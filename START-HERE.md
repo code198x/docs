@@ -224,6 +224,9 @@ Looking for something specific? Use this guide to find the right reference docum
 
 These documents help with lesson design and curriculum structure:
 
+### Legal & Educational Use
+- **[LEGAL-EDUCATIONAL-USE.md](LEGAL-EDUCATIONAL-USE.md)** - Important: How classic games are used as educational references (READ FIRST!)
+
 ### Curriculum Overview
 - **[CURRICULUM-OVERVIEW.md](CURRICULUM-OVERVIEW.md)** - Complete 8256-lesson curriculum (Phase 0 + Phases 1-16)
 
@@ -252,6 +255,9 @@ These documents help with lesson design and curriculum structure:
 - **[LESSON-WORKFLOW.md](LESSON-WORKFLOW.md)** - Lesson creation process
 - **[TIER-1-CURRICULUM-REVIEW.md](TIER-1-CURRICULUM-REVIEW.md)** - Tier 1 analysis
 - **[PATTERN-LIBRARY-ANALYSIS.md](PATTERN-LIBRARY-ANALYSIS.md)** - Common programming patterns
+
+### Asset Creation & Contribution
+- **[ASSET-GUIDELINES.md](ASSET-GUIDELINES.md)** - Creating and contributing sprites, music, and graphics (CC0 assets, tools, tutorials)
 
 ---
 
@@ -303,6 +309,6 @@ When adding new reference documents:
 
 ---
 
-**Version:** 1.0
-**Last Updated:** 2025-10-18
+**Version:** 1.1
+**Last Updated:** 2025-10-21
 **Purpose:** Navigation and discovery for C64 reference library
