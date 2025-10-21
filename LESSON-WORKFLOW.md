@@ -214,13 +214,25 @@ BASIC reads the port directly - slower than assembly, but it proves the concept.
 Try reversing the direction tests. What if you change line 90 to check
 different bits?
 
-## Quick Reference
+### From the Vault
+
+- [CIA](/vault/cia) - Complex Interface Adapter hardware details
+- [Impossible Mission](/vault/impossible-mission) - Game that pioneered smooth joystick control
+
+### Quick Reference
 
 - **Joystick port 2:** $DC00 (56320)
 - **Joystick port 1:** $DC01 (56321)
 - **Reading:** `J = PEEK(56320) AND 15`
 - **Testing:** `IF (J AND 1)=0 THEN` (up pressed)
 ```
+
+**"From the Vault" Section:**
+- Links to `/vault/*` pages on the website (NOT `/docs` files)
+- References hardware, games, programmers, or companies mentioned in the lesson
+- Provides deeper historical and technical context
+- Only include entries that genuinely relate to the lesson content
+- Maximum 2-3 links per lesson (avoid overwhelming learners)
 
 **Tone Guidelines:**
 
@@ -269,13 +281,24 @@ Create `/code-samples/commodore-64/phase-0/tier-2/lesson-023/main.bas`:
 - Include REM comments for clarity
 - Use chip names in comments (VIC-II, SID, not "video chip", "sound chip")
 
-### **Step 5: Validate Syntax**
+### **Step 5: MANDATORY Pre-Completion Verification**
+
+**⚠️ CRITICAL: Complete ALL these steps BEFORE claiming the lesson is done.**
+
+Do NOT skip ahead to Step 7 (screenshots) or tell the user it's complete until every verification passes.
+
+#### **5a. Validate Syntax with petcat**
+
+For EACH code sample file:
 
 ```bash
-./scripts/validate-basic.sh
+# Validate syntax (must show no errors)
+petcat -text -o /dev/null -- example-1.bas
+petcat -text -o /dev/null -- example-2.bas
+# etc.
 ```
 
-This uses `petcat` to check BASIC V2 syntax. Fix any errors before proceeding.
+**Required:** Must see no error output. Fix any syntax errors before proceeding.
 
 **Common issues:**
 - Unmatched quotes
@@ -283,30 +306,54 @@ This uses `petcat` to check BASIC V2 syntax. Fix any errors before proceeding.
 - Line numbers out of range
 - Malformed DATA statements
 
-### **Step 6: Load and Test in VICE**
+#### **5b. Generate PRG Files**
 
 ```bash
-./scripts/quick-vice.sh commodore-64/phase-0/tier-2/lesson-023
+# Generate loadable PRG files
+petcat -w2 -o example-1.prg -- example-1.bas
+petcat -w2 -o example-2.prg -- example-2.bas
 ```
 
-Or with explicit path:
+**Required:** PRG files must be created successfully. Check file sizes are reasonable (>0 bytes).
+
+#### **5c. Runtime Test with VICE**
+
+For the MOST COMPLEX example (usually example-2 or the main demo):
+
 ```bash
-./scripts/quick-vice.sh code-samples/commodore-64/phase-0/tier-2/lesson-023/main.bas
+# Test for runtime errors (100M cycles = ~2 minutes execution)
+x64sc -autostart example-2.prg -limitcycles 100000000 +sound +confirmonexit
 ```
 
-**Testing checklist:**
-- [ ] Code loads without errors
-- [ ] RUN produces expected result
-- [ ] Visual/audio effect is impressive
-- [ ] Experimentation parameters work as described
-- [ ] No runtime crashes or freezes
+**Required:**
+- Exit code must be 0 (no errors)
+- No ILLEGAL QUANTITY ERROR
+- No SYNTAX ERROR
+- No OUT OF MEMORY ERROR
+- Program runs for full cycle count without crashing
 
-**VICE tips:**
-- Alt+W toggles warp mode (faster loading)
-- RUN/STOP halts program
-- Cmd+R (macOS) or F12 (Linux) resets
+**Check exit code:**
+```bash
+echo $?  # Must be 0
+```
 
-### **Step 7: Capture Screenshots**
+If exit code is non-zero, DO NOT PROCEED. Debug and fix the code.
+
+#### **5d. Verification Checklist**
+
+Only proceed when you can answer YES to ALL:
+
+- [ ] petcat validation passed for all .bas files
+- [ ] All .prg files generated successfully
+- [ ] Runtime test completed with exit code 0
+- [ ] No runtime errors observed in output
+- [ ] Code uses lowercase keywords in .bas files
+- [ ] Code has NO indentation (line numbers flush left)
+- [ ] MDX uses UPPERCASE for REM comments
+
+**If ANY answer is NO:** Fix the issues before proceeding to Step 6.
+
+### **Step 6: Capture Screenshots**
 
 When the impressive moment is visible:
 
@@ -498,6 +545,10 @@ Phase: N, Tier: N, Lesson: N/total
 ---
 
 ## Quality Checklist
+
+**⚠️ REMINDER: You should have completed Step 5 (MANDATORY Pre-Completion Verification) BEFORE reaching this checklist.**
+
+If you skipped Step 5, GO BACK and complete it now. Do not proceed without running all verification steps.
 
 Before committing:
 

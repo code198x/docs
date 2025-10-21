@@ -1,8 +1,18 @@
 # C64 Reference Guide - Start Here
 
 **Purpose:** Navigation guide for all C64 reference documentation
-**Updated:** 2025-10-18
+**Updated:** 2025-10-21
 **For:** Code Like It's 198x curriculum designers and lesson creators
+
+---
+
+## ⚠️ Important: Game References Are Educational Only
+
+**All classic game names mentioned in this curriculum are LEARNING REFERENCES.**
+
+Students build **original games inspired by** classic mechanics, NOT clones. When a lesson says "Build Tetris," it means: *Build an original falling-block puzzle game using rotation and line-clearing mechanics, with your own name, graphics, sounds, and implementation.*
+
+See [CURRICULUM-OVERVIEW.md](CURRICULUM-OVERVIEW.md) for complete legal details.
 
 ---
 
@@ -214,7 +224,29 @@ Looking for something specific? Use this guide to find the right reference docum
 
 These documents help with lesson design and curriculum structure:
 
-- **[PHASE-0-CURRICULUM.md](PHASE-0-CURRICULUM.md)** - Complete Phase 0 curriculum outline
+### Curriculum Overview
+- **[CURRICULUM-OVERVIEW.md](CURRICULUM-OVERVIEW.md)** - Complete 8256-lesson curriculum (Phase 0 + Phases 1-16)
+
+### Phase Documents (0-16)
+- **[PHASE-0-CURRICULUM.md](PHASE-0-CURRICULUM.md)** - BASIC Introduction (64 lessons)
+- **[PHASE-1-CURRICULUM.md](PHASE-1-CURRICULUM.md)** - Assembly + Hardware Fundamentals (512 lessons)
+- **[PHASE-2-CURRICULUM.md](PHASE-2-CURRICULUM.md)** - Action Foundations (512 lessons)
+- **[PHASE-3-CURRICULUM.md](PHASE-3-CURRICULUM.md)** - Puzzle Games (512 lessons)
+- **[PHASE-4-CURRICULUM.md](PHASE-4-CURRICULUM.md)** - Platformers Deep Dive (512 lessons)
+- **[PHASE-5-CURRICULUM.md](PHASE-5-CURRICULUM.md)** - Beat-em-ups & Brawlers (384 lessons)
+- **[PHASE-6-CURRICULUM.md](PHASE-6-CURRICULUM.md)** - Shoot-em-ups (1024 lessons)
+- **[PHASE-7-CURRICULUM.md](PHASE-7-CURRICULUM.md)** - RPG Systems (1024 lessons)
+- **[PHASE-8-CURRICULUM.md](PHASE-8-CURRICULUM.md)** - Adventure Games (512 lessons)
+- **[PHASE-9-CURRICULUM.md](PHASE-9-CURRICULUM.md)** - Strategy Games (512 lessons)
+- **[PHASE-10-CURRICULUM.md](PHASE-10-CURRICULUM.md)** - Racing & Driving (384 lessons)
+- **[PHASE-11-CURRICULUM.md](PHASE-11-CURRICULUM.md)** - Fighting Games (384 lessons)
+- **[PHASE-12-CURRICULUM.md](PHASE-12-CURRICULUM.md)** - Sports Games (384 lessons)
+- **[PHASE-13-CURRICULUM.md](PHASE-13-CURRICULUM.md)** - Multi-Genre Synthesis (512 lessons)
+- **[PHASE-14-CURRICULUM.md](PHASE-14-CURRICULUM.md)** - Complete Games (512 lessons)
+- **[PHASE-15-CURRICULUM.md](PHASE-15-CURRICULUM.md)** - Technical Showcase & Epics (512 lessons)
+- **[PHASE-16-CURRICULUM.md](PHASE-16-CURRICULUM.md)** - The Gauntlet + Mastery Projects (512 lessons)
+
+### Lesson Design Resources
 - **[LESSON-ARCHETYPES.md](LESSON-ARCHETYPES.md)** - Discovery, Challenge, Synthesis, Deep Dive
 - **[LESSON-PREFLIGHT-CHECKLIST.md](LESSON-PREFLIGHT-CHECKLIST.md)** - Quality checklist before publishing
 - **[LESSON-WORKFLOW.md](LESSON-WORKFLOW.md)** - Lesson creation process

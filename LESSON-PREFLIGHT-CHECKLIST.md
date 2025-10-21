@@ -130,6 +130,36 @@ After editing, verify:
 - [ ] Frontmatter objectives align with curriculum
 - [ ] Code examples support curriculum goals (not old curriculum)
 
+### Step 5A: Code Validation (MANDATORY)
+
+**All `.bas` files MUST pass validation before committing:**
+
+```bash
+# Validate each example
+./scripts/validate-bas.sh code-samples/.../lesson-NNN/example-1.bas
+./scripts/validate-bas.sh code-samples/.../lesson-NNN/example-2.bas
+```
+
+**Validation checks:**
+- ✅ petcat syntax validation (tokenization)
+- ✅ C64 BASIC V2 semantic correctness
+- ✅ Hardware register addresses
+- ✅ POKE value ranges (0-255)
+- ⚠️  Sprite boundary warnings (non-blocking)
+
+**What validation catches:**
+- `RESTORE 10` → Error (should be bare `RESTORE`)
+- `POKE 53280,300` → Error (value >255)
+- Unsupported BASIC features (DO, WHILE, PROC)
+- Invalid hardware addresses
+
+**See `/scripts/README.md` for detailed validation documentation.**
+
+**Required before commit:**
+- [ ] All `.bas` files validated successfully
+- [ ] No validation errors (warnings are OK)
+- [ ] PRG files regenerated after any fixes
+
 ---
 
 ## Emergency Procedures
