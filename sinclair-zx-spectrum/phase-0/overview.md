@@ -1,21 +1,22 @@
-# Phase 0: Sinclair BASIC (ZX Spectrum)
+# Phase 0: Sinclair BASIC
 
 **Lessons:** 1-64 (4 tiers × 16 lessons)
 **Language:** Sinclair BASIC
-**Models:** ZX Spectrum 48K/128K
 **Approach:** Game-first discovery learning
 
 ## Philosophy
 
+Learn programming by building games, not by memorising syntax. Each short arc (2-3 lessons) produces a complete playable game. Concepts emerge naturally from trying to make games better, faster, and more interesting.
+
 The ZX Spectrum defined British home computing in the 1980s. Its unique characteristics shape this curriculum:
 
 - **Attribute-based graphics** - Colour in 8×8 character blocks (not per-pixel)
-- **Beeper sound** - Single-channel 1-bit audio (no dedicated sound chip)
-- **Sinclair BASIC** - Fast, keyword-entry system with unique commands
+- **Beeper sound** - Single-channel 1-bit audio (no dedicated sound chip on 48K)
+- **Sinclair BASIC** - Fast interpreter, keyword-entry system with direct graphics commands
 - **Memory constraints** - 48K total (16K screen, ~32K for programs on base model)
-- **Instant response** - Direct screen access, minimal OS overhead
+- **Instant response** - Direct screen access via PRINT AT, PLOT, DRAW, CIRCLE
 
-Phase 0 teaches Sinclair BASIC fundamentals while building complete games, discovering the platform's strengths (fast BASIC execution, responsive input) and constraints (colour clash, simple sound) through hands-on experience.
+Experience both the strengths (speed, responsiveness) and constraints (colour clash, attribute system) that defined British bedroom coding.
 
 ## Spectrum-Specific Advantages
 
