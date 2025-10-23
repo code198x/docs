@@ -84,7 +84,7 @@ This curriculum teaches comprehensive C64 game development through **building or
 **Tier 3 (L33-48):** 3 professional games (45-280 lines) - Mastery (platformer, RPG, puzzle)
 **Tier 4 (L49-64):** 3 ceiling demos (80-250 lines) - Explicit BASIC limits demonstration
 
-See [PHASE-0-CURRICULUM-GAME-FIRST.md](PHASE-0-CURRICULUM-GAME-FIRST.md) for complete details.
+See [commodore-64/PHASE-0-CURRICULUM-GAME-FIRST.md](commodore-64/PHASE-0-CURRICULUM-GAME-FIRST.md) for complete details.
 
 ---
 
@@ -555,7 +555,7 @@ Final phases synthesize all skills into ultimate challenges.
 
 **See individual phase documents for complete lesson breakdowns:**
 - [START-HERE.md](START-HERE.md) - Main navigation
-- [PHASE-0-CURRICULUM.md](PHASE-0-CURRICULUM.md) through [PHASE-16-CURRICULUM.md](PHASE-16-CURRICULUM.md) - Individual phase details
+- Phase curriculum files located under each platform directory (e.g., commodore-64/PHASE-0-CURRICULUM.md through commodore-64/PHASE-16-CURRICULUM.md)
 
 ---
 

@@ -10,7 +10,7 @@
 
 Lessons are stored in:
 ```
-/website/src/pages/commodore-64/phase-X/tier-Y/lesson-NNN.mdx
+/website/src/pages/{platform}/phase-{N}/tier-{N}/lesson-{NNN}.mdx
 ```
 
 **Naming convention:**
@@ -32,8 +32,8 @@ phase: 0  # 0-16
 tier: 1   # 1-8 (depending on phase)
 lessonNumber: 1  # 1-8256
 totalLessons: 64  # 64 for Phase 0, 8256 total
-prevLesson: "/commodore-64/phase-0/tier-1/lesson-000"  # or null for first lesson
-nextLesson: "/commodore-64/phase-0/tier-1/lesson-002"  # or null for last lesson
+prevLesson: "/{platform}/phase-{N}/tier-{N}/lesson-{NNN}"  # or null for first lesson
+nextLesson: "/{platform}/phase-{N}/tier-{N}/lesson-{NNN}"  # or null for last lesson
 objectives:
   - '[Objective 1 - specific, measurable, action-oriented]'
   - '[Objective 2 - builds on previous lessons]'
@@ -115,7 +115,7 @@ Sample output:
 READY.
 ```
 
-![Screenshot description](/images/commodore-64/phase-0/tier-1/lesson-NNN/example-1.png)
+![Screenshot description](/images/{platform}/phase-{N}/tier-{N}/lesson-{NNN}/example-1.png)
 
 **Line 10** clears screen. **Lines 20-40** POKE character 42 (asterisk) to three vertical positions. Each position is 40 bytes apart (one row down).
 
@@ -128,7 +128,7 @@ READY.
 - Explain key lines with **bold line numbers**
 - Add one practical tip in blockquote
 - Keep code short (10-20 lines ideal for BASIC)
-- Image path: `/images/commodore-64/phase-X/tier-Y/lesson-NNN/example-N.png`
+- Image path: `/images/{platform}/phase-{N}/tier-{N}/lesson-{NNN}/example-N.png`
 
 ---
 
@@ -163,7 +163,7 @@ Build a simple pattern drawer:
 
 The programme fills the screen with solid blocks in a grid pattern.
 
-![Pattern demonstration](/images/commodore-64/phase-0/tier-1/lesson-NNN/example-2.png)
+![Pattern demonstration](/images/{platform}/phase-{N}/tier-{N}/lesson-{NNN}/example-2.png)
 ```
 
 **Guidelines:**
@@ -354,7 +354,7 @@ Summary of lesson accomplishments and preview of next lesson.
 
 **File naming:**
 ```
-/images/commodore-64/phase-X/tier-Y/lesson-NNN/example-N.png
+/images/{platform}/phase-{N}/tier-{N}/lesson-{NNN}/example-N.png
 ```
 
 **Guidelines:**
@@ -399,10 +399,10 @@ See [ASSET-GUIDELINES.md](/docs/ASSET-GUIDELINES.md) for details.
 ## Lesson Filename Example
 
 ```
-/website/src/pages/commodore-64/phase-0/tier-3/lesson-033.mdx
+/website/src/pages/{platform}/phase-{N}/tier-{N}/lesson-{NNN}.mdx
 ```
 
-For Phase 0, Tier 3, Lesson 33 (Advanced Animation)
+Example: `/website/src/pages/commodore-64/phase-0/tier-3/lesson-033.mdx`
 
 ---
 
@@ -418,8 +418,8 @@ phase: 0
 tier: 3
 lessonNumber: 33
 totalLessons: 64
-prevLesson: "/commodore-64/phase-0/tier-2/lesson-032"
-nextLesson: "/commodore-64/phase-0/tier-3/lesson-034"
+prevLesson: "/{platform}/phase-{N}/tier-{N}/lesson-{NNN}"
+nextLesson: "/{platform}/phase-{N}/tier-{N}/lesson-{NNN}"
 objectives:
   - 'Create multi-frame sprite animation sequences.'
   - 'Implement animation state machines for complex movement.'
@@ -453,7 +453,7 @@ Sample output:
 [Expected output]
 ```
 
-![Screenshot](/images/commodore-64/phase-0/tier-3/lesson-033/example-1.png)
+![Screenshot](/images/{platform}/phase-{N}/tier-{N}/lesson-{NNN}/example-1.png)
 
 **Line 10** [explanation]
 
@@ -476,7 +476,7 @@ Build a [more complex example]:
 
 [Explanation]
 
-![Screenshot](/images/commodore-64/phase-0/tier-3/lesson-033/example-2.png)
+![Screenshot](/images/{platform}/phase-{N}/tier-{N}/lesson-{NNN}/example-2.png)
 
 ---
 

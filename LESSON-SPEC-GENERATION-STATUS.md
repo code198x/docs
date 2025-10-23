@@ -9,7 +9,7 @@
 ## Completion Summary
 
 ### Tier 1: Discovery (Lessons 1-16) - ✅ COMPLETE
-**Location:** `/Users/stevehill/Projects/Code198x/docs/commodore-64/phase-0/tier-1/`
+**Location:** `docs/{platform}/phase-{N}/tier-{N}/` (example: `docs/commodore-64/phase-0/tier-1/`)
 **Files Created:** 16/16
 
 - ✅ L001: Hello, Computer
@@ -30,7 +30,7 @@
 - ✅ L016: Crystal Caverns (Synthesis)
 
 ### Tier 2: Building (Lessons 17-32) - ⏸️ PARTIAL
-**Location:** `/Users/stevehill/Projects/Code198x/docs/commodore-64/phase-0/tier-2/`
+**Location:** `docs/{platform}/phase-{N}/tier-{N}/` (example: `docs/commodore-64/phase-0/tier-2/`)
 **Files Created:** 10/16
 
 **Arc 1: Space Shooter Evolution (7 lessons) - COMPLETE**
@@ -56,11 +56,11 @@
 - ⏸️ L032: Asteroids Complete (Synthesis)
 
 ### Tier 3: Mastery (Lessons 33-48) - ⏸️ NOT STARTED
-**Location:** `/Users/stevehill/Projects/Code198x/docs/commodore-64/phase-0/tier-3/`
+**Location:** `docs/{platform}/phase-{N}/tier-{N}/` (example: `docs/commodore-64/phase-0/tier-3/`)
 **Files Created:** 0/16
 
 ### Tier 4: Limits (Lessons 49-64) - ⏸️ NOT STARTED
-**Location:** `/Users/stevehill/Projects/Code198x/docs/commodore-64/phase-0/tier-4/`
+**Location:** `docs/{platform}/phase-{N}/tier-{N}/` (example: `docs/commodore-64/phase-0/tier-4/`)
 **Files Created:** 0/16
 
 ---
@@ -131,7 +131,7 @@ All created lessons include:
 
 ## Remaining Work
 
-To complete all 64 lessons:
+To complete all 64 lessons for Phase 0:
 
 **Tier 2 (6 remaining):**
 - L027-028 (Sound arc completion)
@@ -146,6 +146,8 @@ To complete all 64 lessons:
 - L049-053 (Speed Limit - 5 lessons)
 - L054-059 (Visual Limit - 6 lessons)
 - L060-064 (Complexity Limit - 5 lessons)
+
+**Note:** This status document tracks C64 Phase 0 lesson specifications. Other platforms and phases will require similar specification files following the same template pattern.
 
 **Estimated time to complete:** 8-10 hours following established template
 
@@ -165,17 +167,15 @@ To complete all 64 lessons:
 
 1. **For completed lessons:** Use directly as specification for lesson content creation
 2. **For remaining lessons:** Follow established template pattern:
-   - Read curriculum entry in `PHASE-0-CURRICULUM-GAME-FIRST.md`
+   - Read curriculum entry in platform phase curriculum (e.g., `{platform}/PHASE-{N}-CURRICULUM-GAME-FIRST.md`)
    - Identify arc position and learning objectives
    - Fill template sections following examples
    - Ensure hardware documentation accuracy
    - Add appropriate Quick Reference content
 
 3. **Cross-reference requirements:**
-   - VIC-II topics → reference `/docs/VIC-II-QUICK-REFERENCE.md`
-   - CIA topics → reference `/docs/CIA-QUICK-REFERENCE.md`
-   - SID topics → reference SID documentation
-   - PETSCII → reference `/docs/PETSCII-AND-SCREEN-CODES.md`
+   - Hardware topics → reference platform-specific quick references under `docs/{platform}/hardware/` directory
+   - Example C64: VIC-II, CIA, SID, PETSCII references in `docs/commodore-64/hardware/`
 
 ---
 

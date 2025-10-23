@@ -11,10 +11,10 @@ This document describes the complete workflow for creating Code Like It's 198x l
 
 Each lesson consists of these components:
 
-1. **Lesson content** (MDX) - `/website/src/pages/commodore-64/phase-N/tier-N/lesson-NNN.mdx`
-2. **Runnable code** (BASIC/ASM) - `/code-samples/commodore-64/phase-N/tier-N/lesson-NNN/main.bas`
-3. **Screenshots** (PNG) - `/website/public/images/lessons/commodore-64/phase-N/tier-N/lesson-NNN-*.png`
-4. **Videos/GIFs** (optional) - `/website/public/media/lessons/commodore-64/phase-N/tier-N/lesson-NNN-*.mp4|.gif`
+1. **Lesson content** (MDX) - `/website/src/pages/{platform}/phase-{N}/tier-{N}/lesson-{NNN}.mdx`
+2. **Runnable code** (BASIC/ASM) - `/code-samples/{platform}/phase-{N}/tier-{N}/lesson-{NNN}/main.bas`
+3. **Screenshots** (PNG) - `/website/public/images/lessons/{platform}/phase-{N}/tier-{N}/lesson-{NNN}-*.png`
+4. **Videos/GIFs** (optional) - `/website/public/media/lessons/{platform}/phase-{N}/tier-{N}/lesson-{NNN}-*.mp4|.gif`
 
 ---
 
@@ -122,7 +122,7 @@ Are you being honest about what this is?
 
 **Choose archetype** - Which teaching pattern fits this concept?
 
-**Check pattern library** - Does a pattern exist for this technique? ([Browse patterns](../website/src/pages/commodore-64/phase-0/patterns/))
+**Check pattern library** - Does a pattern exist for this technique? (Check platform-specific patterns in website/src/pages/{platform}/patterns/)
 
 **Check prerequisites** - What must learner know already?
 
@@ -132,7 +132,7 @@ Are you being honest about what this is?
 
 ### **Step 2: Write the Lesson MDX**
 
-Create `/website/src/pages/commodore-64/phase-0/tier-1/lesson-001.mdx`:
+Create `/website/src/pages/{platform}/phase-{N}/tier-{N}/lesson-{NNN}.mdx`:
 
 ```markdown
 ---
@@ -169,8 +169,8 @@ and you're building the same control system that powered *Impossible Mission*.
 - `tier`: 1-4 for Phase 0 (1-8 for Assembly phases)
 - `lessonNumber`: Sequential number (1-64 for Phase 0)
 - `totalLessons`: 64 for Phase 0
-- `prevLesson`: `/commodore-64/phase-N/tier-N/lesson-NNN` or null
-- `nextLesson`: `/commodore-64/phase-N/tier-N/lesson-NNN` or null
+- `prevLesson`: `/{platform}/phase-{N}/tier-{N}/lesson-{NNN}` or null
+- `nextLesson`: `/{platform}/phase-{N}/tier-{N}/lesson-{NNN}` or null
 - `objectives`: (optional) Array of learning goals
 
 ### **Step 3: Structure Your Content**
@@ -193,7 +193,7 @@ Type this in and RUN it. Move the joystick.
 
 [20-40 line impressive result]
 
-![Screenshot](/images/lessons/commodore-64/phase-0/tier-2/lesson-023-main.png)
+![Screenshot](/images/lessons/{platform}/phase-{N}/tier-{N}/lesson-{NNN}-main.png)
 
 BASIC reads the port directly - slower than assembly, but it proves the concept.
 (Assembly lessons will show full-speed techniques.)
@@ -254,7 +254,7 @@ different bits?
 
 ### **Step 4: Extract the Code**
 
-Create `/code-samples/commodore-64/phase-0/tier-2/lesson-023/main.bas`:
+Create `/code-samples/{platform}/phase-{N}/tier-{N}/lesson-{NNN}/main.bas`:
 
 ```basic
 10 REM JOYSTICK SPRITE DEMO
@@ -367,7 +367,7 @@ When the impressive moment is visible:
 
 **Save to:**
 ```
-/website/public/images/lessons/commodore-64/phase-0/tier-2/lesson-023-main.png
+/website/public/images/lessons/{platform}/phase-{N}/tier-{N}/lesson-{NNN}-main.png
 ```
 
 **Naming conventions:**
@@ -391,7 +391,7 @@ When the impressive moment is visible:
 
 [Code block here]
 
-![Sprite following joystick movements](/images/lessons/commodore-64/phase-0/tier-2/lesson-023-main.png)
+![Sprite following joystick movements](/images/lessons/{platform}/phase-{N}/tier-{N}/lesson-{NNN}-main.png)
 
 You're reading port $DC00 sixty times per second, the same technique
 that powered the smooth controls in *Impossible Mission*.
@@ -405,7 +405,7 @@ that powered the smooth controls in *Impossible Mission*.
 
 ### **Step 9: Update Tier Landing Page** (If New Lesson)
 
-Edit `/website/src/pages/commodore-64/phase-0/tier-2/index.astro`:
+Edit `/website/src/pages/{platform}/phase-{N}/tier-{N}/index.astro`:
 
 ```javascript
 const lessons = [
@@ -512,11 +512,11 @@ See [PATTERN-LIBRARY-ANALYSIS.md](PATTERN-LIBRARY-ANALYSIS.md) for complete inte
 ### **Step 12: Commit Everything Together**
 
 ```bash
-git add website/src/pages/commodore-64/phase-0/tier-2/lesson-023.mdx
-git add code-samples/commodore-64/phase-0/tier-2/lesson-023/main.bas
-git add website/public/images/lessons/commodore-64/phase-0/tier-2/lesson-023-main.png
+git add website/src/pages/{platform}/phase-{N}/tier-{N}/lesson-{NNN}.mdx
+git add code-samples/{platform}/phase-{N}/tier-{N}/lesson-{NNN}/main.bas
+git add website/public/images/lessons/{platform}/phase-{N}/tier-{N}/lesson-{NNN}-main.png
 git add docs/vault-todo.md
-git commit -m "feat(commodore64-phase0): Add lesson 23 - Joystick sprite control
+git commit -m "feat({platform}-phase{N}): Add lesson {NNN} - [description]
 
 - Read hardware port $DC00 for joystick input
 - Update sprite positions in real-time loop
@@ -540,7 +540,7 @@ Phase: N, Tier: N, Lesson: N/total
 ```
 
 **Types:** `feat`, `fix`, `docs`, `refactor`
-**Scopes:** `commodore64-phase0`, `commodore64-phase1`, `spectrum-phase0`, `nes-phase0`, etc.
+**Scopes:** `{platform}-phase{N}` (e.g., `commodore64-phase0`, `spectrum-phase0`, `nes-phase1`, etc.)
 
 ---
 
@@ -605,18 +605,18 @@ Validating Commodore 64 BASIC lesson files (Phase 0)...
 Summary: 64/64 files passed syntax validation
 ```
 
-### `quick-vice.sh`
+### `quick-vice.sh` (C64)
 Load lesson in VICE:
 
 ```bash
 # Using Phase/Tier/Lesson path
-./scripts/quick-vice.sh commodore-64/phase-0/tier-2/lesson-023
+./scripts/quick-vice.sh {platform}/phase-{N}/tier-{N}/lesson-{NNN}
 
 # Using full file path
-./scripts/quick-vice.sh code-samples/commodore-64/phase-0/tier-2/lesson-023/main.bas
+./scripts/quick-vice.sh code-samples/{platform}/phase-{N}/tier-{N}/lesson-{NNN}/main.bas
 
 # Without warp mode (normal speed)
-./scripts/quick-vice.sh commodore-64/phase-0/tier-2/lesson-023 nowarp
+./scripts/quick-vice.sh {platform}/phase-{N}/tier-{N}/lesson-{NNN} nowarp
 ```
 
 ---
@@ -685,9 +685,9 @@ Each platform will have:
 - [LESSON-ARCHETYPES.md](LESSON-ARCHETYPES.md) - Detailed archetype guide
 - [PATTERN-LIBRARY-ANALYSIS.md](PATTERN-LIBRARY-ANALYSIS.md) - Pattern library integration strategy **← READ THIS**
 - [VAULT-WORKFLOW.md](VAULT-WORKFLOW.md) - Historical reference and timeline guide
-- [PHASE-0-CURRICULUM.md](PHASE-0-CURRICULUM.md) - Complete 64-lesson curriculum specification
+- Phase curriculum specifications - Located under each platform directory (e.g., commodore-64/PHASE-0-CURRICULUM.md)
 - [TIER-1-CURRICULUM-REVIEW.md](TIER-1-CURRICULUM-REVIEW.md) - Existing lessons vs. new curriculum analysis
-- [Pattern Library](../website/src/pages/commodore-64/phase-0/patterns/) - 33 reusable C64 BASIC patterns (browse online)
+- Pattern Libraries - Platform-specific reusable patterns (e.g., website/src/pages/commodore-64/phase-0/patterns/)
 - [PROJECT_OVERVIEW.md](../PROJECT_OVERVIEW.md) - Curriculum structure and philosophy
 - [CLAUDE.md](../CLAUDE.md) - Project coding standards
 - [README.md](../README.md) - Project philosophy
