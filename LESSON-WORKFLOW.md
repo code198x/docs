@@ -20,11 +20,11 @@ Each lesson consists of these components:
 
 ## Content Structure
 
-### **Phase 0: BASIC Foundation** (64 lessons)
-- **Tier 1:** Lessons 1-16 (First principles, simple concepts)
-- **Tier 2:** Lessons 17-32 (Building complexity)
-- **Tier 3:** Lessons 33-48 (Advanced techniques)
-- **Tier 4:** Lessons 49-64 (Mastery and synthesis)
+### **Phase 0: BASIC Foundation** (64 lessons - Game-First Approach)
+- **Tier 1:** Lessons 1-16 (Discovery - 6 foundation games)
+- **Tier 2:** Lessons 17-32 (Building - 4 technical games, sprites/sound/physics)
+- **Tier 3:** Lessons 33-48 (Mastery - 3 professional games: platformer, RPG, puzzle)
+- **Tier 4:** Lessons 49-64 (Limits - 3 ceiling demonstrations, explicit BASIC limits)
 
 ### **Phases 1-8: Assembly Mastery** (1024 lessons, future)
 - Each phase: 128 lessons across 8 tiers

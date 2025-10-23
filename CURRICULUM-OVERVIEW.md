@@ -76,10 +76,15 @@ This curriculum teaches comprehensive C64 game development through **building or
 
 ### Phase 0: BASIC Introduction (64 lessons)
 
-**Structure:** 4 tiers × 16 lessons
-**Outcome:** Programming fundamentals, optional for experienced programmers
+**Structure:** 4 tiers × 16 lessons (game-first approach)
+**Outcome:** 16 complete games, programming fundamentals through gameplay, natural discovery of BASIC's limits
 
-See [PHASE-0-CURRICULUM.md](PHASE-0-CURRICULUM.md) for complete details.
+**Tier 1 (L1-16):** 6 foundation games (5-60 lines) - Discovery
+**Tier 2 (L17-32):** 4 technical games (25-150 lines) - Building (sprites, sound, physics)
+**Tier 3 (L33-48):** 3 professional games (45-280 lines) - Mastery (platformer, RPG, puzzle)
+**Tier 4 (L49-64):** 3 ceiling demos (80-250 lines) - Explicit BASIC limits demonstration
+
+See [PHASE-0-CURRICULUM-GAME-FIRST.md](PHASE-0-CURRICULUM-GAME-FIRST.md) for complete details.
 
 ---
 
