@@ -17,12 +17,12 @@
 ## Arcs Overview
 
 ### Arc 1: Text Adventures (L1-3)
-**Game:** Mystery Manor with scoring
+**Game:** Dungeon Quest with scoring
 **Concepts:** Structured programming (no line numbers), procedures, Locate, Input$
 
 - **L1:** Hello, Amiga - Infinite counter with Locate positioning
-- **L2:** Knowledge Quest - Calculator quiz with procedures
-- **L3:** Mystery Manor - Complete text adventure with scoring
+- **L2:** Interactive Oracle - User input and conditional branching
+- **L3:** Dungeon Quest - Complete text adventure with procedures and scoring
 
 ### Arc 2: Knowledge Base (L4-6)
 **Game:** Data-Driven Quiz Engine
@@ -74,7 +74,7 @@ By completing Tier 1, you will have:
 - Created sound effects with Paula's 4-channel audio
 - Learned Joypad/Inkey$ for responsive input
 - Written programs ranging from 10 to 80 lines
-- Understood the game development loop (input ’ process ’ output ’ repeat)
+- Understood the game development loop (input ï¿½ process ï¿½ output ï¿½ repeat)
 
 ## Prerequisites
 
