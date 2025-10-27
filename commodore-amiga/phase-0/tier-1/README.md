@@ -29,8 +29,8 @@
 **Concepts:** Data/Read statements, arrays, string handling, Restore
 
 - **L4:** Quiz Master - Simple quiz with Data statements
-- **L5:** High Score Hall - Top 5 leaderboard with sorting
-- **L6:** Data-Driven Quiz - Expandable quiz engine with categories
+- **L5:** Knowledge Master - Menu-driven quiz with categories and high score
+- **L6:** Data Bank - Arrays with Dim, search, and browse functionality
 
 ### Arc 3: BOB Graphics (L7-9)
 **Tool:** Pattern Designer (hardware-accelerated graphics)
