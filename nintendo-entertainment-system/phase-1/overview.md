@@ -329,6 +329,6 @@ None - Phase 1 is designed for assembly beginners who want to learn through game
 
 ---
 
-**Version:** 1.0
-**Last Updated:** 2025-10-23
-**Status:** Overview complete - detailed tier and lesson specs to be created
+**Version:** 1.1
+**Last Updated:** 2025-10-27
+**Status:** Tier 1 (L1-32) complete (32-lesson Pong game), Tier 2-16 specs to be created

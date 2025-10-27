@@ -1,6 +1,6 @@
 # Phase 0: AMOS Professional
 
-**Lessons:** 1-64 (4 tiers × 16 lessons)
+**Lessons:** 1-64 (4 tiers ï¿½ 16 lessons)
 **Language:** AMOS Professional
 **Approach:** Game-first discovery learning
 
@@ -242,6 +242,6 @@ None - Phase 0 is the entry point.
 
 ---
 
-**Version:** 1.0
-**Last Updated:** 2025-10-23
-**Status:** Outline - detailed lesson specs to be created
+**Version:** 1.1
+**Last Updated:** 2025-10-27
+**Status:** Tier 1 (L1-16) complete, Tier 2 (L17-32) specs complete, Tier 3-4 to be created
