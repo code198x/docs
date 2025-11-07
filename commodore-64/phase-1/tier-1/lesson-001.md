@@ -8,7 +8,7 @@
 ## Learning Objectives
 
 - Set up C64 memory map and BASIC stub for assembly programs
-- Initialize SID chip registers
+- Initialise SID chip registers
 - Generate first sound from SID voice 1
 - Understand memory-mapped hardware in assembly
 - Write first complete 6502 assembly program
@@ -27,7 +27,7 @@ Phase 0 complete (BASIC fundamentals, hardware concepts, SID basics from L10-11)
 ### BASIC Stub
 Assembly programs need a BASIC stub to launch them. This is a tokenized BASIC line (e.g., `10 SYS 2064`) that jumps to our machine code.
 
-### Memory Map Initialization
+### Memory Map Initialisation
 Assembly programs start at $0801 (2049) with BASIC stub, then machine code begins at $0810 (2064). This is standard C64 convention.
 
 ### SID Chip Registers
@@ -104,6 +104,9 @@ Formula: `frequency_value = (note_hz * 16777216) / clock_speed`
 3. **Missing volume:** $D418 must be non-zero or no sound
 4. **Gate bit not set:** Bit 0 of $D404 must be 1 to start note
 5. **SID not cleared:** Previous values in registers can cause issues
+6. **Infinite loop missing:** Without `jmp loop`, the program continues into random memory, likely crashing. The infinite loop keeps the program running so the note continues.
+7. **PAL vs NTSC frequency mismatch:** Frequency values differ between PAL (985248 Hz) and NTSC (1022727 Hz) machines. Using PAL frequencies on NTSC C64 results in sharp notes.
+8. **Multiple waveforms selected:** Setting multiple waveform bits (e.g., triangle + sawtooth) creates unpredictable results. Select only one waveform per voice.
 
 ## Extension Ideas
 
@@ -154,7 +157,7 @@ D:        $1327 (293.66 Hz)
 E:        $1561 (329.63 Hz)
 F:        $166F (349.23 Hz)
 G:        $18F9 (392.00 Hz)
-A:        $1BB8 (440.00 Hz)
+A:        $1D38 (440.00 Hz)
 ```
 
 **Assembler:**
