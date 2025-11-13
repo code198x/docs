@@ -1,8 +1,10 @@
-# Video Capture Workflow for Phase 1 Lessons
+# Audio Capture Workflow for Phase 1 Lessons
 
 ## Overview
 
-Phase 1 lessons require video/audio demonstration of SID chip functionality. Audio can be captured automatically, but video requires manual screen recording.
+Phase 1 lessons require audio demonstration of SID chip functionality. Audio can be captured automatically with VICE. Video is optional and can be added later if needed.
+
+**Primary deliverable:** Audio-only WAV files demonstrating SID output
 
 ## Automated Audio Capture
 
@@ -27,7 +29,53 @@ x64sc -autostart example-1.prg \
 
 **Result:** Audio-only WAV file with SID output
 
-## Manual Video Capture
+## Quick Capture Script
+
+For efficient batch processing of all lessons:
+
+```bash
+#!/bin/bash
+# capture-audio.sh <lesson-number>
+
+LESSON=$1
+CODE_DIR="/Users/stevehill/Projects/Code198x/code-samples/commodore-64/phase-1/tier-1/lesson-$(printf '%03d' $LESSON)"
+OUTPUT_DIR="/Users/stevehill/Projects/Code198x/website/public/audio/commodore-64/phase-1/tier-1"
+
+mkdir -p "$OUTPUT_DIR"
+
+cd "$CODE_DIR"
+
+# Capture example-1 (90 seconds)
+x64sc -autostart example-1.prg \
+      -limitcycles 5400000 \
+      -sound \
+      -soundrate 44100 \
+      -soundrecdev wav \
+      -soundrecarg "$OUTPUT_DIR/lesson-$(printf '%03d' $LESSON)-example-1.wav"
+
+echo "Captured: lesson-$(printf '%03d' $LESSON)-example-1.wav"
+
+# Capture example-2 if it exists (90 seconds)
+if [ -f "example-2.prg" ]; then
+    x64sc -autostart example-2.prg \
+          -limitcycles 5400000 \
+          -sound \
+          -soundrate 44100 \
+          -soundrecdev wav \
+          -soundrecarg "$OUTPUT_DIR/lesson-$(printf '%03d' $LESSON)-example-2.wav"
+
+    echo "Captured: lesson-$(printf '%03d' $LESSON)-example-2.wav"
+fi
+```
+
+**Usage:**
+```bash
+chmod +x capture-audio.sh
+./capture-audio.sh 1    # Captures lesson 001 audio
+./capture-audio.sh 6    # Captures lesson 006 audio
+```
+
+## Manual Video Capture (Optional)
 
 Video capture requires screen recording software due to VICE GUI limitations.
 
@@ -146,14 +194,21 @@ Expected: `sample_rate=44100`, `channels=1` or `channels=2`
 
 ## File Naming Convention
 
+**Audio files (primary):**
+```
+/website/public/audio/commodore-64/phase-1/tier-1/lesson-NNN-example-N.wav
+```
+
+Examples:
+- `lesson-001-example-1.wav` (triangle wave)
+- `lesson-001-example-2.wav` (sawtooth with ADSR)
+- `lesson-002-example-1.wav`
+- `lesson-006-example-1.wav`
+
+**Video files (optional):**
 ```
 /website/public/video/commodore-64/phase-1/tier-1/lesson-NNN-demonstration.mp4
 ```
-
-Example:
-- `lesson-001-demonstration.mp4`
-- `lesson-002-frequency-tables.mp4`
-- `lesson-006-rhythm-matching.mp4`
 
 ## Quality Guidelines
 
