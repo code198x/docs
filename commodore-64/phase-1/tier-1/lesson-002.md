@@ -138,6 +138,9 @@ B4    493.88   $20DA
 C5    523.25   $22CE
 ```
 
+**PAL vs NTSC:**
+These frequency values are for **PAL systems** (985,248 Hz clock). NTSC systems use a 1,022,727 Hz clock (~3.8% faster), requiring different values for the same pitch. If you're using an NTSC C64 or emulator, multiply these values by 1.038 or recalculate using the NTSC clock rate. For complete frequency tables covering both systems, see the SID Frequency Reference in the Vault.
+
 ## Common Pitfalls
 
 1. **16-bit values split wrong:** Must store low/high bytes separately

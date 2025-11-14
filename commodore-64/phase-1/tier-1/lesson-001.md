@@ -160,6 +160,9 @@ G:        $1A13 (392.00 Hz)
 A:        $1D45 (440.00 Hz)
 ```
 
+**PAL vs NTSC:**
+These frequency values are calculated for **PAL systems** (985,248 Hz clock). NTSC systems use a 1,022,727 Hz clock (~3.8% faster), requiring different values for the same pitch. For example, Middle C on NTSC = $1215. If targeting NTSC, multiply PAL values by 1.038 or recalculate using the NTSC clock rate.
+
 **Assembler:**
 Use ACME assembler (or KickAssembler/CA65):
 ```bash
