@@ -150,14 +150,14 @@ Bit 6: Pulse waveform
 Bit 7: Noise waveform
 ```
 
-**Common Note Frequencies:**
+**Common Note Frequencies (A440 PAL tuning):**
 ```
-Middle C: $1111 (261.63 Hz)
-D:        $1327 (293.66 Hz)
-E:        $1561 (329.63 Hz)
-F:        $166F (349.23 Hz)
-G:        $18F9 (392.00 Hz)
-A:        $1D38 (440.00 Hz)
+Middle C: $1167 (261.63 Hz)
+D:        $1389 (293.66 Hz)
+E:        $15ED (329.63 Hz)
+F:        $173B (349.23 Hz)
+G:        $1A13 (392.00 Hz)
+A:        $1D45 (440.00 Hz)
 ```
 
 **Assembler:**
