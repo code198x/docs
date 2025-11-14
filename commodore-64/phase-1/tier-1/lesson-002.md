@@ -118,24 +118,24 @@ sdly2:  dex
 **SID Frequency Registers:**
 - Voice 1 uses $D400 (low) + $D401 (high) for 16-bit frequency value
 
-**Musical Note Frequencies (PAL):**
+**Musical Note Frequencies (PAL, A440 tuning):**
 ```
 Note  Hz       SID Value (hex)
-C3    130.81   $0889
-D3    146.83   $0993
-E3    164.81   $0AB0
-F3    174.61   $0B37
-G3    196.00   $0C7C
-A3    220.00   $0DDC
-B3    246.94   $0F5C
-C4    261.63   $1111
-D4    293.66   $1327
-E4    329.63   $1561
-F4    349.23   $166F
-G4    392.00   $18F9
-A4    440.00   $1BB8
-B4    493.88   $1EB8
-C5    523.25   $2223
+C3    130.81   $08B3
+D3    146.83   $09C4
+E3    164.81   $0AF6
+F3    174.61   $0B9D
+G3    196.00   $0D09
+A3    220.00   $0EA2
+B3    246.94   $106D
+C4    261.63   $1167
+D4    293.66   $1389
+E4    329.63   $15ED
+F4    349.23   $173B
+G4    392.00   $1A13
+A4    440.00   $1D45
+B4    493.88   $20DA
+C5    523.25   $22CE
 ```
 
 ## Common Pitfalls

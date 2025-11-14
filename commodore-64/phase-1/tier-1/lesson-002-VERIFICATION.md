@@ -13,32 +13,39 @@
 
 ## Code Samples
 - [x] example-1.asm created (3-note sequence)
+- [x] example-1.asm committed to git (was missing initially)
 - [x] example-1.prg compiles without errors
 - [x] example-1 runs in VICE, plays C-E-G chord sequence
 - [x] example-2.asm created (full C major scale)
 - [x] example-2.prg compiles without errors
-- [x] example-2 runs in VICE, plays 9-note scale
+- [x] example-2 runs in VICE, plays 8-note scale (C4-C5)
 
 ## Audio
 - [x] example-1 audio captured (90 seconds, 44.1kHz)
 - [x] example-2 audio captured (90 seconds, 44.1kHz)
 - [x] Both audio files verified (RIFF WAVE format)
+- [x] Audio recaptured with corrected A440 PAL frequencies
 
 ## Quality
 - [x] British English validated
 - [x] Technical terms correct
 - [x] All sections present
 - [x] Curriculum aligned (Arc 1: First Sound, L2 of 3)
+- [x] Frequency values verified against A440 PAL standard
+- [x] Frequency table in documentation matches code examples
+- [x] All source files committed to git
 
 ## Integration
 - [x] Files in correct locations
 - [x] Referenced in Tier 1 README
 - [x] Git committed with descriptive messages
 
-## Ready for Publication: YES
+## Ready for Publication: YES (after corrections applied)
 
 ## Notes
 - Audio demonstrates frequency tables effectively
-- Example 1: Clear C-E-G chord progression
-- Example 2: Full scale shows data-driven approach
+- Example 1: Clear C-E-G chord progression (A440 PAL tuning)
+- Example 2: Full octave scale (C4-C5, 8 notes) shows data-driven approach
 - Both use correct ACME syntax (!byte directive)
+- **Corrections applied:** All frequency values corrected from flat tuning to proper A440 PAL standard
+- **Fixes:** Missing example-1.asm source committed, 9-note table reduced to standard 8-note octave
