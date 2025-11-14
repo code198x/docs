@@ -321,8 +321,8 @@ Each genre appears across multiple phases:
 - Tier 12: Multi-Directional Shooter → Bullet hell, raster effects
 - Tier 13: Advanced Tactics → Complex AI, large battles
 - Tier 14: Pinball Simulation → Realistic physics, multiple tables
-- Tier 15: Hybrid Genre → Shooter + RPG elements
-- Tier 16: Technical Demo Game → Showcase all Phase 5 techniques
+- Tier 15: Artillery Game → Scorched Earth/Worms-style destructible terrain
+- Tier 16: Tower Defense → Strategic unit placement, wave management
 
 **Dropped genres:** Flight Simulator (limited evolution), Isometric Tactics (evolved into Action RPG), Isometric Shooter (mechanics in other shooters)
 
@@ -356,8 +356,8 @@ Each genre appears across multiple phases:
 - Tier 12: Racing → Weather effects, dynamic tracks
 - Tier 13: Run 'n' Gun → Massive sprites, set pieces
 - Tier 14: Multi-Directional Shooter → Innovative control schemes
-- Tier 15: Experimental Mechanics → New gameplay ideas
-- Tier 16: Innovation Showcase → Pushing C64 boundaries
+- Tier 15: God Game → Populous-style terrain manipulation, indirect control
+- Tier 16: Construction/Management → Theme Park/Railroad Tycoon-style building
 
 **Dropped genres:** Pinball (limited further evolution), Sports Simulation (mechanics perfected), Advanced Tactics (now Strategy RPG), Hybrid Genre (all are hybrids now)
 
@@ -392,7 +392,7 @@ Each genre appears across multiple phases:
 - Tier 13: Puzzle Adventure → Atmospheric, environmental storytelling
 - Tier 14: Roguelike → Deep systems, replayability
 - Tier 15: Sandbox Game → Open-ended gameplay
-- Tier 16: Epic Showcase → 60+ minute experience
+- Tier 16: Stealth-Action → Metal Gear-style infiltration, detection mechanics
 
 **Dropped genres:** Puzzle Platformer (mechanics in Story-Driven), Roguelike Shooter (now Roguelike), Simulation (elements in other games)
 
@@ -426,12 +426,12 @@ Each genre appears across multiple phases:
 - Tier 12: Multi-Directional Shooter → Technical perfection
 - Tier 13: Roguelike → Endless replayability, depth
 - Tier 14: Sandbox → Open-ended, emergent gameplay
-- Tier 15: Experimental Masterpiece → Innovative + polished
-- Tier 16: Magnum Opus → Portfolio showcase, commercial-ready
+- Tier 15: Stealth-Action → Perfect infiltration mechanics, MGS-quality
+- Tier 16: 4X Strategy Lite → Civilization-inspired expand/explore/exploit/exterminate
 
 **Modern techniques:** FLD, VSP, advanced demo tricks, cycle-perfect code, ultimate optimization, all techniques at mastery
 
-**Dropped genres:** Puzzle Adventure (evolved into Story-Driven Epic), Experimental Mechanics (now Experimental Masterpiece)
+**Dropped genres:** Puzzle Adventure (evolved into Story-Driven Epic), God Game (mechanics in Sandbox), Construction/Management (mechanics in Sandbox)
 
 **New techniques:** Full-screen parallax at full speed, 50+ sprite multiplexing optimally, sophisticated physics, professional animation, cinematic presentation, complete audio, modern optimization, all techniques combined
 
@@ -563,7 +563,7 @@ Each genre appears across multiple phases:
 - **Phase 5:** Metroidvania (full), Pinball Simulation
 - **Phase 6:** Roguelike, Puzzle Platformer, Strategy RPG
 - **Phase 7:** Story-Driven Platformer, Sandbox, Puzzle Adventure
-- **Phase 8:** Experimental Masterpiece, Magnum Opus
+- **Phase 8:** Stealth-Action, 4X Strategy Lite
 
 ---
 
@@ -583,11 +583,11 @@ Each genre appears across multiple phases:
 - **Maintained engagement:** Genre variety prevents boredom
 
 ### Genre Diversity
-16 genres ensure:
+16 genres per phase ensure:
 - Different game mechanics explored
 - Varied technical challenges
 - Learner finds preferred genres
-- Portfolio showcases range
+- Completed games show breadth
 
 ### Assessment
 - **Per Tier:** Working playable game (self-assessment)

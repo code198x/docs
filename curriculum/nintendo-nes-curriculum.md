@@ -411,8 +411,8 @@ Tournament-quality balance, special move depth, variety
 ### Tier 13: Puzzle Action (Lessons 385-416)
 **New Genre:** Real-time puzzle solving under pressure
 
-### Tier 14: Technical Showcase Platformer (Lessons 417-448)
-**New Genre:** Pushing absolute limits of sprite, scroll, audio
+### Tier 14: Tower Defense (Lessons 417-448)
+**New Genre:** Strategic defender placement with wave management
 
 ### Tier 15: Narrative Action (Lessons 449-480)
 **New Genre:** Story-driven action with cinematic sequences
@@ -439,7 +439,7 @@ Tournament-quality balance, special move depth, variety
 - **All-Phase Core:** Side-Scrolling Platformer, Action-Adventure, Metroidvania, Run 'n' Gun, Beat 'Em Up, Action-Platformer
 - **Continued:** Side-Scrolling Shooter, Vertical Shooter, Action RPG, JRPG, Fighting Game, Roguelike
 - **New for Phase 6:** None (perfecting existing)
-- **Dropped:** Puzzle Action, Technical Showcase Platformer, Narrative Action, Hybrid Excellence
+- **Dropped:** Puzzle Action, Tower Defense, Narrative Action, Hybrid Excellence
 
 ### Tier 1: Side-Scrolling Platformer - Ultimate (Lessons 1-32)
 Genre-defining platformer pushing every limit
@@ -545,17 +545,17 @@ Ultimate one-on-one combat on NES
 ### Tier 12: Roguelike - Master (Lessons 353-384)
 Ultimate procedural dungeon crawler
 
-### Tier 13: Showcase Game 1 (Lessons 385-416)
-Technical and artistic showcase of student's choice
+### Tier 13: Artillery Strategy (Lessons 385-416)
+Worms-style turn-based destructible terrain combat
 
-### Tier 14: Showcase Game 2 (Lessons 417-448)
-Innovation showcase of student's choice
+### Tier 14: Puzzle-Platformer Hybrid (Lessons 417-448)
+Environmental puzzles integrated with precision platforming
 
-### Tier 15: Showcase Game 3 (Lessons 449-480)
-Genre mastery showcase of student's choice
+### Tier 15: God Game (Lessons 449-480)
+Populous-style terrain manipulation and indirect control
 
-### Tier 16: Showcase Game 4 (Lessons 481-512)
-Personal vision showcase of student's choice
+### Tier 16: 4X Strategy Lite (Lessons 481-512)
+Turn-based expand/explore/exploit/exterminate strategy
 
 ---
 
@@ -574,7 +574,7 @@ Personal vision showcase of student's choice
 **Genre Mix:**
 - **All-Phase Core:** All 6 core genres perfected
 - **Continued:** All 6 continued genres perfected
-- **Capstone:** Student-directed masterworks
+- **New Advanced:** Stealth-Action, Construction/Management, Pinball Simulation, Multi-Genre Epic
 
 ### Tier 1: Side-Scrolling Platformer - Legacy (Lessons 1-32)
 Ultimate platformer defining what's possible on NES
@@ -612,17 +612,17 @@ Ultimate fighting legacy
 ### Tier 12: Roguelike - Legacy (Lessons 353-384)
 Ultimate procedural crawler legacy
 
-### Tier 13: Magnum Opus 1 (Lessons 385-416)
-Student's ultimate vision - any genre, commercial quality
+### Tier 13: Stealth-Action (Lessons 385-416)
+Metal Gear-style line-of-sight infiltration and detection mechanics
 
-### Tier 14: Magnum Opus 2 (Lessons 417-448)
-Student's technical masterpiece - pushing boundaries
+### Tier 14: Construction/Management (Lessons 417-448)
+SimCity-inspired building and resource management simulation
 
-### Tier 15: Portfolio Compilation (Lessons 449-480)
-Best work compiled with professional presentation
+### Tier 15: Pinball Simulation (Lessons 449-480)
+Realistic pinball physics with multiple tables and modes
 
-### Tier 16: Commercial Release Preparation (Lessons 481-512)
-Cartridge production, distribution, preservation for modern platforms
+### Tier 16: Multi-Genre Epic (Lessons 481-512)
+Blaster Master-style game with distinct gameplay modes per area
 
 ---
 
@@ -681,15 +681,15 @@ These genres appear in all 8 phases with increasing sophistication:
 - **Hybrid Platformer:** Kirby copy abilities
 - **Platformer-Shooter Hybrid:** Integrated mechanics
 - **Experimental Platformer:** Unique movement
-- **Multi-Genre Game:** Blaster Master-style
-- **Technical Showcase:** Pure tech demo
+- **Tower Defense:** Strategic defender placement
 - **Narrative Action:** Story-driven action
 - **Hybrid Excellence:** Genre blending
 
-#### Phase 6-7 Only
-- **Innovative Platformer/Shooter/Adventure:** Unique mechanics
-- **Genre-Defying:** Transcends classification
-- **Showcase Games:** Student technical showcases
+#### Phase 7 Only
+- **Artillery Strategy:** Worms-style combat
+- **Puzzle-Platformer Hybrid:** Environmental puzzles with platforming
+- **God Game:** Populous-style indirect control
+- **4X Strategy Lite:** Turn-based empire building
 
 ### Emerging Genres by Phase
 
@@ -712,6 +712,18 @@ These genres appear in all 8 phases with increasing sophistication:
 #### Phase 5 Introductions
 - **Roguelike:** Procedural dungeons - **CONTINUES TO PHASE 8**
 
+#### Phase 7 Introductions
+- **Artillery Strategy:** Worms-style turn-based combat
+- **Puzzle-Platformer Hybrid:** Environmental puzzles with platforming
+- **God Game:** Populous-style indirect control
+- **4X Strategy Lite:** Turn-based empire strategy
+
+#### Phase 8 Introductions
+- **Stealth-Action:** Metal Gear-style infiltration
+- **Construction/Management:** SimCity-inspired building
+- **Pinball Simulation:** Realistic pinball physics
+- **Multi-Genre Epic:** Blaster Master-style mode switching
+
 ### Genre Count by Phase
 - **Phase 1:** 16 genres (foundation, learning hardware)
 - **Phase 2:** 16 genres (1 evolved, 7 new core, 8 other new, 12 dropped)
@@ -719,8 +731,8 @@ These genres appear in all 8 phases with increasing sophistication:
 - **Phase 4:** 16 genres (6 core, 4 continued, 3 new, 6 dropped)
 - **Phase 5:** 16 genres (6 core, 5 continued, 2 new, 5 dropped)
 - **Phase 6:** 16 genres (6 core, 6 continued, 0 new, 4 dropped)
-- **Phase 7:** 16 genres (6 core, 6 continued, 0 new, 4 dropped to showcases)
-- **Phase 8:** 16 genres (6 core, 6 continued, 4 capstone)
+- **Phase 7:** 16 genres (6 core, 6 continued, 4 new)
+- **Phase 8:** 16 genres (6 core, 6 continued, 4 new advanced)
 
 ---
 

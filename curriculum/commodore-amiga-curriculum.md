@@ -552,11 +552,11 @@ Ultimate procedural crawler with emergent gameplay depth
 ### Tier 14: Open-World RPG - Advanced (Lessons 417-448)
 Living world with NPC schedules, dynamic events, freedom
 
-### Tier 15: Hybrid Genre Masterwork (Lessons 449-480)
-Unique blend of two genres executed to perfection
+### Tier 15: Artillery Strategy (Lessons 449-480)
+Worms-style turn-based destructible terrain with advanced physics
 
-### Tier 16: Technical Showcase (Lessons 481-512)
-Pushing absolute limits of Amiga hardware capabilities
+### Tier 16: Tower Defense (Lessons 481-512)
+Strategic defender placement with wave management and upgrade systems
 
 ---
 
@@ -576,7 +576,7 @@ Pushing absolute limits of Amiga hardware capabilities
 **Genre Mix:**
 - **All-Phase Core:** Horizontal Shooter, Platform Game, Vertical Shooter, Run 'n' Gun, Racing, Beat 'Em Up
 - **Continued:** Point-and-Click Adventure, Metroidvania, Strategy Game, Action RPG, FPS, Roguelike, Fighting Game, Open-World RPG
-- **Capstone Games:** Student-directed masterworks and portfolio
+- **New Advanced:** God Game, 4X Strategy
 
 ### Tier 1: Horizontal Shooter - Legacy (Lessons 1-32)
 Ultimate showcase of the genre on Amiga platform
@@ -620,11 +620,11 @@ Ultimate procedural gameplay with endless replayability
 ### Tier 14: Open-World RPG - Legacy (Lessons 417-448)
 Living breathing game world with complete freedom
 
-### Tier 15: Magnum Opus Project (Lessons 449-480)
-**Student Choice:** Any genre, commercial quality, innovative mechanics, personal vision
+### Tier 15: God Game (Lessons 449-480)
+Populous-style terrain manipulation, indirect control, sophisticated AI systems
 
-### Tier 16: Portfolio & Commercial Release (Lessons 481-512)
-**Capstone:** Compile best work, professional presentation, distribution preparation, preservation
+### Tier 16: 4X Strategy (Lessons 481-512)
+Civilization-inspired expand/explore/exploit/exterminate with diplomacy and tech trees
 
 ---
 
@@ -727,7 +727,7 @@ These genres appear in all 8 phases with increasing sophistication:
 - **Phase 5:** 16 genres (6 core, 4 continued, 3 new, 6 dropped)
 - **Phase 6:** 16 genres (6 core, 6 continued, 2 new, 4 dropped)
 - **Phase 7:** 16 genres (6 core, 8 continued, 0 new, 2 dropped)
-- **Phase 8:** 16 genres (6 core, 8 continued, 2 capstone)
+- **Phase 8:** 16 genres (6 core, 8 continued, 2 new advanced)
 
 ---
 

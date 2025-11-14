@@ -599,23 +599,23 @@ Ultimate procedural dungeon crawler
 ### Tier 10: Open-World Adventure - Legacy (Lessons 289-320)
 Living breathing game world
 
-### Tier 11: Magnum Opus Project 1 (Lessons 321-352)
-Student's choice - any genre, commercial quality
+### Tier 11: Fighting Game - Legacy (Lessons 321-352)
+One-on-one combat with special moves and combos
 
-### Tier 12: Magnum Opus Project 2 (Lessons 353-384)
-Student's choice - push technical boundaries
+### Tier 12: Puzzle-Action - Legacy (Lessons 353-384)
+Real-time puzzle solving with arcade action elements
 
-### Tier 13: Magnum Opus Project 3 (Lessons 385-416)
-Student's choice - innovative mechanics
+### Tier 13: Artillery Strategy (Lessons 385-416)
+Worms-style turn-based destructible terrain combat
 
-### Tier 14: Magnum Opus Project 4 (Lessons 417-448)
-Student's choice - artistic vision
+### Tier 14: God Game (Lessons 417-448)
+Populous-style terrain manipulation and indirect control
 
-### Tier 15: Portfolio Showcase (Lessons 449-480)
-Compilation of best work with professional presentation
+### Tier 15: Stealth-Action (Lessons 449-480)
+Line-of-sight infiltration with detection mechanics
 
-### Tier 16: Commercial Release Preparation (Lessons 481-512)
-Marketing, distribution, preservation for modern platforms
+### Tier 16: 4X Strategy Lite (Lessons 481-512)
+Turn-based expand/explore/exploit/exterminate strategy
 
 ---
 
@@ -725,7 +725,7 @@ These genres appear in all 8 phases with increasing sophistication:
 - **Phase 5:** 16 genres (5 core, 4 continued, 3 new, 7 dropped)
 - **Phase 6:** 16 genres (5 core, 4 continued, 3 new, 7 dropped)
 - **Phase 7:** 16 genres (5 core, 5 continued, 0 new, 6 dropped)
-- **Phase 8:** 16 genres (5 core, 5 continued, 6 capstone)
+- **Phase 8:** 16 genres (5 core, 5 continued, 6 new advanced)
 
 ---
 
