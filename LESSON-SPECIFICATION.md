@@ -467,6 +467,67 @@ Sharp attack (A=0, D=9) creates the characteristic laser sound.
 - Lowercase hex (`$d020` not `$D020`)
 - Include comments explaining VIC-II, SID, CIA registers
 
+**Sprite positioning requirements (BASIC and Assembly):**
+
+**X-coordinate MSB ($D010) - CRITICAL:**
+- The C64 screen is 320 pixels wide, but sprite X registers ($D000, $D002, etc.) only hold 0-255
+- **MUST use $D010 (53264) MSB register** for X positions > 255
+- Introduce MSB concept in first sprite positioning lesson
+- ALL sprite examples after introduction must handle MSB correctly
+
+**Example (Assembly):**
+```asm
+    lda #200
+    sta $d000       ; Sprite 0 X position (low byte)
+
+    lda $d010
+    ora #%00000001  ; Set bit 0 for sprite 0 MSB
+    sta $d010       ; X = 256 + 200 = 456 (off-screen right)
+```
+
+**Example (BASIC):**
+```basic
+100 X=200
+110 POKE 53248,X              : REM LOW BYTE
+120 IF X>255 THEN POKE 53264,PEEK(53264) OR 1
+130 IF X<=255 THEN POKE 53264,PEEK(53264) AND 254
+```
+
+**Boundary checking - MANDATORY:**
+- Negative coordinates cause `?ILLEGAL QUANTITY ERROR` crashes
+- X coordinates must be 0-511 (with MSB)
+- Y coordinates must be 0-255
+- **Always validate before POKE:**
+
+```basic
+100 X=X+DX:Y=Y+DY
+110 IF X<0 THEN X=0
+120 IF X>319 THEN X=319
+130 IF Y<0 THEN Y=0
+140 IF Y>199 THEN Y=199
+150 POKE 53248,X AND 255
+160 IF X>255 THEN POKE 53264,PEEK(53264)OR 1:GOTO 180
+170 POKE 53264,PEEK(53264)AND 254
+180 POKE 53249,Y
+```
+
+**Assembly boundary checking:**
+```asm
+    ; Check Y lower bound
+    lda sprite_y
+    bpl +           ; Branch if positive
+    lda #0
+    sta sprite_y
++
+    ; Check Y upper bound
+    cmp #200
+    bcc +
+    lda #199
+    sta sprite_y
++
+    ; Similar for X with 0-319 range
+```
+
 **Validation:**
 ```bash
 ./scripts/validate-bas.sh example-1.bas  # BASIC validation
