@@ -567,6 +567,98 @@ Each genre appears across multiple phases:
 
 ---
 
+## Integration with Vault and Pattern Library
+
+### The Vault: Contextual Links
+
+Lessons should link to Vault entries when mentioning:
+
+**People:** Programmers, musicians, artists, designers
+- *Example:* "...similar to Martin Galway's approach in Comic Bakery..."
+- *Link to:* `/vault/people/martin-galway`
+
+**Companies:** Studios, publishers, hardware manufacturers
+- *Example:* "...techniques pioneered by Psygnosis..."
+- *Link to:* `/vault/companies/psygnosis`
+
+**Games:** Specific titles used as examples
+- *Example:* "...as seen in Mayhem in Monsterland..."
+- *Link to:* `/vault/games/mayhem-in-monsterland`
+
+**Techniques:** Programming methods and approaches
+- *Example:* "...using sprite multiplexing to display..."
+- *Link to:* `/vault/techniques/c64-sprite-multiplexing`
+
+**Hardware:** Chips and components being programmed
+- *Example:* "...the VIC-II chip's sprite registers..."
+- *Link to:* `/vault/hardware/vic-ii`
+
+**Cultural Context:** Movies, music, events for era context
+- *Example:* "...this game was released the same year as Aliens..."
+- *Link to:* `/vault/movies/aliens-1986`
+
+### The Pattern Library: Reference Implementations
+
+Lessons teach concepts step-by-step, then reference Pattern Library for production-ready code:
+
+**Pattern Introduction:**
+When a pattern is first taught, the lesson should:
+1. Teach the concept and build it up incrementally
+2. Show a working example in the lesson
+3. Reference the Pattern Library entry for the complete, production-ready version
+
+*Example at end of lesson:*
+```markdown
+## Further Practice
+
+For a complete, production-ready implementation with additional optimizations,
+see [Pattern: Sprite Multiplexing (Basic)](/patterns/c64/rendering/sprite-multiplexing-basic).
+```
+
+**Pattern Evolution:**
+As patterns evolve across phases, reference the appropriate version:
+- Phase 2: [Pattern: Sprite Multiplexing (Basic)](/patterns/c64/rendering/sprite-multiplexing-basic)
+- Phase 3: [Pattern: Sprite Multiplexing (Sorted)](/patterns/c64/rendering/sprite-multiplexing-sorted)
+- Phase 5: [Pattern: Sprite Multiplexing (Advanced)](/patterns/c64/rendering/sprite-multiplexing-advanced)
+
+**Pattern Categories for C64:**
+- **Rendering:** Sprites, scrolling, raster effects, character graphics
+- **Input:** Joystick, keyboard, multi-key detection
+- **Audio:** SID music, sound effects, mixing
+- **Physics:** Collision detection, gravity, projectiles
+- **AI:** Enemy behavior, pathfinding
+- **Framework:** Raster interrupts, game loops, state machines
+- **Optimization:** Unrolled loops, lookup tables, cycle counting
+
+### Integration Example
+
+**Lesson excerpt:**
+```markdown
+In this lesson, we're implementing sprite multiplexing to display more than
+8 sprites on screen. The VIC-II chip only supports 8 hardware sprites, but
+by using raster interrupts we can reuse them multiple times per frame.
+
+[...lesson content teaching the concept step by step...]
+
+This technique was pioneered in games like Uridium and became standard by
+the late 1980s. Mayhem in Monsterland uses advanced multiplexing to display
+50+ sprites with minimal flickering.
+
+## Further Reading
+
+**Pattern Library:**
+- [Sprite Multiplexing (Basic)](/patterns/c64/rendering/sprite-multiplexing-basic)
+- [Raster Interrupts](/patterns/c64/framework/raster-interrupts)
+
+**Vault:**
+- [Sprite Multiplexing Technique](/vault/techniques/c64-sprite-multiplexing)
+- [VIC-II Chip](/vault/hardware/vic-ii)
+- [Mayhem in Monsterland](/vault/games/mayhem-in-monsterland)
+- [Andrew Braybrook](/vault/people/andrew-braybrook) (Uridium creator)
+```
+
+---
+
 ## Curriculum Notes
 
 ### Powers of 2 Structure

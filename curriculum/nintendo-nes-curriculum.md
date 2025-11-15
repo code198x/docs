@@ -736,6 +736,99 @@ These genres appear in all 8 phases with increasing sophistication:
 
 ---
 
+## Integration with Vault and Pattern Library
+
+### The Vault: Contextual Links
+
+Lessons should link to Vault entries when mentioning:
+
+**People:** Programmers, musicians, artists, designers
+- *Example:* "...similar to Koji Kondo's approach in Super Mario Bros..."
+- *Link to:* `/vault/people/koji-kondo`
+
+**Companies:** Studios, publishers, hardware manufacturers
+- *Example:* "...developed by Konami..."
+- *Link to:* `/vault/companies/konami`
+
+**Games:** Specific titles used as examples
+- *Example:* "...the sprite multiplexing technique from Mega Man..."
+- *Link to:* `/vault/games/mega-man`
+
+**Techniques:** Programming methods and approaches
+- *Example:* "...using MMC3 scanline IRQs for status bar splits..."
+- *Link to:* `/vault/techniques/nes-mmc3-irq`
+
+**Hardware:** Chips and components being programmed
+- *Example:* "...the PPU's nametable system..."
+- *Link to:* `/vault/hardware/nes-ppu`
+
+**Cultural Context:** Movies, music, events for era context
+- *Example:* "...released during the height of NES popularity in 1989..."
+- *Link to:* `/vault/events/nes-golden-age`
+
+### The Pattern Library: Reference Implementations
+
+Lessons teach concepts step-by-step, then reference Pattern Library for production-ready code:
+
+**Pattern Introduction:**
+When a pattern is first taught, the lesson should:
+1. Teach the concept and build it up incrementally
+2. Show a working example in the lesson
+3. Reference the Pattern Library entry for the complete, production-ready version
+
+*Example at end of lesson:*
+```markdown
+## Further Practice
+
+For a complete, production-ready sprite management system with pooling,
+see [Pattern: Sprite Management System](/patterns/nes/rendering/sprite-management).
+```
+
+**Pattern Evolution:**
+As patterns evolve across phases, reference the appropriate version:
+- Phase 1: [Pattern: Sprite Display (Basic)](/patterns/nes/rendering/sprite-basic)
+- Phase 2: [Pattern: Sprite Multiplexing](/patterns/nes/rendering/sprite-multiplexing)
+- Phase 4: [Pattern: 8×16 Sprite Mode](/patterns/nes/rendering/sprite-8x16)
+
+**Pattern Categories for NES:**
+- **Rendering:** Sprite management, PPU scrolling, nametable updates, CHR-RAM
+- **Input:** Controller reading, two-player support, input buffering
+- **Audio:** APU music playback, sound effects, DPCM samples
+- **Physics:** Tile collision, platformer physics, projectiles
+- **AI:** Enemy behavior, pathfinding
+- **Framework:** NMI handlers, game loops, state machines
+- **Data:** Memory mappers (MMC1, MMC3, etc.), compression, CHR-ROM banking
+
+### Integration Example
+
+**Lesson excerpt:**
+```markdown
+In this lesson, we're implementing sprite management for our platformer. The
+NES PPU supports 64 sprites (8×8 or 8×16), but only 8 can be displayed per
+scanline. We need to manage sprite priority and handle the 8-per-scanline
+limit to minimize flickering.
+
+[...lesson content teaching the concept step by step...]
+
+Super Mario Bros. 3 uses sophisticated sprite management to handle Mario,
+enemies, power-ups, and effects simultaneously. The game prioritizes sprites
+intelligently, ensuring important elements (like Mario) never flicker.
+
+## Further Reading
+
+**Pattern Library:**
+- [Sprite Management System](/patterns/nes/rendering/sprite-management)
+- [OAM DMA Transfer](/patterns/nes/rendering/oam-dma)
+
+**Vault:**
+- [PPU (Picture Processing Unit)](/vault/hardware/nes-ppu)
+- [Super Mario Bros. 3](/vault/games/super-mario-bros-3)
+- [Shigeru Miyamoto](/vault/people/shigeru-miyamoto)
+- [Sprite Flickering Technique](/vault/techniques/nes-sprite-flickering)
+```
+
+---
+
 ## NES-Specific Technical Notes
 
 ### PPU (Picture Processing Unit)

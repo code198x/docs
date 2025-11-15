@@ -731,6 +731,98 @@ These genres appear in all 8 phases with increasing sophistication:
 
 ---
 
+## Integration with Vault and Pattern Library
+
+### The Vault: Contextual Links
+
+Lessons should link to Vault entries when mentioning:
+
+**People:** Programmers, musicians, artists, designers
+- *Example:* "...inspired by the Bitmap Brothers' visual style..."
+- *Link to:* `/vault/people/bitmap-brothers`
+
+**Companies:** Studios, publishers, hardware manufacturers
+- *Example:* "...techniques developed by Team17..."
+- *Link to:* `/vault/companies/team17`
+
+**Games:** Specific titles used as examples
+- *Example:* "...the parallax scrolling from Shadow of the Beast..."
+- *Link to:* `/vault/games/shadow-of-the-beast`
+
+**Techniques:** Programming methods and approaches
+- *Example:* "...using copper list programming for palette effects..."
+- *Link to:* `/vault/techniques/amiga-copper-effects`
+
+**Hardware:** Chips and components being programmed
+- *Example:* "...the Paula chip's sample playback capabilities..."
+- *Link to:* `/vault/hardware/paula-chip`
+
+**Cultural Context:** Movies, music, events for era context
+- *Example:* "...reflecting the demoscene's influence on commercial games..."
+- *Link to:* `/vault/culture/amiga-demoscene`
+
+### The Pattern Library: Reference Implementations
+
+Lessons teach concepts step-by-step, then reference Pattern Library for production-ready code:
+
+**Pattern Introduction:**
+When a pattern is first taught, the lesson should:
+1. Teach the concept and build it up incrementally
+2. Show a working example in the lesson
+3. Reference the Pattern Library entry for the complete, production-ready version
+
+*Example at end of lesson:*
+```markdown
+## Further Practice
+
+For a complete, production-ready blitter routine with optimization notes,
+see [Pattern: Blitter Rectangle Fill](/patterns/amiga/rendering/blitter-rectangle-fill).
+```
+
+**Pattern Evolution:**
+As patterns evolve across phases, reference the appropriate version:
+- Phase 1: [Pattern: Hardware Sprites (Basic)](/patterns/amiga/rendering/hardware-sprite-basic)
+- Phase 3: [Pattern: Hardware Sprites (Multiplexed)](/patterns/amiga/rendering/hardware-sprite-multiplexed)
+- Phase 5: [Pattern: Hardware Sprites (AGA Enhanced)](/patterns/amiga/rendering/hardware-sprite-aga)
+
+**Pattern Categories for Amiga:**
+- **Rendering:** BOBs, hardware sprites, blitter, copper, dual playfield
+- **Input:** Mouse, joystick, keyboard
+- **Audio:** Paula sample playback, MOD music, sound mixing
+- **Physics:** Collision detection, gravity, projectiles
+- **AI:** Enemy behavior, pathfinding
+- **Framework:** VBlank interrupts, game loops, state machines
+- **Optimization:** 68000 optimizations, blitter usage, memory management
+
+### Integration Example
+
+**Lesson excerpt:**
+```markdown
+In this lesson, we're using the Copper co-processor to create palette effects.
+The Copper is a specialized processor that can modify chip registers in sync
+with the video beam, enabling effects like sky gradients and raster bars.
+
+[...lesson content teaching the concept step by step...]
+
+This technique was showcased spectacularly in Shadow of the Beast, which used
+the Copper to create multi-layer parallax with unique palettes per layer.
+Psygnosis games became known for pushing the Copper to its limits.
+
+## Further Reading
+
+**Pattern Library:**
+- [Copper Palette Effects](/patterns/amiga/rendering/copper-palette-effects)
+- [Multi-Layer Parallax](/patterns/amiga/rendering/parallax-multilayer)
+
+**Vault:**
+- [Copper Co-Processor](/vault/hardware/copper)
+- [Shadow of the Beast](/vault/games/shadow-of-the-beast)
+- [Psygnosis](/vault/companies/psygnosis)
+- [Roger Dean](/vault/people/roger-dean) (Cover artist who influenced aesthetic)
+```
+
+---
+
 ## Amiga-Specific Technical Notes
 
 ### OCS/ECS vs AGA Chipsets

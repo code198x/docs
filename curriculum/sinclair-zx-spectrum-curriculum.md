@@ -729,6 +729,99 @@ These genres appear in all 8 phases with increasing sophistication:
 
 ---
 
+## Integration with Vault and Pattern Library
+
+### The Vault: Contextual Links
+
+Lessons should link to Vault entries when mentioning:
+
+**People:** Programmers, musicians, artists, designers
+- *Example:* "...influenced by Matthew Smith's work on Manic Miner..."
+- *Link to:* `/vault/people/matthew-smith`
+
+**Companies:** Studios, publishers, hardware manufacturers
+- *Example:* "...published by Ultimate Play the Game..."
+- *Link to:* `/vault/companies/ultimate-play-the-game`
+
+**Games:** Specific titles used as examples
+- *Example:* "...the isometric technique from Knight Lore..."
+- *Link to:* `/vault/games/knight-lore`
+
+**Techniques:** Programming methods and approaches
+- *Example:* "...using software sprite rendering with XOR..."
+- *Link to:* `/vault/techniques/zx-software-sprites`
+
+**Hardware:** Chips and components being programmed
+- *Example:* "...the Z80 CPU's register pairs..."
+- *Link to:* `/vault/hardware/z80-cpu`
+
+**Cultural Context:** Movies, music, events for era context
+- *Example:* "...released during the height of the UK home computer boom..."
+- *Link to:* `/vault/events/uk-home-computer-boom`
+
+### The Pattern Library: Reference Implementations
+
+Lessons teach concepts step-by-step, then reference Pattern Library for production-ready code:
+
+**Pattern Introduction:**
+When a pattern is first taught, the lesson should:
+1. Teach the concept and build it up incrementally
+2. Show a working example in the lesson
+3. Reference the Pattern Library entry for the complete, production-ready version
+
+*Example at end of lesson:*
+```markdown
+## Further Practice
+
+For a complete, production-ready implementation with attribute clash management,
+see [Pattern: Software Sprite Rendering (XOR)](/patterns/zx-spectrum/rendering/software-sprite-xor).
+```
+
+**Pattern Evolution:**
+As patterns evolve across phases, reference the appropriate version:
+- Phase 1: [Pattern: Software Sprites (Basic)](/patterns/zx-spectrum/rendering/software-sprite-basic)
+- Phase 3: [Pattern: Software Sprites (Masked)](/patterns/zx-spectrum/rendering/software-sprite-masked)
+- Phase 5: [Pattern: Software Sprites (Multi-Color)](/patterns/zx-spectrum/rendering/software-sprite-multicolor)
+
+**Pattern Categories for ZX Spectrum:**
+- **Rendering:** Software sprites, UDG, scrolling, attribute management
+- **Input:** Keyboard reading, Kempston joystick, multi-key detection
+- **Audio:** Beeper sound effects, beeper music, AY chip music (128K)
+- **Physics:** Collision detection, gravity, projectiles
+- **AI:** Enemy behavior, pathfinding
+- **Framework:** Interrupt handlers, game loops, state machines
+- **Optimization:** Unrolled loops, lookup tables, Z80 optimizations
+
+### Integration Example
+
+**Lesson excerpt:**
+```markdown
+In this lesson, we're implementing software sprites using XOR rendering. Unlike
+the C64's hardware sprites, the ZX Spectrum requires us to draw sprites by
+manipulating screen memory directly. XOR drawing allows us to erase sprites
+by redrawing them.
+
+[...lesson content teaching the concept step by step...]
+
+This technique was used extensively in classic Spectrum games. Knight Lore's
+isometric sprites used sophisticated masking to handle the attribute system,
+while Exolon used pre-shifted sprite data for smooth horizontal movement.
+
+## Further Reading
+
+**Pattern Library:**
+- [Software Sprite Rendering (XOR)](/patterns/zx-spectrum/rendering/software-sprite-xor)
+- [Attribute Management](/patterns/zx-spectrum/rendering/attribute-management)
+
+**Vault:**
+- [Software Sprites Technique](/vault/techniques/zx-software-sprites)
+- [ULA Chip](/vault/hardware/zx-ula)
+- [Knight Lore](/vault/games/knight-lore)
+- [The Stamper Brothers](/vault/people/stamper-brothers) (Ultimate founders)
+```
+
+---
+
 ## ZX Spectrum-Specific Technical Notes
 
 ### Attribute Clash
