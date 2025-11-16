@@ -103,10 +103,3 @@ When you notice a repeated failure pattern:
 **With skills:** "petcat compiled successfully [output shown], screenshots exist [ls output shown], curriculum verified [spec quoted], lesson complete with evidence"
 
 **Skills turn subjective judgment into objective verification.**
-
----
-
-**See also:**
-- /CRITICAL-CURRICULUM-AUTHORITY.md (curriculum process)
-- /docs/LESSON-PREFLIGHT-CHECKLIST.md (quality checklist)
-- /docs/START-HERE.md (reference navigation)
