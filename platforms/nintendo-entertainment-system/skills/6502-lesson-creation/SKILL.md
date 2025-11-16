@@ -27,7 +27,7 @@ Use when:
 **Before starting, ensure:**
 
 1. **lesson-creation-workflow skill** - Read generic workflow first
-2. **Curriculum alignment** - Read `/docs/nintendo-entertainment-system/PHASE-N-CURRICULUM.md`
+2. **Curriculum alignment** - Read `/docs/curriculum/nintendo-nes-curriculum.md`
 3. **Tools installed:**
    - `ca65` (cc65 assembler) - 6502 assembler
    - `ld65` (cc65 linker) - With NES configuration
@@ -550,7 +550,6 @@ wait_vblank:
 **Essential docs:**
 - `/docs/NES-QUICK-REFERENCE.md` - PPU/APU registers, memory map
 - `/docs/6502-QUICK-REFERENCE.md` - 6502 instruction set (no illegal opcodes)
-- `/docs/START-HERE.md` - Navigation
 
 ---
 

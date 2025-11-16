@@ -17,7 +17,7 @@ This skill guides creation of ZX Spectrum Z80 assembly lessons. Z80 is NOT 6502 
 ## Prerequisites
 
 1. **lesson-creation-workflow skill**
-2. **Curriculum:** `/docs/sinclair-zx-spectrum/PHASE-N-CURRICULUM.md`
+2. **Curriculum:** `/docs/curriculum/sinclair-zx-spectrum-curriculum.md`
 3. **Tools:** sjasmplus assembler, FUSE emulator, Python 3 validator
 
 ## Z80 Assembly Rules
@@ -287,7 +287,6 @@ EXX
 **Essential docs:**
 - `/docs/Z80-QUICK-REFERENCE.md` - Z80 instruction set
 - `/docs/ZX-SPECTRUM-QUICK-REFERENCE.md` - ULA, memory map
-- `/docs/START-HERE.md` - Navigation
 
 ## The Bottom Line
 

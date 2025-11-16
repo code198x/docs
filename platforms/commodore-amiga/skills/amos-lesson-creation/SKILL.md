@@ -17,7 +17,7 @@ This skill guides creation of Amiga AMOS BASIC lessons. AMOS is Amiga-specific B
 ## Prerequisites
 
 1. **lesson-creation-workflow skill**
-2. **Curriculum:** `/docs/commodore-amiga/PHASE-N-CURRICULUM.md`
+2. **Curriculum:** `/docs/curriculum/commodore-amiga-curriculum.md`
 3. **Tools:** AMOS Pro (in emulator), FS-UAE emulator, Python 3 validator
 
 ## AMOS BASIC Rules
@@ -249,7 +249,6 @@ Screen Close 0
 **Essential docs:**
 - `/docs/AMIGA-QUICK-REFERENCE.md` - AMOS commands, hardware
 - `/docs/68000-QUICK-REFERENCE.md` - For assembly (not AMOS)
-- `/docs/START-HERE.md` - Navigation
 
 ## The Bottom Line
 

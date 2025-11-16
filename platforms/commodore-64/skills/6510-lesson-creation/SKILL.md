@@ -27,7 +27,9 @@ Use when:
 **Before starting, ensure:**
 
 1. **lesson-creation-workflow skill** - Read generic workflow first
-2. **Curriculum alignment** - Read `/docs/commodore-64/PHASE-N-CURRICULUM.md`
+2. **Curriculum alignment** - Read curriculum file from `/docs/curriculum/`:
+   - Phase 0 Tier 1: `/docs/curriculum/commodore-64-phase-0-tier-1-curriculum.md`
+   - General C64: `/docs/curriculum/commodore-64-curriculum.md`
 3. **Tools installed:**
    - `ca65` (cc65 assembler) - 6502/6510 assembler
    - `ld65` (cc65 linker) - Produces .prg files
@@ -558,12 +560,15 @@ $D027  ; Sprite 0 colour
 
 ## Platform-Specific Resources
 
-**Essential docs:**
-- `/docs/6510-QUICK-REFERENCE.md` - Instruction set, addressing modes
-- `/docs/VIC-II-QUICK-REFERENCE.md` - Hardware registers
-- `/docs/SID-QUICK-REFERENCE.md` - Sound registers
-- `/docs/CIA-QUICK-REFERENCE.md` - I/O registers
-- `/docs/START-HERE.md` - Navigation
+**Essential quick references** (in `/docs/platforms/commodore-64/hardware/`):
+- `6510-QUICK-REFERENCE.md` - Instruction set, addressing modes
+- `VIC-II-QUICK-REFERENCE.md` - Hardware registers
+- `SID-CHIP-REFERENCE.md` - Sound registers
+- `CIA-QUICK-REFERENCE.md` - I/O registers
+
+**Common errors documentation:**
+- `/docs/platforms/commodore-64/advanced/6510-COMMON-ERRORS.md` - Assembly pitfalls
+- `/docs/platforms/commodore-64/basic-v2/C64-COMMON-ERRORS.md` - BASIC pitfalls
 
 ---
 

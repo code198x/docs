@@ -17,7 +17,7 @@ This skill guides creation of ZX Spectrum Sinclair BASIC lessons. Key difference
 ## Prerequisites
 
 1. **lesson-creation-workflow skill**
-2. **Curriculum:** `/docs/sinclair-zx-spectrum/PHASE-N-CURRICULUM.md`
+2. **Curriculum:** `/docs/curriculum/sinclair-zx-spectrum-curriculum.md`
 3. **Tools:** zmakebas compiler, FUSE emulator, Python 3 validator
 
 ## ZX Spectrum BASIC Rules
@@ -234,10 +234,13 @@ fuse example-1.tap
 
 ## Platform-Specific Resources
 
-**Essential docs:**
-- `/docs/ZX-SPECTRUM-QUICK-REFERENCE.md` - ULA, memory map
-- `/docs/Z80-QUICK-REFERENCE.md` - For assembly (not BASIC)
-- `/docs/START-HERE.md` - Navigation
+**Essential quick references** (in `/docs/platforms/sinclair-zx-spectrum/language/`):
+- `ZX-SPECTRUM-BASIC-QUICK-REFERENCE.md` - BASIC commands, syntax
+- `ZX-SPECTRUM-MEMORY-AND-GRAPHICS-REFERENCE.md` - ULA, memory map, graphics
+
+**Common errors documentation:**
+- `/docs/platforms/sinclair-zx-spectrum/ZX-COMMON-ERRORS.md` - BASIC pitfalls
+- `/docs/platforms/sinclair-zx-spectrum/Z80-COMMON-ERRORS.md` - Assembly pitfalls
 
 ## The Bottom Line
 

@@ -126,7 +126,9 @@ Use when:
 **Before starting, ensure:**
 
 1. **lesson-creation-workflow skill** - Read generic workflow first
-2. **Curriculum alignment** - Read `/docs/commodore-64/PHASE-N-CURRICULUM.md`
+2. **Curriculum alignment** - Read curriculum file from `/docs/curriculum/`:
+   - Phase 0 Tier 1: `/docs/curriculum/commodore-64-phase-0-tier-1-curriculum.md`
+   - General C64: `/docs/curriculum/commodore-64-curriculum.md`
 3. **Tools installed:**
    - `petcat` (VICE tools) - BASIC tokenizer/detokenizer
    - `x64sc` (VICE emulator) - For screenshot capture
@@ -674,16 +676,20 @@ python3 /scripts/validate-c64-basic.py example-1.bas
 
 ## Platform-Specific Resources
 
-**Essential docs:**
-- `/docs/VIC-II-QUICK-REFERENCE.md` - Screen, sprites, colours
-- `/docs/SID-QUICK-REFERENCE.md` - Sound synthesis
-- `/docs/CIA-QUICK-REFERENCE.md` - Joystick, keyboard
-- `/docs/PETSCII-AND-SCREEN-CODES.md` - Character codes
-- `/docs/START-HERE.md` - Navigation to other references
+**Essential quick references** (in `/docs/platforms/commodore-64/hardware/`):
+- `VIC-II-QUICK-REFERENCE.md` - Screen, sprites, colours
+- `SID-CHIP-REFERENCE.md` - Sound synthesis
+- `CIA-QUICK-REFERENCE.md` - Joystick, keyboard
+- `PETSCII-AND-SCREEN-CODES.md` - Character codes
+- `6510-QUICK-REFERENCE.md` - CPU instructions (for assembly)
 
-**Avoid unless needed:**
-- `/docs/VIC-II-REFERENCE.md` (90KB - full hardware specs)
-- `/docs/6526-CIA-REFERENCE.md` (80KB - electrical specs)
+**Common errors documentation:**
+- `/docs/platforms/commodore-64/basic-v2/C64-COMMON-ERRORS.md` - BASIC pitfalls
+- `/docs/platforms/commodore-64/advanced/6510-COMMON-ERRORS.md` - Assembly pitfalls
+
+**Comprehensive references** (use only if you need deep hardware details):
+- `VIC-II-REFERENCE.md` - Full VIC-II hardware specs
+- `6526-CIA-REFERENCE.md` - Full CIA hardware specs
 
 ---
 

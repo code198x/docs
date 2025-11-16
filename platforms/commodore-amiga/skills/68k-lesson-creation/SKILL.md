@@ -17,7 +17,7 @@ This skill guides creation of Amiga 68000 assembly lessons. The 68000 is complet
 ## Prerequisites
 
 1. **lesson-creation-workflow skill**
-2. **Curriculum:** `/docs/commodore-amiga/PHASE-N-CURRICULUM.md`
+2. **Curriculum:** `/docs/curriculum/commodore-amiga-curriculum.md`
 3. **Tools:** vasm assembler (68000, mot syntax), FS-UAE emulator, Python 3 validator
 
 ## 68000 Assembly Rules
@@ -342,7 +342,6 @@ $DFF180  ; Color palette
 **Essential docs:**
 - `/docs/68000-QUICK-REFERENCE.md` - 68000 instruction set
 - `/docs/AMIGA-QUICK-REFERENCE.md` - Custom chips, memory map
-- `/docs/START-HERE.md` - Navigation
 
 ## The Bottom Line
 
