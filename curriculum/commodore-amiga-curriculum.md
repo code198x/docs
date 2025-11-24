@@ -5,7 +5,7 @@
 This curriculum covers game development for the Commodore Amiga across 8 phases of increasing complexity, from foundational 68000 assembly games through sophisticated commercial-quality titles that showcased the platform's legendary capabilities.
 
 **Total Structure:**
-- **8 Phases** (2^3) - Technical progression from 1985-style to 1994-style games
+- **9 Phases (0-8)** - Phase 0 AMOS BASIC is the recommended starting point; Phases 1-8 cover 68000 assembly
 - **16 Tiers per Phase** (2^4) - 16 different game genres/types
 - **32 Lessons per Tier** (2^5) - Complete game development cycle
 - **Total: 4,096 lessons** (2^12)

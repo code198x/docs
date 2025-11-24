@@ -5,7 +5,7 @@
 This curriculum covers game development for the Sinclair ZX Spectrum across 8 phases of increasing complexity, from basic arcade-style games to sophisticated commercial-quality titles that pushed the hardware to its limits.
 
 **Total Structure:**
-- **8 Phases** (2^3) - Technical progression from 1982-style to 1992-style games
+- **9 Phases (0-8)** - Phase 0 BASIC is the recommended starting point; Phases 1-8 cover Z80 assembly
 - **16 Tiers per Phase** (2^4) - 16 different game genres/types
 - **32 Lessons per Tier** (2^5) - Complete game development cycle
 - **Total: 4,096 lessons** (2^12)

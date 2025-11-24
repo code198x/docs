@@ -8,7 +8,7 @@
 
 ## Overview
 
-Phase 0 is the optional beginner on-ramp for platforms with accessible high-level languages (BASIC, FORTH, etc.). It introduces programming fundamentals and game development concepts before transitioning to assembly language in Phase 1.
+Phase 0 is the recommended beginner on-ramp for platforms with accessible high-level languages (BASIC, FORTH, etc.). It introduces programming fundamentals and game development concepts before transitioning to assembly language in Phase 1.
 
 **Target Audience:**
 - Complete programming novices

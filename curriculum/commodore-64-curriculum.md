@@ -1,7 +1,7 @@
 # Commodore 64 Assembly Curriculum
 
 **Platform:** commodore-64
-**Phases:** 1-8 (Phase 0 BASIC is deprioritized)
+**Phases:** 0-8 (Phase 0 BASIC is the recommended starting point)
 **Total Tiers:** 128 (16 per phase, 2^7)
 **Lessons Per Tier:** 32 (2^5)
 **Total Lessons:** 4,096 (2^12)

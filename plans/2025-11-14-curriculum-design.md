@@ -615,7 +615,7 @@ Modern optimization techniques discovered post-era but running on original hardw
 
 ### Commodore 64 Toolchain
 
-**BASIC (Phase 0 - Deprioritized):**
+**BASIC (Phase 0 - Recommended Starting Point):**
 - **Tokenizer:** petcat (from VICE)
 - **Validation:** Multi-stage
   1. Tokenization: `petcat -w2 -o output.prg -- input.bas`
@@ -633,7 +633,7 @@ Modern optimization techniques discovered post-era but running on original hardw
 
 ### Sinclair ZX Spectrum Toolchain
 
-**BASIC (Phase 0 - Deprioritized):**
+**BASIC (Phase 0 - Recommended Starting Point):**
 - **Tool:** zmakebas or bas2tap
 - **Output format:** .tap files
 - **Emulator:** FUSE (Free Unix Spectrum Emulator)
@@ -648,7 +648,7 @@ Modern optimization techniques discovered post-era but running on original hardw
 
 ### Commodore Amiga Toolchain
 
-**AMOS BASIC (Phase 0 - Deprioritized):**
+**AMOS BASIC (Phase 0 - Recommended Starting Point):**
 - **Tool:** AMOS Professional (in emulator)
 - **Emulator:** FS-UAE
 - **Output format:** .adf (disk images)
