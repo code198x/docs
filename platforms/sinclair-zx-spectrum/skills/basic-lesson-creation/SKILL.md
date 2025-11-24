@@ -1,39 +1,33 @@
 ---
-name: zx-lesson-creation  
-description: Use when creating or editing ZX Spectrum BASIC lessons - enforces platform-specific compilation, validation, screenshot capture, and Sinclair BASIC requirements
+name: zx-basic-lesson-creation
+description: Use when creating or editing ZX Spectrum BASIC lessons - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
 ---
 
 # ZX Spectrum BASIC Lesson Creation
 
-## Overview
+**Role:** Technical execution for Phase 3 (Validation) of the Content Creation Workflow.
 
-This skill guides creation of ZX Spectrum Sinclair BASIC lessons. Key differences from C64 BASIC: mandatory LET keyword, PRINT AT y,x (not x,y), ULA graphics (attribute-based colour), BEEP sound (no sound chip), case-insensitive, .tap file format.
+**Prerequisite:** Read `/docs/CONTENT-CREATION-WORKFLOW.md` first. This skill provides ZX-specific technical details, not the full workflow.
+
+---
 
 ## When to Use
 
-- Creating/editing ZX Spectrum BASIC lessons
-- **NOT** for Z80 assembly (use zx-z80-lesson-creation)
+Use this skill during **Phase 3 (Validation)** when:
+- Compiling ZX Spectrum BASIC with zmakebas
+- Capturing screenshots with FUSE emulator
+- Validating Sinclair BASIC syntax
+- Checking for ZX-specific pitfalls
 
-## Prerequisites
+**Do NOT use for:**
+- Z80 Assembly lessons (use `z80-lesson-creation` skill)
+- Other platforms (use platform-specific skills)
 
-1. **lesson-creation-workflow skill**
-2. **Curriculum:** `/docs/curriculum/sinclair-zx-spectrum-curriculum.md`
-3. **Tools:** zmakebas compiler, FUSE emulator, Python 3 validator
+---
 
-## ZX Spectrum BASIC Rules
+## Sinclair BASIC Rules
 
-### 1. Case-Insensitive Keywords
-
-```basic
-✓ CORRECT (any case works):
-10 PRINT "HELLO"
-10 print "hello"
-10 Print "Hello"
-
-✗ C64-style lowercase in .bas not required
-```
-
-### 2. Mandatory LET Keyword
+### 1. Mandatory LET Keyword
 
 ```basic
 ✓ CORRECT:
@@ -44,7 +38,7 @@ This skill guides creation of ZX Spectrum Sinclair BASIC lessons. Key difference
 10 SCORE=0     ← Syntax error without LET
 ```
 
-### 3. PRINT AT (Note Order: Y,X)
+### 2. PRINT AT Order (Y,X - Row First!)
 
 ```basic
 ✓ CORRECT:
@@ -54,210 +48,203 @@ This skill guides creation of ZX Spectrum Sinclair BASIC lessons. Key difference
 10 PRINT AT 5,10;"HELLO"  ; Backwards!
 ```
 
-### 4. Colour System (INK/PAPER/BORDER)
+### 3. Colours 0-7 Only (Not 0-15)
 
 ```basic
 10 BORDER 0        ; Black border
-20 PAPER 7         ; White paper (background)
-30 INK 2           ; Red ink (foreground)
-40 PRINT "HELLO"   ; Red text on white
+20 PAPER 7         ; White paper
+30 INK 2           ; Red ink
+
+Colours: 0=black, 1=blue, 2=red, 3=magenta, 4=green, 5=cyan, 6=yellow, 7=white
 ```
 
-**Colours: 0-7 only** (not 0-15 like C64)
-
-### 5. BEEP for Sound
+### 4. BEEP for Sound (No Sound Chip)
 
 ```basic
 10 BEEP duration,pitch
 20 BEEP 0.5,10    ; 0.5 sec, pitch 10
 ```
 
-**No SID chip - BEEP only!**
+### 5. Case-Insensitive
 
-## Required Files Checklist
+Any case works (unlike C64):
+```basic
+10 PRINT "HELLO"
+10 print "hello"
+10 Print "Hello"  ; All valid
+```
 
-- [ ] `/website/src/pages/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN.mdx`
-- [ ] `/code-samples/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/example-1.bas`
-- [ ] `/code-samples/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/example-1.tap` (compiled)
-- [ ] `/website/public/images/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/screenshot-1.png`
+---
 
-## Compilation Process
+## Phase 3: Validation (Technical Details)
+
+### Step 3.1: Semantic Validation
 
 ```bash
 cd /code-samples/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/
 
-# Compile to .tap
-zmakebas -o example-1.tap -n LESSON example-1.bas
-
-# -n LESSON = Program name shown in ZX menu
-```
-
-**Semantic validation:**
-```bash
 python3 /scripts/validate-zx-basic.py example-1.bas
 ```
 
 **Checks:**
-- LET keyword present for assignments
-- PRINT AT order (y,x not x,y)
-- Colours 0-7 range
-- Screen coordinates (32×24 characters)
-- PEEK/POKE addresses valid for ZX
+- ✅ LET keyword present for assignments
+- ✅ PRINT AT order (y,x not x,y)
+- ✅ Colours 0-7 range
+- ✅ Screen coordinates (32×24)
+- ✅ PEEK/POKE addresses valid
 
-## Screenshot Capture (FUSE - Manual Only)
-
-**FUSE emulator resists automation - manual capture required:**
+### Step 3.2: Compilation (zmakebas)
 
 ```bash
-# Load ROM
-fuse example-1.tap
-
-# Media → Screenshot
-# Save to /website/public/images/sinclair-zx-spectrum/.../screenshot-1.png
+zmakebas -o example-1.tap -n LESSON example-1.bas
+echo $?  # Must be 0
 ```
 
-**Verify with READ tool after capture.**
+**Flags:**
+- `-o example-1.tap` = Output .tap file
+- `-n LESSON` = Program name in ZX menu
+- `example-1.bas` = Input source
 
-## ZX-Specific Validation
+### Step 3.3: Screenshot Capture (FUSE - Manual)
 
-### Memory Map
+**FUSE resists automation - manual capture required:**
 
-| Range | Purpose | Writable |
-|-------|---------|----------|
-| $4000-$57FF | Screen RAM | ✓ |
-| $5800-$5AFF | Attribute RAM (colour) | ✓ |
-| $5B00-$FFFF | User RAM | ✓ |
+```bash
+fuse example-1.tap
+```
+
+1. Wait for program to run
+2. Menu → Media → Screenshot
+3. Save to `/website/public/images/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/screenshot-1.png`
+
+### Step 3.4: Screenshot Verification (MANDATORY)
+
+**Use Read tool to VIEW every screenshot:**
+
+```
+✅ CORRECT: "Read screenshot-1.png - shows blue border, white background,
+   text 'SCORE: 100' at row 10. NO error messages visible."
+
+❌ WRONG: "Screenshot verified ✅" (too vague)
+```
+
+**If ANY error found:** Fix code → Recompile → Recapture → Re-verify
+
+---
+
+## Memory Map
+
+| Range | Decimal | Purpose |
+|-------|---------|---------|
+| $4000-$57FF | 16384-22527 | Screen RAM (bitmap) |
+| $5800-$5AFF | 22528-23295 | Attribute RAM (colour) |
+| $5B00-$FFFF | 23296-65535 | User RAM |
 
 **Screen:** 256×192 pixels, 32×24 characters
-**Attributes:** 8×8 pixel blocks, INK/PAPER/BRIGHT/FLASH
 
-### ULA Port ($FE)
+**Attributes:** 8×8 pixel blocks with INK/PAPER/BRIGHT/FLASH
+
+---
+
+## ULA Port
 
 ```basic
 OUT 254,value   ; Border colour + speaker
 ```
 
-**Bits:**
-- 0-2: Border colour
-- 3: MIC (cassette)
-- 4: Speaker (BEEP)
+**Bits 0-2:** Border colour (0-7)
+**Bit 4:** Speaker (BEEP)
 
-## Anti-Patterns
+---
+
+## Common Pitfalls
 
 ### 1. Missing LET
-
-**Anti-pattern:**
 ```basic
-10 X=5     ← Syntax error!
-```
-
-**Fix:**
-```basic
-10 LET X=5
+❌ WRONG: 10 X=5       ; Syntax error!
+✅ CORRECT: 10 LET X=5
 ```
 
 ### 2. PRINT AT Order Wrong
-
-**Anti-pattern:**
 ```basic
-10 PRINT AT 5,10;"X"  ; Column 5, Row 10 - backwards!
+❌ WRONG: 10 PRINT AT 5,10;"X"   ; Column 5, Row 10 - backwards!
+✅ CORRECT: 10 PRINT AT 10,5;"X" ; Row 10, Column 5
 ```
 
-**Fix:**
+### 3. Colour Out of Range
 ```basic
-10 PRINT AT 10,5;"X"  ; Row 10, Column 5
+❌ WRONG: 10 INK 14    ; Only 0-7 valid!
+✅ CORRECT: 10 INK 6
 ```
 
-### 3. Using C64 Colour Codes
-
-**Anti-pattern:**
+### 4. Expecting SID Chip
 ```basic
-10 INK 14  ; Only 0-7 valid!
+❌ WRONG: OUT 54296,15  ; C64 SID volume - doesn't exist!
+✅ CORRECT: BEEP 1,10   ; ZX uses BEEP only
 ```
 
-**Fix:**
-```basic
-10 INK 6   ; Use 0-7 range
-```
+---
 
-### 4. Wasting Memory
+## Required Files
 
-**Principle: Don't waste space**
-- ZX Spectrum 48K has limited RAM
-- Keep code tight, no unnecessary padding
-- Use space-efficient algorithms
+| File | Location |
+|------|----------|
+| Lesson MDX | `/website/src/pages/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN.mdx` |
+| Source (.bas) | `/code-samples/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/example-1.bas` |
+| Tape (.tap) | `/code-samples/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/example-1.tap` |
+| Screenshot | `/website/public/images/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/screenshot-1.png` |
 
-## Complete Workflow Checklist
+---
 
-1. **Preparation:** Read curriculum, create directories
-2. **Code Creation:** Write .bas with LET, compile with zmakebas
-3. **Screenshot:** Manual capture with FUSE
-4. **Lesson MDX:** Create with uppercase keywords for display
-5. **Validation:** Run all validation skills
-6. **File Verification:** ls all locations
-7. **Navigation Update:** Update tier/phase/platform indexes
+## Quick Reference Commands
 
-## Quick Reference
-
-### Compilation
 ```bash
+# Semantic validation
+python3 /scripts/validate-zx-basic.py example-1.bas
+
+# Compile
 zmakebas -o example-1.tap -n LESSON example-1.bas
-```
 
-### Screenshot
-```bash
+# Screenshot (manual)
 fuse example-1.tap
-# Media → Screenshot (manual)
+# Media → Screenshot
 ```
 
-### Key Differences from C64
-- LET mandatory
-- PRINT AT y,x (not x,y)
-- Colours 0-7 (not 0-15)
-- BEEP (no SID chip)
-- Case-insensitive
+---
 
-### Common Addresses
-```basic
-16384  REM Screen start ($4000)
-22528  REM Attributes start ($5800)
-254    REM ULA port (border/sound)
-```
+## Key Differences from C64
 
-## Common Mistakes
+| Feature | C64 | ZX Spectrum |
+|---------|-----|-------------|
+| LET keyword | Optional | **Mandatory** |
+| PRINT position | POKE cursor | PRINT AT y,x |
+| Colours | 0-15 | 0-7 |
+| Sound | SID chip | BEEP only |
+| Case | Lowercase in .bas | Any case |
+| Output format | .prg | .tap |
 
-1. **Missing LET** - Syntax error
-2. **PRINT AT backwards** - Wrong coordinates
-3. **Colour out of range** - Only 0-7
-4. **Expecting SID chip** - Use BEEP only
-5. **C64-style lowercase** - Not required, any case works
+---
 
 ## Platform-Specific Resources
 
-**Essential quick references** (in `/docs/platforms/sinclair-zx-spectrum/language/`):
-- `ZX-SPECTRUM-BASIC-QUICK-REFERENCE.md` - BASIC commands, syntax
-- `ZX-SPECTRUM-MEMORY-AND-GRAPHICS-REFERENCE.md` - ULA, memory map, graphics
+**Quick references** (in `/docs/platforms/sinclair-zx-spectrum/`):
+- `language/ZX-SPECTRUM-BASIC-QUICK-REFERENCE.md` - Commands, syntax
+- `language/ZX-SPECTRUM-MEMORY-AND-GRAPHICS-REFERENCE.md` - ULA, memory
 
-**Common errors documentation:**
-- `/docs/platforms/sinclair-zx-spectrum/ZX-COMMON-ERRORS.md` - BASIC pitfalls
-- `/docs/platforms/sinclair-zx-spectrum/Z80-COMMON-ERRORS.md` - Assembly pitfalls
+**Common errors:**
+- `ZX-COMMON-ERRORS.md` - BASIC pitfalls
+- `Z80-COMMON-ERRORS.md` - Assembly pitfalls
+
+---
 
 ## The Bottom Line
 
-**ZX Spectrum BASIC lessons require:**
-1. zmakebas compilation to .tap
-2. LET keyword for all assignments
-3. PRINT AT y,x order (row first)
-4. Colours 0-7 range
-5. FUSE manual screenshot capture
-6. Space-efficient code (48K RAM limit)
-7. British English (except "program")
+**This skill provides:** Compilation, validation, and screenshot capture for ZX BASIC lessons.
+
+**The main workflow provides:** Planning, creation, integration, and publication steps.
 
 **Zero tolerance for:**
 - Missing LET keyword
-- Wrong PRINT AT order
+- Wrong PRINT AT order (must be y,x)
 - Colour values > 7
 - Unverified screenshots
-- American spellings (except "program")
-
-**Every ZX BASIC lesson must compile to .tap, run in FUSE, and display expected output verified with manual screenshots.**

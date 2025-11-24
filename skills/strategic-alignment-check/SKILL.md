@@ -7,7 +7,7 @@ description: Use when validating lesson against project strategic principles - s
 
 ## Overview
 
-Every lesson must align with strategic principles in `/docs/STRATEGIC-FOUNDATION.md`. Lessons violating core principles (copyright, nostalgia, abstract theory, modern engines, instructor dependency) must be rejected.
+Every lesson must align with strategic principles in `/docs/CONTENT-CREATION-WORKFLOW.md` (see "Strategic Principles" section). Lessons violating core principles (copyright, nostalgia, abstract theory, modern engines, instructor dependency) must be rejected.
 
 ## When to Use
 
@@ -25,9 +25,9 @@ Use when:
 
 ## Strategic Document
 
-**Location:** `/Users/stevehill/Projects/Code198x/docs/STRATEGIC-FOUNDATION.md`
+**Location:** `/docs/CONTENT-CREATION-WORKFLOW.md` → "Strategic Principles" section
 
-**Read this document** before using this skill.
+**Read this section** before using this skill.
 
 ## Quick Violation Scan
 
@@ -152,7 +152,7 @@ grep -iE "quick (survey|overview|tour)|brief|surface.level|skim" [file.mdx]
 ```
 STRATEGIC ALIGNMENT CHECK: Lesson {NNN}
 
-Strategic Document: /docs/STRATEGIC-FOUNDATION.md
+Strategic Document: /docs/CONTENT-CREATION-WORKFLOW.md (Strategic Principles section)
 
 === QUICK SCAN RESULTS ===
 
@@ -341,7 +341,7 @@ grep -iE "Unity|Unreal|Godot" lesson.mdx
 grep -iE "submit|grading|instructor|feedback" lesson.mdx
 
 # Read strategic document
-cat /Users/stevehill/Projects/Code198x/docs/STRATEGIC-FOUNDATION.md
+cat /Users/stevehill/Projects/Code198x/docs/CONTENT-CREATION-WORKFLOW.md
 ```
 
 ## Integration with Other Skills

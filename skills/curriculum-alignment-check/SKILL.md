@@ -25,13 +25,13 @@ Use when:
 ### File Path Pattern
 
 ```
-/docs/{platform}/PHASE-{N}-CURRICULUM.md
+/docs/curriculum/{platform}-curriculum.md
 ```
 
 **Examples:**
-- `/docs/commodore-64/PHASE-0-CURRICULUM.md`
-- `/docs/sinclair-zx-spectrum/PHASE-0-CURRICULUM.md`
-- `/docs/nintendo-entertainment-system/PHASE-1-CURRICULUM.md`
+- `/docs/curriculum/commodore-64-curriculum.md`
+- `/docs/curriculum/sinclair-zx-spectrum-curriculum.md`
+- `/docs/curriculum/nintendo-nes-curriculum.md`
 
 ### Structured Curricula (Phase 0 ZX Spectrum, some others)
 
@@ -48,8 +48,7 @@ Some curricula use granular structure:
 **Use TodoWrite to track each item:**
 
 ### 1. Locate Curriculum Spec
-- [ ] Find PHASE-{N}-CURRICULUM.md for platform
-- [ ] If structured, find tier-{N}/README.md
+- [ ] Find curriculum in `/docs/curriculum/{platform}-curriculum.md`
 - [ ] Read lesson specification for lesson number
 
 ### 2. Core Alignment
@@ -177,11 +176,7 @@ From project policy (CLAUDE.md):
 
 ```bash
 # Find curriculum spec
-ls docs/{platform}/PHASE-{N}-CURRICULUM.md
-
-# If structured:
-ls docs/{platform}/phase-{N}/tier-{N}/README.md
-cat docs/{platform}/phase-{N}/tier-{N}/lesson-NNN.md
+ls docs/curriculum/{platform}-curriculum.md
 
 # Check lesson file
 cat website/src/pages/{platform}/phase-{N}/tier-{N}/lesson-{NNN}.mdx

@@ -1,52 +1,35 @@
 ---
 name: c64-6510-lesson-creation
-description: Use when creating or editing C64 6510 Assembly lessons - enforces platform-specific compilation, validation, screenshot capture, and assembly requirements
+description: Use when creating or editing C64 6510 Assembly lessons - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
 ---
 
 # C64 6510 Assembly Lesson Creation
 
-## Overview
+**Role:** Technical execution for Phase 3 (Validation) of the Content Creation Workflow.
 
-This skill guides creation of C64 6510 assembly language lessons with platform-specific validation, compilation, and screenshot capture. It extends the generic lesson-creation-workflow with 6510-specific requirements.
-
-## When to Use
-
-Use when:
-- Creating new C64 6510 assembly lesson
-- Editing existing C64 assembly lesson
-- Validating C64 assembly lesson before commit
-
-**Do NOT use for:**
-- C64 BASIC lessons (use c64-lesson-creation instead)
-- Other platforms (use platform-specific skills)
+**Prerequisite:** Read `/docs/CONTENT-CREATION-WORKFLOW.md` first. This skill provides 6510-specific technical details, not the full workflow.
 
 ---
 
-## Prerequisites
+## When to Use
 
-**Before starting, ensure:**
+Use this skill during **Phase 3 (Validation)** when:
+- Assembling 6510 code with ca65/ld65
+- Capturing screenshots with VICE x64sc
+- Validating zero page usage and register preservation
+- Checking for 6510-specific pitfalls
 
-1. **lesson-creation-workflow skill** - Read generic workflow first
-2. **Curriculum alignment** - Read curriculum file from `/docs/curriculum/`:
-   - Phase 0 Tier 1: `/docs/curriculum/commodore-64-phase-0-tier-1-curriculum.md`
-   - General C64: `/docs/curriculum/commodore-64-curriculum.md`
-3. **Tools installed:**
-   - `ca65` (cc65 assembler) - 6502/6510 assembler
-   - `ld65` (cc65 linker) - Produces .prg files
-   - `x64sc` (VICE emulator) - For screenshot capture
-   - Python 3 - For semantic validator
+**Do NOT use for:**
+- C64 BASIC lessons (use `basic-lesson-creation` skill)
+- Other platforms (use platform-specific skills)
 
 ---
 
 ## 6510 Assembly Rules
 
-**Critical requirements for 6510 assembly:**
+### Instruction Set (6502 + I/O Port)
 
-### 1. Instruction Set
-
-**6510 = 6502 + illegal opcodes (optional)**
-
-**Legal 6502 instructions:**
+**Legal instructions:**
 - Load/Store: LDA, LDX, LDY, STA, STX, STY
 - Transfer: TAX, TAY, TXA, TYA, TSX, TXS
 - Stack: PHA, PHP, PLA, PLP
@@ -59,11 +42,7 @@ Use when:
 - Flags: CLC, CLD, CLI, CLV, SEC, SED, SEI
 - Other: BIT, NOP, BRK
 
-**Illegal opcodes (optional, use with caution):**
-- DCP, ISC, LAX, RLA, RRA, SAX, SLO, SRE
-- Document usage clearly if used
-
-### 2. Addressing Modes
+### Addressing Modes
 
 ```asm
 LDA #$00      ; Immediate
@@ -76,193 +55,135 @@ LDA ($00,X)   ; Indexed indirect
 LDA ($00),Y   ; Indirect indexed
 ```
 
-### 3. Syntax (ca65)
+### BASIC Stub (Space-Efficient)
 
-**Case-insensitive instructions, case-sensitive labels:**
-
-```asm
-; Comments start with semicolon
-.org $0801        ; Origin directive
-label:            ; Labels end with colon
-    LDA #$00      ; Instructions indented
-    STA $D020     ; Hex with $
-    RTS           ; Return from subroutine
-```
-
-### 4. BASIC Stub Requirement (Space-Efficient)
-
-**C64 assembly programs need BASIC stub for SYS call:**
+**C64 assembly requires BASIC stub for SYS call:**
 
 ```asm
-.org $0801        ; BASIC start
-
+.org $0801
 ; BASIC stub: 10 SYS 2061 (saves 3 bytes vs SYS 2064)
 .byte $0b,$08,$0a,$00,$9e,$32,$30,$36,$31,$00,$00,$00
 
-; Assembly code starts at $080D (2061 decimal)
+; Code starts at $080D (2061 decimal)
 start:
     LDA #$00
     STA $D020
     RTS
 ```
 
-**Why SYS 2061 instead of 2064:** Code starts immediately after 12-byte stub, no wasted space.
-
 ---
 
-## Required Files Checklist
+## Phase 3: Validation (Technical Details)
 
-For C64 6510 assembly lesson NNN in Phase X, Tier Y:
-
-- [ ] `/website/src/pages/commodore-64/phase-X/tier-Y/lesson-NNN.mdx`
-- [ ] `/code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/example-1.asm`
-- [ ] `/code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/example-1.prg` (assembled+linked)
-- [ ] `/code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/example-2.asm` (if applicable)
-- [ ] `/code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/example-2.prg` (if applicable)
-- [ ] `/website/public/images/commodore-64/phase-X/tier-Y/lesson-NNN/screenshot-1.png`
-- [ ] `/website/public/images/commodore-64/phase-X/tier-Y/lesson-NNN/screenshot-2.png` (if applicable)
-
----
-
-## Compilation Process
-
-### Step 1: Assemble with ca65
+### Step 3.1: Assemble with ca65
 
 ```bash
 cd /code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/
 
-# Assemble to object file
 ca65 -t c64 example-1.asm -o example-1.o
-
-# Check exit code
-echo $?  # Should be 0 (success)
+echo $?  # Must be 0
 ```
 
-**Flags explained:**
-- `-t c64` = Target C64 platform
-- `-o example-1.o` = Output object file
-- `example-1.asm` = Input assembly source
+**Common errors:**
+- `Illegal instruction` → Invalid 6510 opcode
+- `Undefined symbol` → Missing label
+- `Range error` → Branch > 127 bytes
 
-**Common ca65 errors:**
-- `Error: Illegal instruction` → Invalid 6510 opcode
-- `Error: Undefined symbol` → Missing label definition
-- `Error: Range error` → Branch too far (> 127 bytes)
-
-### Step 2: Link with ld65
+### Step 3.2: Link with ld65
 
 ```bash
-# Link object to PRG
 ld65 -t c64 example-1.o -o example-1.prg
-
-# Check exit code
-echo $?  # Should be 0 (success)
+echo $?  # Must be 0
 ```
 
-**Flags explained:**
-- `-t c64` = Target C64 platform (generates correct PRG format)
-- `example-1.o` = Input object file
-- `-o example-1.prg` = Output executable
-
-**Common ld65 errors:**
-- `Error: Unresolved external` → Missing symbol in object
-- `Error: Segment overflow` → Code too large for memory region
-
-### Step 3: Run Semantic Validator
+### Step 3.3: Semantic Validation
 
 ```bash
-# 6510 assembly semantic validator
 python3 /scripts/validate-c64-asm.py example-1.asm
 ```
 
-**Semantic checks:**
-- Register preservation (A/X/Y saved if needed)
-- Zero page usage (avoid BASIC/KERNAL areas)
-- Stack usage (JSR/RTS balanced)
-- Hardware register writes (valid addresses)
-- Interrupt handling (SEI/CLI pairs)
-- Branch distance (not > ±127 bytes)
-- Illegal opcode documentation
+**Checks:**
+- ✅ Zero page usage (avoid $00-$8F)
+- ✅ Register preservation (PHA/PLA balance)
+- ✅ Stack balance (JSR/RTS pairs)
+- ✅ SEI/CLI pairing
+- ✅ Branch distances
+- ✅ Hardware register validity
 
----
+### Step 3.4: Screenshot Capture
 
-## Screenshot Capture
-
-**Same as C64 BASIC:** x64sc emulator with .prg autostart.
-
-### Manual Capture
-
+**Manual:**
 ```bash
 x64sc -autostart example-1.prg
-
-# Press Alt+S to capture screenshot
+# Press Alt+S to capture
 ```
 
-### Automated Capture
-
+**Automated:**
 ```bash
 x64sc -autostart example-1.prg \
   -limitcycles 20000000 \
   -VICIIdsize \
-  -exitscreenshot /website/public/images/.../screenshot-1.png \
+  -exitscreenshot screenshot-1.png \
   +sound
 ```
 
----
+### Step 3.5: Screenshot Verification (MANDATORY)
 
-## 6510-Specific Validation
+**Use Read tool to VIEW every screenshot:**
 
-### 1. Zero Page Usage
+```
+✅ CORRECT: "Read screenshot-1.png - shows black border, blue background,
+   sprite at center. NO error messages visible."
 
-**Safe zero page addresses:**
-
-| Range | Usage | Safe for User Code |
-|-------|-------|-------------------|
-| $00-$01 | Processor port, memory config | ✗ Critical |
-| $02-$8F | BASIC/KERNAL working storage | ✗ Avoid |
-| $90-$FF | BASIC working storage | ⚠ Caution |
-| $FB-$FE | Free for user code | ✓ Safe |
-
-**Validation:**
-```bash
-# Find zero page usage
-grep -iE "\\$[0-9a-f]{2}[^0-9a-f]" example-1.asm
-
-# Check if using $02-$8F (BASIC/KERNAL area)
+❌ WRONG: "Screenshot verified ✅" (too vague)
 ```
 
-### 2. Register Preservation
+**If ANY issue found:** Fix code → Reassemble → Recapture → Re-verify
 
-**Good practice: Preserve A/X/Y in subroutines**
+---
+
+## Zero Page Safety
+
+| Range | Usage | Safe |
+|-------|-------|------|
+| $00-$01 | Processor port | ✗ Critical |
+| $02-$8F | BASIC/KERNAL | ✗ Avoid |
+| $90-$FA | BASIC storage | ⚠ Caution |
+| $FB-$FE | Free for user | ✓ Safe |
+
+**Always use $FB-$FE for your variables.**
+
+---
+
+## Register Preservation
+
+**Preserve A/X/Y in subroutines:**
 
 ```asm
 subroutine:
     PHA           ; Save A
-    TXA
-    PHA           ; Save X
-    TYA
-    PHA           ; Save Y
-    
-    ; ... do work ...
-    
-    PLA           ; Restore Y
-    TAY
-    PLA           ; Restore X
-    TAX
+    TXA : PHA     ; Save X
+    TYA : PHA     ; Save Y
+
+    ; ... work ...
+
+    PLA : TAY     ; Restore Y
+    PLA : TAX     ; Restore X
     PLA           ; Restore A
     RTS
 ```
 
 **Validation:**
 ```bash
-# Check for PHA/PLA balance
-grep -c "PHA" example-1.asm
-grep -c "PLA" example-1.asm
-# Counts should match
+grep -c "PHA" example-1.asm  # Count pushes
+grep -c "PLA" example-1.asm  # Should match
 ```
 
-### 3. Interrupt Handling
+---
 
-**If setting up interrupt:**
+## Interrupt Handling
+
+**Always pair SEI/CLI:**
 
 ```asm
 setup_irq:
@@ -272,323 +193,133 @@ setup_irq:
     RTS
 ```
 
-**Validation:**
-```bash
-# Check SEI has matching CLI
-grep -n "SEI\|CLI" example-1.asm
-```
-
-### 4. Branch Distance
-
-**Branches limited to ±127 bytes:**
-
-```asm
-loop:
-    ; ... lots of code ...
-    DEX
-    BNE loop      ; If > 127 bytes away, use JMP instead
-```
-
-**Validation:**
-- ca65 reports "Range error" if branch too far
-- Fix: Use JMP for long jumps
-
-### 5. Hardware Access Validation
-
-**Same as BASIC:**
-- VIC-II: $D000-$D02E
-- SID: $D400-$D41C
-- CIA #1: $DC00-$DC0F
-- CIA #2: $DD00-$DD0F
-- Screen RAM: $0400-$07E7
-- Colour RAM: $D800-$DBE7
-
-```bash
-# Find hardware access
-grep -iE "\\$D[0-9A-F]{3}" example-1.asm
-```
-
 ---
 
-## Anti-Patterns (6510 Assembly Specific)
+## Common Pitfalls
 
-### 1. Not Preserving Registers
-
-**Anti-pattern:**
+### 1. Using SYS 2064 Instead of 2061
 ```asm
-main:
-    JSR subroutine
-    LDA counter    ; Expects A unchanged
-    ; ... A was clobbered by subroutine!
+❌ WRONG: .byte ...$32,$30,$36,$34...  ; SYS 2064 (wastes 3 bytes)
+✅ CORRECT: .byte ...$32,$30,$36,$31... ; SYS 2061
 ```
 
-**Fix:**
+### 2. Using BASIC Zero Page
 ```asm
-subroutine:
-    PHA            ; Save registers
-    ; ... work ...
-    PLA            ; Restore registers
-    RTS
+❌ WRONG: LDA $91    ; BASIC working storage
+✅ CORRECT: LDA $FB  ; Safe user area
 ```
 
-### 2. Using Zero Page Without Checking
-
-**Anti-pattern:**
+### 3. Unbalanced Stack
 ```asm
-LDA $91          ; BASIC working storage - corrupted!
-```
-
-**Fix:**
-```asm
-LDA $FB          ; Safe user area
-```
-
-### 3. Wasting Space with SYS 2064
-
-**Anti-pattern:**
-```asm
-.org $0801
-.byte $0b,$08,$0a,$00,$9e,$32,$30,$36,$34,$00,$00,$00  ; SYS 2064
-; 3 wasted bytes at $080D-$080F
-.org $0810       ; Code starts at 2064
-start:
-```
-
-**Fix:**
-```asm
-.org $0801
-.byte $0b,$08,$0a,$00,$9e,$32,$30,$36,$31,$00,$00,$00  ; SYS 2061
-; Code starts immediately at $080D (saves 3 bytes)
-start:
-```
-
-### 4. Long Branches
-
-**Anti-pattern:**
-```asm
-loop:
-    ; ... 200 bytes of code ...
-    DEX
-    BNE loop     ; Range error!
-```
-
-**Fix:**
-```asm
-loop:
-    ; ... 200 bytes of code ...
-    DEX
-    BEQ done
-    JMP loop     ; Use JMP for long distance
-done:
-```
-
-### 5. Unbalanced Stack
-
-**Anti-pattern:**
-```asm
-subroutine:
+❌ WRONG:
     PHA
-    ; ... forgot PLA ...
-    RTS          ; Stack corrupted!
-```
+    ; forgot PLA
+    RTS        ; Stack corrupted!
 
-**Fix:**
-```asm
-subroutine:
+✅ CORRECT:
     PHA
     ; ... work ...
     PLA
     RTS
 ```
 
-### 6. Reading Write-Only Registers
-
-**Anti-pattern:**
+### 4. Branch Too Far
 ```asm
-LDA $D020      ; Border colour - write-only in some cases
+❌ WRONG:
+loop:
+    ; ... 200 bytes ...
+    BNE loop   ; Range error!
+
+✅ CORRECT:
+loop:
+    ; ... 200 bytes ...
+    BEQ done
+    JMP loop
+done:
 ```
 
-**Better:**
+### 5. Missing SEI Before IRQ Setup
 ```asm
-; Keep shadow copy in RAM
-LDA border_colour
+❌ WRONG:
+    LDA #<irq_handler
+    STA $0314    ; Crash during write!
+
+✅ CORRECT:
+    SEI
+    LDA #<irq_handler
+    STA $0314
+    CLI
 ```
 
 ---
 
-## Integration with Other Skills
+## Hardware Addresses
 
-**After code creation, run these skills:**
-
-1. **lesson-validation** - Generic validation
-2. **curriculum-alignment-check** - Verify matches curriculum
-3. **screenshot-verification** - Verify screenshots correct
-4. **british-english-check** - Language validation
-5. **voice-tone-check** - Voice consistency
-
----
-
-## Complete Workflow Checklist
-
-### Phase 1: Preparation
-
-- [ ] Read curriculum spec for lesson
-- [ ] Check if mismatched lesson exists (archive if needed)
-- [ ] Create code sample directory
-- [ ] Create screenshot directory
-
-### Phase 2: Code Creation
-
-- [ ] Write example-1.asm with BASIC stub (SYS 2061)
-- [ ] Validate 6510 instruction set
-- [ ] Check zero page usage ($FB-$FE safe)
-- [ ] Check register preservation
-- [ ] Assemble with ca65 → example-1.o
-- [ ] Link with ld65 → example-1.prg
-- [ ] Run semantic validator
-- [ ] Create example-2.asm if needed
-
-### Phase 3: Screenshot Capture
-
-- [ ] Load example-1.prg in x64sc
-- [ ] Capture screenshot (manual or automated)
-- [ ] Save to correct location
-- [ ] Verify screenshot with READ tool
-- [ ] Capture additional screenshots if needed
-
-### Phase 4: Lesson MDX Creation
-
-- [ ] Create lesson-NNN.mdx
-- [ ] Include assembly code with explanations
-- [ ] Explain register usage
-- [ ] Explain memory layout
-- [ ] Add screenshots
-- [ ] British English (except "program")
-
-### Phase 5: Validation
-
-- [ ] Run lesson-validation skill
-- [ ] Run curriculum-alignment-check
-- [ ] Run screenshot-verification
-- [ ] Run british-english-check
-- [ ] Run voice-tone-check
-- [ ] Fix any issues
-
-### Phase 6: File Verification
-
-- [ ] ls code-samples/.../lesson-NNN/ (all files present)
-- [ ] ls website/public/images/.../lesson-NNN/ (all screenshots present)
-- [ ] ls website/src/pages/.../lesson-NNN.mdx (lesson file present)
-
-### Phase 7: Navigation Update
-
-- [ ] Update tier-N.astro with new lesson
-- [ ] Update phase-N.astro if new tier
-- [ ] Update commodore-64.astro if new phase
+| Address | Decimal | Purpose |
+|---------|---------|---------|
+| $D020 | 53280 | Border colour |
+| $D021 | 53281 | Background colour |
+| $D000-$D010 | 53248-53264 | Sprite positions |
+| $D015 | 53269 | Sprite enable |
+| $D027-$D02E | 53287-53294 | Sprite colours |
+| $DC00 | 56320 | CIA #1 Port A (joystick) |
 
 ---
 
-## Quick Reference
+## Required Files
 
-### Compilation
+| File | Location |
+|------|----------|
+| Lesson MDX | `/website/src/pages/commodore-64/phase-X/tier-Y/lesson-NNN.mdx` |
+| Source (.asm) | `/code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/example-1.asm` |
+| Object (.o) | `/code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/example-1.o` |
+| Executable (.prg) | `/code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/example-1.prg` |
+| Screenshot | `/website/public/images/commodore-64/phase-X/tier-Y/lesson-NNN/screenshot-1.png` |
+
+---
+
+## Quick Reference Commands
+
 ```bash
+# Assemble + link
 ca65 -t c64 example-1.asm -o example-1.o
 ld65 -t c64 example-1.o -o example-1.prg
-```
 
-### Screenshot
-```bash
+# Semantic validation
+python3 /scripts/validate-c64-asm.py example-1.asm
+
+# Screenshot
 x64sc -autostart example-1.prg
-# Alt+S to capture
+# Press Alt+S
+
+# Check register balance
+grep -c "PHA" example-1.asm
+grep -c "PLA" example-1.asm
 ```
-
-### BASIC Stub Template (Space-Efficient)
-```asm
-.org $0801
-.byte $0b,$08,$0a,$00,$9e,$32,$30,$36,$31,$00,$00,$00  ; SYS 2061
-; Code starts at $080D
-```
-
-### Safe Zero Page
-```asm
-$FB, $FC, $FD, $FE  ; Safe for user code
-```
-
-### Common Hardware Addresses
-```asm
-$D020  ; Border colour
-$D021  ; Background colour
-$D000  ; Sprite 0 X
-$D001  ; Sprite 0 Y
-$D015  ; Sprite enable
-$D027  ; Sprite 0 colour
-```
-
----
-
-## Common Mistakes
-
-**Mistake 1: Missing BASIC stub**
-- **Symptom:** Program won't load from BASIC
-- **Fix:** Add BASIC stub at $0801
-
-**Mistake 2: Using SYS 2064 instead of SYS 2061**
-- **Symptom:** 3 wasted bytes
-- **Fix:** Use SYS 2061 ($080D) for space efficiency
-
-**Mistake 3: Using BASIC zero page**
-- **Symptom:** Crashes, corruption
-- **Fix:** Use $FB-$FE only
-
-**Mistake 4: Unbalanced stack**
-- **Symptom:** RTS jumps to wrong address
-- **Fix:** Balance PHA/PLA, JSR/RTS
-
-**Mistake 5: Branch too far**
-- **Symptom:** "Range error" during assembly
-- **Fix:** Use JMP instead of branch
-
-**Mistake 6: Not preserving registers**
-- **Symptom:** Unexpected behavior after JSR
-- **Fix:** PHA/PLA around subroutines
-
-**Mistake 7: Forgetting SEI/CLI**
-- **Symptom:** System crashes during IRQ setup
-- **Fix:** Always pair SEI with CLI
 
 ---
 
 ## Platform-Specific Resources
 
-**Essential quick references** (in `/docs/platforms/commodore-64/hardware/`):
-- `6510-QUICK-REFERENCE.md` - Instruction set, addressing modes
-- `VIC-II-QUICK-REFERENCE.md` - Hardware registers
-- `SID-CHIP-REFERENCE.md` - Sound registers
-- `CIA-QUICK-REFERENCE.md` - I/O registers
+**Quick references** (in `/docs/platforms/commodore-64/`):
+- `hardware/6510-QUICK-REFERENCE.md` - Instructions, addressing
+- `hardware/VIC-II-QUICK-REFERENCE.md` - Graphics registers
+- `hardware/CIA-QUICK-REFERENCE.md` - I/O registers
 
-**Common errors documentation:**
-- `/docs/platforms/commodore-64/advanced/6510-COMMON-ERRORS.md` - Assembly pitfalls
-- `/docs/platforms/commodore-64/basic-v2/C64-COMMON-ERRORS.md` - BASIC pitfalls
+**Common errors:**
+- `advanced/6510-COMMON-ERRORS.md` - Assembly pitfalls
 
 ---
 
 ## The Bottom Line
 
-**C64 6510 assembly lessons require:**
-1. ca65/ld65 compilation to .prg
-2. BASIC stub at $0801 using SYS 2061 (space-efficient)
-3. Safe zero page usage ($FB-$FE)
-4. Register preservation in subroutines
-5. SEI/CLI pairing for interrupts
-6. Branch distance validation
-7. British English (except "program")
+**This skill provides:** Assembly, linking, validation, and screenshot capture for 6510 lessons.
+
+**The main workflow provides:** Planning, creation, integration, and publication steps.
 
 **Zero tolerance for:**
-- Missing BASIC stub (won't load)
-- Wasting space (use SYS 2061, not 2064)
-- Using BASIC/KERNAL zero page ($00-$8F)
-- Unbalanced stack operations
+- Missing BASIC stub
+- Wasting space (use SYS 2061)
+- Using BASIC/KERNAL zero page
+- Unbalanced stack
 - Unverified screenshots
-- American spellings (except "program")
-
-**Every 6510 assembly lesson must assemble, link, run, and display expected output verified with screenshots.**

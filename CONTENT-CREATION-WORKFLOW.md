@@ -37,6 +37,49 @@ Lessons fall into natural patterns. Content communicates purpose; no visual mark
 
 ---
 
+## Strategic Principles (Non-Negotiable)
+
+These principles define what this project IS and IS NOT. Violations are grounds for rejection.
+
+### What We Are
+
+1. **Game-First Pedagogy** - Concepts taught through game implementation, never isolated theory
+2. **Hardware Intimacy** - Direct hardware access (sprites, registers, sound chips), not abstraction layers
+3. **Original Creation** - Inspired by classics, NOT reproductions of existing games
+4. **Mastery Through Repetition** - Skills reinforced across multiple lessons and games
+5. **Self-Directed Learning** - Learners assess their own progress; no instructor required
+
+### What We Are NOT
+
+1. **NOT Nostalgia Tourism** - Focus on skills and hardware, not "remember when" feelings
+2. **NOT Modern Engines** - No Unity, Unreal, Godot, GameMaker. Zero tolerance.
+3. **NOT Reproductions** - No "pixel-perfect Donkey Kong". Respect copyright.
+4. **NOT Quick Fixes** - Honest about difficulty and time investment
+5. **NOT Shallow Coverage** - Deep treatment of each platform, not surface surveys
+6. **NOT Instructor-Dependent** - Working code = success; no grades or submissions
+7. **NOT Abstract Theory** - Games teach concepts; no "memorize these, apply later"
+
+### Quick Violation Check
+
+```bash
+# Copyright violations
+grep -iE "exact|replica|reproduction|recreat(e|ing)|pixel.perfect" lesson.mdx
+
+# Nostalgia tourism
+grep -iE "remember|nostalg|childhood|magical|back in the day" lesson.mdx
+
+# Modern engines (ZERO TOLERANCE)
+grep -iE "Unity|Unreal|Godot|GameMaker" lesson.mdx
+
+# Abstract theory
+grep -iE "theor(y|etical)|memorize|memorise|later lessons" lesson.mdx
+
+# Instructor dependency
+grep -iE "submit|grading|instructor|feedback|assignment" lesson.mdx
+```
+
+---
+
 ## Workflow Phases
 
 The workflow has **five main phases**, each with detailed steps:
@@ -255,7 +298,7 @@ echo $? # Must be 0
 - Semantic validation if available
 - Runtime testing in emulator
 
-**See platform skill for complete validation process** (commodore-64-basic-lesson-creation, zx-spectrum-assembly-lesson-creation, etc.)
+**⚠️ USE PLATFORM SKILL HERE:** See "Platform-Specific Details" section for skill paths. The platform skill provides complete validation commands, semantic checks, and screenshot capture instructions.
 
 **Required:** All validation must pass before proceeding. Fix errors immediately.
 
@@ -608,36 +651,37 @@ git push origin <branch-name>
 
 ## Platform-Specific Details
 
-**Universal workflow applies to all platforms, with platform-specific validation:**
+**Universal workflow applies to all platforms. Platform skills provide technical execution details.**
+
+**⚠️ IMPORTANT: Use platform skills during Phase 3 (Validation) for compilation, screenshot capture, and platform-specific checks.**
 
 ### Commodore 64
-- **Phase 0:** See `commodore-64-basic-lesson-creation` skill
-- **Phase 1+:** See `commodore-64-assembly-lesson-creation` skill
+- **BASIC V2:** `/docs/platforms/commodore-64/skills/basic-lesson-creation/SKILL.md`
+- **6510 Assembly:** `/docs/platforms/commodore-64/skills/6510-lesson-creation/SKILL.md`
 
-### ZX Spectrum
-- **Phase 0:** See `zx-spectrum-basic-lesson-creation` skill
-- **Phase 1+:** See `zx-spectrum-assembly-lesson-creation` skill
+### Sinclair ZX Spectrum
+- **Sinclair BASIC:** `/docs/platforms/sinclair-zx-spectrum/skills/basic-lesson-creation/SKILL.md`
+- **Z80 Assembly:** `/docs/platforms/sinclair-zx-spectrum/skills/z80-lesson-creation/SKILL.md`
 
-### Amiga
-- **Phase 0:** See `amiga-amos-lesson-creation` skill
-- **Phase 1+:** See `amiga-assembly-lesson-creation` skill
+### Commodore Amiga
+- **AMOS BASIC:** `/docs/platforms/commodore-amiga/skills/amos-lesson-creation/SKILL.md`
+- **68000 Assembly:** `/docs/platforms/commodore-amiga/skills/68k-lesson-creation/SKILL.md`
 
-### NES/Famicom
-- **No Phase 0** (no BASIC available)
-- **Phase 1+:** See `nes-assembly-lesson-creation` skill
+### Nintendo Entertainment System
+- **No BASIC** (assembly only)
+- **6502 Assembly:** `/docs/platforms/nintendo-entertainment-system/skills/6502-lesson-creation/SKILL.md`
 
-**Each skill provides:**
-- Platform-specific validation commands
-- Emulator configuration
-- Common pitfalls for that platform
-- Screenshot capture workflow
-- Audio capture workflow (for platforms with sound chips)
-- File structure requirements
+**Each platform skill provides:**
+- Compilation/assembly commands
+- Semantic validation (where available)
+- Emulator configuration for screenshots
+- Platform-specific pitfalls and anti-patterns
+- Memory map validation
+- File naming conventions
 
-**Platform Skills Naming Convention:**
-- `{platform}-basic-lesson-creation` (Phase 0)
-- `{platform}-amos-lesson-creation` (Amiga Phase 0 - AMOS BASIC)
-- `{platform}-assembly-lesson-creation` (Phase 1+)
+**Relationship: Workflow = Strategy, Skills = Tactics**
+- This workflow defines WHAT to do and WHEN
+- Platform skills define HOW to execute technical steps
 
 ---
 
@@ -1065,13 +1109,13 @@ git stash list  # Check for stashed changes
 
 hardware, games, people, companies, platforms, techniques, events, culture, publications, tools, peripherals, formats, concepts, terminology
 
-### Platform Skills Naming
+### Platform Skills Location
 
-- `{platform}-basic-lesson-creation` (Phase 0)
-- `{platform}-amos-lesson-creation` (Amiga Phase 0)
-- `{platform}-assembly-lesson-creation` (Phase 1+)
+Skills are in `/docs/platforms/{platform}/skills/{language}-lesson-creation/SKILL.md`
 
-Examples: `commodore-64-basic-lesson-creation`, `zx-spectrum-assembly-lesson-creation`
+Examples:
+- C64 BASIC: `/docs/platforms/commodore-64/skills/basic-lesson-creation/SKILL.md`
+- ZX Z80: `/docs/platforms/sinclair-zx-spectrum/skills/z80-lesson-creation/SKILL.md`
 
 ### Commit Message Format
 
