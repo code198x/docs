@@ -11,13 +11,20 @@ For curriculum roadmap (future games/units), see `/docs/curriculum/*.md`.
 - [x] Add syntax highlighting for 68000 assembly (Amiga uses `asm` but could benefit from dedicated grammar)
 - [x] Add syntax highlighting for Z80 assembly (ZX Spectrum)
 - [ ] Consider adding download buttons to CodeFromFile component (download .asm file directly)
-- [ ] Add "Copy to clipboard" button to code blocks
+- [x] Add "Copy to clipboard" button to code blocks
 
 ## Build & CI
 
 - [ ] Add build verification for code-samples (compile all .asm files in CI)
 - [ ] Add link checker to catch broken internal links
 - [ ] Consider caching code-samples checkout in CI for faster builds
+
+## Developer Experience
+
+- [ ] Rework development environments - readers should be able to build code without downloading random packages
+  - Consider Docker-based toolchains per platform
+  - Or web-based assemblers/emulators
+  - Document exact toolchain versions and sources
 
 ## Content Quality
 
