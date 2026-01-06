@@ -8,8 +8,8 @@ For curriculum roadmap (future games/units), see `/docs/curriculum/*.md`.
 
 ## Infrastructure
 
-- [ ] Add syntax highlighting for 68000 assembly (Amiga uses `asm` but could benefit from dedicated grammar)
-- [ ] Add syntax highlighting for Z80 assembly (ZX Spectrum)
+- [x] Add syntax highlighting for 68000 assembly (Amiga uses `asm` but could benefit from dedicated grammar)
+- [x] Add syntax highlighting for Z80 assembly (ZX Spectrum)
 - [ ] Consider adding download buttons to CodeFromFile component (download .asm file directly)
 - [ ] Add "Copy to clipboard" button to code blocks
 
@@ -46,3 +46,4 @@ For curriculum roadmap (future games/units), see `/docs/curriculum/*.md`.
 ---
 
 *Last updated: 2026-01-06*
+*Z80 and 68k syntax highlighting added: 2026-01-06*
