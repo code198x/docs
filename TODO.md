@@ -29,11 +29,11 @@ For curriculum roadmap (future games/units), see `/docs/curriculum/*.md`.
 
 - [ ] Add README.md to each game folder in code-samples explaining the build process
 - [ ] Consider adding pre-built binaries (.prg, .tap, .nes, .adf) for users without toolchains
-- [ ] Add license file to code-samples repo
+- [x] Add license file to code-samples repo
 
 ## Documentation
 
-- [ ] Update CLAUDE.md to reference new CodeFromFile workflow
+- [x] Update CLAUDE.md to reference new CodeFromFile workflow (local file, not version controlled)
 - [ ] Document the extraction scripts in scripts/
 - [ ] Add contributor guide if accepting external contributions
 
