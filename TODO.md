@@ -28,6 +28,11 @@ For curriculum roadmap (future games/units), see `/docs/curriculum/*.md`.
 
 ## Content Quality
 
+- [ ] **CRITICAL: Generate missing screenshots** - ZX Spectrum, Amiga, and NES units have no screenshots
+  - ZX Spectrum Ink War: 16 units missing screenshots
+  - Amiga Hop: 16 units missing screenshots
+  - NES Neon Nexus: 16 units missing screenshots
+  - Link checker currently excludes `/images/` paths until fixed
 - [ ] Audit screenshots across all units (verify no error screens, blank outputs)
 - [ ] Run British English spell checker across all MDX files
 - [ ] Verify all "Build It. Run It." sections have correct commands per platform
