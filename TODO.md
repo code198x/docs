@@ -15,16 +15,18 @@ For curriculum roadmap (future games/units), see `/docs/curriculum/*.md`.
 
 ## Build & CI
 
-- [ ] Add build verification for code-samples (compile all .asm files in CI)
+- [x] Add build verification for code-samples (compile all .asm files in CI)
 - [x] Add link checker to catch broken internal links
 - [ ] Consider caching code-samples checkout in CI for faster builds
 
 ## Developer Experience
 
-- [ ] Rework development environments - readers should be able to build code without downloading random packages
-  - Consider Docker-based toolchains per platform
-  - Or web-based assemblers/emulators
-  - Document exact toolchain versions and sources
+- [x] Rework development environments - Docker-based toolchains per platform
+  - ghcr.io/code198x/commodore-64 (ACME, VICE)
+  - ghcr.io/code198x/sinclair-zx-spectrum (PasmoNext, Fuse)
+  - ghcr.io/code198x/commodore-amiga (vasm, amitools)
+  - ghcr.io/code198x/nintendo-nes (cc65, FCEUX)
+- [ ] Document toolchain usage in Getting Started guides
 
 ## Content Quality
 
@@ -60,3 +62,4 @@ For curriculum roadmap (future games/units), see `/docs/curriculum/*.md`.
 *Last updated: 2026-01-06*
 *Z80 and 68k syntax highlighting added: 2026-01-06*
 *Link checker CI added: 2026-01-06*
+*Build verification CI added: 2026-01-06*
