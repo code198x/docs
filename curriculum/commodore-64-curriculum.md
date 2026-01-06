@@ -2,8 +2,8 @@
 
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
-**Games:** 16 (12 standard, 4 extended)
-**Total Units:** 144
+**Games:** 16 (14 at 16 units, 2 at 32 units)
+**Total Units:** 288
 
 ---
 
@@ -18,7 +18,7 @@ By the final game, learners will have skills matching professional C64 developer
 ## Game Sequence
 
 ### Game 1: SID Symphony
-**Units:** 8
+**Units:** 16
 **Concept:** Rhythm game - notes scroll horizontally across three tracks, hit the correct key when notes reach the hit zone. Guitar Hero on the C64.
 
 **Skills taught:**
@@ -33,7 +33,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 2: Starfield
-**Units:** 8
+**Units:** 16
 **Concept:** Single-screen space shooter. Player ship versus waves of enemies. Shoot, dodge, survive.
 
 **Skills taught:**
@@ -46,7 +46,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 3: Maze Raider
-**Units:** 8
+**Units:** 16
 **Concept:** Pac-Man style maze chase. Navigate corridors, collect pellets, avoid enemies.
 
 **Skills taught:**
@@ -59,7 +59,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 4: Platform Panic
-**Units:** 8
+**Units:** 16
 **Concept:** Single-screen platformer. Jump between platforms, avoid hazards, reach the exit.
 
 **Skills taught:**
@@ -72,7 +72,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 5: Brick Basher
-**Units:** 8
+**Units:** 16
 **Concept:** Breakout clone. Paddle, ball, bricks. Clear the screen.
 
 **Skills taught:**
@@ -85,7 +85,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 6: Invader Wave
-**Units:** 8
+**Units:** 16
 **Concept:** Space Invaders style fixed shooter. Enemy formation descends, player defends.
 
 **Skills taught:**
@@ -98,7 +98,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 7: Scroll Runner
-**Units:** 8
+**Units:** 16
 **Concept:** Horizontal scrolling introduction. Runner dodges obstacles in an endless scroll.
 
 **Skills taught:**
@@ -111,7 +111,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 8: Night Raid
-**Units:** 8
+**Units:** 16
 **Concept:** Scramble-style side-scroller. Fly through terrain, shoot enemies, manage fuel.
 
 **Skills taught:**
@@ -124,7 +124,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 9: Sprite Storm
-**Units:** 8
+**Units:** 16
 **Concept:** Multi-sprite action game. More enemies than the hardware allows - enter multiplexing.
 
 **Skills taught:**
@@ -137,7 +137,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 10: Raster Rider
-**Units:** 8
+**Units:** 16
 **Concept:** Racing game with pseudo-3D road using raster effects.
 
 **Skills taught:**
@@ -150,7 +150,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 11: Dungeon Crawl
-**Units:** 8
+**Units:** 16
 **Concept:** Top-down adventure. Explore rooms, collect keys, unlock doors, find treasure.
 
 **Skills taught:**
@@ -163,7 +163,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 12: Arena Fighter
-**Units:** 8
+**Units:** 16
 **Concept:** One-on-one combat. Two fighters, health bars, special moves.
 
 **Skills taught:**
@@ -189,7 +189,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 14: Isometric Quest
-**Units:** 16
+**Units:** 32
 **Concept:** Isometric adventure game. Explore a 3D-perspective world.
 
 **Skills taught:**
@@ -215,7 +215,7 @@ By the final game, learners will have skills matching professional C64 developer
 ---
 
 ### Game 16: Symphony's End
-**Units:** 16
+**Units:** 32
 **Concept:** Commercial-quality showcase. A complete, polished game combining everything learnt.
 
 **Skills taught:**
