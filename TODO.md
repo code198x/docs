@@ -16,7 +16,7 @@ For curriculum roadmap (future games/units), see `/docs/curriculum/*.md`.
 ## Build & CI
 
 - [ ] Add build verification for code-samples (compile all .asm files in CI)
-- [ ] Add link checker to catch broken internal links
+- [x] Add link checker to catch broken internal links
 - [ ] Consider caching code-samples checkout in CI for faster builds
 
 ## Developer Experience
@@ -54,3 +54,4 @@ For curriculum roadmap (future games/units), see `/docs/curriculum/*.md`.
 
 *Last updated: 2026-01-06*
 *Z80 and 68k syntax highlighting added: 2026-01-06*
+*Link checker CI added: 2026-01-06*
