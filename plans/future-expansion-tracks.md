@@ -188,6 +188,8 @@ Platforms under consideration for future curriculum development.
 | BBC Micro | 6502 | BBC BASIC | Master | Educational heritage, excellent BASIC |
 | MSX | Z80 | MSX BASIC | MSX2/MSX2+ | Japanese market, standardised hardware |
 | Apple II | 6502 | Applesoft BASIC | IIgs | American classic, simple architecture |
+| TRS-80 Color Computer | 6809 | Color BASIC | CoCo 3 | Strong US following, OS-9 heritage |
+| Dragon 32/64 | 6809 | Dragon BASIC | - | UK CoCo cousin, compatible software |
 
 ### 16-Bit Home Computers
 
@@ -205,6 +207,7 @@ Platforms under consideration for future curriculum development.
 | SNES | 65816 | - | Mode 7, complex but powerful |
 | TurboGrafx-16 | 6502 | CD-ROM² | HuC6280, large sprite counts |
 | Game Boy | Z80 (SM83) | GBC, GBA | Handheld constraints |
+| Vectrex | 6809 | - | Vector graphics, unique display |
 | Atari 2600 | 6502 | - | Racing the beam, extreme constraints |
 
 ### Selection Criteria
@@ -238,10 +241,21 @@ When evaluating platforms for inclusion:
 
 | Pattern | Platforms |
 |---------|-----------|
-| Period hardware upgrade | CPC → Plus, ST → STE, MSX → MSX2, BBC → Master |
+| Period hardware upgrade | CPC → Plus, ST → STE, MSX → MSX2, BBC → Master, CoCo → CoCo 3 |
 | Modern FPGA successor | (None identified yet for non-current platforms) |
 | Console variants | SMS → Game Gear, GB → GBC → GBA, MD → CD/32X |
-| No clear enhancement | Atari 2600, Apple II, SNES |
+| No clear enhancement | Atari 2600, Apple II, SNES, Dragon, Vectrex |
+
+### CPU Family Coverage
+
+| Family | Current Platforms | Future Platforms |
+|--------|-------------------|------------------|
+| 6502 | C64, NES | Atari 8-bit, Apple II, BBC Micro |
+| Z80 | ZX Spectrum | Amstrad CPC, MSX, SMS, Game Boy |
+| 68000 | Amiga | Atari ST, Mega Drive |
+| 6809 | - | TRS-80 CoCo, Dragon, Vectrex |
+| 65816 | - | SNES |
+| ARM | - | Archimedes |
 
 ---
 
