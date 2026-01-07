@@ -196,6 +196,11 @@ Platforms under consideration for future curriculum development.
 | TI-99/4A | TMS9900 | TI BASIC | - | Unique 16-bit CPU, early (1981) |
 | FM-7 | 6809 | F-BASIC | FM-77 | Japanese, Fujitsu |
 | PC-88 | Z80 | N88-BASIC | - | NEC, huge in Japan |
+| ZX81 | Z80 | Sinclair BASIC | - | Spectrum predecessor, 1KB RAM constraint |
+| ZX80 | Z80 | Sinclair BASIC | - | Earliest Sinclair, extreme limits |
+| Jupiter Ace | Z80 | Forth | - | Forth-based, unique approach |
+| Sinclair QL | 68008 | SuperBASIC | - | 68K variant, influential failure |
+| Bally Astrocade | Z80 | Bally BASIC | - | Early console with built-in BASIC |
 
 ### 16-Bit Home Computers
 
@@ -220,6 +225,11 @@ Platforms under consideration for future curriculum development.
 | Intellivision | CP1610 | - | Unique CPU, early console |
 | Atari 7800 | 6502 | - | Backward compatible with 2600 |
 | Atari 2600 | 6502 | - | Racing the beam, extreme constraints |
+| SG-1000 | Z80 | - | Sega's first, SMS predecessor |
+| Neo Geo AES | 68000 | CD | Arcade hardware at home |
+| Fairchild Channel F | F8 | - | First ROM cartridge console |
+| Magnavox Odyssey² | 8048 | - | Unique Intel CPU, early console |
+| Amiga CD32 | 68020 | - | Amiga as console, AGA chipset |
 
 ### Handhelds
 
@@ -267,21 +277,24 @@ When evaluating platforms for inclusion:
 | Modern FPGA successor | (None identified yet for non-current platforms) |
 | Console variants | SMS → Game Gear, MD → CD/32X |
 | Handheld variants | GB → GBC → GBA, WonderSwan → Color → Crystal |
-| No clear enhancement | Atari 2600, Atari 7800, Apple II, SNES, Dragon, Vectrex, Oric, TI-99/4A, Intellivision, ColecoVision, Lynx, Neo Geo Pocket |
+| No clear enhancement | Atari 2600, Atari 7800, Apple II, SNES, Dragon, Vectrex, Oric, TI-99/4A, Intellivision, ColecoVision, Lynx, Neo Geo Pocket, ZX80, ZX81, Jupiter Ace, Sinclair QL, Bally Astrocade, SG-1000, Channel F, Odyssey², CD32 |
 
 ### CPU Family Coverage
 
 | Family | Current Platforms | Future Platforms |
 |--------|-------------------|------------------|
 | 6502 | C64, NES | Atari 8-bit, Apple II, BBC Micro, VIC-20, Oric, TurboGrafx, Atari 7800, Atari 2600, Atari Lynx |
-| Z80 | ZX Spectrum | Amstrad CPC, MSX, SMS, Game Boy, SAM Coupé, ColecoVision, PC-88, Game Gear, Neo Geo Pocket |
-| 68000 | Amiga | Atari ST, Mega Drive, Sharp X68000 |
+| Z80 | ZX Spectrum | Amstrad CPC, MSX, SMS, Game Boy, SAM Coupé, ColecoVision, PC-88, Game Gear, Neo Geo Pocket, ZX81, ZX80, Jupiter Ace, SG-1000, Bally Astrocade |
+| 68000 | Amiga | Atari ST, Mega Drive, Sharp X68000, Neo Geo AES, Amiga CD32 |
+| 68008 | - | Sinclair QL |
 | 6809 | - | TRS-80 CoCo, Dragon, Vectrex, FM-7 |
 | 65816 | - | SNES |
 | ARM | - | Archimedes |
 | TMS9900 | - | TI-99/4A |
 | CP1610 | - | Intellivision |
 | x86 | - | PC-98, WonderSwan |
+| F8 | - | Fairchild Channel F |
+| 8048 | - | Magnavox Odyssey² |
 
 ---
 
