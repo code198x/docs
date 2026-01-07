@@ -215,12 +215,21 @@ Platforms under consideration for future curriculum development.
 | Sega Mega Drive | 68000 | Mega CD, 32X | Blast processing, dual CPUs |
 | SNES | 65816 | - | Mode 7, complex but powerful |
 | TurboGrafx-16 | 6502 | CD-ROM² | HuC6280, large sprite counts |
-| Game Boy | Z80 (SM83) | GBC, GBA | Handheld constraints |
 | Vectrex | 6809 | - | Vector graphics, unique display |
 | ColecoVision | Z80 | - | Similar to SMS, TMS9918 graphics |
 | Intellivision | CP1610 | - | Unique CPU, early console |
 | Atari 7800 | 6502 | - | Backward compatible with 2600 |
 | Atari 2600 | 6502 | - | Racing the beam, extreme constraints |
+
+### Handhelds
+
+| Platform | Language | Enhancement Track | Notes |
+|----------|----------|-------------------|-------|
+| Game Boy | Z80 (SM83) | GBC, GBA | Handheld constraints, huge library |
+| Atari Lynx | 6502 | - | First colour handheld, custom blitter |
+| Sega Game Gear | Z80 | - | Portable SMS, backlit colour |
+| Neo Geo Pocket Color | Z80 | - | SNK, strong fighting games |
+| WonderSwan | V30MZ (x86) | Color, Crystal | Gunpei Yokoi's final hardware |
 
 ### Selection Criteria
 
@@ -256,22 +265,23 @@ When evaluating platforms for inclusion:
 | Period hardware upgrade | CPC → Plus, ST → STE, MSX → MSX2, BBC → Master, CoCo → CoCo 3, FM-7 → FM-77, X68000 → X68030 |
 | Same-family upgrade | C64 → C128, TurboGrafx → CD-ROM² |
 | Modern FPGA successor | (None identified yet for non-current platforms) |
-| Console variants | SMS → Game Gear, GB → GBC → GBA, MD → CD/32X |
-| No clear enhancement | Atari 2600, Atari 7800, Apple II, SNES, Dragon, Vectrex, Oric, TI-99/4A, Intellivision, ColecoVision |
+| Console variants | SMS → Game Gear, MD → CD/32X |
+| Handheld variants | GB → GBC → GBA, WonderSwan → Color → Crystal |
+| No clear enhancement | Atari 2600, Atari 7800, Apple II, SNES, Dragon, Vectrex, Oric, TI-99/4A, Intellivision, ColecoVision, Lynx, Neo Geo Pocket |
 
 ### CPU Family Coverage
 
 | Family | Current Platforms | Future Platforms |
 |--------|-------------------|------------------|
-| 6502 | C64, NES | Atari 8-bit, Apple II, BBC Micro, VIC-20, Oric, TurboGrafx, Atari 7800, Atari 2600 |
-| Z80 | ZX Spectrum | Amstrad CPC, MSX, SMS, Game Boy, SAM Coupé, ColecoVision, PC-88 |
+| 6502 | C64, NES | Atari 8-bit, Apple II, BBC Micro, VIC-20, Oric, TurboGrafx, Atari 7800, Atari 2600, Atari Lynx |
+| Z80 | ZX Spectrum | Amstrad CPC, MSX, SMS, Game Boy, SAM Coupé, ColecoVision, PC-88, Game Gear, Neo Geo Pocket |
 | 68000 | Amiga | Atari ST, Mega Drive, Sharp X68000 |
 | 6809 | - | TRS-80 CoCo, Dragon, Vectrex, FM-7 |
 | 65816 | - | SNES |
 | ARM | - | Archimedes |
 | TMS9900 | - | TI-99/4A |
 | CP1610 | - | Intellivision |
-| x86 | - | PC-98 |
+| x86 | - | PC-98, WonderSwan |
 
 ---
 
