@@ -190,6 +190,12 @@ Platforms under consideration for future curriculum development.
 | Apple II | 6502 | Applesoft BASIC | IIgs | American classic, simple architecture |
 | TRS-80 Color Computer | 6809 | Color BASIC | CoCo 3 | Strong US following, OS-9 heritage |
 | Dragon 32/64 | 6809 | Dragon BASIC | - | UK CoCo cousin, compatible software |
+| VIC-20 | 6502 | CBM BASIC | - | C64 predecessor, simpler entry point |
+| Oric-1/Atmos | 6502 | Oric BASIC | - | UK cult following |
+| SAM Coupé | Z80 | SAM BASIC | - | UK "Spectrum successor" |
+| TI-99/4A | TMS9900 | TI BASIC | - | Unique 16-bit CPU, early (1981) |
+| FM-7 | 6809 | F-BASIC | FM-77 | Japanese, Fujitsu |
+| PC-88 | Z80 | N88-BASIC | - | NEC, huge in Japan |
 
 ### 16-Bit Home Computers
 
@@ -197,6 +203,9 @@ Platforms under consideration for future curriculum development.
 |----------|----------|---------------|-------------------|-------|
 | Atari ST | 68000 | GFA BASIC | STE | MIDI standard, clean architecture |
 | Acorn Archimedes | ARM | BBC BASIC V | RISC OS | First ARM platform, powerful BASIC |
+| Sharp X68000 | 68000 | X-BASIC | X68030 | Japanese, very powerful, strong homebrew |
+| PC-98 | x86 | N88-BASIC(86) | - | NEC, dominant in Japan, unique graphics |
+| C128 | 8502/Z80 | BASIC 7.0 | - | C64 enhancement track candidate |
 
 ### Game Consoles
 
@@ -208,6 +217,9 @@ Platforms under consideration for future curriculum development.
 | TurboGrafx-16 | 6502 | CD-ROM² | HuC6280, large sprite counts |
 | Game Boy | Z80 (SM83) | GBC, GBA | Handheld constraints |
 | Vectrex | 6809 | - | Vector graphics, unique display |
+| ColecoVision | Z80 | - | Similar to SMS, TMS9918 graphics |
+| Intellivision | CP1610 | - | Unique CPU, early console |
+| Atari 7800 | 6502 | - | Backward compatible with 2600 |
 | Atari 2600 | 6502 | - | Racing the beam, extreme constraints |
 
 ### Selection Criteria
@@ -241,21 +253,25 @@ When evaluating platforms for inclusion:
 
 | Pattern | Platforms |
 |---------|-----------|
-| Period hardware upgrade | CPC → Plus, ST → STE, MSX → MSX2, BBC → Master, CoCo → CoCo 3 |
+| Period hardware upgrade | CPC → Plus, ST → STE, MSX → MSX2, BBC → Master, CoCo → CoCo 3, FM-7 → FM-77, X68000 → X68030 |
+| Same-family upgrade | C64 → C128, TurboGrafx → CD-ROM² |
 | Modern FPGA successor | (None identified yet for non-current platforms) |
 | Console variants | SMS → Game Gear, GB → GBC → GBA, MD → CD/32X |
-| No clear enhancement | Atari 2600, Apple II, SNES, Dragon, Vectrex |
+| No clear enhancement | Atari 2600, Atari 7800, Apple II, SNES, Dragon, Vectrex, Oric, TI-99/4A, Intellivision, ColecoVision |
 
 ### CPU Family Coverage
 
 | Family | Current Platforms | Future Platforms |
 |--------|-------------------|------------------|
-| 6502 | C64, NES | Atari 8-bit, Apple II, BBC Micro |
-| Z80 | ZX Spectrum | Amstrad CPC, MSX, SMS, Game Boy |
-| 68000 | Amiga | Atari ST, Mega Drive |
-| 6809 | - | TRS-80 CoCo, Dragon, Vectrex |
+| 6502 | C64, NES | Atari 8-bit, Apple II, BBC Micro, VIC-20, Oric, TurboGrafx, Atari 7800, Atari 2600 |
+| Z80 | ZX Spectrum | Amstrad CPC, MSX, SMS, Game Boy, SAM Coupé, ColecoVision, PC-88 |
+| 68000 | Amiga | Atari ST, Mega Drive, Sharp X68000 |
+| 6809 | - | TRS-80 CoCo, Dragon, Vectrex, FM-7 |
 | 65816 | - | SNES |
 | ARM | - | Archimedes |
+| TMS9900 | - | TI-99/4A |
+| CP1610 | - | Intellivision |
+| x86 | - | PC-98 |
 
 ---
 
