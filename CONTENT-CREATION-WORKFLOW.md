@@ -296,7 +296,7 @@ echo $? # Must be 0
 ```
 
 **Assembly Games:**
-- Platform-specific assembler (ACME, ca65, vasm, sjasmplus)
+- Platform-specific assembler (ACME, ca65, vasm, pasmonext)
 - Semantic validation if available
 - Runtime testing in emulator
 

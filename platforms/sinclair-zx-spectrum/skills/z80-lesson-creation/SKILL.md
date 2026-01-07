@@ -14,7 +14,7 @@ description: Use when creating or editing ZX Spectrum Z80 Assembly units - provi
 ## When to Use
 
 Use this skill during **Phase 3 (Validation)** when:
-- Assembling Z80 code with sjasmplus
+- Assembling Z80 code with pasmonext
 - Capturing screenshots with FUSE emulator
 - Validating Z80 instruction usage
 - Checking for ZX-specific pitfalls
@@ -59,13 +59,13 @@ OUT ($FE),A     ; Output to port
 
 ## Phase 3: Validation (Technical Details)
 
-### Step 3.1: Assemble with sjasmplus
+### Step 3.1: Assemble with pasmonext
 
 ```bash
 cd /code-samples/sinclair-zx-spectrum/game-NN-{slug}/unit-NN/
 
 # Assemble to .tap
-sjasmplus example-1.asm --tap=example-1.tap
+pasmonext --tapbas example-1.asm example-1.tap
 echo $?  # Must be 0
 ```
 
@@ -177,7 +177,7 @@ fuse example-1.tap
 
 ```bash
 # Assemble
-sjasmplus example-1.asm --tap=example-1.tap
+pasmonext --tapbas example-1.asm example-1.tap
 
 # Semantic validation
 python3 /scripts/validate-zx-asm.py example-1.asm

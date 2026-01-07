@@ -468,7 +468,7 @@ Many patterns have **simple → complex** progressions taught across games:
 
 ### Code Style
 
-- **Assembly:** Platform-appropriate assembler syntax (ACME for C64, sjasmplus for ZX, vasm for Amiga, ca65 for NES)
+- **Assembly:** Platform-appropriate assembler syntax (ACME for C64, pasmonext for ZX, vasm for Amiga, ca65 for NES)
 - **Indentation:** Consistent (labels flush left, instructions indented)
 - **Constants:** Named constants, not magic numbers
 - **Optimization:** Phase-appropriate (don't over-optimize Phase 2 examples)
