@@ -188,18 +188,39 @@ Platforms under consideration for future curriculum development.
 | BBC Micro | 6502 | BBC BASIC | Master | Educational heritage, excellent BASIC |
 | MSX | Z80 | MSX BASIC | MSX2/MSX2+ | Japanese market, standardised hardware |
 | Apple II | 6502 | Applesoft BASIC | IIgs | American classic, simple architecture |
+| TRS-80 Model I/III/4 | Z80 | BASIC | Model 4 | Early home computing, CP/M capable |
 | TRS-80 Color Computer | 6809 | Color BASIC | CoCo 3 | Strong US following, OS-9 heritage |
 | Dragon 32/64 | 6809 | Dragon BASIC | - | UK CoCo cousin, compatible software |
+| Commodore PET | 6502 | CBM BASIC | - | First Commodore, business market |
 | VIC-20 | 6502 | CBM BASIC | - | C64 predecessor, simpler entry point |
+| Commodore Plus/4 | 7501 | BASIC 3.5 | - | Business-focused, built-in software |
 | Oric-1/Atmos | 6502 | Oric BASIC | - | UK cult following |
+| Acorn Electron | 6502 | BBC BASIC | - | Budget BBC Micro, UK educational |
 | SAM Coupé | Z80 | SAM BASIC | - | UK "Spectrum successor" |
 | TI-99/4A | TMS9900 | TI BASIC | - | Unique 16-bit CPU, early (1981) |
 | FM-7 | 6809 | F-BASIC | FM-77 | Japanese, Fujitsu |
 | PC-88 | Z80 | N88-BASIC | - | NEC, huge in Japan |
+| PC-6001 | Z80 | N60-BASIC | PC-6601 | NEC entry-level, Japanese |
+| Sharp MZ-700/800 | Z80 | S-BASIC | MZ-1500 | Sharp clean computer, Japanese |
+| Sharp X1 | Z80 | S-BASIC | X1 Turbo | Sharp, TV tuner integration, Japanese |
 | ZX81 | Z80 | Sinclair BASIC | - | Spectrum predecessor, 1KB RAM constraint |
 | ZX80 | Z80 | Sinclair BASIC | - | Earliest Sinclair, extreme limits |
 | Jupiter Ace | Z80 | Forth | - | Forth-based, unique approach |
 | Sinclair QL | 68008 | SuperBASIC | - | 68K variant, influential failure |
+| Camputers Lynx | Z80 | Lynx BASIC | - | UK computer (not Atari handheld) |
+| Memotech MTX | Z80 | MTX BASIC | - | UK, expandable system |
+| Elan Enterprise | Z80 | IS-BASIC | - | Hungarian, advanced for era |
+| Mattel Aquarius | Z80 | Aquarius BASIC | - | Budget US computer, limited |
+| Thomson MO5/TO7 | 6809 | BASIC | TO8/TO9 | French market, educational |
+| Tatung Einstein | Z80 | - | TC01 | UK-sold, CP/M capable, disk-based |
+| Spectravideo SV-318/328 | Z80 | SVI BASIC | - | MSX precursor, semi-compatible |
+| Grundy NewBrain | Z80 | NewBrain BASIC | - | UK, unusual design, Sinclair rival |
+| Laser 200/310 | Z80 | BASIC | - | VTech budget computers |
+| Sord M5 | Z80 | BASIC-I/G | - | Japanese, game-focused |
+| Hector | Z80 | BASIC | - | French market |
+| Exidy Sorcerer | Z80 | BASIC | - | Early CP/M capable |
+| Video Genie | Z80 | BASIC | - | TRS-80 Model I clone |
+| Colour Genie | Z80 | BASIC | - | Improved Video Genie, colour |
 | Bally Astrocade | Z80 | Bally BASIC | - | Early console with built-in BASIC |
 
 ### 16-Bit Home Computers
@@ -212,7 +233,7 @@ Platforms under consideration for future curriculum development.
 | PC-98 | x86 | N88-BASIC(86) | - | NEC, dominant in Japan, unique graphics |
 | C128 | 8502/Z80 | BASIC 7.0 | - | C64 enhancement track candidate |
 
-### Game Consoles
+### Game Consoles (8-bit/16-bit Era)
 
 | Platform | Language | Enhancement Track | Notes |
 |----------|----------|-------------------|-------|
@@ -223,13 +244,34 @@ Platforms under consideration for future curriculum development.
 | Vectrex | 6809 | - | Vector graphics, unique display |
 | ColecoVision | Z80 | - | Similar to SMS, TMS9918 graphics |
 | Intellivision | CP1610 | - | Unique CPU, early console |
+| Atari 5200 | 6502 | - | Same architecture as Atari 8-bit |
 | Atari 7800 | 6502 | - | Backward compatible with 2600 |
 | Atari 2600 | 6502 | - | Racing the beam, extreme constraints |
+| Atari Jaguar | 68000 + RISC | CD | First 64-bit marketing, complex |
 | SG-1000 | Z80 | - | Sega's first, SMS predecessor |
 | Neo Geo AES | 68000 | CD | Arcade hardware at home |
 | Fairchild Channel F | F8 | - | First ROM cartridge console |
 | Magnavox Odyssey² | 8048 | - | Unique Intel CPU, early console |
 | Amiga CD32 | 68020 | - | Amiga as console, AGA chipset |
+| 3DO | ARM60 | - | Early CD-based, multiple manufacturers |
+| Philips CD-i | 68070 | - | Multimedia focus, infamous Zelda |
+
+### Game Consoles (32-bit Era - Extended Coverage)
+
+These platforms represent the transition from assembly-primary to C/C++-primary development. They're included as "extended coverage" for learners who want to push beyond the core vintage era.
+
+| Platform | Language | Notes |
+|----------|----------|-------|
+| PlayStation | MIPS R3000A | 3D revolution, 102M units, MIPS architecture |
+| Sega Saturn | Dual SH-2 | Complex dual-CPU, notoriously difficult |
+| Nintendo 64 | MIPS R4300i | 64-bit MIPS, cartridge 3D, RCP |
+| Sega Dreamcast | SH-4 | Last Sega console, PowerVR2 GPU |
+
+**32-bit era notes:**
+- These platforms mix assembly and C programming
+- More complex hardware requiring 3D mathematics
+- Still possible as assembly curricula but with higher difficulty
+- Natural endpoint for "vintage" coverage (year ~2001)
 
 ### Handhelds
 
@@ -283,18 +325,22 @@ When evaluating platforms for inclusion:
 
 | Family | Current Platforms | Future Platforms |
 |--------|-------------------|------------------|
-| 6502 | C64, NES | Atari 8-bit, Apple II, BBC Micro, VIC-20, Oric, TurboGrafx, Atari 7800, Atari 2600, Atari Lynx |
-| Z80 | ZX Spectrum | Amstrad CPC, MSX, SMS, Game Boy, SAM Coupé, ColecoVision, PC-88, Game Gear, Neo Geo Pocket, ZX81, ZX80, Jupiter Ace, SG-1000, Bally Astrocade |
-| 68000 | Amiga | Atari ST, Mega Drive, Sharp X68000, Neo Geo AES, Amiga CD32 |
+| 6502 | C64, NES | Atari 8-bit, Apple II, BBC Micro, Acorn Electron, VIC-20, Commodore PET, Oric, TurboGrafx, Atari 5200, Atari 7800, Atari 2600, Atari Lynx |
+| 7501 | - | Commodore Plus/4 |
+| Z80 | ZX Spectrum | Amstrad CPC, MSX, SMS, Game Boy, SAM Coupé, ColecoVision, PC-88, PC-6001, Game Gear, Neo Geo Pocket, ZX81, ZX80, Jupiter Ace, SG-1000, TRS-80 Model I/III/4, Sharp MZ, Sharp X1, Tatung Einstein, Spectravideo, Grundy NewBrain, Laser 200/310, Sord M5, Hector, Exidy Sorcerer, Video/Colour Genie, Camputers Lynx, Memotech MTX, Elan Enterprise, Mattel Aquarius, Bally Astrocade |
+| 68000 | Amiga | Atari ST, Mega Drive, Sharp X68000, Neo Geo AES, Atari Jaguar (+ RISC), Amiga CD32 |
 | 68008 | - | Sinclair QL |
-| 6809 | - | TRS-80 CoCo, Dragon, Vectrex, FM-7 |
+| 68070 | - | Philips CD-i |
+| 6809 | - | TRS-80 CoCo, Dragon, Vectrex, FM-7, Thomson MO/TO |
 | 65816 | - | SNES |
-| ARM | - | Archimedes |
+| ARM | - | Archimedes, Game Boy Advance, 3DO |
 | TMS9900 | - | TI-99/4A |
 | CP1610 | - | Intellivision |
 | x86 | - | PC-98, WonderSwan |
 | F8 | - | Fairchild Channel F |
 | 8048 | - | Magnavox Odyssey² |
+| MIPS | - | PlayStation, Nintendo 64 |
+| SH-2/SH-4 | - | Sega Saturn (dual SH-2), Sega Dreamcast (SH-4) |
 
 ---
 
@@ -312,5 +358,6 @@ When evaluating platforms for inclusion:
 
 ## Version History
 
+- **2.1 (2026-01-07):** Expanded future platforms to 72 platforms across 16 CPU families. Added 32-bit era extended coverage (PlayStation, Saturn, N64, Dreamcast). Added missing 8-bit computers (Einstein, Spectravideo, NewBrain, Sord M5, Hector, Laser, Video/Colour Genie, etc.).
 - **2.0 (2026-01-07):** Restructured into Enhancement Tracks and Post-Capstone Games. Added concrete unit counts and implementation priorities.
 - **1.0 (2025-01-07):** Initial planning document.
