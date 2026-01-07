@@ -1,9 +1,9 @@
 ---
-name: zx-basic-lesson-creation
-description: Use when creating or editing ZX Spectrum BASIC lessons - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
+name: zx-basic-unit-creation
+description: Use when creating or editing ZX Spectrum BASIC units - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
 ---
 
-# ZX Spectrum BASIC Lesson Creation
+# ZX Spectrum BASIC Unit Creation
 
 **Role:** Technical execution for Phase 3 (Validation) of the Content Creation Workflow.
 
@@ -20,7 +20,7 @@ Use this skill during **Phase 3 (Validation)** when:
 - Checking for ZX-specific pitfalls
 
 **Do NOT use for:**
-- Z80 Assembly lessons (use `z80-lesson-creation` skill)
+- Z80 Assembly units (use `z80-lesson-creation` skill)
 - Other platforms (use platform-specific skills)
 
 ---
@@ -81,7 +81,7 @@ Any case works (unlike C64):
 ### Step 3.1: Semantic Validation
 
 ```bash
-cd /code-samples/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/
+cd /code-samples/sinclair-zx-spectrum/game-NN-{slug}/unit-NN/
 
 python3 /scripts/validate-zx-basic.py example-1.bas
 ```
@@ -115,7 +115,7 @@ fuse example-1.tap
 
 1. Wait for program to run
 2. Menu → Media → Screenshot
-3. Save to `/website/public/images/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/screenshot-1.png`
+3. Save to `/website/public/images/sinclair-zx-spectrum/game-NN-{slug}/unit-NN/screenshot-1.png`
 
 ### Step 3.4: Screenshot Verification (MANDATORY)
 
@@ -189,10 +189,10 @@ OUT 254,value   ; Border colour + speaker
 
 | File | Location |
 |------|----------|
-| Lesson MDX | `/website/src/pages/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN.mdx` |
-| Source (.bas) | `/code-samples/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/example-1.bas` |
-| Tape (.tap) | `/code-samples/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/example-1.tap` |
-| Screenshot | `/website/public/images/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/screenshot-1.png` |
+| Unit MDX | `/website/src/pages/sinclair-zx-spectrum/game-MM-{slug}/unit-NN-{slug}.mdx` |
+| Source (.bas) | `/code-samples/sinclair-zx-spectrum/game-MM-{slug}/unit-NN/example-1.bas` |
+| Tape (.tap) | `/code-samples/sinclair-zx-spectrum/game-MM-{slug}/unit-NN/example-1.tap` |
+| Screenshot | `/website/public/images/sinclair-zx-spectrum/game-MM-{slug}/unit-NN/screenshot-1.png` |
 
 ---
 
@@ -239,7 +239,7 @@ fuse example-1.tap
 
 ## The Bottom Line
 
-**This skill provides:** Compilation, validation, and screenshot capture for ZX BASIC lessons.
+**This skill provides:** Compilation, validation, and screenshot capture for ZX BASIC units.
 
 **The main workflow provides:** Planning, creation, integration, and publication steps.
 

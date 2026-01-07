@@ -1,9 +1,9 @@
 ---
-name: zx-z80-lesson-creation
-description: Use when creating or editing ZX Spectrum Z80 Assembly lessons - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
+name: zx-z80-unit-creation
+description: Use when creating or editing ZX Spectrum Z80 Assembly units - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
 ---
 
-# ZX Spectrum Z80 Assembly Lesson Creation
+# ZX Spectrum Z80 Assembly Unit Creation
 
 **Role:** Technical execution for Phase 3 (Validation) of the Content Creation Workflow.
 
@@ -20,7 +20,7 @@ Use this skill during **Phase 3 (Validation)** when:
 - Checking for ZX-specific pitfalls
 
 **Do NOT use for:**
-- ZX Spectrum BASIC lessons (use `basic-lesson-creation` skill)
+- ZX Spectrum BASIC units (use `basic-lesson-creation` skill)
 - Other platforms (use platform-specific skills)
 
 ---
@@ -62,7 +62,7 @@ OUT ($FE),A     ; Output to port
 ### Step 3.1: Assemble with sjasmplus
 
 ```bash
-cd /code-samples/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/
+cd /code-samples/sinclair-zx-spectrum/game-NN-{slug}/unit-NN/
 
 # Assemble to .tap
 sjasmplus example-1.asm --tap=example-1.tap
@@ -90,7 +90,7 @@ fuse example-1.tap
 
 1. Wait for program to run
 2. Menu → Media → Screenshot
-3. Save to `/website/public/images/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/screenshot-1.png`
+3. Save to `/website/public/images/sinclair-zx-spectrum/game-NN-{slug}/unit-NN/screenshot-1.png`
 
 ### Step 3.4: Screenshot Verification (MANDATORY)
 
@@ -166,10 +166,10 @@ fuse example-1.tap
 
 | File | Location |
 |------|----------|
-| Lesson MDX | `/website/src/pages/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN.mdx` |
-| Source (.asm) | `/code-samples/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/example-1.asm` |
-| Tape (.tap) | `/code-samples/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/example-1.tap` |
-| Screenshot | `/website/public/images/sinclair-zx-spectrum/phase-X/tier-Y/lesson-NNN/screenshot-1.png` |
+| Unit MDX | `/website/src/pages/sinclair-zx-spectrum/game-MM-{slug}/unit-NN-{slug}.mdx` |
+| Source (.asm) | `/code-samples/sinclair-zx-spectrum/game-MM-{slug}/unit-NN/example-1.asm` |
+| Tape (.tap) | `/code-samples/sinclair-zx-spectrum/game-MM-{slug}/unit-NN/example-1.tap` |
+| Screenshot | `/website/public/images/sinclair-zx-spectrum/game-MM-{slug}/unit-NN/screenshot-1.png` |
 
 ---
 
@@ -202,7 +202,7 @@ fuse example-1.tap
 
 ## The Bottom Line
 
-**This skill provides:** Assembly, validation, and screenshot capture for Z80 lessons.
+**This skill provides:** Assembly, validation, and screenshot capture for Z80 units.
 
 **The main workflow provides:** Planning, creation, integration, and publication steps.
 

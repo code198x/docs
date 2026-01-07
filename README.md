@@ -38,7 +38,7 @@ See [CURRICULUM-SPECIFICATION.md](CURRICULUM-SPECIFICATION.md) for the full mode
 ├── plans/                  # Design documents
 │
 ├── CURRICULUM-SPECIFICATION.md   # How curricula work
-├── LESSON-SPECIFICATION.md       # How to format unit files
+├── UNIT-SPECIFICATION.md         # How to format unit files
 ├── PATTERN-LIBRARY-SPECIFICATION.md
 ├── VAULT-SPECIFICATION.md
 └── CONTENT-CREATION-WORKFLOW.md
@@ -49,19 +49,29 @@ See [CURRICULUM-SPECIFICATION.md](CURRICULUM-SPECIFICATION.md) for the full mode
 | Document | Purpose |
 |----------|---------|
 | [CURRICULUM-SPECIFICATION.md](CURRICULUM-SPECIFICATION.md) | The games model, unit structure, pedagogical approach |
-| [LESSON-SPECIFICATION.md](LESSON-SPECIFICATION.md) | Technical formatting for unit files |
+| [UNIT-SPECIFICATION.md](UNIT-SPECIFICATION.md) | Technical formatting for unit files |
 | [VAULT-SPECIFICATION.md](VAULT-SPECIFICATION.md) | Encyclopedia of people, companies, games, techniques |
 | [PATTERN-LIBRARY-SPECIFICATION.md](PATTERN-LIBRARY-SPECIFICATION.md) | Reusable code patterns by platform |
 | [CONTENT-CREATION-WORKFLOW.md](CONTENT-CREATION-WORKFLOW.md) | End-to-end content creation process |
 
 ## Platform Status
 
-| Platform | Curriculum | Status |
-|----------|------------|--------|
-| Commodore 64 | [16 games](curriculum/commodore-64-curriculum.md) | Game sequence defined |
-| ZX Spectrum | [TBD](curriculum/sinclair-zx-spectrum-curriculum.md) | Awaiting restructure |
-| Amiga | [TBD](curriculum/commodore-amiga-curriculum.md) | Awaiting restructure |
-| NES | [TBD](curriculum/nintendo-nes-curriculum.md) | Awaiting restructure |
+### Assembly Curricula (Main)
+
+| Platform | Language | Curriculum | Status |
+|----------|----------|------------|--------|
+| Commodore 64 | 6510 Assembly | [16 games, 1,536 units](curriculum/commodore-64-curriculum.md) | Game sequence defined |
+| ZX Spectrum | Z80 Assembly | [16 games, 1,536 units](curriculum/sinclair-zx-spectrum-curriculum.md) | Game sequence defined |
+| NES | 6502 Assembly | [16 games, 1,536 units](curriculum/nintendo-nes-curriculum.md) | Game sequence defined |
+| Amiga | 68000 Assembly | [16 games, 2,048 units](curriculum/commodore-amiga-curriculum.md) | Game sequence defined |
+
+### BASIC Gateway Curricula (Optional)
+
+| Platform | Language | Curriculum | Status |
+|----------|----------|------------|--------|
+| Commodore 64 | BASIC V2 | [8 games, 512 units](curriculum/commodore-64-basic-curriculum.md) | Game sequence defined |
+| ZX Spectrum | Sinclair BASIC | [8 games, 512 units](curriculum/sinclair-zx-spectrum-basic-curriculum.md) | Game sequence defined |
+| Amiga | AMOS BASIC | [8 games, 512 units](curriculum/commodore-amiga-amos-curriculum.md) | Game sequence defined |
 
 ## Related Repositories
 

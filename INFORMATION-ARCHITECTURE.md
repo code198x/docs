@@ -1,8 +1,11 @@
 # Information Architecture Specification
 
+**Version:** 2.0
+**Last Updated:** 2026-01-07
+
 ## Overview
 
-This document defines how learners navigate and discover content across Code Like It's 198x. The IA connects four primary content types (Curriculum, Lessons, Vault, Pattern Library) into a coherent learning experience that supports both structured learning and exploratory discovery.
+This document defines how learners navigate and discover content across Code Like It's 198x. The IA connects four primary content types (Curriculum, Units, Vault, Pattern Library) into a coherent learning experience that supports both structured learning and exploratory discovery.
 
 **Core Principles:**
 - **Learning-first navigation** - Curriculum progression is primary path
@@ -32,17 +35,14 @@ This document defines how learners navigate and discover content across Code Lik
 │   ├── /commodore-amiga/
 │   └── /nintendo-nes/
 │
-├── /learn/ (Lessons)
+├── /learn/ (Units)
 │   ├── /commodore-64/
-│   │   ├── /phase-1/
-│   │   │   ├── /tier-01/ (Space Shooter)
-│   │   │   │   ├── /lesson-001/
-│   │   │   │   ├── /lesson-002/
-│   │   │   │   └── ... (32 lessons)
-│   │   │   ├── /tier-02/ (Maze Chase)
-│   │   │   └── ... (16 tiers)
-│   │   ├── /phase-2/
-│   │   └── ... (8 phases)
+│   │   ├── /game-01-sid-symphony/
+│   │   │   ├── /unit-01-first-notes/
+│   │   │   ├── /unit-02-adsr-envelopes/
+│   │   │   └── ... (64 units)
+│   │   ├── /game-02-starfield/
+│   │   └── ... (16 games)
 │   └── ... (all platforms)
 │
 ├── /vault/ (Reference encyclopedia)
@@ -84,18 +84,18 @@ This document defines how learners navigate and discover content across Code Lik
 
 ## URL Patterns
 
-### Lessons
-**Pattern:** `/learn/{platform}/phase-{N}/tier-{NN}/lesson-{NNN}/`
+### Units
+**Pattern:** `/learn/{platform}/game-{NN}-{game-slug}/unit-{NN}-{unit-slug}/`
 
 **Examples:**
-- `/learn/commodore-64/phase-1/tier-01/lesson-001/` - First lesson
-- `/learn/commodore-64/phase-2/tier-05/lesson-150/` - Horizontal Shooter, Lesson 150
-- `/learn/nintendo-nes/phase-8/tier-16/lesson-512/` - Final lesson
+- `/learn/commodore-64/game-01-sid-symphony/unit-01-first-notes/` - First unit
+- `/learn/commodore-64/game-09-sprite-storm/unit-12-multiplexing/` - Advanced game
+- `/learn/nintendo-nes/game-16-requiem-for-a-mapper/unit-64-final-polish/` - Final unit
 
 **Why this structure:**
-- Clear hierarchy: platform → phase → tier → lesson
-- Predictable URLs (easy to guess next lesson)
-- Human-readable
+- Clear hierarchy: platform → game → unit
+- Numbered AND slugged for sort order + readability
+- Human-readable URLs (SEO-friendly)
 - Supports breadcrumb navigation naturally
 
 ### Vault Entries
@@ -109,7 +109,7 @@ This document defines how learners navigate and discover content across Code Lik
 - `/vault/events/fall-of-berlin-wall/`
 
 **Why this structure:**
-- Category-first organization
+- Category-first organisation
 - Shared namespace (one vault for all platforms)
 - Descriptive slugs
 - Supports browsing by category
@@ -125,7 +125,7 @@ This document defines how learners navigate and discover content across Code Lik
 
 **Why this structure:**
 - Platform-first (code is platform-specific)
-- Category organization (find all rendering patterns)
+- Category organisation (find all rendering patterns)
 - Descriptive pattern names
 - Supports evolution chains (sprite-multiplexing-basic → -sorted → -advanced)
 
@@ -138,7 +138,7 @@ This document defines how learners navigate and discover content across Code Lik
 
 **Why this structure:**
 - One overview page per platform
-- Shows all phases, tiers, genre progression
+- Shows all games, unit counts, skill progression
 - Entry point for structured learning
 
 ### Platform Landing Pages
@@ -167,7 +167,7 @@ This document defines how learners navigate and discover content across Code Lik
 - Site tagline/mission
 - Platform selector (4 primary platforms prominently)
 - Quick links to popular content
-- Recent additions (vault entries, new lessons)
+- Recent additions (vault entries, new units)
 - "Start Learning" CTA
 
 **Navigation:**
@@ -198,50 +198,85 @@ This document defines how learners navigate and discover content across Code Lik
 
 **Purpose:** Show complete curriculum structure for a platform
 
+**Note:** Some platforms have multiple curricula:
+- **BASIC Gateway (Optional):** 8 games teaching fundamentals through an accessible language
+- **Assembly Main:** 16 games teaching professional-level hardware programming
+
+Platforms with BASIC gateways: Commodore 64 (BASIC V2), ZX Spectrum (Sinclair BASIC), Amiga (AMOS BASIC)
+Platforms without BASIC gateway: NES (assembly only)
+
 **Content:**
-- 8 phases with descriptions
-- 16 tiers per phase (expandable/collapsible)
-- Genre progression visualization
+- Curriculum selector (if platform has multiple)
+- Game sequence with descriptions
+- Unit counts per game
+- Skill progression visualisation
 - Learning path guidance
-- "Start Phase 1" CTA
+- "Start Game 1" CTA
 
 **Navigation:**
 - Breadcrumb: Home → Platform → Curriculum
-- Phase navigation (jump to phase)
-- Link to first lesson in each tier
+- Curriculum tabs (if multiple: "BASIC Gateway" / "Assembly")
+- Game navigation (jump to any game)
+- Link to first unit in each game
 - Related: Platform page, Vault system entry
 
-**Example Layout:**
+**Example Layout (Platform with BASIC Gateway):**
 ```
 # Commodore 64 Curriculum
 
-## Phase 1: Foundation (1982-1983)
-Target quality: Early C64 games - simple graphics, basic scrolling...
+[BASIC V2 Gateway] [6510 Assembly]  ← Curriculum tabs
 
-[Tier 1: Space Shooter] → Lesson 1
-[Tier 2: Maze Chase] → Lesson 33
-[Tier 3: Platform Game] → Lesson 65
-... (expand to show all 16)
+## BASIC V2 Gateway (Optional - 8 Games, 512 Units)
 
-## Phase 2: Enhancement (1983-1984)
-Target quality: Improved C64 games - smooth scrolling...
+Start here if you're new to programming or want a gentler introduction.
 
-[Show/Hide Tiers]
+[Game 1: Number Hunter] → Unit 1
+Number guessing with INPUT and IF/THEN
+
+[Game 2: Cosmic Drift] → Unit 1
+Animation with POKE to screen memory
+
+... (8 games)
+
+---
+
+## 6510 Assembly (Main - 16 Games, 1,536 Units)
+
+[Game 1: SID Symphony] → Unit 1
+Rhythm game introducing the SID chip
+
+[Game 2: Starfield] → Unit 1
+Space shooter with hardware sprites
+
+... (show all 16 games)
+
+## Advanced Games (128 Units Each)
+
+[Game 11: Dungeon Crawl] → Unit 1
+Top-down adventure with save system
+
+...
+
+## Capstone (256 Units)
+
+[Game 16: Symphony's End] → Unit 1
+Commercial-quality action-adventure
 ```
 
-### 4. Lesson Page (`/learn/{platform}/phase-{N}/tier-{NN}/lesson-{NNN}/`)
+### 4. Unit Page (`/learn/{platform}/game-{NN}-{slug}/unit-{NN}-{slug}/`)
 
-**Purpose:** Primary learning content - teach one concept
+**Purpose:** Primary learning content - teach concepts that produce a working result
 
 **Required Sections:**
 1. **Header:**
-   - Lesson number and title
-   - Tier/genre context
+   - Unit number and title
+   - Game context
    - Estimated time
    - Difficulty indicator
 
-2. **Learning Objectives:**
-   - What you'll learn in this lesson
+2. **Opening:**
+   - What this unit teaches
+   - What you'll build
    - Prerequisites (with links)
 
 3. **Main Content:**
@@ -259,17 +294,19 @@ Target quality: Improved C64 games - smooth scrolling...
 5. **Further Reading:**
    - Pattern Library references
    - Vault contextual links
-   - Related lessons
+   - Related units
+
+6. **What You've Learnt:**
+   - Bullet summary of capabilities
 
 **Navigation:**
-- Breadcrumb: Home → Platform → Curriculum → Phase N → Tier NN → Lesson NNN
-- Lesson navigation: ← Previous | Next →
-- Tier overview: All lessons in this tier
-- Jump to: [Lesson select dropdown]
+- Breadcrumb: Home → Platform → Game → Unit
+- Unit navigation: ← Previous | Next →
+- Game overview: All units in this game
+- Jump to: [Unit select dropdown]
 
 **Sidebar (contextual):**
-- Tier progress: Lesson X of 32
-- Phase progress: Tier X of 16
+- Game progress: Unit X of 64
 - Quick links to Vault mentions
 - Related patterns
 - Download code samples
@@ -277,30 +314,31 @@ Target quality: Improved C64 games - smooth scrolling...
 **Example Layout:**
 ```
 ┌─────────────────────────────────────────────────┐
-│ Breadcrumb: C64 > Phase 1 > Tier 1 > Lesson 8  │
+│ Breadcrumb: C64 > SID Symphony > Unit 3         │
 ├─────────────────────────────────────────────────┤
-│ LESSON 8: Displaying More Sprites               │
-│ Space Shooter • 30 mins • Intermediate          │
+│ UNIT 3: Reading the Keyboard                    │
+│ SID Symphony • 45 mins • Foundation             │
 ├──────────────────────────┬──────────────────────┤
 │ MAIN CONTENT             │ SIDEBAR              │
 │                          │                      │
-│ ## Learning Objectives   │ Tier Progress:       │
-│ - Sprite multiplexing    │ [████████░░] 8/32    │
-│ - Raster interrupts      │                      │
+│ ## What You'll Build     │ Game Progress:       │
+│ A keyboard scanner that  │ [████░░░░] 3/64      │
+│ detects which key is...  │                      │
 │                          │ Related Vault:       │
-│ ## Introduction          │ • VIC-II Chip        │
-│ The VIC-II supports...   │ • Raster Interrupts  │
+│ ## Introduction          │ • CIA Chip           │
+│ The C64 keyboard is a    │ • Keyboard Matrix    │
+│ matrix scanned by...     │                      │
+│                          │ Related Patterns:    │
+│ [Code example]           │ • Key Debounce       │
 │                          │                      │
-│ [Code example]           │ Related Patterns:    │
-│                          │ • Sprite Mux Basic   │
-│ [Screenshot]             │                      │
-│                          │ Download:            │
-│ ## Further Reading       │ • lesson-008.asm     │
-│ **Patterns:**            │ • lesson-008.prg     │
-│ - Sprite Multiplexing    │                      │
+│ [Screenshot]             │ Download:            │
+│                          │ • unit-03.bas        │
+│ ## What You've Learnt    │                      │
+│ - Keyboard matrix        │                      │
+│ - CIA register reading   │                      │
 │                          │                      │
 ├──────────────────────────┴──────────────────────┤
-│ ← Lesson 7  |  Tier Overview  |  Lesson 9 →     │
+│ ← Unit 2  |  Game Overview  |  Unit 4 →         │
 └─────────────────────────────────────────────────┘
 ```
 
@@ -313,46 +351,46 @@ Target quality: Improved C64 games - smooth scrolling...
 - Key facts (frontmatter data displayed)
 - Main content (comprehensive article)
 - Cross-references (related entries)
-- Curriculum integration (which lessons reference this)
+- Curriculum integration (which units reference this)
 
 **Navigation:**
 - Breadcrumb: Home → Vault → Category → Entry
 - Related entries (same category)
 - Category browser
-- Referenced in lessons (backlinks)
+- Referenced in units (backlinks)
 
 **Example Layout (Person):**
 ```
 ┌─────────────────────────────────────────────────┐
-│ Breadcrumb: Vault > People > Martin Galway     │
+│ Breadcrumb: Vault > People > Rob Hubbard        │
 ├─────────────────────────────────────────────────┤
-│ [PERSON] Martin Galway                          │
+│ [PERSON] Rob Hubbard                            │
 │                                                 │
-│ Role: Musician, Sound Designer                 │
-│ Platforms: Commodore 64, ZX Spectrum           │
-│ Active: 1983-1988                               │
+│ Role: Musician, Sound Designer                  │
+│ Platforms: Commodore 64, Amiga                  │
+│ Active: 1985-1989                               │
 ├─────────────────────────────────────────────────┤
 │ [Photo if available]                            │
 │                                                 │
 │ ## Biography                                    │
-│ Martin Galway revolutionized...                 │
+│ Rob Hubbard defined the sound of the C64...     │
 │                                                 │
 │ ## Notable Works                                │
-│ • Comic Bakery (link to game vault)            │
-│ • Times of Lore                                 │
+│ • Commando (link to game vault)                 │
+│ • Monty on the Run                              │
 │                                                 │
 │ ## Signature Techniques                         │
-│ • Multi-speed music routines                    │
+│ • Multi-speed playback routines                 │
 │   (link to technique vault)                     │
 │                                                 │
 │ ## Related Entries                              │
-│ People: Rob Hubbard, Ben Daglish               │
+│ People: Martin Galway, Ben Daglish              │
 │ Hardware: SID Chip                              │
 │ Companies: Ocean Software                       │
 │                                                 │
 │ ## Referenced In Curriculum                     │
-│ • C64 Phase 2, Tier 3, Lesson 45               │
-│ • C64 Phase 4, Tier 8, Lesson 230              │
+│ • C64 Game 1: SID Symphony, Units 8-12          │
+│ • C64 Game 11: Dungeon Crawl, Unit 45           │
 └─────────────────────────────────────────────────┘
 ```
 
@@ -361,7 +399,7 @@ Target quality: Improved C64 games - smooth scrolling...
 **Purpose:** Provide production-ready reference implementation
 
 **Content Structure:**
-- Pattern metadata (difficulty, phase, prerequisites)
+- Pattern metadata (difficulty, game introduced, prerequisites)
 - Overview (what it does, when to use)
 - How it works (technical explanation)
 - Code implementation (complete, commented)
@@ -376,24 +414,24 @@ Target quality: Improved C64 games - smooth scrolling...
 - Related patterns (same category)
 - Evolution chain (previous/next versions)
 - Platform pattern browser
-- Referenced in lessons (backlinks)
+- Referenced in units (backlinks)
 
 **Example Layout:**
 ```
 ┌─────────────────────────────────────────────────┐
-│ Breadcrumb: Patterns > C64 > Rendering >       │
+│ Breadcrumb: Patterns > C64 > Rendering >        │
 │             Sprite Multiplexing (Basic)         │
 ├─────────────────────────────────────────────────┤
 │ Sprite Multiplexing (Basic)                     │
-│ Intermediate • Phase 2 • C64                    │
+│ Intermediate • Game 9 • C64                     │
 ├──────────────────────────┬──────────────────────┤
 │ ## Overview              │ METADATA             │
 │ Displays more than 8...  │                      │
 │                          │ Difficulty: ●●●○○    │
-│ ## When to Use           │ Phase: 2             │
+│ ## When to Use           │ Introduced: Game 9   │
 │ Use when: 9-40 sprites   │ First taught:        │
-│                          │   Phase 2, Tier 1,   │
-│ ## How It Works          │   Lesson 8           │
+│                          │   Sprite Storm,      │
+│ ## How It Works          │   Unit 12            │
 │ 1. Sort sprites by Y     │                      │
 │ 2. Set up IRQ chain...   │ Prerequisites:       │
 │                          │ • Raster IRQs        │
@@ -401,18 +439,18 @@ Target quality: Improved C64 games - smooth scrolling...
 │ ```asm                   │                      │
 │ ; Complete code here     │ Evolution:           │
 │ ```                      │ ← (none)             │
-│                          │ → Sorted (Phase 3)   │
-│ ## Performance           │ → Advanced (Phase 5) │
+│                          │ → Sorted (Game 11)   │
+│ ## Performance           │ → Advanced (Game 13) │
 │ CPU: ~900 cycles/frame   │                      │
 │                          │ Related:             │
 │ ## Variations            │ • Sprite Animation   │
-│ • Sorted (Phase 3)       │ • Raster Interrupts  │
-│ • Advanced (Phase 5)     │                      │
-│                          │ Used in lessons:     │
-│ ## Genre Applications    │ • Phase 2, Tier 1,   │
-│ Essential for:           │   Lesson 8           │
-│ • Shoot 'em ups          │ • Phase 3, Tier 2,   │
-│ • Beat 'em ups           │   Lessons 12-14      │
+│ • Sorted (Game 11)       │ • Raster Interrupts  │
+│ • Advanced (Game 13)     │                      │
+│                          │ Used in units:       │
+│ ## Genre Applications    │ • Game 9, Units 12-16│
+│ Essential for:           │ • Game 11, Unit 8    │
+│ • Shoot 'em ups          │ • Game 12, Units 4-8 │
+│ • Beat 'em ups           │                      │
 └──────────────────────────┴──────────────────────┘
 ```
 
@@ -450,27 +488,27 @@ Target quality: Improved C64 games - smooth scrolling...
 **Pattern:** `Home → Level 1 → Level 2 → Current Page`
 
 **Examples:**
-- Lesson: `Home → C64 → Curriculum → Phase 1 → Tier 1 → Lesson 8`
-- Vault: `Home → Vault → People → Martin Galway`
+- Unit: `Home → C64 → SID Symphony → Unit 3: Reading the Keyboard`
+- Vault: `Home → Vault → People → Rob Hubbard`
 - Pattern: `Home → Patterns → C64 → Rendering → Sprite Multiplexing`
 
-**Behavior:**
+**Behaviour:**
 - Each segment is clickable (navigates up hierarchy)
 - Current page not clickable
 - Collapses on mobile to `... → Parent → Current`
 
 ### Contextual Navigation
 
-**In Lessons:**
-- Sequential: ← Previous Lesson | Next Lesson →
-- Tier overview: "View all 32 lessons in Tier 1: Space Shooter"
-- Phase overview: "View Phase 1 overview"
-- Lesson jump: Dropdown to jump to any lesson in tier
+**In Units:**
+- Sequential: ← Previous Unit | Next Unit →
+- Game overview: "View all 64 units in SID Symphony"
+- Curriculum overview: "View C64 Curriculum"
+- Unit jump: Dropdown to jump to any unit in game
 
 **In Vault:**
 - Category browser: "View all People"
 - Related entries: Horizontal cards of related vault entries
-- Backlinks: "Referenced in 12 lessons"
+- Backlinks: "Referenced in 12 units"
 
 **In Patterns:**
 - Evolution chain: ← Basic | Sorted | Advanced →
@@ -483,17 +521,17 @@ Target quality: Improved C64 games - smooth scrolling...
 
 ```
 ┌─────────────────────────────────────────────────┐
-│ PLATFORMS         LEARN            RESOURCES     │
-│ • Commodore 64    • How to Use     • Vault       │
-│ • ZX Spectrum     • Browse         • Patterns    │
-│ • Amiga           • By Genre                     │
-│ • NES             • By Era         ABOUT         │
-│                                    • About       │
-│                   COMMUNITY        • Contact     │
-│                   • GitHub         • Legal       │
-│                   • Discord                      │
-│                                                  │
-│ Code Like It's 198x © 2025                       │
+│ PLATFORMS         LEARN            RESOURCES    │
+│ • Commodore 64    • How to Use     • Vault      │
+│ • ZX Spectrum     • Browse         • Patterns   │
+│ • Amiga           • By Genre                    │
+│ • NES             • By Era         ABOUT        │
+│                                    • About      │
+│                   COMMUNITY        • Contact    │
+│                   • GitHub         • Legal      │
+│                   • Discord                     │
+│                                                 │
+│ Code Like It's 198x © 2026                      │
 └─────────────────────────────────────────────────┘
 ```
 
@@ -501,32 +539,32 @@ Target quality: Improved C64 games - smooth scrolling...
 
 ## Cross-Linking Strategy
 
-### Inline Links in Lessons
+### Inline Links in Units
 
 **When to link to Vault:**
-- First mention of person/company/game/technique in lesson
+- First mention of person/company/game/technique in unit
 - Natural reading flow (don't over-link)
-- Provide context without disrupting lesson
+- Provide context without disrupting unit
 
 **Format:**
 ```markdown
-...similar to [Martin Galway](/vault/people/martin-galway/)'s approach
-in [Comic Bakery](/vault/games/comic-bakery/)...
+...similar to [Rob Hubbard](/vault/people/rob-hubbard/)'s approach
+in [Commando](/vault/games/commando/)...
 ```
 
 **Visual treatment:**
-- Vault links: Subtle color/underline, icon indicator
+- Vault links: Subtle colour/underline, icon indicator
 - Hover: Preview card with key facts
 - Click: Navigate to full vault entry
 
 **When to link to Patterns:**
-- End of lesson in "Further Practice" section
+- End of unit in "Further Reading" section
 - When referencing a technique the learner should know
 - Don't link to patterns not yet taught
 
 **Format:**
 ```markdown
-## Further Practice
+## Further Reading
 
 For a production-ready implementation, see
 [Pattern: Sprite Multiplexing (Basic)](/patterns/c64/rendering/sprite-multiplexing-basic/).
@@ -535,7 +573,7 @@ For a production-ready implementation, see
 ### Backlinks
 
 **Every Vault entry and Pattern shows:**
-- Which lessons reference it
+- Which units reference it
 - Automatic bidirectional linking
 - Helps learners find related content
 
@@ -544,18 +582,18 @@ For a production-ready implementation, see
 ## Referenced In Curriculum
 
 C64:
-• Phase 2, Tier 1, Lesson 8 - "Displaying More Sprites"
-• Phase 3, Tier 2, Lesson 40 - "Advanced Sprite Management"
-• Phase 5, Tier 1, Lesson 160 - "Sprite Multiplexing Mastery"
+• Game 1: SID Symphony, Unit 8 - "Multi-voice Basics"
+• Game 9: Sprite Storm, Unit 12 - "Multiplexing Introduction"
+• Game 11: Dungeon Crawl, Unit 45 - "Background Music"
 ```
 
 ### Related Content
 
 **Algorithmic suggestions:**
-- Same platform, same phase
+- Same platform, same game
 - Same genre, different platform
 - Same technique, different implementation
-- Prerequisite/follow-up lessons
+- Prerequisite/follow-up units
 
 **Manual curation:**
 - Frontmatter in vault/pattern entries
@@ -569,7 +607,7 @@ C64:
 ### Global Search
 
 **Search box in header, searches:**
-- Lesson titles and content
+- Unit titles and content
 - Vault entry names and content
 - Pattern names and descriptions
 
@@ -577,9 +615,9 @@ C64:
 ```
 Search: "sprite multiplexing"
 
-LESSONS (8)
-• C64 Phase 2, Tier 1, Lesson 8 - Displaying More Sprites
-• C64 Phase 3, Tier 2, Lesson 40 - Advanced Sprite Management
+UNITS (8)
+• C64 Game 9: Sprite Storm, Unit 12 - Multiplexing Introduction
+• C64 Game 9: Sprite Storm, Unit 14 - Sorted Sprite Lists
 ...
 
 VAULT (3)
@@ -599,15 +637,15 @@ PATTERNS (4)
 
 **By Platform:** `/browse/by-platform/`
 - List all content for selected platform
-- Filter by phase, tier, category
+- Filter by game, category
 
 **By Genre:** `/browse/by-genre/`
-- All "Shoot 'em Up" tiers across platforms
-- All "Platformer" tiers across platforms
-- See how genre evolved across phases
+- All "Shoot 'em Up" games across platforms
+- All "Platformer" games across platforms
+- See how genre evolved across platforms
 
 **By Technique:** `/browse/by-technique/`
-- All "sprite multiplexing" content (lessons, vault, patterns)
+- All "sprite multiplexing" content (units, vault, patterns)
 - All "scrolling" content across platforms
 - Compare techniques between platforms
 
@@ -617,28 +655,9 @@ PATTERNS (4)
 - "What techniques emerged in 1985-1987?"
 
 **By Difficulty:** `/browse/by-difficulty/`
-- Beginner (Phase 1-2)
-- Intermediate (Phase 3-5)
-- Advanced (Phase 6-8)
-
-**Example Browse Page:**
-```
-# Browse by Genre: Shoot 'em Up
-
-## Horizontal Shooters
-
-Commodore 64:
-• Phase 1, Tier 1: Space Shooter (Lessons 1-32)
-• Phase 2, Tier 5: Horizontal Shooter Enhanced (Lessons 129-160)
-• Phase 3, Tier 1: Horizontal Shooter Advanced (Lessons 1-32)
-...
-
-ZX Spectrum:
-• Phase 1, Tier 5: Horizontal Shooter (Lessons 129-160)
-...
-
-[Filter: Platform | Phase | Difficulty]
-```
+- Foundation (Games 1-10)
+- Advanced (Games 11-15)
+- Capstone (Game 16)
 
 ---
 
@@ -649,14 +668,14 @@ ZX Spectrum:
 **Path:**
 1. Homepage → "Choose Platform" → Commodore 64
 2. Platform page → "Start Learning" → Curriculum overview
-3. Curriculum → "Phase 1" → Tier 1 → Lesson 1
-4. In lesson: Read content, follow inline Vault links for context
-5. End of lesson: Click "Next Lesson →"
-6. After Lesson 32: "Tier complete! → Start Tier 2"
+3. Curriculum → "Game 1: SID Symphony" → Unit 1
+4. In unit: Read content, follow inline Vault links for context
+5. End of unit: Click "Next Unit →"
+6. After Unit 64: "Game complete! → Start Game 2"
 
 **Navigation support:**
 - Clear CTAs at each step
-- Progress indicators (Lesson X of 32)
+- Progress indicators (Unit X of 64)
 - Option to skip ahead (but discouraged)
 - Return to curriculum overview anytime
 
@@ -669,11 +688,11 @@ ZX Spectrum:
 4. Scan list → "Sprite Multiplexing (Advanced)"
 5. Read pattern, copy code
 6. Related patterns sidebar → "Sprite Animation"
-7. Check "Referenced in lessons" to learn context
+7. Check "Referenced in units" to learn context
 
 **Navigation support:**
 - Fast access from global nav
-- Category organization
+- Category organisation
 - Search shortcut
 - Clear code examples
 - Evolution chain visible
@@ -681,12 +700,12 @@ ZX Spectrum:
 ### Flow 3: Exploring Cultural Context
 
 **Path:**
-1. Reading Lesson 45 (C64, Phase 2)
-2. Click inline link → Vault: Martin Galway
+1. Reading Unit 8 (C64, Game 1: SID Symphony)
+2. Click inline link → Vault: Rob Hubbard
 3. From vault entry → Related: SID Chip
 4. From SID Chip → Related: Bob Yannes (designer)
 5. From Bob Yannes → Related: Ensoniq (company he founded)
-6. Backlink → "Referenced in 8 lessons" → Discover more content
+6. Backlink → "Referenced in 8 units" → Discover more content
 
 **Navigation support:**
 - Rich cross-linking
@@ -698,9 +717,9 @@ ZX Spectrum:
 
 **Path:**
 1. Browse → "By Genre" → "Platformers"
-2. See all platformer tiers across all platforms
-3. Compare: C64 Phase 1, Tier 3 vs. NES Phase 1, Tier 3
-4. Open both lessons in tabs
+2. See all platformer games across all platforms
+3. Compare: C64 Game 4: Platform Panic vs. NES Game 2: Crate Escape
+4. Open both games in tabs
 5. Compare techniques, constraints, approaches
 6. Check Vault → Compare VIC-II vs. PPU hardware
 
@@ -713,34 +732,39 @@ ZX Spectrum:
 
 ## Progressive Disclosure
 
-### Lesson Complexity
+### Unit Complexity
 
-**Phase 1 Lessons:**
+**Foundation Games (1-10):**
 - Simpler layout
 - More explanation, less assumed knowledge
 - Fewer sidebar elements
 - Clear step-by-step
 
-**Phase 8 Lessons:**
+**Advanced Games (11-15):**
 - Denser technical content
 - Assumes prerequisite knowledge
 - More sidebar cross-references
 - Advanced patterns prominent
 
+**Capstone (Game 16):**
+- Full technical depth
+- Professional-level techniques
+- Comprehensive cross-references
+
 ### Sidebar Content
 
 **Contextual visibility:**
-- Phase 1: Show minimal sidebar (progress, next lesson)
-- Phase 3+: Add related patterns, vault links
-- Phase 5+: Add performance notes, optimization links
-- Phase 8: Full sidebar with advanced cross-references
+- Game 1-4: Show minimal sidebar (progress, next unit)
+- Game 5-10: Add related patterns, vault links
+- Game 11-15: Add performance notes, optimisation links
+- Game 16: Full sidebar with advanced cross-references
 
 ### Content Density
 
 **Progressive information:**
-- Lessons link to Vault for "deep dive" info
+- Units link to Vault for "deep dive" info
 - Patterns link to Vault for historical context
-- Vault entries link to lessons for practical application
+- Vault entries link to units for practical application
 - Learner chooses depth based on interest
 
 ---
@@ -767,7 +791,7 @@ ZX Spectrum:
 
 ### Mobile-Specific Features
 
-**Sticky lesson navigation:**
+**Sticky unit navigation:**
 - Prev/Next always accessible
 - Floating back-to-top button
 
@@ -789,24 +813,24 @@ ZX Spectrum:
 **Format:** `{Specific} | {Context} | Code Like It's 198x`
 
 **Examples:**
-- `Lesson 8: Displaying More Sprites | C64 Phase 1 | Code Like It's 198x`
-- `Martin Galway | People | The Vault | Code Like It's 198x`
+- `Unit 3: Reading the Keyboard | C64 SID Symphony | Code Like It's 198x`
+- `Rob Hubbard | People | The Vault | Code Like It's 198x`
 - `Sprite Multiplexing (Basic) | C64 Patterns | Code Like It's 198x`
 
 ### Meta Descriptions
 
-**Lessons:**
+**Units:**
 ```
-Learn sprite multiplexing on the Commodore 64. Display more than 8 sprites
-using raster interrupts. Phase 1, Tier 1, Lesson 8 of our C64 game
-development curriculum.
+Learn keyboard scanning on the Commodore 64. Read the CIA chip's keyboard
+matrix to detect key presses for your rhythm game. Game 1: SID Symphony,
+Unit 3 of our C64 game development curriculum.
 ```
 
 **Vault:**
 ```
-Martin Galway - Pioneering C64 musician who revolutionized SID chip
-composition. Known for Comic Bakery, Times of Lore, and innovative
-multi-speed music routines.
+Rob Hubbard - Legendary C64 musician who defined the SID chip sound.
+Known for Commando, Monty on the Run, and pioneering multi-speed
+music routines.
 ```
 
 **Patterns:**
@@ -818,7 +842,7 @@ and usage examples.
 
 ### Structured Data
 
-**Lessons:**
+**Units:**
 - Schema.org/LearningResource
 - Course hierarchy
 - Estimated time
@@ -852,21 +876,26 @@ and usage examples.
        │                 │                 │
 ┌──────▼──────┐   ┌──────▼──────┐   ┌─────▼──────┐
 │ CURRICULUM  │   │    ENTRY    │   │  PATTERN   │
-│  OVERVIEW   │   │   (Galway)  │   │   ENTRY    │
+│  OVERVIEW   │   │  (Hubbard)  │   │   ENTRY    │
 └──────┬──────┘   └──────┬──────┘   └─────┬──────┘
        │                 │                 │
 ┌──────▼──────┐          │                 │
-│   LESSON    │◄─────────┴─────────────────┘
+│    GAME     │          │                 │
+│   LANDING   │          │                 │
+└──────┬──────┘          │                 │
+       │                 │                 │
+┌──────▼──────┐          │                 │
+│    UNIT     │◄─────────┴─────────────────┘
 │    PAGE     │   (inline links & backlinks)
 └─────────────┘
 ```
 
 **Relationship types:**
-- **Hierarchical:** Homepage → Platform → Curriculum → Lesson
-- **Cross-reference:** Lessons ↔ Vault (inline links)
-- **Cross-reference:** Lessons ↔ Patterns (further reading)
+- **Hierarchical:** Homepage → Platform → Curriculum → Game → Unit
+- **Cross-reference:** Units ↔ Vault (inline links)
+- **Cross-reference:** Units ↔ Patterns (further reading)
 - **Cross-reference:** Patterns ↔ Vault (context links)
-- **Backlinks:** All content types ↔ Lessons
+- **Backlinks:** All content types ↔ Units
 
 ---
 
@@ -877,16 +906,17 @@ and usage examples.
 - Homepage
 - Platform landing pages
 - Curriculum overviews
-- Lesson pages (all structure, Phase 1 content)
+- Game landing pages
+- Unit pages (all structure, Game 1 content)
 - Basic global nav
 - Breadcrumbs
-- Prev/Next lesson navigation
+- Prev/Next unit navigation
 
 ### Phase 2: Reference Systems
 **Add after core path works:**
 - Vault directory and entries
 - Pattern Library directory and entries
-- Inline linking from lessons
+- Inline linking from units
 - Backlinks (automated)
 - Search (basic)
 
@@ -896,26 +926,29 @@ and usage examples.
 - Advanced search (filters)
 - Related content algorithms
 - User progress tracking
-- Mobile optimizations
+- Mobile optimisations
 
 ---
 
 ## Success Metrics
 
 **Good IA = Learners can:**
-1. **Start easily** - New user to first lesson in <2 clicks
+1. **Start easily** - New user to first unit in <2 clicks
 2. **Progress smoothly** - Never uncertain what to do next
 3. **Find context** - Vault/patterns accessible but not required
 4. **Explore freely** - Browse by interest without getting lost
 5. **Return confidently** - Remember where they were, pick up easily
 
 **Measure:**
-- Click depth to first lesson
-- Lesson completion rate
+- Click depth to first unit
+- Unit completion rate
 - Vault/pattern engagement
 - Search success rate
 - Browse page usage
 
 ---
 
-*This IA creates a learning-first experience where structured curriculum progression is primary, but rich contextual exploration is always one click away.*
+## Version History
+
+- **2.0 (2026-01-07):** Complete rewrite for games/units model. Updated all URL patterns, page types, and navigation.
+- **1.0 (2025-01-15):** Original specification using phases/tiers/lessons model.

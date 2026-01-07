@@ -1,9 +1,9 @@
 ---
-name: nes-6502-lesson-creation
-description: Use when creating or editing NES 6502 Assembly lessons - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
+name: nes-6502-unit-creation
+description: Use when creating or editing NES 6502 Assembly units - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
 ---
 
-# NES 6502 Assembly Lesson Creation
+# NES 6502 Assembly Unit Creation
 
 **Role:** Technical execution for Phase 3 (Validation) of the Content Creation Workflow.
 
@@ -20,7 +20,7 @@ Use this skill during **Phase 3 (Validation)** when:
 - Checking for NES-specific pitfalls (especially VBlank timing)
 
 **Do NOT use for:**
-- C64 lessons (use C64-specific skills)
+- C64 units (use C64-specific skills)
 - Other platforms (use platform-specific skills)
 
 ---
@@ -76,7 +76,7 @@ Unlike C64, NES uses strict 6502 - no illegal opcodes.
 ### Step 3.1: Assemble with ca65
 
 ```bash
-cd /code-samples/nintendo-entertainment-system/phase-X/tier-Y/lesson-NNN/
+cd /code-samples/nintendo-entertainment-system/game-NN-{slug}/unit-NN/
 
 ca65 example-1.asm -o example-1.o
 echo $?  # Must be 0
@@ -124,7 +124,7 @@ fceux example-1.nes
 # Press F12 or File → Screenshot
 ```
 
-Save to `/website/public/images/nintendo-entertainment-system/phase-X/tier-Y/lesson-NNN/screenshot-1.png`
+Save to `/website/public/images/nintendo-entertainment-system/game-NN-{slug}/unit-NN/screenshot-1.png`
 
 ### Step 3.5: Screenshot Verification (MANDATORY)
 
@@ -202,10 +202,10 @@ nmi_handler:
 
 | File | Location |
 |------|----------|
-| Lesson MDX | `/website/src/pages/nintendo-entertainment-system/phase-X/tier-Y/lesson-NNN.mdx` |
-| Source (.asm) | `/code-samples/nintendo-entertainment-system/phase-X/tier-Y/lesson-NNN/example-1.asm` |
-| ROM (.nes) | `/code-samples/nintendo-entertainment-system/phase-X/tier-Y/lesson-NNN/example-1.nes` |
-| Screenshot | `/website/public/images/nintendo-entertainment-system/phase-X/tier-Y/lesson-NNN/screenshot-1.png` |
+| Unit MDX | `/website/src/pages/nintendo-entertainment-system/game-MM-{slug}/unit-NN-{slug}.mdx` |
+| Source (.asm) | `/code-samples/nintendo-entertainment-system/game-MM-{slug}/unit-NN/example-1.asm` |
+| ROM (.nes) | `/code-samples/nintendo-entertainment-system/game-MM-{slug}/unit-NN/example-1.nes` |
+| Screenshot | `/website/public/images/nintendo-entertainment-system/game-MM-{slug}/unit-NN/screenshot-1.png` |
 
 ---
 
@@ -243,7 +243,7 @@ wait_vblank:
 
 ## The Bottom Line
 
-**This skill provides:** Assembly, linking, validation, and screenshot capture for NES lessons.
+**This skill provides:** Assembly, linking, validation, and screenshot capture for NES units.
 
 **The main workflow provides:** Planning, creation, integration, and publication steps.
 

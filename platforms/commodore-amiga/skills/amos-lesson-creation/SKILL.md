@@ -1,9 +1,9 @@
 ---
-name: amiga-amos-lesson-creation
-description: Use when creating or editing Amiga AMOS BASIC lessons - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
+name: amiga-amos-unit-creation
+description: Use when creating or editing Amiga AMOS BASIC units - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
 ---
 
-# Amiga AMOS BASIC Lesson Creation
+# Amiga AMOS BASIC Unit Creation
 
 **Role:** Technical execution for Phase 3 (Validation) of the Content Creation Workflow.
 
@@ -20,7 +20,7 @@ Use this skill during **Phase 3 (Validation)** when:
 - Checking for Amiga-specific pitfalls
 
 **Do NOT use for:**
-- 68000 Assembly lessons (use `68k-lesson-creation` skill)
+- 68000 Assembly units (use `68k-lesson-creation` skill)
 - Other platforms (use platform-specific skills)
 
 ---
@@ -95,7 +95,7 @@ fs-uae --amiga-model=A1200 example-1.adf
 
 1. Run program
 2. Capture via FS-UAE menu
-3. Save to `/website/public/images/commodore-amiga/phase-X/tier-Y/lesson-NNN/screenshot-1.png`
+3. Save to `/website/public/images/commodore-amiga/game-NN-{slug}/unit-NN/screenshot-1.png`
 
 ### Step 3.4: Screenshot Verification (MANDATORY)
 
@@ -165,10 +165,10 @@ Screen Open 0,320,256,16,Lowres    ; One reasonable screen
 
 | File | Location |
 |------|----------|
-| Lesson MDX | `/website/src/pages/commodore-amiga/phase-X/tier-Y/lesson-NNN.mdx` |
-| Source (.amos) | `/code-samples/commodore-amiga/phase-X/tier-Y/lesson-NNN/example-1.amos` |
-| Disk image (.adf) | `/code-samples/commodore-amiga/phase-X/tier-Y/lesson-NNN/example-1.adf` |
-| Screenshot | `/website/public/images/commodore-amiga/phase-X/tier-Y/lesson-NNN/screenshot-1.png` |
+| Unit MDX | `/website/src/pages/commodore-amiga/game-MM-{slug}/unit-NN-{slug}.mdx` |
+| Source (.amos) | `/code-samples/commodore-amiga/game-MM-{slug}/unit-NN/example-1.amos` |
+| Disk image (.adf) | `/code-samples/commodore-amiga/game-MM-{slug}/unit-NN/example-1.adf` |
+| Screenshot | `/website/public/images/commodore-amiga/game-MM-{slug}/unit-NN/screenshot-1.png` |
 
 ---
 
@@ -209,7 +209,7 @@ Screen Close 0
 
 ## The Bottom Line
 
-**This skill provides:** Testing, validation, and screenshot capture for AMOS lessons.
+**This skill provides:** Testing, validation, and screenshot capture for AMOS units.
 
 **The main workflow provides:** Planning, creation, integration, and publication steps.
 

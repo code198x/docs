@@ -1,9 +1,9 @@
 ---
-name: amiga-68k-lesson-creation
-description: Use when creating or editing Amiga 68000 Assembly lessons - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
+name: amiga-68k-unit-creation
+description: Use when creating or editing Amiga 68000 Assembly units - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
 ---
 
-# Amiga 68000 Assembly Lesson Creation
+# Amiga 68000 Assembly Unit Creation
 
 **Role:** Technical execution for Phase 3 (Validation) of the Content Creation Workflow.
 
@@ -20,7 +20,7 @@ Use this skill during **Phase 3 (Validation)** when:
 - Checking for Amiga-specific pitfalls
 
 **Do NOT use for:**
-- AMOS BASIC lessons (use `amos-lesson-creation` skill)
+- AMOS BASIC units (use `amos-lesson-creation` skill)
 - Other platforms (use platform-specific skills)
 
 ---
@@ -65,7 +65,7 @@ RTS                 ; Return
 ### Step 3.1: Assemble with vasm
 
 ```bash
-cd /code-samples/commodore-amiga/phase-X/tier-Y/lesson-NNN/
+cd /code-samples/commodore-amiga/game-NN-{slug}/unit-NN/
 
 vasm68k_mot -Fhunkexe -o example-1 example-1.asm
 echo $?  # Must be 0
@@ -97,7 +97,7 @@ fs-uae --amiga-model=A1200 --hard-drive-0=/path/to/code-samples/
 
 1. Run executable from Workbench/CLI
 2. Capture via FS-UAE menu
-3. Save to `/website/public/images/commodore-amiga/phase-X/tier-Y/lesson-NNN/screenshot-1.png`
+3. Save to `/website/public/images/commodore-amiga/game-NN-{slug}/unit-NN/screenshot-1.png`
 
 ### Step 3.4: Screenshot Verification (MANDATORY)
 
@@ -183,10 +183,10 @@ subroutine:
 
 | File | Location |
 |------|----------|
-| Lesson MDX | `/website/src/pages/commodore-amiga/phase-X/tier-Y/lesson-NNN.mdx` |
-| Source (.asm) | `/code-samples/commodore-amiga/phase-X/tier-Y/lesson-NNN/example-1.asm` |
-| Executable | `/code-samples/commodore-amiga/phase-X/tier-Y/lesson-NNN/example-1` |
-| Screenshot | `/website/public/images/commodore-amiga/phase-X/tier-Y/lesson-NNN/screenshot-1.png` |
+| Unit MDX | `/website/src/pages/commodore-amiga/game-MM-{slug}/unit-NN-{slug}.mdx` |
+| Source (.asm) | `/code-samples/commodore-amiga/game-MM-{slug}/unit-NN/example-1.asm` |
+| Executable | `/code-samples/commodore-amiga/game-MM-{slug}/unit-NN/example-1` |
+| Screenshot | `/website/public/images/commodore-amiga/game-MM-{slug}/unit-NN/screenshot-1.png` |
 
 ---
 
@@ -224,7 +224,7 @@ $DFF180  ; Color palette
 
 ## The Bottom Line
 
-**This skill provides:** Assembly, validation, and screenshot capture for 68000 lessons.
+**This skill provides:** Assembly, validation, and screenshot capture for 68000 units.
 
 **The main workflow provides:** Planning, creation, integration, and publication steps.
 

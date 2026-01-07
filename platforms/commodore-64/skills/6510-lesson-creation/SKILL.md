@@ -1,9 +1,9 @@
 ---
-name: c64-6510-lesson-creation
-description: Use when creating or editing C64 6510 Assembly lessons - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
+name: c64-6510-unit-creation
+description: Use when creating or editing C64 6510 Assembly units - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
 ---
 
-# C64 6510 Assembly Lesson Creation
+# C64 6510 Assembly Unit Creation
 
 **Role:** Technical execution for Phase 3 (Validation) of the Content Creation Workflow.
 
@@ -20,7 +20,7 @@ Use this skill during **Phase 3 (Validation)** when:
 - Checking for 6510-specific pitfalls
 
 **Do NOT use for:**
-- C64 BASIC lessons (use `basic-lesson-creation` skill)
+- C64 BASIC units (use `basic-lesson-creation` skill)
 - Other platforms (use platform-specific skills)
 
 ---
@@ -78,7 +78,7 @@ start:
 ### Step 3.1: Assemble with ca65
 
 ```bash
-cd /code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/
+cd /code-samples/commodore-64/game-NN-{slug}/unit-NN/
 
 ca65 -t c64 example-1.asm -o example-1.o
 echo $?  # Must be 0
@@ -270,11 +270,11 @@ done:
 
 | File | Location |
 |------|----------|
-| Lesson MDX | `/website/src/pages/commodore-64/phase-X/tier-Y/lesson-NNN.mdx` |
-| Source (.asm) | `/code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/example-1.asm` |
-| Object (.o) | `/code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/example-1.o` |
-| Executable (.prg) | `/code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/example-1.prg` |
-| Screenshot | `/website/public/images/commodore-64/phase-X/tier-Y/lesson-NNN/screenshot-1.png` |
+| Unit MDX | `/website/src/pages/commodore-64/game-MM-{slug}/unit-NN-{slug}.mdx` |
+| Source (.asm) | `/code-samples/commodore-64/game-MM-{slug}/unit-NN/example-1.asm` |
+| Object (.o) | `/code-samples/commodore-64/game-MM-{slug}/unit-NN/example-1.o` |
+| Executable (.prg) | `/code-samples/commodore-64/game-MM-{slug}/unit-NN/example-1.prg` |
+| Screenshot | `/website/public/images/commodore-64/game-MM-{slug}/unit-NN/screenshot-1.png` |
 
 ---
 
@@ -313,7 +313,7 @@ grep -c "PLA" example-1.asm
 
 ## The Bottom Line
 
-**This skill provides:** Assembly, linking, validation, and screenshot capture for 6510 lessons.
+**This skill provides:** Assembly, linking, validation, and screenshot capture for 6510 units.
 
 **The main workflow provides:** Planning, creation, integration, and publication steps.
 

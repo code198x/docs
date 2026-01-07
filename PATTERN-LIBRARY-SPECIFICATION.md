@@ -52,15 +52,15 @@ title: "Sprite Multiplexing (Basic)"
 platform: "Commodore 64"
 category: "Rendering"
 difficulty: "Intermediate"
-phase_introduced: 2
-lesson_first_taught: "Phase 2, Tier 1, Lesson 8"
+game_introduced: 9
+unit_first_taught: "Game 9 (Sprite Storm), Unit 8"
 evolution:
   - pattern: "sprite-multiplexing-basic"
-    phase: 2
+    game: 9
   - pattern: "sprite-multiplexing-sorted"
-    phase: 3
+    game: 11
   - pattern: "sprite-multiplexing-advanced"
-    phase: 5
+    game: 13
 related_patterns:
   - "raster-interrupts"
   - "sprite-animation"
@@ -131,7 +131,7 @@ Displays more than 8 sprites on-screen by reusing the same hardware sprites mult
 ; =============================================================================
 ; BASIC SPRITE MULTIPLEXING
 ; Handles 8-24 sprites using simple zone-based multiplexing
-; First taught: Phase 2, Tier 1, Lesson 8
+; First taught: Game 9 (Sprite Storm), Unit 8
 ; =============================================================================
 
 ; --- Constants ---
@@ -277,9 +277,9 @@ sta sprite_frame+0
 
 This is the **basic zone-based** approach. Other implementations:
 
-- **[Sorted Multiplexing](/patterns/c64/rendering/sprite-multiplexing-sorted)** (Phase 3) - Dynamic Y-sorting for variable sprite counts
-- **[Advanced Multiplexing](/patterns/c64/rendering/sprite-multiplexing-advanced)** (Phase 5) - Handles 40-60 sprites with flicker management
-- **[Sprite Pooling](/patterns/c64/rendering/sprite-pooling)** (Phase 4) - Object pooling for bullet/particle systems
+- **[Sorted Multiplexing](/patterns/c64/rendering/sprite-multiplexing-sorted)** (Game 11) - Dynamic Y-sorting for variable sprite counts
+- **[Advanced Multiplexing](/patterns/c64/rendering/sprite-multiplexing-advanced)** (Game 13) - Handles 40-60 sprites with flicker management
+- **[Sprite Pooling](/patterns/c64/rendering/sprite-pooling)** (Game 10) - Object pooling for bullet/particle systems
 
 **Comparison:**
 - **Basic (this):** Fixed zones, 8-24 sprites, simplest implementation
@@ -326,8 +326,8 @@ This is the **basic zone-based** approach. Other implementations:
 - Sprite basics ([Pattern: Basic Sprite Display](/patterns/c64/rendering/sprite-basics))
 - VIC-II sprite registers ([Vault: VIC-II](/vault/hardware/vic-ii))
 
-**Required Phase:**
-- Phase 2 minimum (raster IRQs introduced in Phase 2, Tier 1, Lesson 3)
+**Required Game:**
+- Game 9 minimum (raster IRQs introduced in Game 9, Unit 3)
 ```
 
 #### 9. Curriculum Integration
@@ -338,27 +338,27 @@ This is the **basic zone-based** approach. Other implementations:
 ## Curriculum Integration
 
 **First Introduced:**
-- **Phase 2, Tier 1, Lesson 8** - "Displaying More Sprites"
+- **Game 9 (Sprite Storm), Unit 8** - "Displaying More Sprites"
   - Basic zone-based multiplexing
   - 3 zones, 24 sprites maximum
-  - Simple shooting game example
+  - Arena shooter example
 
 **Expanded:**
-- **Phase 3, Tier 2, Lessons 12-14** - "Dynamic Sprite Management"
+- **Game 11 (Dungeon Crawl), Units 12-14** - "Dynamic Sprite Management"
   - Y-sorting algorithm
   - Variable zone positioning
-  - Shoot 'em up with 30+ enemies
+  - Multiple on-screen enemies
 
 **Mastered:**
-- **Phase 5, Tier 1, Lessons 18-20** - "Advanced Multiplexing"
+- **Game 13 (Parallax Patrol), Units 18-20** - "Advanced Multiplexing"
   - Flicker management strategies
   - 50+ sprites with priority handling
-  - Bullet hell shmup example
+  - Side-scrolling shooter example
 
 **Referenced In:**
-- Phase 3, Tier 5 (Horizontal Shooter)
-- Phase 4, Tier 3 (Vertical Shooter)
-- Phase 5, Tier 8 (Beat 'Em Up)
+- Game 8 (Night Raid) - Horizontal shooter
+- Game 10 (Raster Rider) - Racing game
+- Game 12 (Arena Fighter) - Beat 'em up
 ```
 
 #### 10. Genre Applications
@@ -425,13 +425,13 @@ This is the **basic zone-based** approach. Other implementations:
 
 ### Pattern Progression
 
-Many patterns have **simple → complex** progressions taught across phases:
+Many patterns have **simple → complex** progressions taught across games:
 
 **Example: Sprite Multiplexing**
-- **Phase 2:** Basic zone-based (fixed 3 zones, 24 sprites)
-- **Phase 3:** Sorted dynamic (variable zones, 40 sprites)
-- **Phase 5:** Advanced (60+ sprites, flicker management)
-- **Phase 7:** Optimized (cycle-perfect, maximum performance)
+- **Game 9 (Sprite Storm):** Basic zone-based (fixed 3 zones, 24 sprites)
+- **Game 11 (Dungeon Crawl):** Sorted dynamic (variable zones, 40 sprites)
+- **Game 13 (Parallax Patrol):** Advanced (60+ sprites, flicker management)
+- **Game 16 (Symphony's End):** Optimized (cycle-perfect, maximum performance)
 
 **Each version is a separate pattern entry** with:
 - Cross-links to earlier/later versions
@@ -455,7 +455,7 @@ Many patterns have **simple → complex** progressions taught across phases:
 ; =============================================================================
 ; SPRITE MULTIPLEXING - BASIC ZONE IMPLEMENTATION
 ; Handles 8-24 sprites across 3 fixed vertical zones
-; First taught: Phase 2, Tier 1, Lesson 8
+; First taught: Game 9 (Sprite Storm), Unit 8
 ;
 ; Performance: ~300 cycles per zone IRQ (900 cycles/frame total)
 ; Memory: 4 bytes per sprite + 300 bytes code
@@ -559,12 +559,12 @@ Many patterns have **simple → complex** progressions taught across phases:
 
 ## Integration with Curriculum
 
-### Lesson → Pattern Flow
+### Unit → Pattern Flow
 
-1. **Lesson teaches concept** with step-by-step implementation
-2. **Lesson references Pattern Library** at end: "See [Pattern: Sprite Multiplexing Basic] for production-ready implementation"
+1. **Unit teaches concept** with step-by-step implementation
+2. **Unit references Pattern Library** at end: "See [Pattern: Sprite Multiplexing Basic] for production-ready implementation"
 3. **Pattern provides reference code** ready to copy/adapt
-4. **Pattern links back to lesson** where it was taught
+4. **Pattern links back to unit** where it was taught
 
 ### Standalone Usage
 
@@ -575,8 +575,8 @@ Many patterns have **simple → complex** progressions taught across phases:
 - Copy-paste-adapt for own projects
 
 **Enhanced with curriculum:**
-- Context from lessons provides deeper understanding
-- Evolution across phases shows progression
+- Context from units provides deeper understanding
+- Evolution across games shows progression
 - Genre applications from curriculum examples
 
 ---
@@ -609,20 +609,20 @@ Many patterns have **simple → complex** progressions taught across phases:
 - [ ] Evolution metadata (if part of progression)
 - [ ] Genre applications identified
 - [ ] Performance trade-offs documented
-- [ ] Lesson references accurate
+- [ ] Unit references accurate
 
 ---
 
-## Usage Examples in Lessons
+## Usage Examples in Units
 
-### How Lessons Reference Patterns
+### How Units Reference Patterns
 
-**In Lesson Text:**
+**In Unit Text:**
 ```markdown
 Now that we understand how sprite multiplexing works, we can implement it in our game. For a complete, production-ready implementation with additional optimizations, see [Pattern: Sprite Multiplexing (Basic)](/patterns/c64/rendering/sprite-multiplexing-basic).
 ```
 
-**In Lesson "Further Reading" Section:**
+**In Unit "Further Reading" Section:**
 ```markdown
 ## Further Reading
 
@@ -644,34 +644,34 @@ Now that we understand how sprite multiplexing works, we can implement it in our
 1. **By Platform:** Browse C64 → Rendering → find all rendering patterns
 2. **By Technique Category:** All collision detection patterns across platforms
 3. **By Genre:** All patterns commonly used in Shoot 'Em Ups
-4. **By Phase:** All patterns introduced in Phase 3
+4. **By Game:** All patterns introduced in Game 9
 5. **By Evolution:** Follow progression from basic → advanced versions
-6. **From Lessons:** Direct links from lesson content
+6. **From Units:** Direct links from unit content
 7. **From Vault:** Cross-links from technique entries
 
 **Metadata Enables:**
 - Filter by difficulty level
 - Show patterns for specific genres
-- Track evolution across phases
-- Relate patterns to lessons taught
+- Track evolution across games
+- Relate patterns to units taught
 
 ---
 
 ## Content Priorities
 
-**Phase 1 Pattern Needs (Immediate):**
+**Foundation Games (1-6) Pattern Needs (Immediate):**
 - Core framework patterns (game loop, state machine, interrupts)
 - Basic rendering (sprites, scrolling, collision)
 - Simple input (controller/keyboard reading)
 - Basic audio (sound effect playback)
 
-**Phase 2-4 Expansion:**
+**Mid-Curriculum Games (7-10) Expansion:**
 - Intermediate rendering (multiplexing, smooth scrolling)
 - Physics systems (gravity, projectiles, platformer mechanics)
 - Simple AI (patrol patterns, basic pathfinding)
 - Audio integration (music + SFX without conflicts)
 
-**Phase 5-8 Completion:**
+**Advanced Games (11-16) Completion:**
 - Advanced rendering (maximum sprites, complex effects)
 - Sophisticated AI (behavior trees, advanced pathfinding)
 - Optimization patterns (unrolled loops, table lookups, cycle counting)
@@ -691,4 +691,11 @@ Now that we understand how sprite multiplexing works, we can implement it in our
 
 ---
 
-*The Pattern Library transforms lessons from "how to build this game" into "here's reusable code for your own games" - giving learners a professional toolkit they can use long after completing the curriculum.*
+*The Pattern Library transforms units from "how to build this game" into "here's reusable code for your own games" - giving learners a professional toolkit they can use long after completing the curriculum.*
+
+---
+
+## Version History
+
+- **2.0 (2026-01-07):** Updated for games/units model. Replaced phases/tiers/lessons references with game/unit references throughout.
+- **1.0 (2025-11-15):** Original pattern library specification.

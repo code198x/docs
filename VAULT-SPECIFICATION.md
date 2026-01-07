@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Vault is a comprehensive reference encyclopedia providing historical, technical, and cultural context for everything referenced in the Code Like It's 198x curriculum. When a lesson mentions a person, game, technique, or cultural event, learners can follow links to Vault entries to explore deeper context, understand significance, and discover related concepts.
+The Vault is a comprehensive reference encyclopedia providing historical, technical, and cultural context for everything referenced in the Code Like It's 198x curriculum. When a unit mentions a person, game, technique, or cultural event, learners can follow links to Vault entries to explore deeper context, understand significance, and discover related concepts.
 
 **Key Principles:**
 - **Comprehensive where practical** - Provide thorough context, not just definitions
@@ -118,7 +118,7 @@ Psygnosis pushed hardware limits on Amiga, particularly with Shadow of the Beast
 
 ### 3. Games
 
-**Purpose:** Document specific games referenced in lessons as examples, inspirations, or technical achievements.
+**Purpose:** Document specific games referenced in units as examples, inspirations, or technical achievements.
 
 **Required Fields:**
 - **Title:** Full game title with regional variants
@@ -130,7 +130,7 @@ Psygnosis pushed hardware limits on Amiga, particularly with Shadow of the Beast
 - **Overview:** What the game is and why it matters
 - **Technical Achievements:** Notable programming/artistic techniques used
 - **Cultural Impact:** Influence on gaming and broader culture
-- **Curriculum Relevance:** Why this game is referenced in lessons
+- **Curriculum Relevance:** Why this game is referenced in units
 - **Related Entries:** Links to People, Companies, Techniques, other Games
 
 **Optional Fields:**
@@ -164,10 +164,10 @@ Widely considered one of the most technically accomplished C64 games ever made, 
 Released in 1993 when the C64 was commercially dead, Mayhem proved that dedicated programmers could still extract previously impossible performance...
 
 ## Curriculum Relevance
-Referenced in Phase 7-8 lessons as the gold standard for:
-- Advanced sprite multiplexing (Lesson 7-01)
-- Full-screen scrolling optimization (Lesson 7-02)
-- Character-based sprite systems (Lesson 8-05)
+Referenced in Game 15-16 units as the gold standard for:
+- Advanced sprite multiplexing (Game 15, Unit 1)
+- Full-screen scrolling optimization (Game 15, Unit 2)
+- Character-based sprite systems (Game 16, Unit 5)
 
 ## Related Entries
 - [John and Steve Rowlands](/vault/people/rowlands-brothers)
@@ -190,7 +190,7 @@ Referenced in Phase 7-8 lessons as the gold standard for:
 - **Variations:** Different implementations or related techniques
 - **Trade-offs:** Performance, memory, complexity considerations
 - **Historical Context:** When it emerged, who pioneered it
-- **Curriculum Integration:** Which lessons teach/use this technique
+- **Curriculum Integration:** Which units teach/use this technique
 - **Related Entries:** Links to Games, People, Pattern Library entries
 
 **Optional Fields:**
@@ -228,10 +228,10 @@ By triggering a raster interrupt when the screen beam passes the bottom of the f
 First extensively used in commercial games around 1985-1986. Games like *Parallax* and *Uridium* demonstrated sophisticated multiplexing that became standard by the late 1980s.
 
 ## Curriculum Integration
-- **First Introduced:** Phase 2, Tier 1, Lesson 8
-- **Intermediate:** Phase 3, Tier 2, Lessons 12-14
-- **Advanced:** Phase 5, Tier 1, Lessons 18-20
-- **Mastery:** Phase 7, Tier 2, Lesson 10
+- **First Introduced:** Game 9 (Sprite Storm), Unit 8
+- **Intermediate:** Game 11 (Dungeon Crawl), Units 12-14
+- **Advanced:** Game 13 (Parallax Patrol), Units 18-20
+- **Mastery:** Game 16 (Symphony's End), Unit 10
 
 ## Related Entries
 - [VIC-II Chip](/vault/hardware/vic-ii)
@@ -680,7 +680,7 @@ Britain's premier C64 gaming magazine, *Zzap!64* combined comprehensive reviews,
 - Optimized playback routines
 
 ## Influence on Game Development
-While created in 2008, this demo proved techniques relevant to Phase 7-8 curriculum goals. Shows what's ultimately possible when combining all advanced techniques.
+While created in 2008, this demo proved techniques relevant to Game 15-16 curriculum goals. Shows what's ultimately possible when combining all advanced techniques.
 
 ## Related Entries
 - [FLD Technique](/vault/techniques/c64-fld)
@@ -798,15 +798,15 @@ tags: ["sid-music", "c64-audio", "1980s"]
 
 ## Integration with Curriculum
 
-**Lesson Linking:**
-- Lessons include inline Vault links when mentioning people, games, techniques, etc.
+**Unit Linking:**
+- Units include inline Vault links when mentioning people, games, techniques, etc.
 - Links appear naturally in text: "...similar to Martin Galway's approach in *Comic Bakery*..."
 - Links open Vault entries in new context (sidebar, modal, or new page)
 
-**Vault-to-Lesson Reverse Links:**
+**Vault-to-Unit Reverse Links:**
 - Vault entries include "Curriculum Integration" sections
-- List which lessons reference or teach related concepts
-- Example: "This technique is first introduced in Phase 3, Tier 2, Lesson 8"
+- List which units reference or teach related concepts
+- Example: "This technique is first introduced in Game 9, Unit 8"
 
 **Pattern Library Integration:**
 - Technique entries link to Pattern Library implementations
@@ -817,19 +817,19 @@ tags: ["sid-music", "c64-audio", "1980s"]
 
 ## Content Priorities
 
-**Phase 1 Vault Needs (Immediate):**
+**Foundation Games (1-6) Vault Needs (Immediate):**
 - Core hardware components (SID, VIC-II, PPU, etc.)
 - Fundamental techniques (sprites, scrolling, collision)
 - Essential systems (C64, ZX Spectrum, Amiga, NES)
 - Key companies (Commodore, Nintendo, Sinclair)
 
-**Phase 2-4 Expansion:**
+**Mid-Curriculum Games (7-10) Expansion:**
 - Notable developers and musicians
 - Classic games frequently referenced
 - Intermediate techniques
 - Cultural events of early-to-mid 1980s
 
-**Phase 5-8 Completion:**
+**Advanced Games (11-16) Completion:**
 - Advanced techniques and optimizations
 - Late-era developers and games
 - Demoscene and technical showcases
@@ -861,4 +861,11 @@ tags: ["sid-music", "c64-audio", "1980s"]
 
 ---
 
-*The Vault provides the historical and technical context that transforms lessons from "how to code" into "how developers actually worked" - connecting learners to the real people, real constraints, and real innovations that defined the era.*
+*The Vault provides the historical and technical context that transforms units from "how to code" into "how developers actually worked" - connecting learners to the real people, real constraints, and real innovations that defined the era.*
+
+---
+
+## Version History
+
+- **2.0 (2026-01-07):** Updated for games/units model. Replaced phases/tiers/lessons references with game/unit references throughout.
+- **1.0 (2025-11-15):** Original vault specification.

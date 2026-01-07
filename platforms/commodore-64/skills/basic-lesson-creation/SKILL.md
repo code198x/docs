@@ -1,9 +1,9 @@
 ---
-name: c64-basic-lesson-creation
-description: Use when creating or editing C64 BASIC lessons - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
+name: c64-basic-unit-creation
+description: Use when creating or editing C64 BASIC units - provides platform-specific compilation, validation, and screenshot capture for Phase 3 of the content creation workflow
 ---
 
-# C64 BASIC Lesson Creation
+# C64 BASIC Unit Creation
 
 **Role:** Technical execution for Phase 3 (Validation) of the Content Creation Workflow.
 
@@ -20,7 +20,7 @@ Use this skill during **Phase 3 (Validation)** when:
 - Checking for C64-specific pitfalls
 
 **Do NOT use for:**
-- C64 6510 Assembly lessons (use `6510-lesson-creation` skill)
+- C64 6510 Assembly units (use `6510-lesson-creation` skill)
 - Other platforms (use platform-specific skills)
 
 ---
@@ -47,7 +47,7 @@ Use this skill during **Phase 3 (Validation)** when:
 ✓ CORRECT (.bas file): 10 print "hello"
 ✗ WRONG (.bas file): 10 PRINT "hello"
 ```
-Display UPPERCASE in MDX lesson content for readability.
+Display UPPERCASE in MDX unit content for readability.
 
 ### 3. Reserved Variables (NEVER USE)
 - `ST` - I/O status (read-only, causes SYNTAX ERROR if written)
@@ -75,7 +75,7 @@ Only first TWO characters are significant:
 **Run BEFORE petcat - catches errors petcat cannot detect!**
 
 ```bash
-cd /code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/
+cd /code-samples/commodore-64/game-NN-{slug}/unit-NN/
 
 python3 /scripts/validate-c64-basic.py example-1.bas
 ```
@@ -113,7 +113,7 @@ echo $?  # Must be 0
 ```bash
 x64sc -autostart example-1.prg
 # Press Alt+S to capture, save to:
-# /website/public/images/commodore-64/phase-X/tier-Y/lesson-NNN/screenshot-1.png
+# /website/public/images/commodore-64/game-NN-{slug}/unit-NN/screenshot-1.png
 ```
 
 **Automated capture (static output):**
@@ -121,7 +121,7 @@ x64sc -autostart example-1.prg
 x64sc -autostart example-1.prg \
   -limitcycles 20000000 \
   -VICIIdsize \
-  -exitscreenshot /website/public/images/commodore-64/phase-X/tier-Y/lesson-NNN/screenshot-1.png \
+  -exitscreenshot /website/public/images/commodore-64/game-NN-{slug}/unit-NN/screenshot-1.png \
   +sound
 ```
 
@@ -268,14 +268,14 @@ grep "^ " example-1.bas
 
 ## Required Files
 
-For lesson NNN in Phase X, Tier Y:
+For unit NN in Game MM:
 
 | File | Location |
 |------|----------|
-| Lesson MDX | `/website/src/pages/commodore-64/phase-X/tier-Y/lesson-NNN.mdx` |
-| Code (.bas) | `/code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/example-1.bas` |
-| Compiled (.prg) | `/code-samples/commodore-64/phase-X/tier-Y/lesson-NNN/example-1.prg` |
-| Screenshot | `/website/public/images/commodore-64/phase-X/tier-Y/lesson-NNN/screenshot-1.png` |
+| Unit MDX | `/website/src/pages/commodore-64/game-MM-{slug}/unit-NN-{slug}.mdx` |
+| Code (.bas) | `/code-samples/commodore-64/game-MM-{slug}/unit-NN/example-1.bas` |
+| Compiled (.prg) | `/code-samples/commodore-64/game-MM-{slug}/unit-NN/example-1.prg` |
+| Screenshot | `/website/public/images/commodore-64/game-MM-{slug}/unit-NN/screenshot-1.png` |
 
 ---
 
@@ -320,7 +320,7 @@ grep "^ " example-1.bas
 
 ## The Bottom Line
 
-**This skill provides:** Compilation, validation, and screenshot capture for C64 BASIC lessons.
+**This skill provides:** Compilation, validation, and screenshot capture for C64 BASIC units.
 
 **The main workflow provides:** Planning, creation, integration, and publication steps.
 
