@@ -175,6 +175,76 @@ Potential modules applicable across platforms:
 
 ---
 
+## Potential Future Platforms
+
+Platforms under consideration for future curriculum development.
+
+### 8-Bit Home Computers
+
+| Platform | Language | BASIC Gateway | Enhancement Track | Notes |
+|----------|----------|---------------|-------------------|-------|
+| Amstrad CPC | Z80 | Locomotive BASIC | CPC Plus | Strong UK following, unique gate array |
+| Atari 8-bit | 6502 | Atari BASIC | - | ANTIC/GTIA graphics, POKEY sound |
+| BBC Micro | 6502 | BBC BASIC | Master | Educational heritage, excellent BASIC |
+| MSX | Z80 | MSX BASIC | MSX2/MSX2+ | Japanese market, standardised hardware |
+| Apple II | 6502 | Applesoft BASIC | IIgs | American classic, simple architecture |
+
+### 16-Bit Home Computers
+
+| Platform | Language | BASIC Gateway | Enhancement Track | Notes |
+|----------|----------|---------------|-------------------|-------|
+| Atari ST | 68000 | GFA BASIC | STE | MIDI standard, clean architecture |
+| Acorn Archimedes | ARM | BBC BASIC V | RISC OS | First ARM platform, powerful BASIC |
+
+### Game Consoles
+
+| Platform | Language | Enhancement Track | Notes |
+|----------|----------|-------------------|-------|
+| Sega Master System | Z80 | Game Gear | Simple VDP, good entry point |
+| Sega Mega Drive | 68000 | Mega CD, 32X | Blast processing, dual CPUs |
+| SNES | 65816 | - | Mode 7, complex but powerful |
+| TurboGrafx-16 | 6502 | CD-ROM² | HuC6280, large sprite counts |
+| Game Boy | Z80 (SM83) | GBC, GBA | Handheld constraints |
+| Atari 2600 | 6502 | - | Racing the beam, extreme constraints |
+
+### Selection Criteria
+
+When evaluating platforms for inclusion:
+
+1. **Historical significance** - Was it commercially important or influential?
+2. **Active community** - Are people still developing for it?
+3. **Educational value** - Does it teach unique concepts?
+4. **Tooling availability** - Are assemblers/emulators mature?
+5. **Differentiation** - Does it offer something our current platforms don't?
+
+### Platform Priorities
+
+**High interest:**
+- Sega Mega Drive (68000 skills transfer from Amiga)
+- Atari ST (68000, different chipset philosophy from Amiga)
+- BBC Micro (educational heritage, exceptional BASIC)
+
+**Medium interest:**
+- SNES (complex but iconic)
+- Amstrad CPC (Z80 skills transfer, strong UK community)
+- Game Boy (handheld constraints, huge nostalgia)
+
+**Lower priority:**
+- Atari 2600 (extremely niche, racing-the-beam is specialist)
+- MSX (smaller Western audience)
+- Apple II (simpler than C64, less hardware to teach)
+
+### Enhancement Track Applicability
+
+| Pattern | Platforms |
+|---------|-----------|
+| Period hardware upgrade | CPC → Plus, ST → STE, MSX → MSX2, BBC → Master |
+| Modern FPGA successor | (None identified yet for non-current platforms) |
+| Console variants | SMS → Game Gear, GB → GBC → GBA, MD → CD/32X |
+| No clear enhancement | Atari 2600, Apple II, SNES |
+
+---
+
 ## Design Principles
 
 1. **Enhancement tracks build on core games** - Same game, enhanced for better hardware
