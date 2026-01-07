@@ -221,6 +221,9 @@ Platforms under consideration for future curriculum development.
 | Exidy Sorcerer | Z80 | BASIC | - | Early CP/M capable |
 | Video Genie | Z80 | BASIC | - | TRS-80 Model I clone |
 | Colour Genie | Z80 | BASIC | - | Improved Video Genie, colour |
+| Nascom 1/2 | Z80 | NAS-SYS | - | UK kit computer, historically important |
+| Galaksija | Z80 | BASIC | - | Yugoslav DIY computer, unique history |
+| Timex Sinclair 2068 | Z80 | BASIC | - | US Spectrum variant with differences |
 | Bally Astrocade | Z80 | Bally BASIC | - | Early console with built-in BASIC |
 
 ### 16-Bit Home Computers
@@ -228,8 +231,10 @@ Platforms under consideration for future curriculum development.
 | Platform | Language | BASIC Gateway | Enhancement Track | Notes |
 |----------|----------|---------------|-------------------|-------|
 | Atari ST | 68000 | GFA BASIC | STE | MIDI standard, clean architecture |
+| Atari Falcon | 68030 | GFA BASIC | - | Last Atari computer, DSP, music production |
 | Acorn Archimedes | ARM | BBC BASIC V | RISC OS | First ARM platform, powerful BASIC |
 | Sharp X68000 | 68000 | X-BASIC | X68030 | Japanese, very powerful, strong homebrew |
+| FM Towns | 386SX | F-BASIC | Towns II | Japanese, first CD-ROM computer, sprites |
 | PC-98 | x86 | N88-BASIC(86) | - | NEC, dominant in Japan, unique graphics |
 | C128 | 8502/Z80 | BASIC 7.0 | - | C64 enhancement track candidate |
 
@@ -252,6 +257,12 @@ Platforms under consideration for future curriculum development.
 | Neo Geo AES | 68000 | CD | Arcade hardware at home |
 | Fairchild Channel F | F8 | - | First ROM cartridge console |
 | Magnavox Odyssey² | 8048 | - | Unique Intel CPU, early console |
+| RCA Studio II | CDP1802 | - | COSMAC CPU, early console |
+| Emerson Arcadia 2001 | Signetics 2636 | - | Unique CPU, multi-brand console |
+| CreatiVision | 6502 | - | VTech, computer/console hybrid |
+| Epoch Super Cassette Vision | NEC µPD7801 | - | Japanese, unique CPU |
+| Casio PV-1000 | Z80 | - | Japanese, Casio's only console |
+| SC-3000 | Z80 | - | Sega computer, SG-1000 based |
 | Amiga CD32 | 68020 | - | Amiga as console, AGA chipset |
 | 3DO | ARM60 | - | Early CD-based, multiple manufacturers |
 | Philips CD-i | 68070 | - | Multimedia focus, infamous Zelda |
@@ -282,6 +293,9 @@ These platforms represent the transition from assembly-primary to C/C++-primary 
 | Sega Game Gear | Z80 | - | Portable SMS, backlit colour |
 | Neo Geo Pocket Color | Z80 | - | SNK, strong fighting games |
 | WonderSwan | V30MZ (x86) | Color, Crystal | Gunpei Yokoi's final hardware |
+| Milton Bradley Microvision | TMS1100 | - | First handheld with cartridges (1979) |
+| Pokémon Mini | S1C88 | - | Tiny, extreme constraints, unique CPU |
+| Game.com | Sharp SM8521 | - | Tiger, late 90s, touchscreen |
 
 ### Selection Criteria
 
@@ -325,20 +339,28 @@ When evaluating platforms for inclusion:
 
 | Family | Current Platforms | Future Platforms |
 |--------|-------------------|------------------|
-| 6502 | C64, NES | Atari 8-bit, Apple II, BBC Micro, Acorn Electron, VIC-20, Commodore PET, Oric, TurboGrafx, Atari 5200, Atari 7800, Atari 2600, Atari Lynx |
+| 6502 | C64, NES | Atari 8-bit, Apple II, BBC Micro, Acorn Electron, VIC-20, Commodore PET, Oric, TurboGrafx, Atari 5200, Atari 7800, Atari 2600, Atari Lynx, CreatiVision |
 | 7501 | - | Commodore Plus/4 |
-| Z80 | ZX Spectrum | Amstrad CPC, MSX, SMS, Game Boy, SAM Coupé, ColecoVision, PC-88, PC-6001, Game Gear, Neo Geo Pocket, ZX81, ZX80, Jupiter Ace, SG-1000, TRS-80 Model I/III/4, Sharp MZ, Sharp X1, Tatung Einstein, Spectravideo, Grundy NewBrain, Laser 200/310, Sord M5, Hector, Exidy Sorcerer, Video/Colour Genie, Camputers Lynx, Memotech MTX, Elan Enterprise, Mattel Aquarius, Bally Astrocade |
+| Z80 | ZX Spectrum | Amstrad CPC, MSX, SMS, Game Boy, SAM Coupé, ColecoVision, PC-88, PC-6001, Game Gear, Neo Geo Pocket, ZX81, ZX80, Jupiter Ace, SG-1000, SC-3000, TRS-80 Model I/III/4, Sharp MZ, Sharp X1, Tatung Einstein, Spectravideo, Grundy NewBrain, Laser 200/310, Sord M5, Hector, Exidy Sorcerer, Video/Colour Genie, Camputers Lynx, Memotech MTX, Elan Enterprise, Mattel Aquarius, Nascom, Galaksija, Timex Sinclair 2068, Casio PV-1000, Bally Astrocade |
 | 68000 | Amiga | Atari ST, Mega Drive, Sharp X68000, Neo Geo AES, Atari Jaguar (+ RISC), Amiga CD32 |
 | 68008 | - | Sinclair QL |
+| 68030 | - | Atari Falcon |
 | 68070 | - | Philips CD-i |
 | 6809 | - | TRS-80 CoCo, Dragon, Vectrex, FM-7, Thomson MO/TO |
 | 65816 | - | SNES |
 | ARM | - | Archimedes, Game Boy Advance, 3DO |
+| 386 | - | FM Towns |
 | TMS9900 | - | TI-99/4A |
+| TMS1100 | - | Milton Bradley Microvision |
 | CP1610 | - | Intellivision |
 | x86 | - | PC-98, WonderSwan |
 | F8 | - | Fairchild Channel F |
 | 8048 | - | Magnavox Odyssey² |
+| CDP1802 | - | RCA Studio II |
+| Signetics 2636 | - | Emerson Arcadia 2001 |
+| NEC µPD7801 | - | Epoch Super Cassette Vision |
+| S1C88 | - | Pokémon Mini |
+| SM8521 | - | Game.com |
 | MIPS | - | PlayStation, Nintendo 64 |
 | SH-2/SH-4 | - | Sega Saturn (dual SH-2), Sega Dreamcast (SH-4) |
 
@@ -358,6 +380,7 @@ When evaluating platforms for inclusion:
 
 ## Version History
 
+- **2.2 (2026-01-07):** Expanded to 87 platforms across 24 CPU families. Added FM Towns, Atari Falcon, early consoles with unique CPUs (RCA Studio II, Arcadia 2001, Super Cassette Vision), early handhelds (Microvision, Pokémon Mini, Game.com), UK kit computers (Nascom), and Eastern European platforms (Galaksija).
 - **2.1 (2026-01-07):** Expanded future platforms to 72 platforms across 16 CPU families. Added 32-bit era extended coverage (PlayStation, Saturn, N64, Dreamcast). Added missing 8-bit computers (Einstein, Spectravideo, NewBrain, Sord M5, Hector, Laser, Video/Colour Genie, etc.).
 - **2.0 (2026-01-07):** Restructured into Enhancement Tracks and Post-Capstone Games. Added concrete unit counts and implementation priorities.
 - **1.0 (2025-01-07):** Initial planning document.
