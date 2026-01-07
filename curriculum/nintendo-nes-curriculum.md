@@ -402,8 +402,33 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ---
 
+## Post-Capstone: Audio Expansion
+
+The NES had several cartridge mappers with built-in audio expansion chips, adding extra sound channels beyond the standard 2A03. These are highly prized for homebrew development.
+
+### Game 17: VRC6 Symphony (64 units)
+Audio expansion using Konami's VRC6 mapper (Castlevania III, Akumajou Densetsu).
+- Two additional pulse channels
+- One sawtooth channel
+- Enhanced music composition
+- Mapper programming
+
+### Game 18: MMC5 Mastery (64 units)
+Advanced mapper techniques using Nintendo's MMC5.
+- Extended nametables
+- 8×8 attribute mode
+- Extra sound channel
+- Split-screen effects
+
+These expansion games target learners interested in pushing beyond standard NES capabilities, particularly for enhanced homebrew releases.
+
+See `/docs/plans/future-expansion-tracks.md` for full details.
+
+---
+
 ## Version History
 
+- **3.1 (2026-01-07):** Added post-capstone audio expansion games (VRC6, MMC5).
 - **3.0 (2025-01-07):** Restructured to 1,536 units (64/128/256 scaling) matching C64 and ZX Spectrum curricula.
 - **2.0 (2025-11-26):** Complete rewrite. Replaced phases/tiers/lessons with games model.
 - **1.0 (2025-01-15):** Original curriculum.

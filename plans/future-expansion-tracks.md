@@ -9,159 +9,185 @@
 
 The core curriculum for each platform focuses on **period-authentic skills** - what professional developers knew and used during each platform's commercial era. This ensures learners develop genuine understanding of the hardware and constraints that shaped classic games.
 
-However, retro computing hasn't stood still. Modern hardware expansions, FPGA recreations, and enhanced successors offer new possibilities while building on the same foundations. These **expansion tracks** are optional modules for learners who've completed the core curriculum and want to explore further.
+However, retro computing hasn't stood still. Modern hardware expansions, FPGA recreations, and enhanced successors offer new possibilities while building on the same foundations.
+
+Expansion content falls into two categories:
+
+1. **Enhancement Tracks** - Enhanced versions of existing games for hardware family upgrades (MEGA65, Next, AGA)
+2. **Post-Capstone Games** - New games for expansion peripherals and advanced mappers (REU, VRC6, WHDLoad)
 
 ---
 
-## Commodore 64 Expansion Tracks
+## Enhancement Tracks
 
-### Expansion Hardware
-- **REU (Ram Expansion Unit):** 1700/1750 programming, DMA transfers, extended memory
-- **SuperCPU:** 20MHz mode, 16-bit registers, enhanced addressing
-- **GeoRAM/NeoRAM:** Alternative RAM expansion approaches
+Enhancement tracks follow the Amiga AGA model: separate versions of later games that showcase enhanced hardware while the main curriculum remains compatible with base hardware.
 
-### Modern Hardware
-- **Ultimate 64/1541 Ultimate:** Integration, REU emulation, network features
-- **SD2IEC:** Modern storage, directory handling, compatibility
-- **Turbo Chameleon:** Cartridge-based expansion programming
-- **BackBit:** Modern cartridge development
+### Commodore 64 → MEGA65
 
-### MEGA65
-- **BASIC 65:** Enhanced BASIC with structures, long variables
-- **Enhanced graphics:** VIC-IV, extended colour modes, sprites
-- **DMA controller:** Hardware-accelerated operations
-- **Enhanced SID:** Dual SID, extended capabilities
-- **40MHz mode:** High-performance computing
-- **Ethernet/SD:** Modern I/O integration
+Enhanced versions for games that benefit from VIC-IV, 40MHz, DMA, and dual SID.
 
-### Modern Tooling
-- **Cross-development:** VS Code, modern assemblers, CI/CD pipelines
-- **Debugging:** VICE monitor, memory inspection, breakpoints
-- **Asset pipelines:** Automated graphics/music conversion
-- **Emulator testing:** Automated test suites
+| Game | Units | Enhancement Focus |
+|------|-------|-------------------|
+| Games 9-14 | 32 each | VIC-IV modes, DMA operations |
+| Game 15 | 64 | Full MEGA65 showcase |
+| Game 16 | 128 | Definitive MEGA65 version |
+| **Total** | **384** | |
 
----
+**MEGA65 Capabilities:**
+- VIC-IV: 256 colours, hardware sprites, bitplanes
+- 40MHz mode with 6502 compatibility
+- DMA controller for fast memory operations
+- Dual SID chips
+- Ethernet, SD card integration
 
-## Sinclair ZX Spectrum Expansion Tracks
+### Sinclair ZX Spectrum → Next
 
-### Expansion Hardware
-- **Interface 1/Microdrive:** Network and storage expansion
-- **AY sound chip:** 128K sound programming
-- **DivMMC/DivIDE:** Mass storage integration
-- **Multiface:** Memory access, snapshot development
+Enhanced versions for games that benefit from Z80N, hardware sprites, copper, and enhanced graphics.
 
-### Modern Hardware
-- **ZX Spectrum Next:** Enhanced Spectrum with Z80N, copper, DMA
-- **Sprites:** Hardware sprites (Next-specific)
-- **Enhanced graphics:** 256-colour modes, layer system
-- **SD card integration:** Modern storage workflows
+| Game | Units | Enhancement Focus |
+|------|-------|-------------------|
+| Games 9-14 | 32 each | Hardware sprites, copper effects |
+| Game 15 | 64 | Full Next showcase |
+| Game 16 | 128 | Definitive Next version |
+| **Total** | **384** | |
 
-### Modern Tooling
-- **Cross-assemblers:** z88dk, sjasmplus workflows
-- **Fuse/ZEsarUX:** Emulator debugging features
-- **TAP/TZX creation:** Distribution format tooling
+**Next Capabilities:**
+- Z80N: New instructions for faster code
+- Hardware sprites (64 sprites, 16 colours each)
+- Copper: Raster-synchronised effects
+- 256-colour modes, layer system
+- DMA for fast memory operations
 
----
+### Sinclair ZX Spectrum → 128K
 
-## Commodore Amiga Expansion Tracks
+Optional 128K-enhanced versions of select games (period-authentic, 1985+).
 
-### Expansion Hardware
-- **Accelerators:** 68020/030/040/060 programming
-- **RTG graphics:** Picasso, CyberGraphX
-- **Fast RAM:** Extended memory usage
-- **PCMCIA:** Storage and expansion
+| Game | Enhancement Focus |
+|------|-------------------|
+| Select games | AY soundtrack, extra content via banked RAM |
 
-### Modern Hardware
-- **Vampire accelerators:** FPGA-based Apollo core, 68080
-- **PiStorm:** Raspberry Pi accelerator integration
-- **Wicher/TF cards:** Modern accelerator cards
-- **SD/CF storage:** Modern mass storage
+128K enhancements are smaller scope than Next - primarily adding AY music and using banked RAM for additional content. Not every game warrants a 128K version.
 
-### MorphOS/AmigaOS 4
-- **Modern AmigaOS:** Programming for current AmigaOS variants
-- **PowerPC considerations:** Architecture differences
-- **Compatibility layers:** Writing for multiple targets
+### Commodore Amiga → AGA
 
-### Modern Tooling
-- **Cross-compilers:** GCC, VBCC toolchains
-- **WHDLoad:** Game packaging and installation
-- **FS-UAE:** Emulator debugging and testing
+**Already implemented.** See `/docs/curriculum/commodore-amiga-curriculum.md`.
+
+| Game | Units | Enhancement Focus |
+|------|-------|-------------------|
+| Games 9-14 | 32 each | 256 colours, enhanced effects |
+| Game 15 | 64 | HAM8 cutscenes |
+| Game 16 | 128 | Full AGA showcase |
+| **Total** | **384** | |
 
 ---
 
-## Nintendo Entertainment System Expansion Tracks
+## Post-Capstone Games
 
-### Mapper Deep Dives
-- **Advanced mappers:** MMC5, VRC6/7, FME-7
-- **Audio expansion:** VRC6, Namco 163, Sunsoft 5B sound
-- **Enhanced graphics:** MMC5 extended attributes, split scrolling
+New games after the main curriculum targeting expansion peripherals, advanced mappers, or professional skills. These build on complete mastery of the core platform.
 
-### Modern Hardware
-- **Flash cartridges:** EverDrive, PowerPak development
-- **FPGAs:** MiSTer, Analogue Nt considerations
-- **Modern reproduction:** Creating physical cartridges
+### Commodore 64
 
-### Modern Tooling
-- **cc65 advanced:** C development for NES
-- **NESmaker:** High-level development tools
-- **Mesen debugging:** Advanced debugging features
+**Game 17: REU Adventure** (64 units)
+Programming the 1750 REU (Ram Expansion Unit).
+- DMA transfers
+- Extended memory management
+- REU-optimised game techniques
+- Bank switching patterns
+
+### Sinclair ZX Spectrum
+
+No post-capstone currently planned - the 128K and Next enhancement tracks provide sufficient expansion content.
+
+### Nintendo Entertainment System
+
+**Game 17: VRC6 Symphony** (64 units)
+Audio expansion using Konami's VRC6 mapper.
+- Two additional pulse channels
+- One sawtooth channel
+- Enhanced music composition
+- Mapper programming
+
+**Game 18: MMC5 Mastery** (64 units)
+Advanced techniques using Nintendo's MMC5 mapper.
+- Extended nametables
+- 8×8 attribute mode
+- Extra sound channel
+- Split-screen effects
+
+### Commodore Amiga
+
+**Game 17: WHDLoad Mastery** (64 units)
+Professional game packaging for hard disk installation.
+- WHDLoad slave creation
+- Memory detection and adaptation
+- Quit key handling
+- Compatibility techniques
 
 ---
 
-## Cross-Platform Modules
+## Cross-Platform Modules (Future)
+
+Potential modules applicable across platforms:
 
 ### Preservation Skills
-- **Format archiving:** Platform-specific disk/tape formats
-- **Emulator accuracy:** Testing and verification
-- **Documentation:** Technical writing for preservation
+- Format archiving (platform-specific disk/tape formats)
+- Emulator accuracy testing
+- Technical documentation
 
 ### Community Integration
-- **Demoscene:** Competition participation, size coding
-- **Homebrew releases:** Modern distribution channels
-- **Open source:** Contributing to emulators and tools
+- Demoscene participation
+- Homebrew distribution channels
+- Open source contribution (emulators, tools)
 
 ### Professional Skills
-- **Retro game industry:** Working with publishers like Bitmap Soft, Psytronik
-- **Kickstarter/crowdfunding:** Funding retro projects
-- **Physical production:** Cartridge/disk manufacturing
+- Working with retro publishers (Bitmap Soft, Psytronik)
+- Crowdfunding retro projects
+- Physical production (cartridges, disks)
 
 ---
 
-## Structure
+## Unit Summary
 
-Each expansion track would be structured as:
-- **Prerequisites:** Which core curriculum games must be completed
-- **Units:** 16-64 units depending on scope
-- **Projects:** Practical applications of new skills
-- **Integration:** How skills combine with core knowledge
-
-Expansion tracks are **not required** for curriculum completion. They exist for learners who want to:
-1. Work with specific hardware they own
-2. Target modern retro platforms (MEGA65, Next, etc.)
-3. Contribute to the modern retro development community
-4. Pursue professional retro game development
+| Platform | Core | Enhancement | Post-Capstone | Total Available |
+|----------|------|-------------|---------------|-----------------|
+| C64 | 1,536 | 384 (MEGA65) | 64 (REU) | 1,984 |
+| Spectrum | 1,536 | 384 (Next) + TBD (128K) | - | 1,920+ |
+| NES | 1,536 | - | 128 (VRC6, MMC5) | 1,664 |
+| Amiga | 2,048 | 384 (AGA) | 64 (WHDLoad) | 2,496 |
 
 ---
 
-## Priority
+## Implementation Priority
 
-Initial expansion track development (post core curriculum completion):
+**Phase 1 (with core curriculum):**
+- Amiga AGA (complete)
 
-1. **MEGA65 (C64)** - Active platform with growing community
-2. **ZX Spectrum Next** - Popular modern Spectrum
-3. **Advanced NES mappers** - High demand for audio expansion knowledge
-4. **Amiga WHDLoad** - Practical distribution skill
+**Phase 2 (post core curriculum):**
+1. MEGA65 enhancement track - active platform, growing community
+2. ZX Spectrum Next enhancement track - popular modern Spectrum
+3. NES audio expansion games - high demand for VRC6/MMC5 knowledge
 
-Lower priority:
-- Older expansion hardware (REU, SuperCPU) - smaller audience
-- Preservation skills - specialist interest
-- Cross-platform tooling - varies by learner setup
+**Phase 3 (based on demand):**
+- 128K Spectrum enhancements
+- REU programming
+- WHDLoad mastery
+- Cross-platform modules
 
 ---
 
-## Notes
+## Design Principles
 
-- Expansion tracks should **build on** core curriculum, not replace it
-- Period-authentic skills remain the foundation
-- Modern hardware understanding comes from deep original hardware knowledge
-- "Learn the C64 properly, then the MEGA65 makes sense"
+1. **Enhancement tracks build on core games** - Same game, enhanced for better hardware
+2. **Post-capstone games are standalone** - New games requiring core curriculum completion
+3. **Period-authentic first** - Modern hardware understanding comes from deep original knowledge
+4. **Powers of 2** - All unit counts remain powers of 2 (32, 64, 128)
+5. **Optional, not required** - Expansion content never gates core curriculum completion
+
+"Learn the C64 properly, then the MEGA65 makes sense."
+
+---
+
+## Version History
+
+- **2.0 (2026-01-07):** Restructured into Enhancement Tracks and Post-Capstone Games. Added concrete unit counts and implementation priorities.
+- **1.0 (2025-01-07):** Initial planning document.

@@ -330,33 +330,23 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 ---
 
-## BASIC Gateway (Optional)
+## BASIC V2 Gateway (Optional)
 
-For learners wanting a gentler introduction before assembly, an optional BASIC track is available.
+For learners wanting a gentler introduction before assembly, an optional BASIC V2 curriculum is available. This 512-unit track (8 games × 64 units) teaches programming fundamentals through complete games before tackling 6510.
 
-### BASIC Game 1: Maze Muncher
-**Units:** 8
-**Concept:** Simple maze game in BASIC V2. Navigate, collect, avoid.
+**Games:** Number Hunter, Cosmic Drift, Catcher, Maze Escape, Snake Trail, Space Dodge, Memory Match, Platform Peril
 
 **Skills taught:**
-- BASIC V2 fundamentals
-- POKE/PEEK for hardware access
-- Keyboard input
-- PETSCII graphics
-- Game loop in interpreted language
+- BASIC V2 fundamentals (PRINT, INPUT, IF/THEN)
+- POKE/PEEK for screen and colour memory
+- Character graphics and custom characters
+- Real-time input with GET
+- Arrays and game state
+- BASIC's limits - why assembly is needed
 
-### BASIC Game 2: Sprite Bounce
-**Units:** 8
-**Concept:** Ball-and-paddle game using hardware sprites from BASIC.
+The BASIC gateway is optional. Learners can start directly at Game 1 (SID Symphony) with no BASIC knowledge required. The gateway exists for those who prefer building foundational programming concepts before diving into assembly.
 
-**Skills taught:**
-- Sprite control via POKE
-- SID sound effects from BASIC
-- Joystick reading
-- BASIC limitations (speed ceiling)
-- Why assembly matters
-
-The BASIC track is optional. Learners can start directly at Game 1 (SID Symphony) with no BASIC knowledge required.
+See `/docs/curriculum/commodore-64-basic-curriculum.md` for full details.
 
 ---
 
@@ -385,21 +375,37 @@ By Game 16, learners produce work comparable to late-era commercial releases lik
 
 ---
 
-## Future Expansion Tracks
+## Optional Enhancement Versions
 
-After completing the core curriculum, optional expansion tracks are available:
+Select games have optional enhanced versions for expanded hardware. Not every game warrants enhancement - these target games where the additional capabilities meaningfully improve the experience.
 
-- **MEGA65:** Enhanced BASIC 65, VIC-IV, DMA, dual SID
-- **Expansion Hardware:** REU, SuperCPU programming
-- **Modern Hardware:** Ultimate 64, SD2IEC integration
-- **Modern Tooling:** VS Code workflows, CI/CD for retro
+### MEGA65 Enhancements
 
-See `/docs/plans/future-expansion-tracks.md` for details.
+For games that benefit from VIC-IV, 40MHz, and enhanced SID:
+
+| Game | Units | Enhancement Focus |
+|------|-------|-------------------|
+| 9-16 (select) | 32-128 | VIC-IV graphics, DMA, dual SID, 40MHz |
+
+MEGA65 enhancements follow the Amiga AGA model - separate versions that showcase the enhanced hardware while the main game remains stock C64 compatible.
+
+**Structure (when implemented):**
+- Games 9-14 MEGA65: 32 units each
+- Game 15 MEGA65: 64 units
+- Game 16 MEGA65: 128 units
+
+### Post-Capstone: REU Programming
+
+**Game 17: REU Adventure** (64 units)
+Expansion hardware programming using the 1750 REU. DMA transfers, extended memory, techniques for REU-enhanced games.
+
+See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ---
 
 ## Version History
 
+- **3.1 (2026-01-07):** Added optional enhancement versions section (MEGA65, REU). Updated BASIC gateway reference to 512-unit curriculum.
 - **3.0 (2025-01-07):** Expanded to 1,536 units. Games 1-10 at 64 units, Games 11-15 at 128 units, Game 16 at 256 units. Added disk I/O, fast loaders, turbo tape.
 - **2.0 (2025-11-25):** Complete rewrite. Replaced phases/tiers/lessons with games model.
 - **1.0 (2025-01-15):** Original 4,096-lesson curriculum.

@@ -357,35 +357,23 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 ---
 
-## Sinclair BASIC Track (Optional)
+## Sinclair BASIC Gateway (Optional)
 
-For learners wanting a different approach, an optional Sinclair BASIC track is available. BASIC is better suited to certain game types - particularly text adventures where string handling matters more than speed.
+For learners wanting a gentler introduction before assembly, an optional Sinclair BASIC curriculum is available. This 512-unit track (8 games × 64 units) teaches programming fundamentals through complete games before tackling Z80.
 
-### BASIC Game 1: Caverns of Dorath
-**Units:** 8
-**Concept:** Text adventure. Explore caverns, solve puzzles, find treasure. Parser-based interaction.
+**Games:** Guess Quest, Pixel Rain, Paddle Battle, Dungeon Explorer, Snake Spectrum, Asteroid Dodge, Pattern Match, Platform Jump
 
 **Skills taught:**
-- Sinclair BASIC fundamentals
-- String handling and INPUT$
-- IF/THEN logic
-- Arrays for room and inventory data
-- PRINT and CLS for display
-- Game state management
+- Sinclair BASIC fundamentals (PRINT, INPUT, IF/THEN/ELSE)
+- Graphics commands (PLOT, DRAW, CIRCLE)
+- User-Defined Graphics (UDGs)
+- Real-time input with INKEY$
+- Arrays and game state
+- BASIC's limits - why assembly is needed
 
-### BASIC Game 2: Mindbreaker
-**Units:** 8
-**Concept:** Mastermind-style code breaker. Deduce the hidden code through logic and clues.
+The BASIC gateway is optional. Learners can start directly at Game 1 (Ink War) with no BASIC knowledge required. The gateway exists for those who prefer building foundational programming concepts before diving into assembly.
 
-**Skills taught:**
-- Array manipulation
-- Logic and deduction algorithms
-- Feedback systems
-- Game loop in BASIC
-- Difficulty progression
-- Why assembly matters for speed
-
-The BASIC track is optional. Learners can start directly at Game 1 (Ink War) with no BASIC knowledge required.
+See `/docs/curriculum/sinclair-zx-spectrum-basic-curriculum.md` for full details.
 
 ---
 
@@ -456,20 +444,42 @@ Smooth scrolling requires shifting screen memory in software - an expensive oper
 
 ---
 
-## Future Expansion Tracks
+## Optional Enhancement Versions
 
-After completing the core curriculum, optional expansion tracks are available:
+Select games have optional enhanced versions for expanded hardware. Not every game warrants enhancement - these target games where the additional capabilities meaningfully improve the experience.
 
-- **ZX Spectrum Next:** Hardware sprites, copper, DMA, enhanced graphics
-- **128K Deep Dive:** Advanced AY programming, full bank usage
-- **Modern Tooling:** VS Code workflows, automated testing
+### 128K Enhancements
 
-See `/docs/plans/future-expansion-tracks.md` for details.
+For games that benefit from AY sound and extra RAM:
+
+| Game | Enhancement Focus |
+|------|-------------------|
+| TBD | AY soundtrack, extra levels |
+
+128K enhancements add AY music, sound effects, and potentially additional content using banked RAM. These are period-authentic enhancements (128K released 1985).
+
+### ZX Spectrum Next Enhancements
+
+For games that benefit from modern hardware capabilities:
+
+| Game | Units | Enhancement Focus |
+|------|-------|-------------------|
+| 9-16 (select) | 32-128 | Hardware sprites, copper, 256 colours, Z80N |
+
+Next enhancements follow the Amiga AGA model - separate versions that showcase the enhanced hardware while the main game remains 48K compatible.
+
+**Structure (when implemented):**
+- Games 9-14 Next: 32 units each
+- Game 15 Next: 64 units
+- Game 16 Next: 128 units
+
+See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ---
 
 ## Version History
 
+- **3.1 (2026-01-07):** Added optional enhancement versions section (128K and Next). Updated BASIC gateway reference to 512-unit curriculum.
 - **3.0 (2025-01-07):** Expanded to 1,536 units. Games 1-10 at 64 units, Games 11-15 at 128 units, Game 16 at 256 units. Added tape loading, 128K support, distribution skills.
 - **2.0 (2025-11-26):** Complete rewrite. Replaced phases/tiers/lessons with games model.
 - **1.0 (2025-01-15):** Original 4,096-lesson curriculum.
