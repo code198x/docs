@@ -82,7 +82,7 @@ This documentation repository is one of three:
 
 ## Contributing
 
-Content creation follows the platform-specific skills in `/platforms/[platform]/skills/`. All units must:
+All units must:
 
 1. Align with the curriculum specification
 2. Compile and run on the target platform

@@ -1,7 +1,7 @@
 # Content Creation Workflow
 
-**Last Updated:** 2026-01-07
-**Version:** 2.0
+**Last Updated:** 2026-01-08
+**Version:** 2.1
 **Purpose:** Complete end-to-end guide for creating curriculum units, from initial planning through publication
 **Scope:** Universal workflow applying to all platforms and games
 
@@ -16,7 +16,6 @@
 **Core Principles:**
 - **Curriculum alignment is mandatory** - No work begins without verified alignment to specifications
 - **Quality over speed** - Three core criteria must be met
-- **Platform skills handle execution** - This workflow defines process, platform skills execute technical details
 - **Integration by design** - Vault, Pattern Library, and cross-references built in, not bolted on
 
 **Unit Archetypes (Design Tools, Not Labels):**
@@ -113,7 +112,7 @@ The workflow has **five main phases**, each with detailed steps:
 **Purpose:** Ensure code works and unit meets quality criteria.
 
 **Steps:**
-- Platform-specific code validation (delegate to platform skill)
+- Platform-specific code validation (see platform tools below)
 - Runtime testing (no crashes, correct output)
 - Apply three quality criteria
 - Screenshot/media capture and verification
@@ -280,9 +279,9 @@ Don't create Pattern Library entries yet - just tag for later extraction.
 
 ### Step 3.1: Code Validation (MANDATORY)
 
-**Delegate to platform-specific skill** - Each platform has validation requirements:
+**Platform-Specific Validation Tools:**
 
-**BASIC Gateway Games - Example C64:**
+**Commodore 64 BASIC:**
 ```bash
 # Syntax validation
 petcat -text -o /dev/null -- example-1.bas
@@ -290,17 +289,39 @@ petcat -text -o /dev/null -- example-1.bas
 # Generate executable
 petcat -w2 -o example-1.prg -- example-1.bas
 
-# Runtime test (no crashes, no errors)
+# Runtime test
 x64sc -autostart example-1.prg -limitcycles 100000000 +sound +confirmonexit
 echo $? # Must be 0
 ```
 
-**Assembly Games:**
-- Platform-specific assembler (ACME, ca65, vasm, pasmonext)
-- Semantic validation if available
-- Runtime testing in emulator
+**Commodore 64 6510 Assembly:**
+```bash
+acme -f cbm -o example-1.prg example-1.asm
+x64sc -autostart example-1.prg
+```
 
-**⚠️ USE PLATFORM SKILL HERE:** See "Platform-Specific Details" section for skill paths. The platform skill provides complete validation commands, semantic checks, and screenshot capture instructions.
+**ZX Spectrum (BASIC and Z80):**
+```bash
+# Z80 Assembly
+pasmonext --tap --name CODE example-1.asm example-1.tap
+fuse example-1.tap
+
+# BASIC (use zmakebas in Docker container)
+zmakebas -o example-1.tap example-1.bas
+```
+
+**Commodore Amiga 68000:**
+```bash
+vasmm68k_mot -Fhunkexe -o example-1 example-1.asm
+fs-uae --floppy_drive_0=example.adf
+```
+
+**NES 6502:**
+```bash
+ca65 example-1.asm -o example-1.o
+ld65 -C nes.cfg example-1.o -o example-1.nes
+mesen example-1.nes
+```
 
 **Required:** All validation must pass before proceeding. Fix errors immediately.
 
@@ -331,7 +352,7 @@ Ask these questions:
 - For each major example in unit
 
 **Screenshot Capture:**
-- Platform-specific (see platform skill for emulator instructions)
+- Use emulator's built-in screenshot function (Alt+S in VICE, F5 in Fuse, etc.)
 - PNG format (lossless)
 - Descriptive filenames: `unit-NN-main.png`, `unit-NN-step1.png`
 - Location: `/website/public/images/{platform}/game-NN-{slug}/unit-NN/`
@@ -648,37 +669,27 @@ git push origin <branch-name>
 
 ## Platform-Specific Details
 
-**Universal workflow applies to all platforms. Platform skills provide technical execution details.**
-
-**⚠️ IMPORTANT: Use platform skills during Phase 3 (Validation) for compilation, screenshot capture, and platform-specific checks.**
+**Universal workflow applies to all platforms. See Phase 3 for platform-specific validation commands.**
 
 ### Commodore 64
-- **BASIC V2:** `/docs/platforms/commodore-64/skills/basic-lesson-creation/SKILL.md`
-- **6510 Assembly:** `/docs/platforms/commodore-64/skills/6510-lesson-creation/SKILL.md`
+- **Assembler:** ACME
+- **Emulator:** VICE (x64sc)
+- **BASIC compiler:** petcat
 
 ### Sinclair ZX Spectrum
-- **Sinclair BASIC:** `/docs/platforms/sinclair-zx-spectrum/skills/basic-lesson-creation/SKILL.md`
-- **Z80 Assembly:** `/docs/platforms/sinclair-zx-spectrum/skills/z80-lesson-creation/SKILL.md`
+- **Assembler:** pasmonext
+- **Emulator:** Fuse
+- **BASIC compiler:** zmakebas (in Docker container)
 
 ### Commodore Amiga
-- **AMOS BASIC:** `/docs/platforms/commodore-amiga/skills/amos-lesson-creation/SKILL.md`
-- **68000 Assembly:** `/docs/platforms/commodore-amiga/skills/68k-lesson-creation/SKILL.md`
+- **Assembler:** vasm (vasmm68k_mot)
+- **Emulator:** FS-UAE
 
 ### Nintendo Entertainment System
-- **No BASIC** (assembly only)
-- **6502 Assembly:** `/docs/platforms/nintendo-entertainment-system/skills/6502-lesson-creation/SKILL.md`
+- **Assembler:** ca65/ld65 (cc65 suite)
+- **Emulator:** Mesen
 
-**Each platform skill provides:**
-- Compilation/assembly commands
-- Semantic validation (where available)
-- Emulator configuration for screenshots
-- Platform-specific pitfalls and anti-patterns
-- Memory map validation
-- File naming conventions
-
-**Relationship: Workflow = Strategy, Skills = Tactics**
-- This workflow defines WHAT to do and WHEN
-- Platform skills define HOW to execute technical steps
+**Platform references:** See `/docs/platforms/{platform}/` for hardware documentation, memory maps, and common errors.
 
 ---
 
@@ -1018,13 +1029,14 @@ git stash list  # Check for stashed changes
 
 hardware, games, people, companies, platforms, techniques, events, culture, publications, tools, peripherals, formats, concepts, terminology
 
-### Platform Skills Location
+### Platform Tools
 
-Skills are in `/docs/platforms/{platform}/skills/{language}-lesson-creation/SKILL.md`
-
-Examples:
-- C64 BASIC: `/docs/platforms/commodore-64/skills/basic-lesson-creation/SKILL.md`
-- ZX Z80: `/docs/platforms/sinclair-zx-spectrum/skills/z80-lesson-creation/SKILL.md`
+| Platform | Assembler | Emulator | BASIC Compiler |
+|----------|-----------|----------|----------------|
+| C64 | ACME | VICE (x64sc) | petcat |
+| ZX Spectrum | pasmonext | Fuse | zmakebas |
+| Amiga | vasm | FS-UAE | - |
+| NES | ca65/ld65 | Mesen | - |
 
 ### Commit Message Format
 
@@ -1044,6 +1056,7 @@ Scopes: `{platform}-game{NN}`
 
 ## Version History
 
+- **2.1 (2026-01-08):** Removed skill references; integrated platform validation commands directly into workflow.
 - **2.0 (2026-01-07):** Complete rewrite for games/units model. Replaced phases/tiers/lessons structure with games/units throughout.
 - **1.0 (2025-11-15):** Original content creation workflow.
 
