@@ -34,7 +34,6 @@ See [CURRICULUM-SPECIFICATION.md](CURRICULUM-SPECIFICATION.md) for the full mode
 │   ├── commodore-amiga/
 │   └── nintendo-entertainment-system/
 │
-├── skills/                 # Content creation workflows
 ├── plans/                  # Design documents
 │
 ├── CURRICULUM-SPECIFICATION.md   # How curricula work
@@ -83,7 +82,7 @@ This documentation repository is one of three:
 
 ## Contributing
 
-Content creation follows the skills in `/skills/` and platform-specific workflows in `/platforms/[platform]/skills/`. All units must:
+Content creation follows the platform-specific skills in `/platforms/[platform]/skills/`. All units must:
 
 1. Align with the curriculum specification
 2. Compile and run on the target platform
