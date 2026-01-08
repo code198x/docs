@@ -2,700 +2,262 @@
 
 ## Overview
 
-The Pattern Library is a comprehensive reference collection of reusable code patterns, routines, and techniques taught throughout the Code Like It's 198x curriculum. Each pattern provides production-ready implementations that learners can use directly in their own projects, with clear explanations of how they work, when to use them, and what trade-offs they involve.
+The Pattern Library is a collection of reusable code patterns taught throughout the Code Like It's 198x curriculum. Each pattern provides production-ready code that learners can copy and adapt for their own projects.
 
 **Key Principles:**
-- **Standalone utility** - Usable independently of curriculum, enhanced when used together
-- **Production-ready code** - Copy-paste-adapt for real projects
-- **Evolution tracked** - Simple → complex versions with clear progression
-- **Lesson-linked** - Reference back to where each pattern was taught
-- **Multiple variations** - Separate entries for different approaches, cross-linked
-- **Platform-specific** - Code implementations tailored to each platform's architecture
+- **Production-ready** - Complete, working code you can copy-paste-adapt
+- **Concise** - Just enough explanation to use it effectively
+- **Cross-platform** - Same concept shown across different platforms where applicable
+- **Evolution tracked** - Simple → complex versions linked together
 
 ---
 
-## Organization Structure
+## Organisation
 
-### Multi-Dimensional Classification
+### URL Structure
 
-Patterns are organized by **three dimensions**:
+```
+/patterns/                           # Index: browse by platform or category
+/patterns/commodore-64/              # All C64 patterns
+/patterns/commodore-64/rendering/    # C64 rendering patterns
+/patterns/commodore-64/rendering/sprite-multiplexing-basic/
+```
 
-1. **Platform:** Commodore 64, ZX Spectrum, Amiga, NES (platform-specific implementations)
-2. **Technique Category:** What the pattern does
-3. **Genre Application:** Where the pattern is commonly used (cross-referenced)
+### Categories
 
-**Primary Organization:** `/patterns/{platform}/{category}/{pattern-name}`
-
-**Categories:**
-- **Rendering:** Graphics display, sprites, scrolling, effects
-- **Input:** Controller reading, keyboard handling, input buffering
-- **Audio:** Music playback, sound effects, mixing
-- **Physics:** Collision detection, movement, gravity, projectiles
-- **AI:** Enemy behavior, pathfinding, decision-making
-- **Data:** Compression, loading, save systems
-- **Optimization:** Speed-ups, memory management, code tricks
-- **Framework:** Game loops, state machines, utility routines
+- **Rendering:** Sprites, scrolling, screen effects
+- **Input:** Joystick, keyboard, mouse
+- **Audio:** Music playback, sound effects
+- **Physics:** Collision, movement, gravity
+- **AI:** Enemy behaviour, pathfinding
+- **Framework:** Game loops, state machines, interrupts
 
 ---
 
 ## Pattern Entry Format
 
-### Required Sections
+Each pattern has **5 sections** (not 12):
 
-Every pattern entry must include:
-
-#### 1. Frontmatter Metadata
+### 1. Frontmatter
 
 ```yaml
 ---
 title: "Sprite Multiplexing (Basic)"
 platform: "Commodore 64"
 category: "Rendering"
-difficulty: "Intermediate"
-game_introduced: 9
-unit_first_taught: "Game 9 (Sprite Storm), Unit 8"
+difficulty: "Intermediate"  # Beginner | Intermediate | Advanced
+taught_in: "Game 9, Unit 8"
+tags: ["sprites", "raster", "vic-ii"]
 evolution:
-  - pattern: "sprite-multiplexing-basic"
-    game: 9
-  - pattern: "sprite-multiplexing-sorted"
-    game: 11
-  - pattern: "sprite-multiplexing-advanced"
-    game: 13
-related_patterns:
-  - "raster-interrupts"
-  - "sprite-animation"
-related_vault:
-  - "/vault/techniques/c64-sprite-multiplexing"
-  - "/vault/hardware/vic-ii"
-genres: ["Shoot 'Em Up", "Platform Game", "Beat 'Em Up"]
-tags: ["sprites", "multiplexing", "raster", "vic-ii"]
+  previous: null
+  next: "sprite-multiplexing-sorted"
+related:
+  patterns: ["raster-interrupts", "sprite-animation"]
+  vault: ["vic-ii", "raster-tricks-101"]
 ---
 ```
 
-#### 2. Overview
+### 2. Overview
 
-**Purpose:** One-paragraph explanation of what the pattern does and why you'd use it.
+One paragraph: what it does, why you'd use it, key trade-off.
 
 ```markdown
 ## Overview
 
-Displays more than 8 sprites on-screen by reusing the same hardware sprites multiple times per frame. When the screen beam passes below the first set of sprites, a raster interrupt repositions them further down the screen. Essential for games needing 16-40 sprites (enemies, bullets, collectibles).
+Display more than 8 hardware sprites by reusing them at different vertical positions. A raster interrupt repositions sprites after the beam passes. Use when you need 9-40 sprites; accept occasional flicker when sprites cluster on the same scanline.
 ```
 
-#### 3. When to Use This Pattern
+### 3. Code
 
-**Purpose:** Clear guidance on appropriate use cases.
-
-```markdown
-## When to Use This Pattern
-
-**Use when:**
-- You need 9-40 sprites on screen
-- Sprites are roughly distributed vertically (not all clustered)
-- You can tolerate occasional flickering when >8 sprites share a scanline
-
-**Don't use when:**
-- 8 sprites or fewer suffice (unnecessary complexity)
-- All sprites cluster at same Y position (multiplexing won't help)
-- You need rock-solid 50fps with no IRQ overhead (use sprite-less rendering)
-```
-
-#### 4. How It Works
-
-**Purpose:** Technical explanation of the approach.
+The actual pattern - complete, commented, ready to use.
 
 ```markdown
-## How It Works
-
-1. **Setup:** Sort all active sprites by Y position
-2. **IRQ Chain:** Set up raster interrupts at the Y position where each group of 8 sprites ends
-3. **Reposition:** In each IRQ, update hardware sprite positions to the next group
-4. **Handle Overflow:** When >8 sprites share a scanline, choose which to display (or flicker between frames)
-
-**Key Timing:**
-- IRQ must trigger below the bottom sprite of current group
-- Sprite positioning takes ~63 cycles per sprite
-- Must complete before raster beam catches up
-```
-
-#### 5. Code Implementation
-
-**Purpose:** Complete, working, well-commented code.
-
-```markdown
-## Code Implementation
-
-### Basic Sprite Multiplexing (8-24 sprites)
+## Code
 
 ` ``asm
-; =============================================================================
-; BASIC SPRITE MULTIPLEXING
-; Handles 8-24 sprites using simple zone-based multiplexing
-; First taught: Game 9 (Sprite Storm), Unit 8
-; =============================================================================
+; SPRITE MULTIPLEXING - BASIC (8-24 sprites)
+; Taught: Game 9 (Sprite Storm), Unit 8
+; CPU: ~900 cycles/frame | Memory: ~400 bytes
 
-; --- Constants ---
 MAX_SPRITES = 24
-SPRITE_ZONES = 3        ; Screen divided into 3 zones
-SPRITES_PER_ZONE = 8
 
-; --- Zero Page Variables ---
-sprite_count:       .byte 0         ; Total active sprites (0-24)
-sprite_x_lo:        .res MAX_SPRITES
-sprite_x_hi:        .res MAX_SPRITES
-sprite_y:           .res MAX_SPRITES
-sprite_frame:       .res MAX_SPRITES
-
-; --- IRQ Raster Positions ---
-irq_zone1 = 80      ; First multiplexing zone
-irq_zone2 = 160     ; Second multiplexing zone
-irq_zone3 = 240     ; Third multiplexing zone
-
-; =============================================================================
-; Initialize Multiplexing System
-; =============================================================================
-init_multiplexing:
-    ; Set up raster IRQ chain
-    sei
-    lda #<irq_zone1_handler
-    sta $0314
-    lda #>irq_zone1_handler
-    sta $0315
-
-    lda #irq_zone1
-    sta $d012               ; Trigger at scanline 80
-
-    lda #$1b
-    sta $d011               ; Enable raster IRQ
-    lda #$01
-    sta $d01a               ; Enable raster interrupt
-    cli
-    rts
-
-; =============================================================================
-; Zone 1 IRQ Handler (Scanline 80)
-; Displays sprites 0-7
-; =============================================================================
-irq_zone1_handler:
-    pha
-    txa
-    pha
-    tya
-    pha
-
-    ; Update hardware sprites 0-7 from logical sprites 0-7
-    ldx #7
-:   lda sprite_x_lo,x
-    sta $d000,x,x          ; X position low byte
-    lda sprite_x_hi,x
-    sta $d010              ; X position MSB (via bit manipulation)
-    lda sprite_y,x
-    sta $d001,x,x          ; Y position
-    lda sprite_frame,x
-    sta $07f8,x            ; Sprite pointer
-    dex
-    bpl :-
-
-    ; Chain to next IRQ
-    lda #<irq_zone2_handler
-    sta $0314
-    lda #>irq_zone2_handler
-    sta $0315
-    lda #irq_zone2
-    sta $d012
-
-    asl $d019              ; Acknowledge IRQ
-
-    pla
-    tay
-    pla
-    tax
-    pla
-    rti
-
-; =============================================================================
-; Zone 2 IRQ Handler (Scanline 160)
-; Displays sprites 8-15
-; =============================================================================
-irq_zone2_handler:
-    ; [Similar structure, using logical sprites 8-15]
-    ; ...
-
-; =============================================================================
-; Zone 3 IRQ Handler (Scanline 240)
-; Displays sprites 16-23
-; =============================================================================
-irq_zone3_handler:
-    ; [Similar structure, using logical sprites 16-23]
-    ; ...
-
-    ; Chain back to zone 1
-    lda #<irq_zone1_handler
-    sta $0314
-    lda #>irq_zone1_handler
-    sta $0315
-    lda #irq_zone1
-    sta $d012
-
-    asl $d019
-    pla
-    tay
-    pla
-    tax
-    pla
-    rti
+; [Complete working code here...]
 ` ``
 
 **Usage:**
 ` ``asm
-; In your game initialization:
 jsr init_multiplexing
-
-; Update sprite positions in main loop:
-lda #20                ; Set sprite count
-sta sprite_count
-
-lda #100               ; Sprite 0 X position
-sta sprite_x_lo+0
-lda #0
-sta sprite_x_hi+0
-lda #50                ; Sprite 0 Y position
-sta sprite_y+0
-lda #64                ; Sprite 0 frame (sprite pointer)
-sta sprite_frame+0
-
-; Repeat for other sprites...
+; [Minimal usage example]
 ` ``
 ```
 
-#### 6. Variations
+### 4. Trade-offs
 
-**Purpose:** Link to related patterns with different approaches.
+Brief, scannable costs and benefits.
 
 ```markdown
-## Variations
+## Trade-offs
 
-This is the **basic zone-based** approach. Other implementations:
+| Aspect | Cost |
+|--------|------|
+| CPU | ~900 cycles/frame (3 IRQs) |
+| Memory | 4 bytes/sprite + 300 bytes code |
+| Limitation | Flickers when >8 sprites share Y position |
 
-- **[Sorted Multiplexing](/patterns/c64/rendering/sprite-multiplexing-sorted)** (Game 11) - Dynamic Y-sorting for variable sprite counts
-- **[Advanced Multiplexing](/patterns/c64/rendering/sprite-multiplexing-advanced)** (Game 13) - Handles 40-60 sprites with flicker management
-- **[Sprite Pooling](/patterns/c64/rendering/sprite-pooling)** (Game 10) - Object pooling for bullet/particle systems
-
-**Comparison:**
-- **Basic (this):** Fixed zones, 8-24 sprites, simplest implementation
-- **Sorted:** Variable zones, 16-40 sprites, Y-sorting overhead
-- **Advanced:** 40-60+ sprites, complex flicker management, highest performance cost
+**When to use:** 9-40 sprites, vertically distributed.
+**When to avoid:** All sprites clustered at same Y, or ≤8 sprites needed.
 ```
 
-#### 7. Performance & Trade-offs
+### 5. Related
 
-**Purpose:** Clear understanding of costs.
-
-```markdown
-## Performance & Trade-offs
-
-**CPU Cost:**
-- ~200-300 cycles per IRQ (×3 = 900 cycles/frame)
-- Raster time: Must complete before beam catches sprites
-- Sorting cost (if using sorted variation): ~500-2000 cycles/frame
-
-**Memory Cost:**
-- 4 bytes per logical sprite (x_lo, x_hi, y, frame)
-- IRQ handlers: ~300 bytes total
-
-**Visual Quality:**
-- **Flickering:** Occurs when >8 sprites share Y coordinate
-- **Timing:** Occasional glitches if IRQ timing fails
-- **Sprite Priority:** Can't change per-zone (hardware limitation)
-
-**Optimization Tips:**
-- Sort only when sprite positions change significantly
-- Use fewer zones if sprites cluster vertically
-- Pre-calculate sprite pointers when possible
-```
-
-#### 8. Prerequisites
-
-**Purpose:** What learner should know first.
+Links only - no prose.
 
 ```markdown
-## Prerequisites
+## Related
 
-**Required Knowledge:**
-- Raster interrupts ([Pattern: Raster Interrupts](/patterns/c64/framework/raster-interrupts))
-- Sprite basics ([Pattern: Basic Sprite Display](/patterns/c64/rendering/sprite-basics))
-- VIC-II sprite registers ([Vault: VIC-II](/vault/hardware/vic-ii))
+**Patterns:** [Raster Interrupts](/patterns/commodore-64/framework/raster-interrupts) | [Sprite Animation](/patterns/commodore-64/rendering/sprite-animation)
 
-**Required Game:**
-- Game 9 minimum (raster IRQs introduced in Game 9, Unit 3)
-```
+**Vault:** [VIC-II Chip](/vault/vic-ii) | [Raster Tricks 101](/vault/raster-tricks-101)
 
-#### 9. Curriculum Integration
-
-**Purpose:** Where this pattern appears in lessons.
-
-```markdown
-## Curriculum Integration
-
-**First Introduced:**
-- **Game 9 (Sprite Storm), Unit 8** - "Displaying More Sprites"
-  - Basic zone-based multiplexing
-  - 3 zones, 24 sprites maximum
-  - Arena shooter example
-
-**Expanded:**
-- **Game 11 (Dungeon Crawl), Units 12-14** - "Dynamic Sprite Management"
-  - Y-sorting algorithm
-  - Variable zone positioning
-  - Multiple on-screen enemies
-
-**Mastered:**
-- **Game 13 (Parallax Patrol), Units 18-20** - "Advanced Multiplexing"
-  - Flicker management strategies
-  - 50+ sprites with priority handling
-  - Side-scrolling shooter example
-
-**Referenced In:**
-- Game 8 (Night Raid) - Horizontal shooter
-- Game 10 (Raster Rider) - Racing game
-- Game 12 (Arena Fighter) - Beat 'em up
-```
-
-#### 10. Genre Applications
-
-**Purpose:** Where this pattern is commonly used.
-
-```markdown
-## Genre Applications
-
-**Essential For:**
-- **Shoot 'Em Ups:** Many enemies + bullets simultaneously
-- **Beat 'Em Ups:** Multiple on-screen enemies
-- **Platform Games:** Enemies + collectibles + hazards
-
-**Not Needed For:**
-- **Puzzle Games:** Usually ≤8 distinct sprites
-- **Racing Games:** Often use character-based graphics
-- **Text Adventures:** Minimal sprite usage
-```
-
-#### 11. Related Patterns
-
-**Purpose:** Cross-references to complementary patterns.
-
-```markdown
-## Related Patterns
-
-**Dependencies:**
-- [Raster Interrupts](/patterns/c64/framework/raster-interrupts) - Required foundation
-
-**Commonly Used With:**
-- [Sprite Animation](/patterns/c64/rendering/sprite-animation) - Animating multiplexed sprites
-- [Bullet Pool Management](/patterns/c64/physics/bullet-pooling) - Managing many projectiles
-- [Enemy Update Routines](/patterns/c64/ai/enemy-updates) - Updating many enemies efficiently
-
-**Alternatives:**
-- [Character-Based Sprites](/patterns/c64/rendering/char-sprites) - No multiplexing needed, different aesthetic
-- [Software Sprites](/patterns/c64/rendering/software-sprites) - More sprites possible, much slower
-```
-
-#### 12. Related Vault Entries
-
-**Purpose:** Links to deeper context.
-
-```markdown
-## Related Vault Entries
-
-**Techniques:**
-- [Sprite Multiplexing](/vault/techniques/c64-sprite-multiplexing) - Comprehensive technique overview
-- [Raster Interrupts](/vault/techniques/c64-raster-interrupts) - How raster IRQs work
-
-**Hardware:**
-- [VIC-II Chip](/vault/hardware/vic-ii) - Hardware sprite system details
-- [6510 CPU](/vault/hardware/6510-cpu) - Timing and cycle counting
-
-**Games Using This:**
-- [Mayhem in Monsterland](/vault/games/mayhem-in-monsterland) - 50+ sprite multiplexing
-- [Turrican](/vault/games/turrican) - Advanced multiplexing example
+**Evolution:** Basic → [Sorted](/patterns/commodore-64/rendering/sprite-multiplexing-sorted) → [Advanced](/patterns/commodore-64/rendering/sprite-multiplexing-advanced)
 ```
 
 ---
 
-## Evolution Tracking
+## Cross-Platform Patterns
 
-### Pattern Progression
+When the same concept exists across platforms, create a **comparison page**:
 
-Many patterns have **simple → complex** progressions taught across games:
+```
+/patterns/cross-platform/sprite-collision/
+```
 
-**Example: Sprite Multiplexing**
-- **Game 9 (Sprite Storm):** Basic zone-based (fixed 3 zones, 24 sprites)
-- **Game 11 (Dungeon Crawl):** Sorted dynamic (variable zones, 40 sprites)
-- **Game 13 (Parallax Patrol):** Advanced (60+ sprites, flicker management)
-- **Game 16 (Symphony's End):** Optimized (cycle-perfect, maximum performance)
+Shows side-by-side implementations:
+- C64: Hardware sprite collision registers
+- Spectrum: Software bounding box (no hardware sprites)
+- Amiga: Blitter-based collision
+- NES: OAM sprite collision flags
 
-**Each version is a separate pattern entry** with:
-- Cross-links to earlier/later versions
-- "Evolution" metadata showing progression
-- Clear explanation of what's new vs. previous version
-- When to upgrade from previous version
+This is one of the most valuable features - learners see how the same problem is solved differently based on hardware.
+
+---
+
+## What NOT to Include
+
+Patterns are **not** tutorials. They assume you've done the curriculum or have equivalent knowledge.
+
+**Don't include:**
+- Step-by-step explanations of how the code works
+- Historical context (that's what the Vault is for)
+- Multiple pages of prose
+- "Prerequisites" sections (the difficulty tag suffices)
+- Genre applications (obvious from the pattern name)
+
+**Do include:**
+- Working code
+- Enough comments to understand it
+- Clear trade-offs
+- Links to related content
 
 ---
 
 ## Code Standards
 
-### Commenting
-
-**Every pattern must include:**
-- File/section header explaining purpose
-- Inline comments for non-obvious code
-- Register usage documentation
-- Timing notes where critical
+### Comments
 
 ```asm
 ; =============================================================================
-; SPRITE MULTIPLEXING - BASIC ZONE IMPLEMENTATION
-; Handles 8-24 sprites across 3 fixed vertical zones
-; First taught: Game 9 (Sprite Storm), Unit 8
-;
-; Performance: ~300 cycles per zone IRQ (900 cycles/frame total)
-; Memory: 4 bytes per sprite + 300 bytes code
+; PATTERN NAME - VARIATION
+; Brief description
+; Taught: Game X, Unit Y
+; CPU: ~N cycles/frame | Memory: ~N bytes
 ; =============================================================================
-
-; Registers on entry: N/A (IRQ handler)
-; Registers on exit: All preserved
-; Zero page used: None (uses only IRQ-safe locations)
 ```
 
-### Code Style
+### Style
 
-- **Assembly:** Platform-appropriate assembler syntax (ACME for C64, pasmonext for ZX, vasm for Amiga, ca65 for NES)
-- **Indentation:** Consistent (labels flush left, instructions indented)
-- **Constants:** Named constants, not magic numbers
-- **Optimization:** Phase-appropriate (don't over-optimize Phase 2 examples)
+- Platform-appropriate assembler (ACME for C64, pasmonext for ZX Spectrum, vasm for Amiga, ca65 for NES)
+- Labels flush left, instructions indented
+- Named constants, not magic numbers
+- Comments on non-obvious lines only
 
 ---
 
 ## File Structure
 
 ```
-/patterns/
-  /commodore-64/
-    /rendering/
-      sprite-multiplexing-basic.md
-      sprite-multiplexing-sorted.md
-      sprite-multiplexing-advanced.md
-      scrolling-character-based.md
-      scrolling-pixel-smooth.md
-    /input/
-      joystick-reading-basic.md
-      joystick-debouncing.md
-      keyboard-multi-key.md
-    /audio/
-      sid-music-playback.md
-      sfx-interrupting-music.md
-    /physics/
-      collision-sprite-sprite.md
-      collision-sprite-background.md
-      gravity-platformer.md
-    /ai/
-      enemy-patrol-pattern.md
-      pathfinding-simple.md
-    /framework/
-      raster-interrupts.md
-      game-loop-basic.md
-      state-machine.md
-    /optimization/
-      unrolled-loops.md
-      table-lookups.md
-
-  /sinclair-zx-spectrum/
-    /rendering/
-      software-sprite-xor.md
-      attribute-management.md
-      scrolling-character.md
-    /input/
-      keyboard-reading.md
-    /audio/
-      beeper-sound-effects.md
-      beeper-music.md
-    /physics/
-      collision-detection.md
-    /framework/
-      interrupt-handlers.md
-
-  /commodore-amiga/
-    /rendering/
-      bob-sprite-basic.md
-      hardware-sprite-multiplexing.md
-      copper-palette-effects.md
-      blitter-rectangle-fill.md
-    /input/
-      mouse-reading.md
-      joystick-reading.md
-    /audio/
-      paula-sample-playback.md
-      protracker-mod-playback.md
-    /framework/
-      vertical-blank-interrupt.md
-
-  /nintendo-nes/
-    /rendering/
-      sprite-management.md
-      ppu-scrolling.md
-      nametable-updates.md
-    /input/
-      controller-reading.md
-    /audio/
-      apu-music-playback.md
-      apu-sound-effects.md
-    /physics/
-      tile-collision.md
-    /framework/
-      nmi-handler.md
-      game-loop.md
+/website/src/pages/patterns/
+  index.astro                              # Main index
+  commodore-64/
+    index.astro                            # C64 patterns index
+    rendering/
+      sprite-multiplexing-basic.mdx
+      sprite-multiplexing-sorted.mdx
+      scrolling-character.mdx
+    input/
+      joystick-reading.mdx
+    audio/
+      sid-music-playback.mdx
+    framework/
+      raster-interrupts.mdx
+      game-loop.mdx
+  sinclair-zx-spectrum/
+    index.astro
+    rendering/
+      software-sprites.mdx
+      attribute-clash.mdx
+    input/
+      keyboard-reading.mdx
+    framework/
+      interrupt-mode-2.mdx
+  commodore-amiga/
+    index.astro
+    ...
+  nintendo-nes/
+    index.astro
+    ...
+  cross-platform/
+    sprite-collision.mdx                   # Comparison pages
+    game-loop.mdx
+    scrolling.mdx
 ```
 
 ---
 
-## Integration with Curriculum
+## Integration
 
-### Unit → Pattern Flow
-
-1. **Unit teaches concept** with step-by-step implementation
-2. **Unit references Pattern Library** at end: "See [Pattern: Sprite Multiplexing Basic] for production-ready implementation"
-3. **Pattern provides reference code** ready to copy/adapt
-4. **Pattern links back to unit** where it was taught
-
-### Standalone Usage
-
-**Patterns work independently:**
-- Complete working code (no "fill in the blanks")
-- Clear prerequisites listed
-- Self-contained explanations
-- Copy-paste-adapt for own projects
-
-**Enhanced with curriculum:**
-- Context from units provides deeper understanding
-- Evolution across games shows progression
-- Genre applications from curriculum examples
-
----
-
-## Integration with Vault
-
-**Pattern → Vault Links:**
-- Every pattern links to related Vault technique entries
-- Links to hardware entries for technical context
-- Links to games that exemplify the pattern
-
-**Vault → Pattern Links:**
-- Vault technique entries link to Pattern implementations
-- Example: Vault's "Sprite Multiplexing" technique → links to all Pattern variations
-
-**Relationship:**
-- **Vault** = "What it is and why it matters" (context, history, significance)
-- **Pattern** = "Here's working code you can use" (implementation, usage, trade-offs)
-
----
-
-## Quality Standards
-
-**Before Publishing a Pattern:**
-- [ ] All required sections completed
-- [ ] Code compiles and runs correctly
-- [ ] Comments explain non-obvious logic
-- [ ] Prerequisites clearly stated
-- [ ] At least 3 cross-links (related patterns, vault entries)
-- [ ] Evolution metadata (if part of progression)
-- [ ] Genre applications identified
-- [ ] Performance trade-offs documented
-- [ ] Unit references accurate
-
----
-
-## Usage Examples in Units
-
-### How Units Reference Patterns
-
-**In Unit Text:**
+### From Units
+Units link to patterns at the end:
 ```markdown
-Now that we understand how sprite multiplexing works, we can implement it in our game. For a complete, production-ready implementation with additional optimizations, see [Pattern: Sprite Multiplexing (Basic)](/patterns/c64/rendering/sprite-multiplexing-basic).
+For a production-ready version, see [Pattern: Sprite Multiplexing](/patterns/commodore-64/rendering/sprite-multiplexing-basic).
 ```
 
-**In Unit "Further Reading" Section:**
+### From Vault
+Vault articles link to implementations:
 ```markdown
-## Further Reading
-
-**Pattern Library:**
-- [Sprite Multiplexing (Basic)](/patterns/c64/rendering/sprite-multiplexing-basic) - Production implementation
-- [Raster Interrupts](/patterns/c64/framework/raster-interrupts) - Foundation technique
-
-**Vault:**
-- [Sprite Multiplexing Technique](/vault/techniques/c64-sprite-multiplexing) - Historical context
-- [VIC-II Chip](/vault/hardware/vic-ii) - Hardware details
+See the [Pattern Library](/patterns/commodore-64/rendering/sprite-multiplexing-basic) for working code.
 ```
 
----
-
-## Search and Discovery
-
-**Multiple Access Paths:**
-
-1. **By Platform:** Browse C64 → Rendering → find all rendering patterns
-2. **By Technique Category:** All collision detection patterns across platforms
-3. **By Genre:** All patterns commonly used in Shoot 'Em Ups
-4. **By Game:** All patterns introduced in Game 9
-5. **By Evolution:** Follow progression from basic → advanced versions
-6. **From Units:** Direct links from unit content
-7. **From Vault:** Cross-links from technique entries
-
-**Metadata Enables:**
-- Filter by difficulty level
-- Show patterns for specific genres
-- Track evolution across games
-- Relate patterns to units taught
+### Relationship Summary
+- **Curriculum Units** = "How to build this step-by-step"
+- **Pattern Library** = "Here's production code to copy"
+- **Vault** = "Why this matters and how it came to be"
 
 ---
 
-## Content Priorities
+## Quality Checklist
 
-**Foundation Games (1-6) Pattern Needs (Immediate):**
-- Core framework patterns (game loop, state machine, interrupts)
-- Basic rendering (sprites, scrolling, collision)
-- Simple input (controller/keyboard reading)
-- Basic audio (sound effect playback)
-
-**Mid-Curriculum Games (7-10) Expansion:**
-- Intermediate rendering (multiplexing, smooth scrolling)
-- Physics systems (gravity, projectiles, platformer mechanics)
-- Simple AI (patrol patterns, basic pathfinding)
-- Audio integration (music + SFX without conflicts)
-
-**Advanced Games (11-16) Completion:**
-- Advanced rendering (maximum sprites, complex effects)
-- Sophisticated AI (behavior trees, advanced pathfinding)
-- Optimization patterns (unrolled loops, table lookups, cycle counting)
-- Professional production patterns (save systems, compression, loaders)
-
----
-
-## Future Enhancements
-
-**Potential Additions:**
-- **Interactive Examples:** Embedded live code editors, web-based emulators
-- **Video Demonstrations:** Patterns demonstrated in working games
-- **Performance Profiling:** Actual cycle counts and memory usage visualized
-- **Community Contributions:** Verified pattern submissions with editorial review
-- **Cross-Platform Comparisons:** Show same pattern implemented across all platforms
-- **Downloadable Archives:** Complete working examples as downloadable .zip files
-
----
-
-*The Pattern Library transforms units from "how to build this game" into "here's reusable code for your own games" - giving learners a professional toolkit they can use long after completing the curriculum.*
+Before publishing:
+- [ ] Code compiles and runs
+- [ ] Comments on non-obvious lines
+- [ ] Trade-offs table complete
+- [ ] At least 2 related links
+- [ ] Difficulty tag accurate
 
 ---
 
 ## Version History
 
-- **2.0 (2026-01-07):** Updated for games/units model. Replaced phases/tiers/lessons references with game/unit references throughout.
-- **1.0 (2025-11-15):** Original pattern library specification.
+- **3.0 (2026-01-08):** Simplified from 12 sections to 5. Added cross-platform comparison pages. Removed redundant sections.
+- **2.0 (2026-01-07):** Updated for games/units model.
+- **1.0 (2025-11-15):** Original specification.
