@@ -1,0 +1,97 @@
+---
+title: "Hit or Miss"
+description: "Detect when notes are hit or missed. Add visual feedback. The toy becomes a game."
+pubDate: 2025-11-25
+game: 1
+gameName: "SID Symphony"
+unit: 3
+totalUnits: 16
+system: "Commodore 64"
+tags: ["assembly", "6510", "collision-detection", "game-logic", "feedback"]
+prevLesson: "/commodore-64/assembly/game-01-sid-symphony/unit-02"
+nextLesson: "/commodore-64/assembly/game-01-sid-symphony/unit-04"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+*Need to catch up? Check out [Unit 2: Notes in Motion](/commodore-64/game-01-sid-symphony/unit-02).*
+
+## What You're Building
+
+Notes scroll. The SID sings. But nothing happens when a note reaches the hit zone. You can't succeed. You can't fail. There's no game yet.
+
+By the end of this unit, you'll have:
+
+- Hit detection — pressing X while a note is in the hit zone removes it
+- Miss detection — notes that scroll past without being hit trigger feedback
+- Visual feedback — green flash for hits, red flash for misses
+
+It's a game now. You can win. You can lose. There are stakes.
+
+## The Key-Down Problem
+
+In Unit 2, we checked if X was held. But for hit detection, we need to know when X *transitions* from not-pressed to pressed — the exact moment of the key-down.
+
+Why? If we check every frame that X is held, a single keypress lasting 10 frames would try to hit 10 notes. We only want one hit per press.
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-03/snippets/01-the-key-down-problem.asm" lang="asm" />
+
+Each frame, compare "is pressed now" with "was pressed last frame":
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-03/snippets/02-the-key-down-problem.asm" lang="asm" />
+
+The transition happens when `key_was_pressed` is 0 and current state is 1.
+
+## Hit Detection
+
+A "hit" means: X pressed while any note is in the hit zone (columns 0-3).
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-03/snippets/03-hit-detection.asm" lang="asm" />
+
+We scan through all note slots. The first active note with position less than `HIT_ZONE_W` is a hit.
+
+## Miss Detection
+
+A "miss" happens when a note scrolls off the left edge. In `move_notes`, when a note's position wraps to $FF, it's a miss:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-03/snippets/04-miss-detection.asm" lang="asm" />
+
+## Visual Feedback
+
+Feedback needs to be immediate and clear. We flash the hit zone colour:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-03/snippets/05-visual-feedback.asm" lang="asm" />
+
+Each frame, check if a flash is active:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-03/snippets/06-visual-feedback.asm" lang="asm" />
+
+<InlineNote>
+Four frames at 50fps is about 80 milliseconds — long enough to notice, short enough to feel snappy. This is a common pattern for feedback timing.
+</InlineNote>
+
+## What You've Built
+
+Build it. Run it. Watch a note scroll toward the hit zone. Press X at the right moment — the note vanishes, the zone flashes green. Miss one — red flash.
+
+## What You've Learnt
+
+- **Key-down detection** — Compare current state with previous frame to find transitions
+- **Collision zones** — Use comparison operators to check if values fall within ranges
+- **Timer-based effects** — Decrement counters each frame for timed events
+- **Colour RAM manipulation** — Change colours without changing characters
+
+## The Complete Code
+
+Here's the complete `symphony.asm` for this unit:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-03/symphony.asm" lang="asm" />
+
+## Next Unit
+
+You can hit notes. You can miss them. But nothing's counting. The score stays at zero. The streak never moves.
+
+In Unit 4, we add scoring. Hits earn points. Consecutive hits build streaks. The numbers on screen start to mean something.

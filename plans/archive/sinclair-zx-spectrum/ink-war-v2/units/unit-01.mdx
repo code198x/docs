@@ -1,0 +1,96 @@
+---
+title: "The Spectrum's Display"
+description: "Understand the ZX Spectrum's 256×192 pixel display and how it maps to memory at $4000, laying the foundation for all graphics programming."
+pubDate: 2026-01-09
+game: 1
+gameSlug: "ink-war"
+unit: 1
+unitSlug: "the-spectrums-display"
+totalUnits: 64
+tags: ["assembly", "z80", "display", "screen-memory"]
+prevUnit: null
+nextUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-02"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+The ZX Spectrum's display is 256 pixels wide and 192 pixels tall. Every pixel you see on screen lives in memory starting at address $4000. Understanding this mapping is the foundation of all Spectrum graphics programming.
+
+## The Display Memory
+
+The Spectrum dedicates 6144 bytes to screen graphics, stored at $4000-$57FF. Each byte represents 8 horizontal pixels—a set bit shows the INK colour, a clear bit shows the PAPER colour.
+
+The maths is straightforward:
+- **256 pixels** across ÷ 8 pixels per byte = **32 bytes** per row
+- **192 rows** × 32 bytes = **6144 bytes** total
+
+This program fills every byte of display memory with a stripe pattern:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-01/display.asm" />
+
+![Stripe pattern filling the display](/images/sinclair-zx-spectrum/game-01-ink-war/unit-01/display.png)
+
+## How It Works
+
+The program demonstrates three key concepts:
+
+### 1. Screen Memory Location
+
+```asm
+    ld hl, $4000        ; Screen memory start
+    ld bc, 6144         ; Total bytes in display
+```
+
+Screen memory always starts at $4000 (16384 decimal). The full 6144 bytes runs through to $57FF.
+
+### 2. Pixel Patterns
+
+```asm
+    ld a, $aa           ; Pattern: 10101010
+    ; or
+    ld a, $55           ; Pattern: 01010101
+```
+
+Each bit in a byte controls one pixel. The pattern $AA (binary 10101010) creates alternating pixels—every other column lit. Combined with $55 (01010101) in alternating bytes, you get vertical stripes.
+
+### 3. Attribute Memory
+
+```asm
+    ld hl, $5800        ; Attribute memory
+```
+
+Immediately after the display memory sits attribute memory at $5800-$5AFF (768 bytes). This controls the colour of each 8×8 pixel cell. We'll explore attributes properly in Unit 5.
+
+## The Clear Screen Routine
+
+The `clear_screen` routine uses LDIR—a powerful Z80 instruction that copies blocks of memory:
+
+```asm
+clear_screen:
+    ld hl, $4000        ; Source: screen start
+    ld de, $4001        ; Destination: next byte
+    ld bc, 6143         ; Count: all but first byte
+    ld (hl), 0          ; Clear first byte
+    ldir                ; Copy zero through entire screen
+```
+
+This works by setting the first byte to zero, then copying that zero to each subsequent byte. LDIR repeats the copy BC times, propagating the zero through all 6143 remaining bytes.
+
+## Memory Map Summary
+
+| Address | Size | Purpose |
+|---------|------|---------|
+| $4000-$57FF | 6144 bytes | Display bitmap (pixels) |
+| $5800-$5AFF | 768 bytes | Attributes (colours) |
+
+The display bitmap stores what's drawn. The attributes store what colour each 8×8 cell appears in. Together, they form the complete 6912 bytes of screen memory.
+
+## What You've Learnt
+
+- **Display dimensions** — 256×192 pixels, matching the Spectrum's TV output
+- **Memory location** — Screen memory lives at $4000-$57FF (6144 bytes)
+- **Byte mapping** — Each byte represents 8 horizontal pixels
+- **Row size** — 32 bytes per row (256 ÷ 8)
+- **Attribute location** — Colour data follows at $5800-$5AFF
+- **LDIR instruction** — Block copy for fast memory fills

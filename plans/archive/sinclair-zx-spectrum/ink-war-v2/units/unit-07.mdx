@@ -1,0 +1,175 @@
+---
+title: "Setting Attributes"
+description: "Write a routine to colour individual 8×8 cells by calculating attribute addresses and storing colour values."
+pubDate: 2026-01-09
+game: 1
+gameSlug: "ink-war"
+unit: 7
+unitSlug: "setting-attributes"
+totalUnits: 64
+tags: ["assembly", "z80", "attributes", "colour", "game-mechanics"]
+prevUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-06"
+nextUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-08"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+Claiming territory in Ink War means changing a cell's attribute. This unit builds the routine that makes it happen—converting row and column coordinates into an attribute address, then setting the colour.
+
+## The Core Mechanic
+
+This is Ink War's fundamental operation:
+
+```asm
+; Claim cell at row 5, column 10 for player 1 (red)
+    ld b, 5             ; Row
+    ld c, 10            ; Column
+    ld a, %01000010     ; Bright red
+    call set_attribute
+```
+
+One routine. Three parameters. Territory claimed.
+
+## The Demonstration
+
+This program places individual coloured cells and creates an 8×8 checkerboard grid—previewing how the Ink War board will work:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-07/setattr.asm" />
+
+![Individual coloured cells and checkerboard grid](/images/sinclair-zx-spectrum/game-01-ink-war/unit-07/setattr.png)
+
+## The set_attribute Routine
+
+```asm
+set_attribute:
+    push af             ; Save attribute value
+    call get_attr_addr  ; HL = attribute address
+    pop af              ; Restore attribute
+    ld (hl), a          ; Set the attribute
+    ret
+```
+
+Four instructions. The work is in calculating the address.
+
+## Address Calculation
+
+```asm
+get_attr_addr:
+    ld h, $58           ; High byte always $58
+    ld a, b             ; A = row
+    add a, a            ; × 2
+    add a, a            ; × 4
+    add a, a            ; × 8
+    add a, a            ; × 16
+    add a, a            ; × 32
+    add a, c            ; + column
+    ld l, a             ; L = offset
+    ret
+```
+
+Five `ADD A,A` instructions multiply the row by 32. Adding the column gives the offset from $5800. Since row × 32 + column never exceeds 767, it fits in a single byte.
+
+## Creating the Grid
+
+The demonstration builds an 8×8 checkerboard:
+
+```asm
+    ld d, 8             ; Start row
+grid_row:
+    ld e, 12            ; Start column
+
+grid_col:
+    ld b, d             ; Row
+    ld c, e             ; Column
+
+    ; Alternate colours based on position
+    ld a, d
+    xor e               ; XOR row and column
+    and 1               ; Keep low bit
+    jr z, use_cyan
+    ld a, %01000110     ; Bright yellow
+    jr set_cell
+use_cyan:
+    ld a, %01000101     ; Bright cyan
+set_cell:
+    call set_attribute
+```
+
+XORing row and column creates the checkerboard pattern—when their sum is even, use cyan; when odd, use yellow.
+
+## Why This Matters for Ink War
+
+The game board is an 8×8 grid of attribute cells. Each turn:
+
+1. Player selects a cell (row, column)
+2. Game validates the move
+3. `set_attribute` claims the cell in player's colour
+
+The attribute system *is* the game state. No separate data structure needed—the screen shows exactly what the game knows.
+
+## Colour Values for Players
+
+```asm
+; Player 1 - Red
+PLAYER1_ATTR    equ %01000010   ; Bright red ($42)
+
+; Player 2 - Green
+PLAYER2_ATTR    equ %01000100   ; Bright green ($44)
+
+; Neutral cells
+NEUTRAL_ATTR    equ %00000111   ; White ($07)
+
+; Cursor highlight
+CURSOR_ATTR     equ %01000110   ; Bright yellow ($46)
+```
+
+Using EQU defines makes the code readable and changes easy.
+
+## Making Cells Visible
+
+The screen must have pixels set for INK colours to show:
+
+```asm
+fill_pattern:
+    ld hl, $4000
+    ld de, $4001
+    ld bc, 6143
+    ld (hl), $ff        ; All pixels set
+    ldir
+    ret
+```
+
+Filling with $FF means every pixel shows the INK colour. An empty screen ($00) would show only PAPER.
+
+## Optimisation: Inline Address Calculation
+
+For frequently-called code, inline the address calculation:
+
+```asm
+; Faster: no CALL overhead
+set_attr_fast:
+    ; HL = $5800 + (B × 32) + C
+    ld h, $58
+    ld a, b
+    rrca                ; × 128 then mask = × 32
+    rrca
+    rrca
+    and %11100000       ; Keep high 3 bits
+    or c                ; Add column
+    ld l, a
+    ; Now set attribute
+    ld (hl), d          ; D = attribute value
+    ret
+```
+
+Three rotates right plus masking is faster than five additions—but harder to read.
+
+## What You've Learnt
+
+- **Cell addressing** — Row × 32 + column gives attribute offset
+- **set_attribute routine** — Three parameters: row, column, colour
+- **Checkerboard pattern** — XOR row and column for alternation
+- **Game state in attributes** — Screen shows game state directly
+- **Player colours** — Defined constants for readability
+- **Visibility requirement** — Pixels must be set for INK to show

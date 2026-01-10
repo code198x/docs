@@ -1,0 +1,174 @@
+---
+title: "Drawing Pixels"
+description: "Plot individual pixels by calculating byte addresses and bit positions, combining the screen address routine with bit masking."
+pubDate: 2026-01-09
+game: 1
+gameSlug: "ink-war"
+unit: 4
+unitSlug: "drawing-pixels"
+totalUnits: 64
+tags: ["assembly", "z80", "display", "pixels", "bit-manipulation"]
+prevUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-03"
+nextUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-05"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+Each screen byte contains 8 pixels. To set a single pixel, you need the correct byte address *and* the correct bit within that byte. This unit combines address calculation with bit manipulation.
+
+## The Pixel Plotting Process
+
+Setting one pixel requires four steps:
+
+1. **Calculate row address** — Use the Y coordinate (from Unit 3)
+2. **Add column offset** — Divide X by 8 to find the byte
+3. **Calculate bit position** — X AND 7 gives the bit (0-7)
+4. **Set the bit** — OR the bit mask into the existing byte
+
+## Complete Pixel Plotting
+
+This program draws a rectangle with diagonal lines, demonstrating individual pixel control:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-04/pixels.asm" />
+
+![Rectangle with X pattern drawn pixel by pixel](/images/sinclair-zx-spectrum/game-01-ink-war/unit-04/pixels.png)
+
+## The plot_pixel Routine
+
+The routine takes X in C and Y in B:
+
+```asm
+plot_pixel:
+    ; Get base address for this row
+    call get_screen_addr    ; HL = row start
+
+    ; Add X/8 to get correct byte
+    ld a, c             ; A = X
+    srl a               ; Divide by 8
+    srl a
+    srl a
+    add a, l
+    ld l, a             ; HL = byte address
+```
+
+Three `SRL A` instructions divide X by 8, giving the column offset (0-31). Adding this to L gives the address of the byte containing our pixel.
+
+## Calculating the Bit Position
+
+Pixel 0 is the leftmost in each byte (bit 7), pixel 7 is rightmost (bit 0):
+
+```
+Byte:     [7][6][5][4][3][2][1][0]  ← bit numbers
+Pixels:   [0][1][2][3][4][5][6][7]  ← pixel positions
+```
+
+So X position 0, 8, 16... use bit 7. Positions 1, 9, 17... use bit 6. The pattern is: bit = 7 - (X AND 7).
+
+```asm
+    ld a, c             ; A = X
+    and %00000111       ; Keep low 3 bits
+    ld b, a             ; B = shift count
+
+    ld a, %10000000     ; Start with bit 7
+    jr z, do_plot       ; Position 0? Done
+
+shift_bit:
+    srl a               ; Shift right
+    djnz shift_bit      ; Repeat B times
+```
+
+Starting with bit 7 set ($80), we shift right by the pixel position. Position 0 needs no shifts; position 7 needs seven shifts to reach bit 0.
+
+## Setting the Pixel
+
+The final step uses OR to set the bit without disturbing other pixels:
+
+```asm
+do_plot:
+    or (hl)             ; Combine with existing
+    ld (hl), a          ; Write back
+    ret
+```
+
+OR preserves any pixels already set. If you wanted to *clear* a pixel, you'd use AND with an inverted mask:
+
+```asm
+; Clear pixel (not in this program)
+    cpl                 ; Invert mask: 10000000 → 01111111
+    and (hl)            ; Clear the bit
+    ld (hl), a
+```
+
+## Drawing Lines
+
+The rectangle edges loop through coordinates:
+
+```asm
+top_edge:
+    push bc             ; Save coordinates
+    call plot_pixel     ; Plot current pixel
+    pop bc              ; Restore coordinates
+    inc c               ; X++
+    ld a, c
+    cp 192              ; Reached end?
+    jr nz, top_edge     ; No, continue
+```
+
+PUSH/POP preserves BC because plot_pixel uses B internally. Each iteration plots one pixel and moves to the next X position.
+
+## Diagonal Lines
+
+Diagonals increment both X and Y:
+
+```asm
+diag1:
+    push bc
+    call plot_pixel
+    pop bc
+    inc b               ; Y++
+    inc c               ; X++
+    ld a, b
+    cp 159              ; Near bottom?
+    jr nz, diag1
+```
+
+For the opposite diagonal, use `DEC C` instead of `INC C` to move X leftward while Y moves down.
+
+## Optimisation Opportunity
+
+The shift loop is simple but slow for positions 5-7. A lookup table is faster:
+
+```asm
+; Faster bit lookup (8 bytes of data)
+bit_masks:
+    defb %10000000      ; Position 0
+    defb %01000000      ; Position 1
+    defb %00100000      ; Position 2
+    defb %00010000      ; Position 3
+    defb %00001000      ; Position 4
+    defb %00000100      ; Position 5
+    defb %00000010      ; Position 6
+    defb %00000001      ; Position 7
+
+; Usage:
+    ld a, c
+    and 7
+    ld e, a
+    ld d, 0
+    ld hl, bit_masks
+    add hl, de
+    ld a, (hl)          ; A = correct bit mask
+```
+
+For Ink War's attribute-based gameplay, we won't need pixel plotting often—but it's essential knowledge for the screen system.
+
+## What You've Learnt
+
+- **Pixel addressing** — Byte address + bit position gives pixel location
+- **Column calculation** — X/8 gives byte offset within row
+- **Bit position** — X AND 7 gives pixel position (0-7) within byte
+- **Bit masking** — Shift $80 right by position count
+- **OR to set** — Preserves existing pixels when setting new ones
+- **Coordinate loops** — PUSH/POP preserves registers across calls
+- **Diagonal drawing** — Increment both X and Y each iteration

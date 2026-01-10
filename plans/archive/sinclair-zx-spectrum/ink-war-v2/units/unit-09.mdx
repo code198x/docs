@@ -1,0 +1,166 @@
+---
+title: "Z80 Registers"
+description: "Meet the Z80's registers—the processor's working memory where all calculations happen—and see how each serves a different purpose."
+pubDate: 2026-01-09
+game: 1
+gameSlug: "ink-war"
+unit: 9
+unitSlug: "z80-registers"
+totalUnits: 64
+tags: ["assembly", "z80", "registers", "cpu"]
+prevUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-08"
+nextUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-10"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+Registers are the Z80's fast internal storage—tiny memory cells built into the processor itself. Every operation flows through registers. Understanding them is essential for writing assembly.
+
+## The Main Registers
+
+The Z80 has eight main 8-bit registers:
+
+| Register | Primary Use |
+|----------|-------------|
+| **A** | Accumulator—arithmetic, I/O, comparisons |
+| **B** | Counter for loops (DJNZ) |
+| **C** | I/O port number, general use |
+| **D** | General purpose, often pairs with E |
+| **E** | General purpose |
+| **H** | High byte of address |
+| **L** | Low byte of address |
+| **F** | Flags (not directly accessible) |
+
+## Register Pairs
+
+Registers combine into 16-bit pairs for addresses and larger values:
+
+| Pair | Registers | Common Use |
+|------|-----------|------------|
+| **BC** | B + C | Counter, port number |
+| **DE** | D + E | Destination pointer |
+| **HL** | H + L | Primary memory pointer |
+| **AF** | A + F | Accumulator + flags |
+
+## Registers in Action
+
+This program uses different registers for different jobs:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-09/registers.asm" />
+
+![Registers controlling screen colours](/images/sinclair-zx-spectrum/game-01-ink-war/unit-09/registers.png)
+
+## A: The Accumulator
+
+The A register is special—most arithmetic and I/O operations involve it:
+
+```asm
+    ld a, 1             ; Load value into A
+    out ($fe), a        ; Output A to port (border)
+
+    ld a, %00000111     ; A holds attribute value
+    ld (hl), a          ; Store A to memory
+```
+
+When you need to do maths or output to hardware, A is usually involved.
+
+## HL: The Memory Pointer
+
+HL is the primary register for addressing memory:
+
+```asm
+    ld hl, $5800        ; HL points to attributes
+    ld (hl), a          ; Store A where HL points
+    inc hl              ; Move to next address
+```
+
+The `(HL)` notation means "the memory location that HL points to".
+
+## BC: The Counter
+
+BC often counts iterations:
+
+```asm
+    ld bc, 768          ; 768 iterations
+loop:
+    ; ... do work ...
+    dec bc              ; BC = BC - 1
+    ld a, b
+    or c                ; Check if BC = 0
+    jr nz, loop         ; If not zero, continue
+```
+
+The `OR C` trick checks if both B and C are zero—only then is the result zero.
+
+## DE: The Secondary Pointer
+
+DE often tracks a second position:
+
+```asm
+    ld de, 0            ; DE counts position
+    ; ... in loop ...
+    inc de              ; Track how many done
+    ld a, d             ; Check high byte
+    cp 2                ; Reached 512?
+```
+
+## Index Registers: IX and IY
+
+IX and IY are 16-bit registers with offset addressing:
+
+```asm
+    ld ix, $5800 + 384  ; IX points to middle of attributes
+    ld a, %01000110     ; Yellow
+    ld (ix+0), a        ; Store at IX
+    ld (ix+1), a        ; Store at IX+1
+    ld (ix+2), a        ; Store at IX+2
+```
+
+The `(IX+n)` notation adds an offset without changing IX. Useful for structures and tables.
+
+## Special Registers
+
+| Register | Bits | Purpose |
+|----------|------|---------|
+| **SP** | 16 | Stack pointer—tracks the stack |
+| **PC** | 16 | Program counter—next instruction |
+| **I** | 8 | Interrupt vector (advanced) |
+| **R** | 8 | Memory refresh (random seed) |
+
+SP and PC are managed automatically. You rarely set them directly.
+
+## The Flags Register (F)
+
+F holds status flags set by operations:
+
+| Flag | Meaning |
+|------|---------|
+| Z | Zero—result was zero |
+| C | Carry—overflow occurred |
+| S | Sign—result is negative |
+| P/V | Parity/Overflow |
+| H | Half-carry (BCD) |
+| N | Subtract flag (BCD) |
+
+You can't load F directly, but operations set it and conditional jumps test it.
+
+## Quick Tricks
+
+```asm
+    xor a               ; A = 0 (faster than LD A,0)
+    ld a, b
+    or c                ; Test if BC = 0
+    inc hl              ; Move pointer forward
+    dec b               ; Count down (sets flags)
+```
+
+## What You've Learnt
+
+- **A register** — The accumulator for arithmetic and I/O
+- **HL register** — Primary memory pointer using (HL) syntax
+- **BC register** — Often used as loop counter
+- **DE register** — Secondary pointer or value holder
+- **IX/IY registers** — Index registers with offset addressing
+- **Register pairs** — 8-bit registers combine for 16-bit values
+- **Flags** — Status bits set by operations, tested by jumps

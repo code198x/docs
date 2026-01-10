@@ -1,0 +1,138 @@
+---
+title: "Attribute Memory"
+description: "Locate the Spectrum's attribute memory at $5800-$5AFF and understand how its 768 bytes map to the 32×24 character grid."
+pubDate: 2026-01-09
+game: 1
+gameSlug: "ink-war"
+unit: 5
+unitSlug: "attribute-memory"
+totalUnits: 64
+tags: ["assembly", "z80", "attributes", "colour", "screen-memory"]
+prevUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-04"
+nextUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-06"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+The attribute memory controls colour on the Spectrum. Unlike the bitmap which stores pixels, attributes store colour information for 8×8 pixel cells. This is the system that makes Ink War possible—and what creates the famous "colour clash".
+
+## Where Attributes Live
+
+Attribute memory occupies 768 bytes immediately after the bitmap:
+
+| Memory | Size | Purpose |
+|--------|------|---------|
+| $4000-$57FF | 6144 bytes | Bitmap (pixels) |
+| $5800-$5AFF | 768 bytes | Attributes (colours) |
+
+The 768 bytes cover 32 columns × 24 rows = 768 cells. Each cell controls the colour of one 8×8 pixel area.
+
+## Attribute Mapping
+
+This program demonstrates how attribute memory maps to the screen, giving each row a different colour:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-05/attributes.asm" />
+
+![Each row showing different attribute colours](/images/sinclair-zx-spectrum/game-01-ink-war/unit-05/attributes.png)
+
+## Linear Layout
+
+Unlike the bitmap's interleaved layout, attribute memory is simple and linear:
+
+```
+$5800: Row 0, columns 0-31  (32 bytes)
+$5820: Row 1, columns 0-31  (32 bytes)
+$5840: Row 2, columns 0-31  (32 bytes)
+...
+$5AE0: Row 23, columns 0-31 (32 bytes)
+```
+
+To find any attribute:
+
+```asm
+; Address = $5800 + (row × 32) + column
+; Input: B = row (0-23), C = column (0-31)
+
+get_attr_addr:
+    ld h, $58           ; High byte is always $58
+    ld a, b             ; A = row
+    add a, a            ; × 2
+    add a, a            ; × 4
+    add a, a            ; × 8
+    add a, a            ; × 16
+    add a, a            ; × 32
+    add a, c            ; + column
+    ld l, a             ; HL = attribute address
+    ret
+```
+
+Five `ADD A,A` instructions multiply the row by 32. Adding the column gives the final offset.
+
+## The Row Loop
+
+The demonstration fills each row with a calculated colour:
+
+```asm
+    ld hl, $5800        ; Start of attributes
+    ld b, 24            ; 24 rows
+
+row_loop:
+    ; Calculate colour from row number
+    ld a, 24
+    sub b               ; A = current row (0-23)
+    and %00000111       ; INK colour (0-7)
+```
+
+Each row gets a different INK colour based on its position. The pattern repeats every 8 rows because INK values cycle through 0-7.
+
+## Making Colours Visible
+
+Attributes only affect areas where pixels are set. A blank screen shows no colour difference—both INK and PAPER appear as PAPER.
+
+The checkerboard pattern ensures both colours are visible:
+
+```asm
+fill_pattern:
+    ld hl, $4000
+    ld bc, 6144
+
+fill_loop:
+    ld a, h             ; Use address for pattern
+    xor l
+    and $55             ; Creates checkerboard
+    ld (hl), a
+    inc hl
+    ; ...
+```
+
+XORing the high and low address bytes creates a pseudo-random but consistent pattern. ANDing with $55 keeps alternating pixels.
+
+## Attribute Memory vs Bitmap Memory
+
+| Aspect | Bitmap ($4000) | Attributes ($5800) |
+|--------|----------------|-------------------|
+| Size | 6144 bytes | 768 bytes |
+| Layout | Interleaved | Linear |
+| Resolution | Per pixel | Per 8×8 cell |
+| Content | Shape (on/off) | Colour |
+
+The bitmap determines *what* is drawn. Attributes determine *what colour* it appears in. Both are needed for a complete display.
+
+## Why 768 Bytes?
+
+The Spectrum display is:
+- 256 pixels wide ÷ 8 = 32 character columns
+- 192 pixels tall ÷ 8 = 24 character rows
+- 32 × 24 = 768 cells
+
+Each cell needs exactly one attribute byte, so 768 bytes covers the entire screen. This compact representation is why attributes are efficient—but also why colour clash exists.
+
+## What You've Learnt
+
+- **Attribute location** — $5800-$5AFF, immediately after bitmap
+- **Size** — 768 bytes for 32×24 character cells
+- **Linear layout** — Row-by-row, no interleaving
+- **Address calculation** — $5800 + (row × 32) + column
+- **Visibility** — Pixels must be set for INK colour to show
+- **Relationship to bitmap** — Bitmap = shape, attributes = colour

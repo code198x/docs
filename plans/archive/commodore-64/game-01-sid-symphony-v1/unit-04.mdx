@@ -1,0 +1,144 @@
+---
+title: "Keeping Score"
+description: "Track hits with points and streaks. The numbers on screen finally mean something."
+pubDate: 2025-11-25
+game: 1
+gameName: "SID Symphony"
+unit: 4
+totalUnits: 16
+system: "Commodore 64"
+tags: ["assembly", "6510", "scoring", "binary-to-decimal", "game-state"]
+prevLesson: "/commodore-64/assembly/game-01-sid-symphony/unit-03"
+nextLesson: "/commodore-64/assembly/game-01-sid-symphony/unit-05"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+*Need to catch up? Check out [Unit 3: Hit or Miss](/commodore-64/game-01-sid-symphony/unit-03).*
+
+## What You're Building
+
+You can hit notes. You can miss them. But the score stays frozen at zero, the streak never moves. Your performance isn't being measured.
+
+By the end of this unit, you'll have:
+
+- Points awarded for each hit (10 points per note)
+- A streak counter that tracks consecutive hits
+- Streak reset on misses
+- Live score and streak display that updates as you play
+
+The numbers mean something now. Every hit counts.
+
+## Storing the Score
+
+A score can get big. 10 points per hit, maybe 100 notes in a song — that's 1000 points minimum. We need more than a single byte (max 255).
+
+Two bytes give us 0-65535:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-04/snippets/01-storing-the-score.asm" lang="asm" />
+
+Why track `best_streak`? For the end-of-game screen (Unit 8). Players like seeing their best performance, even if they fumbled at the end.
+
+## Adding Points
+
+Adding to a 16-bit number requires handling the carry:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-04/snippets/02-adding-points.asm" lang="asm" />
+
+When `score_lo` overflows past 255, the carry flag is set. We detect this with `bcc` (branch if carry clear) — if no overflow occurred, skip the increment.
+
+<InlineNote>
+This is how all multi-byte arithmetic works on the 6502. Addition sets the carry when a byte overflows. Subtraction clears the carry when borrowing is needed. Chain operations use these flags to propagate between bytes.
+</InlineNote>
+
+## Managing Streaks
+
+Streaks are simpler — just one byte. On a hit:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-04/snippets/03-managing-streaks.asm" lang="asm" />
+
+On a miss:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-04/snippets/04-managing-streaks.asm" lang="asm" />
+
+The streak resets completely. No partial credit for "almost" keeping it going.
+
+## The Display Problem
+
+We have a 16-bit binary number. The screen wants decimal digits. The 6502 doesn't have a divide instruction. How do we convert?
+
+Repeated subtraction. To find how many 10000s are in a number, subtract 10000 until you can't anymore. Count the subtractions. That's your digit.
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-04/snippets/05-the-display-problem.asm" lang="asm" />
+
+Then repeat for 1000s, 100s, 10s, and 1s. Each iteration is simpler because the numbers get smaller.
+
+The `<` and `>` operators extract the low and high bytes of a 16-bit constant. `<10000` is `$10`, `>10000` is `$27` (since 10000 = $2710).
+
+## Drawing Digits
+
+Once we have digits (0-9), we convert to screen codes and write them:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-04/snippets/06-drawing-digits.asm" lang="asm" />
+
+Screen codes for digits are `$30-$39` (same as PETSCII). OR-ing with `$30` converts a digit value (0-9) to the displayable character.
+
+## Streak Display
+
+The streak is simpler — just two digits (0-99 is plenty):
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-04/snippets/07-streak-display.asm" lang="asm" />
+
+This is the same algorithm, just for a single byte. Subtract 10 until you can't, count the subtractions, the remainder is the ones digit.
+
+## Integration
+
+In `check_hit`, after removing the note:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-04/snippets/08-integration.asm" lang="asm" />
+
+When a note despawns (missed):
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-04/snippets/09-integration.asm" lang="asm" />
+
+## Update Every Frame
+
+The main loop calls the display update each frame:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-04/snippets/10-update-every-frame.asm" lang="asm" />
+
+Is this wasteful? Slightly — we're converting and drawing even when nothing changed. But it's simple and fast enough. Optimisation can wait.
+
+## Build It. Run It.
+
+Assemble and run:
+
+```bash
+acme -o symphony.prg symphony.asm
+x64sc symphony.prg
+```
+
+Hit a note — watch the score jump to 10, the streak to 1. Hit another — 20, streak 2. Miss one — score stays, streak drops to 0.
+
+## What You've Learnt
+
+- **16-bit numbers**: Use two bytes, handle carry between them
+- **Division without divide**: Repeated subtraction gives quotient and remainder
+- **Screen code conversion**: OR with `$30` to convert digit values to displayable characters
+- **State integration**: Connecting game events to visible feedback
+
+## Next Unit
+
+Score goes up. Streak goes up and down. But there's no consequence for missing. You can't lose. The crowd meter sits empty, doing nothing.
+
+In [Unit 5: The Crowd](/commodore-64/game-01-sid-symphony/unit-05), we add the crowd. Hit notes to keep them happy. Miss too many and they leave. Now there's something to lose.
+
+## The Complete Code
+
+Here's the complete `symphony.asm` including all features from Units 1-4:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-04/symphony.asm" lang="asm" />
+

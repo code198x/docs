@@ -1,0 +1,166 @@
+---
+title: "Attribute Byte Structure"
+description: "Decode the attribute byte format: INK, PAPER, BRIGHT, and FLASH bits that control colour in each 8×8 cell."
+pubDate: 2026-01-09
+game: 1
+gameSlug: "ink-war"
+unit: 6
+unitSlug: "attribute-byte-structure"
+totalUnits: 64
+tags: ["assembly", "z80", "attributes", "colour", "bit-manipulation"]
+prevUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-05"
+nextUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-07"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+Each attribute byte packs four pieces of information into 8 bits: foreground colour, background colour, brightness, and flash. Understanding this structure is essential for controlling the Spectrum's display.
+
+## The Attribute Byte Format
+
+```
+Bit:    7     6     5  4  3     2  1  0
+      ┌─────┬─────┬─────────┬─────────┐
+      │  F  │  B  │  P P P  │  I I I  │
+      └─────┴─────┴─────────┴─────────┘
+        │     │       │         │
+        │     │       │         └── INK (0-7)
+        │     │       └──────────── PAPER (0-7)
+        │     └──────────────────── BRIGHT (0-1)
+        └────────────────────────── FLASH (0-1)
+```
+
+## The Colour Chart
+
+This program creates a complete colour reference showing all combinations:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-06/attrbyte.asm" />
+
+![Colour chart showing all attribute combinations](/images/sinclair-zx-spectrum/game-01-ink-war/unit-06/attrbyte.png)
+
+## INK Colours (Bits 0-2)
+
+INK is the foreground colour—where pixels are set (1):
+
+| Value | Colour | Binary |
+|-------|--------|--------|
+| 0 | Black | 000 |
+| 1 | Blue | 001 |
+| 2 | Red | 010 |
+| 3 | Magenta | 011 |
+| 4 | Green | 100 |
+| 5 | Cyan | 101 |
+| 6 | Yellow | 110 |
+| 7 | White | 111 |
+
+```asm
+; Set INK to red (2)
+    ld a, (hl)          ; Get current attribute
+    and %11111000       ; Clear INK bits
+    or 2                ; Set INK to red
+    ld (hl), a          ; Store back
+```
+
+## PAPER Colours (Bits 3-5)
+
+PAPER is the background colour—where pixels are clear (0):
+
+```asm
+; Set PAPER to blue (1)
+    ld a, (hl)
+    and %11000111       ; Clear PAPER bits
+    or %00001000        ; PAPER 1 = blue (1 << 3)
+    ld (hl), a
+```
+
+PAPER values use the same 0-7 colour codes, shifted left by 3 bits.
+
+## BRIGHT (Bit 6)
+
+BRIGHT increases the intensity of both INK and PAPER:
+
+```asm
+; Turn BRIGHT on
+    ld a, (hl)
+    or %01000000        ; Set bit 6
+    ld (hl), a
+
+; Turn BRIGHT off
+    ld a, (hl)
+    and %10111111       ; Clear bit 6
+    ld (hl), a
+```
+
+Normal colours are darker; bright colours are more vivid. This effectively gives you 15 distinct colours (black is the same in both modes).
+
+## FLASH (Bit 7)
+
+FLASH alternates INK and PAPER every 16 frames (about 0.32 seconds):
+
+```asm
+; Enable FLASH
+    ld a, (hl)
+    or %10000000        ; Set bit 7
+    ld (hl), a
+```
+
+The hardware handles the alternation automatically—you just set the bit and the ULA does the rest.
+
+## Building Attribute Bytes
+
+To create a complete attribute:
+
+```asm
+; Red INK (2), Yellow PAPER (6), BRIGHT, no FLASH
+; Binary: 0 1 110 010 = %01110010 = $72
+
+    ld a, %01110010     ; Pre-calculated
+    ld (hl), a
+
+; Or build it piece by piece:
+    ld a, 2             ; INK = red
+    or 6 << 3           ; PAPER = yellow (6 × 8 = 48)
+    or 1 << 6           ; BRIGHT = on (64)
+    ld (hl), a          ; Store attribute
+```
+
+## The Colour Loop
+
+The demonstration builds attributes from row numbers:
+
+```asm
+    ld a, d             ; A = PAPER value (0-7)
+    rlca                ; Shift to bits 5-3
+    rlca
+    rlca
+    ld e, a             ; E = PAPER in position
+
+    ; ...then for each column:
+    ld a, e             ; PAPER bits
+    or c                ; Add INK bits (0-7)
+    ld (hl), a          ; Store attribute
+```
+
+Three `RLCA` instructions shift the PAPER value from bits 0-2 to bits 3-5.
+
+## Practical Attribute Values
+
+Common combinations for Ink War:
+
+| Purpose | INK | PAPER | BRIGHT | Value |
+|---------|-----|-------|--------|-------|
+| Player 1 | 2 (red) | 0 (black) | 1 | $42 |
+| Player 2 | 4 (green) | 0 (black) | 1 | $44 |
+| Neutral | 7 (white) | 0 (black) | 0 | $07 |
+| Cursor | 6 (yellow) | 0 (black) | 1 | $46 |
+
+## What You've Learnt
+
+- **Byte layout** — FBPPPIII packs four values into 8 bits
+- **INK (bits 0-2)** — Foreground colour where pixels are set
+- **PAPER (bits 3-5)** — Background colour where pixels are clear
+- **BRIGHT (bit 6)** — Increases intensity of both colours
+- **FLASH (bit 7)** — Hardware-driven INK/PAPER alternation
+- **Bit manipulation** — AND to clear bits, OR to set bits, RLCA to shift
+- **Colour codes** — 0=black, 1=blue, 2=red, 3=magenta, 4=green, 5=cyan, 6=yellow, 7=white

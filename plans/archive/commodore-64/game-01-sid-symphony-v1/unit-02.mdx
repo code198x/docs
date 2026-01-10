@@ -1,0 +1,118 @@
+---
+title: "Notes in Motion"
+description: "Spawn notes on the right, watch them scroll toward the hit zone. The highway comes alive."
+pubDate: 2025-11-25
+game: 1
+gameName: "SID Symphony"
+unit: 2
+totalUnits: 16
+system: "Commodore 64"
+tags: ["assembly", "6510", "animation", "game-objects", "timing"]
+prevLesson: "/commodore-64/assembly/game-01-sid-symphony/unit-01"
+nextLesson: "/commodore-64/assembly/game-01-sid-symphony/unit-03"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+*Need to catch up? Check out [Unit 1: The Stage](/commodore-64/game-01-sid-symphony/unit-01).*
+
+## What You're Building
+
+The stage is set. The SID can sing. But nothing's moving yet.
+
+By the end of this unit, you'll have:
+
+- Notes spawning on the right edge of Track 2
+- Smooth animation as they scroll toward the hit zone
+- Multiple notes on screen at once
+- Proper frame timing so it looks the same on every C64
+
+It's not a game yet — you can't hit the notes, can't score points, can't fail. But it *looks* like a game. Something is happening. The highway is alive.
+
+## The Problem With Speed
+
+Our Unit 1 main loop runs as fast as it can. On a real C64, that's roughly a million cycles per second. If we moved a note every time through the loop, it would cross the screen in a blur.
+
+We need to sync with something reliable: the display.
+
+## The Raster Beam
+
+The C64 draws the screen 50 times per second (PAL) or 60 times (NTSC). An electron beam sweeps across the screen, line by line, painting each frame. The VIC-II chip tracks which line it's currently drawing in register `$D012`.
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/snippets/01-the-raster-beam.asm" lang="asm" />
+
+Why wait for "not zero" first? If we're already on line 0 when we check, we'd immediately continue — and might run multiple updates in the same frame. The two-step wait ensures we catch the *transition* to line 0.
+
+This is the foundation of all smooth C64 animation.
+
+## Storing Notes
+
+We need to track which notes exist and where they are. The simplest approach: an array of X positions.
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/snippets/02-storing-notes.asm" lang="asm" />
+
+A note with X position `$FF` doesn't exist. Any other value (0-39) is its column on screen.
+
+## Spawning Notes
+
+To spawn a note, find an empty slot and set its position to 39 (the right edge):
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/snippets/03-spawning-notes.asm" lang="asm" />
+
+## Moving Notes
+
+Every few frames, shift all active notes one column left:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/snippets/04-moving-notes.asm" lang="asm" />
+
+When a note at column 0 decrements, it wraps to `$FF` — our inactive marker. The note despawns automatically.
+
+## Drawing and Erasing Notes
+
+Notes appear on Track 2 (row 12). We calculate the screen address and write a character:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/snippets/05-drawing-and-erasing-notes.asm" lang="asm" />
+
+Erasing is similar but writes a dash character to restore the track.
+
+<InlineNote>
+The zero page pointer `screen_ptr` ($FB-$FC) lets us use indirect indexed addressing: `sta (screen_ptr),y`. This is how we write to calculated addresses on the 6502.
+</InlineNote>
+
+## Timer-Based Events
+
+Two timers control the rhythm:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/snippets/06-timer-based-events.asm" lang="asm" />
+
+Each frame, decrement both. When they hit zero, do the action and reset:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/snippets/07-timer-based-events.asm" lang="asm" />
+
+At 50fps: notes move ~12 times per second, notes spawn every second. A note takes about 3 seconds to cross the screen.
+
+## What You've Built
+
+Build it. Run it. Watch notes appear on the right, scroll left, and vanish off the edge. Press X — the SID still sings. The two systems coexist.
+
+## What You've Learnt
+
+- **Raster synchronisation** — `$D012` tracks the beam; wait for line 0 for frame sync
+- **Object arrays** — Store entity state in arrays; use sentinel values for inactive slots
+- **Timer patterns** — Decrement counters each frame; act when zero; reset
+- **Indirect addressing** — Calculate addresses at runtime; access through zero page pointers
+
+## The Complete Code
+
+Here's the complete `symphony.asm` for this unit:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/symphony.asm" lang="asm" />
+
+## Next Unit
+
+Notes scroll past, but nothing happens when they reach the hit zone. You can't succeed. You can't fail. There's no game yet.
+
+In Unit 3, we detect when you press X at the right moment — and when you don't. Hits and misses. The game gets teeth.

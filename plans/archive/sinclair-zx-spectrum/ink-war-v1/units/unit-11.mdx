@@ -1,0 +1,210 @@
+---
+title: "Sound Effects"
+description: "Add Spectrum beeps for moves, captures, and wins."
+pubDate: 2026-01-04
+game: 1
+gameName: "Ink War"
+unit: 11
+totalUnits: 16
+system: "Sinclair ZX Spectrum"
+tags: ["assembly", "z80", "sound", "buzzer"]
+nextLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-12"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+*Need to catch up? Check out [Unit 10: Scoring](/sinclair-zx-spectrum/game-01-ink-war/unit-10).*
+
+## What You're Building
+
+The game works, but it's silent. Moves happen without feedback. Claims go unheard. Victory arrives with no fanfare. The Spectrum has a speaker — time to use it.
+
+By the end of this unit, you'll have:
+
+- A flexible beep routine controlled by pitch and duration
+- Sound effects for cursor movement
+- Audio feedback for successful cell claims
+- Victory and defeat jingles
+
+![Game with sound effects hooked in](/images/sinclair-zx-spectrum/game-01-ink-war/unit-11/screenshot.png)
+
+## The Spectrum's Beeper
+
+The ZX Spectrum has a simple 1-bit speaker. Bit 4 of port $FE controls it. To make sound:
+
+1. Set bit 4 high (speaker cone out)
+2. Wait a bit
+3. Set bit 4 low (speaker cone in)
+4. Wait a bit
+5. Repeat
+
+The wait duration determines pitch — shorter waits make higher frequencies. The number of cycles determines length.
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/01-the-spectrum-s-beeper.asm" lang="asm" />
+
+There's a catch: port $FE also controls the border colour (bits 0-2). We need to preserve those bits or the border will flicker during sound.
+
+## The Plan
+
+We need:
+
+1. **A core beep routine** — with adjustable pitch and duration
+2. **Specific sound effects** — move, claim, victory, defeat
+3. **Integration** — call sounds from the right places
+
+## The Beep Routine
+
+Here's a flexible beep that takes pitch (delay between toggles) and duration (number of cycles):
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/02-the-beep-routine.asm" lang="asm" />
+
+We store the current border colour and mix it into the speaker output. This prevents the border from flickering black during sound.
+
+## Adding a Border Colour Variable
+
+We need to track the current border colour. Add it to the variables section:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/03-adding-a-border-colour-variable.asm" lang="asm" />
+
+And update `update_ui_colours` to save it:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/04-adding-a-border-colour-variable.asm" lang="asm" />
+
+Also update `set_winner_border`:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/05-adding-a-border-colour-variable.asm" lang="asm" />
+
+## Creating Sound Effects
+
+Now we create specific sounds. Each just sets up DE (pitch) and BC (duration), then calls `play_beep`.
+
+### Move Sound
+
+A quick, high-pitched click:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/06-creating-sound-effects.asm" lang="asm" />
+
+### Claim Sound
+
+A satisfying "boop" when claiming a cell:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/07-creating-sound-effects.asm" lang="asm" />
+
+### Victory Fanfare
+
+An ascending sequence of notes:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/08-creating-sound-effects.asm" lang="asm" />
+
+### Defeat Sound
+
+A descending, sad sequence:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/09-creating-sound-effects.asm" lang="asm" />
+
+### Draw Sound
+
+Two neutral tones:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/10-creating-sound-effects.asm" lang="asm" />
+
+## Hooking Up the Sounds
+
+Now we integrate sounds into existing routines.
+
+### Movement Beeps
+
+Add a call to `beep_move` at the end of each movement routine:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/11-hooking-up-the-sounds.asm" lang="asm" />
+
+Do the same for `move_down`, `move_left`, and `move_right`.
+
+### Claim Beep
+
+In `claim_cell`, add a sound after the visual update:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/12-hooking-up-the-sounds.asm" lang="asm" />
+
+### Result Sounds
+
+In `show_results`, play the appropriate sound after displaying the screen:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/13-hooking-up-the-sounds.asm" lang="asm" />
+
+Wait — we have a problem. The `show_results` routine currently ends with `ret` after printing "PRESS SPACE". We need to reorganise it slightly.
+
+Actually, looking at the flow: `check_game_over` calls `show_results`, then `set_winner_border`, then `wait_for_restart`. We can play the sound after `show_results` returns, in `check_game_over`:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/14-hooking-up-the-sounds.asm" lang="asm" />
+
+Then create a separate routine:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/15-hooking-up-the-sounds.asm" lang="asm" />
+
+## Understanding the Beep Timing
+
+The pitch delay loop:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/16-understanding-the-beep-timing.asm" lang="asm" />
+
+Each iteration is about 26 T-states when taken. At 3.5 MHz, that's about 7.4 microseconds per iteration. For DE=100, the delay is roughly 740 microseconds, giving a frequency of about 675 Hz.
+
+Lower pitch values = shorter delay = higher frequency.
+Higher pitch values = longer delay = lower frequency.
+
+## Build It. Run It.
+
+```bash
+pasmo --tapbas inkwar.asm inkwar.tap
+```
+
+Test the sounds:
+
+- Move the cursor — you should hear a quick click
+- Claim a cell — a satisfying "boop"
+- Play to completion — hear the victory or defeat jingle
+
+## Recap / Sanity Check
+
+- Port $FE bit 4 controls the speaker
+- Border colour must be preserved during sound
+- Pitch is determined by delay loop duration
+- Duration is determined by number of cycles
+- Sounds must be short to avoid stalling gameplay
+
+## What You've Built
+
+Comparing to Unit 10:
+
+- **`play_beep`** — Core sound generation with pitch and duration
+- **`beep_move`** — Quick click for cursor movement
+- **`beep_claim`** — Satisfying tone for claims
+- **`beep_victory`** — Ascending jingle for winning
+- **`beep_defeat`** — Descending sound for losing
+- **`beep_draw`** — Neutral tones for draws
+- **`play_result_sound`** — Dispatches to appropriate end sound
+- **`border_colour`** — Tracks current border for sound preservation
+
+The game now has audio feedback throughout!
+
+## What You've Learnt
+
+- **1-bit audio** — Making sound with a single speaker bit
+- **Frequency generation** — Delay loops control pitch
+- **Port preservation** — Not destroying other bits when toggling one
+- **Event-driven sound** — Hooking audio into game events
+- **Sound design** — Using pitch and rhythm to convey meaning
+
+## The Complete Code
+
+Here's `inkwar.asm` as it stands after Unit 11:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/inkwar.asm" lang="asm" />
+
+## Next Unit
+
+The game plays, sounds, ends, and displays scores. But it starts abruptly — no title screen, no instructions.
+
+In Unit 12, we'll add a **Title Screen** with game title and controls.

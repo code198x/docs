@@ -1,0 +1,119 @@
+---
+title: "Colour the Board"
+description: "Add player colours to show territory control—red versus blue in the battle for the board."
+pubDate: 2026-01-09
+game: 1
+gameSlug: "ink-war"
+unit: 15
+unitSlug: "colour-the-board"
+totalUnits: 64
+tags: ["assembly", "z80", "graphics", "colours", "gameplay"]
+prevUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-14"
+nextUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-16"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+Territory control is shown through colour. Red versus Blue—when a player claims a cell, it changes to their colour.
+
+## Player Colour Constants
+
+```asm
+PLAYER1_ATTR equ %01010000   ; Bright red paper
+PLAYER2_ATTR equ %01001000   ; Bright blue paper
+EMPTY_ATTR   equ %00111000   ; White paper (unclaimed)
+```
+
+Breaking down the attribute bytes:
+
+| Player | Binary | BRIGHT | PAPER | INK |
+|--------|--------|--------|-------|-----|
+| Player 1 | %01010000 | 1 | 010 (red) | 000 (black) |
+| Player 2 | %01001000 | 1 | 001 (blue) | 000 (black) |
+| Empty | %00111000 | 0 | 111 (white) | 000 (black) |
+
+## The Complete Code
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-15/colour.asm" />
+
+![Game board with red and blue territories](/images/sinclair-zx-spectrum/game-01-ink-war/unit-15/colour.png)
+
+## Claiming a Cell
+
+To claim a cell, calculate its address and write the player's colour:
+
+```asm
+    ; Player 1 claims cell at row 8, column 12 (top-left of board)
+    ld hl, $5800 + (BOARD_TOP * 32) + BOARD_LEFT
+    ld (hl), PLAYER1_ATTR
+```
+
+The cell instantly changes colour. No pixel drawing needed—just one byte write.
+
+## Address Formula
+
+For any board cell at (row, column):
+
+```asm
+address = $5800 + ((BOARD_TOP + row) × 32) + (BOARD_LEFT + column)
+```
+
+Where row and column are 0-7 within the board.
+
+## Why Paper Colour?
+
+We use PAPER (background) colour because:
+- Screen pixels are cleared (all zeros)
+- Zeros show the PAPER colour
+- One attribute byte = one solid colour block
+
+If we wanted patterns, we'd set pixels and use INK colour instead.
+
+## Simulating a Game
+
+The code places pieces to simulate a game in progress:
+
+```asm
+    ; Player 1 claims top-left corner
+    ld hl, $5800 + (BOARD_TOP * 32) + BOARD_LEFT
+    ld (hl), PLAYER1_ATTR
+
+    ; Player 2 claims bottom-right corner
+    ld hl, $5800 + ((BOARD_TOP + 7) * 32) + BOARD_LEFT + 7
+    ld (hl), PLAYER2_ATTR
+```
+
+## Colour Choices
+
+Red vs Blue works well because:
+- High contrast with each other
+- Both visible against white/grey
+- Classic gaming rivalry
+- Easy to distinguish at a glance
+
+## The Three States
+
+Every cell has one of three states:
+
+| State | Colour | Meaning |
+|-------|--------|---------|
+| Empty | White | Unclaimed territory |
+| Player 1 | Red | Red's territory |
+| Player 2 | Blue | Blue's territory |
+
+## Looking Ahead
+
+With colours working, we need:
+- Input to let players choose cells
+- Turn system to alternate players
+- Win detection when board is full
+
+The display is ready. Next: making it interactive.
+
+## What You've Learnt
+
+- **Player colours** — Attribute bytes for red, blue, and empty
+- **PAPER vs INK** — Using paper colour for solid blocks
+- **Cell claiming** — Writing one byte changes cell colour
+- **Game state visualisation** — Colours show who controls what

@@ -1,0 +1,180 @@
+---
+title: "Jumps and Calls"
+description: "Control program flow with JP, JR, CALL, and RET—making decisions, looping, and organising code into reusable subroutines."
+pubDate: 2026-01-09
+game: 1
+gameSlug: "ink-war"
+unit: 12
+unitSlug: "jumps-and-calls"
+totalUnits: 64
+tags: ["assembly", "z80", "instructions", "control-flow", "subroutines"]
+prevUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-11"
+nextUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-13"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+Programs need to make decisions and repeat actions. Jump instructions change which instruction executes next. Call instructions create reusable subroutines. Together, they give programs structure.
+
+## Jump Instructions
+
+| Instruction | Type | Range |
+|-------------|------|-------|
+| `JP addr` | Absolute | Anywhere in memory |
+| `JR offset` | Relative | -128 to +127 bytes |
+| `JP cond, addr` | Conditional absolute | Anywhere |
+| `JR cond, offset` | Conditional relative | -128 to +127 |
+
+## Control Flow in Action
+
+This program demonstrates jumps, calls, and conditions:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-12/jumps.asm" />
+
+![Patterns from jumps and subroutine calls](/images/sinclair-zx-spectrum/game-01-ink-war/unit-12/jumps.png)
+
+## JP: Absolute Jump
+
+Jump to any address in memory:
+
+```asm
+    jp $8000            ; Jump to address $8000
+    jp label            ; Jump to label
+```
+
+JP is 3 bytes: opcode + 16-bit address. Use for distant jumps.
+
+## JR: Relative Jump
+
+Jump by an offset from current position:
+
+```asm
+    jr skip             ; Jump forward to 'skip'
+    ; ... skipped code ...
+skip:
+    jr loop             ; Jump back to 'loop'
+```
+
+JR is 2 bytes: opcode + 8-bit signed offset. More compact for nearby jumps.
+
+## Conditional Jumps
+
+Jump only if a condition is true:
+
+```asm
+    cp 5                ; Compare A with 5
+    jr z, equal         ; Jump if Zero (A == 5)
+    jr nz, not_equal    ; Jump if Not Zero (A != 5)
+    jr c, less          ; Jump if Carry (A < 5, unsigned)
+    jr nc, greater_eq   ; Jump if No Carry (A >= 5)
+```
+
+## Condition Codes
+
+| Code | Meaning | Flag |
+|------|---------|------|
+| Z | Zero | Z=1 |
+| NZ | Not Zero | Z=0 |
+| C | Carry | C=1 |
+| NC | No Carry | C=0 |
+| PE | Parity Even | P/V=1 |
+| PO | Parity Odd | P/V=0 |
+| M | Minus | S=1 |
+| P | Plus | S=0 |
+
+## DJNZ: Loop Instruction
+
+Decrement B and jump if not zero:
+
+```asm
+    ld b, 10            ; Loop 10 times
+loop:
+    ; ... loop body ...
+    djnz loop           ; B--, jump if B != 0
+```
+
+DJNZ combines DEC B and JR NZ into one instruction. Perfect for counted loops.
+
+## CALL and RET: Subroutines
+
+CALL pushes the return address and jumps. RET pops it and returns:
+
+```asm
+    call draw_box       ; Save return address, jump to draw_box
+    ; Execution continues here after RET
+
+draw_box:
+    ; ... subroutine code ...
+    ret                 ; Return to caller
+```
+
+## The Subroutine Pattern
+
+```asm
+subroutine:
+    push bc             ; Save registers you'll modify
+    push hl
+
+    ; ... do work ...
+
+    pop hl              ; Restore in reverse order
+    pop bc
+    ret
+```
+
+PUSH/POP preserve registers so the caller isn't affected.
+
+## Reusable Code
+
+The draw_box subroutine is called three times with different positions:
+
+```asm
+    ld b, 5             ; Row 5
+    ld c, 4             ; Column 4
+    call draw_box
+
+    ld b, 5
+    ld c, 14            ; Different column
+    call draw_box
+
+    ld b, 5
+    ld c, 24            ; Different column
+    call draw_box
+```
+
+One subroutine, three boxes. Change the subroutine and all calls benefit.
+
+## Carry Flag for Comparisons
+
+CP sets the carry flag for unsigned comparisons:
+
+```asm
+    ld a, b
+    sub 8               ; A = B - 8
+    jr c, below_eight   ; Carry set if B < 8
+```
+
+If subtracting would go negative, carry is set. This tests "less than" for unsigned values.
+
+## Jump Tables
+
+For multiple conditions, sometimes a table is cleaner:
+
+```asm
+    ; A = 0, 1, 2, or 3
+    add a, a            ; A = A * 2 (each JP is 3 bytes... hmm)
+    ; Actually, for JP need * 3, which is messier
+    ; Often easier to use sequential JR Z tests
+```
+
+For small numbers of cases, sequential comparisons are usually clearer.
+
+## What You've Learnt
+
+- **JP vs JR** — Absolute (3 bytes, any distance) vs relative (2 bytes, ±127)
+- **Conditions** — Z, NZ, C, NC test flags set by previous operations
+- **DJNZ** — Combined decrement-and-jump for loops
+- **CALL/RET** — Create reusable subroutines
+- **PUSH/POP** — Preserve registers in subroutines
+- **Carry flag** — Set by SUB/CP for unsigned comparisons

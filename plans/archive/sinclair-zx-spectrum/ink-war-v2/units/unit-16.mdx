@@ -1,0 +1,141 @@
+---
+title: "Display Test"
+description: "Phase 1 finale—a complete display demonstration bringing together everything we've learnt about the Spectrum's screen system."
+pubDate: 2026-01-09
+game: 1
+gameSlug: "ink-war"
+unit: 16
+unitSlug: "display-test"
+totalUnits: 64
+tags: ["assembly", "z80", "graphics", "animation", "milestone"]
+prevUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-15"
+nextUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-17"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+Phase 1 complete. This unit brings together everything: screen clearing, board drawing, player colours, and animated gameplay demonstration.
+
+## What This Demo Shows
+
+The display test demonstrates:
+- Clear screen routine
+- Game board with border
+- Player colour indicators
+- Animated piece placement
+- Complete game visualisation
+
+## The Complete Code
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-16/display.asm" />
+
+![Complete game display with animated gameplay](/images/sinclair-zx-spectrum/game-01-ink-war/unit-16/display.png)
+
+## Player Indicators
+
+Coloured bars show whose turn it is:
+
+```asm
+    ; Red bar for Player 1
+    ld hl, $5800 + (SCORE1_ROW * 32) + SCORE1_COL
+    ld b, 6
+    ld a, PLAYER1_ATTR
+title1_loop:
+    ld (hl), a
+    inc hl
+    djnz title1_loop
+```
+
+## Animation with Data Tables
+
+Move data stored in a table:
+
+```asm
+moves:
+    defb 0, 0, 1             ; Row 0, Col 0, Player 1
+    defb 7, 7, 2             ; Row 7, Col 7, Player 2
+    defb 0, 1, 1
+    ; ... more moves
+```
+
+Each move is three bytes: row, column, player number.
+
+## Using IX for Table Access
+
+The IX register accesses table entries with offsets:
+
+```asm
+    ld ix, moves
+animate_loop:
+    ld a, (ix+0)             ; Row
+    ld d, a
+    ld a, (ix+1)             ; Column
+    ld e, a
+    ld a, (ix+2)             ; Player
+
+    ; Process move...
+
+    inc ix                   ; Advance to next entry
+    inc ix
+    inc ix
+```
+
+IX+0, IX+1, IX+2 access consecutive bytes without modifying IX.
+
+## Frame-Based Timing
+
+HALT waits for the next frame (1/50th second):
+
+```asm
+    ld b, 8                  ; 8 frames delay
+delay:
+    halt                     ; Wait for vertical blank
+    djnz delay
+```
+
+8 frames = 160ms between moves—visible but not too slow.
+
+## Address Calculation Revisited
+
+Converting board position to attribute address:
+
+```asm
+    ; row in D, column in E
+    ld a, d
+    add a, BOARD_TOP         ; Convert to screen row
+    ; ... multiply by 32 ...
+    add a, e
+    add a, BOARD_LEFT        ; Add screen column
+    ld l, a
+    ld h, $58                ; HL = attribute address
+```
+
+## Phase 1 Complete
+
+You now understand:
+
+| Topic | Units |
+|-------|-------|
+| Screen memory layout | 1-4 |
+| Attribute system | 5-8 |
+| Z80 fundamentals | 9-12 |
+| Game display | 13-16 |
+
+## What's Next
+
+Phase 2 adds interactivity:
+- Keyboard input
+- Turn management
+- Move validation
+- Score tracking
+
+The display works. Time to make it playable.
+
+## What You've Learnt
+
+- **Data tables** — Store move sequences as DEFB data
+- **IX indexing** — Access table elements with offsets
+- **HALT timing** — Frame-based animation delays
+- **Complete integration** — Combining all previous techniques
+- **Game visualisation** — Showing gameplay through colour changes

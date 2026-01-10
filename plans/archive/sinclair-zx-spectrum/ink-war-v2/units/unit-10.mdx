@@ -1,0 +1,164 @@
+---
+title: "Load and Store"
+description: "Master the LD instruction—the Z80's most common operation—moving data between registers, memory, and immediate values."
+pubDate: 2026-01-09
+game: 1
+gameSlug: "ink-war"
+unit: 10
+unitSlug: "load-and-store"
+totalUnits: 64
+tags: ["assembly", "z80", "instructions", "memory"]
+prevUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-09"
+nextUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-11"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+LD (load) is the Z80's most frequently used instruction. It copies data from one place to another—registers, memory, or immediate values. Nearly every line of assembly involves LD.
+
+## LD Forms
+
+The LD instruction has many variations:
+
+| Form | Example | Meaning |
+|------|---------|---------|
+| Register ← Value | `LD A, 7` | A = 7 |
+| Register ← Register | `LD A, B` | A = B |
+| Register ← Memory | `LD A, (HL)` | A = contents at HL |
+| Memory ← Register | `LD (HL), A` | Store A at HL |
+| Memory ← Value | `LD (HL), 7` | Store 7 at HL |
+
+## LD in Practice
+
+This program demonstrates all LD forms:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-10/loadstore.asm" />
+
+![Coloured cells showing LD operations](/images/sinclair-zx-spectrum/game-01-ink-war/unit-10/loadstore.png)
+
+## Loading Immediate Values
+
+Put a value directly into a register:
+
+```asm
+    ld a, 7             ; 8-bit value into A
+    ld b, 24            ; 8-bit value into B
+    ld hl, $5800        ; 16-bit value into HL
+    ld bc, 768          ; 16-bit value into BC
+```
+
+The value is encoded in the instruction itself—no memory access needed.
+
+## Register to Register
+
+Copy between registers:
+
+```asm
+    ld a, b             ; Copy B to A
+    ld d, e             ; Copy E to D
+    ld h, l             ; Copy L to H
+```
+
+Fast—both registers are inside the CPU. No memory involved.
+
+## Storing to Memory
+
+Write a register to a memory address:
+
+```asm
+    ; Using HL as pointer
+    ld (hl), a          ; Store A where HL points
+
+    ; Using fixed address
+    ld ($5803), a       ; Store A at address $5803
+```
+
+The parentheses mean "the memory location at this address".
+
+## Loading from Memory
+
+Read from a memory address into a register:
+
+```asm
+    ; Using HL as pointer
+    ld a, (hl)          ; A = contents at HL
+
+    ; Using fixed address
+    ld a, ($5800)       ; A = contents at $5800
+```
+
+## The Pointer Pattern
+
+A common pattern for processing memory:
+
+```asm
+    ld hl, $5800        ; Point to start
+    ld a, 7             ; Value to store
+
+store_loop:
+    ld (hl), a          ; Store at current position
+    inc hl              ; Move pointer forward
+    ; ... check for end, loop back
+```
+
+HL moves through memory while A holds the value to store.
+
+## LDIR: Block Copy
+
+LDIR is a special LD that copies blocks:
+
+```asm
+    ld hl, $5800        ; Source address
+    ld de, $5820        ; Destination address
+    ld bc, 32           ; Number of bytes
+    ldir                ; Copy BC bytes from HL to DE
+```
+
+LDIR repeats: copy (HL) to (DE), increment both, decrement BC, until BC=0.
+
+## Direct Memory Store
+
+Store an immediate value to memory:
+
+```asm
+    ld hl, $5806
+    ld (hl), %00000101  ; Store cyan attribute directly
+```
+
+This avoids loading A first—slightly more efficient.
+
+## Address Modes Summary
+
+| Notation | Meaning | Example |
+|----------|---------|---------|
+| `A` | Register A | `LD A, 5` |
+| `(HL)` | Memory at HL | `LD A, (HL)` |
+| `($5800)` | Memory at fixed address | `LD A, ($5800)` |
+| `5` | Immediate value | `LD A, 5` |
+
+## LD Restrictions
+
+Not everything is allowed:
+
+```asm
+    ld (hl), (de)       ; INVALID - can't copy memory to memory
+    ld bc, (hl)         ; INVALID - can't load 16-bit from (HL)
+    ld ($5800), b       ; INVALID - only A can use direct addressing
+```
+
+When you need these, use A as an intermediary:
+
+```asm
+    ld a, (de)          ; Load from source
+    ld (hl), a          ; Store to destination
+```
+
+## What You've Learnt
+
+- **LD forms** — Register, memory, and immediate operands
+- **Pointer pattern** — HL points to memory, A holds values
+- **Parentheses** — Mean "memory at this address"
+- **LDIR** — Block copy instruction
+- **Restrictions** — Only A uses direct addressing for stores
+- **Efficiency** — Register-to-register is fastest

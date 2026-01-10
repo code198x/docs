@@ -1,0 +1,177 @@
+---
+title: "Arithmetic"
+description: "Perform calculations with ADD, SUB, INC, and DEC—the operations that drive game logic, positions, and scores."
+pubDate: 2026-01-09
+game: 1
+gameSlug: "ink-war"
+unit: 11
+unitSlug: "arithmetic"
+totalUnits: 64
+tags: ["assembly", "z80", "instructions", "arithmetic"]
+prevUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-10"
+nextUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-12"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+Games need maths: positions change, scores increase, counters decrement. The Z80's arithmetic instructions make this happen.
+
+## Arithmetic Instructions
+
+| Instruction | Operation | Example |
+|-------------|-----------|---------|
+| `INC` | Add 1 | `INC A` (A = A + 1) |
+| `DEC` | Subtract 1 | `DEC B` (B = B - 1) |
+| `ADD` | Addition | `ADD A, 5` (A = A + 5) |
+| `SUB` | Subtraction | `SUB 3` (A = A - 3) |
+
+## Arithmetic in Action
+
+This program creates patterns using arithmetic operations:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/arithmetic.asm" />
+
+![Patterns created by arithmetic operations](/images/sinclair-zx-spectrum/game-01-ink-war/unit-11/arithmetic.png)
+
+## INC: Increment
+
+Add 1 to a register or memory:
+
+```asm
+    inc a               ; A = A + 1
+    inc b               ; B = B + 1
+    inc hl              ; HL = HL + 1
+    inc (hl)            ; Memory at HL += 1
+```
+
+INC is perfect for moving through memory or counting up.
+
+## DEC: Decrement
+
+Subtract 1:
+
+```asm
+    dec a               ; A = A - 1
+    dec bc              ; BC = BC - 1
+    dec (hl)            ; Memory at HL -= 1
+```
+
+DEC is ideal for countdown loops.
+
+## ADD: Addition
+
+Add to the accumulator:
+
+```asm
+    add a, 5            ; A = A + 5
+    add a, b            ; A = A + B
+    add a, (hl)         ; A = A + memory at HL
+```
+
+Note: ADD always involves A for 8-bit operations.
+
+## SUB: Subtraction
+
+Subtract from the accumulator:
+
+```asm
+    sub 3               ; A = A - 3
+    sub b               ; A = A - B
+    sub (hl)            ; A = A - memory at HL
+```
+
+SUB has an implied destination—always A.
+
+## 16-bit Addition
+
+ADD works with register pairs:
+
+```asm
+    add hl, de          ; HL = HL + DE
+    add hl, bc          ; HL = HL + BC
+```
+
+Essential for pointer arithmetic:
+
+```asm
+    ld hl, $5800        ; Start of attributes
+    ld de, 32           ; One row = 32 bytes
+    add hl, de          ; Move to next row
+```
+
+## Creating Diagonals
+
+The INC demo draws a diagonal by adding 33 (32 + 1) each step:
+
+```asm
+    ld hl, $5800        ; Top-left
+    ld de, 33           ; Down one row + right one column
+inc_demo:
+    ld (hl), %01000010  ; Red cell
+    add hl, de          ; Move diagonally
+    djnz inc_demo
+```
+
+The DEC demo uses 31 (32 - 1) for the opposite diagonal.
+
+## Multiplication by Addition
+
+The Z80 has no multiply instruction. Use repeated addition:
+
+```asm
+    ; Calculate row * 32
+    ld a, 16            ; Row 16
+    ld b, a             ; Counter = row number
+    ld hl, 0            ; Result
+
+multiply:
+    ld de, 32           ; Add 32 each iteration
+    add hl, de
+    djnz multiply       ; HL = 16 * 32 = 512
+```
+
+For powers of 2, bit shifting is faster (covered later).
+
+## Flags and Arithmetic
+
+Arithmetic sets flags in the F register:
+
+| Flag | Set When |
+|------|----------|
+| Z (Zero) | Result is zero |
+| C (Carry) | Overflow occurred |
+| S (Sign) | Result is negative |
+
+```asm
+    ld a, 255
+    inc a               ; A = 0, Z flag set (wrapped)
+
+    ld a, 5
+    sub 10              ; A = 251, C flag set (borrow)
+```
+
+## ADC and SBC: With Carry
+
+For multi-byte arithmetic:
+
+```asm
+    ; Add 16-bit using 8-bit operations
+    ld a, e
+    add a, c            ; Add low bytes
+    ld e, a
+    ld a, d
+    adc a, b            ; Add high bytes + carry
+    ld d, a             ; DE = DE + BC
+```
+
+ADC = Add with Carry, SBC = Subtract with Carry.
+
+## What You've Learnt
+
+- **INC/DEC** — Add or subtract 1 from registers or memory
+- **ADD/SUB** — 8-bit arithmetic always involves A
+- **ADD HL** — 16-bit addition for pointer arithmetic
+- **Multiplication** — Use repeated addition (no MUL instruction)
+- **Flags** — Zero, Carry, Sign set by arithmetic results
+- **ADC/SBC** — Multi-byte arithmetic with carry

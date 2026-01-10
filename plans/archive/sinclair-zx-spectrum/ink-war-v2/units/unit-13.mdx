@@ -1,0 +1,147 @@
+---
+title: "Clear Screen Routine"
+description: "Build a reusable clear screen subroutine—essential foundation code every game needs."
+pubDate: 2026-01-09
+game: 1
+gameSlug: "ink-war"
+unit: 13
+unitSlug: "clear-screen-routine"
+totalUnits: 64
+tags: ["assembly", "z80", "subroutines", "screen", "ldir"]
+prevUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-12"
+nextUnit: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-14"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+Every game starts by clearing the screen. This foundational routine will be used throughout our game development.
+
+## The LDIR Block Copy
+
+The Z80's LDIR instruction copies blocks of memory efficiently:
+
+```asm
+    ld hl, source       ; Source address
+    ld de, destination  ; Destination address
+    ld bc, count        ; Number of bytes
+    ldir                ; Copy BC bytes from (HL) to (DE)
+```
+
+LDIR repeats: copy byte from (HL) to (DE), increment both, decrement BC, repeat until BC=0.
+
+## The Clear Screen Trick
+
+To fill memory with a single value, we use a clever technique:
+
+```asm
+    ld hl, $4000        ; Start of screen
+    ld (hl), 0          ; Set first byte to zero
+    ld de, $4001        ; Destination = start + 1
+    ld bc, 6143         ; 6144 - 1 bytes
+    ldir                ; Copy the zero across
+```
+
+Set the first byte, then copy it forward 6143 times. Each copy reads the zero we just wrote.
+
+## Complete Clear Screen Demo
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-13/clear.asm" />
+
+![Cleared screen with test bars](/images/sinclair-zx-spectrum/game-01-ink-war/unit-13/clear.png)
+
+## Screen Memory Size
+
+The Spectrum's display memory:
+
+| Region | Address | Size | Content |
+|--------|---------|------|---------|
+| Pixels | $4000-$57FF | 6144 bytes | Bitmap data |
+| Attributes | $5800-$5AFF | 768 bytes | Colour data |
+
+Clear both regions for a completely blank screen.
+
+## The Clear Screen Subroutine
+
+```asm
+clear_screen:
+    push af             ; Save registers
+    push bc
+    push de
+    push hl
+
+    ld hl, $4000        ; Screen start
+    ld (hl), 0          ; Zero first byte
+    ld de, $4001
+    ld bc, 6143
+    ldir                ; Fill with zeros
+
+    pop hl              ; Restore registers
+    pop de
+    pop bc
+    pop af
+    ret
+```
+
+PUSH/POP preserve registers so callers aren't affected.
+
+## Clear Attributes Subroutine
+
+```asm
+clear_attributes:
+    push af
+    push bc
+    push de
+    push hl
+
+    ld hl, $5800        ; Attribute start
+    ld (hl), %00111000  ; White paper, black ink
+    ld de, $5801
+    ld bc, 767
+    ldir
+
+    pop hl
+    pop de
+    pop bc
+    pop af
+    ret
+```
+
+The attribute value %00111000 gives white paper (111) with black ink (000).
+
+## Combining Both
+
+A convenience routine:
+
+```asm
+clear_all:
+    call clear_screen
+    call clear_attributes
+    ret
+```
+
+One call to clear everything.
+
+## Why Clear Both?
+
+- **Pixels only**: Old colours remain, new drawing appears in old colours
+- **Attributes only**: Old pixel patterns remain visible
+- **Both**: Completely clean slate
+
+## Timing Considerations
+
+LDIR takes 21 T-states per byte (16 for the last). For 6144 bytes:
+
+- ~129,000 T-states for screen
+- ~16,000 T-states for attributes
+- Total: ~145,000 T-states ≈ 0.04 seconds
+
+Fast enough to not notice, but visible if you watch carefully.
+
+## What You've Learnt
+
+- **LDIR** — Block copy instruction for filling memory
+- **Fill trick** — Set first byte, copy it forward
+- **Subroutine structure** — PUSH/POP to preserve registers
+- **Screen regions** — 6144 bytes pixels, 768 bytes attributes
+- **Default attributes** — %00111000 for white paper, black ink

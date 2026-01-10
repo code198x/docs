@@ -1,0 +1,204 @@
+---
+title: "Difficulty Levels"
+description: "Add difficulty settings to adjust AI speed and strategy."
+pubDate: 2026-01-04
+game: 1
+gameName: "Ink War"
+unit: 14
+totalUnits: 16
+system: "Sinclair ZX Spectrum"
+tags: ["assembly", "z80", "ai", "tuning"]
+nextLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-15"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+*Need to catch up? Check out [Unit 13: Two Player Mode](/sinclair-zx-spectrum/game-01-ink-war/unit-13).*
+
+## What You're Building
+
+The AI plays the same way every time. There's no way to ease into the game or challenge yourself with a tougher opponent. Time to add difficulty settings.
+
+By the end of this unit, you'll have:
+
+- Three difficulty levels: Easy, Normal, and Hard
+- Difficulty selection on the title screen (for 1P mode only)
+- AI think delay that varies by difficulty
+- Strategic scoring adjustments for each level
+
+![Difficulty selection](/images/sinclair-zx-spectrum/game-01-ink-war/unit-14/screenshot.png)
+
+## The Plan
+
+We need to:
+
+1. **Add a difficulty variable** — track the current setting
+2. **Create a difficulty selection screen** — show after choosing 1P mode
+3. **Modify AI think delay** — faster on Hard, slower on Easy
+4. **Adjust AI scoring** — add center preference for Hard, reduce blocking for Easy
+
+## How Difficulty Will Work
+
+Each difficulty level adjusts two things:
+
+| Level  | Think Delay | Centre Bonus | Blocking Bonus |
+|--------|-------------|--------------|----------------|
+| Easy   | 40 frames   | 0            | 0              |
+| Normal | 25 frames   | 1            | 4              |
+| Hard   | 10 frames   | 3            | 6              |
+
+**Think delay** — How long the AI "thinks" before moving. Slower gives you more time to plan.
+
+**Centre bonus** — Extra score for cells near the board centre. Higher makes the AI more strategically aggressive.
+
+**Blocking bonus** — Score boost for blocking the player. Zero means the AI won't actively try to block.
+
+## Adding the Difficulty Variable
+
+Add to the variables section:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/01-adding-the-difficulty-variable.asm" lang="asm" />
+
+We default to Normal (2) so returning players get the familiar experience.
+
+## The Difficulty Selection Screen
+
+After choosing 1P mode, we'll show difficulty options. First, the display routine:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/02-the-difficulty-selection-screen.asm" lang="asm" />
+
+New strings:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/03-the-difficulty-selection-screen.asm" lang="asm" />
+
+## Handling Difficulty Selection
+
+Wait for 1, 2, or 3:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/04-handling-difficulty-selection.asm" lang="asm" />
+
+The 3 key is bit 2 on row $F7 (the 1-5 row).
+
+## Updating the Entry Point
+
+Modify the start sequence to show difficulty selection only for 1P mode:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/05-updating-the-entry-point.asm" lang="asm" />
+
+In 2P mode, we skip straight to the game — difficulty only affects the AI.
+
+## Variable Think Delay
+
+Replace the fixed delay with a lookup:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/06-variable-think-delay.asm" lang="asm" />
+
+Easy gives you 40 frames (~0.8 seconds) to watch the AI "think". Hard is only 10 frames (~0.2 seconds) — blink and you'll miss it.
+
+## Adjusting AI Scoring
+
+The bigger change is in `score_cell`. We'll modify the blocking bonus and add centre preference:
+
+### Centre Preference
+
+Cells near the centre of the board are more valuable — they have more expansion options. Let's reward the AI for claiming them on harder difficulties:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/07-adjusting-ai-scoring.asm" lang="asm" />
+
+### Blocking Bonus
+
+Adjust the blocking bonus based on difficulty:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/08-adjusting-ai-scoring.asm" lang="asm" />
+
+## The Complete score_cell Routine
+
+Here's the full updated routine:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/09-the-complete-score-cell-routine.asm" lang="asm" />
+
+## Playing to Difficulty
+
+Each difficulty creates a different experience:
+
+**Easy:**
+- Slow responses give you time to think
+- No centre preference — the AI expands wherever it finds a valid move
+- No blocking — it won't actively try to stop you
+- Great for learning the game mechanics
+
+**Normal:**
+- Balanced pace
+- Mild centre preference (+1/+1 for centre cells)
+- Standard blocking (+4 when near enemy)
+- The default experience
+
+**Hard:**
+- Lightning-fast responses — feels like playing a human
+- Strong centre preference (+2/+2)
+- Aggressive blocking (+6)
+- A real challenge
+
+## Build It. Run It.
+
+```bash
+pasmo --tapbas inkwar.asm inkwar.tap
+```
+
+Test each difficulty:
+
+**Easy (press 1 → 1):**
+- AI takes noticeably longer to move
+- AI doesn't seem to block your expansion
+- Win easily while learning the board
+
+**Normal (press 1 → 2):**
+- Same as before — familiar pacing
+- AI puts up a decent fight
+
+**Hard (press 1 → 3):**
+- AI moves almost instantly
+- AI aggressively controls the centre
+- Much harder to beat
+
+## Recap / Sanity Check
+
+- Difficulty variable stores 1 (Easy), 2 (Normal), or 3 (Hard)
+- Difficulty selection only appears for 1P mode
+- AI think delay varies: 40/25/10 frames
+- Centre bonus adds strategic depth to harder levels
+- Blocking bonus makes hard AI more defensive
+- 2P mode skips difficulty selection entirely
+
+## What You've Built
+
+Comparing to Unit 13:
+
+- **`difficulty`** — variable tracking current setting
+- **`show_difficulty`** — difficulty selection screen
+- **`wait_for_difficulty`** — input handling for 1/2/3 keys
+- **Updated `ai_think_delay`** — variable delay by difficulty
+- **Updated `score_cell`** — centre bonus and variable blocking
+- **New strings** — msg_difficulty, msg_easy, msg_normal, msg_hard
+
+The game now scales to player skill level!
+
+## What You've Learnt
+
+- **Lookup tables vs branching** — Using `cp` chains to select values
+- **Conditional features** — Only showing difficulty for relevant modes
+- **AI tuning** — How small scoring changes affect behaviour
+- **Game balance** — Creating distinct experiences with the same AI logic
+
+## The Complete Code
+
+Here's `inkwar.asm` as it stands after Unit 14:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/inkwar.asm" lang="asm" />
+
+## Next Unit
+
+The game now adapts to your skill level. But it still looks a bit rough around the edges.
+
+In Unit 15, we'll add **Visual Polish** — refining the cursor, pacing, and colours for a more polished experience.
