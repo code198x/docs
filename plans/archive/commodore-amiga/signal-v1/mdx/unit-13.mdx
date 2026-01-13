@@ -1,0 +1,134 @@
+---
+title: "High Score Table"
+description: "Add a high score table that tracks the best scores across games."
+pubDate: 2026-01-04
+game: 1
+gameName: "Hop"
+unit: 13
+totalUnits: 16
+system: "Commodore Amiga"
+tags: ["assembly", "68000", "high-score", "sorting"]
+nextLesson: "/commodore-amiga/assembly/game-01-signal/unit-14"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+*Need to catch up? Check out [Unit 12: Title Screen](/commodore-amiga/game-01-signal/unit-12).*
+
+## What You're Building
+
+Every classic arcade game has a high score table. It gives players a target to beat and makes the game worth replaying. This unit adds:
+
+- A table storing the top 5 scores
+- Automatic insertion when a score qualifies
+- High score display on the game over screen
+- Name entry for new high scores (using initials)
+
+When you're done, achieving a top score will let you enter your three-letter initials. The game over screen will show all five high scores with names.
+
+## Storing High Scores
+
+We need to store both the score (a 32-bit number) and the player's initials (3 characters). Each entry is 8 bytes:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-13/snippets/01-storing-high-scores.asm" lang="asm" />
+
+<InlineNote>
+Real arcade machines stored high scores in battery-backed RAM so they persisted when powered off. Our program loses scores when it exits, but the same data structure would work with saved files on disk.
+</InlineNote>
+
+## Checking for High Score
+
+When the game ends, we need to check if the player's score beats any existing high score:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-13/snippets/02-checking-for-high-score.asm" lang="asm" />
+
+The `bgt.s` (branch if greater than, signed) instruction works because we're comparing signed long words. A score of 10000 is greater than 5000.
+
+## Inserting a New Score
+
+When a score qualifies, we need to:
+1. Shift all lower scores down by one position
+2. Insert the new score at the right position
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-13/snippets/03-inserting-a-new-score.asm" lang="asm" />
+
+## Name Entry State
+
+When the player achieves a high score, we enter a name entry mode. They cycle through A-Z for each of three positions:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-13/snippets/04-name-entry-state.asm" lang="asm" />
+
+## Handling Input During Entry
+
+During name entry, up/down cycles through letters, fire moves to the next position:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-13/snippets/05-handling-input-during-entry.asm" lang="asm" />
+
+## Drawing the High Score Table
+
+On the game over screen, we display all five high scores:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-13/snippets/06-drawing-the-high-score-table.asm" lang="asm" />
+
+## Integrating with Game Over
+
+The game over flow now checks for high scores:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-13/snippets/07-integrating-with-game-over.asm" lang="asm" />
+
+The game over screen now shows the high score table:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-13/snippets/08-integrating-with-game-over.asm" lang="asm" />
+
+## Adding the New Game Mode
+
+We need to add MODE_ENTRY to our mode constants and main loop:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-13/snippets/09-adding-the-new-game-mode.asm" lang="asm" />
+
+## Build It. Run It.
+
+Assemble and run:
+
+```bash
+vasmm68k_mot -Fhunkexe -o hop -nosym hop.asm
+```
+
+Run in an emulator and:
+
+1. Play until game over
+2. If your score beats any default score, you'll enter name entry mode
+3. Use up/down to select letters, fire to confirm
+4. After entering three letters, see the high score table
+
+## What You've Learnt
+
+- **Data structures**: Organising related data (score + name) into entries
+- **Array manipulation**: Shifting entries to make room for insertions
+- **Comparison operations**: Using `bgt` for signed number comparison
+- **State machine expansion**: Adding new modes to existing game flow
+- **Text input**: Cycling through character values with constraints
+
+## The Complete Code
+
+Here's the complete `hop.asm` with high score table:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-13/hop.asm" lang="asm" />
+
+## Recap / Sanity Check
+
+Before moving on, verify:
+
+- [ ] Default high scores show on title screen
+- [ ] Getting a score above 1000 triggers name entry
+- [ ] Up/down cycles through A-Z
+- [ ] Fire advances to next letter position
+- [ ] After 3 letters, name appears in high score table
+- [ ] Scores sort correctly (highest at top)
+
+## Next Unit
+
+[Unit 14: Level Progression](/commodore-amiga/game-01-signal/unit-14) - Make the game harder as levels increase with faster objects and new hazards.

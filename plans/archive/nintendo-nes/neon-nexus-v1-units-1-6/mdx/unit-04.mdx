@@ -1,0 +1,206 @@
+---
+title: "Palettes and Colours"
+description: "Load palettes and see colour on screen for the first time — the NES awakens."
+pubDate: 2026-01-10
+game: 1
+gameName: "Neon Nexus"
+unit: 4
+totalUnits: 64
+system: "Nintendo Entertainment System"
+tags: ["assembly", "6502", "ppu", "palettes", "colours"]
+prevLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-03"
+nextLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-05"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+## What You're Building
+
+The PPU is ready. The timing is solid. Now let's give it something to show.
+
+By the end of this unit, you'll have:
+
+- Palettes loaded into PPU memory
+- Rendering enabled
+- A solid colour filling the screen
+- Your first visible output on the NES
+
+No more grey. The screen will glow with colour — proof that you're controlling the PPU.
+
+## The NES Colour System
+
+The NES has a fixed master palette of 64 colours (52 unique, some duplicates). You can't define custom RGB values — you pick from what the hardware provides.
+
+Here's a selection of useful colours:
+
+| Value | Colour | Value | Colour |
+|-------|--------|-------|--------|
+| $0F | Black | $30 | White |
+| $00 | Dark grey | $10 | Light grey |
+| $01 | Dark blue | $11 | Medium blue |
+| $21 | Light blue | $31 | Pale blue |
+| $06 | Dark red | $16 | Medium red |
+| $27 | Orange | $17 | Brown |
+| $09 | Dark green | $19 | Medium green |
+| $29 | Light green | $1A | Bright green |
+| $05 | Dark magenta | $15 | Medium magenta |
+| $25 | Light magenta | $14 | Purple |
+
+The full palette is organised in rows by hue and columns by brightness. Lower values are darker.
+
+## Palette Memory
+
+Palette data lives at $3F00-$3F1F in PPU memory — 32 bytes total:
+
+- **$3F00**: Universal background colour
+- **$3F01-$3F03**: Background palette 0
+- **$3F05-$3F07**: Background palette 1
+- **$3F09-$3F0B**: Background palette 2
+- **$3F0D-$3F0F**: Background palette 3
+- **$3F11-$3F13**: Sprite palette 0
+- **$3F15-$3F17**: Sprite palette 1
+- **$3F19-$3F1B**: Sprite palette 2
+- **$3F1D-$3F1F**: Sprite palette 3
+
+Each palette has 4 colour slots, but:
+- Slot 0 of every background palette mirrors $3F00 (the universal background)
+- Slot 0 of every sprite palette is transparent
+
+So you really get 3 unique colours per palette, plus the shared background.
+
+## Defining Palette Data
+
+Here's our palette data — 32 bytes defining 8 palettes:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-04/snippets/01-palette-data.asm" />
+
+The first byte ($01, dark blue) is our background colour. With no tiles defined, the entire screen will be this colour.
+
+## Loading Palettes
+
+To write palette data to the PPU:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-04/snippets/02-load-palettes.asm" />
+
+The process:
+1. Read PPUSTATUS to reset the address latch
+2. Write $3F to PPUADDR (high byte of $3F00)
+3. Write $00 to PPUADDR (low byte)
+4. Write 32 bytes to PPUDATA (address auto-increments)
+
+**Critical**: Do this during VBlank or before rendering is enabled. Writing to PPU memory while the screen is being drawn causes corruption.
+
+## Enabling Rendering
+
+With palettes loaded, we enable rendering:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-04/snippets/03-enable-rendering.asm" />
+
+PPUMASK controls what the PPU displays:
+- Bit 3: Show background
+- Bit 4: Show sprites
+- Bits 1-2: Show in leftmost 8 pixels
+
+We set bits 3 and 1 to show the background across the full screen.
+
+## The Complete Code
+
+Here's our program with palette loading and rendering:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-04/nexus.asm" />
+
+## Build It. Run It.
+
+```bash
+ca65 nexus.asm -o nexus.o
+ld65 -C nes.cfg nexus.o -o nexus.nes
+fceux nexus.nes
+```
+
+You should see a solid dark blue screen:
+
+![A dark blue screen - colours are working!](/images/nintendo-entertainment-system/game-01-neon-nexus/unit-04/screenshot.png)
+
+That's not grey anymore — that's colour $01 from our palette. The PPU is reading our palette data and rendering it to the screen.
+
+## What Just Happened?
+
+Let's trace the journey:
+
+1. **Reset**: We initialise the NES and wait for PPU warmup
+2. **Load palettes**: We write 32 bytes to $3F00-$3F1F
+3. **Enable rendering**: We set PPUMASK to show the background
+4. **PPU renders**: Every frame, the PPU reads the nametable (all zeros = tile 0), looks up tile 0 in the pattern table (empty), and fills pixels with colour 0 from the palette (our background colour, $01)
+
+The background colour floods the screen because we haven't defined any tiles — every pixel falls through to the universal background at $3F00.
+
+## Experimenting with Colours
+
+Try changing the first byte of `palette_data`:
+
+```asm
+palette_data:
+    .byte $16               ; Try $16 = red
+```
+
+Rebuild and run. The screen should be red now.
+
+Try other values:
+- `$09` — dark green
+- `$27` — orange
+- `$0F` — black (disappears!)
+- `$30` — white (blinding!)
+
+Each value selects a different colour from the NES master palette.
+
+## Why the Screen Is Solid
+
+The PPU is doing its job — reading the nametable and rendering tiles. But:
+
+- The nametable is empty (all zeros) — every cell references tile 0
+- Tile 0 in our CHR ROM is empty (all zeros) — every pixel is colour 0
+- Colour 0 is the universal background colour from $3F00
+
+So the entire 256×240 pixel screen displays our background colour. When we add tile graphics, we'll see actual patterns instead of solid colour.
+
+## What You've Learnt
+
+- **NES colours**: 64 fixed colours, selected by index
+- **Palette memory**: $3F00-$3F1F in PPU address space
+- **Background colour**: $3F00 fills transparent pixels
+- **Loading palettes**: PPUADDR to set address, PPUDATA to write
+- **PPUMASK**: Controls what renders (sprites, background)
+- **Timing**: Load palettes before enabling rendering
+
+## The Palette Structure
+
+Here's the complete layout:
+
+```
+$3F00: Universal background (shared by all)
+$3F01: BG palette 0, colour 1
+$3F02: BG palette 0, colour 2
+$3F03: BG palette 0, colour 3
+$3F04: (mirrors $3F00)
+$3F05: BG palette 1, colour 1
+$3F06: BG palette 1, colour 2
+$3F07: BG palette 1, colour 3
+...and so on...
+
+$3F10: (mirrors $3F00)
+$3F11: Sprite palette 0, colour 1
+$3F12: Sprite palette 0, colour 2
+$3F13: Sprite palette 0, colour 3
+$3F14: (mirrors $3F00)
+$3F15: Sprite palette 1, colour 1
+...and so on...
+```
+
+Each palette gives you the background colour plus 3 unique colours — enough for simple but distinctive graphics.
+
+## Next Unit
+
+Colours work. Now we need shapes.
+
+In Unit 5, we'll design tile graphics — the 8×8 pixel building blocks of NES visuals. You'll create your first tiles and see them on screen.

@@ -1,0 +1,134 @@
+---
+title: "The Three Voices"
+description: "The SID has three independent voices. Configure them all, explore the four waveforms, and play your first chord."
+pubDate: 2026-01-08
+game: 1
+gameName: "SID Symphony"
+unit: 2
+totalUnits: 64
+system: "Commodore 64"
+tags: ["assembly", "6510", "sid", "waveforms", "chord"]
+prevLesson: "/commodore-64/assembly/game-01-sid-symphony/unit-01"
+nextLesson: "/commodore-64/assembly/game-01-sid-symphony/unit-03"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+*Need to catch up? Check out [Unit 1: First Sound](/commodore-64/assembly/game-01-sid-symphony/unit-01).*
+
+## What You're Building
+
+One voice made one sound. But the SID has *three* voices — three independent sound generators that can play simultaneously. That's not just three times louder. That's harmony. That's chords. That's music.
+
+By the end of this unit, you'll have:
+
+- All three SID voices playing together
+- A C major chord ringing out (C-E-G)
+- Three different waveforms, each with its own character
+- Understanding of how voices combine
+
+Listen to the result. That's not a beep — that's a *chord*.
+
+## Voice Register Offsets
+
+Each SID voice has seven registers. Voice 1 starts at $D400, but where are the others?
+
+Simple arithmetic: each voice occupies 7 bytes, so the voices are 7 bytes apart:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/snippets/01-voice-offsets.asm" />
+
+Voice 1 at $D400, Voice 2 at $D407, Voice 3 at $D40E. The register layout is identical — only the base address changes.
+
+## The Four Waveforms
+
+The SID can generate four fundamentally different waveforms. Each has a distinct sonic character:
+
+| Waveform | Bit | Sound Character |
+|----------|-----|-----------------|
+| Triangle | $10 | Soft, pure, flute-like |
+| Sawtooth | $20 | Bright, buzzy, string-like |
+| Pulse | $40 | Hollow, reedy, organ-like |
+| Noise | $80 | Unpitched, percussive, static |
+
+The waveform is selected in the control register, combined with the gate bit:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/snippets/02-waveform-bits.asm" />
+
+<InlineNote>
+You can only select *one* waveform at a time (setting multiple bits produces unusual, often harsh, sounds — interesting for experimentation, but not for music).
+</InlineNote>
+
+## Building a Chord
+
+A chord is multiple notes that sound good together. The simplest pleasant chord is a **major triad**: the root note, a major third above it, and a perfect fifth above it.
+
+For C major: C, E, and G.
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/snippets/03-chord-frequencies.asm" />
+
+We'll build a proper frequency table in Unit 4. For now, these three values give us a clean C major chord.
+
+## Configuring Each Voice
+
+Each voice needs the same setup: frequency, envelope, waveform, and gate. The only differences are the frequency value and the waveform selection:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/snippets/04-configure-voice.asm" />
+
+We give each voice a different waveform so you can hear them individually within the chord:
+- Voice 1 (C): Triangle — the soft foundation
+- Voice 2 (E): Sawtooth — the bright third
+- Voice 3 (G): Pulse — the hollow fifth
+
+## Pulse Width
+
+The pulse waveform has an extra parameter: **pulse width**. This controls the ratio of "high" to "low" in each cycle.
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/snippets/05-pulse-width.asm" />
+
+- 50% ($0800) — Balanced, hollow square wave
+- 25% ($0400) — Thinner, more nasal
+- 10% ($0199) — Very thin, almost filtered
+
+Triangle and sawtooth don't use pulse width. Noise ignores both pulse width and frequency (it's just random).
+
+## How Voices Combine
+
+When multiple voices play simultaneously, the SID adds their outputs together. Three voices at full sustain won't be three times as loud — the SID has a single output that clips if overdriven.
+
+For clean mixing:
+- Use similar sustain levels across voices
+- Vary waveforms for distinct voices
+- Space frequencies apart (don't play the same note on multiple voices)
+
+## Build It. Run It.
+
+```bash
+acme -f cbm -o symphony.prg symphony.asm
+x64sc symphony.prg
+```
+
+You'll see a black screen. But *listen*. That's a chord — three distinct tones harmonising together.
+
+Try these experiments:
+1. Change Voice 2's waveform from sawtooth to triangle — hear how the chord becomes softer
+2. Change Voice 3's pulse width to $0400 — hear how it becomes thinner
+3. Set all three to the same waveform — hear how they blend into one sound
+
+## What You've Learnt
+
+- **Voice offsets**: +7 bytes per voice ($D400, $D407, $D40E)
+- **Waveform selection**: Triangle ($10), Sawtooth ($20), Pulse ($40), Noise ($80)
+- **Pulse width**: 12-bit value controlling pulse wave duty cycle
+- **Voice mixing**: The SID sums all voices to a single output
+
+## The Complete Code
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-02/symphony.asm" />
+
+## Next Unit
+
+We've played sounds, we've played chords. But they're all the same shape — instant on, sustained, instant off. Real instruments don't work that way. A piano note swells and fades. A drum hits and decays. A string sustains then releases.
+
+In Unit 3, we explore ADSR envelopes in depth — shaping sounds from harsh stabs to soft pads.

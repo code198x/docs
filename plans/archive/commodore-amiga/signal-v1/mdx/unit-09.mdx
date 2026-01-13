@@ -1,0 +1,201 @@
+---
+title: "Lives and Scoring"
+description: "Track the player's remaining lives and display a running score."
+pubDate: 2026-01-04
+game: 1
+gameName: "Hop"
+unit: 9
+totalUnits: 16
+system: "Commodore Amiga"
+tags: ["assembly", "68000", "game-logic", "text"]
+nextLesson: "/commodore-amiga/assembly/game-01-signal/unit-10"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+*Need to catch up? Check out [Unit 8: Collision and Death](/commodore-amiga/game-01-signal/unit-08).*
+
+## What You're Building
+
+Every arcade game needs stakes. Lives give the player a limited number of chances, and score gives them a reason to keep playing. This unit adds:
+
+- **Lives system** starting with 3 lives
+- **Score tracking** that increases when the frog advances
+- **On-screen display** showing lives and score
+- **Game over detection** when lives reach zero
+
+By the end, death will actually cost something, and progress will be rewarded.
+
+## The Lives System
+
+Lives are simple: start with a number (traditionally 3), decrement on death, and end the game at zero.
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/01-the-lives-system.asm" lang="asm" />
+
+When the frog dies, we decrement lives in our `kill_frog` routine:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/02-the-lives-system.asm" lang="asm" />
+
+In `update_death`, we check if lives have run out before respawning:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/03-the-lives-system.asm" lang="asm" />
+
+We add a new state for game over:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/04-the-lives-system.asm" lang="asm" />
+
+## The Scoring System
+
+Score increases when the frog makes forward progress. The simplest approach: award points whenever the frog hops upward.
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/05-the-scoring-system.asm" lang="asm" />
+
+We use a long word (32 bits) for score because it can grow quite large. In the movement handler, we award points for upward hops:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/06-the-scoring-system.asm" lang="asm" />
+
+## Displaying Numbers
+
+To show lives and score on screen, we need to draw numbers. This requires:
+1. A font - bitmap data for digits 0-9
+2. A drawing routine to blit characters to the screen
+
+### The Digit Font
+
+Each digit is 8 pixels wide and 8 pixels tall - one byte per row, 8 bytes per character:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/07-displaying-numbers.asm" lang="asm" />
+
+Each digit takes 8 bytes, so digit N starts at `font_digits + (N * 8)`.
+
+### Drawing a Character
+
+We use the Blitter to copy font data to the screen. Since our font is exactly 8 pixels wide (one byte), this is straightforward:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/08-displaying-numbers.asm" lang="asm" />
+
+### Drawing Multi-Digit Numbers
+
+Score can be several digits. We need to extract each digit and draw them left to right:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/09-displaying-numbers.asm" lang="asm" />
+
+This approach:
+1. Starts with the largest power of 10 (100000)
+2. Counts how many times we can subtract it - that's our digit
+3. Draws that digit
+4. Moves to the next power of 10
+5. Repeats for all 6 digits
+
+### Drawing Lives
+
+Lives are simpler - just one or two digits:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/10-displaying-numbers.asm" lang="asm" />
+
+If you want to show lives as icons (little frogs), you could use sprites or blitter objects instead of numbers.
+
+## Screen Layout
+
+We need to reserve screen space for the HUD (Heads-Up Display):
+
+```
++----------------------------------+
+|  SCORE: 000000      LIVES: 3     |  <- HUD area (top 16 pixels)
++----------------------------------+
+|                                  |
+|           GAME AREA              |
+|                                  |
++----------------------------------+
+```
+
+Adjust your zone boundaries to account for the HUD:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/11-screen-layout.asm" lang="asm" />
+
+## Drawing Labels
+
+We also need to draw "SCORE:" and "LIVES:" labels. We can add letter definitions to our font, or use pre-rendered bitmap labels:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/12-drawing-labels.asm" lang="asm" />
+
+For simplicity, you could also just hard-code positions and draw the HUD once at startup rather than every frame.
+
+## Clearing the HUD Area
+
+Before drawing numbers, we need to clear the previous values. Use the Blitter to fill the number area with zeros:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/13-clearing-the-hud-area.asm" lang="asm" />
+
+## Updated Main Loop
+
+Add HUD drawing to your main loop:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/14-updated-main-loop.asm" lang="asm" />
+
+## Game Over Handling
+
+When `frog_state` is `STATE_GAMEOVER`, the main loop should stop normal gameplay:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/snippets/15-game-over-handling.asm" lang="asm" />
+
+Later units will add a "GAME OVER" message and restart option.
+
+## Build It. Run It.
+
+Save the complete code below as `hop.asm` and build:
+
+```bash
+vasmm68k_mot -Fhunkexe -kick1hunks -nosym -o hop hop.asm
+```
+
+Create a bootable ADF:
+
+```bash
+xdftool hop.adf format "Hop" + write hop + makedir s + write s/startup-sequence "hop"
+```
+
+Run in an emulator:
+
+```bash
+fs-uae --floppy_drive_0=hop.adf
+```
+
+**Expected behaviour:**
+- Score appears in top-left, starts at 000000
+- Lives appear in top-right, starts at 3
+- Hopping up increases score by 10
+- Dying decreases lives by 1
+- At 0 lives, game stops (game over state)
+
+## What You've Learnt
+
+| Concept | Why It Matters |
+|---------|----------------|
+| Lives system | Creates stakes and tension |
+| Score tracking | Rewards player progress |
+| Number display | Essential for any game HUD |
+| Digit extraction | Divide by powers of 10 |
+| HUD layout | Separate game area from info display |
+
+## The Complete Code
+
+Here's the full `hop.asm` with lives and scoring:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-09/hop.asm" lang="asm" />
+
+## Recap / Sanity Check
+
+Before moving on, verify:
+- [ ] Score starts at 000000 and displays correctly
+- [ ] Lives start at 3 and display correctly
+- [ ] Hopping forward adds 10 to score
+- [ ] Dying decrements lives by 1
+- [ ] At 0 lives, game enters game over state
+- [ ] HUD doesn't overlap with game area
+- [ ] Code assembles without errors
+
+## Next Unit
+
+[Unit 10: Home Zone](/commodore-amiga/game-01-signal/unit-10) - Add the goal at the top and win conditions.

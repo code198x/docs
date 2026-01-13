@@ -1,0 +1,130 @@
+---
+title: "Enemy Patterns"
+description: "Give each enemy a unique movement style — diagonal, horizontal, and vertical."
+pubDate: 2026-01-10
+game: 1
+gameName: "Neon Nexus"
+unit: 13
+totalUnits: 64
+system: "Nintendo Entertainment System"
+tags: ["assembly", "6502", "ai", "movement"]
+prevLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-12"
+nextLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-14"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+## What You're Building
+
+Four identical enemies bouncing the same way gets predictable fast. Real games mix it up.
+
+By the end of this unit, you'll have:
+
+- Direction tracking for each enemy
+- Diagonal bouncing enemies
+- Horizontal-only enemies
+- Vertical-only enemies
+- A dispatcher that handles different patterns
+
+Same enemies, different behaviours. The game becomes less predictable.
+
+## Direction Variables
+
+Track each enemy's direction on both axes:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-13/snippets/01-direction-variables.asm" />
+
+The magic value `2` means "don't move on this axis" — this lets us create horizontal-only or vertical-only enemies without separate code paths.
+
+## Initialising Patterns
+
+Set up four distinct movement styles:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-13/snippets/02-init-patterns.asm" />
+
+Each enemy starts at a different position with a different pattern:
+- **Enemies 0-1**: Full diagonal bounce (like before)
+- **Enemy 2**: Horizontal only — slides left and right
+- **Enemy 3**: Vertical only — bobs up and down
+
+## Movement Dispatcher
+
+Check each enemy's pattern and call the appropriate movement:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-13/snippets/03-move-dispatch.asm" />
+
+The dispatcher checks direction values. If X direction is 2, skip horizontal movement. If Y direction is 2, skip vertical. Otherwise, do both.
+
+## Horizontal Movement
+
+The X-axis movement with boundary bouncing:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-13/snippets/04-move-x.asm" />
+
+The pattern: check direction → move → check boundary → reverse if needed. Simple but effective.
+
+## Vertical Movement
+
+The Y-axis movement follows the same pattern:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-13/snippets/05-move-y.asm" />
+
+By separating X and Y into subroutines, we can call just one for single-axis enemies.
+
+## The Complete Code
+
+Here's our program with enemy patterns:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-13/nexus.asm" />
+
+## Build It. Run It.
+
+```bash
+ca65 nexus.asm -o nexus.o
+ld65 -C nes.cfg nexus.o -o nexus.nes
+fceux nexus.nes
+```
+
+Watch the enemies move differently:
+
+![Enemy patterns](/images/nintendo-entertainment-system/game-01-neon-nexus/unit-13/screenshot.png)
+
+You'll see:
+1. Two enemies bouncing diagonally across the whole screen
+2. One enemy sliding horizontally at a fixed height
+3. One enemy bobbing vertically in place
+
+The game is now less predictable — you can't just memorise one pattern.
+
+## The Power of Data-Driven Design
+
+We didn't write separate code for each enemy type. We used **data** (the direction values) to control **behaviour**. This is a fundamental game programming technique:
+
+- Same movement code handles all patterns
+- Adding new patterns means changing data, not code
+- The dispatcher cleanly separates "what to do" from "how to do it"
+
+Professional games use this approach extensively. Enemy types, level layouts, difficulty curves — they're all data driving generic code.
+
+## Expanding This System
+
+With this foundation, you could easily add:
+
+- **Speed per enemy**: Store `enemy_speed` and add/subtract that instead of 1
+- **More patterns**: Chase the player, follow waypoints, random turns
+- **Pattern switching**: Enemy changes behaviour at certain health or time
+
+The structure supports all of this with minimal code changes.
+
+## What You've Learnt
+
+- **Direction arrays**: Per-enemy state for independent behaviour
+- **Magic values**: Using special values (2) to encode "no movement"
+- **Dispatcher pattern**: One loop that handles multiple behaviours
+- **Subroutine reuse**: Same movement code for all patterns
+- **Data-driven design**: Behaviour controlled by data, not hardcoded logic
+
+## Next Unit
+
+Enemies have personality now. In Unit 14, we'll add sound effects — the NES's APU will give our game audio feedback.

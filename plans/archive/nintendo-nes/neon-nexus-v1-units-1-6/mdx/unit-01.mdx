@@ -1,0 +1,264 @@
+---
+title: "NES Architecture"
+description: "Your first NES program: understand the hardware and write code that runs on the console."
+pubDate: 2026-01-10
+game: 1
+gameName: "Neon Nexus"
+unit: 1
+totalUnits: 64
+system: "Nintendo Entertainment System"
+tags: ["assembly", "6502", "architecture", "ines", "vectors"]
+nextLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-02"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+*Need to set up your tools first? See [Getting Started](/nintendo-entertainment-system/getting-started).*
+
+## What You're Building
+
+Before graphics, before sound, before gameplay — you need to make the NES run your code.
+
+By the end of this unit, you'll have:
+
+- A working NES ROM that boots in any emulator
+- An understanding of the NES hardware architecture
+- The essential initialisation sequence every NES game needs
+- Your first 6502 assembly program
+
+The screen will be blank. But it's YOUR blank screen — proof that the NES is executing your code.
+
+## The NES Hardware
+
+The NES is built around three main components:
+
+**CPU (Central Processing Unit)** — A modified 6502 running at 1.79 MHz (NTSC). This is where your game logic executes.
+
+**PPU (Picture Processing Unit)** — A custom chip that handles all graphics. It has its own memory and runs independently of the CPU.
+
+**APU (Audio Processing Unit)** — Generates sound through five channels: two pulse waves, a triangle wave, noise, and sample playback.
+
+These chips communicate through memory-mapped I/O — specific memory addresses that trigger hardware behaviour rather than storing data.
+
+## The Memory Map
+
+The CPU sees a 64KB address space. Here's what lives where:
+
+| Address Range | Size | Purpose |
+|---------------|------|---------|
+| $0000-$07FF | 2KB | Internal RAM |
+| $0800-$1FFF | — | Mirrors of RAM |
+| $2000-$2007 | 8 bytes | PPU registers |
+| $2008-$3FFF | — | Mirrors of PPU registers |
+| $4000-$4017 | 24 bytes | APU and I/O registers |
+| $4020-$FFFF | ~48KB | Cartridge space (ROM) |
+
+The most important regions for now:
+
+- **$0000-$00FF** (Zero Page): Fast memory. The 6502 can access it with shorter, faster instructions.
+- **$0100-$01FF** (Stack): Hardware stack for subroutine calls and interrupts.
+- **$2000-$2007** (PPU): Control the graphics hardware.
+- **$FFFA-$FFFF** (Vectors): Where the CPU looks for interrupt handler addresses.
+
+## The Interrupt Vectors
+
+At the very end of memory ($FFFA-$FFFF), three 16-bit addresses tell the CPU where to go:
+
+| Address | Name | When It's Used |
+|---------|------|----------------|
+| $FFFA | NMI | Start of each frame (VBlank) |
+| $FFFC | Reset | Power-on and reset button |
+| $FFFE | IRQ | Hardware interrupts |
+
+When you power on the NES, the CPU reads the address at $FFFC-$FFFD and jumps there. This is your entry point.
+
+## Setting Up
+
+Create two files:
+- `nexus.asm` — The game code
+- `nes.cfg` — Linker configuration (tells the assembler where to put things)
+
+**Build and run** with these commands:
+
+```bash
+ca65 nexus.asm -o nexus.o
+ld65 -C nes.cfg nexus.o -o nexus.nes
+fceux nexus.nes
+```
+
+When you see "Build it. Run it." in this lesson, use these commands.
+
+## The iNES Header
+
+Every NES ROM starts with a 16-byte header. This tells emulators (and flash carts) about the cartridge:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-01/snippets/01-ines-header.asm" />
+
+Let's break this down:
+
+**`"NES", $1A`** — The magic number identifying an iNES file. Every NES ROM starts with these four bytes.
+
+**`.byte 2`** — PRG-ROM size in 16KB units. We have 2 × 16KB = 32KB of program code.
+
+**`.byte 1`** — CHR-ROM size in 8KB units. We have 8KB of tile graphics.
+
+**`$01`** — Flags byte: vertical nametable mirroring, mapper 0 (NROM — the simplest mapper).
+
+**`$00`** — More flags. Zero means no special features.
+
+The remaining bytes are padding — reserved for future use.
+
+## PPU Register Definitions
+
+We define symbolic names for the PPU registers we'll use:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-01/snippets/02-ppu-registers.asm" />
+
+Using names like `PPUCTRL` instead of raw addresses like `$2000` makes the code much clearer.
+
+## The Reset Handler
+
+When the NES powers on, it needs proper initialisation. Here's the standard startup sequence:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-01/snippets/03-reset-init.asm" />
+
+Every instruction matters:
+
+**`sei`** — Disable interrupts. We don't want NMIs firing before we're ready.
+
+**`cld`** — Clear decimal mode. The NES doesn't support it, but good practice to be explicit.
+
+**`ldx #$40` / `stx $4017`** — Disable the APU frame counter IRQ.
+
+**`ldx #$FF` / `txs`** — Set the stack pointer to $FF. The stack lives at $0100-$01FF and grows downward.
+
+**`inx`** — Increment X from $FF to $00. A clever trick to get zero.
+
+**`stx PPUCTRL` / `stx PPUMASK`** — Disable NMI and turn off rendering. We need the PPU quiet during setup.
+
+## Waiting for VBlank
+
+The PPU needs time to warm up after power-on. We wait for two VBlank periods:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-01/snippets/04-vblank-wait.asm" />
+
+**`bit PPUSTATUS`** — The BIT instruction reads a memory location and sets CPU flags based on its value. Bit 7 of PPUSTATUS is the VBlank flag.
+
+**`bpl`** — Branch if Plus (bit 7 clear). We loop until VBlank sets the flag.
+
+Why two waits? The first VBlank might occur during PPU warmup. After two, we know the PPU is fully ready.
+
+## Clearing RAM
+
+Between the VBlank waits, we clear all RAM to zero:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-01/snippets/05-clear-ram.asm" />
+
+This writes $00 to every byte from $0000-$07FF. The loop uses indexed addressing — `sta $0000, x` writes to address $0000 + X.
+
+When X wraps from $FF back to $00, the `bne` (Branch if Not Equal) falls through and the loop ends.
+
+## The Main Loop
+
+After initialisation, we enter the main loop:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-01/snippets/06-main-loop.asm" />
+
+For now, it does nothing — just loops forever. The screen stays blank because we haven't enabled rendering or loaded any graphics.
+
+But this is still a working NES program. The CPU is executing your code.
+
+## Interrupt Handlers
+
+We need handlers for the NMI and IRQ vectors, even if they do nothing yet:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-01/snippets/07-interrupt-handlers.asm" />
+
+**`rti`** — Return from Interrupt. This restores the CPU state and continues execution.
+
+The NMI fires 60 times per second (NTSC). In later units, this is where we'll update the game state.
+
+## The Vector Table
+
+Finally, we tell the CPU where our handlers are:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-01/snippets/08-vectors.asm" />
+
+**`.segment "VECTORS"`** — Places this code at $FFFA-$FFFF.
+
+**`.word`** — Stores a 16-bit address. When the NES powers on, it reads the `reset` address and jumps there.
+
+The CHR segment reserves 8KB for tile graphics. For now it's empty — we'll add tiles in later units.
+
+## The Linker Configuration
+
+The `nes.cfg` file tells the linker where to place each segment:
+
+```
+MEMORY {
+    ZP:     start = $00,    size = $100,   type = rw, file = "";
+    RAM:    start = $0200,  size = $600,   type = rw, file = "";
+    HEADER: start = $0,     size = $10,    type = ro, file = %O, fill = yes;
+    PRG:    start = $8000,  size = $8000,  type = ro, file = %O, fill = yes;
+    CHR:    start = $0,     size = $2000,  type = ro, file = %O, fill = yes;
+}
+
+SEGMENTS {
+    ZEROPAGE: load = ZP,     type = zp;
+    BSS:      load = RAM,    type = bss;
+    HEADER:   load = HEADER, type = ro;
+    CODE:     load = PRG,    type = ro,  start = $8000;
+    VECTORS:  load = PRG,    type = ro,  start = $FFFA;
+    CHARS:    load = CHR,    type = ro;
+}
+```
+
+This maps our segments to the correct memory locations and ensures the vectors end up at $FFFA.
+
+## Build It. Run It.
+
+```bash
+ca65 nexus.asm -o nexus.o
+ld65 -C nes.cfg nexus.o -o nexus.nes
+fceux nexus.nes
+```
+
+You should see... a blank grey screen.
+
+![A blank screen - your first NES program](/images/nintendo-entertainment-system/game-01-neon-nexus/unit-01/screenshot.png)
+
+That's correct! The emulator isn't crashing. The NES is running your code. The screen is blank because:
+- Rendering is disabled (PPUMASK = 0)
+- No palette colours are loaded
+- No tiles are defined
+
+But the foundation is solid. Your reset handler ran. Your main loop is running. The NES obeys you now.
+
+## The Complete Code
+
+Here's everything together:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-01/nexus.asm" />
+
+## What You've Learnt
+
+- **NES architecture**: CPU, PPU, and APU working together
+- **Memory map**: Where RAM, ROM, and registers live
+- **Interrupt vectors**: How the CPU finds your code on power-on
+- **iNES header**: The 16 bytes every ROM needs
+- **Initialisation sequence**: The essential startup ritual
+- **VBlank waiting**: Ensuring the PPU is ready
+
+## Recap / Sanity Check
+
+- Build + run: `ca65 nexus.asm -o nexus.o && ld65 -C nes.cfg nexus.o -o nexus.nes && fceux nexus.nes`
+- Screen: blank grey. That's expected — rendering is disabled.
+- If the emulator crashes or shows garbage, check the vector table placement ($FFFA).
+- The ROM should be exactly 40,976 bytes (16 header + 32,768 PRG + 8,192 CHR).
+
+## Next Unit
+
+The NES is running. But there's nothing to see.
+
+In Unit 2, we'll explore the PPU — the graphics chip that makes the NES special. You'll learn about pattern tables, nametables, and how the NES draws its iconic 8-bit visuals.

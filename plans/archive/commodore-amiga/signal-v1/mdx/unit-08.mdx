@@ -1,0 +1,178 @@
+---
+title: "Collision and Death"
+description: "Detect deadly collisions with cars and water, triggering the frog's demise."
+pubDate: 2026-01-04
+game: 1
+gameName: "Hop"
+unit: 8
+totalUnits: 16
+system: "Commodore Amiga"
+tags: ["assembly", "68000", "collision", "game-logic"]
+nextLesson: "/commodore-amiga/assembly/game-01-signal/unit-09"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+*Need to catch up? Check out [Unit 7: Riding the Logs](/commodore-amiga/game-01-signal/unit-07).*
+
+## What You're Building
+
+Hop is a game about survival. The frog must navigate deadly traffic and treacherous water, and until now our frog has been immortal. Time to change that.
+
+This unit adds:
+- **Collision detection** with cars using bounding boxes
+- **Water death** when in the river without a log
+- **Death state** that pauses gameplay and resets the frog
+- **Death animation** using a brief flash before respawn
+
+By the end, hitting a car or falling in the water will actually mean something.
+
+## The Death State Machine
+
+Before diving into collision code, we need to think about game states. Our frog can be:
+
+| State | Value | Meaning |
+|-------|-------|---------|
+| ALIVE | 0 | Normal gameplay, frog can move |
+| DYING | 1 | Death animation playing, input ignored |
+| DEAD | 2 | Animation complete, waiting to respawn |
+
+We'll use a simple state variable:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-08/snippets/01-the-death-state-machine.asm" lang="asm" />
+
+The death timer counts down frames during the dying animation. When it hits zero, we transition from DYING to DEAD, then respawn.
+
+## Bounding Box Collision
+
+Collision detection in 2D games typically uses bounding boxes - invisible rectangles around each object. Two objects collide when their boxes overlap.
+
+For two boxes to overlap, ALL four of these must be true:
+- Object A's left edge is left of Object B's right edge
+- Object A's right edge is right of Object B's left edge
+- Object A's top edge is above Object B's bottom edge
+- Object A's bottom edge is below Object B's top edge
+
+In code, we check if any condition FAILS (no collision), which is often simpler:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-08/snippets/02-bounding-box-collision.asm" lang="asm" />
+
+The key insight: we check for separation, not overlap. If ANY separation test passes, there's no collision. Only if ALL four tests fail do we have a hit.
+
+## Car Collision - Death by Traffic
+
+Cars kill on contact. We loop through all objects, check if each is a car (TYPE_CAR), and if the frog overlaps it:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-08/snippets/03-car-collision-death-by-traffic.asm" lang="asm" />
+
+## Water Death - Sink or Swim
+
+The water zone is deadly UNLESS the frog is standing on a log. We already track this with `on_log` from Unit 7. The logic:
+
+1. Check if frog is in the water zone (by Y position)
+2. If in water AND not on a log, the frog drowns
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-08/snippets/04-water-death-sink-or-swim.asm" lang="asm" />
+
+The order matters here. We must check for log contact FIRST (in handle_platform), THEN check for water death. Otherwise we'd kill the frog before giving them a chance to land on a log.
+
+## The Kill Routine
+
+When the frog dies, we:
+1. Set state to DYING
+2. Start the death timer
+3. Optionally trigger a sound (Unit 11)
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-08/snippets/05-the-kill-routine.asm" lang="asm" />
+
+## Death Animation
+
+During the DYING state, we run a simple animation - flashing the sprite on and off by toggling its visibility. The death timer counts down each frame:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-08/snippets/06-death-animation.asm" lang="asm" />
+
+The flash effect uses a simple trick: check if the timer value is odd or even using `AND #1`. Odd frames hide the sprite, even frames show it.
+
+## Updated Main Loop
+
+Our main loop now needs to handle game states. When the frog is dying or dead, we skip input processing but continue updating the world:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-08/snippets/07-updated-main-loop.asm" lang="asm" />
+
+Notice the order of operations:
+1. Update objects (cars and logs keep moving during death)
+2. If alive: handle input and check collisions
+3. If not alive: run death animation
+4. Always draw everything
+
+This keeps the world alive even when the player is dead, which feels more dynamic than freezing everything.
+
+## Edge Case - Off-Screen Death
+
+What if the frog rides a log off the edge of the screen? That's also death:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-08/snippets/08-edge-case-off-screen-death.asm" lang="asm" />
+
+Add this check after `handle_platform` in the main loop.
+
+## Build It. Run It.
+
+Save the complete code below as `hop.asm` and build:
+
+```bash
+vasmm68k_mot -Fhunkexe -kick1hunks -nosym -o hop hop.asm
+```
+
+Create a bootable ADF:
+
+```bash
+xdftool hop.adf format "Hop" + write hop + makedir s + write s/startup-sequence "hop"
+```
+
+Run in an emulator:
+
+```bash
+fs-uae --floppy_drive_0=hop.adf
+```
+
+**Expected behaviour:**
+- Frog appears at the bottom and can hop with joystick
+- Cars and logs move across their lanes
+- Hitting a car kills the frog (sprite flashes)
+- Entering water without a log kills the frog
+- After death animation, frog respawns at start
+- Riding a log off-screen also kills the frog
+
+## What You've Learnt
+
+This unit covered critical game mechanics:
+
+| Concept | Why It Matters |
+|---------|----------------|
+| Bounding box collision | Industry-standard technique for 2D collision |
+| Separation testing | Easier to code than overlap testing |
+| Game states | Clean way to manage alive/dying/dead |
+| Death animation | Visual feedback that something happened |
+| Execution order | Platform check before water death check |
+
+## The Complete Code
+
+Here's the full `hop.asm` with collision and death:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-08/hop.asm" lang="asm" />
+
+## Recap / Sanity Check
+
+Before moving on, verify:
+- [ ] Car collision kills the frog
+- [ ] Water zone kills if not on a log
+- [ ] Death animation shows sprite flashing
+- [ ] Frog respawns at start position after death
+- [ ] Off-screen riding causes death
+- [ ] Cars and logs keep moving during death sequence
+- [ ] Code assembles without errors
+
+## Next Unit
+
+[Unit 9: Lives and Scoring](/commodore-amiga/game-01-signal/unit-09) - Track the player's lives and add a score display.

@@ -6,6 +6,8 @@
 
 **Commercial Quality Target:** A game that could have sold for £9.99 on cassette in 1986. Polished, replayable, impressive to show friends.
 
+**Design Principle:** "Show First, Explain Later" - Scaffold provides working code immediately; theory follows experience.
+
 ---
 
 ## The Finished Game
@@ -52,6 +54,18 @@ Before detailing the units, here's what the learner builds:
 
 ---
 
+## Engagement Milestones
+
+| Milestone | Unit |
+|-----------|------|
+| First visible + audible output | 1 |
+| First interactivity (trigger sounds) | 1 |
+| First rhythm gameplay | 2 |
+| First "game feel" (scoring, feedback) | 6 |
+| Complete playable game | 16 |
+
+---
+
 ## Phase 1: Foundation (Units 1-16)
 
 *Goal: A working rhythm game with one song. Playable from start to finish.*
@@ -60,206 +74,140 @@ Before detailing the units, here's what the learner builds:
 
 ---
 
-### Unit 1: First Sound
+### Unit 1: Hello SID
 
 **Learning Objectives:**
-- Understand the BASIC stub that launches machine code
-- Know the SID chip's memory location ($D400-$D41C)
-- Write to SID registers to produce a tone
-- Create a working assembly program that runs on the C64
+- Run a working C64 program with sound AND visuals
+- Trigger sounds by pressing keys
+- See immediate feedback on screen
+- Experience the SID chip from minute one
 
 **Concepts Introduced:**
+- Scaffold approach (working code provided)
 - Memory-mapped I/O
-- The SID's three voices
-- Frequency registers (low/high byte pairs)
-- Gate bit (turning sound on/off)
+- SID chip overview (three voices)
+- Screen memory basics
 
-**Code Written:**
-```
+**Scaffold Provides:**
 - BASIC stub (10 SYS 2064)
-- Set SID frequency registers for voice 1
-- Set waveform (pulse wave)
-- Set gate bit to trigger sound
-- Infinite loop to keep program running
-```
+- Screen layout with three tracks and hit zones
+- SID configured with three distinct voices
+- Keyboard reading for Z/X/C keys
+- Visual feedback when keys pressed
+
+**What the Learner Does:**
+- Runs the scaffold - sees tracks, hears nothing yet
+- Presses Z - voice 1 plays, track 1 flashes
+- Presses X - voice 2 plays, track 2 flashes
+- Presses C - voice 3 plays, track 3 flashes
+- Changes SID frequency values, hears pitch change
+- Changes screen colours, sees immediate result
 
 **What the Learner Sees:**
-A blank screen, but a continuous tone plays from the SID. Changing values changes the pitch. First contact with the SID chip.
+Three horizontal tracks on screen with a hit zone on the left. Pressing Z/X/C triggers different notes and flashes the corresponding track. Interactive from the first moment.
 
 **Technical Details:**
 - SID base: $D400
-- Voice 1 frequency: $D400-$D401
-- Voice 1 control: $D404
-- Gate bit is bit 0 of control register
+- Screen memory: $0400
+- Colour RAM: $D800
+- Z/X/C checked via CIA keyboard matrix
 
 ---
 
-### Unit 2: The Three Voices
+### Unit 2: Notes Appear
 
 **Learning Objectives:**
-- Configure all three SID voices independently
-- Understand waveform selection (triangle, sawtooth, pulse, noise)
-- Hear the characteristic sound of each waveform
-- Play a chord (three simultaneous notes)
+- Display notes that scroll across the screen
+- Understand character-based animation
+- See the basic rhythm game pattern
+- Notes sync to a simple beat
 
 **Concepts Introduced:**
+- Character movement (erase, draw, move)
+- Beat timing with frame counting
+- Note data structure basics
+- Right-to-left scrolling
+
+**Code Written:**
+```
+- Add note spawning on beat
+- Notes appear at right edge of track
+- Move notes left each frame
+- Notes disappear at left edge
+- Simple test pattern (4 notes, repeating)
+```
+
+**What the Learner Sees:**
+Notes scroll from right to left across the three tracks in time with a simple beat. They can press keys when notes reach the hit zone - the SID sounds match. It feels like a game already.
+
+**Technical Details:**
+- Note character placed on screen
+- X position decremented each frame
+- Notes spawn from song data
+- 25 frames per beat at 120 BPM (PAL)
+
+---
+
+### Unit 3: Making It Your Own
+
+**Learning Objectives:**
+- Customise the SID sounds by modifying waveforms and ADSR
+- Change the visual appearance with different colours
+- Learn by doing - modify values and experience the results
+- Produce a uniquely-sounding version of the game
+
+**Concepts Introduced:**
+- SID voice registers through hands-on modification
+- ADSR envelopes by hearing the differences
+- Waveform selection by trying each one
+- Colour RAM customisation
+
+**Code Written:**
+```
+- Customisation section at top of code
+- VOICE1_WAVE, VOICE2_WAVE, VOICE3_WAVE constants
+- VOICE_ATTACK, VOICE_DECAY, VOICE_SUSTAIN, VOICE_RELEASE
+- TRACK_COLOUR constants for each track
+- BORDER_COLOUR, BACKGROUND_COLOUR
+```
+
+**What the Learner Sees:**
+The game runs with different sounds and colours. Each voice has a distinct timbre. The screen has a custom colour scheme. Multiple "Try This" sections guide experimentation.
+
+**Technical Details:**
 - Voice register offsets (+7 per voice)
-- Waveform bits in control register
-- Pulse width for pulse wave
-- How voices sum together
-
-**Code Written:**
-```
-- Configure voice 1: triangle wave, middle C
-- Configure voice 2: sawtooth wave, E above middle C
-- Configure voice 3: pulse wave, G above middle C
-- Gate all three simultaneously
-```
-
-**What the Learner Sees:**
-A C major chord plays continuously. The learner experiments with different waveforms and hears how triangle sounds flute-like, sawtooth sounds brassy, pulse sounds hollow, and noise sounds like static.
-
-**Technical Details:**
 - Waveform bits: triangle=$11, sawtooth=$21, pulse=$41, noise=$81
-- Voice offsets: voice 1=$D400, voice 2=$D407, voice 3=$D40E
-- Pulse width: $D402-$D403 (12-bit value)
+- ADSR registers: Attack/Decay=$D405, Sustain/Release=$D406
+- Colour RAM at $D800, screen at $0400
+- Border at $D020, background at $D021
 
 ---
 
-### Unit 3: ADSR Envelopes
+### Unit 4: Custom Graphics
 
 **Learning Objectives:**
-- Understand Attack, Decay, Sustain, Release
-- Shape sounds from harsh stabs to soft pads
-- Create distinct timbres for each voice
-- Hear how envelope affects musical expression
+- Design custom characters for the game
+- Switch VIC-II to use custom charset
+- Create note, track, and hit zone graphics
+- Professional visual appearance
 
 **Concepts Introduced:**
-- ADSR register layout (4 bits each)
-- Time values for each stage
-- How sustain level affects volume
-- Why release matters for musical sounds
-
-**Code Written:**
-```
-- Voice 1: fast attack, no decay, full sustain (organ-like)
-- Voice 2: slow attack, medium decay, low sustain (string-like)
-- Voice 3: instant attack, fast decay, no sustain (pluck-like)
-- Play chord, release after 1 second to hear release phase
-```
-
-**What the Learner Sees:**
-Three very different sounding notes despite same waveforms. The pluck fades quickly, the string swells in, the organ sustains. First taste of sound design.
-
-**Technical Details:**
-- Attack/Decay register: $D405 (voice 1), +7 for others
-- Sustain/Release register: $D406 (voice 1), +7 for others
-- Values 0-15 for each parameter
-- Attack 0 = 2ms, Attack 15 = 8 seconds
-
----
-
-### Unit 4: Playing a Scale
-
-**Learning Objectives:**
-- Calculate frequency values for musical notes
-- Build a note table for one octave
-- Play notes in sequence with timing
-- Introduce the concept of a frame-based timer
-
-**Concepts Introduced:**
-- Frequency = (note_value * clock) / 16777216
-- Lookup tables for efficiency
-- Frame counting for timing
-- Raster wait for consistent speed
-
-**Code Written:**
-```
-- Note frequency table (C4 through B4, 12 notes)
-- Play routine: load note, set frequency, gate on
-- Simple delay loop (wait N frames)
-- Scale plays automatically on startup
-```
-
-**What the Learner Sees:**
-A musical scale plays: C-D-E-F-G-A-B-C, one note per beat. First recognisable melody from their code.
-
-**Technical Details:**
-- C4 = $1168 (4456 decimal)
-- Each semitone multiplies by 2^(1/12) ≈ 1.0595
-- 50 frames = 1 second on PAL C64
-- Raster register: $D012
-
----
-
-### Unit 5: Screen Layout
-
-**Learning Objectives:**
-- Clear the screen efficiently
-- Set border and background colours
-- Use PETSCII characters for basic graphics
-- Plan screen layout for the game
-
-**Concepts Introduced:**
-- Screen memory at $0400
-- Colour RAM at $D800
-- Border ($D020) and background ($D021)
-- Screen dimensions: 40x25 characters
-
-**Code Written:**
-```
-- Clear screen routine (fill $0400-$07E7 with spaces)
-- Set all colour RAM to chosen colour
-- Draw three horizontal lines for tracks (rows 8, 12, 16)
-- Draw hit zone column (column 4)
-- Reserve top row for score display
-```
-
-**What the Learner Sees:**
-Three horizontal tracks across the screen with a vertical hit zone on the left. Score area at top. The skeleton of the game screen.
-
-**Layout:**
-```
-SCORE: 000000              HI: 000000
-________________________________________
-        [============================]  <- Track 1
-        |
-        [============================]  <- Track 2
-        |
-        [============================]  <- Track 3
-        |
-        Hit Zone
-________________________________________
-HEALTH: ████████
-```
-
----
-
-### Unit 6: Custom Characters
-
-**Learning Objectives:**
-- Understand character ROM and RAM
-- Design custom characters for notes
-- Copy character set to RAM for modification
-- Switch VIC-II to use custom characters
-
-**Concepts Introduced:**
-- Character memory pointer (VIC $D018)
+- Character ROM and RAM
 - 8 bytes per character definition
-- Designing on 8x8 grid
-- Bank selection basics
+- Character memory pointer ($D018)
+- 8x8 pixel grid design
 
 **Code Written:**
 ```
-- Copy ROM character set to $3000
-- Define note character (filled circle or arrow)
-- Define track characters (horizontal line variants)
+- Copy ROM charset to $3000
+- Define note character (arrow or circle)
+- Define track line characters
 - Define hit zone characters
-- Point VIC to new character set
+- Point VIC to custom charset
 ```
 
 **What the Learner Sees:**
-The same layout as Unit 5, but now with custom graphics. Notes will be distinctive shapes, tracks have custom line graphics, hit zone has a unique marker.
+The game looks polished now. Custom note graphics, clean track lines, distinctive hit zone. It looks like a real game, not placeholder graphics.
 
 **Character Designs:**
 - Note: solid circle or chevron pointing left
@@ -269,61 +217,162 @@ The same layout as Unit 5, but now with custom graphics. Notes will be distincti
 
 ---
 
-### Unit 7: The Game Loop
+### Unit 5: Hit Detection
 
 **Learning Objectives:**
-- Structure code as initialisation + main loop
-- Synchronise to raster for consistent timing
-- Count frames for game speed control
-- Handle clean program exit
+- Detect when a key press matches a note
+- Implement timing windows (Perfect/Good/Miss)
+- Play correct SID note on hit
+- Remove hit notes from play
 
 **Concepts Introduced:**
-- Init-once vs every-frame code
-- Raster synchronisation techniques
-- Frame counter variable
-- Beat timing (frames per beat)
+- Timing window calculation
+- Position-based detection
+- Hit vs miss logic
+- Note consumption (one input per note)
 
 **Code Written:**
 ```
-- init: subroutine for one-time setup
-- main_loop: the repeating game code
-- wait_raster: sync to specific raster line
-- frame_counter: increments each frame
-- beat_counter: triggers every N frames
-- Check for Q key to exit
+- check_hit: find note in hit zone on pressed track
+- Calculate timing accuracy
+- Perfect: ±2 frames from centre
+- Good: ±4 frames
+- Miss: key pressed but no note (or too early/late)
+- Play SID note on successful hit
 ```
 
 **What the Learner Sees:**
-The game screen sits stable with no flickering. A counter (displayed for debugging) increments smoothly. The foundation for all game logic.
+Pressing the right key at the right time removes the note and plays the sound. Wrong timing or wrong track does nothing. The core gameplay loop works.
 
 **Technical Details:**
-- Wait for raster 255 before processing
-- BPM to frames: 120 BPM = 25 frames per beat (PAL)
-- Use zero page for frequently accessed variables
+- Hit zone spans columns 3-5
+- Check note X position against zone
+- Track match required
+- One note consumed per key press
 
 ---
 
-### Unit 8: Note Data Structure
+### Unit 6: Scoring and Feedback
 
 **Learning Objectives:**
-- Design a data format for song notes
-- Understand the trade-offs in data representation
-- Create a simple test song
-- Calculate memory requirements
+- Implement score counter
+- Award points for hit quality
+- Display score on screen
+- Visual feedback for hits/misses
 
 **Concepts Introduced:**
-- Parallel arrays vs structs
-- Beat-relative timing
-- Track assignment (1, 2, or 3)
-- End-of-song marker
+- 16-bit score arithmetic
+- Binary to decimal display
+- Screen flash effects
+- Colour feedback (flash on hit)
 
 **Code Written:**
 ```
-- song_beats: array of beat numbers when notes appear
-- song_tracks: array of which track (1-3)
-- song_notes: array of SID note values
-- song_length: total beats in song
-- Test song: 32 beats, 16 notes, simple pattern
+- score_lo, score_hi: 16-bit counter
+- add_score: Perfect=100, Good=50
+- display_score: show 6 digits
+- Flash border/track on hit quality
+- "PERFECT" or "GOOD" text flash
+```
+
+**What the Learner Sees:**
+Score at top of screen increases on hits. Perfect hits flash brighter than good hits. The game provides satisfying feedback. Players want to hit perfects.
+
+**Technical Details:**
+- Score display at row 0
+- Border colour flash: $D020
+- Use BCD or division for display
+- Max score 65535 (16-bit)
+
+---
+
+### Unit 7: Miss Handling
+
+**Learning Objectives:**
+- Detect notes that pass unhit
+- Provide negative feedback for misses
+- Track miss count
+- Balance punishment vs reward
+
+**Concepts Introduced:**
+- Implicit misses (note left zone)
+- Explicit misses (wrong key)
+- Negative audio feedback
+- Miss visual effect
+
+**Code Written:**
+```
+- Check notes past hit zone (x < 3)
+- Play miss sound (noise burst)
+- Flash track red briefly
+- Increment miss counter
+- Track "fell through" notes
+```
+
+**What the Learner Sees:**
+Notes that scroll past unhit trigger a harsh buzz and red flash. Pressing the wrong key also gives feedback. Mistakes feel like mistakes.
+
+**Technical Details:**
+- Miss sound: noise waveform, fast decay
+- Track flash: red colour briefly
+- Miss counter for health calculation
+
+---
+
+### Unit 8: Health System
+
+**Learning Objectives:**
+- Implement health/performance meter
+- Health increases on hits, decreases on misses
+- Display as bar graph
+- Game ends when health depletes
+
+**Concepts Introduced:**
+- Clamped value (0-64 range)
+- Bar graph with custom characters
+- Game over condition
+- Win/lose stakes
+
+**Code Written:**
+```
+- health: value 0-64
+- modify_health: Perfect+4, Good+2, Miss-8
+- display_health: 8-character bar
+- check_game_over: health==0 ends song
+- Start at 32 (half full)
+```
+
+**What the Learner Sees:**
+Health bar at bottom grows with hits, shrinks with misses. If it empties, the song ends in failure. Stakes are real now - the game can be lost.
+
+**Technical Details:**
+- Custom chars for full/half/empty bar
+- 8 characters × 8 states = 64 levels
+- Game over triggers immediately at 0
+
+---
+
+### Unit 9: Song Data
+
+**Learning Objectives:**
+- Design data format for songs
+- Create first complete song
+- Calculate memory requirements
+- Balance difficulty with musicality
+
+**Concepts Introduced:**
+- Beat/track/note format
+- Song length and structure
+- End-of-song marker
+- Musical composition basics
+
+**Code Written:**
+```
+- Song data structure: beat, track, SID note
+- First song: 64 beats, ~30 notes
+- Musical pattern that sounds good
+- End marker ($FF)
+- Song length constant
 ```
 
 **Data Format:**
@@ -342,273 +391,227 @@ song_data:
 ```
 
 **What the Learner Sees:**
-No visual change yet - data structures are invisible. But the song is defined and ready to drive the game.
+A complete song plays from start to finish. Notes appear on beat, player hits them, song progresses. First real musical experience.
 
 ---
 
-### Unit 9: Spawning Notes
+### Unit 10: Song Playback
 
 **Learning Objectives:**
-- Read song data at the right time
-- Create visual notes on screen
-- Track active notes in memory
-- Limit simultaneous notes for performance
+- Play song from data
+- Spawn notes at correct time
+- Track song position
+- Sync gameplay to music
 
 **Concepts Introduced:**
-- Song playhead (current beat position)
-- Active note array
-- Spawning at right edge of screen
-- Finding free slots in arrays
+- Song playhead (current beat)
+- Note spawning from data
+- Beat-to-screen timing
+- Look-ahead for scrolling
 
 **Code Written:**
 ```
-- song_position: current beat in song
-- active_notes: array of 8 note structures
-- spawn_note: create new note from song data
-- Check song data each beat
-- Place note character at right edge of correct track
+- song_position: current beat
+- Process song data each beat
+- Spawn notes from data
+- Handle multiple notes per beat
+- Track song progress
 ```
 
 **What the Learner Sees:**
-Notes appear at the right edge of the screen on the correct track, synchronised to the beat. They don't move yet - just pop into existence.
+Complete song plays with proper timing. Notes spawn exactly when they should. The rhythm feels right - hit notes to play the tune.
 
 **Technical Details:**
-- Maximum 8 active notes (one per possible screen column in hit zone)
-- Note structure: x_position, track, note_value, active_flag
-- Spawn at x=39 (rightmost column)
+- Look ahead: spawn notes 35 columns before hit zone
+- Multiple notes can spawn on same beat
+- Song playhead increments each beat
 
 ---
 
-### Unit 10: Moving Notes
-
-**Learning Objectives:**
-- Animate notes across the screen
-- Calculate timing so notes hit the zone on beat
-- Remove notes that pass the hit zone
-- Handle smooth visual movement
-
-**Concepts Introduced:**
-- Per-frame position updates
-- Pixels vs characters for movement
-- Character position calculation
-- Off-screen cleanup
-
-**Code Written:**
-```
-- update_notes: move all active notes left
-- Calculate scroll speed from BPM and distance
-- Erase old position, draw new position
-- Deactivate notes that pass x=0
-- Sync so note reaches hit zone on its beat
-```
-
-**What the Learner Sees:**
-Notes scroll smoothly from right to left across their tracks, reaching the hit zone exactly on the beat. The game is starting to look like a rhythm game.
-
-**Technical Details:**
-- Hit zone at column 4
-- Columns to travel: 35
-- At 120 BPM, 25 frames per beat
-- Multiple notes can be on screen simultaneously
-
----
-
-### Unit 11: Keyboard Input
-
-**Learning Objectives:**
-- Read the C64 keyboard matrix
-- Detect specific key presses (Z, X, C)
-- Debounce to avoid repeated triggers
-- Provide visual feedback for input
-
-**Concepts Introduced:**
-- CIA keyboard scanning ($DC00-$DC01)
-- Matrix row and column selection
-- Key state vs key transition
-- Input visualization
-
-**Code Written:**
-```
-- scan_keyboard: read key matrix
-- check_z, check_x, check_c: specific key routines
-- key_state: previous frame's key status
-- key_pressed: newly pressed this frame
-- Flash hit zone row when key pressed
-```
-
-**What the Learner Sees:**
-Pressing Z, X, or C causes the corresponding track's hit zone to flash. The game responds to input. Notes still scroll past without interaction.
-
-**Technical Details:**
-- Z = row 1, col 4
-- X = row 2, col 7
-- C = row 2, col 4
-- Store previous state to detect edges
-
----
-
-### Unit 12: Hit Detection
-
-**Learning Objectives:**
-- Detect when a key press coincides with a note
-- Implement timing windows for accuracy
-- Trigger correct SID note on successful hit
-- Remove hit notes from play
-
-**Concepts Introduced:**
-- Timing windows (frames of tolerance)
-- Perfect vs Good vs Miss thresholds
-- Playing the correct note on hit
-- Note consumption (one input, one note)
-
-**Code Written:**
-```
-- check_hits: run when key pressed
-- Find notes in hit zone on that track
-- Calculate timing difference from perfect
-- If within window: play note, remove from screen
-- If outside window: it's a miss
-```
-
-**What the Learner Sees:**
-Pressing the right key when a note is in the hit zone plays the note and removes it from screen. Wrong timing or wrong track does nothing (yet). The core gameplay works.
-
-**Technical Details:**
-- Perfect: ±2 frames
-- Good: ±4 frames
-- Miss: note still there, key wasted
-- Only one note consumed per key press
-
----
-
-### Unit 13: Scoring Basics
-
-**Learning Objectives:**
-- Implement a score counter
-- Award points based on hit quality
-- Display score on screen efficiently
-- Handle large numbers (16-bit)
-
-**Concepts Introduced:**
-- 16-bit arithmetic on 8-bit CPU
-- Binary to decimal conversion
-- Efficient screen updates (only changed digits)
-- Score constants
-
-**Code Written:**
-```
-- score_lo, score_hi: 16-bit score
-- add_score: add N points to score
-- display_score: convert to decimal, show on screen
-- Point values: Perfect=100, Good=50
-- Update display only when score changes
-```
-
-**What the Learner Sees:**
-Score display at top of screen increases when notes are hit. Perfect hits score more than good hits. The numbers feel satisfying.
-
-**Technical Details:**
-- Max score: 65535 (enough for one song)
-- Display as 6 digits with leading zeros
-- Use BCD mode or division for conversion
-
----
-
-### Unit 14: Miss Handling
-
-**Learning Objectives:**
-- Detect notes that weren't hit in time
-- Provide feedback for misses
-- Track miss count
-- Play dissonant sound for misses
-
-**Concepts Introduced:**
-- Implicit misses (note left hit zone)
-- Explicit misses (key pressed, nothing there)
-- Negative feedback design
-- Dissonance in SID
-
-**Code Written:**
-```
-- check_missed_notes: notes past hit zone
-- mark_miss: increment miss counter, play sound
-- miss_sound: brief noise burst or wrong note
-- Flash track red on miss
-- Display miss count (debug, remove later)
-```
-
-**What the Learner Sees:**
-Notes that scroll past unhit cause a harsh buzz and the track flashes briefly. Pressing a key with no note also triggers feedback. The game now punishes mistakes.
-
-**Technical Details:**
-- Miss sound: noise waveform, fast decay
-- Track flash: change colour RAM briefly
-- Miss counter separate from score
-
----
-
-### Unit 15: Health Meter
-
-**Learning Objectives:**
-- Implement a performance meter
-- Increase health on hits, decrease on misses
-- Display health as a bar graph
-- End song when health depletes
-
-**Concepts Introduced:**
-- Clamped values (min/max bounds)
-- Bar graph display with custom characters
-- Game over state
-- Health as "second chance" pool
-
-**Code Written:**
-```
-- health: value 0-64
-- modify_health: add or subtract, clamp
-- display_health: show as 8-character bar
-- check_game_over: health==0 ends song
-- Custom characters for full/partial/empty bar segments
-```
-
-**What the Learner Sees:**
-Health bar at bottom of screen grows with hits, shrinks with misses. If it empties completely, the song ends in failure. Stakes are real now.
-
-**Technical Details:**
-- Start at 32/64 (half full)
-- Perfect: +4, Good: +2, Miss: -8
-- Display: 8 characters × 8 pixels = 64 levels
-- Game over triggers immediately when health hits 0
-
----
-
-### Unit 16: Complete Playthrough
+### Unit 11: Song End and Results
 
 **Learning Objectives:**
 - Detect end of song
 - Display results screen
-- Calculate and show statistics
-- Allow replay or return to start
+- Show final score and statistics
+- Allow replay
 
 **Concepts Introduced:**
-- Game states (playing, results, menu)
 - End-of-song detection
-- Statistics calculation
-- Simple menu navigation
+- Results calculation (percentage)
+- State transition
+- Replay logic
 
 **Code Written:**
 ```
-- check_song_end: all beats processed, all notes resolved
-- show_results: clear screen, display stats
-- Results: score, perfects, goods, misses, max combo
-- Wait for key press
-- Return to song start for replay
+- Detect song end (all beats processed, all notes resolved)
+- Clear screen for results
+- Display: score, perfects, goods, misses
+- Calculate and show percentage
+- Wait for key, restart song
 ```
 
 **What the Learner Sees:**
-After the song ends (success or failure), a results screen shows score and breakdown. Press a key to play again. A complete game loop.
+Song ends, results appear showing performance breakdown. Press key to play again. Complete game loop works.
+
+**Technical Details:**
+- Track perfects/goods/misses separately
+- Percentage = (perfects + goods) / total * 100
+- Results: SCORE, PERFECTS, GOODS, MISSES, ACCURACY
+
+---
+
+### Unit 12: Combo System
+
+**Learning Objectives:**
+- Track consecutive hits
+- Implement score multiplier
+- Break combo on miss
+- Display combo prominently
+
+**Concepts Introduced:**
+- Combo counter
+- Multiplier tiers
+- Combo break feedback
+- Risk/reward design
+
+**Code Written:**
+```
+- combo: consecutive hits
+- max_combo: best this song
+- multiplier: 1x at 0, 2x at 10, 3x at 25, 4x at 50
+- Score multiplied by current multiplier
+- Combo resets to 0 on any miss
+```
+
+**What the Learner Sees:**
+Combo counter climbs with each hit. Score multiplier increases at thresholds. Missing breaks the combo dramatically. Consistency is rewarded.
+
+**Multiplier Tiers:**
+- 0-9 hits: 1x
+- 10-24 hits: 2x
+- 25-49 hits: 3x
+- 50+ hits: 4x
+
+---
+
+### Unit 13: Title Screen
+
+**Learning Objectives:**
+- Create title screen state
+- Display game title
+- Start game on key press
+- Simple state machine
+
+**Concepts Introduced:**
+- Game states (TITLE, PLAYING, RESULTS)
+- State machine pattern
+- State dispatch
+- Title screen design
+
+**Code Written:**
+```
+- game_state: TITLE=0, PLAYING=1, RESULTS=2
+- Title screen layout with "SID SYMPHONY"
+- "PRESS FIRE TO START"
+- Fire key → transition to PLAYING
+- Clean state initialisation
+```
+
+**What the Learner Sees:**
+Game starts at title screen with logo. Press fire to start playing. After results, press fire to return to title. Complete game flow.
+
+**Technical Details:**
+- State values: TITLE=0, PLAYING=1, RESULTS=2
+- Dispatch: compare state, jump to handler
+- Clean reset when entering PLAYING
+
+---
+
+### Unit 14: Game Over Screen
+
+**Learning Objectives:**
+- Handle health-depleted game over
+- Different from successful completion
+- Restart or return to title
+- Distinct feedback for failure
+
+**Concepts Introduced:**
+- Win vs lose states
+- Game over presentation
+- Restart options
+- Failure feedback
+
+**Code Written:**
+```
+- game_over state when health==0
+- Display "GAME OVER"
+- Show score achieved
+- Option to retry or return to title
+- Distinct from results screen
+```
+
+**What the Learner Sees:**
+Health depletes, "GAME OVER" appears with sad feedback. Score shown but marked as failed. Press to retry or return to title.
+
+---
+
+### Unit 15: Sound Polish
+
+**Learning Objectives:**
+- Distinct sounds for hit qualities
+- Miss sound design
+- Menu sounds
+- Audio feedback completeness
+
+**Concepts Introduced:**
+- Sound design vocabulary
+- Positive vs negative sounds
+- UI sounds
+- Audio polish
+
+**Code Written:**
+```
+- perfect_sound: bright, high, satisfying
+- good_sound: positive but lesser
+- miss_sound: harsh buzz
+- menu_sounds: select, confirm
+- All events have audio feedback
+```
+
+**What the Learner Sees:**
+Every action has appropriate sound. Perfect hits sound amazing. Misses sound harsh. Menu navigation clicks. Complete audio experience.
+
+---
+
+### Unit 16: Phase 1 Complete
+
+**Learning Objectives:**
+- Polish complete experience
+- Fix remaining issues
+- Playtest and tune
+- Celebrate completion
+
+**Concepts Introduced:**
+- Integration testing
+- Balance tuning
+- Polish pass
+- Milestone celebration
+
+**Code Written:**
+```
+- Final bug fixes
+- Difficulty balance (hit windows, health values)
+- Visual consistency check
+- Timing verification
+- First song fully tuned
+```
+
+**What the Learner Sees:**
+Complete, polished rhythm game. Title screen, gameplay with scoring and health, results or game over, restart loop. One song, fully playable. Hand it to a friend and watch them play SID Symphony.
 
 **Phase 1 Checkpoint:**
-The learner has built a working rhythm game. One song, basic graphics, functional scoring, health system, win/lose conditions. It's simple but complete. Everything from here builds on this foundation.
+The learner has built a working rhythm game. They understand SID sound, screen graphics, keyboard input, and game loop structure. The game is playable and fun. Everything from here builds on this foundation.
 
 ---
 
@@ -616,7 +619,7 @@ The learner has built a working rhythm game. One song, basic graphics, functiona
 
 *Goal: Multiple songs, difficulty levels, game modes. A game with real content and variety.*
 
-*By the end of this phase, the game has 5 songs, 3 difficulty levels, career mode, practice mode, endless mode, and a combo system. It's a game people would actually want to play multiple times.*
+*By the end of this phase, the game has 5 songs, 3 difficulty levels, career mode, practice mode, endless mode, and advanced combo system. It's a game people would actually want to play multiple times.*
 
 ---
 
@@ -768,41 +771,7 @@ Song 3 scrolls faster, demands quicker reactions. The game tests speed now, not 
 
 ---
 
-### Unit 22: Combo System
-
-**Learning Objectives:**
-- Track consecutive successful hits
-- Implement score multiplier
-- Break combo on any miss
-- Display combo prominently
-
-**Concepts Introduced:**
-- Combo counter variable
-- Multiplier tiers (10, 25, 50 hits)
-- Combo break feedback
-- Risk/reward design
-
-**Code Written:**
-```
-- combo: current consecutive hits
-- max_combo: best combo this song
-- multiplier: 1x, 2x, 3x, 4x based on combo
-- Multiply score by multiplier
-- Reset combo to 0 on miss
-```
-
-**What the Learner Sees:**
-A combo counter appears, climbing with each hit. Score multiplier increases at thresholds. Missing breaks the combo and feels devastating. High scores now require consistency.
-
-**Multiplier Tiers:**
-- 0-9 hits: 1x
-- 10-24 hits: 2x
-- 25-49 hits: 3x
-- 50+ hits: 4x
-
----
-
-### Unit 23: Combo Visuals
+### Unit 22: Combo Visuals
 
 **Learning Objectives:**
 - Provide visual feedback for combo status
@@ -830,7 +799,7 @@ As combo builds, the border shifts through colours, numbers grow large, sprites 
 
 ---
 
-### Unit 24: Practice Mode
+### Unit 23: Practice Mode
 
 **Learning Objectives:**
 - Implement alternate game mode
@@ -858,7 +827,7 @@ Practice mode in menu. Songs play slower and don't end on empty health. Learners
 
 ---
 
-### Unit 25: Song 4 - Syncopation
+### Unit 24: Song 4 - Syncopation
 
 **Learning Objectives:**
 - Compose with off-beat emphasis
@@ -885,7 +854,7 @@ Song 4 feels different - notes land between expected beats. The visual beat mark
 
 ---
 
-### Unit 26: Career Mode Structure
+### Unit 25: Career Mode Structure
 
 **Learning Objectives:**
 - Implement progression system
@@ -913,7 +882,7 @@ Career mode shows songs 2-5 locked initially. Completing Song 1 unlocks Song 2. 
 
 ---
 
-### Unit 27: Song 5 - The Challenge
+### Unit 26: Song 5 - The Challenge
 
 **Learning Objectives:**
 - Compose a demanding finale song
@@ -940,7 +909,7 @@ Song 5 is clearly the boss. Longer, denser, more demanding. Completing it on Har
 
 ---
 
-### Unit 28: Joystick Support
+### Unit 27: Joystick Support
 
 **Learning Objectives:**
 - Read joystick input
@@ -973,7 +942,7 @@ Options menu includes control scheme. Joystick works as alternative to keyboard.
 
 ---
 
-### Unit 29: Endless Mode - Procedural Generation
+### Unit 28: Endless Mode - Procedural Generation
 
 **Learning Objectives:**
 - Generate note patterns algorithmically
@@ -1001,7 +970,7 @@ Endless mode generates notes forever. Patterns feel musical (mostly on beats) bu
 
 ---
 
-### Unit 30: Endless Mode - Difficulty Curve
+### Unit 29: Endless Mode - Difficulty Curve
 
 **Learning Objectives:**
 - Implement dynamic difficulty
@@ -1029,7 +998,7 @@ Endless mode starts easy, gets progressively harder. Level number tracks progres
 
 ---
 
-### Unit 31: Statistics Tracking
+### Unit 30: Statistics Tracking
 
 **Learning Objectives:**
 - Track persistent statistics
@@ -1057,7 +1026,35 @@ Statistics screen shows lifetime totals: notes hit, perfects, best combo, songs 
 
 ---
 
-### Unit 32: Content Complete Review
+### Unit 31: ADSR Sound Design
+
+**Learning Objectives:**
+- Refine sound design using ADSR
+- Create distinct sounds per track
+- Improve miss feedback
+- Professional audio polish
+
+**Concepts Introduced:**
+- ADSR deep dive
+- Track-specific timbres
+- Layered sound design
+- Audio polish pass
+
+**Code Written:**
+```
+- Track 1: bright, percussive (fast attack/decay)
+- Track 2: warm, sustained (slow attack)
+- Track 3: bass, punchy (medium attack, low sustain)
+- Miss: harsh noise with fast decay
+- All sounds refined for "feel"
+```
+
+**What the Learner Sees:**
+The three tracks sound distinctly different. Hitting notes feels more satisfying. The SID is being used more expressively.
+
+---
+
+### Unit 32: Phase 2 Complete
 
 **Learning Objectives:**
 - Playtest complete content
@@ -2059,4 +2056,5 @@ By completing all 64 units, learners have demonstrated mastery of:
 
 ## Version History
 
-- **1.0 (2025-01-07):** Initial 64-unit outline
+- **2.0 (2026-01-12):** Complete restructure following "scaffold first, explain later" approach. Interactive from Unit 1. Visual+audio output from first moment. Theory (Unit 3) follows experience.
+- **1.0 (2025-01-07):** Initial 64-unit outline (theory-first approach, blank screens in Units 1-4, interactivity at Unit 11).

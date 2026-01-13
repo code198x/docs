@@ -1,0 +1,102 @@
+---
+title: "Detecting Game End"
+description: "Know when the board is full. Game state tracking and the simplest state machine: playing versus game over."
+pubDate: 2026-01-09
+game: 1
+gameName: "Ink War"
+unit: 11
+totalUnits: 64
+system: "Sinclair ZX Spectrum"
+tags: ["assembly", "z80", "game-state", "state-machine", "end-condition"]
+prevLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-10"
+nextLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-12"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+## What You're Building
+
+Players can claim cells, see scores, and take turns. But when does the game end? Currently, it doesn't — players could keep trying to claim already-claimed cells forever. In this unit, we add end detection.
+
+By the end of this unit, you'll have:
+
+- A game state variable tracking whether we're playing or finished
+- Detection for when all 64 cells are claimed
+- A main loop that stops processing input when the game ends
+- Your first simple state machine
+
+![Unit 11 Screenshot](/images/sinclair-zx-spectrum/game-01-ink-war/unit-11/screenshot.png)
+
+*The game looks the same — the difference is in the ending. Fill all 64 cells and the game stops.*
+
+## Game States
+
+Until now, our main loop has been an infinite loop processing input forever. Real games need states — the game is either being played, or it's over:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/01-game-state-constants.asm" />
+
+This is the simplest possible state machine: two states, one transition (playing → game over).
+
+<InlineNote>
+State machines are fundamental to game programming. Even this two-state version separates "what the game is doing" from "how it responds to input."
+</InlineNote>
+
+## Checking for Game End
+
+After each successful claim, we count empty cells. If none remain, the game is over:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/02-check-game-end.asm" />
+
+We iterate through all 64 cells, incrementing D for each empty one. If D is zero at the end, all cells are filled. We also clear the turn indicator since there's no "next turn" when the game ends.
+
+## Modified Main Loop
+
+The main loop now checks game state before processing input:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/03-main-loop.asm" />
+
+When `game_state` is `STATE_GAME_OVER`, we skip input processing entirely. The game simply halts in a loop. (The next unit will add winner display and make this more interesting.)
+
+## When to Check
+
+We call `check_game_end` after each successful claim, before switching players:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/snippets/04-valid-move-updated.asm" />
+
+If the game ends, we skip the player switch — there's no need to indicate whose turn it is when nobody can move.
+
+## Build It. Run It.
+
+```bash
+pasmonext --sna inkwar.asm inkwar.sna
+```
+
+Run in your emulator:
+
+1. Play normally — claim cells, watch scores change
+2. Fill the entire board (all 64 cells)
+3. After the last cell is claimed, the turn indicator disappears
+4. Input no longer works — no cursor movement, no claiming
+5. The game has ended
+
+<InlineNote>
+You'll need patience (or a faster emulator) to fill all 64 cells manually. The test is worth it — seeing the game properly stop is satisfying.
+</InlineNote>
+
+## What You've Learnt
+
+- **Game states**: Variables that track what the game is doing
+- **State machines**: Different behaviour based on current state
+- **End condition**: Checking when gameplay should stop
+- **Clean transitions**: Stopping input, clearing indicators
+- **Separation of concerns**: State check separate from input handling
+
+## The Complete Code
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-11/inkwar.asm" />
+
+## Next Unit
+
+The game ends when the board is full. But who won? In Unit 12, we'll compare final scores and determine the winner. Red versus blue — may the best player win.

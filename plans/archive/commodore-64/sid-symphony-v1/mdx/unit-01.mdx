@@ -1,0 +1,133 @@
+---
+title: "First Sound"
+description: "Your first contact with the SID chip. Write to memory, hear a tone. The C64 speaks."
+pubDate: 2026-01-08
+game: 1
+gameName: "SID Symphony"
+unit: 1
+totalUnits: 64
+system: "Commodore 64"
+tags: ["assembly", "6510", "sid", "memory-mapped-io"]
+nextLesson: "/commodore-64/assembly/game-01-sid-symphony/unit-02"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+*Need to set up your tools first? See [Getting Started](/commodore-64/getting-started).*
+
+## What You're Building
+
+No graphics. No input. Just sound.
+
+By the end of this unit, you'll have:
+
+- A working assembly program that runs on the C64
+- Your first contact with the SID chip
+- A continuous tone playing through the speaker
+
+It's not much to look at — a blank screen. But *listen*. That tone is yours. You made the C64 speak.
+
+## The BASIC Stub
+
+Every C64 program that loads with `LOAD"*",8,1` and runs with `RUN` needs a BASIC stub. This tiny fake BASIC program tells the C64 where to find your machine code:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-01/snippets/01-basic-stub.asm" />
+
+The `* = $0801` tells the assembler to put this code at address $0801, where BASIC programs live. The stub creates a single BASIC line: `10 SYS 2064`. When you type RUN, the C64 executes this line, which jumps to address 2064 ($0810) — where your real code begins.
+
+## Memory-Mapped I/O
+
+Here's the key insight that makes the C64 tick: **hardware is controlled through memory addresses**.
+
+Want to change the border colour? Write to address $D020.
+Want to make sound? Write to addresses starting at $D400.
+
+The CPU doesn't know or care that these addresses connect to hardware. It just reads and writes bytes. The magic happens in the chips monitoring those memory locations.
+
+This is called **memory-mapped I/O**, and it's how all C64 programming works.
+
+## The SID Chip
+
+The SID (Sound Interface Device) is the C64's legendary sound chip. It lives at addresses $D400 through $D41C — 29 bytes that control three independent voices, each capable of producing different waveforms.
+
+For now, we only need voice 1:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-01/snippets/02-sid-registers.asm" />
+
+Each voice has seven registers. We'll explore them all, but today we focus on making *any* sound at all.
+
+## Setting the Frequency
+
+Sound is vibration. The SID creates vibration by oscillating between high and low values at a specific rate — the frequency. Higher frequency means higher pitch.
+
+The SID's frequency registers take a 16-bit value, split across two 8-bit registers:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-01/snippets/03-set-frequency.asm" />
+
+The value $1168 produces middle C (approximately 262 Hz). We'll build a proper note table in Unit 4.
+
+<InlineNote>
+Why two registers? The 6510 is an 8-bit CPU — it can only work with one byte at a time. Any value larger than 255 must be split across multiple bytes. You'll see this pattern constantly.
+</InlineNote>
+
+## The ADSR Envelope
+
+A tone that starts instantly and stops instantly sounds harsh and artificial. Real sounds have shape — they swell, sustain, and fade.
+
+The SID shapes sounds using four parameters: **Attack**, **Decay**, **Sustain**, and **Release** (ADSR):
+
+- **Attack**: How quickly the sound reaches full volume
+- **Decay**: How quickly it drops to the sustain level
+- **Sustain**: The volume while the note is held
+- **Release**: How quickly it fades after the note ends
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-01/snippets/04-set-envelope.asm" />
+
+For now, we use instant attack ($0), no decay ($0), full sustain ($F), and instant release ($0). This creates a plain, sustained tone — perfect for testing.
+
+## Opening the Gate
+
+You've set the frequency. You've set the envelope. But the SID is still silent. Why?
+
+The SID has a **gate**. Think of it like a musician's breath — the sound only plays while the gate is open. The gate is bit 0 of the control register.
+
+The control register also selects which waveform to use. We'll explore waveforms in Unit 2, but for now we use the **pulse wave** (bit 6):
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-01/snippets/05-gate-on.asm" />
+
+The moment you write this value, the SID springs to life.
+
+## Build It. Run It.
+
+Save this code as `symphony.asm` and assemble it:
+
+```bash
+acme -f cbm -o symphony.prg symphony.asm
+x64sc symphony.prg
+```
+
+You should see a black screen. More importantly, you should *hear* a continuous tone.
+
+<InlineNote>
+If you don't hear anything, check your emulator's sound settings. In VICE, go to Settings → Sound settings and ensure sound is enabled.
+</InlineNote>
+
+## What You've Learnt
+
+- **Memory-mapped I/O**: Hardware is controlled by writing to specific addresses
+- **The SID chip**: Lives at $D400, has three voices, each with its own registers
+- **Frequency**: A 16-bit value split across two registers
+- **ADSR envelope**: Shapes how sounds evolve over time
+- **The gate bit**: Controls when sound plays
+
+## The Complete Code
+
+Here's the complete `symphony.asm`:
+
+<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-01/symphony.asm" />
+
+## Next Unit
+
+One voice, one note, one tone. But the SID has three voices, each capable of different waveforms. In Unit 2, we'll explore all four waveforms and make all three voices sing together — your first chord.

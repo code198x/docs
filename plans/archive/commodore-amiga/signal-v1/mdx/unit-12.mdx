@@ -1,0 +1,167 @@
+---
+title: "Title Screen"
+description: "Add a title screen with game logo and press fire to start functionality."
+pubDate: 2026-01-04
+game: 1
+gameName: "Hop"
+unit: 12
+totalUnits: 16
+system: "Commodore Amiga"
+tags: ["assembly", "68000", "title", "game-flow"]
+nextLesson: "/commodore-amiga/assembly/game-01-signal/unit-13"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+*Need to catch up? Check out [Unit 11: Sound Effects](/commodore-amiga/game-01-signal/unit-11).*
+
+## What You're Building
+
+Every game needs a title screen. It's the player's first impression—a chance to set the mood before gameplay begins. This unit adds:
+
+- A game title displayed at the centre of the screen
+- "PRESS FIRE TO START" prompt with blinking animation
+- Clean transition from title screen to gameplay
+- Game mode state machine to manage different screens
+
+When you're done, launching the game will show the title screen. Press fire to begin playing. After game over, you'll return to the title screen to start again.
+
+## Game Modes vs Game States
+
+We already have game states (ALIVE, DYING, DEAD, GAMEOVER) that control what happens during gameplay. Now we need a higher-level concept: **game modes** that determine which screen we're showing.
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-12/snippets/01-game-modes-vs-game-states.asm" lang="asm" />
+
+The game mode determines whether we run the title screen logic, the gameplay logic, or the game over screen logic. Within MODE_PLAYING, we still use our existing game states to track whether the frog is alive, dying, or dead.
+
+This two-level approach keeps things organised:
+
+```
+Game Mode: MODE_TITLE
+    └── Show title, wait for fire
+
+Game Mode: MODE_PLAYING
+    └── Game State: STATE_ALIVE (normal play)
+    └── Game State: STATE_DYING (death animation)
+    └── Game State: STATE_DEAD (respawn delay)
+    └── (transitions to MODE_GAMEOVER when lives = 0)
+
+Game Mode: MODE_GAMEOVER
+    └── Show game over, wait for fire
+    └── (transitions back to MODE_TITLE)
+```
+
+## Drawing Text to the Screen
+
+We already have digit rendering for the score. For the title screen, we need to draw alphabetic text. We'll extend our font to include letters A-Z.
+
+Each letter is 8x8 pixels, just like our digits. We store them as 8 bytes of bitmap data:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-12/snippets/02-drawing-text-to-the-screen.asm" lang="asm" />
+
+For the title "HOP", we only need three letters. But let's include the full alphabet so we can display other messages too:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-12/snippets/03-drawing-text-to-the-screen.asm" lang="asm" />
+
+## Blinking Text Effect
+
+A static "PRESS FIRE" message is boring. Making it blink draws the player's attention and signals that input is expected.
+
+We use a simple frame counter and toggle visibility every 30 frames (half a second at 50fps):
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-12/snippets/04-blinking-text-effect.asm" lang="asm" />
+
+When drawing the prompt, we check `blink_visible` and skip the draw if it's zero.
+
+## The Title Screen Loop
+
+The title screen has its own update routine. It's simpler than gameplay—we just:
+
+1. Update the blink timer
+2. Draw the title text
+3. Draw the blinking prompt (if visible)
+4. Check for fire button
+5. Start the game when fire is pressed
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-12/snippets/05-the-title-screen-loop.asm" lang="asm" />
+
+## Starting a New Game
+
+When transitioning from the title screen to gameplay, we need to reset everything:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-12/snippets/06-starting-a-new-game.asm" lang="asm" />
+
+The `fire_delay` prevents the fire button press that started the game from immediately triggering a hop on the first frame.
+
+## Modifying the Main Loop
+
+Our main loop now branches based on game mode:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-12/snippets/07-modifying-the-main-loop.asm" lang="asm" />
+
+## Text Rendering System
+
+Let's implement the text drawing routine. It's similar to our number rendering but uses letters instead of digits:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-12/snippets/08-text-rendering-system.asm" lang="asm" />
+
+<InlineNote>
+ASCII codes make text handling straightforward. 'A' is 65, 'Z' is 90. Subtract 65 to get font indices 0-25. The same technique works for digits: '0' is 48, so subtract 48 for indices 0-9.
+</InlineNote>
+
+## The Game Over Transition
+
+When lives reach zero during gameplay, we transition to MODE_GAMEOVER:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-12/snippets/09-the-game-over-transition.asm" lang="asm" />
+
+## Build It. Run It.
+
+Assemble and run:
+
+```bash
+vasmm68k_mot -Fhunkexe -o hop -nosym hop.asm
+```
+
+Run in an emulator. You should see:
+
+1. Title screen with "HOP" displayed
+2. "PRESS FIRE" blinking below
+3. Press fire to start playing
+4. After game over, you return to a game over screen
+5. Press fire again to return to title
+
+The game now has proper flow—title screen, gameplay, game over, and back to title.
+
+## What You've Learnt
+
+- **Game modes**: High-level state machine for different screens
+- **Text rendering**: Drawing strings character by character
+- **ASCII conversion**: Using character codes to index font data
+- **Blink animation**: Frame counter toggling visibility
+- **Game flow**: Clean transitions between title, play, and game over
+- **Fire delay**: Preventing input from triggering across screen transitions
+
+## The Complete Code
+
+Here's the complete `hop.asm` with title screen support:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-12/hop.asm" lang="asm" />
+
+## Recap / Sanity Check
+
+Before moving on, verify:
+
+- [ ] Game starts on title screen showing "HOP"
+- [ ] "PRESS FIRE" blinks on and off
+- [ ] Fire button starts the game
+- [ ] Game over returns to a game over screen
+- [ ] Fire from game over returns to title
+- [ ] Score displays correctly on game over screen
+
+## Next Unit
+
+[Unit 13: High Score Table](/commodore-amiga/game-01-signal/unit-13) - Add persistent high scores that survive game resets.

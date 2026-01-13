@@ -1,0 +1,110 @@
+---
+title: "Results Screen"
+description: "Create a dedicated results screen with final scores, win margin, and proper presentation. The end of each game deserves celebration."
+pubDate: 2026-01-09
+game: 1
+gameName: "Ink War"
+unit: 14
+totalUnits: 64
+system: "Sinclair ZX Spectrum"
+tags: ["assembly", "z80", "results", "display", "polish"]
+prevLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-13"
+nextLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-15"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+## What You're Building
+
+In Unit 12, we announced the winner over the game board. It worked, but felt rushed — the scores were still there, the board still visible. A proper results screen clears everything away and celebrates the victory.
+
+By the end of this unit, you'll have:
+
+- A dedicated results screen (not overlaid on gameplay)
+- Final scores displayed prominently
+- Win margin calculation and display
+- Special handling for draws
+- A polished end-of-game experience
+
+![Unit 14 Screenshot](/images/sinclair-zx-spectrum/game-01-ink-war/unit-14/screenshot.png)
+
+*Title screen — play a full game to see the new results screen.*
+
+## Results Screen Layout
+
+The results screen needs clear hierarchy:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/01-results-constants.asm" />
+
+The winner announcement sits at the top where eyes naturally go first. Scores come next — both players see their final territory. The win margin tells the story: was it a close battle or a decisive victory?
+
+<InlineNote>
+"Won by 6 cells" is more meaningful than just showing "35 vs 29". It tells players how close the game was.
+</InlineNote>
+
+## Separating Calculation from Display
+
+We split winner determination into two parts: calculating the result, then displaying it:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/02-calculate-results.asm" />
+
+The calculation determines the winner and computes the margin. The Z80's `SUB` instruction gives us the difference directly. We store both values so the display routines can use them.
+
+## Drawing the Results Screen
+
+The main drawing routine calls each component:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/03-draw-results.asm" />
+
+Each element gets its own colour:
+- Winner message in the player's colour (red or cyan)
+- Draw message in white
+- Scores in player colours
+- Margin and prompt in white/yellow
+
+## The Win Margin Message
+
+The margin message adapts to the result:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/snippets/04-margin-message.asm" />
+
+A win shows "WON BY X CELLS". A draw gets special treatment: "TIED AT 32 EACH!" — more interesting than just "margin = 0".
+
+<InlineNote>
+The draw message is longer, so we adjust the column position (`RESULT_MARGIN_COL - 1`) to keep it centred.
+</InlineNote>
+
+## Build It. Run It.
+
+```bash
+pasmonext --sna inkwar.asm inkwar.sna
+```
+
+Run in your emulator:
+
+1. Press any key to start
+2. Play a full game — claim all 64 cells
+3. When the last cell is claimed, watch for the results screen
+4. You'll see: winner announcement, final scores, and win margin
+5. The border flashes in the winner's colour
+6. Press any key to return to title
+
+Try for a draw! If you can manage exactly 32 cells each, you'll see the special "TIED AT 32 EACH!" message.
+
+## What You've Learnt
+
+- **Dedicated screens**: Clearing away gameplay for clean presentation
+- **Result calculation**: Computing winner and margin separately
+- **Display hierarchy**: Most important information first
+- **Special cases**: Different handling for draws
+- **Polish**: Small touches that make games feel finished
+
+## The Complete Code
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-14/inkwar.asm" />
+
+## Next Unit
+
+The game is almost complete. One final touch remains: making it obvious that players can start a new game. In Unit 15, we'll add visual feedback encouraging players to press a key, ensuring no one sits at the results screen wondering what to do next.

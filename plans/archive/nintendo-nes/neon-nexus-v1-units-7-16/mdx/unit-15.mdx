@@ -1,0 +1,141 @@
+---
+title: "Title Screen and Game States"
+description: "Add proper game flow — title screen, gameplay, and game over."
+pubDate: 2026-01-10
+game: 1
+gameName: "Neon Nexus"
+unit: 15
+totalUnits: 64
+system: "Nintendo Entertainment System"
+tags: ["assembly", "6502", "game-state", "screens"]
+prevLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-14"
+nextLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-16"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+## What You're Building
+
+Right now the game dumps you straight into gameplay. Real games have flow — title screen, gameplay, game over, restart.
+
+By the end of this unit, you'll have:
+
+- A title screen with "NEON NEXUS" and "PRESS START"
+- Game states: title, playing, game over
+- A state machine that manages transitions
+- Game over screen showing final score
+- Press START to restart
+
+The game finally feels like a real game.
+
+## Game States
+
+Define the states our game can be in:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-15/snippets/01-game-states.asm" />
+
+Three states, simple and clear. The `screen_drawn` flag prevents redrawing every frame — we only draw a screen once when entering a state.
+
+## The State Machine
+
+In the main loop, branch based on current state:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-15/snippets/02-state-machine.asm" />
+
+Each state handler does its own thing, then jumps back to `main_loop`. This pattern keeps code organised and makes adding new states easy.
+
+## Title State Handler
+
+Show the title screen, wait for START:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-15/snippets/03-title-state.asm" />
+
+When transitioning, we:
+1. Call `start_game` to reset all variables
+2. Set the new state
+3. Clear `screen_drawn` so the new screen gets drawn
+
+## Drawing the Title Screen
+
+Write text to the nametable:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-15/snippets/04-draw-title.asm" />
+
+We hide sprites (no gameplay on title), clear the screen, then write text at specific positions. The PPU address formula: row × 32 + column, plus base address $2000.
+
+## Game Over Transition
+
+When lives reach zero, switch states:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-15/snippets/05-game-over-transition.asm" />
+
+The state change happens in `lose_life`. The playing state detects this and clears `screen_drawn` before looping.
+
+## The Complete Code
+
+Here's our program with game states:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-15/nexus.asm" />
+
+## Build It. Run It.
+
+```bash
+ca65 nexus.asm -o nexus.o
+ld65 -C nes.cfg nexus.o -o nexus.nes
+fceux nexus.nes
+```
+
+You'll see the title screen:
+
+![Title screen](/images/nintendo-entertainment-system/game-01-neon-nexus/unit-15/screenshot.png)
+
+Press START to play. When lives run out, see game over with your score. Press START to play again.
+
+## The State Machine Pattern
+
+This pattern appears in virtually every game:
+
+```
+        ┌──────────┐
+        │  TITLE   │
+        └────┬─────┘
+             │ START
+        ┌────▼─────┐
+   ┌───►│ PLAYING  │
+   │    └────┬─────┘
+   │         │ lives = 0
+   │    ┌────▼─────┐
+   └────┤ GAMEOVER │
+  START └──────────┘
+```
+
+Each state is self-contained. Transitions are explicit. Adding pause, high scores, or other screens just means adding new states and transitions.
+
+## Screen Drawing Optimisation
+
+Notice how we only draw screens when `screen_drawn` is false:
+
+```asm
+title_state:
+    lda screen_drawn
+    bne @check_start        ; Already drawn, skip
+    jsr draw_title_screen
+    lda #1
+    sta screen_drawn
+```
+
+Without this, we'd redraw every frame — wasteful and potentially causing visual glitches. Draw once, then just handle input.
+
+## What You've Learnt
+
+- **Game states**: Enum-like constants for different modes
+- **State machine**: Main loop branches based on state
+- **Screen management**: Draw once, track with flag
+- **State transitions**: Change state + clear screen flag
+- **Nametable text**: Writing letters at specific positions
+- **Game flow**: Title → playing → game over → restart
+
+## Next Unit
+
+The game is feature-complete. In Unit 16, we'll polish it — refining details to make the final product shine.

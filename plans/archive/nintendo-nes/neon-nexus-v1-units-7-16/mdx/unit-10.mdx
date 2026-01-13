@@ -1,0 +1,112 @@
+---
+title: "Collectibles"
+description: "Add items to collect — give the player a reason to keep playing."
+pubDate: 2026-01-10
+game: 1
+gameName: "Neon Nexus"
+unit: 10
+totalUnits: 64
+system: "Nintendo Entertainment System"
+tags: ["assembly", "6502", "collision", "scoring"]
+prevLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-09"
+nextLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-11"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+## What You're Building
+
+The game has danger. Now it needs reward.
+
+By the end of this unit, you'll have:
+
+- A collectible item sprite
+- Item collision detection
+- A score counter
+- Pseudo-random item respawning
+- The core gameplay loop complete
+
+Dodge enemies, collect items, score points.
+
+## The Item Sprite
+
+We need a new tile that reads as "collectible" at a glance. A diamond shape works well:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-10/snippets/05-item-tile.asm" />
+
+Green contrasts with the white player and red enemies — visual language that says "good thing, grab it."
+
+## Item Variables
+
+Track the item position and player score:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-10/snippets/01-item-variables.asm" />
+
+The item hitbox is 8 pixels — slightly larger than the enemy hitbox of 7. This is intentional: enemies should be hard to avoid, items should be easy to collect. Game design in numbers.
+
+## Checking Item Collision
+
+The collision check mirrors enemy collision, but the outcome differs:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-10/snippets/02-item-collision.asm" />
+
+Same bounding box technique. But instead of triggering game over, we call `collect_item` and continue playing.
+
+## Collecting the Item
+
+When collected, increment score and respawn the item elsewhere:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-10/snippets/03-collect-item.asm" />
+
+The "random" position uses `frame_counter`. Since collection timing depends on player movement, this creates unpredictable placement without implementing a true random number generator.
+
+## Updating the Item Sprite
+
+Write item position to shadow OAM each frame:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-10/snippets/04-item-sprite.asm" />
+
+The item uses sprite slot 5 — after the player (slot 0) and four enemies (slots 1-4).
+
+## The Complete Code
+
+Here's our program with collectible items:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-10/nexus.asm" />
+
+## Build It. Run It.
+
+```bash
+ca65 nexus.asm -o nexus.o
+ld65 -C nes.cfg nexus.o -o nexus.nes
+fceux nexus.nes
+```
+
+You should see the player, red enemies, and a green diamond:
+
+![Player collecting items](/images/nintendo-entertainment-system/game-01-neon-nexus/unit-10/screenshot.png)
+
+Move toward the green diamond. When you touch it, the score increments (internally — we'll display it next unit) and the item respawns at a new location. Keep collecting while dodging enemies!
+
+## Why Pseudo-Random?
+
+True random numbers are expensive on the NES. There's no hardware random number generator. Games typically use:
+
+- **Frame counter**: Changes every frame, player timing makes it unpredictable
+- **LFSR**: Linear feedback shift register — mathematical pseudo-randomness
+- **Player input timing**: The exact frame buttons are pressed
+
+Our approach — using frame counter mixed with score — is simple and effective. Each collection happens at a different time, so each respawn position differs.
+
+## What You've Learnt
+
+- **Collectible items**: A second type of game object with different behaviour
+- **Positive collision**: Not all collisions end the game
+- **Pseudo-random positioning**: Frame counter provides adequate unpredictability
+- **Visual language**: Colour distinguishes friend from foe
+- **Gameplay loop**: Now complete — avoid danger, seek reward
+
+## Next Unit
+
+You're collecting items, but the score is invisible. In Unit 11, we'll display the score on screen — diving into background tiles and nametable updates during gameplay.

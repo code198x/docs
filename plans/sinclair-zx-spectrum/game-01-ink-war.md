@@ -6,6 +6,8 @@
 
 **Commercial Quality Target:** A game that could have sold for £7.99 on cassette in 1984. Simple, addictive, polished.
 
+**Design Principle:** "Show First, Explain Later" - Scaffold provides working code immediately; theory follows experience.
+
 ---
 
 ## The Finished Game
@@ -47,564 +49,305 @@ Before detailing the units, here's what the learner builds:
 
 ---
 
+## Engagement Milestones
+
+| Milestone | Unit |
+|-----------|------|
+| First visible output (game board) | 1 |
+| First interactivity (cursor moves) | 1 |
+| First "game feel" (claiming cells) | 2 |
+| Complete two-player game | 8 |
+| Complete playable game with AI | 16 |
+
+---
+
 ## Phase 1: Foundation (Units 1-16)
 
-*Goal: A working two-player game. Playable from start to finish with a friend.*
+*Goal: A working two-player game with AI opponent. Playable from start to finish.*
 
-*By the end of this phase, the learner has built a complete game. Two humans can play Ink War, taking turns at the keyboard. It's simple but fully functional - claim cells, track score, detect winner.*
+*By the end of this phase, the learner has built a complete game. Humans can play against each other or against the computer. It's simple but fully functional - claim cells, track score, detect winner.*
 
 ---
 
-### Unit 1: The Spectrum's Display
+### Unit 1: Hello Spectrum
 
 **Learning Objectives:**
-- Understand the BASIC stub that launches machine code
-- Know where screen memory lives ($4000-$57FF)
-- Know where attribute memory lives ($5800-$5AFF)
-- Write a working assembly program that runs on the Spectrum
-- See colour on screen immediately
+- Run a working ZX Spectrum program
+- See the game board immediately
+- Move a cursor with keyboard
+- Experience the attribute system from minute one
 
 **Concepts Introduced:**
-- Memory-mapped display
-- Screen memory (bitmap) vs attribute memory (colour)
-- The ORG directive
-- BASIC loader (RANDOMIZE USR 32768)
+- Scaffold approach (working code provided)
+- Attribute memory overview
+- Keyboard input basics
+- Game loop structure
 
-**Code Written:**
-```
-- BASIC loader stub
-- Set border colour via OUT
-- Fill a few attribute cells with colour
-- Infinite loop to keep program running
-```
+**Scaffold Provides:**
+- BASIC loader (RANDOMIZE USR 32768)
+- Game board drawn (8×8 grid with border)
+- Cursor displayed on the board
+- Keyboard reading for Q/A/O/P
+- Cursor movement within board boundaries
+
+**What the Learner Does:**
+- Runs the scaffold - sees game board immediately
+- Presses Q - cursor moves up
+- Presses A - cursor moves down
+- Presses O - cursor moves left
+- Presses P - cursor moves right
+- Changes border colour in code, sees immediate result
+- Changes cursor colour, sees it change
 
 **What the Learner Sees:**
-Border changes colour. A few coloured blocks appear on screen. First contact with the Spectrum display system. The program runs from their own code.
+A centred 8×8 game board with black border. A flashing cursor on the board. Pressing Q/A/O/P moves the cursor around. Interactive from the first moment.
 
 **Technical Details:**
+- Attribute memory: $5800-$5AFF
 - Border colour: OUT ($FE), A
-- Attribute memory: $5800-$5AFF (768 bytes)
-- Screen memory: $4000-$57FF (6144 bytes)
-- Each attribute byte: one 8×8 cell
+- Keyboard port: $FE with row selection
+- Cursor: flashing using FLASH attribute bit
 
 ---
 
-### Unit 2: The Attribute Grid
+### Unit 2: Claiming Cells
 
 **Learning Objectives:**
-- Understand the 32×24 attribute cell grid
-- Calculate attribute address from row and column
-- Decode attribute byte structure (INK, PAPER, BRIGHT, FLASH)
-- Fill regions of the screen with colour
+- Press Space to claim cells
+- See cells change to player colour
+- Track whose turn it is
+- Experience core gameplay
 
 **Concepts Introduced:**
-- Attribute byte format: FBPPPIII
-- Address calculation: $5800 + (row × 32) + column
-- BRIGHT and FLASH bits
-- The 8 Spectrum colours
+- Cell state tracking
+- Action key detection
+- State change (empty → claimed)
+- Turn alternation
 
 **Code Written:**
 ```
-- Clear attribute memory to single colour
-- Fill specific rows with different colours
-- Create a checkerboard pattern
-- Demonstrate BRIGHT effect
+- board_state: 64-byte array (0=empty, 1=red, 2=blue)
+- current_player: starts at 1
+- Space key detection
+- Claim cell: set state, change attribute colour
+- Alternate turns after valid claim
+- Sound feedback on claim
 ```
 
 **What the Learner Sees:**
-Colourful patterns fill the screen. Checkerboard shows alternating colours. BRIGHT colours visibly differ from normal. The attribute system makes sense.
+Press Space on an empty cell - it turns red (Player 1's colour). Turn indicator changes. Press Space again - next cell turns blue (Player 2). Core gameplay works already.
+
+**Technical Details:**
+- Player 1: bright red paper (%01010000)
+- Player 2: bright blue paper (%01001000)
+- Empty: white paper (%00111000)
+- State array: 64 bytes, indexed by row×8+col
+
+---
+
+### Unit 3: Making It Yours
+
+**Learning Objectives:**
+- Customise board colours (learn attribute byte structure)
+- Move the board position (learn address calculation)
+- Change cursor appearance (learn FLASH/BRIGHT bits)
+- Understand by modifying, not just reading
+
+**Concepts Introduced:**
+- Attribute byte format (FBPPPIII) - through changing colours
+- Address calculation: $5800 + row×32 + col - through moving the board
+- FLASH and BRIGHT bits - through cursor customisation
+
+**Code Written:**
+```
+- Change board border colour (modify attribute values)
+- Change empty cell colour (white → cyan or other)
+- Move board to different screen position
+- Change cursor from FLASH to BRIGHT cycling
+- Add border colour change on turn switch
+```
+
+**What the Learner Sees:**
+A customised version of the game - different colours, different position, different cursor style. They've made it their own by understanding and changing the internals.
 
 **Technical Details:**
 - Attribute byte: bit 7=FLASH, bit 6=BRIGHT, bits 5-3=PAPER, bits 2-0=INK
 - Colours: 0=black, 1=blue, 2=red, 3=magenta, 4=green, 5=cyan, 6=yellow, 7=white
-- 32 columns × 24 rows = 768 cells
+- Board position: adjust base address calculation
+- Border: OUT ($FE), A with colour in bits 0-2
 
 ---
 
-### Unit 3: Drawing the Board
-
-**Learning Objectives:**
-- Plan game board layout on screen
-- Calculate board position (centred)
-- Draw border around the board
-- Fill board with "empty" colour
-- Use constants for maintainability
-
-**Concepts Introduced:**
-- EQU for constants
-- Nested loops (row/column)
-- Board positioning arithmetic
-- Clear screen routine (LDIR)
-
-**Code Written:**
-```
-- Define board constants (BOARD_TOP, BOARD_LEFT, BOARD_SIZE)
-- Clear screen routine
-- Draw 10×10 border (black cells around 8×8 board)
-- Fill 8×8 board area with white (empty)
-- Set black border colour
-```
-
-**What the Learner Sees:**
-A centred 8×8 white game board with black border, on a black background. The game board is clearly visible. This is the play area.
-
-**Technical Details:**
-- Board: 8×8 cells
-- Position: row 8, column 12 (centred on 32×24 screen)
-- Border: row 7-16, column 11-20
-- Empty cell colour: white paper (%00111000)
-- Border colour: black (%00000000)
-
----
-
-### Unit 4: Player Colours
-
-**Learning Objectives:**
-- Define player colour constants
-- Write a routine to claim a cell
-- Understand cell state (empty, player 1, player 2)
-- Demonstrate the visual goal of the game
-
-**Concepts Introduced:**
-- Game state in memory (who owns each cell)
-- Colour as game state indicator
-- Subroutine for cell colouring
-- Board array concept
-
-**Code Written:**
-```
-- Define PLAYER1_ATTR (bright red) and PLAYER2_ATTR (bright blue)
-- Subroutine: set_cell(row, col, colour)
-- Manually place some red and blue cells
-- Create snapshot of "game in progress"
-```
-
-**What the Learner Sees:**
-The board shows some red cells (Player 1 territory) and some blue cells (Player 2 territory) with white empty cells remaining. A visual preview of what gameplay will look like.
-
-**Technical Details:**
-- Player 1: bright red paper = %01010000
-- Player 2: bright blue paper = %01001000
-- Empty: white paper = %00111000
-- Cell state array: 64 bytes, values 0/1/2
-
----
-
-### Unit 5: Keyboard Input
-
-**Learning Objectives:**
-- Understand the Spectrum keyboard matrix
-- Read specific keys (Q, A, O, P, Space)
-- Detect key press vs key held
-- Provide visual feedback for input
-
-**Concepts Introduced:**
-- Keyboard port ($FE)
-- Half-row addressing
-- Key debouncing (previous state comparison)
-- Edge detection (newly pressed)
-
-**Code Written:**
-```
-- Keyboard reading routine
-- Check Q (up), A (down), O (left), P (right), Space (action)
-- Store previous key state
-- Detect new key presses only
-- Flash border on key press (visual feedback)
-```
-
-**What the Learner Sees:**
-Pressing Q/A/O/P/Space causes the border to flash different colours. The program responds to specific keys. Input is debounced - holding a key doesn't repeat rapidly.
-
-**Technical Details:**
-- Port $FE with high byte selecting half-row
-- Q: row $FB bit 0, A: row $FD bit 0
-- O: row $DF bit 1, P: row $DF bit 0
-- Space: row $7F, bit 0
-- Debounce: compare current state with previous frame
-
----
-
-### Unit 6: The Cursor
-
-**Learning Objectives:**
-- Track cursor position in memory
-- Display cursor on the board
-- Move cursor with keyboard input
-- Constrain cursor to board boundaries
-
-**Concepts Introduced:**
-- Cursor state (row, column variables)
-- Cursor display (different attribute or flashing)
-- Boundary checking
-- Game loop with input processing
-
-**Code Written:**
-```
-- cursor_row, cursor_col variables
-- draw_cursor: highlight current cell
-- erase_cursor: restore cell's actual colour
-- move_cursor: update position based on input
-- Boundary checks (0-7 range)
-- Main loop: erase, read input, move, draw
-```
-
-**What the Learner Sees:**
-A highlighted cell (the cursor) on the board. Pressing Q/A/O/P moves it around. The cursor can't move outside the board. Smooth, responsive movement.
-
-**Technical Details:**
-- Cursor display: use FLASH bit or inverted colours
-- Cursor position: 0-7 for row, 0-7 for column
-- Movement: check boundaries before updating position
-- Main loop runs at frame rate (HALT synchronisation)
-
----
-
-### Unit 7: Claiming Cells
-
-**Learning Objectives:**
-- Detect action key press (Space)
-- Check if current cell is empty
-- Claim cell for current player
-- Update visual display
-
-**Concepts Introduced:**
-- Cell state array (tracking ownership)
-- Claim validation (empty check)
-- State change (memory + display)
-- Current player variable
-
-**Code Written:**
-```
-- board_state: 64-byte array (0=empty, 1=P1, 2=P2)
-- current_player: 1 or 2
-- claim_cell: check empty, set state, update display
-- Play feedback sound on claim
-- Error feedback if cell occupied
-```
-
-**What the Learner Sees:**
-Pressing Space on an empty cell turns it to the current player's colour (red or blue). Pressing Space on an occupied cell does nothing (or plays error sound). Cells stay claimed.
-
-**Technical Details:**
-- Board state array: 64 bytes at fixed address
-- Index calculation: row × 8 + column
-- State values: 0=empty, 1=player 1, 2=player 2
-- Visual update: write player's attribute byte
-
----
-
-### Unit 8: Turn System
-
-**Learning Objectives:**
-- Alternate between players after valid claim
-- Display whose turn it is
-- Change cursor colour to match current player
-- Handle turn transitions cleanly
-
-**Concepts Introduced:**
-- Turn state management
-- Player indicator display
-- XOR for toggling (1↔2)
-- UI updates on state change
-
-**Code Written:**
-```
-- Switch player after successful claim (XOR or subtract)
-- Draw turn indicator (coloured bar or text area)
-- Cursor colour matches current player
-- Update indicator on turn change
-```
-
-**What the Learner Sees:**
-After claiming a cell, the turn indicator changes and cursor becomes the other player's colour. Red claims, then blue's turn, then red's turn. The game alternates properly.
-
-**Technical Details:**
-- Toggle: current_player = 3 - current_player (swaps 1↔2)
-- Turn indicator: coloured cells at top of screen
-- Cursor colour: use current player's attribute
-- Both players use same keyboard (hot-seat)
-
----
-
-### Unit 9: Move Validation
-
-**Learning Objectives:**
-- Validate moves before allowing them
-- Provide clear feedback for invalid moves
-- Only switch turns on valid moves
-- Handle edge cases robustly
-
-**Concepts Introduced:**
-- Input validation pattern
-- Error feedback (visual and audio)
-- Defensive programming
-- User experience for invalid actions
-
-**Code Written:**
-```
-- validate_move: check cell is empty
-- Invalid move: play error beep, flash border red
-- Valid move: play success beep, proceed with claim
-- Don't switch turns on invalid move
-```
-
-**What the Learner Sees:**
-Trying to claim an occupied cell plays a harsh buzz and briefly flashes the border. The turn doesn't change. Only valid moves progress the game. Clear feedback for mistakes.
-
-**Technical Details:**
-- Validation: check board_state[index] == 0
-- Error sound: short noise burst via beeper
-- Success sound: pleasant tone
-- Border flash: brief colour change (2-3 frames)
-
----
-
-### Unit 10: Score Display
+### Unit 4: Score and Turn Display
 
 **Learning Objectives:**
 - Count cells owned by each player
 - Display scores on screen
-- Update scores after each move
-- Format numbers for display
+- Show whose turn it is
+- Update display after each move
 
 **Concepts Introduced:**
-- Counting algorithm (iterate board)
+- Cell counting (iterate board)
 - Number to character conversion
-- Efficient score update (increment vs recount)
-- Score display area layout
+- UI areas on screen
+- Efficient updates
 
 **Code Written:**
 ```
 - count_cells: iterate board, count 1s and 2s
 - display_score: show "RED: nn  BLUE: nn"
+- Turn indicator (coloured bar or text)
 - Update after each claim
-- Position scores at top of screen
 ```
 
 **What the Learner Sees:**
-Score display at top shows "RED: 5 BLUE: 3" (or similar). Numbers update immediately when cells are claimed. Players can see who's winning.
+Score display at top shows "RED: 3 BLUE: 2". Turn indicator shows whose move it is. Numbers update when cells are claimed. Players can see who's winning.
 
 **Technical Details:**
-- Score positions: top row of screen
-- Number display: convert to ASCII (add $30)
-- Two-digit display: divide by 10 for tens digit
+- Score at row 0-1 of screen
+- Number display: add $30 (ASCII offset)
+- Turn indicator: coloured attribute cells
 - Maximum score: 64 (fits in two digits)
 
 ---
 
-### Unit 11: Detecting Game End
+### Unit 5: Move Validation
 
 **Learning Objectives:**
-- Detect when the board is full
-- Transition to end-of-game state
-- Stop accepting further moves
-- Count total claimed cells
+- Check if cell is already claimed
+- Provide feedback for invalid moves
+- Only switch turns on valid moves
+- Beeper sound effects
 
 **Concepts Introduced:**
-- Game state (playing vs ended)
-- End condition detection
-- State machine basics
-- Total cell counting
+- Input validation
+- Error feedback (visual + audio)
+- Beeper sound generation
+- Defensive programming
 
 **Code Written:**
 ```
-- Check if moves_made == 64 (or count empty cells == 0)
-- game_over flag
-- When game_over: stop processing moves
-- Transition to results display
+- validate_move: check board_state[index] == 0
+- Invalid: play error buzz, flash border red
+- Valid: play success tone, proceed
+- Don't change turn on invalid move
 ```
 
 **What the Learner Sees:**
-After the 64th cell is claimed, the game stops accepting input. No more moves possible. The board is completely filled with red and blue.
+Pressing Space on an occupied cell plays a harsh buzz and border flashes red. Turn doesn't change. Only valid moves progress the game. Clear feedback for mistakes.
 
 **Technical Details:**
-- Track moves_made counter (increment on each claim)
-- Or count empty cells after each move
-- Game over when moves_made == 64
-- Set game_state to GAME_OVER
+- Beeper port: bit 4 of $FE
+- Error sound: short noise at low frequency
+- Success sound: pleasant rising tone
+- Border flash: 2-3 frames of red
 
 ---
 
-### Unit 12: Determining the Winner
+### Unit 6: Game End Detection
 
 **Learning Objectives:**
-- Compare final scores
+- Detect when board is full
 - Determine winner (or draw)
-- Display winner announcement
-- Celebrate victory visually
+- Display results
+- Allow restart
 
 **Concepts Introduced:**
-- Score comparison logic
-- Three outcomes (P1 wins, P2 wins, draw)
-- Victory display
-- Visual celebration effect
+- End condition detection
+- Score comparison
+- Result states (win/lose/draw)
+- Game restart
 
 **Code Written:**
 ```
-- Compare player 1 score vs player 2 score
-- Display "RED WINS!", "BLUE WINS!", or "DRAW!"
+- Check if moves == 64 (or count empty == 0)
+- Compare scores to determine winner
+- Display "RED WINS!" or "BLUE WINS!" or "DRAW!"
 - Flash screen in winner's colour
-- Hold on results
+- Press key to restart
 ```
 
 **What the Learner Sees:**
-"RED WINS!" (or "BLUE WINS!" or "DRAW!") appears on screen. The border flashes the winner's colour. Clear indication of outcome.
+After 64 moves, "RED WINS!" (or similar) appears. Border flashes winner's colour. Press any key to play again. Complete game loop.
 
 **Technical Details:**
-- Compare: if score1 > score2, P1 wins; if score2 > score1, P2 wins; else draw
-- Message display: use screen memory or attributes
-- Celebration: border colour cycling or flashing
-- Hold: wait for key press before continuing
+- moves_made counter incremented each valid claim
+- Game over when moves_made == 64
+- Winner: score1 > score2 → P1, score2 > score1 → P2, else draw
+- Victory celebration: colour cycling effect
 
 ---
 
-### Unit 13: Game States
+### Unit 7: Title Screen
 
 **Learning Objectives:**
-- Implement state machine (title, playing, results)
-- Handle transitions between states
-- Create simple title screen
-- Structure code for multiple states
+- Create title screen state
+- Display game title
+- Start game on key press
+- Simple state machine
 
 **Concepts Introduced:**
-- Game state variable
+- Game states (TITLE, PLAYING, RESULTS)
 - State machine pattern
-- Dispatch based on state
-- Initialisation per state
+- State dispatch
+- Title screen design
 
 **Code Written:**
 ```
-- game_state: TITLE, PLAYING, RESULTS
-- Main loop dispatches to current state handler
-- title_state: draw title, wait for key, → PLAYING
-- playing_state: existing game logic
-- results_state: show winner, wait for key, → TITLE
+- game_state: TITLE=0, PLAYING=1, RESULTS=2
+- Title screen: "INK WAR" in large text
+- "PRESS ANY KEY TO START"
+- Key press → transition to PLAYING
+- Results → key press → TITLE
 ```
 
 **What the Learner Sees:**
-Game starts with title screen ("INK WAR - Press any key"). Key press starts game. After game ends, results show, then key press returns to title.
+Game starts at title screen with "INK WAR". Press any key to start playing. After game ends, results show, then key returns to title. Complete game flow.
 
 **Technical Details:**
-- State values: 0=TITLE, 1=PLAYING, 2=RESULTS
-- Dispatch: compare and jump to handler
-- State init: reset variables when entering state
-- Clean transitions between states
+- State values: TITLE=0, PLAYING=1, RESULTS=2
+- Clear screen between states
+- Reset board when entering PLAYING
 
 ---
 
-### Unit 14: Results Screen
+### Unit 8: Complete Two-Player Game
 
 **Learning Objectives:**
-- Create proper results display
-- Show final scores clearly
-- Display winner prominently
-- Calculate and show statistics
-
-**Concepts Introduced:**
-- Results screen layout
-- Statistics (win margin, percentage)
-- Screen composition
-- Polish for end state
-
-**Code Written:**
-```
-- Clear screen for results
-- Large "RED WINS!" or "BLUE WINS!" display
-- Final scores: "RED: 35  BLUE: 29"
-- Win margin: "Won by 6 cells"
-- Territory percentage (optional)
-```
-
-**What the Learner Sees:**
-A proper results screen, not just overlaid text. Clear winner announcement, final scores, how much they won by. Looks like a finished game.
-
-**Technical Details:**
-- Clear screen before drawing results
-- Centre text on screen
-- Win margin: abs(score1 - score2)
-- Percentage: (score × 100) / 64
-
----
-
-### Unit 15: Play Again
-
-**Learning Objectives:**
-- Reset game state completely
-- Return to title or restart game
-- Clear board properly
-- Handle game loop restart
-
-**Concepts Introduced:**
-- State reset
-- Variable initialisation
-- Clean restart
-- Option: play again vs title
-
-**Code Written:**
-```
-- reset_game: clear board_state array, reset scores
-- Reset current_player to 1
-- Reset cursor position
-- From results: key press → TITLE (or PLAYING for quick rematch)
-```
-
-**What the Learner Sees:**
-After results, press a key and the game restarts fresh. Board is empty, scores are zero, ready for another game. Can play indefinitely.
-
-**Technical Details:**
-- Zero the board_state array (64 bytes)
-- Reset all game variables
-- Redraw empty board
-- Return to title or directly to playing
-
----
-
-### Unit 16: Complete Two-Player Game
-
-**Learning Objectives:**
-- Polish the complete experience
-- Fix any remaining issues
-- Test full game flow
-- Celebrate completion
+- Polish the experience
+- Fix remaining issues
+- Test complete flow
+- Playable with a friend
 
 **Concepts Introduced:**
 - Integration testing
-- Edge case handling
 - Polish pass
+- Edge cases
 - Completeness checklist
 
 **Code Written:**
 ```
 - Final bug fixes
-- Timing adjustments
-- Visual polish (consistent colours, aligned text)
-- Verify all paths work
+- Visual alignment fixes
+- Input timing adjustments
+- Complete playthrough verification
 ```
 
 **What the Learner Sees:**
-A complete, polished two-player game. Title → Play → Results → Title loop works perfectly. Hand the keyboard to a friend and play Ink War.
+Complete, polished two-player game. Title → Play → Results → Title works perfectly. Hand the keyboard to a friend and play Ink War.
 
-**Phase 1 Checkpoint:**
-The learner has built a working game. Two humans can sit at the same keyboard and play Ink War competitively. It's simple but complete - exactly what Game 1 should deliver by Unit 16.
-
----
-
-## Phase 2: Expansion (Units 17-32)
-
-*Goal: Add AI opponent, sound effects, and enhanced gameplay options.*
-
-*By the end of this phase, the game has a computer opponent with difficulty levels, sound effects, and gameplay options. It's a proper single-player experience.*
+**Phase 1 Midpoint:**
+At Unit 8, two humans can play Ink War competitively. The core game is complete.
 
 ---
 
-### Unit 17: AI Framework
+### Unit 9: AI Framework
 
 **Learning Objectives:**
-- Design AI decision structure
 - Add game mode selection (vs Human / vs AI)
 - Implement random cell selection (baseline AI)
 - Replace Player 2 with AI when selected
+- Handle AI turn automatically
 
 **Concepts Introduced:**
 - Game mode variable
@@ -618,14 +361,21 @@ The learner has built a working game. Two humans can sit at the same keyboard an
 - Mode selection on title screen
 - find_empty_cell: locate any empty cell
 - AI makes random valid move
+- Brief delay before AI moves
 ```
 
 **What the Learner Sees:**
 Title screen offers "1 - Two Player" / "2 - vs Computer". Selecting vs Computer, the AI takes Player 2's turns automatically. It plays randomly but legally.
 
+**Technical Details:**
+- Random using R register
+- Find empty: scan board_state for 0
+- AI delay: 25 frames (0.5 second)
+- AI takes blue (player 2) side
+
 ---
 
-### Unit 18: Smarter AI - Adjacent Priority
+### Unit 10: Smarter AI - Adjacent Priority
 
 **Learning Objectives:**
 - AI prefers cells adjacent to own territory
@@ -637,22 +387,22 @@ Title screen offers "1 - Two Player" / "2 - vs Computer". Selecting vs Computer,
 - Cell adjacency checking
 - Priority scoring
 - Building territory
-- AI personality through strategy
+- AI personality
 
 **Code Written:**
 ```
 - check_adjacent: count friendly neighbours
 - Score cells by adjacency
-- Prefer cells with more friendly neighbours
+- Pick highest-scoring empty cell
 - Fall back to random if no adjacent options
 ```
 
 **What the Learner Sees:**
-AI builds connected regions instead of scattered claims. Territory grows outward from existing cells. More intelligent behaviour.
+AI builds connected regions instead of scattered claims. Territory grows outward. More intelligent behaviour.
 
 ---
 
-### Unit 19: Defensive AI
+### Unit 11: Defensive AI
 
 **Learning Objectives:**
 - AI blocks opponent expansion
@@ -675,11 +425,11 @@ AI builds connected regions instead of scattered claims. Territory grows outward
 ```
 
 **What the Learner Sees:**
-AI doesn't just expand blindly - it blocks the player's expansion too. More competitive and challenging to beat.
+AI blocks player expansion too. More competitive. Harder to beat.
 
 ---
 
-### Unit 20: Corner and Edge Strategy
+### Unit 12: Corner and Edge Strategy
 
 **Learning Objectives:**
 - AI values corners highly
@@ -695,18 +445,18 @@ AI doesn't just expand blindly - it blocks the player's expansion too. More comp
 
 **Code Written:**
 ```
-- Cell value table (corners=high, edges=medium, centre=low)
+- Cell value table (corners=high, edges=medium)
 - Add position value to cell score
 - Corners grabbed early
 - Strategic opening moves
 ```
 
 **What the Learner Sees:**
-AI grabs corners early - good Othello/Reversi strategy. Edge cells prioritised. Feels like playing a real opponent.
+AI grabs corners early. Edge cells prioritised. Feels like playing a real opponent.
 
 ---
 
-### Unit 21: AI Difficulty Levels
+### Unit 13: AI Difficulty Levels
 
 **Learning Objectives:**
 - Implement Easy/Normal/Hard difficulty
@@ -725,593 +475,353 @@ AI grabs corners early - good Othello/Reversi strategy. Edge cells prioritised. 
 - ai_difficulty: EASY, NORMAL, HARD
 - Easy: 70% random, 30% strategic
 - Normal: 30% random, 70% strategic
-- Hard: 100% strategic + look-ahead
+- Hard: 100% strategic
 - Difficulty selection on mode screen
 ```
 
 **What the Learner Sees:**
-Choose AI difficulty. Easy is beatable by beginners. Normal provides challenge. Hard requires good strategy to win.
+Choose AI difficulty. Easy is beatable by beginners. Hard requires good strategy to win.
 
 ---
 
-### Unit 22: Beeper Basics
+### Unit 14: Sound Effects
 
 **Learning Objectives:**
-- Understand the Spectrum beeper
-- Generate tones of different pitches
-- Create short sound effects
-- Time sound generation
+- Create distinct sounds for events
+- Claim sounds, error sounds
+- Victory/defeat jingles
+- Audio feedback completeness
 
 **Concepts Introduced:**
-- Beeper port ($FE)
-- Pitch as loop timing
-- Duration as iterations
-- Single-bit audio
-
-**Code Written:**
-```
-- beep_tone: play note of given pitch/duration
-- Click sound (very short beep)
-- Rising tone, falling tone
-- Test various pitches
-```
-
-**What the Learner Sees:**
-Various beeps and tones play when testing. The Spectrum makes sound from code.
-
----
-
-### Unit 23: Game Sound Effects
-
-**Learning Objectives:**
-- Create distinct sounds for game events
-- Claim sound (positive feedback)
-- Invalid move sound (negative feedback)
-- Turn change sound
-
-**Concepts Introduced:**
-- Sound design for feedback
+- Beeper sound design
 - Positive vs negative sounds
-- Audio consistency
-- Game feel through sound
+- Musical jingles
+- Audio feedback
 
 **Code Written:**
 ```
 - sound_claim: pleasant rising tone
 - sound_invalid: harsh buzz
+- jingle_victory: triumphant phrase
+- jingle_defeat: sad descending phrase
 - sound_turn: subtle click
-- Integrate into game events
 ```
 
 **What the Learner Sees:**
-Claims have satisfying bloop. Invalid moves have error buzz. Turn changes have subtle click. Game feels more alive.
+Every action has sound. Claiming feels good. Invalid moves sound wrong. Winning plays celebration tune.
 
 ---
 
-### Unit 24: Victory Jingles
+### Unit 15: Results Screen
 
 **Learning Objectives:**
-- Create short musical phrases
-- Victory jingle (celebratory)
-- Defeat jingle (commiserating)
-- Draw jingle (neutral)
+- Create proper results display
+- Show final scores
+- Winner announcement
+- Play again option
 
 **Concepts Introduced:**
-- Musical phrases on beeper
-- Emotional tone through music
-- Multi-note sequences
-- Note timing
+- Results screen layout
+- Statistics display
+- Screen composition
+- Polish for end state
 
 **Code Written:**
 ```
-- jingle_victory: ascending triumphant phrase
-- jingle_defeat: descending sad phrase
-- jingle_draw: neutral resolution
-- Play appropriate jingle on results
+- Clear screen for results
+- Large winner announcement
+- Final scores displayed
+- Win margin shown
+- "PRESS ANY KEY" to continue
 ```
 
 **What the Learner Sees:**
-Winning plays happy tune. Losing plays sad tune. Draw plays neutral tune. Audio matches emotional outcome.
+Proper results screen. Clear winner. Final scores. Professional presentation.
 
 ---
 
-### Unit 25: Title Music
+### Unit 16: Phase 1 Complete
 
 **Learning Objectives:**
-- Create simple looping music
-- Music on title screen
-- Interruptible by key press
+- Polish complete experience
+- Test all modes
+- Fix remaining issues
+- Celebrate completion
+
+**Concepts Introduced:**
+- Integration testing
+- Mode switching verification
+- Polish pass
+- Milestone celebration
+
+**Code Written:**
+```
+- Test two-player mode
+- Test all AI difficulty levels
+- Fix any issues found
+- Final visual polish
+```
+
+**What the Learner Sees:**
+Complete game with two-player and AI modes. Three AI difficulty levels. Sound effects. Title screen, gameplay, results. A real game.
+
+**Phase 1 Checkpoint:**
+The learner has built a complete game. They understand Spectrum display, Z80 input handling, and game logic. Two-player and AI modes work. Everything from here builds on this foundation.
+
+---
+
+## Phase 2: Expansion (Units 17-32)
+
+*Goal: Enhanced visuals, more options, and gameplay variety.*
+
+*By the end of this phase, the game has custom graphics, animations, options menu, and board variations.*
+
+---
+
+### Unit 17: Custom Character Set
+
+**Learning Objectives:**
+- Design custom characters
+- Load charset in memory
+- Switch to custom charset
+- Better visual quality
+
+**Concepts Introduced:**
+- Character memory
+- 8×8 character design
+- Charset loading
+- Visual identity
+
+**Code Written:**
+```
+- Design border characters
+- Design UI characters
+- Load at startup
+- Use throughout game
+```
+
+**What the Learner Sees:**
+Game uses custom characters. Nicer borders, better symbols. More polished appearance.
+
+---
+
+### Unit 18: Cursor Animation
+
+**Learning Objectives:**
+- Animate cursor visibility
+- Pulsing or cycling effect
+- Better visual focus
+- Frame timing for animation
+
+**Concepts Introduced:**
+- Frame-based animation
+- Colour cycling
+- Animation states
+- Visual feedback
+
+**Code Written:**
+```
+- Cursor cycles between colours
+- Or: cursor pulses using BRIGHT
+- Smooth animation timing
+- Clear visual focus
+```
+
+**What the Learner Sees:**
+Cursor pulses or colour-cycles. Easier to see. More alive.
+
+---
+
+### Unit 19: Claim Animation
+
+**Learning Objectives:**
+- Animate cell claim
+- Brief flash effect
+- More satisfying claims
+- Visual polish
+
+**Concepts Introduced:**
+- Event-triggered animation
+- Brief effects
+- Feedback layering
+- Polish through motion
+
+**Code Written:**
+```
+- Claim: flash white briefly
+- Then settle to player colour
+- 4-6 frame animation
+- Apply to all claims
+```
+
+**What the Learner Sees:**
+Cells don't just snap to colour. Brief flash animation. More satisfying.
+
+---
+
+### Unit 20: Title Screen Animation
+
+**Learning Objectives:**
+- Animate title screen
+- Colour cycling effects
+- Visual interest
+- Professional presentation
+
+**Concepts Introduced:**
+- Title animation
+- Colour cycling
+- Animation loops
+- First impression
+
+**Code Written:**
+```
+- Title text colour cycles
+- Background colour shifts
+- Pulsing menu cursor
+- Animation loop
+```
+
+**What the Learner Sees:**
+Title screen moves and breathes. Looks professional. Good first impression.
+
+---
+
+### Unit 21: Title Music
+
+**Learning Objectives:**
+- Create simple music loop
+- Play on title screen
+- Stop on game start
 - Set the mood
 
 **Concepts Introduced:**
-- Music loops
-- Background music vs foreground action
+- Music on beeper
+- Note sequences
+- Loop structure
 - Music data format
-- Simple sequencer
 
 **Code Written:**
 ```
-- Simple 8-16 bar melody
-- Loop continuously on title
-- Stop immediately on key press
-- Musical identity for the game
+- Simple melody (8-16 notes)
+- Loop continuously
+- Stop on key press
+- Musical identity
 ```
 
 **What the Learner Sees:**
-Title screen has music playing. Creates atmosphere. Press key to start, music stops, game begins.
+Title screen has music. Creates atmosphere. Feels like a proper game.
 
 ---
 
-### Unit 26: Move Timer (Optional Mode)
+### Unit 22: Options Menu
 
 **Learning Objectives:**
-- Add optional time limit per turn
-- Timer display countdown
-- Auto-skip on timeout
-- Faster-paced games
+- Create options screen
+- Toggle settings
+- Board size option
+- Sound on/off
 
 **Concepts Introduced:**
-- Frame counting for timing
-- Timer display
-- Timeout handling
-- Optional game modes
+- Menu navigation
+- Toggle UI
+- Settings storage
+- User preferences
 
 **Code Written:**
 ```
-- move_timer: counts down from N seconds
-- Display remaining time
-- Timeout: random valid move or skip
-- Option to enable/disable timer
+- Options menu layout
+- Sound: On/Off
+- Board size: 6×6 or 8×8
+- Return to title
 ```
 
 **What the Learner Sees:**
-Optional timed mode - timer counts down each turn. Adds urgency. Times out if too slow.
+Options menu with settings. Can change board size. Can mute sounds.
 
 ---
 
-### Unit 27: Undo Move (Practice Mode)
+### Unit 23: Board Size Variation
 
 **Learning Objectives:**
-- Store previous board state
-- Undo last move
-- Practice mode only (not vs AI)
-- Learning aid feature
+- Implement 6×6 board option
+- Adjust drawing for size
+- Adjust logic for size
+- Quicker games
 
 **Concepts Introduced:**
-- State history
-- Undo mechanism
-- Mode-specific features
-- Learning assistance
-
-**Code Written:**
-```
-- Store previous_board_state before each move
-- Undo key restores previous state
-- Only available in two-player practice
-- Decrement move counter on undo
-```
-
-**What the Learner Sees:**
-In practice mode, press U to undo last move. Learn from mistakes. Not available vs AI.
-
----
-
-### Unit 28: Board Variations
-
-**Learning Objectives:**
-- Different board sizes (6×6, 8×8)
-- Pre-blocked cells (obstacles)
-- Starting positions variation
-- Configuration options
-
-**Concepts Introduced:**
-- Configurable game parameters
-- Board size as variable
-- Obstacle cells
+- Variable board size
+- Parameterised drawing
+- Adjusted calculations
 - Game variants
 
 **Code Written:**
 ```
 - board_size variable (6 or 8)
-- Adjust drawing and logic for size
-- Optional blocked cells (neither player can claim)
-- Preset obstacle patterns
+- Adjust board drawing
+- Adjust boundary checks
+- Adjust win detection (36 vs 64)
 ```
 
 **What the Learner Sees:**
-Options for 6×6 (quicker) or 8×8 (standard) boards. Optional obstacles create variety.
+6×6 option for quicker games. Works correctly. Different strategic feel.
 
 ---
 
-### Unit 29: Statistics Tracking
+### Unit 24: Move Timer (Optional)
 
 **Learning Objectives:**
-- Track wins/losses/draws per session
-- Display statistics screen
-- Track best win margin
-- Session statistics
+- Add optional time limit
+- Timer display
+- Auto-move on timeout
+- Faster-paced games
 
 **Concepts Introduced:**
-- Persistent (session) data
+- Frame counting for timer
+- Timer display
+- Timeout handling
+- Optional features
+
+**Code Written:**
+```
+- move_timer: counts down
+- Display remaining seconds
+- Timeout: random valid move
+- Enable/disable in options
+```
+
+**What the Learner Sees:**
+Optional timed mode. Timer counts down. Forces quick decisions.
+
+---
+
+### Unit 25: Statistics Tracking
+
+**Learning Objectives:**
+- Track session statistics
+- Wins/losses/draws
+- Best win margin
+- Stats display
+
+**Concepts Introduced:**
+- Session data
 - Statistics calculation
-- Stats display screen
-- Performance tracking
+- Stats screen
+- Progress tracking
 
 **Code Written:**
 ```
 - wins, losses, draws counters
 - best_margin tracking
 - Stats screen from menu
-- Reset stats option
+- Reset option
 ```
 
 **What the Learner Sees:**
-Statistics screen shows session record: "Won: 5, Lost: 3, Draw: 1, Best win: 12 cells".
+Statistics screen shows record. Tracks performance across games.
 
 ---
 
-### Unit 30: Animation - Cell Claims
-
-**Learning Objectives:**
-- Animate cell colour change
-- Smooth transition effect
-- Visual feedback enhancement
-- Polish through animation
-
-**Concepts Introduced:**
-- Frame-based animation
-- Colour transitions
-- Animation timing
-- Visual polish
-
-**Code Written:**
-```
-- Animate claim: flash white, then settle to colour
-- Or: expand from centre effect using attributes
-- Brief but noticeable
-- Apply to all claims
-```
-
-**What the Learner Sees:**
-Cells don't just snap to colour - brief flash or expansion animation. More satisfying claims.
-
----
-
-### Unit 31: Animation - Cursor
-
-**Learning Objectives:**
-- Animate cursor visibility
-- Smooth cursor movement (optional)
-- Pulsing or flashing cursor
-- Better visual focus
-
-**Concepts Introduced:**
-- Cursor animation states
-- Visibility cycling
-- Frame timing for animation
-- Focus indication
-
-**Code Written:**
-```
-- Cursor pulses (alternates highlight)
-- Or: smooth colour transition
-- Consistent animation timing
-- Clear visual focus
-```
-
-**What the Learner Sees:**
-Cursor pulses or flashes to draw attention. Easier to see where you are on the board.
-
----
-
-### Unit 32: Phase 2 Complete
-
-**Learning Objectives:**
-- Integration testing
-- Balance AI difficulty
-- Polish all features
-- Complete feature verification
-
-**Concepts Introduced:**
-- Feature integration
-- Balance testing
-- Quality assurance
-- Phase completion
-
-**Code Written:**
-```
-- Test all combinations
-- Adjust AI balance if needed
-- Fix integration issues
-- Document known issues
-```
-
-**What the Learner Sees:**
-Complete game with AI, sound, options, and polish. A proper single-player experience. Ready for Phase 3.
-
-**Phase 2 Checkpoint:**
-The game now has a competent AI opponent at multiple difficulty levels, sound effects and music, gameplay options, and visual polish. It's a complete single-player game.
-
----
-
-## Phase 3: Polish (Units 33-48)
-
-*Goal: Professional presentation and user experience.*
-
----
-
-### Unit 33: Title Screen Design
-
-**Learning Objectives:**
-- Design visually appealing title
-- Use attributes for logo/graphics
-- Plan menu layout
-- Establish visual identity
-
-**Concepts Introduced:**
-- Screen composition
-- Logo design with attributes
-- Colour scheme selection
-- Visual hierarchy
-
-**Code Written:**
-```
-- "INK WAR" logo using attributes
-- Colour scheme (reds and blues)
-- Menu option layout
-- Version/credit text
-```
-
-**What the Learner Sees:**
-Professional-looking title screen with large colourful logo. Clear menu options. Looks like a commercial game.
-
----
-
-### Unit 34: Title Animation
-
-**Learning Objectives:**
-- Animate title elements
-- Create visual interest
-- Colour cycling effects
-- Attract attention
-
-**Concepts Introduced:**
-- Frame-based animation
-- Colour cycling
-- Animation loops
-- Visual polish
-
-**Code Written:**
-```
-- Logo colour cycling
-- Pulsing menu cursor
-- Background animation
-- Transition effects
-```
-
-**What the Learner Sees:**
-Title screen moves and breathes. Logo shimmers, menu pulses. The game feels alive.
-
----
-
-### Unit 35: Menu Navigation
-
-**Learning Objectives:**
-- Implement menu system
-- Handle up/down selection
-- Visual feedback for selection
-- State transitions from menu
-
-**Concepts Introduced:**
-- Menu state management
-- Cursor navigation
-- Selection confirmation
-- Menu hierarchies
-
-**Code Written:**
-```
-- Menu cursor position
-- Navigate with keys
-- Confirm with Space/Enter
-- Sub-menus for options
-```
-
-**What the Learner Sees:**
-Navigate menus smoothly. Selection clearly visible. Sub-menus accessible. Professional feel.
-
----
-
-### Unit 36: Attract Mode
-
-**Learning Objectives:**
-- Auto-play demonstration
-- Showcase gameplay
-- Return on input
-- Cycle through features
-
-**Concepts Introduced:**
-- Demo playback
-- AI vs AI mode
-- Attract loop
-- Marketing through gameplay
-
-**Code Written:**
-```
-- AI vs AI game demo
-- Cycle after timeout on title
-- Any key returns to title
-- Show different board states
-```
-
-**What the Learner Sees:**
-Leave game idle and it plays itself. Shows off gameplay. Any key returns to menu. Shop window feature.
-
----
-
-### Unit 37: Options Menu
-
-**Learning Objectives:**
-- Create options screen
-- Toggle settings
-- Display current values
-- Return to main menu
-
-**Concepts Introduced:**
-- Settings storage
-- Toggle UI pattern
-- Options categories
-- User preferences
-
-**Code Written:**
-```
-- Options screen layout
-- Toggle: Sound On/Off
-- Toggle: Board Size
-- Toggle: AI Difficulty
-- Save settings in memory
-```
-
-**What the Learner Sees:**
-Options menu with toggleable settings. Changes apply immediately. Preferences remembered during session.
-
----
-
-### Unit 38: Control Configuration
-
-**Learning Objectives:**
-- Allow key remapping
-- Display current controls
-- Redefine keys option
-- Support multiple schemes
-
-**Concepts Introduced:**
-- Key binding
-- Input configuration
-- Control schemes
-- Accessibility
-
-**Code Written:**
-```
-- Display current key bindings
-- Redefine keys routine
-- Default schemes (QAOP, cursor)
-- Store custom bindings
-```
-
-**What the Learner Sees:**
-View and change control keys. Multiple preset schemes. Custom key definition.
-
----
-
-### Unit 39: Audio Options
-
-**Learning Objectives:**
-- Sound on/off toggle
-- Music on/off toggle
-- Sound test feature
-- Audio preferences
-
-**Concepts Introduced:**
-- Audio flags
-- Conditional sound playing
-- Sound test mode
-- User audio preferences
-
-**Code Written:**
-```
-- sound_enabled flag
-- music_enabled flag
-- Check flags before playing
-- Sound test: hear all effects
-```
-
-**What the Learner Sees:**
-Turn sound/music on or off. Sound test plays all effects and jingles. Preferences respected.
-
----
-
-### Unit 40: Help Screen
-
-**Learning Objectives:**
-- Display game rules
-- Show controls
-- How to play guide
-- Return to menu
-
-**Concepts Introduced:**
-- Text display
-- Scrolling text (if needed)
-- Help content
-- User guidance
-
-**Code Written:**
-```
-- Help screen layout
-- Game rules text
-- Control diagram
-- Objective explanation
-```
-
-**What the Learner Sees:**
-Help screen explains rules and controls. New players can learn the game. Clear instructions.
-
----
-
-### Unit 41: Custom Character Set
-
-**Learning Objectives:**
-- Design game-specific characters
-- Load custom charset
-- Better visual quality
-- Consistent aesthetic
-
-**Concepts Introduced:**
-- Character memory
-- Character design (8×8)
-- Font replacement
-- Visual identity
-
-**Code Written:**
-```
-- Design custom characters for UI
-- Arrows, borders, special symbols
-- Load charset at startup
-- Use throughout game
-```
-
-**What the Learner Sees:**
-Game uses custom characters - nicer borders, better symbols. More polished appearance.
-
----
-
-### Unit 42: Enhanced Board Graphics
-
-**Learning Objectives:**
-- Improve board appearance
-- Cell detail using characters
-- Border decorations
-- Visual refinement
-
-**Concepts Introduced:**
-- Character graphics
-- Screen composition
-- Detail enhancement
-- Polish through graphics
-
-**Code Written:**
-```
-- Custom border characters
-- Cell interior patterns (optional)
-- Corner pieces
-- Row/column markers
-```
-
-**What the Learner Sees:**
-Board looks more finished. Decorative borders. Optional grid markings. Professional appearance.
-
----
-
-### Unit 43: Victory Effects
+### Unit 26: Victory Effects
 
 **Learning Objectives:**
 - Elaborate win celebration
@@ -1330,149 +840,617 @@ Board looks more finished. Decorative borders. Optional grid markings. Professio
 - Flash sequence
 - Winner colour flood
 - Jingle synchronised
-- Particle-like effects
+- Build-up effect
 ```
 
 **What the Learner Sees:**
-Winning is celebrated with elaborate effects. Screen flashes, colours flood, music plays. Satisfying victory.
+Winning is celebrated dramatically. Screen effects. Music plays. Satisfying victory.
 
 ---
 
-### Unit 44: Screen Transitions
+### Unit 27: Screen Transitions
 
 **Learning Objectives:**
 - Smooth state transitions
-- Wipe/fade effects
+- Wipe effects
 - Visual continuity
-- Polish through transitions
+- Professional feel
 
 **Concepts Introduced:**
 - Transition effects
 - Screen wiping
 - Effect timing
-- Professional feel
+- Polish through transitions
 
 **Code Written:**
 ```
-- Wipe: horizontal bar clears screen
-- Or: attribute cascade effect
-- Apply between states
-- Consistent transition style
+- Wipe effect between screens
+- Attribute cascade
+- Consistent style
+- Clean transitions
 ```
 
 **What the Learner Sees:**
-Screens don't just cut - they transition smoothly. Wipe effect between states. Professional presentation.
+Screens don't just cut. Smooth transitions. Professional presentation.
 
 ---
 
-### Unit 45: High Score Table
+### Unit 28: Practice Mode
+
+**Learning Objectives:**
+- Undo last move
+- Learning aid
+- Two-player only
+- Practice without commitment
+
+**Concepts Introduced:**
+- State history
+- Undo mechanism
+- Mode-specific features
+- Learning support
+
+**Code Written:**
+```
+- Store previous state
+- Undo key (U)
+- Only in two-player practice
+- Decrement move counter
+```
+
+**What the Learner Sees:**
+Practice mode with undo. Learn from mistakes. Experiment freely.
+
+---
+
+### Unit 29: Control Options
+
+**Learning Objectives:**
+- Configurable controls
+- Multiple key schemes
+- Cursor keys option
+- Accessibility
+
+**Concepts Introduced:**
+- Key binding
+- Control schemes
+- Input configuration
+- User preference
+
+**Code Written:**
+```
+- Control scheme selection
+- QAOP or cursor keys
+- Display current scheme
+- Save preference
+```
+
+**What the Learner Sees:**
+Choose control scheme. QAOP or cursor keys. Preference remembered.
+
+---
+
+### Unit 30: Help Screen
+
+**Learning Objectives:**
+- Display game rules
+- Show controls
+- How to play
+- User guidance
+
+**Concepts Introduced:**
+- Text display
+- Help content
+- Instruction writing
+- Onboarding
+
+**Code Written:**
+```
+- Help screen layout
+- Game rules text
+- Control diagram
+- Return to menu
+```
+
+**What the Learner Sees:**
+Help screen explains rules and controls. New players can learn the game.
+
+---
+
+### Unit 31: Attract Mode
+
+**Learning Objectives:**
+- Auto-play demo
+- AI vs AI game
+- Return on input
+- Shop window feature
+
+**Concepts Introduced:**
+- Demo playback
+- AI vs AI mode
+- Attract timing
+- Feature showcase
+
+**Code Written:**
+```
+- AI vs AI demonstration
+- Trigger after idle timeout
+- Any key returns to title
+- Show gameplay
+```
+
+**What the Learner Sees:**
+Leave game idle - it plays itself. Shows off gameplay. Any key returns.
+
+---
+
+### Unit 32: Phase 2 Complete
+
+**Learning Objectives:**
+- Integration testing
+- All features verified
+- Polish pass
+- Phase completion
+
+**Concepts Introduced:**
+- Feature integration
+- Testing methodology
+- Quality verification
+- Milestone
+
+**Code Written:**
+```
+- Test all features together
+- Fix integration issues
+- Final polish
+- Document known issues
+```
+
+**What the Learner Sees:**
+Complete game with all Phase 2 features. Custom graphics, animations, options, variations. Ready for Phase 3.
+
+**Phase 2 Checkpoint:**
+The game now has custom graphics, animations, music, options, and game variations. It looks and sounds like a commercial product.
+
+---
+
+## Phase 3: Polish (Units 33-48)
+
+*Goal: Professional presentation and advanced features.*
+
+---
+
+### Unit 33: Enhanced Title Screen
+
+**Learning Objectives:**
+- Large logo design
+- Visual impact
+- Menu refinement
+- Brand identity
+
+**Concepts Introduced:**
+- Logo design with attributes
+- Visual hierarchy
+- Screen composition
+- First impression
+
+**Code Written:**
+```
+- "INK WAR" large logo
+- Colour scheme
+- Menu layout refined
+- Credit text
+```
+
+**What the Learner Sees:**
+Professional title screen with large colourful logo. Commercial quality.
+
+---
+
+### Unit 34: High Score Table
 
 **Learning Objectives:**
 - Track high scores
-- Name entry system
+- Name entry
 - Display leaderboard
-- Persist during session
+- Persistence goal
 
 **Concepts Introduced:**
 - Score storage
-- Sorting/insertion
 - Name entry UI
+- Sorting
 - Achievement display
 
 **Code Written:**
 ```
-- high_scores: array of scores + names
-- Check if new high score
+- high_scores array (10 entries)
 - Name entry (3 letters)
-- Display table
+- Insert in sorted position
+- Display formatted table
 ```
 
 **What the Learner Sees:**
-High score table shows top scores with names. New high score prompts name entry. Leaderboard competition.
+High score table. Name entry for new records. Competition motivation.
 
 ---
 
-### Unit 46: Pause Functionality
+### Unit 35: Pause Functionality
 
 **Learning Objectives:**
-- Pause game mid-play
-- Display pause state
+- Mid-game pause
+- Pause overlay
 - Resume cleanly
-- Handle pause input
+- Professional feature
 
 **Concepts Introduced:**
-- Game pause state
+- Pause state
 - State preservation
-- Pause overlay
+- Overlay display
 - Resume handling
 
 **Code Written:**
 ```
-- Pause on P key
-- Display "PAUSED"
-- Freeze game state
-- Resume on P again
+- P key pauses
+- "PAUSED" overlay
+- Game state frozen
+- P again resumes
 ```
 
 **What the Learner Sees:**
-Press P to pause - game freezes with overlay. Press P again to resume. Important feature for real play.
+Press P to pause. Game freezes with overlay. P to resume.
 
 ---
 
-### Unit 47: Polish Pass
+### Unit 36: AI Speed Options
 
 **Learning Objectives:**
-- Review entire game
-- Fix visual inconsistencies
+- Adjustable AI think time
+- Instant vs deliberate
+- Player preference
+- Pacing control
+
+**Concepts Introduced:**
+- Think time parameter
+- Pacing options
+- User preference
+- Gameplay feel
+
+**Code Written:**
+```
+- AI speed: Fast/Normal/Slow
+- Adjust delay before AI moves
+- Option in settings
+- Apply per game
+```
+
+**What the Learner Sees:**
+Choose AI thinking speed. Fast for quick games. Slow for tension.
+
+---
+
+### Unit 37: Cell Patterns
+
+**Learning Objectives:**
+- Pre-blocked cells
+- Obstacle patterns
+- Level variety
+- Content expansion
+
+**Concepts Introduced:**
+- Obstacle cells
+- Pattern data
+- Level selection
+- Game variants
+
+**Code Written:**
+```
+- Blocked cells (neither can claim)
+- Preset patterns
+- Pattern selection
+- Visual distinction
+```
+
+**What the Learner Sees:**
+Board layouts with obstacles. More variety. Strategic depth.
+
+---
+
+### Unit 38: Tournament Mode
+
+**Learning Objectives:**
+- Best of N matches
+- Match tracking
+- Tournament winner
+- Extended play
+
+**Concepts Introduced:**
+- Match series
+- Progress tracking
+- Victory conditions
+- Extended sessions
+
+**Code Written:**
+```
+- Best of 3/5/7
+- Track match scores
+- Tournament winner screen
+- Match counter display
+```
+
+**What the Learner Sees:**
+Tournament mode for extended competition. Track match progress.
+
+---
+
+### Unit 39: Campaign Mode
+
+**Learning Objectives:**
+- Progressive AI opponents
+- Unlock system
+- Increasing difficulty
+- Sense of progression
+
+**Concepts Introduced:**
+- Progression design
+- Unlock mechanics
+- Challenge curve
+- Player journey
+
+**Code Written:**
+```
+- Series of AI levels
+- Each harder than last
+- Unlock next on victory
+- Campaign complete screen
+```
+
+**What the Learner Sees:**
+Campaign: beat progressively harder AI. Unlock opponents. Achievement.
+
+---
+
+### Unit 40: Board Themes
+
+**Learning Objectives:**
+- Visual themes for boards
+- Colour schemes
+- Themed characters
+- Visual variety
+
+**Concepts Introduced:**
+- Theme system
+- Colour palettes
+- Asset swapping
+- Visual freshness
+
+**Code Written:**
+```
+- Theme selection
+- Different colour schemes
+- Theme-specific characters
+- Apply to gameplay
+```
+
+**What the Learner Sees:**
+Choose board themes. Different colour schemes. Visual variety.
+
+---
+
+### Unit 41: AI Personalities
+
+**Learning Objectives:**
+- Different AI styles
+- Aggressive vs defensive
+- Named opponents
+- Character variety
+
+**Concepts Introduced:**
+- AI personality
+- Strategy weights
+- Character design
+- Opponent variety
+
+**Code Written:**
+```
+- Aggressive AI (offensive focus)
+- Defensive AI (blocking focus)
+- Balanced AI (current)
+- Random or selectable
+```
+
+**What the Learner Sees:**
+Different AI opponents play differently. Named characters. More variety.
+
+---
+
+### Unit 42: Tutorial Mode
+
+**Learning Objectives:**
+- Teach new players
+- Step-by-step guidance
+- Interactive learning
+- Onboarding
+
+**Concepts Introduced:**
+- Tutorial design
+- Step progression
+- Guidance text
+- Learning flow
+
+**Code Written:**
+```
+- Tutorial sequence
+- Highlighted instructions
+- Forced moves for learning
+- Completion detection
+```
+
+**What the Learner Sees:**
+Tutorial teaches the game step by step. New players learn easily.
+
+---
+
+### Unit 43: Replay Viewer
+
+**Learning Objectives:**
+- Record game moves
+- Playback recording
+- Review games
+- Learning tool
+
+**Concepts Introduced:**
+- Move recording
+- Playback system
+- State reconstruction
+- Analysis tool
+
+**Code Written:**
+```
+- Record all moves
+- Playback mode
+- Step forward/back
+- Speed control
+```
+
+**What the Learner Sees:**
+Review completed games. Step through moves. Learn from games.
+
+---
+
+### Unit 44: Sound Test
+
+**Learning Objectives:**
+- Preview all sounds
+- Audio catalogue
+- Testing feature
+- Development aid
+
+**Concepts Introduced:**
+- Sound preview
+- Audio catalogue
+- Test mode
+- Quality verification
+
+**Code Written:**
+```
+- Sound test screen
+- List all sounds
+- Play on selection
+- Return to options
+```
+
+**What the Learner Sees:**
+Sound test plays all effects and jingles. Preview audio.
+
+---
+
+### Unit 45: Credits Screen
+
+**Learning Objectives:**
+- Acknowledge creation
+- Professional credits
+- Learner's name
+- Completion reward
+
+**Concepts Introduced:**
+- Credits display
+- Attribution
+- Closure
+- Recognition
+
+**Code Written:**
+```
+- Credits screen
+- Game by: [learner]
+- Tools used
+- Return to title
+```
+
+**What the Learner Sees:**
+Credits screen with their name. They made this game.
+
+---
+
+### Unit 46: Loading Screen
+
+**Learning Objectives:**
+- First impression
+- Loading display
+- Set expectations
+- Professional start
+
+**Concepts Introduced:**
+- Loading experience
+- First impression
+- Branding
+- Presentation
+
+**Code Written:**
+```
+- Loading screen image
+- Title/logo display
+- Brief delay or progress
+- Transition to title
+```
+
+**What the Learner Sees:**
+Game loads with proper loading screen. Professional presentation.
+
+---
+
+### Unit 47: Final Polish Pass
+
+**Learning Objectives:**
+- Review everything
+- Fix inconsistencies
 - Tighten timing
-- Final adjustments
+- Quality bar
 
 **Concepts Introduced:**
 - Polish methodology
 - Detail attention
-- Quality threshold
-- Pre-release review
+- Final review
+- Quality standard
 
 **Code Written:**
 ```
-- Fix alignment issues
-- Adjust colours for consistency
-- Tighten input response
-- Verify all text correct
+- Visual alignment fixes
+- Timing adjustments
+- Colour consistency
+- Bug fixes
 ```
 
 **What the Learner Sees:**
-Subtle improvements throughout. Everything more consistent and tight. The 90% to 100% jump.
+Everything slightly better. More consistent. More polished.
 
 ---
 
 ### Unit 48: Phase 3 Complete
 
 **Learning Objectives:**
-- Full integration test
-- Feature verification
+- Full verification
+- All features working
 - Quality sign-off
-- Phase completion
+- Ready for Phase 4
 
 **Concepts Introduced:**
 - Release candidacy
-- Feature completeness
-- Quality bar
-- Phase gates
+- Verification
+- Quality gate
+- Milestone
 
 **Code Written:**
 ```
 - Complete playthrough
+- All modes tested
 - All features verified
-- Bug fixes
-- Documentation updates
+- Document status
 ```
 
 **What the Learner Sees:**
-Complete, polished game. Professional presentation. Ready for final phase.
+Complete, polished game. All features working. Professional quality.
 
 **Phase 3 Checkpoint:**
-The game looks and sounds professional. Menus are polished, effects are satisfying, presentation is complete. It feels like a commercial product.
+The game has tournament mode, campaign mode, themes, AI personalities, tutorial, and full polish. Commercial presentation.
 
 ---
 
@@ -1485,27 +1463,27 @@ The game looks and sounds professional. Menus are polished, effects are satisfyi
 ### Unit 49: Code Review
 
 **Learning Objectives:**
-- Review entire codebase
+- Review codebase
+- Document structure
 - Identify improvements
-- Document architecture
 - Prepare for optimisation
 
 **Concepts Introduced:**
-- Code review practices
-- Technical debt
+- Code review
 - Documentation
-- Refactoring planning
+- Technical debt
+- Architecture analysis
 
 **Code Written:**
 ```
-- Add comments throughout
+- Full code review
+- Add comments
 - Document memory map
-- Note inefficiencies
-- Plan optimisation targets
+- Note improvements
 ```
 
 **What the Learner Sees:**
-No visible change - cleaner code. Better organisation. Ready for optimisation.
+No visible change. Cleaner, documented code.
 
 ---
 
@@ -1513,407 +1491,407 @@ No visible change - cleaner code. Better organisation. Ready for optimisation.
 
 **Learning Objectives:**
 - Reduce memory usage
-- Eliminate waste
-- Compress data
-- Free space for features
+- Remove waste
+- Efficient data
+- RAM budget
 
 **Concepts Introduced:**
 - Memory profiling
 - Data compression
 - Dead code removal
-- Memory budgeting
+- Efficiency
 
 **Code Written:**
 ```
 - Remove unused code
-- Compress look-up tables
-- Optimise data structures
+- Compress data tables
+- Optimise variables
 - Document savings
 ```
 
 **What the Learner Sees:**
-Same game, smaller size. More efficient. Professional optimisation.
+Same game, smaller. More efficient.
 
 ---
 
 ### Unit 51: Performance Optimisation
 
 **Learning Objectives:**
-- Profile performance
-- Speed up critical paths
-- Optimise hot loops
-- Maintain responsiveness
+- Speed up code
+- Optimise hot paths
+- Smooth performance
+- Professional quality
 
 **Concepts Introduced:**
-- Profiling techniques
+- Profiling
 - Cycle counting
-- Loop optimisation
-- Performance budgeting
+- Optimisation techniques
+- Performance budget
 
 **Code Written:**
 ```
 - Identify slow routines
-- Optimise board scanning
-- Speed up display updates
+- Optimise critical paths
 - Verify frame rate
+- Document performance
 ```
 
 **What the Learner Sees:**
-Game feels slightly smoother. More responsive. Professional performance.
+Smoother performance. More responsive.
 
 ---
 
-### Unit 52: Timing Stability
+### Unit 52: Advanced AI - Look-Ahead
 
 **Learning Objectives:**
-- Verify stable timing
-- Handle worst cases
-- Eliminate slowdown
-- Rock-solid performance
-
-**Concepts Introduced:**
-- Worst-case analysis
-- Timing verification
-- Performance testing
-- Stability assurance
-
-**Code Written:**
-```
-- Test under load
-- Verify all paths
-- Fix any slowdown
-- Document timing budget
-```
-
-**What the Learner Sees:**
-Perfectly stable regardless of game state. No slowdown ever. Professional quality.
-
----
-
-### Unit 53: Advanced AI - Look-Ahead
-
-**Learning Objectives:**
-- Implement simple minimax
+- Simple minimax
 - One-move look-ahead
-- Better evaluation
 - Stronger opponent
+- AI mastery
 
 **Concepts Introduced:**
-- Minimax algorithm
-- Game tree concept
+- Minimax concept
 - Evaluation function
-- Recursive thinking
+- Game tree
+- Advanced AI
 
 **Code Written:**
 ```
 - Simple minimax (depth 1)
-- Evaluate resulting positions
+- Evaluate positions
 - Pick best outcome
-- Optional for Hard mode
+- For Hard mode
 ```
 
 **What the Learner Sees:**
-Hard AI is noticeably stronger. Thinks ahead. Difficult to beat.
+Hard AI is noticeably stronger. Thinks ahead.
 
 ---
 
-### Unit 54: AI Evaluation Tuning
+### Unit 53: AI Balancing
 
 **Learning Objectives:**
-- Refine evaluation function
-- Balance weights
-- Test and adjust
-- Optimal AI
+- Tune all AI levels
+- Test balance
+- Fair challenge
+- Quality AI
 
 **Concepts Introduced:**
+- Balance testing
 - Weight tuning
-- Testing methodology
-- Balance iteration
-- AI quality
+- Difficulty curve
+- Player experience
 
 **Code Written:**
 ```
-- Adjust position values
-- Tune adjacency weights
-- Test against humans
-- Fine-tune difficulty
+- Test all difficulties
+- Adjust weights
+- Verify win rates
+- Document balance
 ```
 
 **What the Learner Sees:**
-AI plays better - feels more intelligent. Well-balanced challenge.
+All AI levels feel right. Fair but challenging.
 
 ---
 
-### Unit 55: AI Personalities
+### Unit 54: Two-Player Polish
 
 **Learning Objectives:**
-- Multiple AI styles
-- Aggressive vs defensive
-- Random personality
-- Variety in opponents
+- Enhance two-player
+- Turn indicators
+- Player identification
+- Social play
 
 **Concepts Introduced:**
-- AI personality
-- Strategy variation
-- Player preference
-- Replayability
+- Multiplayer UX
+- Player distinction
+- Turn clarity
+- Social gaming
 
 **Code Written:**
 ```
-- Aggressive: maximise own territory
-- Defensive: block opponent priority
-- Balanced: current behaviour
-- Random selection or player choice
+- Enhanced turn display
+- Player labels
+- Better visual separation
+- Clearer feedback
 ```
 
 **What the Learner Sees:**
-Different AI opponents play differently. Choose style or random. More variety.
+Two-player mode feels better. Clearer turns. Better experience.
 
 ---
 
-### Unit 56: AI Polish
+### Unit 55: Network Placeholder
 
 **Learning Objectives:**
-- Final AI testing
-- Edge case handling
-- Performance verification
-- AI completion
+- Placeholder for future
+- System design
+- Extensibility
+- Planning ahead
 
 **Concepts Introduced:**
-- AI quality assurance
+- Future-proofing
+- System design
+- Placeholder code
+- Extensibility
+
+**Code Written:**
+```
+- Input abstraction
+- Turn state management
+- Placeholder comments
+- Clean interfaces
+```
+
+**What the Learner Sees:**
+No visible change. Code ready for future network play.
+
+---
+
+### Unit 56: Accessibility Review
+
+**Learning Objectives:**
+- Check accessibility
+- Colour considerations
+- Control alternatives
+- Inclusive design
+
+**Concepts Introduced:**
+- Accessibility
+- Colour blind modes
+- Alternative inputs
+- Inclusive gaming
+
+**Code Written:**
+```
+- Review colour choices
+- Symbol alternatives
+- Control options
+- Document accessibility
+```
+
+**What the Learner Sees:**
+Game works for more players. Accessible design.
+
+---
+
+### Unit 57: Bug Hunt
+
+**Learning Objectives:**
+- Systematic testing
 - Edge cases
-- Final testing
-- Completion criteria
+- Fix issues
+- Quality assurance
+
+**Concepts Introduced:**
+- Bug hunting
+- Edge case testing
+- Defensive coding
+- QA process
 
 **Code Written:**
 ```
-- Test all difficulty levels
-- Fix any issues
-- Verify performance
-- Document AI behaviour
+- Test all paths
+- Fix edge cases
+- Add defensive checks
+- Document fixes
 ```
 
 **What the Learner Sees:**
-AI is complete and polished. Reliable opponent at all levels.
+No new bugs. Stable game.
 
 ---
 
-### Unit 57: Tournament Mode
+### Unit 58: External Testing
 
 **Learning Objectives:**
-- Best of N matches
-- Match tracking
-- Tournament winner
-- Extended play
-
-**Concepts Introduced:**
-- Match series
-- Progress tracking
-- Victory conditions
-- Extended game modes
-
-**Code Written:**
-```
-- Tournament: best of 3/5/7
-- Track match scores
-- Declare tournament winner
-- Tournament results screen
-```
-
-**What the Learner Sees:**
-Tournament mode for extended play. Track match progress. Ultimate winner declared.
-
----
-
-### Unit 58: Campaign Mode
-
-**Learning Objectives:**
-- Progressive challenges
-- Unlock system
-- Increasing difficulty
-- Sense of progression
-
-**Concepts Introduced:**
-- Progression systems
-- Unlock gates
-- Challenge design
-- Player journey
-
-**Code Written:**
-```
-- Series of AI opponents
-- Each harder than last
-- Unlock next on victory
-- Campaign completion reward
-```
-
-**What the Learner Sees:**
-Campaign mode: beat progressively harder AI. Unlock opponents. Campaign completion achievement.
-
----
-
-### Unit 59: Board Layouts
-
-**Learning Objectives:**
-- Additional board patterns
-- Obstacles and variants
-- Challenge boards
-- Content variety
-
-**Concepts Introduced:**
-- Level design
-- Board patterns
-- Challenge modes
-- Content creation
-
-**Code Written:**
-```
-- Multiple obstacle patterns
-- Challenge boards
-- Selection in options
-- Variety in play
-```
-
-**What the Learner Sees:**
-Multiple board layouts. Obstacle patterns. More variety and replay value.
-
----
-
-### Unit 60: Feature Complete
-
-**Learning Objectives:**
-- Final feature review
-- Integration testing
-- Bug fixes
-- Feature lock
-
-**Concepts Introduced:**
-- Feature completeness
-- Integration testing
-- Release preparation
-- Feature freeze
-
-**Code Written:**
-```
-- Test all features together
-- Fix integration issues
+- Fresh perspectives
+- External feedback
 - Final adjustments
-- Declare feature complete
-```
-
-**What the Learner Sees:**
-All features working together. Complete game. Ready for release preparation.
-
----
-
-### Unit 61: Loading Screen
-
-**Learning Objectives:**
-- Create loading display
-- First impression
-- Set expectations
-- Professional presentation
+- User testing
 
 **Concepts Introduced:**
-- Loading experience
-- First impressions
-- Branding
-- Professional start
+- User testing
+- Feedback collection
+- Iteration
+- External validation
 
 **Code Written:**
 ```
-- Loading screen graphic
-- Copyright/credit text
-- Brief display before title
-- Clean transition
+- Collect feedback
+- Make adjustments
+- Final tweaks
+- Verify improvements
 ```
 
 **What the Learner Sees:**
-Game loads with proper loading screen. Professional first impression.
+Improvements from feedback. Better experience.
 
 ---
 
-### Unit 62: Instructions
+### Unit 59: Documentation
 
 **Learning Objectives:**
-- Complete documentation
-- In-game help
-- Printed instructions
-- Player guidance
+- Write instructions
+- Create documentation
+- Help text
+- User guidance
 
 **Concepts Introduced:**
-- Documentation
+- Documentation writing
+- Instruction design
 - User guidance
-- Instruction writing
 - Release materials
 
 **Code Written:**
 ```
-- Expand help screen
-- Write text instructions
-- Create quick reference
+- Write instructions
+- Quick reference
 - Complete documentation
+- In-game help updates
 ```
 
 **What the Learner Sees:**
-Complete instructions accessible in-game. Clear guidance for new players.
+Complete documentation. Clear instructions.
 
 ---
 
-### Unit 63: Final Testing
+### Unit 60: Feature Freeze
 
 **Learning Objectives:**
-- Complete testing pass
-- Edge cases
-- Player testing
+- Lock features
+- Final testing
+- Release preparation
+- Stability focus
+
+**Concepts Introduced:**
+- Feature freeze
 - Release candidate
+- Stability testing
+- Final verification
+
+**Code Written:**
+```
+- Lock all features
+- Final test pass
+- Fix only bugs
+- Declare RC
+```
+
+**What the Learner Sees:**
+Final version. Ready for release.
+
+---
+
+### Unit 61: TAP File Creation
+
+**Learning Objectives:**
+- Create TAP file
+- Tape distribution
+- Standard format
+- Real hardware
+
+**Concepts Introduced:**
+- TAP format
+- Tape distribution
+- Loading headers
+- Standard format
+
+**Code Written:**
+```
+- Create TAP file
+- Verify loading
+- Test on emulator
+- Document format
+```
+
+**What the Learner Sees:**
+Loadable TAP file. Real distribution format.
+
+---
+
+### Unit 62: TZX with Loading Screen
+
+**Learning Objectives:**
+- Create TZX file
+- Add loading screen
+- Professional loading
+- Enhanced format
+
+**Concepts Introduced:**
+- TZX format
+- Loading screens
+- Enhanced distribution
+- Professional packaging
+
+**Code Written:**
+```
+- Design loading screen
+- Create TZX file
+- Include loading screen
+- Verify loading
+```
+
+**What the Learner Sees:**
+Loading screen during load. Professional presentation.
+
+---
+
+### Unit 63: Final Playtest
+
+**Learning Objectives:**
+- Complete playthrough
+- Final verification
+- Release readiness
+- Sign-off
 
 **Concepts Introduced:**
 - Release testing
-- User testing
-- Bug prioritisation
+- Final verification
+- Quality gate
 - Release readiness
 
 **Code Written:**
 ```
-- Full test pass
-- Fix critical bugs
-- Verify all paths
-- Release candidate declared
+- Complete playthrough
+- All modes tested
+- All features verified
+- Release approved
 ```
 
 **What the Learner Sees:**
-Thoroughly tested game. All issues resolved. Ready for release.
+Final, verified game. Ready for release.
 
 ---
 
 ### Unit 64: Distribution
 
 **Learning Objectives:**
-- Create distributable file
-- TAP/TZX format
-- Package game
-- Release complete
+- Package for release
+- Create distribution
+- Archive source
+- Release!
 
 **Concepts Introduced:**
-- Distribution formats
-- File packaging
+- Distribution packaging
 - Release process
+- Archival
 - Project completion
 
 **Code Written:**
 ```
-- Create TAP file
-- Test on real hardware/emulator
-- Package with documentation
+- Final TAP/TZX files
+- Documentation package
+- Source archive
 - Release!
 ```
 
 **What the Learner Sees:**
-Finished TAP file ready to distribute. Complete game. Achievement unlocked.
+Complete distribution package. Ready to share. A finished game.
 
 **Phase 4 Checkpoint:**
-The game is complete. Optimised, polished, feature-rich, and professionally packaged. It could have sold for £7.99 in 1984. The learner has built a commercial-quality game.
+The game is complete. Optimised, polished, tested, and packaged for distribution. Commercial quality. The learner has built a real ZX Spectrum game.
 
 ---
 
@@ -1949,23 +1927,25 @@ By completing all 64 units, learners have demonstrated mastery of:
 
 ---
 
-## Comparison: 16 Units vs 64 Units
+## Comparison: 8 Units vs 64 Units
 
-| Aspect | 16-Unit Version | 64-Unit Version |
-|--------|-----------------|-----------------|
+| Aspect | 8-Unit Version | 64-Unit Version |
+|--------|----------------|-----------------|
 | Gameplay | Two-player only | AI + Two-player |
+| AI | None | Three difficulty levels + personalities |
 | Sound | None | Full SFX + music |
-| Visuals | Basic | Animated, polished |
-| Options | None | Multiple settings |
-| AI | None | Three difficulty levels |
-| Save | None | Statistics tracking |
-| Polish | Minimal | Professional |
+| Visuals | Basic | Custom graphics, animated |
+| Options | None | Board sizes, themes, controls |
+| Modes | Single | Tournament, Campaign, Practice |
+| Save | None | High scores, statistics |
+| Distribution | PRG file | TAP/TZX with loading screen |
 | Commercial viable? | No | Yes |
-| Time investment | 16-32 hours | 64-128 hours |
+| Time investment | 8-16 hours | 64-128 hours |
 
 ---
 
 ## Version History
 
-- **2.0 (2026-01-09):** Complete restructure. Playable two-player game by Unit 16. Detailed unit breakdowns matching SID Symphony format. AI moved to Phase 2.
-- **1.0 (2025-xx-xx):** Original outline (display-theory focused, no game until Phase 2).
+- **3.0 (2026-01-12):** Complete restructure following "scaffold first, explain later" approach. Interactive from Unit 1 (board + moving cursor). Core gameplay by Unit 2. Theory (Unit 3) follows experience. AI by Unit 16.
+- **2.0 (2026-01-09):** Previous restructure (playable two-player by Unit 16, AI in Phase 2).
+- **1.0 (2025-xx-xx):** Original outline (display theory first, interactivity at Unit 5).

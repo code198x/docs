@@ -1,0 +1,163 @@
+---
+title: "The Hop"
+description: "Make the frog hop. Learn how to read the joystick and update hardware sprite positions with discrete movement."
+pubDate: 2026-01-03
+game: 1
+gameName: "Hop"
+unit: 3
+totalUnits: 16
+system: "Commodore Amiga"
+tags: ["assembly", "68000", "joystick", "sprites"]
+nextLesson: "/commodore-amiga/assembly/game-01-signal/unit-04"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+*Need to catch up? Check out [Unit 2: The Frog](/commodore-amiga/game-01-signal/unit-02).*
+
+## What You're Building
+
+The frog is on the screen, but it's frozen. It's time to give it life.
+
+By the end of this unit, you'll have:
+
+- A frog that hops up, down, left, and right
+- Joystick input with edge detection (one press = one hop)
+- Discrete movement (Frogger-style grid hopping)
+- Boundary clamping to keep the frog on screen
+
+This is the moment the game becomes interactive.
+
+## The Amiga Joystick
+
+The Amiga has two game ports. Port 2 (typically used for joysticks) is read through `JOY1DAT` at offset $00C.
+
+Unlike simpler systems, the Amiga uses **quadrature encoding** for joystick data — the same system used for mice and trackballs. For a digital joystick, we need to decode it.
+
+### JOY1DAT Format
+
+The register contains two counters:
+
+| Bits | Purpose |
+|------|---------|
+| 15-8 | Vertical counter (Y1, Y0) |
+| 7-0 | Horizontal counter (X1, X0) |
+
+For a digital joystick, we only need specific bits. The standard decoding:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-03/snippets/01-the-amiga-joystick.asm" lang="asm" />
+
+But up/down require XOR decoding:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-03/snippets/02-the-amiga-joystick.asm" lang="asm" />
+
+### The Fire Button
+
+The joystick fire button is on CIA-A at $BFE001, bit 7 (active low):
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-03/snippets/03-the-amiga-joystick.asm" lang="asm" />
+
+## Discrete Hopping
+
+In Frogger, the frog doesn't glide — it hops in discrete steps. One joystick push = one hop. This means we need **edge detection**: only register a hop when the joystick transitions from "not pressed" to "pressed."
+
+We'll store the previous frame's joystick state and compare:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-03/snippets/04-discrete-hopping.asm" lang="asm" />
+
+The logic:
+1. Read current joystick state
+2. Compare with previous state
+3. Only act on newly-pressed directions
+4. Store current state for next frame
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-03/snippets/05-discrete-hopping.asm" lang="asm" />
+
+## Sprite Position Variables
+
+We'll track the frog's logical position in memory:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-03/snippets/06-sprite-position-variables.asm" lang="asm" />
+
+### Movement Constants
+
+Frogger movement is grid-based. We'll hop 16 pixels per move:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-03/snippets/07-sprite-position-variables.asm" lang="asm" />
+
+### Boundaries
+
+We need to keep the frog on screen:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-03/snippets/08-sprite-position-variables.asm" lang="asm" />
+
+## Updating the Sprite Position
+
+Amiga sprite control words encode position differently than a simple X/Y:
+
+**Word 1**: `VSTART[7:0] | HSTART[8:1]`
+**Word 2**: `VSTOP[7:0] | CONTROL`
+
+The horizontal position is shifted right by 1 (giving 2-pixel granularity), and the low bit goes into the control word. For simplicity, we'll keep positions even.
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-03/snippets/09-updating-the-sprite-position.asm" lang="asm" />
+
+## The Main Loop
+
+Our game loop now:
+1. Waits for vertical blank
+2. Reads joystick with edge detection
+3. Updates frog position (with boundary checks)
+4. Updates sprite control words
+5. Repeats
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-03/snippets/10-the-main-loop.asm" lang="asm" />
+
+## The Joystick Routine
+
+Here's the complete joystick reading with edge detection:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-03/snippets/11-the-joystick-routine.asm" lang="asm" />
+
+## Build It. Run It.
+
+```bash
+vasmm68k_mot -Fhunkexe -kick1hunks -o hop -nosym hop.asm
+xdftool hop.adf create + format "Hop" ofs + boot install boot1x + write hop + makedir s
+echo "hop" > startup-sequence
+xdftool hop.adf write startup-sequence s/startup-sequence
+fs-uae --floppy_drive_0=hop.adf
+```
+
+Push the joystick — the frog hops! Each push moves exactly one grid cell. The frog stays within the play area.
+
+## What You've Learnt
+
+- **JOY1DAT** ($00C) holds quadrature-encoded joystick data
+- **XOR decoding** extracts clean up/down signals
+- **Edge detection** ensures one press = one hop
+- **Sprite control words** encode position with specific bit layouts
+- **Boundary checking** prevents the frog from leaving the play area
+
+## The Complete Code
+
+Here's the full `hop.asm` with movement:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-03/hop.asm" lang="asm" />
+
+## Recap / Sanity Check
+
+Before moving on, verify:
+
+- [ ] Build succeeds with no errors
+- [ ] Frog responds to joystick input
+- [ ] Each joystick push = exactly one hop
+- [ ] Frog cannot move off the left, right, top, or bottom boundaries
+- [ ] Movement is 16 pixels per hop (grid-aligned)
+
+## Next Unit
+
+The frog is hopping. But the road is safe. Too safe.
+
+In [Unit 4: The Traffic](/commodore-amiga/game-01-signal/unit-04), we add cars that scroll across the road using the Blitter.

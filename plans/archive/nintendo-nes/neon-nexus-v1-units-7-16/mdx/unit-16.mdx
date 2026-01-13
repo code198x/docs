@@ -1,0 +1,120 @@
+---
+title: "Phase 1 Complete"
+description: "Review Phase 1 — celebrate what you've built and preview what's next."
+pubDate: 2026-01-10
+game: 1
+gameName: "Neon Nexus"
+unit: 16
+totalUnits: 64
+system: "Nintendo Entertainment System"
+tags: ["assembly", "6502", "review", "phase-complete"]
+prevLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-15"
+nextLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-17"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+## Phase 1 Complete
+
+Over 16 units, you've built the foundation of Neon Nexus. Let's review what's working:
+
+**Core Systems:**
+- Player movement with boundary checking
+- Multiple enemies with different movement patterns
+- Collision detection using bounding boxes
+- Collectible items with random respawn
+
+**Game State:**
+- Lives system with invulnerability
+- Score tracking and HUD display
+- Title screen with "PRESS START"
+- Game over screen with final score
+- State machine managing transitions
+
+**Polish:**
+- Sound effects for collecting and getting hit
+- Player sprite flashing during invulnerability
+- VBlank-safe PPU updates
+- Efficient dirty flag system
+
+## Phase 1 Journey
+
+| Unit | Topic | What You Learnt |
+|------|-------|-----------------|
+| 1 | Hello NES | iNES header, PPU basics, first ROM |
+| 2 | Drawing Tiles | CHR-ROM, pattern tables, nametables |
+| 3 | Palette | Colour palettes, attribute tables |
+| 4 | Sprites | OAM, shadow buffer, DMA transfer |
+| 5 | Movement | Controller input, position updates |
+| 6 | Boundaries | Screen edge detection, clamping |
+| 7 | Animation | Frame counting, tile cycling |
+| 8 | Enemies | Multiple sprites, movement patterns |
+| 9 | Collision | Bounding box, absolute distance |
+| 10 | Collectibles | Items, random placement, scoring |
+| 11 | Score Display | VBlank updates, dirty flags, BCD |
+| 12 | Lives | Counters, invulnerability, flashing |
+| 13 | Enemy Patterns | Data-driven movement, dispatcher |
+| 14 | Sound Effects | APU, pulse channel, pitch sweeps |
+| 15 | Title Screen | Game states, state machine |
+| 16 | Review | Phase 1 complete |
+
+## Technical Foundation
+
+You now understand:
+
+- **Memory-mapped I/O**: How the NES communicates with its PPU and APU through specific addresses
+- **VBlank timing**: Why we can only update the PPU during vertical blank
+- **Sprite handling**: How 64 sprites share shadow OAM and get DMA'd to the PPU
+- **Sound synthesis**: How period values create different pitches on the APU
+- **Game architecture**: How state machines organise complex game logic
+
+## The Phase 1 Code
+
+Here's the complete Phase 1 version of Neon Nexus:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-16/nexus.asm" />
+
+## Build It
+
+```bash
+ca65 nexus.asm -o nexus.o
+ld65 -C nes.cfg nexus.o -o nexus.nes
+```
+
+Your Phase 1 game:
+
+![Neon Nexus Phase 1](/images/nintendo-entertainment-system/game-01-neon-nexus/unit-16/screenshot.png)
+
+This ROM runs on real NES hardware. You've written code that would work on a cartridge from 1985.
+
+## What's Next: Phase 2
+
+Phase 1 gave you the foundation. Phase 2 expands on it:
+
+- **Background graphics**: Drawing the playfield with tiles
+- **Attribute tables**: Colouring different screen regions
+- **Level design**: Creating distinct play areas
+- **Difficulty progression**: Making the game harder over time
+- **High scores**: Tracking and displaying best performances
+- **More enemy types**: Expanding the threat variety
+
+The single-screen action game becomes richer and more polished.
+
+## Three Phases Remain
+
+| Phase | Units | Focus |
+|-------|-------|-------|
+| Phase 2 | 17-32 | Background graphics, levels, difficulty |
+| Phase 3 | 33-48 | Advanced features, optimisation |
+| Phase 4 | 49-64 | Final polish, release quality |
+
+By Unit 64, Neon Nexus will be a complete, polished game worthy of a real cartridge.
+
+## Phase 1 Achievement
+
+You've built a playable game in 6502 assembly. Not a tutorial exercise — actual machine code that controls hardware from 1985.
+
+The foundation is solid. Now we build on it.
+
+See you in Phase 2.

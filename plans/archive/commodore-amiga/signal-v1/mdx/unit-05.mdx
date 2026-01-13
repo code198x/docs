@@ -1,0 +1,141 @@
+---
+title: "Traffic Flow"
+description: "Animate multiple cars with the Blitter. Learn how to manage arrays of game objects with different speeds."
+pubDate: 2026-01-03
+game: 1
+gameName: "Hop"
+unit: 5
+totalUnits: 16
+system: "Commodore Amiga"
+tags: ["assembly", "68000", "blitter", "animation"]
+nextLesson: "/commodore-amiga/assembly/game-01-signal/unit-06"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+*Need to catch up? Check out [Unit 4: The Traffic](/commodore-amiga/game-01-signal/unit-04).*
+
+## What You're Building
+
+One car is hardly traffic. Time to fill the highway.
+
+By the end of this unit, you'll have:
+
+- Multiple cars in different road lanes
+- Cars moving at different speeds
+- Cars moving in both directions
+- A data-driven object system
+
+## Object Data Structures
+
+Games need to track many similar entities (cars, enemies, bullets). There are two common approaches:
+
+**Struct of Arrays** — separate arrays for each property:
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-05/snippets/01-object-data-structures.asm" lang="asm" />
+
+**Array of Structs** — each object is a contiguous block:
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-05/snippets/02-object-data-structures.asm" lang="asm" />
+
+For the 68000, **Array of Structs** often works well because we can use address register offsets like `2(a0)` to access fields, and advance with `lea 6(a0),a0` between objects.
+
+## The Car Structure
+
+Each car needs:
+
+| Offset | Field | Size | Description |
+|--------|-------|------|-------------|
+| 0 | X | Word | Horizontal position |
+| 2 | Y | Word | Vertical position (fixed per lane) |
+| 4 | Speed | Word | Signed: positive = right, negative = left |
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-05/snippets/03-the-car-structure.asm" lang="asm" />
+
+## Initialising the Cars
+
+We'll place cars in the four road lanes, alternating direction:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-05/snippets/04-initialising-the-cars.asm" lang="asm" />
+
+## The Update Loop
+
+Each frame, we loop through all cars:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-05/snippets/05-the-update-loop.asm" lang="asm" />
+
+### The DBF Instruction
+
+`dbf d7,.loop` is "Decrement and Branch if False" — it decrements D7, then branches if D7 ≥ 0. It's the 68000's loop instruction.
+
+If you want 4 iterations, set D7 to 3 (it loops while ≥ 0).
+
+## Wrapping Coordinates
+
+Cars need to wrap around the screen edges:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-05/snippets/06-wrapping-coordinates.asm" lang="asm" />
+
+Note we wrap to slightly off-screen (-16 or 320) so cars scroll smoothly in from the edge rather than popping.
+
+## Clearing Before Drawing
+
+We must clear the car's old position before drawing the new one. With multiple cars, each car clears itself before moving:
+
+1. Clear at current position
+2. Update position
+3. Draw at new position
+
+This prevents "trails" of old pixels.
+
+## Signed Arithmetic
+
+The 68000 handles signed numbers naturally. A speed of -3 means:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-05/snippets/07-signed-arithmetic.asm" lang="asm" />
+
+When comparing for wrap, we use signed comparisons:
+- `blt` (Branch if Less Than) — signed
+- `bge` (Branch if Greater or Equal) — signed
+
+## Build It. Run It.
+
+```bash
+vasmm68k_mot -Fhunkexe -kick1hunks -o hop -nosym hop.asm
+xdftool hop.adf create + format "Hop" ofs + boot install boot1x + write hop + makedir s
+echo "hop" > startup-sequence
+xdftool hop.adf write startup-sequence s/startup-sequence
+fs-uae --floppy_drive_0=hop.adf
+```
+
+Four cars should be moving across the road — some going left, some going right, at different speeds!
+
+## What You've Learnt
+
+- **Array of Structs** keeps related data together
+- **68000 addressing modes** like `CAR_X(a2)` access struct fields
+- **DBF** is the standard loop instruction
+- **Signed arithmetic** handles bidirectional movement naturally
+- **Clear-then-draw** prevents pixel trails
+
+## The Complete Code
+
+Here's the full `hop.asm` with multiple cars:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-05/hop.asm" lang="asm" />
+
+## Recap / Sanity Check
+
+Before moving on, verify:
+
+- [ ] Build succeeds with no errors
+- [ ] Four cars visible on the road
+- [ ] Cars move in different directions
+- [ ] Cars move at different speeds
+- [ ] Cars wrap around screen edges smoothly
+- [ ] Frog still moves correctly
+
+## Next Unit
+
+The road is dangerous. But the river is worse.
+
+In [Unit 6: The River](/commodore-amiga/game-01-signal/unit-06), we add logs that the frog must ride across the water.

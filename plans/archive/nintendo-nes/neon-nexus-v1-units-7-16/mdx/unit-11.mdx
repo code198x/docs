@@ -1,0 +1,116 @@
+---
+title: "Score Display"
+description: "Show the score on screen — learn VBlank updates and number rendering."
+pubDate: 2026-01-10
+game: 1
+gameName: "Neon Nexus"
+unit: 11
+totalUnits: 64
+system: "Nintendo Entertainment System"
+tags: ["assembly", "6502", "ppu", "hud"]
+prevLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-10"
+nextLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-12"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+## What You're Building
+
+You're collecting items. The score increments. But you can't see it.
+
+By the end of this unit, you'll have:
+
+- Number tiles (0-9) in CHR-ROM
+- A "SCORE" label on screen
+- Real-time score display that updates when you collect items
+- Understanding of VBlank timing for PPU updates
+
+The invisible becomes visible.
+
+## The VBlank Problem
+
+The PPU is drawing to the screen 60 times per second. We can't just write to the nametable whenever we want — we'd corrupt the display.
+
+The solution: **VBlank**. Between frames, there's a brief window (~2,270 CPU cycles) when the PPU isn't drawing. The NMI fires at the start of VBlank, giving us safe time to update the screen.
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-11/snippets/04-vblank-updates.asm" />
+
+This is why we update the score in the NMI handler, not in the main loop.
+
+## Number Tiles
+
+To display digits, we need tiles for 0-9 in CHR-ROM:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-11/snippets/01-digit-tiles.asm" />
+
+We place digits at tiles 5-14. To convert a number N to its tile index: `TILE_DIGIT_0 + N`.
+
+## The Dirty Flag Pattern
+
+We don't want to update the score every frame — only when it changes. A "dirty flag" signals when updates are needed:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-11/snippets/02-score-dirty-flag.asm" />
+
+This pattern separates "what happened" (game logic) from "when to display it" (NMI handler).
+
+## Binary to Decimal
+
+The score is stored as a binary number (0-255). To display it, we need individual decimal digits. We extract them through repeated subtraction:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-11/snippets/03-binary-to-decimal.asm" />
+
+For score 123:
+- Subtract 100 once → X=1, remainder=23
+- Subtract 10 twice → X=2, remainder=3
+- Remainder 3 is the ones digit
+
+## HUD Layout
+
+The score display lives in the top row of the nametable:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-11/snippets/05-hud-layout.asm" />
+
+We draw "SCORE" once at startup, then update only the digits during gameplay.
+
+## The Complete Code
+
+Here's our program with score display:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-11/nexus.asm" />
+
+## Build It. Run It.
+
+```bash
+ca65 nexus.asm -o nexus.o
+ld65 -C nes.cfg nexus.o -o nexus.nes
+fceux nexus.nes
+```
+
+You should see "SCORE 000" at the top of the screen:
+
+![Score display HUD](/images/nintendo-entertainment-system/game-01-neon-nexus/unit-11/screenshot.png)
+
+Collect items and watch the score increase in real-time. The HUD updates smoothly without any flicker.
+
+## Why Dirty Flags?
+
+The dirty flag pattern is everywhere in NES development:
+
+- **Efficiency**: Only update what changed
+- **Timing safety**: Separate game logic from PPU updates
+- **Simplicity**: Clear signal of "something needs doing"
+
+The alternative — updating everything every frame — wastes precious VBlank time and makes code harder to reason about.
+
+## What You've Learnt
+
+- **VBlank timing**: PPU updates must happen during the safe window
+- **NMI-driven updates**: Use the interrupt handler for display changes
+- **Dirty flag pattern**: Track what needs updating
+- **Binary to decimal**: Extract digits through repeated subtraction
+- **Nametable addressing**: Calculate PPU addresses for specific screen positions
+
+## Next Unit
+
+The score displays. But what about lives? In Unit 12, we'll add a lives system — take damage without instant death, and track how many chances remain.

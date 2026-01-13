@@ -1,0 +1,138 @@
+---
+title: "Enemies"
+description: "Add moving enemies — sprites that create challenge and danger."
+pubDate: 2026-01-10
+game: 1
+gameName: "Neon Nexus"
+unit: 8
+totalUnits: 64
+system: "Nintendo Entertainment System"
+tags: ["assembly", "6502", "sprites", "enemies", "movement"]
+prevLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-07"
+nextLesson: "/nintendo-entertainment-system/assembly/game-01-neon-nexus/unit-09"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+## What You're Building
+
+The player moves. But there's no challenge yet — nothing to avoid, nothing to fear.
+
+By the end of this unit, you'll have:
+
+- Multiple enemy sprites moving independently
+- Enemy position arrays for managing multiple objects
+- Automatic movement with screen wrapping
+- A tile design for enemy graphics
+
+The arena becomes populated with threats.
+
+## Managing Multiple Objects
+
+One enemy would be simple — just add more variables. But games need many enemies. We'll use arrays:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-08/snippets/01-enemy-variables.asm" />
+
+With indexed addressing, we can access any enemy: `enemy_x, x` where X is the enemy index (0-3).
+
+## Initialising Enemies
+
+Place enemies at starting positions around the arena:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-08/snippets/02-init-enemies.asm" />
+
+Spreading enemies across the screen creates fairness — the player isn't immediately surrounded.
+
+## Enemy Movement
+
+Enemies need to move on their own. A simple pattern: some move down, some move up:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-08/snippets/03-move-enemies.asm" />
+
+The wrapping logic creates continuous movement. Enemies descend/ascend endlessly, wrapping from bottom to top or vice versa.
+
+## Updating Enemy Sprites
+
+Enemy positions need to be copied to OAM each frame:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-08/snippets/04-update-enemy-sprites.asm" />
+
+This loop writes 4 bytes per enemy (Y, tile, attributes, X) for all 4 enemies. Using the Y register for OAM offset and X register for enemy index allows efficient iteration.
+
+## Enemy Graphics
+
+The enemy tile uses an invader-style design:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-08/snippets/05-enemy-tile.asm" />
+
+Classic shapes work well at 8×8. The reaching arms and distinct silhouette make enemies instantly recognisable.
+
+## The Game Loop
+
+The main loop now updates enemies every frame:
+
+```asm
+main_loop:
+    lda #$00
+    sta nmi_ready
+@wait_for_nmi:
+    lda nmi_ready
+    beq @wait_for_nmi
+
+    jsr read_controller
+    jsr update_player
+    jsr move_enemies         ; Move enemies
+    jsr update_enemy_sprites ; Update OAM
+
+    jmp main_loop
+```
+
+Order matters: move enemies, then update sprites. This ensures the display reflects the current frame's positions.
+
+## The Complete Code
+
+Here's our program with enemies:
+
+<CodeFromFile src="nintendo-entertainment-system/game-01-neon-nexus/unit-08/nexus.asm" />
+
+## Build It. Run It.
+
+```bash
+ca65 nexus.asm -o nexus.o
+ld65 -C nes.cfg nexus.o -o nexus.nes
+fceux nexus.nes
+```
+
+You should see the player and 4 green enemies:
+
+![Player and enemies in the arena](/images/nintendo-entertainment-system/game-01-neon-nexus/unit-08/screenshot.png)
+
+The enemies move vertically — two descend from the top, two ascend from the bottom. They wrap around when reaching the screen edges.
+
+Move the player to dodge them. Currently there's no collision detection, so you can pass through enemies freely. That changes in the next unit.
+
+## Multiple Sprites
+
+The NES supports 64 sprites, but only 8 can appear on a single scanline. With 5 sprites (1 player + 4 enemies) and vertical movement patterns, we avoid scanline conflicts.
+
+Sprite 0 is the player. Sprites 1-4 are enemies. OAM addresses:
+- Sprite 0: $0200-$0203 (player)
+- Sprite 1: $0204-$0207 (enemy 0)
+- Sprite 2: $0208-$020B (enemy 1)
+- Sprite 3: $020C-$020F (enemy 2)
+- Sprite 4: $0210-$0213 (enemy 3)
+
+## What You've Learnt
+
+- **Position arrays**: Store multiple objects efficiently
+- **Indexed addressing**: Access array elements with registers
+- **Independent movement**: Each object can have its own behaviour
+- **Screen wrapping**: Check boundaries and reset positions
+- **Sprite ordering**: Player first, enemies after
+
+## Next Unit
+
+Enemies move. But they can't hurt you yet.
+
+In Unit 9, we'll add collision detection — when player meets enemy, something happens. The game gets its first real stakes.

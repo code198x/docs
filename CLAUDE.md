@@ -64,6 +64,174 @@ docker-compose up -d                        # Start containers
 docker-compose exec workspace bash          # Enter workspace
 ```
 
+### ZX Spectrum Build and Screenshot Commands
+
+```bash
+# Build ZX Spectrum snapshot (pasmonext assembler)
+docker run --rm \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  ghcr.io/code198x/sinclair-zx-spectrum:latest \
+  pasmonext --sna /code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.asm \
+                  /code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna
+
+# Capture screenshot (title screen only)
+docker run --rm \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  -v /Users/stevehill/Projects/Code198x/website/public/images:/images \
+  ghcr.io/code198x/sinclair-zx-spectrum:latest \
+  spectrum-screenshot \
+    /code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna \
+    /images/sinclair-zx-spectrum/game-01-ink-war/unit-XX/screenshot.png \
+    --wait 1
+
+# Capture screenshot with input injection (skip title, show gameplay)
+docker run --rm \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  -v /Users/stevehill/Projects/Code198x/website/public/images:/images \
+  ghcr.io/code198x/sinclair-zx-spectrum:latest \
+  spectrum-screenshot \
+    /code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna \
+    /images/sinclair-zx-spectrum/game-01-ink-war/unit-XX/screenshot.png \
+    --wait 2 --input /scripts/inputs/claim-cells.sh
+```
+
+**Input Scripts** (in `/sinclair-zx-spectrum-dev/scripts/inputs/`):
+- `claim-cells.sh` - Skip title screen, claim several cells to show gameplay
+
+### C64 Build and Screenshot Commands
+
+**Note:** Use `c64-dev:latest` (built locally from `commodore-64-dev/`). Build with: `cd commodore-64-dev && docker build -t c64-dev:latest .`
+
+**Requires:** C64 ROMs extracted to `/tmp/c64roms/`:
+- `kernal-901227-03.bin`
+- `basic-901226-01.bin`
+- `chargen-901225-01.bin`
+
+```bash
+# Build C64 PRG (ACME assembler)
+docker run --rm \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  c64-dev:latest \
+  acme -f cbm -l /code-samples/commodore-64/game-01-sid-symphony/unit-XX/labels.txt \
+  -o /code-samples/commodore-64/game-01-sid-symphony/unit-XX/symphony.prg \
+  /code-samples/commodore-64/game-01-sid-symphony/unit-XX/symphony.asm
+
+# Capture C64 screenshot (inline - handles ROMs, Xvfb, VICE, and scaling)
+docker run --rm \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  -v /Users/stevehill/Projects/Code198x/website/public/images:/images \
+  -v /tmp/c64roms:/roms \
+  c64-dev:latest bash -c "
+cp /roms/*.bin /usr/share/vice/C64/
+Xvfb :99 -screen 0 1024x768x24 &>/dev/null &
+sleep 1
+export DISPLAY=:99
+x64sc -limitcycles 3500000 \
+  -exitscreenshot /tmp/raw.png \
+  -autostartprgmode 1 \
+  -warp \
+  +sound \
+  /code-samples/commodore-64/game-01-sid-symphony/unit-XX/symphony.prg 2>/dev/null
+convert /tmp/raw.png -filter point -resize 200% /images/commodore-64/game-01-sid-symphony/unit-XX/screenshot.png
+"
+```
+
+**Key VICE flags:**
+- `-limitcycles 3500000` - Run for ~3.5 seconds (PAL cycles)
+- `-autostartprgmode 1` - Inject PRG directly into RAM
+- `-exitscreenshot /path` - Save screenshot on exit
+- `-warp` - Run at maximum speed
+- `+sound` - Disable sound (faster, no audio errors)
+
+### NES Build and Screenshot Commands
+
+```bash
+# Build NES ROM (ca65 assembler)
+docker run --rm \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  code198x/nintendo-entertainment-system:latest \
+  bash -c "cd /code-samples/nintendo-entertainment-system/game-01-neon-nexus/unit-XX && \
+           ca65 nexus.asm -o nexus.o && \
+           ld65 -C nes.cfg nexus.o -o nexus.nes"
+
+# Capture NES screenshot
+docker run --rm \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  -v /Users/stevehill/Projects/Code198x/website/public/images:/images \
+  code198x/nintendo-entertainment-system:latest \
+  nes-screenshot \
+    /code-samples/nintendo-entertainment-system/game-01-neon-nexus/unit-XX/nexus.nes \
+    /images/nintendo-entertainment-system/game-01-neon-nexus/unit-XX/screenshot.png \
+    --wait 2 --crop
+```
+
+### Amiga Build, Screenshot, and Video Commands
+
+**Note:** Use `amiga-dev:latest` (built locally from `commodore-amiga-dev/`). Build with: `cd commodore-amiga-dev && docker build -t amiga-dev:latest .`
+
+```bash
+# Build Amiga executable (vasm assembler)
+# IMPORTANT: Use -kick1hunks for Kickstart 1.x compatibility
+docker run --rm --entrypoint="" \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  amiga-dev:latest \
+  /bin/bash -c "cd /code-samples/commodore-amiga/game-01-signal/unit-XX && \
+           vasmm68k_mot -Fhunkexe -kick1hunks -o signal signal.asm"
+
+# Create bootable ADF disk image
+docker run --rm --entrypoint="" \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  amiga-dev:latest \
+  /bin/bash -c "cd /code-samples/commodore-amiga/game-01-signal/unit-XX && \
+           echo 'signal' > startup-sequence && \
+           rm -f signal.adf && \
+           xdftool signal.adf create && \
+           xdftool signal.adf format 'Signal' && \
+           xdftool signal.adf makedir s && \
+           xdftool signal.adf boot install && \
+           xdftool signal.adf write startup-sequence s/startup-sequence && \
+           xdftool signal.adf write signal && \
+           xdftool signal.adf protect signal e && \
+           rm startup-sequence"
+
+# Capture Amiga screenshot (requires Kickstart ROM at /tmp/kickstart/kick13.rom)
+# Extract ROM first: cp "/path/to/Kickstart v1.3...rom" /tmp/kickstart/kick13.rom
+docker run --rm --entrypoint="" \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  -v /tmp/kickstart:/roms \
+  -v /Users/stevehill/Projects/Code198x/website/public/images:/images \
+  -v /Users/stevehill/Projects/Code198x/commodore-amiga-dev/scripts:/scripts \
+  amiga-dev:latest \
+  /bin/bash -c "/scripts/amiga-screenshot.sh \
+    /code-samples/commodore-amiga/game-01-signal/unit-XX/signal.adf \
+    /images/commodore-amiga/game-01-signal/unit-XX/screenshot.png \
+    --wait 12"
+
+# Capture Amiga video (with input injection to skip title screen)
+docker run --rm --entrypoint="" \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  -v /tmp/kickstart:/roms \
+  -v /Users/stevehill/Projects/Code198x/website/public/videos:/videos \
+  -v /Users/stevehill/Projects/Code198x/commodore-amiga-dev/scripts:/scripts \
+  amiga-dev:latest \
+  /bin/bash -c "/scripts/amiga-video.sh \
+    /code-samples/commodore-amiga/game-01-signal/unit-XX/signal.adf \
+    /videos/commodore-amiga/game-01-signal/unit-XX/gameplay.mp4 \
+    --wait 12 --duration 15 --input /scripts/inputs/skip-title.sh"
+```
+
+**Input Scripts** (in `/commodore-amiga-dev/scripts/inputs/`):
+- `skip-title.sh` - Press fire to skip title screen (Units 15-16)
+- `demo-movement.sh` - Basic frog movement demo (Units 2-14)
+- `signal-gameplay.sh` - Full gameplay demo with navigation
+
+**Amiga DMACON Reference:**
+- `$83a0` = Master + Copper + Sprites **+ Bitplanes** (DMAEN | BPLEN | COPEN | SPREN) - **USE THIS for sprites to work!**
+- `$8280` = Master + Copper only (DMAEN | COPEN)
+- `$83e0` = All DMA (DMAEN | BPLEN | COPEN | BLTEN | SPREN)
+
+**IMPORTANT:** Even without bitplane graphics, sprites need BPLEN ($0100) enabled to render correctly.
+
 ---
 
 ## Repository Structure
@@ -204,6 +372,6 @@ The component infers the correct syntax highlighting from the file path:
 
 ---
 
-**Version:** 5.1
-**Last Updated:** 2026-01-08
-**Status:** Added all 7 repositories to documentation
+**Version:** 5.4
+**Last Updated:** 2026-01-13
+**Status:** Added C64 build and screenshot commands

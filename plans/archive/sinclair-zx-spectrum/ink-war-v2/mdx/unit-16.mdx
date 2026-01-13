@@ -1,0 +1,120 @@
+---
+title: "Complete Two-Player Game"
+description: "You did it. A complete, polished two-player game for the ZX Spectrum. Hand the keyboard to a friend and play."
+pubDate: 2026-01-09
+game: 1
+gameName: "Ink War"
+unit: 16
+totalUnits: 64
+system: "Sinclair ZX Spectrum"
+tags: ["assembly", "z80", "complete", "game", "phase-1"]
+prevLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-15"
+nextLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-17"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+## What You've Built
+
+This is it. Sixteen units. One complete game.
+
+Ink War is a fully playable two-player territory control game for the ZX Spectrum. Two humans can sit at the same keyboard, take turns claiming cells, and compete to control the majority of the 8×8 board.
+
+![Unit 16 Screenshot](/images/sinclair-zx-spectrum/game-01-ink-war/unit-16/screenshot.png)
+
+*The title screen — press any key to begin battle.*
+
+## The Complete Game
+
+Here's what you built:
+
+**Display System**
+- Direct attribute manipulation at $5800
+- Character printing from ROM ($3D00)
+- Border effects for feedback
+
+**Input System**
+- Keyboard port reading ($FE)
+- Key debouncing (edge detection)
+- Direction and action handling
+
+**Game Logic**
+- 64-cell board state tracking
+- Move validation (empty cells only)
+- Score counting
+- Win/lose/draw detection
+
+**State Machine**
+- Title → Playing → Results → Title loop
+- Clean state transitions
+- Complete game reset between plays
+
+**Polish**
+- Visual turn indicator
+- Sound effects (success, error, restart)
+- Flashing prompts
+- Screen transitions
+
+## The Architecture
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-16/snippets/01-game-structure.asm" />
+
+The state machine pattern keeps everything organised. Each state knows how to set itself up, process one frame, and transition to the next state.
+
+## The Mechanics
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-16/snippets/02-game-mechanics.asm" />
+
+Simple rules, clean implementation. The Spectrum's attribute system became our game board — no colour clash, just strategy.
+
+## Play It
+
+```bash
+pasmonext --sna inkwar.asm inkwar.sna
+```
+
+Load in your emulator and play:
+
+1. **Press any key** to start
+2. **Q/A/O/P** to move the cursor
+3. **Space** to claim the current cell
+4. **Alternate turns** with your opponent
+5. **Fill the board** — majority wins
+6. **Press any key** to play again
+
+Hand the keyboard to a friend. Play best of three. Develop strategies. That's what games are for.
+
+## What You've Learnt
+
+Over 16 units, you've learnt:
+
+- **Z80 Assembly**: LD, CP, JR, DJNZ, PUSH/POP, IN/OUT
+- **Memory-Mapped I/O**: Screen at $4000, attributes at $5800
+- **Keyboard Input**: Port $FE with half-row addressing
+- **Game State**: Variables, arrays, state machines
+- **Game Logic**: Validation, scoring, win detection
+- **Polish**: Sound, visual feedback, transitions
+
+More importantly, you've learnt that a game is just a loop. Read input. Update state. Draw screen. Repeat. Everything else is detail.
+
+## Phase 1 Complete
+
+This is the end of Phase 1. You have a working game.
+
+In Phase 2 (Units 17-32), we'll add an AI opponent so you can play solo. The game will get difficulty levels, better sound, and gameplay options.
+
+But right now? You built a game. On a ZX Spectrum. In assembly language.
+
+That's worth celebrating.
+
+## The Complete Code
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-16/inkwar.asm" />
+
+## Next Steps
+
+Phase 2 begins with Unit 17: AI Framework. We'll add a computer opponent that can take Player 2's turns, starting with random moves and building up to strategic play.
+
+Or take a break. You've earned it. Play some Ink War with a friend. You made this.

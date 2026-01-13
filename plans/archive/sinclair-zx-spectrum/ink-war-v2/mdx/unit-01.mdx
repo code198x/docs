@@ -1,0 +1,148 @@
+---
+title: "The Spectrum's Display"
+description: "Your first contact with the Spectrum's memory-mapped display. Change the border, colour some cells, see pixels respond to code."
+pubDate: 2026-01-09
+game: 1
+gameName: "Ink War"
+unit: 1
+totalUnits: 64
+system: "Sinclair ZX Spectrum"
+tags: ["assembly", "z80", "display", "attributes", "memory-mapped"]
+nextLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-02"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+*Need to set up your tools first? See [Getting Started](/sinclair-zx-spectrum/getting-started).*
+
+## What You're Building
+
+No gameplay. No input. Just colour.
+
+By the end of this unit, you'll have:
+
+- A working assembly program that runs on the Spectrum
+- Your first contact with the display system
+- A blue border and coloured blocks on screen
+
+It's not much — a few coloured squares. But those squares came from *your* code writing directly to memory. The Spectrum obeyed.
+
+![Unit 1 Screenshot](/images/sinclair-zx-spectrum/game-01-ink-war/unit-01/screenshot.png)
+
+## Memory-Mapped Display
+
+Here's the insight that makes the Spectrum tick: **the screen is just memory**.
+
+The Spectrum doesn't have special "draw pixel" commands. Instead, certain memory addresses are connected directly to the display hardware. Write a byte to $5800, and a cell on screen changes colour. Write to $4000, and pixels appear.
+
+This is called a **memory-mapped display**, and it's how all Spectrum programming works.
+
+## Where the Screen Lives
+
+The Spectrum's display uses two areas of memory:
+
+| Memory Range | Size | Purpose |
+|-------------|------|---------|
+| $4000-$57FF | 6144 bytes | Screen memory (pixels) |
+| $5800-$5AFF | 768 bytes | Attribute memory (colours) |
+
+**Screen memory** controls which pixels are on or off — pure black and white dots. **Attribute memory** controls what colours those dots appear in.
+
+For Ink War, we'll focus almost entirely on attributes. Each attribute byte controls the colour of one 8×8 pixel cell — and our game board is made of these cells.
+
+## The Border
+
+Before we touch the screen, let's change the border. The border is the area surrounding the main display, and it's controlled by port $FE:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-01/snippets/02-border.asm" />
+
+The `OUT` instruction sends a value to a hardware port. Port $FE controls several things, but bits 0-2 set the border colour. We send 1 (blue), and the border turns blue.
+
+<InlineNote>
+Why a port instead of memory? The border isn't part of the screen — it's drawn by the ULA chip around the display area. Ports communicate with hardware that isn't memory-mapped.
+</InlineNote>
+
+## Constants
+
+Before we continue, let's define some constants. These give names to numbers, making our code readable:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-01/snippets/01-constants.asm" />
+
+Now we can write `BLUE` instead of `1`, and `ATTR_START` instead of `$5800`. When you read the code later, you'll know exactly what it means.
+
+## The Attribute Byte
+
+Each attribute byte packs several pieces of information into 8 bits:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-01/snippets/03-attribute-byte.asm" />
+
+The format is **FBPPPIII**:
+
+- **F** (bit 7): Flash — alternates between ink and paper colours
+- **B** (bit 6): Bright — makes colours more vivid
+- **PPP** (bits 5-3): Paper colour — the background
+- **III** (bits 2-0): Ink colour — the foreground
+
+To create red paper with white ink:
+- Paper = RED (2) = 010 in binary
+- Ink = WHITE (7) = 111 in binary
+- Result: %00010111
+
+## Writing to Attribute Memory
+
+Now let's place some coloured cells on screen:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-01/snippets/04-write-attribute.asm" />
+
+The `LD (HL), A` instruction writes the value in the A register to the address pointed to by HL. Since HL points to $5800 (the first attribute cell), we've just changed the colour of the top-left cell on screen.
+
+`INC HL` moves to the next cell. The attribute cells are arranged in a simple grid — 32 cells per row, 24 rows. Incrementing HL moves one cell to the right.
+
+## The Infinite Loop
+
+There's one problem: when our code finishes, it returns to BASIC. The Spectrum redraws the screen, and our coloured cells vanish.
+
+We need to keep the program running:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-01/snippets/05-infinite-loop.asm" />
+
+`JR` means "Jump Relative". When the CPU reaches this instruction, it jumps back to the `forever` label — which is the same instruction. It loops forever, keeping our code running and our colours visible.
+
+<InlineNote>
+We'll replace this crude loop with proper game logic later. For now, it keeps our display intact.
+</InlineNote>
+
+## Build It. Run It.
+
+Save this code as `inkwar.asm` and assemble it:
+
+```bash
+pasmonext --sna inkwar.asm inkwar.sna
+```
+
+Load the `.sna` file in your emulator. You should see:
+
+- A blue border
+- Several coloured cells in the top-left corner
+- One cell flashing (the FLASH bit in action)
+
+## What You've Learnt
+
+- **Memory-mapped display**: The screen is just memory at specific addresses
+- **Screen memory** ($4000-$57FF): Controls pixels (on/off)
+- **Attribute memory** ($5800-$5AFF): Controls colours (768 cells)
+- **The border**: Controlled via port $FE, not memory
+- **Attribute byte format**: FBPPPIII (Flash, Bright, Paper, Ink)
+- **The 8 colours**: Black, blue, red, magenta, green, cyan, yellow, white
+
+## The Complete Code
+
+Here's the complete `inkwar.asm`:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-01/inkwar.asm" />
+
+## Next Unit
+
+We've placed a few cells by hand. But Ink War needs an 8×8 board — 64 cells. In Unit 2, we'll explore the attribute grid in depth: how to calculate addresses, how to fill regions, and how to create the patterns that will become our game board.

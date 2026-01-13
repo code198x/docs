@@ -6,6 +6,8 @@
 
 **Commercial Quality Target:** A game that could have sold for £19.99 on disk in 1987. Polished, responsive, with that distinctive Amiga look and sound.
 
+**Design Principle:** "Show First, Explain Later" - Scaffold provides working code immediately; theory follows experience.
+
 ---
 
 ## The Finished Game
@@ -54,1207 +56,1114 @@ Before detailing the units, here's what the learner builds:
 
 ---
 
+## Engagement Milestones
+
+| Milestone | Unit |
+|-----------|------|
+| First visible output (sprite + playfield) | 1 |
+| First interactivity (joystick movement) | 2 |
+| First "game feel" (obstacles, collision) | 8 |
+| Complete roads game | 16 |
+| Complete roads + river game | 32 |
+| Full polish (music, effects, menus) | 48 |
+| Distribution ready | 64 |
+
+---
+
 ## Phase 1: Foundation (Units 1-16)
 
-*Goal: A complete, playable Frogger game. Simple graphics, but fully functional - cross lanes, avoid obstacles, reach home.*
+*Goal: A complete, playable Frogger game with roads, cars, collision, lives, and scoring. River section comes in Phase 2.*
 
-*By the end of this phase, the learner has built a working game. The frog crosses roads, avoids cars (using hardware sprites), reaches home zones, loses lives, and wins levels. It's simple but complete.*
+*By the end of this phase, the learner has built a working game. The frog crosses roads, avoids cars, reaches home zones, loses lives, and wins levels. It's roads-only but complete.*
 
 ---
 
-### Unit 1: The Amiga Architecture
+### Unit 1: Hello Amiga
 
 **Learning Objectives:**
-- Understand the Amiga's custom chipset (Agnus, Denise, Paula)
-- Know the memory map (chip RAM, custom registers)
-- Write a first 68000 assembly program
-- See the program run on the Amiga
+- Run a working Amiga program
+- See the custom chipset in action
+- Modify sprite position and colours
+- Understand immediate feedback
 
 **Concepts Introduced:**
-- 68000 CPU vs custom chips
-- Chip RAM vs Fast RAM
-- Custom chip base address ($DFF000)
-- Program structure (code section)
+- Scaffold approach (working code provided)
+- Custom chipset overview (Agnus, Denise, Paula)
+- Hardware sprites
+- Copper display lists
 
-**Code Written:**
-```
-- Minimal executable structure
-- Set background colour via COLOR00
-- Infinite loop to keep program running
-- Exit cleanly (optional)
+**Scaffold Provides:**
+- System takeover and clean restoration
+- 5-bitplane display (32 colours)
+- Copper list with zone colours
+- Hardware sprite 0 (frog) displayed
+- VBlank interrupt handler
+- Exit on right mouse button
+
+**What the Learner Does:**
+```asm
+FROG_START_X = 160    ; Change to move frog horizontally
+FROG_START_Y = 220    ; Change to move frog vertically
+; Modify palette entries to change zone colours
+; Modify sprite data to change frog appearance
 ```
 
 **What the Learner Sees:**
-The Amiga screen changes to a solid colour. The program runs from their own code. First contact with the custom chipset.
+Coloured playfield with frog sprite visible. Changes to constants immediately affect the display. First contact with the Amiga.
+
+**Technical Details (hidden in scaffold):**
+- Custom base: $DFF000
+- Forbid/Permit for OS takeover
+- INTENA/DMACON state save/restore
+- DIWSTRT/DIWSTOP, DDFSTRT/DDFSTOP
+- Copper list structure
+
+---
+
+### Unit 2: Moving the Frog
+
+**Learning Objectives:**
+- Read joystick input
+- Update sprite position from input
+- Constrain movement to boundaries
+- Achieve interactivity
+
+**Concepts Introduced:**
+- CIA port reading ($BFE001)
+- Direction decoding
+- Sprite position updates
+- Boundary checking
+
+**Code Written:**
+```asm
+read_joystick:
+    move.b  $BFE001,d0      ; Read CIA port
+    ; Decode up/down/left/right
+    ; Store direction
+
+update_frog:
+    ; Add direction to frog position
+    ; Check screen boundaries
+    ; Update sprite control words
+```
+
+**What the Learner Sees:**
+Push joystick, frog moves. Interactivity achieved in Unit 2.
 
 **Technical Details:**
-- Custom base: $DFF000
-- COLOR00: $DFF180
-- Background colour = bits 11-0 (RGB4 format)
-- Colour value: $0F00 = bright red
+- CIA-A: $BFE001
+- Direction bits decoded from port
+- Sprite VSTART/HSTART in control words
 
 ---
 
-### Unit 2: Taking Over the System
+### Unit 3: Understanding What We Built
 
 **Learning Objectives:**
-- Understand why we disable the OS for games
-- Save system state for clean exit
-- Disable interrupts and DMA
-- Restore system on exit
+- Understand system takeover (why we disable the OS)
+- Understand Copper lists (how the display works)
+- Understand hardware sprites (how the frog appears)
+- Understand VBlank (why timing is consistent)
 
 **Concepts Introduced:**
-- Exec library and forbid/permit
-- Interrupt control (INTENA)
-- DMA control (DMACON)
-- Saving/restoring state
+- Exec library and Forbid/Permit
+- Interrupt and DMA control
+- Copper as display list processor
+- Sprite data format
+- Vertical blank synchronisation
 
 **Code Written:**
-```
-- Save interrupt and DMA state
-- Disable multitasking (Forbid)
-- Disable all interrupts
-- Disable all DMA
-- On exit: restore everything
-```
+None - this unit explains the scaffold code.
 
 **What the Learner Sees:**
-The Workbench disappears. A blank screen under total program control. Exit returns to Workbench cleanly.
+Same as Unit 2. This unit is about understanding, not new output.
 
 **Technical Details:**
 - INTENA: $DFF09A (write), $DFF01C (read)
 - DMACON: $DFF096 (write), $DFF002 (read)
-- Bit 15: SET/CLR bit
-- Exec base at address 4
+- Copper WAIT/MOVE instruction format
+- Sprite control word structure
+- Level 3 autovector at $6C
 
 ---
 
-### Unit 3: Display Fundamentals
+### Unit 4: The Playfield
 
 **Learning Objectives:**
-- Understand bitplane display architecture
-- Set up display window and data fetch
-- Configure a single bitplane
-- See pixels on screen
+- Modify Copper list for zone colours
+- Design the game layout
+- Understand Copper timing
 
 **Concepts Introduced:**
-- Bitplanes (1 bit per pixel per plane)
-- DIWSTRT/DIWSTOP (display window)
-- DDFSTRT/DDFSTOP (data fetch)
-- BPLCON0 (bitplane control)
+- Copper WAIT for scanline position
+- Copper MOVE for register writes
+- Zone-based colour design
+- Playfield planning
 
 **Code Written:**
-```
-- Allocate bitplane memory
-- Set display window (standard PAL)
-- Set data fetch timing
-- Configure 1 bitplane
-- Point BPL1PT to bitplane
-- Enable bitplane DMA
+```asm
+copper_list:
+    dc.w    $0180,$0030     ; COLOR00 = dark blue
+    dc.w    $2C01,$FFFE     ; Wait for line $2C
+    dc.w    $0180,$0050     ; Green for home zone
+    dc.w    $5001,$FFFE     ; Wait for river start
+    dc.w    $0180,$0058     ; Blue for river
+    ; ... more zone transitions
 ```
 
 **What the Learner Sees:**
-A screen showing random memory as pixels. Then a cleared bitplane showing solid colour. The display system works.
+Proper game playfield: green home zones, blue river area, grey road section, green start zone.
 
 **Technical Details:**
-- DIWSTRT: $DFF08E (typically $2C81)
-- DIWSTOP: $DFF090 (typically $2CC1)
-- DDFSTRT: $DFF092 (typically $0038)
-- DDFSTOP: $DFF094 (typically $00D0)
-- BPLCON0: $DFF100
+- Copper WAIT: $VVHH,$FFFE
+- Copper MOVE: $0RRR,$DDDD
+- Zone layout for 13-row grid
 
 ---
 
-### Unit 4: The Copper
+### Unit 5: Grid-Based Movement
 
 **Learning Objectives:**
-- Understand the Copper coprocessor
-- Write a basic Copper list
-- Use Copper to set up display
-- Change colours mid-screen
+- Convert free movement to grid hops
+- Implement hop animation
+- Add movement state machine
+- Create Frogger's distinctive feel
 
 **Concepts Introduced:**
-- Copper as display list processor
-- WAIT instruction (wait for beam position)
-- MOVE instruction (write to register)
-- Copper list termination
+- Grid coordinate system
+- Movement states (idle, hopping)
+- Frame-based animation
+- Smooth interpolation
 
 **Code Written:**
-```
-- Create Copper list in memory
-- Set display registers via Copper
-- Set palette colours via Copper
-- Add colour change mid-screen
-- Point COP1LC to list
-- Enable Copper DMA
+```asm
+frog_grid_x:    dc.w    10      ; Column (0-19)
+frog_grid_y:    dc.w    0       ; Row (0-12)
+frog_state:     dc.w    0       ; 0=idle, 1-8=hopping
+frog_dir:       dc.w    0       ; Current hop direction
+
+update_frog_position:
+    ; If idle and input: start hop
+    ; If hopping: interpolate position
+    ; On frame 8: snap to grid, return to idle
 ```
 
 **What the Learner Sees:**
-A split-colour screen - different colours in top and bottom halves. The Copper controls the display without CPU intervention.
-
-**Technical Details:**
-- COP1LC: $DFF080-082 (Copper list pointer)
-- Copper WAIT: $VVHH, $FFFE (wait for position)
-- Copper MOVE: $0RRR, $DDDD (register, data)
-- Copper end: $FFFF, $FFFE
-
----
-
-### Unit 5: The Game Display
-
-**Learning Objectives:**
-- Plan the game screen layout
-- Set up 5 bitplanes (32 colours)
-- Draw road and river zones
-- Create a proper playfield
-
-**Concepts Introduced:**
-- Multiple bitplanes
-- Modulo for screen width
-- Colour palette design
-- Zone-based background
-
-**Code Written:**
-```
-- Allocate 5 bitplanes
-- Configure 32-colour display
-- Set Copper palette (road grey, water blue, grass green)
-- Use Copper for zone colours
-- Clear screen to background colours
-```
-
-**What the Learner Sees:**
-A proper game playfield: green safe zones at top and middle, grey road section, blue river section, green start zone at bottom. The stage is set.
-
-**Technical Details:**
-- 5 bitplanes = 32 colours
-- Each bitplane: 320/8 × 256 = 10,240 bytes
-- Total: 51,200 bytes for display
-- Modulo: 0 for standard width
-
----
-
-### Unit 6: Hardware Sprites
-
-**Learning Objectives:**
-- Understand Amiga hardware sprites
-- Create sprite data structure
-- Display a sprite on screen
-- Set sprite colours
-
-**Concepts Introduced:**
-- Sprite DMA channels (8 sprites)
-- Sprite data format (control words + image)
-- Sprite positioning (SPRPOS, SPRCTL)
-- Sprite colours (SPRxCOL)
-
-**Code Written:**
-```
-- Create sprite data (control + image)
-- Set sprite position
-- Point SPR0PT to sprite data
-- Set sprite colours
-- Enable sprite DMA
-```
-
-**What the Learner Sees:**
-A small coloured shape appears on screen - the first hardware sprite. It can be moved by changing the control words.
-
-**Technical Details:**
-- SPR0PT: $DFF120 (sprite 0 pointer)
-- Sprite format: 2 control words, then pairs of data words
-- Control word 1: VSTART, HSTART
-- Control word 2: VSTOP, control bits
-- 3 colours + transparent per sprite
-
----
-
-### Unit 7: The Player Frog
-
-**Learning Objectives:**
-- Design the frog sprite (16×16 pixels)
-- Display frog at starting position
-- Plan movement grid
-- Understand sprite positioning maths
-
-**Concepts Introduced:**
-- Sprite design (16 wide, variable height)
-- Grid-based positioning
-- Screen coordinates vs game grid
-- Sprite attachment (for more colours, future use)
-
-**Code Written:**
-```
-- Frog sprite data (16×16)
-- Calculate grid cell to screen position
-- Place frog at bottom centre
-- Store frog grid position in variables
-- Display frog correctly
-```
-
-**What the Learner Sees:**
-A recognisable frog sprite at the bottom of the playfield. Positioned on the starting zone, ready to hop.
+Frog hops in discrete steps, smoothly animated. Grid-based movement like real Frogger.
 
 **Technical Details:**
 - Grid: 20 columns × 13 rows
 - Cell size: 16×16 pixels
-- Screen offset: adjust for centring
-- Starting position: row 0, column 10
-
----
-
-### Unit 8: Joystick Input
-
-**Learning Objectives:**
-- Read joystick from CIA port
-- Detect direction presses
-- Handle fire button
-- Debounce input
-
-**Concepts Introduced:**
-- CIA-A port register ($BFE001)
-- Joystick direction bits
-- JOYxDAT register (alternative)
-- Edge detection for presses
-
-**Code Written:**
-```
-- Read joystick port
-- Decode up/down/left/right
-- Detect new presses (not held)
-- Store direction in variable
-- Visual feedback (border flash)
-```
-
-**What the Learner Sees:**
-Pressing joystick directions causes the border to flash in different colours. Input is detected and debounced properly.
-
-**Technical Details:**
-- CIA-A: $BFE001
-- JOY1DAT: $DFF00C (mouse/joy port 1)
-- Direction decoding from bit differences
-- Fire: CIA-A bit 7 (directly readable)
-
----
-
-### Unit 9: Frog Movement
-
-**Learning Objectives:**
-- Move frog in response to input
-- Animate hop movement
-- Constrain to grid
-- Respect screen boundaries
-
-**Concepts Introduced:**
-- Grid-based movement
-- Movement state (idle, hopping)
-- Frame-by-frame animation
-- Boundary checking
-
-**Code Written:**
-```
-- Movement state variable
-- On input: start hop in direction
-- Each frame: move sprite partway
-- On hop complete: snap to grid
-- Check boundaries before moving
-```
-
-**What the Learner Sees:**
-The frog hops smoothly in the direction pushed. Movement is grid-aligned. Can't move off screen. Feels responsive.
-
-**Technical Details:**
 - Hop duration: 8 frames
-- Pixels per frame: 2 (16 pixels / 8 frames)
-- Movement state: 0=idle, 1-8=hopping
-- Direction stored during hop
+- Movement: 2 pixels per frame
 
 ---
 
-### Unit 10: VBlank and Timing
+### Unit 6: The Blitter Introduction
 
 **Learning Objectives:**
-- Understand VBlank interrupt
-- Set up interrupt handler
-- Synchronise game to frame rate
-- Consistent 50Hz update
+- Understand why 8 sprites isn't enough
+- Learn Blitter basics (copy operation)
+- Perform a simple Blitter copy
+- Prepare for BOB graphics
 
 **Concepts Introduced:**
-- Vertical blank period
-- Interrupt vectors
-- Level 3 interrupt (VBlank)
-- Frame-based timing
+- Blitter as DMA graphics engine
+- BOBs (Blitter Objects) vs hardware sprites
+- Source/destination channels
+- BLTSIZE triggering
 
 **Code Written:**
-```
-- Set up VBlank interrupt handler
-- Enable VBlank interrupt
-- Main loop waits for VBlank flag
-- Game logic runs once per frame
-- Stable 50 FPS
+```asm
+blit_copy:
+    btst    #14,DMACONR(a6) ; Wait for Blitter
+    bne.s   blit_copy
+    move.l  #source,BLTAPT(a6)
+    move.l  #dest,BLTDPT(a6)
+    move.w  #0,BLTAMOD(a6)
+    move.w  #0,BLTDMOD(a6)
+    move.w  #$09F0,BLTCON0(a6)  ; A->D copy
+    move.w  #$0000,BLTCON1(a6)
+    move.w  #(16<<6)|1,BLTSIZE(a6)  ; 16 lines, 1 word
 ```
 
 **What the Learner Sees:**
-Frog movement is now perfectly smooth and consistent. No variation in speed. Professional game feel.
+A rectangle copied on screen. Understanding of how we'll draw many cars.
 
 **Technical Details:**
-- Level 3 autovector: $6C
-- INTENA bit 5: VERTB (vertical blank)
-- INTREQ: $DFF09C (acknowledge)
-- 50 Hz PAL, 60 Hz NTSC
+- BLTCON0: $DFF040
+- BLTAPT/BLTDPT: source/dest pointers
+- BLTSIZE: triggers blit, encodes dimensions
+- Wait via DMACONR bit 14
 
 ---
 
-### Unit 11: Obstacles - Cars
+### Unit 7: Cars on the Road
 
 **Learning Objectives:**
-- Use additional sprites for cars
-- Move cars across lanes
+- Draw cars using Blitter
+- Move multiple cars each frame
 - Handle screen wrapping
-- Different speeds per lane
+- Vary speed per lane
 
 **Concepts Introduced:**
-- Multiple sprite management
-- Horizontal wrapping
-- Lane data structure
-- Speed variation
+- Object data structures
+- Blitter drawing loop
+- Screen edge wrapping
+- Lane-based behaviour
 
 **Code Written:**
-```
-- Car sprite data (simple rectangle)
-- 4 cars using sprites 1-4
-- Each car has: x, y, speed, lane
-- Update positions each frame
-- Wrap at screen edges
+```asm
+NUM_CARS = 8
+car_x:      ds.w    NUM_CARS
+car_y:      ds.w    NUM_CARS
+car_speed:  ds.w    NUM_CARS
+car_lane:   ds.w    NUM_CARS
+
+move_cars:
+    ; For each car:
+    ;   Add speed to X
+    ;   If X > 336: X = 0
+    ;   If X < 0: X = 336
+
+draw_cars:
+    ; For each car:
+    ;   Blitter copy car graphic to screen position
 ```
 
 **What the Learner Sees:**
-Cars move across the road lanes at different speeds. Some go left, some go right. They wrap around the screen edges.
+Cars moving across road lanes at different speeds. Traffic!
 
 **Technical Details:**
-- Sprites 1-4 for cars
-- Lane speeds: 1, 2, -1, -2 (pixels/frame)
-- Wrap: if x > 336, x = 0; if x < 0, x = 336
-- Y fixed per lane
+- Lane Y positions calculated from grid
+- Speeds: 1, 2, -1, -2 pixels/frame
+- Wrap threshold: screen width + car width
 
 ---
 
-### Unit 12: Collision Detection
+### Unit 8: Collision Detection
 
 **Learning Objectives:**
-- Detect frog-car collision
+- Detect frog-car overlap
 - Handle death event
-- Implement lives system
-- Respawn after death
+- Implement respawn
+- Add consequence to gameplay
 
 **Concepts Introduced:**
 - Bounding box collision
-- Hardware collision detection (CLXDAT)
-- Death animation
+- Absolute value distance
+- Death state
 - Respawn logic
 
 **Code Written:**
-```
-- Check bounding box overlap
-- Or use CLXDAT sprite collision
-- On collision: trigger death
-- Death: play sound, flash, lose life
-- Respawn at start position
+```asm
+check_collision:
+    ; For each car:
+    ;   dx = abs(frog_x - car_x)
+    ;   dy = abs(frog_y - car_y)
+    ;   if dx < threshold AND dy < threshold:
+    ;       trigger death
+
+trigger_death:
+    ; Flash screen
+    ; Brief pause
+    ; Decrement lives
+    ; Respawn at start
 ```
 
 **What the Learner Sees:**
-Hitting a car causes the frog to "die" - a brief flash, and it reappears at the start. Lives counter decreases.
+Hit a car → screen flash → frog reappears at start. It's a game!
 
 **Technical Details:**
-- CLXDAT: $DFF00E (collision data)
-- Bounding box: simpler and more control
-- Collision margin: 2-4 pixels for fairness
-- Lives: start with 3
+- Collision threshold: 12 pixels (box overlap)
+- Flash via Copper palette change
+- Death pause: 30 frames
 
 ---
 
-### Unit 13: Safe Zones and Goals
+### Unit 9: Lives System
 
 **Learning Objectives:**
-- Define home zone positions
+- Track lives variable
+- Display lives as icons
+- Handle game over condition
+- Add stakes to gameplay
+
+**Concepts Introduced:**
+- Lives counter
+- Sprite-based HUD
+- Game over state
+- Multi-sprite display
+
+**Code Written:**
+```asm
+lives:      dc.w    3
+
+display_lives:
+    ; Use sprites 1-3 for life icons
+    ; Position in top-left corner
+    ; Hide unused sprites (Y = 0)
+
+check_game_over:
+    tst.w   lives
+    beq     game_over
+```
+
+**What the Learner Sees:**
+Small frog icons in corner show remaining lives. Lose all 3 → game over.
+
+**Technical Details:**
+- Sprites 1-3 for lives display
+- Life icon: 8×8 mini frog
+- Position: top-left, 8 pixels apart
+
+---
+
+### Unit 10: Home Zones
+
+**Learning Objectives:**
+- Define goal positions
 - Detect frog reaching home
-- Mark home as filled
-- Track level completion
+- Mark homes as filled
+- Award points
 
 **Concepts Introduced:**
-- Goal zones
-- Zone state (empty, filled)
-- Score on reaching goal
-- Level complete condition
+- Goal zone detection
+- State per home (empty/filled)
+- Scoring events
+- Level completion check
 
 **Code Written:**
-```
-- 5 home zones across top
-- Check if frog Y at top row
-- Check if frog X in home zone
-- If home empty: fill it, award points
-- If all homes filled: level complete
+```asm
+NUM_HOMES = 5
+home_filled:    ds.b    NUM_HOMES   ; 0=empty, 1=filled
+score:          ds.l    1
+
+check_home:
+    ; If frog at top row:
+    ;   Determine which home zone
+    ;   If home empty:
+    ;       Mark filled
+    ;       Add 50 to score
+    ;       Respawn frog
+    ;   Check if all homes filled → level complete
 ```
 
 **What the Learner Sees:**
-Reaching a home zone at the top fills it in (colour change) and scores points. The frog respawns. Fill all 5 to complete the level.
+Reach top → home fills in (colour change) → points awarded → frog respawns.
 
 **Technical Details:**
-- Home zones: columns 2, 6, 10, 14, 18
-- Home width: 2 grid cells
+- Home columns: 2, 6, 10, 14, 18
+- Home width: 2 grid cells each
 - Points per home: 50
-- Level complete: all 5 filled
 
 ---
 
-### Unit 14: Game States
+### Unit 11: Sound Effects
 
 **Learning Objectives:**
-- Implement state machine (title, playing, game over)
-- Handle transitions between states
-- Create simple title screen
-- Display game over
+- Set up Paula for samples
+- Trigger sounds on events
+- Create audio feedback
 
 **Concepts Introduced:**
-- Game state variable
-- State machine pattern
-- State initialisation
-- Key/button to start
+- Paula audio channels
+- Sample format (8-bit signed)
+- AUDxLC, AUDxLEN, AUDxPER, AUDxVOL
+- DMA audio enable
 
 **Code Written:**
-```
-- game_state: TITLE, PLAYING, GAME_OVER
-- Main loop dispatches to state handler
-- TITLE: show text, wait for fire
-- PLAYING: run game logic
-- GAME_OVER: show message, wait, → TITLE
+```asm
+play_sound:
+    ; a0 = sample pointer
+    ; d0 = length in words
+    ; d1 = period (pitch)
+    move.l  a0,AUD0LC(a6)
+    move.w  d0,AUD0LEN(a6)
+    move.w  d1,AUD0PER(a6)
+    move.w  #64,AUD0VOL(a6)
+    move.w  #$8001,DMACON(a6)
+    rts
+
+; Call on: hop, death, home reached
 ```
 
 **What the Learner Sees:**
-Game starts with title screen. Press fire to play. Game over returns to title. Proper game flow.
+Hop makes a sound. Death makes a sound. Reaching home makes a sound. The game has audio presence.
 
 **Technical Details:**
-- States: 0=TITLE, 1=PLAYING, 2=GAME_OVER
-- Simple text display using Blitter (or pre-drawn)
-- Transition on fire button
+- AUD0LC: $DFF0A0
+- AUD0LEN: $DFF0A4
+- AUD0PER: $DFF0A6 (428 ≈ 8287 Hz)
+- AUD0VOL: $DFF0A8 (0-64)
 
 ---
 
-### Unit 15: Score and Lives Display
+### Unit 12: Score Display
 
 **Learning Objectives:**
+- Convert score to decimal digits
 - Display score on screen
-- Display remaining lives
 - Update efficiently
-- Format numbers
 
 **Concepts Introduced:**
-- Number to text conversion
-- Blitter text (or sprite numbers)
-- HUD area reservation
-- Efficient updates
+- Binary to BCD conversion
+- Blitter text rendering
+- HUD positioning
+- Dirty rectangle updates
 
 **Code Written:**
-```
-- Reserve top 16 pixels for HUD
-- Score: 6-digit display
-- Lives: numeric or icons
-- Update only when changed
-- Binary to decimal conversion
+```asm
+display_score:
+    ; Convert 32-bit score to 6 decimal digits
+    ; Draw each digit using Blitter
+    ; Position in HUD area
 ```
 
 **What the Learner Sees:**
-Score and lives displayed at top of screen. Score increases when reaching homes. Lives decrease on death.
+Score displayed at top of screen. Increases when reaching homes.
 
 **Technical Details:**
-- Score: 32-bit value
-- Display as 6 decimal digits
-- Lives: simple icons or number 0-9
-- HUD above playfield
+- Score: 32-bit long word
+- Display: 6 digits (up to 999,999)
+- Digit graphics: 8×8 each
 
 ---
 
-### Unit 16: Complete Frog Game
+### Unit 13: Timer
 
 **Learning Objectives:**
-- Polish the complete experience
-- Verify all game paths
-- Add level restart
-- Celebrate completion
+- Implement countdown timer
+- Display time remaining
+- Death on timeout
+- Time bonus for speed
+
+**Concepts Introduced:**
+- Frame-based countdown
+- Urgency mechanic
+- Risk/reward balance
+- Time display
+
+**Code Written:**
+```asm
+timer:      dc.w    3000    ; 60 seconds × 50 frames
+
+update_timer:
+    subq.w  #1,timer
+    beq     timeout_death
+    ; Display timer / 50 as seconds
+
+award_time_bonus:
+    ; On reaching home: score += timer / 5
+```
+
+**What the Learner Sees:**
+Timer counting down. Must reach home before time runs out. Faster = more bonus points.
+
+**Technical Details:**
+- 60 seconds = 3000 frames (PAL)
+- Display as seconds (timer / 50)
+- Bonus: timer × 2 points
+
+---
+
+### Unit 14: Level Progression
+
+**Learning Objectives:**
+- Track current level
+- Increase difficulty per level
+- Handle level completion
+- Create progression
+
+**Concepts Introduced:**
+- Difficulty scaling
+- Level state
+- Speed multipliers
+- Content variation
+
+**Code Written:**
+```asm
+level:      dc.w    1
+
+next_level:
+    addq.w  #1,level
+    ; Increase car speeds
+    ; Add more cars
+    ; Reset homes
+    ; Reset frog position
+
+calculate_speed:
+    ; base_speed + (level - 1) × increment
+```
+
+**What the Learner Sees:**
+Complete level → brief celebration → next level with faster cars.
+
+**Technical Details:**
+- Speed increase: +0.5 pixels/frame per level
+- Car count: 8 + (level × 2)
+- Max level: 8 (or endless)
+
+---
+
+### Unit 15: Game States
+
+**Learning Objectives:**
+- Implement state machine
+- Create title screen
+- Handle game over
+- Manage transitions
+
+**Concepts Introduced:**
+- Game states (TITLE, PLAYING, GAME_OVER)
+- State transitions
+- Simple text display
+- Fire button detection
+
+**Code Written:**
+```asm
+STATE_TITLE     = 0
+STATE_PLAYING   = 1
+STATE_GAMEOVER  = 2
+
+game_state:     dc.w    STATE_TITLE
+
+main_loop:
+    move.w  game_state,d0
+    cmp.w   #STATE_TITLE,d0
+    beq     handle_title
+    cmp.w   #STATE_PLAYING,d0
+    beq     handle_playing
+    bra     handle_gameover
+```
+
+**What the Learner Sees:**
+Title screen → press fire → play → game over → press fire → title. Complete flow.
+
+**Technical Details:**
+- State variable controls dispatch
+- Title: simple text, wait for fire
+- Game over: show score, wait, return to title
+
+---
+
+### Unit 16: Phase 1 Complete
+
+**Learning Objectives:**
+- Review all systems
+- Final polish pass
+- Test all paths
+- Celebrate milestone
 
 **Concepts Introduced:**
 - Integration testing
-- Edge cases
-- Game loop completeness
-- Phase milestone
+- Polish methodology
+- Phase completion
+- Preview of Phase 2
 
 **Code Written:**
-```
-- Level complete: brief celebration, restart harder
-- Speed increase per level
-- Final testing pass
-- Fix any remaining issues
-```
+- Bug fixes
+- Timing adjustments
+- Final balance tuning
 
 **What the Learner Sees:**
-A complete, playable Frogger game. Cross roads, avoid cars, reach homes. Die, respawn, game over, restart. Simple but fully functional.
+Complete, polished roads-only Frogger. Playable game with title, gameplay, game over, scoring, lives, levels, and sound.
 
 **Phase 1 Checkpoint:**
-The learner has built a working game. Hardware sprites for the frog and cars, joystick input, collision detection, scoring, lives, and level completion. It's simple (no river yet, no Blitter graphics) but complete. Everything from here builds on this foundation.
+The learner has built a working game. Hardware sprite frog, Blitter cars, collision detection, lives, scoring, timer, level progression, and complete game flow. The river section comes in Phase 2.
 
 ---
 
 ## Phase 2: Expansion (Units 17-32)
 
-*Goal: Add the river section, log riding, Blitter graphics, and sound. Transform the simple game into proper Frogger.*
+*Goal: Add the river section with logs and turtles. Cookie-cut Blitter masking for proper BOBs. Complete Frogger gameplay.*
 
-*By the end of this phase, the game has roads AND river, logs to ride, Blitter-drawn obstacles for more on screen, and Paula sound effects. It looks and sounds like an Amiga game.*
-
----
-
-### Unit 17: The Blitter Concept
-
-**Learning Objectives:**
-- Understand the Blitter's role
-- Know the difference between sprites and BOBs
-- Understand Blitter channels (A, B, C, D)
-- Prepare for Blitter graphics
-
-**Concepts Introduced:**
-- Blitter as DMA graphics engine
-- BOBs (Blitter Objects) vs sprites
-- Source and destination channels
-- Why we need the Blitter
-
-**Code Written:**
-```
-- Blitter register overview
-- Simple fill operation
-- Wait for Blitter (BLTBUSY)
-- Theory unit, minimal code
-```
-
-**What the Learner Sees:**
-Understanding of why 8 sprites isn't enough for a full game, and how the Blitter provides the solution.
-
-**Technical Details:**
-- BLTCON0: $DFF040 (control)
-- BLTCON1: $DFF042 (control 2)
-- BLTxPT: pointers for A, B, C, D
-- BLTSIZE: $DFF058 (triggers blit)
+*By the end of this phase, the game has roads AND river, logs to ride, turtles that dive, crocodiles, and bonus items. It's complete Frogger.*
 
 ---
 
-### Unit 18: Blitter Copy
+### Unit 17: Blitter Masking (Cookie Cut)
 
 **Learning Objectives:**
-- Perform a simple Blitter copy
-- Understand source and destination
-- Set up modulos correctly
-- Wait for completion
-
-**Concepts Introduced:**
-- A→D copy operation
-- Modulo calculation
-- BLTSIZE encoding
-- Blitter wait loop
-
-**Code Written:**
-```
-- Set up source pointer (A)
-- Set up destination pointer (D)
-- Configure modulos
-- Set BLTCON0 for A→D copy
-- Set BLTSIZE to trigger
-- Wait for completion
-```
-
-**What the Learner Sees:**
-A rectangle copied from one screen location to another. The Blitter works independently of the CPU.
-
-**Technical Details:**
-- BLTCON0: $09F0 for A→D with all minterms
-- BLTAMOD, BLTDMOD: modulo values
-- BLTSIZE: (height << 6) | (width_in_words)
-- Wait: check DMACON bit 14
-
----
-
-### Unit 19: Blitter Masking (Cookie Cut)
-
-**Learning Objectives:**
-- Understand cookie-cut mode
-- Use mask data for shaped objects
-- Draw object over background
-- Proper BOB compositing
+- Understand cookie-cut compositing
+- Use mask for shaped objects
+- Draw BOBs over background
+- Preserve background pixels
 
 **Concepts Introduced:**
 - Cookie-cut concept
-- Mask (stencil) channel
-- Minterm selection
-- Preserving background
+- Mask (stencil) data
+- Minterm selection for A,B,C,D channels
+- Proper BOB drawing
 
 **Code Written:**
-```
-- Create object with mask
-- Configure A (mask), B (object), C (background), D (output)
-- Set minterms for cookie-cut
-- Draw masked object
+```asm
+cookie_cut:
+    ; A = mask, B = object, C = background, D = destination
+    move.l  #mask,BLTAPT(a6)
+    move.l  #object,BLTBPT(a6)
+    move.l  #screen,BLTCPT(a6)
+    move.l  #screen,BLTDPT(a6)
+    move.w  #$0FCA,BLTCON0(a6)  ; Cookie-cut minterms
+    ; ... modulos and size
 ```
 
 **What the Learner Sees:**
-A shaped object (car or log) appears on the background without a rectangular box around it. Proper game graphics.
+Shaped objects appear on screen without rectangular boxes. Proper game graphics.
 
 **Technical Details:**
-- Cookie-cut minterms: $0FCA
-- A=mask, B=object, C=background, D=destination
-- All four channels active
-- Mask: 1 where object, 0 where background shows
+- Minterms: $0FCA for cookie-cut
+- All 4 channels (A, B, C, D) used
+- Mask: 1 where object, 0 where background shows through
 
 ---
 
-### Unit 20: BOB Cars
+### Unit 18: Improved Car Graphics
 
 **Learning Objectives:**
-- Replace sprite cars with Blitter BOBs
-- Draw multiple cars efficiently
-- Erase and redraw each frame
-- Handle many more cars
-
-**Concepts Introduced:**
-- BOB lifecycle (erase, draw)
-- Save-behind for erasure
-- Sorted draw order
-- Performance considerations
+- Apply cookie-cut to cars
+- Design proper car shapes
+- Multiple car designs
+- Smooth drawing
 
 **Code Written:**
-```
-- Car BOB graphics data
-- Erase old positions
-- Draw at new positions
-- 8+ cars now possible
-```
+- Car graphics with masks
+- Cookie-cut drawing routine
+- Different car types per lane
 
 **What the Learner Sees:**
-More cars on screen than the 8-sprite limit allowed. Traffic is denser and more challenging.
-
-**Technical Details:**
-- Erase: restore background (or clear)
-- Draw: cookie-cut each car
-- Order: erase all, then draw all
-- Performance: Blitter is fast
+Cars now have proper shapes, not just rectangles. Different coloured cars.
 
 ---
 
-### Unit 21: The River Section
+### Unit 19: The River Section
 
 **Learning Objectives:**
-- Add river lanes to display
+- Add river lanes to playfield
 - Different collision rules for water
-- Introduce log concept
-- Plan river mechanics
+- Plan log mechanics
+- Extend Copper list
 
 **Concepts Introduced:**
-- Water as deadly (without log)
-- Logs as platforms
 - Lane types (road vs river)
-- Platform riding
+- Water as deadly zone
+- Platform concept
+- Zone-specific rules
 
 **Code Written:**
-```
-- Add river lanes to level data
-- Lane type flag (road/river)
-- Water = death if not on log
-- Visual distinction
+```asm
+LANE_ROAD   = 0
+LANE_RIVER  = 1
+
+lane_type:  dc.b    LANE_ROAD,LANE_ROAD,LANE_ROAD,LANE_ROAD,LANE_ROAD
+            dc.b    LANE_RIVER,LANE_RIVER,LANE_RIVER,LANE_RIVER,LANE_RIVER
 ```
 
 **What the Learner Sees:**
-River section visible in the playfield. Blue water between the road and top safe zones.
-
-**Technical Details:**
-- 5 river lanes above safe zone
-- 5 road lanes below safe zone
-- Water colour: palette modification
-- Lane data includes type
+River section visible with blue water. Entering water without a log = death.
 
 ---
 
-### Unit 22: Logs and Platforms
+### Unit 20: Logs
 
 **Learning Objectives:**
 - Draw logs as BOBs
-- Logs move across lanes
-- Logs wrap at screen edges
+- Move logs across river
 - Multiple log sizes
-
-**Concepts Introduced:**
-- Platform objects
-- Log lengths (short, medium, long)
-- Wrapping platforms
-- Platform array
+- Screen wrapping
 
 **Code Written:**
-```
-- Log BOB graphics (3 sizes)
-- Log data: x, y, size, speed
-- Draw logs each frame
-- Wrap at screen edges
+```asm
+NUM_LOGS = 12
+log_x:      ds.w    NUM_LOGS
+log_y:      ds.w    NUM_LOGS
+log_size:   ds.w    NUM_LOGS    ; 0=short, 1=medium, 2=long
+log_speed:  ds.w    NUM_LOGS
 ```
 
 **What the Learner Sees:**
-Logs floating across river lanes, moving left and right at different speeds. They wrap around screen edges.
+Logs floating across river lanes. Different sizes and speeds.
 
 **Technical Details:**
 - Log sizes: 32, 48, 64 pixels wide
-- Log array: 12-16 logs
-- Mixed with cars in object list
-- Or separate rendering pass
+- Cookie-cut drawing
+- Wrap at screen edges
 
 ---
 
-### Unit 23: Log Riding
+### Unit 21: Log Riding
 
 **Learning Objectives:**
 - Detect frog on log
-- Frog moves with log
-- Fall off = water death
-- Safe while on log
+- Move frog with log
+- Fall off = death
+- Platform attachment
 
 **Concepts Introduced:**
-- Platform attachment
+- Platform riding mechanic
 - Relative movement
-- Detachment on hop
+- Attachment/detachment
 - Combined collision
 
 **Code Written:**
-```
-- Check frog overlaps log
-- If on river and on log: safe, move with log
-- If on river and not on log: death
-- Detach when hopping
+```asm
+attached_log:   dc.w    -1      ; -1 = not attached
+
+check_log_collision:
+    ; For each log:
+    ;   If frog overlaps log:
+    ;       attached_log = log index
+    ;       return
+    ; If in river and attached_log = -1:
+    ;   death (fell in water)
+
+move_with_log:
+    ; If attached_log >= 0:
+    ;   frog_x += log_speed[attached_log]
 ```
 
 **What the Learner Sees:**
-Frog can hop onto logs and ride them across the river. Falling in water causes death. River is crossable.
-
-**Technical Details:**
-- Check each log for overlap
-- attached_log variable
-- Add log.dx to frog.x each frame
-- Clear attachment on movement input
+Frog can hop onto logs and rides them across the river. Miss a log = splash!
 
 ---
 
-### Unit 24: Turtles
+### Unit 22: Turtles
 
 **Learning Objectives:**
 - Add turtle platforms
-- Turtles dive underwater periodically
-- Unsafe when diving
+- Implement diving behaviour
+- Unsafe when underwater
 - Animation states
 
 **Concepts Introduced:**
 - Animated platforms
-- State: swimming, diving, surfacing
+- State machine per object
 - Timer-based state changes
 - Conditional safety
 
 **Code Written:**
-```
-- Turtle BOB graphics (3 frames)
-- Turtle state machine
-- Diving timer
-- Only safe when swimming
-```
+```asm
+TURTLE_SWIMMING = 0
+TURTLE_DIVING   = 1
+TURTLE_UNDER    = 2
 
-**What the Learner Sees:**
-Turtles swim across river, periodically diving. Must time jumps to catch them when safe.
-
-**Technical Details:**
-- Turtle states: 0=swimming, 1=diving, 2=underwater
-- Dive cycle: ~120 frames
-- Animation frames during state
-- Check state for safety
-
----
-
-### Unit 25: Paula Audio Basics
-
-**Learning Objectives:**
-- Understand Paula audio channels
-- Set up sample playback
-- Play a simple sound
-- Control volume and period
-
-**Concepts Introduced:**
-- 4 audio channels
-- Sample format (8-bit signed)
-- AUDxLC, AUDxLEN, AUDxPER, AUDxVOL
-- DMA audio playback
-
-**Code Written:**
-```
-- Load/create sample data
-- Set sample pointer and length
-- Set period (pitch)
-- Set volume
-- Enable audio DMA
+turtle_state:   ds.b    NUM_TURTLES
+turtle_timer:   ds.w    NUM_TURTLES
 ```
 
 **What the Learner Sees:**
-A sound plays from the Amiga! First audio output from their code.
-
-**Technical Details:**
-- AUD0LC: $DFF0A0 (sample pointer)
-- AUD0LEN: $DFF0A4 (length in words)
-- AUD0PER: $DFF0A6 (period)
-- AUD0VOL: $DFF0A8 (volume 0-64)
+Turtles swim across river, periodically diving. Must time jumps carefully.
 
 ---
 
-### Unit 26: Sound Effects
-
-**Learning Objectives:**
-- Create game sound effects
-- Trigger sounds on events
-- Hop, death, splash, home sounds
-- Sound priority
-
-**Concepts Introduced:**
-- Sound effect triggering
-- Channel allocation
-- Priority (death over hop)
-- Short one-shot samples
-
-**Code Written:**
-```
-- 4 sound effects (hop, death, splash, score)
-- play_sound routine
-- Trigger on events
-- Simple priority system
-```
-
-**What the Learner Sees:**
-Hopping makes a sound. Deaths have a splash. Reaching home celebrates. The game has audio.
-
-**Technical Details:**
-- Hop: short pop (~500 samples)
-- Death: noise burst (~2000 samples)
-- Splash: water sound (~3000 samples)
-- Score: ascending tone (~1500 samples)
-
----
-
-### Unit 27: Timer and Urgency
-
-**Learning Objectives:**
-- Add time limit per life
-- Display countdown timer
-- Death on timeout
-- Bonus for time remaining
-
-**Concepts Introduced:**
-- Frame-based timer
-- Time display
-- Timeout handling
-- Risk/reward
-
-**Code Written:**
-```
-- Time limit: 60 seconds
-- Decrement each frame
-- Display seconds remaining
-- Timeout = death
-- Bonus points for remaining time
-```
-
-**What the Learner Sees:**
-Timer counting down adds urgency. Must reach home before time expires. Extra points for speed.
-
-**Technical Details:**
-- Frames per second: 50 (PAL)
-- Timer: frames remaining
-- Display: seconds (timer / 50)
-- Bonus: timer × 10 points
-
----
-
-### Unit 28: Multiple Levels
-
-**Learning Objectives:**
-- Implement level progression
-- Increase difficulty each level
-- Vary traffic patterns
-- Track current level
-
-**Concepts Introduced:**
-- Level data
-- Difficulty scaling
-- Pattern variation
-- Progression
-
-**Code Written:**
-```
-- Level number tracking
-- Speed multiplier per level
-- More objects per level
-- Display level number
-```
-
-**What the Learner Sees:**
-Completing a level moves to the next with faster traffic and tighter gaps. Visible level number.
-
-**Technical Details:**
-- Speed scale: 1.0 + (level × 0.1)
-- Object count: base + (level × 2)
-- Maximum level: 8 or endless
-- Level display in HUD
-
----
-
-### Unit 29: Bonus Items
-
-**Learning Objectives:**
-- Add bonus flies on logs
-- Time-limited appearance
-- Points for collection
-- Visual distinction
-
-**Concepts Introduced:**
-- Bonus spawning
-- Timeout despawn
-- Collision with items
-- Extra scoring
-
-**Code Written:**
-```
-- Fly sprite/BOB
-- Random spawn timer
-- Position on random log
-- Collect for bonus points
-- Despawn after timeout
-```
-
-**What the Learner Sees:**
-Occasionally a fly appears on a log. Collecting it gives bonus points. Adds risk/reward.
-
-**Technical Details:**
-- Spawn chance: 1/200 per frame
-- Despawn after: 300 frames
-- Bonus: 200 points
-- One fly at a time
-
----
-
-### Unit 30: Crocodiles
+### Unit 23: Crocodiles
 
 **Learning Objectives:**
 - Add crocodile hazard
-- Croc looks like log but kills
-- Mouth opens = danger
-- Adds river hazard
-
-**Concepts Introduced:**
-- Hazard platform
+- Safe to ride (body), dangerous (mouth)
+- Mouth opens periodically
 - Visual warning
-- State-based danger
-- Risk assessment
 
 **Code Written:**
-```
-- Crocodile BOB graphics
-- Mouth closed = safe to ride
-- Mouth open = death
-- Random timing
-```
+- Crocodile graphics (open/closed mouth)
+- State-based danger
+- Warning animation
 
 **What the Learner Sees:**
-Some "logs" are crocodiles. Their mouths open periodically. Must jump away before they bite.
-
-**Technical Details:**
-- Croc states: closed, opening, open, closing
-- Open mouth = death on contact
-- Cycle timing: random 150-250 frames
-- Warning: opening animation
+Some "logs" are crocodiles. Ride the body, avoid the open mouth.
 
 ---
 
-### Unit 31: Home Zone Hazards
+### Unit 24: Bonus Flies
 
 **Learning Objectives:**
-- Add alligators in homes
-- Some homes temporarily blocked
-- Must time approach
-- Adds endgame challenge
-
-**Concepts Introduced:**
-- Goal hazards
-- Blocking state
-- Clear timing
-- Late-game difficulty
+- Spawn bonus items on logs
+- Time-limited appearance
+- Collection for points
+- Risk/reward
 
 **Code Written:**
-```
-- Alligator in home animation
-- Home blocked when occupied
-- Wait for clear
-- Only 1-2 homes blocked at once
+```asm
+fly_active:     dc.w    0
+fly_x:          dc.w    0
+fly_y:          dc.w    0
+fly_timer:      dc.w    0
+
+spawn_fly:
+    ; Random chance each frame
+    ; Place on random log
+    ; Set despawn timer
 ```
 
 **What the Learner Sees:**
-Some home zones have alligators blocking them. Must wait for them to leave or choose another home.
+Flies appear occasionally on logs. Collect for 200 bonus points.
 
-**Technical Details:**
-- Random home selection
-- Block duration: 100-200 frames
-- Maximum 2 blocked simultaneously
-- Higher levels = more frequent
+---
+
+### Unit 25: Home Zone Hazards
+
+**Learning Objectives:**
+- Add alligators blocking homes
+- Timing for safe entry
+- Late-game challenge
+
+**What the Learner Sees:**
+Some home zones temporarily blocked by alligators. Must wait or choose another.
+
+---
+
+### Unit 26: Water Animation
+
+**Learning Objectives:**
+- Animate water surface
+- Copper colour cycling
+- Ambient motion effect
+
+**Code Written:**
+- Water colours in palette
+- Rotate colours via Copper or VBlank
+- Subtle shimmer effect
+
+**What the Learner Sees:**
+River water appears to flow and shimmer.
+
+---
+
+### Unit 27: Improved Death Effects
+
+**Learning Objectives:**
+- Different death animations
+- Squash (car), splash (water)
+- Visual feedback
+
+**Code Written:**
+- Squash animation frames
+- Splash animation frames
+- Trigger appropriate version
+
+**What the Learner Sees:**
+Hit by car = squash. Fall in water = splash. Better feedback.
+
+---
+
+### Unit 28: Level Variety
+
+**Learning Objectives:**
+- Different layouts per level
+- Vary obstacle patterns
+- Maintain difficulty curve
+
+**Code Written:**
+- Level data tables
+- Pattern variation
+- Difficulty parameters per level
+
+**What the Learner Sees:**
+Each level feels slightly different. Not just faster, but varied.
+
+---
+
+### Unit 29: Female Frog Bonus
+
+**Learning Objectives:**
+- Bonus escort objective
+- Carry to home for extra points
+- Optional challenge
+
+**Code Written:**
+- Female frog sprite
+- Pickup mechanic
+- Escort to home
+- Bonus scoring
+
+**What the Learner Sees:**
+Pink frog appears on logs. Rescue her for big bonus.
+
+---
+
+### Unit 30: HUD Improvements
+
+**Learning Objectives:**
+- Better score display
+- Level indicator
+- Time bar visualisation
+
+**What the Learner Sees:**
+Cleaner HUD with all information visible at a glance.
+
+---
+
+### Unit 31: Integration Testing
+
+**Learning Objectives:**
+- Test all river mechanics
+- Verify log/turtle/croc interactions
+- Balance difficulty
+
+**Code Written:**
+- Bug fixes
+- Balance adjustments
+
+**What the Learner Sees:**
+All systems working together smoothly.
 
 ---
 
 ### Unit 32: Phase 2 Complete
 
 **Learning Objectives:**
-- Integration testing
-- Balance difficulty curve
-- Verify all mechanics
-- Polish gameplay
-
-**Concepts Introduced:**
-- Full game testing
-- Balance tuning
-- Feature verification
-- Phase gate
-
-**Code Written:**
-```
-- Test all combinations
-- Adjust speeds and timing
-- Fix integration issues
-- Document improvements needed
-```
+- Full game verification
+- Polish pass
+- Phase milestone
 
 **What the Learner Sees:**
-Complete Frogger game with roads AND river. Cars, logs, turtles, crocodiles. Sound effects. Multiple levels. A real game.
+Complete Frogger game with roads AND river. All hazards, bonuses, and mechanics working.
 
 **Phase 2 Checkpoint:**
-The game now has the complete Frogger experience: road and river sections, Blitter graphics for many objects, platform riding, hazards, sound effects, and level progression. It's a proper Amiga game.
+The game now has complete Frogger gameplay: roads with cars, river with logs/turtles/crocodiles, bonus items, water animation, and proper death effects. It's a real Amiga game.
 
 ---
 
 ## Phase 3: Polish (Units 33-48)
 
-*Goal: Professional presentation - title screen, menus, visual effects, music.*
+*Goal: Professional presentation - animated title, menus, music, visual effects.*
 
-*By the end of this phase, the game has animated title, attract mode, high scores, options, Copper effects, and background music. Commercial quality presentation.*
+*By the end of this phase, the game has animated title screen, attract mode, high score table, options menu, background music, Copper visual effects, and polished transitions. Commercial presentation quality.*
 
 ---
 
 ### Unit 33: Title Screen Design
 
 **Learning Objectives:**
-- Design impactful title screen
+- Design impactful title screen layout
 - Create game logo graphics
 - Plan menu structure
 - Establish visual identity
 
 **Concepts Introduced:**
 - Title screen composition
-- Logo design
+- Logo design principles
 - Colour palette for branding
-- Menu layout
+- Menu layout planning
 
 **Code Written:**
-```
-- Title screen background
-- "SIGNAL" logo graphics
-- Menu options: Start, Options, High Scores
-- Colour scheme
+```asm
+title_screen:
+    ; Load title graphics
+    ; Display "SIGNAL" logo
+    ; Show menu options
+    ; Position cursor
+
+menu_options:
+    dc.b    "START GAME",0
+    dc.b    "OPTIONS",0
+    dc.b    "HIGH SCORES",0
 ```
 
 **What the Learner Sees:**
-Professional title screen with large logo, clear menu options. Looks like a commercial game.
+Professional title screen with large logo and clear menu options. Looks like a commercial game.
 
 ---
 
 ### Unit 34: Title Animation
 
 **Learning Objectives:**
-- Animate title elements
-- Copper colour cycling
+- Animate title elements via Copper
+- Implement colour cycling
 - Create visual interest
-- Loop animations
+- Loop animations smoothly
 
 **Concepts Introduced:**
-- Copper for animation
-- Palette cycling
+- Copper palette animation
+- Colour cycling tables
 - Sine-wave movement
-- Attention management
+- Frame-based animation timing
 
 **Code Written:**
-```
-- Logo colour cycling via Copper
-- Pulsing menu cursor
-- Background animation
-- Smooth loops
+```asm
+animate_title:
+    ; Rotate logo colours via Copper
+    ; Pulse menu cursor
+    ; Update animation frame
+    ; Smooth cycling
+
+colour_cycle:
+    ; Table of gradient colours
+    ; Advance index each frame
+    ; Write to Copper list
 ```
 
 **What the Learner Sees:**
-Title screen moves and breathes. Logo shimmers, colours cycle. The game feels alive before playing.
+Title screen comes alive. Logo shimmers with cycling colours, cursor pulses. The game feels alive before playing.
 
 ---
 
 ### Unit 35: Menu Navigation
 
 **Learning Objectives:**
-- Implement menu system
-- Handle up/down selection
-- Visual feedback for cursor
-- State transitions
+- Implement joystick menu control
+- Provide visual selection feedback
+- Handle menu state transitions
+- Create responsive UI
 
 **Concepts Introduced:**
 - Menu state management
 - Cursor navigation
 - Selection confirmation
-- Sub-menus
+- Input debouncing for menus
 
 **Code Written:**
-```
-- Menu cursor position
-- Up/down joystick navigation
-- Fire to confirm selection
-- Visual cursor indicator
+```asm
+menu_cursor:    dc.w    0       ; Current selection
+
+handle_menu:
+    ; Read joystick
+    ; Up/down moves cursor
+    ; Fire confirms selection
+    ; Update cursor display
+
+update_cursor:
+    ; Highlight current option
+    ; Dehighlight others
 ```
 
 **What the Learner Sees:**
-Navigate menus with joystick. Selection clearly highlighted. Press fire to choose.
+Navigate menus with joystick. Selection clearly highlighted. Press fire to choose. Responsive and intuitive.
 
 ---
 
 ### Unit 36: Attract Mode
 
 **Learning Objectives:**
-- Implement auto-play demo
-- Record or script gameplay
-- Return on input
-- Cycle from title
+- Implement auto-play demonstration
+- Script or AI-control gameplay
+- Return to title on input
+- Cycle from title after timeout
 
 **Concepts Introduced:**
-- Demo playback
-- AI plays game
-- Attract cycle
-- Input interrupt
+- Demo playback system
+- Simple AI for demonstration
+- Attract cycle timing
+- Input interruption
 
 **Code Written:**
-```
-- AI plays simple pattern
-- Timeout from title triggers
-- Any input returns to title
-- Shows off gameplay
+```asm
+ATTRACT_TIMEOUT = 500   ; Frames before attract starts
+
+attract_mode:
+    ; AI controls frog
+    ; Simple pattern: hop toward nearest home
+    ; Avoid obvious cars
+    ; Any input returns to title
+
+attract_ai:
+    ; Determine safe direction
+    ; Execute hop
+    ; Basic pathfinding
 ```
 
 **What the Learner Sees:**
-Leave game idle and it plays itself. Demonstrates gameplay automatically.
+Leave game idle → it plays itself, demonstrating gameplay. Press any button to return to title.
 
 ---
 
@@ -1262,275 +1171,337 @@ Leave game idle and it plays itself. Demonstrates gameplay automatically.
 
 **Learning Objectives:**
 - Create options menu
-- Starting lives setting
-- Starting level setting
-- Sound toggle
+- Implement setting toggles
+- Apply settings to gameplay
+- Save user preferences
 
 **Concepts Introduced:**
-- Settings storage
+- Settings data structure
 - Toggle UI pattern
-- Value adjustment
-- Apply settings
+- Value adjustment controls
+- Settings application
 
 **Code Written:**
-```
-- Options screen layout
-- Lives: 3, 5, 7
-- Start level: 1-5
-- Sound: On/Off
+```asm
+options:
+    lives_setting:      dc.w    3   ; 3, 5, or 7
+    start_level:        dc.w    1   ; 1-5
+    sound_enabled:      dc.w    1   ; 0 or 1
+
+options_screen:
+    ; Display current settings
+    ; Left/right adjusts values
+    ; Fire returns to title
 ```
 
 **What the Learner Sees:**
-Options menu allows customisation. Settings apply to next game.
+Options menu with adjustable settings: starting lives (3/5/7), starting level (1-5), sound on/off. Settings apply to next game.
 
 ---
 
 ### Unit 38: High Score Table
 
 **Learning Objectives:**
-- Track top scores
-- Name entry system
-- Display leaderboard
-- Rank scores
+- Track top 10 scores
+- Implement name entry
+- Display formatted leaderboard
+- Sort and insert scores
 
 **Concepts Introduced:**
 - Score data structure
-- Name entry UI
-- Sorting/insertion
+- Name entry UI (3 letters)
+- Sorting/insertion algorithms
 - Display formatting
 
 **Code Written:**
-```
-- Top 10 scores array
-- Name entry (3 letters)
-- Insert in sorted order
-- Formatted display
+```asm
+NUM_HIGH_SCORES = 10
+
+high_scores:
+    ds.l    NUM_HIGH_SCORES     ; Score values
+    ds.b    NUM_HIGH_SCORES*4   ; Names (3 chars + null)
+
+check_high_score:
+    ; Compare against table
+    ; If qualifies: trigger name entry
+    ; Insert in sorted position
+
+name_entry:
+    ; Display alphabet
+    ; Joystick selects letter
+    ; Fire confirms
 ```
 
 **What the Learner Sees:**
-High score table with names. New high scores prompt name entry.
+High score table with names and scores. New high score prompts name entry with joystick-controlled letter selection.
 
 ---
 
-### Unit 39: Background Music - Module Basics
+### Unit 39: MOD Music Basics
 
 **Learning Objectives:**
-- Understand MOD format
-- Load module data
-- Basic replay routine
-- Music during gameplay
+- Understand MOD file format
+- Implement basic replay routine
+- Play background music
+- Understand pattern sequencing
 
 **Concepts Introduced:**
-- MOD file format
-- Pattern/sequence structure
-- Simple replay loop
-- Channel mixing
+- MOD format structure (samples, patterns, sequence)
+- Pattern-based playback
+- Sample triggering via Paula
+- Tick-based timing
 
 **Code Written:**
-```
-- Basic MOD replay routine
-- Load module data
-- Play during game
-- Pause on pause
+```asm
+mod_player:
+    ; Parse MOD header
+    ; Load sample pointers
+    ; Set up pattern sequence
+    ; Play routine called each tick
+
+play_tick:
+    ; Advance pattern position
+    ; Trigger notes on channels
+    ; Handle effects (volume, pitch)
 ```
 
 **What the Learner Sees:**
-Background music plays during gameplay. Adds atmosphere and polish.
+Background music plays! Four-channel MOD music during gameplay. The Amiga sound.
 
 **Technical Details:**
-- MOD format: 4 channels
-- Pattern-based sequencing
-- Sample playback via Paula
-- CPU time consideration
+- MOD format: 4 channels, 31 samples
+- Pattern: 64 rows of note data
+- Tick rate: typically 6 ticks per row at 125 BPM
 
 ---
 
 ### Unit 40: Music Integration
 
 **Learning Objectives:**
-- Different music per state
-- Title music, game music
-- Music stops on game over
+- Different music per game state
+- Smooth music transitions
 - Volume control
+- Performance budgeting
 
 **Concepts Introduced:**
-- State-based music
-- Music transitions
+- State-based music selection
+- Music fade in/out
 - Volume adjustment
-- Performance budget
+- CPU time management
 
 **Code Written:**
-```
-- Title music loop
-- Game music loop
-- Fade on state change
-- Stop on game over
+```asm
+music_state:    dc.w    MUSIC_TITLE
+
+set_music:
+    ; Fade out current
+    ; Load new module
+    ; Fade in
+
+music_volume:
+    ; Adjust Paula volumes
+    ; Smooth transitions
 ```
 
 **What the Learner Sees:**
-Different music for title and gameplay. Clean transitions between states.
+Title has one tune, gameplay another. Clean transitions between states. Music pauses when game pauses.
 
 ---
 
 ### Unit 41: Copper Sky Gradient
 
 **Learning Objectives:**
-- Create gradient background
-- Copper colour changes per line
-- Time of day effect
-- Visual depth
+- Create per-line colour gradient
+- Build dynamic Copper list
+- Implement time-of-day effect
+- Add visual depth
 
 **Concepts Introduced:**
-- Per-line colour changes
-- Gradient generation
-- Colour interpolation
-- Copper list size
+- Copper WAIT per scanline
+- Gradient colour calculation
+- Dynamic Copper list building
+- Visual atmosphere
 
 **Code Written:**
-```
-- Generate gradient colours
-- Copper list with WAIT/MOVE per line
-- Sky gradient above playfield
-- Optional time progression
+```asm
+build_sky_gradient:
+    ; For each line in sky area:
+    ;   Calculate gradient colour
+    ;   Add WAIT for line
+    ;   Add MOVE to COLOR00
+    ; Terminate Copper list
+
+gradient_colour:
+    ; Interpolate between top and horizon colours
+    ; Smooth blue-to-orange transition
 ```
 
 **What the Learner Sees:**
-Beautiful gradient sky above the playfield. Distinctly Amiga visual effect.
+Beautiful gradient sky above the playfield, transitioning from deep blue to orange at the horizon. Distinctly Amiga.
 
 ---
 
-### Unit 42: Water Animation
-
-**Learning Objectives:**
-- Animate water surface
-- Colour cycling effect
-- Sync with frame rate
-- Subtle motion
-
-**Concepts Introduced:**
-- Palette animation
-- Colour rotation
-- Cycle timing
-- Ambient motion
-
-**Code Written:**
-```
-- Water colours in palette
-- Rotate colours each frame
-- Creates wave effect
-- Subtle but effective
-```
-
-**What the Learner Sees:**
-River water appears to shimmer and flow. Adds life to the playfield.
-
----
-
-### Unit 43: Death Animation
-
-**Learning Objectives:**
-- Elaborate death effect
-- Car hit vs water death
-- Animation sequence
-- Brief but satisfying
-
-**Concepts Introduced:**
-- Animation sequences
-- Effect variation
-- Particle-like effects
-- Timing
-
-**Code Written:**
-```
-- Squash animation for car
-- Splash animation for water
-- Frame sequences
-- Trigger appropriate version
-```
-
-**What the Learner Sees:**
-Death has visual feedback beyond just respawn. Car hits squash, water falls splash.
-
----
-
-### Unit 44: Level Complete Effect
+### Unit 42: Level Complete Effects
 
 **Learning Objectives:**
 - Celebrate level completion
-- Bonus calculation display
-- Transition to next level
-- Positive feedback
+- Display bonus calculation
+- Create transition to next level
+- Provide positive feedback
 
 **Concepts Introduced:**
 - Victory effects
-- Score count-up
+- Score count-up animation
 - Screen transitions
-- Celebration
+- Celebration timing
 
 **Code Written:**
-```
-- Fill all homes triggers
-- Flash effect
-- Bonus points count up
-- Fade to next level
+```asm
+level_complete:
+    ; Flash all homes
+    ; Play victory jingle
+    ; Count up time bonus
+    ; Fade to next level
+
+bonus_countup:
+    ; Display "TIME BONUS"
+    ; Tick up points visually
+    ; Sound per tick
 ```
 
 **What the Learner Sees:**
-Completing a level is celebrated. Bonus points tick up. Transition effect to next level.
+Completing level triggers celebration: homes flash, bonus points count up audibly, smooth transition to next level.
 
 ---
 
-### Unit 45: Pause System
+### Unit 43: Pause System
 
 **Learning Objectives:**
-- Pause mid-game
-- Pause menu options
+- Implement pause functionality
+- Create pause menu overlay
 - Resume cleanly
-- Music pause
+- Handle pause during music
 
 **Concepts Introduced:**
 - Pause state
 - State preservation
-- Overlay display
+- Overlay rendering
 - Music pause/resume
 
 **Code Written:**
-```
-- Pause on specific button
-- Display PAUSED overlay
-- Menu: Resume, Restart, Quit
-- Resume with countdown
+```asm
+paused:     dc.w    0
+
+handle_pause:
+    ; Check pause button
+    ; If pressed: toggle pause state
+    ; Pause music
+    ; Show pause menu
+
+pause_menu:
+    ; RESUME
+    ; RESTART LEVEL
+    ; QUIT TO TITLE
 ```
 
 **What the Learner Sees:**
-Press pause to freeze game. Menu appears. Resume continues exactly where left off.
+Press P (or Start) to pause. Overlay menu appears. Resume continues exactly where left off. Music pauses too.
 
 ---
 
-### Unit 46: Screen Transitions
+### Unit 44: Screen Transitions
 
 **Learning Objectives:**
-- Smooth state transitions
-- Fade or wipe effects
-- Copper-based fades
+- Implement fade effects
+- Create smooth state changes
+- Use Copper for fades
 - Professional feel
 
 **Concepts Introduced:**
-- Transition effects
-- Colour fading via Copper
-- Effect timing
-- Polish through transitions
+- Fade to/from black via Copper
+- Palette manipulation
+- Transition timing
+- Effect queuing
 
 **Code Written:**
-```
-- Fade to black
-- Fade from black
-- Wipe alternative
-- Apply between states
+```asm
+fade_out:
+    ; Reduce all palette entries toward black
+    ; Each frame: subtract from RGB
+    ; Until all zero
+
+fade_in:
+    ; Increase from black to target palette
+    ; Each frame: add toward target
+    ; Until target reached
 ```
 
 **What the Learner Sees:**
-Screens don't cut abruptly. Smooth fades between title, game, and results.
+Screens don't cut abruptly. Smooth fades between title, game, results. Professional polish.
+
+---
+
+### Unit 45: Sound Priority
+
+**Learning Objectives:**
+- Manage multiple sound effects
+- Implement priority system
+- Allocate channels appropriately
+- Handle sound conflicts
+
+**Concepts Introduced:**
+- Sound priority levels
+- Channel allocation
+- Sound queuing
+- Interruption rules
+
+**Code Written:**
+```asm
+PRIORITY_DEATH  = 3     ; Highest
+PRIORITY_SCORE  = 2
+PRIORITY_HOP    = 1     ; Lowest
+
+play_sound_priority:
+    ; Check if channel busy
+    ; Compare priorities
+    ; If new higher: interrupt
+    ; Else: queue or skip
+```
+
+**What the Learner Sees:**
+Important sounds (death) always play. Less important sounds (hop) yield to higher priority. No audio glitches.
+
+---
+
+### Unit 46: Additional Sound Effects
+
+**Learning Objectives:**
+- Add variety to audio
+- Create ambient sounds
+- Implement car horns
+- Polish audio experience
+
+**Concepts Introduced:**
+- Sound variety
+- Random sound selection
+- Ambient audio
+- Audio polish
+
+**Code Written:**
+```asm
+; New samples:
+; - Car horn (triggered randomly by cars)
+; - Ambient river (looping)
+; - Level complete jingle
+; - Game over jingle
+
+random_car_horn:
+    ; Small chance each frame
+    ; Play horn from random car
+```
+
+**What the Learner Sees:**
+Richer audio: occasional car horns, ambient water sounds, distinct jingles for win/lose. Game sounds complete.
 
 ---
 
@@ -1549,15 +1520,13 @@ Screens don't cut abruptly. Smooth fades between title, game, and results.
 - Pre-release review
 
 **Code Written:**
-```
-- Fix alignment issues
+- Alignment fixes
 - Colour adjustments
 - Timing refinements
-- Verify all features
-```
+- Bug fixes
 
 **What the Learner Sees:**
-Subtle improvements throughout. Everything more consistent and refined.
+Subtle improvements throughout. Colours more consistent, timing tighter, everything more refined.
 
 ---
 
@@ -1567,62 +1536,59 @@ Subtle improvements throughout. Everything more consistent and refined.
 - Full integration test
 - Feature verification
 - Quality sign-off
-- Phase completion
+- Phase milestone
 
 **Concepts Introduced:**
-- Release candidacy
-- Feature completeness
-- Quality bar
+- Release candidate assessment
+- Feature completeness check
+- Quality bar evaluation
 - Phase gate
 
 **Code Written:**
-```
-- Complete playthrough
-- All features verified
-- Bug fixes
-- Documentation
-```
+- Final bug fixes
+- Documentation updates
+- Feature verification
 
 **What the Learner Sees:**
-Complete, polished game with professional presentation. Commercial quality.
+Complete, polished game with professional presentation. Title animation, menus, music, effects, transitions.
 
 **Phase 3 Checkpoint:**
-The game has professional presentation: animated title, attract mode, high scores, options, Copper effects, background music, and polished transitions. It looks and sounds like a commercial Amiga game.
+Professional presentation with animated title, attract mode, high scores, options, music, Copper effects, and polished transitions. Commercial quality.
 
 ---
 
 ## Phase 4: Mastery (Units 49-64)
 
-*Goal: Advanced techniques, optimisation, and distribution.*
+*Goal: Advanced techniques, optimisation, multiplayer, and distribution.*
 
-*By the end of this phase, the game uses advanced Amiga techniques, is optimised for performance, and is packaged for distribution as a bootable disk.*
+*By the end of this phase, the game is optimised for performance, has two-player modes, difficulty options, and is packaged as a bootable disk ready for distribution. Professional release quality.*
 
 ---
 
 ### Unit 49: Code Review
 
 **Learning Objectives:**
-- Review codebase architecture
-- Identify improvements
+- Review entire codebase architecture
 - Document code structure
-- Plan optimisation
+- Identify optimisation targets
+- Plan improvements
 
 **Concepts Introduced:**
-- Code review practices
-- Technical debt
-- Documentation
+- Code review methodology
+- Technical debt assessment
+- Documentation practices
 - Refactoring planning
 
 **Code Written:**
-```
-- Add comprehensive comments
-- Document memory map
-- Identify hot paths
-- Plan optimisation targets
+```asm
+; Add comprehensive comments
+; Document memory map
+; Create routine index
+; Identify hot paths for optimisation
 ```
 
 **What the Learner Sees:**
-Cleaner, documented code. Preparation for optimisation.
+Cleaner, well-documented code. Clear understanding of where time is spent and what can be improved.
 
 ---
 
@@ -1632,348 +1598,439 @@ Cleaner, documented code. Preparation for optimisation.
 - Reduce memory footprint
 - Compress graphics data
 - Optimise data structures
-- Free chip RAM
+- Free chip RAM for future use
 
 **Concepts Introduced:**
 - Memory profiling
-- RLE compression
-- Data packing
+- RLE compression for graphics
+- Data packing techniques
 - Chip RAM budgeting
 
 **Code Written:**
-```
-- Compress BOB graphics
-- Pack level data
-- Remove redundancy
-- Document savings
+```asm
+; RLE decompress routine
+decompress_rle:
+    ; Read byte
+    ; If high bit set: repeat next byte N times
+    ; Else: copy N literal bytes
+
+; Pack multiple flags into single bytes
+; Reuse memory where possible
 ```
 
 **What the Learner Sees:**
-Same game, smaller memory use. More room for content.
+Same game, smaller memory use. Graphics compressed. More room for additional content.
+
+**Technical Details:**
+- Before: ~100KB graphics
+- After: ~60KB compressed
+- Decompression during load
 
 ---
 
 ### Unit 51: Blitter Optimisation
 
 **Learning Objectives:**
-- Optimise Blitter usage
-- Reduce blit count
-- Interleaved bitplanes
-- Maximum performance
+- Optimise Blitter operations
+- Use interleaved bitplane format
+- Combine operations
+- Maximise throughput
 
 **Concepts Introduced:**
+- Interleaved vs planar format
 - Blitter scheduling
-- Interleaved format
-- Blit combining
+- Combined erase/draw operations
 - DMA efficiency
 
 **Code Written:**
-```
-- Interleaved graphics
-- Combined erase/draw
-- Optimal modulos
-- Verify performance
+```asm
+; Convert to interleaved format
+; Single blit draws all bitplanes
+; Combine background restore with object draw
+; Optimal modulo calculations
 ```
 
 **What the Learner Sees:**
-Smoother graphics, more objects possible, better performance.
+More objects possible. Smoother animation. Better performance headroom.
+
+**Technical Details:**
+- Interleaved: all planes in one blit
+- Reduces blit count by 5x (for 5 planes)
+- More complex setup, faster execution
 
 ---
 
 ### Unit 52: CPU/Blitter Parallelism
 
 **Learning Objectives:**
-- CPU work during Blitter operations
-- Avoid Blitter wait loops
-- Parallel processing
-- Maximum throughput
+- Do CPU work during Blitter operations
+- Avoid blocking waits
+- Schedule work efficiently
+- Maximise throughput
 
 **Concepts Introduced:**
 - CPU/Blitter parallelism
-- Deferred waits
-- Work scheduling
+- Deferred Blitter waits
+- Work scheduling patterns
 - Resource utilisation
 
 **Code Written:**
-```
-- Start blit, do CPU work, then wait
-- Batch Blitter operations
-- Optimise wait points
-- Verify overlap
+```asm
+game_loop:
+    ; Start background restore blit
+    jsr start_restore_blit
+
+    ; Do CPU work while Blitter runs
+    jsr update_game_logic
+    jsr read_input
+    jsr update_positions
+
+    ; Now wait for Blitter (probably already done)
+    jsr wait_blitter
+
+    ; Start object drawing
+    jsr draw_objects
 ```
 
 **What the Learner Sees:**
-More responsive game. Better performance without visual change.
+More responsive game. Better frame rate. CPU and Blitter working in parallel.
 
 ---
 
 ### Unit 53: Advanced Copper
 
 **Learning Objectives:**
-- Dynamic Copper list building
-- Copper sprites
-- Per-line effects
-- Advanced timing
+- Build Copper lists dynamically
+- Implement per-line effects
+- Double-buffer Copper lists
+- Advanced timing tricks
 
 **Concepts Introduced:**
-- Dynamic Copper lists
-- Copper-based effects
-- Scanline tricks
-- Double-buffered Copper
+- Dynamic Copper list generation
+- Copper double-buffering
+- Sprite repositioning via Copper
+- Scanline effects
 
 **Code Written:**
-```
-- Build Copper list per frame
-- Dynamic gradient changes
-- Level-specific effects
-- Double-buffer lists
+```asm
+build_copper_list:
+    ; Generate list based on game state
+    ; Add sprite repositions for more sprites
+    ; Add per-line colour effects
+    ; Swap lists each frame
+
+copper_sprite_multiplex:
+    ; Reposition sprite mid-screen
+    ; Effectively doubles sprite count
 ```
 
 **What the Learner Sees:**
-More dynamic visual effects. Responsive to game state.
+More dynamic visual effects. Additional sprites via multiplexing. Effects respond to gameplay.
 
 ---
 
-### Unit 54: More Enemies
+### Unit 54: More Hazards
 
 **Learning Objectives:**
-- Add snakes on road
-- Cars that speed up
-- Additional hazards
-- Variety
+- Add snakes on road edges
+- Implement fast car variants
+- Create hazard variety
+- Balance difficulty
 
 **Concepts Introduced:**
-- Enemy variety
+- Enemy variety design
 - Behaviour variation
 - Difficulty layering
 - Content expansion
 
 **Code Written:**
-```
-- Snake hazard on road edge
-- Fast car variants
-- Mix hazard types
-- Level-based appearance
-```
+```asm
+; Snake hazard
+snake_x:        ds.w    NUM_SNAKES
+snake_dir:      ds.w    NUM_SNAKES
 
-**What the Learner Sees:**
-More variety in hazards. Game stays fresh longer.
+update_snakes:
+    ; Move along road edge
+    ; Reverse at boundaries
+    ; Collision = death
 
----
-
-### Unit 55: Female Frog Bonus
-
-**Learning Objectives:**
-- Add bonus objective
-- Escort female frog home
-- Extra points
-- Risk/reward
-
-**Concepts Introduced:**
-- Bonus mechanics
-- Escort gameplay
-- Optional objectives
-- Score multipliers
-
-**Code Written:**
-```
-- Female frog appears on log
-- Hop onto her to pick up
-- Carry to home for bonus
-- Timer while carrying
+; Fast car (appears in later levels)
+spawn_fast_car:
+    ; Double speed
+    ; Different colour
+    ; Warning sound
 ```
 
 **What the Learner Sees:**
-Pink frog appears occasionally on logs. Rescue her for bonus points.
+More variety in hazards. Snakes patrol road edges. Occasional fast cars add surprise.
 
 ---
 
-### Unit 56: Two Player Mode
+### Unit 55: Two Player (Alternating)
 
 **Learning Objectives:**
-- Alternating two player
-- Separate scores
-- Player indicator
-- Competitive play
+- Implement turn-based multiplayer
+- Track separate scores
+- Handle player switching
+- Create competitive mode
 
 **Concepts Introduced:**
-- Multiplayer design
-- State per player
-- Turn alternation
+- Multiplayer state management
+- Per-player data
+- Turn alternation logic
 - Score comparison
 
 **Code Written:**
-```
-- Two player option
-- Alternate on death/home
-- Separate score tracking
-- Winner determination
+```asm
+current_player:     dc.w    0
+player_scores:      ds.l    2
+player_lives:       ds.w    2
+
+switch_player:
+    ; Save current player state
+    ; Load other player state
+    ; Update display
+    ; Show "PLAYER X" indicator
 ```
 
 **What the Learner Sees:**
-Two player mode. Take turns, compete for high score.
+Two player option in menu. Players take turns on death or home reached. Separate scores. Winner announced.
 
 ---
 
-### Unit 57: Simultaneous Two Player
+### Unit 56: Two Player (Simultaneous)
 
 **Learning Objectives:**
-- Both players on screen
-- Separate controls
-- Collision between players
-- Cooperative/competitive
+- Both frogs on screen together
+- Separate joystick controls
+- Handle player interaction
+- Competitive racing
 
 **Concepts Introduced:**
 - Simultaneous multiplayer
-- Control separation
-- Player collision
-- Split attention
+- Control separation (port 1 vs port 2)
+- Player-player collision
+- Race mechanics
 
 **Code Written:**
-```
-- Two frogs on screen
-- Joy 1 and Joy 2
-- Can collide (push?)
-- Compete for homes
+```asm
+NUM_PLAYERS = 2
+
+player_x:       ds.w    NUM_PLAYERS
+player_y:       ds.w    NUM_PLAYERS
+player_state:   ds.w    NUM_PLAYERS
+
+read_both_joysticks:
+    ; Read JOY0DAT and JOY1DAT
+    ; Decode for each player
+
+check_player_collision:
+    ; If players overlap: bump apart
+    ; Or: pass through (design choice)
 ```
 
 **What the Learner Sees:**
-Both players play at once. Race to fill homes.
+Both players on screen simultaneously. Race to fill homes. Can bump each other. Frantic fun.
 
 ---
 
-### Unit 58: Statistics Tracking
+### Unit 57: Statistics Tracking
 
 **Learning Objectives:**
 - Track gameplay statistics
-- Display stats screen
-- Session records
-- Achievement-like goals
+- Display session records
+- Implement achievements
+- Long-term goals
 
 **Concepts Introduced:**
 - Statistics collection
-- Persistent data
+- Record tracking
+- Achievement system
 - Display formatting
-- Goals
 
 **Code Written:**
-```
-- Track: homes, deaths, levels, time
-- Best stats this session
-- Stats screen from menu
-- Goals (reach level 5, etc.)
+```asm
+stats:
+    total_homes:    ds.l    1
+    total_deaths:   ds.l    1
+    highest_level:  ds.w    1
+    fastest_level:  ds.w    1
+
+achievements:
+    ; Reach level 5
+    ; Score 10,000
+    ; Complete level without dying
+    ; Rescue 10 female frogs
 ```
 
 **What the Learner Sees:**
-Statistics screen shows achievements. Long-term goals to pursue.
+Statistics screen showing total progress. Achievements to unlock. Long-term goals beyond single game.
 
 ---
 
-### Unit 59: Difficulty Options
+### Unit 58: Difficulty Options
 
 **Learning Objectives:**
-- Configurable difficulty
-- Easy/Normal/Hard modes
-- Affect speed and hazards
-- Accessibility
+- Implement difficulty levels
+- Scale game parameters
+- Improve accessibility
+- Balance challenge
 
 **Concepts Introduced:**
 - Difficulty parameters
+- Scaling factors
+- Accessibility design
 - Player choice
-- Balance tuning
-- Accessibility
 
 **Code Written:**
-```
-- Difficulty setting in options
-- Easy: slower, fewer hazards
-- Hard: faster, more hazards
-- Apply to game parameters
+```asm
+DIFF_EASY   = 0
+DIFF_NORMAL = 1
+DIFF_HARD   = 2
+
+difficulty:     dc.w    DIFF_NORMAL
+
+apply_difficulty:
+    ; EASY: slower speeds, more time, fewer hazards
+    ; NORMAL: default settings
+    ; HARD: faster speeds, less time, more hazards
+
+speed_multiplier:
+    dc.w    80, 100, 130    ; Percentages
 ```
 
 **What the Learner Sees:**
-Difficulty option makes game accessible to all skill levels.
+Difficulty option in menu. Easy mode for beginners, Hard for experts. Game accessible to all skill levels.
 
 ---
 
-### Unit 60: Final Content
+### Unit 59: Final Content
 
 **Learning Objectives:**
-- Add remaining content
-- Ensure 8 complete levels
-- Verify progression
-- Content complete
+- Complete all 8 levels
+- Verify difficulty curve
+- Finalise patterns
+- Content freeze
 
 **Concepts Introduced:**
 - Content completion
-- Level design
-- Difficulty curve
-- Feature lock
+- Level design finalisation
+- Difficulty curve verification
+- Feature freeze
 
 **Code Written:**
-```
-- Complete all 8 levels
-- Verify difficulty curve
-- Final enemy patterns
-- Content freeze
+```asm
+; Level data for all 8 levels
+; Each level defines:
+;   - Car speeds and counts
+;   - Log speeds and counts
+;   - Turtle/croc frequency
+;   - Time limit
+;   - Bonus spawn rates
 ```
 
 **What the Learner Sees:**
-Complete game with all levels, features, and content.
+Complete game with 8 distinct levels. Clear difficulty progression. Satisfying challenge curve.
 
 ---
 
-### Unit 61: Loading Screen
+### Unit 60: Loading Screen
 
 **Learning Objectives:**
 - Create loading display
-- First impression
-- Loading animation
-- Set expectations
+- Establish first impression
+- Show branding
+- Professional start
 
 **Concepts Introduced:**
 - Load-time experience
 - First impressions
-- Branding
-- Professional start
+- Branding display
+- Progress indication
 
 **Code Written:**
-```
-- Loading screen graphics
-- Simple animation during load
-- Copyright/credits
-- Transition to title
+```asm
+loading_screen:
+    ; Display logo immediately
+    ; Show "LOADING..." text
+    ; Optional: progress bar
+    ; Transition to title when ready
+
+; Copyright and credits
+dc.b    "(C) 2026 CODE198X",0
+dc.b    "PROGRAMMING: LEARNER",0
 ```
 
 **What the Learner Sees:**
-Professional loading screen while game loads. Good first impression.
+Professional loading screen while game loads. Logo, credits, loading indication. Good first impression.
 
 ---
 
-### Unit 62: Disk Mastering
+### Unit 61: Disk Mastering
 
 **Learning Objectives:**
 - Create bootable ADF
 - Organise files on disk
-- Boot sector setup
+- Write boot sector
 - Distribution format
 
 **Concepts Introduced:**
-- ADF format
-- Boot block
+- ADF disk format
+- Boot block structure
 - File organisation
-- Bootable disk
+- Bootable disk creation
 
 **Code Written:**
-```
-- Create boot sector
-- Organise files efficiently
-- Test boot process
-- Create ADF image
+```asm
+; Boot block code
+boot_block:
+    ; Minimal boot code
+    ; Load main executable
+    ; Jump to start
+
+; Disk layout:
+; Track 0: Boot block
+; Track 1-79: Game data
 ```
 
 **What the Learner Sees:**
-Game boots directly from disk. No Workbench needed.
+Game boots directly from disk. No Workbench required. Insert disk, power on, play.
+
+**Technical Details:**
+- ADF: 880KB, 80 tracks, 11 sectors
+- Boot block: first 1024 bytes
+- Checksum required for boot
+
+---
+
+### Unit 62: Compatibility Testing
+
+**Learning Objectives:**
+- Test on multiple Amiga models
+- Verify A500 compatibility
+- Check A1200 compatibility
+- Handle hardware differences
+
+**Concepts Introduced:**
+- Hardware compatibility
+- Chipset variations
+- Memory configurations
+- Testing methodology
+
+**Code Written:**
+```asm
+; Detect machine type
+detect_machine:
+    ; Check for AGA (A1200/A4000)
+    ; Check for ECS (A500+/A600)
+    ; Check for OCS (A500/A2000)
+
+; Adjust for differences if needed
+; (Signal targets OCS, should work everywhere)
+```
+
+**What the Learner Sees:**
+Game tested and verified on A500, A600, A1200. Works across the Amiga range.
 
 ---
 
@@ -1981,66 +2038,73 @@ Game boots directly from disk. No Workbench needed.
 
 **Learning Objectives:**
 - Complete test pass
-- Edge cases
-- Compatibility testing
+- Verify all features
+- Test edge cases
 - Release candidate
 
 **Concepts Introduced:**
-- Release testing
-- Compatibility
+- Release testing methodology
+- Edge case identification
 - Bug triage
-- Release readiness
+- Release readiness criteria
 
 **Code Written:**
-```
-- Full playthrough all modes
-- Test on different Amiga models
-- Fix critical issues
-- Declare RC
-```
+- Bug fixes from testing
+- Edge case handling
+- Final polish
 
 **What the Learner Sees:**
-Thoroughly tested game. Works on A500, A1200, etc.
+Thoroughly tested game. All features verified. All modes tested. Ready for release.
+
+**Test Checklist:**
+- [ ] All 8 levels completable
+- [ ] All menu options work
+- [ ] High scores save correctly
+- [ ] Two-player modes work
+- [ ] All difficulty levels balanced
+- [ ] Music plays correctly
+- [ ] All sound effects trigger
+- [ ] Boots on A500 with 512KB
 
 ---
 
 ### Unit 64: Distribution
 
 **Learning Objectives:**
-- Create final distribution
-- Documentation
-- Package complete
-- Release
+- Create final distribution package
+- Write documentation
+- Archive source code
+- Release the game
 
 **Concepts Introduced:**
 - Distribution packaging
-- Documentation
-- Archive practices
+- Documentation writing
+- Source archival
 - Release process
 
-**Code Written:**
+**Files Created:**
 ```
-- Final ADF image
-- Readme file
-- Quick reference card
-- Source archive
+SIGNAL.ADF          ; Bootable game disk
+README.TXT          ; Game instructions
+QUICKREF.TXT        ; Quick reference card
+SOURCE.LHA          ; Source code archive
 ```
 
 **What the Learner Sees:**
-Complete distribution package. Professional release.
+Complete distribution package. Professional readme. Source code archived. Game ready to share.
 
 **Phase 4 Checkpoint:**
-The game is complete. Optimised, full-featured, professionally packaged. It could have sold for £19.99 in 1987. The learner has built a commercial-quality Amiga game.
+Complete, optimised, professionally packaged game. Two-player modes, difficulty options, statistics, and achievements. Boots from disk, works on all Amigas. Could have sold for £19.99 in 1987. The learner has built a commercial-quality Amiga game.
 
 ---
 
 ## Skills Mastery Summary
 
-By completing all 64 units, learners have demonstrated mastery of:
+By completing all 64 units, learners demonstrate mastery of:
 
 ### 68000 Assembly
-- Registers (D0-D7, A0-A7) and addressing modes
-- Data movement, arithmetic, and logic
+- Registers and addressing modes
+- Data movement, arithmetic, logic
 - Interrupt handling
 - Performance optimisation
 
@@ -2058,31 +2122,16 @@ By completing all 64 units, learners have demonstrated mastery of:
 - Multiplayer implementation
 
 ### Professional Skills
-- Code organisation and documentation
+- Code organisation
 - Performance optimisation
 - Distribution packaging
 - Quality assurance
 
 ---
 
-## Comparison: 16 Units vs 64 Units
-
-| Aspect | 16-Unit Version | 64-Unit Version |
-|--------|-----------------|-----------------|
-| Graphics | Hardware sprites only | Blitter BOBs + sprites |
-| Gameplay | Roads only | Roads + river + hazards |
-| Audio | None | Full SFX + music |
-| Visuals | Static | Copper effects, animations |
-| Levels | 1 | 8 with progression |
-| Modes | Single player only | 1P, 2P alternate, 2P simultaneous |
-| Polish | Minimal | Full menus, options, high scores |
-| Distribution | Executable | Bootable ADF |
-| Commercial viable? | No | Yes |
-| Time investment | 16-32 hours | 64-128 hours |
-
----
-
 ## Version History
 
-- **2.0 (2026-01-10):** Complete restructure. Playable game by Unit 16. Full unit-by-unit detail matching SID Symphony/Ink War format.
-- **1.0 (2026-01-07):** Initial outline (hardware-theory focused, no game until Phase 2).
+- **3.1 (2026-01-12):** Expanded Phases 2-4 with full unit descriptions matching Phase 1 detail level.
+- **3.0 (2026-01-12):** Complete restructure following "scaffold first, explain later" approach. Sprite visible in Unit 1, interactivity in Unit 2. River moved to Phase 2.
+- **2.0 (2026-01-10):** Previous restructure (playable game by Unit 16).
+- **1.0 (2026-01-07):** Initial outline (theory-first approach).

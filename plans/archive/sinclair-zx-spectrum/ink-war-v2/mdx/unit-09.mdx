@@ -1,0 +1,114 @@
+---
+title: "Move Validation"
+description: "Robust validation with audio feedback. Success sounds pleasant, errors sound harsh. Clear feedback for every action."
+pubDate: 2026-01-09
+game: 1
+gameName: "Ink War"
+unit: 9
+totalUnits: 64
+system: "Sinclair ZX Spectrum"
+tags: ["assembly", "z80", "validation", "sound", "beeper"]
+prevLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-08"
+nextLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-10"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+## What You're Building
+
+We've had validation since Unit 7 — you can't claim occupied cells. But silent rejection isn't good user experience. In this unit, we add audio feedback that makes valid and invalid moves instantly distinguishable.
+
+By the end of this unit, you'll have:
+
+- A beeper routine for generating tones
+- A pleasant rising sound for successful claims
+- A harsh buzz for invalid moves
+- Clear, immediate feedback for every action
+
+![Unit 9 Screenshot](/images/sinclair-zx-spectrum/game-01-ink-war/unit-09/screenshot.png)
+
+*The visuals haven't changed — run the program to hear the sounds!*
+
+## The Spectrum Beeper
+
+The Spectrum has a simple 1-bit speaker controlled by bit 4 of port $FE. To make sound, we toggle this bit rapidly:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-09/snippets/01-beep-routine.asm" />
+
+The pitch is controlled by how long we wait between toggles. Shorter waits = higher frequency = higher pitch. The duration controls how long the sound plays.
+
+<InlineNote>
+The speaker shares port $FE with the border colour. When making sound, you might see the border flicker. This is normal — the Spectrum's design means we can't entirely avoid it.
+</InlineNote>
+
+## Success Sound
+
+A successful claim should feel good. We use a rising pitch — three quick notes, each higher than the last:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-09/snippets/02-success-sound.asm" />
+
+Rising pitch suggests progress, achievement, positivity. It's short enough not to be annoying but distinctive enough to register.
+
+## Error Sound
+
+An invalid move needs clear negative feedback. We use a low, harsh buzz:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-09/snippets/03-error-sound.asm" />
+
+Low pitch sounds "wrong" to human ears. The longer duration emphasises the error without being obnoxious.
+
+## Validation Flow
+
+The validation now has clear paths for valid and invalid moves:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-09/snippets/04-validation-flow.asm" />
+
+Invalid moves:
+1. Play error sound
+2. Flash border red (extended)
+3. Return — turn doesn't change
+
+Valid moves:
+1. Claim the cell
+2. Update display
+3. Play success sound
+4. Switch turns
+
+## Why Audio Matters
+
+Games without audio feedback feel unresponsive. Even simple beeps tell players:
+- "Yes, I heard you"
+- "That worked" or "That didn't work"
+- "Something important happened"
+
+The Spectrum's beeper is limited, but it's enough for effective feedback.
+
+## Build It. Run It.
+
+```bash
+pasmonext --sna inkwar.asm inkwar.sna
+```
+
+Make sure your emulator's sound is enabled, then:
+
+1. Move to an empty cell → Press Space → *rising bleep* + green flash
+2. Move cursor away, then back → Press Space on claimed cell → *harsh buzz* + red flash
+3. Notice the difference is instant and unmistakable
+
+## What You've Learnt
+
+- **Beeper basics**: Toggle bit 4 of port $FE to make sound
+- **Pitch control**: Shorter delays = higher pitch
+- **Sound design**: Rising = positive, low = negative
+- **User experience**: Audio feedback makes games feel responsive
+- **Defensive programming**: Different paths for valid vs invalid
+
+## The Complete Code
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-09/inkwar.asm" />
+
+## Next Unit
+
+Players can claim cells with satisfying feedback. But how many cells does each player have? In Unit 10, we'll add a score display showing the cell count for each player. The competition becomes measurable.

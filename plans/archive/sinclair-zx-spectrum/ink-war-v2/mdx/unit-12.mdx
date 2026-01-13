@@ -1,0 +1,105 @@
+---
+title: "Determining the Winner"
+description: "Compare scores, announce the winner, and celebrate with a flashing border. Three outcomes: red wins, blue wins, or draw."
+pubDate: 2026-01-09
+game: 1
+gameName: "Ink War"
+unit: 12
+totalUnits: 64
+system: "Sinclair ZX Spectrum"
+tags: ["assembly", "z80", "comparison", "winner", "celebration"]
+prevLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-11"
+nextLesson: "/sinclair-zx-spectrum/assembly/game-01-ink-war/unit-13"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+import InlineNote from "../../../../components/units/InlineNote.astro";
+
+## What You're Building
+
+The game ends when all cells are claimed. But who won? Both players have been fighting for territory — now it's time to declare a victor. In this unit, we compare final scores and announce the winner.
+
+By the end of this unit, you'll have:
+
+- Score comparison logic with three outcomes
+- Winner message display ("RED WINS!", "BLU WINS!", or "DRAW!")
+- A flashing border celebration effect
+- A null-terminated string printing routine
+
+![Unit 12 Screenshot](/images/sinclair-zx-spectrum/game-01-ink-war/unit-12/screenshot.png)
+
+*Initial state — fill the board to see the winner announced!*
+
+## Winner Codes
+
+We need to track not just whether the game is over, but who won:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-12/snippets/01-winner-constants.asm" />
+
+The messages are null-terminated strings — a common pattern in assembly programming. The zero byte marks where the string ends.
+
+<InlineNote>
+"BLU" instead of "BLUE" — we keep messages the same length for simpler positioning. Consistency beats completeness.
+</InlineNote>
+
+## Comparing Scores
+
+The Z80's `CP` instruction makes comparison straightforward:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-12/snippets/02-determine-winner.asm" />
+
+The `CP` instruction subtracts without storing the result, but sets the flags:
+- **Zero flag**: set if values are equal (draw)
+- **Carry flag**: set if A < B (P2 < P1, so P1 wins)
+
+Otherwise P2 has more and wins.
+
+## Printing Strings
+
+Instead of printing each character individually, we create a reusable string-printing routine:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-12/snippets/03-print-string.asm" />
+
+The loop continues until it hits the null terminator (byte value 0). This pattern appears throughout computing — from early assembly to modern C strings.
+
+## Victory Celebration
+
+A flashing border celebrates the winner in their colour:
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-12/snippets/04-flash-border.asm" />
+
+The game over loop calls this repeatedly, creating a continuous flash. Red flashes for P1, cyan for P2, white for a draw.
+
+## Build It. Run It.
+
+```bash
+pasmonext --sna inkwar.asm inkwar.sna
+```
+
+Run in your emulator:
+
+1. Play a full game — fill all 64 cells
+2. After the last cell is claimed, the winner message appears
+3. The border flashes in the winner's colour
+4. If you manage a draw (32 cells each), the border flashes white
+
+<InlineNote>
+To test the draw condition easily, have players take alternating corners and work inward. Getting exactly 32-32 requires planning!
+</InlineNote>
+
+## What You've Learnt
+
+- **Comparison logic**: Using CP and flags for three-way branching
+- **Null-terminated strings**: Common string representation pattern
+- **String printing**: Reusable routine for message display
+- **Visual celebration**: Border effects for victory feedback
+- **Outcome handling**: Different paths for win/lose/draw
+
+## The Complete Code
+
+<CodeFromFile src="sinclair-zx-spectrum/game-01-ink-war/unit-12/inkwar.asm" />
+
+## Next Unit
+
+We have a working game with winner announcement. But it plays once and stops. In Unit 13, we'll add proper game states — title, playing, game over — so players can start new games and the experience feels complete.

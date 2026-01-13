@@ -1,0 +1,179 @@
+---
+title: "Sound Effects"
+description: "Add audio feedback using the Amiga's Paula chip for hops, deaths, and scoring."
+pubDate: 2026-01-04
+game: 1
+gameName: "Hop"
+unit: 11
+totalUnits: 16
+system: "Commodore Amiga"
+tags: ["assembly", "68000", "paula", "audio"]
+nextLesson: "/commodore-amiga/assembly/game-01-signal/unit-12"
+layout: "../../../../layouts/UnitLayout.astro"
+---
+
+import CodeFromFile from "@components/CodeFromFile.astro";
+
+*Need to catch up? Check out [Unit 10: Home Zone](/commodore-amiga/game-01-signal/unit-10).*
+
+## What You're Building
+
+Sound brings games to life. A satisfying "boing" when you hop, a squelch when you die, a triumphant jingle when you reach home - these audio cues create emotional feedback that makes gameplay feel responsive.
+
+This unit adds:
+- **Paula audio basics** - understanding the Amiga's sound chip
+- **Sample playback** - triggering short sound effects
+- **Multiple sounds** - hop, death, and score effects
+- **Channel management** - keeping sounds organised
+
+## Meet Paula
+
+Paula is the Amiga's audio chip, named like the other custom chips (Agnus, Denise). Paula provides:
+
+- **4 DMA channels** for sample playback
+- **8-bit signed samples** (-128 to +127)
+- **Variable sample rates** via period values
+- **Per-channel volume** (0-64)
+- **Stereo output** - channels 0,3 left; 1,2 right
+
+For a simple game like Hop, we'll use one or two channels for sound effects.
+
+## Paula Registers
+
+Each of Paula's 4 channels has these registers:
+
+| Register | Offset | Purpose |
+|----------|--------|---------|
+| AUDxLCH | $A0+ | Sample data pointer (high word) |
+| AUDxLCL | $A2+ | Sample data pointer (low word) |
+| AUDxLEN | $A4+ | Sample length in words |
+| AUDxPER | $A6+ | Period (sample rate) |
+| AUDxVOL | $A8+ | Volume (0-64) |
+
+Channel offsets: 0=$A0, 1=$B0, 2=$C0, 3=$D0
+
+The period value determines playback speed: lower = faster/higher pitch. A period of 428 gives approximately 8287Hz (standard Amiga sample rate).
+
+## Creating Simple Waveforms
+
+For our game, we'll create simple synthesised sounds rather than loading samples from disk. A basic approach uses mathematically generated waveforms:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-11/snippets/01-creating-simple-waveforms.asm" lang="asm" />
+
+For a death sound, we might use noise or a descending tone:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-11/snippets/02-creating-simple-waveforms.asm" lang="asm" />
+
+And a pleasant chime for reaching home:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-11/snippets/03-creating-simple-waveforms.asm" lang="asm" />
+
+## Initialising Audio
+
+Enable audio DMA in our startup code:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-11/snippets/04-initialising-audio.asm" lang="asm" />
+
+## Playing a Sound
+
+To play a sample:
+1. Point the channel to sample data
+2. Set the length (in words)
+3. Set the period (playback speed)
+4. Set the volume
+5. Trigger the DMA
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-11/snippets/05-playing-a-sound.asm" lang="asm" />
+
+## Convenience Routines
+
+Create simple wrappers for each sound:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-11/snippets/06-convenience-routines.asm" lang="asm" />
+
+## Triggering Sounds
+
+Add sound calls to our existing routines:
+
+In `handle_movement` when hopping:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-11/snippets/07-triggering-sounds.asm" lang="asm" />
+
+In `kill_frog`:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-11/snippets/08-triggering-sounds.asm" lang="asm" />
+
+In `fill_home_slot`:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-11/snippets/09-triggering-sounds.asm" lang="asm" />
+
+## Paula Register Constants
+
+Add these to your constants section:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-11/snippets/10-paula-register-constants.asm" lang="asm" />
+
+## Sound Data in Chip RAM
+
+Audio sample data MUST be in Chip RAM for Paula DMA to access it:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-11/snippets/11-sound-data-in-chip-ram.asm" lang="asm" />
+
+The `even` directive ensures the sample starts on a word boundary, which Paula requires.
+
+## Build It. Run It.
+
+Save the complete code below as `hop.asm` and build:
+
+```bash
+vasmm68k_mot -Fhunkexe -kick1hunks -nosym -o hop hop.asm
+```
+
+Create a bootable ADF:
+
+```bash
+xdftool hop.adf format "Hop" + write hop + makedir s + write s/startup-sequence "hop"
+```
+
+Run in an emulator:
+
+```bash
+fs-uae --floppy_drive_0=hop.adf
+```
+
+**Expected behaviour:**
+- Each hop produces a short "boing" sound
+- Death plays a harsh descending tone
+- Reaching home plays a pleasant chime
+- Sounds don't cut off other sounds (short enough)
+
+## What You've Learnt
+
+| Concept | Why It Matters |
+|---------|----------------|
+| Paula basics | The Amiga's dedicated audio hardware |
+| Sample format | 8-bit signed PCM data |
+| Period values | Control playback pitch |
+| DMA channels | Hardware-driven sample playback |
+| Chip RAM requirement | Audio data must be DMA-accessible |
+
+## The Complete Code
+
+Here's the full `hop.asm` with sound effects:
+
+<CodeFromFile src="commodore-amiga/game-01-signal/unit-11/hop.asm" lang="asm" />
+
+## Recap / Sanity Check
+
+Before moving on, verify:
+- [ ] Hopping in any direction plays a sound
+- [ ] Death plays a different sound
+- [ ] Reaching home plays a pleasant chime
+- [ ] Sounds don't crash or cause glitches
+- [ ] Audio DMA is enabled properly
+- [ ] Sample data is word-aligned
+- [ ] Code assembles without errors
+
+## Next Unit
+
+[Unit 12: Title Screen](/commodore-amiga/game-01-signal/unit-12) - Add a title screen before gameplay begins.
