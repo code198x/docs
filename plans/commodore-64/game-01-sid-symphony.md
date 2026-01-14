@@ -17,17 +17,18 @@ Before detailing the units, here's what the learner builds:
 ### Core Gameplay
 - Three note tracks (high, mid, low) corresponding to three SID voices
 - Notes scroll right-to-left toward a hit zone
-- Player presses Z/X/C (or joystick positions) to hit notes
+- Player presses Z/X/C to hit notes
 - Timing matters: Perfect, Good, Miss ratings
 - Combo system rewards consecutive hits
 - Health/performance meter - too many misses ends the song
 
 ### Content
-- 5 complete songs of varying difficulty
+- 6 complete songs of varying difficulty
 - 3 difficulty levels per song (Easy/Normal/Hard)
 - Practice mode (slow speed, no fail)
-- Career mode (unlock songs by completing previous)
-- Endless mode (procedurally generated patterns)
+- Endless mode (songs loop until health depletes)
+- High scores per song/difficulty
+- Performance grades (S/A/B/C/D)
 
 ### Audio
 - Full SID music (not just beeps - actual composed tracks)
@@ -49,6 +50,7 @@ Before detailing the units, here's what the learner builds:
 - Attract mode (demo playback)
 - High score table with name entry
 - Options screen (difficulty, sound test)
+- Lifetime statistics tracking
 - Pause functionality
 - Credits sequence
 
@@ -619,7 +621,7 @@ The learner has built a working rhythm game. They understand SID sound, screen g
 
 *Goal: Multiple songs, difficulty levels, game modes. A game with real content and variety.*
 
-*By the end of this phase, the game has 5 songs, 3 difficulty levels, career mode, practice mode, endless mode, and advanced combo system. It's a game people would actually want to play multiple times.*
+*By the end of this phase, the game has 6 songs, 3 difficulty levels, practice mode, endless mode, high scores, and advanced scoring with grades. It's a game people would actually want to play multiple times.*
 
 ---
 
@@ -854,203 +856,195 @@ Song 4 feels different - notes land between expected beats. The visual beat mark
 
 ---
 
-### Unit 25: Career Mode Structure
+### Unit 25: High Score Persistence
 
 **Learning Objectives:**
-- Implement progression system
-- Lock content behind achievement
-- Save and display progress
-- Create sense of advancement
+- Store high scores per song and difficulty
+- Compare current score against stored best
+- Display high score feedback
+- Understand 16-bit score storage
 
 **Concepts Introduced:**
-- Unlock conditions
-- Progress persistence (in memory for now)
-- Achievement thresholds
-- Career menu UI
+- High score table structure
+- Index calculation (song × 3 + difficulty)
+- 16-bit comparison
+- Visual feedback for new records
 
 **Code Written:**
 ```
-- song_unlocked: array of booleans
-- unlock_condition: minimum score or completion
-- Song 1 always unlocked
-- Check unlock after results
-- Career menu shows locked/unlocked status
+- high_scores: 18-entry table (6 songs × 3 difficulties)
+- check_high_score: compare and update if beaten
+- Display "NEW HIGH SCORE" on results screen
+- Show current high score during song selection
 ```
 
 **What the Learner Sees:**
-Career mode shows songs 2-5 locked initially. Completing Song 1 unlocks Song 2. Progress creates motivation to continue. A reason to play beyond high scores.
+After completing a song, the game shows if a new high score was achieved. The menu displays best scores for each song/difficulty combination. Replayability through score chasing.
 
 ---
 
-### Unit 26: Song 5 - The Challenge
+### Unit 26: Song 5 - Polyrhythms
 
 **Learning Objectives:**
-- Compose a demanding finale song
-- Use all SID capabilities learned so far
-- Create memorable musical moments
-- Balance difficulty with fairness
+- Compose with multiple simultaneous rhythms
+- Create chord patterns (2-3 notes at once)
+- Challenge coordination skills
+- Balance complexity with playability
 
 **Concepts Introduced:**
-- Extended song length
-- Dynamic difficulty within song
-- Climactic sections
-- Reward for mastery
+- Polyrhythms in music
+- Chord notation in song data
+- Multi-track coordination
+- Difficulty through complexity rather than speed
 
 **Code Written:**
 ```
-- Song 5 data: 2+ minutes, 100+ notes
-- Uses all three voices prominently
-- Difficulty ramps within song
-- Climactic ending section
+- Song 5 data: 136 BPM, emphasis on chords
+- Patterns with 2-3 simultaneous notes
+- Different rhythmic patterns per track
+- Test polyrhythm handling across difficulties
 ```
 
 **What the Learner Sees:**
-Song 5 is clearly the boss. Longer, denser, more demanding. Completing it on Hard is a real achievement. The SID output is impressive.
+Song 5 "Chordstorm" demands hitting multiple keys at once. The three tracks move independently, creating layered rhythms. A coordination challenge rather than speed challenge.
 
 ---
 
-### Unit 27: Joystick Support
+### Unit 27: Visual Polish
 
 **Learning Objectives:**
-- Read joystick input
-- Map joystick to three-track input
-- Let player choose control scheme
-- Handle both simultaneously
+- Add colour-coded feedback for hit quality
+- Improve visual clarity of game state
+- Create distinct visual language for events
+- Polish the player feedback loop
 
 **Concepts Introduced:**
-- CIA joystick reading
-- Direction to track mapping
-- Input method selection
-- Control scheme UI
+- Colour as information
+- Border flash effects
+- Visual hierarchy
+- Feedback timing
 
 **Code Written:**
 ```
-- read_joystick: check directions
-- Map: up=track1, fire=track2, down=track3
-- control_scheme: keyboard or joystick
-- Selection in options
-- Both can work simultaneously
+- Colour-coded hit feedback (white=perfect, yellow=good, red=miss)
+- Border flash on hits
+- Improved combo display colours
+- Visual consistency pass across UI
 ```
 
 **What the Learner Sees:**
-Options menu includes control scheme. Joystick works as alternative to keyboard. Some players prefer one or the other.
-
-**Joystick Mapping:**
-- Up: Track 1 (high voice)
-- Fire: Track 2 (mid voice)
-- Down: Track 3 (low voice)
+The game feels more responsive. Perfect hits flash white, good hits yellow, misses red. The border pulses with hits. Visual feedback reinforces audio feedback.
 
 ---
 
-### Unit 28: Endless Mode - Procedural Generation
+### Unit 28: Endless Mode
 
 **Learning Objectives:**
-- Generate note patterns algorithmically
-- Follow musical rules for coherent patterns
-- Create unlimited content
-- Balance randomness with playability
+- Implement survival game mode
+- Loop songs continuously
+- Track progress across loops
+- Create different play experience from normal mode
 
 **Concepts Introduced:**
-- Procedural generation basics
-- Beat grid constraints
-- Probability distributions
-- Seed-based randomness
+- Mode flags and toggles
+- Song looping without reset
+- Loop counter tracking
+- Mode combinations (practice + endless)
 
 **Code Written:**
 ```
-- generate_note: decide if note appears on beat
-- Probability increases with level
-- Notes placed on beat grid
-- Track selection weighted
-- Infinite loop mode (no song end)
+- endless_mode: toggle flag
+- Loop song when end reached instead of showing results
+- loop_count: track number of loops completed
+- Display loop counter during play
+- Continue until health depletes
 ```
 
 **What the Learner Sees:**
-Endless mode generates notes forever. Patterns feel musical (mostly on beats) but unpredictable. High score is only goal.
+Endless mode toggle on menu. When enabled, songs loop forever - the challenge becomes survival. Score accumulates across loops. How long can you last?
 
 ---
 
-### Unit 29: Endless Mode - Difficulty Curve
+### Unit 29: Song 6 - Mixed Techniques
 
 **Learning Objectives:**
-- Implement dynamic difficulty
-- Increase challenge over time
-- Track level/progress in endless
-- Balance for long sessions
+- Compose a song combining all techniques
+- Test skill integration
+- Create comprehensive challenge
+- Validate learning across previous songs
 
 **Concepts Introduced:**
-- Dynamic difficulty adjustment
-- Level as time survived
-- Speed increase over time
-- Density increase over time
+- Skill synthesis
+- Pattern layering (basic + syncopation + chords)
+- Progressive section design
+- Curriculum capstone
 
 **Code Written:**
 ```
-- endless_level: increases with time
-- Speed scales with level
-- Note density scales with level
-- Display current level
-- Level up fanfare
+- Song 6 "Fusion" data: 130 BPM, mixed techniques
+- Sections progress from simple to complex
+- Combines basic rhythm, syncopation, and polyrhythms
+- Tests all skills developed in previous songs
 ```
 
 **What the Learner Sees:**
-Endless mode starts easy, gets progressively harder. Level number tracks progress. Eventually becomes impossible but that's the point. Competing for how long you survive.
+Song 6 "Fusion" combines everything. Basic beats, off-beat syncopation, chords - all in one song. Completing this on Hard proves mastery of all techniques.
 
 ---
 
-### Unit 30: Statistics Tracking
+### Unit 30: Advanced Scoring Mechanics
 
 **Learning Objectives:**
-- Track persistent statistics
-- Display lifetime achievements
-- Create long-term goals
-- Show progression over time
+- Implement streak bonuses
+- Add section completion rewards
+- Create full combo bonus
+- Layer multiple scoring systems
 
 **Concepts Introduced:**
-- Aggregate statistics
-- 32-bit counters for large values
-- Statistics display screen
-- Progress visualisation
+- Perfect streak tracking
+- Bit flags for milestone tracking
+- Section progress calculation
+- Score composition design
 
 **Code Written:**
 ```
-- total_notes_hit: lifetime counter
-- total_perfects: lifetime counter
-- best_combo: highest ever achieved
-- games_played: session counter
-- stats_screen: display all statistics
+- perfect_streak: consecutive perfect counter
+- Streak bonus every 5 consecutive perfects
+- Section bonuses at 25%, 50%, 75% completion
+- Full combo bonus (200 points) for zero misses
+- Multiple overlapping reward systems
 ```
 
 **What the Learner Sees:**
-Statistics screen shows lifetime totals: notes hit, perfects, best combo, songs completed. A sense of overall progress beyond individual songs.
+Scoring now rewards consistency, not just accuracy. Five perfects in a row earns bonus points. Reaching song milestones awards section bonuses. A perfect run with no misses earns a special bonus.
 
 ---
 
-### Unit 31: ADSR Sound Design
+### Unit 31: Results Screen Enhancements
 
 **Learning Objectives:**
-- Refine sound design using ADSR
-- Create distinct sounds per track
-- Improve miss feedback
-- Professional audio polish
+- Calculate performance grades
+- Display accuracy percentage
+- Show best streak achieved
+- Create meaningful performance feedback
 
 **Concepts Introduced:**
-- ADSR deep dive
-- Track-specific timbres
-- Layered sound design
-- Audio polish pass
+- Percentage calculation in 8-bit
+- Grade thresholds (S/A/B/C/D)
+- Colour-coded grade display
+- Results screen layout design
 
 **Code Written:**
 ```
-- Track 1: bright, percussive (fast attack/decay)
-- Track 2: warm, sustained (slow attack)
-- Track 3: bass, punchy (medium attack, low sustain)
-- Miss: harsh noise with fast decay
-- All sounds refined for "feel"
+- calculate_grade: (perfect_count × 100) / notes_hit
+- Grade thresholds: S=95%, A=85%, B=70%, C=50%, D=below
+- Colour-coded grades (S=yellow, A=green, B=cyan, C=grey, D=red)
+- Best streak display on results
+- Enhanced statistics layout
 ```
 
 **What the Learner Sees:**
-The three tracks sound distinctly different. Hitting notes feels more satisfying. The SID is being used more expressively.
+Results screen now shows a letter grade prominently. "S" rank requires 95% perfects - a real achievement. Best streak shows longest perfect run. Players understand their performance at a glance.
 
 ---
 
@@ -1072,16 +1066,16 @@ The three tracks sound distinctly different. Hitting notes feels more satisfying
 ```
 - Playtest session with notes
 - Adjust note patterns for balance
-- Verify career unlock flow
+- Verify mode interactions (practice + endless)
 - Fix any issues found
-- Document known issues
+- Add version display to title screen
 ```
 
 **What the Learner Sees:**
-The complete game with all content. Everything works together. Five songs, three difficulties, multiple modes. Ready for polish.
+The complete game with all content. Everything works together. Six songs, three difficulties, multiple modes, advanced scoring. Ready for polish.
 
 **Phase 2 Checkpoint:**
-The game now has substantial content: 5 songs × 3 difficulties = 15 distinct challenges, plus endless mode for infinite play. Career mode provides progression. Practice mode helps learning. The game is feature-complete but not yet polished.
+The game now has substantial content: 6 songs × 3 difficulties = 18 distinct challenges, plus endless mode for survival play. Practice mode helps learning. High scores and grades provide replayability. The game is feature-complete but not yet polished.
 
 ---
 
@@ -1454,31 +1448,35 @@ High score table shows top 10 with names. Beating a score prompts name entry. Ne
 
 ---
 
-### Unit 46: Options Screen
+### Unit 46: Options and Statistics Screen
 
 **Learning Objectives:**
 - Create options menu
 - Implement configurable settings
-- Save preferences
+- Track and display lifetime statistics
 - Sound test feature
 
 **Concepts Introduced:**
 - Settings persistence
-- Toggle and slider UI
-- Sound test mode
+- Aggregate statistics (32-bit counters)
+- Statistics display formatting
 - User preferences
 
 **Code Written:**
 ```
 - Options menu structure
 - Difficulty default setting
-- Sound/music volume controls
-- Control scheme selection
 - Sound test (preview all songs)
+- Statistics submenu:
+  - total_notes_hit: lifetime counter
+  - total_perfects: lifetime perfect hits
+  - best_combo: highest combo ever
+  - songs_completed: total completions
+- Large number display formatting
 ```
 
 **What the Learner Sees:**
-Options screen allows customisation: difficulty, volume, controls. Sound test lets players preview songs. Player has control.
+Options screen allows customisation and shows lifetime statistics. Total notes hit, total perfects, best combo ever achieved. A sense of overall progress beyond individual songs.
 
 ---
 

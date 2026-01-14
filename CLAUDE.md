@@ -102,46 +102,55 @@ docker run --rm \
 
 **Note:** Use `c64-dev:latest` (built locally from `commodore-64-dev/`). Build with: `cd commodore-64-dev && docker build -t c64-dev:latest .`
 
-**Requires:** C64 ROMs extracted to `/tmp/c64roms/`:
+**Requires:** C64 ROMs in `/commodore-64-dev/roms/` (gitignored, never commit):
 - `kernal-901227-03.bin`
 - `basic-901226-01.bin`
 - `chargen-901225-01.bin`
+
+Original zipped ROMs available at `~/Projects/Code198x/C64/Firmware/`. Extract and rename to the above filenames.
 
 ```bash
 # Build C64 PRG (ACME assembler)
 docker run --rm \
   -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
   c64-dev:latest \
-  acme -f cbm -l /code-samples/commodore-64/game-01-sid-symphony/unit-XX/labels.txt \
-  -o /code-samples/commodore-64/game-01-sid-symphony/unit-XX/symphony.prg \
+  acme -f cbm -o /code-samples/commodore-64/game-01-sid-symphony/unit-XX/symphony.prg \
   /code-samples/commodore-64/game-01-sid-symphony/unit-XX/symphony.asm
 
-# Capture C64 screenshot (inline - handles ROMs, Xvfb, VICE, and scaling)
+# Capture C64 screenshot (title screen)
 docker run --rm \
   -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
   -v /Users/stevehill/Projects/Code198x/website/public/images:/images \
-  -v /tmp/c64roms:/roms \
-  c64-dev:latest bash -c "
-cp /roms/*.bin /usr/share/vice/C64/
-Xvfb :99 -screen 0 1024x768x24 &>/dev/null &
-sleep 1
-export DISPLAY=:99
-x64sc -limitcycles 3500000 \
-  -exitscreenshot /tmp/raw.png \
-  -autostartprgmode 1 \
-  -warp \
-  +sound \
-  /code-samples/commodore-64/game-01-sid-symphony/unit-XX/symphony.prg 2>/dev/null
-convert /tmp/raw.png -filter point -resize 200% /images/commodore-64/game-01-sid-symphony/unit-XX/screenshot.png
-"
+  -v /Users/stevehill/Projects/Code198x/commodore-64-dev/roms:/roms \
+  -v /Users/stevehill/Projects/Code198x/commodore-64-dev/scripts:/scripts \
+  -w /code-samples/commodore-64/game-01-sid-symphony/unit-XX \
+  c64-dev:latest bash /scripts/c64-screenshot.sh \
+    symphony.asm \
+    /images/commodore-64/game-01-sid-symphony/unit-XX/screenshot.png
+
+# Capture C64 screenshot (skip title, show menu/gameplay)
+# Games with SCREENSHOT_MODE support will skip directly to the menu
+docker run --rm \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  -v /Users/stevehill/Projects/Code198x/website/public/images:/images \
+  -v /Users/stevehill/Projects/Code198x/commodore-64-dev/roms:/roms \
+  -v /Users/stevehill/Projects/Code198x/commodore-64-dev/scripts:/scripts \
+  -w /code-samples/commodore-64/game-01-sid-symphony/unit-XX \
+  c64-dev:latest bash /scripts/c64-screenshot.sh \
+    symphony.asm \
+    /images/commodore-64/game-01-sid-symphony/unit-XX/screenshot.png \
+    --define SCREENSHOT_MODE=1
 ```
 
-**Key VICE flags:**
-- `-limitcycles 3500000` - Run for ~3.5 seconds (PAL cycles)
-- `-autostartprgmode 1` - Inject PRG directly into RAM
-- `-exitscreenshot /path` - Save screenshot on exit
-- `-warp` - Run at maximum speed
-- `+sound` - Disable sound (faster, no audio errors)
+**Screenshot Mode:**
+Games from Unit 17+ support `SCREENSHOT_MODE` compile-time flag:
+- When `SCREENSHOT_MODE=1`, the game skips the title screen and shows the menu
+- Add to game source: `!ifndef SCREENSHOT_MODE { SCREENSHOT_MODE = 0 }`
+- Use conditional: `!if SCREENSHOT_MODE = 1 { ... } else { ... }`
+
+**c64-screenshot.sh options:**
+- `--define KEY=VALUE` - Pass define to ACME assembler
+- `--cycles N` - CPU cycles before capture (default: 5000000)
 
 ### NES Build and Screenshot Commands
 
@@ -372,6 +381,6 @@ The component infers the correct syntax highlighting from the file path:
 
 ---
 
-**Version:** 5.4
-**Last Updated:** 2026-01-13
-**Status:** Added C64 build and screenshot commands
+**Version:** 5.6
+**Last Updated:** 2026-01-14
+**Status:** Added SCREENSHOT_MODE support for C64 screenshots (skip title screen)
