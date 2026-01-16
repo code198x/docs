@@ -98,6 +98,27 @@ docker run --rm \
 
 **Input Scripts** (in `/sinclair-zx-spectrum-dev/scripts/inputs/`):
 - `claim-cells.sh` - Skip title screen, claim several cells to show gameplay
+- `quick-game.sh` - Play a quick demo game
+
+```bash
+# Capture ZX Spectrum video (with input injection)
+docker run --rm \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  -v /Users/stevehill/Projects/Code198x/website/public/videos:/videos \
+  ghcr.io/code198x/sinclair-zx-spectrum:latest \
+  spectrum-video \
+    /code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna \
+    /videos/sinclair-zx-spectrum/game-01-ink-war/unit-XX/gameplay.mp4 \
+    --wait 2 --duration 15 --input /scripts/inputs/quick-game.sh
+```
+
+**spectrum-video.sh options:**
+- `--wait SECONDS` - Wait before recording (default: 3 for .sna, 8 for .tap)
+- `--duration SECONDS` - Recording length (default: 10)
+- `--input SCRIPT` - Input injection script
+- `--fps N` - Frame rate (default: 50)
+- `--scale N` - Scale factor 1-4 (default: 2)
+- `--machine TYPE` - 48, 128, plus2, plus3 (default: 48)
 
 ### C64 Build and Screenshot Commands
 
@@ -152,6 +173,34 @@ Games from Unit 17+ support `SCREENSHOT_MODE` compile-time flag:
 **c64-screenshot.sh options:**
 - `--define KEY=VALUE` - Pass define to ACME assembler
 - `--cycles N` - CPU cycles before capture (default: 5000000)
+
+```bash
+# Capture C64 video (with input injection)
+docker run --rm \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  -v /Users/stevehill/Projects/Code198x/website/public/videos:/videos \
+  -v /Users/stevehill/Projects/Code198x/commodore-64-dev/roms:/roms \
+  -v /Users/stevehill/Projects/Code198x/commodore-64-dev/scripts:/scripts \
+  -w /code-samples/commodore-64/game-01-sid-symphony/unit-XX \
+  c64-dev:latest bash /scripts/c64-video.sh \
+    symphony.asm \
+    /videos/commodore-64/game-01-sid-symphony/unit-XX/gameplay.mp4 \
+    --wait 5 --duration 20 --input /scripts/inputs/symphony-demo.sh
+```
+
+**c64-video.sh options:**
+- `--wait SECONDS` - Wait before recording (default: 5)
+- `--duration SECONDS` - Recording length (default: 10)
+- `--input SCRIPT` - Input injection script
+- `--define KEY=VALUE` - Pass define to ACME assembler
+- `--fps N` - Frame rate (default: 50)
+- `--scale N` - Scale factor 1-4 (default: 2)
+- `--joystick PORT` - Joystick port 1 or 2 (default: 2)
+
+**Input Scripts** (in `/commodore-64-dev/scripts/inputs/`):
+- `symphony-demo.sh` - Navigate menu and play notes in SID Symphony
+
+**Joystick Mapping:** Arrow keys for directions, Right Ctrl for fire.
 
 ### NES Build and Screenshot Commands
 
