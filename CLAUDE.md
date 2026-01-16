@@ -222,7 +222,30 @@ docker run --rm \
     /code-samples/nintendo-entertainment-system/game-01-neon-nexus/unit-XX/nexus.nes \
     /images/nintendo-entertainment-system/game-01-neon-nexus/unit-XX/screenshot.png \
     --wait 2 --crop
+
+# Capture NES video (with input injection)
+docker run --rm \
+  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
+  -v /Users/stevehill/Projects/Code198x/website/public/videos:/videos \
+  -v /Users/stevehill/Projects/Code198x/nintendo-entertainment-system-dev/scripts:/scripts \
+  code198x/nintendo-entertainment-system:latest \
+  nes-video \
+    /code-samples/nintendo-entertainment-system/game-01-neon-nexus/unit-XX/nexus.nes \
+    /videos/nintendo-entertainment-system/game-01-neon-nexus/unit-XX/gameplay.mp4 \
+    --wait 3 --duration 15 --input /scripts/inputs/start-game.sh
 ```
+
+**nes-video.sh options:**
+- `--wait SECONDS` - Wait before recording (default: 3)
+- `--duration SECONDS` - Recording length (default: 10)
+- `--input SCRIPT` - Input injection script
+- `--fps N` - Frame rate (default: 60)
+- `--scale N` - Scale factor 1-4 (default: 2)
+
+**Input Scripts** (in `/nintendo-entertainment-system-dev/scripts/inputs/`):
+- `start-game.sh` - Press Start to begin game
+
+**Controller Mapping:** Arrow keys = D-pad, Z = A, X = B, Return = Start, Shift = Select.
 
 ### Amiga Build, Screenshot, and Video Commands
 
