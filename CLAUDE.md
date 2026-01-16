@@ -24,8 +24,9 @@ See `/docs/CURRICULUM-SPECIFICATION.md` for the full curriculum model.
 
 ## Tech Stack
 
-- **Website**: Astro 5.16+ with MDX content
-- **Routing**: File-based in `/website/src/pages/` (no complex collections)
+- **Website**: Astro 5.x with MDX content
+- **Routing**: File-based in `/website/src/pages/`
+- **Data**: Astro content collections for games, units, platforms, vault, patterns
 - **Code Samples**: Single source of truth in `/code-samples/`, imported via `CodeFromFile` component
 - **Assembly Tools**: Docker containers per platform (ACME for C64, pasmonext for ZX, ca65 for NES, vasm for Amiga)
 - **Version Control**: 7 separate git repositories (see below)
@@ -261,6 +262,59 @@ Code198x/
 
 ---
 
+## Content Collections
+
+The website uses Astro content collections for structured data. Collections are defined in `/website/src/content/config.ts`.
+
+### Games Collection (`src/content/games/`)
+
+Nested by platform, one file per track. Defines game catalogue (name, tagline, skills, status). Does **not** store unit counts — those are computed from units collection.
+
+```
+games/
+├── commodore-64/
+│   ├── assembly.yaml    # 16 assembly games
+│   └── basic.yaml       # 8 BASIC gateway games
+├── sinclair-zx-spectrum/
+├── commodore-amiga/
+└── nintendo-entertainment-system/
+```
+
+### Units Collection (`src/content/units/`)
+
+Nested by platform and track. One file per game. **Single source of truth** for unit counts, availability, and phase definitions.
+
+```
+units/
+├── commodore-64/
+│   ├── assembly/
+│   │   ├── game-01-sid-symphony.yaml
+│   │   └── ...
+│   └── basic/
+├── sinclair-zx-spectrum/
+└── ...
+```
+
+### Helper Functions (`src/lib/`)
+
+```typescript
+// Games with computed counts
+import { getGamesWithCounts } from '../lib/games';
+const games = await getGamesWithCounts('commodore-64', 'assembly');
+
+// Unit details
+import { getUnitsEntry, getPhases, getUnits } from '../lib/units';
+const entry = await getUnitsEntry('commodore-64', 'assembly', 'game-01-sid-symphony');
+```
+
+### Adding/Updating Units
+
+1. Edit the units YAML file: `src/content/units/[platform]/[track]/[game].yaml`
+2. Set `available: true` for published units
+3. Unit counts are computed automatically — no need to update games collection
+
+---
+
 ## Key Documentation Locations
 
 ### Specifications
@@ -381,6 +435,47 @@ The component infers the correct syntax highlighting from the file path:
 
 ---
 
-**Version:** 5.6
-**Last Updated:** 2026-01-14
-**Status:** Added SCREENSHOT_MODE support for C64 screenshots (skip title screen)
+## Design Context
+
+### Users
+Learners of all ages who want to understand how computers actually work by building complete games on vintage platforms. They range from curious beginners to experienced developers seeking deeper knowledge. They come with a sense of wonder about the machines that shaped computing history, and they want to feel that same magic the original bedroom coders felt.
+
+### Brand Personality
+**Three words:** Authentic, Educational, Reverent
+
+**Voice:** Warm but never condescending. Technical but never dry. The tone of someone who genuinely loves these machines sharing knowledge with someone who wants to understand them. We teach machines, not frameworks — and we mean it.
+
+**Emotional goal:** Nostalgic wonder — recapturing the "magic of discovery" feeling. That moment when a kid typed in code from a magazine and watched the screen come alive. The interface should make learners feel they're about to unlock something real.
+
+### Aesthetic Direction
+**Visual tone:** Warm retro-technical. Period-appropriate without ironic pastiche. The visual language of early computing magazines (CRASH, ZZAP!64, Your Sinclair) meets modern usability.
+
+**Key elements:**
+- Platform-specific branding (C64 blue, Spectrum rainbow, NES red, Amiga orange)
+- Authentic retro effects used sparingly (scanlines, copper bars, CRT glow)
+- Light mode default (cream/beige evoking C64 case plastic), dark mode available
+- JetBrains Mono for code, Inter for body — clean and readable
+- Generous spacing, clear hierarchy, inviting rather than intimidating
+
+**Anti-references (explicitly avoid):**
+- Slick startup aesthetic: gradient blobs, excessive whitespace, generic "modern" feel
+- Gaudy retro pastiche: neon vaporwave, pixel art overload, ironic kitsch
+- Dense academic style: dry documentation dumps, intimidating walls of text
+
+### Design Principles
+
+1. **Authentic over decorative** — Retro elements should be genuine (actual platform colours, real visual effects those machines produced), not generic "pixel art" decoration. If it didn't exist on the actual hardware, question whether it belongs.
+
+2. **Inviting over intimidating** — Assembly language is scary enough. The interface should feel approachable and warm, making complex topics feel achievable. Clear visual hierarchy, generous whitespace, progressive disclosure.
+
+3. **Platform identity matters** — Each system has its own visual DNA. The C64 section should feel different from the Spectrum section. Use platform colours consistently; hero sections and accents should immediately signal which machine you're learning about.
+
+4. **Substance over flash** — Avoid purely decorative animations. When motion exists, it should enhance understanding or provide subtle delight (copy button feedback, hover states). Never distract from the content.
+
+5. **Readable code is sacred** — Code blocks are where learning happens. Dark backgrounds, clear syntax highlighting, comfortable font size. Never sacrifice code readability for aesthetic choices.
+
+---
+
+**Version:** 5.7
+**Last Updated:** 2026-01-15
+**Status:** Added Design Context section for UI/UX guidance
