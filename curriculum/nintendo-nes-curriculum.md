@@ -60,38 +60,24 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 ---
 
-#### Game 2: Neon Nexus
-**Units:** 64 (4 phases)
-**Concept:** Fixed-screen action game. Player moves around a single screen, avoids enemies, collects items. A digital/futuristic vibe.
-
-**Skills taught:**
-- Deeper PPU exploration
-- Background tile variety
-- Item collection mechanics
-- Basic enemy AI
-- Game loop refinement
-- Level design basics
-
-**Why here:** After Stellar Barrage, learners understand the PPU through action. Neon Nexus explores different game mechanics on the same hardware.
-
----
-
-#### Game 3: Crate Escape
+#### Game 2: Crate Escape
 **Units:** 64 (4 phases)
 **Concept:** Single-screen platformer. Jump between platforms in a warehouse setting, avoid hazards, reach the exit. Crates as platforms.
 
 **Skills taught:**
 - Gravity and falling
 - Jump physics (impulse, arc, landing)
-- Platform collision detection
+- Platform collision detection (tile-based)
 - Player animation (walk cycle, jump frame)
 - Hazards and enemies
 - Level completion logic
 - Multiple levels
 
+**Why here:** After shooting, platforming introduces gravity physics and tile collision - fundamental skills for NES games.
+
 ---
 
-#### Game 4: Fracture Point
+#### Game 3: Fracture Point
 **Units:** 64 (4 phases)
 **Concept:** Breakout clone. Paddle, ball, bricks. The tension builds to the breaking point.
 
@@ -106,7 +92,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 ---
 
-#### Game 5: Pellet Panic
+#### Game 4: Pellet Panic
 **Units:** 64 (4 phases)
 **Concept:** Pac-Man style maze game. Collect pellets, avoid ghosts, power pills turn the tables. Frantic energy.
 
@@ -121,7 +107,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 ---
 
-#### Game 6: Crypt Crawler
+#### Game 5: Crypt Crawler
 **Units:** 64 (4 phases)
 **Concept:** Flip-screen top-down exploration. Navigate dungeon rooms, collect items, avoid enemies. The ancestor to Zelda-style games.
 
@@ -136,7 +122,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 ---
 
-#### Game 7: Fangs for the Memory
+#### Game 6: Fangs for the Memory
 **Units:** 64 (4 phases)
 **Concept:** Snake game with a pun. Eat food, grow longer, don't hit yourself.
 
@@ -151,7 +137,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 ---
 
-#### Game 8: Gridlock
+#### Game 7: Gridlock
 **Units:** 64 (4 phases)
 **Concept:** Falling blocks puzzle. Tetris-style rotation, stacking, and line clearing. Fill up the grid until you're locked.
 
@@ -166,7 +152,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 ---
 
-#### Game 9: Pixel Plains
+#### Game 8: Pixel Plains
 **Units:** 64 (4 phases)
 **Concept:** Side-scrolling platformer. The NES's signature genre - Crate Escape's mechanics in a larger, scrolling world.
 
@@ -182,7 +168,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 ---
 
-#### Game 10: Ion Trail
+#### Game 9: Ion Trail
 **Units:** 64 (4 phases)
 **Concept:** Side-scrolling shooter. Gradius territory - horizontal scroll, shoot enemies, navigate terrain. Leave a trail of ions in your wake.
 
@@ -193,6 +179,24 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 - Enemy waves and patterns
 - Terrain collision
 - Power-ups and weapon upgrades
+
+---
+
+#### Game 10: Arena Assault
+**Units:** 64 (4 phases)
+**Concept:** Top-down arena shooter. Enemies spawn from all directions, survive waves, collect power-ups. Tests all foundation skills before advanced games.
+
+**Skills taught:**
+- Integration of all foundation skills
+- 8-way movement and shooting
+- Heavy sprite management (approaching limits)
+- Wave-based survival
+- Multiple weapon types
+- Boss encounters (foundation-level)
+- Score attack design
+- Polish and game feel refinement
+
+**Why here:** Capstone of foundation phase. Combines shooting, collision, AI, and sprite management. Prepares learners for advanced techniques.
 
 ---
 
@@ -437,7 +441,8 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
-- **3.2 (2026-01-18):** Restructured Game 1. Stellar Barrage (shooter) now first game at 128 units for immediate engagement. Neon Nexus moved to Game 2. Total now 1,600 units.
+- **3.3 (2026-01-18):** Reordered games per skill tree analysis. Removed Neon Nexus (redundant with Stellar Barrage). Crate Escape now Game 2. Added Arena Assault as Game 10 (foundation capstone). See `/docs/curriculum/SKILL-TREES.md`.
+- **3.2 (2026-01-18):** Restructured Game 1. Stellar Barrage (shooter) now first game at 128 units for immediate engagement. Total now 1,600 units.
 - **3.1 (2026-01-07):** Added post-capstone audio expansion games (VRC6, MMC5).
 - **3.0 (2025-01-07):** Restructured to 1,536 units (64/128/256 scaling) matching C64 and ZX Spectrum curricula.
 - **2.0 (2025-11-26):** Complete rewrite. Replaced phases/tiers/lessons with games model.

@@ -57,21 +57,23 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 ---
 
-### Game 2: SID Symphony
+### Game 2: Platform Panic
 **Units:** 64 (4 phases)
-**Concept:** Rhythm game - notes scroll horizontally across three tracks, hit the correct key when notes reach the hit zone.
+**Concept:** Single-screen platformer. Jump between platforms, avoid hazards, reach the exit.
 
 **Skills taught:**
-- Deep SID chip exploration (voices, ADSR, waveforms)
-- Raster timing basics
-- Keyboard input
-- Screen layout with character graphics
-- Song sequencing and patterns
-- Difficulty progression
+- Gravity and jump physics
+- Platform collision (landing, bumping)
+- Tile-based collision detection
+- Animation frames and states
+- Hazard timing
+- Level progression
+- Ladders, moving platforms
+- Enemy patterns
 
-**Why here:** After Starfield, learners have heard SID through sound effects. Now they explore the chip as the central mechanic.
+**Why here:** After shooting, platforming introduces the fundamental physics model used in countless games. Gravity and tile collision are core skills.
 
-**Detailed outline:** `/docs/plans/commodore-64/game-02-sid-symphony.md`
+**Detailed outline:** `/docs/plans/commodore-64/game-02-platform-panic.md`
 
 ---
 
@@ -81,35 +83,19 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Skills taught:**
 - Character graphics (custom character sets)
-- Tile-based maps
-- Tile collision detection
+- Tile-based maps (building on platformer skills)
 - Pathfinding AI (A* introduction)
 - Screen-based level data
-- Ghost AI behaviours
+- Ghost AI behaviours (chase, scatter, frightened)
 - Level editor concepts
+
+**Why here:** Builds on tile collision from platforming, introduces AI pathfinding.
 
 **Detailed outline:** `/docs/plans/commodore-64/game-03-maze-raider.md`
 
 ---
 
-### Game 4: Platform Panic
-**Units:** 64 (4 phases)
-**Concept:** Single-screen platformer. Jump between platforms, avoid hazards, reach the exit.
-
-**Skills taught:**
-- Gravity and jump physics
-- Platform collision (landing, bumping)
-- Animation frames and states
-- Hazard timing
-- Level progression
-- Ladders, moving platforms
-- Enemy patterns
-
-**Detailed outline:** `/docs/plans/commodore-64/game-04-platform-panic.md`
-
----
-
-### Game 5: Brick Basher
+### Game 4: Brick Basher
 **Units:** 64 (4 phases)
 **Concept:** Breakout clone. Paddle, ball, bricks. Clear the screen.
 
@@ -121,24 +107,46 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 - Increasing difficulty
 - Level design variety
 
-**Detailed outline:** `/docs/plans/commodore-64/game-05-brick-basher.md`
+**Why here:** Physics refinement - angles, reflections, vectors. Different feel from gravity-based games.
+
+**Detailed outline:** `/docs/plans/commodore-64/game-04-brick-basher.md`
 
 ---
 
-### Game 6: Invader Wave
+### Game 5: Invader Wave
 **Units:** 64 (4 phases)
 **Concept:** Space Invaders style fixed shooter. Enemy formation descends, player defends.
 
 **Skills taught:**
 - Formation movement patterns
-- Enemy bullet management
+- Enemy bullet management (enemies shoot back)
 - Shields (destructible character graphics)
 - Wave progression
 - High score persistence
 - UFO bonus enemies
 - Increasing wave difficulty
 
-**Detailed outline:** `/docs/plans/commodore-64/game-06-invader-wave.md`
+**Why here:** Builds on shooter from Game 1, adds formation AI and destructible terrain.
+
+**Detailed outline:** `/docs/plans/commodore-64/game-05-invader-wave.md`
+
+---
+
+### Game 6: SID Symphony
+**Units:** 64 (4 phases)
+**Concept:** Rhythm game - notes scroll horizontally across three tracks, hit the correct key when notes reach the hit zone.
+
+**Skills taught:**
+- Deep SID chip exploration (voices, ADSR, waveforms)
+- Keyboard matrix reading (not just joystick)
+- Precise timing requirements
+- Screen layout with character graphics
+- Song sequencing and patterns
+- Difficulty progression
+
+**Why here:** Rhythm games require timing precision and keyboard input - skills that benefit from 5 games of experience. The SID deep dive is more meaningful after hearing it in action games.
+
+**Detailed outline:** `/docs/plans/commodore-64/game-06-sid-symphony.md`
 
 ---
 
@@ -412,7 +420,8 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
-- **3.2 (2026-01-18):** Restructured Game 1. Starfield (shooter) now first game at 128 units for immediate engagement. SID Symphony moved to Game 2. Total now 1,600 units.
+- **3.3 (2026-01-18):** Reordered games per skill tree analysis. Platform Panic now Game 2 (introduces gravity/tiles). SID Symphony moved to Game 6 (requires keyboard + timing skills). See `/docs/curriculum/SKILL-TREES.md`.
+- **3.2 (2026-01-18):** Restructured Game 1. Starfield (shooter) now first game at 128 units for immediate engagement. Total now 1,600 units.
 - **3.1 (2026-01-07):** Added optional enhancement versions section (MEGA65, REU). Updated BASIC gateway reference to 512-unit curriculum.
 - **3.0 (2025-01-07):** Expanded to 1,536 units. Games 1-10 at 64 units, Games 11-15 at 128 units, Game 16 at 256 units. Added disk I/O, fast loaders, turbo tape.
 - **2.0 (2025-11-25):** Complete rewrite. Replaced phases/tiers/lessons with games model.
