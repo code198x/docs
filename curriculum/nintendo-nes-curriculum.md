@@ -4,7 +4,7 @@
 **Language:** 6502 Assembly (no BASIC gateway)
 **Killer Feature:** PPU (Picture Processing Unit) - tile-based graphics mastery
 **Games:** 16
-**Total Units:** 1,536
+**Total Units:** 1,600
 
 ---
 
@@ -22,37 +22,61 @@ By the final game, learners will have skills matching professional NES developer
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation | 1-10 | 64 | 640 |
+| Foundation (shooter) | 1 | 128 | 128 |
+| Foundation | 2-10 | 64 | 576 |
 | Advanced | 11-15 | 128 | 640 |
 | Capstone | 16 | 256 | 256 |
-| **Total** | **16** | | **1,536** |
+| **Total** | **16** | | **1,600** |
 
-Each game is divided into 4 phases (foundation games) or 8 phases (advanced games) or 16 phases (capstone), with each phase containing 16 units.
+Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game 1) or 16 phases (capstone), with each phase containing 16 units.
 
 ---
 
 ## Game Sequence
 
-### Foundation Games (64 Units Each)
+### Foundation Games
 
-#### Game 1: Neon Nexus
-**Units:** 64 (4 phases)
-**Concept:** Fixed-screen action game. Player moves around a single screen, avoids enemies, collects items. A digital/futuristic vibe that teaches PPU fundamentals.
+#### Game 1: Stellar Barrage
+**Units:** 128 (8 phases)
+**Concept:** Fixed-screen space shooter. Player ship versus descending enemy waves. Immediate engagement from Unit 1.
 
 **Skills taught:**
 - PPU setup (pattern tables, nametables, palettes)
 - Background tiles (the playfield)
-- Sprites (player, enemies, items via OAM)
+- Sprites (player, enemies, bullets via OAM)
 - Controller input
-- Basic collision detection
-- Game loop on NES
+- Projectile spawning and management
+- Enemy formations and patterns
+- Multiple collision types (bullet-enemy, enemy-player)
+- Wave progression
+- Score tracking
 - APU sound basics
+- Sprite management under pressure (8-per-scanline limit)
+- Sprite flickering techniques
 
-**Why first:** The PPU is the heart of NES development. This game touches all the fundamentals without overwhelming complexity.
+**Why first:** A shooter gets something playable on screen immediately. Learners control a ship from Unit 2, shoot from Unit 3. The PPU is learned through building a real game.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-stellar-barrage.md`
 
 ---
 
-#### Game 2: Crate Escape
+#### Game 2: Neon Nexus
+**Units:** 64 (4 phases)
+**Concept:** Fixed-screen action game. Player moves around a single screen, avoids enemies, collects items. A digital/futuristic vibe.
+
+**Skills taught:**
+- Deeper PPU exploration
+- Background tile variety
+- Item collection mechanics
+- Basic enemy AI
+- Game loop refinement
+- Level design basics
+
+**Why here:** After Stellar Barrage, learners understand the PPU through action. Neon Nexus explores different game mechanics on the same hardware.
+
+---
+
+#### Game 3: Crate Escape
 **Units:** 64 (4 phases)
 **Concept:** Single-screen platformer. Jump between platforms in a warehouse setting, avoid hazards, reach the exit. Crates as platforms.
 
@@ -64,21 +88,6 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced game
 - Hazards and enemies
 - Level completion logic
 - Multiple levels
-
----
-
-#### Game 3: Stellar Barrage
-**Units:** 64 (4 phases)
-**Concept:** Fixed-screen space shooter. Player ship versus descending enemy waves. Space Invaders territory.
-
-**Skills taught:**
-- Projectile spawning and management
-- Enemy formations and patterns
-- Multiple collision types (bullet-enemy, enemy-player)
-- Wave progression
-- Score tracking
-- Sprite management under pressure (8-per-scanline limit)
-- Sprite flickering techniques
 
 ---
 
@@ -428,6 +437,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.2 (2026-01-18):** Restructured Game 1. Stellar Barrage (shooter) now first game at 128 units for immediate engagement. Neon Nexus moved to Game 2. Total now 1,600 units.
 - **3.1 (2026-01-07):** Added post-capstone audio expansion games (VRC6, MMC5).
 - **3.0 (2025-01-07):** Restructured to 1,536 units (64/128/256 scaling) matching C64 and ZX Spectrum curricula.
 - **2.0 (2025-11-26):** Complete rewrite. Replaced phases/tiers/lessons with games model.

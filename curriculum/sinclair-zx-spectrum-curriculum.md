@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 1,536
+**Total Units:** 1,600
 
 ---
 
@@ -23,10 +23,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-10 | 64 | 640 | Foundation - core concepts |
+| 1 | 128 | 128 | Foundation shooter - immediate engagement, full game |
+| 2-10 | 64 | 576 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, epic action) |
 | 16 | 256 | 256 | Capstone - commercial quality |
+| **Total** | | **1,600** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -34,27 +36,49 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 ## Game Sequence
 
-### Game 1: Ink War
-**Units:** 64 (4 phases)
-**Concept:** Territory control game where the attribute system *is* the gameplay. Player vs AI, taking turns to claim 8×8 attribute cells. Control the majority to win.
+### Game 1: Skyfire
+**Units:** 128 (8 phases)
+**Concept:** Fixed-screen space shooter. Player ship versus descending enemy waves. Immediate engagement from Unit 1.
 
 **Skills taught:**
 - Screen memory layout ($4000-$57FF)
 - Attribute memory ($5800-$5AFF)
 - INK, PAPER, BRIGHT, FLASH bits
 - Keyboard input via ROM routines
-- Game state management
-- Simple AI decision-making
-- Turn-based game loop
-- Colour clash awareness
+- Player sprite drawing and movement
+- Projectile spawning and management
+- Enemy patterns and waves
+- Multiple collision types
+- Beeper sound effects (pitch variation)
+- Sprite masking techniques
+- Increasing difficulty curves
+- High score display
 
-**Why first:** The attribute system is what made Spectrum games look distinctly Spectrum. Starting here teaches the core constraint that shapes everything else.
+**Why first:** A shooter gets something playable on screen immediately. Learners control a ship from Unit 2, shoot from Unit 3. The attribute system is learned through doing, not theory.
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-01-ink-war.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-skyfire.md`
 
 ---
 
-### Game 2: Shatter
+### Game 2: Ink War
+**Units:** 64 (4 phases)
+**Concept:** Territory control game where the attribute system *is* the gameplay. Player vs AI, taking turns to claim 8×8 attribute cells. Control the majority to win.
+
+**Skills taught:**
+- Deep attribute system mastery
+- Turn-based game loop
+- Game state management
+- Simple AI decision-making
+- Colour clash awareness
+- Strategic game design
+
+**Why here:** After Skyfire, learners understand attributes through action. Ink War lets them explore attributes as the central mechanic.
+
+**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-02-ink-war.md`
+
+---
+
+### Game 3: Shatter
 **Units:** 64 (4 phases)
 **Concept:** Breakout clone with polish focus. Paddle, ball, bricks - with custom font, smooth animation, and audio feedback.
 
@@ -69,25 +93,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 - Power-up systems
 - Level progression
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-02-shatter.md`
-
----
-
-### Game 3: Skyfire
-**Units:** 64 (4 phases)
-**Concept:** Fixed-screen space shooter. Player ship versus descending enemy waves.
-
-**Skills taught:**
-- Player sprite drawing and movement
-- Projectile spawning and management
-- Enemy patterns and waves
-- Multiple collision types
-- Beeper sound effects (pitch variation)
-- Sprite masking techniques
-- Increasing difficulty curves
-- High score display
-
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-03-skyfire.md`
+**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-03-shatter.md`
 
 ---
 
@@ -479,6 +485,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.2 (2026-01-18):** Restructured Game 1. Skyfire (shooter) now first game at 128 units for immediate engagement. Ink War moved to Game 2. Total now 1,600 units.
 - **3.1 (2026-01-07):** Added optional enhancement versions section (128K and Next). Updated BASIC gateway reference to 512-unit curriculum.
 - **3.0 (2025-01-07):** Expanded to 1,536 units. Games 1-10 at 64 units, Games 11-15 at 128 units, Game 16 at 256 units. Added tape loading, 128K support, distribution skills.
 - **2.0 (2025-11-26):** Complete rewrite. Replaced phases/tiers/lessons with games model.

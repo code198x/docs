@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 1,536
+**Total Units:** 1,600
 
 ---
 
@@ -21,10 +21,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-10 | 64 | 640 | Foundation - core concepts |
+| 1 | 128 | 128 | Foundation shooter - immediate engagement, full game |
+| 2-10 | 64 | 576 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, Turrican-style) |
 | 16 | 256 | 256 | Capstone - commercial quality with demo-scene techniques |
+| **Total** | | **1,600** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -32,28 +34,9 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 ## Game Sequence
 
-### Game 1: SID Symphony
-**Units:** 64 (4 phases)
-**Concept:** Rhythm game - notes scroll horizontally across three tracks, hit the correct key when notes reach the hit zone.
-
-**Skills taught:**
-- SID chip fundamentals (voices, ADSR, waveforms)
-- Raster timing basics
-- Keyboard input
-- Screen layout with character graphics
-- Game loop structure
-- Song sequencing and patterns
-- Difficulty progression
-
-**Why first:** The SID chip is why people remember the C64. Starting here creates immediate emotional investment and produces impressive audio from the first units.
-
-**Detailed outline:** `/docs/plans/commodore-64/game-01-sid-symphony.md`
-
----
-
-### Game 2: Starfield
-**Units:** 64 (4 phases)
-**Concept:** Single-screen space shooter. Player ship versus waves of enemies. Shoot, dodge, survive.
+### Game 1: Starfield
+**Units:** 128 (8 phases)
+**Concept:** Single-screen space shooter. Player ship versus waves of enemies. Shoot, dodge, survive. Immediate engagement from Unit 1.
 
 **Skills taught:**
 - Hardware sprites (enabling, positioning, pointers)
@@ -63,8 +46,32 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 - Score display
 - Wave systems
 - Power-ups and ship upgrades
+- SID sound effects (integrated throughout)
+- Multicolour sprites
+- Boss battles
+- Commercial-quality polish
 
-**Detailed outline:** `/docs/plans/commodore-64/game-02-starfield.md`
+**Why first:** A shooter gets something playable on screen immediately. Learners control a ship from Unit 2, shoot from Unit 3. The SID is introduced through satisfying sound effects, not theory.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-starfield.md`
+
+---
+
+### Game 2: SID Symphony
+**Units:** 64 (4 phases)
+**Concept:** Rhythm game - notes scroll horizontally across three tracks, hit the correct key when notes reach the hit zone.
+
+**Skills taught:**
+- Deep SID chip exploration (voices, ADSR, waveforms)
+- Raster timing basics
+- Keyboard input
+- Screen layout with character graphics
+- Song sequencing and patterns
+- Difficulty progression
+
+**Why here:** After Starfield, learners have heard SID through sound effects. Now they explore the chip as the central mechanic.
+
+**Detailed outline:** `/docs/plans/commodore-64/game-02-sid-symphony.md`
 
 ---
 
@@ -405,6 +412,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.2 (2026-01-18):** Restructured Game 1. Starfield (shooter) now first game at 128 units for immediate engagement. SID Symphony moved to Game 2. Total now 1,600 units.
 - **3.1 (2026-01-07):** Added optional enhancement versions section (MEGA65, REU). Updated BASIC gateway reference to 512-unit curriculum.
 - **3.0 (2025-01-07):** Expanded to 1,536 units. Games 1-10 at 64 units, Games 11-15 at 128 units, Game 16 at 256 units. Added disk I/O, fast loaders, turbo tape.
 - **2.0 (2025-11-25):** Complete rewrite. Replaced phases/tiers/lessons with games model.
