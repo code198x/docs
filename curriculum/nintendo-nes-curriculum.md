@@ -4,7 +4,7 @@
 **Language:** 6502 Assembly (no BASIC gateway)
 **Killer Feature:** PPU (Picture Processing Unit) - tile-based graphics mastery
 **Games:** 16
-**Total Units:** 1,984
+**Total Units:** 2,048
 
 ---
 
@@ -22,11 +22,11 @@ By the final game, learners will have skills matching professional NES developer
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter, platformer, breakout, maze, exploration, snake, puzzle) | 1-7 | 128 | 896 |
-| Foundation | 8-10 | 64 | 192 |
+| Foundation (shooter, platformer, breakout, maze, exploration, snake, puzzle, scrolling) | 1-8 | 128 | 1,024 |
+| Foundation | 9-10 | 64 | 128 |
 | Advanced | 11-15 | 128 | 640 |
 | Capstone | 16 | 256 | 256 |
-| **Total** | **16** | | **1,984** |
+| **Total** | **16** | | **2,048** |
 
 Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Games 1-2) or 16 phases (capstone), with each phase containing 16 units.
 
@@ -210,18 +210,33 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ---
 
 #### Game 8: Pixel Plains
-**Units:** 64 (4 phases)
-**Concept:** Side-scrolling platformer. The NES's signature genre - Crate Escape's mechanics in a larger, scrolling world.
+**Units:** 128 (8 phases)
+**Concept:** Side-scrolling platformer polished to commercial quality. The NES's signature genre - take Crate Escape's mechanics and expand them into a larger, scrolling world with multiple themed areas, boss battles, and secrets.
 
 **Skills taught:**
-- Hardware scrolling fundamentals
-- Scroll registers and nametable management
-- Camera following player
-- Large level data structures
+- NES hardware scrolling fundamentals
+- PPUSCROLL and nametable management
+- Camera following with smooth tracking
+- Metatile-based level design
+- Large level data structures with compression
 - Scrolling collision detection
-- Enemies in scrolling world
+- Enemies that spawn and despawn with camera
+- Moving platforms and environmental hazards
+- Boss battles with multi-sprite bosses
+- Multiple world themes (grass, cave, sky, castle)
+- World map navigation
+- Power-up and health systems
+- Checkpoint and lives system
+- Secret exits and bonus levels
+- Time limit mechanics
+- Water/swimming areas
+- Save/password system
+- APU music with level themes
+- Demo/attract mode
 
-**Why here:** The NES has hardware scrolling - this is where it shines. Super Mario Bros. territory.
+**Why here:** The NES has hardware scrolling - this is where it shines. Super Mario Bros. territory. Building on Crate Escape's single-screen platforming, learners create their first scrolling world.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-pixel-plains.md`
 
 ---
 
@@ -498,6 +513,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.10 (2026-01-18):** Expanded Game 8 (Pixel Plains) to 128 units with NES scrolling, world map, and boss battles. Total now 2,048 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Gridlock) to 128 units with rotation matrices, multiple modes, and two-player versus. Total now 1,984 units.
 - **3.8 (2026-01-18):** Expanded Game 6 (Fangs for the Memory) to 128 units with ring buffer teaching. Total now 1,920 units.
 - **3.7 (2026-01-18):** Expanded Game 5 (Crypt Crawler) to 128 units with full Zelda-style exploration. Total now 1,856 units.

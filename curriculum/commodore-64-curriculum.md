@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 1,984
+**Total Units:** 2,048
 
 ---
 
@@ -21,12 +21,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-7 | 128 | 896 | Foundation games - shooter, platformer, maze, breakout, exploration, rhythm, scrolling |
-| 8-10 | 64 | 192 | Foundation - core concepts |
+| 1-8 | 128 | 1,024 | Foundation games - shooter, platformer, maze, breakout, exploration, rhythm, scrolling, Scramble |
+| 9-10 | 64 | 128 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, Turrican-style) |
 | 16 | 256 | 256 | Capstone - commercial quality with demo-scene techniques |
-| **Total** | | **1,984** | |
+| **Total** | | **2,048** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -194,19 +194,30 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 8: Night Raid
-**Units:** 64 (4 phases)
-**Concept:** Scramble-style side-scroller. Fly through terrain, shoot enemies, manage fuel.
+**Units:** 128 (8 phases)
+**Concept:** Scramble-style side-scroller polished to commercial quality. Fly your jet through enemy territory, navigate scrolling terrain, shoot enemies, bomb ground targets, and manage fuel. A complete horizontal shooter showcasing combined scrolling and combat mechanics.
 
 **Skills taught:**
-- Scrolling combined with shooting
-- Terrain collision
-- Resource management (fuel)
-- Ground and air targets
-- Level streaming from data
-- Boss encounters
-- Bomb mechanics
+- Scrolling combined with shooting mechanics
+- Character-based terrain collision in scrolling world
+- Resource management (fuel depletion and collection)
+- Dual weapon systems (forward shots and bombs)
+- Ground targets and air enemies
+- Level streaming from compressed data
+- Multiple enemy types with varied patterns
+- Boss encounters with pattern-based attacks
+- Power-up system (speed, rapid fire, shield, weapon upgrades)
+- Raster colour effects for atmosphere
+- Parallax starfield background
+- Multiple levels with themed terrain
+- Checkpoint and lives system
+- Two-player alternating mode
+- Demo/attract mode
+- Turbo loader for fast loading
 
-**Detailed outline:** `/docs/plans/commodore-64/game-08-night-raid.md`
+**Why here:** Building on Scroll Runner's horizontal scrolling foundation, Night Raid combines scrolling with the shooting mechanics learned in earlier games. Resource management adds strategic depth.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-night-raid.md`
 
 ---
 
@@ -446,6 +457,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.10 (2026-01-18):** Expanded Game 8 (Night Raid) to 128 units with Scramble-style gameplay, boss battles, and power-ups. Total now 2,048 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Scroll Runner) to 128 units with VIC-II hardware scrolling, double buffering, and parallax. Total now 1,984 units.
 - **3.8 (2026-01-18):** Expanded Game 6 (SID Symphony) to 128 units with deep SID exploration and rhythm gameplay. Total now 1,920 units.
 - **3.7 (2026-01-18):** Replaced Game 5 Invader Wave with Catacombs (flip-screen exploration), expanded to 128 units. Total now 1,856 units.
