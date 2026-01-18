@@ -4,7 +4,7 @@
 **Language:** 6502 Assembly (no BASIC gateway)
 **Killer Feature:** PPU (Picture Processing Unit) - tile-based graphics mastery
 **Games:** 16
-**Total Units:** 3,328
+**Total Units:** 3,584
 
 ---
 
@@ -27,8 +27,8 @@ By the final game, learners will have skills matching professional NES developer
 | Advanced | 11-13 | 256 | 768 |
 | Advanced | 14 | 256 | 256 |
 | Expert | 15 | 512 | 512 |
-| Capstone | 16 | 256 | 256 |
-| **Total** | **16** | | **3,328** |
+| Capstone | 16 | 512 | 512 |
+| **Total** | **16** | | **3,584** |
 
 Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Games 1-2) or 16 phases (capstone), with each phase containing 16 units.
 
@@ -464,25 +464,38 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 ---
 
-### Capstone Game (256 Units)
+### Capstone Game (512 Units)
 
 #### Game 16: Requiem for a Mapper
-**Units:** 256 (16 phases)
-**Concept:** Action-adventure epic. The capstone project combining everything learnt into a commercial-quality game. The title honours the bank-switching magic that made larger NES games possible.
+**Units:** 512 (32 phases)
+**Concept:** The ultimate NES capstone - an epic action-adventure honouring the bank-switching magic that made larger NES games possible. 5 distinct zones, multiple gameplay styles, and commercial-quality production rivalling the best late-era NES releases.
 
 **Skills taught:**
-- Large world design
-- Multiple gameplay mechanics integrated
-- Story and progression elements
-- Advanced MMC3 usage
-- IRQ-based effects (scanline counting)
-- Save system (battery backup)
-- Polish and presentation
-- Professional production values
 - All previous techniques at mastery level
+- **Advanced MMC3 mastery** (IRQ scanline, PRG/CHR banking)
+- Large world design (5 zones × 16+ rooms)
+- Multiple gameplay styles (platforming, exploration, combat, puzzles)
+- **DMC sample integration**
+- Combat system with sub-weapons
+- 5 zone bosses plus multi-phase final boss
+- Inventory and equipment system
+- Puzzle systems (blocks, switches, sequences)
+- Story and cutscene system
+- **Battery-backed SRAM save system**
+- Multiple save slots
+- Multiple difficulty modes
+- New Game+ with extra content
+- **NTSC/PAL compatibility**
+- **Optional expansion audio** (VRC6, MMC5)
 - ROM image creation and distribution
+- **Physical cartridge production** (PCB, shell, manual)
+- Professional presentation and polish
 
-**Why last:** The curriculum ends with learners demonstrating full command of the machine. Every NES developer knows the importance of mappers - now they've mastered them.
+**Why 512 units:** The capstone integrates all 15 previous games' skills plus advanced MMC3, DMC samples, battery saves, and a complete commercial-quality game with 5 zones, bosses, and production-ready ROM/cartridge output.
+
+**Why last:** The curriculum ends with learners demonstrating full command of the machine. Every NES developer knows the importance of mappers - now they've mastered them, and the requiem they compose is a masterpiece.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-requiem-for-a-mapper.md`
 
 ---
 
@@ -622,6 +635,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.18 (2026-01-18):** Expanded Game 16 (Requiem for a Mapper) to 512 units with DMC samples, physical cart production, and 5-zone epic. Total now 3,584 units.
 - **3.17 (2026-01-18):** Expanded Game 15 (Echoes of Eponium) to 512 units with full Metroidvania, MMC3 mapper, and battery-backed saves. Total now 3,328 units.
 - **3.16 (2026-01-18):** Expanded Game 14 (Tarmac Terror) to 256 units with Outrun-style pseudo-3D racing. Total now 2,944 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Pavement Justice) to 256 units with Y-depth sorting and beat 'em up mechanics. Total now 2,816 units.

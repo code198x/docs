@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 3,328
+**Total Units:** 3,584
 
 ---
 
@@ -28,8 +28,8 @@ Games scale in unit count based on complexity:
 | 11-13 | 256 | 768 | System-heavy - multiple complex systems |
 | 14 | 256 | 256 | Advanced - Filmation-style isometric (Head Over Heels) |
 | 15 | 512 | 512 | Expert - Knight Lore-style isometric with transformation |
-| 16 | 256 | 256 | Capstone - commercial quality |
-| **Total** | | **3,328** | |
+| 16 | 512 | 512 | Capstone - commercial quality with 128K/48K dual support |
+| **Total** | | **3,584** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -453,27 +453,37 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 16: Spectral Legacy
-**Units:** 256 (16 phases)
-**Concept:** Action-adventure epic. The capstone project combining everything learnt into a commercial-quality game.
+**Units:** 512 (32 phases)
+**Concept:** The ultimate Spectrum capstone - a sweeping action-adventure across 5 distinct zones, combining every technique learned into a commercial-quality masterpiece. Multiple gameplay styles, 100+ screens, and professional production values.
 
 **Skills taught:**
 - All previous techniques at mastery level
-- Large world design (100+ screens)
-- Multiple gameplay mechanics integrated
-- Story and progression elements
-- Full save system
+- Large world design (100+ screens across 5 zones)
+- Multiple gameplay styles (platforming, exploration, combat, puzzles)
+- Advanced attribute management and clash reduction
+- Optimised software scrolling
+- **128K full support** (AY music, bank switching, extra RAM)
+- **48K compatible version** with beeper fallback
+- Combat system with combos
+- Magic system
+- 5 zone bosses plus multi-phase final boss
+- Inventory and equipment system
+- Puzzle systems (blocks, switches, sequences)
+- Story and cutscene system
+- **Password and 128K tape save systems**
+- **+3 disk support** with save/load
+- Multiple difficulty modes
+- New Game+ with extra content
 - **Turbo tape loader**
-- **128K full support** (AY music, extra RAM)
-- **+3 disk support** (optional)
 - **TZX file creation** with loading screen
-- Professional presentation
-- Polish and game feel
+- **Next enhanced version** (optional)
+- Professional presentation and polish
 
-**Why 256 units:** The capstone integrates all 15 previous games' skills plus professional distribution and 128K features.
+**Why 512 units:** The capstone integrates all 15 previous games' skills plus 128K/48K dual support, turbo loaders, and a complete commercial-quality game with 5 zones, bosses, multiple gameplay styles, and full polish.
 
-**Why last:** The curriculum ends with learners demonstrating full command of the machine. "Spectral" nods to the Spectrum; "Legacy" is what they've built.
+**Why last:** The curriculum ends with learners demonstrating full command of the machine. "Spectral" nods to the Spectrum; "Legacy" is what they've built - and what they leave behind.
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-16-spectral-legacy.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-spectral-legacy.md`
 
 ---
 
@@ -599,6 +609,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.18 (2026-01-18):** Expanded Game 16 (Spectral Legacy) to 512 units with 5-zone adventure, 128K/48K dual support, and Next enhanced version. Total now 3,584 units.
 - **3.17 (2026-01-18):** Expanded Game 15 (Bastion) to 512 units with Knight Lore-style isometric adventure and transformation mechanic. Total now 3,328 units.
 - **3.16 (2026-01-18):** Expanded Game 14 (Strafe) to 256 units with 1942-style vertical shooting and 128K AY support. Total now 2,944 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Knuckle Brawl) to 256 units with Y-depth sorting and combo systems. Total now 2,816 units.

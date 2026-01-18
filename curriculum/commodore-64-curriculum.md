@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 3,328
+**Total Units:** 3,584
 
 ---
 
@@ -26,8 +26,8 @@ Games scale in unit count based on complexity:
 | 11-13 | 256 | 768 | System-heavy - multiple complex systems |
 | 14 | 256 | 256 | Advanced - isometric paradigm (Knight Lore-style) |
 | 15 | 512 | 512 | Expert - Turrican-style run'n'gun masterpiece |
-| 16 | 256 | 256 | Capstone - commercial quality with demo-scene techniques |
-| **Total** | | **3,328** | |
+| 16 | 512 | 512 | Capstone - commercial quality with demo-scene techniques |
+| **Total** | | **3,584** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -415,25 +415,36 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 16: Symphony's End
-**Units:** 256 (16 phases)
-**Concept:** Commercial-quality capstone. A complete, polished action-adventure combining everything learnt with demo-scene techniques.
+**Units:** 512 (32 phases)
+**Concept:** The ultimate C64 capstone - a complete, commercial-quality action-adventure combining everything learned with demo-scene visual effects. An epic journey across 5 zones with puzzles, combat, bosses, and a compelling story, showcasing the full power of the C64.
 
 **Skills taught:**
 - All previous techniques at mastery level
-- **Demo-scene effects:** FLD, DYCP, AGSP
-- **Advanced SID:** filters, ring modulation, multi-speed playback
-- IRQ loader with music during load
+- **Demo-scene effects:** FLD, DYCP, AGSP, tech-tech, raster bars
+- **Advanced SID:** filters, ring modulation, multi-speed, digi-drums
 - **Direct 1541 drive programming** (drive's 6502, serial protocol)
 - **Custom fast loader** (bypassing Kernal, GCR decoding)
+- IRQ loader with music during load
+- Level streaming for huge worlds
+- 5 zones with unique themes and bosses
+- Multi-phase final boss
+- Combat system with combos and magic
+- Inventory and equipment system
+- Puzzle systems (blocks, switches, sequences)
+- Story and cutscene system
+- Save/load system with disk support
+- Multiple difficulty modes
+- New Game+ with extra content
 - **Turbo tape loader** for cassette distribution
 - Professional disk mastering
 - Dual distribution (D64 disk + tape)
+- 6581/8580 SID detection and optimisation
 
-**Why 256 units:** The capstone integrates all 15 previous games' skills plus demo-scene techniques and professional distribution.
+**Why 512 units:** The capstone integrates all 15 previous games' skills plus demo-scene techniques, advanced SID, fast loader development, and a complete commercial-quality game with 5 zones, bosses, and full polish.
 
-**Why last:** The curriculum ends where it began - with the SID. But now the learner commands every aspect of the machine.
+**Why last:** The curriculum ends where it began - with the SID. But now the learner commands every aspect of the machine, from the demo-scene effects to the drive's CPU.
 
-**Detailed outline:** `/docs/plans/commodore-64/game-16-symphonys-end.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-symphonys-end.md`
 
 ---
 
@@ -512,6 +523,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.18 (2026-01-18):** Expanded Game 16 (Symphony's End) to 512 units with demo-scene effects, fast loader, and epic 5-zone adventure. Total now 3,584 units.
 - **3.17 (2026-01-18):** Expanded Game 15 (Mega Blaster) to 512 units with Turrican-style run'n'gun masterpiece. Total now 3,328 units.
 - **3.16 (2026-01-18):** Expanded Game 14 (Isometric Quest) to 256 units with Knight Lore-style isometric adventure. Total now 2,944 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Parallax Patrol) to 256 units with multi-layer parallax and option drones. Total now 2,816 units.
