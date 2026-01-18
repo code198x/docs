@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 1,856
+**Total Units:** 1,920
 
 ---
 
@@ -21,12 +21,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-5 | 128 | 640 | Foundation games - shooter, platformer, maze, breakout, exploration |
-| 6-10 | 64 | 320 | Foundation - core concepts |
+| 1-6 | 128 | 768 | Foundation games - shooter, platformer, maze, breakout, exploration, rhythm |
+| 7-10 | 64 | 256 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, Turrican-style) |
 | 16 | 256 | 256 | Capstone - commercial quality with demo-scene techniques |
-| **Total** | | **1,856** | |
+| **Total** | | **1,920** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -144,20 +144,26 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 6: SID Symphony
-**Units:** 64 (4 phases)
-**Concept:** Rhythm game - notes scroll horizontally across three tracks, hit the correct key when notes reach the hit zone.
+**Units:** 128 (8 phases)
+**Concept:** Rhythm game polished to commercial quality. Notes scroll horizontally across three tracks (one per SID voice), hit the correct key when notes reach the hit zone. A deep dive into the SID chip through gameplay.
 
 **Skills taught:**
-- Deep SID chip exploration (voices, ADSR, waveforms)
+- Deep SID chip mastery (all three voices, ADSR, waveforms)
 - Keyboard matrix reading (not just joystick)
 - Precise timing requirements
-- Screen layout with character graphics
-- Song sequencing and patterns
-- Difficulty progression
+- Filter control and resonance
+- Ring modulation and sync effects
+- Pulse width modulation
+- Song data structures and sequencing
+- Timing accuracy system (Perfect/Good/OK)
+- Combo and multiplier systems
+- Multiple difficulty levels
+- Song editor basics
+- Two-player and battle modes
 
 **Why here:** Rhythm games require timing precision and keyboard input - skills that benefit from 5 games of experience. The SID deep dive is more meaningful after hearing it in action games.
 
-**Detailed outline:** `/docs/plans/commodore-64/game-06-sid-symphony.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-sid-symphony.md`
 
 ---
 
@@ -431,6 +437,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.8 (2026-01-18):** Expanded Game 6 (SID Symphony) to 128 units with deep SID exploration and rhythm gameplay. Total now 1,920 units.
 - **3.7 (2026-01-18):** Replaced Game 5 Invader Wave with Catacombs (flip-screen exploration), expanded to 128 units. Total now 1,856 units.
 - **3.6 (2026-01-18):** Expanded Game 4 (Brick Basher) to 128 units with full breakout polish. Total now 1,792 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Maze Raider) to 128 units with ghost AI personalities and pathfinding. Total now 1,728 units.
