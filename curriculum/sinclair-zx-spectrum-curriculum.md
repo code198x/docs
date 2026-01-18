@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 1,664
+**Total Units:** 1,728
 
 ---
 
@@ -23,12 +23,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-2 | 128 | 256 | Foundation games - shooter then physics, full experience |
-| 3-10 | 64 | 512 | Foundation - core concepts |
+| 1-3 | 128 | 384 | Foundation games - shooter, physics, platformer - full experience |
+| 4-10 | 64 | 448 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, epic action) |
 | 16 | 256 | 256 | Capstone - commercial quality |
-| **Total** | | **1,664** | |
+| **Total** | | **1,728** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -82,22 +82,26 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 3: Cavern
-**Units:** 64 (4 phases)
-**Concept:** Single-screen platformer in the Manic Miner tradition. Platforms, hazards, collectibles.
+**Units:** 128 (8 phases)
+**Concept:** Single-screen platformer polished to commercial quality. In the Manic Miner tradition - platforms, hazards, collectibles, air supply, and pixel-perfect jumps.
 
 **Skills taught:**
-- Gravity and falling physics
-- Jump physics (velocity, arc, landing)
-- Platform collision detection
-- Player animation (walk cycle, jump frame)
-- Hazards and enemies (crumbling floors, patrolling enemies)
-- Level completion logic
-- Air supply mechanic
-- Multiple levels
+- Gravity and jump physics (velocity, acceleration, variable height)
+- Platform collision detection (landing, head bonk, walls)
+- Player animation (walk cycle, jump, death)
+- Patrolling enemies with simple AI
+- Crumbling platforms (timed hazards)
+- Moving platforms (horizontal and vertical)
+- Conveyor belts and environmental hazards
+- Air supply mechanic (time pressure)
+- Key collection and locked exits
+- Power-ups (speed, invincibility)
+- 20 levels with progressive difficulty
+- Full beeper audio (music and SFX)
 
-**Why here:** Builds on sub-cell movement from Shatter, applies physics to gravity instead of bouncing.
+**Why here:** Builds on sub-cell movement from Shatter, applies physics to gravity instead of bouncing. This is the Spectrum's signature genre.
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-03-cavern.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-cavern.md`
 
 ---
 
@@ -491,6 +495,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.5 (2026-01-18):** Expanded Game 3 (Cavern) to 128 units with full Manic Miner-style platformer features. Total now 1,728 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Shatter) to 128 units for full physics polish. Total now 1,664 units.
 - **3.3 (2026-01-18):** Reordered games per skill tree analysis. Shatter now Game 2 (sub-cell physics). Cavern now Game 3 (platforming). Ink War moved to Game 5 (requires strategic AI experience). See `/docs/curriculum/SKILL-TREES.md`.
 - **3.2 (2026-01-18):** Restructured Game 1. Skyfire (shooter) now first game at 128 units for immediate engagement. Total now 1,600 units.
