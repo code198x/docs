@@ -267,20 +267,29 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 10: Exodus
-**Units:** 64 (4 phases)
-**Concept:** Scrolling platformer. Cavern's mechanics in a larger, scrolling world.
+**Units:** 256 (16 phases)
+**Concept:** Epic scrolling platformer combining Blitz's scrolling mastery with full platformer mechanics. Vast worlds to explore with multiple themed areas, bosses, and commercial-quality polish.
 
 **Skills taught:**
-- Horizontal scrolling with platformer physics
-- Camera following player
-- Large level data structures
+- Software scrolling + platformer physics integration
+- Camera systems with dead zones
+- Level compression and streaming
 - Scrolling collision detection
-- Enemies in scrolling world
-- Checkpoints and progression
-- Scrolling optimisation techniques
-- Level streaming basics
+- Slope physics
+- Moving platforms
+- Full enemy system in scrolling world
+- Four themed worlds with unique graphics
+- Boss encounters per world
+- Health, lives, and checkpoint systems
+- Collectibles and power-ups
+- AY-3-8910 music and effects
+- Save/password systems
+- Multiple game modes
+- 48K and 128K versions
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-10-exodus.md`
+**Why expanded:** Combining scrolling and platforming is the ultimate Spectrum challenge. 256 units allows a complete, polished scrolling platformer worthy of commercial release.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-exodus.md`
 
 ---
 
@@ -544,6 +553,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.12 (2026-01-18):** Expanded Game 10 (Exodus) to 256 units with scrolling platformer mastery. Total now 2,432 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Blitz) to 256 units with software scrolling mastery. Total now 2,240 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Stack) to 128 units with T-spins, competitive multiplayer, and modern puzzle features. Total now 2,048 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Slither) to 128 units with ring buffer data structure and AI opponent. Total now 1,984 units.
