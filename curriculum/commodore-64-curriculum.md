@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 2,688
+**Total Units:** 2,816
 
 ---
 
@@ -331,23 +331,27 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 13: Parallax Patrol
-**Units:** 128 (8 phases)
-**Concept:** Advanced side-scrolling shooter with multi-layer parallax. R-Type/Gradius style.
+**Units:** 256 (16 phases)
+**Concept:** R-Type/Gradius-style horizontal shooter with multi-layer parallax scrolling, option drones, charge shots, and epic boss battles. Advanced VIC-II techniques for smooth scrolling with multiple speed layers.
 
 **Skills taught:**
-- Multi-layer parallax scrolling (3+ layers)
-- Advanced weapon systems (4 types with upgrades)
-- Option drones with formations
-- Charge shot mechanics
-- 7 complete stages with unique themes
-- Epic multi-phase boss encounters
-- Level compression (RLE)
-- Checkpoint system
+- Multi-layer parallax scrolling (4+ speed layers)
+- Advanced sprite multiplexing for heavy action
+- Option drone following algorithm (position history buffer)
+- Charge shot mechanics (3 charge levels)
+- Weapon system with 4 types and upgrades
+- 7 complete stages with unique themes and parallax
+- Epic multi-phase boss encounters with weak points
+- Level compression (RLE) and streaming
+- Bullet pattern systems
+- Rank system (adaptive difficulty)
 - Two-player cooperative mode
+- SID music during intense action
+- Performance profiling for 50fps
 
-**Why 128 units:** 7 stages each needing unique terrain, enemies, and bosses plus complex weapon and option systems.
+**Why expanded:** A full Gradius-style shmup with multi-layer parallax, options, charge shots, 7 stages, AND complex bosses requires 256 units for proper depth.
 
-**Detailed outline:** `/docs/plans/commodore-64/game-13-parallax-patrol.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-parallax-patrol.md`
 
 ---
 
@@ -489,6 +493,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.15 (2026-01-18):** Expanded Game 13 (Parallax Patrol) to 256 units with multi-layer parallax and option drones. Total now 2,816 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Arena Fighter) to 256 units with fighting game mastery. Total now 2,688 units.
 - **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.
 - **3.12 (2026-01-18):** Expanded Game 10 (Raster Rider) to 256 units with pseudo-3D racing. Total now 2,432 units.

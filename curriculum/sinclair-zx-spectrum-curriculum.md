@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 2,688
+**Total Units:** 2,816
 
 ---
 
@@ -354,26 +354,31 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 13: Knuckle Brawl
-**Units:** 128 (8 phases)
-**Concept:** Side-scrolling beat 'em up. Walk right, punch enemies, fight bosses. Streets of Rage/Final Fight territory.
+**Units:** 256 (16 phases)
+**Concept:** Streets of Rage/Final Fight-style brawler with Y-depth sorting, combo systems, weapon pickups, and two-player co-op. Walk right, punch enemies, fight bosses.
 
 **Skills taught:**
-- Depth sorting (Y-axis layering)
-- Melee combat mechanics (punches, kicks, throws)
-- Combo systems
-- Multiple enemy management
+- Y-axis depth sorting (bucket sort algorithm)
+- Large animated character sprites
+- Melee combat mechanics (punches, kicks, grabs, throws)
+- Combo system with chains and juggles
+- Attack slots and enemy AI coordination
+- Multiple enemy types (Punk, Thug, Knife, Big, Acrobat)
+- Weapon pickups (Pipe, Knife, Chain, Bottle)
+- 5 complete stages with unique themes
+- 5 boss encounters with patterns
+- Multiple playable characters with stats
+- Two-player cooperative mode
+- Versus mode
 - Health and damage systems
-- Walking "into" the screen (pseudo-3D)
-- Stage progression
-- Multiple playable characters
-- Weapon pickups
-- Boss encounters
+- AY-3-8910 music and sound effects
+- 48K and 128K versions
 
-**Why 128 units:** Depth sorting is complex, combat needs proper feel, multiple characters need balancing.
+**Why expanded:** A complete beat 'em up with Y-sorting, combos, enemy coordination, 5 stages, 5 bosses, AND two-player co-op requires 256 units.
 
 **Why here:** Depth sorting is the bridge to isometric. This game introduces layered drawing order.
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-13-knuckle-brawl.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-knuckle-brawl.md`
 
 ---
 
@@ -568,6 +573,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.15 (2026-01-18):** Expanded Game 13 (Knuckle Brawl) to 256 units with Y-depth sorting and combo systems. Total now 2,816 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Recoil) to 256 units with run 'n' gun mastery. Total now 2,688 units.
 - **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.
 - **3.12 (2026-01-18):** Expanded Game 10 (Exodus) to 256 units with scrolling platformer mastery. Total now 2,432 units.

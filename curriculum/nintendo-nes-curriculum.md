@@ -4,7 +4,7 @@
 **Language:** 6502 Assembly (no BASIC gateway)
 **Killer Feature:** PPU (Picture Processing Unit) - tile-based graphics mastery
 **Games:** 16
-**Total Units:** 2,688
+**Total Units:** 2,816
 
 ---
 
@@ -363,18 +363,29 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ---
 
 #### Game 13: Pavement Justice
-**Units:** 128 (8 phases)
-**Concept:** Side-scrolling beat 'em up. Walk right, punch enemies, clean up the streets. Vigilante action with Y-depth sorting.
+**Units:** 256 (16 phases)
+**Concept:** Double Dragon/River City Ransom-style brawler with Y-depth sorting, combo systems, weapon pickups, and two-player co-op. Vigilante action cleaning up the streets.
 
 **Skills taught:**
-- Y-axis depth sorting
-- Melee combat mechanics
-- Combo systems
-- Multiple enemy management
-- Health and damage systems
-- Walking "into" the screen
-- Stage progression
-- Boss battles
+- Y-axis depth sorting with OAM ordering
+- Large metasprite characters
+- Melee combat (punches, kicks, grabs, throws)
+- Combo system with chains and juggles
+- Attack slots and enemy AI coordination
+- Multiple enemy types (Punk, Thug, Knife, Big, Acrobat)
+- Weapon pickups (Bat, Knife, Chain, Trash can)
+- 5 complete stages with unique tilesets
+- 5 boss encounters with patterns
+- Multiple playable characters
+- Two-player cooperative mode
+- Sprite limit management and flicker distribution
+- Health pickups and food items
+- APU music and sound effects
+- Demo/attract mode
+
+**Why expanded:** A complete beat 'em up with Y-sorting, combos, enemy coordination, 5 stages, 5 bosses, AND two-player co-op with sprite management requires 256 units.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-pavement-justice.md`
 
 ---
 
@@ -569,6 +580,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.15 (2026-01-18):** Expanded Game 13 (Pavement Justice) to 256 units with Y-depth sorting and beat 'em up mechanics. Total now 2,816 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Iron Assault) to 256 units with run 'n' gun mastery. Total now 2,688 units.
 - **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.
 - **3.12 (2026-01-18):** Expanded Game 10 (Arena Assault) to 256 units as foundation capstone. Total now 2,432 units.

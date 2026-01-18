@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 3,456 (3,072 OCS/ECS + 384 AGA)
+**Total Units:** 3,584 (3,200 OCS/ECS + 384 AGA)
 
 ---
 
@@ -382,18 +382,29 @@ The expanded structure allows thorough coverage of:
 ---
 
 #### Game 13: Onslaught
-**Units:** 128 (8 phases)
-**Concept:** Vertical scrolling shooter with bullet patterns.
+**Units:** 256 (16 phases)
+**Concept:** 1942/SWIV-style vertical shooter with formation patterns, bullet patterns, ground and air targets, and epic multi-phase bosses. Intense action showcasing the Amiga's capabilities.
 
 **Skills taught:**
-- Vertical scrolling
-- Formation enemy patterns
-- Bullet pattern systems
-- Ground and air targets
-- Multi-phase bosses
-- Weapon upgrade trees
-- Rank system (dynamic difficulty)
-- Full MOD soundtrack
+- Vertical hardware scrolling
+- Formation enemy patterns (V, line, circle, spiral)
+- Bullet pattern systems (aimed, spread, ring, spiral)
+- Ground targets (tanks, turrets, buildings, convoys)
+- Air enemies with varied behaviours
+- Multi-phase boss encounters with weak points
+- Weapon upgrade system (Wide, Laser, Spread, Homing)
+- Missile and bomb secondary weapons
+- Options/satellites with firing
+- 5 complete stages with unique themes
+- Rank system (adaptive difficulty based on performance)
+- Two-player cooperative mode
+- Grazing bonus system
+- Paula MOD soundtrack
+- AGA enhanced version
+
+**Why expanded:** A full vertical shmup with formation patterns, bullet systems, ground/air layers, 5 stages, bosses, AND rank system requires 256 units.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-onslaught.md`
 
 ---
 
@@ -677,6 +688,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.15 (2026-01-18):** Expanded Game 13 (Onslaught) to 256 units with bullet patterns and rank system. OCS/ECS total now 3,200 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Highway) to 256 units with pseudo-3D racing and Copper road rendering. OCS/ECS total now 3,072 units.
 - **3.13 (2026-01-18):** Expanded Game 11 (Brawler) to 256 units with Y-depth sorting. OCS/ECS total now 2,944 units.
 - **3.12 (2026-01-18):** Expanded Game 10 (Wanderer) to 256 units with full platformer worlds. OCS/ECS total now 2,816 units.
