@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 2,624 (2,240 OCS/ECS + 384 AGA)
+**Total Units:** 2,688 (2,304 OCS/ECS + 384 AGA)
 
 ---
 
@@ -24,12 +24,12 @@ By the final game, learners will have skills matching professional Amiga develop
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter, timing, breakout) | 1-3 | 128 | 384 |
-| Foundation | 4-8 | 64 | 320 |
+| Foundation (shooter, timing, breakout, platformer) | 1-4 | 128 | 512 |
+| Foundation | 5-8 | 64 | 256 |
 | Advanced | 9-14 | 128 | 768 |
 | Expert | 15 | 256 | 256 |
 | Capstone | 16 | 512 | 512 |
-| **Total** | **16** | | **2,240** |
+| **Total** | **16** | | **2,304** |
 
 The expanded structure allows thorough coverage of:
 - Blitter operations (copy, fill, line draw, cookie-cut)
@@ -118,17 +118,26 @@ The expanded structure allows thorough coverage of:
 ---
 
 #### Game 4: Ascent
-**Units:** 64 (4 phases)
-**Concept:** Single-screen platformer. Climb upward through hazards.
+**Units:** 128 (8 phases)
+**Concept:** Single-screen platformer polished to commercial quality. Climb upward through hazards, collect items, reach the exit. Smooth 50fps gameplay with Copper-enhanced visuals and sampled audio.
 
 **Skills taught:**
-- Gravity and jump physics
-- Platform collision with bitplanes
-- Player animation (BOBs)
+- Gravity and jump physics (velocity, acceleration, variable height)
+- Platform collision with Blitter backgrounds
+- BOB animation for player character (walk cycle, jump frames)
 - Blitter cookie-cut masking
-- Enemy patterns
-- Level data structures
-- Hazard collision
+- Moving platforms (horizontal and vertical)
+- Crumbling platforms and environmental hazards
+- Patrolling and flying enemies
+- Stomping enemies mechanic
+- Power-ups (speed, high jump, invincibility)
+- 20 levels across multiple themed worlds
+- Boss battles
+- MOD music with SFX mixing
+
+**Why here:** After horizontal gameplay in Games 1-3, learners tackle vertical movement and jump physics - the foundation for countless games.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-ascent.md`
 
 ---
 
@@ -559,6 +568,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.6 (2026-01-18):** Expanded Game 4 (Ascent) to 128 units with full platformer polish. OCS/ECS total now 2,304 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Shatter Point) to 128 units with Blitter physics and power-ups. OCS/ECS total now 2,240 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Signal) to 128 units for full timing-game polish. OCS/ECS total now 2,176 units.
 - **3.3 (2026-01-18):** Restructured Game 1. Blast Zone (shooter) now first game at 128 units for immediate engagement, bootable from Unit 1. Signal moved to Game 2.

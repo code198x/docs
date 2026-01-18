@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 1,728
+**Total Units:** 1,792
 
 ---
 
@@ -23,12 +23,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-3 | 128 | 384 | Foundation games - shooter, physics, platformer - full experience |
-| 4-10 | 64 | 448 | Foundation - core concepts |
+| 1-4 | 128 | 512 | Foundation games - shooter, physics, platformer, exploration - full experience |
+| 5-10 | 64 | 384 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, epic action) |
 | 16 | 256 | 256 | Capstone - commercial quality |
-| **Total** | | **1,728** | |
+| **Total** | | **1,792** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -106,22 +106,25 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 4: Chambers
-**Units:** 64 (4 phases)
-**Concept:** Flip-screen top-down exploration. Navigate rooms, collect items, avoid enemies. Atic Atac territory.
+**Units:** 128 (8 phases)
+**Concept:** Flip-screen top-down exploration polished to commercial quality. Navigate rooms, collect items, avoid enemies, find the exit. In the Atic Atac tradition - the Spectrum's signature exploration genre.
 
 **Skills taught:**
-- 4-way movement
-- Room data structures
-- Screen transitions (flip-screen)
-- Persistent state across rooms
-- Simple inventory (keys, items)
-- Enemies with chase behaviour
-- Multiple room types
-- Locked doors and key colours
+- 4-way top-down movement
+- Room data structures and transitions
+- Persistent state (collected items stay collected)
+- Inventory systems (keys, items, weapons)
+- Enemy chase AI with wall awareness
+- Multiple enemy types (patrol, chase, ranged)
+- Coloured keys and locked doors
+- Hazards, traps, and environmental puzzles
+- Multi-floor world design
+- Full beeper audio (music and SFX)
+- High scores, difficulty options, map screen
 
-**Why here:** Multi-room structure and state management prepare learners for more complex AI in following games.
+**Why here:** Multi-room structure and state management prepare learners for more complex AI in following games. 128 units allows full world-building.
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-04-chambers.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-chambers.md`
 
 ---
 
@@ -495,6 +498,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.6 (2026-01-18):** Expanded Game 4 (Chambers) to 128 units with full Atic Atac-style exploration. Total now 1,792 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Cavern) to 128 units with full Manic Miner-style platformer features. Total now 1,728 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Shatter) to 128 units for full physics polish. Total now 1,664 units.
 - **3.3 (2026-01-18):** Reordered games per skill tree analysis. Shatter now Game 2 (sub-cell physics). Cavern now Game 3 (platforming). Ink War moved to Game 5 (requires strategic AI experience). See `/docs/curriculum/SKILL-TREES.md`.
