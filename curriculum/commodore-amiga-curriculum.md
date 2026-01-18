@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 3,712 (3,328 OCS/ECS + 384 AGA)
+**Total Units:** 4,032 (3,584 OCS/ECS + 448 AGA)
 
 ---
 
@@ -25,10 +25,12 @@ By the final game, learners will have skills matching professional Amiga develop
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
 | Foundation (shooter, timing, breakout, platformer, exploration, maze, snake, puzzle) | 1-8 | 128 | 1,024 |
-| Advanced | 9-14 | 128 | 768 |
-| Expert | 15 | 256 | 256 |
+| Intermediate | 9-10 | 256 | 512 |
+| Advanced | 11-13 | 256 | 768 |
+| Advanced | 14 | 256 | 256 |
+| Expert | 15 | 512 | 512 |
 | Capstone | 16 | 512 | 512 |
-| **Total** | **16** | | **2,560** |
+| **Total** | **16** | | **3,584** |
 
 The expanded structure allows thorough coverage of:
 - Blitter operations (copy, fill, line draw, cookie-cut)
@@ -445,23 +447,40 @@ The expanded structure allows thorough coverage of:
 ### Expert Game (256 Units)
 
 #### Game 15: Echoes of the Ancients
-**Units:** 256 (16 phases)
-**Concept:** Connected world exploration with ability-gating. Metroidvania design on Amiga hardware.
+**Units:** 512 (32 phases)
+**Concept:** Full Metroidvania masterpiece on Amiga hardware. Explore interconnected regions across an ancient world, gaining abilities that unlock new areas. Multi-layer parallax per region, Copper effects for atmosphere, and the Amiga's audiovisual power at full display.
 
 **Skills taught:**
-- Large connected world map
-- Non-linear progression
-- Ability-gating design
+- Large connected world map (5 regions × 50+ rooms)
+- Non-linear progression with sequence breaking
+- Ability-gating design (10+ abilities)
+- Movement abilities (wall jump, double jump, dash, morph, grapple)
+- Combat abilities (charge beam, spread shot, missiles, bombs)
 - Backtracking and shortcuts
-- Player progression system
-- Save system with battery backup
-- Multiple endings
-- Advanced Blitter techniques
+- Region-specific visual themes with unique palettes
+- Multi-layer parallax scrolling per region
+- Copper colour effects per zone (sky gradients, water, fire)
+- Advanced Blitter techniques for smooth scrolling
+- Player progression system (health, energy, upgrades)
+- Disk-based save system with multiple slots
+- Boss encounters that grant abilities (10 major bosses)
+- Mini-bosses and optional challenges
+- Environmental hazards per region
+- Hidden items and expansions
+- Map system with fog of war
+- Percentage completion tracking
+- Multiple endings based on completion
+- Time attack and speedrun modes
+- Full MOD soundtrack with per-region themes
+- Paula sample integration for effects
 - Memory management for large games
-- Advanced Copper effects
-- Multi-disk support
+- Multi-disk support for expanded content
+- AGA enhanced version with 256 colours
+- HAM8 cutscenes for story moments
 
-**Why expanded:** Metroidvania design requires extensive world building, ability systems, and careful memory management.
+**Why 512 units:** Full Metroidvania requires extensive world building: 5 regions, 10+ abilities, multi-layer parallax per region, Copper effects, disk-based saves, and the Amiga's full audiovisual capabilities.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-echoes-of-the-ancients.md`
 
 ---
 
@@ -564,8 +583,8 @@ The AGA (Advanced Graphics Architecture) chipset, introduced with the A1200 and 
 ---
 
 #### Game 15 AGA: Echoes of the Ancients AGA
-**Units:** 64 (4 phases)
-**Enhancement focus:** 256-colour Metroidvania visuals, enhanced atmospheric effects, richer zone palettes, HAM8 cutscenes.
+**Units:** 128 (8 phases)
+**Enhancement focus:** 256-colour Metroidvania visuals with enhanced region palettes, smoother parallax with additional layers, HAM8 cutscenes for story moments, enhanced atmospheric effects, richer boss encounters.
 
 ---
 
@@ -706,6 +725,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.17 (2026-01-18):** Expanded Game 15 (Echoes of the Ancients) to 512 units (OCS/ECS) and 128 units (AGA) with full Metroidvania and per-region parallax. OCS/ECS total now 3,584 units, AGA total now 448 units, grand total 4,032 units.
 - **3.16 (2026-01-18):** Expanded Game 14 (Fortress) to 256 units with Blitter-based isometric adventure. OCS/ECS total now 3,328 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Onslaught) to 256 units with bullet patterns and rank system. OCS/ECS total now 3,200 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Highway) to 256 units with pseudo-3D racing and Copper road rendering. OCS/ECS total now 3,072 units.

@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 2,944
+**Total Units:** 3,328
 
 ---
 
@@ -22,11 +22,12 @@ Games scale in unit count based on complexity:
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
 | 1-8 | 128 | 1,024 | Foundation games - shooter, platformer, maze, breakout, exploration, rhythm, scrolling, Scramble |
-| 9-10 | 64 | 128 | Foundation - core concepts |
-| 11-13 | 128 | 384 | System-heavy - multiple complex systems |
-| 14-15 | 128 | 256 | Advanced - new paradigms (isometric, Turrican-style) |
+| 9-10 | 256 | 512 | Intermediate - sprite multiplexing, pseudo-3D racing |
+| 11-13 | 256 | 768 | System-heavy - multiple complex systems |
+| 14 | 256 | 256 | Advanced - isometric paradigm (Knight Lore-style) |
+| 15 | 512 | 512 | Expert - Turrican-style run'n'gun masterpiece |
 | 16 | 256 | 256 | Capstone - commercial quality with demo-scene techniques |
-| **Total** | | **2,048** | |
+| **Total** | | **3,328** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -385,22 +386,31 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 15: Mega Blaster
-**Units:** 128 (8 phases)
-**Concept:** Turrican-style run'n'gun. Large scrolling world, multiple weapons, vehicle transformations, epic bosses.
+**Units:** 512 (32 phases)
+**Concept:** Turrican-style run'n'gun masterpiece. Large scrolling worlds across 6 distinct environments, multiple weapons with upgrade paths, grappling hook physics, vehicle transformation (wheel mode), and epic multi-phase bosses. The ultimate C64 action game.
 
 **Skills taught:**
-- Multi-directional scrolling (8-way)
-- Advanced weapon variety (beam, spread, bounce, missiles)
-- Grappling hook mechanics
-- Vehicle transformation (wheel mode)
-- Massive boss encounters
-- Level streaming for huge worlds
-- Exploration-based level design
-- Hidden secrets and power-ups
+- Multi-directional scrolling (8-way with Turrican-style freedom)
+- Advanced weapon system (beam, spread, bounce, missiles, lightning)
+- Weapon upgrade paths and power levels
+- Grappling hook physics (rope simulation with sine table)
+- Vehicle transformation (wheel mode with different physics)
+- Massive multi-phase boss encounters
+- Level streaming for huge worlds (6 worlds × 4 stages)
+- Exploration-based level design with secrets
+- Hidden areas and secret passages
+- Time attack and challenge modes
+- Environmental hazards (lava, ice, wind)
+- Destructible terrain
+- Score system with multipliers
+- Multiple difficulty modes
+- Save/password system
+- Full SID soundtrack with per-world themes
+- Demo-scene quality visual effects
 
-**Why 128 units:** Turrican-level complexity requires extensive content and multiple interconnected systems.
+**Why 512 units:** Turrican-level complexity requires extensive systems: 8-way scrolling, grappling physics, vehicle transformation, massive boss battles, and 6 complete worlds with secrets. This is the pinnacle of C64 action gaming.
 
-**Detailed outline:** `/docs/plans/commodore-64/game-15-mega-blaster.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-mega-blaster.md`
 
 ---
 
@@ -502,6 +512,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.17 (2026-01-18):** Expanded Game 15 (Mega Blaster) to 512 units with Turrican-style run'n'gun masterpiece. Total now 3,328 units.
 - **3.16 (2026-01-18):** Expanded Game 14 (Isometric Quest) to 256 units with Knight Lore-style isometric adventure. Total now 2,944 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Parallax Patrol) to 256 units with multi-layer parallax and option drones. Total now 2,816 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Arena Fighter) to 256 units with fighting game mastery. Total now 2,688 units.

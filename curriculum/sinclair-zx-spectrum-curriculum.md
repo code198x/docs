@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 2,944
+**Total Units:** 3,328
 
 ---
 
@@ -24,11 +24,12 @@ Games scale in unit count based on complexity:
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
 | 1-8 | 128 | 1,024 | Foundation games - shooter, physics, platformer, exploration, strategy, maze, snake, Tetris |
-| 9-10 | 64 | 128 | Foundation - core concepts |
-| 11-13 | 128 | 384 | System-heavy - multiple complex systems |
-| 14-15 | 128 | 256 | Advanced - new paradigms (isometric, epic action) |
+| 9-10 | 256 | 512 | Intermediate - scrolling, character-based display mastery |
+| 11-13 | 256 | 768 | System-heavy - multiple complex systems |
+| 14 | 256 | 256 | Advanced - Filmation-style isometric (Head Over Heels) |
+| 15 | 512 | 512 | Expert - Knight Lore-style isometric with transformation |
 | 16 | 256 | 256 | Capstone - commercial quality |
-| **Total** | | **2,048** | |
+| **Total** | | **3,328** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -416,24 +417,38 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 15: Bastion
-**Units:** 128 (8 phases)
-**Concept:** Isometric exploration game. Knight Lore territory - the prestige Spectrum technique.
+**Units:** 512 (32 phases)
+**Concept:** Knight Lore-style isometric adventure with transformation curse mechanic. Navigate 100+ rooms across 5 distinct zones, solve puzzles, collect items, and find the cure before time runs out. The ultimate Spectrum isometric challenge.
 
 **Skills taught:**
-- Isometric projection mathematics
-- 3D coordinate systems
-- Depth sorting (painter's algorithm)
-- Movement in isometric space
-- Collision in 3D
+- Isometric projection mathematics (world-to-screen conversion)
+- 3D coordinate systems (X, Y, Z axes)
+- Depth sorting (painter's algorithm for correct draw order)
+- Isometric tile rendering and room construction
+- Movement in isometric space (8-direction mapping)
+- Z-height collision detection (platforms, stairs)
 - Attribute clash management in isometric view
-- Room-based world structure
-- Object interaction
-- Puzzle mechanics (push blocks, switches)
-- 64+ rooms across multiple zones
+- Room-based world structure (100+ rooms)
+- Transformation mechanic (human/beast forms with timer)
+- Form-specific abilities (human: carry, beast: jump)
+- Push block puzzles (Sokoban-style in isometric)
+- Multi-block puzzles and pressure plates
+- Object interaction and inventory
+- Coloured keys and locked doors
+- 5 distinct zones with unique palettes
+- Multiple enemy types (guards, ghosts, creatures)
+- Combat system (sword, throwables)
+- Boss encounters per zone
+- Save/password system
+- Multiple endings based on completion
+- Time attack and challenge modes
+- Hidden secrets and bonus rooms
+- Full beeper audio (music and effects)
+- AY-compatible enhanced version
 
-**Why 128 units:** Isometric is a completely different paradigm requiring new mathematics, rendering, and collision approaches.
+**Why 512 units:** Knight Lore-style isometric requires completely new mathematics, rendering, and collision approaches. The transformation mechanic, 100+ rooms, 5 zones, and puzzle systems demand extensive coverage.
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-15-bastion.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-bastion.md`
 
 ---
 
@@ -584,6 +599,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.17 (2026-01-18):** Expanded Game 15 (Bastion) to 512 units with Knight Lore-style isometric adventure and transformation mechanic. Total now 3,328 units.
 - **3.16 (2026-01-18):** Expanded Game 14 (Strafe) to 256 units with 1942-style vertical shooting and 128K AY support. Total now 2,944 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Knuckle Brawl) to 256 units with Y-depth sorting and combo systems. Total now 2,816 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Recoil) to 256 units with run 'n' gun mastery. Total now 2,688 units.
