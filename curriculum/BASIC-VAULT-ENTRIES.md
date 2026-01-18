@@ -159,7 +159,8 @@
 | `udg-graphics` | Technique | Spectrum, C64, CPC |
 | `bob-graphics` | Technique | Amiga (AMOS/Blitz) |
 | `double-buffering-basic` | Technique | Amiga |
-| `simons-basic-sprites` | Technique | Commodore 64 |
+| `c64-custom-characters` | Technique | Commodore 64 |
+| `peek-poke-gaming` | Technique | Commodore 64 |
 | `destructible-terrain` | Technique | Amiga (Blitz) |
 | `basic-inline-assembly` | Technique | BBC Micro |
 

@@ -3,75 +3,82 @@
 **Track:** C64 BASIC
 **Genre:** Platformer
 **Units:** 8
-**BASIC Version:** Simons' BASIC
+**BASIC Version:** Stock BASIC V2
 
 ---
 
 ## Overview
 
-Single-screen platformer with jumping, platforms, and collectibles. Introduction to gravity physics.
+Single-screen platformer using character graphics. Teaches gravity and platform collision.
 
 ### What You Build
 
 - Jumping character
-- Platform collision
-- Gravity simulation
-- Collectible items
+- Platforms (characters)
+- Collectibles
 - Level completion
-- Multiple levels
 
 ---
 
 ## Unit Breakdown
 
-### Unit 1: The Character
-**Concepts:** Player sprite, basic movement
+### Unit 1: Level Display
+**Concepts:** Drawing platforms with characters, DATA for level
 
-### Unit 2: Gravity
-**Concepts:** Falling, velocity, acceleration
+### Unit 2: The Player
+**Concepts:** Player character, position variables
 
-### Unit 3: Jumping
-**Concepts:** Jump velocity, arc physics
+### Unit 3: Movement
+**Concepts:** Left/right, keyboard reading
 
-### Unit 4: Platforms
-**Concepts:** Platform data, drawing
+### Unit 4: Gravity
+**Concepts:** Falling, velocity, floor detection
 
-### Unit 5: Platform Collision
-**Concepts:** Landing detection, standing
+### Unit 5: Jumping
+**Concepts:** Jump velocity, grounded state
 
-### Unit 6: Collectibles
-**Concepts:** Items, collision, score
+### Unit 6: Platform Collision
+**Concepts:** PEEK below player, landing
 
-### Unit 7: Level Design
-**Concepts:** DATA for levels, level loading
+### Unit 7: Collectibles
+**Concepts:** Items, PEEK to collect, scoring
 
 ### Unit 8: Complete Game
-**Concepts:** Multiple levels, win condition
+**Concepts:** Lives, level complete, multiple levels
 
 ---
 
-## Gravity Physics
+## Gravity and Jumping
 
 ```basic
-100 REM GRAVITY CONSTANTS
-110 GR = 0.5: REM GRAVITY
-120 JP = -8: REM JUMP POWER
+100 REM GRAVITY SYSTEM
+110 REM CHECK IF ON PLATFORM
+120 BELOW=PEEK(1024+(PY+1)*40+PX)
+130 IF BELOW=160 OR BELOW=96 THEN GROUNDED=1: VY=0: GOTO 200
+140 GROUNDED=0
+150 REM APPLY GRAVITY
+160 VY=VY+1: IF VY>3 THEN VY=3
+170 PY=PY+VY
 
-200 REM APPLY GRAVITY
-210 VY = VY + GR: REM ACCELERATE
-220 Y = Y + VY: REM MOVE
-230 IF Y > FLOOR THEN Y = FLOOR: VY = 0
+200 REM JUMPING
+210 K=PEEK(197): REM CHECK KEYBOARD
+220 IF K=60 AND GROUNDED=1 THEN VY=-3: REM SPACE TO JUMP
+```
 
-300 REM JUMP
-310 IF FIRE AND GROUNDED THEN VY = JP
+### Platform Characters
+
+```basic
+300 REM PLATFORM = CHR$(160) (SOLID BLOCK)
+310 REM LADDER = CHR$(96)
+320 REM COIN = CHR$(87)
 ```
 
 ---
 
 ## Skills Learned
 
-- Gravity simulation
-- Jump physics
-- Platform collision
-- Level data structures
-- Game state (grounded/airborne)
+- Integer gravity physics
+- Grounded state tracking
+- PEEK for collision detection
+- Level data in DATA statements
+- Simple animation

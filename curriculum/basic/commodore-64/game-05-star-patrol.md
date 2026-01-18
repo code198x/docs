@@ -3,75 +3,87 @@
 **Track:** C64 BASIC
 **Genre:** Fixed Shooter
 **Units:** 8
-**BASIC Version:** Simons' BASIC
+**BASIC Version:** Stock BASIC V2
 
 ---
 
 ## Overview
 
-Space Invaders-style fixed shooter. Multiple sprites, shooting mechanics, and wave-based gameplay.
+Space shooter using custom character graphics. Introduces redefining the character set via POKE.
 
 ### What You Build
 
-- Player ship (sprite)
-- Enemy formation
-- Shooting mechanics
-- Collision detection
-- Wave system
-- Lives and scoring
+- Player ship (custom character)
+- Enemy waves (custom characters)
+- Shooting (character movement)
+- Lives system
 
 ---
 
 ## Unit Breakdown
 
-### Unit 1: Starfield Background
-**Concepts:** PLOT points, scrolling effect
+### Unit 1: Custom Character Setup
+**Concepts:** Copying ROM to RAM, character memory location
 
-### Unit 2: Player Ship
-**Concepts:** Sprite definition, movement
+### Unit 2: Designing Characters
+**Concepts:** 8x8 grid, DATA statements, POKEing character data
 
-### Unit 3: Player Shooting
-**Concepts:** Bullet sprite, firing logic
+### Unit 3: Player Ship
+**Concepts:** Display custom character, movement
 
-### Unit 4: Enemy Formation
-**Concepts:** Multiple sprites, arrays
+### Unit 4: Shooting
+**Concepts:** Bullet character, vertical movement
 
-### Unit 5: Enemy Movement
-**Concepts:** Wave patterns, direction changes
+### Unit 5: Enemies
+**Concepts:** Enemy characters, positioning
 
-### Unit 6: Collision Detection
-**Concepts:** SPRITEBOB COL, hit detection
+### Unit 6: Enemy Movement
+**Concepts:** Wave patterns, descent
 
-### Unit 7: Scoring and Lives
-**Concepts:** Score display, game state
+### Unit 7: Collision
+**Concepts:** PEEK for hit detection
 
-### Unit 8: Waves and Difficulty
-**Concepts:** Level progression, speed increase
+### Unit 8: Complete Game
+**Concepts:** Scoring, lives, waves
 
 ---
 
-## Multiple Sprite Handling
+## Custom Character Setup
 
 ```basic
-100 REM SETUP ENEMIES
-110 FOR I = 1 TO 5
-120   SPRITE I+1,1,2,0,0: REM RED ENEMIES
-130   MOB SET I+1, I*50, 50
-140 NEXT I
+100 REM COPY CHARACTER ROM TO RAM
+110 POKE 56334,0: REM TURN OFF INTERRUPTS
+120 POKE 1,51: REM SWITCH IN CHARACTER ROM
+130 FOR I=0 TO 2047
+140   POKE 12288+I,PEEK(53248+I)
+150 NEXT I
+160 POKE 1,55: REM SWITCH OUT ROM
+170 POKE 56334,1: REM RESTORE INTERRUPTS
+180 POKE 53272,(PEEK(53272)AND240)+12: REM POINT TO NEW SET
+```
 
-200 REM MOVE ALL ENEMIES
-210 FOR I = 1 TO 5
-220   X = X SPRITE(I+1)
-230   MOB SET I+1, X+DX, Y SPRITE(I+1)
-240 NEXT I
+### Defining a Ship Character
+
+```basic
+200 REM DEFINE CHARACTER 128 AS SHIP
+210 FOR I=0 TO 7: READ D
+220   POKE 12288+128*8+I,D
+230 NEXT I
+240 DATA 24,60,126,255,255,90,36,102
+```
+
+### Display Custom Character
+
+```basic
+300 PRINT CHR$(128);: REM SHOW SHIP
 ```
 
 ---
 
 ## Skills Learned
 
-- Multiple sprite management
-- Arrays for game objects
-- Bullet mechanics
-- Wave-based design
-- Sprite collision
+- Character set copying
+- Custom character design
+- Character memory manipulation
+- PETSCII codes above 127
+- Wave-based game design

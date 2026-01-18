@@ -3,73 +3,94 @@
 **Track:** C64 BASIC
 **Genre:** Top-Down Racing
 **Units:** 8
-**BASIC Version:** Simons' BASIC
+**BASIC Version:** Stock BASIC V2
 
 ---
 
 ## Overview
 
-Top-down racing game with custom character graphics for the track. Lap timing and obstacles.
+Top-down racing using character graphics for the track. Teaches timing and surface detection.
 
 ### What You Build
 
-- Car sprite with rotation
-- Custom character track
-- Lap counting system
-- Timer display
-- Track collision
-- Best time tracking
+- Car (character)
+- Track (custom characters)
+- Lap counting
+- Timer using TI
+- Surface effects (grass slowdown)
 
 ---
 
 ## Unit Breakdown
 
-### Unit 1: Custom Characters
-**Concepts:** Character redefinition, track tiles
+### Unit 1: Track Design
+**Concepts:** Custom characters for track pieces
 
-### Unit 2: Track Layout
-**Concepts:** Screen layout, track design
+### Unit 2: Drawing the Track
+**Concepts:** Level data, PRINT track
 
 ### Unit 3: The Car
-**Concepts:** Sprite, 8-direction movement
+**Concepts:** Car character, position
 
-### Unit 4: Car Physics
-**Concepts:** Acceleration, friction, turning
+### Unit 4: Movement
+**Concepts:** Joystick, 4/8 direction
 
-### Unit 5: Track Collision
-**Concepts:** Character detection, slowdown
+### Unit 5: Surface Detection
+**Concepts:** PEEK surface, speed effects
 
-### Unit 6: Lap System
+### Unit 6: Checkpoints
 **Concepts:** Checkpoint detection, lap counting
 
 ### Unit 7: Timer
-**Concepts:** TI variable, time display
+**Concepts:** TI and TI$ variables
 
-### Unit 8: Polish
-**Concepts:** Best times, game complete
+### Unit 8: Complete Race
+**Concepts:** Countdown, best times
 
 ---
 
-## Custom Characters
+## Custom Characters for Track
 
 ```basic
-100 REM REDEFINE CHARACTERS FOR TRACK
-110 POKE 56334,0: REM DISABLE INTERRUPTS
-120 POKE 1,51: REM SWITCH TO RAM
-130 FOR I = 0 TO 7
-140   READ D: POKE 12288 + 8*128 + I, D
-150 NEXT I
-160 DATA 255,129,129,129,129,129,129,255
-170 POKE 1,55: POKE 56334,1
-180 POKE 53272, (PEEK(53272) AND 240) OR 12
+100 REM COPY CHARSET TO RAM
+110 POKE 56334,0: POKE 1,51
+120 FOR I=0 TO 2047: POKE 12288+I,PEEK(53248+I): NEXT
+130 POKE 1,55: POKE 56334,1
+140 POKE 53272,(PEEK(53272)AND240)+12
+
+150 REM DEFINE TRACK PIECES
+160 FOR I=0 TO 7: READ D: POKE 12288+128*8+I,D: NEXT
+170 DATA 255,255,255,255,255,255,255,255: REM ROAD
+```
+
+## Surface Detection
+
+```basic
+200 REM CHECK SURFACE UNDER CAR
+210 SURFACE=PEEK(1024+CY*40+CX)
+220 IF SURFACE=32 THEN SP=1: REM GRASS - SLOW
+230 IF SURFACE=160 THEN SP=3: REM ROAD - NORMAL
+240 IF SURFACE=102 THEN SP=4: REM BOOST PAD
+250 IF SURFACE=86 THEN 900: REM BARRIER - CRASH
+```
+
+### Timer Usage
+
+```basic
+300 REM START RACE TIMER
+310 TI$="000000"
+
+400 REM DISPLAY TIME
+410 T=TI/60: REM CONVERT TO SECONDS
+420 PRINT TAB(30)INT(T)
 ```
 
 ---
 
 ## Skills Learned
 
-- Custom character graphics
-- 8-direction movement
-- Simple car physics
-- Lap/checkpoint systems
-- Timer implementation
+- TI/TI$ for timing
+- Surface-based gameplay
+- Checkpoint systems
+- Custom track characters
+- Lap counting logic
