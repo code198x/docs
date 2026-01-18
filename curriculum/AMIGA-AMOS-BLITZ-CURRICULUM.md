@@ -56,7 +56,7 @@ If Worms could be made in Blitz Basic, students can make great games too.
 | **Language** | AMOS Professional |
 | **Games** | 8 |
 | **Prerequisite** | Basic programming concepts |
-| **Duration** | 8-16 units per game |
+| **Units per game** | 4-16 (varies by complexity) |
 | **Outcome** | Complete Amiga games |
 
 ### Game 1: Target Practice
@@ -64,7 +64,7 @@ If Worms could be made in Blitz Basic, students can make great games too.
 
 | Aspect | Details |
 |--------|---------|
-| **Units** | 8 |
+| **Units** | 4 |
 | **Genre** | Click targets |
 | **Concepts** | Mouse input, sprites, scoring |
 
@@ -288,6 +288,7 @@ Print "FINAL SCORE: ";SCORE
 | **Language** | Blitz Basic 2 |
 | **Games** | 8 |
 | **Prerequisite** | Some programming experience |
+| **Units per game** | 4-16 (varies by complexity) |
 | **Focus** | Performance, professional techniques |
 | **Outcome** | Commercial-quality games |
 
@@ -305,7 +306,7 @@ Print "FINAL SCORE: ";SCORE
 
 | Aspect | Details |
 |--------|---------|
-| **Units** | 8 |
+| **Units** | 4 |
 | **Genre** | Reaction timer |
 | **Concepts** | Blitz environment, timing, display |
 
