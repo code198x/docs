@@ -4,7 +4,7 @@
 **Language:** 6502 Assembly (no BASIC gateway)
 **Killer Feature:** PPU (Picture Processing Unit) - tile-based graphics mastery
 **Games:** 16
-**Total Units:** 1,792
+**Total Units:** 1,856
 
 ---
 
@@ -22,11 +22,11 @@ By the final game, learners will have skills matching professional NES developer
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter, platformer, breakout, maze) | 1-4 | 128 | 512 |
-| Foundation | 5-10 | 64 | 384 |
+| Foundation (shooter, platformer, breakout, maze, exploration) | 1-5 | 128 | 640 |
+| Foundation | 6-10 | 64 | 320 |
 | Advanced | 11-15 | 128 | 640 |
 | Capstone | 16 | 256 | 256 |
-| **Total** | **16** | | **1,792** |
+| **Total** | **16** | | **1,856** |
 
 Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Games 1-2) or 16 phases (capstone), with each phase containing 16 units.
 
@@ -128,17 +128,28 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ---
 
 #### Game 5: Crypt Crawler
-**Units:** 64 (4 phases)
-**Concept:** Flip-screen top-down exploration. Navigate dungeon rooms, collect items, avoid enemies. The ancestor to Zelda-style games.
+**Units:** 128 (8 phases)
+**Concept:** Flip-screen top-down dungeon exploration polished to commercial quality. Navigate interconnected rooms, collect keys and treasures, defeat monsters, find the exit. The ancestor to Zelda-style adventure games.
 
 **Skills taught:**
-- 4-way (or 8-way) movement
-- Room data structures
-- Screen transitions
+- Room data structures and metatile system
+- Screen transitions with PPU updates
 - Persistent state across rooms
-- Simple inventory (keys, items)
-- Enemies with chase behaviour
-- Key/door mechanics
+- Inventory system (keys, potions, weapons)
+- HUD display for health/items
+- Enemy AI (patrol, chase, wall-aware)
+- Melee combat with sword attack
+- Multiple enemy types including ranged
+- Coloured keys and locked doors
+- Push blocks and puzzle elements
+- Multiple dungeon floors
+- Boss encounters
+- Password/save system
+- Full APU audio (music and effects)
+
+**Why here:** After single-screen games, learners manage multi-room worlds with persistent state - foundation for adventure games.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-crypt-crawler.md`
 
 ---
 
@@ -461,6 +472,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.7 (2026-01-18):** Expanded Game 5 (Crypt Crawler) to 128 units with full Zelda-style exploration. Total now 1,856 units.
 - **3.6 (2026-01-18):** Expanded Game 4 (Pellet Panic) to 128 units with four distinct ghost AI personalities. Total now 1,792 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Fracture Point) to 128 units with full breakout polish and power-ups. Total now 1,728 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Crate Escape) to 128 units for full platformer polish. Total now 1,664 units.

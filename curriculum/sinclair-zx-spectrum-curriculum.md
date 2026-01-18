@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 1,792
+**Total Units:** 1,856
 
 ---
 
@@ -23,12 +23,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-4 | 128 | 512 | Foundation games - shooter, physics, platformer, exploration - full experience |
-| 5-10 | 64 | 384 | Foundation - core concepts |
+| 1-5 | 128 | 640 | Foundation games - shooter, physics, platformer, exploration, strategy |
+| 6-10 | 64 | 320 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, epic action) |
 | 16 | 256 | 256 | Capstone - commercial quality |
-| **Total** | | **1,792** | |
+| **Total** | | **1,856** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -129,20 +129,26 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 5: Ink War
-**Units:** 64 (4 phases)
-**Concept:** Territory control game where the attribute system *is* the gameplay. Player vs AI, taking turns to claim 8×8 attribute cells. Control the majority to win.
+**Units:** 128 (8 phases)
+**Concept:** Territory control strategy game polished to commercial quality. Player vs AI, taking turns to claim 8×8 attribute cells. Control the majority to win. A unique genre that turns the Spectrum's colour limitations into a feature.
 
 **Skills taught:**
-- Deep attribute system mastery
+- Deep attribute system mastery (attribute = gameplay)
 - Turn-based game loop (different paradigm)
-- Game state management
-- Strategic AI decision-making
-- Colour clash as gameplay element
-- Strategic game design
+- Strategic AI (greedy, minimax, personality)
+- Position evaluation and scoring
+- Multiple game modes (vs AI, two-player)
+- Board size variants (6×6, 8×8, 10×10)
+- Tournament and handicap modes
+- Undo/replay functionality
+- Save/load games
+- Tutorial mode
+- Statistics and achievements
+- Full beeper audio (music and effects)
 
-**Why here:** After 4 action games, learners have solid fundamentals. Ink War is a change of pace that explores attributes deeply and introduces strategic AI - skills that benefit from experience.
+**Why here:** After 4 action games, learners explore strategic thinking. The attribute system becomes the core mechanic, turning a limitation into innovation.
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-05-ink-war.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-ink-war.md`
 
 ---
 
@@ -498,6 +504,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.7 (2026-01-18):** Expanded Game 5 (Ink War) to 128 units with minimax AI and strategy polish. Total now 1,856 units.
 - **3.6 (2026-01-18):** Expanded Game 4 (Chambers) to 128 units with full Atic Atac-style exploration. Total now 1,792 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Cavern) to 128 units with full Manic Miner-style platformer features. Total now 1,728 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Shatter) to 128 units for full physics polish. Total now 1,664 units.

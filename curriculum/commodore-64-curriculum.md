@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 1,792
+**Total Units:** 1,856
 
 ---
 
@@ -21,12 +21,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-4 | 128 | 512 | Foundation games - shooter, platformer, maze, breakout - full experience |
-| 5-10 | 64 | 384 | Foundation - core concepts |
+| 1-5 | 128 | 640 | Foundation games - shooter, platformer, maze, breakout, exploration |
+| 6-10 | 64 | 320 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, Turrican-style) |
 | 16 | 256 | 256 | Capstone - commercial quality with demo-scene techniques |
-| **Total** | | **1,792** | |
+| **Total** | | **1,856** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -119,22 +119,27 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 ---
 
-### Game 5: Invader Wave
-**Units:** 64 (4 phases)
-**Concept:** Space Invaders style fixed shooter. Enemy formation descends, player defends.
+### Game 5: Catacombs
+**Units:** 128 (8 phases)
+**Concept:** Flip-screen top-down dungeon exploration polished to commercial quality. Navigate interconnected rooms, collect keys and treasures, avoid monsters, find the exit. In the tradition of classic C64 explorers.
 
 **Skills taught:**
-- Formation movement patterns
-- Enemy bullet management (enemies shoot back)
-- Shields (destructible character graphics)
-- Wave progression
-- High score persistence
-- UFO bonus enemies
-- Increasing wave difficulty
+- Room data structures and transitions
+- Persistent state (items stay collected)
+- Custom character set for dungeon tiles
+- Inventory system (keys, potions, weapons)
+- Enemy AI (patrol, chase, ranged)
+- Combat system (melee and ranged)
+- Multiple dungeon floors
+- Coloured keys and locked doors
+- Push blocks and puzzle elements
+- Full SID audio (music and effects)
+- Save/checkpoint system
+- Boss battles
 
-**Why here:** Builds on shooter from Game 1, adds formation AI and destructible terrain.
+**Why here:** After single-screen games, learners manage multi-room worlds with persistent state - the foundation for larger adventure games.
 
-**Detailed outline:** `/docs/plans/commodore-64/game-05-invader-wave.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-catacombs.md`
 
 ---
 
@@ -426,6 +431,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.7 (2026-01-18):** Replaced Game 5 Invader Wave with Catacombs (flip-screen exploration), expanded to 128 units. Total now 1,856 units.
 - **3.6 (2026-01-18):** Expanded Game 4 (Brick Basher) to 128 units with full breakout polish. Total now 1,792 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Maze Raider) to 128 units with ghost AI personalities and pathfinding. Total now 1,728 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Platform Panic) to 128 units for full polish. Total now 1,664 units.
