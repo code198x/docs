@@ -301,18 +301,31 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ### Advanced Games
 
 #### Game 11: Thunder Run
-**Units:** 128 (8 phases)
-**Concept:** Vertical scrolling shooter. 1942-style planes and formations. The thunder of engines and gunfire.
+**Units:** 256 (16 phases)
+**Concept:** 1942-style vertical shooter with formations, bullet patterns, and epic bosses. Introduces MMC1 mapper for expanded ROM and CHR banking.
 
 **Skills taught:**
-- Vertical scrolling (new direction)
-- Formation enemy patterns
-- Bullet patterns (enemy fire)
+- Vertical scrolling mechanics
+- Row-based level streaming
+- Formation enemy patterns (V, line, circle)
+- Bullet patterns (aimed, spread, spiral)
 - Ground and air targets
-- Power-up collection
-- Boss encounters
-- MMC1 mapper basics
-- Extended CHR banks
+- Five complete stages
+- Five multi-phase bosses
+- Multiple power-up types
+- Weapon upgrade system
+- **MMC1 mapper fundamentals**
+- **Serial register writing**
+- **CHR bank switching**
+- **PRG bank switching**
+- **Multiple tilesets per level**
+- Rank/difficulty scaling
+- Two-player alternating
+- Second loop with true ending
+
+**Why expanded:** A full vertical shmup plus MMC1 mapper mastery requires 256 units. Mapper knowledge is essential for larger NES games.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-thunder-run.md`
 
 ---
 
@@ -539,6 +552,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.
 - **3.12 (2026-01-18):** Expanded Game 10 (Arena Assault) to 256 units as foundation capstone. Total now 2,432 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Ion Trail) to 256 units with Gradius-style power system and options. Total now 2,240 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Pixel Plains) to 128 units with NES scrolling, world map, and boss battles. Total now 2,048 units.
