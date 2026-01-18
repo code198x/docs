@@ -1,6 +1,6 @@
 # C64 BASIC Curriculum
 
-**Purpose:** Define the 8-game BASIC curriculum track for Commodore 64 - a complete game development curriculum using Simons' BASIC.
+**Purpose:** Define the 8-game BASIC curriculum track for Commodore 64 - a complete game development curriculum using stock BASIC V2.
 
 **Last Updated:** 2026-01-18
 
@@ -15,34 +15,46 @@
 | **Games** | 8 |
 | **Units per game** | 4, 8, or 16 (varies by complexity) |
 | **Prerequisite** | None |
-| **BASIC Version** | BASIC V2 + Simons' BASIC |
+| **BASIC Version** | Stock BASIC V2 (no extensions required) |
 | **Outcome** | Complete, playable games |
 
 ---
 
 ## Philosophy
 
-### Why BASIC?
+### Why Stock BASIC V2?
 
 | Reason | Benefit |
 |--------|---------|
-| **Immediate results** | Type and run |
-| **Focus on game design** | Logic and creativity, not hardware registers |
-| **Rapid iteration** | Quick testing cycle |
-| **Historical authenticity** | Many learned this way |
-| **Complete curriculum** | Real games, not just exercises |
-| **Commercially viable** | Games were sold written in BASIC |
+| **Everyone had it** | Built into every C64 |
+| **Historical authenticity** | Magazine type-ins used PEEK/POKE |
+| **No setup required** | Works on any C64 or emulator |
+| **Teaches hardware** | PEEK/POKE reveals the machine |
+| **Real limitation** | Understanding constraints breeds creativity |
 
-### Why Simons' BASIC?
+### The PEEK/POKE Approach
 
-Stock C64 BASIC V2 is inadequate for games:
-- No sprite commands
-- No sound commands
-- No graphics commands
+Stock C64 BASIC has no graphics, sound, or sprite commands - but PEEK and POKE give you direct hardware access:
 
-**Simons' BASIC** adds 114 commands making game development practical.
+```basic
+POKE 53280,0          : REM BORDER BLACK
+POKE 53281,0          : REM BACKGROUND BLACK
+POKE 1024,81          : REM PUT BALL CHARACTER ON SCREEN
+POKE 54296,15         : REM SID VOLUME MAX
+J=PEEK(56320)         : REM READ JOYSTICK
+```
 
-**Alternative:** Could use other extensions (Laser BASIC, etc.) but Simons' BASIC is well-documented and historically significant.
+This is how people *actually* programmed C64 BASIC games.
+
+### Why NOT Simons' BASIC?
+
+| Consideration | Reality |
+|---------------|---------|
+| **Cost** | Simons' BASIC was a separate purchase |
+| **Availability** | Most users didn't have it |
+| **Type-ins** | Magazine listings assumed stock BASIC |
+| **Learning** | PEEK/POKE teaches hardware better |
+| **Authenticity** | This is how it was really done |
 
 ---
 
@@ -56,7 +68,7 @@ Stock C64 BASIC V2 is inadequate for games:
 | **Units** | 4 |
 | **Genre** | Number guessing |
 | **Concepts** | Variables, input, conditionals, loops |
-| **BASIC** | Stock BASIC V2 (no extension needed) |
+| **Graphics** | Text only |
 
 **What You Build:**
 - Computer picks a number
@@ -82,7 +94,7 @@ Stock C64 BASIC V2 is inadequate for games:
 | **Units** | 16 |
 | **Genre** | Text adventure |
 | **Concepts** | Strings, arrays, data structures |
-| **BASIC** | Stock BASIC V2 |
+| **Graphics** | Text only |
 
 **What You Build:**
 - Room descriptions
@@ -107,8 +119,8 @@ Stock C64 BASIC V2 is inadequate for games:
 |--------|---------|
 | **Units** | 8 |
 | **Genre** | Snake/growth game |
-| **Concepts** | Screen characters, movement, collision |
-| **BASIC** | Stock BASIC V2 with PEEK/POKE |
+| **Concepts** | Screen memory, movement, collision |
+| **Graphics** | Character-based |
 
 **What You Build:**
 - Character-based snake
@@ -118,11 +130,18 @@ Stock C64 BASIC V2 is inadequate for games:
 
 **Skills Introduced:**
 - PEEK and POKE (introduction)
-- Screen memory (1024)
-- Keyboard reading
+- Screen memory (1024-2023)
+- Colour memory (55296-56295)
+- Keyboard reading (PEEK(197))
 - Game loop concept
-- Collision detection (character)
-- Screen coordinates
+- Collision detection (PEEK screen)
+
+**Key Code:**
+```basic
+100 S=1024: REM SCREEN MEMORY
+110 POKE S+Y*40+X, 81: REM DRAW BALL
+120 IF PEEK(S+NY*40+NX)=81 THEN 500: REM HIT SELF
+```
 
 ---
 
@@ -133,24 +152,32 @@ Stock C64 BASIC V2 is inadequate for games:
 |--------|---------|
 | **Units** | 8 |
 | **Genre** | Breakout/brick breaker |
-| **Concepts** | Movement, bounce physics, scoring |
-| **BASIC** | Simons' BASIC (graphics commands) |
+| **Concepts** | Character graphics, physics, collision |
+| **Graphics** | Character-based |
 
 **What You Build:**
-- Paddle (keyboard/joystick)
-- Bouncing ball
-- Breakable bricks
+- Paddle (character)
+- Bouncing ball (character)
+- Breakable bricks (characters)
 - Score display
 
 **Skills Introduced:**
-- **Simons' BASIC introduction**
-- HIRES/MULTI graphics
-- LINE, CIRCLE commands
-- Joystick reading (JOY)
-- Ball physics (angle reflection)
+- PETSCII graphics characters
+- Ball physics (character movement)
+- Joystick reading (PEEK(56320))
+- Screen collision (PEEK)
+- Colour for different bricks
 - Score tracking
 
-**Transition Point:** This game introduces Simons' BASIC - students see the dramatic improvement over stock BASIC.
+**Key Code:**
+```basic
+100 J=PEEK(56320): REM READ JOYSTICK
+110 IF (J AND 4)=0 THEN PX=PX-1: REM LEFT
+120 IF (J AND 8)=0 THEN PX=PX+1: REM RIGHT
+130 REM CHECK WHAT BALL HIT
+140 C=PEEK(1024+BY*40+BX)
+150 IF C=160 THEN SC=SC+10: REM HIT BRICK
+```
 
 ---
 
@@ -161,22 +188,34 @@ Stock C64 BASIC V2 is inadequate for games:
 |--------|---------|
 | **Units** | 8 |
 | **Genre** | Fixed shooter |
-| **Concepts** | Sprites, enemies, shooting |
-| **BASIC** | Simons' BASIC |
+| **Concepts** | Custom characters, shooting |
+| **Graphics** | Character-based with redefined characters |
 
 **What You Build:**
-- Player ship (sprite)
-- Enemy waves
-- Shooting
+- Player ship (custom character)
+- Enemy waves (custom characters)
+- Shooting (character movement)
 - Lives system
 
 **Skills Introduced:**
-- SPRITE commands
-- MOB (moveable object blocks)
-- Sprite collision
-- Multiple sprites
-- Wave patterns
-- Lives/game over
+- Custom character sets
+- Character memory (POKE 53272)
+- Copying character ROM to RAM
+- Designing 8x8 characters
+- Bullet management
+- Multiple enemies
+
+**Key Code:**
+```basic
+100 REM COPY CHARSET TO RAM
+110 POKE 56334,0: POKE 1,51
+120 FOR I=0 TO 2047: POKE 12288+I,PEEK(53248+I): NEXT
+130 POKE 1,55: POKE 56334,1
+140 POKE 53272,(PEEK(53272)AND240)+12
+150 REM NOW REDEFINE CHARACTER 128
+160 FOR I=0 TO 7: READ D: POKE 12288+128*8+I,D: NEXT
+170 DATA 24,60,126,255,255,90,36,102
+```
 
 ---
 
@@ -188,21 +227,31 @@ Stock C64 BASIC V2 is inadequate for games:
 | **Units** | 8 |
 | **Genre** | Single-screen platformer |
 | **Concepts** | Gravity, jumping, platforms |
-| **BASIC** | Simons' BASIC |
+| **Graphics** | Character-based |
 
 **What You Build:**
 - Jumping character
-- Platforms
+- Platforms (characters)
 - Collectibles
 - Level completion
 
 **Skills Introduced:**
 - Gravity simulation
 - Jump physics
-- Platform collision
-- Character animation (basic)
-- Level design
-- State (grounded/airborne)
+- Platform collision (PEEK below)
+- Level data in DATA statements
+- Simple animation (2-frame)
+- Game state
+
+**Key Code:**
+```basic
+100 REM CHECK IF ON PLATFORM
+110 BELOW=PEEK(1024+(PY+1)*40+PX)
+120 IF BELOW=160 THEN GROUNDED=1: VY=0: GOTO 150
+130 GROUNDED=0: VY=VY+1: REM GRAVITY
+140 REM JUMP
+150 IF PEEK(197)=60 AND GROUNDED THEN VY=-3
+```
 
 ---
 
@@ -213,21 +262,32 @@ Stock C64 BASIC V2 is inadequate for games:
 |--------|---------|
 | **Units** | 8 |
 | **Genre** | Top-down racing |
-| **Concepts** | Track, lap timing, obstacles |
-| **BASIC** | Simons' BASIC |
+| **Concepts** | Track design, timing, collision |
+| **Graphics** | Character-based track |
 
 **What You Build:**
-- Car (sprite)
-- Track (character graphics)
+- Car (character)
+- Track (custom characters)
 - Lap counting
 - Timer
+- Grass slowdown
 
 **Skills Introduced:**
-- Character set graphics
-- Track/boundary collision
-- Timer implementation
+- Track design with custom characters
+- Timer using TI variable
+- Checkpoint detection
+- Different surface effects
 - Lap logic
-- Speed/acceleration
+- Best time tracking
+
+**Key Code:**
+```basic
+100 REM CHECK SURFACE
+110 SURFACE=PEEK(1024+CY*40+CX)
+120 IF SURFACE=32 THEN SPEED=1: REM GRASS - SLOW
+130 IF SURFACE=160 THEN SPEED=3: REM ROAD - FAST
+140 TI$="000000": REM RESET TIMER
+```
 
 ---
 
@@ -239,22 +299,33 @@ Stock C64 BASIC V2 is inadequate for games:
 | **Units** | 16 |
 | **Genre** | Sokoban-style puzzle |
 | **Concepts** | Puzzle logic, undo, level design |
-| **BASIC** | Simons' BASIC |
+| **Graphics** | Character-based (perfect fit) |
 
 **What You Build:**
 - Push-block mechanics
 - Multiple levels
 - Win detection
 - Move counter
+- Simple undo
 
 **Skills Introduced:**
 - Puzzle state management
 - Level data structures
-- Push mechanics
-- Undo system (array-based)
+- Push logic (check two ahead)
+- Array-based undo
 - Multiple levels from DATA
+- Victory detection
 
-**Capstone:** This game brings together everything learned - logic, graphics, state management, level design.
+**Key Code:**
+```basic
+100 REM CHECK PUSH
+110 NX=PX+DX: NY=PY+DY: REM NEXT CELL
+120 BX=NX+DX: BY=NY+DY: REM BEYOND THAT
+130 NC=PEEK(1024+NY*40+NX): BC=PEEK(1024+BY*40+BX)
+140 IF NC=66 AND BC=32 THEN GOSUB 500: REM PUSH BOX
+```
+
+**Capstone:** Sokoban works beautifully with character graphics - this is the ideal C64 BASIC puzzle game.
 
 ---
 
@@ -267,18 +338,30 @@ Stock C64 BASIC V2 is inadequate for games:
 | 1 | Variables, conditionals, loops |
 | 2 | Strings, arrays, DATA |
 | 3 | PEEK/POKE, screen memory |
-| 4 | Simons' BASIC graphics |
-| 5 | Sprites, collision |
-| 6 | Physics, state |
-| 7 | Custom characters, timing |
+| 4 | Joystick, collision |
+| 5 | Custom characters |
+| 6 | Physics, gravity |
+| 7 | Timing, surfaces |
 | 8 | Complex state, levels |
+
+### Key Memory Locations
+
+| Address | Purpose |
+|---------|---------|
+| **1024-2023** | Screen memory |
+| **55296-56295** | Colour memory |
+| **53280** | Border colour |
+| **53281** | Background colour |
+| **56320** | Joystick port 2 |
+| **197** | Current key pressed |
+| **53272** | Character set location |
 
 ### Cumulative Skills
 
 By end of track, students can:
 - Write structured BASIC programs
-- Use Simons' BASIC commands
-- Create sprites and graphics
+- Use PEEK/POKE for hardware access
+- Create custom characters
 - Handle input (keyboard and joystick)
 - Implement game loops
 - Manage game state
@@ -290,14 +373,14 @@ By end of track, students can:
 
 ### If Students Want to Go Deeper
 
-Some students may be curious about assembly language. The BASIC curriculum provides excellent preparation:
+The PEEK/POKE approach provides excellent preparation for assembly:
 
 | BASIC Concept | Assembly Equivalent |
 |---------------|---------------------|
 | POKE 53280,0 | LDA #0 : STA $D020 |
-| SPRITE commands | VIC-II registers |
-| JOY(1) | CIA port reading |
+| PEEK(56320) | LDA $DC00 |
 | Screen memory | $0400+ |
+| Colour memory | $D800+ |
 
 ### But Assembly is Not Required
 
@@ -305,7 +388,7 @@ The BASIC curriculum is **complete in itself**:
 - 8 full games
 - Real game development skills
 - Historical authenticity
-- Commercial games were made in BASIC
+- Magazine type-ins worked exactly like this
 
 Students who complete this track have learned to make games. That's the goal.
 
@@ -313,29 +396,24 @@ Students who complete this track have learned to make games. That's the goal.
 
 ## Technical Requirements
 
-### Simons' BASIC Setup
+### No Extensions Needed
 
+Just a C64 (or emulator):
 ```
-LOAD "SIMONS BASIC",8
+LOAD "*",8
 RUN
 ```
 
-Simons' BASIC adds commands including:
-
-| Category | Commands |
-|----------|----------|
-| **Graphics** | HIRES, MULTI, LINE, CIRCLE, PAINT |
-| **Sprites** | SPRITE, MOB, MOBC |
-| **Sound** | VOL, ENVELOPE |
-| **Input** | JOY, PEN |
-| **Utility** | RENUMBER, AUTO, etc. |
+Or type programs in directly - exactly as it was done.
 
 ### Emulator Setup
 
-VICE with Simons' BASIC cartridge image:
-```
-x64 -cart8 simons.crt
-```
+Any C64 emulator works:
+- VICE (x64)
+- Frodo
+- CCS64
+
+No cartridges, no extensions, no special setup.
 
 ### File Format
 
@@ -346,51 +424,16 @@ SAVE "PROGRAM",8
 
 ---
 
-## Sample Unit Structure
-
-### Game 4, Unit 3: "Adding the Ball"
-
-**Duration:** 60-90 minutes
-
-**Objectives:**
-- Create ball sprite
-- Implement movement
-- Add screen boundary bouncing
-
-**BASIC Code:**
-
-```basic
-100 REM WALL SMASHER - UNIT 3
-110 REM BALL MOVEMENT
-120 HIRES 0,1: REM BLACK BG, WHITE FG
-130 SPRITE 1,1,15,0,0: REM SPRITE 1 ON
-140 BX=160: BY=100: REM BALL POSITION
-150 DX=2: DY=-2: REM BALL DIRECTION
-160 REM MAIN LOOP
-170 BX=BX+DX: BY=BY+DY
-180 IF BX<10 OR BX>310 THEN DX=-DX
-190 IF BY<10 OR BY>190 THEN DY=-DY
-200 MOB SET 1,BX,BY
-210 GOTO 170
-```
-
-**What Students Learn:**
-- Sprite positioning
-- Direction variables
-- Boundary checking
-- Sign flipping for bounce
-
----
-
 ## Comparison to Assembly Track
 
-| Aspect | BASIC Gateway | Assembly Track |
-|--------|---------------|----------------|
+| Aspect | BASIC Track | Assembly Track |
+|--------|-------------|----------------|
 | **Barrier** | Low | Higher |
-| **Speed** | Slow but workable | Full speed |
-| **Detail** | Abstracted | Hardware level |
+| **Speed** | Slower but playable | Full speed |
+| **Detail** | PEEK/POKE level | Register level |
 | **Games** | 8 | 16 |
-| **Duration** | Shorter units | Longer units |
+| **Graphics** | Character-based | Sprites, bitmaps |
+| **Authenticity** | Magazine type-ins | Professional dev |
 | **Outcome** | Game design skills | Full system mastery |
 
 ---
@@ -402,17 +445,19 @@ SAVE "PROGRAM",8
 | Issue | Solution |
 |-------|----------|
 | **BASIC line numbers** | Explain historical context |
-| **Simons' BASIC setup** | Provide ready emulator configs |
-| **Slow execution** | Frame expectations |
+| **PEEK/POKE confusion** | Memory map diagrams help |
+| **Slow execution** | Frame expectations - it's BASIC |
 | **GOTO confusion** | Teach structured patterns |
+| **Character codes** | PETSCII reference charts |
 
 ### Historical Context
 
-Include notes about:
-- Why C64 BASIC was limited
-- How people actually made games
-- Magazine type-ins
-- The path to assembly
+This is exactly how magazine type-ins worked:
+- Programs published in CRASH, ZZAP!64, Compute!
+- Readers typed them in character by character
+- PEEK/POKE for everything
+- Character graphics, not sprites
+- Hundreds of games published this way
 
 ---
 
@@ -420,10 +465,11 @@ Include notes about:
 
 | Entry | Type |
 |-------|------|
-| `c64-basic-gateway` | Curriculum |
-| `simons-basic-games` | Culture |
+| `c64-basic-v2-games` | Culture |
+| `magazine-type-ins` | Culture |
+| `peek-poke-gaming` | Technique |
 
-**New entries: 2**
+**New entries: 3**
 
 ---
 
@@ -431,15 +477,16 @@ Include notes about:
 
 The C64 BASIC curriculum provides:
 - **8 complete, playable games**
-- **Real game development skills**
-- **Historical authenticity** - this is how people learned
-- **Practical, transferable knowledge**
+- **Stock BASIC V2 only** - no extensions needed
+- **Historical authenticity** - exactly like magazine type-ins
+- **PEEK/POKE mastery** - direct hardware access
+- **Character-based graphics** - the authentic approach
 - **A complete curriculum** - not just a stepping stone
 
 Students completing this track have:
-- Made real games
-- Learned game design
-- Understood programming concepts
+- Made real games using the same techniques as 1980s programmers
+- Learned game design principles
+- Understood C64 hardware through PEEK/POKE
 - Created something they can share and be proud of
 
 **That's success. That's the goal.**

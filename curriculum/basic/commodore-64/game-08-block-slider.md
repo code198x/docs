@@ -3,13 +3,13 @@
 **Track:** C64 BASIC
 **Genre:** Sokoban Puzzle
 **Units:** 16
-**BASIC Version:** Simons' BASIC
+**BASIC Version:** Stock BASIC V2
 
 ---
 
 ## Overview
 
-Sokoban-style puzzle game. Push blocks onto targets. **Capstone project** combining all skills.
+Sokoban-style puzzle game - **perfect for character graphics**. Push boxes onto targets. Capstone project.
 
 ### What You Build
 
@@ -17,62 +17,61 @@ Sokoban-style puzzle game. Push blocks onto targets. **Capstone project** combin
 - Multiple puzzle levels
 - Win detection
 - Move counter
-- Undo system
-- Level select
+- Undo system (optional)
 
 ---
 
 ## Unit Breakdown
 
-### Phase 1: Core Mechanics (Units 1-4)
+### Phase 1: Core (Units 1-4)
 
 #### Unit 1: Level Display
-**Concepts:** Level data, tile drawing
+**Concepts:** Level data in DATA, drawing with PRINT
 
 #### Unit 2: Player Movement
-**Concepts:** Grid movement, collision
+**Concepts:** Joystick/keyboard, position update
 
-#### Unit 3: Block Pushing
-**Concepts:** Push detection, block movement
+#### Unit 3: Wall Collision
+**Concepts:** PEEK ahead, blocking movement
 
-#### Unit 4: Target Detection
-**Concepts:** Win condition checking
+#### Unit 4: Box Detection
+**Concepts:** Detecting boxes, preparing for push
 
-### Phase 2: Levels (Units 5-8)
+### Phase 2: Pushing (Units 5-8)
 
-#### Unit 5: Multiple Levels
-**Concepts:** Level data array, level loading
+#### Unit 5: Push Mechanics
+**Concepts:** Check two cells ahead, move box
 
-#### Unit 6: Level Progression
-**Concepts:** Next level, completion
+#### Unit 6: Target Tiles
+**Concepts:** Boxes on targets, visual feedback
 
-#### Unit 7: Level Select
-**Concepts:** Menu system, level choice
+#### Unit 7: Win Detection
+**Concepts:** All boxes on targets
 
-#### Unit 8: Level Design
-**Concepts:** Creating good puzzles
-
-### Phase 3: Features (Units 9-12)
-
-#### Unit 9: Move Counter
+#### Unit 8: Move Counter
 **Concepts:** Counting, display
 
-#### Unit 10: Undo System
-**Concepts:** State history, array stack
+### Phase 3: Levels (Units 9-12)
 
-#### Unit 11: Restart Level
-**Concepts:** State reset, original data
+#### Unit 9: Multiple Levels
+**Concepts:** Level data array, level loading
+
+#### Unit 10: Level Select
+**Concepts:** Menu, choosing levels
+
+#### Unit 11: Level Complete
+**Concepts:** Transition, next level
 
 #### Unit 12: Best Scores
-**Concepts:** Tracking best moves per level
+**Concepts:** Tracking fewest moves per level
 
 ### Phase 4: Polish (Units 13-16)
 
 #### Unit 13: Graphics
-**Concepts:** Custom characters, colors
+**Concepts:** Custom characters for tiles
 
 #### Unit 14: Sound
-**Concepts:** SOUND command, feedback
+**Concepts:** POKE to SID for feedback
 
 #### Unit 15: Title Screen
 **Concepts:** Menu, instructions
@@ -85,28 +84,65 @@ Sokoban-style puzzle game. Push blocks onto targets. **Capstone project** combin
 ## Push Mechanics
 
 ```basic
-100 REM CHECK PUSH
-110 NX = PX + DX: NY = PY + DY: REM NEXT CELL
-120 IF LEVEL(NX,NY) = WALL THEN RETURN
-130 IF LEVEL(NX,NY) = BOX THEN GOSUB 500: REM TRY PUSH
-140 IF CANMOVE THEN PX = NX: PY = NY
+100 REM GET DIRECTION
+110 J=PEEK(56320)
+120 DX=0: DY=0
+130 IF (J AND 1)=0 THEN DY=-1: REM UP
+140 IF (J AND 2)=0 THEN DY=1: REM DOWN
+150 IF (J AND 4)=0 THEN DX=-1: REM LEFT
+160 IF (J AND 8)=0 THEN DX=1: REM RIGHT
 
-500 REM PUSH BOX
-510 BX = NX + DX: BY = NY + DY
-520 IF LEVEL(BX,BY) <> EMPTY THEN CANMOVE = 0: RETURN
-530 LEVEL(BX,BY) = BOX
-540 LEVEL(NX,NY) = EMPTY
-550 CANMOVE = 1
-560 RETURN
+200 REM CHECK NEXT CELL
+210 NX=PX+DX: NY=PY+DY
+220 NC=PEEK(1024+NY*40+NX)
+230 IF NC=87 THEN RETURN: REM WALL - CAN'T MOVE
+240 IF NC<>66 THEN 400: REM NOT BOX - JUST MOVE
+
+300 REM BOX - CHECK IF CAN PUSH
+310 BX=NX+DX: BY=NY+DY
+320 BC=PEEK(1024+BY*40+BX)
+330 IF BC=87 OR BC=66 THEN RETURN: REM CAN'T PUSH
+340 REM PUSH THE BOX
+350 POKE 1024+BY*40+BX,66: REM BOX TO NEW POSITION
+360 POKE 1024+NY*40+NX,32: REM CLEAR OLD BOX POSITION
+
+400 REM MOVE PLAYER
+410 POKE 1024+PY*40+PX,32: REM CLEAR OLD
+420 PX=NX: PY=NY
+430 POKE 1024+PY*40+PX,64: REM DRAW PLAYER
 ```
+
+### Win Detection
+
+```basic
+500 REM CHECK IF ALL TARGETS HAVE BOXES
+510 WIN=1
+520 FOR I=1 TO NT
+530   TX=TX(I): TY=TY(I)
+540   IF PEEK(1024+TY*40+TX)<>66 THEN WIN=0
+550 NEXT I
+560 IF WIN=1 THEN GOSUB 800: REM LEVEL COMPLETE
+```
+
+---
+
+## Why Sokoban is Perfect for C64 BASIC
+
+| Reason | Benefit |
+|--------|---------|
+| **Turn-based** | No speed issues |
+| **Character-based** | Perfect fit for PETSCII |
+| **Logic-focused** | Gameplay over graphics |
+| **Expandable** | Easy to add levels |
+| **Classic** | Real game with real challenge |
 
 ---
 
 ## Skills Learned
 
 - Complex game state
-- Undo/history systems
-- Puzzle design
+- Two-cell-ahead checking
+- Win condition logic
 - Level data management
-- Menu systems
+- Undo/history systems
 - All previous skills combined
