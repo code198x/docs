@@ -4,7 +4,7 @@
 **Language:** 6502 Assembly (no BASIC gateway)
 **Killer Feature:** PPU (Picture Processing Unit) - tile-based graphics mastery
 **Games:** 16
-**Total Units:** 2,816
+**Total Units:** 2,944
 
 ---
 
@@ -390,18 +390,39 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ---
 
 #### Game 14: Tarmac Terror
-**Units:** 128 (8 phases)
-**Concept:** Pseudo-3D racing. Road rushing toward you, dodge traffic, survive the terror of the tarmac.
+**Units:** 256 (16 phases)
+**Concept:** Outrun-style racing with road rushing toward you. Dodge traffic, navigate curves, survive the terror of the tarmac. Master perspective mathematics and sprite scaling on NES hardware.
 
 **Skills taught:**
-- Pseudo-3D road rendering
-- Sprite scaling simulation
-- Speed variation (accelerate, brake)
-- Obstacle spawning
-- Collision at speed
-- Road curves and hills
-- Distance-based scoring
-- Split-screen two-player
+- Pseudo-3D road rendering (perspective mathematics)
+- Road width calculation per scanline
+- Horizon line and ground plane
+- Road stripes with animation
+- Road curves (left and right offset)
+- Road hills (uphill and downhill)
+- Combined curve + hill rendering
+- Sprite scaling simulation (pre-scaled sprites)
+- Billboard objects (trees, signs, buildings)
+- Player car with steering lean frames
+- Acceleration, braking, and speed limits
+- Gear system with shifting
+- Curve physics (centrifugal force)
+- Off-road penalty and crash detection
+- Traffic system with multiple car types
+- Traffic collision and crash sequence
+- Checkpoint time extension
+- 5 themed tracks (Coastal, City, Desert, Forest, Mountain)
+- Branching path route selection
+- Championship mode with points
+- Time trial with ghost replay
+- **Split-screen two-player mode**
+- **Sprite 0 for screen split**
+- APU engine sound synthesis
+- Full APU music
+
+**Why expanded:** Pseudo-3D racing with perspective mathematics, curves, hills, traffic, 5 tracks, AND split-screen multiplayer requires 256 units for NES implementation.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-tarmac-terror.md`
 
 ---
 
@@ -580,6 +601,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.16 (2026-01-18):** Expanded Game 14 (Tarmac Terror) to 256 units with Outrun-style pseudo-3D racing. Total now 2,944 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Pavement Justice) to 256 units with Y-depth sorting and beat 'em up mechanics. Total now 2,816 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Iron Assault) to 256 units with run 'n' gun mastery. Total now 2,688 units.
 - **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.

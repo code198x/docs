@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 2,816
+**Total Units:** 2,944
 
 ---
 
@@ -383,24 +383,35 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 14: Strafe
-**Units:** 128 (8 phases)
-**Concept:** Full vertical scrolling shooter. 1942-style planes, formations, weapons, bosses. 7+ stages.
+**Units:** 256 (16 phases)
+**Concept:** 1942-style vertical shooter with plane formations, bullet patterns, weapon upgrades, and epic boss battles. 7 stages of intense aerial combat with 128K AY sound support.
 
 **Skills taught:**
-- Vertical scrolling (optimised)
-- Formation enemy patterns
-- Bullet hell patterns
-- Power-up collection and weapon variety
-- Boss encounters (multi-phase)
-- Score chaining mechanics
-- Multiple ship types
-- **128K detection and AY sound**
+- Vertical software scrolling (optimised)
+- Formation enemy patterns (V, line, circle, spiral)
+- Bullet pattern systems (aimed, spread, fan, ring, spiral)
+- Multiple weapon types with 3 upgrade levels
+- Charge shot mechanics
+- Homing missiles and bombs
+- Smart bomb (screen clear)
+- Ground targets (tanks, turrets, SAM sites, buildings, convoys)
+- Air enemies (Fighter, Bomber, Gunship, Kamikaze)
+- 7 complete stages (Pacific, Island, Carrier, Mainland, Mountains, Enemy Base, Final Assault)
+- Multi-phase boss encounters with weak points
+- Final boss with 3 phases
+- Rank system (adaptive difficulty)
+- Score chains and grazing bonus
+- Multiple ship types with different stats
+- **128K detection and AY-3-8912 sound**
 - **Bank switching basics**
 - Two-player simultaneous mode
+- Versus mode
+- Second loop with true ending
+- 48K and 128K versions
 
-**Why 128 units:** Full shooter with 7 stages, multiple weapons, bosses, and 128K support.
+**Why expanded:** A full 1942-style shmup with 7 stages, bullet patterns, ground/air targets, bosses, AND 128K audio requires 256 units for complete implementation.
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-14-strafe.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-strafe.md`
 
 ---
 
@@ -573,6 +584,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.16 (2026-01-18):** Expanded Game 14 (Strafe) to 256 units with 1942-style vertical shooting and 128K AY support. Total now 2,944 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Knuckle Brawl) to 256 units with Y-depth sorting and combo systems. Total now 2,816 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Recoil) to 256 units with run 'n' gun mastery. Total now 2,688 units.
 - **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.
