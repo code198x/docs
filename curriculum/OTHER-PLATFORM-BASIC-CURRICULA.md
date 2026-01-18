@@ -164,56 +164,120 @@ Students can **mix BASIC and assembly** naturally.
 
 | Aspect | Details |
 |--------|---------|
-| **Language** | Sinclair BASIC |
+| **Language** | Sinclair BASIC (+ Beta BASIC optional) |
 | **Platform** | ZX Spectrum |
-| **Games** | 4-8 (gateway track) |
+| **Games** | 8 |
 | **Prerequisite** | None |
 | **Purpose** | Gateway to Z80 assembly |
 
-### Why Spectrum BASIC?
+### Why Spectrum BASIC Deserves 8 Games
+
+| Reason | Notes |
+|--------|-------|
+| **Historical importance** | THE UK home computer |
+| **Massive type-in culture** | Sinclair Programs, magazines full of BASIC |
+| **Capable built-in commands** | PLOT, DRAW, CIRCLE, attributes |
+| **Text adventure heritage** | Perfect for the genre |
+| **Parity with C64** | Same gateway importance |
+| **Faster than C64 BASIC** | Reasonably performant |
+
+### Sinclair BASIC Features
 
 | Strength | Notes |
 |----------|-------|
 | **Graphics commands** | PLOT, DRAW, CIRCLE built-in |
 | **Attribute system** | INK, PAPER, BRIGHT, FLASH |
 | **Reasonable speed** | Faster than C64 BASIC |
-| **Huge library** | Many type-in games |
+| **Huge library** | Hundreds of type-in games |
+| **UDGs** | User Defined Graphics for sprites |
 
 | Limitation | Notes |
 |------------|-------|
 | **No procedures** | Subroutines only (GOSUB) |
 | **Limited sound** | BEEP command only |
-| **Attribute clash** | Colour limitations |
+| **Attribute clash** | Colour limitations (but teachable!) |
 
-### Potential Game Sequence (4 games)
+### Game Sequence (8 games)
 
 #### Game 1: Number Guess
 **"Think of a Number"**
 
-| Concepts | Basic I/O, conditionals |
-|----------|------------------------|
-| **Skills** | INPUT, PRINT, IF/THEN |
+| Aspect | Details |
+|--------|---------|
+| **Units** | 8 |
+| **Concepts** | Variables, input, conditionals, loops |
+| **Skills** | INPUT, PRINT, IF/THEN, RND |
 
-#### Game 2: Maze Game
+#### Game 2: Text Adventure
+**"The Cursed Manor"**
+
+| Aspect | Details |
+|--------|---------|
+| **Units** | 8 |
+| **Concepts** | Strings, arrays, DATA, parsing |
+| **Skills** | String handling, room structure |
+
+Text adventures were HUGE on Spectrum - this is historically authentic.
+
+#### Game 3: Maze Game
 **"Lost in the Labyrinth"**
 
-| Concepts | Movement, screen drawing |
-|----------|-------------------------|
-| **Skills** | PLOT, DRAW, INKEY$ |
+| Aspect | Details |
+|--------|---------|
+| **Units** | 8 |
+| **Concepts** | Movement, screen drawing, collision |
+| **Skills** | PLOT, DRAW, INKEY$, ATTR |
 
-#### Game 3: Breakout
+#### Game 4: Breakout
 **"Block Breaker"**
 
-| Concepts | Movement, collision |
-|----------|---------------------|
-| **Skills** | Animation, ATTR |
+| Aspect | Details |
+|--------|---------|
+| **Units** | 8 |
+| **Concepts** | Physics, arrays, animation |
+| **Skills** | Ball movement, brick arrays |
 
-#### Game 4: Space Shooter
+#### Game 5: Snake
+**"Spectrum Serpent"**
+
+| Aspect | Details |
+|--------|---------|
+| **Units** | 8 |
+| **Concepts** | Growth, collision, speed |
+| **Skills** | PRINT AT, screen reading |
+
+#### Game 6: Space Shooter
 **"Starfire"**
 
-| Concepts | Sprites (UDGs), shooting |
-|----------|-------------------------|
-| **Skills** | User-defined graphics |
+| Aspect | Details |
+|--------|---------|
+| **Units** | 8 |
+| **Concepts** | UDGs, shooting, waves |
+| **Skills** | User-defined graphics, collision |
+
+**UDG Introduction:** This game teaches custom character graphics.
+
+#### Game 7: Platform Game
+**"Miner Mick"**
+
+| Aspect | Details |
+|--------|---------|
+| **Units** | 8 |
+| **Concepts** | Gravity, platforms, collectibles |
+| **Skills** | Physics, level design |
+
+Homage to Manic Miner - which defined Spectrum gaming.
+
+#### Game 8: Puzzle Adventure
+**"The Crystal Quest"**
+
+| Aspect | Details |
+|--------|---------|
+| **Units** | 8 |
+| **Concepts** | Inventory, puzzles, multiple screens |
+| **Skills** | State management, complex logic |
+
+**Capstone:** Combines everything - text, graphics, logic, state.
 
 ### Spectrum BASIC Code Example
 
@@ -391,6 +455,7 @@ MSX has hardware sprites accessible from BASIC:
 | Platform | Language | Games | Priority |
 |----------|----------|-------|----------|
 | **C64** | BASIC + Simons' | 8 | High (gateway) |
+| **Spectrum** | Sinclair BASIC | 8 | High (UK heritage) |
 | **Amiga** | AMOS | 8 | High |
 | **Amiga** | Blitz Basic | 8 | High |
 | **BBC Micro** | BBC BASIC | 8-16 | High (best BASIC) |
@@ -399,10 +464,10 @@ MSX has hardware sprites accessible from BASIC:
 
 | Platform | Language | Games | Priority |
 |----------|----------|-------|----------|
-| **Spectrum** | Sinclair BASIC | 4 | Medium |
-| **Amstrad CPC** | Locomotive BASIC | 4 | Medium |
+| **Spectrum** | Sinclair BASIC | 8 | High |
+| **Amstrad CPC** | Locomotive BASIC | 4-8 | Medium |
 | **Atari ST** | STOS | 8 | Medium |
-| **MSX** | MSX-BASIC | 4 | Medium |
+| **MSX** | MSX-BASIC | 4-8 | Medium |
 
 ### BASIC Quality Ranking
 
