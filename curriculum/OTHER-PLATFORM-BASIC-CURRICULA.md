@@ -454,7 +454,7 @@ MSX has hardware sprites accessible from BASIC:
 
 | Platform | Language | Games | Priority |
 |----------|----------|-------|----------|
-| **C64** | BASIC + Simons' | 8 | High (gateway) |
+| **C64** | Stock BASIC V2 | 8 | High (gateway) |
 | **Spectrum** | Sinclair BASIC | 8 | High (UK heritage) |
 | **Amiga** | AMOS | 8 | High |
 | **Amiga** | Blitz Basic | 8 | High |
@@ -476,7 +476,7 @@ MSX has hardware sprites accessible from BASIC:
 | **Excellent** | BBC BASIC, AMOS, Blitz Basic |
 | **Good** | STOS, Locomotive BASIC, Turbo-BASIC XL |
 | **Adequate** | Sinclair BASIC, MSX-BASIC |
-| **Poor** | C64 BASIC V2 (needs extension), AmigaBASIC |
+| **Poor** | C64 BASIC V2, AmigaBASIC |
 
 ---
 
