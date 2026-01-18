@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 2,816
+**Total Units:** 2,944
 
 ---
 
@@ -356,22 +356,31 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 14: Isometric Quest
-**Units:** 128 (8 phases)
-**Concept:** Isometric adventure game. Explore a 3D-perspective world, solve puzzles, complete quests.
+**Units:** 256 (16 phases)
+**Concept:** Knight Lore-style isometric adventure with exploration, puzzles, and combat. Master isometric projection mathematics, depth sorting, and the prestige technique that defined a generation of games.
 
 **Skills taught:**
 - Isometric projection mathematics
 - World-to-screen coordinate conversion
 - Depth sorting (painter's algorithm)
 - Isometric collision detection
-- A* pathfinding in isometric space
-- Z-height handling (elevated terrain)
-- Large world with 64+ screens
-- Full adventure game systems
+- Z-height handling (elevated terrain, stairs)
+- Push block puzzles
+- Pressure plates and triggers
+- Doors and gates with key types
+- Combat system with multiple enemies (slime, skeleton, ghost)
+- 5 zones with unique themes (Castle Entrance, Dungeon, Tower, Crypt, Throne)
+- Boss encounters per zone
+- Multi-phase final boss
+- Inventory and equipment system
+- Magic items and potions
+- Save/password system
+- Full SID audio (music and effects)
+- Good/Best ending based on completion
 
-**Why 128 units:** Isometric is a completely different paradigm requiring new mathematics, rendering, and collision approaches.
+**Why expanded:** Isometric is a completely different paradigm requiring new mathematics, rendering, and collision approaches. A full Knight Lore-style adventure with 5 zones, puzzles, combat, AND inventory requires 256 units.
 
-**Detailed outline:** `/docs/plans/commodore-64/game-14-isometric-quest.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-isometric-quest.md`
 
 ---
 
@@ -493,6 +502,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.16 (2026-01-18):** Expanded Game 14 (Isometric Quest) to 256 units with Knight Lore-style isometric adventure. Total now 2,944 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Parallax Patrol) to 256 units with multi-layer parallax and option drones. Total now 2,816 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Arena Fighter) to 256 units with fighting game mastery. Total now 2,688 units.
 - **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.

@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 3,584 (3,200 OCS/ECS + 384 AGA)
+**Total Units:** 3,712 (3,328 OCS/ECS + 384 AGA)
 
 ---
 
@@ -409,18 +409,36 @@ The expanded structure allows thorough coverage of:
 ---
 
 #### Game 14: Fortress
-**Units:** 128 (8 phases)
-**Concept:** Isometric action-adventure. 3D projection with exploration and puzzles.
+**Units:** 256 (16 phases)
+**Concept:** Knight Lore/Cadaver-style isometric adventure with exploration, puzzles, combat, and Amiga-quality audiovisuals. Master isometric projection and depth sorting with the Blitter.
 
 **Skills taught:**
-- Isometric projection maths
-- 3D coordinate systems
+- Isometric projection mathematics
+- World-to-screen coordinate conversion
 - Depth sorting (painter's algorithm)
-- Isometric collision detection
-- Block puzzle mechanics
-- Equipment and inventory
-- Multiple zones
-- Boss encounters
+- Blitter-based isometric tile rendering
+- Z-height collision detection
+- Push block puzzles
+- Pressure plates and triggers
+- Doors and gates with key types
+- Combat system (sword, shield, magic)
+- Multiple enemy types (Skeleton, Ghost, Knight)
+- 5 zones with unique themes (Entrance, Dungeons, Tower, Crypt, Throne)
+- Copper colour effects per zone
+- Boss encounters per zone
+- Multi-phase final boss
+- Inventory and equipment system
+- Magic system (Fireball, Shield, Teleport)
+- Mana system
+- Save system with disk support
+- MOD music with Paula sound effects
+- Good/Best ending based on completion
+- New Game+ mode
+- AGA enhanced version
+
+**Why expanded:** A full Knight Lore-style adventure with isometric projection, 5 zones, puzzles, combat, magic, AND Blitter rendering requires 256 units for Amiga implementation.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-fortress.md`
 
 ---
 
@@ -688,6 +706,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.16 (2026-01-18):** Expanded Game 14 (Fortress) to 256 units with Blitter-based isometric adventure. OCS/ECS total now 3,328 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Onslaught) to 256 units with bullet patterns and rank system. OCS/ECS total now 3,200 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Highway) to 256 units with pseudo-3D racing and Copper road rendering. OCS/ECS total now 3,072 units.
 - **3.13 (2026-01-18):** Expanded Game 11 (Brawler) to 256 units with Y-depth sorting. OCS/ECS total now 2,944 units.
