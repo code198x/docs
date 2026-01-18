@@ -538,7 +538,7 @@ BBC BASIC excelled at this with its built-in assembler.
 
 | Platform | Track | Games | Notes |
 |----------|-------|-------|-------|
-| **C64** | BASIC Gateway | 8 | With Simons' BASIC |
+| **C64** | BASIC Gateway | 8 | Stock BASIC V2 + PEEK/POKE |
 | **Amiga** | AMOS Track | 8 | Full game development |
 | **Amiga** | Blitz Track | 8 | More advanced |
 | **BBC Micro** | BBC BASIC | 8-16 | Full curriculum possible |
