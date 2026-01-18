@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 2,944 (2,560 OCS/ECS + 384 AGA)
+**Total Units:** 3,072 (2,688 OCS/ECS + 384 AGA)
 
 ---
 
@@ -251,24 +251,35 @@ The expanded structure allows thorough coverage of:
 
 ---
 
-### Advanced Games (128 Units Each)
+### Advanced Games
 
 #### Game 9: Parallax
-**Units:** 128 (8 phases)
-**Concept:** Horizontal parallax shooter - the quintessential Amiga showcase.
+**Units:** 256 (16 phases)
+**Concept:** THE quintessential Amiga showcase. Multi-layer parallax scrolling with dual playfield mode, advanced Copper effects, and epic shooter gameplay. Master the techniques that made Shadow of the Beast famous.
 
 **Skills taught:**
-- Dual playfield mode
-- Multiple scroll layers at different speeds
-- Copper palette cycling
-- Hardware scrolling with Blitter updates
-- Enemy patterns in scrolling world
-- Terrain collision
-- Power-up system
-- Boss encounters
-- Paula MOD replay basics
+- Dual playfield mode (DBLPF in BPLCON0)
+- Multi-layer parallax (4+ speed layers)
+- Bitplane DMA timing mastery
+- Hardware scroll registers (BPLCON1)
+- Copper list programming for per-line effects
+- Raster bars and colour cycling
+- Blitter buffer management for scroll
+- Water reflections and sky gradients
+- Vertical parallax for height variation
+- Player and enemies in parallax world
+- Complex bullet patterns
+- Five complete levels with unique visuals
+- Five epic multi-phase boss battles
+- Weapon upgrade system with options
+- Paula MOD replay integration
+- Multiple game modes
+- A1200 AGA enhanced version
+- Performance profiling for 50fps
 
-**Why expanded:** Dual playfield and parallax scrolling require deep understanding of bitplane DMA timing.
+**Why expanded:** Dual playfield with true multi-layer parallax is the Amiga's signature technique. Shadow of the Beast defined the platform with these effects. 256 units allows complete mastery of DMA timing, Copper programming, and visual showcase.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-parallax.md`
 
 ---
 
@@ -618,6 +629,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.11 (2026-01-18):** Expanded Game 9 (Parallax) to 256 units with dual playfield mastery and multi-layer parallax. OCS/ECS total now 2,688 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Tetrad) to 128 units with Blitter line clearing, T-spins, and competitive multiplayer. OCS/ECS total now 2,560 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Venom) to 128 units with ring buffer, two-player split-screen, and theme system. OCS/ECS total now 2,496 units.
 - **3.8 (2026-01-18):** Expanded Game 6 (Gobble) to 128 units with four ghost AI personalities. OCS/ECS total now 2,432 units.

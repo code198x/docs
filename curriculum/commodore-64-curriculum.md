@@ -222,19 +222,29 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 9: Sprite Storm
-**Units:** 64 (4 phases)
-**Concept:** Multi-sprite action game. More enemies than the hardware allows - enter multiplexing.
+**Units:** 256 (16 phases)
+**Concept:** Arena shooter displaying 24-32 sprites using THE defining C64 technique: sprite multiplexing. Master raster interrupt timing, Y-sorted sprite allocation, and cycle-exact code to overcome the 8-sprite hardware limit.
 
 **Skills taught:**
-- Sprite multiplexing (16-32 sprites)
-- Sorted sprite lists
-- Raster interrupt timing
-- Sprite priority and overlap
-- Performance optimisation
-- Arena shooter gameplay
-- Wave-based enemy spawning
+- Sprite multiplexing (8→32 sprites)
+- Y-sorted sprite lists with bucket sort
+- Raster interrupt timing and chaining
+- Double IRQ for stable raster
+- Cycle-exact timing and badline awareness
+- Self-modifying IRQ handlers
+- Flicker management and priority systems
+- Sprite crunch bug avoidance
+- Arena shooter with wave-based spawning
+- Multi-sprite composite bosses
+- Multiple enemy AI types
+- Weapon upgrade systems
+- Two-player co-op and versus modes
+- SID music during heavy IRQ load
+- Performance profiling and optimisation
 
-**Detailed outline:** `/docs/plans/commodore-64/game-09-sprite-storm.md`
+**Why expanded:** Sprite multiplexing is THE advanced C64 technique. Games like Katakis, Turrican, and Armalyte relied on it. 256 units allows mastery of raster timing, sorted allocation, and flicker-free display.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-sprite-storm.md`
 
 ---
 
@@ -457,6 +467,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.11 (2026-01-18):** Expanded Game 9 (Sprite Storm) to 256 units with sprite multiplexing mastery. Total now 2,240 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Night Raid) to 128 units with Scramble-style gameplay, boss battles, and power-ups. Total now 2,048 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Scroll Runner) to 128 units with VIC-II hardware scrolling, double buffering, and parallax. Total now 1,984 units.
 - **3.8 (2026-01-18):** Expanded Game 6 (SID Symphony) to 128 units with deep SID exploration and rhythm gameplay. Total now 1,920 units.

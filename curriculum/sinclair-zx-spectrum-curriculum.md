@@ -239,22 +239,30 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 9: Blitz
-**Units:** 64 (4 phases)
-**Concept:** Side-scrolling shooter. Horizontal scroll, shoot enemies, navigate terrain.
+**Units:** 256 (16 phases)
+**Concept:** Side-scrolling shooter on hardware with NO scroll support. Master THE hardest Spectrum technique: software pixel scrolling. Shift every byte, manage contended memory timing, and build a complete R-Type style shooter.
 
 **Skills taught:**
-- Software horizontal scrolling
-- Tile map level data
-- Player in scrolling playfield
-- Terrain collision
-- Enemies tied to scroll position
-- Multiple stage sections
-- Optimised screen shifting
-- Background/foreground layers
+- Software horizontal scrolling (character and pixel-level)
+- Stack-based scroll tricks for maximum speed
+- Unrolled and self-modifying scroll routines
+- Contended memory timing management
+- Attribute clash handling during scroll
+- Tile map level streaming
+- Parallax pseudo-layers via colour tricks
+- Player and enemies in scrolling playfield
+- Complex bullet patterns and enemy AI
+- Five complete levels with distinct themes
+- Five epic boss battles
+- Weapon upgrade system with multiple types
+- 128K AY sound enhancements
+- Multiple game modes (Normal, Boss Rush, Endless)
+- Two-player alternating mode
+- Comprehensive optimisation techniques
 
-**Why here:** The Spectrum has no hardware scrolling - this is all software, shifting bytes. A fundamental skill for larger games.
+**Why expanded:** Software scrolling is THE hardest Spectrum technique. Games like R-Type achieved legendary status for smooth scrolling on hardware with no scroll support. 256 units allows mastery of this platform-defining challenge.
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-09-blitz.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-blitz.md`
 
 ---
 
@@ -536,6 +544,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.11 (2026-01-18):** Expanded Game 9 (Blitz) to 256 units with software scrolling mastery. Total now 2,240 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Stack) to 128 units with T-spins, competitive multiplayer, and modern puzzle features. Total now 2,048 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Slither) to 128 units with ring buffer data structure and AI opponent. Total now 1,984 units.
 - **3.8 (2026-01-18):** Expanded Game 6 (Chomp) to 128 units with four distinct ghost AI personalities. Total now 1,920 units.

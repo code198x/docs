@@ -241,16 +241,31 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ---
 
 #### Game 9: Ion Trail
-**Units:** 64 (4 phases)
-**Concept:** Side-scrolling shooter. Gradius territory - horizontal scroll, shoot enemies, navigate terrain. Leave a trail of ions in your wake.
+**Units:** 256 (16 phases)
+**Concept:** Definitive NES horizontal shooter in Gradius style. Power-up progression system, trailing options, multiple weapon types, and epic boss encounters. Master the shmup genre on Nintendo's hardware.
 
 **Skills taught:**
-- Horizontal scrolling for shooting game
-- Player in scrolling playfield
-- Projectiles in scrolling world
-- Enemy waves and patterns
-- Terrain collision
-- Power-ups and weapon upgrades
+- Horizontal scrolling for shooters
+- Gradius-style power meter system
+- Option drone following algorithm (position history buffer)
+- Multiple weapon types with upgrade levels
+- Charge shot mechanics
+- Complex enemy AI and formations
+- Bullet pattern design (danmaku lite)
+- Five complete stages with unique themes
+- Five epic multi-phase boss battles
+- Rank system (adaptive difficulty)
+- Sprite management for high bullet counts
+- Sprite 0 split for fixed HUD
+- APU sound effects and music
+- Multiple game modes (Normal, Boss Rush, Score Attack)
+- Two-player co-op mode
+- Second loop with true ending
+- Battery save for high scores
+
+**Why expanded:** A full Gradius-style shmup with options, weapon levels, and complex bosses requires deep coverage. The power-up system alone is a significant undertaking. 256 units allows a complete, polished shooter.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-ion-trail.md`
 
 ---
 
@@ -513,6 +528,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.11 (2026-01-18):** Expanded Game 9 (Ion Trail) to 256 units with Gradius-style power system and options. Total now 2,240 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Pixel Plains) to 128 units with NES scrolling, world map, and boss battles. Total now 2,048 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Gridlock) to 128 units with rotation matrices, multiple modes, and two-player versus. Total now 1,984 units.
 - **3.8 (2026-01-18):** Expanded Game 6 (Fangs for the Memory) to 128 units with ring buffer teaching. Total now 1,920 units.
