@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 2,560 (2,176 OCS/ECS + 384 AGA)
+**Total Units:** 2,624 (2,240 OCS/ECS + 384 AGA)
 
 ---
 
@@ -24,12 +24,12 @@ By the final game, learners will have skills matching professional Amiga develop
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter + timing) | 1-2 | 128 | 256 |
-| Foundation | 3-8 | 64 | 384 |
+| Foundation (shooter, timing, breakout) | 1-3 | 128 | 384 |
+| Foundation | 4-8 | 64 | 320 |
 | Advanced | 9-14 | 128 | 768 |
 | Expert | 15 | 256 | 256 |
 | Capstone | 16 | 512 | 512 |
-| **Total** | **16** | | **2,176** |
+| **Total** | **16** | | **2,240** |
 
 The expanded structure allows thorough coverage of:
 - Blitter operations (copy, fill, line draw, cookie-cut)
@@ -95,17 +95,25 @@ The expanded structure allows thorough coverage of:
 ---
 
 #### Game 3: Shatter Point
-**Units:** 64 (4 phases)
-**Concept:** Breakout clone with Copper gradients and sampled sound.
+**Units:** 128 (8 phases)
+**Concept:** Breakout clone polished to commercial quality. Paddle, ball, bricks - with Copper gradient backgrounds, sampled impacts, and Blitter-powered destruction.
 
 **Skills taught:**
-- Ball physics with fixed-point maths
-- Blitter fills for bricks
-- Copper gradient backgrounds
-- Paula sample playback
-- Brick destruction with Blitter clear
-- Power-up system
-- Smooth animation
+- Ball physics with 16.16 fixed-point maths
+- Blitter fills for brick rendering and destruction
+- Copper gradient backgrounds (dynamic sky effects)
+- Paula sample playback for varied impacts
+- Paddle angle control for ball direction
+- Multiple brick types (hard, unbreakable, explosive)
+- Power-up system (extend, multi-ball, laser, catch)
+- Multi-ball management
+- Level design variety (20 levels)
+- MOD music with SFX mixing
+- Full polish (high scores, difficulty options)
+
+**Why here:** After BOBs and sprites in Games 1-2, learners apply Blitter skills to physics-based gameplay and background manipulation.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-shatter-point.md`
 
 ---
 
@@ -551,6 +559,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.5 (2026-01-18):** Expanded Game 3 (Shatter Point) to 128 units with Blitter physics and power-ups. OCS/ECS total now 2,240 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Signal) to 128 units for full timing-game polish. OCS/ECS total now 2,176 units.
 - **3.3 (2026-01-18):** Restructured Game 1. Blast Zone (shooter) now first game at 128 units for immediate engagement, bootable from Unit 1. Signal moved to Game 2.
 - **3.2 (2026-01-07):** Added AGA enhancement games (384 units) for Games 9-16. Total now 2,432 units.

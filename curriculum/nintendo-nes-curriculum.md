@@ -4,7 +4,7 @@
 **Language:** 6502 Assembly (no BASIC gateway)
 **Killer Feature:** PPU (Picture Processing Unit) - tile-based graphics mastery
 **Games:** 16
-**Total Units:** 1,664
+**Total Units:** 1,728
 
 ---
 
@@ -22,11 +22,11 @@ By the final game, learners will have skills matching professional NES developer
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter + platformer) | 1-2 | 128 | 256 |
-| Foundation | 3-10 | 64 | 512 |
+| Foundation (shooter, platformer, breakout) | 1-3 | 128 | 384 |
+| Foundation | 4-10 | 64 | 448 |
 | Advanced | 11-15 | 128 | 640 |
 | Capstone | 16 | 256 | 256 |
-| **Total** | **16** | | **1,664** |
+| **Total** | **16** | | **1,728** |
 
 Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Games 1-2) or 16 phases (capstone), with each phase containing 16 units.
 
@@ -83,17 +83,24 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ---
 
 #### Game 3: Fracture Point
-**Units:** 64 (4 phases)
-**Concept:** Breakout clone. Paddle, ball, bricks. The tension builds to the breaking point.
+**Units:** 128 (8 phases)
+**Concept:** Breakout clone polished to commercial quality. Paddle, ball, bricks - with fixed-point physics, power-ups, and 20 varied levels. The tension builds to the fracture point.
 
 **Skills taught:**
-- Ball physics (velocity, angles)
-- Paddle control
-- Reflection/bounce mechanics
-- Brick destruction (updating background tiles)
-- APU sound design
-- Score and lives
-- Power-up bricks
+- Ball physics with fixed-point maths (smooth sub-pixel movement)
+- Background tile modification (bricks disappear from nametable)
+- Paddle angle control (hit position affects bounce)
+- Multiple brick types (hard, unbreakable, explosive)
+- Power-up system (extend, multi-ball, laser, catch)
+- APU sound design for impacts
+- Level design variety
+- Attribute table for brick colours
+- Score multipliers and combos
+- Full polish (20 levels, music, high scores)
+
+**Why here:** After sprites in Games 1-2, learners master dynamic backgrounds. Ball physics teaches fixed-point maths before applying it to more complex games.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-fracture-point.md`
 
 ---
 
@@ -446,6 +453,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.5 (2026-01-18):** Expanded Game 3 (Fracture Point) to 128 units with full breakout polish and power-ups. Total now 1,728 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Crate Escape) to 128 units for full platformer polish. Total now 1,664 units.
 - **3.3 (2026-01-18):** Reordered games per skill tree analysis. Removed Neon Nexus (redundant with Stellar Barrage). Crate Escape now Game 2. Added Arena Assault as Game 10 (foundation capstone). See `/docs/curriculum/SKILL-TREES.md`.
 - **3.2 (2026-01-18):** Restructured Game 1. Stellar Barrage (shooter) now first game at 128 units for immediate engagement. Total now 1,600 units.

@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 1,664
+**Total Units:** 1,728
 
 ---
 
@@ -21,12 +21,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-2 | 128 | 256 | Foundation games - shooter then platformer, full experience |
-| 3-10 | 64 | 512 | Foundation - core concepts |
+| 1-3 | 128 | 384 | Foundation games - shooter, platformer, maze - full experience |
+| 4-10 | 64 | 448 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, Turrican-style) |
 | 16 | 256 | 256 | Capstone - commercial quality with demo-scene techniques |
-| **Total** | | **1,664** | |
+| **Total** | | **1,728** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -80,20 +80,22 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 3: Maze Raider
-**Units:** 64 (4 phases)
-**Concept:** Pac-Man style maze chase. Navigate corridors, collect pellets, avoid enemies.
+**Units:** 128 (8 phases)
+**Concept:** Pac-Man style maze chase polished to commercial quality. Navigate corridors, collect pellets, avoid ghosts. Grab power pills to turn the tables.
 
 **Skills taught:**
-- Character graphics (custom character sets)
-- Tile-based maps (building on platformer skills)
-- Pathfinding AI (A* introduction)
-- Screen-based level data
-- Ghost AI behaviours (chase, scatter, frightened)
-- Level editor concepts
+- Custom character sets (redefining C64 characters)
+- Tile-based maps with colour RAM
+- Ghost AI personalities (Blinky, Pinky, Inky, Clyde behaviours)
+- Pathfinding introduction (intersection decision-making)
+- State machines (chase, scatter, frightened, eaten)
+- Level design for maze games
+- Bonus fruit and score multipliers
+- Full SID audio (waka-waka, sirens, music)
 
-**Why here:** Builds on tile collision from platforming, introduces AI pathfinding.
+**Why here:** After sprites in Games 1-2, learners master character graphics for tile-based worlds. Ghost AI introduces pathfinding - a fundamental skill for all future games.
 
-**Detailed outline:** `/docs/plans/commodore-64/game-03-maze-raider.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-maze-raider.md`
 
 ---
 
@@ -422,6 +424,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.5 (2026-01-18):** Expanded Game 3 (Maze Raider) to 128 units with ghost AI personalities and pathfinding. Total now 1,728 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Platform Panic) to 128 units for full polish. Total now 1,664 units.
 - **3.3 (2026-01-18):** Reordered games per skill tree analysis. Platform Panic now Game 2 (introduces gravity/tiles). SID Symphony moved to Game 6 (requires keyboard + timing skills). See `/docs/curriculum/SKILL-TREES.md`.
 - **3.2 (2026-01-18):** Restructured Game 1. Starfield (shooter) now first game at 128 units for immediate engagement. Total now 1,600 units.
