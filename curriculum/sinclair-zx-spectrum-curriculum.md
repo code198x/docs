@@ -60,25 +60,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 ---
 
-### Game 2: Ink War
-**Units:** 64 (4 phases)
-**Concept:** Territory control game where the attribute system *is* the gameplay. Player vs AI, taking turns to claim 8×8 attribute cells. Control the majority to win.
-
-**Skills taught:**
-- Deep attribute system mastery
-- Turn-based game loop
-- Game state management
-- Simple AI decision-making
-- Colour clash awareness
-- Strategic game design
-
-**Why here:** After Skyfire, learners understand attributes through action. Ink War lets them explore attributes as the central mechanic.
-
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-02-ink-war.md`
-
----
-
-### Game 3: Shatter
+### Game 2: Shatter
 **Units:** 64 (4 phases)
 **Concept:** Breakout clone with polish focus. Paddle, ball, bricks - with custom font, smooth animation, and audio feedback.
 
@@ -93,11 +75,13 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 - Power-up systems
 - Level progression
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-03-shatter.md`
+**Why here:** After shooting, ball physics introduces a different movement model. Sub-cell movement is a core Spectrum skill that pays off in every subsequent game.
+
+**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-02-shatter.md`
 
 ---
 
-### Game 4: Cavern
+### Game 3: Cavern
 **Units:** 64 (4 phases)
 **Concept:** Single-screen platformer in the Manic Miner tradition. Platforms, hazards, collectibles.
 
@@ -111,11 +95,13 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 - Air supply mechanic
 - Multiple levels
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-04-cavern.md`
+**Why here:** Builds on sub-cell movement from Shatter, applies physics to gravity instead of bouncing.
+
+**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-03-cavern.md`
 
 ---
 
-### Game 5: Chambers
+### Game 4: Chambers
 **Units:** 64 (4 phases)
 **Concept:** Flip-screen top-down exploration. Navigate rooms, collect items, avoid enemies. Atic Atac territory.
 
@@ -129,7 +115,27 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 - Multiple room types
 - Locked doors and key colours
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-05-chambers.md`
+**Why here:** Multi-room structure and state management prepare learners for more complex AI in following games.
+
+**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-04-chambers.md`
+
+---
+
+### Game 5: Ink War
+**Units:** 64 (4 phases)
+**Concept:** Territory control game where the attribute system *is* the gameplay. Player vs AI, taking turns to claim 8×8 attribute cells. Control the majority to win.
+
+**Skills taught:**
+- Deep attribute system mastery
+- Turn-based game loop (different paradigm)
+- Game state management
+- Strategic AI decision-making
+- Colour clash as gameplay element
+- Strategic game design
+
+**Why here:** After 4 action games, learners have solid fundamentals. Ink War is a change of pace that explores attributes deeply and introduces strategic AI - skills that benefit from experience.
+
+**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-05-ink-war.md`
 
 ---
 
@@ -485,7 +491,8 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
-- **3.2 (2026-01-18):** Restructured Game 1. Skyfire (shooter) now first game at 128 units for immediate engagement. Ink War moved to Game 2. Total now 1,600 units.
+- **3.3 (2026-01-18):** Reordered games per skill tree analysis. Shatter now Game 2 (sub-cell physics). Cavern now Game 3 (platforming). Ink War moved to Game 5 (requires strategic AI experience). See `/docs/curriculum/SKILL-TREES.md`.
+- **3.2 (2026-01-18):** Restructured Game 1. Skyfire (shooter) now first game at 128 units for immediate engagement. Total now 1,600 units.
 - **3.1 (2026-01-07):** Added optional enhancement versions section (128K and Next). Updated BASIC gateway reference to 512-unit curriculum.
 - **3.0 (2025-01-07):** Expanded to 1,536 units. Games 1-10 at 64 units, Games 11-15 at 128 units, Game 16 at 256 units. Added tape loading, 128K support, distribution skills.
 - **2.0 (2025-11-26):** Complete rewrite. Replaced phases/tiers/lessons with games model.
