@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 2,816 (2,432 OCS/ECS + 384 AGA)
+**Total Units:** 2,880 (2,496 OCS/ECS + 384 AGA)
 
 ---
 
@@ -24,12 +24,12 @@ By the final game, learners will have skills matching professional Amiga develop
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter, timing, breakout, platformer, exploration, maze) | 1-6 | 128 | 768 |
-| Foundation | 7-8 | 64 | 128 |
+| Foundation (shooter, timing, breakout, platformer, exploration, maze, snake) | 1-7 | 128 | 896 |
+| Foundation | 8 | 64 | 64 |
 | Advanced | 9-14 | 128 | 768 |
 | Expert | 15 | 256 | 256 |
 | Capstone | 16 | 512 | 512 |
-| **Total** | **16** | | **2,432** |
+| **Total** | **16** | | **2,496** |
 
 The expanded structure allows thorough coverage of:
 - Blitter operations (copy, fill, line draw, cookie-cut)
@@ -193,17 +193,30 @@ The expanded structure allows thorough coverage of:
 ---
 
 #### Game 7: Venom
-**Units:** 64 (4 phases)
-**Concept:** Snake game with ring buffer data structure.
+**Units:** 128 (8 phases)
+**Concept:** Classic snake game polished to commercial quality. Uses ring buffer for efficient body management and showcases Blitter segment rendering with Copper colour effects.
 
 **Skills taught:**
-- Ring buffer implementation
-- Grid-based movement
-- Self-collision detection
-- Blitter segment rendering
+- Ring buffer implementation in 68000
+- Grid-based movement system
+- Self-collision detection algorithms
+- Blitter-based segment rendering
 - Growth mechanics
-- Speed scaling
-- Multiple game modes
+- Speed scaling with difficulty progression
+- Multiple level packs with maze layouts
+- Moving obstacles and teleport portals
+- Power-up system (slow-down, ghost, score multiplier)
+- Two-player split-screen mode
+- AI opponent with difficulty levels
+- Theme system (Jungle, Tech, Desert)
+- Copper colour effects and gradients
+- Paula sound effects and module music
+- Achievement and statistics tracking
+- Demo/attract mode
+
+**Why here:** After maze navigation in Gobble, learners tackle a different grid-based challenge. The ring buffer is fundamental to game programming, and the Amiga's hardware makes segment rendering smooth and colourful.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-venom.md`
 
 ---
 
@@ -589,6 +602,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.9 (2026-01-18):** Expanded Game 7 (Venom) to 128 units with ring buffer, two-player split-screen, and theme system. OCS/ECS total now 2,496 units.
 - **3.8 (2026-01-18):** Expanded Game 6 (Gobble) to 128 units with four ghost AI personalities. OCS/ECS total now 2,432 units.
 - **3.7 (2026-01-18):** Expanded Game 5 (Crypt) to 128 units with full dungeon exploration. OCS/ECS total now 2,368 units.
 - **3.6 (2026-01-18):** Expanded Game 4 (Ascent) to 128 units with full platformer polish. OCS/ECS total now 2,304 units.

@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 1,920
+**Total Units:** 1,984
 
 ---
 
@@ -23,12 +23,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-6 | 128 | 768 | Foundation games - shooter, physics, platformer, exploration, strategy, maze |
-| 7-10 | 64 | 256 | Foundation - core concepts |
+| 1-7 | 128 | 896 | Foundation games - shooter, physics, platformer, exploration, strategy, maze, snake |
+| 8-10 | 64 | 192 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, epic action) |
 | 16 | 256 | 256 | Capstone - commercial quality |
-| **Total** | | **1,920** | |
+| **Total** | | **1,984** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -179,20 +179,30 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 7: Slither
-**Units:** 64 (4 phases)
-**Concept:** Snake game. Eat food, grow longer, don't hit yourself.
+**Units:** 128 (8 phases)
+**Concept:** Classic snake game polished to commercial quality. Eat food, grow longer, avoid hitting yourself or walls. Teaches the ring buffer data structure.
 
 **Skills taught:**
-- Grid-based movement
-- Growing entity management (linked list concepts)
-- Self-collision detection
-- Food spawning
-- Increasing difficulty through length
-- Tight game loop optimisation
-- Obstacle mazes
-- Speed progression
+- Ring buffer for body segment storage
+- Grid-based movement system
+- Self-collision detection algorithms
+- Growing entity management
+- Food spawning and placement validation
+- Speed progression with length
+- Multiple maze layouts
+- Level system with targets
+- Power-up system (slow-down, ghost, shrink)
+- Two-player alternating mode
+- AI opponent with difficulty levels
+- Wrap-around mode option
+- Theme system (visual variants)
+- Achievement and statistics tracking
+- Beeper sound effects and music
+- Demo/attract mode
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-07-slither.md`
+**Why here:** After maze navigation in Chomp, learners tackle a different grid-based challenge. The ring buffer is a fundamental data structure used throughout game and audio programming.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-slither.md`
 
 ---
 
@@ -512,6 +522,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.9 (2026-01-18):** Expanded Game 7 (Slither) to 128 units with ring buffer data structure and AI opponent. Total now 1,984 units.
 - **3.8 (2026-01-18):** Expanded Game 6 (Chomp) to 128 units with four distinct ghost AI personalities. Total now 1,920 units.
 - **3.7 (2026-01-18):** Expanded Game 5 (Ink War) to 128 units with minimax AI and strategy polish. Total now 1,856 units.
 - **3.6 (2026-01-18):** Expanded Game 4 (Chambers) to 128 units with full Atic Atac-style exploration. Total now 1,792 units.
