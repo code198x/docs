@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 1,728
+**Total Units:** 1,792
 
 ---
 
@@ -21,12 +21,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-3 | 128 | 384 | Foundation games - shooter, platformer, maze - full experience |
-| 4-10 | 64 | 448 | Foundation - core concepts |
+| 1-4 | 128 | 512 | Foundation games - shooter, platformer, maze, breakout - full experience |
+| 5-10 | 64 | 384 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, Turrican-style) |
 | 16 | 256 | 256 | Capstone - commercial quality with demo-scene techniques |
-| **Total** | | **1,728** | |
+| **Total** | | **1,792** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -100,20 +100,22 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 4: Brick Basher
-**Units:** 64 (4 phases)
-**Concept:** Breakout clone. Paddle, ball, bricks. Clear the screen.
+**Units:** 128 (8 phases)
+**Concept:** Breakout clone polished to commercial quality. Paddle, ball, bricks - with tight physics, satisfying destruction, and the SID chip making every bounce sing.
 
 **Skills taught:**
-- Ball physics (velocity vectors, reflection angles)
-- Paddle control
-- Brick grid collision
-- Power-up systems (multi-ball, laser, catch)
-- Increasing difficulty
-- Level design variety
+- Ball physics with fixed-point maths (velocity, reflection, spin)
+- Paddle collision with positional angle control
+- Character graphics for brick fields
+- Multiple brick types (hard, unbreakable, explosive)
+- Power-up systems (extend, multi-ball, laser, catch, slow)
+- SID audio design for satisfying impacts
+- 20 levels of varied brick patterns
+- High scores, difficulty options, two-player mode
 
-**Why here:** Physics refinement - angles, reflections, vectors. Different feel from gravity-based games.
+**Why here:** Physics refinement - angles, reflections, vectors. Different feel from gravity-based games. 128 units allows full polish.
 
-**Detailed outline:** `/docs/plans/commodore-64/game-04-brick-basher.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-brick-basher.md`
 
 ---
 
@@ -424,6 +426,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.6 (2026-01-18):** Expanded Game 4 (Brick Basher) to 128 units with full breakout polish. Total now 1,792 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Maze Raider) to 128 units with ghost AI personalities and pathfinding. Total now 1,728 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Platform Panic) to 128 units for full polish. Total now 1,664 units.
 - **3.3 (2026-01-18):** Reordered games per skill tree analysis. Platform Panic now Game 2 (introduces gravity/tiles). SID Symphony moved to Game 6 (requires keyboard + timing skills). See `/docs/curriculum/SKILL-TREES.md`.

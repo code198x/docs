@@ -4,7 +4,7 @@
 **Language:** 6502 Assembly (no BASIC gateway)
 **Killer Feature:** PPU (Picture Processing Unit) - tile-based graphics mastery
 **Games:** 16
-**Total Units:** 1,728
+**Total Units:** 1,792
 
 ---
 
@@ -22,11 +22,11 @@ By the final game, learners will have skills matching professional NES developer
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter, platformer, breakout) | 1-3 | 128 | 384 |
-| Foundation | 4-10 | 64 | 448 |
+| Foundation (shooter, platformer, breakout, maze) | 1-4 | 128 | 512 |
+| Foundation | 5-10 | 64 | 384 |
 | Advanced | 11-15 | 128 | 640 |
 | Capstone | 16 | 256 | 256 |
-| **Total** | **16** | | **1,728** |
+| **Total** | **16** | | **1,792** |
 
 Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Games 1-2) or 16 phases (capstone), with each phase containing 16 units.
 
@@ -105,17 +105,25 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ---
 
 #### Game 4: Pellet Panic
-**Units:** 64 (4 phases)
-**Concept:** Pac-Man style maze game. Collect pellets, avoid ghosts, power pills turn the tables. Frantic energy.
+**Units:** 128 (8 phases)
+**Concept:** Pac-Man style maze game polished to commercial quality. Collect all pellets, avoid ghosts, grab power pills to turn the tables. Frantic, panic-inducing energy with four distinct ghost personalities.
 
 **Skills taught:**
-- Tile-based maze structure
-- Constrained corridor movement
-- Enemy AI with personality
-- Power-ups that change game state
-- Wrap-around screen edges
+- Tile-based maze structure (background tiles)
+- Constrained corridor movement with smooth cornering
+- Ghost AI personalities (Blinky chase, Pinky ambush, Inky flank, Clyde random)
+- Chase/scatter mode switching on timers
+- Frightened mode with ghost-eating chains
+- Power-up state changes
+- Screen wrap-around tunnels
 - Speed and difficulty progression
-- Ghost scatter/chase modes
+- Bonus fruit per level
+- Full APU audio (waka-waka, siren, death)
+- High scores, demo mode, intermissions
+
+**Why here:** After physics games, AI personalities bring the maze to life. 128 units allows four distinct ghost behaviours.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-pellet-panic.md`
 
 ---
 
@@ -453,6 +461,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.6 (2026-01-18):** Expanded Game 4 (Pellet Panic) to 128 units with four distinct ghost AI personalities. Total now 1,792 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Fracture Point) to 128 units with full breakout polish and power-ups. Total now 1,728 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Crate Escape) to 128 units for full platformer polish. Total now 1,664 units.
 - **3.3 (2026-01-18):** Reordered games per skill tree analysis. Removed Neon Nexus (redundant with Stellar Barrage). Crate Escape now Game 2. Added Arena Assault as Game 10 (foundation capstone). See `/docs/curriculum/SKILL-TREES.md`.
