@@ -13,6 +13,7 @@
 | **Track** | BASIC |
 | **Platform** | Commodore 64 |
 | **Games** | 8 |
+| **Units per game** | 4, 8, or 16 (varies by complexity) |
 | **Prerequisite** | None |
 | **BASIC Version** | BASIC V2 + Simons' BASIC |
 | **Outcome** | Complete, playable games |
@@ -52,7 +53,7 @@ Stock C64 BASIC V2 is inadequate for games:
 
 | Aspect | Details |
 |--------|---------|
-| **Units** | 8 |
+| **Units** | 4 |
 | **Genre** | Number guessing |
 | **Concepts** | Variables, input, conditionals, loops |
 | **BASIC** | Stock BASIC V2 (no extension needed) |
@@ -78,7 +79,7 @@ Stock C64 BASIC V2 is inadequate for games:
 
 | Aspect | Details |
 |--------|---------|
-| **Units** | 8 |
+| **Units** | 16 |
 | **Genre** | Text adventure |
 | **Concepts** | Strings, arrays, data structures |
 | **BASIC** | Stock BASIC V2 |
@@ -235,7 +236,7 @@ Stock C64 BASIC V2 is inadequate for games:
 
 | Aspect | Details |
 |--------|---------|
-| **Units** | 8 |
+| **Units** | 16 |
 | **Genre** | Sokoban-style puzzle |
 | **Concepts** | Puzzle logic, undo, level design |
 | **BASIC** | Simons' BASIC |

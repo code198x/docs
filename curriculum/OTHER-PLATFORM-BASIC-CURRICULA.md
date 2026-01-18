@@ -204,7 +204,7 @@ Students can **mix BASIC and assembly** naturally.
 
 | Aspect | Details |
 |--------|---------|
-| **Units** | 8 |
+| **Units** | 4 |
 | **Concepts** | Variables, input, conditionals, loops |
 | **Skills** | INPUT, PRINT, IF/THEN, RND |
 
@@ -213,7 +213,7 @@ Students can **mix BASIC and assembly** naturally.
 
 | Aspect | Details |
 |--------|---------|
-| **Units** | 8 |
+| **Units** | 16 |
 | **Concepts** | Strings, arrays, DATA, parsing |
 | **Skills** | String handling, room structure |
 
@@ -273,7 +273,7 @@ Homage to Manic Miner - which defined Spectrum gaming.
 
 | Aspect | Details |
 |--------|---------|
-| **Units** | 8 |
+| **Units** | 16 |
 | **Concepts** | Inventory, puzzles, multiple screens |
 | **Skills** | State management, complex logic |
 
