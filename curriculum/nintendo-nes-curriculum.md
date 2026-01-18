@@ -4,7 +4,7 @@
 **Language:** 6502 Assembly (no BASIC gateway)
 **Killer Feature:** PPU (Picture Processing Unit) - tile-based graphics mastery
 **Games:** 16
-**Total Units:** 2,944
+**Total Units:** 3,328
 
 ---
 
@@ -23,10 +23,12 @@ By the final game, learners will have skills matching professional NES developer
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
 | Foundation (shooter, platformer, breakout, maze, exploration, snake, puzzle, scrolling) | 1-8 | 128 | 1,024 |
-| Foundation | 9-10 | 64 | 128 |
-| Advanced | 11-15 | 128 | 640 |
+| Intermediate | 9-10 | 256 | 512 |
+| Advanced | 11-13 | 256 | 768 |
+| Advanced | 14 | 256 | 256 |
+| Expert | 15 | 512 | 512 |
 | Capstone | 16 | 256 | 256 |
-| **Total** | **16** | | **2,048** |
+| **Total** | **16** | | **3,328** |
 
 Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Games 1-2) or 16 phases (capstone), with each phase containing 16 units.
 
@@ -427,19 +429,38 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ---
 
 #### Game 15: Echoes of Eponium
-**Units:** 128 (8 phases)
-**Concept:** Metroidvania. Connected world, ability-gating, backtracking, upgrades. Explore the mysterious ruins of Eponium, where echoes of the past guide your way.
+**Units:** 512 (32 phases)
+**Concept:** Full Metroidvania epic. Explore the mysterious ruins of Eponium across 5 interconnected regions, gaining abilities that unlock new areas. Connected world, ability-gating, backtracking, upgrades, and multiple endings. The ultimate NES exploration game.
 
 **Skills taught:**
-- Large connected world map
-- Non-linear progression
-- Ability-gating (new powers unlock new areas)
-- Backtracking and exploration
-- Player upgrades and progression
-- Save/password system
-- Boss encounters that grant abilities
-- World design and pacing
-- MMC3 mapper features
+- MMC3 mapper with IRQ scanline counter
+- Large connected world map (5 regions × 40+ rooms)
+- Non-linear progression with sequence breaking potential
+- Ability-gating design (8+ abilities unlock areas)
+- Movement abilities (wall jump, double jump, dash, morph)
+- Combat abilities (charge beam, missiles, bombs)
+- Backtracking and shortcuts
+- Region-specific visual themes (ruins, caves, water, fire, sky)
+- CHR bank switching for varied tilesets
+- Parallax scrolling with IRQ timing
+- Player progression system (health, energy, weapon upgrades)
+- Battery-backed save system (SRAM)
+- Multiple save slots
+- Boss encounters that grant abilities (8 major bosses)
+- Mini-bosses and optional challenges
+- Environmental hazards per region
+- Hidden items and expansions
+- Map system with fog of war
+- Percentage completion tracking
+- Multiple endings based on completion
+- Time attack and speedrun modes
+- Advanced APU music with region themes
+- DMC sample integration
+- World design and pacing for 8+ hours of content
+
+**Why 512 units:** Full Metroidvania requires extensive world building: 5 regions, 8+ abilities, ability-gating design, battery-backed saves, multiple endings, and careful pacing for non-linear exploration.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-echoes-of-eponium.md`
 
 ---
 
@@ -601,6 +622,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.17 (2026-01-18):** Expanded Game 15 (Echoes of Eponium) to 512 units with full Metroidvania, MMC3 mapper, and battery-backed saves. Total now 3,328 units.
 - **3.16 (2026-01-18):** Expanded Game 14 (Tarmac Terror) to 256 units with Outrun-style pseudo-3D racing. Total now 2,944 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Pavement Justice) to 256 units with Y-depth sorting and beat 'em up mechanics. Total now 2,816 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Iron Assault) to 256 units with run 'n' gun mastery. Total now 2,688 units.
