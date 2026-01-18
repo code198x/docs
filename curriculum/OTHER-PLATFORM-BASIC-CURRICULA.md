@@ -168,7 +168,7 @@ Students can **mix BASIC and assembly** naturally.
 | **Platform** | ZX Spectrum |
 | **Games** | 8 |
 | **Prerequisite** | None |
-| **Purpose** | Gateway to Z80 assembly |
+| **Purpose** | Complete game development curriculum |
 
 ### Why Spectrum BASIC Deserves 8 Games
 
@@ -482,34 +482,49 @@ MSX has hardware sprites accessible from BASIC:
 
 ## Part 7: Teaching Philosophy
 
-### Why BASIC First?
+### BASIC as Complete Curriculum
+
+BASIC tracks are **not** stepping stones to assembly - they are complete curricula in their own right.
+
+| Evidence | Details |
+|----------|---------|
+| **Worms** | Made in Blitz Basic - one of gaming's biggest franchises |
+| **Ultimate Soccer Manager** | Commercial AMOS release |
+| **Skidmarks** | Commercial Blitz Basic release |
+| **Countless BBC games** | Professional releases in BBC BASIC |
+| **Magazine libraries** | Thousands of playable BASIC games |
+
+### Why BASIC?
 
 | Reason | Benefit |
 |--------|---------|
 | **Immediate results** | Type and run |
-| **Focus on logic** | Not memory maps |
-| **Game design** | Concepts transfer |
-| **Confidence** | Success builds motivation |
+| **Focus on logic** | Game design, not hardware registers |
+| **Rapid iteration** | Quick testing cycle |
 | **Historical authenticity** | This is how people learned |
+| **Commercially proven** | Real games shipped in BASIC |
+| **Complete solution** | No need to "graduate" to assembly |
 
-### When to Move to Assembly
+### BASIC vs Assembly: Different Goals
 
-Students should move to assembly when:
-- Comfortable with game concepts
-- Want more performance
-- Curious about "how it really works"
-- Completed BASIC track
+| BASIC Track | Assembly Track |
+|-------------|----------------|
+| Game design focus | Hardware mastery |
+| Faster development | Maximum performance |
+| Higher-level thinking | Low-level understanding |
+| Equally valid | Equally valid |
 
-### BASIC Skills That Transfer
+**Neither is "better" - they serve different goals.**
 
-| BASIC | Assembly |
-|-------|----------|
-| Variables | Memory locations |
-| PEEK/POKE | Load/Store |
-| Loops | Branch instructions |
-| Conditionals | Compare and branch |
-| Subroutines | JSR/RTS |
-| Arrays | Address calculation |
+### Optional Assembly Transition
+
+Some students may *choose* to explore assembly:
+- Curiosity about hardware
+- Performance requirements
+- Interest in low-level programming
+- Want to understand "how it really works"
+
+This is optional, not required. A complete BASIC curriculum produces real games.
 
 ---
 
