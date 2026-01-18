@@ -530,7 +530,135 @@ Many sceners became vocal **anti-piracy** advocates once they made games profess
 
 ---
 
-## Part 8: Summary
+## Part 8: Size Coding & Code Golf
+
+### The Origins of Code Golf
+
+**Code golf** - writing the smallest possible program to achieve a task - has direct roots in demo scene size competitions and 8-bit memory constraints.
+
+### The Progression
+
+| Era | Constraint | Culture |
+|-----|------------|---------|
+| **1980s** | 48KB RAM, 170KB disks | "Fit the game on one tape/disk" |
+| **Late 1980s** | Crack intro size limits | Impressive effects in tiny space |
+| **1990s** | Demo categories (64K, 4K) | Formalised size competitions |
+| **2000s** | 256 byte, 128 byte, 64 byte | Extreme size coding |
+| **Modern** | Code golf sites, JS1K, Shadertoy | Recreational size coding |
+
+### Demo Scene Size Categories
+
+| Category | Size | Challenge |
+|----------|------|-----------|
+| **Demo** | Unlimited | Full artistic expression |
+| **64K intro** | 65,536 bytes | Procedural generation required |
+| **4K intro** | 4,096 bytes | Extreme compression, every byte matters |
+| **1K intro** | 1,024 bytes | Barely possible, minimalist |
+| **256 byte** | 256 bytes | Pure assembly wizardry |
+| **128 byte** | 128 bytes | Near-impossible constraints |
+| **64 byte** | 64 bytes | Single effect, maximum density |
+
+### Legendary Size-Coded Productions
+
+| Production | Size | Achievement |
+|------------|------|-------------|
+| **fr-08: .the" product** | 64K | Full 3D engine, procedural textures, music |
+| **.kkrieger** | 96K | Complete FPS game with levels |
+| **Elevated** | 4K | Entire mountain landscape with flythrough |
+| **Memories** | 256 bytes | C64 demo, multiple effects |
+| **Tube** | 256 bytes | Full 3D tunnel on C64 |
+
+### Techniques Born from Size Constraints
+
+| Technique | Purpose | Modern Use |
+|-----------|---------|------------|
+| **Procedural generation** | Create content algorithmically | Every modern game |
+| **Compressed bytecode** | Pack logic tightly | Game scripting |
+| **Procedural textures** | Generate instead of store | Texture synthesis |
+| **Procedural music** | Algorithmic composition | Generative audio |
+| **Shader tricks** | Math over data | GPU programming |
+| **Self-extracting code** | Compressed executable | Installers, packers |
+
+### Code Golf Evolution
+
+#### 8-bit Era (Implicit Code Golf)
+
+Every byte mattered:
+- C64: 64KB total, 38KB usable with BASIC
+- Spectrum: 48KB, screen takes 6.75KB
+- Fitting a game on 170KB disk = constant optimisation
+
+Programmers competed informally on who could fit more features.
+
+#### Demo Scene (Formalised)
+
+Size categories created explicit competition:
+- 64K intros forced procedural generation
+- 4K intros pushed mathematical elegance
+- 256-byte challenged what's possible
+
+#### Modern Code Golf (Recreational)
+
+| Community | Focus |
+|-----------|-------|
+| **code.golf** | Shortest solutions in various languages |
+| **JS1K** | JavaScript in 1024 bytes |
+| **Shadertoy** | Size-constrained shaders |
+| **PICO-8** | 8KB cart limit |
+| **TIC-80** | Similar constraints |
+| **dwitter.net** | 140 character JavaScript |
+| **Pouet.net** | Demo scene database, size coding |
+
+### Key People in Size Coding
+
+| Person | Handle | Known For |
+|--------|--------|-----------|
+| **Gábor Lázár** | Sensible | 256-byte demos |
+| **Linus Åkesson** | lft | C64 extreme size coding |
+| **Iñigo Quilez** | iq | Shadertoy founder, procedural pioneer |
+| **Fabian Giesen** | ryg | Farbrausch, compression genius |
+| **Tom Thumb** | Various | 256-byte specialists |
+
+### Why Size Coding Matters
+
+| Skill | Application |
+|-------|-------------|
+| **Deep hardware understanding** | Embedded systems, drivers |
+| **Algorithmic thinking** | Efficient code everywhere |
+| **Compression expertise** | Data engineering |
+| **Mathematical elegance** | Shader programming |
+| **Resource awareness** | Mobile, web, constrained platforms |
+| **Creative problem solving** | Universal |
+
+### Connection to Curriculum
+
+Our curriculum teaches **constraint-based thinking**:
+- 64KB C64 programs
+- 48KB Spectrum games
+- NES cartridge limits
+- Every platform has constraints
+
+This is the same discipline that created:
+- Demo scene size coding
+- Modern code golf
+- Efficient game engines
+- Procedural generation
+
+### Vault Entries
+
+- `code-golf` - Culture entry
+- `size-coding` - Technique entry
+- `64k-intro` - Culture entry
+- `4k-intro` - Culture entry
+- `procedural-generation` - Technique entry (expanded)
+- `kkrieger` - Demo entry (96KB FPS)
+- `elevated` - Demo entry (4K landscape)
+- `inigo-quilez` - People entry (Shadertoy)
+- `pico-8` - System entry (modern constrained platform)
+
+---
+
+## Part 9: Summary
 
 ### New Vault Entries
 
