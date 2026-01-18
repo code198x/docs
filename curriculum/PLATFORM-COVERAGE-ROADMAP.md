@@ -44,6 +44,7 @@
 
 | Platform | CPU | Unique Value | Audience |
 |----------|-----|--------------|----------|
+| **Dragon 32/64** | 6809 | Best 8-bit CPU, clean architecture, UK heritage | UK, 6809 learners |
 | **Game Boy** | Z80-like | Handheld constraints, active homebrew, GB Studio | Large, nostalgia + active |
 | **MSX** | Z80 | Japanese gaming, standardisation story | Japan, Europe, Brazil |
 | **Atari 8-bit** | 6502 | ANTIC/GTIA, display lists, predates C64 | US, retro enthusiasts |
@@ -51,6 +52,7 @@
 | **SNES** | 65816 | Advanced 2D, Mode 7 | Large, Nintendo fans |
 | **Atari ST** | 68000 | MIDI, music production | Musicians, Europe |
 | **Master System** | Z80 | NES alternative, Sega history | Brazil (huge), Europe |
+| **Vectrex** | 6809 | Vector graphics - completely unique | Niche but unique |
 
 ### Coverage Approach for Tier 2
 
@@ -96,15 +98,14 @@
 |----------|-----|--------------------|
 | **Colecovision** | Z80 | Similar to MSX/Spectrum |
 | **Intellivision** | CP1610 | Unusual architecture, limited appeal |
-| **Vectrex** | 6809 | Vector graphics - fascinating but niche |
 | **Odyssey 2** | 8048 | Very limited |
 | **Fairchild Channel F** | F8 | Historical first, limited capability |
 | **Bally Astrocade** | Z80 | Interesting, very niche |
 | **Thomson TO7/MO5** | 6809 | French schools, limited outside France |
 | **Microbee** | Z80 | Australian schools |
 | **Oric** | 6502 | French market |
-| **Dragon 32/64** | 6809 | UK, limited library |
 | **SAM Coupé** | Z80 | Spectrum successor, came too late |
+| **TRS-80 CoCo** | 6809 | Dragon-compatible, US market (reference alongside Dragon) |
 | **Enterprise 128** | Z80 | Hungarian, interesting but obscure |
 
 ### Reference Documentation Includes
@@ -168,7 +169,7 @@ If the curriculum serves primarily:
 | **Z80** | Spectrum | MSX, Amstrad, Game Boy, Master System | Excellent |
 | **68000** | Amiga | Mega Drive, Atari ST, Jaguar | Good |
 | **65816** | — | SNES | One platform |
-| **6809** | — | Dragon, Vectrex (reference) | Reference |
+| **6809** | — | Dragon 32/64, Vectrex, CoCo | Good (best 8-bit CPU) |
 
 ### Unique Hardware Concepts
 
