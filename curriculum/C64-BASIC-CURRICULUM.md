@@ -1,6 +1,6 @@
-# C64 BASIC Gateway Curriculum
+# C64 BASIC Curriculum
 
-**Purpose:** Define the 8-game BASIC curriculum track for Commodore 64 - a gateway for beginners before assembly.
+**Purpose:** Define the 8-game BASIC curriculum track for Commodore 64 - a complete game development curriculum using Simons' BASIC.
 
 **Last Updated:** 2026-01-18
 
@@ -10,26 +10,27 @@
 
 | Aspect | Details |
 |--------|---------|
-| **Track** | BASIC Gateway |
+| **Track** | BASIC |
 | **Platform** | Commodore 64 |
 | **Games** | 8 |
 | **Prerequisite** | None |
-| **Progression** | Leads to Assembly track |
 | **BASIC Version** | BASIC V2 + Simons' BASIC |
+| **Outcome** | Complete, playable games |
 
 ---
 
 ## Philosophy
 
-### Why Start With BASIC?
+### Why BASIC?
 
 | Reason | Benefit |
 |--------|---------|
-| **Lower barrier** | No hexadecimal, no memory maps |
-| **Immediate feedback** | Type and run |
-| **Focus on logic** | Game design, not hardware |
+| **Immediate results** | Type and run |
+| **Focus on game design** | Logic and creativity, not hardware registers |
+| **Rapid iteration** | Quick testing cycle |
 | **Historical authenticity** | Many learned this way |
-| **Confidence building** | Success before complexity |
+| **Complete curriculum** | Real games, not just exercises |
+| **Commercially viable** | Games were sold written in BASIC |
 
 ### Why Simons' BASIC?
 
@@ -284,9 +285,11 @@ By end of track, students can:
 
 ---
 
-## Connection to Assembly Track
+## Optional: Exploring Assembly
 
-### Bridge Concepts
+### If Students Want to Go Deeper
+
+Some students may be curious about assembly language. The BASIC curriculum provides excellent preparation:
 
 | BASIC Concept | Assembly Equivalent |
 |---------------|---------------------|
@@ -295,13 +298,15 @@ By end of track, students can:
 | JOY(1) | CIA port reading |
 | Screen memory | $0400+ |
 
-### Recommended Transition
+### But Assembly is Not Required
 
-After completing BASIC Gateway:
-1. **Game 1-4 (Assembly)** build on same concepts
-2. Students see "how it really works"
-3. POKE experience helps understand addresses
-4. Game design skills transfer directly
+The BASIC curriculum is **complete in itself**:
+- 8 full games
+- Real game development skills
+- Historical authenticity
+- Commercial games were made in BASIC
+
+Students who complete this track have learned to make games. That's the goal.
 
 ---
 
@@ -423,15 +428,17 @@ Include notes about:
 
 ## Summary
 
-The C64 BASIC Gateway provides:
-- **8 complete games**
-- **Gentle learning curve**
-- **Historical authenticity**
-- **Clear path to assembly**
-- **Practical skills**
+The C64 BASIC curriculum provides:
+- **8 complete, playable games**
+- **Real game development skills**
+- **Historical authenticity** - this is how people learned
+- **Practical, transferable knowledge**
+- **A complete curriculum** - not just a stepping stone
 
-Students completing this track are ready for the full assembly curriculum with:
-- Understanding of game concepts
-- Familiarity with C64
-- PEEK/POKE experience
-- Confidence from completed projects
+Students completing this track have:
+- Made real games
+- Learned game design
+- Understood programming concepts
+- Created something they can share and be proud of
+
+**That's success. That's the goal.**
