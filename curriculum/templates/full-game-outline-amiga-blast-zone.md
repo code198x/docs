@@ -26,6 +26,7 @@ This shooter showcases the chipset symphony. Player is a hardware sprite. Enemie
 
 - **One concept per unit** — never overwhelming
 - **Always playable** — from Unit 2 onwards
+- **Bootable from Unit 1** — learners can run their game immediately
 - **Debugging inline** — every unit includes "if it doesn't work"
 - **Chipset harmony** — Blitter, Copper, Paula all used from early on
 - **Sampled sound throughout** — that Amiga audio quality
@@ -35,11 +36,11 @@ This shooter showcases the chipset symphony. Player is a hardware sprite. Enemie
 
 ## Phase 1: Minimal Playable Game (Units 1-16)
 
-**Goal:** Complete game loop — shoot enemies, score points, die, restart.
+**Goal:** Complete game loop — shoot enemies, score points, die, restart. Bootable from Unit 1.
 
 | Unit | You Add | Result |
 |------|---------|--------|
-| 1 | Ship sprite on screen | See your ship |
+| 1 | Ship sprite on screen + bootable ADF | See your ship, **can run it** |
 | 2 | Joystick moves ship | **Control something** |
 | 3 | Fire button shoots | Bullet flies up |
 | 4 | Laser sample plays | Satisfying "pew" |
@@ -57,6 +58,9 @@ This shooter showcases the chipset symphony. Player is a hardware sprite. Enemie
 | 16 | Integration + edge cases | Solid foundation |
 
 **Amiga-Specific Unit 1:**
+
+Unlike other platforms, Amiga programs need to be on a bootable disk to run. Unit 1 teaches both sprite display AND how to create a runnable disk.
+
 ```asm
 ; Set up hardware sprite 0 (player ship)
 ; Sprite data must be in chip RAM
@@ -78,13 +82,32 @@ ship_sprite:
     dc.w    0,0         ; End of sprite
 ```
 
+**Creating a bootable ADF (Unit 1):**
+```bash
+# Assemble with vasm
+vasmm68k_mot -Fhunkexe -kick1hunks -o blastzone blastzone.asm
+
+# Create bootable disk with xdftool
+xdftool blastzone.adf create
+xdftool blastzone.adf format "BlastZone"
+xdftool blastzone.adf makedir s
+xdftool blastzone.adf boot install
+echo "blastzone" > startup-sequence
+xdftool blastzone.adf write startup-sequence s/startup-sequence
+xdftool blastzone.adf write blastzone
+```
+
+The ADF boots directly into your game. Every unit from now on uses this same process.
+
 **If it doesn't work (Unit 1):**
 - **Black screen?** Check DMACON — sprites need $8020, display needs $8100+
 - **No sprite?** Sprite data not in chip RAM, or SPRxPT not set
 - **Wrong position?** Sprite header encodes position (tricky format)
 - **Wrong colours?** Set COLOR17-19 for sprite 0 palette
+- **Won't boot?** Check startup-sequence is in s/ directory, executable name matches
+- **Guru Meditation on boot?** Code at wrong address, or missing chip RAM section
 
-**End of Phase 1:** Playable Amiga shooter.
+**End of Phase 1:** Playable Amiga shooter, bootable from disk.
 
 ---
 
@@ -299,10 +322,16 @@ ship_sprite:
 | 122 | Extra life fanfare | Feedback |
 | 123 | PAL/NTSC handling | Platform |
 | 124 | Continue option | Forgiveness |
-| 125 | ADF disk creation | Distribution |
-| 126 | Bootable disk | Professional |
+| 125 | Custom boot screen | Professional presentation |
+| 126 | Disk icon + info file | Distribution polish |
 | 127 | Final balance + bugs | Release ready |
 | 128 | **Complete game** | Ship it! |
+
+**Amiga-Specific:**
+- Custom boot screen with loading graphic (via Copper during load)
+- Disk icon so it looks professional in Workbench
+- .info file with proper tooltypes
+- Optimised file layout on disk for faster loading
 
 **End of Phase 8:** A game worthy of Amiga PD libraries or budget release.
 
@@ -352,7 +381,7 @@ ship_sprite:
 | Visuals | Basic display | Copper gradients, 32 colours, effects |
 | Audio | Samples | Full MOD music, varied SFX |
 | Modes | Single play | Two-player, difficulty, attract |
-| Polish | Functional | Bootable ADF, high scores, ending |
+| Distribution | Bootable ADF | Custom boot screen, disk icon, polished |
 
 ---
 
@@ -368,5 +397,5 @@ The challenge is using this power tastefully, not just showing off.
 
 ---
 
-**Version:** 1.0
-**Last Updated:** 2026-01-17
+**Version:** 1.1
+**Last Updated:** 2026-01-18

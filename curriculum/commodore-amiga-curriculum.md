@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 2,432 (2,048 OCS/ECS + 384 AGA)
+**Total Units:** 2,496 (2,112 OCS/ECS + 384 AGA)
 
 ---
 
@@ -24,11 +24,12 @@ By the final game, learners will have skills matching professional Amiga develop
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation | 1-8 | 64 | 512 |
+| Foundation (shooter) | 1 | 128 | 128 |
+| Foundation | 2-8 | 64 | 448 |
 | Advanced | 9-14 | 128 | 768 |
 | Expert | 15 | 256 | 256 |
 | Capstone | 16 | 512 | 512 |
-| **Total** | **16** | | **2,048** |
+| **Total** | **16** | | **2,112** |
 
 The expanded structure allows thorough coverage of:
 - Blitter operations (copy, fill, line draw, cookie-cut)
@@ -43,38 +44,48 @@ The expanded structure allows thorough coverage of:
 
 ## Game Sequence
 
-### Foundation Games (64 Units Each)
+### Foundation Games
 
-#### Game 1: Signal
-**Units:** 64 (4 phases)
-**Concept:** Frogger-style lane crosser. Cross roads, ride logs, reach safety. A timing game that naturally exercises the entire chipset.
+#### Game 1: Blast Zone
+**Units:** 128 (8 phases)
+**Concept:** Fixed-screen space shooter. Player ship versus enemy waves. Immediate engagement from Unit 1, bootable from the start.
 
 **Skills taught:**
 - 68000 assembly fundamentals
 - Display setup and Copper list basics
-- Hardware sprites (player)
-- Blitter basics (BOBs for cars, logs)
-- Copper colour splits
-- Paula sound effects
-- Collision detection
-- Game loop fundamentals
-
-**Why first:** This simple game touches every custom chip without going deep on any. Learners see the chipset symphony from day one.
-
----
-
-#### Game 2: Blast Zone
-**Units:** 64 (4 phases)
-**Concept:** Fixed-screen space shooter. Player ship versus enemy waves.
-
-**Skills taught:**
-- Hardware sprite multiplexing
-- Blitter object (BOB) management
+- Hardware sprites (player ship)
+- Blitter objects (BOBs for enemies)
+- Copper gradients and colour effects
+- Paula sample playback
+- Bootable ADF creation (from Unit 1)
 - Projectile spawning and pooling
-- Enemy formations
+- Enemy formations and patterns
 - Multiple collision types
 - Wave progression
 - Score display with Blitter text
+- Boss battles
+- Commercial-quality polish
+
+**Why first:** A shooter gets something playable on screen immediately. Learners control a ship from Unit 2, shoot from Unit 3. The chipset symphony is learned through building a real game, and learners can run their game from a bootable disk from day one.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-blast-zone.md`
+
+---
+
+#### Game 2: Signal
+**Units:** 64 (4 phases)
+**Concept:** Frogger-style lane crosser. Cross roads, ride logs, reach safety. A timing game that exercises the chipset.
+
+**Skills taught:**
+- Deeper Copper list exploration
+- More complex BOB patterns (cars, logs)
+- Timer-based gameplay
+- Lives and game over flow
+- Level progression
+- Collision refinement
+- Game feel polish
+
+**Why here:** After Blast Zone, learners understand the chipset through action. Signal explores different game mechanics on the same hardware.
 
 ---
 
@@ -535,6 +546,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.3 (2026-01-18):** Restructured Game 1. Blast Zone (shooter) now first game at 128 units for immediate engagement, bootable from Unit 1. Signal moved to Game 2. Total now 2,496 units.
 - **3.2 (2026-01-07):** Added AGA enhancement games (384 units) for Games 9-16. Total now 2,432 units.
 - **3.1 (2026-01-07):** Corrected structure to use only powers of 2 for unit counts (64/128/256/512).
 - **3.0 (2025-01-07):** Restructured to 2,048 units with expanded hardware coverage. AMOS moved to separate curriculum.
