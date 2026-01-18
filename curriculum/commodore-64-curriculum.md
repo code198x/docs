@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 1,920
+**Total Units:** 1,984
 
 ---
 
@@ -21,12 +21,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-6 | 128 | 768 | Foundation games - shooter, platformer, maze, breakout, exploration, rhythm |
-| 7-10 | 64 | 256 | Foundation - core concepts |
+| 1-7 | 128 | 896 | Foundation games - shooter, platformer, maze, breakout, exploration, rhythm, scrolling |
+| 8-10 | 64 | 192 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, Turrican-style) |
 | 16 | 256 | 256 | Capstone - commercial quality with demo-scene techniques |
-| **Total** | | **1,920** | |
+| **Total** | | **1,984** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -168,19 +168,28 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 7: Scroll Runner
-**Units:** 64 (4 phases)
-**Concept:** Horizontal scrolling introduction. Runner dodges obstacles in an endless scroll.
+**Units:** 128 (8 phases)
+**Concept:** Endless horizontal scroller. Runner dodges obstacles in an endless scroll, teaching VIC-II hardware scrolling, double buffering, and parallax effects.
 
 **Skills taught:**
-- Hardware horizontal scrolling (VIC-II $D016)
-- Colour RAM scrolling
+- VIC-II horizontal hardware scrolling ($D016)
+- Fine scroll and coarse scroll coordination
+- Colour RAM scrolling synchronisation
 - Screen buffer management
-- Double buffering
-- Colour splits (basic raster)
+- Double buffering for tear-free display
+- Raster interrupts for colour splits
+- Parallax background layers (multiple speeds)
 - Procedural obstacle spawning
-- Basic parallax background
+- Jump and duck mechanics
+- Sprite multiplexing for extra enemies
+- Power-up systems
+- Speed progression and difficulty curves
+- Custom character sets
+- Music tempo that matches gameplay speed
 
-**Detailed outline:** `/docs/plans/commodore-64/game-07-scroll-runner.md`
+**Why here:** Hardware scrolling is a defining C64 technique. After mastering single-screen games, learners tackle the fundamentals that power side-scrollers, shoot-em-ups, and platformers.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-scroll-runner.md`
 
 ---
 
@@ -437,6 +446,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.9 (2026-01-18):** Expanded Game 7 (Scroll Runner) to 128 units with VIC-II hardware scrolling, double buffering, and parallax. Total now 1,984 units.
 - **3.8 (2026-01-18):** Expanded Game 6 (SID Symphony) to 128 units with deep SID exploration and rhythm gameplay. Total now 1,920 units.
 - **3.7 (2026-01-18):** Replaced Game 5 Invader Wave with Catacombs (flip-screen exploration), expanded to 128 units. Total now 1,856 units.
 - **3.6 (2026-01-18):** Expanded Game 4 (Brick Basher) to 128 units with full breakout polish. Total now 1,792 units.
