@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 3,200 (2,816 OCS/ECS + 384 AGA)
+**Total Units:** 3,328 (2,944 OCS/ECS + 384 AGA)
 
 ---
 
@@ -315,19 +315,32 @@ The expanded structure allows thorough coverage of:
 ---
 
 #### Game 11: Brawler
-**Units:** 128 (8 phases)
-**Concept:** Side-scrolling beat 'em up with Y-depth sorting.
+**Units:** 256 (16 phases)
+**Concept:** Streets of Rage / Final Fight style beat 'em up with Y-depth sorting, combo systems, and two-player co-op. Large animated sprites with satisfying melee combat.
 
 **Skills taught:**
-- Y-axis depth sorting
-- Large sprite animation
-- Melee combat mechanics
-- Combo systems
-- Multiple enemy coordination
-- Health and damage
-- Weapon pickups
-- Boss fights
+- Y-axis depth sorting algorithms
+- Large sprite animation (32x48+)
+- Melee combat with hit detection
+- Combo systems and chains
+- Juggle mechanics
+- Special moves and meter
+- Grab and throw mechanics
+- Enemy AI coordination
+- Attack slot system
+- Multiple enemy types
+- Weapon pickups (pipe, knife)
+- Four complete levels
+- Four boss encounters
 - Two-player cooperative
+- Versus mode
+- Character selection with stats
+- Destructible objects and item drops
+- MOD music and satisfying hit sounds
+
+**Why expanded:** A full beat 'em up with Y-sorting, combos, enemy coordination, AND two-player co-op requires 256 units for proper depth.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-brawler.md`
 
 ---
 
@@ -644,6 +657,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.13 (2026-01-18):** Expanded Game 11 (Brawler) to 256 units with Y-depth sorting. OCS/ECS total now 2,944 units.
 - **3.12 (2026-01-18):** Expanded Game 10 (Wanderer) to 256 units with full platformer worlds. OCS/ECS total now 2,816 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Parallax) to 256 units with dual playfield mastery and multi-layer parallax. OCS/ECS total now 2,688 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Tetrad) to 128 units with Blitter line clearing, T-spins, and competitive multiplayer. OCS/ECS total now 2,560 units.

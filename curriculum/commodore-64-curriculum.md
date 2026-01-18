@@ -275,23 +275,29 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 11: Dungeon Crawl
-**Units:** 128 (8 phases)
-**Concept:** Top-down adventure. Explore rooms, collect keys, unlock doors, solve puzzles, defeat enemies.
+**Units:** 256 (16 phases)
+**Concept:** Zelda-style top-down adventure with inventory, NPCs, quests, and combat. Introduces C64 disk I/O for save games. Multi-room dungeon exploration with puzzles and boss encounters.
 
 **Skills taught:**
 - Multi-room map architecture
-- Room transitions
-- Full inventory system
-- NPC dialogue system
-- Quest framework
-- Combat system
-- Environmental puzzles
-- **Disk I/O fundamentals** (Kernal routines)
+- Room transitions and state persistence
+- Full inventory system with equipment
+- NPC dialogue and branching conversations
+- Quest framework with objectives
+- Melee and ranged combat
+- Environmental puzzles (blocks, switches, bombs)
+- Multiple dungeon themes
+- Boss encounters
+- **Kernal disk I/O routines**
 - **Disk save/load system**
 - **D64 disk image creation**
-- Password backup system
+- Password backup for non-disk users
+- Second quest/New Game+ mode
+- Full game polish and release
 
-**Why 128 units:** First game with multiple complex interconnected systems (inventory, quests, NPCs, combat, saves).
+**Why expanded:** A complete adventure game with inventory, NPCs, quests, combat, puzzles, AND disk I/O requires 256 units for proper depth and polish.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-dungeon-crawl.md`
 
 **Detailed outline:** `/docs/plans/commodore-64/game-11-dungeon-crawl.md`
 
@@ -476,6 +482,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.
 - **3.12 (2026-01-18):** Expanded Game 10 (Raster Rider) to 256 units with pseudo-3D racing. Total now 2,432 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Sprite Storm) to 256 units with sprite multiplexing mastery. Total now 2,240 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Night Raid) to 128 units with Scramble-style gameplay, boss battles, and power-ups. Total now 2,048 units.

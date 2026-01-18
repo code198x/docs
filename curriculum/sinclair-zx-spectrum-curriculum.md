@@ -294,23 +294,30 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 11: Redline
-**Units:** 128 (8 phases)
-**Concept:** Full vertical scrolling racer. Championship mode, multiple tracks, opponent AI, weather effects.
+**Units:** 256 (16 phases)
+**Concept:** Championship vertical scrolling racer with multiple tracks, AI opponents, weather effects, and damage system. Introduces tape loading fundamentals.
 
 **Skills taught:**
 - Vertical software scrolling
-- Speed variation (accelerate, brake)
-- Road rendering with curves
-- Opponent AI with overtaking
-- Collision at speed
-- Track variety (city, country, night)
-- Championship progression
-- Weather effects (rain affects handling)
-- **Tape loading basics** (standard loader)
-- **TAP file creation**
-- Pit stops and damage
+- Racing physics (acceleration, braking, grip)
+- Road rendering with curves and hills
+- Multiple AI opponents with overtaking logic
+- Rubber banding and difficulty scaling
+- Collision and damage system
+- Pit stop mechanics
+- 8 unique tracks (city, coast, mountain, night)
+- Championship mode with points
+- Weather effects (rain, night)
+- Dynamic weather transitions
+- **Standard tape loading routines**
+- **TAP file format and creation**
+- **Multi-load structure**
+- Time trial and qualifying modes
+- Two-player mode
 
-**Why 128 units:** Full racing game with championships, multiple tracks, and opponent AI requires extensive content and systems.
+**Why expanded:** A full championship racer with AI, weather, damage, pit stops, AND tape loading fundamentals requires 256 units.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-redline.md`
 
 **Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-11-redline.md`
 
@@ -553,6 +560,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.
 - **3.12 (2026-01-18):** Expanded Game 10 (Exodus) to 256 units with scrolling platformer mastery. Total now 2,432 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Blitz) to 256 units with software scrolling mastery. Total now 2,240 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Stack) to 128 units with T-spins, competitive multiplayer, and modern puzzle features. Total now 2,048 units.
