@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 2,496 (2,112 OCS/ECS + 384 AGA)
+**Total Units:** 2,560 (2,176 OCS/ECS + 384 AGA)
 
 ---
 
@@ -14,7 +14,7 @@ The Amiga 68000 Assembly curriculum teaches direct hardware programming through 
 
 The Amiga wasn't about one killer feature. It was about the custom chips working in harmony: the Blitter accelerating graphics, the Copper synchronising effects to the display beam, Paula playing four channels of sampled audio. This curriculum teaches learners to conduct that orchestra.
 
-This is an expanded curriculum (2,048 units vs 1,536 for other platforms) because the Amiga's hardware requires deeper coverage - Blitter operations, Copper lists, DMA timing, and the interplay between all components.
+This is an expanded curriculum because the Amiga's hardware requires deeper coverage - Blitter operations, Copper lists, DMA timing, and the interplay between all components.
 
 By the final game, learners will have skills matching professional Amiga developers of the early 1990s.
 
@@ -24,12 +24,12 @@ By the final game, learners will have skills matching professional Amiga develop
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter) | 1 | 128 | 128 |
-| Foundation | 2-8 | 64 | 448 |
+| Foundation (shooter + timing) | 1-2 | 128 | 256 |
+| Foundation | 3-8 | 64 | 384 |
 | Advanced | 9-14 | 128 | 768 |
 | Expert | 15 | 256 | 256 |
 | Capstone | 16 | 512 | 512 |
-| **Total** | **16** | | **2,112** |
+| **Total** | **16** | | **2,176** |
 
 The expanded structure allows thorough coverage of:
 - Blitter operations (copy, fill, line draw, cookie-cut)
@@ -73,19 +73,24 @@ The expanded structure allows thorough coverage of:
 ---
 
 #### Game 2: Signal
-**Units:** 64 (4 phases)
-**Concept:** Frogger-style lane crosser. Cross roads, ride logs, reach safety. A timing game that exercises the chipset.
+**Units:** 128 (8 phases)
+**Concept:** Frogger-style lane crosser polished to commercial quality. Cross roads, ride logs, avoid hazards, reach home. A timing game that showcases Amiga audiovisuals.
 
 **Skills taught:**
-- Deeper Copper list exploration
-- More complex BOB patterns (cars, logs)
-- Timer-based gameplay
-- Lives and game over flow
-- Level progression
-- Collision refinement
-- Game feel polish
+- Grid-based hop movement (different from continuous)
+- Lane objects as BOBs (cars, trucks, logs, turtles)
+- Riding moving objects (velocity transfer)
+- Timing-based gameplay (patience vs. reflexes)
+- Copper gradient backgrounds (sky, water)
+- MOD music with SFX mixing
+- Multiple hazards (crocs, snakes, diving turtles)
+- Power-ups (bonus flies, lady frog escort)
+- High scores, difficulty, multiplayer
+- 15 levels with increasing challenge
 
-**Why here:** After Blast Zone, learners understand the chipset through action. Signal explores different game mechanics on the same hardware.
+**Why here:** After the action-focused shooter, Signal teaches timing and patience - a different gameplay rhythm. 128 units allows proper exploration of feel and polish.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-signal.md`
 
 ---
 
@@ -546,7 +551,8 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
-- **3.3 (2026-01-18):** Restructured Game 1. Blast Zone (shooter) now first game at 128 units for immediate engagement, bootable from Unit 1. Signal moved to Game 2. Total now 2,496 units.
+- **3.4 (2026-01-18):** Expanded Game 2 (Signal) to 128 units for full timing-game polish. OCS/ECS total now 2,176 units.
+- **3.3 (2026-01-18):** Restructured Game 1. Blast Zone (shooter) now first game at 128 units for immediate engagement, bootable from Unit 1. Signal moved to Game 2.
 - **3.2 (2026-01-07):** Added AGA enhancement games (384 units) for Games 9-16. Total now 2,432 units.
 - **3.1 (2026-01-07):** Corrected structure to use only powers of 2 for unit counts (64/128/256/512).
 - **3.0 (2025-01-07):** Restructured to 2,048 units with expanded hardware coverage. AMOS moved to separate curriculum.

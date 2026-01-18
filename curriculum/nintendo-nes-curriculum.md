@@ -4,7 +4,7 @@
 **Language:** 6502 Assembly (no BASIC gateway)
 **Killer Feature:** PPU (Picture Processing Unit) - tile-based graphics mastery
 **Games:** 16
-**Total Units:** 1,600
+**Total Units:** 1,664
 
 ---
 
@@ -22,13 +22,13 @@ By the final game, learners will have skills matching professional NES developer
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter) | 1 | 128 | 128 |
-| Foundation | 2-10 | 64 | 576 |
+| Foundation (shooter + platformer) | 1-2 | 128 | 256 |
+| Foundation | 3-10 | 64 | 512 |
 | Advanced | 11-15 | 128 | 640 |
 | Capstone | 16 | 256 | 256 |
-| **Total** | **16** | | **1,600** |
+| **Total** | **16** | | **1,664** |
 
-Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game 1) or 16 phases (capstone), with each phase containing 16 units.
+Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Games 1-2) or 16 phases (capstone), with each phase containing 16 units.
 
 ---
 
@@ -61,19 +61,24 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ---
 
 #### Game 2: Crate Escape
-**Units:** 64 (4 phases)
-**Concept:** Single-screen platformer. Jump between platforms in a warehouse setting, avoid hazards, reach the exit. Crates as platforms.
+**Units:** 128 (8 phases)
+**Concept:** Single-screen platformer polished to commercial quality. Jump between platforms, avoid hazards, collect items, defeat enemies, reach the exit.
 
 **Skills taught:**
-- Gravity and falling
-- Jump physics (impulse, arc, landing)
-- Platform collision detection (tile-based)
-- Player animation (walk cycle, jump frame)
-- Hazards and enemies
-- Level completion logic
-- Multiple levels
+- Gravity and jump physics (with variable height, coyote time)
+- Tile-based collision (the NES way)
+- Metatile level design
+- Player animation states
+- Hazards (spikes, enemies, conveyors, collapsing platforms)
+- Moving platforms (horizontal, vertical)
+- Ladders and collectibles
+- Full APU music and sound
+- High scores, passwords, boss level
+- 20 levels of varied design
 
-**Why here:** After shooting, platforming introduces gravity physics and tile collision - fundamental skills for NES games.
+**Why here:** After shooting, platforming introduces gravity and tile collision - fundamental NES skills. 128 units allows proper exploration of feel, level design, and polish.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-crate-escape.md`
 
 ---
 
@@ -441,6 +446,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.4 (2026-01-18):** Expanded Game 2 (Crate Escape) to 128 units for full platformer polish. Total now 1,664 units.
 - **3.3 (2026-01-18):** Reordered games per skill tree analysis. Removed Neon Nexus (redundant with Stellar Barrage). Crate Escape now Game 2. Added Arena Assault as Game 10 (foundation capstone). See `/docs/curriculum/SKILL-TREES.md`.
 - **3.2 (2026-01-18):** Restructured Game 1. Stellar Barrage (shooter) now first game at 128 units for immediate engagement. Total now 1,600 units.
 - **3.1 (2026-01-07):** Added post-capstone audio expansion games (VRC6, MMC5).
