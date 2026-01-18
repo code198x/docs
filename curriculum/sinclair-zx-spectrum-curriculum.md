@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 1,984
+**Total Units:** 2,048
 
 ---
 
@@ -23,12 +23,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-7 | 128 | 896 | Foundation games - shooter, physics, platformer, exploration, strategy, maze, snake |
-| 8-10 | 64 | 192 | Foundation - core concepts |
+| 1-8 | 128 | 1,024 | Foundation games - shooter, physics, platformer, exploration, strategy, maze, snake, Tetris |
+| 9-10 | 64 | 128 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, epic action) |
 | 16 | 256 | 256 | Capstone - commercial quality |
-| **Total** | | **1,984** | |
+| **Total** | | **2,048** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -207,20 +207,34 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 8: Stack
-**Units:** 64 (4 phases)
-**Concept:** Falling blocks puzzle. Tetris-style piece rotation, stacking, and line clearing.
+**Units:** 128 (8 phases)
+**Concept:** Classic falling block puzzle polished to commercial quality. Tetris-style piece rotation, stacking, and line clearing with modern features like wall kicks, T-spins, and competitive multiplayer.
 
 **Skills taught:**
-- Piece rotation (4 orientations per piece)
-- Falling on a timer
-- Grid collision (can piece fit?)
-- Line detection and clearing
-- Next piece preview
-- Speed increases over time
-- Scoring with combos
-- Wall kick mechanics
+- Piece rotation mathematics (4 orientations × 7 pieces)
+- Timer-based falling mechanics
+- Grid collision detection (can piece fit?)
+- Line detection and efficient clearing
+- Next piece preview and hold piece
+- Ghost piece showing landing position
+- Wall kick system (SRS-style)
+- T-spin detection and bonus scoring
+- Combo and back-to-back systems
+- 7-bag randomiser for fair distribution
+- Speed progression with level system
+- Multiple game modes (Marathon, Sprint, Ultra)
+- Two-player competitive with garbage lines
+- AI opponent with difficulty levels
+- Visual themes and customisation
+- Achievement and statistics tracking
+- Beeper sound effects
+- 128K AY music (optional)
+- Replay system
+- Demo/attract mode
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-08-stack.md`
+**Why here:** The falling blocks puzzle teaches rotation mathematics, grid algorithms, and polished game feel. Different from snake's ring buffer, this focuses on piece manipulation and clearing mechanics.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-stack.md`
 
 ---
 
@@ -522,6 +536,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.10 (2026-01-18):** Expanded Game 8 (Stack) to 128 units with T-spins, competitive multiplayer, and modern puzzle features. Total now 2,048 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Slither) to 128 units with ring buffer data structure and AI opponent. Total now 1,984 units.
 - **3.8 (2026-01-18):** Expanded Game 6 (Chomp) to 128 units with four distinct ghost AI personalities. Total now 1,920 units.
 - **3.7 (2026-01-18):** Expanded Game 5 (Ink War) to 128 units with minimax AI and strategy polish. Total now 1,856 units.

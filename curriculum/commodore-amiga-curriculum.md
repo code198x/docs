@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 2,880 (2,496 OCS/ECS + 384 AGA)
+**Total Units:** 2,944 (2,560 OCS/ECS + 384 AGA)
 
 ---
 
@@ -24,12 +24,11 @@ By the final game, learners will have skills matching professional Amiga develop
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter, timing, breakout, platformer, exploration, maze, snake) | 1-7 | 128 | 896 |
-| Foundation | 8 | 64 | 64 |
+| Foundation (shooter, timing, breakout, platformer, exploration, maze, snake, puzzle) | 1-8 | 128 | 1,024 |
 | Advanced | 9-14 | 128 | 768 |
 | Expert | 15 | 256 | 256 |
 | Capstone | 16 | 512 | 512 |
-| **Total** | **16** | | **2,496** |
+| **Total** | **16** | | **2,560** |
 
 The expanded structure allows thorough coverage of:
 - Blitter operations (copy, fill, line draw, cookie-cut)
@@ -221,17 +220,34 @@ The expanded structure allows thorough coverage of:
 ---
 
 #### Game 8: Tetrad
-**Units:** 64 (4 phases)
-**Concept:** Falling blocks puzzle with Blitter rendering.
+**Units:** 128 (8 phases)
+**Concept:** Classic falling block puzzle polished to Amiga quality. Uses the Blitter for efficient grid rendering and line clearing, with Copper effects for visual polish. Feature-complete with competitive multiplayer.
 
 **Skills taught:**
-- Piece rotation maths
-- Grid collision detection
-- Line clearing with Blitter scroll
-- Next piece preview
-- Ghost piece
-- Score multipliers
-- Two-player mode
+- Piece rotation mathematics in 68000
+- Grid collision detection algorithms
+- Line clearing with Blitter scroll operations
+- Efficient Blitter-based grid rendering
+- Next piece preview and hold piece
+- Ghost piece projection
+- Wall kick system (SRS-style)
+- T-spin detection and scoring
+- Combo and back-to-back systems
+- 7-bag randomiser
+- Speed progression (20 levels)
+- Multiple game modes (Marathon, Sprint, Ultra, 20G)
+- Two-player split-screen versus with garbage
+- AI opponent with difficulty levels
+- Visual theme system (Classic, Neon, Marble)
+- Copper colour effects and gradients
+- Paula sound effects and module music
+- Achievement and statistics tracking
+- DAS/ARR tuning options
+- Demo/attract mode
+
+**Why here:** After Venom's ring buffer, Tetrad teaches different grid algorithms - rotation matrices and line clearing. The Blitter's scroll capability makes line clearing efficient and visually smooth.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-tetrad.md`
 
 ---
 
@@ -602,6 +618,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.10 (2026-01-18):** Expanded Game 8 (Tetrad) to 128 units with Blitter line clearing, T-spins, and competitive multiplayer. OCS/ECS total now 2,560 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Venom) to 128 units with ring buffer, two-player split-screen, and theme system. OCS/ECS total now 2,496 units.
 - **3.8 (2026-01-18):** Expanded Game 6 (Gobble) to 128 units with four ghost AI personalities. OCS/ECS total now 2,432 units.
 - **3.7 (2026-01-18):** Expanded Game 5 (Crypt) to 128 units with full dungeon exploration. OCS/ECS total now 2,368 units.
