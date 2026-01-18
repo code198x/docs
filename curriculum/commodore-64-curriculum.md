@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 1,600
+**Total Units:** 1,664
 
 ---
 
@@ -21,12 +21,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1 | 128 | 128 | Foundation shooter - immediate engagement, full game |
-| 2-10 | 64 | 576 | Foundation - core concepts |
+| 1-2 | 128 | 256 | Foundation games - shooter then platformer, full experience |
+| 3-10 | 64 | 512 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, Turrican-style) |
 | 16 | 256 | 256 | Capstone - commercial quality with demo-scene techniques |
-| **Total** | | **1,600** | |
+| **Total** | | **1,664** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -58,22 +58,24 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 2: Platform Panic
-**Units:** 64 (4 phases)
-**Concept:** Single-screen platformer. Jump between platforms, avoid hazards, reach the exit.
+**Units:** 128 (8 phases)
+**Concept:** Single-screen platformer. Jump between platforms, avoid hazards, reach the exit. Polished to commercial quality.
 
 **Skills taught:**
 - Gravity and jump physics
 - Platform collision (landing, bumping)
 - Tile-based collision detection
 - Animation frames and states
-- Hazard timing
-- Level progression
-- Ladders, moving platforms
-- Enemy patterns
+- Hazard timing and moving platforms
+- Level design and progression
+- Ladders, collectibles, enemies
+- Variable jump height, coyote time
+- Full SID music and sound
+- High scores, passwords, boss level
 
-**Why here:** After shooting, platforming introduces the fundamental physics model used in countless games. Gravity and tile collision are core skills.
+**Why here:** After shooting, platforming introduces the fundamental physics model used in countless games. 128 units allows a fully polished game, not just a prototype.
 
-**Detailed outline:** `/docs/plans/commodore-64/game-02-platform-panic.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-platform-panic.md`
 
 ---
 
@@ -420,6 +422,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.4 (2026-01-18):** Expanded Game 2 (Platform Panic) to 128 units for full polish. Total now 1,664 units.
 - **3.3 (2026-01-18):** Reordered games per skill tree analysis. Platform Panic now Game 2 (introduces gravity/tiles). SID Symphony moved to Game 6 (requires keyboard + timing skills). See `/docs/curriculum/SKILL-TREES.md`.
 - **3.2 (2026-01-18):** Restructured Game 1. Starfield (shooter) now first game at 128 units for immediate engagement. Total now 1,600 units.
 - **3.1 (2026-01-07):** Added optional enhancement versions section (MEGA65, REU). Updated BASIC gateway reference to 512-unit curriculum.

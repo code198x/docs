@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 1,600
+**Total Units:** 1,664
 
 ---
 
@@ -23,12 +23,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1 | 128 | 128 | Foundation shooter - immediate engagement, full game |
-| 2-10 | 64 | 576 | Foundation - core concepts |
+| 1-2 | 128 | 256 | Foundation games - shooter then physics, full experience |
+| 3-10 | 64 | 512 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, epic action) |
 | 16 | 256 | 256 | Capstone - commercial quality |
-| **Total** | | **1,600** | |
+| **Total** | | **1,664** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -61,23 +61,23 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 2: Shatter
-**Units:** 64 (4 phases)
-**Concept:** Breakout clone with polish focus. Paddle, ball, bricks - with custom font, smooth animation, and audio feedback.
+**Units:** 128 (8 phases)
+**Concept:** Breakout clone polished to commercial quality. Paddle, ball, bricks - with physics that feel right, power-ups, and full audio.
 
 **Skills taught:**
-- Custom font design and installation
-- Smooth sub-cell movement (pixel precision)
-- Frame-based timing and delta movement
-- Collision detection (walls, paddle, bricks)
-- Bounce angles and reflection physics
-- Brick destruction with visual effects
-- Beeper sound design
-- Power-up systems
-- Level progression
+- Sub-cell movement (fixed-point pixel precision)
+- Ball physics (velocity, angles, reflection, spin)
+- Paddle control and angle influence
+- Multiple brick types (hard, unbreakable)
+- Power-up systems (extend, multi-ball, laser, catch)
+- Custom fonts and graphics (UDG)
+- Full beeper audio (music + SFX)
+- High scores, difficulty settings, multiplayer
+- 20 levels of varied brick patterns
 
-**Why here:** After shooting, ball physics introduces a different movement model. Sub-cell movement is a core Spectrum skill that pays off in every subsequent game.
+**Why here:** After shooting, physics simulation introduces a fundamentally different movement model. 128 units allows proper exploration of angles, feel, and polish.
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-02-shatter.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-shatter.md`
 
 ---
 
@@ -491,6 +491,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.4 (2026-01-18):** Expanded Game 2 (Shatter) to 128 units for full physics polish. Total now 1,664 units.
 - **3.3 (2026-01-18):** Reordered games per skill tree analysis. Shatter now Game 2 (sub-cell physics). Cavern now Game 3 (platforming). Ink War moved to Game 5 (requires strategic AI experience). See `/docs/curriculum/SKILL-TREES.md`.
 - **3.2 (2026-01-18):** Restructured Game 1. Skyfire (shooter) now first game at 128 units for immediate engagement. Total now 1,600 units.
 - **3.1 (2026-01-07):** Added optional enhancement versions section (128K and Next). Updated BASIC gateway reference to 512-unit curriculum.
