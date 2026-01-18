@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 2,688 (2,304 OCS/ECS + 384 AGA)
+**Total Units:** 2,752 (2,368 OCS/ECS + 384 AGA)
 
 ---
 
@@ -24,12 +24,12 @@ By the final game, learners will have skills matching professional Amiga develop
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter, timing, breakout, platformer) | 1-4 | 128 | 512 |
-| Foundation | 5-8 | 64 | 256 |
+| Foundation (shooter, timing, breakout, platformer, exploration) | 1-5 | 128 | 640 |
+| Foundation | 6-8 | 64 | 192 |
 | Advanced | 9-14 | 128 | 768 |
 | Expert | 15 | 256 | 256 |
 | Capstone | 16 | 512 | 512 |
-| **Total** | **16** | | **2,304** |
+| **Total** | **16** | | **2,368** |
 
 The expanded structure allows thorough coverage of:
 - Blitter operations (copy, fill, line draw, cookie-cut)
@@ -142,17 +142,28 @@ The expanded structure allows thorough coverage of:
 ---
 
 #### Game 5: Crypt
-**Units:** 64 (4 phases)
-**Concept:** Flip-screen top-down exploration. Navigate dungeon rooms.
+**Units:** 128 (8 phases)
+**Concept:** Flip-screen top-down dungeon exploration polished to commercial quality. Navigate interconnected rooms, collect keys and treasures, defeat monsters, find the exit. Smooth 50fps with Copper-enhanced room transitions.
 
 **Skills taught:**
-- Room data structures
-- Screen transitions with Copper
+- Room data structures and Blitter tile rendering
+- Screen transitions with Copper fades
 - Persistent state management
-- Key/door mechanics
-- Chase AI
-- Blitter tile rendering
-- Inventory system
+- Inventory system (keys, potions, weapons)
+- Enemy AI (patrol, chase, wall-aware)
+- Combat system (melee attack)
+- Multiple enemy types including ranged
+- Coloured keys and locked doors
+- Push blocks and puzzle elements
+- Multiple dungeon floors
+- Copper zone palettes for visual variety
+- Boss encounters
+- Save system
+- MOD music with SFX mixing
+
+**Why here:** After single-screen games, learners manage multi-room worlds with persistent state - foundation for adventure games.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-crypt.md`
 
 ---
 
@@ -568,6 +579,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.7 (2026-01-18):** Expanded Game 5 (Crypt) to 128 units with full dungeon exploration. OCS/ECS total now 2,368 units.
 - **3.6 (2026-01-18):** Expanded Game 4 (Ascent) to 128 units with full platformer polish. OCS/ECS total now 2,304 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Shatter Point) to 128 units with Blitter physics and power-ups. OCS/ECS total now 2,240 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Signal) to 128 units for full timing-game polish. OCS/ECS total now 2,176 units.
