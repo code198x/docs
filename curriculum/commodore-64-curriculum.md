@@ -249,19 +249,28 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 10: Raster Rider
-**Units:** 64 (4 phases)
-**Concept:** Racing game with pseudo-3D road using raster effects.
+**Units:** 256 (16 phases)
+**Concept:** Outrun-style pseudo-3D racing using advanced raster techniques. Master per-scanline colour manipulation, road perspective mathematics, sprite scaling, and create a full championship racing experience.
 
 **Skills taught:**
-- Advanced raster splits
-- Colour cycling for speed effect
-- Road perspective rendering
-- Opponent cars
-- Timer-based gameplay
-- Track variety
-- Position-based scoring
+- Advanced raster interrupt chains
+- Per-scanline colour manipulation
+- Road perspective mathematics
+- Curve and hill rendering
+- Sprite scaling illusion for depth
+- Speed-based colour cycling
+- Track data compression
+- Multiple themed tracks (coastal, desert, forest, mountain, night)
+- Opponent car AI and collision
+- Championship mode with points
+- Weather and time-of-day variants
+- Ghost replay system
+- SID engine sound synthesis
+- Full game structure and polish
 
-**Detailed outline:** `/docs/plans/commodore-64/game-10-raster-rider.md`
+**Why expanded:** Pseudo-3D racing requires deep mastery of raster timing and road mathematics. This technique defined classic racers and teaches advanced interrupt handling.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-raster-rider.md`
 
 ---
 
@@ -467,6 +476,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.12 (2026-01-18):** Expanded Game 10 (Raster Rider) to 256 units with pseudo-3D racing. Total now 2,432 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Sprite Storm) to 256 units with sprite multiplexing mastery. Total now 2,240 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Night Raid) to 128 units with Scramble-style gameplay, boss battles, and power-ups. Total now 2,048 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Scroll Runner) to 128 units with VIC-II hardware scrolling, double buffering, and parallax. Total now 1,984 units.

@@ -270,24 +270,35 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ---
 
 #### Game 10: Arena Assault
-**Units:** 64 (4 phases)
-**Concept:** Top-down arena shooter. Enemies spawn from all directions, survive waves, collect power-ups. Tests all foundation skills before advanced games.
+**Units:** 256 (16 phases)
+**Concept:** Foundation capstone - intense arena combat integrating ALL skills learned so far. 8-way movement and shooting, heavy sprite management, wave survival, bosses, and commercial-quality polish.
 
 **Skills taught:**
 - Integration of all foundation skills
 - 8-way movement and shooting
-- Heavy sprite management (approaching limits)
-- Wave-based survival
-- Multiple weapon types
-- Boss encounters (foundation-level)
-- Score attack design
-- Polish and game feel refinement
+- Sprite priority and flicker management
+- Wave-based survival design
+- Multiple enemy types with varied AI
+- Wave composition and difficulty scaling
+- Full power-up system
+- Multiple weapon types (machine gun, shotgun, laser, homing)
+- Shield and health systems
+- Four boss encounters
+- Multiple arenas with unique mechanics
+- Arena hazards and teleporters
+- Two-player co-op and versus modes
+- Score attack and endless modes
+- APU sound and music
+- Statistics and achievements
+- Battery save for high scores
 
-**Why here:** Capstone of foundation phase. Combines shooting, collision, AI, and sprite management. Prepares learners for advanced techniques.
+**Why expanded:** As the foundation capstone, Arena Assault must demonstrate mastery of all techniques. 256 units allows a complete, polished arena shooter that proves readiness for advanced games.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-arena-assault.md`
 
 ---
 
-### Advanced Games (128 Units Each)
+### Advanced Games
 
 #### Game 11: Thunder Run
 **Units:** 128 (8 phases)
@@ -528,6 +539,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.12 (2026-01-18):** Expanded Game 10 (Arena Assault) to 256 units as foundation capstone. Total now 2,432 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Ion Trail) to 256 units with Gradius-style power system and options. Total now 2,240 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Pixel Plains) to 128 units with NES scrolling, world map, and boss battles. Total now 2,048 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Gridlock) to 128 units with rotation matrices, multiple modes, and two-player versus. Total now 1,984 units.

@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 3,072 (2,688 OCS/ECS + 384 AGA)
+**Total Units:** 3,200 (2,816 OCS/ECS + 384 AGA)
 
 ---
 
@@ -284,18 +284,33 @@ The expanded structure allows thorough coverage of:
 ---
 
 #### Game 10: Wanderer
-**Units:** 128 (8 phases)
-**Concept:** Scrolling platformer. Large world exploration.
+**Units:** 256 (16 phases)
+**Concept:** Epic scrolling platformer building on Parallax's techniques. Four themed worlds with multiple levels each, boss encounters, collectibles, and commercial-quality polish.
 
 **Skills taught:**
 - Horizontal scrolling platformer
-- Camera following with dead zones
-- Large level data (compression)
-- Checkpoints and progress
+- Camera systems with dead zones
+- Level compression and streaming
+- Slope physics
 - Moving platforms
-- Environmental hazards
-- Parallax backgrounds
-- Extended enemy AI
+- Multiple enemy types
+- Combat system (stomp and projectile)
+- Health, lives, and checkpoints
+- Collectibles and power-ups
+- Four themed worlds (Grasslands, Underground, Sky, Castle)
+- Boss encounters per world
+- Multi-layer parallax per world
+- Copper colour effects
+- Weather effects (rain, snow)
+- Paula music and sound effects
+- World map navigation
+- Save system
+- Time attack and boss rush modes
+- AGA enhanced version
+
+**Why expanded:** A full scrolling platformer with multiple worlds, bosses, and polish requires deep coverage. 256 units allows a complete Mario-style experience on Amiga hardware.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-wanderer.md`
 
 ---
 
@@ -629,6 +644,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.12 (2026-01-18):** Expanded Game 10 (Wanderer) to 256 units with full platformer worlds. OCS/ECS total now 2,816 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Parallax) to 256 units with dual playfield mastery and multi-layer parallax. OCS/ECS total now 2,688 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Tetrad) to 128 units with Blitter line clearing, T-spins, and competitive multiplayer. OCS/ECS total now 2,560 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Venom) to 128 units with ring buffer, two-player split-screen, and theme system. OCS/ECS total now 2,496 units.
