@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 3,328 (2,944 OCS/ECS + 384 AGA)
+**Total Units:** 3,456 (3,072 OCS/ECS + 384 AGA)
 
 ---
 
@@ -345,19 +345,39 @@ The expanded structure allows thorough coverage of:
 ---
 
 #### Game 12: Highway
-**Units:** 128 (8 phases)
-**Concept:** Pseudo-3D racing with Copper road effects.
+**Units:** 256 (16 phases)
+**Concept:** Outrun-style pseudo-3D racing with Copper-based road rendering, sprite scaling, and high-speed action. Multiple tracks, traffic, and split-screen two-player mode.
 
 **Skills taught:**
-- Perspective projection
-- Copper-based road rendering
-- Sprite scaling simulation
-- Speed simulation
-- Traffic and obstacles
-- Road curves via Copper
-- Hill rendering
-- Split-screen two-player
-- Time trial and championship modes
+- Perspective projection mathematics
+- Copper-based road rendering (per-scanline colours)
+- Road width calculation and horizon line
+- Road curves and hills rendering
+- Combined curve + hill sections
+- Sprite scaling simulation for depth
+- Pre-scaled sprite system
+- Player car with multiple lean frames
+- Steering, acceleration, and braking
+- Speed-to-scroll conversion
+- Centrifugal force on curves
+- Off-road penalty and crash detection
+- Traffic system with multiple car types
+- Traffic AI and collision
+- Checkpoint time extension system
+- 5 themed tracks (Coastal, City, Desert, Forest, Mountain)
+- Championship mode with points
+- Time of day variants (sunset, night with headlights)
+- Weather effects (rain, fog)
+- Tunnel sections with lighting
+- Split-screen two-player mode with Copper
+- Ghost replay system
+- Paula engine sound synthesis
+- MOD music integration
+- AGA enhanced version
+
+**Why expanded:** Pseudo-3D racing with Copper road rendering, perspective mathematics, traffic, weather, AND split-screen multiplayer requires 256 units for complete mastery.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-highway.md`
 
 ---
 
@@ -657,6 +677,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.14 (2026-01-18):** Expanded Game 12 (Highway) to 256 units with pseudo-3D racing and Copper road rendering. OCS/ECS total now 3,072 units.
 - **3.13 (2026-01-18):** Expanded Game 11 (Brawler) to 256 units with Y-depth sorting. OCS/ECS total now 2,944 units.
 - **3.12 (2026-01-18):** Expanded Game 10 (Wanderer) to 256 units with full platformer worlds. OCS/ECS total now 2,816 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Parallax) to 256 units with dual playfield mastery and multi-layer parallax. OCS/ECS total now 2,688 units.

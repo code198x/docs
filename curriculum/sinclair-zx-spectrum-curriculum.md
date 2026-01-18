@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 2,048
+**Total Units:** 2,688
 
 ---
 
@@ -324,24 +324,32 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 12: Recoil
-**Units:** 128 (8 phases)
-**Concept:** Run 'n' gun action. Contra-style platforming with multi-directional shooting, multiple weapons, epic bosses.
+**Units:** 256 (16 phases)
+**Concept:** Contra-style run 'n' gun action with 8-way shooting, multiple weapons, and epic boss battles. Two-player co-op and intense action on the Spectrum.
 
 **Skills taught:**
-- Combining platformer and shooter mechanics
-- Multi-directional firing (8-way)
-- Shooting while moving/jumping
-- Enemies that shoot back
-- Weapon power-ups and switching
-- Boss encounters with patterns
-- Multiple stages with themes
+- Platformer + shooter hybrid mechanics
+- 8-way directional shooting system
+- Run and gun (shoot while moving/jumping)
+- Aim lock for precision targeting
+- Weapon system with 5 types (Rifle, Spread, Laser, Machine Gun, Flame, Homing)
+- Weapon pickups and switching
+- Enemy variety (Soldier, Sniper, Turret, Runner, Grenadier, Flying)
+- Boss framework with health bars and patterns
+- 4 epic boss encounters (Wall Turrets, Tank, Helicopter, Mech)
+- Final boss with multiple phases
+- 5 complete stages (Jungle, Base, Waterfall, Snowfield, Alien Hive)
+- Horizontal and vertical scrolling sections
 - Two-player cooperative mode
-- Continues and checkpoints
-- Spread, laser, and homing weapons
+- Shared/individual lives options
+- Difficulty modes (Easy, Normal, Hard)
+- Continue and checkpoint systems
+- AY-3-8910 music and sound effects
+- 48K and 128K versions
 
-**Why 128 units:** Combines two genres (platformer + shooter) with weapon variety and boss design.
+**Why expanded:** A complete Contra-style game with 8-way shooting, 5 weapon types, 5 stages, 5 bosses, AND two-player co-op requires 256 units for proper implementation.
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-12-recoil.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-recoil.md`
 
 ---
 
@@ -560,6 +568,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.14 (2026-01-18):** Expanded Game 12 (Recoil) to 256 units with run 'n' gun mastery. Total now 2,688 units.
 - **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.
 - **3.12 (2026-01-18):** Expanded Game 10 (Exodus) to 256 units with scrolling platformer mastery. Total now 2,432 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Blitz) to 256 units with software scrolling mastery. Total now 2,240 units.

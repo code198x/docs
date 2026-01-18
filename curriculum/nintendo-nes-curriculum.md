@@ -4,7 +4,7 @@
 **Language:** 6502 Assembly (no BASIC gateway)
 **Killer Feature:** PPU (Picture Processing Unit) - tile-based graphics mastery
 **Games:** 16
-**Total Units:** 2,048
+**Total Units:** 2,688
 
 ---
 
@@ -330,18 +330,35 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ---
 
 #### Game 12: Iron Assault
-**Units:** 128 (8 phases)
-**Concept:** Run 'n' gun action. Contra-style platforming with multi-directional shooting. Heavy metal assault.
+**Units:** 256 (16 phases)
+**Concept:** Contra-style run 'n' gun action with 8-way shooting, weapon power-ups, and intense boss battles. Two-player cooperative mode for maximum action.
 
 **Skills taught:**
-- Platformer physics with shooting
-- Multi-directional firing (8-way)
-- Shooting while moving/jumping
-- Enemies that shoot back
-- Weapon power-ups
-- Boss encounters
-- Two-player cooperative
-- Advanced sprite management
+- Platformer + shooter hybrid mechanics
+- 8-way directional shooting with arm sprite rotation
+- Run and gun (shoot while moving/jumping)
+- Crouching and prone aim positions
+- Weapon system with 6 types (Rifle, Spread S, Laser L, Machine Gun M, Fire Ball F, Crush C)
+- Weapon pickups with flying capsules
+- Bullet pool management
+- Enemy variety (Soldier, Sniper, Turret, Runner, Grenadier, Jetpack, Shield)
+- Large boss assembly with multi-sprite composition
+- Boss weak points and health bars
+- 5 complete stages (Jungle, Base Exterior, Waterfall vertical, Base Interior, Alien Hive)
+- Horizontal and vertical scrolling sections
+- Top-down base sections
+- Section transitions
+- Two-player cooperative with shared camera
+- Sprite limit management with flicker
+- Individual/shared lives options
+- Difficulty modes with one-hit death option
+- Continue and checkpoint systems
+- APU music and sound effects
+- Demo/attract mode
+
+**Why expanded:** A full Contra-style game with 8-way shooting, 6 weapons, 5 stages, epic bosses, AND two-player co-op with sprite management requires 256 units.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-iron-assault.md`
 
 ---
 
@@ -552,6 +569,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.14 (2026-01-18):** Expanded Game 12 (Iron Assault) to 256 units with run 'n' gun mastery. Total now 2,688 units.
 - **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.
 - **3.12 (2026-01-18):** Expanded Game 10 (Arena Assault) to 256 units as foundation capstone. Total now 2,432 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Ion Trail) to 256 units with Gradius-style power system and options. Total now 2,240 units.

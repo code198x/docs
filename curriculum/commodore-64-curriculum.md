@@ -3,7 +3,7 @@
 **Platform:** Commodore 64
 **Killer Feature:** SID sound chip
 **Games:** 16
-**Total Units:** 2,048
+**Total Units:** 2,688
 
 ---
 
@@ -304,22 +304,29 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 12: Arena Fighter
-**Units:** 128 (8 phases)
-**Concept:** One-on-one fighting game. Four fighters, health bars, special moves, combos.
+**Units:** 256 (16 phases)
+**Concept:** Street Fighter II-inspired one-on-one fighting game with four unique characters, special moves, combos, and tournament mode. Deep state machines and frame-perfect timing.
 
 **Skills taught:**
 - Complex animation state machines
 - Hitbox/hurtbox collision system
-- Frame data (startup, active, recovery)
-- Input buffering
-- Motion input detection (QCF, DP)
-- Special moves and super meter
-- AI opponent with difficulty scaling
-- 4 distinct character archetypes
+- Frame data (startup, active, recovery frames)
+- Input buffering for responsive controls
+- Motion input detection (QCF, QCB, DP motions)
+- Special moves with invincibility frames
+- Super meter and EX moves
+- Combo system with cancels and links
+- Juggle mechanics with limits
+- AI opponent with spacing awareness and difficulty scaling
+- 4 distinct character archetypes (Shoto, Grappler, Charge, Rushdown)
+- Tournament/Arcade mode
+- Training mode with input display
+- Two-player versus mode
+- Full SID audio (hit sounds, announcer, character themes)
 
-**Why 128 units:** Fighting games require deep state machine work, frame-perfect timing, and multiple complete characters.
+**Why expanded:** Fighting games require mastery of complex state machines, frame-perfect timing, input detection, and complete character implementation. Four distinct archetypes plus AI and modes requires 256 units.
 
-**Detailed outline:** `/docs/plans/commodore-64/game-12-arena-fighter.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-arena-fighter.md`
 
 ---
 
@@ -482,6 +489,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.14 (2026-01-18):** Expanded Game 12 (Arena Fighter) to 256 units with fighting game mastery. Total now 2,688 units.
 - **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.
 - **3.12 (2026-01-18):** Expanded Game 10 (Raster Rider) to 256 units with pseudo-3D racing. Total now 2,432 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Sprite Storm) to 256 units with sprite multiplexing mastery. Total now 2,240 units.
