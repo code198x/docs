@@ -3,7 +3,7 @@
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
 **Games:** 16
-**Total Units:** 1,856
+**Total Units:** 1,920
 
 ---
 
@@ -23,12 +23,12 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-5 | 128 | 640 | Foundation games - shooter, physics, platformer, exploration, strategy |
-| 6-10 | 64 | 320 | Foundation - core concepts |
+| 1-6 | 128 | 768 | Foundation games - shooter, physics, platformer, exploration, strategy, maze |
+| 7-10 | 64 | 256 | Foundation - core concepts |
 | 11-13 | 128 | 384 | System-heavy - multiple complex systems |
 | 14-15 | 128 | 256 | Advanced - new paradigms (isometric, epic action) |
 | 16 | 256 | 256 | Capstone - commercial quality |
-| **Total** | | **1,856** | |
+| **Total** | | **1,920** | |
 
 Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
 
@@ -153,20 +153,28 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 ---
 
 ### Game 6: Chomp
-**Units:** 64 (4 phases)
-**Concept:** Pac-Man style maze game. Collect dots, avoid ghosts, eat power pills to turn the tables.
+**Units:** 128 (8 phases)
+**Concept:** Pac-Man style maze game polished to commercial quality. Collect dots, avoid ghosts with distinct AI personalities, eat power pills to turn the tables.
 
 **Skills taught:**
 - Tile-based maze structure
-- Constrained corridor movement
-- Enemy AI with personality (scatter, chase modes)
-- Power-ups that change game state
-- Wrap-around screen edges
-- Levels and speed progression
-- Ghost respawn mechanics
-- Bonus fruit spawning
+- Constrained corridor movement (only turn at junctions)
+- Four ghost AI personalities (Blinky, Pinky, Inky, Clyde)
+- Chase/scatter mode state machines
+- Frightened mode with ghost-eating chains
+- Power-up state transitions
+- Screen wrap-around tunnels
+- Speed and difficulty progression
+- Bonus fruit per level
+- Cruise Elroy (Blinky speed-up)
+- Intermission cut-scenes
+- Full beeper audio (waka-waka, siren, death)
+- High scores, demo mode
+- Two-player mode
 
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-06-chomp.md`
+**Why here:** After strategic Ink War, learners return to real-time action with sophisticated enemy AI. Four distinct ghost behaviours create emergent gameplay.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-chomp.md`
 
 ---
 
@@ -504,6 +512,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.8 (2026-01-18):** Expanded Game 6 (Chomp) to 128 units with four distinct ghost AI personalities. Total now 1,920 units.
 - **3.7 (2026-01-18):** Expanded Game 5 (Ink War) to 128 units with minimax AI and strategy polish. Total now 1,856 units.
 - **3.6 (2026-01-18):** Expanded Game 4 (Chambers) to 128 units with full Atic Atac-style exploration. Total now 1,792 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Cavern) to 128 units with full Manic Miner-style platformer features. Total now 1,728 units.

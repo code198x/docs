@@ -4,7 +4,7 @@
 **Language:** 68000 Assembly
 **Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
 **Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 2,752 (2,368 OCS/ECS + 384 AGA)
+**Total Units:** 2,816 (2,432 OCS/ECS + 384 AGA)
 
 ---
 
@@ -24,12 +24,12 @@ By the final game, learners will have skills matching professional Amiga develop
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter, timing, breakout, platformer, exploration) | 1-5 | 128 | 640 |
-| Foundation | 6-8 | 64 | 192 |
+| Foundation (shooter, timing, breakout, platformer, exploration, maze) | 1-6 | 128 | 768 |
+| Foundation | 7-8 | 64 | 128 |
 | Advanced | 9-14 | 128 | 768 |
 | Expert | 15 | 256 | 256 |
 | Capstone | 16 | 512 | 512 |
-| **Total** | **16** | | **2,368** |
+| **Total** | **16** | | **2,432** |
 
 The expanded structure allows thorough coverage of:
 - Blitter operations (copy, fill, line draw, cookie-cut)
@@ -168,17 +168,27 @@ The expanded structure allows thorough coverage of:
 ---
 
 #### Game 6: Gobble
-**Units:** 64 (4 phases)
-**Concept:** Pac-Man style maze game with ghost AI personalities.
+**Units:** 128 (8 phases)
+**Concept:** Pac-Man style maze game polished to commercial quality. Collect dots, avoid ghosts with distinct AI personalities, eat power pills to turn the tables. Smooth 50fps with Copper-enhanced effects.
 
 **Skills taught:**
-- Tile-based maze with Blitter
+- Tile-based maze with Blitter rendering
 - Constrained corridor movement
-- Ghost AI (scatter, chase, frightened)
-- Power-up state machines
-- Screen wrapping via Copper
-- Speed progression
-- Audio cues for gameplay
+- Four ghost AI personalities (Blinky, Pinky, Inky, Clyde)
+- Chase/scatter mode state machines
+- Frightened mode with ghost-eating
+- Screen wrapping via tunnels
+- Speed and difficulty progression
+- Copper gradient backgrounds
+- Intermission cut-scenes
+- Paula sample audio (waka, siren)
+- MOD music for title
+- Demo mode
+- Two-player simultaneous mode
+
+**Why here:** After dungeon exploration, learners create constrained corridor movement with sophisticated enemy AI. Four distinct ghost behaviours create emergent gameplay.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-gobble.md`
 
 ---
 
@@ -579,6 +589,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.8 (2026-01-18):** Expanded Game 6 (Gobble) to 128 units with four ghost AI personalities. OCS/ECS total now 2,432 units.
 - **3.7 (2026-01-18):** Expanded Game 5 (Crypt) to 128 units with full dungeon exploration. OCS/ECS total now 2,368 units.
 - **3.6 (2026-01-18):** Expanded Game 4 (Ascent) to 128 units with full platformer polish. OCS/ECS total now 2,304 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Shatter Point) to 128 units with Blitter physics and power-ups. OCS/ECS total now 2,240 units.

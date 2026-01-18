@@ -4,7 +4,7 @@
 **Language:** 6502 Assembly (no BASIC gateway)
 **Killer Feature:** PPU (Picture Processing Unit) - tile-based graphics mastery
 **Games:** 16
-**Total Units:** 1,856
+**Total Units:** 1,920
 
 ---
 
@@ -22,11 +22,11 @@ By the final game, learners will have skills matching professional NES developer
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter, platformer, breakout, maze, exploration) | 1-5 | 128 | 640 |
-| Foundation | 6-10 | 64 | 320 |
+| Foundation (shooter, platformer, breakout, maze, exploration, snake) | 1-6 | 128 | 768 |
+| Foundation | 7-10 | 64 | 256 |
 | Advanced | 11-15 | 128 | 640 |
 | Capstone | 16 | 256 | 256 |
-| **Total** | **16** | | **1,856** |
+| **Total** | **16** | | **1,920** |
 
 Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Games 1-2) or 16 phases (capstone), with each phase containing 16 units.
 
@@ -154,17 +154,27 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 ---
 
 #### Game 6: Fangs for the Memory
-**Units:** 64 (4 phases)
-**Concept:** Snake game with a pun. Eat food, grow longer, don't hit yourself.
+**Units:** 128 (8 phases)
+**Concept:** Snake game with a vampire bat theme polished to commercial quality. Eat food, grow longer, don't hit yourself. The ring buffer data structure taught through gameplay.
 
 **Skills taught:**
-- Grid-based movement
-- Growing entity management (ring buffer)
+- Ring buffer data structure (fundamental programming pattern)
+- Grid-based movement with timing control
 - Self-collision detection
-- Food spawning
-- Increasing difficulty through length
-- Tight game loop
-- Multiple game modes
+- Food spawning and variety
+- Speed progression as snake grows
+- Input buffering for direction changes
+- Multiple game modes (classic, levels, survival, time attack)
+- Level obstacles and mazes
+- Power-ups (speed, invincibility)
+- Smooth animation between tiles
+- Two-player and versus modes
+- Full APU audio (music and effects)
+- Password system for progress
+
+**Why here:** After dungeon exploration, this simpler game teaches an important data structure while letting concepts consolidate. The ring buffer is used throughout game and audio programming.
+
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-fangs-for-the-memory.md`
 
 ---
 
@@ -472,6 +482,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.8 (2026-01-18):** Expanded Game 6 (Fangs for the Memory) to 128 units with ring buffer teaching. Total now 1,920 units.
 - **3.7 (2026-01-18):** Expanded Game 5 (Crypt Crawler) to 128 units with full Zelda-style exploration. Total now 1,856 units.
 - **3.6 (2026-01-18):** Expanded Game 4 (Pellet Panic) to 128 units with four distinct ghost AI personalities. Total now 1,792 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Fracture Point) to 128 units with full breakout polish and power-ups. Total now 1,728 units.
