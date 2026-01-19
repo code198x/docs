@@ -34,16 +34,56 @@ Six categories, each with a nested URL structure:
 
 ### Frontmatter
 
-Keep it simple:
+Required fields for all entries:
 
 ```yaml
 ---
-layout: ../../layouts/VaultLayout.astro
+title: "Entry Title"
+subtitle: "Short tagline"
+summary: "One-sentence description for cards and SEO."
+category: "people"  # people, companies, games, techniques, hardware, systems, culture
+platforms: ['c64', 'amiga']  # Optional, any platform strings
+tags: ['tag1', 'tag2']
+---
+```
+
+### Category-Specific Date Fields
+
+Each category has semantic date fields. Use `null` or omit the end field if still active/alive/ongoing.
+
+| Category | Start Field | End Field | Example |
+|----------|-------------|-----------|---------|
+| People | `born` | `died` | `born: 1960` (alive) |
+| Companies | `founded` | `dissolved` | `founded: 1987`, `dissolved: 2001` |
+| Games | `released` | — | `released: 1993` |
+| Techniques | `originated` | `deprecated` | `originated: 1980` (still used) |
+| Culture | `emerged` | `ended` | `emerged: 1985`, `ended: 1995` |
+| Hardware/Systems | `introduced` | `discontinued` | `introduced: 1982`, `discontinued: 1994` |
+
+**Example (Person):**
+```yaml
+---
 title: "Rob Hubbard"
 subtitle: "Composer of the Commodore"
 summary: "One-sentence description for cards and SEO."
-tags: ["c64", "sid", "composers"]
-years: [1985, 1990]  # Active period or release years
+category: "people"
+platforms: ['c64']
+tags: ['composers', 'sid']
+born: 1955
+---
+```
+
+**Example (Company):**
+```yaml
+---
+title: "Bullfrog Productions"
+subtitle: "God game inventors"
+summary: "..."
+category: "companies"
+platforms: ['amiga', 'pc']
+tags: ['developer', 'british']
+founded: 1987
+dissolved: 2001
 ---
 ```
 
@@ -219,6 +259,7 @@ Migration will require:
 
 ## Version History
 
+- **4.0 (2026-01-19):** Replaced generic `years` field with category-specific date fields (born/died, founded/dissolved, released, etc.). Added semantic display labels.
 - **3.0 (2026-01-08):** Simplified from 11 entry types to 7. Reduced required fields. Shortened examples. Documented migration path.
 - **2.0 (2026-01-07):** Updated for games/units model.
 - **1.0 (2025-11-15):** Original specification.
