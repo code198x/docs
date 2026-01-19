@@ -14,19 +14,28 @@ The Vault is a reference encyclopedia providing historical, technical, and cultu
 
 ## Entry Types
 
-Six categories, each with a nested URL structure:
+Eighteen categories, each with a nested URL structure:
 
 | Type | URL Pattern | Purpose |
 |------|-------------|---------|
 | People | `/vault/people/{slug}` | Programmers, artists, musicians, designers |
 | Companies | `/vault/companies/{slug}` | Studios, publishers, hardware manufacturers |
+| Groups | `/vault/groups/{slug}` | Scene collectives, demo groups, informal organisations |
 | Games | `/vault/games/{slug}` | Notable games referenced in curriculum |
+| Demos | `/vault/demos/{slug}` | Demo scene productions and digital art showcases |
+| Genres | `/vault/genres/{slug}` | Game genres, subgenres, and design movements |
 | Techniques | `/vault/techniques/{slug}` | Programming techniques and approaches |
+| Tools | `/vault/tools/{slug}` | Development tools, trackers, databases, archives |
+| Emulators | `/vault/emulators/{slug}` | Emulation software preserving vintage platforms |
 | Hardware | `/vault/hardware/{slug}` | Chips and components (SID, VIC-II, PPU) |
 | Systems | `/vault/systems/{slug}` | Platforms (C64, Spectrum, Amiga, NES) |
-| Culture | `/vault/culture/{slug}` | Magazines, demos, events, music, films, movements |
-
-**Note:** Current implementation uses flat URLs (`/vault/{slug}`). Migration to nested structure is planned.
+| Culture | `/vault/culture/{slug}` | Movements and cultural context |
+| Events | `/vault/events/{slug}` | Demo parties, LAN events, conferences |
+| Magazines | `/vault/magazines/{slug}` | Gaming press, computing magazines, fanzines |
+| Books | `/vault/books/{slug}` | Books about gaming, programming, computing history |
+| Phenomena | `/vault/phenomena/{slug}` | Cultural phenomena, industry events, defining moments |
+| Distribution | `/vault/distribution/{slug}` | Software distribution methods (shareware, cover tapes) |
+| Communities | `/vault/communities/{slug}` | Subcultures and communities (demo scene, modding) |
 
 ---
 
@@ -41,7 +50,7 @@ Required fields for all entries:
 title: "Entry Title"
 subtitle: "Short tagline"
 summary: "One-sentence description for cards and SEO."
-category: "people"  # people, companies, games, techniques, hardware, systems, culture
+category: "people"  # people, companies, groups, games, demos, genres, techniques, tools, emulators, hardware, systems, culture, events, magazines, books, phenomena, distribution, communities
 platforms: ['c64', 'amiga']  # Optional, any platform strings
 tags: ['tag1', 'tag2']
 ---
@@ -51,14 +60,25 @@ tags: ['tag1', 'tag2']
 
 Each category has semantic date fields. Use `null` or omit the end field if still active/alive/ongoing.
 
-| Category | Start Field | End Field | Example |
-|----------|-------------|-----------|---------|
-| People | `born` | `died` | `born: 1960` (alive) |
-| Companies | `founded` | `dissolved` | `founded: 1987`, `dissolved: 2001` |
-| Games | `released` | — | `released: 1993` |
-| Techniques | `originated` | `deprecated` | `originated: 1980` (still used) |
-| Culture | `emerged` | `ended` | `emerged: 1985`, `ended: 1995` |
-| Hardware/Systems | `introduced` | `discontinued` | `introduced: 1982`, `discontinued: 1994` |
+| Category | Start Field | End Field | Display Label | Example |
+|----------|-------------|-----------|---------------|---------|
+| People | `born` | `died` | Lived | `born: 1960` (alive) |
+| Companies | `founded` | `dissolved` | Active | `founded: 1987`, `dissolved: 2001` |
+| Groups | `founded` | `dissolved` | Active | `founded: 1987` (still active) |
+| Games | `released` | — | Released | `released: 1993` |
+| Demos | `released` | — | Released | `released: 1993` |
+| Genres | `emerged` | `ended` | Era | `emerged: 1980` (ongoing) |
+| Techniques | `originated` | `deprecated` | Used | `originated: 1980` (still used) |
+| Tools | `released` | — | Released | `released: 1987` |
+| Emulators | `released` | — | Released | `released: 1997` |
+| Culture | `emerged` | `ended` | Period | `emerged: 1985`, `ended: 1995` |
+| Events | `emerged` | `ended` | Held | `emerged: 1992` (ongoing) |
+| Magazines | `founded` | `dissolved` | Published | `founded: 1984`, `dissolved: 1992` |
+| Books | `released` | — | Published | `released: 2003` |
+| Phenomena | `emerged` | `ended` | Period | `emerged: 1983`, `ended: 1985` |
+| Distribution | `emerged` | `ended` | Era | `emerged: 1980` (ongoing) |
+| Communities | `emerged` | `ended` | Active | `emerged: 1985` (ongoing) |
+| Hardware/Systems | `introduced` | `discontinued` | Produced | `introduced: 1982`, `discontinued: 1994` |
 
 **Example (Person):**
 ```yaml
@@ -159,9 +179,75 @@ Link to Pattern Library for actual code: "See [Pattern: Sprite Multiplexing](/pa
 
 ### Culture
 
-Covers magazines, demos, events, films, music, and movements that provide era context.
+Covers movements, communities, and cultural phenomena that provide era context.
 
 **Sections:** Overview, Significance, See Also
+
+### Groups
+
+Scene collectives, demo groups, cracking groups, and informal organisations. Not commercial entities.
+
+**Sections:** Overview, Fast Facts (founded, location, notable members), Key Releases, See Also
+
+### Events
+
+Demo parties, LAN events, gaming conferences, and recurring gatherings.
+
+**Sections:** Overview, Fast Facts (first held, location, peak attendance), Notable Moments, See Also
+
+### Demos
+
+Demo scene productions - non-interactive audiovisual showcases.
+
+**Sections:** Overview, Fast Facts (group, platform, year, competition placement), Technical Achievements, See Also
+
+### Magazines
+
+Gaming press, computing magazines, and fanzines.
+
+**Sections:** Overview, Fast Facts (publisher, years active, circulation), Notable Coverage, See Also
+
+### Books
+
+Books about gaming, programming, computing history, and the games industry.
+
+**Sections:** Overview, Fast Facts (author, publisher, year), Key Takeaways, See Also
+
+### Phenomena
+
+Cultural phenomena, industry events, and defining moments (e.g., video game crash of 1983, bedroom coding era).
+
+**Sections:** Overview, Causes/Context, Impact, See Also
+
+### Genres
+
+Game genres, subgenres, and design movements (e.g., roguelike, immersive sim, JRPG).
+
+**Sections:** Overview, Defining Characteristics, Key Games, Evolution, See Also
+
+### Tools
+
+Development tools, music trackers, databases, and archives (e.g., ProTracker, HVSC, World of Spectrum).
+
+**Sections:** Overview, Fast Facts (platform, release year), Features, Significance, See Also
+
+### Emulators
+
+Emulation software preserving vintage platforms (e.g., VICE, MAME).
+
+**Sections:** Overview, Fast Facts (platforms emulated, release year), Accuracy/Features, See Also
+
+### Distribution
+
+Software distribution methods and channels (e.g., shareware, budget games, cover tapes, type-in listings).
+
+**Sections:** Overview, How It Worked, Impact on Gaming, See Also
+
+### Communities
+
+Subcultures and communities around gaming and computing (e.g., demo scene, modding, speedrunning, chiptune).
+
+**Sections:** Overview, Origins, Culture and Practices, See Also
 
 ---
 
@@ -217,17 +303,22 @@ Patterns link for context: "See [VIC-II](/vault/hardware/vic-ii) for hardware de
 ## File Structure
 
 ```
-/website/src/pages/vault/
-  index.astro                    # Main vault index
+/website/src/content/vault/
   people/
     rob-hubbard.mdx
     jeff-minter.mdx
   companies/
     llamasoft.mdx
     hewson.mdx
+  groups/
+    fairlight.mdx
+    future-crew.mdx
   games/
     paradroid.mdx
     uridium.mdx
+  demos/
+    second-reality.mdx
+    state-of-the-art.mdx
   techniques/
     raster-tricks.mdx
     sprite-multiplexing.mdx
@@ -238,9 +329,25 @@ Patterns link for context: "See [VIC-II](/vault/hardware/vic-ii) for hardware de
     c64.mdx
     spectrum.mdx
   culture/
+    arcade-ports.mdx
+    import-gaming.mdx
+  events/
+    assembly-party.mdx
+    revision-party.mdx
+  magazines/
     zzap64.mdx
+    crash.mdx
+  books/
+    racing-the-beam.mdx
+  phenomena/
+    video-game-crash-1983.mdx
     bedroom-coder.mdx
+  distribution/
+    shareware.mdx
+    cover-tapes.mdx
+  communities/
     demo-scene.mdx
+    modding.mdx
 ```
 
 ---
@@ -259,6 +366,9 @@ Migration will require:
 
 ## Version History
 
+- **7.0 (2026-01-19):** Expanded from 16 to 18 categories. Added distribution (shareware, cover tapes, etc.) and communities (demo scene, modding, etc.). Moved bedroom-coder to phenomena.
+- **6.0 (2026-01-19):** Expanded from 13 to 16 categories. Added tools (trackers, archives), genres (game genres), and emulators (emulation software).
+- **5.0 (2026-01-19):** Expanded from 7 to 13 categories. Added groups (scene collectives), demos (demo productions), events (parties/conferences), magazines, books, and phenomena. Updated file structure and date field documentation.
 - **4.0 (2026-01-19):** Replaced generic `years` field with category-specific date fields (born/died, founded/dissolved, released, etc.). Added semantic display labels.
 - **3.0 (2026-01-08):** Simplified from 11 entry types to 7. Reduced required fields. Shortened examples. Documented migration path.
 - **2.0 (2026-01-07):** Updated for games/units model.
