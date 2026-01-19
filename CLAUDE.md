@@ -67,58 +67,71 @@ docker-compose exec workspace bash          # Enter workspace
 
 ### ZX Spectrum Build and Screenshot Commands
 
+**Build uses Docker; screenshot/video uses native spectrum-emu.**
+
 ```bash
-# Build ZX Spectrum snapshot (pasmonext assembler)
+# Build ZX Spectrum snapshot (pasmonext assembler - Docker)
 docker run --rm \
   -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
   ghcr.io/code198x/sinclair-zx-spectrum:latest \
   pasmonext --sna /code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.asm \
                   /code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna
 
-# Capture screenshot (title screen only)
-docker run --rm \
-  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
-  -v /Users/stevehill/Projects/Code198x/website/public/images:/images \
-  ghcr.io/code198x/sinclair-zx-spectrum:latest \
-  spectrum-screenshot \
-    /code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna \
-    /images/sinclair-zx-spectrum/game-01-ink-war/unit-XX/screenshot.png \
-    --wait 1
+# Capture screenshot (native spectrum-emu)
+~/Projects/spectrum-emu/target/release/spectrum-screenshot \
+  /Users/stevehill/Projects/Code198x/code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna \
+  /Users/stevehill/Projects/Code198x/website/public/images/sinclair-zx-spectrum/game-01-ink-war/unit-XX/screenshot.png \
+  --wait 50
 
 # Capture screenshot with input injection (skip title, show gameplay)
-docker run --rm \
-  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
-  -v /Users/stevehill/Projects/Code198x/website/public/images:/images \
-  ghcr.io/code198x/sinclair-zx-spectrum:latest \
-  spectrum-screenshot \
-    /code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna \
-    /images/sinclair-zx-spectrum/game-01-ink-war/unit-XX/screenshot.png \
-    --wait 2 --input /scripts/inputs/claim-cells.sh
+~/Projects/spectrum-emu/target/release/spectrum-screenshot \
+  /Users/stevehill/Projects/Code198x/code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna \
+  /Users/stevehill/Projects/Code198x/website/public/images/sinclair-zx-spectrum/game-01-ink-war/unit-XX/screenshot.png \
+  --input /Users/stevehill/Projects/Code198x/code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inputs/gameplay.txt
+
+# Capture video with audio (native spectrum-emu)
+~/Projects/spectrum-emu/target/release/spectrum-video \
+  /Users/stevehill/Projects/Code198x/code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna \
+  /Users/stevehill/Projects/Code198x/website/public/videos/sinclair-zx-spectrum/game-01-ink-war/unit-XX/gameplay.mp4 \
+  --wait 50 --duration 500 \
+  --input /Users/stevehill/Projects/Code198x/code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inputs/gameplay.txt
 ```
 
-**Input Scripts** (in `/sinclair-zx-spectrum-dev/scripts/inputs/`):
-- `claim-cells.sh` - Skip title screen, claim several cells to show gameplay
-- `quick-game.sh` - Play a quick demo game
+**spectrum-screenshot options:**
+- `--wait, -w N` - Wait N frames before capture (default: 0)
+- `--input, -i FILE` - Execute input script from file
 
-```bash
-# Capture ZX Spectrum video (with input injection)
-docker run --rm \
-  -v /Users/stevehill/Projects/Code198x/code-samples:/code-samples \
-  -v /Users/stevehill/Projects/Code198x/website/public/videos:/videos \
-  ghcr.io/code198x/sinclair-zx-spectrum:latest \
-  spectrum-video \
-    /code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna \
-    /videos/sinclair-zx-spectrum/game-01-ink-war/unit-XX/gameplay.mp4 \
-    --wait 2 --duration 15 --input /scripts/inputs/quick-game.sh
+**spectrum-video options:**
+- `--wait, -w N` - Wait N frames before recording (default: 0)
+- `--duration, -d N` - Record for N frames (default: 500, ~10 seconds at 50fps)
+- `--input, -i FILE` - Execute input script from file
+- `--fps N` - Output frame rate (default: 50)
+- `--scale, -s N` - Scale factor 1-4 (default: 2)
+- `--no-audio` - Disable audio capture
+
+**Supported formats:** `.sna`, `.z80`, `.tap`, `.tzx`
+
+**Input Script Format** (text file, one action per line):
+```text
+# Comment
+wait 50              # Wait 50 frames
+tap Space 10         # Press Space for 10 frames
+tap Q 10             # Press Q for 10 frames
+key_down O           # Hold O key down
+wait 20
+key_up O             # Release O key
+joy_tap Fire 5       # Joystick fire for 5 frames
 ```
 
-**spectrum-video.sh options:**
-- `--wait SECONDS` - Wait before recording (default: 3 for .sna, 8 for .tap)
-- `--duration SECONDS` - Recording length (default: 10)
-- `--input SCRIPT` - Input injection script
-- `--fps N` - Frame rate (default: 50)
-- `--scale N` - Scale factor 1-4 (default: 2)
-- `--machine TYPE` - 48, 128, plus2, plus3 (default: 48)
+**Input scripts location:** Store alongside code samples in `inputs/` subdirectory:
+```
+code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/
+  inkwar.asm
+  inkwar.sna
+  inputs/
+    title-screen.txt    # Show title only
+    gameplay.txt        # Skip title, show gameplay
+```
 
 ### C64 Build and Screenshot Commands
 

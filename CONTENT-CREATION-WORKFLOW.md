@@ -1,7 +1,7 @@
 # Content Creation Workflow
 
-**Last Updated:** 2026-01-08
-**Version:** 2.1
+**Last Updated:** 2026-01-19
+**Version:** 2.4
 **Purpose:** Complete end-to-end guide for creating curriculum units, from initial planning through publication
 **Scope:** Universal workflow applying to all platforms and games
 
@@ -82,21 +82,22 @@ grep -iE "submit|grading|instructor|feedback|assignment" unit-NN-*.mdx
 
 ## Workflow Phases
 
-The workflow has **five main phases**, each with detailed steps:
+The workflow has **six main phases**, each with detailed steps. Phases 1-5 apply to every unit; Phase 6 applies when completing a game.
 
 ### Phase 1: Planning (Pre-Work)
 **Purpose:** Verify curriculum alignment and make key decisions before writing begins.
 
 **Steps:**
 - Locate and read curriculum specification (`/docs/curriculum/{platform}-curriculum.md`)
-- Locate game outline (if exists): `/docs/plans/{platform}/game-NN-{slug}.md`
 - Verify current unit matches specification (if editing existing)
+- Validate skill tree prerequisites (check `/docs/curriculum/reference/SKILL-TREES.md`)
 - Choose unit archetype based on concept
 - Identify prerequisites from previous units
 - Check for existing Pattern Library entries
 - Identify required Vault entries (hardware chips, essential context)
 
 **Hard Stop:** If unit doesn't match curriculum specification, STOP. Follow decision matrix (archive mismatch, don't edit).
+**Hard Stop:** If skill tree prerequisites missing, STOP. Either reorder units or simplify technique.
 
 ### Phase 2: Creation
 **Purpose:** Write unit content and working code.
@@ -104,6 +105,7 @@ The workflow has **five main phases**, each with detailed steps:
 **Steps:**
 - Write unit MDX following structure
 - Create runnable code examples
+- Create standalone technique demos (when appropriate)
 - Write clear explanations
 - Include experimentation suggestions
 - Tag potential patterns as you write (lightweight tracking)
@@ -137,6 +139,16 @@ The workflow has **five main phases**, each with detailed steps:
 - Update game landing page
 - Mark unit as published
 
+### Phase 6: Game Completion (When All Units Done)
+**Purpose:** Finalise game, extract patterns, verify navigation.
+
+**Steps:**
+- Extract Pattern Library entries from standalone demos
+- Verify all unit navigation works
+- Cross-reference audit
+- Final game verification (playable start to finish)
+- Update platform landing page
+
 ---
 
 ## Phase 1: Planning (Detailed)
@@ -147,8 +159,7 @@ The workflow has **five main phases**, each with detailed steps:
 
 1. **Locate specification** (check in order):
    - Platform curriculum: `/docs/curriculum/{platform}-curriculum.md`
-   - Game outline: `/docs/plans/{platform}/game-NN-{slug}.md`
-   - BASIC gateway curriculum (if applicable): `/docs/curriculum/{platform}-basic-curriculum.md`
+   - BASIC gateway curriculum (if applicable): `/docs/curriculum/basic/{platform}/`
 
 2. **Read specification completely** - Note game name, unit position, key concepts, skills taught
 
@@ -182,7 +193,30 @@ Choose archetype based on what you're teaching:
 - Check Pattern Library for existing patterns covering this technique
 - Note which hardware chips will be discussed
 
-### Step 1.4: Required Vault Entries Check
+### Step 1.4: Skill Tree Validation
+
+Verify the unit's technique has its prerequisites taught in earlier units.
+
+**Check against skill tree** (`/docs/curriculum/reference/SKILL-TREES.md`):
+1. What skills does this unit's technique require?
+2. Have those skills been taught in earlier units of this game (or previous games)?
+3. If not, either:
+   - Teach the prerequisite in an earlier unit first
+   - Simplify the technique to match available skills
+   - Flag as a curriculum ordering issue
+
+**Example validation:**
+```
+Unit: Game 9, Unit 12 - Sprite Multiplexing
+Requires: Raster interrupts, sprite basics
+Check: Raster interrupts taught in Game 7? ✅
+Check: Sprite basics taught in Game 1? ✅
+Proceed: Yes
+```
+
+**Hard Stop:** If prerequisites aren't available, STOP. Either reorder units or adjust the technique scope.
+
+### Step 1.5: Required Vault Entries Check
 
 Identify **must-create** Vault entries:
 - Hardware chips mentioned (VIC-II, SID, CIA, etc.)
@@ -249,15 +283,46 @@ objectives:
 - Include clear comments explaining key concepts
 - Progressive complexity (simple example → complex example)
 
-### Step 2.3: Pattern Tagging (Lightweight)
+### Step 2.3: Standalone Technique Demos (When Appropriate)
+
+Some techniques benefit from isolated demonstration. Create a standalone demo when the technique:
+- Is complex enough that seeing it in isolation aids understanding
+- Will be reused across multiple games
+- Is a likely Pattern Library candidate
+- Benefits from experimentation outside game context
+
+**Location:** `/code-samples/{platform}/{game}/techniques/{technique-name}.asm`
+
+**Requirements:**
+- 50-100 lines (maximum 150)
+- Compile and run without dependencies
+- Demonstrate exactly one technique
+- Include header comment linking to the teaching unit
+
+**Example header:**
+```asm
+; =============================================================================
+; SPRITE MULTIPLEXING - STANDALONE DEMO
+; Demonstrates displaying >8 sprites using raster interrupts
+; Full tutorial: Game 9 (Sprite Storm), Unit 12
+; =============================================================================
+```
+
+**Not everything needs a standalone demo.** Simple techniques are better taught purely in game context.
+
+### Step 2.4: Pattern Tagging (Lightweight)
 
 As you write, note reusable techniques:
 - Add comment in code: `REM PATTERN: SID initialization sequence`
 - Or note in unit planning doc: "Pattern candidate: sprite MSB handling"
 
-Don't create Pattern Library entries yet - just tag for later extraction.
+**Don't create Pattern Library entries yet** - just tag for later extraction. Standalone demos (Step 2.3) are teaching tools, not production patterns. Pattern Library entries are created *after game completion* using standalone demos as raw material.
 
-### Step 2.4: Writing Guidelines
+The flow:
+1. **During development:** Create standalone demos + tag pattern candidates
+2. **After game completion:** Extract tagged patterns into Pattern Library entries
+
+### Step 2.5: Writing Guidelines
 
 **Tone:**
 - Conversational but precise
@@ -542,6 +607,7 @@ Before committing, verify ALL of these:
 - [ ] No crashes, no error messages in output
 - [ ] PRG/executable files generated successfully
 - [ ] Code follows platform conventions (no indentation for BASIC, etc.)
+- [ ] Standalone technique demos validated (if created)
 
 **Quality:**
 - [ ] Three quality criteria met (It Works Fast, It's Real, It's Clear)
@@ -664,6 +730,81 @@ git push origin <branch-name>
 - Single unit → Game landing only
 - Game complete → Game + Platform landing
 - Major milestone → All levels including Homepage
+
+---
+
+## Phase 6: Game Completion (When Final Unit Published)
+
+When all units in a game are complete, perform these additional steps.
+
+### Step 6.1: Pattern Library Extraction
+
+Now is the time to create Pattern Library entries from standalone demos.
+
+**For each standalone demo in `techniques/`:**
+1. Review the demo - has the technique evolved during development?
+2. Create Pattern Library entry (see PATTERN-LIBRARY-SPECIFICATION.md)
+3. Optimise and add edge-case handling
+4. Add trade-offs table and related links
+5. Link from relevant units to the new pattern
+
+**For each tagged pattern candidate:**
+1. Check if standalone demo exists - if not, create one
+2. Follow same pattern creation process
+
+### Step 6.2: Navigation and Landing Pages
+
+**Game landing page:**
+- [ ] All units listed with correct titles
+- [ ] All units marked as published
+- [ ] Unit navigation (prev/next) works for entire sequence
+- [ ] Game summary/description is accurate
+
+**Platform landing page:**
+- [ ] Game marked as complete
+- [ ] Unit count updated
+- [ ] Game description added to completed games section
+
+### Step 6.3: Cross-Reference Audit
+
+- [ ] All Vault links in units are valid
+- [ ] Pattern Library links point to published patterns
+- [ ] "From the Vault" sections are populated
+- [ ] Related units are cross-referenced where appropriate
+
+### Step 6.4: Final Game Verification
+
+**Build and run:**
+- [ ] Final unit compiles and runs without errors
+- [ ] Game is playable from start to finish
+- [ ] All features from all units work together
+
+**Content review:**
+- [ ] British English throughout
+- [ ] No placeholder text remaining
+- [ ] Screenshots are current (not from earlier development)
+
+### Step 6.5: Announcement
+
+- [ ] Update platform landing page
+- [ ] Update homepage if major milestone
+- [ ] Document completion in commit message
+
+**Commit message for game completion:**
+```
+feat({platform}): Complete Game N - {Game Name}
+
+All {X} units published. Game teaches:
+- Skill 1
+- Skill 2
+- Skill 3
+
+Pattern Library entries created:
+- pattern-name-1
+- pattern-name-2
+
+Milestone: Game N of {total} complete for {platform}
+```
 
 ---
 
@@ -870,6 +1011,92 @@ git stash list  # Check for stashed changes
 
 ---
 
+## Revision Workflow
+
+The main workflow is forward-only (create units sequentially). This section covers going back to revise earlier work.
+
+### When to Revise
+
+**Do revise when:**
+- Bug discovered that affects later units (fix the root cause)
+- Technique improved in later unit and should be backported
+- Factual error found (wrong register address, incorrect explanation)
+- Screenshot shows outdated state after code changes
+- Skill tree analysis reveals missing prerequisite
+
+**Don't revise for:**
+- Style preferences ("I'd phrase this differently now")
+- Minor optimisations that don't affect learning
+- Adding features not in the curriculum spec
+
+### Single-Unit Revision
+
+**Scenario:** Bug in Unit 5 discovered while building Unit 20.
+
+**Steps:**
+1. **Document the issue** - Note what's wrong and why
+2. **Check impact** - Do later units depend on the buggy code?
+3. **Fix in isolation:**
+   ```bash
+   # Create branch for the fix
+   git checkout -b fix/game-01-unit-05-bug
+
+   # Make minimal fix
+   # Re-validate code
+   # Recapture screenshot if affected
+   ```
+4. **Update dependent units** - If Units 6-19 copied the buggy pattern, fix those too
+5. **Commit with clear message:**
+   ```
+   fix(c64-game01): Fix sprite collision in Unit 5
+
+   Bug: Collision check used wrong register ($D01E instead of $D01F)
+   Impact: Units 6, 8, 12 also had this bug (copied pattern)
+
+   All affected units updated and re-validated.
+   ```
+
+### Multi-Unit Revision (Technique Update)
+
+**Scenario:** Unit 15 introduces a better approach that should replace the technique taught in Unit 8.
+
+**Decision framework:**
+1. **Is the old technique wrong?** → Fix it
+2. **Is the old technique just less optimal?** → Usually leave it (learning progression matters)
+3. **Does the old technique cause problems in later units?** → Fix it
+
+**If fixing:**
+1. Update Unit 8 with the improved technique
+2. Check all units between 8 and 15 for impacts
+3. Update Unit 15 to reference the improvement, not introduce it
+4. Re-validate all affected units
+5. Update any standalone demos in `techniques/`
+
+### Revision Checklist
+
+Before committing any revision:
+- [ ] Minimal change - fix only what's broken
+- [ ] All affected units identified and updated
+- [ ] All affected code re-validated
+- [ ] All affected screenshots recaptured
+- [ ] Standalone demos updated if applicable
+- [ ] Commit message explains what and why
+
+### Tracking Revisions
+
+For significant revisions, add a note to the unit's frontmatter:
+
+```yaml
+revisions:
+  - date: "2026-01-19"
+    description: "Fixed sprite collision register"
+    units_affected: [5, 6, 8, 12]
+```
+
+This helps track what changed and when, especially for debugging later issues.
+
+---
+
 ## Common Pitfalls and Troubleshooting
 
 ### Pitfall 1: Formulaic Writing
@@ -979,18 +1206,20 @@ git stash list  # Check for stashed changes
 
 ## Quick Reference Summary
 
-### The Five Workflow Phases
+### The Six Workflow Phases
 
-1. **Planning** - Verify curriculum alignment, choose archetype, identify prerequisites
-2. **Creation** - Write content and code, tag patterns
+1. **Planning** - Verify curriculum alignment, skill tree validation, choose archetype, identify prerequisites
+2. **Creation** - Write content and code, create standalone demos, tag patterns
 3. **Validation** - Code validation, quality criteria, screenshot/audio verification
 4. **Integration** - Vault entries, pattern tagging, cross-references
 5. **Publication** - Final checks, commit, update navigation
+6. **Game Completion** - Pattern extraction, navigation audit, final verification (when game finished)
 
 ### Hard Stops (Must Complete Before Proceeding)
 
 - ❌ No curriculum specification → STOP, cannot create unit
 - ❌ Unit doesn't match specification → STOP, archive and rewrite
+- ❌ Skill tree prerequisites missing → STOP, reorder or simplify
 - ❌ Code validation fails → STOP, fix before proceeding
 - ❌ Screenshot shows errors → STOP, fix and recapture
 - ❌ Audio sounds wrong → STOP, fix and recapture
@@ -1013,17 +1242,27 @@ git stash list  # Check for stashed changes
 - **Tutorial** - Step-by-step construction
 - **Showcase** - Inspirational demonstration
 
-### Required Before Completion
+### Required Before Unit Completion
 
 - [ ] Curriculum alignment verified
+- [ ] Skill tree prerequisites available
 - [ ] Code validated (syntax + runtime)
 - [ ] Screenshots verified with Read tool
 - [ ] Audio verified (for sound units)
 - [ ] Quality criteria met (2/3+)
 - [ ] Required Vault entries created (hardware)
+- [ ] Standalone demos created (if appropriate)
 - [ ] Pattern candidates tagged
 - [ ] British English checked
 - [ ] Navigation updated
+
+### Required Before Game Completion
+
+- [ ] All units published
+- [ ] Pattern Library entries extracted from standalone demos
+- [ ] All navigation working (prev/next through entire game)
+- [ ] Cross-reference audit complete
+- [ ] Final game playable start to finish
 
 ### Vault Categories (14 total)
 
@@ -1056,6 +1295,8 @@ Scopes: `{platform}-game{NN}`
 
 ## Version History
 
+- **2.4 (2026-01-19):** Added Phase 6 (Game Completion), Skill Tree Validation (Step 1.4), Revision Workflow section. Updated Quick Reference to six phases.
+- **2.3 (2026-01-19):** Added Step 2.3 for standalone technique demos. Updated checklist. Removed references to deleted `/docs/plans/` directory. Updated BASIC curriculum path.
 - **2.1 (2026-01-08):** Removed skill references; integrated platform validation commands directly into workflow.
 - **2.0 (2026-01-07):** Complete rewrite for games/units model. Replaced phases/tiers/lessons structure with games/units throughout.
 - **1.0 (2025-11-15):** Original content creation workflow.

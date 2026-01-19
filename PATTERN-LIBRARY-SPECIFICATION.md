@@ -226,9 +226,43 @@ Patterns are **not** tutorials. They assume you've done the curriculum or have e
 
 ## Integration
 
+### The Three-Level Model
+
+Content flows from teaching to reference:
+
+```
+Unit (game context)          → "Why do I need this? How does it fit?"
+Standalone (isolated demo)   → "How does this technique work on its own?"
+Pattern Library (reference)  → "Give me production-ready code to copy"
+```
+
+### From Standalone Demos to Patterns
+
+Standalone technique demos (in `code-samples/{platform}/{game}/techniques/`) are the raw material for Pattern Library entries.
+
+**Timing:** Pattern Library entries are created *after game completion*, not during development. This ensures:
+- The technique has been refined through the full game
+- You're not documenting something that might change
+- Focus stays on teaching during development
+
+**The flow:**
+
+1. **During development:** Unit teaches technique + standalone demo provides isolated version
+2. **After game completion:** Extract patterns from standalone demos
+
+When creating a pattern, start from the standalone demo:
+- Keep the core logic
+- Add optimisations and edge-case handling
+- Improve comments for reference use
+- Add trade-offs table and related links
+
+**Standalone demos are teaching tools; patterns are production tools.**
+
 ### From Units
-Units link to patterns at the end:
+Units link to both standalone demos and patterns:
 ```markdown
+> **Isolated Example:** See [techniques/sprite-multiplexing.asm](link) for a minimal demonstration.
+
 For a production-ready version, see [Pattern: Sprite Multiplexing](/patterns/commodore-64/rendering/sprite-multiplexing-basic).
 ```
 
@@ -239,9 +273,10 @@ See the [Pattern Library](/patterns/commodore-64/rendering/sprite-multiplexing-b
 ```
 
 ### Relationship Summary
-- **Curriculum Units** = "How to build this step-by-step"
-- **Pattern Library** = "Here's production code to copy"
-- **Vault** = "Why this matters and how it came to be"
+- **Curriculum Units** = "How to build this step-by-step" (game context)
+- **Standalone Demos** = "How does this work in isolation?" (50-100 lines)
+- **Pattern Library** = "Here's production code to copy" (optimised reference)
+- **Vault** = "Why this matters and how it came to be" (context)
 
 ---
 
@@ -258,6 +293,7 @@ Before publishing:
 
 ## Version History
 
+- **3.1 (2026-01-19):** Added three-level model (units → standalone demos → patterns). Documented how standalone demos feed Pattern Library.
 - **3.0 (2026-01-08):** Simplified from 12 sections to 5. Added cross-platform comparison pages. Removed redundant sections.
 - **2.0 (2026-01-07):** Updated for games/units model.
 - **1.0 (2025-11-15):** Original specification.

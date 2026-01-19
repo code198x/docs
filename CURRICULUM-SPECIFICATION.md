@@ -1,7 +1,7 @@
 # Curriculum Specification
 
-**Version:** 2.0
-**Last Updated:** 2025-11-25
+**Version:** 2.1
+**Last Updated:** 2026-01-19
 **Purpose:** Defines the structure, philosophy, and content model for all platform curricula.
 
 ---
@@ -238,6 +238,75 @@ The assembly curriculum assumes no BASIC knowledge. A learner starting at Game 1
 
 ---
 
+## Standalone Technique Examples
+
+Some techniques benefit from isolated demonstration before integration into a game. The `techniques/` directory provides minimal, focused examples.
+
+### The Three-Level Model
+
+```
+Unit (game context)          → "Why do I need this? How does it fit?"
+Standalone (isolated demo)   → "How does this technique work on its own?"
+Pattern Library (reference)  → "Give me production-ready code to copy"
+```
+
+Each level serves a different purpose:
+- **Units** teach techniques within game context (game-first pedagogy)
+- **Standalone demos** provide isolated reference (50-100 lines, just the technique)
+- **Patterns** provide optimised, production-ready implementations
+
+### Directory Structure
+
+```
+code-samples/{platform}/{game}/
+  techniques/                    # Standalone demos introduced by this game
+    sprite-multiplexing.asm      # Minimal isolated demonstration
+    raster-interrupts.asm
+  unit-01/
+  unit-12/                       # Unit that teaches the technique in context
+    game.asm                     # Full game integration
+```
+
+### When to Create Standalone Demos
+
+Create a standalone demo when a technique:
+- Is complex enough that seeing it in isolation aids understanding
+- Will be reused across multiple games
+- Is a likely Pattern Library candidate
+- Benefits from experimentation outside game context
+
+**Not everything needs a standalone demo.** Simple techniques (reading a joystick, playing a sound effect) are better taught purely in game context.
+
+### Standalone Demo Requirements
+
+A standalone demo should:
+- Be **minimal** - 50-100 lines, absolute maximum 150
+- Be **complete** - compile and run without dependencies
+- Be **focused** - demonstrate exactly one technique
+- **Include comments** - enough to understand without the unit
+- **Produce visible output** - show that it works
+
+Example header:
+```asm
+; =============================================================================
+; SPRITE MULTIPLEXING - STANDALONE DEMO
+; Demonstrates displaying >8 sprites using raster interrupts
+; Full tutorial: Game 9 (Sprite Storm), Unit 12
+; =============================================================================
+```
+
+### Relationship to Units
+
+Units link to standalone demos:
+```markdown
+> **Isolated Example:** Want to study multiplexing without the game code?
+> See [techniques/sprite-multiplexing.asm](link) for a minimal demonstration.
+```
+
+The unit teaches *why* and *when*; the standalone shows *how* in isolation.
+
+---
+
 ## Integration with Vault and Pattern Library
 
 Units don't exist in isolation. They link to the Vault for context and the Pattern Library for reusable code.
@@ -297,5 +366,6 @@ Platform curriculum files should be concise. They list what exists, not why the 
 
 ## Version History
 
+- **2.1 (2026-01-19):** Added Standalone Technique Examples section (three-level model: units → standalone demos → patterns).
 - **2.0 (2025-11-25):** Complete rewrite. Replaced phases/tiers/lessons model with games model.
 - **1.0 (2025-01-15):** Original specification using 4,096 lessons per platform.

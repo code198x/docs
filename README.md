@@ -22,22 +22,33 @@ See [CURRICULUM-SPECIFICATION.md](CURRICULUM-SPECIFICATION.md) for the full mode
 
 ```
 /
-├── curriculum/             # Game sequences per platform
+├── curriculum/                    # Game sequences and curricula
 │   ├── commodore-64-curriculum.md
 │   ├── sinclair-zx-spectrum-curriculum.md
 │   ├── commodore-amiga-curriculum.md
-│   └── nintendo-nes-curriculum.md
+│   ├── nintendo-nes-curriculum.md
+│   ├── assembly/                  # Future platform assembly stubs
+│   │   ├── sega-mega-drive/
+│   │   ├── atari-st/
+│   │   ├── bbc-micro/
+│   │   └── ...
+│   ├── basic/                     # BASIC curricula and stubs
+│   │   ├── commodore-64/
+│   │   ├── sinclair-zx-spectrum/
+│   │   ├── commodore-amiga/
+│   │   ├── bbc-micro/
+│   │   └── ...
+│   ├── patterns/                  # Reusable code patterns
+│   └── reference/                 # Planning and reference docs
 │
-├── platforms/              # Platform-specific references
-│   ├── commodore-64/       # Hardware refs, quick guides, common errors
+├── platforms/                     # Platform-specific references
+│   ├── commodore-64/              # Hardware refs, quick guides
 │   ├── sinclair-zx-spectrum/
 │   ├── commodore-amiga/
 │   └── nintendo-entertainment-system/
 │
-├── plans/                  # Design documents
-│
-├── CURRICULUM-SPECIFICATION.md   # How curricula work
-├── UNIT-SPECIFICATION.md         # How to format unit files
+├── CURRICULUM-SPECIFICATION.md    # How curricula work
+├── UNIT-SPECIFICATION.md          # How to format unit files
 ├── PATTERN-LIBRARY-SPECIFICATION.md
 ├── VAULT-SPECIFICATION.md
 └── CONTENT-CREATION-WORKFLOW.md
@@ -68,9 +79,16 @@ See [CURRICULUM-SPECIFICATION.md](CURRICULUM-SPECIFICATION.md) for the full mode
 
 | Platform | Language | Curriculum | Status |
 |----------|----------|------------|--------|
-| Commodore 64 | BASIC V2 | [8 games, 512 units](curriculum/commodore-64-basic-curriculum.md) | Game sequence defined |
-| ZX Spectrum | Sinclair BASIC | [8 games, 512 units](curriculum/sinclair-zx-spectrum-basic-curriculum.md) | Game sequence defined |
-| Amiga | AMOS BASIC | [8 games, 512 units](curriculum/commodore-amiga-amos-curriculum.md) | Game sequence defined |
+| Commodore 64 | BASIC V2 | [8 games, 512 units](curriculum/basic/commodore-64/) | Game sequence defined |
+| ZX Spectrum | Sinclair BASIC | [8 games, 512 units](curriculum/basic/sinclair-zx-spectrum/) | Game sequence defined |
+| Amiga | AMOS/Blitz BASIC | [16 games](curriculum/basic/commodore-amiga/) | Game sequence defined |
+
+### Future Platforms (Stub Curricula)
+
+Stub curricula have been created for future platforms. See:
+- [curriculum/assembly/](curriculum/assembly/) - Assembly stubs (Mega Drive, Atari ST, BBC Micro, SNES, etc.)
+- [curriculum/basic/](curriculum/basic/) - BASIC stubs (BBC BASIC, Locomotive, STOS/GFA, MSX-BASIC)
+- [curriculum/reference/future-platforms-complete.md](curriculum/reference/future-platforms-complete.md) - Full platform roadmap
 
 ## Related Repositories
 

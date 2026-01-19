@@ -1,7 +1,7 @@
 # Information Architecture Specification
 
-**Version:** 2.0
-**Last Updated:** 2026-01-07
+**Version:** 2.1
+**Last Updated:** 2026-01-19
 
 ## Overview
 
@@ -40,7 +40,7 @@ This document defines how learners navigate and discover content across Code Lik
 │   │   ├── /game-01-sid-symphony/
 │   │   │   ├── /unit-01-first-notes/
 │   │   │   ├── /unit-02-adsr-envelopes/
-│   │   │   └── ... (64 units)
+│   │   │   └── ... (128 units)
 │   │   ├── /game-02-starfield/
 │   │   └── ... (16 games)
 │   └── ... (all platforms)
@@ -90,7 +90,7 @@ This document defines how learners navigate and discover content across Code Lik
 **Examples:**
 - `/learn/commodore-64/game-01-sid-symphony/unit-01-first-notes/` - First unit
 - `/learn/commodore-64/game-09-sprite-storm/unit-12-multiplexing/` - Advanced game
-- `/learn/nintendo-nes/game-16-requiem-for-a-mapper/unit-64-final-polish/` - Final unit
+- `/learn/nintendo-nes/game-16-requiem-for-a-mapper/unit-128-final-polish/` - Final unit
 
 **Why this structure:**
 - Clear hierarchy: platform → game → unit
@@ -306,7 +306,7 @@ Commercial-quality action-adventure
 - Jump to: [Unit select dropdown]
 
 **Sidebar (contextual):**
-- Game progress: Unit X of 64
+- Game progress: Unit X of N (varies by game: 8, 16, 32, 64, or 128)
 - Quick links to Vault mentions
 - Related patterns
 - Download code samples
@@ -322,7 +322,7 @@ Commercial-quality action-adventure
 │ MAIN CONTENT             │ SIDEBAR              │
 │                          │                      │
 │ ## What You'll Build     │ Game Progress:       │
-│ A keyboard scanner that  │ [████░░░░] 3/64      │
+│ A keyboard scanner that  │ [██░░░░░░] 3/128     │
 │ detects which key is...  │                      │
 │                          │ Related Vault:       │
 │ ## Introduction          │ • CIA Chip           │
@@ -950,5 +950,6 @@ and usage examples.
 
 ## Version History
 
+- **2.1 (2026-01-19):** Updated unit counts (SID Symphony has 128 units, not 64). Fixed variable unit counts in sidebar example.
 - **2.0 (2026-01-07):** Complete rewrite for games/units model. Updated all URL patterns, page types, and navigation.
 - **1.0 (2025-01-15):** Original specification using phases/tiers/lessons model.
