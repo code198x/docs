@@ -78,19 +78,19 @@ docker run --rm \
                   /code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna
 
 # Capture screenshot (native spectrum-emu)
-~/Projects/spectrum-emu/target/release/spectrum-screenshot \
+~/Projects/retro-emu/spectrum-emu/target/release/spectrum-screenshot \
   /Users/stevehill/Projects/Code198x/code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna \
   /Users/stevehill/Projects/Code198x/website/public/images/sinclair-zx-spectrum/game-01-ink-war/unit-XX/screenshot.png \
   --wait 50
 
 # Capture screenshot with input injection (skip title, show gameplay)
-~/Projects/spectrum-emu/target/release/spectrum-screenshot \
+~/Projects/retro-emu/spectrum-emu/target/release/spectrum-screenshot \
   /Users/stevehill/Projects/Code198x/code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna \
   /Users/stevehill/Projects/Code198x/website/public/images/sinclair-zx-spectrum/game-01-ink-war/unit-XX/screenshot.png \
   --input /Users/stevehill/Projects/Code198x/code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inputs/gameplay.txt
 
 # Capture video with audio (native spectrum-emu)
-~/Projects/spectrum-emu/target/release/spectrum-video \
+~/Projects/retro-emu/spectrum-emu/target/release/spectrum-video \
   /Users/stevehill/Projects/Code198x/code-samples/sinclair-zx-spectrum/game-01-ink-war/unit-XX/inkwar.sna \
   /Users/stevehill/Projects/Code198x/website/public/videos/sinclair-zx-spectrum/game-01-ink-war/unit-XX/gameplay.mp4 \
   --wait 50 --duration 500 \
