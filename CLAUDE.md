@@ -51,13 +51,25 @@ All repos live under `/Users/stevehill/Projects/Code198x/`:
 
 ---
 
+## Pagefind (Search Index)
+
+The website build runs Pagefind after `astro build`. On Apple Silicon, use the local binary:
+
+```
+/Users/stevehill/Projects/Code198x/website/tools/pagefind/pagefind
+```
+
+Set `PAGEFIND_BINARY_PATH` when running `npx pagefind` (this is wired into `npm run build`).
+
+---
+
 ## Essential Commands
 
 ```bash
 # Website Development (from /website directory)
 npm install              # Install dependencies
 npm run dev              # Dev server at localhost:4321
-npm run build            # Production build
+npm run build            # Production build (uses local Pagefind binary if configured)
 npm run preview          # Preview production build
 
 # Docker Assembly Environment (from root)
