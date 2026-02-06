@@ -54,7 +54,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why first:** A shooter gets something playable on screen immediately. Learners control a ship from Unit 2, shoot from Unit 3. The SID is introduced through satisfying sound effects, not theory.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-starfield.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-01-full-game-outline-c64-starfield.md`
 
 ---
 
@@ -76,7 +76,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** After shooting, platforming introduces the fundamental physics model used in countless games. 128 units allows a fully polished game, not just a prototype.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-platform-panic.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-02-full-game-outline-c64-platform-panic.md`
 
 ---
 
@@ -96,7 +96,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** After sprites in Games 1-2, learners master character graphics for tile-based worlds. Ghost AI introduces pathfinding - a fundamental skill for all future games.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-maze-raider.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-03-full-game-outline-c64-maze-raider.md`
 
 ---
 
@@ -116,7 +116,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** Physics refinement - angles, reflections, vectors. Different feel from gravity-based games. 128 units allows full polish.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-brick-basher.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-04-full-game-outline-c64-brick-basher.md`
 
 ---
 
@@ -140,7 +140,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** After single-screen games, learners manage multi-room worlds with persistent state - the foundation for larger adventure games.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-catacombs.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-05-full-game-outline-c64-catacombs.md`
 
 ---
 
@@ -164,7 +164,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** Rhythm games require timing precision and keyboard input - skills that benefit from 5 games of experience. The SID deep dive is more meaningful after hearing it in action games.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-sid-symphony.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-06-full-game-outline-c64-sid-symphony.md`
 
 ---
 
@@ -190,7 +190,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** Hardware scrolling is a defining C64 technique. After mastering single-screen games, learners tackle the fundamentals that power side-scrollers, shoot-em-ups, and platformers.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-scroll-runner.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-07-full-game-outline-c64-scroll-runner.md`
 
 ---
 
@@ -218,7 +218,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** Building on Scroll Runner's horizontal scrolling foundation, Night Raid combines scrolling with the shooting mechanics learned in earlier games. Resource management adds strategic depth.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-night-raid.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-08-full-game-outline-c64-night-raid.md`
 
 ---
 
@@ -245,7 +245,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why expanded:** Sprite multiplexing is THE advanced C64 technique. Games like Katakis, Turrican, and Armalyte relied on it. 256 units allows mastery of raster timing, sorted allocation, and flicker-free display.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-sprite-storm.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-09-full-game-outline-c64-sprite-storm.md`
 
 ---
 
@@ -271,7 +271,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why expanded:** Pseudo-3D racing requires deep mastery of raster timing and road mathematics. This technique defined classic racers and teaches advanced interrupt handling.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-raster-rider.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-10-full-game-outline-c64-raster-rider.md`
 
 ---
 
@@ -298,9 +298,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why expanded:** A complete adventure game with inventory, NPCs, quests, combat, puzzles, AND disk I/O requires 256 units for proper depth and polish.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-dungeon-crawl.md`
-
-**Detailed outline:** `/docs/plans/commodore-64/game-11-dungeon-crawl.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-11-full-game-outline-c64-dungeon-crawl.md`
 
 ---
 
@@ -327,7 +325,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why expanded:** Fighting games require mastery of complex state machines, frame-perfect timing, input detection, and complete character implementation. Four distinct archetypes plus AI and modes requires 256 units.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-arena-fighter.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-12-full-game-outline-c64-arena-fighter.md`
 
 ---
 
@@ -352,7 +350,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why expanded:** A full Gradius-style shmup with multi-layer parallax, options, charge shots, 7 stages, AND complex bosses requires 256 units for proper depth.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-parallax-patrol.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-13-full-game-outline-c64-parallax-patrol.md`
 
 ---
 
@@ -381,7 +379,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why expanded:** Isometric is a completely different paradigm requiring new mathematics, rendering, and collision approaches. A full Knight Lore-style adventure with 5 zones, puzzles, combat, AND inventory requires 256 units.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-isometric-quest.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-14-full-game-outline-c64-isometric-quest.md`
 
 ---
 
@@ -410,7 +408,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why 512 units:** Turrican-level complexity requires extensive systems: 8-way scrolling, grappling physics, vehicle transformation, massive boss battles, and 6 complete worlds with secrets. This is the pinnacle of C64 action gaming.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-mega-blaster.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-15-full-game-outline-c64-mega-blaster.md`
 
 ---
 
@@ -444,7 +442,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why last:** The curriculum ends where it began - with the SID. But now the learner commands every aspect of the machine, from the demo-scene effects to the drive's CPU.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-c64-symphonys-end.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-64/game-16-full-game-outline-c64-symphonys-end.md`
 
 ---
 
