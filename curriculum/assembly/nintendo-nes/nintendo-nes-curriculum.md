@@ -60,7 +60,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why first:** The NES is the platformer machine — Super Mario Bros. defined the console. A platformer teaches the PPU through its most natural use: tiles become platforms, sprites become characters, scrolling becomes the world opening up. Learners see a character on screen by Unit 2, jump by Unit 3, and the screen scrolls by mid-game.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-dash.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-01-full-game-outline-nes-dash.md`
 
 ---
 
@@ -82,7 +82,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why here:** After shooting, platforming introduces gravity and tile collision - fundamental NES skills. 128 units allows proper exploration of feel, level design, and polish.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-crate-escape.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-02-full-game-outline-nes-crate-escape.md`
 
 ---
 
@@ -104,7 +104,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why here:** After sprites in Games 1-2, learners master dynamic backgrounds. Ball physics teaches fixed-point maths before applying it to more complex games.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-fracture-point.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-03-full-game-outline-nes-fracture-point.md`
 
 ---
 
@@ -127,7 +127,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why here:** After physics games, AI personalities bring the maze to life. 128 units allows four distinct ghost behaviours.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-pellet-panic.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-04-full-game-outline-nes-pellet-panic.md`
 
 ---
 
@@ -153,7 +153,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why here:** After single-screen games, learners manage multi-room worlds with persistent state - foundation for adventure games.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-crypt-crawler.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-05-full-game-outline-nes-crypt-crawler.md`
 
 ---
 
@@ -178,7 +178,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why here:** After dungeon exploration, this simpler game teaches an important data structure while letting concepts consolidate. The ring buffer is used throughout game and audio programming.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-fangs-for-the-memory.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-06-full-game-outline-nes-fangs-for-the-memory.md`
 
 ---
 
@@ -209,7 +209,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why here:** The falling blocks puzzle is a classic that teaches rotation matrices, grid algorithms, and polished game feel. 128 units allows a feature-complete puzzle game with multiple modes.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-gridlock.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-07-full-game-outline-nes-gridlock.md`
 
 ---
 
@@ -240,7 +240,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why here:** The NES has hardware scrolling - this is where it shines. Super Mario Bros. territory. Building on Crate Escape's single-screen platforming, learners create their first scrolling world.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-pixel-plains.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-08-full-game-outline-nes-pixel-plains.md`
 
 ---
 
@@ -269,7 +269,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why expanded:** A full Gradius-style shmup with options, weapon levels, and complex bosses requires deep coverage. The power-up system alone is a significant undertaking. 256 units allows a complete, polished shooter.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-ion-trail.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-09-full-game-outline-nes-ion-trail.md`
 
 ---
 
@@ -298,7 +298,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why expanded:** As the foundation capstone, Arena Assault must demonstrate mastery of all techniques. 256 units allows a complete, polished arena shooter that proves readiness for advanced games.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-arena-assault.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-10-full-game-outline-nes-arena-assault.md`
 
 ---
 
@@ -329,7 +329,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why expanded:** A full vertical shmup plus MMC1 mapper mastery requires 256 units. Mapper knowledge is essential for larger NES games.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-thunder-run.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-11-full-game-outline-nes-thunder-run.md`
 
 ---
 
@@ -362,7 +362,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why expanded:** A full Contra-style game with 8-way shooting, 6 weapons, 5 stages, epic bosses, AND two-player co-op with sprite management requires 256 units.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-iron-assault.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-12-full-game-outline-nes-iron-assault.md`
 
 ---
 
@@ -389,7 +389,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why expanded:** A complete beat 'em up with Y-sorting, combos, enemy coordination, 5 stages, 5 bosses, AND two-player co-op with sprite management requires 256 units.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-pavement-justice.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-13-full-game-outline-nes-pavement-justice.md`
 
 ---
 
@@ -426,7 +426,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why expanded:** Pseudo-3D racing with perspective mathematics, curves, hills, traffic, 5 tracks, AND split-screen multiplayer requires 256 units for NES implementation.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-tarmac-terror.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-14-full-game-outline-nes-tarmac-terror.md`
 
 ---
 
@@ -462,7 +462,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why 512 units:** Full Metroidvania requires extensive world building: 5 regions, 8+ abilities, ability-gating design, battery-backed saves, multiple endings, and careful pacing for non-linear exploration.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-echoes-of-eponium.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-15-full-game-outline-nes-echoes-of-eponium.md`
 
 ---
 
@@ -497,7 +497,7 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 **Why last:** The curriculum ends with learners demonstrating full command of the machine. Every NES developer knows the importance of mappers - now they've mastered them, and the requiem they compose is a masterpiece.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-requiem-for-a-mapper.md`
+**Detailed outline:** `/docs/curriculum/assembly/nintendo-nes/game-16-full-game-outline-nes-requiem-for-a-mapper.md`
 
 ---
 

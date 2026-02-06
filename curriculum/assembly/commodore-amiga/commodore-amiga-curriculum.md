@@ -69,7 +69,7 @@ The expanded structure allows thorough coverage of:
 
 **Why first:** A terrain puzzle makes the Blitter the core mechanic from Unit 1. Digging a tunnel is a Blitter clear. Building a bridge is a Blitter copy. Every game action is a hardware operation — learners see the chipset working because it IS the gameplay. The Copper splits the screen for the UI panel, Paula plays satisfying terrain sounds, and the 68000 orchestrates everything. Bootable ADF from day one.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-exodus.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-01-full-game-outline-amiga-exodus.md`
 
 ---
 
@@ -91,7 +91,7 @@ The expanded structure allows thorough coverage of:
 
 **Why here:** After the terrain puzzle's Blitter focus, Signal teaches timing-based gameplay with hardware sprites and BOBs — a different rhythm. 128 units allows proper exploration of feel and polish.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-signal.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-02-full-game-outline-amiga-signal.md`
 
 ---
 
@@ -114,7 +114,7 @@ The expanded structure allows thorough coverage of:
 
 **Why here:** After BOBs and sprites in Games 1-2, learners apply Blitter skills to physics-based gameplay and background manipulation.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-shatter-point.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-03-full-game-outline-amiga-shatter-point.md`
 
 ---
 
@@ -138,7 +138,7 @@ The expanded structure allows thorough coverage of:
 
 **Why here:** After horizontal gameplay in Games 1-3, learners tackle vertical movement and jump physics - the foundation for countless games.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-ascent.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-04-full-game-outline-amiga-ascent.md`
 
 ---
 
@@ -164,7 +164,7 @@ The expanded structure allows thorough coverage of:
 
 **Why here:** After single-screen games, learners manage multi-room worlds with persistent state - foundation for adventure games.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-crypt.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-05-full-game-outline-amiga-crypt.md`
 
 ---
 
@@ -189,7 +189,7 @@ The expanded structure allows thorough coverage of:
 
 **Why here:** After dungeon exploration, learners create constrained corridor movement with sophisticated enemy AI. Four distinct ghost behaviours create emergent gameplay.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-gobble.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-06-full-game-outline-amiga-gobble.md`
 
 ---
 
@@ -217,7 +217,7 @@ The expanded structure allows thorough coverage of:
 
 **Why here:** After maze navigation in Gobble, learners tackle a different grid-based challenge. The ring buffer is fundamental to game programming, and the Amiga's hardware makes segment rendering smooth and colourful.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-venom.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-07-full-game-outline-amiga-venom.md`
 
 ---
 
@@ -249,7 +249,7 @@ The expanded structure allows thorough coverage of:
 
 **Why here:** After Venom's ring buffer, Tetrad teaches different grid algorithms - rotation matrices and line clearing. The Blitter's scroll capability makes line clearing efficient and visually smooth.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-tetrad.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-08-full-game-outline-amiga-tetrad.md`
 
 ---
 
@@ -281,7 +281,7 @@ The expanded structure allows thorough coverage of:
 
 **Why expanded:** Dual playfield with true multi-layer parallax is the Amiga's signature technique. Shadow of the Beast defined the platform with these effects. 256 units allows complete mastery of DMA timing, Copper programming, and visual showcase.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-parallax.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-09-full-game-outline-amiga-parallax.md`
 
 ---
 
@@ -312,7 +312,7 @@ The expanded structure allows thorough coverage of:
 
 **Why expanded:** A full scrolling platformer with multiple worlds, bosses, and polish requires deep coverage. 256 units allows a complete Mario-style experience on Amiga hardware.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-wanderer.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-10-full-game-outline-amiga-wanderer.md`
 
 ---
 
@@ -342,7 +342,7 @@ The expanded structure allows thorough coverage of:
 
 **Why expanded:** A full beat 'em up with Y-sorting, combos, enemy coordination, AND two-player co-op requires 256 units for proper depth.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-brawler.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-11-full-game-outline-amiga-brawler.md`
 
 ---
 
@@ -379,7 +379,7 @@ The expanded structure allows thorough coverage of:
 
 **Why expanded:** Pseudo-3D racing with Copper road rendering, perspective mathematics, traffic, weather, AND split-screen multiplayer requires 256 units for complete mastery.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-highway.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-12-full-game-outline-amiga-highway.md`
 
 ---
 
@@ -406,7 +406,7 @@ The expanded structure allows thorough coverage of:
 
 **Why expanded:** A full vertical shmup with formation patterns, bullet systems, ground/air layers, 5 stages, bosses, AND rank system requires 256 units.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-onslaught.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-13-full-game-outline-amiga-onslaught.md`
 
 ---
 
@@ -440,7 +440,7 @@ The expanded structure allows thorough coverage of:
 
 **Why expanded:** A full Knight Lore-style adventure with isometric projection, 5 zones, puzzles, combat, magic, AND Blitter rendering requires 256 units for Amiga implementation.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-fortress.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-14-full-game-outline-amiga-fortress.md`
 
 ---
 
@@ -480,7 +480,7 @@ The expanded structure allows thorough coverage of:
 
 **Why 512 units:** Full Metroidvania requires extensive world building: 5 regions, 10+ abilities, multi-layer parallax per region, Copper effects, disk-based saves, and the Amiga's full audiovisual capabilities.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-echoes-of-the-ancients.md`
+**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-15-full-game-outline-amiga-echoes-of-the-ancients.md`
 
 ---
 

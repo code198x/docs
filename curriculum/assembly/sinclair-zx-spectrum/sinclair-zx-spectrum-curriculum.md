@@ -59,7 +59,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why first:** A maze explorer makes the attribute system the core mechanic from Unit 1. Walls are INK, floors are PAPER, items are BRIGHT — the Spectrum's defining feature becomes the game design tool. Learners see pixels on screen immediately and navigate a room by Unit 3.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-shadowkeep.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-01-full-game-outline-zx-spectrum-shadowkeep.md`
 
 ---
 
@@ -80,7 +80,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** After shooting, physics simulation introduces a fundamentally different movement model. 128 units allows proper exploration of angles, feel, and polish.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-shatter.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-02-full-game-outline-zx-spectrum-shatter.md`
 
 ---
 
@@ -104,7 +104,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** Builds on sub-cell movement from Shatter, applies physics to gravity instead of bouncing. This is the Spectrum's signature genre.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-cavern.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-03-full-game-outline-zx-spectrum-cavern.md`
 
 ---
 
@@ -127,7 +127,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** Multi-room structure and state management prepare learners for more complex AI in following games. 128 units allows full world-building.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-chambers.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-04-full-game-outline-zx-spectrum-chambers.md`
 
 ---
 
@@ -151,7 +151,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** After 4 action games, learners explore strategic thinking. The attribute system becomes the core mechanic, turning a limitation into innovation.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-ink-war.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-05-full-game-outline-zx-spectrum-ink-war.md`
 
 ---
 
@@ -177,7 +177,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** After strategic Ink War, learners return to real-time action with sophisticated enemy AI. Four distinct ghost behaviours create emergent gameplay.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-chomp.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-06-full-game-outline-zx-spectrum-chomp.md`
 
 ---
 
@@ -205,7 +205,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** After maze navigation in Chomp, learners tackle a different grid-based challenge. The ring buffer is a fundamental data structure used throughout game and audio programming.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-slither.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-07-full-game-outline-zx-spectrum-slither.md`
 
 ---
 
@@ -237,7 +237,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** The falling blocks puzzle teaches rotation mathematics, grid algorithms, and polished game feel. Different from snake's ring buffer, this focuses on piece manipulation and clearing mechanics.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-stack.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-08-full-game-outline-zx-spectrum-stack.md`
 
 ---
 
@@ -265,7 +265,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why expanded:** Software scrolling is THE hardest Spectrum technique. Games like R-Type achieved legendary status for smooth scrolling on hardware with no scroll support. 256 units allows mastery of this platform-defining challenge.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-blitz.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-09-full-game-outline-zx-spectrum-blitz.md`
 
 ---
 
@@ -292,7 +292,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why expanded:** Combining scrolling and platforming is the ultimate Spectrum challenge. 256 units allows a complete, polished scrolling platformer worthy of commercial release.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-expanse.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-10-full-game-outline-zx-spectrum-expanse.md`
 
 ---
 
@@ -320,7 +320,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why expanded:** A full championship racer with AI, weather, damage, pit stops, AND tape loading fundamentals requires 256 units.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-redline.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-11-full-game-outline-zx-spectrum-redline.md`
 
 **Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-11-redline.md`
 
@@ -352,7 +352,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why expanded:** A complete Contra-style game with 8-way shooting, 5 weapon types, 5 stages, 5 bosses, AND two-player co-op requires 256 units for proper implementation.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-recoil.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-12-full-game-outline-zx-spectrum-recoil.md`
 
 ---
 
@@ -381,7 +381,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why here:** Depth sorting is the bridge to isometric. This game introduces layered drawing order.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-knuckle-brawl.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-13-full-game-outline-zx-spectrum-knuckle-brawl.md`
 
 ---
 
@@ -414,7 +414,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why expanded:** A full 1942-style shmup with 7 stages, bullet patterns, ground/air targets, bosses, AND 128K audio requires 256 units for complete implementation.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-strafe.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-14-full-game-outline-zx-spectrum-strafe.md`
 
 ---
 
@@ -450,7 +450,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why 512 units:** Knight Lore-style isometric requires completely new mathematics, rendering, and collision approaches. The transformation mechanic, 100+ rooms, 5 zones, and puzzle systems demand extensive coverage.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-bastion.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-15-full-game-outline-zx-spectrum-bastion.md`
 
 ---
 
@@ -485,7 +485,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why last:** The curriculum ends with learners demonstrating full command of the machine. "Spectral" nods to the Spectrum; "Legacy" is what they've built - and what they leave behind.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-spectral-legacy.md`
+**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-16-full-game-outline-zx-spectrum-spectral-legacy.md`
 
 ---
 
