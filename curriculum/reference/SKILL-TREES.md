@@ -239,7 +239,7 @@ Games are shown in **bold** where they primarily teach that skill.
 4. **Scrolling is a major milestone** - everything before is fixed-screen
 
 **Recommended ZX order based on tree:**
-1. Skyfire (shooter) - foundation
+1. Shadowkeep (maze explorer) - foundation
 2. Shatter (breakout) - sub-pixel, physics
 3. Cavern (platformer) - gravity, builds on physics
 4. Byte Biter (snake) - data structures
@@ -341,13 +341,12 @@ Games are shown in **bold** where they primarily teach that skill.
 
 ### NES Key Insights
 
-1. **Neon Nexus is largely redundant** - Stellar Barrage teaches the same PPU skills
-2. **Tile collision is prerequisite for both platforming AND maze games**
-3. **Scrolling requires solid tile collision understanding**
-4. **Mappers are late-game** - need everything else first
+1. **Tile collision is prerequisite for both platforming AND maze games**
+2. **Scrolling requires solid tile collision understanding**
+3. **Mappers are late-game** - need everything else first
 
 **Recommended NES order based on tree:**
-1. Stellar Barrage (shooter) - PPU foundation, 128 units
+1. Dash (platformer) - PPU foundation, scrolling, 128 units
 2. Crate Escape (platformer) - tile collision, gravity
 3. Fracture Point (breakout) - physics refinement
 4. Pellet Panic (maze) - tile-based maze, AI
@@ -358,7 +357,7 @@ Games are shown in **bold** where they primarily teach that skill.
 9. Ion Trail (scroll shooter) - scrolling + combat
 10. **NEW: Something that builds toward mappers**
 
-**Neon Nexus verdict:** Remove or make optional "practice project"
+**Neon Nexus:** Removed (redundant with Dash). Dash teaches the same PPU skills through the NES's native genre.
 
 ---
 
@@ -445,12 +444,12 @@ Games are shown in **bold** where they primarily teach that skill.
 
 ### Amiga Key Insights
 
-1. **Signal works as Game 2** - it's genuinely different (timing vs action)
+1. **Signal works as Game 2** - it's genuinely different (timing vs terrain modification)
 2. **Copper effects build gradually** - basics in G1, advanced later
 3. **MOD playback is separate from sample playback** - can be introduced later
 4. **Dual playfield requires solid scrolling understanding**
 
-**Recommended Amiga order:** Current sequence works well. Signal as Game 2 introduces timing-based gameplay which is distinct from shooting.
+**Recommended Amiga order:** Current sequence works well. Exodus (terrain puzzle) teaches Blitter fundamentals naturally. Signal as Game 2 introduces timing-based gameplay which is distinct from terrain modification.
 
 ---
 
@@ -459,19 +458,22 @@ Games are shown in **bold** where they primarily teach that skill.
 | Platform | Major Change Needed? | Key Adjustment |
 |----------|---------------------|----------------|
 | **C64** | Yes | SID Symphony → Game 6 (needs keyboard + timing) |
-| **ZX Spectrum** | Yes | Ink War → Game 5 (needs AI/strategy experience) |
-| **NES** | Yes | Remove Neon Nexus (redundant), or make optional |
-| **Amiga** | No | Signal works as Game 2 |
+| **ZX Spectrum** | Yes | Ink War → Game 5 (needs AI/strategy experience). Game 1 now Shadowkeep (maze explorer). |
+| **NES** | Yes | Neon Nexus removed. Game 1 now Dash (platformer). |
+| **Amiga** | Yes | Game 1 now Exodus (terrain puzzle). Signal stays as Game 2. |
 
 ### Universal Pattern
 
 ```
-GAME 1: Shooter (128 units)
-   └─→ Sprites, input, collision, sound effects, waves, polish
+GAME 1: Platform-native genre (128 units)
+   └─→ C64: Shooter (hardware sprites, SID)
+   └─→ Spectrum: Maze explorer (attributes, character cells)
+   └─→ NES: Platformer (PPU tiles, OAM, scrolling)
+   └─→ Amiga: Terrain puzzle (Blitter, Copper, bitplanes)
 
-GAME 2: Different physics model
-   └─→ Platformer OR Ball physics OR Timing game
-   └─→ Introduces gravity/reflection/patience
+GAME 2: Different gameplay model
+   └─→ Ball physics OR Timing game OR Platformer
+   └─→ Introduces different movement/interaction paradigm
 
 GAMES 3-5: Variety of fixed-screen games
    └─→ Maze, puzzle, strategy

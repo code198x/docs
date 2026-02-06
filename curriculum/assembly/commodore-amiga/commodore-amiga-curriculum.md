@@ -89,7 +89,7 @@ The expanded structure allows thorough coverage of:
 - High scores, difficulty, multiplayer
 - 15 levels with increasing challenge
 
-**Why here:** After the action-focused shooter, Signal teaches timing and patience - a different gameplay rhythm. 128 units allows proper exploration of feel and polish.
+**Why here:** After the terrain puzzle's Blitter focus, Signal teaches timing-based gameplay with hardware sprites and BOBs — a different rhythm. 128 units allows proper exploration of feel and polish.
 
 **Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-signal.md`
 

@@ -3,7 +3,7 @@
 **Game:** Crate Escape (Game 2)
 **Platform:** Nintendo Entertainment System
 **Units:** 128 (8 phases × 16 units)
-**Prerequisite:** Stellar Barrage (Game 1) - PPU, sprites, OAM, controller, APU basics
+**Prerequisite:** Dash (Game 1) - PPU, sprites, OAM, controller, scrolling, APU basics
 **Target Quality:** Polished single-screen platformer (Donkey Kong / Lode Runner quality)
 
 ---

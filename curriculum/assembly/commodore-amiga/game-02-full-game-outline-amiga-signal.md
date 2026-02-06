@@ -3,7 +3,7 @@
 **Game:** Signal (Game 2)
 **Platform:** Commodore Amiga
 **Units:** 128 (8 phases × 16 units)
-**Prerequisite:** Blast Zone (Game 1) - sprites, BOBs, Copper, Paula, bootable ADF
+**Prerequisite:** Exodus (Game 1) - Blitter operations, Copper, Paula, bitplane graphics, bootable ADF
 **Target Quality:** Polished lane-crossing game (Frogger / Crossy Road quality)
 
 ---

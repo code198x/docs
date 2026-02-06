@@ -1,4 +1,4 @@
-# Game 10: Exodus - Complete 256-Unit Outline
+# Game 10: Expanse - Complete 256-Unit Outline
 
 ## Game Overview
 **Platform:** Sinclair ZX Spectrum
@@ -378,7 +378,7 @@ Unit 252: Documentation
 Unit 253: Final fixes
 Unit 254: Release build
 Unit 255: Retrospective
-Unit 256: Complete Exodus
+Unit 256: Complete Expanse
 **Runnable each unit**
 
 ---

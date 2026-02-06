@@ -261,13 +261,13 @@ Each curriculum game entry includes:
 
 ## ZX Spectrum
 
-### Game 1: Skyfire (Fixed-Screen Shooter)
+### Game 1: Shadowkeep (Top-Down Maze Explorer)
 
 | Category | Games |
 |----------|-------|
-| **Inspired By** | Galaxian, Phoenix |
-| **Genre Siblings** | Arcadia (Spectrum), Pheenix |
-| **Modern Descendants** | Space Invaders Extreme |
+| **Inspired By** | Atic Atac, Sabre Wulf |
+| **Genre Siblings** | Driller, Knight Tyme |
+| **Modern Descendants** | Spelunky (exploration aspect) |
 
 ---
 
@@ -364,7 +364,7 @@ Each curriculum game entry includes:
 
 ---
 
-### Game 10: Exodus (Scrolling Platformer)
+### Game 10: Expanse (Scrolling Platformer)
 
 | Category | Games |
 |----------|-------|
@@ -450,15 +450,15 @@ Each curriculum game entry includes:
 
 ## Nintendo Entertainment System
 
-### Game 1: Stellar Barrage (Fixed-Screen Shooter)
+### Game 1: Dash (Side-Scrolling Platformer)
 
 | Category | Games |
 |----------|-------|
-| **Inspired By** | Galaga (NES port) |
-| **Genre Siblings** | Galaxian, Star Force |
-| **Modern Descendants** | Galaga Legions |
+| **Inspired By** | Super Mario Bros., Mega Man |
+| **Genre Siblings** | Kid Icarus, Adventure Island |
+| **Modern Descendants** | Shovel Knight, Celeste |
 
-**Vault entries:** `star-force`
+**Vault entries:** `super-mario-bros`
 
 ---
 
@@ -641,15 +641,15 @@ Each curriculum game entry includes:
 
 ## Commodore Amiga
 
-### Game 1: Blast Zone (Fixed-Screen Shooter)
+### Game 1: Exodus (Terrain Puzzle)
 
 | Category | Games |
 |----------|-------|
-| **Inspired By** | Galaga, Deluxe Galaga |
-| **Genre Siblings** | Megablast, Datastorm |
-| **Modern Descendants** | Galaga Legions |
+| **Inspired By** | Lemmings (DMA Design) |
+| **Genre Siblings** | Humans, Troddlers |
+| **Modern Descendants** | Lemmings Touch, Pikmin |
 
-**Vault entries:** `deluxe-galaga`, `datastorm`
+**Vault entries:** `lemmings`
 
 ---
 

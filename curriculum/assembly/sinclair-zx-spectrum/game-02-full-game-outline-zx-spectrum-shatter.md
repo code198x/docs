@@ -3,7 +3,7 @@
 **Game:** Shatter (Game 2)
 **Platform:** Sinclair ZX Spectrum
 **Units:** 128 (8 phases × 16 units)
-**Prerequisite:** Skyfire (Game 1) - screen memory, attributes, keyboard, beeper
+**Prerequisite:** Shadowkeep (Game 1) - screen memory, attributes, keyboard, beeper
 **Target Quality:** Polished breakout clone (Arkanoid / Batty quality)
 
 ---
