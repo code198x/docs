@@ -42,70 +42,75 @@ score         = $07     ; Score (0–99, BCD)
 
 ---
 
-## Unit 9: Enemies Spawn Continuously
+## Unit 9: Enemy Waves
 
 **Builds on:** Unit 8 (score display)
-**What the learner builds:** Instead of one enemy, a spawn timer creates a new enemy periodically. Still one enemy on screen at a time, but the spawn timing is controlled rather than immediate.
+**What the learner builds:** Three enemies on screen at once, respawning in waves. Enemy positions stored in tables, processed with indexed addressing.
 
 ### New variables
 ```asm
-spawn_timer   = $08     ; Frames until next enemy spawn
-enemy_active  = $09     ; 0 = no enemy on screen, 1 = active
+enemy_x_tbl   = $08     ; 3 bytes: X positions for enemies 0–2
+enemy_y_tbl   = $0b     ; 3 bytes: Y positions for enemies 0–2
+enemy_active  = $0e     ; 3 bytes: active flag per enemy (0/1)
+flash_tbl     = $11     ; 3 bytes: flash timer per enemy
 ```
 
 ### Assembly code design
-- **Init:** Set `enemy_active` to 1, `spawn_timer` to 0 (enemy starts on screen).
-- **On hit/off-screen:** Set `enemy_active` to 0, disable sprite 2, set `spawn_timer` to 60 (about 1.2 seconds at PAL).
-- **Spawn logic:** Each frame, if `enemy_active` is 0, decrement `spawn_timer`. When it reaches 0, spawn a new enemy (random X, Y at top), set `enemy_active` to 1, enable sprite 2.
-- **Subroutines:** Introduce `JSR`/`RTS` — extract `spawn_enemy` as a subroutine called from both init and spawn timer expiry.
+- **Data tables:** Enemy state stored as parallel arrays — X, Y, active flag, flash timer. Indexed by X register (0, 1, 2).
+- **Indexed addressing:** `LDA enemy_x_tbl,X` / `STA enemy_x_tbl,X` to process each enemy in a loop.
+- **Subroutines:** Introduce `JSR`/`RTS`. Extract `spawn_enemy` (sets random X, Y at top, marks active) and `update_enemy` (movement, off-screen check) as subroutines.
+- **Sprite mapping:** Sprites 2, 3, 4 for the three enemies. Sprite registers accessed via calculated offsets.
+- **Collision check:** Loop through all active enemies for bullet collision. First hit wins — break out of the loop.
 
 ### Key 6510 concepts
+- **Indexed addressing** — `LDA table,X` to access arrays of data
 - **`JSR`/`RTS`** — subroutine call and return, the stack stores the return address
-- **Spawn timer** — another frame counter, this time for delayed appearance
-- **Active flags** — tracking whether an object exists on screen
+- **Data tables** — parallel arrays for multi-object state
+- **Loop with index** — `LDX #$02` / `DEX` / `BPL` to iterate three enemies
 
 ### Snippets
-1. `01-spawn-timer.asm` — The spawn countdown and enemy activation
-2. `02-subroutine.asm` — The `spawn_enemy` subroutine with `JSR`/`RTS`
+1. `01-indexed-addressing.asm` — The enemy update loop with `LDA table,X`
+2. `02-subroutines.asm` — `spawn_enemy` and `update_enemy` with `JSR`/`RTS`
 
 ### MDX sections
+- Three Enemies at Once
+- Data Tables
+- Indexed Addressing: LDA table,X
 - Subroutines: JSR and RTS
-- The Spawn Timer
-- Active Flags
 - The Complete Code
 - If It Doesn't Work
-- Try This: Faster/Slower Spawns
+- Try This: More Enemies / Faster Waves
 
 ---
 
-## Unit 10: Enemy Touches Ship = Death
+## Unit 10: Player Death
 
-**Builds on:** Unit 9 (spawn timer, subroutines)
-**What the learner builds:** The enemy can now kill the player. Each frame, check enemy-ship distance. On collision, the ship flashes red and the game halts (for now — no lives yet, just a stop).
+**Builds on:** Unit 9 (enemy waves, indexed addressing, subroutines)
+**What the learner builds:** The enemy can now kill the player. Each frame, check ship-enemy distance for all active enemies. On collision, set a `game_over` flag to stop the game loop.
 
 ### New variables
 ```asm
-player_dead   = $0a     ; 0 = alive, 1 = dead
+game_over     = $14     ; 0 = playing, 1 = game over
 ```
 
 ### Assembly code design
-- **New collision check:** After enemy movement, compare enemy position to ship position using the same distance-check pattern from Unit 6. Ship position comes from `$D000`/`$D001`.
-- **On player hit:** Set `player_dead` to 1, flash border red (`$D020 = $02`), play a death sound on voice 3 (low descending tone).
-- **Game loop guard:** At the top of the game loop, check `player_dead`. If set, skip all input/update logic — the game freezes.
+- **Ship-enemy collision:** After enemy movement, loop through all active enemies and compare each to the ship position. Same bounding-box distance check as bullet collision (Unit 6), but between ship and each enemy.
+- **On player hit:** Set `game_over` to 1. The game loop checks this flag at the top — if set, skip all input/update logic. The game freezes.
+- **Reuse pattern:** The distance-check code is the same shape as bullet collision, reinforcing the pattern.
 
 ### Key 6510 concepts
 - **Reusing collision pattern** — same distance check, different sprites
 - **Game state flag** — a single byte controls whether the game runs
-- **SID voice 3** — third independent voice for the death sound
+- **Looped collision** — checking the ship against each enemy in the table
 
 ### Snippets
-1. `01-ship-collision.asm` — The enemy-ship distance check
-2. `02-death-state.asm` — Setting `player_dead`, border flash, game freeze
+1. `01-ship-collision.asm` — The ship-enemy distance check loop
+2. `02-game-over-flag.asm` — Setting and checking `game_over`
 
 ### MDX sections
 - The Ship Can Die
 - Reusing the Collision Pattern
-- Voice 3: The Death Sound
+- Checking All Enemies
 - Freezing the Game
 - The Complete Code
 - If It Doesn't Work
@@ -113,78 +118,156 @@ player_dead   = $0a     ; 0 = alive, 1 = dead
 
 ---
 
-## Unit 11: Game Over Screen
+## Unit 11: Game Over
 
-**Builds on:** Unit 10 (death state)
-**What the learner builds:** When the player dies, "GAME OVER" appears in the centre of the screen using screen RAM writes. The game stays frozen — no restart yet.
+**Builds on:** Unit 10 (player death)
+**What the learner builds:** "GAME OVER" text appears on screen. Pressing fire restarts the game — all state resets.
 
 ### New variables
-None new — uses `player_dead` from Unit 10.
+```asm
+game_state    = $14     ; 0 = playing, 1 = game over (replaces game_over)
+```
+Replaces `game_over` — same address, better name for what comes next.
 
 ### Assembly code design
-- **`show_game_over` subroutine:** Writes "GAME OVER" to screen RAM at row 12, column 15 (centred on 40-column screen). Each character written with a loop or unrolled `LDA #char / STA $0400+offset` sequence.
+- **`show_game_over` subroutine:** Writes "GAME OVER" to screen RAM at row 12, column 15 (centred on 40-column screen). Each character written as `LDA #char / STA $0400+offset`.
+- **Screen codes:** C64 screen codes differ from PETSCII — 'A'=1, 'B'=2, etc. Calculated positions: row × 40 + column + $0400.
 - **Colour:** Write matching colour values to colour RAM for the text.
-- **Called once:** When `player_dead` transitions from 0 to 1, call `show_game_over` then keep looping without updates.
+- **`init_game` subroutine:** Extract all initialisation into a reusable subroutine. Called on first boot and on restart.
+- **Restart:** Game loop checks `game_state`. If 1, poll fire button. On press, call `init_game`, clear screen, set `game_state` to 0.
 
 ### Key 6510 concepts
 - **Screen RAM text output** — writing specific characters to calculated positions
 - **Screen codes vs PETSCII** — C64 screen codes differ from PETSCII; 'A'=1, 'B'=2, etc.
 - **Calculated screen positions** — row × 40 + column + $0400
+- **Initialisation as subroutine** — reusable setup via `JSR init_game`
 
 ### Snippets
-1. `01-screen-text.asm` — The `show_game_over` subroutine with character writes
-2. `02-screen-position.asm` — Calculating row/column offsets in screen RAM
+1. `01-game-over-text.asm` — The `show_game_over` subroutine with character writes
+2. `02-restart.asm` — The `init_game` subroutine and restart logic
 
 ### MDX sections
 - Screen Codes
 - Positioning Text on Screen
 - The Game Over Display
+- Press Fire to Restart
+- Extracting Initialisation
 - The Complete Code
 - If It Doesn't Work
 - Try This: Custom Messages / Colour Effects
 
 ---
 
-## Unit 12: Press Fire to Restart
+## Unit 12: Three Lives
 
-**Builds on:** Unit 11 (game over screen)
-**What the learner builds:** After game over, pressing fire restarts the game. All state resets — score, enemy position, player position, screen cleared.
+**Builds on:** Unit 11 (game over + restart)
+**What the learner builds:** The player has three lives. Each death decrements the counter. Lives displayed as a digit at the top-right of the screen. Game over only when lives reach zero.
 
 ### New variables
 ```asm
-game_state    = $0b     ; 0 = playing, 1 = game over
+lives         = $15     ; Lives remaining (starts at 3)
 ```
-Replaces `player_dead` — more general purpose.
 
 ### Assembly code design
-- **State machine:** `game_state` replaces `player_dead`. The game loop branches on `game_state`: if 0, run the game; if 1, check for fire button.
-- **`init_game` subroutine:** Extract all initialisation into a reusable subroutine. Called on first boot and on restart.
-- **Restart:** When fire is pressed during game over, call `init_game`, clear the screen, set `game_state` to 0.
+- **Init:** Set `lives` to 3. Display "3" at top-right of screen RAM ($0400 + 39 = $0427).
+- **On death:** Decrement `lives` with `DEC`. If zero, transition to game over. If non-zero, reset ship position, continue playing.
+- **`update_lives_display`:** Convert lives count to screen code (add $30) and write to screen RAM.
+- **Conditional transition:** `DEC lives / BEQ game_over_state` — game over only at zero.
 
 ### Key 6510 concepts
-- **State machine** — game behaviour determined by a state variable
-- **Initialisation as subroutine** — reusable setup via `JSR init_game`
-- **Complete reset** — clearing screen, variables, sprite positions
+- **`DEC` for counters** — decrement a zero-page variable
+- **Conditional state transition** — game over only at zero lives
+- **Display update** — keeping screen in sync with game state
 
 ### Snippets
-1. `01-state-machine.asm` — The game loop branching on `game_state`
-2. `02-restart.asm` — The `init_game` subroutine and restart logic
+1. `01-lives-counter.asm` — Decrementing lives and checking for game over
+2. `02-lives-display.asm` — Writing lives count to screen RAM
 
 ### MDX sections
-- Game States
-- The State Machine Pattern
-- Extracting Initialisation
-- The Restart Flow
+- Tracking Lives
+- Death Without Game Over
+- Updating the Display
 - The Complete Code
 - If It Doesn't Work
-- Try This: Countdown Before Restart
+- Try This: Extra Life at Score Threshold
 
 ---
 
-## Unit 13: Title Screen
+## Unit 13: Life Lost Flash
 
-**Builds on:** Unit 12 (restart, state machine)
-**What the learner builds:** The game starts with a title screen showing the game name. Press fire to begin. The state machine gains a third state.
+**Builds on:** Unit 12 (three lives)
+**What the learner builds:** When the player loses a life, the border flashes red for several frames and SID plays a descending tone on voice 3. An invulnerability timer prevents instant re-death.
+
+### New variables
+```asm
+death_timer   = $16     ; Death flash countdown (0 = no flash)
+```
+
+### Assembly code design
+- **On death (non-game-over):** Set `death_timer` to 16. Set border colour to red (`$D020 = $02`). Trigger SID voice 3 with a descending sawtooth.
+- **Each frame:** If `death_timer` > 0, decrement. Ship is invulnerable during flash (skip ship-enemy collision). When timer expires, restore border to black, resume normal play.
+- **SID voice 3:** Low-frequency sawtooth that decays — a falling, mournful tone contrasting with the sharp noise explosion.
+
+### Key 6510 concepts
+- **Border flash (`$D020`)** — simple whole-screen visual effect
+- **SID voice 3** — third independent voice for the death sound
+- **Invulnerability timer** — frame counter reuse, same pattern as `flash_timer`
+
+### Snippets
+1. `01-death-flash.asm` — Border flash with timer and colour restore
+2. `02-death-sound.asm` — SID voice 3 descending sawtooth setup
+
+### MDX sections
+- The Border as Feedback
+- Voice 3: A Different Sound
+- Invulnerability During Flash
+- The Complete Code
+- If It Doesn't Work
+- Try This: Different Death Sounds / Flash Colours
+
+---
+
+## Unit 14: Starfield
+
+**Builds on:** Unit 13 (life lost flash)
+**What the learner builds:** A star-filled scrolling background — the game's namesake. Characters written to screen RAM, coloured via colour RAM to suggest depth.
+
+### New variables
+```asm
+star_tbl      = $17     ; Star Y offsets (8–16 stars in a table)
+```
+
+### Assembly code design
+- **Star table:** A fixed table of screen RAM offsets for star positions. Each frame, move stars down by adding 40 (one row) to their offset. When past row 24, wrap to the top.
+- **Character and colour:** Dim grey dots (colour $0B, dark grey) for distant stars, bright white dots (colour $01) for close ones. Character $2E (period) or $51 (filled circle) for different sizes.
+- **Parallax illusion:** Close stars move every frame, distant stars move every other frame. A frame counter (AND #$01) controls the slow layer.
+- **Init:** Scatter stars across the screen with initial offsets.
+
+### Key 6510 concepts
+- **Colour RAM (`$D800`+)** — per-character colour for visual depth
+- **Character-based backgrounds** — using screen codes as graphics
+- **Parallax scrolling** — two speed layers for depth illusion
+- **Modular tables** — reusing the table pattern from Unit 9
+
+### Snippets
+1. `01-star-init.asm` — Setting up initial star positions in screen/colour RAM
+2. `02-star-scroll.asm` — Moving stars down with wrap-around and parallax
+
+### MDX sections
+- The Namesake
+- Characters as Graphics
+- Colour for Depth
+- Parallax: Two Speed Layers
+- The Complete Code
+- If It Doesn't Work
+- Try This: More Stars / Different Patterns
+
+---
+
+## Unit 15: Title Screen
+
+**Builds on:** Unit 14 (starfield)
+**What the learner builds:** The game starts with a title screen showing "STARFIELD" and "PRESS FIRE". The state machine gains a third state: title, playing, game over.
 
 ### New variables
 ```asm
@@ -192,15 +275,15 @@ Replaces `player_dead` — more general purpose.
 ```
 
 ### Assembly code design
-- **State 0 (title):** Display "STARFIELD" and "PRESS FIRE" on screen RAM. Wait for fire button. On press, transition to state 1.
+- **State 0 (title):** Display "STARFIELD" and "PRESS FIRE" on screen RAM. Stars still animate in the background. Wait for fire button. On press, transition to state 1.
 - **`show_title` subroutine:** Writes title text and "PRESS FIRE" prompt to screen RAM with colour.
-- **Screen clear:** Factor out screen clearing into a `clear_screen` subroutine, called before title and before gameplay.
+- **`clear_screen` subroutine:** Factor out screen clearing, called before title and before gameplay.
 - **State transitions:** Title → Playing (fire pressed), Playing → Game Over (death), Game Over → Title (fire pressed).
 
 ### Key 6510 concepts
 - **Three-state machine** — title, playing, game over
 - **Screen RAM fills** — clearing and writing larger blocks of text
-- **Colour RAM** — per-character colour for styled title text
+- **State transitions** — branching on a state variable to different code paths
 
 ### Snippets
 1. `01-title-screen.asm` — The `show_title` subroutine
@@ -217,95 +300,25 @@ Replaces `player_dead` — more general purpose.
 
 ---
 
-## Unit 14: Three Lives
+## Unit 16: Screen Edges
 
-**Builds on:** Unit 13 (title screen, three-state machine)
-**What the learner builds:** The player has three lives. Each death decrements the counter. Lives displayed as ship icons (or numbers) at the top of the screen. Game over only when lives reach zero.
-
-### New variables
-```asm
-lives         = $0c     ; Lives remaining (starts at 3)
-```
-
-### Assembly code design
-- **Init:** Set `lives` to 3. Display "3" (or three ship characters) at top-right of screen RAM.
-- **On death:** Decrement `lives`. If zero, transition to game over. If non-zero, flash the ship, reset positions, continue playing.
-- **`update_lives_display`:** Write current lives count to screen RAM.
-- **Respawn:** After losing a life, brief invulnerability (reuse frame counter pattern from Unit 7).
-
-### Key 6510 concepts
-- **Game state in zero page** — lives as a tracked variable
-- **Conditional state transition** — game over only at zero lives
-- **Display update** — keeping screen in sync with game state
-
-### Snippets
-1. `01-lives-counter.asm` — Decrementing lives and checking for game over
-2. `02-lives-display.asm` — Writing lives count to screen RAM
-
-### MDX sections
-- Tracking Lives
-- Death Without Game Over
-- Updating the Display
-- Brief Invulnerability
-- The Complete Code
-- If It Doesn't Work
-- Try This: Extra Life at Score Threshold
-
----
-
-## Unit 15: Life Lost Flash/Sound
-
-**Builds on:** Unit 14 (three lives)
-**What the learner builds:** When the player loses a life, the border flashes red for several frames and SID plays a descending tone. Visual and audio feedback for death, matching the explosion feedback from Unit 7.
+**Builds on:** Unit 15 (title screen)
+**What the learner builds:** Full-width ship movement across the 320-pixel screen using the MSB register at `$D010`. Boundary clamping prevents the ship from wrapping.
 
 ### New variables
-```asm
-death_timer   = $0d     ; Death flash countdown (0 = no flash)
-```
+None new — this unit fixes how existing position logic works.
 
 ### Assembly code design
-- **On death (non-game-over):** Set `death_timer` to 16. Set border colour to red (`$D020 = $02`). Trigger SID voice 3 with a descending sawtooth.
-- **Each frame:** If `death_timer` > 0, decrement. Ship is invulnerable during flash. When timer expires, restore border to black, resume normal play.
-- **SID voice 3:** Low-frequency sawtooth that decays — a falling, mournful tone contrasting with the sharp noise explosion.
+- **Sprite X bit 8 (`$D010`):** The C64 screen is wider than 255 pixels. `$D010` holds bit 8 of each sprite's X position. Use bit 0 for the ship so it can reach the right edge.
+- **EOR for bit toggling:** When the ship crosses the 255/256 boundary, toggle bit 0 of `$D010` with `EOR #$01`.
+- **Boundary clamping:** Prevent the ship from moving off-screen (top, bottom, left, right). Clamp Y to a visible range, handle X with 9-bit comparison logic.
+- **Clean restart:** Ensure `$D010` resets to 0 on restart. Silence all SID voices (gate off on all three).
 
 ### Key 6510 concepts
-- **Border flash (`$D020`)** — simple whole-screen visual effect
-- **SID voice 3 as sound** — using the third voice for game audio (not just random numbers)
-- **Frame counter reuse** — same pattern as `flash_timer`, different purpose
-
-### Snippets
-1. `01-death-flash.asm` — Border flash with timer and colour restore
-2. `02-death-sound.asm` — SID voice 3 descending sawtooth setup
-
-### MDX sections
-- The Border as Feedback
-- Voice 3: A Different Sound
-- Invulnerability During Flash
-- The Complete Code
-- If It Doesn't Work
-- Try This: Different Death Sounds / Flash Colours
-
----
-
-## Unit 16: Integration + Edge Cases
-
-**Builds on:** Unit 15 (death flash/sound)
-**What the learner builds:** The final Phase 1 unit. Fixes edge cases: sprite X bit 8 for wide-screen movement, screen boundary clamping, reset of all timers on restart. The game is now a complete, polished loop.
-
-### New variables
-None new — this unit is about fixing and integrating existing code.
-
-### Assembly code design
-- **Sprite X bit 8 (`$D010`):** The C64 screen is wider than 255 pixels. `$D010` holds bit 8 of each sprite's X position. Handle this for the ship so it can reach the right edge.
-- **Boundary clamping:** Prevent the ship from moving off-screen (top, bottom, left, right). Clamp Y to a visible range, handle X with the 9-bit logic.
-- **Clean restart:** Ensure all timers (`flash_timer`, `spawn_timer`, `death_timer`) reset to 0 on restart. Ensure SID voices are silenced (gate off on all three).
-- **Edge case: bullet vs dead enemy:** Don't check collision if enemy is inactive or flashing.
-- **Edge case: fire during death flash:** Ignore fire input during `death_timer` countdown.
-
-### Key 6510 concepts
-- **9-bit X positions** — `$D010` as a bitmask for bit 8 of each sprite's X
-- **Boundary checking** — clamping values with `CMP`/branch
-- **Integration testing mindset** — finding and fixing interactions between systems
+- **`$D010` X-position MSB register** — bit 8 for each sprite's X coordinate
+- **`EOR` for bit toggling** — flipping a single bit without affecting others
+- **Boundary clamping** — `CMP`/branch to keep values in a valid range
+- **9-bit arithmetic** — working with values that span two storage locations
 
 ### Snippets
 1. `01-x-bit-8.asm` — Reading and writing `$D010` for 9-bit X positions
@@ -313,9 +326,9 @@ None new — this unit is about fixing and integrating existing code.
 
 ### MDX sections
 - The Ninth Bit: `$D010`
+- Toggling Bits with EOR
 - Staying on Screen
 - Clean Restarts
-- Edge Cases Worth Fixing
 - The Complete Code
 - If It Doesn't Work
 - Phase 1 Complete: What You've Built
@@ -325,11 +338,12 @@ None new — this unit is about fixing and integrating existing code.
 ## Implementation Sequencing Notes
 
 - **Unit 8 depends on Unit 7** — adds to the `hit_enemy` block
-- **Unit 9 restructures enemy logic** — `enemy_active` flag changes how the enemy section works; must be careful not to break the flash timer
-- **Units 10–12 form a tight sequence** — death → game over → restart. Best implemented together without long gaps.
-- **Unit 13 (title screen) refactors state** — changes `game_state` values, which ripples through the code. Plan the state values before writing.
-- **Units 14–15 are paired** — lives counter and death feedback go together naturally
-- **Unit 16 is cleanup** — should be implemented last as it fixes issues across all prior units
+- **Unit 9 is a major refactor** — multiple enemies restructure the entire enemy section. Tables, indexed addressing, and subroutines all land at once. This is the biggest single-unit change in Phase 1.
+- **Units 10–11 form a tight sequence** — death → game over + restart. Best implemented together.
+- **Units 12–13 are paired** — lives counter and death feedback go together naturally
+- **Unit 14 (starfield) is self-contained** — adds background visuals without changing game logic
+- **Unit 15 (title screen) refactors state** — changes `game_state` from 2 values to 3, which ripples through the code
+- **Unit 16 is polish** — fixes movement range and edge cases across all prior units
 
 ## Growing Complexity
 
