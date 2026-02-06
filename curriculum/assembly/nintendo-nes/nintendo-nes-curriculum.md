@@ -22,7 +22,7 @@ By the final game, learners will have skills matching professional NES developer
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter, platformer, breakout, maze, exploration, snake, puzzle, scrolling) | 1-8 | 128 | 1,024 |
+| Foundation (platformer, platformer, breakout, maze, exploration, snake, puzzle, scrolling) | 1-8 | 128 | 1,024 |
 | Intermediate | 9-10 | 256 | 512 |
 | Advanced | 11-13 | 256 | 768 |
 | Advanced | 14 | 256 | 256 |
@@ -38,27 +38,29 @@ Each game is divided into 4 phases (foundation games) or 8 phases (advanced/Game
 
 ### Foundation Games
 
-#### Game 1: Stellar Barrage
+#### Game 1: Dash
 **Units:** 128 (8 phases)
-**Concept:** Fixed-screen space shooter. Player ship versus descending enemy waves. Immediate engagement from Unit 1.
+**Concept:** Side-scrolling platformer. Run, jump, and collect your way through tile-based levels. The NES was built for this — the PPU's nametables, hardware scrolling, and OAM sprites all come together naturally in a platformer.
 
 **Skills taught:**
 - PPU setup (pattern tables, nametables, palettes)
-- Background tiles (the playfield)
-- Sprites (player, enemies, bullets via OAM)
-- Controller input
-- Projectile spawning and management
-- Enemy formations and patterns
-- Multiple collision types (bullet-enemy, enemy-player)
-- Wave progression
-- Score tracking
+- Background tiles (level layout via nametables)
+- Sprites via OAM (player character, collectibles, enemies)
+- Controller input (D-pad movement, A to jump)
+- Gravity and jump physics (velocity, acceleration, variable height)
+- Tile-based collision detection
+- Platform types (solid, one-way, moving)
+- NES hardware scrolling (PPUSCROLL)
+- Camera following with nametable management
+- Collectibles and score tracking
+- Hazards and enemy patterns
 - APU sound basics
-- Sprite management under pressure (8-per-scanline limit)
-- Sprite flickering techniques
+- Player animation states (idle, run, jump, fall)
+- Level data structures and metatiles
 
-**Why first:** A shooter gets something playable on screen immediately. Learners control a ship from Unit 2, shoot from Unit 3. The PPU is learned through building a real game.
+**Why first:** The NES is the platformer machine — Super Mario Bros. defined the console. A platformer teaches the PPU through its most natural use: tiles become platforms, sprites become characters, scrolling becomes the world opening up. Learners see a character on screen by Unit 2, jump by Unit 3, and the screen scrolls by mid-game.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-stellar-barrage.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-nes-dash.md`
 
 ---
 
@@ -611,6 +613,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.20 (2026-02-06):** Replaced Game 1 Stellar Barrage (shooter) with Dash (side-scrolling platformer) to play to the NES's defining hardware strength.
 - **3.19 (2026-01-19):** Removed post-capstone audio expansion games (17-18) - curriculum now 16 games.
 - **3.18 (2026-01-18):** Expanded Game 16 (Requiem for a Mapper) to 512 units with DMC samples, physical cart production, and 5-zone epic. Total now 3,584 units.
 - **3.17 (2026-01-18):** Expanded Game 15 (Echoes of Eponium) to 512 units with full Metroidvania, MMC3 mapper, and battery-backed saves. Total now 3,328 units.
@@ -628,7 +631,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 - **3.5 (2026-01-18):** Expanded Game 3 (Fracture Point) to 128 units with full breakout polish and power-ups. Total now 1,728 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Crate Escape) to 128 units for full platformer polish. Total now 1,664 units.
 - **3.3 (2026-01-18):** Reordered games per skill tree analysis. Removed Neon Nexus (redundant with Stellar Barrage). Crate Escape now Game 2. Added Arena Assault as Game 10 (foundation capstone). See `/docs/curriculum/SKILL-TREES.md`.
-- **3.2 (2026-01-18):** Restructured Game 1. Stellar Barrage (shooter) now first game at 128 units for immediate engagement. Total now 1,600 units.
+- **3.2 (2026-01-18):** Restructured Game 1. Stellar Barrage (shooter) as first game at 128 units for immediate engagement. Total now 1,600 units. (Stellar Barrage later replaced by Dash in 3.20.)
 - **3.1 (2026-01-07):** Added post-capstone audio expansion games (VRC6, MMC5).
 - **3.0 (2025-01-07):** Restructured to 1,536 units (64/128/256 scaling) matching C64 and ZX Spectrum curricula.
 - **2.0 (2025-11-26):** Complete rewrite. Replaced phases/tiers/lessons with games model.

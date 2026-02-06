@@ -24,7 +24,7 @@ By the final game, learners will have skills matching professional Amiga develop
 
 | Phase | Games | Units Each | Total |
 |-------|-------|------------|-------|
-| Foundation (shooter, timing, breakout, platformer, exploration, maze, snake, puzzle) | 1-8 | 128 | 1,024 |
+| Foundation (terrain puzzle, timing, breakout, platformer, exploration, maze, snake, puzzle) | 1-8 | 128 | 1,024 |
 | Intermediate | 9-10 | 256 | 512 |
 | Advanced | 11-13 | 256 | 768 |
 | Advanced | 14 | 256 | 256 |
@@ -47,29 +47,29 @@ The expanded structure allows thorough coverage of:
 
 ### Foundation Games
 
-#### Game 1: Blast Zone
+#### Game 1: Exodus
 **Units:** 128 (8 phases)
-**Concept:** Fixed-screen space shooter. Player ship versus enemy waves. Immediate engagement from Unit 1, bootable from the start.
+**Concept:** Terrain puzzle in the Lemmings tradition. Creatures walk across a bitmap landscape — the player modifies the terrain to guide them to safety. Digging, building, and redirecting are all Blitter operations. The Amiga's custom chipset becomes the game design tool.
 
 **Skills taught:**
 - 68000 assembly fundamentals
 - Display setup and Copper list basics
-- Hardware sprites (player ship)
-- Blitter objects (BOBs for enemies)
-- Copper gradients and colour effects
-- Paula sample playback
+- Bitplane graphics and bitmap terrain
+- Blitter operations (copy, fill, clear, modify)
+- Terrain as modifiable bitmap data
+- Copper gradients and colour effects (sky, ground)
+- Paula sample playback (digging, building, arrival sounds)
 - Bootable ADF creation (from Unit 1)
-- Projectile spawning and pooling
-- Enemy formations and patterns
-- Multiple collision types
-- Wave progression
-- Score display with Blitter text
-- Boss battles
-- Commercial-quality polish
+- Creature AI (walking, turning at walls, falling)
+- Terrain modification (digging tunnels, building bridges)
+- Player input for assigning abilities
+- Collision detection against bitmap terrain
+- UI panel with Copper screen split
+- Level data structures and progression
 
-**Why first:** A shooter gets something playable on screen immediately. Learners control a ship from Unit 2, shoot from Unit 3. The chipset symphony is learned through building a real game, and learners can run their game from a bootable disk from day one.
+**Why first:** A terrain puzzle makes the Blitter the core mechanic from Unit 1. Digging a tunnel is a Blitter clear. Building a bridge is a Blitter copy. Every game action is a hardware operation — learners see the chipset working because it IS the gameplay. The Copper splits the screen for the UI panel, Paula plays satisfying terrain sounds, and the 68000 orchestrates everything. Bootable ADF from day one.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-blast-zone.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-amiga-exodus.md`
 
 ---
 
@@ -611,7 +611,7 @@ The AGA (Advanced Graphics Architecture) chipset, introduced with the A1200 and 
 
 | Games | Blitter Skills |
 |-------|---------------|
-| 1-4 | Basic copy, simple BOBs |
+| 1-4 | Terrain modification, basic copy, simple BOBs |
 | 5-8 | Cookie-cut, fills, tile rendering |
 | 9-11 | Scrolling updates, large BOBs |
 | 12-14 | Line draw, complex fills, isometric |
@@ -725,6 +725,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 
 ## Version History
 
+- **3.18 (2026-02-06):** Replaced Game 1 Blast Zone (shooter) with Exodus (terrain puzzle) to showcase the Blitter as a game mechanic. Lemmings-style terrain modification is a natural fit for Amiga hardware.
 - **3.17 (2026-01-18):** Expanded Game 15 (Echoes of the Ancients) to 512 units (OCS/ECS) and 128 units (AGA) with full Metroidvania and per-region parallax. OCS/ECS total now 3,584 units, AGA total now 448 units, grand total 4,032 units.
 - **3.16 (2026-01-18):** Expanded Game 14 (Fortress) to 256 units with Blitter-based isometric adventure. OCS/ECS total now 3,328 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Onslaught) to 256 units with bullet patterns and rank system. OCS/ECS total now 3,200 units.
@@ -739,7 +740,7 @@ By Game 16, learners produce work comparable to late-era commercial releases.
 - **3.6 (2026-01-18):** Expanded Game 4 (Ascent) to 128 units with full platformer polish. OCS/ECS total now 2,304 units.
 - **3.5 (2026-01-18):** Expanded Game 3 (Shatter Point) to 128 units with Blitter physics and power-ups. OCS/ECS total now 2,240 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Signal) to 128 units for full timing-game polish. OCS/ECS total now 2,176 units.
-- **3.3 (2026-01-18):** Restructured Game 1. Blast Zone (shooter) now first game at 128 units for immediate engagement, bootable from Unit 1. Signal moved to Game 2.
+- **3.3 (2026-01-18):** Restructured Game 1. Blast Zone (shooter) as first game at 128 units for immediate engagement, bootable from Unit 1. Signal moved to Game 2. (Blast Zone later replaced by Exodus in 3.18.)
 - **3.2 (2026-01-07):** Added AGA enhancement games (384 units) for Games 9-16. Total now 2,432 units.
 - **3.1 (2026-01-07):** Corrected structure to use only powers of 2 for unit counts (64/128/256/512).
 - **3.0 (2025-01-07):** Restructured to 2,048 units with expanded hardware coverage. AMOS moved to separate curriculum.

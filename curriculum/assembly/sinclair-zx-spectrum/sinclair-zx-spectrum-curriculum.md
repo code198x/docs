@@ -23,7 +23,7 @@ Games scale in unit count based on complexity:
 
 | Games | Units Each | Total | Rationale |
 |-------|-----------|-------|-----------|
-| 1-8 | 128 | 1,024 | Foundation games - shooter, physics, platformer, exploration, strategy, maze, snake, Tetris |
+| 1-8 | 128 | 1,024 | Foundation games - maze explorer, physics, platformer, exploration, strategy, maze, snake, Tetris |
 | 9-10 | 256 | 512 | Intermediate - scrolling, character-based display mastery |
 | 11-13 | 256 | 768 | System-heavy - multiple complex systems |
 | 14 | 256 | 256 | Advanced - Filmation-style isometric (Head Over Heels) |
@@ -37,27 +37,29 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 ## Game Sequence
 
-### Game 1: Skyfire
+### Game 1: Shadowkeep
 **Units:** 128 (8 phases)
-**Concept:** Fixed-screen space shooter. Player ship versus descending enemy waves. Immediate engagement from Unit 1.
+**Concept:** Top-down maze explorer. Navigate rooms of a dark keep, collect keys, avoid creatures, find the exit. The attribute system is the game — ink and paper define walls, floors, items, and danger.
 
 **Skills taught:**
 - Screen memory layout ($4000-$57FF)
 - Attribute memory ($5800-$5AFF)
 - INK, PAPER, BRIGHT, FLASH bits
 - Keyboard input via ROM routines
-- Player sprite drawing and movement
-- Projectile spawning and management
-- Enemy patterns and waves
-- Multiple collision types
+- Character-cell movement (8-pixel grid)
+- Wall collision via attribute reading
+- Room data structures (tile maps)
+- Item collection and inventory
+- Enemy patrol AI (simple path following)
 - Beeper sound effects (pitch variation)
-- Sprite masking techniques
-- Increasing difficulty curves
-- High score display
+- Multi-room transitions
+- Key and door mechanics
+- Score and status display
+- Increasing difficulty (more rooms, faster enemies)
 
-**Why first:** A shooter gets something playable on screen immediately. Learners control a ship from Unit 2, shoot from Unit 3. The attribute system is learned through doing, not theory.
+**Why first:** A maze explorer makes the attribute system the core mechanic from Unit 1. Walls are INK, floors are PAPER, items are BRIGHT — the Spectrum's defining feature becomes the game design tool. Learners see pixels on screen immediately and navigate a room by Unit 3.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-skyfire.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-shadowkeep.md`
 
 ---
 
@@ -267,7 +269,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 ---
 
-### Game 10: Exodus
+### Game 10: Expanse
 **Units:** 256 (16 phases)
 **Concept:** Epic scrolling platformer combining Blitz's scrolling mastery with full platformer mechanics. Vast worlds to explore with multiple themed areas, bosses, and commercial-quality polish.
 
@@ -290,7 +292,7 @@ Each game follows a phase structure (4-16 phases depending on length), with each
 
 **Why expanded:** Combining scrolling and platforming is the ultimate Spectrum challenge. 256 units allows a complete, polished scrolling platformer worthy of commercial release.
 
-**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-exodus.md`
+**Detailed outline:** `/docs/curriculum/templates/full-game-outline-zx-spectrum-expanse.md`
 
 ---
 
@@ -501,7 +503,7 @@ For learners wanting a gentler introduction before assembly, an optional Sinclai
 - Arrays and game state
 - BASIC's limits - why assembly is needed
 
-The BASIC gateway is optional. Learners can start directly at Game 1 (Ink War) with no BASIC knowledge required. The gateway exists for those who prefer building foundational programming concepts before diving into assembly.
+The BASIC gateway is optional. Learners can start directly at Game 1 (Shadowkeep) with no BASIC knowledge required. The gateway exists for those who prefer building foundational programming concepts before diving into assembly.
 
 See `/docs/curriculum/sinclair-zx-spectrum-basic-curriculum.md` for full details.
 
@@ -609,13 +611,14 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 
 ## Version History
 
+- **3.20 (2026-02-06):** Replaced Game 1 Skyfire (shooter) with Shadowkeep (top-down maze explorer) to showcase the attribute system as a game mechanic. Renamed Game 10 from Exodus to Expanse to avoid name conflict with Amiga Game 1.
 - **3.18 (2026-01-18):** Expanded Game 16 (Spectral Legacy) to 512 units with 5-zone adventure, 128K/48K dual support, and Next enhanced version. Total now 3,584 units.
 - **3.17 (2026-01-18):** Expanded Game 15 (Bastion) to 512 units with Knight Lore-style isometric adventure and transformation mechanic. Total now 3,328 units.
 - **3.16 (2026-01-18):** Expanded Game 14 (Strafe) to 256 units with 1942-style vertical shooting and 128K AY support. Total now 2,944 units.
 - **3.15 (2026-01-18):** Expanded Game 13 (Knuckle Brawl) to 256 units with Y-depth sorting and combo systems. Total now 2,816 units.
 - **3.14 (2026-01-18):** Expanded Game 12 (Recoil) to 256 units with run 'n' gun mastery. Total now 2,688 units.
 - **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.
-- **3.12 (2026-01-18):** Expanded Game 10 (Exodus) to 256 units with scrolling platformer mastery. Total now 2,432 units.
+- **3.12 (2026-01-18):** Expanded Game 10 (Expanse, formerly Exodus) to 256 units with scrolling platformer mastery. Total now 2,432 units.
 - **3.11 (2026-01-18):** Expanded Game 9 (Blitz) to 256 units with software scrolling mastery. Total now 2,240 units.
 - **3.10 (2026-01-18):** Expanded Game 8 (Stack) to 128 units with T-spins, competitive multiplayer, and modern puzzle features. Total now 2,048 units.
 - **3.9 (2026-01-18):** Expanded Game 7 (Slither) to 128 units with ring buffer data structure and AI opponent. Total now 1,984 units.
@@ -625,7 +628,7 @@ See `/docs/plans/future-expansion-tracks.md` for full details.
 - **3.5 (2026-01-18):** Expanded Game 3 (Cavern) to 128 units with full Manic Miner-style platformer features. Total now 1,728 units.
 - **3.4 (2026-01-18):** Expanded Game 2 (Shatter) to 128 units for full physics polish. Total now 1,664 units.
 - **3.3 (2026-01-18):** Reordered games per skill tree analysis. Shatter now Game 2 (sub-cell physics). Cavern now Game 3 (platforming). Ink War moved to Game 5 (requires strategic AI experience). See `/docs/curriculum/SKILL-TREES.md`.
-- **3.2 (2026-01-18):** Restructured Game 1. Skyfire (shooter) now first game at 128 units for immediate engagement. Total now 1,600 units.
+- **3.2 (2026-01-18):** Restructured Game 1. Skyfire (shooter) as first game at 128 units for immediate engagement. Total now 1,600 units. (Skyfire later replaced by Shadowkeep in 3.20.)
 - **3.1 (2026-01-07):** Added optional enhancement versions section (128K and Next). Updated BASIC gateway reference to 512-unit curriculum.
 - **3.0 (2025-01-07):** Expanded to 1,536 units. Games 1-10 at 64 units, Games 11-15 at 128 units, Game 16 at 256 units. Added tape loading, 128K support, distribution skills.
 - **2.0 (2025-11-26):** Complete rewrite. Replaced phases/tiers/lessons with games model.
