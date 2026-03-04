@@ -32,10 +32,10 @@ docker run --rm -v $(pwd)/code-samples:/code-samples <image> <assembler> <args>
 ## Platform Build Quick Reference
 | Platform | Image | Assembler | Output |
 |----------|-------|-----------|--------|
-| C64 | `c64-dev:latest` | `acme -f cbm` | `.prg` |
+| C64 | `ghcr.io/code198x/commodore-64:latest` | `acme -f cbm` | `.prg` |
 | ZX Spectrum | `ghcr.io/code198x/sinclair-zx-spectrum:latest` | `pasmonext --sna` | `.sna` |
-| Amiga | `amiga-dev:latest` | `vasmm68k_mot -Fhunkexe -kick1hunks` | executable |
-| NES | `code198x/nintendo-entertainment-system:latest` | `ca65` + `ld65` | `.nes` |
+| Amiga | `ghcr.io/code198x/commodore-amiga:latest` | `vasmm68k_mot -Fhunkexe -kick1hunks` | executable |
+| NES | `ghcr.io/code198x/nintendo-nes:latest` | `ca65` + `ld65` | `.nes` |
 
 ## Screenshot/Video Tools
 - **C64**: Docker script `/scripts/c64-screenshot.sh` (ROMs symlinked from `~/Projects/Reference/`)
