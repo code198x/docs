@@ -44,7 +44,7 @@ Teaching both shows that there is no single "right" tool — different problems 
 | 1 | 64 | Ricochet — bouncing sprites game (immediate visuals) |
 | 2 | 64 | Conduit — pipe-routing puzzle with mouse control |
 | 3 | 64 | Sidewinder — scrolling game using screen commands |
-| 4 | 64 | TBD — complete game with MOD music |
+| 4 | 64 | The Lighthouse — point-and-click adventure |
 | **Total** | **256** | |
 
 Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targets under 500 lines of AMOS.
@@ -129,7 +129,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targe
 
 ---
 
-### AMOS Game 4: TBD
+### AMOS Game 4: The Lighthouse
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Complete polished game
@@ -163,7 +163,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targe
 | 1 | 64 | Flashpoint — fast action game (compiled speed) |
 | 2 | 64 | Gridlock — structured game with data modelling |
 | 3 | 64 | Craterfall — pushing hardware with compiled code |
-| 4 | 64 | TBD — full production game |
+| 4 | 64 | Tarmac — top-down racing game |
 | **Total** | **256** | |
 
 Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targets under 500 lines of Blitz Basic.
@@ -247,7 +247,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targe
 
 ---
 
-### Blitz Game 4: TBD
+### Blitz Game 4: Tarmac
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Complete polished game
