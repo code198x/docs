@@ -141,11 +141,11 @@ Five regions, each with a distinct visual theme, tileset, enemy set, and boss. T
 ### Game 4: Capstone
 
 **Units:** 512 (16 phases × 32 units)
-**Genre:** Action game with multiple gameplay styles (distinct from Games 1-3)
-**Inspired by:** Kirby's Adventure, Batman: Return of the Joker, Shatterhand
-**Working title:** TBD
+**Genre:** Multi-style action game with late-era NES polish
+**Inspired by:** Kirby's Adventure, Batman: Return of the Joker, Little Samson
+**Working title:** Starweave
 
-**Concept:** A late-era NES showcase that pushes the hardware to its limits. Multiple gameplay styles within a single game (action-platformer sections, vehicle sections, puzzle rooms). CHR animation for background effects (waterfalls, machinery, weather). Advanced DMC usage for punchy audio. The game demonstrates what the NES can do when every technique is mastered.
+**Concept:** A weaver's apprentice climbs through five realms to repair the sky-loom where constellations are woven. Each realm has a distinct gameplay style: forest platforming, underwater swimming, wind-affected gliding, mechanical puzzle-solving, and vertical star-thread weaving. CHR animation for flowing water and shimmering thread. Advanced DMC for sampled bass and voice. Cinematic cutscenes between realms. The NES pushed to Kirby's Adventure levels of visual and audio polish.
 
 The capstone's new material is production polish: NTSC/PAL compatibility, advanced MMC3 techniques, professional ROM image creation, and the kind of visual/audio polish that characterised the NES's final commercial years.
 
