@@ -1,0 +1,32 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "93384c012a3e",
+  "session_id": "e122b0f8-8dc9-4751-ad66-d62080b6cb50",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-09T11:06:04.552771Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "curriculum/assembly/sinclair-zx-spectrum/game-01-full-game-outline-zx-spectrum-gravelight.md"
+  ],
+  "agent": "Claude Code",
+  "transcript_identifier_at_start": "08540d87-5159-4a42-8ca2-6aacad87cf4c",
+  "checkpoint_transcript_start": 960,
+  "transcript_lines_at_start": 960,
+  "token_usage": {
+    "input_tokens": 13,
+    "cache_creation_tokens": 27017,
+    "cache_read_tokens": 2147392,
+    "output_tokens": 10456,
+    "api_call_count": 7
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-09T11:06:04.268851Z",
+    "agent_lines": 61,
+    "human_added": 0,
+    "human_modified": 118,
+    "human_removed": 239,
+    "total_committed": 179,
+    "agent_percentage": 34.07821229050279
+  }
+}
