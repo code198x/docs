@@ -1,0 +1,32 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "ab0477f1c352",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "curriculum/basic/commodore-amiga/amos/game-01-ricochet.md",
+    "curriculum/basic/commodore-amiga/amos/game-02-conduit.md",
+    "curriculum/basic/commodore-amiga/amos/game-03-sidewinder.md",
+    "curriculum/basic/commodore-amiga/blitz/game-01-flashpoint.md",
+    "curriculum/basic/commodore-amiga/blitz/game-02-gridlock.md",
+    "curriculum/basic/commodore-amiga/blitz/game-03-craterfall.md",
+    "curriculum/basic/commodore-amiga/commodore-amiga-basic-curriculum.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/ab/0477f1c352/0/metadata.json",
+      "transcript": "/ab/0477f1c352/0/full.jsonl",
+      "context": "/ab/0477f1c352/0/context.md",
+      "content_hash": "/ab/0477f1c352/0/content_hash.txt",
+      "prompt": "/ab/0477f1c352/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 21,
+    "cache_creation_tokens": 26637,
+    "cache_read_tokens": 4636461,
+    "output_tokens": 20455,
+    "api_call_count": 17
+  }
+}
