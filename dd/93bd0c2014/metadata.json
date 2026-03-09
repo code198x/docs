@@ -1,0 +1,26 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "dd93bd0c2014",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "curriculum/assembly/sinclair-zx-spectrum/game-02-full-game-outline-zx-spectrum-ionfire.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/dd/93bd0c2014/0/metadata.json",
+      "transcript": "/dd/93bd0c2014/0/full.jsonl",
+      "context": "/dd/93bd0c2014/0/context.md",
+      "content_hash": "/dd/93bd0c2014/0/content_hash.txt",
+      "prompt": "/dd/93bd0c2014/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 5,
+    "cache_creation_tokens": 7220,
+    "cache_read_tokens": 975247,
+    "output_tokens": 7007,
+    "api_call_count": 3
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "dd93bd0c2014",
+  "session_id": "e122b0f8-8dc9-4751-ad66-d62080b6cb50",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-09T11:12:18.424353Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "curriculum/assembly/sinclair-zx-spectrum/game-02-full-game-outline-zx-spectrum-ionfire.md"
+  ],
+  "agent": "Claude Code",
+  "transcript_identifier_at_start": "0c2ce724-4803-4c66-b7f4-d82737b13293",
+  "checkpoint_transcript_start": 991,
+  "transcript_lines_at_start": 991,
+  "token_usage": {
+    "input_tokens": 5,
+    "cache_creation_tokens": 7220,
+    "cache_read_tokens": 975247,
+    "output_tokens": 7007,
+    "api_call_count": 3
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-09T11:12:17.669378Z",
+    "agent_lines": 2,
+    "human_added": 0,
+    "human_modified": 118,
+    "human_removed": 239,
+    "total_committed": 120,
+    "agent_percentage": 1.6666666666666667
+  }
+}
