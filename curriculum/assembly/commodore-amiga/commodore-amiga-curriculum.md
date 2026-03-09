@@ -144,11 +144,11 @@ This is the game that teaches Copper programming at the deepest level and introd
 ### Game 4: Capstone
 
 **Units:** 512 (16 phases × 32 units)
-**Genre:** Scrolling action game with chipset showcase (distinct from Games 1-3)
-**Inspired by:** Team17, Psygnosis, or Bitmap Brothers releases
-**Working title:** TBD
+**Genre:** Scrolling action game bridging OCS to AGA
+**Inspired by:** Team17, Psygnosis, Bitmap Brothers
+**Working title:** Horizons
 
-**Concept:** A scrolling action game that runs on an A500 and lights up on an A1200. The OCS/ECS version uses all techniques from Games 1-3. The AGA version adds 256-colour graphics, enhanced sprites, HAM8 title screens, and A1200-specific optimisations. The capstone bridges the Amiga's generations: one codebase, two visual presentations.
+**Concept:** A chain of floating islands in a luminous void. Five islands, each a scrolling action stage with distinct terrain, enemies, and a boss. On an A500: vivid OCS with Copper gradients, dual playfield parallax, and Blitter BOBs. On an A1200: the same game ignites with AGA — 256-colour palettes, enhanced sprites, HAM8 title screens and cutscenes. One codebase, two presentations. Chipset detection at startup branches the display path. Custom trackloader, multi-disk support, WHDLoad compatibility.
 
 The new material is chipset detection and adaptation, AGA register programming, custom disk loading, and the production polish that characterised Amiga commercial releases.
 
