@@ -1,0 +1,30 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "e5e9b1bed013",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "curriculum/basic/commodore-64/commodore-64-basic-curriculum.md",
+    "curriculum/basic/commodore-64/game-01-depth-charge.md",
+    "curriculum/basic/commodore-64/game-02-neon-nexus.md",
+    "curriculum/basic/commodore-64/game-03-starswarm.md",
+    "curriculum/basic/commodore-64/game-04-signal-lost.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/e5/e9b1bed013/0/metadata.json",
+      "transcript": "/e5/e9b1bed013/0/full.jsonl",
+      "context": "/e5/e9b1bed013/0/context.md",
+      "content_hash": "/e5/e9b1bed013/0/content_hash.txt",
+      "prompt": "/e5/e9b1bed013/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 28,
+    "cache_creation_tokens": 41916,
+    "cache_read_tokens": 3798903,
+    "output_tokens": 32293,
+    "api_call_count": 16
+  }
+}

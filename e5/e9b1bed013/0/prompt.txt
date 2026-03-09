@@ -1,0 +1,262 @@
+Please resume from where we left off.
+
+---
+
+Over here, I'm more interested in tying this project into the wider Code Like It's 198x project
+
+---
+
+We're probably not going to be able to embed the WASM emulators right now because of license issues - we'd be able to do Spectrum and NES, but C64 and Amiga would be "problematic". We do have input scripts, but they're JSON-based right now.
+
+---
+
+I want to get _good_ content. And I don't think the current units - and perhaps not even the games themselves - are ambitious enough, or high-quality enough - to hold the interest of potential readers
+
+---
+
+1. All of the above, and then some. I want this to be accessible to as many audiences as possible (this is the reason for the BASIC tracks).
+2. A game which resembles those which were commercially available during the lifetime of the system. We can build up to that, but the progression should be obvious and visible.
+3. Yes, I absolutely would consider that approach.
+
+---
+
+Yes, let's aim for no more than 8 games per platform, no repetition between them for at least these first four systems (we might not have any choice when we introduce future systems). Let's try these.
+
+---
+
+1. I feel like they could be compelling enough.
+2. Either/or, really - Pinball Dreams is indeed iconic.
+3. Maybe not even 8 games, maybe 4. Should be separate though.
+4. I think they are, BUT we're not going to be doing physical packaging at any point.
+
+Could we go any tighter, or does that put the entire project at risk? These are ambitious games - but I'm not against them.
+
+---
+
+We lose the powers of two if we drop to 6...
+
+---
+
+The other advantage of cutting to 4 is that we have more concepts available for other target systems.
+
+---
+
+Yes, though I'm not entirely convinced I can do rotoscoping :D
+
+---
+
+Yes, let's swap for a driving game.
+
+---
+
+Let's figure out the BASIC tracks
+
+---
+
+Agreed, though we don't necessarily need to cap at 50 lines. I'd be fine up to around 500 lines, but beyond that it would be unwieldy.
+
+---
+
+Here we're starting with a text adventure for all 3 systems, I don't think that's quite enough variety. They were iconic on the Spectrum, less so on the others.
+
+---
+
+I want a _game_ for all of them, so C64 #1 is not yet there
+
+---
+
+That's better, yes. Let's go with that.
+
+---
+
+Let's go with these - it would be _nice_ to specify the capstone games in more detail now, but I get it
+
+---
+
+That's fine for now. One note: "Not physical cartridge production, but a ROM that runs on real hardware via flash cart." - this should be possible for EVERY title.
+
+---
+
+Yes, please do so now.
+
+---
+
+The one trick here is that we _can_ repeat genres later on, I just don't want to for these four systems.
+
+---
+
+Better. Ok. Let's write the game specification docs
+
+---
+
+I didn't spot when you were writing them, but the BASIC entries should be split into separate docs - we have separate curricula entries for those in docs/curriculum/basic/{system} (though, thinking about it, those could be organised as docs/curriculum/{system}/{assembly,basic})
+
+---
+
+Is it worth keeping both, and defining some games that could be done in Blitz as well? It's _very_ different in terms of style.
+
+---
+
+Let's commit these for now, then decide how to proceed from there.
+
+---
+
+We should probably name the games, then we can make the game outlines based on those.
+
+---
+
+Spectrum:
+
+1 - not keen on any of these, keep riffing
+2 - Ionfire feels good
+3 - Grimstone, yes!
+4 - not keen on any of these
+
+C64:
+
+1 - Nova Storm
+2 - Coldframe
+3 - not keen on these
+4 - not keen on these
+
+NES:
+
+1 - Dash
+2 - Wyrdstone
+3 - not keen on these
+4 - not keen on these
+
+Amiga:
+
+1 - Exodus
+2 - Duskfall
+3 - Redline
+4 - not keen on these
+
+I think the problem with the game 4 names is that we haven't truly defined what those games _are_ yet - so it's tricky to come up with a good name
+
+---
+
+Spectrum - gravelight
+C64 - warfront
+NES - Abyssal Gate
+
+---
+
+Let's name the BASIC games too - we might even pivot to making those
+
+---
+
+Spectrum:
+
+1 - The Cursed Manor sounds good!
+2 - Night Patrol
+3 - Lattice
+4 - Blockstorm
+
+C64:
+
+1 - Depth Charge
+2 - Neon Nexus
+3 - Starswarm
+4 - these names are terrible
+
+AMOS:
+
+1 - Ricochet
+2 - these names are terrible
+3 - Sidewinder
+4 - these names are terrible
+
+Blitz:
+
+1 - Flashpoint
+2 - Gridlock
+3 - Craterfall
+4 - these names are terrible
+
+I sense the same problem with game 4 here, we haven't fully specced it
+
+---
+
+Yes, let's update
+
+---
+
+Probably the game outlines, it'll make it easier to write the content
+
+---
+
+Let's start with (1), and work from there. Each deserves focus.
+
+---
+
+1: I'd consider going even larger, but we can see.
+2: I'd love a proper parser, but that might be challenging.
+3: Player is invited to a party, but finds that all of the other guests are frozen in place. Must figure out why in order to escape.
+4: Yes!
+5: No save and load.
+
+---
+
+That sounds good, I'd enjoy playing that.
+
+---
+
+Night Patrol first
+
+---
+
+I think your plan might be correct, BUT there's the interesting pivot where you act as an intruder. Not sure which is most fun.
+
+---
+
+Yes, please
+
+---
+
+Let's do Lattice now
+
+---
+
+I think you're spot on.
+
+---
+
+Let's do Blockstorm
+
+---
+
+Agree, this sounds fine to me
+
+---
+
+Let's do the C64 BASIC, yes
+
+---
+
+[Request interrupted by user]
+
+---
+
+Actually, let's clean up the legacy Spectrum BASIC games that no longer apply
+
+---
+
+Delete all eight, please
+
+---
+
+Let's write the specs for the C64 BASIC games first, in case there's anything useful in the legacy specs
+
+---
+
+I think rhythm would be hard to do at BASIC speed. I do like game 3, but I suspect game 2 is actually doable
+
+---
+
+Is this too close to our Night Patrol concept for the Spectrum?
+
+---
+
+I like the idea. Signal Lost might be the best name.
