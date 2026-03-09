@@ -1,0 +1,33 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "d11bcd00a931",
+  "session_id": "e122b0f8-8dc9-4751-ad66-d62080b6cb50",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-09T11:21:56.295687Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "curriculum/assembly/sinclair-zx-spectrum/game-04-full-game-outline-zx-spectrum-dawnreach.md",
+    "curriculum/assembly/sinclair-zx-spectrum/sinclair-zx-spectrum-curriculum.md"
+  ],
+  "agent": "Claude Code",
+  "transcript_identifier_at_start": "756e6949-ef78-423d-a2bc-eedcf5e21f94",
+  "checkpoint_transcript_start": 1016,
+  "transcript_lines_at_start": 1016,
+  "token_usage": {
+    "input_tokens": 15,
+    "cache_creation_tokens": 9059,
+    "cache_read_tokens": 3089485,
+    "output_tokens": 8435,
+    "api_call_count": 9
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-09T11:21:56.008322Z",
+    "agent_lines": 9,
+    "human_added": 0,
+    "human_modified": 118,
+    "human_removed": 239,
+    "total_committed": 127,
+    "agent_percentage": 7.086614173228346
+  }
+}
