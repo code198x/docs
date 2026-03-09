@@ -1,0 +1,32 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "ddab4641f7f5",
+  "session_id": "e122b0f8-8dc9-4751-ad66-d62080b6cb50",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-09T09:54:23.00914Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "curriculum/basic/sinclair-zx-spectrum/game-04-blockstorm.md"
+  ],
+  "agent": "Claude Code",
+  "transcript_identifier_at_start": "83987292-c52e-4cc7-bd92-ada31e9016c2",
+  "checkpoint_transcript_start": 731,
+  "transcript_lines_at_start": 731,
+  "token_usage": {
+    "input_tokens": 8,
+    "cache_creation_tokens": 9335,
+    "cache_read_tokens": 854106,
+    "output_tokens": 9261,
+    "api_call_count": 4
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-09T09:54:22.790378Z",
+    "agent_lines": 117,
+    "human_added": 0,
+    "human_modified": 118,
+    "human_removed": 239,
+    "total_committed": 235,
+    "agent_percentage": 49.787234042553195
+  }
+}
