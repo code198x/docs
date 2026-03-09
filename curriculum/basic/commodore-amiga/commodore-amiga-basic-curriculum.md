@@ -42,7 +42,7 @@ Teaching both shows that there is no single "right" tool — different problems 
 | Game | Units | Role |
 |------|-------|------|
 | 1 | 64 | Ricochet — bouncing sprites game (immediate visuals) |
-| 2 | 64 | TBD — mouse-driven game |
+| 2 | 64 | Conduit — pipe-routing puzzle with mouse control |
 | 3 | 64 | Sidewinder — scrolling game using screen commands |
 | 4 | 64 | TBD — complete game with MOD music |
 | **Total** | **256** | |
@@ -77,7 +77,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targe
 
 ---
 
-### AMOS Game 2: TBD
+### AMOS Game 2: Conduit
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Point-and-click / mouse-driven
