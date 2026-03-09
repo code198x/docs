@@ -24,7 +24,7 @@ BASIC is not a prerequisite for the assembly track. The two tracks are independe
 | 1 | 64 | Depth Charge — grid strategy game using PRINT and INPUT |
 | 2 | 64 | Neon Nexus — character grid action via POKE |
 | 3 | 64 | Starswarm — sprite game via hardware register POKEs |
-| 4 | 64 | TBD — music + game combining sound and gameplay |
+| 4 | 64 | Signal Lost — SID-driven space survival game |
 | **Total** | **256** | |
 
 Each game has 4 phases of 16 units. Each unit is 60-120 minutes and produces a working result.
@@ -123,7 +123,7 @@ The progression mirrors the hardware: pure BASIC → screen RAM → VIC-II sprit
 
 ---
 
-### Game 4: TBD
+### Game 4: Signal Lost
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Action game with SID sound
