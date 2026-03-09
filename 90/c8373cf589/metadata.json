@@ -1,0 +1,33 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "90c8373cf589",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "CURRICULUM-SPECIFICATION.md",
+    "curriculum/assembly/commodore-64/commodore-64-curriculum.md",
+    "curriculum/assembly/commodore-amiga/commodore-amiga-curriculum.md",
+    "curriculum/assembly/nintendo-nes/nintendo-nes-curriculum.md",
+    "curriculum/assembly/sinclair-zx-spectrum/sinclair-zx-spectrum-curriculum.md",
+    "curriculum/basic/commodore-64/commodore-64-basic-curriculum.md",
+    "curriculum/basic/commodore-amiga/commodore-amiga-basic-curriculum.md",
+    "curriculum/basic/sinclair-zx-spectrum/sinclair-zx-spectrum-basic-curriculum.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/90/c8373cf589/0/metadata.json",
+      "transcript": "/90/c8373cf589/0/full.jsonl",
+      "context": "/90/c8373cf589/0/context.md",
+      "content_hash": "/90/c8373cf589/0/content_hash.txt",
+      "prompt": "/90/c8373cf589/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 131,
+    "cache_creation_tokens": 333067,
+    "cache_read_tokens": 8304717,
+    "output_tokens": 86513,
+    "api_call_count": 67
+  }
+}
