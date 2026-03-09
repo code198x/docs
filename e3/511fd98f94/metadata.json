@@ -1,0 +1,26 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "e3511fd98f94",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "curriculum/basic/sinclair-zx-spectrum/game-03-lattice.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/e3/511fd98f94/0/metadata.json",
+      "transcript": "/e3/511fd98f94/0/full.jsonl",
+      "context": "/e3/511fd98f94/0/context.md",
+      "content_hash": "/e3/511fd98f94/0/content_hash.txt",
+      "prompt": "/e3/511fd98f94/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 8,
+    "cache_creation_tokens": 8253,
+    "cache_read_tokens": 820389,
+    "output_tokens": 7949,
+    "api_call_count": 4
+  }
+}
