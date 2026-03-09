@@ -1,0 +1,32 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "9f94055e60f0",
+  "session_id": "e122b0f8-8dc9-4751-ad66-d62080b6cb50",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-09T09:34:50.038648Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "curriculum/basic/sinclair-zx-spectrum/game-01-the-cursed-manor.md"
+  ],
+  "agent": "Claude Code",
+  "transcript_identifier_at_start": "d4c3415e-8b53-4bf0-b441-487e40eebcaf",
+  "checkpoint_transcript_start": 654,
+  "transcript_lines_at_start": 654,
+  "token_usage": {
+    "input_tokens": 15,
+    "cache_creation_tokens": 10671,
+    "cache_read_tokens": 1307719,
+    "output_tokens": 9626,
+    "api_call_count": 7
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-09T09:34:49.827583Z",
+    "agent_lines": 71,
+    "human_added": 0,
+    "human_modified": 118,
+    "human_removed": 239,
+    "total_committed": 189,
+    "agent_percentage": 37.56613756613756
+  }
+}
