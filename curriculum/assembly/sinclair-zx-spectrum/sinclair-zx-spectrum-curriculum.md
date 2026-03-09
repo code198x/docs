@@ -131,13 +131,13 @@ This is the first game to use 128K features: AY-3-8912 music, bank switching for
 ### Game 4: Capstone
 
 **Units:** 512 (16 phases × 32 units)
-**Genre:** Scrolling action-adventure (distinct from Games 1-3)
-**Inspired by:** Late-era Ocean, Codemasters, or Rare releases
-**Working title:** TBD
+**Genre:** Scrolling action-platformer with exploration
+**Inspired by:** Midnight Resistance, Ghosts 'n Goblins, Dan Dare III
+**Working title:** Dawnreach
 
-**Concept:** A scrolling action-adventure that combines platforming, combat, and exploration across multiple zones. This is not a repetition of Games 1-3 — it is a new genre that requires all previous skills (attribute awareness, smooth scrolling, large world management) plus the production techniques that separated bedroom coders from commercial studios.
+**Concept:** A journey across the land toward the source of a spreading darkness. Five zones — Greenwood (forest), Ridgeway (mountains), Shorelands (coast), Ashfield (wasteland), and the Dawnreach (eastern tower) — each a scrolling landscape with unique terrain, enemies, and a guardian boss. The game combines platforming from Gravelight, scrolling from Ionfire, and world complexity from Grimstone into a single production.
 
-The capstone's new material is distribution and production: turbo tape loading, +3 disk support, 128K/48K dual-mode code paths, and loading screens. The finished game should look like it could sit on a shop shelf next to Midnight Resistance or Robocop.
+The capstone's new material is distribution and production: turbo tape loading, +3 disk support, 128K/48K dual-mode code paths, loading screens, and multi-load architecture. The finished game should look like it could sit on a shop shelf next to Midnight Resistance or Dan Dare III.
 
 **Skills taught:**
 - All techniques from Games 1-3 at mastery level
