@@ -1,0 +1,35 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "23b837e12ed9",
+  "session_id": "e122b0f8-8dc9-4751-ad66-d62080b6cb50",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-09T11:59:55.831083Z",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "curriculum/assembly/commodore-amiga/commodore-amiga-curriculum.md",
+    "curriculum/assembly/commodore-amiga/game-02-full-game-outline-amiga-duskfall.md",
+    "curriculum/assembly/commodore-amiga/game-03-full-game-outline-amiga-redline.md",
+    "curriculum/assembly/commodore-amiga/game-04-full-game-outline-amiga-horizons.md"
+  ],
+  "agent": "Claude Code",
+  "transcript_identifier_at_start": "85adb542-783a-439c-9f90-1bdcb02b7c9e",
+  "checkpoint_transcript_start": 1148,
+  "transcript_lines_at_start": 1148,
+  "token_usage": {
+    "input_tokens": 14,
+    "cache_creation_tokens": 412722,
+    "cache_read_tokens": 3711118,
+    "output_tokens": 19302,
+    "api_call_count": 10
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-09T11:59:55.496697Z",
+    "agent_lines": 566,
+    "human_added": 0,
+    "human_modified": 118,
+    "human_removed": 239,
+    "total_committed": 684,
+    "agent_percentage": 82.7485380116959
+  }
+}

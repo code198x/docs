@@ -1,0 +1,29 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "23b837e12ed9",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "curriculum/assembly/commodore-amiga/commodore-amiga-curriculum.md",
+    "curriculum/assembly/commodore-amiga/game-02-full-game-outline-amiga-duskfall.md",
+    "curriculum/assembly/commodore-amiga/game-03-full-game-outline-amiga-redline.md",
+    "curriculum/assembly/commodore-amiga/game-04-full-game-outline-amiga-horizons.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/23/b837e12ed9/0/metadata.json",
+      "transcript": "/23/b837e12ed9/0/full.jsonl",
+      "context": "/23/b837e12ed9/0/context.md",
+      "content_hash": "/23/b837e12ed9/0/content_hash.txt",
+      "prompt": "/23/b837e12ed9/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 14,
+    "cache_creation_tokens": 412722,
+    "cache_read_tokens": 3711118,
+    "output_tokens": 19302,
+    "api_call_count": 10
+  }
+}
