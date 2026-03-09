@@ -1,0 +1,28 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "2dd88d8db2b5",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "curriculum/basic/commodore-amiga/amos/game-04-the-lighthouse.md",
+    "curriculum/basic/commodore-amiga/blitz/game-04-tarmac.md",
+    "curriculum/basic/commodore-amiga/commodore-amiga-basic-curriculum.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/2d/d88d8db2b5/0/metadata.json",
+      "transcript": "/2d/d88d8db2b5/0/full.jsonl",
+      "context": "/2d/d88d8db2b5/0/context.md",
+      "content_hash": "/2d/d88d8db2b5/0/content_hash.txt",
+      "prompt": "/2d/d88d8db2b5/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 13,
+    "cache_creation_tokens": 13625,
+    "cache_read_tokens": 2064438,
+    "output_tokens": 12733,
+    "api_call_count": 7
+  }
+}
