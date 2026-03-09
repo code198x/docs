@@ -1,0 +1,26 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "ef91bfb749b6",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "curriculum/assembly/sinclair-zx-spectrum/game-03-full-game-outline-zx-spectrum-grimstone.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/ef/91bfb749b6/0/metadata.json",
+      "transcript": "/ef/91bfb749b6/0/full.jsonl",
+      "context": "/ef/91bfb749b6/0/context.md",
+      "content_hash": "/ef/91bfb749b6/0/content_hash.txt",
+      "prompt": "/ef/91bfb749b6/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 5,
+    "cache_creation_tokens": 8688,
+    "cache_read_tokens": 998314,
+    "output_tokens": 8676,
+    "api_call_count": 3
+  }
+}

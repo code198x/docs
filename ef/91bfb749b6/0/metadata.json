@@ -1,0 +1,32 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "ef91bfb749b6",
+  "session_id": "e122b0f8-8dc9-4751-ad66-d62080b6cb50",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-09T11:16:24.747358Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "curriculum/assembly/sinclair-zx-spectrum/game-03-full-game-outline-zx-spectrum-grimstone.md"
+  ],
+  "agent": "Claude Code",
+  "transcript_identifier_at_start": "438f5492-eacb-4bc2-bbb2-54cd3fcdb22e",
+  "checkpoint_transcript_start": 1003,
+  "transcript_lines_at_start": 1003,
+  "token_usage": {
+    "input_tokens": 5,
+    "cache_creation_tokens": 8688,
+    "cache_read_tokens": 998314,
+    "output_tokens": 8676,
+    "api_call_count": 3
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-09T11:16:24.461295Z",
+    "agent_lines": 97,
+    "human_added": 0,
+    "human_modified": 118,
+    "human_removed": 239,
+    "total_committed": 215,
+    "agent_percentage": 45.11627906976744
+  }
+}
