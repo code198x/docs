@@ -1,636 +1,279 @@
-# Amiga AMOS & Blitz Basic Curriculum
+# Commodore Amiga BASIC Curriculum
 
-**Purpose:** Define BASIC-based curriculum tracks for Commodore Amiga using AMOS and Blitz Basic - languages that produced real commercial games.
-
-**Last Updated:** 2026-01-18
+**Platform:** Commodore Amiga
+**Languages:** AMOS Professional, Blitz Basic 2
+**Tracks:** 2
+**Total Games:** 8 (4 AMOS + 4 Blitz)
+**Total Units:** 512 (8 × 64)
 
 ---
 
 ## Overview
 
-| Track | Language | Games | Target |
-|-------|----------|-------|--------|
-| **AMOS Track** | AMOS Professional | 8 | Beginners, hobbyists |
-| **Blitz Track** | Blitz Basic 2 | 8 | Intermediate, performance |
+The Amiga BASIC curriculum has two tracks: AMOS and Blitz Basic. Both are real game development languages — commercial titles shipped in each — but they represent fundamentally different approaches to the same hardware.
 
-Both tracks can lead to the Assembly track or stand alone as complete curricula.
+**AMOS** is friendly and immediate. `Bob 1, 100, 100, 1` puts a sprite on screen. `Screen Offset 0, X, 0` scrolls the display. AMOS wraps hardware complexity in accessible commands, making it ideal for learners who want visual results quickly.
+
+**Blitz Basic** is compiled and fast. It produces executables that rival hand-written C. Where AMOS abstracts the hardware, Blitz exposes more of it. Games like Worms and Skidmarks shipped as Blitz Basic — proof that "BASIC" doesn't mean "slow."
+
+The two tracks teach different things: AMOS teaches game design thinking with immediate feedback. Blitz teaches performance-aware programming that bridges toward assembly. Neither is a prerequisite for the other or for the assembly track.
 
 ---
 
-## Why AMOS and Blitz?
-
-### Commercial Proof
-
-These weren't toy languages - real games shipped:
-
-| Game | Language | Developer |
-|------|----------|-----------|
-| **Worms** | Blitz Basic | Team17 |
-| **Skidmarks** | Blitz Basic | Acid Software |
-| **Super Skidmarks** | Blitz Basic | Acid Software |
-| **Ultimate Soccer Manager** | AMOS | Impressions |
-| **Guardian** | AMOS | Acid Software |
-| **Scorched Tanks** | AMOS | Various |
-
-If Worms could be made in Blitz Basic, students can make great games too.
-
-### AMOS vs Blitz: When to Use Which
+## Why Both?
 
 | Factor | AMOS | Blitz Basic |
 |--------|------|-------------|
-| **Learning curve** | Gentler | Steeper |
-| **Speed** | Good (compiled) | Excellent |
-| **Documentation** | Extensive | Good |
-| **Community (historical)** | Huge | Large |
-| **Modern use** | Emulation | Emulation |
-| **Best for** | Learning, rapid dev | Performance games |
+| **Speed** | Interpreted (with compiler option) | Compiled — fast executables |
+| **Ease** | Gentler, more forgiving | Steeper, more structured |
+| **Hardware access** | Abstracted (BOB, SCREEN commands) | More direct (memory access, custom types) |
+| **Culture** | Hobbyist, learning, prototyping | Performance, commercial games |
+| **Commercial proof** | Guardian, Scorched Tanks, Ultimate Soccer Manager | Worms, Skidmarks, Super Skidmarks |
+| **Bridge to assembly** | Indirect — same concepts, different interface | Direct — similar memory model and performance thinking |
+
+Teaching both shows that there is no single "right" tool — different problems reward different approaches.
 
 ---
 
-## Part 1: AMOS Track (8 Games)
+## Part 1: AMOS Track (4 Games)
 
-### Track Overview
+### Structure
 
-| Aspect | Details |
-|--------|---------|
-| **Language** | AMOS Professional |
-| **Games** | 8 |
-| **Prerequisite** | Basic programming concepts |
-| **Units per game** | 4-16 (varies by complexity) |
-| **Outcome** | Complete Amiga games |
+| Game | Units | Role |
+|------|-------|------|
+| 1 | 64 | First program — bouncing sprites game (immediate visuals) |
+| 2 | 64 | Mouse interaction — point-and-click game |
+| 3 | 64 | Hardware scroll — scrolling game using screen commands |
+| 4 | 64 | Full production — complete game with MOD music |
+| **Total** | **256** | |
 
-### Game 1: Pixel Hunter
-
-| Aspect | Details |
-|--------|---------|
-| **Units** | 4 |
-| **Genre** | Click targets |
-| **Concepts** | Mouse input, sprites, scoring |
-
-**What You Build:**
-- Targets appear randomly
-- Click to score
-- Timer countdown
-- High score
-
-**Skills Introduced:**
-- AMOS environment
-- Screen setup
-- Mouse reading
-- Sprite display
-- Timer/scoring
-
-**Sample Code:**
-```basic
-' PIXEL HUNTER - AMOS
-Screen Open 0,320,256,32,Lowres
-Flash Off : Curs Off : Cls 0
-Load "targets.abk",1
-
-SCORE=0 : TIME=30
-
-Do
-  TARGETX=Rnd(280)+20
-  TARGETY=Rnd(200)+20
-  Sprite 1,TARGETX,TARGETY,1
-
-  Repeat
-    If Mouse Key=1
-      MX=X Screen(X Mouse)
-      MY=Y Screen(Y Mouse)
-      If Abs(MX-TARGETX)<16 And Abs(MY-TARGETY)<16
-        Inc SCORE : Exit
-      End If
-    End If
-  Until Timer>50*TIME
-
-  Dec TIME
-Loop Until TIME=0
-
-Print "FINAL SCORE: ";SCORE
-```
+Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targets under 500 lines of AMOS.
 
 ---
 
-### Game 2: Labyrinth
+### AMOS Game 1: Bouncing Sprites Game
 
-| Aspect | Details |
-|--------|---------|
-| **Units** | 8 |
-| **Genre** | Maze navigation |
-| **Concepts** | Tile maps, collision, bob graphics |
+**Units:** 64 (4 phases × 16 units)
+**Genre:** Sprite-based action
+**Inspired by:** AMOS demo programs, simple arcade games
 
-**What You Build:**
-- Generated or designed mazes
-- Player movement
-- Wall collision
-- Exit goal
+**Concept:** A game built around moving BOBs — sprites that bounce, collide, and interact. AMOS makes this immediate: `Bob 1, X, Y, Image` puts a sprite on screen. The learner starts with a visual demo (sprites bouncing off screen edges) and turns it into a game by adding rules, scoring, and player control. Catch falling objects, dodge bouncing hazards, or shoot moving targets — the specific game design emerges from the mechanics.
 
-**Skills Introduced:**
-- Bob (blitter object) graphics
-- Tile-based collision
-- Map arrays
-- Keyboard input (joystick)
+**Skills taught:**
+- AMOS environment and editor
+- Screen setup (SCREEN OPEN, mode, dimensions)
+- BOB display and movement (Bob, Bob Off, X Bob, Y Bob)
+- Sprite sheet loading (LOAD, SPRITE$, banks)
+- Collision detection (Bob Col, Sprite Col)
+- Joystick reading (Joy, Jleft, Jright, Jup, Jdown, Fire)
+- Game loop structure (DO...LOOP, WAIT VBL)
+- Variables, arrays, conditionals, loops
+- Score display (TEXT, LOCATE, PRINT)
+- Difficulty progression (speed, spawn rate)
+- Title screen and game-over
+- WAIT VBL for frame synchronisation
 
----
-
-### Game 3: Barrier Bash
-
-| Aspect | Details |
-|--------|---------|
-| **Units** | 8 |
-| **Genre** | Breakout |
-| **Concepts** | Physics, brick arrays, power-ups |
-
-**What You Build:**
-- Paddle control
-- Ball physics
-- Destructible bricks
-- Simple power-ups
-
-**Skills Introduced:**
-- Bob collision
-- Ball reflection
-- Array manipulation (bricks)
-- Game states
+**Why first:** AMOS's strength is immediate visual results. `Bob 1, 100, 100, 1` — there's a sprite. Move it, bounce it, collide it. The game comes together visually from the first unit, and AMOS handles the hardware complexity (bitplane allocation, DMA timing, Blitter cookie-cut) invisibly. The learner focuses on game design, not hardware registers.
 
 ---
 
-### Game 4: Nebula Strike
+### AMOS Game 2: Mouse-Driven Game
 
-| Aspect | Details |
-|--------|---------|
-| **Units** | 8 |
-| **Genre** | Vertical shooter |
-| **Concepts** | Scrolling, multiple enemies, bullets |
+**Units:** 64 (4 phases × 16 units)
+**Genre:** Point-and-click / mouse-driven
+**Inspired by:** AMOS utility programs, simple point-and-click games
 
-**What You Build:**
-- Scrolling starfield
-- Player ship
-- Enemy waves
-- Shooting/collision
+**Concept:** A game that uses the Amiga's mouse as the primary input — click targets, drag objects, draw paths, select tools. The Amiga was a mouse-first computer; AMOS exposes mouse state directly. The game could be a puzzle (arrange pieces), a strategy game (place defences), or a creative tool turned game (draw shapes that come alive). The mouse changes how the player thinks about interaction.
 
-**Skills Introduced:**
-- Hardware scrolling
-- Multiple sprites
-- Bullet management
-- Wave patterns
-- Screen wrapping
+**Skills taught:**
+- Mouse reading (X Mouse, Y Mouse, Mouse Key, Mouse Click)
+- Zone detection (ZONE, screen regions)
+- Drag-and-drop mechanics (track mouse state, move objects)
+- Screen zones and clickable areas
+- Cursor graphics (custom mouse pointer via sprite)
+- Menu and button design
+- AMOS drawing commands (INK, BOX, BAR, CIRCLE, DRAW, PAINT)
+- Screen management (multiple screens, screen priority)
+- Sound effects via SAM (AMOS speech synthesiser) and SAMPLE PLAY
+- State machines (tool selected → action on click → result)
+- Undo/redo via state arrays
+- File I/O (saving/loading game state)
 
----
-
-### Game 5: Hop Island
-
-| Aspect | Details |
-|--------|---------|
-| **Units** | 16 |
-| **Genre** | Platformer |
-| **Concepts** | Gravity, jumping, level design |
-
-**What You Build:**
-- Platform levels
-- Jump physics
-- Collectibles
-- Enemies
-
-**Skills Introduced:**
-- Gravity/physics
-- Tile collision (platforms)
-- Level data
-- Enemy AI (simple)
-- Lives/continues
+**Why here:** The Amiga has a mouse — use it. Most home computers of the era were joystick-first; the Amiga's mouse changes what kinds of games are natural. After the joystick-driven action of Game 1, a mouse-driven game teaches a completely different interaction model. AMOS's zone detection and drawing commands make this accessible; the assembly track's equivalent would require significant Intuition library work.
 
 ---
 
-### Game 6: Match Gems
+### AMOS Game 3: Scrolling Game
 
-| Aspect | Details |
-|--------|---------|
-| **Units** | 8 |
-| **Genre** | Match-3 puzzle |
-| **Concepts** | Grid logic, cascades, scoring |
+**Units:** 64 (4 phases × 16 units)
+**Genre:** Side-scrolling action
+**Inspired by:** Simple Amiga platformers and shooters
 
-**What You Build:**
-- Gem grid
-- Match detection
-- Cascade/refill
-- Score combos
+**Concept:** A side-scrolling game where the background moves and enemies appear from the right. The player navigates, avoids, or shoots. AMOS's SCREEN OFFSET command provides hardware scrolling — the same scroll registers the assembly track programs directly. The learner sees the relationship between AMOS commands and hardware behaviour: `Screen Offset 0, X, 0` writes to BPLxPT and BPLCON1.
 
-**Skills Introduced:**
-- 2D array manipulation
-- Pattern matching
-- Cascade logic
-- Animation timing
+**Skills taught:**
+- Hardware scrolling via SCREEN OFFSET
+- Tile-based background design
+- Level data in arrays (tile map, enemy spawn points)
+- Enemy spawning and despawning (off-screen management)
+- Background and foreground layers (dual playfield via AMOS DUAL)
+- Parallax scrolling (multiple screen offsets at different speeds)
+- Camera and viewport concepts
+- Combining scrolling with BOB sprites
+- Level streaming (updating tile data as the view moves)
+- AMOS music playback (TRACK LOAD, TRACK PLAY for MOD files)
+- Sound effects mixed with music (SAMPLE PLAY on specific channels)
+- Performance awareness (when AMOS starts to struggle)
 
----
-
-### Game 7: Speed Demon
-
-| Aspect | Details |
-|--------|---------|
-| **Units** | 8 |
-| **Genre** | Top-down racing |
-| **Concepts** | Track, AI opponents, laps |
-
-**What You Build:**
-- Scrolling track
-- Car physics
-- AI racers
-- Lap system
-
-**Skills Introduced:**
-- Dual playfield (track/sprites)
-- Car handling
-- Simple AI
-- Checkpoint system
+**Why here:** Scrolling reveals the Amiga's hardware architecture. SCREEN OFFSET isn't a software trick — it's telling Agnus where to start reading bitplane data. The learner sees the connection between AMOS commands and hardware registers, which makes the assembly track's direct register programming feel like a natural progression. Parallax via dual playfield is the same technique that Shadow of the Beast uses — AMOS just wraps it in friendlier syntax.
 
 ---
 
-### Game 8: Treasure Quest
+### AMOS Game 4: Full Game with MOD Music
 
-| Aspect | Details |
-|--------|---------|
-| **Units** | 16 |
-| **Genre** | Action-adventure |
-| **Concepts** | Inventory, NPCs, quests |
+**Units:** 64 (4 phases × 16 units)
+**Genre:** Complete polished game
+**Inspired by:** Commercial AMOS games (Guardian, Scorched Tanks)
 
-**What You Build:**
-- Multi-screen world
-- Inventory system
-- NPC interaction
-- Quest completion
+**Concept:** A complete, polished game combining all previous skills with MOD music playback. Multiple screens (title, options, game, high scores, credits), sample sound effects mixed with music, difficulty progression, and a professional presentation. The game should feel like something you'd find on an Amiga Power coverdisk — not a demo, a real game.
 
-**Skills Introduced:**
-- Screen transitions
-- Inventory management
-- Dialogue system
-- Save/load (optional)
-- Game structure
+**Skills taught:**
+- MOD music playback (TRACK LOAD, TRACK PLAY, TRACK STOP)
+- Sound effect mixing (allocating channels between music and SFX)
+- Multiple game screens (title, options, game, scores)
+- Screen transitions (fades, wipes via palette manipulation)
+- High score table with name entry and persistence
+- Difficulty settings and game options
+- AMOS compiler (creating standalone executables)
+- Disk-based distribution (creating bootable ADF)
+- Professional presentation (attract mode, credits)
+- Performance profiling (where AMOS hits its ceiling)
+- What assembly would do differently (and faster)
 
-**Capstone project** - combines everything learned.
-
----
-
-## Part 2: Blitz Basic Track (8 Games)
-
-### Track Overview
-
-| Aspect | Details |
-|--------|---------|
-| **Language** | Blitz Basic 2 |
-| **Games** | 8 |
-| **Prerequisite** | Some programming experience |
-| **Units per game** | 4-16 (varies by complexity) |
-| **Focus** | Performance, professional techniques |
-| **Outcome** | Commercial-quality games |
-
-### Why Blitz After/Instead of AMOS?
-
-| Scenario | Recommendation |
-|----------|----------------|
-| **Complete beginner** | AMOS first |
-| **Some programming experience** | Can start Blitz |
-| **Want fastest games** | Blitz |
-| **After AMOS track** | Blitz for next level |
-
-### Game 1: Reflex
-
-| Aspect | Details |
-|--------|---------|
-| **Units** | 4 |
-| **Genre** | Reaction timer |
-| **Concepts** | Blitz environment, timing, display |
-
-**Skills Introduced:**
-- Blitz Basic syntax
-- Compilation
-- VBlank timing
-- Display setup
+**Why last:** The AMOS track's peak. The game demonstrates everything AMOS can do — and honestly shows where it struggles. MOD music playback and sound mixing are effortless (AMOS handles Paula DMA); real-time action with many BOBs starts to stutter. The compiled executable runs from a bootable ADF, just like the assembly track's output. The learner has a complete game to show for the track, and a clear understanding of why the assembly track exists.
 
 ---
 
-### Game 2: Venom
+## Part 2: Blitz Basic Track (4 Games)
 
-| Aspect | Details |
-|--------|---------|
-| **Units** | 8 |
-| **Genre** | Snake |
-| **Concepts** | Shape drawing, growth, speed |
+### Structure
 
-**Skills Introduced:**
-- Blitz shapes
-- List/queue data structures
-- Speed management
-- Clean game loops
+| Game | Units | Role |
+|------|-------|------|
+| 1 | 64 | First program — fast action game (compiled speed) |
+| 2 | 64 | Custom types — structured game with data modelling |
+| 3 | 64 | Performance game — pushing hardware with compiled code |
+| 4 | 64 | Full production — Worms-level quality and polish |
+| **Total** | **256** | |
 
----
-
-### Game 3: Rock Hazard
-
-| Aspect | Details |
-|--------|---------|
-| **Units** | 8 |
-| **Genre** | Asteroids |
-| **Concepts** | Rotation, thrust, wrapping |
-
-**Skills Introduced:**
-- Angle/rotation maths
-- Thrust physics
-- Object splitting
-- Screen wrapping
+Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targets under 500 lines of Blitz Basic.
 
 ---
 
-### Game 4: Tower Guard
+### Blitz Game 1: Fast Action Game
 
-| Aspect | Details |
-|--------|---------|
-| **Units** | 8 |
-| **Genre** | Fixed defender |
-| **Concepts** | Aiming, waves, upgrades |
+**Units:** 64 (4 phases × 16 units)
+**Genre:** Fast-paced arcade action
+**Inspired by:** Simple Blitz demos, arcade shooters
 
-**Skills Introduced:**
-- Angle calculation
-- Wave spawning
-- Upgrade systems
-- Resource management
+**Concept:** A fast-paced action game that demonstrates compiled Blitz speed from the start. Where AMOS Game 1 was about getting sprites on screen easily, this game is about getting them on screen fast. Many objects, smooth movement, responsive controls. The compiled executable runs noticeably faster than equivalent AMOS code — same hardware, different tool, different result.
 
----
+**Skills taught:**
+- Blitz Basic environment and compiler
+- Bitmap and shape loading (LoadBitmap, LoadShape)
+- Display setup (BitMap, Slice, Show)
+- Shape blitting (Blit, BBlit — Blitter-based drawing)
+- Input handling (Joyb, Joyx, Joyy for joystick)
+- Game loop with VWait (vertical blank synchronisation)
+- Variables and basic control flow
+- Compiled vs. interpreted: measurable speed difference
+- Object management (arrays of positions, velocities)
+- Collision detection (ShapeHit, pixel-based)
+- Score and display management
+- Frame-rate-aware design (consistent speed on different Amigas)
 
-### Game 5: Road Rage
-
-| Aspect | Details |
-|--------|---------|
-| **Units** | 16 |
-| **Genre** | Racing (Skidmarks-style) |
-| **Concepts** | Car physics, tracks, multiplayer |
-
-**What You Build:**
-- Top-down racing
-- Skid/drift physics
-- Track system
-- 2-player split screen
-
-**Skills Introduced:**
-- Advanced car physics
-- Track collision
-- Split-screen display
-- Blitz bitmap manipulation
-
-This game type is what Blitz is famous for!
+**Why first:** Blitz's selling point is speed. The first game should demonstrate that immediately — more objects, smoother movement, faster response than AMOS could manage. The learner sees the same hardware producing different results depending on the tool. The compiler changes what's possible.
 
 ---
 
-### Game 6: Metal Warrior
+### Blitz Game 2: Structured Game with Custom Types
 
-| Aspect | Details |
-|--------|---------|
-| **Units** | 16 |
-| **Genre** | Run and gun |
-| **Concepts** | Turrican-style action |
+**Units:** 64 (4 phases × 16 units)
+**Genre:** Strategy or simulation
+**Inspired by:** Management games, structured Blitz programs
 
-**What You Build:**
-- Large scrolling levels
-- Multiple weapons
-- Boss battles
-- Power-ups
+**Concept:** A game that benefits from structured data — custom types (NEWTYPE) for game entities, linked lists for dynamic collections, structured game state. A tower defence, a simple management game, or a unit-based tactics game. The gameplay is less about reflexes and more about systems interacting. Blitz's custom types make this natural where AMOS would need parallel arrays.
 
-**Skills Introduced:**
-- Large level handling
-- Weapon systems
-- Boss patterns
-- Scrolling optimisation
+**Skills taught:**
+- NEWTYPE for custom data structures (entity, projectile, wave)
+- Linked lists and dynamic allocation
+- Structured program design (procedures, local variables)
+- Entity-component thinking (position, velocity, health, state per object)
+- Pathfinding basics (grid-based, A* introduction)
+- Mouse input (MouseX, MouseY, MouseButton)
+- UI rendering (menus, buttons, info panels)
+- Game state machines (setup → play → pause → game-over)
+- File I/O for save/load
+- Sound via Blitz audio commands
+- Separation of game logic from rendering
 
----
-
-### Game 7: Battle Grid
-
-| Aspect | Details |
-|--------|---------|
-| **Units** | 8 |
-| **Genre** | Turn-based tactics |
-| **Concepts** | Grid movement, units, combat |
-
-**Skills Introduced:**
-- Turn-based structure
-- Unit management
-- Combat calculation
-- AI opponents
+**Why here:** Blitz's custom types (NEWTYPE/End NEWTYPE) enable structured programming that AMOS can't match. This game teaches data modelling — thinking about entities as structures with properties and behaviours. The approach is closer to how professional C and assembly games organise their data, making Blitz a genuine bridge to systems-level thinking.
 
 ---
 
-### Game 8: Artillery Duel
+### Blitz Game 3: Performance Game
 
-| Aspect | Details |
-|--------|---------|
-| **Units** | 16 |
-| **Genre** | Artillery/Worms style |
-| **Concepts** | Terrain, projectiles, destruction |
+**Units:** 64 (4 phases × 16 units)
+**Genre:** Performance-intensive action (many objects, particles, scrolling)
+**Inspired by:** Worms, Skidmarks — games that pushed Blitz to its limits
 
-**What You Build:**
-- Destructible terrain
-- Angle/power shooting
-- Multiple weapons
-- Turn-based multiplayer
+**Concept:** A game designed to stress the hardware: many simultaneous objects, particle effects, scrolling backgrounds, real-time physics. A destruction game (terrain deformation like Worms), a racing game (many cars, track scrolling), or a swarm game (hundreds of entities). The compiled Blitz code handles workloads that would crush AMOS.
 
-**Skills Introduced:**
-- Terrain manipulation
-- Projectile physics
-- Pixel-level collision
-- Multiplayer turns
+**Skills taught:**
+- Bitmap manipulation (direct pixel access, terrain modification)
+- Particle systems (spawn, update, expire — hundreds of objects)
+- Optimised Blitter usage (QBlit, direct Blitter access)
+- Double buffering (draw to back buffer, swap)
+- Scrolling with bitmap manipulation
+- Physics simulation (gravity, bounce, friction)
+- Performance profiling and optimisation
+- Memory management (pre-allocation, object pools)
+- Copper effects via Blitz copper commands
+- Advanced collision (bitmap overlap, per-pixel)
+- Terrain deformation (modifying the playfield bitmap — Worms technique)
+- Why this works compiled but wouldn't interpreted
 
-**Capstone** - this is the style of game that made Blitz famous (Worms).
-
----
-
-## AMOS Technical Reference
-
-### Essential Commands
-
-| Category | Commands |
-|----------|----------|
-| **Display** | Screen Open, Screen Copy, Cls |
-| **Sprites** | Sprite, Sprite Off, X Sprite, Y Sprite |
-| **Bobs** | Bob, Bob Off, Paste Bob |
-| **Input** | Joy, Jup, Jdown, Fire, Mouse Key |
-| **Sound** | Sam Play, Track Play |
-| **Collision** | Spritebob Col, Bob Col |
-
-### Screen Setup
-
-```basic
-Screen Open 0,320,256,32,Lowres
-Flash Off : Curs Off : Cls 0
-Hide On  ' Hide mouse
-Double Buffer
-```
-
-### Sprite Handling
-
-```basic
-Load "sprites.abk",1  ' Load sprite bank
-Sprite 1,160,128,1    ' Sprite 1, position, image 1
-X Sprite(1)=X Sprite(1)+2  ' Move sprite
-```
-
-### Game Loop Pattern
-
-```basic
-Do
-  ' Input
-  If Jleft(1) Then Dec PLAYERX
-  If Jright(1) Then Inc PLAYERX
-  If Fire(1) Then Gosub SHOOT
-
-  ' Update
-  Gosub MOVE_ENEMIES
-  Gosub CHECK_COLLISION
-
-  ' Draw
-  Sprite 1,PLAYERX,PLAYERY,1
-
-  ' Sync
-  Wait Vbl
-Loop
-```
+**Why here:** This is where Blitz proves its commercial pedigree. Worms was written in Blitz Basic — terrain deformation, physics, particles, AI, all running smoothly. This game teaches the same techniques: bitmap manipulation for destructible terrain, physics for projectiles, particle effects for explosions. The learner sees Blitz operating at a level that rivals hand-written assembly for many workloads.
 
 ---
 
-## Blitz Basic Technical Reference
+### Blitz Game 4: Full Production
 
-### Essential Commands
+**Units:** 64 (4 phases × 16 units)
+**Genre:** Complete polished game
+**Inspired by:** Commercial Blitz releases (Worms, Skidmarks, Super Stardust)
 
-| Category | Commands |
-|----------|----------|
-| **Display** | BitMap, Use BitMap, VWait |
-| **Shapes** | LoadShapes, Blit, QBlit |
-| **Input** | Joyb, Joyx, Joyy |
-| **Sound** | Sound, Sample |
-| **Collision** | ShapeHit, RectsHit |
+**Concept:** A complete, polished game at commercial quality. Multiple game modes, MOD music, sound effects, save/load, options screen, attract mode. The compiled executable boots from ADF and runs on any Amiga. The game should feel like a coverdisk release — something a magazine would be proud to include. This is the Blitz track's proof that BASIC can produce professional results.
 
-### Blitz Game Structure
+**Skills taught:**
+- MOD music integration (module loading, channel allocation)
+- Sound effect management (priority, channel stealing)
+- Multiple game modes (campaign, versus, time trial)
+- Configuration and options (persistent settings)
+- Standalone executable creation
+- Bootable ADF creation
+- System-friendly startup/shutdown (OS takeover and restore)
+- Attract mode and demo replay
+- Credits and professional presentation
+- Testing across Amiga models (A500, A1200 — chip/fast RAM differences)
+- Distribution considerations (ADF, WHDLoad, hard disk install)
+- What assembly would add (and when it's not needed)
 
-```blitz
-; Blitz Basic 2 structure
-DEFTYPE .w  ; Default to word
-
-; Constants
-#SCREENW = 320
-#SCREENH = 256
-
-; Initialisation
-BitMap 0,#SCREENW,#SCREENH,4
-LoadShapes 0,"sprites.shp"
-
-; Main loop
-While NOT done
-  VWait
-
-  ; Input
-  If Joyb(1) Then Gosub Shoot
-
-  ; Update
-  Gosub MovePlayer
-  Gosub MoveEnemies
-
-  ; Draw
-  Cls 0
-  Blit 0,playerx,playery
-
-Wend
-```
-
-### Performance Tips
-
-| Tip | Reason |
-|-----|--------|
-| **Use DEFTYPE** | Avoid slow floats |
-| **QBlit vs Blit** | Faster, no clipping |
-| **Precalculate** | Tables faster than maths |
-| **VWait sync** | Consistent timing |
+**Why last:** The Blitz track's capstone demonstrates that "BASIC" is not a limitation — it's a choice. The compiled executable is indistinguishable from a C or assembly program to the end user. The learner has produced a game that boots from disk, plays music, handles input, and looks professional. The assembly track remains available for those who want deeper hardware control, but Blitz proves it's not always necessary.
 
 ---
 
-## Tool Setup
+## Changelog
 
-### AMOS Professional
-
-| Tool | Location |
-|------|----------|
-| **AMOS Pro** | Aminet, original disks |
-| **Sprite Editor** | Built into AMOS |
-| **Sample Editor** | AMOS includes |
-
-### Blitz Basic 2
-
-| Tool | Location |
-|------|----------|
-| **Blitz Basic 2** | Acid Software, Aminet |
-| **Shape Editor** | Included |
-| **Debugger** | Built in |
-
-### Emulator Configuration
-
-**WinUAE/FS-UAE setup:**
-- A500 or A1200 configuration
-- 1MB+ RAM
-- Workbench 1.3 or 3.0
-- Hard drive for convenience
-
----
-
-## Comparison to Assembly Track
-
-| Aspect | AMOS/Blitz | Assembly |
-|--------|------------|----------|
-| **Development speed** | Fast | Slow |
-| **Execution speed** | Good | Best |
-| **Learning curve** | Gentle | Steep |
-| **Hardware access** | Abstracted | Direct |
-| **Commercial viable** | Yes (proven) | Yes |
-| **Understanding depth** | Surface | Complete |
-
-### Progression Path
-
-```
-AMOS Track (8 games)
-       ↓
-Blitz Track (8 games) ← Can skip AMOS if experienced
-       ↓
-Assembly Track (16 games)
-```
-
-Or stay with AMOS/Blitz - they're complete environments for making real games.
-
----
-
-## Summary
-
-### AMOS Track
-- **8 games** from simple to complex
-- **Beginner-friendly** syntax
-- **Rapid development** cycle
-- **Historical significance** - huge community
-- **Commercial games** were made in AMOS
-
-### Blitz Track
-- **8 games** focused on performance
-- **Compiled** for speed
-- **Professional** results
-- **Worms was made in Blitz** - proof of capability
-- **Advanced** techniques
-
-Both tracks prove BASIC can make real games - not just toys.
-
----
-
-## Vault Entries
-
-| Entry | Type |
-|-------|------|
-| `amos-curriculum` | Curriculum |
-| `blitz-curriculum` | Curriculum |
-| `amos-commercial-games` | Culture |
-| `blitz-commercial-games` | Culture |
-
-**New entries: 4**
+- **v4.0 (2026-03-09):** Major restructure. Reduced from 8 to 4 games per track. Standardised to 64 units per game. AMOS and Blitz tracks maintained as distinct curricula. Each game targets under 500 lines. Previous 8-game curriculum preserved in game outline files for reference.
+- **v3.0 (2026-01-18):** Initial 8-game AMOS + 8-game Blitz curriculum.

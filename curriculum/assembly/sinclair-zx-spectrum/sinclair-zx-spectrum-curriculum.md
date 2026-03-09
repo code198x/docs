@@ -2,634 +2,171 @@
 
 **Platform:** Sinclair ZX Spectrum
 **Killer Feature:** Attribute colour system
-**Games:** 16
-**Total Units:** 3,584
+**Assembly Games:** 4
+**Total Units:** 1,408
 
 ---
 
 ## Overview
 
-The ZX Spectrum curriculum teaches Z80 assembly programming through 16 complete games. The sequence begins with the attribute system - the Spectrum's defining characteristic that created its distinctive visual style - and progresses through scrolling, enemy AI, isometric projection, and advanced techniques until learners can produce commercial-quality games.
+The ZX Spectrum curriculum teaches Z80 assembly programming through four complete games. The sequence begins with the attribute system — the Spectrum's defining characteristic that created its distinctive visual style — and progresses through software scrolling, isometric projection, and professional production techniques until learners can produce commercial-quality games.
 
 The Spectrum had no hardware sprites, no smooth scrolling, and a single-bit beeper for sound. Every impressive effect was achieved through software and creativity. This curriculum embraces those constraints, teaching learners to make the hardware sing through ingenuity.
 
-By the final game, learners will have skills matching professional Spectrum developers of the late 1980s - equivalent to teams at Ultimate, Ocean, or Codemasters.
+By the final game, learners will have skills matching professional Spectrum developers of the late 1980s — equivalent to teams at Ultimate, Ocean, or Codemasters.
 
 ---
 
-## Unit Structure
+## Assembly Track
 
-Games scale in unit count based on complexity:
+### Structure
 
-| Games | Units Each | Total | Rationale |
-|-------|-----------|-------|-----------|
-| 1-8 | 128 | 1,024 | Foundation games - maze explorer, physics, platformer, exploration, strategy, maze, snake, Tetris |
-| 9-10 | 256 | 512 | Intermediate - scrolling, character-based display mastery |
-| 11-13 | 256 | 768 | System-heavy - multiple complex systems |
-| 14 | 256 | 256 | Advanced - Filmation-style isometric (Head Over Heels) |
-| 15 | 512 | 512 | Expert - Knight Lore-style isometric with transformation |
-| 16 | 512 | 512 | Capstone - commercial quality with 128K/48K dual support |
-| **Total** | | **3,584** | |
-
-Each game follows a phase structure (4-16 phases depending on length), with each phase containing 16 units.
+| Game | Units | Phases | Units/Phase | Role |
+|------|-------|--------|-------------|------|
+| 1 | 128 | 8 | 16 | Accessible entry — attributes as game mechanic |
+| 2 | 256 | 8 | 32 | Signature technique — software pixel scrolling |
+| 3 | 512 | 16 | 32 | Ambitious — isometric adventure with 128K features |
+| 4 | 512 | 16 | 32 | Capstone — commercial-quality dual-mode release |
+| **Total** | **1,408** | | | |
 
 ---
 
-## Game Sequence
+### Game 1: Single-Screen Platformer
 
-### Game 1: Shadowkeep
 **Units:** 128 (8 phases)
-**Concept:** Top-down maze explorer. Navigate rooms of a dark keep, collect keys, avoid creatures, find the exit. The attribute system is the game — ink and paper define walls, floors, items, and danger.
+**Genre:** Single-screen platformer
+**Inspired by:** Manic Miner, Jet Set Willy
+**Working title:** TBD
+
+**Concept:** Jump between platforms, collect items, avoid hazards, reach the exit. Each level fits on a single screen. The attribute system is the game — INK defines walls, PAPER defines floors, BRIGHT marks collectibles. The learner sees pixels on screen in unit 1, moves a character in unit 2, and has a playable level by unit 4.
 
 **Skills taught:**
-- Screen memory layout ($4000-$57FF)
-- Attribute memory ($5800-$5AFF)
-- INK, PAPER, BRIGHT, FLASH bits
-- Keyboard input via ROM routines
+- Z80 fundamentals (registers, addressing modes, flags, stack)
+- Screen memory layout ($4000-$57FF) and its non-linear row organisation
+- Attribute memory ($5800-$5AFF) — INK, PAPER, BRIGHT, FLASH bits
+- Keyboard input via port reads and ROM routines
 - Character-cell movement (8-pixel grid)
-- Wall collision via attribute reading
-- Room data structures (tile maps)
-- Item collection and inventory
-- Enemy patrol AI (simple path following)
-- Beeper sound effects (pitch variation)
-- Multi-room transitions
-- Key and door mechanics
-- Score and status display
-- Increasing difficulty (more rooms, faster enemies)
+- Gravity and jump physics (velocity, acceleration, variable jump height)
+- Platform collision detection via attribute reading
+- Player animation (walk cycle, jump, fall, death)
+- Patrolling enemies (path following, speed variation)
+- Crumbling platforms, conveyor belts, moving platforms
+- Air supply or timer mechanic (time pressure)
+- Level data structures (tile maps, compact encoding)
+- Beeper sound effects (pitch and duration variation)
+- Multi-level progression with increasing difficulty
+- Score display and high score table
+- Title screen and game-over sequence
 
-**Why first:** A maze explorer makes the attribute system the core mechanic from Unit 1. Walls are INK, floors are PAPER, items are BRIGHT — the Spectrum's defining feature becomes the game design tool. Learners see pixels on screen immediately and navigate a room by Unit 3.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-01-full-game-outline-zx-spectrum-shadowkeep.md`
+**Why first:** Manic Miner is the Spectrum. A single-screen platformer makes the attribute system the core game mechanic from unit 1. Walls are INK, floors are PAPER, items are BRIGHT — the Spectrum's defining feature becomes the game design tool. The game looks like a real Spectrum release because it IS one: the same techniques, the same constraints, the same visual style that defined the platform.
 
 ---
 
-### Game 2: Shatter
-**Units:** 128 (8 phases)
-**Concept:** Breakout clone polished to commercial quality. Paddle, ball, bricks - with physics that feel right, power-ups, and full audio.
+### Game 2: Horizontal Scrolling Shoot 'Em Up
+
+**Units:** 256 (8 phases × 32 units)
+**Genre:** Horizontal scrolling shmup
+**Inspired by:** R-Type, Zynaps, Nemesis
+**Working title:** TBD
+
+**Concept:** Pilot a ship through alien landscapes, fight waves of enemies, defeat massive bosses. The Spectrum has no hardware scroll registers, so every pixel of scrolling is achieved through software — shift operations across screen memory, timed to avoid visible tearing. Building this game is the Spectrum's crowning technical achievement.
 
 **Skills taught:**
-- Sub-cell movement (fixed-point pixel precision)
-- Ball physics (velocity, angles, reflection, spin)
-- Paddle control and angle influence
-- Multiple brick types (hard, unbreakable)
-- Power-up systems (extend, multi-ball, laser, catch)
-- Custom fonts and graphics (UDG)
-- Full beeper audio (music + SFX)
-- High scores, difficulty settings, multiplayer
-- 20 levels of varied brick patterns
+- Software pixel scrolling (the hard technique — no hardware support)
+- Contended memory timing (ULA steals cycles during screen refresh)
+- Pixel-level shift operations across screen bytes
+- Double buffering approaches for flicker-free display
+- Background tile map management during scroll
+- Pixel-precise collision detection
+- Player ship with smooth multi-directional movement
+- Weapon systems (primary fire, power-ups, charge shots)
+- Enemy wave patterns and formation AI
+- Large multi-character boss sprites
+- Boss behaviour patterns (movement phases, weak points, attacks)
+- Parallax effects via software (background layers at different speeds)
+- Screen layout optimisation (attribute-friendly colour zones)
+- Beeper sound engine (music during gameplay)
+- Level progression with distinct visual themes
+- Lives, continues, score, and high score persistence
 
-**Why here:** After shooting, physics simulation introduces a fundamentally different movement model. 128 units allows proper exploration of angles, feel, and polish.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-02-full-game-outline-zx-spectrum-shatter.md`
+**Why here:** Software pixel scrolling is the hardest thing to do well on the Spectrum. There are no scroll registers — every frame, the code shifts pixels across memory while the ULA fights for bus access. Games like R-Type on the Spectrum were technical miracles. This game teaches the technique through necessity: the gameplay demands scrolling, so the learner builds it. By the end, they understand contended memory timing at a level that makes every other Spectrum technique feel straightforward.
 
 ---
 
-### Game 3: Cavern
-**Units:** 128 (8 phases)
-**Concept:** Single-screen platformer polished to commercial quality. In the Manic Miner tradition - platforms, hazards, collectibles, air supply, and pixel-perfect jumps.
+### Game 3: Isometric Adventure
+
+**Units:** 512 (16 phases × 32 units)
+**Genre:** Isometric adventure
+**Inspired by:** Knight Lore, Head Over Heels, Batman
+**Working title:** TBD
+
+**Concept:** Explore a castle or fortress rendered in isometric 3D. Push blocks onto pressure plates, avoid enemies, collect items, solve environmental puzzles across 100+ rooms. The Spectrum invented this genre — Ultimate's Knight Lore was the first isometric adventure, and it changed what people believed the hardware could do.
+
+This is the first game to use 128K features: AY-3-8912 music, bank switching for a larger world, and dual-page rendering.
 
 **Skills taught:**
-- Gravity and jump physics (velocity, acceleration, variable height)
-- Platform collision detection (landing, head bonk, walls)
-- Player animation (walk cycle, jump, death)
-- Patrolling enemies with simple AI
-- Crumbling platforms (timed hazards)
-- Moving platforms (horizontal and vertical)
-- Conveyor belts and environmental hazards
-- Air supply mechanic (time pressure)
-- Key collection and locked exits
-- Power-ups (speed, invincibility)
-- 20 levels with progressive difficulty
-- Full beeper audio (music and SFX)
+- Isometric projection mathematics (world-to-screen coordinate conversion)
+- Depth sorting (painter's algorithm — draw back-to-front)
+- Isometric tile and object rendering
+- Z-height collision detection (walking on raised platforms, falling)
+- Room-based world structure with transitions
+- Push-block puzzles (Sokoban-style within isometric space)
+- Pressure plates, doors, gates, keys
+- Multiple enemy types with distinct behaviours
+- Player abilities (jump, carry, push, use items)
+- Inventory system
+- Transformation or time mechanic (Knight Lore's werewolf, Head Over Heels' character switching)
+- 128K detection and adaptation
+- AY-3-8912 music (three channels, envelope, noise)
+- Bank switching for room data (fitting 100+ rooms)
+- Dual-screen rendering (draw off-screen, flip)
+- 5+ themed zones with distinct visual palettes (within attribute constraints)
+- Save or password system for progress
+- Title screen with AY music, in-game ambient sound
 
-**Why here:** Builds on sub-cell movement from Shatter, applies physics to gravity instead of bouncing. This is the Spectrum's signature genre.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-03-full-game-outline-zx-spectrum-cavern.md`
+**Why here:** The isometric adventure is the Spectrum's unique gift to gaming. Knight Lore in 1984 made people believe the Spectrum could do 3D. This game teaches the mathematics behind the illusion — projection, depth sorting, Z-collision — while building a world large enough to justify 128K bank switching. It's where the curriculum's techniques come together: attribute mastery from Game 1, display timing from Game 2, and now spatial reasoning in isometric space.
 
 ---
 
-### Game 4: Chambers
-**Units:** 128 (8 phases)
-**Concept:** Flip-screen top-down exploration polished to commercial quality. Navigate rooms, collect items, avoid enemies, find the exit. In the Atic Atac tradition - the Spectrum's signature exploration genre.
+### Game 4: Capstone
+
+**Units:** 512 (16 phases × 32 units)
+**Genre:** Scrolling action-adventure (distinct from Games 1-3)
+**Inspired by:** Late-era Ocean, Codemasters, or Rare releases
+**Working title:** TBD
+
+**Concept:** A scrolling action-adventure that combines platforming, combat, and exploration across multiple zones. This is not a repetition of Games 1-3 — it is a new genre that requires all previous skills (attribute awareness, smooth scrolling, large world management) plus the production techniques that separated bedroom coders from commercial studios.
+
+The capstone's new material is distribution and production: turbo tape loading, +3 disk support, 128K/48K dual-mode code paths, and loading screens. The finished game should look like it could sit on a shop shelf next to Midnight Resistance or Robocop.
 
 **Skills taught:**
-- 4-way top-down movement
-- Room data structures and transitions
-- Persistent state (collected items stay collected)
-- Inventory systems (keys, items, weapons)
-- Enemy chase AI with wall awareness
-- Multiple enemy types (patrol, chase, ranged)
-- Coloured keys and locked doors
-- Hazards, traps, and environmental puzzles
-- Multi-floor world design
-- Full beeper audio (music and SFX)
-- High scores, difficulty options, map screen
+- All techniques from Games 1-3 at mastery level
+- Scrolling world with varied terrain and enemy placement
+- Melee and ranged combat systems
+- Multi-zone world design (distinct themes, palettes, enemy sets)
+- 128K/48K dual-mode detection and code paths
+- AY music on 128K with beeper fallback on 48K
+- Turbo tape loader (custom loading routine, faster than ROM)
+- +3 disk version (accessing the uPD765 FDC)
+- Loading screen (displayed during tape/disk load)
+- Professional title sequence
+- Multiple difficulty levels
+- Password or save system
+- End-game sequence and credits
+- Testing across models (48K, 128K, +2, +2A, +3)
 
-**Why here:** Multi-room structure and state management prepare learners for more complex AI in following games. 128 units allows full world-building.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-04-full-game-outline-zx-spectrum-chambers.md`
-
----
-
-### Game 5: Ink War
-**Units:** 128 (8 phases)
-**Concept:** Territory control strategy game polished to commercial quality. Player vs AI, taking turns to claim 8×8 attribute cells. Control the majority to win. A unique genre that turns the Spectrum's colour limitations into a feature.
-
-**Skills taught:**
-- Deep attribute system mastery (attribute = gameplay)
-- Turn-based game loop (different paradigm)
-- Strategic AI (greedy, minimax, personality)
-- Position evaluation and scoring
-- Multiple game modes (vs AI, two-player)
-- Board size variants (6×6, 8×8, 10×10)
-- Tournament and handicap modes
-- Undo/replay functionality
-- Save/load games
-- Tutorial mode
-- Statistics and achievements
-- Full beeper audio (music and effects)
-
-**Why here:** After 4 action games, learners explore strategic thinking. The attribute system becomes the core mechanic, turning a limitation into innovation.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-05-full-game-outline-zx-spectrum-ink-war.md`
+**Why last:** The capstone proves the learner can ship a product. The game itself combines scrolling action with exploration — genres the learner has already mastered individually. The new challenge is production: making the game load from tape and disk, adapting to different Spectrum models, and presenting a professional package. Every game in the curriculum runs on real hardware; the capstone makes that fact visible through custom loaders and multi-model support.
 
 ---
 
-### Game 6: Chomp
-**Units:** 128 (8 phases)
-**Concept:** Pac-Man style maze game polished to commercial quality. Collect dots, avoid ghosts with distinct AI personalities, eat power pills to turn the tables.
+## BASIC Gateway
 
-**Skills taught:**
-- Tile-based maze structure
-- Constrained corridor movement (only turn at junctions)
-- Four ghost AI personalities (Blinky, Pinky, Inky, Clyde)
-- Chase/scatter mode state machines
-- Frightened mode with ghost-eating chains
-- Power-up state transitions
-- Screen wrap-around tunnels
-- Speed and difficulty progression
-- Bonus fruit per level
-- Cruise Elroy (Blinky speed-up)
-- Intermission cut-scenes
-- Full beeper audio (waka-waka, siren, death)
-- High scores, demo mode
-- Two-player mode
-
-**Why here:** After strategic Ink War, learners return to real-time action with sophisticated enemy AI. Four distinct ghost behaviours create emergent gameplay.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-06-full-game-outline-zx-spectrum-chomp.md`
+The Sinclair BASIC curriculum is maintained separately. See `/docs/curriculum/basic/sinclair-zx-spectrum/sinclair-zx-spectrum-basic-curriculum.md`.
 
 ---
 
-### Game 7: Slither
-**Units:** 128 (8 phases)
-**Concept:** Classic snake game polished to commercial quality. Eat food, grow longer, avoid hitting yourself or walls. Teaches the ring buffer data structure.
-
-**Skills taught:**
-- Ring buffer for body segment storage
-- Grid-based movement system
-- Self-collision detection algorithms
-- Growing entity management
-- Food spawning and placement validation
-- Speed progression with length
-- Multiple maze layouts
-- Level system with targets
-- Power-up system (slow-down, ghost, shrink)
-- Two-player alternating mode
-- AI opponent with difficulty levels
-- Wrap-around mode option
-- Theme system (visual variants)
-- Achievement and statistics tracking
-- Beeper sound effects and music
-- Demo/attract mode
-
-**Why here:** After maze navigation in Chomp, learners tackle a different grid-based challenge. The ring buffer is a fundamental data structure used throughout game and audio programming.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-07-full-game-outline-zx-spectrum-slither.md`
-
----
-
-### Game 8: Stack
-**Units:** 128 (8 phases)
-**Concept:** Classic falling block puzzle polished to commercial quality. Tetris-style piece rotation, stacking, and line clearing with modern features like wall kicks, T-spins, and competitive multiplayer.
-
-**Skills taught:**
-- Piece rotation mathematics (4 orientations × 7 pieces)
-- Timer-based falling mechanics
-- Grid collision detection (can piece fit?)
-- Line detection and efficient clearing
-- Next piece preview and hold piece
-- Ghost piece showing landing position
-- Wall kick system (SRS-style)
-- T-spin detection and bonus scoring
-- Combo and back-to-back systems
-- 7-bag randomiser for fair distribution
-- Speed progression with level system
-- Multiple game modes (Marathon, Sprint, Ultra)
-- Two-player competitive with garbage lines
-- AI opponent with difficulty levels
-- Visual themes and customisation
-- Achievement and statistics tracking
-- Beeper sound effects
-- 128K AY music (optional)
-- Replay system
-- Demo/attract mode
-
-**Why here:** The falling blocks puzzle teaches rotation mathematics, grid algorithms, and polished game feel. Different from snake's ring buffer, this focuses on piece manipulation and clearing mechanics.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-08-full-game-outline-zx-spectrum-stack.md`
-
----
-
-### Game 9: Blitz
-**Units:** 256 (16 phases)
-**Concept:** Side-scrolling shooter on hardware with NO scroll support. Master THE hardest Spectrum technique: software pixel scrolling. Shift every byte, manage contended memory timing, and build a complete R-Type style shooter.
-
-**Skills taught:**
-- Software horizontal scrolling (character and pixel-level)
-- Stack-based scroll tricks for maximum speed
-- Unrolled and self-modifying scroll routines
-- Contended memory timing management
-- Attribute clash handling during scroll
-- Tile map level streaming
-- Parallax pseudo-layers via colour tricks
-- Player and enemies in scrolling playfield
-- Complex bullet patterns and enemy AI
-- Five complete levels with distinct themes
-- Five epic boss battles
-- Weapon upgrade system with multiple types
-- 128K AY sound enhancements
-- Multiple game modes (Normal, Boss Rush, Endless)
-- Two-player alternating mode
-- Comprehensive optimisation techniques
-
-**Why expanded:** Software scrolling is THE hardest Spectrum technique. Games like R-Type achieved legendary status for smooth scrolling on hardware with no scroll support. 256 units allows mastery of this platform-defining challenge.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-09-full-game-outline-zx-spectrum-blitz.md`
-
----
-
-### Game 10: Expanse
-**Units:** 256 (16 phases)
-**Concept:** Epic scrolling platformer combining Blitz's scrolling mastery with full platformer mechanics. Vast worlds to explore with multiple themed areas, bosses, and commercial-quality polish.
-
-**Skills taught:**
-- Software scrolling + platformer physics integration
-- Camera systems with dead zones
-- Level compression and streaming
-- Scrolling collision detection
-- Slope physics
-- Moving platforms
-- Full enemy system in scrolling world
-- Four themed worlds with unique graphics
-- Boss encounters per world
-- Health, lives, and checkpoint systems
-- Collectibles and power-ups
-- AY-3-8910 music and effects
-- Save/password systems
-- Multiple game modes
-- 48K and 128K versions
-
-**Why expanded:** Combining scrolling and platforming is the ultimate Spectrum challenge. 256 units allows a complete, polished scrolling platformer worthy of commercial release.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-10-full-game-outline-zx-spectrum-expanse.md`
-
----
-
-### Game 11: Redline
-**Units:** 256 (16 phases)
-**Concept:** Championship vertical scrolling racer with multiple tracks, AI opponents, weather effects, and damage system. Introduces tape loading fundamentals.
-
-**Skills taught:**
-- Vertical software scrolling
-- Racing physics (acceleration, braking, grip)
-- Road rendering with curves and hills
-- Multiple AI opponents with overtaking logic
-- Rubber banding and difficulty scaling
-- Collision and damage system
-- Pit stop mechanics
-- 8 unique tracks (city, coast, mountain, night)
-- Championship mode with points
-- Weather effects (rain, night)
-- Dynamic weather transitions
-- **Standard tape loading routines**
-- **TAP file format and creation**
-- **Multi-load structure**
-- Time trial and qualifying modes
-- Two-player mode
-
-**Why expanded:** A full championship racer with AI, weather, damage, pit stops, AND tape loading fundamentals requires 256 units.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-11-full-game-outline-zx-spectrum-redline.md`
-
-**Detailed outline:** `/docs/plans/sinclair-zx-spectrum/game-11-redline.md`
-
----
-
-### Game 12: Recoil
-**Units:** 256 (16 phases)
-**Concept:** Contra-style run 'n' gun action with 8-way shooting, multiple weapons, and epic boss battles. Two-player co-op and intense action on the Spectrum.
-
-**Skills taught:**
-- Platformer + shooter hybrid mechanics
-- 8-way directional shooting system
-- Run and gun (shoot while moving/jumping)
-- Aim lock for precision targeting
-- Weapon system with 5 types (Rifle, Spread, Laser, Machine Gun, Flame, Homing)
-- Weapon pickups and switching
-- Enemy variety (Soldier, Sniper, Turret, Runner, Grenadier, Flying)
-- Boss framework with health bars and patterns
-- 4 epic boss encounters (Wall Turrets, Tank, Helicopter, Mech)
-- Final boss with multiple phases
-- 5 complete stages (Jungle, Base, Waterfall, Snowfield, Alien Hive)
-- Horizontal and vertical scrolling sections
-- Two-player cooperative mode
-- Shared/individual lives options
-- Difficulty modes (Easy, Normal, Hard)
-- Continue and checkpoint systems
-- AY-3-8910 music and sound effects
-- 48K and 128K versions
-
-**Why expanded:** A complete Contra-style game with 8-way shooting, 5 weapon types, 5 stages, 5 bosses, AND two-player co-op requires 256 units for proper implementation.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-12-full-game-outline-zx-spectrum-recoil.md`
-
----
-
-### Game 13: Knuckle Brawl
-**Units:** 256 (16 phases)
-**Concept:** Streets of Rage/Final Fight-style brawler with Y-depth sorting, combo systems, weapon pickups, and two-player co-op. Walk right, punch enemies, fight bosses.
-
-**Skills taught:**
-- Y-axis depth sorting (bucket sort algorithm)
-- Large animated character sprites
-- Melee combat mechanics (punches, kicks, grabs, throws)
-- Combo system with chains and juggles
-- Attack slots and enemy AI coordination
-- Multiple enemy types (Punk, Thug, Knife, Big, Acrobat)
-- Weapon pickups (Pipe, Knife, Chain, Bottle)
-- 5 complete stages with unique themes
-- 5 boss encounters with patterns
-- Multiple playable characters with stats
-- Two-player cooperative mode
-- Versus mode
-- Health and damage systems
-- AY-3-8910 music and sound effects
-- 48K and 128K versions
-
-**Why expanded:** A complete beat 'em up with Y-sorting, combos, enemy coordination, 5 stages, 5 bosses, AND two-player co-op requires 256 units.
-
-**Why here:** Depth sorting is the bridge to isometric. This game introduces layered drawing order.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-13-full-game-outline-zx-spectrum-knuckle-brawl.md`
-
----
-
-### Game 14: Strafe
-**Units:** 256 (16 phases)
-**Concept:** 1942-style vertical shooter with plane formations, bullet patterns, weapon upgrades, and epic boss battles. 7 stages of intense aerial combat with 128K AY sound support.
-
-**Skills taught:**
-- Vertical software scrolling (optimised)
-- Formation enemy patterns (V, line, circle, spiral)
-- Bullet pattern systems (aimed, spread, fan, ring, spiral)
-- Multiple weapon types with 3 upgrade levels
-- Charge shot mechanics
-- Homing missiles and bombs
-- Smart bomb (screen clear)
-- Ground targets (tanks, turrets, SAM sites, buildings, convoys)
-- Air enemies (Fighter, Bomber, Gunship, Kamikaze)
-- 7 complete stages (Pacific, Island, Carrier, Mainland, Mountains, Enemy Base, Final Assault)
-- Multi-phase boss encounters with weak points
-- Final boss with 3 phases
-- Rank system (adaptive difficulty)
-- Score chains and grazing bonus
-- Multiple ship types with different stats
-- **128K detection and AY-3-8912 sound**
-- **Bank switching basics**
-- Two-player simultaneous mode
-- Versus mode
-- Second loop with true ending
-- 48K and 128K versions
-
-**Why expanded:** A full 1942-style shmup with 7 stages, bullet patterns, ground/air targets, bosses, AND 128K audio requires 256 units for complete implementation.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-14-full-game-outline-zx-spectrum-strafe.md`
-
----
-
-### Game 15: Bastion
-**Units:** 512 (32 phases)
-**Concept:** Knight Lore-style isometric adventure with transformation curse mechanic. Navigate 100+ rooms across 5 distinct zones, solve puzzles, collect items, and find the cure before time runs out. The ultimate Spectrum isometric challenge.
-
-**Skills taught:**
-- Isometric projection mathematics (world-to-screen conversion)
-- 3D coordinate systems (X, Y, Z axes)
-- Depth sorting (painter's algorithm for correct draw order)
-- Isometric tile rendering and room construction
-- Movement in isometric space (8-direction mapping)
-- Z-height collision detection (platforms, stairs)
-- Attribute clash management in isometric view
-- Room-based world structure (100+ rooms)
-- Transformation mechanic (human/beast forms with timer)
-- Form-specific abilities (human: carry, beast: jump)
-- Push block puzzles (Sokoban-style in isometric)
-- Multi-block puzzles and pressure plates
-- Object interaction and inventory
-- Coloured keys and locked doors
-- 5 distinct zones with unique palettes
-- Multiple enemy types (guards, ghosts, creatures)
-- Combat system (sword, throwables)
-- Boss encounters per zone
-- Save/password system
-- Multiple endings based on completion
-- Time attack and challenge modes
-- Hidden secrets and bonus rooms
-- Full beeper audio (music and effects)
-- AY-compatible enhanced version
-
-**Why 512 units:** Knight Lore-style isometric requires completely new mathematics, rendering, and collision approaches. The transformation mechanic, 100+ rooms, 5 zones, and puzzle systems demand extensive coverage.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-15-full-game-outline-zx-spectrum-bastion.md`
-
----
-
-### Game 16: Spectral Legacy
-**Units:** 512 (32 phases)
-**Concept:** The ultimate Spectrum capstone - a sweeping action-adventure across 5 distinct zones, combining every technique learned into a commercial-quality masterpiece. Multiple gameplay styles, 100+ screens, and professional production values.
-
-**Skills taught:**
-- All previous techniques at mastery level
-- Large world design (100+ screens across 5 zones)
-- Multiple gameplay styles (platforming, exploration, combat, puzzles)
-- Advanced attribute management and clash reduction
-- Optimised software scrolling
-- **128K full support** (AY music, bank switching, extra RAM)
-- **48K compatible version** with beeper fallback
-- Combat system with combos
-- Magic system
-- 5 zone bosses plus multi-phase final boss
-- Inventory and equipment system
-- Puzzle systems (blocks, switches, sequences)
-- Story and cutscene system
-- **Password and 128K tape save systems**
-- **+3 disk support** with save/load
-- Multiple difficulty modes
-- New Game+ with extra content
-- **Turbo tape loader**
-- **TZX file creation** with loading screen
-- **Next enhanced version** (optional)
-- Professional presentation and polish
-
-**Why 512 units:** The capstone integrates all 15 previous games' skills plus 128K/48K dual support, turbo loaders, and a complete commercial-quality game with 5 zones, bosses, multiple gameplay styles, and full polish.
-
-**Why last:** The curriculum ends with learners demonstrating full command of the machine. "Spectral" nods to the Spectrum; "Legacy" is what they've built - and what they leave behind.
-
-**Detailed outline:** `/docs/curriculum/assembly/sinclair-zx-spectrum/game-16-full-game-outline-zx-spectrum-spectral-legacy.md`
-
----
-
-## Sinclair BASIC Gateway (Optional)
-
-For learners wanting a gentler introduction before assembly, an optional Sinclair BASIC curriculum is available. This 512-unit track (8 games × 64 units) teaches programming fundamentals through complete games before tackling Z80.
-
-**Games:** Guess Quest, Pixel Rain, Paddle Battle, Dungeon Explorer, Snake Spectrum, Asteroid Dodge, Pattern Match, Platform Jump
-
-**Skills taught:**
-- Sinclair BASIC fundamentals (PRINT, INPUT, IF/THEN/ELSE)
-- Graphics commands (PLOT, DRAW, CIRCLE)
-- User-Defined Graphics (UDGs)
-- Real-time input with INKEY$
-- Arrays and game state
-- BASIC's limits - why assembly is needed
-
-The BASIC gateway is optional. Learners can start directly at Game 1 (Shadowkeep) with no BASIC knowledge required. The gateway exists for those who prefer building foundational programming concepts before diving into assembly.
-
-See `/docs/curriculum/sinclair-zx-spectrum-basic-curriculum.md` for full details.
-
----
-
-## Skill Progression
-
-| Games | Focus | Era Equivalent |
-|-------|-------|----------------|
-| 1-6 | Single-screen fundamentals | 1982-1984 |
-| 7-8 | Grid-based and puzzle games | 1983-1985 |
-| 9-10 | Scrolling introduction | 1984-1986 |
-| 11-13 | Complex multi-system games | 1986-1988 |
-| 14-15 | Advanced paradigms | 1988-1990 |
-| 16 | Commercial quality | 1990-1993 |
-
-By Game 16, learners produce work comparable to late-era commercial releases like Midnight Resistance (1990), Navy Moves (1988), and Head Over Heels (1987).
-
----
-
-## Distribution Skills Progression
-
-| Game | Skills Introduced |
-|------|------------------|
-| 11 (Redline) | Standard tape loading, TAP file creation |
-| 14 (Strafe) | 128K detection, AY sound, bank switching |
-| 16 (Spectral Legacy) | Turbo loader, full 128K, TZX with loading screen, +3 disk |
-
----
-
-## 128K Support
-
-Later games introduce 128K Spectrum features:
-
-| Feature | Introduced |
-|---------|-----------|
-| 128K detection | Game 14 (Strafe) |
-| AY-3-8912 sound | Game 14 (Strafe) |
-| Bank switching | Game 14 (Strafe) |
-| Full 128K game | Game 16 (Spectral Legacy) |
-
-Games 1-13 target 48K compatibility. Games 14+ include 128K enhancements with 48K fallback.
-
----
-
-## Platform Context
-
-**Hardware:**
-- **CPU:** Zilog Z80 @ 3.5 MHz
-- **RAM:** 48K (16K on early models, 128K on later)
-- **Display:** 256×192 pixels, 32×24 attribute cells
-- **Colours:** 8 colours, each with normal/bright variant (15 total + black)
-- **Sound:** 1-bit beeper (128K models add AY-3-8912 chip)
-- **Storage:** Cassette tape (+3 models have disk)
-
-**The Attribute System:**
-The Spectrum's display divides the screen into 8×8 pixel cells. Each cell has one attribute byte controlling:
-- INK (foreground colour, 3 bits)
-- PAPER (background colour, 3 bits)
-- BRIGHT (intensity, 1 bit)
-- FLASH (alternating, 1 bit)
-
-This creates the infamous "colour clash" when differently-coloured objects overlap within an 8×8 cell. Managing this constraint is central to Spectrum development.
-
-**No Hardware Sprites:**
-Unlike the C64, the Spectrum has no hardware sprites. All moving graphics are software-rendered, making efficient drawing routines essential.
-
-**No Hardware Scrolling:**
-Smooth scrolling requires shifting screen memory in software - an expensive operation that defined what was possible on the platform.
-
----
-
-## Optional Enhancement Versions
-
-Select games have optional enhanced versions for expanded hardware. Not every game warrants enhancement - these target games where the additional capabilities meaningfully improve the experience.
-
-### 128K Enhancements
-
-For games that benefit from AY sound and extra RAM:
-
-| Game | Enhancement Focus |
-|------|-------------------|
-| TBD | AY soundtrack, extra levels |
-
-128K enhancements add AY music, sound effects, and potentially additional content using banked RAM. These are period-authentic enhancements (128K released 1985).
-
-### ZX Spectrum Next Enhancements
-
-For games that benefit from modern hardware capabilities:
-
-| Game | Units | Enhancement Focus |
-|------|-------|-------------------|
-| 9-16 (select) | 32-128 | Hardware sprites, copper, 256 colours, Z80N |
-
-Next enhancements follow the Amiga AGA model - separate versions that showcase the enhanced hardware while the main game remains 48K compatible.
-
-**Structure (when implemented):**
-- Games 9-14 Next: 32 units each
-- Game 15 Next: 64 units
-- Game 16 Next: 128 units
-
-See `/docs/plans/future-expansion-tracks.md` for full details.
-
----
-
-## Version History
-
-- **3.20 (2026-02-06):** Replaced Game 1 Skyfire (shooter) with Shadowkeep (top-down maze explorer) to showcase the attribute system as a game mechanic. Renamed Game 10 from Exodus to Expanse to avoid name conflict with Amiga Game 1.
-- **3.18 (2026-01-18):** Expanded Game 16 (Spectral Legacy) to 512 units with 5-zone adventure, 128K/48K dual support, and Next enhanced version. Total now 3,584 units.
-- **3.17 (2026-01-18):** Expanded Game 15 (Bastion) to 512 units with Knight Lore-style isometric adventure and transformation mechanic. Total now 3,328 units.
-- **3.16 (2026-01-18):** Expanded Game 14 (Strafe) to 256 units with 1942-style vertical shooting and 128K AY support. Total now 2,944 units.
-- **3.15 (2026-01-18):** Expanded Game 13 (Knuckle Brawl) to 256 units with Y-depth sorting and combo systems. Total now 2,816 units.
-- **3.14 (2026-01-18):** Expanded Game 12 (Recoil) to 256 units with run 'n' gun mastery. Total now 2,688 units.
-- **3.13 (2026-01-18):** Expanded Game 11 to 256 units. Total now 2,560 units.
-- **3.12 (2026-01-18):** Expanded Game 10 (Expanse, formerly Exodus) to 256 units with scrolling platformer mastery. Total now 2,432 units.
-- **3.11 (2026-01-18):** Expanded Game 9 (Blitz) to 256 units with software scrolling mastery. Total now 2,240 units.
-- **3.10 (2026-01-18):** Expanded Game 8 (Stack) to 128 units with T-spins, competitive multiplayer, and modern puzzle features. Total now 2,048 units.
-- **3.9 (2026-01-18):** Expanded Game 7 (Slither) to 128 units with ring buffer data structure and AI opponent. Total now 1,984 units.
-- **3.8 (2026-01-18):** Expanded Game 6 (Chomp) to 128 units with four distinct ghost AI personalities. Total now 1,920 units.
-- **3.7 (2026-01-18):** Expanded Game 5 (Ink War) to 128 units with minimax AI and strategy polish. Total now 1,856 units.
-- **3.6 (2026-01-18):** Expanded Game 4 (Chambers) to 128 units with full Atic Atac-style exploration. Total now 1,792 units.
-- **3.5 (2026-01-18):** Expanded Game 3 (Cavern) to 128 units with full Manic Miner-style platformer features. Total now 1,728 units.
-- **3.4 (2026-01-18):** Expanded Game 2 (Shatter) to 128 units for full physics polish. Total now 1,664 units.
-- **3.3 (2026-01-18):** Reordered games per skill tree analysis. Shatter now Game 2 (sub-cell physics). Cavern now Game 3 (platforming). Ink War moved to Game 5 (requires strategic AI experience). See `/docs/curriculum/SKILL-TREES.md`.
-- **3.2 (2026-01-18):** Restructured Game 1. Skyfire (shooter) as first game at 128 units for immediate engagement. Total now 1,600 units. (Skyfire later replaced by Shadowkeep in 3.20.)
-- **3.1 (2026-01-07):** Added optional enhancement versions section (128K and Next). Updated BASIC gateway reference to 512-unit curriculum.
-- **3.0 (2025-01-07):** Expanded to 1,536 units. Games 1-10 at 64 units, Games 11-15 at 128 units, Game 16 at 256 units. Added tape loading, 128K support, distribution skills.
-- **2.0 (2025-11-26):** Complete rewrite. Replaced phases/tiers/lessons with games model.
-- **1.0 (2025-01-15):** Original 4,096-lesson curriculum.
+## Changelog
+
+- **v4.0 (2026-03-09):** Major restructure. Reduced from 16 to 4 assembly games. No-repetition rule across primary platforms. Every game inspired by a real commercial release. BASIC gateway expanded from 8 to 4 focused games. Previous 16-game curriculum preserved in game outline files for reference.
+- **v3.20 (2026-02-06):** Replaced Game 1 (Skyfire) with Shadowkeep.
+- **v3.0 (2026-01-18):** Initial 16-game curriculum.

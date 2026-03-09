@@ -2,289 +2,146 @@
 
 **Platform:** Sinclair ZX Spectrum
 **Language:** Sinclair BASIC
-**Purpose:** Gateway curriculum preparing learners for Z80 Assembly
-**Games:** 8
-**Total Units:** 76
+**Games:** 4
+**Total Units:** 256 (4 × 64)
 
 ---
 
 ## Overview
 
-The Sinclair BASIC curriculum provides an accessible introduction to Spectrum game development. Sinclair BASIC is more capable than C64 BASIC V2, with built-in graphics commands (PLOT, DRAW, CIRCLE) and structured programming features. This makes it excellent for teaching game concepts before tackling Z80 assembly.
+The Sinclair BASIC curriculum teaches programming fundamentals through four complete games. Each game is completable in under 500 lines of Sinclair BASIC. The track follows the Spectrum's BASIC culture: type-in listings from magazines, text adventures, PRINT AT games, and UDG-based action.
 
-This curriculum teaches game design concepts and Spectrum capabilities through BASIC before learners face the complexities of Z80 assembly. Graduates will understand both the potential of the hardware and why direct machine access matters.
+Sinclair BASIC is more capable than most home computer BASICs — built-in graphics commands (PLOT, DRAW, CIRCLE), attribute control (INK, PAPER, BRIGHT), and user-defined graphics (UDGs) make it possible to create visually distinctive games without leaving BASIC. The curriculum exploits these capabilities, progressing from text to screen positioning to pixel graphics to custom characters.
 
----
-
-## Why Sinclair BASIC First?
-
-Sinclair BASIC offers several advantages as a gateway:
-
-1. **Rich graphics commands** - PLOT, DRAW, CIRCLE, INK, PAPER built-in
-2. **Structured programming** - No line numbers required in modern usage
-3. **Immediate feedback** - Type and run instantly
-4. **User-defined graphics** - UDG characters for custom shapes
-5. **Attribute system** - Understanding colour cells early
-6. **See the limits** - Understand why assembly is needed
-
-By the end of this curriculum, learners will have created 8 complete games and will understand both what Sinclair BASIC makes possible and where it struggles - motivating the transition to Z80 assembly.
+BASIC is not a prerequisite for the assembly track. The two tracks are independent. A learner starting at assembly Game 1 should not feel they have missed something by skipping BASIC.
 
 ---
 
-## Curriculum Structure
+## Structure
 
-| Game | Units |
-|------|-------|
-| 1. Think of a Number | 4 |
-| 2. The Cursed Manor | 16 |
-| 3. Lost in the Labyrinth | 8 |
-| 4. Block Breaker | 8 |
-| 5. Spectrum Serpent | 8 |
-| 6. Starfire | 8 |
-| 7. Miner Mick | 8 |
-| 8. The Crystal Quest | 16 |
-| **Total** | **76** |
+| Game | Units | Role |
+|------|-------|------|
+| 1 | 64 | First program — text adventure (the Spectrum BASIC tradition) |
+| 2 | 64 | Screen interaction — chase game using PRINT AT |
+| 3 | 64 | Graphics — drawing/puzzle game using PLOT, DRAW, ATTR |
+| 4 | 64 | Custom graphics — action game with user-defined graphics |
+| **Total** | **256** | |
+
+Each game has 4 phases of 16 units. Each unit is 60-120 minutes and produces a working result.
 
 ---
 
 ## Game Sequence
 
-### Game 1: Think of a Number
-**Units:** 4
-**Genre:** Number Guessing
-**Concept:** Classic number guessing game. Introduction to Sinclair BASIC's unique keyword entry system.
+### Game 1: Text Adventure
+
+**Units:** 64 (4 phases × 16 units)
+**Genre:** Text adventure
+**Inspired by:** The Hobbit, Level 9 games, The Quill
+
+**Concept:** A text adventure in the Spectrum tradition. The player types commands ("GO NORTH", "GET LAMP", "USE KEY"), explores rooms, collects items, solves puzzles. Text adventures were the Spectrum's first killer genre — The Hobbit shipped with every Spectrum+ — and they teach programming fundamentals through narrative.
 
 **Skills taught:**
-- Sinclair BASIC environment and commands
-- Keyword entry system
-- Variables and data types
+- Sinclair BASIC environment and keyword entry system
+- Variables, strings, and data types
 - INPUT and PRINT statements
 - IF/THEN/ELSE logic
-- Random numbers (RND, INT)
-- CLS and screen clearing
+- GOTO and GOSUB for program flow
+- DATA and READ for room descriptions and connections
+- Arrays for inventory and room state
+- String handling (LEFT$, RIGHT$, MID$, INKEY$)
+- Two-word command parser ("verb noun")
+- Game state management (visited rooms, collected items, locked doors)
+- Atmospheric text output (PAUSE, INVERSE, colour changes)
+- Save/load via SAVE/LOAD (tape persistence)
+
+**Why first:** This is how Spectrum owners started. Text adventures require no graphics knowledge — just strings, logic, and imagination. The game is immediately engaging (explore a world, solve puzzles) while teaching every fundamental programming concept. By the end, the learner has built a real game with 20+ rooms, inventory, and puzzles.
 
 ---
 
-### Game 2: The Cursed Manor
-**Units:** 16
-**Genre:** Text Adventure
-**Concept:** Complete text adventure - hugely popular genre on the Spectrum. Games like The Hobbit proved text adventures could be commercial successes.
+### Game 2: Chase Game
+
+**Units:** 64 (4 phases × 16 units)
+**Genre:** Top-down chase game
+**Inspired by:** Magazine type-ins from Crash, Sinclair User, Your Sinclair
+
+**Concept:** A top-down grid-based game using PRINT AT for all display. The player moves through a maze, collects items, avoids enemies. Enemies chase the player using simple AI. The game looks and feels like the type-in listings that filled 1980s Spectrum magazines — the kind of game someone would type in from a printed listing over a Saturday afternoon.
 
 **Skills taught:**
-- DATA and READ statements
-- Room data storage
-- String handling
-- Two-word parser
-- Inventory system
-- Game state management
-- Atmospheric descriptions
-- Puzzle design
+- PRINT AT for screen positioning (row, column)
+- Keyboard scanning (INKEY$)
+- Game loop structure (read input, update state, draw)
+- Grid-based movement (character cell coordinates)
+- Simple AI (enemies move toward player, random patrol)
+- Maze data using string arrays
+- Collision detection via screen coordinates
+- Score tracking and display
+- Difficulty progression (faster enemies, more complex mazes)
+- Multiple levels with different layouts
+- Lives and game-over logic
+- Timing control (PAUSE, loop delays)
+
+**Why here:** PRINT AT is the Spectrum's unique BASIC strength — position text anywhere on screen instantly. This game teaches real-time interaction (game loop, keyboard scanning, enemy movement) while staying within the text-mode world the learner already understands from Game 1. The jump from text adventure to action game is where BASIC starts to feel like a real development tool.
 
 ---
 
-### Game 3: Lost in the Labyrinth
-**Units:** 8
-**Genre:** Maze Game
-**Concept:** Navigate a maze to find the exit. Introduction to Spectrum's built-in graphics commands.
+### Game 3: Drawing/Puzzle Game
+
+**Units:** 64 (4 phases × 16 units)
+**Genre:** Graphical puzzle game
+**Inspired by:** Type-in graphical games, simple puzzle games
+
+**Concept:** A puzzle game using Sinclair BASIC's graphics commands for rendering. PLOT draws points, DRAW connects them with lines, CIRCLE creates shapes. The attribute system (INK, PAPER, BRIGHT) provides colour. Collision detection reads attribute values — if the pixel is a certain INK colour, it's a wall; another colour, it's a collectible. The game looks distinctly Spectrum: blocky colour, clean geometry, functional beauty.
 
 **Skills taught:**
-- PLOT and DRAW commands
-- Screen coordinates (0-255 × 0-175)
-- INK colours for graphics
-- Wall collision using ATTR
-- INKEY$ keyboard polling
-- Timer challenge
-- Real-time game loop
+- PLOT, DRAW, and CIRCLE commands
+- INK, PAPER, BRIGHT, FLASH for colour control
+- POINT and ATTR functions for reading screen state
+- Pixel-level collision detection via colour values
+- Coordinate systems (pixel vs. character cell)
+- Arrays for game state (board, pieces, positions)
+- Mathematical functions (SIN, COS for circular motion, ABS for distance)
+- Timer mechanics and score systems
+- Level design stored in DATA statements
+- Screen clearing and redraw strategies
+- BORDER for visual feedback
+- Combining graphics and text (PRINT AT for HUD, PLOT/DRAW for game area)
+
+**Why here:** Sinclair BASIC's graphics commands are genuinely capable — PLOT, DRAW, and CIRCLE produce clean vector-style visuals that look good within the attribute system. This game transitions the learner from character-cell thinking (PRINT AT) to pixel thinking (coordinates, angles, distance). Reading ATTR values for collision is also the exact technique used in the assembly curriculum's Game 1, creating a natural bridge.
 
 ---
 
-### Game 4: Block Breaker
-**Units:** 8
-**Genre:** Breakout
-**Concept:** Classic brick-breaking game using Spectrum's attribute system for colourful bricks.
+### Game 4: Action Game with UDGs
+
+**Units:** 64 (4 phases × 16 units)
+**Genre:** Action game with custom graphics
+**Inspired by:** Magazine type-in action games, simple arcade conversions
+
+**Concept:** An action game using user-defined graphics (UDGs) for custom characters — a spaceship, enemies, projectiles, terrain. The player moves and shoots in real time. UDGs replace the built-in character set with 8×8 pixel designs, creating the illusion of sprites. The game pushes BASIC to its performance limits: integer variables for speed, minimal string operations, tight game loops. By the end, the learner understands both what BASIC can achieve and exactly why assembly exists.
 
 **Skills taught:**
-- Ball physics and movement
-- Paddle control with INKEY$
-- PRINT AT for bricks
-- Collision detection
-- Score and lives system
-- Level progression
-- Attribute system for colours
+- User-defined graphics (USR, BIN for defining 8×8 pixel characters)
+- UDG design workflow (graph paper → binary → BASIC code)
+- PRINT AT with UDG characters for sprite-like display
+- Animation via UDG cycling (multiple frames)
+- Speed optimisation in Sinclair BASIC:
+  - Integer variables (avoiding floating point)
+  - Minimal string operations
+  - Short variable names (interpreter lookup speed)
+  - GOSUB placement (early in program = faster lookup)
+- Real-time action (shooting, dodging, collecting)
+- Bullet management (limited pool, recycling)
+- Enemy patterns (dive, patrol, chase)
+- Scrolling effect via PRINT AT (character-cell scroll)
+- Sound via BEEP (pitch and duration for effects)
+- High score table with name entry
+- The limits of BASIC: frame rate ceiling, why assembly is the next step
+
+**Why last:** This is the BASIC track's peak. UDGs make the game look like something you'd buy — custom graphics, animation, themed visuals. The speed optimisation teaches how interpreters work (why short variable names matter, why GOSUBs early in the program run faster). And hitting BASIC's performance ceiling is the honest conclusion: the learner sees exactly what 500 lines of BASIC can achieve, and understands viscerally why the assembly track exists.
 
 ---
 
-### Game 5: Spectrum Serpent
-**Units:** 8
-**Genre:** Snake
-**Concept:** Classic Snake game. Spectrum BASIC is fast enough for smooth character-based gameplay.
+## Changelog
 
-**Skills taught:**
-- Array usage for snake body
-- User-Defined Graphics (UDGs)
-- Self-collision detection
-- Food spawning
-- Growth mechanics
-- Score display
-- Speed progression
-- High score system
-
----
-
-### Game 6: Starfire
-**Units:** 8
-**Genre:** Space Shooter
-**Concept:** Space shooter introducing User Defined Graphics (UDGs) for custom sprites.
-
-**Skills taught:**
-- Full UDG character design
-- Multiple moving objects
-- Shooting mechanics
-- Enemy wave patterns
-- Collision detection
-- Difficulty ramping
-- Score system
-- Attribute clash awareness
-
----
-
-### Game 7: Miner Mick
-**Units:** 8
-**Genre:** Platformer
-**Concept:** Single-screen platformer - homage to Manic Miner, which defined Spectrum gaming.
-
-**Skills taught:**
-- Gravity simulation
-- Platform collision
-- Jump mechanics
-- UDG-based player sprite
-- Hazards and enemies
-- Collectible items
-- Level completion
-- Multiple caverns
-
----
-
-### Game 8: The Crystal Quest
-**Units:** 16
-**Genre:** Puzzle Adventure
-**Concept:** Capstone project combining text adventure elements with graphical screens. Collect crystals, solve puzzles, escape the dungeon.
-
-**Skills taught:**
-- Multiple graphical screens
-- Inventory system
-- Puzzle elements
-- NPCs with dialogue
-- Crystal collection quest
-- Complete game experience
-- All previous skills combined
-- BASIC limitations exposed
-
----
-
-## Skill Progression
-
-| Game | Focus | Key Techniques |
-|------|-------|----------------|
-| 1 | Logic, variables | INPUT, IF/THEN/ELSE, RND |
-| 2 | Text, data | DATA/READ, strings, parser |
-| 3 | Graphics | PLOT, DRAW, ATTR |
-| 4 | Real-time input | INKEY$, game loop, collision |
-| 5 | UDGs, arrays | User-Defined Graphics |
-| 6 | Multiple objects | UDG sprites, shooting |
-| 7 | Physics | Gravity, platform collision |
-| 8 | Integration | All skills combined |
-
----
-
-## Why Transition to Z80 Assembly?
-
-By Game 8, learners will encounter Sinclair BASIC's limitations:
-
-| BASIC Limitation | Z80 Solution |
-|------------------|--------------|
-| Slow execution | Direct machine code |
-| Attribute clash | Clever techniques, timing |
-| No hardware sprites | Sprite routines |
-| Slow graphics | Direct screen writes |
-| Limited sound | Beeper control routines |
-| No smooth scroll | Hardware tricks |
-
-The Sinclair BASIC curriculum intentionally pushes learners to these boundaries, creating natural motivation for the Z80 Assembly curriculum.
-
----
-
-## Sinclair BASIC Context
-
-### Key Commands Used
-
-**Program Flow:**
-- `IF...THEN...ELSE`, `FOR...NEXT`, `GO TO`, `GO SUB`
-- `RETURN`, `STOP`
-
-**Input/Output:**
-- `PRINT`, `PRINT AT`, `INPUT`, `INKEY$`
-- `POKE`, `PEEK`
-
-**Graphics:**
-- `PLOT`, `DRAW`, `CIRCLE`
-- `INK`, `PAPER`, `BRIGHT`, `FLASH`
-- `BORDER`, `CLS`
-
-**Data:**
-- `DATA`, `READ`, `RESTORE`
-- `DIM` for arrays
-
-**Functions:**
-- `RND`, `ABS`, `INT`, `SGN`
-- `CHR$`, `CODE`, `VAL`, `STR$`
-
-### Memory Locations
-
-Learners are introduced to key addresses:
-- `16384` - Screen memory start
-- `22528` - Attribute memory start
-- `23675-23677` - System variables (FRAMES)
-- `USR "A"` - UDG memory location
-
-### Attribute System
-
-Understanding the 8×8 colour cell system:
-- INK (foreground) - 0-7
-- PAPER (background) - 0-7
-- BRIGHT - 0 or 1
-- FLASH - 0 or 1
-- Attribute clash - why it happens
-
----
-
-## Distribution
-
-Games are distributed as:
-- `.TAP` files (tape image)
-- `.TZX` files (enhanced tape)
-- `.SNA` snapshots
-- Type-in listings (educational value)
-
----
-
-## Progression to Z80 Assembly
-
-After completing this curriculum, learners should:
-
-1. Understand Spectrum memory layout basics
-2. Know screen and attribute memory
-3. Have created 8 complete games
-4. Understand UDG character design
-5. Recognise BASIC's performance limits
-6. Be motivated to learn assembly
-7. Have game design experience to apply
-
-The Z80 Assembly curriculum (1,536 units) then teaches direct hardware control, building on these foundations.
-
----
-
-## Version History
-
-- **1.0 (2026-01-07):** Initial curriculum design - 512 units, 8 games.
-- **1.1 (2026-01-19):** Updated to match authoritative outline files - 76 units, 8 games with specific titles.
+- **v4.0 (2026-03-09):** Major restructure. Reduced from 8 to 4 games. Standardised to 64 units per game (256 total). Each game targets under 500 lines. Previous 8-game curriculum preserved in game outline files for reference.
+- **v3.0 (2026-01-18):** Initial 8-game curriculum.

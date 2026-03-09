@@ -1,748 +1,190 @@
-# Commodore Amiga 68000 Assembly Curriculum
+# Commodore Amiga Curriculum
 
 **Platform:** Commodore Amiga
-**Language:** 68000 Assembly
-**Prerequisite:** AMOS BASIC curriculum (recommended) or equivalent experience
-**Games:** 16 (OCS/ECS) + 8 AGA enhancements
-**Total Units:** 4,032 (3,584 OCS/ECS + 448 AGA)
+**Killer Feature:** Custom chipset — Agnus, Denise, and Paula working in concert
+**Assembly Games:** 4
+**Total Units:** 1,408
 
 ---
 
 ## Overview
 
-The Amiga 68000 Assembly curriculum teaches direct hardware programming through 16 complete games. The sequence begins with the custom chipset fundamentals - Agnus, Denise, and Paula working together - and progresses through Blitter mastery, Copper programming, parallax scrolling, isometric projection, and advanced techniques until learners can produce commercial-quality games.
+The Amiga curriculum teaches 68000 assembly programming through four complete games. The sequence begins with the custom chipset — Agnus (DMA, Copper, Blitter), Denise (video output), and Paula (audio, interrupts) — and progresses through dual playfield parallax, Copper per-scanline effects, and AGA enhanced graphics until learners can produce commercial-quality games spanning the A500 to A1200.
 
-The Amiga wasn't about one killer feature. It was about the custom chips working in harmony: the Blitter accelerating graphics, the Copper synchronising effects to the display beam, Paula playing four channels of sampled audio. This curriculum teaches learners to conduct that orchestra.
+The Amiga was not about one killer feature. It was about the custom chips working in harmony: the Blitter accelerating graphics, the Copper synchronising effects to the display beam, Paula playing four channels of sampled audio — all while the 68000 orchestrated the action. This curriculum teaches learners to conduct that orchestra.
 
-This is an expanded curriculum because the Amiga's hardware requires deeper coverage - Blitter operations, Copper lists, DMA timing, and the interplay between all components.
-
-By the final game, learners will have skills matching professional Amiga developers of the early 1990s.
+By the final game, learners will have skills matching professional Amiga developers of the early 1990s — equivalent to teams at Team17, Psygnosis, or Magnetic Fields.
 
 ---
 
-## Curriculum Structure
+## Assembly Track
 
-| Phase | Games | Units Each | Total |
-|-------|-------|------------|-------|
-| Foundation (terrain puzzle, timing, breakout, platformer, exploration, maze, snake, puzzle) | 1-8 | 128 | 1,024 |
-| Intermediate | 9-10 | 256 | 512 |
-| Advanced | 11-13 | 256 | 768 |
-| Advanced | 14 | 256 | 256 |
-| Expert | 15 | 512 | 512 |
-| Capstone | 16 | 512 | 512 |
-| **Total** | **16** | | **3,584** |
+### Structure
 
-The expanded structure allows thorough coverage of:
-- Blitter operations (copy, fill, line draw, cookie-cut)
-- Copper programming (display lists, effects, timing)
-- DMA channels and timing
-- Dual playfield modes
-- Hardware sprites and Blitter objects
-- Paula audio (sample playback, mixing)
-- Disk access (trackdisk vs AmigaDOS)
+| Game | Units | Phases | Units/Phase | Role |
+|------|-------|--------|-------------|------|
+| 1 | 128 | 8 | 16 | Accessible entry — Blitter as game mechanic |
+| 2 | 256 | 8 | 32 | Signature technique — dual playfield parallax |
+| 3 | 512 | 16 | 32 | Ambitious — Copper per-scanline racing, perspective maths |
+| 4 | 512 | 16 | 32 | Capstone — OCS/ECS/AGA, chipset detection, professional distribution |
+| **Total** | **1,408** | | | |
 
 ---
 
-## Game Sequence
+### Game 1: Terrain Puzzle
 
-### Foundation Games
-
-#### Game 1: Exodus
 **Units:** 128 (8 phases)
-**Concept:** Terrain puzzle in the Lemmings tradition. Creatures walk across a bitmap landscape — the player modifies the terrain to guide them to safety. Digging, building, and redirecting are all Blitter operations. The Amiga's custom chipset becomes the game design tool.
+**Genre:** Terrain puzzle
+**Inspired by:** Lemmings, Clonk, Worms (terrain modification)
+**Working title:** TBD
+
+**Concept:** Creatures walk across a bitmap landscape. The player modifies the terrain to guide them to safety: digging tunnels, building bridges, redirecting paths. Every game action is a Blitter operation — clearing bits digs, setting bits builds, copying bits constructs. The Copper paints gradient skies above. Paula plays satisfying terrain sounds. The game boots from a custom ADF disk from unit 1.
 
 **Skills taught:**
-- 68000 assembly fundamentals
-- Display setup and Copper list basics
-- Bitplane graphics and bitmap terrain
-- Blitter operations (copy, fill, clear, modify)
-- Terrain as modifiable bitmap data
-- Copper gradients and colour effects (sky, ground)
-- Paula sample playback (digging, building, arrival sounds)
-- Bootable ADF creation (from Unit 1)
-- Creature AI (walking, turning at walls, falling)
-- Terrain modification (digging tunnels, building bridges)
-- Player input for assigning abilities
-- Collision detection against bitmap terrain
+- 68000 assembly fundamentals (data/address registers, addressing modes, supervisor/user mode)
+- Amiga hardware architecture (chip RAM, custom registers, DMA channels)
+- Display setup (bitplanes, display window, DIWSTRT/DIWSTOP, DDFSTRT/DDFSTOP)
+- Copper list basics (WAIT, MOVE, colour changes, screen splits)
+- Copper gradient backgrounds (sky, ground, water)
+- Bitplane graphics and bitmap terrain representation
+- Blitter operations as game mechanics:
+  - BLTCON0/BLTCON1 configuration
+  - Copy (A→D for building), clear (D=0 for digging), fill, line draw
+  - Cookie-cut masking (A=source, B=mask, C=background, D=destination)
+- Paula sample playback (loading and triggering sound effects)
+- Terrain collision detection against bitmap data
+- Creature AI (walking, turning at edges, falling, climbing)
+- Player input for assigning creature abilities
 - UI panel with Copper screen split
-- Level data structures and progression
+- Level data structures (bitmap terrain + creature spawn points)
+- Bootable ADF creation (executable on disk from unit 1)
+- Level progression with increasing difficulty
 
-**Why first:** A terrain puzzle makes the Blitter the core mechanic from Unit 1. Digging a tunnel is a Blitter clear. Building a bridge is a Blitter copy. Every game action is a hardware operation — learners see the chipset working because it IS the gameplay. The Copper splits the screen for the UI panel, Paula plays satisfying terrain sounds, and the 68000 orchestrates everything. Bootable ADF from day one.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-01-full-game-outline-amiga-exodus.md`
-
----
-
-#### Game 2: Signal
-**Units:** 128 (8 phases)
-**Concept:** Frogger-style lane crosser polished to commercial quality. Cross roads, ride logs, avoid hazards, reach home. A timing game that showcases Amiga audiovisuals.
-
-**Skills taught:**
-- Grid-based hop movement (different from continuous)
-- Lane objects as BOBs (cars, trucks, logs, turtles)
-- Riding moving objects (velocity transfer)
-- Timing-based gameplay (patience vs. reflexes)
-- Copper gradient backgrounds (sky, water)
-- MOD music with SFX mixing
-- Multiple hazards (crocs, snakes, diving turtles)
-- Power-ups (bonus flies, lady frog escort)
-- High scores, difficulty, multiplayer
-- 15 levels with increasing challenge
-
-**Why here:** After the terrain puzzle's Blitter focus, Signal teaches timing-based gameplay with hardware sprites and BOBs — a different rhythm. 128 units allows proper exploration of feel and polish.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-02-full-game-outline-amiga-signal.md`
+**Why first:** Lemmings makes the Blitter a game mechanic. Digging a tunnel is `BLTCON0 = $0100` (clear destination). Building a bridge is a Blitter copy. The learner doesn't learn the Blitter in theory and then apply it — every game action IS a Blitter operation. The Copper splits the screen for the UI panel and paints gradients, Paula plays terrain sounds, and the 68000 orchestrates the creatures. It's a small-scale demonstration of the full chipset orchestra.
 
 ---
 
-#### Game 3: Shatter Point
-**Units:** 128 (8 phases)
-**Concept:** Breakout clone polished to commercial quality. Paddle, ball, bricks - with Copper gradient backgrounds, sampled impacts, and Blitter-powered destruction.
+### Game 2: Parallax Showcase
 
-**Skills taught:**
-- Ball physics with 16.16 fixed-point maths
-- Blitter fills for brick rendering and destruction
-- Copper gradient backgrounds (dynamic sky effects)
-- Paula sample playback for varied impacts
-- Paddle angle control for ball direction
-- Multiple brick types (hard, unbreakable, explosive)
-- Power-up system (extend, multi-ball, laser, catch)
-- Multi-ball management
-- Level design variety (20 levels)
-- MOD music with SFX mixing
-- Full polish (high scores, difficulty options)
+**Units:** 256 (8 phases × 32 units)
+**Genre:** Parallax showcase (side-scrolling action)
+**Inspired by:** Shadow of the Beast, Agony, Lionheart
+**Working title:** TBD
 
-**Why here:** After BOBs and sprites in Games 1-2, learners apply Blitter skills to physics-based gameplay and background manipulation.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-03-full-game-outline-amiga-shatter-point.md`
-
----
-
-#### Game 4: Ascent
-**Units:** 128 (8 phases)
-**Concept:** Single-screen platformer polished to commercial quality. Climb upward through hazards, collect items, reach the exit. Smooth 50fps gameplay with Copper-enhanced visuals and sampled audio.
-
-**Skills taught:**
-- Gravity and jump physics (velocity, acceleration, variable height)
-- Platform collision with Blitter backgrounds
-- BOB animation for player character (walk cycle, jump frames)
-- Blitter cookie-cut masking
-- Moving platforms (horizontal and vertical)
-- Crumbling platforms and environmental hazards
-- Patrolling and flying enemies
-- Stomping enemies mechanic
-- Power-ups (speed, high jump, invincibility)
-- 20 levels across multiple themed worlds
-- Boss battles
-- MOD music with SFX mixing
-
-**Why here:** After horizontal gameplay in Games 1-3, learners tackle vertical movement and jump physics - the foundation for countless games.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-04-full-game-outline-amiga-ascent.md`
-
----
-
-#### Game 5: Crypt
-**Units:** 128 (8 phases)
-**Concept:** Flip-screen top-down dungeon exploration polished to commercial quality. Navigate interconnected rooms, collect keys and treasures, defeat monsters, find the exit. Smooth 50fps with Copper-enhanced room transitions.
-
-**Skills taught:**
-- Room data structures and Blitter tile rendering
-- Screen transitions with Copper fades
-- Persistent state management
-- Inventory system (keys, potions, weapons)
-- Enemy AI (patrol, chase, wall-aware)
-- Combat system (melee attack)
-- Multiple enemy types including ranged
-- Coloured keys and locked doors
-- Push blocks and puzzle elements
-- Multiple dungeon floors
-- Copper zone palettes for visual variety
-- Boss encounters
-- Save system
-- MOD music with SFX mixing
-
-**Why here:** After single-screen games, learners manage multi-room worlds with persistent state - foundation for adventure games.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-05-full-game-outline-amiga-crypt.md`
-
----
-
-#### Game 6: Gobble
-**Units:** 128 (8 phases)
-**Concept:** Pac-Man style maze game polished to commercial quality. Collect dots, avoid ghosts with distinct AI personalities, eat power pills to turn the tables. Smooth 50fps with Copper-enhanced effects.
-
-**Skills taught:**
-- Tile-based maze with Blitter rendering
-- Constrained corridor movement
-- Four ghost AI personalities (Blinky, Pinky, Inky, Clyde)
-- Chase/scatter mode state machines
-- Frightened mode with ghost-eating
-- Screen wrapping via tunnels
-- Speed and difficulty progression
-- Copper gradient backgrounds
-- Intermission cut-scenes
-- Paula sample audio (waka, siren)
-- MOD music for title
-- Demo mode
-- Two-player simultaneous mode
-
-**Why here:** After dungeon exploration, learners create constrained corridor movement with sophisticated enemy AI. Four distinct ghost behaviours create emergent gameplay.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-06-full-game-outline-amiga-gobble.md`
-
----
-
-#### Game 7: Venom
-**Units:** 128 (8 phases)
-**Concept:** Classic snake game polished to commercial quality. Uses ring buffer for efficient body management and showcases Blitter segment rendering with Copper colour effects.
-
-**Skills taught:**
-- Ring buffer implementation in 68000
-- Grid-based movement system
-- Self-collision detection algorithms
-- Blitter-based segment rendering
-- Growth mechanics
-- Speed scaling with difficulty progression
-- Multiple level packs with maze layouts
-- Moving obstacles and teleport portals
-- Power-up system (slow-down, ghost, score multiplier)
-- Two-player split-screen mode
-- AI opponent with difficulty levels
-- Theme system (Jungle, Tech, Desert)
-- Copper colour effects and gradients
-- Paula sound effects and module music
-- Achievement and statistics tracking
-- Demo/attract mode
-
-**Why here:** After maze navigation in Gobble, learners tackle a different grid-based challenge. The ring buffer is fundamental to game programming, and the Amiga's hardware makes segment rendering smooth and colourful.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-07-full-game-outline-amiga-venom.md`
-
----
-
-#### Game 8: Tetrad
-**Units:** 128 (8 phases)
-**Concept:** Classic falling block puzzle polished to Amiga quality. Uses the Blitter for efficient grid rendering and line clearing, with Copper effects for visual polish. Feature-complete with competitive multiplayer.
-
-**Skills taught:**
-- Piece rotation mathematics in 68000
-- Grid collision detection algorithms
-- Line clearing with Blitter scroll operations
-- Efficient Blitter-based grid rendering
-- Next piece preview and hold piece
-- Ghost piece projection
-- Wall kick system (SRS-style)
-- T-spin detection and scoring
-- Combo and back-to-back systems
-- 7-bag randomiser
-- Speed progression (20 levels)
-- Multiple game modes (Marathon, Sprint, Ultra, 20G)
-- Two-player split-screen versus with garbage
-- AI opponent with difficulty levels
-- Visual theme system (Classic, Neon, Marble)
-- Copper colour effects and gradients
-- Paula sound effects and module music
-- Achievement and statistics tracking
-- DAS/ARR tuning options
-- Demo/attract mode
-
-**Why here:** After Venom's ring buffer, Tetrad teaches different grid algorithms - rotation matrices and line clearing. The Blitter's scroll capability makes line clearing efficient and visually smooth.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-08-full-game-outline-amiga-tetrad.md`
-
----
-
-### Advanced Games
-
-#### Game 9: Parallax
-**Units:** 256 (16 phases)
-**Concept:** THE quintessential Amiga showcase. Multi-layer parallax scrolling with dual playfield mode, advanced Copper effects, and epic shooter gameplay. Master the techniques that made Shadow of the Beast famous.
+**Concept:** A side-scrolling action game where the visuals are the headline. Multiple background layers scroll at different speeds — distant mountains barely move, mid-ground trees drift past, foreground details rush by. The player runs, jumps, and fights through a world that looks impossibly deep. Shadow of the Beast made people buy Amigas; this game teaches how it worked.
 
 **Skills taught:**
 - Dual playfield mode (DBLPF in BPLCON0)
-- Multi-layer parallax (4+ speed layers)
-- Bitplane DMA timing mastery
-- Hardware scroll registers (BPLCON1)
-- Copper list programming for per-line effects
-- Raster bars and colour cycling
-- Blitter buffer management for scroll
-- Water reflections and sky gradients
-- Vertical parallax for height variation
-- Player and enemies in parallax world
-- Complex bullet patterns
-- Five complete levels with unique visuals
-- Five epic multi-phase boss battles
-- Weapon upgrade system with options
-- Paula MOD replay integration
-- Multiple game modes
-- A1200 AGA enhanced version
-- Performance profiling for 50fps
+  - Two independent 3-bitplane playfields
+  - Separate scroll registers per playfield
+  - Priority control (playfield 1 vs. 2, sprites between layers)
+- Multi-layer parallax (4+ speed layers via scroll register manipulation)
+- Hardware scroll registers (BPLCON1 fine scroll, BPLxPT coarse scroll)
+- Bitplane DMA timing (fetch start/stop, modulos for scrolled displays)
+- Copper per-line colour effects (gradient skies, water reflections, atmospheric haze)
+- Colour cycling and palette animation
+- Blitter-based BOB (Blitter Object) rendering
+  - Cookie-cut sprite drawing
+  - Background save and restore
+  - BOB animation frames
+- Hardware sprite usage alongside BOBs
+- Player movement and combat (run, jump, attack, duck)
+- Enemy AI variety (ground patrol, flying, ranged, boss)
+- Parallax-aware level design (foreground obstacles vs. background decoration)
+- Paula MOD music playback (ProTracker format)
+- Paula SFX mixing (playing effects without interrupting music)
+- Level streaming (loading new background columns during scroll)
+- 5 themed stages with distinct parallax configurations
+- Boss encounters
 
-**Why expanded:** Dual playfield with true multi-layer parallax is the Amiga's signature technique. Shadow of the Beast defined the platform with these effects. 256 units allows complete mastery of DMA timing, Copper programming, and visual showcase.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-09-full-game-outline-amiga-parallax.md`
+**Why here:** Shadow of the Beast defined the Amiga's visual identity. Dual playfield parallax is the technique that made jaws drop — and it only exists because Agnus can drive two independent scroll positions simultaneously. This game teaches the technique through its most spectacular application. The learner also transitions from Blitter-only graphics (Game 1) to combining Blitter BOBs with hardware sprites and dual playfield backgrounds — the full display pipeline that every subsequent Amiga game requires.
 
 ---
 
-#### Game 10: Wanderer
-**Units:** 256 (16 phases)
-**Concept:** Epic scrolling platformer building on Parallax's techniques. Four themed worlds with multiple levels each, boss encounters, collectibles, and commercial-quality polish.
+### Game 3: Pseudo-3D Racing
+
+**Units:** 512 (16 phases × 32 units)
+**Genre:** Pseudo-3D racing
+**Inspired by:** Lotus Turbo Challenge, Outrun, Super Hang-On
+**Working title:** TBD
+
+**Concept:** Drive at high speed down roads that curve, climb hills, and fork. The Copper renders the road by changing colours on every scanline — each line represents a different distance from the viewer, creating the illusion of perspective. Split-screen two-player mode doubles everything. Paula synthesises engine roar that rises and falls with speed.
+
+This is the game that teaches Copper programming at the deepest level and introduces perspective mathematics that nothing else in the curriculum covers.
 
 **Skills taught:**
-- Horizontal scrolling platformer
-- Camera systems with dead zones
-- Level compression and streaming
-- Slope physics
-- Moving platforms
-- Multiple enemy types
-- Combat system (stomp and projectile)
-- Health, lives, and checkpoints
-- Collectibles and power-ups
-- Four themed worlds (Grasslands, Underground, Sky, Castle)
-- Boss encounters per world
-- Multi-layer parallax per world
-- Copper colour effects
-- Weather effects (rain, snow)
-- Paula music and sound effects
-- World map navigation
-- Save system
-- Time attack and boss rush modes
-- AGA enhanced version
+- Perspective projection mathematics (3D world to 2D screen)
+- Road geometry (curves via horizontal offset per scanline, hills via Y displacement)
+- Copper per-scanline rendering:
+  - Road colour changes per line (road, kerb, grass, rumble strip)
+  - Horizon line positioning
+  - Background colour gradients (sky, distance haze)
+- Road segment data structures (curvature, elevation, width, scenery)
+- Sprite scaling simulation (pre-scaled sprite sets for depth)
+- Player car physics (steering, acceleration, braking, gear system)
+- Curve physics (centrifugal force, drift, off-road penalties)
+- Traffic system (AI cars with overtaking behaviour)
+- Roadside scenery (signs, trees, buildings — sprite-based at varying depths)
+- Split-screen two-player:
+  - Copper screen split for two viewports
+  - Independent game state per player
+  - Sprite allocation across split screens
+- Paula engine sound synthesis (frequency modulation for RPM)
+- Paula MOD music with dynamic mixing (fade music during engine roar)
+- 5 themed tracks (coastal, city, desert, forest, mountain)
+- Championship mode (race across all tracks)
+- Time trial with ghost replay
+- Attract mode / demo replay
+- Level-of-detail management (near objects detailed, far objects simplified)
 
-**Why expanded:** A full scrolling platformer with multiple worlds, bosses, and polish requires deep coverage. 256 units allows a complete Mario-style experience on Amiga hardware.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-10-full-game-outline-amiga-wanderer.md`
+**Why here:** Lotus Turbo Challenge is pure Copper programming. Every scanline of the road is a Copper MOVE — change the colour, shift the position, create the illusion of depth. No other game in the curriculum teaches perspective maths or per-scanline rendering at this depth. The split-screen two-player mode doubles the Copper workload and forces efficient resource management. And it's a genuinely fun game to play — the combination of speed, sound, and visual depth is the Amiga at its most exhilarating.
 
 ---
 
-#### Game 11: Brawler
-**Units:** 256 (16 phases)
-**Concept:** Streets of Rage / Final Fight style beat 'em up with Y-depth sorting, combo systems, and two-player co-op. Large animated sprites with satisfying melee combat.
+### Game 4: Capstone
+
+**Units:** 512 (16 phases × 32 units)
+**Genre:** Scrolling action game with chipset showcase (distinct from Games 1-3)
+**Inspired by:** Team17, Psygnosis, or Bitmap Brothers releases
+**Working title:** TBD
+
+**Concept:** A scrolling action game that runs on an A500 and lights up on an A1200. The OCS/ECS version uses all techniques from Games 1-3. The AGA version adds 256-colour graphics, enhanced sprites, HAM8 title screens, and A1200-specific optimisations. The capstone bridges the Amiga's generations: one codebase, two visual presentations.
+
+The new material is chipset detection and adaptation, AGA register programming, custom disk loading, and the production polish that characterised Amiga commercial releases.
 
 **Skills taught:**
-- Y-axis depth sorting algorithms
-- Large sprite animation (32x48+)
-- Melee combat with hit detection
-- Combo systems and chains
-- Juggle mechanics
-- Special moves and meter
-- Grab and throw mechanics
-- Enemy AI coordination
-- Attack slot system
-- Multiple enemy types
-- Weapon pickups (pipe, knife)
-- Four complete levels
-- Four boss encounters
-- Two-player cooperative
-- Versus mode
-- Character selection with stats
-- Destructible objects and item drops
-- MOD music and satisfying hit sounds
+- All techniques from Games 1-3 at mastery level
+- Chipset detection (OCS vs. ECS vs. AGA via VPOSR/DENISEID)
+- AGA register programming:
+  - BPLCON3/BPLCON4 (bank select, palette control, sprite XOR)
+  - FMODE (fetch width for wider bitplane/sprite fetch)
+  - 256-entry 24-bit palette (8-bit RGB via LOCT register)
+  - 8-bitplane displays
+- HAM8 mode (Hold and Modify with 8 bitplanes — 262,144 colours)
+- HAM8 title screen / cutscene rendering
+- Dual code paths (OCS/ECS baseline, AGA enhancements)
+- Custom disk loading (bypassing AmigaDOS for speed)
+- Multi-disk support (if game exceeds single ADF)
+- Bootable ADF with custom trackloader
+- Professional loading sequence (loading screen with progress)
+- Advanced Blitter techniques (optimised for A1200's faster chip RAM)
+- Copper list optimisation for complex displays
+- Memory management across chip/fast RAM
+- Startup-sequence compatible launcher (for hard disk installs)
+- Testing across models (A500, A500+, A600, A1200, A4000)
+- Credits, end sequence, attract mode
 
-**Why expanded:** A full beat 'em up with Y-sorting, combos, enemy coordination, AND two-player co-op requires 256 units for proper depth.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-11-full-game-outline-amiga-brawler.md`
-
----
-
-#### Game 12: Highway
-**Units:** 256 (16 phases)
-**Concept:** Outrun-style pseudo-3D racing with Copper-based road rendering, sprite scaling, and high-speed action. Multiple tracks, traffic, and split-screen two-player mode.
-
-**Skills taught:**
-- Perspective projection mathematics
-- Copper-based road rendering (per-scanline colours)
-- Road width calculation and horizon line
-- Road curves and hills rendering
-- Combined curve + hill sections
-- Sprite scaling simulation for depth
-- Pre-scaled sprite system
-- Player car with multiple lean frames
-- Steering, acceleration, and braking
-- Speed-to-scroll conversion
-- Centrifugal force on curves
-- Off-road penalty and crash detection
-- Traffic system with multiple car types
-- Traffic AI and collision
-- Checkpoint time extension system
-- 5 themed tracks (Coastal, City, Desert, Forest, Mountain)
-- Championship mode with points
-- Time of day variants (sunset, night with headlights)
-- Weather effects (rain, fog)
-- Tunnel sections with lighting
-- Split-screen two-player mode with Copper
-- Ghost replay system
-- Paula engine sound synthesis
-- MOD music integration
-- AGA enhanced version
-
-**Why expanded:** Pseudo-3D racing with Copper road rendering, perspective mathematics, traffic, weather, AND split-screen multiplayer requires 256 units for complete mastery.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-12-full-game-outline-amiga-highway.md`
+**Why last:** The capstone bridges the Amiga's two eras. Running the same game on an A500 (1987, OCS, 7 MHz) and an A1200 (1992, AGA, 14 MHz) demonstrates mastery of the full chipset family. The AGA enhancements aren't a separate game — they're conditional code paths that detect the hardware and adapt. This teaches a real-world skill that every professional Amiga developer needed: shipping a product that works everywhere while looking best on the latest hardware.
 
 ---
 
-#### Game 13: Onslaught
-**Units:** 256 (16 phases)
-**Concept:** 1942/SWIV-style vertical shooter with formation patterns, bullet patterns, ground and air targets, and epic multi-phase bosses. Intense action showcasing the Amiga's capabilities.
+## AMOS Gateway
 
-**Skills taught:**
-- Vertical hardware scrolling
-- Formation enemy patterns (V, line, circle, spiral)
-- Bullet pattern systems (aimed, spread, ring, spiral)
-- Ground targets (tanks, turrets, buildings, convoys)
-- Air enemies with varied behaviours
-- Multi-phase boss encounters with weak points
-- Weapon upgrade system (Wide, Laser, Spread, Homing)
-- Missile and bomb secondary weapons
-- Options/satellites with firing
-- 5 complete stages with unique themes
-- Rank system (adaptive difficulty based on performance)
-- Two-player cooperative mode
-- Grazing bonus system
-- Paula MOD soundtrack
-- AGA enhanced version
-
-**Why expanded:** A full vertical shmup with formation patterns, bullet systems, ground/air layers, 5 stages, bosses, AND rank system requires 256 units.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-13-full-game-outline-amiga-onslaught.md`
+The AMOS curriculum is maintained separately. See `/docs/curriculum/basic/commodore-amiga/commodore-amiga-basic-curriculum.md`.
 
 ---
 
-#### Game 14: Fortress
-**Units:** 256 (16 phases)
-**Concept:** Knight Lore/Cadaver-style isometric adventure with exploration, puzzles, combat, and Amiga-quality audiovisuals. Master isometric projection and depth sorting with the Blitter.
+## Changelog
 
-**Skills taught:**
-- Isometric projection mathematics
-- World-to-screen coordinate conversion
-- Depth sorting (painter's algorithm)
-- Blitter-based isometric tile rendering
-- Z-height collision detection
-- Push block puzzles
-- Pressure plates and triggers
-- Doors and gates with key types
-- Combat system (sword, shield, magic)
-- Multiple enemy types (Skeleton, Ghost, Knight)
-- 5 zones with unique themes (Entrance, Dungeons, Tower, Crypt, Throne)
-- Copper colour effects per zone
-- Boss encounters per zone
-- Multi-phase final boss
-- Inventory and equipment system
-- Magic system (Fireball, Shield, Teleport)
-- Mana system
-- Save system with disk support
-- MOD music with Paula sound effects
-- Good/Best ending based on completion
-- New Game+ mode
-- AGA enhanced version
-
-**Why expanded:** A full Knight Lore-style adventure with isometric projection, 5 zones, puzzles, combat, magic, AND Blitter rendering requires 256 units for Amiga implementation.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-14-full-game-outline-amiga-fortress.md`
-
----
-
-### Expert Game (256 Units)
-
-#### Game 15: Echoes of the Ancients
-**Units:** 512 (32 phases)
-**Concept:** Full Metroidvania masterpiece on Amiga hardware. Explore interconnected regions across an ancient world, gaining abilities that unlock new areas. Multi-layer parallax per region, Copper effects for atmosphere, and the Amiga's audiovisual power at full display.
-
-**Skills taught:**
-- Large connected world map (5 regions × 50+ rooms)
-- Non-linear progression with sequence breaking
-- Ability-gating design (10+ abilities)
-- Movement abilities (wall jump, double jump, dash, morph, grapple)
-- Combat abilities (charge beam, spread shot, missiles, bombs)
-- Backtracking and shortcuts
-- Region-specific visual themes with unique palettes
-- Multi-layer parallax scrolling per region
-- Copper colour effects per zone (sky gradients, water, fire)
-- Advanced Blitter techniques for smooth scrolling
-- Player progression system (health, energy, upgrades)
-- Disk-based save system with multiple slots
-- Boss encounters that grant abilities (10 major bosses)
-- Mini-bosses and optional challenges
-- Environmental hazards per region
-- Hidden items and expansions
-- Map system with fog of war
-- Percentage completion tracking
-- Multiple endings based on completion
-- Time attack and speedrun modes
-- Full MOD soundtrack with per-region themes
-- Paula sample integration for effects
-- Memory management for large games
-- Multi-disk support for expanded content
-- AGA enhanced version with 256 colours
-- HAM8 cutscenes for story moments
-
-**Why 512 units:** Full Metroidvania requires extensive world building: 5 regions, 10+ abilities, multi-layer parallax per region, Copper effects, disk-based saves, and the Amiga's full audiovisual capabilities.
-
-**Detailed outline:** `/docs/curriculum/assembly/commodore-amiga/game-15-full-game-outline-amiga-echoes-of-the-ancients.md`
-
----
-
-### Capstone Game (512 Units)
-
-#### Game 16: Ascension: The Guru Meditation
-**Units:** 512 (32 phases)
-**Concept:** Epic action-adventure combining everything. The title reclaims the infamous Amiga error as a badge of honour.
-
-**Skills taught:**
-- All previous techniques at mastery
-- Large world design
-- Multiple gameplay styles
-- Deep combat system
-- Equipment and magic
-- NPC dialogue and quests
-- Full save system
-- Advanced Copper tricks
-- Optimised Blitter usage
-- Custom disk loading
-- Professional production values
-- Complete portfolio piece
-
-**Why capstone:** Demonstrates total mastery of the Amiga hardware. A commercial-quality game worthy of the platform's legacy.
-
----
-
-## AGA Enhancement Games
-
-The AGA (Advanced Graphics Architecture) chipset, introduced with the A1200 and A4000 in 1992, offered significant improvements over OCS/ECS. Many commercial games shipped in separate OCS and AGA versions - learners follow this industry practice by creating enhanced AGA versions of Games 9-16.
-
-### AGA Curriculum Structure
-
-| OCS Game | OCS Units | AGA Enhancement | AGA Units |
-|----------|-----------|-----------------|-----------|
-| 9: Parallax | 128 | Parallax AGA | 32 |
-| 10: Wanderer | 128 | Wanderer AGA | 32 |
-| 11: Brawler | 128 | Brawler AGA | 32 |
-| 12: Highway | 128 | Highway AGA | 32 |
-| 13: Onslaught | 128 | Onslaught AGA | 32 |
-| 14: Fortress | 128 | Fortress AGA | 32 |
-| 15: Echoes | 256 | Echoes AGA | 64 |
-| 16: Ascension | 512 | Ascension AGA | 128 |
-| **Totals** | **1,536** | | **384** |
-
-### AGA Hardware Features
-
-**Lisa (replaces Denise):**
-- 256 colours on-screen from 16.7 million (24-bit) palette
-- 8 bitplane modes (vs 6 for ECS)
-- Enhanced sprite capabilities
-- Wider sprites (64 pixels)
-
-**Alice (replaces Agnus):**
-- 2MB chip RAM support
-- Enhanced DMA bandwidth
-- Improved Blitter
-
-**Key AGA Modes:**
-- 256-colour chunky/planar modes
-- HAM8 - 262,144 colours (vs HAM6's 4,096)
-- Super hi-res with more colours
-
-### AGA Enhancement Games (32-128 Units Each)
-
-#### Game 9 AGA: Parallax AGA
-**Units:** 32 (2 phases)
-**Enhancement focus:** 256-colour parallax layers, smoother gradients, enhanced palette cycling.
-
----
-
-#### Game 10 AGA: Wanderer AGA
-**Units:** 32 (2 phases)
-**Enhancement focus:** Richer environment palettes, more detailed sprites, enhanced parallax depth.
-
----
-
-#### Game 11 AGA: Brawler AGA
-**Units:** 32 (2 phases)
-**Enhancement focus:** Larger, more colourful character sprites, richer backgrounds, enhanced effects.
-
----
-
-#### Game 12 AGA: Highway AGA
-**Units:** 32 (2 phases)
-**Enhancement focus:** Smoother road colour gradients, better sprite scaling, enhanced sky effects.
-
----
-
-#### Game 13 AGA: Onslaught AGA
-**Units:** 32 (2 phases)
-**Enhancement focus:** More colourful bullet patterns, richer backgrounds, enhanced explosion effects.
-
----
-
-#### Game 14 AGA: Fortress AGA
-**Units:** 32 (2 phases)
-**Enhancement focus:** Richer isometric tiles, enhanced lighting effects, more detailed environments.
-
----
-
-#### Game 15 AGA: Echoes of the Ancients AGA
-**Units:** 128 (8 phases)
-**Enhancement focus:** 256-colour Metroidvania visuals with enhanced region palettes, smoother parallax with additional layers, HAM8 cutscenes for story moments, enhanced atmospheric effects, richer boss encounters.
-
----
-
-#### Game 16 AGA: Ascension AGA
-**Units:** 128 (8 phases)
-**Enhancement focus:** Full AGA showcase - 256-colour graphics throughout, HAM8 cinematics, enhanced effects, A1200/A4000 optimisations. The definitive version.
-
----
-
-### AGA Skills Taught
-
-| Phase | Skills |
-|-------|--------|
-| Games 9-12 AGA | AGA register basics, 256-colour modes, palette expansion |
-| Games 13-14 AGA | Enhanced bitplane modes, AGA Copper techniques |
-| Game 15 AGA | HAM8 mode, advanced AGA effects |
-| Game 16 AGA | Full AGA mastery, A1200/A4000 optimisation |
-
----
-
-## Hardware Skill Progression
-
-### Blitter Progression
-
-| Games | Blitter Skills |
-|-------|---------------|
-| 1-4 | Terrain modification, basic copy, simple BOBs |
-| 5-8 | Cookie-cut, fills, tile rendering |
-| 9-11 | Scrolling updates, large BOBs |
-| 12-14 | Line draw, complex fills, isometric |
-| 15 | Optimised blits, interleaved |
-| 16 | Full Blitter mastery |
-
-### Copper Progression
-
-| Games | Copper Skills |
-|-------|--------------|
-| 1-4 | Display setup, colour splits |
-| 5-8 | Palette changes, transitions |
-| 9-11 | Parallax coordination, gradients |
-| 12-14 | Road effects, sprite repositioning |
-| 15 | Complex display lists |
-| 16 | Full Copper mastery |
-
-### Paula Progression
-
-| Games | Audio Skills |
-|-------|-------------|
-| 1-4 | Sample playback, sound effects |
-| 5-8 | Multiple samples, mixing basics |
-| 9-11 | MOD replay, dynamic music |
-| 12-14 | Positional audio, effects |
-| 15 | Advanced mixing, priorities |
-| 16 | Full audio production |
-
----
-
-## Platform Context
-
-### Hardware
-
-- **CPU:** Motorola 68000 @ 7.16 MHz (NTSC) / 7.09 MHz (PAL)
-- **RAM:** 512KB chip RAM (A500), expandable
-- **Display:** Multiple modes, typically 320×256 (PAL) or 320×200 (NTSC)
-- **Colours:** 32 on-screen from 4096 palette (OCS/ECS), more with tricks
-- **Sound:** Paula - 4 channels, 8-bit PCM samples
-- **Storage:** 880KB 3.5" floppy disks
-
-### The Custom Chipset
-
-**Agnus** - DMA controller and Blitter
-- Coordinates all memory access
-- Contains the Blitter for fast graphics
-- Contains the Copper coprocessor
-- Manages bitplane, sprite, audio DMA
-
-**Denise** - Display and sprites
-- Generates video output
-- Manages 8 hardware sprites
-- Handles playfield display
-- Colour palette registers
-
-**Paula** - Audio and disk
-- Four channels of sampled sound
-- Floppy disk control
-- Interrupt control
-
-### Key Concepts
-
-**Copper:** Display-list coprocessor that executes commands synchronised to the video beam. Essential for:
-- Palette changes mid-screen
-- Sprite repositioning
-- Register modifications
-- Parallax effects
-
-**Blitter:** Hardware block transfer and drawing:
-- Area copy with masking
-- Line drawing
-- Area filling
-- Cookie-cut compositing
-
-**Hardware Sprites:** 8 sprites, 16 pixels wide, 3 colours + transparent. Can be:
-- Paired for 15 colours
-- Repositioned via Copper for more appearances
-- Attached for wider sprites
-
-**Blitter Objects (BOBs):** Software sprites drawn by Blitter:
-- Any size
-- Any colour depth
-- More flexible but CPU/Blitter intensive
-
----
-
-## Distribution
-
-Games are distributed as:
-- ADF disk images (880KB)
-- Multi-disk for larger games
-- Bootable (game loads directly)
-- Optional AmigaDOS loading for development
-
----
-
-## Era Comparison
-
-| Games | Era Equivalent | Commercial Examples |
-|-------|----------------|---------------------|
-| 1-4 | 1985-1986 | Marble Madness, Defender of the Crown |
-| 5-8 | 1987-1988 | Barbarian, Xenon |
-| 9-11 | 1988-1990 | Shadow of the Beast, Turrican |
-| 12-14 | 1990-1991 | Lotus, SWIV, Cadaver |
-| 15 | 1991-1992 | Super Metroid-style exploration |
-| 16 | 1992-1994 | Lionheart, The Chaos Engine |
-
-By Game 16, learners produce work comparable to late-era commercial releases.
-
----
-
-## Version History
-
-- **3.18 (2026-02-06):** Replaced Game 1 Blast Zone (shooter) with Exodus (terrain puzzle) to showcase the Blitter as a game mechanic. Lemmings-style terrain modification is a natural fit for Amiga hardware.
-- **3.17 (2026-01-18):** Expanded Game 15 (Echoes of the Ancients) to 512 units (OCS/ECS) and 128 units (AGA) with full Metroidvania and per-region parallax. OCS/ECS total now 3,584 units, AGA total now 448 units, grand total 4,032 units.
-- **3.16 (2026-01-18):** Expanded Game 14 (Fortress) to 256 units with Blitter-based isometric adventure. OCS/ECS total now 3,328 units.
-- **3.15 (2026-01-18):** Expanded Game 13 (Onslaught) to 256 units with bullet patterns and rank system. OCS/ECS total now 3,200 units.
-- **3.14 (2026-01-18):** Expanded Game 12 (Highway) to 256 units with pseudo-3D racing and Copper road rendering. OCS/ECS total now 3,072 units.
-- **3.13 (2026-01-18):** Expanded Game 11 (Brawler) to 256 units with Y-depth sorting. OCS/ECS total now 2,944 units.
-- **3.12 (2026-01-18):** Expanded Game 10 (Wanderer) to 256 units with full platformer worlds. OCS/ECS total now 2,816 units.
-- **3.11 (2026-01-18):** Expanded Game 9 (Parallax) to 256 units with dual playfield mastery and multi-layer parallax. OCS/ECS total now 2,688 units.
-- **3.10 (2026-01-18):** Expanded Game 8 (Tetrad) to 128 units with Blitter line clearing, T-spins, and competitive multiplayer. OCS/ECS total now 2,560 units.
-- **3.9 (2026-01-18):** Expanded Game 7 (Venom) to 128 units with ring buffer, two-player split-screen, and theme system. OCS/ECS total now 2,496 units.
-- **3.8 (2026-01-18):** Expanded Game 6 (Gobble) to 128 units with four ghost AI personalities. OCS/ECS total now 2,432 units.
-- **3.7 (2026-01-18):** Expanded Game 5 (Crypt) to 128 units with full dungeon exploration. OCS/ECS total now 2,368 units.
-- **3.6 (2026-01-18):** Expanded Game 4 (Ascent) to 128 units with full platformer polish. OCS/ECS total now 2,304 units.
-- **3.5 (2026-01-18):** Expanded Game 3 (Shatter Point) to 128 units with Blitter physics and power-ups. OCS/ECS total now 2,240 units.
-- **3.4 (2026-01-18):** Expanded Game 2 (Signal) to 128 units for full timing-game polish. OCS/ECS total now 2,176 units.
-- **3.3 (2026-01-18):** Restructured Game 1. Blast Zone (shooter) as first game at 128 units for immediate engagement, bootable from Unit 1. Signal moved to Game 2. (Blast Zone later replaced by Exodus in 3.18.)
-- **3.2 (2026-01-07):** Added AGA enhancement games (384 units) for Games 9-16. Total now 2,432 units.
-- **3.1 (2026-01-07):** Corrected structure to use only powers of 2 for unit counts (64/128/256/512).
-- **3.0 (2025-01-07):** Restructured to 2,048 units with expanded hardware coverage. AMOS moved to separate curriculum.
-- **2.0 (2025-11-26):** Complete rewrite. Replaced phases/tiers/lessons with games model.
-- **1.0 (2025-01-15):** Original curriculum.
+- **v4.0 (2026-03-09):** Major restructure. Reduced from 16+8 AGA to 4 assembly games. No-repetition rule across primary platforms. Every game inspired by a real commercial release. AMOS gateway restructured as 4 focused games. Previous 16-game curriculum preserved in game outline files for reference.
+- **v3.0 (2026-01-18):** Initial 16-game + 8 AGA enhancement curriculum.
