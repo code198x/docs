@@ -36,7 +36,7 @@ By the final game, learners will have skills matching professional Amiga develop
 **Units:** 128 (8 phases)
 **Genre:** Terrain puzzle
 **Inspired by:** Lemmings, Clonk, Worms (terrain modification)
-**Working title:** TBD
+**Working title:** Exodus
 
 **Concept:** Creatures walk across a bitmap landscape. The player modifies the terrain to guide them to safety: digging tunnels, building bridges, redirecting paths. Every game action is a Blitter operation — clearing bits digs, setting bits builds, copying bits constructs. The Copper paints gradient skies above. Paula plays satisfying terrain sounds. The game boots from a custom ADF disk from unit 1.
 
@@ -69,7 +69,7 @@ By the final game, learners will have skills matching professional Amiga develop
 **Units:** 256 (8 phases × 32 units)
 **Genre:** Parallax showcase (side-scrolling action)
 **Inspired by:** Shadow of the Beast, Agony, Lionheart
-**Working title:** TBD
+**Working title:** Duskfall
 
 **Concept:** A side-scrolling action game where the visuals are the headline. Multiple background layers scroll at different speeds — distant mountains barely move, mid-ground trees drift past, foreground details rush by. The player runs, jumps, and fights through a world that looks impossibly deep. Shadow of the Beast made people buy Amigas; this game teaches how it worked.
 
@@ -106,7 +106,7 @@ By the final game, learners will have skills matching professional Amiga develop
 **Units:** 512 (16 phases × 32 units)
 **Genre:** Pseudo-3D racing
 **Inspired by:** Lotus Turbo Challenge, Outrun, Super Hang-On
-**Working title:** TBD
+**Working title:** Redline
 
 **Concept:** Drive at high speed down roads that curve, climb hills, and fork. The Copper renders the road by changing colours on every scanline — each line represents a different distance from the viewer, creating the illusion of perspective. Split-screen two-player mode doubles everything. Paula synthesises engine roar that rises and falls with speed.
 

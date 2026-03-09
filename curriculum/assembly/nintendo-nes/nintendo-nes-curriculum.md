@@ -37,7 +37,7 @@ By the final game, learners will have skills matching professional NES developer
 **Units:** 128 (8 phases)
 **Genre:** Scrolling platformer
 **Inspired by:** Super Mario Bros, Mega Man, DuckTales
-**Working title:** TBD
+**Working title:** Dash
 
 **Concept:** Run, jump, and power-up through scrolling tile-based worlds. The NES was built for this — nametables provide the world, OAM sprites provide the characters, PPUSCROLL provides the camera. The learner has a character on screen in unit 1, jumping by unit 3, and the world scrolls by mid-game.
 
@@ -71,7 +71,7 @@ This game uses NROM (no mapper) — 32 KB PRG, 8 KB CHR. Everything fits in the 
 **Units:** 256 (8 phases × 32 units)
 **Genre:** Top-down adventure
 **Inspired by:** The Legend of Zelda, StarTropics
-**Working title:** TBD
+**Working title:** Wyrdstone
 
 **Concept:** Explore an overworld, enter dungeons, find items, defeat bosses. The world is a grid of interconnected screens; entering a dungeon transitions to a different tileset and layout. Items found in dungeons unlock new areas of the overworld. Combat is real-time: swing a sword, dodge enemies, use sub-weapons.
 
@@ -105,7 +105,7 @@ This game introduces battery-backed SRAM — the player's progress persists acro
 **Units:** 512 (16 phases × 32 units)
 **Genre:** Metroidvania
 **Inspired by:** Metroid, Castlevania III, Kid Icarus
-**Working title:** TBD
+**Working title:** Abyssal Gate
 
 **Concept:** Explore a massive interconnected world. Acquire abilities that open new areas. Backtrack through familiar rooms that now reveal hidden paths. The world is too large for the cartridge's base configuration — this game introduces the MMC3 mapper, with bank switching for PRG code and CHR graphics, and a scanline counter for split-screen effects.
 

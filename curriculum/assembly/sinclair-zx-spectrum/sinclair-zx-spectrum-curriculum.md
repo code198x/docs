@@ -36,7 +36,7 @@ By the final game, learners will have skills matching professional Spectrum deve
 **Units:** 128 (8 phases)
 **Genre:** Single-screen platformer
 **Inspired by:** Manic Miner, Jet Set Willy
-**Working title:** TBD
+**Working title:** Gravelight
 
 **Concept:** Jump between platforms, collect items, avoid hazards, reach the exit. Each level fits on a single screen. The attribute system is the game — INK defines walls, PAPER defines floors, BRIGHT marks collectibles. The learner sees pixels on screen in unit 1, moves a character in unit 2, and has a playable level by unit 4.
 
@@ -67,7 +67,7 @@ By the final game, learners will have skills matching professional Spectrum deve
 **Units:** 256 (8 phases × 32 units)
 **Genre:** Horizontal scrolling shmup
 **Inspired by:** R-Type, Zynaps, Nemesis
-**Working title:** TBD
+**Working title:** Ionfire
 
 **Concept:** Pilot a ship through alien landscapes, fight waves of enemies, defeat massive bosses. The Spectrum has no hardware scroll registers, so every pixel of scrolling is achieved through software — shift operations across screen memory, timed to avoid visible tearing. Building this game is the Spectrum's crowning technical achievement.
 
@@ -98,7 +98,7 @@ By the final game, learners will have skills matching professional Spectrum deve
 **Units:** 512 (16 phases × 32 units)
 **Genre:** Isometric adventure
 **Inspired by:** Knight Lore, Head Over Heels, Batman
-**Working title:** TBD
+**Working title:** Grimstone
 
 **Concept:** Explore a castle or fortress rendered in isometric 3D. Push blocks onto pressure plates, avoid enemies, collect items, solve environmental puzzles across 100+ rooms. The Spectrum invented this genre — Ultimate's Knight Lore was the first isometric adventure, and it changed what people believed the hardware could do.
 

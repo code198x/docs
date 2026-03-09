@@ -21,10 +21,10 @@ BASIC is not a prerequisite for the assembly track. The two tracks are independe
 
 | Game | Units | Role |
 |------|-------|------|
-| 1 | 64 | First program — text adventure (the Spectrum BASIC tradition) |
-| 2 | 64 | Screen interaction — chase game using PRINT AT |
-| 3 | 64 | Graphics — drawing/puzzle game using PLOT, DRAW, ATTR |
-| 4 | 64 | Custom graphics — action game with user-defined graphics |
+| 1 | 64 | The Cursed Manor — text adventure (the Spectrum BASIC tradition) |
+| 2 | 64 | Night Patrol — chase game using PRINT AT |
+| 3 | 64 | Lattice — drawing/puzzle game using PLOT, DRAW, ATTR |
+| 4 | 64 | Blockstorm — action game with user-defined graphics |
 | **Total** | **256** | |
 
 Each game has 4 phases of 16 units. Each unit is 60-120 minutes and produces a working result.
@@ -33,7 +33,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes and produces a w
 
 ## Game Sequence
 
-### Game 1: Text Adventure
+### Game 1: The Cursed Manor
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Text adventure
@@ -59,7 +59,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes and produces a w
 
 ---
 
-### Game 2: Chase Game
+### Game 2: Night Patrol
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Top-down chase game
@@ -85,7 +85,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes and produces a w
 
 ---
 
-### Game 3: Drawing/Puzzle Game
+### Game 3: Lattice
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Graphical puzzle game
@@ -111,7 +111,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes and produces a w
 
 ---
 
-### Game 4: Action Game with UDGs
+### Game 4: Blockstorm
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Action game with custom graphics

@@ -36,7 +36,7 @@ By the final game, learners will have skills matching professional C64 developer
 **Units:** 128 (8 phases)
 **Genre:** Wave-based space shooter
 **Inspired by:** Katakis, Galaga, Armalyte
-**Working title:** TBD
+**Working title:** Nova Storm
 
 **Concept:** Control a ship, destroy waves of enemies, collect power-ups, fight bosses. The player has something on screen in unit 1, is shooting by unit 3, and has a playable game with SID sound by unit 8. This is the C64 doing what it does best: colourful hardware sprites with a pounding SID soundtrack.
 
@@ -66,7 +66,7 @@ By the final game, learners will have skills matching professional C64 developer
 **Units:** 256 (8 phases × 32 units)
 **Genre:** Stealth-puzzle platformer
 **Inspired by:** Impossible Mission, Montezuma's Revenge
-**Working title:** TBD
+**Working title:** Coldframe
 
 **Concept:** Infiltrate a facility. Search rooms, hack terminals, avoid robots, collect puzzle pieces, escape before time runs out. Large multi-screen rooms scroll as the player moves. Robot guards patrol on fixed paths but react when they detect the player. The SID creates an atmosphere of tension — humming machinery, echoing footsteps, the iconic synthesised speech.
 
@@ -97,7 +97,7 @@ By the final game, learners will have skills matching professional C64 developer
 **Units:** 512 (16 phases × 32 units)
 **Genre:** Run 'n' gun
 **Inspired by:** Turrican, Mega Turrican, Contra
-**Working title:** TBD
+**Working title:** Warfront
 
 **Concept:** A side-scrolling action game with 8-way movement, multiple weapon systems, and massive bosses across five themed worlds. The player runs, jumps, shoots, and grapples through expansive scrolling levels. This is the game that requires everything the C64 can do: smooth 8-directional scrolling, sprite multiplexing to fill the screen with enemies and projectiles, raster effects for visual polish, and a SID soundtrack that drives the action.
 

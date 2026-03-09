@@ -41,17 +41,17 @@ Teaching both shows that there is no single "right" tool — different problems 
 
 | Game | Units | Role |
 |------|-------|------|
-| 1 | 64 | First program — bouncing sprites game (immediate visuals) |
-| 2 | 64 | Mouse interaction — point-and-click game |
-| 3 | 64 | Hardware scroll — scrolling game using screen commands |
-| 4 | 64 | Full production — complete game with MOD music |
+| 1 | 64 | Ricochet — bouncing sprites game (immediate visuals) |
+| 2 | 64 | TBD — mouse-driven game |
+| 3 | 64 | Sidewinder — scrolling game using screen commands |
+| 4 | 64 | TBD — complete game with MOD music |
 | **Total** | **256** | |
 
 Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targets under 500 lines of AMOS.
 
 ---
 
-### AMOS Game 1: Bouncing Sprites Game
+### AMOS Game 1: Ricochet
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Sprite-based action
@@ -77,7 +77,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targe
 
 ---
 
-### AMOS Game 2: Mouse-Driven Game
+### AMOS Game 2: TBD
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Point-and-click / mouse-driven
@@ -103,7 +103,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targe
 
 ---
 
-### AMOS Game 3: Scrolling Game
+### AMOS Game 3: Sidewinder
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Side-scrolling action
@@ -129,7 +129,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targe
 
 ---
 
-### AMOS Game 4: Full Game with MOD Music
+### AMOS Game 4: TBD
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Complete polished game
@@ -160,17 +160,17 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targe
 
 | Game | Units | Role |
 |------|-------|------|
-| 1 | 64 | First program — fast action game (compiled speed) |
-| 2 | 64 | Custom types — structured game with data modelling |
-| 3 | 64 | Performance game — pushing hardware with compiled code |
-| 4 | 64 | Full production — Worms-level quality and polish |
+| 1 | 64 | Flashpoint — fast action game (compiled speed) |
+| 2 | 64 | Gridlock — structured game with data modelling |
+| 3 | 64 | Craterfall — pushing hardware with compiled code |
+| 4 | 64 | TBD — full production game |
 | **Total** | **256** | |
 
 Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targets under 500 lines of Blitz Basic.
 
 ---
 
-### Blitz Game 1: Fast Action Game
+### Blitz Game 1: Flashpoint
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Fast-paced arcade action
@@ -196,7 +196,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targe
 
 ---
 
-### Blitz Game 2: Structured Game with Custom Types
+### Blitz Game 2: Gridlock
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Strategy or simulation
@@ -221,7 +221,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targe
 
 ---
 
-### Blitz Game 3: Performance Game
+### Blitz Game 3: Craterfall
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Performance-intensive action (many objects, particles, scrolling)
@@ -247,7 +247,7 @@ Each game has 4 phases of 16 units. Each unit is 60-120 minutes. Each game targe
 
 ---
 
-### Blitz Game 4: Full Production
+### Blitz Game 4: TBD
 
 **Units:** 64 (4 phases × 16 units)
 **Genre:** Complete polished game
