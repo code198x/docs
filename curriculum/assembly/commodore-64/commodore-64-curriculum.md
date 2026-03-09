@@ -129,13 +129,13 @@ By the final game, learners will have skills matching professional C64 developer
 ### Game 4: Capstone
 
 **Units:** 512 (16 phases × 32 units)
-**Genre:** Action-platformer with demo-scene polish (distinct from Games 1-3)
-**Inspired by:** Creatures, Mayhem in Monsterland, Last Ninja series
-**Working title:** TBD
+**Genre:** Action-platformer with demo-scene polish
+**Inspired by:** Creatures, Mayhem in Monsterland, demo-scene productions
+**Working title:** Sidereal
 
-**Concept:** A polished action game that combines platforming, combat, and visual spectacle across multiple zones. The game itself is a new genre — not a repeat of the run 'n' gun — but the real focus is on the production techniques that separated bedroom coders from commercial studios: custom fast loaders, direct drive programming, demo-scene visual effects, and professional multi-format distribution.
+**Concept:** A celestial action-platformer across five realms, each reflecting a different sky. Collect fragments of scattered constellations, restore the stars, and return the sky to order. The game combines platforming from Coldframe, scrolling and multiplexing from Warfront, and adds demo-scene craft: FLD, DYCP, open borders, raster bars in the title sequence. Fast loader with music during load. Direct 1541 drive programming. 6581/8580 SID detection. Dual distribution on D64 and tape.
 
-The finished game should look like a Thalamus or System 3 release: custom loading screen, fast loader with music, demo-scene title sequence, and flawless execution.
+The finished game is a love letter to the C64: every register, every trick, every technique the scene invented, in one production.
 
 **Skills taught:**
 - All techniques from Games 1-3 at mastery level
