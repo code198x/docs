@@ -1,0 +1,30 @@
+{
+  "cli_version": "0.4.2",
+  "checkpoint_id": "f92833dff4f7",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "curriculum/assembly/commodore-64/commodore-64-curriculum.md",
+    "curriculum/assembly/commodore-64/game-01-full-game-outline-c64-nova-storm.md",
+    "curriculum/assembly/commodore-64/game-02-full-game-outline-c64-coldframe.md",
+    "curriculum/assembly/commodore-64/game-03-full-game-outline-c64-warfront.md",
+    "curriculum/assembly/commodore-64/game-04-full-game-outline-c64-sidereal.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/f9/2833dff4f7/0/metadata.json",
+      "transcript": "/f9/2833dff4f7/0/full.jsonl",
+      "context": "/f9/2833dff4f7/0/context.md",
+      "content_hash": "/f9/2833dff4f7/0/content_hash.txt",
+      "prompt": "/f9/2833dff4f7/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 16,
+    "cache_creation_tokens": 30131,
+    "cache_read_tokens": 4357424,
+    "output_tokens": 19550,
+    "api_call_count": 12
+  }
+}
