@@ -11,7 +11,7 @@ Retro game dev education. Complete games on vintage platforms (C64, ZX Spectrum,
 ## Repositories
 | Repo | Purpose |
 |------|---------|
-| `website` | Astro 5.x site |
+| `website` | Astro 6.x site |
 | `code-samples` | Working code per unit |
 | `docs` | Specs & curriculum |
 | `commodore-64-dev` | Docker + ACME |
@@ -48,9 +48,18 @@ Options: `--wait N` (frames), `--input FILE` (input script), `--duration N` (vid
 ## Content Collections
 ```
 src/content/
-├── games/{platform}/{track}.yaml    # Game catalogue
-└── units/{platform}/{track}/{game}.yaml  # Unit details (source of truth for counts)
+├── curriculum/                          # MDX pages (units, game indexes, getting-started)
+│   └── {platform}/{track}/{game}/       #   Rendered by src/pages/[...slug].astro
+├── games/{platform}/{track}.yaml        # Game catalogue
+└── units/{platform}/{track}/{game}.yaml # Unit details (source of truth for counts)
 ```
+
+Three MDX page collections share `src/content/curriculum/` as base directory:
+- `unit-pages` — `**/unit-*.mdx` (480 files, Zod-validated frontmatter)
+- `game-pages` — `**/index.mdx` (94 game index pages)
+- `getting-started-pages` — `**/getting-started.mdx` (4 setup guides)
+
+Computed fields (layout, prevLesson, nextLesson, totalUnits, system, gameName) are derived from entry path in the `[...slug].astro` catch-all route — **never in frontmatter**.
 
 Helper: `getGamesWithCounts(platform, track)`, `getUnitsEntry(platform, track, game)`
 
@@ -93,4 +102,7 @@ Use `--wait N` to let program initialise before capture. Typical values:
 - Animation loops: match frame count to loop
 
 ### Astro Content Collections
-If YAML validation fails, check `src/content/config.ts` for schema. Common issue: missing required fields in frontmatter.
+If YAML validation fails, check `src/content.config.ts` for schema. Common issue: missing required fields in frontmatter.
+
+### MDX Page Locations
+Unit, game index, and getting-started MDX files live in `src/content/curriculum/`, **not** `src/pages/`. The `src/pages/` directory only contains `.astro` files (overview pages, dynamic routes, the `[...slug].astro` catch-all).
