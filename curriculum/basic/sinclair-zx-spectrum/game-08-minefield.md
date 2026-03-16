@@ -114,10 +114,10 @@ Mine placement is random but guaranteed: the starting column (leftmost) is alway
 | 12 | GO SUB Architecture | The code has grown. Reorganise: GO SUB 500 for drawing, GO SUB 600 for neighbour counting, GO SUB 700 for mine checking, GO SUB 800 for flag toggling. The main loop calls subroutines — each does one job. | Multiple GO SUBs, subroutine architecture, separating data from display |
 | 13 | Level Progression | Five levels. After completing a level, increase the mine count, clear the grid, regenerate mines, reset the player to the left edge. Each level is harder but the grid size stays the same. | Level parameters, regeneration, progressive difficulty |
 | 14 | Path Guarantee | After placing mines, verify that at least one path exists from left to right. Simple check: for each row, can you step from column 1 to column 10 without hitting a mine? If no path exists, regenerate. | Validation after generation, path existence check, regeneration loop |
-| 15 | Sound and Polish | Step onto safe cell: quiet click. Flag placed: short tone. Mine hit: explosion BEEP (descending). Level complete: ascending fanfare. Border colour changes per level. | Sound design, per-level visual identity |
+| 15 | ATTR and Visual Drama | Use `ATTR(r,c)` to read the colour of a cell — an alternative to array lookup for checking what's on screen. Reveal animations cascade outward from each uncovered cell, changing PAPER colours cell by cell with a rippling BEEP. Mine detonation: FLASH, descending tone, border strobe, chain reaction through adjacent cells. Sound polish: quiet click for safe cells, explosion BEEP for mines, ascending fanfare for level complete. | `ATTR` (reading screen as data), cascading visual effects, dramatic reveals |
 | 16 | The Finished Game | Play all five levels. Verify mine counts, neighbour counting at edges and corners, flag toggling, path guarantee, scoring. Clean the listing. A complete logic game in ~80 lines. | Full integration testing, code review, the finished product |
 
-**Milestone:** The learner understands 2D arrays as the backbone of grid-based games. They can initialise arrays, read neighbours, use flags (0/1 values) to track state, and organise code into multiple GO SUBs. The separation between data (the mine array) and display (what's on screen) is now second nature.
+**Milestone:** The learner understands 2D arrays as the backbone of grid-based games. They can initialise arrays, read neighbours, use flags (0/1 values) to track state, and organise code into multiple GO SUBs. ATTR lets them read the screen as data — the display isn't just output, it's queryable. Cascading reveal animations and mine detonation drama make every interaction feel like an event.
 
 ---
 
@@ -185,4 +185,5 @@ Two 10x10 arrays use ~200 bytes. The program is ~80 lines (~4-5 KB). No performa
 
 ## Changelog
 
+- **v1.1 (2026-03-16):** Added ATTR for collision/state reading and cascading reveal animations (Unit 15). Per visual progression plan.
 - **v1.0 (2026-03-13):** Initial game outline for v5.0 curriculum.

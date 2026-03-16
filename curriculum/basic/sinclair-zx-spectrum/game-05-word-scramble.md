@@ -56,7 +56,7 @@ Short words (3-4 letters) have fewer possible arrangements and are easier to uns
 | 4 | Building Words | Join two strings: `LET r$ = a$ + b$`. Build a word character by character in a loop — start with `r$ = ""`, then `LET r$ = r$ + w$(i TO i)` for each position. Reverse a word by looping backwards. | String concatenation (`+`), building strings in a loop |
 | 5 | The Scrambler | Scramble a word. Copy `w$` into `t$`. Pick a random position `p` in `t$`. Append `t$(p TO p)` to `s$`. Remove that character from `t$`. Repeat until `t$` is empty. Display the scrambled result. | Removing a character from a string, the full scramble algorithm |
 | 6 | Word List | Store ten words in `DATA` statements. `READ w$` pulls the next word. A `FOR` loop runs ten rounds: read, scramble, display, input guess, check answer, track score. | `DATA`, `READ`, score tracking across rounds |
-| 7 | Right and Wrong | When the guess is correct: `BEEP .1, 12` and `INK 4` (green) for "Correct!". When wrong: `BEEP .3, -5` and `INK 2` (red) for "Wrong!" followed by the answer. Show the running score after each round. | Feedback with colour and sound, running score display |
+| 7 | Right and Wrong | When the guess is correct: `BEEP .1, 12` and `INK 4` (green) for "Correct!". When wrong: `BEEP .3, -5` and `INK 2` (red) for "Wrong!" followed by the answer revealed letter by letter with ascending BEEP. Show the running score after each round. | Feedback with colour and sound, animated letter reveal, running score display |
 | 8 | The Finished Game | Title screen with instructions. `PRINT AT` for layout — scrambled word centred on screen, guess below, score at the bottom. After ten rounds, a final screen with the score and a rating (0-3: "Keep trying", 4-6: "Not bad", 7-9: "Excellent", 10: "Perfect!"). Option to play again with `RESTORE` and `GO TO`. | `PRINT AT` for layout, end-of-game summary, `RESTORE` (preview — fully taught in Game 6) |
 
 **Milestone:** The learner can manipulate strings — slicing, concatenating, measuring — and store data in the program with `DATA`/`READ`.
@@ -113,4 +113,5 @@ The scrambler uses `RND` without `RANDOMIZE`. On the Spectrum, `RND` produces a 
 
 ## Changelog
 
+- **v1.1 (2026-03-16):** Added animated letter reveal (ascending BEEP, one character at a time) per visual progression plan.
 - **v1.0 (2026-03-13):** Initial game outline for v5.0 curriculum.

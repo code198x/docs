@@ -72,11 +72,11 @@ This introduces `AND` for combining conditions — the first time the learner ha
 | 3 | Better Display | Use `PRINT AT` to lay out the question neatly: question at the top, options spaced vertically, each labelled A-D. `CLS` between questions. The quiz looks like a quiz now, not scrolling text. | `PRINT AT` for structured layout, `CLS` between screens |
 | 4 | Press a Key | Replace `INPUT` with an `INKEY$` loop. The player presses A, B, C, or D — no Enter needed. Ignore any other key. The response feels instant. Introduce `AND` to combine the four checks into one condition. | `AND` (combining conditions), `INKEY$` for single-key input |
 | 5 | Right and Wrong | Correct answer: flash the chosen option in green (`INK 4`), play a rising `BEEP`. Wrong answer: flash the chosen option in red (`INK 2`), highlight the correct option in green, play a falling `BEEP`. A one-second `PAUSE` before moving on. | Visual feedback with colour, highlighting the correct answer |
-| 6 | Categories | Add a category field to each `DATA` line. Read it into `c$`. Display the category above the question. Introduce `DIM s(4)` — an array with four slots, one per category. Map the category name to an index and increment the right slot. | `DIM` (simple arrays), array access (`s(p)`), mapping names to indices |
-| 7 | The Scoreboard | After all questions, display a scoreboard. Total score at the top. Below it, each category with its score shown as a fraction ("Science: 2/3"). Use a `FOR` loop to print the four category rows. Highlight the best category in yellow. | Array iteration, formatted score display, `OR` (combining conditions for "best of") |
-| 8 | Your Own Quiz | Add ten more questions (the learner writes their own). Use `RESTORE` to allow replaying — after the scoreboard, ask "Play again?" and `RESTORE` to reset the `DATA` pointer. Multiple statements on one line with colons to keep the listing compact. Show the learner how line numbering conventions (100s for setup, 200s for game loop, 500s for data) keep code organised. | `RESTORE`, multiple colons on one line, line numbering conventions |
+| 6 | Reusable Drawing | The question display code is the same every round: clear the area, print the category header in BRIGHT, draw the question, draw the four options. Extract it into a `GO SUB` at line 400. The main loop calls `GO SUB 400` each round instead of repeating the same PRINT AT lines. | `GO SUB` / `RETURN`, subroutines as reusable drawing routines |
+| 7 | Categories and Scores | Add a category field to each `DATA` line. Read it into `c$`. Display the category above the question in BRIGHT. Introduce `DIM s(4)` — an array with four slots, one per category. Map the category name to an index and increment the right slot. | `DIM` (simple arrays), array access (`s(p)`), mapping names to indices |
+| 8 | The Finished Quiz | After all questions, display a scoreboard using a second `GO SUB`. Total score at the top. Each category with its score. Use `RESTORE` to allow replaying. Multiple statements on one line with colons. The learner writes their own questions. | `RESTORE`, `OR` (combining conditions), multiple colons, line numbering conventions |
 
-**Milestone:** The learner has the full BASIC toolkit for simple programs: variables, strings, arrays, loops, decisions, input, colour, sound, screen positioning, and data storage. Foundations complete.
+**Milestone:** The learner has the full BASIC toolkit for simple programs: variables, strings, arrays, loops, decisions, input, colour, sound, screen positioning, data storage, and reusable subroutines. Foundations complete.
 
 ---
 
@@ -163,4 +163,5 @@ This keeps the listing compact. The unit teaches when colons help (grouping rela
 
 ## Changelog
 
+- **v1.1 (2026-03-16):** Added GO SUB/RETURN (moved from Game 7). Unit 6 now teaches reusable drawing subroutines. Unit 7 becomes categories/scores. Unit 8 combines scoreboard, RESTORE, and learner-written questions. Per visual progression plan.
 - **v1.0 (2026-03-13):** Initial game outline for v5.0 curriculum.

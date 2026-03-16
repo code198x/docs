@@ -137,9 +137,9 @@ Add sunk detection per ship, the win condition, visual feedback, and all the pol
 | 21 | Ships Remaining | Display a list below each grid showing which ships are still afloat and which are sunk. Strike through or dim the sunk ones. Both players can see their own fleet status. | Status panel, fleet summary display |
 | 22 | Win Condition | After each shot, check if all 5 of the opponent's ships are sunk. If so, the game ends: "Player N wins!" Display the final boards (both players' ships revealed). | Win check, game end state, full reveal |
 | 23 | Shot Counter | Track how many shots each player has taken. Display at game end: "Player 1 won in 43 shots." Fewer shots is more impressive. | Performance metric, turn counting |
-| 24 | Hit Feedback | When a shot hits, briefly FLASH the hit cell on the tracking grid. A moment of visual drama before the `X` settles in. FLASH 1 for one redraw cycle, then FLASH 0. | FLASH for emphasis, timed visual effect |
-| 25 | Sunk Fanfare | When a ship sinks, play a descending BEEP sequence — three or four notes dropping in pitch. More dramatic than a single BEEP. Distinct from the hit sound. | Multi-note BEEP sequences, audio design |
-| 26 | Win Celebration | The winner gets a full celebratory sequence: ascending BEEPs, FLASH on the winning message, both boards revealed showing all ships. The loser sees where their hidden ships were. | End-game presentation, board reveal |
+| 24 | Direct Attribute POKE | Hit feedback using direct POKE to the attribute file (22528+) for speed. When a shot hits, a flash ripple races across the ship's cells — faster than PRINT AT could manage. When a ship sinks, colour drains cell by cell as the ship fades to black, with a descending tone. Every hit and miss is a dramatic event. | Direct attribute POKE (22528+), fast colour effects, visual drama |
+| 25 | Sunk Fanfare | When a ship sinks, play a descending BEEP sequence — three or four notes dropping in pitch. The sunk ship's cells change to INVERSE. "You sank the [name]!" appears. More dramatic than a single BEEP. | Multi-note BEEP sequences, INVERSE for sunk ships, audio design |
+| 26 | Win Celebration | The winner gets a full celebratory sequence: ascending BEEPs, FLASH on the winning message, both boards revealed showing all ships. The loser sees where their hidden ships were. FLASH and INVERSE carry information throughout — not decoration. | End-game presentation, board reveal, FLASH/INVERSE as information design |
 | 27 | Input Robustness | Handle all bad input gracefully: too short, too long, letters out of range, numbers out of range, missing direction during placement, lowercase letters. Never crash, always explain. | Defensive input handling, string length checks |
 | 28 | Placement Review | After placing all 5 ships, show the complete fleet and ask "Happy with this layout? (Y/N)". If no, clear the grid and start placement again. A chance to fix mistakes. | Confirmation step, grid reset |
 | 29 | Rematch | After a game ends, offer "Play again? (Y/N)". If yes, clear all four arrays, reset all counters, and start fresh placement. No need to re-run the program. | Full game reset, replay loop |
@@ -269,4 +269,5 @@ Four 10×10 arrays (400 numeric values), ship tracking arrays, and ~300 lines of
 
 ## Changelog
 
+- **v1.1 (2026-03-16):** Added direct attribute-file POKE for hit ripples and sunk colour drain (Unit 24). FLASH/INVERSE positioned as information design throughout. Per visual progression plan.
 - **v1.0 (2026-03-13):** Initial game outline for v5.0 curriculum.

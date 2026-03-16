@@ -91,11 +91,11 @@ Five levels. Completing all five shows a victory screen with the final score.
 | 11 | The Timer | A countdown number in the HUD. Decrements once per N iterations of the game loop. When it hits zero, the level ends regardless of remaining coins. | Timer variable, decrement per N ticks, time pressure |
 | 12 | Level Complete | All coins collected (or timer expired): brief "LEVEL COMPLETE" message with bonus points if all coins were grabbed. Then the next level loads. | Level transition, bonus scoring, state change between levels |
 | 13 | Level Progression | Five levels, each harder. More hazards, fewer seconds, higher coin value. Level data stored in variables that change at each transition — no DATA statements needed for this. | Difficulty scaling, variables as level parameters |
-| 14 | GO SUB for Structure | The main loop is getting tangled. Extract the drawing code into a GO SUB at line 500, collision checking into a GO SUB at line 600, and the HUD update into a GO SUB at line 700. The main loop becomes: read input, update position, GO SUB 500, GO SUB 600, GO SUB 700, loop. | GO SUB / RETURN, subroutine structure, separating concerns |
-| 15 | Sound and Polish | Coin collect: short rising BEEP. Hazard hit: low descending BEEP. Level complete: three-note ascending phrase. Game over: descending phrase. Border colour matches the current level (green, cyan, yellow, magenta, red). | Sound design with BEEP, BORDER as level indicator, game feel |
+| 14 | PEEK Timing | The game speed varies depending on how many coins and hazards are on screen. Fix it: `PEEK 23672` reads the Spectrum's frames counter. Wait until the counter changes before processing the next loop iteration. Now movement is consistent — smooth and predictable regardless of screen content. | `PEEK` 23672 (frames counter), consistent game speed, hardware access |
+| 15 | Screen Transitions | Between levels, the screen doesn't just CLS — colour drains away. POKE to the attribute file (22528+) row by row, setting each character cell to PAPER 0 / INK 0. The level fades to black before the new one appears. Coins glitter with FLASH. Hazards pulse with alternating INK. Sound polish: coin collect, hazard hit, level complete, game over. | Attribute-file POKE (22528+), screen transitions, FLASH for items, sound design |
 | 16 | The Finished Game | Play through all five levels. Fix any bugs. Verify scoring, lives, timer, level transitions. Clean up the listing — consistent line numbering, REM comments for each section. A complete, playable, real-time game in ~60 lines. | Integration testing, code tidying, the complete game loop |
 
-**Milestone:** The learner has built their first real-time game. They understand the game loop (input, update, draw), INKEY$ polling, erase-and-redraw movement, collision detection, and GO SUB for code organisation. Every concept from Games 1-6 appears here in service of a game that feels alive.
+**Milestone:** The learner has built their first real-time game and touched the hardware directly. They understand the game loop (input, update, draw), INKEY$ polling, erase-and-redraw movement, collision detection, PEEK timing for consistent speed, and attribute-file POKE for atmospheric screen transitions. The game *feels* smooth because it *is* timed.
 
 ---
 
@@ -161,4 +161,5 @@ At ~60 lines with no UDGs or graphics commands, the program is tiny (~2-3 KB). P
 
 ## Changelog
 
+- **v1.1 (2026-03-16):** Added PEEK 23672 timing (Unit 14) and attribute-file POKE screen transitions (Unit 15). Removed GO SUB introduction (now in Game 6). Per visual progression plan.
 - **v1.0 (2026-03-13):** Initial game outline for v5.0 curriculum.

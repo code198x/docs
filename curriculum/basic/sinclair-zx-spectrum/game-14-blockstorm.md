@@ -252,10 +252,10 @@ Multiple enemy types, 10 waves, power-ups, optimisation, and the honest performa
 | 28 | Optimisation Pass | Speed up the critical path. Shorter variable names (`a` not `score`). Move frequently called GO SUBs to low line numbers (the interpreter searches from line 1). Avoid unnecessary PRINT AT calls — only redraw what changed. Measure the improvement. | Short variable names, GO SUB placement, selective redraw, integer tricks |
 | 29 | Extra Life and Invasion | Award one extra life at 2,000 points — BEEP fanfare, new life appears in HUD. One only. If the formation descends to the player's row: "INVADED!" and instant game over regardless of lives. | Threshold bonus, one-shot trigger, invasion fail state |
 | 30 | High Score Table | Game over: if the score beats the high score, prompt for 3 initials. Store top 3 scores in arrays. Display the table: rank, initials, score. Session only — lost on reset. | Name entry, array sorting, formatted table display |
-| 31 | The Limits of BASIC | A reflective unit. The learner measures loop time at wave 1 (fast) and wave 10 (slow). They calculate why: each PRINT AT takes time, each variable lookup is a linear search, each GO SUB scans from line 1. The same game in assembly would run at 50fps with 100 enemies. This is why the assembly track exists. | Performance analysis, interpreter overhead, bridge to assembly |
-| 32 | The Finished Game | Clean listing. Title screen, 10 waves, 4 enemy types, 2 power-ups, explosions, formation movement, diving scouts, bombing runs, high score table. Under 400 lines. The Spectrum BASIC track's peak — and its honest ending. | Code review, final integration, completion |
+| 31 | Machine Code Helpers | The big unlock. Store a small Z80 routine in DATA statements: a fast screen clear (a few bytes that clear the screen in one frame instead of BASIC's slower CLS). POKE the bytes into spare RAM. Call it with `RANDOMIZE USR address`. The game runs faster than BASIC should allow. The learner has written their first assembly — embedded in BASIC. They understand why it's faster. They know what every byte does. Add `IN 31` for Kempston joystick support — arcade-feel input. | Machine code helpers (DATA/POKE/RANDOMIZE USR), `IN` 31 (Kempston joystick), the bridge to assembly |
+| 32 | The Finished Game | Clean listing. Title screen, 10 waves, 4 enemy types, 2 power-ups, explosions, formation movement, diving scouts, bombing runs, high score table, machine code helpers. Under 400 lines. The Spectrum BASIC track's peak — and the moment the learner punches through BASIC's ceiling. | Code review, final integration, the bridge to assembly |
 
-**Milestone:** A complete vertical shooter with 10 waves, 4 enemy types, 2 power-ups, diving scouts, bombing runs, formation patterns, a high score table, and the measured, documented performance ceiling that makes assembly necessary. Would fill two pages of a magazine listing.
+**Milestone:** A complete vertical shooter with 10 waves, 4 enemy types, 2 power-ups, diving scouts, bombing runs, formation patterns, a high score table, machine code helpers, and Kempston joystick support. The learner has hit the performance ceiling — and punched through it. They've written their first assembly, embedded in BASIC. They understand why it's faster. They know what every byte does. This is the bridge to the assembly track.
 
 ---
 
@@ -371,5 +371,6 @@ The Spectrum 48K has no ELSE keyword. All branching uses `IF condition THEN GO T
 
 ## Changelog
 
+- **v2.1 (2026-03-16):** Added machine code helpers via DATA/POKE/USR (Unit 31), IN 31 Kempston joystick support. Per visual progression plan.
 - **v2.0 (2026-03-13):** Rewritten for v5.0 curriculum. Now Game 14 with 32 units (was Game 4 with 64 units). Compressed from 20 waves to 10, 4 power-ups to 2, removed bosses, attract mode, and difficulty select. Core experience preserved: UDG graphics, formation shooting, the performance ceiling lesson.
 - **v1.0 (2026-03-09):** Initial game outline as Game 4 in the v4.0 curriculum. 64 units across 4 phases.

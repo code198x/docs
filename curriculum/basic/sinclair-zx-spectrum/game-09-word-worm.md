@@ -96,7 +96,7 @@ The player advances a level every 10 words completed.
 | 7 | Building the Input String | As the player types correct characters, build a display string character by character: LET t$ = t$ + k$. Show the growing string at the bottom of the screen in green INK. A visible, growing progress indicator. | String building by concatenation, character-by-character construction, visual feedback |
 | 8 | Completing a Word | When the player types the last character (position equals word length), the word is complete. Erase it from the screen, add to the score, BEEP, and pick the next word. The cycle begins again. | Completion detection (position = LEN), cycling through content, reset for next word |
 | 9 | Missing a Word | If the word reaches row 20: flash it red, increment the miss counter, remove it. Display misses in the HUD. Three misses and the game loop exits to a game over screen. | Miss detection, fail counter, game over condition |
-| 10 | The HUD | Top row: score, level, misses (shown as three hearts or symbols — lose one per miss). Bottom two rows: the target word and the player's typed progress. Clean, readable layout. | HUD with multiple data points, symbol-based life display |
+| 10 | The Game Frame | Build a polished game frame using CHR$ 128-143 — the Spectrum's built-in block graphic characters. Box-drawing borders around the playing area, score panels with block-graphic number frames, arrows indicating the fall direction. The game looks like a real application, not text on a blank screen. HUD: score, level, misses (shown as symbols). | CHR$ 128-143 (block graphic characters), screen framing, box-drawing borders |
 | 11 | Increasing Difficulty | Every 10 completed words, increase the level. Lower the fall speed threshold. Select longer words from the array (levels 1-2 use indices 1-20, levels 3-4 use 15-35, level 5 uses 30-50, with overlap for variety). | Level progression, difficulty as variable, array index ranges |
 | 12 | Multiple Words | From level 3, a second word appears while the first is still falling. Track two (then three) words simultaneously: arrays for each word's row, column, and text. The active target is always the lowest word. | Multiple active objects, parallel tracking arrays, selecting the most urgent target |
 | 13 | GO SUB Dispatch | The game loop now juggles: move words, check input, check misses, update HUD. Organise with GO SUBs: GO SUB 500 moves all falling words, GO SUB 600 handles input, GO SUB 700 checks for misses, GO SUB 800 updates the HUD. | GO SUB as dispatch, multiple subroutines called per tick, code organisation for complexity |
@@ -104,7 +104,7 @@ The player advances a level every 10 words completed.
 | 15 | Sound and Polish | Word complete: rising BEEP (pitch based on word length — longer words, higher note). Miss: low BEEP. Streak: three ascending notes. Game over: descending phrase. Border colour reflects current level. | Sound variety, pitch as data, visual polish |
 | 16 | The Finished Game | Play through all five levels. Verify word selection, fall speed, multiple words, streak tracking, scoring. Test edge cases: what if two words reach the bottom on the same tick? What if the player completes a word just as it reaches the bottom row? Clean the listing. ~80 lines of working, tested code. | Edge case testing, full integration, the finished product |
 
-**Milestone:** The learner can work with string arrays, build strings character by character, use CHR$ and CODE, and manage multiple moving objects on screen. These skills — especially character-level string handling and string arrays — are essential for the text adventure parser in later games.
+**Milestone:** The learner can work with string arrays, build strings character by character, use CHR$ and CODE, and manage multiple moving objects on screen. CHR$ 128-143 unlocks the Spectrum's built-in block graphic characters — box-drawing, arrows, symbols — transforming the game from text on a black screen to a polished application with proper framing. These skills — especially character-level string handling, string arrays, and the full character set — are essential for the text adventure parser in later games.
 
 ---
 
@@ -193,4 +193,5 @@ The only risk is BEEP: Sinclair BASIC's BEEP blocks the entire program for its d
 
 ## Changelog
 
+- **v1.1 (2026-03-16):** Added CHR$ 128-143 block graphics for screen framing (Unit 10). Per visual progression plan.
 - **v1.0 (2026-03-13):** Initial game outline for v5.0 curriculum.

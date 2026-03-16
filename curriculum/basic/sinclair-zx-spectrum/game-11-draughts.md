@@ -90,10 +90,10 @@ Build the board display, place pieces, handle basic movement and single captures
 
 | Unit | Title | What the learner builds | New concepts |
 |------|-------|------------------------|---------------|
-| 1 | The Board Array | A 2D array `DIM b(8,8)` to represent the board. Values: 0=empty, 1=player 1 piece, 2=player 2 piece (kings added later). Fill the starting positions with a loop. | Board state as 2D array, initialisation pattern |
-| 2 | Drawing the Board | PRINT AT loop draws the 8×8 grid. Alternating PAPER colours for dark and light squares. Empty board — no pieces yet, just the chequerboard pattern. | PRINT AT with INK/PAPER per cell, alternating colour pattern |
-| 3 | Drawing Pieces | Read the board array and draw pieces on their squares. Player 1 pieces in red, Player 2 in green. The board looks like a real draughts game. | Mapping array data to screen display, colour per player |
-| 4 | Row and Column Labels | Add labels: A-H across the top, 1-8 down the side. These give the player coordinates to reference when entering moves. | Formatted display layout, CHR$ for letters |
+| 1 | Custom Character Set | Design a bespoke font for the game: custom pieces, board border characters, and a distinctive alphabet. Define each character as 8 bytes and POKE them into memory. POKE 23606/23607 (the CHARS system variable) to install the new font. The entire game has its own typeface. | Custom character sets via POKE CHARS (23606/23607), character design as graphic design |
+| 2 | The Board Array | A 2D array `DIM b(8,8)` to represent the board. Values: 0=empty, 1=player 1 piece, 2=player 2 piece (kings added later). Fill the starting positions with a loop. | Board state as 2D array, initialisation pattern |
+| 3 | Drawing the Board | PRINT AT loop draws the 8×8 grid using custom characters for squares, borders, and labels. Alternating PAPER colours for dark and light squares. The board looks nothing like standard Spectrum text — every character is designed. | PRINT AT with custom characters, visual identity |
+| 4 | Pieces and Labels | Read the board array and draw custom piece characters on their squares. Player 1 pieces in red, Player 2 in green. Add labels: A-H and 1-8 in the custom font. The board looks like a real game — every visual element is hand-designed. | Mapping array data to screen display, colour per player, formatted layout |
 | 5 | Turn Tracking | A variable tracks whose turn it is (1 or 2). Display "Player 1's turn" or "Player 2's turn" below the board. Alternates after each valid move. | Turn-based flow, state variable |
 | 6 | Reading Input | INPUT a move string like "C3 D4". Parse it into four values: source column, source row, destination column, destination row. Handle the letter-to-number conversion (A=1, B=2, etc.). | String parsing, CODE for letter conversion, input validation |
 | 7 | Validating the Source | Check that the source square contains the current player's piece. "No piece there" if empty. "That's not your piece" if it belongs to the opponent. | Multi-condition validation, clear error messages |
@@ -107,7 +107,7 @@ Build the board display, place pieces, handle basic movement and single captures
 | 15 | Subroutine Structure | Organise the code into GO SUBs: draw board, read input, validate move, make move, check capture. The main loop calls each in sequence. | Code organisation at scale, GO SUB architecture |
 | 16 | Two-Player Game | Two players can take turns, move pieces diagonally, and capture opponent pieces. Invalid moves are rejected with clear messages. The board updates correctly after every move. | Integration milestone, end-to-end play |
 
-**Milestone:** A working two-player draughts game with board display, piece movement, single captures, and input validation. Two people can sit down and play — though kings, mandatory captures, and win detection are still to come.
+**Milestone:** A working two-player draughts game with a custom character set, board display using hand-designed pieces, piece movement, single captures, and input validation. The game looks nothing like standard Spectrum text. Two people can sit down and play — though kings, mandatory captures, and win detection are still to come.
 
 ### Phase 2: Full Rules and Polish (Units 17-32)
 
@@ -204,4 +204,5 @@ The Spectrum 48K has no ELSE keyword. All branching uses `IF condition THEN GO T
 
 ## Changelog
 
+- **v1.1 (2026-03-16):** Added custom character set via POKE CHARS (Unit 1). Restructured early units to front-load character design. Per visual progression plan.
 - **v1.0 (2026-03-13):** Initial game outline for v5.0 curriculum.
