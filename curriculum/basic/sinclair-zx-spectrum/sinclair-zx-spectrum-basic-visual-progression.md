@@ -89,29 +89,29 @@ The learner types about 100 lines — many of them are subroutines they'll under
 
 **Visual toolkit gained:** PAPER, INK, BORDER, BRIGHT, BEEP, block-pixel rendering from DATA.
 
-#### Game 2: Countdown — *The screen is alive*
+#### Game 2: Bomb Defusal — *The screen reacts in real time*
 
-CLS wipes clean between rounds. Ticking BEEP builds tension during the countdown. PAUSE controls pacing. The screen flashes on reaction. Results appear with colour-coded speed ratings.
+Big block-pixel digits count down on screen — reusing Game 1's digit renderer in a new context. A burning fuse creeps across the display with a red spark. Four coloured wires wait to be cut. The border shifts from safe green through warning yellow to danger red as time runs out. INKEY$ gives instant input — no waiting for ENTER. Cut the wrong wire and the screen strobes with an explosion.
 
-The screen isn't static text any more — it changes, reacts, and has rhythm.
+The screen isn't static text any more — it reacts in real time, moment by moment.
 
-**Visual toolkit gained:** CLS, PAUSE, BEEP for rhythm, screen-as-sequence.
+**Visual toolkit gained:** CLS, PRINT AT, PAUSE, BEEP, INKEY$, block-pixel digits in a new context.
 
 #### Game 3: Colour Flood — *I can fill the screen*
 
-Full-screen pattern fills: stripes, checkerboards, random splashes, colour spirals. Nested FOR/NEXT loops paint the screen cell by cell. The learner experiments with all 15 colours (8 base + BRIGHT) and discovers the colour model.
+Four chunky colour panels (7x8 blocks each) dominate the screen. Simon plays a sequence — each panel flashes with BRIGHT, accompanied by a distinct BEEP tone. The learner watches, then repeats. Sequences grow longer, stored in strings. GO SUB draws and redraws the panels cleanly. The learner experiments with all 15 colours (8 base + BRIGHT) and discovers colour as a system, not a decoration.
 
-The entire screen becomes a canvas. The learner understands the 32×24 grid and the 8-colour palette.
+The entire screen becomes a canvas. Colour carries meaning — each panel is identified by its colour alone.
 
-**Visual toolkit gained:** FOR/NEXT, nested loops, BRIGHT, colour as a system.
+**Visual toolkit gained:** FOR/NEXT, BRIGHT, colour as a system, GO SUB for reusable drawing.
 
-#### Game 4: Hot and Cold — *I can put things where I want*
+#### Game 4: Hot and Cold — *Things move*
 
-A cursor moves smoothly across the screen. The border pulses through a temperature gradient: cold blue → warm yellow → hot red → white-hot. PRINT AT gives spatial control — the learner places things where they choose, not where the cursor happens to be.
+A cursor moves continuously across the screen, erase-and-redraw in a game loop. The border pulses through a temperature gradient: cold blue → warm yellow → hot red → white-hot. The learner already knows PRINT AT from Game 2 — now they use it for something that moves. Every frame: erase the old position, draw the new one, check the distance, update the border.
 
-This is the first game that feels spatial. The screen is a coordinate grid, not a scrolling text terminal.
+This is the first game with a proper game loop. The screen updates continuously, not in response to a single keypress.
 
-**Visual toolkit gained:** PRINT AT, coordinates, smooth erase-and-redraw, border as feedback.
+**Visual toolkit gained:** Game loop, continuous movement, erase-and-redraw, border as feedback.
 
 #### Game 5: Word Scramble — *Content comes from data*
 
@@ -125,7 +125,7 @@ GO SUB draws formatted question cards with coloured borders. Category headers in
 
 **Visual toolkit gained:** GO SUB/RETURN, RESTORE, structured screen layout, reusable drawing routines.
 
-**Cumulative effect after Foundations:** The learner can set colours, make sounds, clear and redraw the screen, position anything anywhere, store content in DATA, and organise code with GO SUB. Their programs fill the screen with colour and respond to input in real time. They look like real Spectrum software.
+**Cumulative effect after Foundations:** The learner can set colours, make sounds, position anything anywhere with PRINT AT, respond to instant input with INKEY$, run a game loop with continuous movement, store content in DATA, and organise code with GO SUB. Their programs fill the screen with colour and react in real time. They look like real Spectrum software.
 
 ---
 
@@ -240,9 +240,9 @@ Both paths lead somewhere worth going.
 ```
 FOUNDATIONS — "It looks like a game"
   Game  1  Lucky Number ......... Colour + sound + block graphics
-  Game  2  Countdown ............ Screen reacts in real time
-  Game  3  Colour Flood ......... Full-screen pattern fills
-  Game  4  Hot and Cold ......... Spatial control (PRINT AT)
+  Game  2  Bomb Defusal ......... Real-time countdown, INKEY$, block digits
+  Game  3  Colour Flood ......... Chunky colour panels, BRIGHT, GO SUB
+  Game  4  Hot and Cold ......... Game loop, continuous movement
   Game  5  Word Scramble ........ Data-driven content
   Game  6  Quiz Master .......... Structured, reusable presentation
 
