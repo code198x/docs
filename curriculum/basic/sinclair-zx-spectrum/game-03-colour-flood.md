@@ -4,93 +4,52 @@
 **Genre:** Colour memory (Simon Says)
 **Units:** 8
 **Language:** Sinclair BASIC
-**Max lines:** ~65
+**Final size:** ~90 lines
 
 ---
 
 ## Premise
 
-The Spectrum's border floods with colour — a sequence of flashes, each with its own tone. Watch, memorise, repeat. Get it right and the sequence grows by one. Get it wrong and the game is over. How long a sequence can you remember?
+Four big coloured panels fill the screen: blue, red, green, yellow. The Spectrum plays a sequence — one panel lights up bright with a distinct tone, then fades back. Watch, memorise, repeat. Get it right and the sequence grows by one. Get it wrong and it's game over. How long can you remember?
 
-This is Simon Says for the Spectrum. The border is the display — it fills with a colour that's impossible to miss. Each colour has its own pitch, so you can hear the sequence as well as see it. The colour key on screen maps numbers 1-7 to colours, so the player always knows what to press.
+This is Simon Says for the Spectrum. The panels are impossible to miss — each one flashes bright across 8 rows of the screen. Each colour has its own pitch, so you hear the sequence as well as see it. The difficulty scales naturally: a 3-colour sequence is easy; a 10-colour sequence is genuinely hard.
 
-The game teaches FOR/NEXT properly (playing and checking sequences), the Spectrum's colour model (all 7 colours plus their sounds), and string manipulation in its simplest form (building and reading a sequence string).
+The game teaches FOR/NEXT (playing and checking sequences), the Spectrum's colour model (PAPER colours, BRIGHT), and string manipulation in its simplest form (building and reading a sequence stored as a string).
 
 ---
 
 ## Core Mechanics
 
-A string `s$` stores the sequence as digit characters ("2", "46", "463"...). Each round appends a random colour (1-7). A FOR/NEXT loop plays the sequence by flashing the border and BEEPing for each character. The player repeats the sequence by pressing number keys. Each keypress is checked against the string. Wrong answer = game over. Correct full sequence = score +1, sequence grows.
+A string `s$` stores the sequence as digit characters ("1", "13", "132"...). Each round appends a random colour (1-4). A FOR/NEXT loop plays the sequence: for each character, the matching panel flashes bright with PAPER and BRIGHT, the border changes to that colour, a BEEP sounds at a colour-specific pitch, then the panel dims back. The player repeats the sequence by pressing number keys 1-4. Each keypress is checked against the string. Wrong = game over with explosion strobe. Correct full sequence = score +1, sequence grows.
+
+### The Panels
+
+Four panels arranged in a row, each 7 columns wide × 8 rows tall. Drawn by a subroutine at line 400. Colours: PAPER 1 (blue), PAPER 2 (red), PAPER 4 (green), PAPER 6 (yellow). Each panel has a centred number label (1-4).
+
+### The Flash
+
+A subroutine at line 500 draws a single panel in BRIGHT 1, changes the border to that colour, and plays a BEEP. Each colour has its own pitch: blue=5, red=10, green=15, yellow=20. After a brief PAUSE, the dim subroutine redraws all panels at normal brightness.
+
+### Sound Design
+
+Each colour has a distinct pitch, spaced 5 semitones apart. The sequence becomes a melody — experienced players recognise patterns by sound as well as colour. The "correct" jingle plays two high notes. The "wrong" strobe plays alternating low tones.
 
 ---
 
 ## Unit Breakdown
 
-### Unit 1: Counting
+| Unit | Title | What the learner builds | New concepts |
+|------|-------|------------------------|-------------|
+| 1 | Counting | FOR/NEXT counts to 10, backwards, in twos. The loop variable changes each pass. The learner experiments with different start, end, and STEP values. | FOR/NEXT, loop variable, STEP |
+| 2 | The Colour Palette | A FOR loop cycles PAPER through all colours, printing coloured blocks across the screen. The learner sees all 8 colours (0-7) and discovers BRIGHT doubles the palette. One loop fills the screen with colour. | PAPER in loops, the 8 colours, BRIGHT |
+| 3 | Four Panels | Draw four big coloured panels across the screen using nested loops and PRINT AT with PAPER. Each panel is 7 columns × 8 rows. Number labels centred on each panel. The game screen exists. | PAPER with PRINT AT for large blocks, screen layout with colour |
+| 4 | Flash and Fade | A subroutine flashes one panel bright (PAPER + BRIGHT 1), plays a BEEP at a colour-specific pitch, then a second subroutine redraws all panels at normal brightness. The learner calls GO SUB to flash panel 2, panel 4, any panel. | GO SUB for reusable drawing, BRIGHT 1 for emphasis, BEEP per colour |
+| 5 | Play a Sequence | Store a sequence in a string: `LET s$ = "132"`. A FOR loop reads each character with `VAL s$(i TO i)` and flashes the matching panel. The panels light up in order — a visible, audible pattern. | Strings as data, LEN, VAL, STR$, FOR/NEXT to iterate a string |
+| 6 | Your Turn | After the sequence plays, the player repeats it. INKEY$ waits for key 1-4. Each keypress flashes the matching panel and checks against the expected colour. Wrong = game over. Right = next in sequence. | INKEY$ for input, comparing player input against stored sequence |
+| 7 | Growing Sequences | Replace the fixed sequence with a growing one. Each round appends a random colour: `LET s$ = s$ + STR$ (INT (RND*4)+1)`. Score tracks completed rounds. "Correct!" between rounds. GO TO loops back. | String concatenation with RND, growing data, score tracking |
+| 8 | The Finished Game | Title screen with colour panels and instructions. Results screen with animated score count-up and ratings. Explosion strobe on game over. Border resets between phases. The complete game. | Title/results screens, rating tiers, program structure |
 
-**Concept:** FOR/NEXT, loop variable, STEP
-
-The formal introduction to FOR/NEXT. Count to 10, count backwards, count in twos. See how the loop variable changes each pass.
-
----
-
-### Unit 2: The Border Rainbow
-
-**Concept:** BORDER, the 7 colours (1-7), BEEP per colour
-
-Cycle the border through all seven colours with a different BEEP tone for each. The learner sees and hears the colour-to-number mapping. Colour 0 (black) is excluded because it's invisible against the black screen.
-
----
-
-### Unit 3: The Game Screen
-
-**Concept:** PAPER, INK, BRIGHT, building a visual layout
-
-Build the game screen: blue header bar, colour reference key (seven coloured blocks labelled 1-7), score display, status message. Uses FOR/NEXT to draw the header bar and the colour key.
-
----
-
-### Unit 4: Play a Sequence
-
-**Concept:** Strings as data, LEN, VAL, STR$, FOR/NEXT to iterate
-
-Store a fixed sequence in a string (`LET s$="246"`). Loop through it with FOR/NEXT, using `VAL s$(i)` to extract each colour number. Flash the border and BEEP for each one. The learner sees a FOR/NEXT loop reading data from a string — each character is a colour instruction.
-
----
-
-### Unit 5: Your Turn
-
-**Concept:** INKEY$ for input, comparing keys to expected values, debounce
-
-After the sequence plays, the player repeats it. A FOR/NEXT loop checks each keypress against the string. Correct = border flashes the colour with a tone. Wrong = game over with an error BEEP.
-
----
-
-### Unit 6: Growing Sequences
-
-**Concept:** String concatenation, RND, the game loop
-
-Replace the fixed sequence with a growing one. Each round: `LET s$=s$+STR$(INT(RND*7)+1)` appends a random colour. The sequence starts at length 1 and grows by one each round. GO TO loops back for the next round after a correct answer.
-
----
-
-### Unit 7: Scoring and Game Over
-
-**Concept:** Score tracking, IF/THEN rating tiers, game flow
-
-Add a score counter that increments each round. On game over, show the score and a rating tier. "Correct!" flashes green between rounds. "Wrong! Game over." flashes red with a low BEEP.
-
----
-
-### Unit 8: Polish
-
-**Concept:** Speed, difficulty, sound design, the complete game
-
-Speed up the sequence playback as the score increases (shorter PAUSE values). Add BRIGHT to the colour key. Design the sound profile — each colour's BEEP pitch should feel distinct and memorable. The complete game.
-
----
-
-**Milestone:** The learner understands FOR/NEXT loops, the Spectrum's colour model, string basics (LEN, VAL, STR$, concatenation), and has built a genuinely fun memory game. The border-flooding visual and per-colour sounds make this a sensory experience, not just a logic exercise.
+**Milestone:** The learner understands FOR/NEXT loops, BRIGHT, the colour model, and has built a genuinely fun memory game using strings to store growing data. The four chunky panels and per-colour tones make this a sensory experience, not a logic exercise.
 
 ---
 
@@ -98,34 +57,45 @@ Speed up the sequence playback as the score increases (shorter PAUSE values). Ad
 
 ### Key Variables
 
-```
-s$  - the sequence string (e.g. "2463")
-sc  - score (number of completed rounds)
-c   - current colour number being played/checked
-k$  - the key the player pressed
-i   - loop counter for sequence playback and checking
-```
+| Variable | Purpose |
+|----------|---------|
+| `s$` | The sequence string (e.g. "1324") |
+| `sc` | Score (completed rounds) |
+| `c` | Current colour number being played/checked |
+| `e` | Expected colour from sequence |
+| `k$` | Player's keypress |
+| `i` | Loop counter for playback and checking |
+| `px` | Panel x-position (column) |
+
+### Four Colours Not Seven
+
+The v2 prototype used 7 colours (matching the Spectrum's palette). The v3 uses 4 — blue (1), red (2), green (4), yellow (6). Four is plenty for Simon Says: the original game only had four. Fewer colours means the panels can be bigger, the key mapping is simpler (1-4 not 1-7), and the game is accessible to younger learners.
+
+The skipped colours (3=magenta, 5=cyan, 7=white) could return as BRIGHT variants in a "Try This" extension — expanding the palette adds difficulty.
+
+### Panel Drawing
+
+Each panel occupies 7 columns × 8 rows. The four panels sit at columns 1, 9, 17, 25 — filling 28 of the 32 available columns with 1-column gaps between them. Rows 3-10, leaving room for the header (row 0) and status messages (row 19).
+
+### String as Sequence Storage
+
+`s$` grows by one character each round. Character `i` holds the colour for step `i` of the sequence. `VAL s$(i TO i)` converts it back to a number for the panel flash. This is the learner's first use of strings as structured data — the same idea that will drive DATA/READ in Game 5.
 
 ### Line Numbering
 
-- 1-18: Setup and header bar
-- 20-30: Colour key and initial display
-- 32-34: Variable initialisation
-- 40-66: New round and sequence playback
-- 70-110: Player input and checking
-- 112-126: Round complete / game over
-
-### Spectrum-Specific Notes
-
-- `STR$ n` converts a number to a string. `VAL s$` converts a string to a number. These are how the sequence string stores and retrieves colour numbers.
-- `s$(i)` reads the i-th character of string `s$`. On the Spectrum, string indexing starts at 1, not 0.
-- Colours 1-7 are used (not 0) because BORDER 0 is black and invisible against the black screen background.
-- Each colour gets a BEEP at `c*3` semitones — this spaces the tones evenly so each colour sounds distinct.
+- 1-5: Initialisation
+- 10-46: Title screen
+- 48-68: Game screen setup
+- 80-152: Game loop (new round, play sequence, player input, correct)
+- 200-258: Game over and results
+- 400-424: Draw panels subroutine (dim)
+- 500-522: Flash panel subroutine (bright)
 
 ---
 
 ## Changelog
 
-- **v3.0 (2026-03-16):** Complete redesign as Simon Says colour memory game. Replaced screen-filling visual toy with a proper game.
-- **v2.0 (2026-03-16):** Visual-first screen-filling patterns (replaced — too much tech demo, not enough game).
-- **v1.0 (2026-03-13):** Initial game outline for v5.0 curriculum.
+- **v4.0 (2026-03-17):** Four chunky colour panels (7×8 blocks), distinct BEEP per colour, GO SUB for flash/dim, proper title and results screens. Prototype tested in Emu198x.
+- **v3.0 (2026-03-16):** Simon Says redesign with border flashes.
+- **v2.0 (2026-03-16):** Screen-filling patterns (replaced — too much tech demo).
+- **v1.0 (2026-03-13):** Initial game outline.
