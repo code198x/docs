@@ -23,7 +23,7 @@ The progression isn't "learn commands." It's "take control of the machine."
 3. **Control the hardware** (Projects, Games 11–14)
 4. **Own the machine** (Advanced + Capstone, Games 15–16)
 
-By Game 14, the learner is writing machine code snippets, designing custom character sets, and manipulating screen memory directly. By Game 16, they've built an illustrated text adventure with autonomous NPCs and atmospheric lighting — all in BASIC, on a machine from 1982. And they've been writing assembly in DATA statements for three games. The assembly track isn't a scary new world. It's the thing they've been reaching for every time BASIC wasn't fast enough.
+By Game 14, the learner is writing machine code snippets, designing custom character sets, and manipulating screen memory directly. By Game 16, they've built a top-down adventure with connected screens, autonomous NPCs, and atmospheric lighting — all in BASIC, on a machine from 1982. And they've been writing assembly in DATA statements for three games. The assembly track isn't a scary new world. It's the thing they've been reaching for every time BASIC wasn't fast enough.
 
 ---
 
@@ -133,13 +133,13 @@ GO SUB draws formatted question cards with coloured borders. Category headers in
 
 The leap from static displays to dynamic worlds. Characters move. Enemies chase. The screen transitions between levels. The learner's games have *life*.
 
-#### Game 7: Treasure Hunt — *PEEK timing and screen effects*
+#### Game 7: Snake — *PEEK timing and continuous movement*
 
-Proper frame-rate timing via PEEK 23672 (the frames counter). Movement is smooth and consistent regardless of what's happening on screen. Screen transitions between levels: attribute wipe (POKE to the attribute file, row by row, fading to black before redrawing). Lives shown as character icons. Coins glitter with FLASH. Hazards pulse with alternating INK.
+Proper frame-rate timing via PEEK 23672 (the frames counter). The snake moves continuously — the learner steers, not steps. Movement is smooth and consistent regardless of what's happening on screen. The body trails behind in an array, growing with each pickup. Screen transitions between levels: attribute wipe (POKE to the attribute file, row by row, fading to black before redrawing). Hazards pulse with alternating INK.
 
 The game *feels* smooth because it *is* timed. This is the first game where the learner controls *when* things happen, not just *what* happens.
 
-**Visual toolkit gained:** PEEK for timing, attribute-file POKE for transitions, consistent frame rate.
+**Visual toolkit gained:** PEEK for timing, arrays for trailing movement, consistent frame rate.
 
 #### Game 8: Minefield — *ATTR collision and colour as data*
 
@@ -149,13 +149,13 @@ The learner discovers that the screen isn't just output — it's readable data.
 
 **Visual toolkit gained:** ATTR for collision/state, colour as information, cascading visual effects.
 
-#### Game 9: Word Worm — *CHR$ and the full character set*
+#### Game 9: Breakout — *CHR$ block graphics and pixel collision*
 
-Words cascade down the screen against a frame built from graphic characters (CHR$ 128–143). Block-graphic borders, box-drawing characters, arrows, and symbols create a polished game frame that looks like a real application. Score display uses block-graphic number frames. Correct completions burst with FLASH and ascending tone. Misses crash with descending tone and colour drain.
+Bricks built from CHR$ block characters fill the top of the screen. The ball bounces via PLOT/DRAW, checked with POINT for pixel-level collision. The bat moves smoothly along the bottom. Block-graphic borders frame the play area. Bricks shatter row by row with colour changes and descending tones. The ball leaves trails when OVER 1 is active.
 
-The learner discovers the full 256-character set — far more than just letters and numbers.
+The learner bridges character space and pixel space for the first time — bricks are characters, but the ball lives in pixels.
 
-**Visual toolkit gained:** CHR$ for graphic characters, screen framing with block graphics, visual polish through the full character set.
+**Visual toolkit gained:** CHR$ block graphics, PLOT/DRAW for movement, POINT for collision, character-pixel hybrid design.
 
 #### Game 10: Night Patrol — *OVER 1 and flicker-free movement*
 
@@ -173,29 +173,29 @@ This is the most complex game so far: an arcade experience with AI, levels, and 
 
 Custom character sets, pixel graphics, UDGs, and machine code helpers. The learner's output looks like commercial Spectrum software.
 
-#### Game 11: Draughts — *Custom character set*
+#### Game 11: Tarmac — *Custom character set*
 
-POKE to the CHARS system variable (23606/23607) installs a bespoke font. Board pieces aren't letters — they're hand-designed 8×8 pixel graphics that replace the standard character set. The entire game has its own typeface: a custom alphabet, custom numbers, custom border characters. Legal moves highlighted with colour. Captured pieces animate through character designs. The board is framed with custom box-drawing characters.
+POKE to the CHARS system variable (23606/23607) installs a bespoke font. Track tiles, kerbs, grass, barriers, and the player's car are all hand-designed 8×8 pixel graphics that replace the standard character set. The entire game has its own visual identity — every tile is designed, not default. The track scrolls downward as the car weaves through corners. Different surfaces use different character tiles, creating varied terrain from a single custom set.
 
 *The game looks nothing like standard Spectrum text.* Everything on screen is designed, not default.
 
-**Visual toolkit gained:** Custom character sets via POKE CHARS, character design as graphic design, visual identity.
+**Visual toolkit gained:** Custom character sets via POKE CHARS, tile design, visual identity through character replacement.
 
-#### Game 12: Battleships — *Attribute animation and dramatic reveals*
+#### Game 12: Flood — *Attribute animation and colour as mechanic*
 
-Direct POKE to the attribute file (22528+) for fast colour effects. Hit: a flash ripple across the ship's cells. Sunk: colour drains cell by cell as the ship fades to black, with a descending tone. The "pass the keyboard" screen uses INVERSE text and colour-cycling BORDER. Radar-style grid display with FLASH for active scanning.
+Direct POKE to the attribute file (22528+) for fast colour effects. Each turn floods connected cells with a new colour — the fill ripples outward, cell by cell, with a cascading POKE that transforms the board in real time. Colour *is* the game: the player's strategy is about which colour to choose, and the screen reflects every decision instantly. Fast attribute updates make the board feel alive.
 
-Every hit and miss is a dramatic event. FLASH and INVERSE carry information, not decoration.
+Colour isn't decoration here — it's the entire mechanic. The learner discovers that POKE to the attribute file is faster than PRINT, and uses that speed for gameplay.
 
-**Visual toolkit gained:** Direct attribute POKE for speed, FLASH/INVERSE as information design, dramatic visual events.
+**Visual toolkit gained:** Direct attribute POKE for speed, colour as game mechanic, flood fill as visual effect.
 
-#### Game 13: Lattice — *Pixel graphics*
+#### Game 13: Rooftops — *UDGs, animation, and jump physics*
 
-PLOT, DRAW, and CIRCLE create geometry in 256×176 pixel space. Smooth curves. Diagonal lines. Circles. Rotating shapes driven by SIN and COS. POINT-based collision — if the pixel is lit, you hit something. The game exists in pixel space, not character space. Combined with attribute colour for regions, it's visually unlike anything the learner has built before.
+USR-defined 8×8 sprites: a running character with animation frames, platforms, collectibles, and hazards. BIN notation for pixel-row design. Animation by cycling between UDG definitions — the character's legs move as they run. Jump physics give weight and momentum. Platform collision uses ATTR and SCREEN$ to read what's beneath the player's feet.
 
-This is the moment the Spectrum stops looking blocky.
+The game looks *authored* — every visual element is hand-designed, not assembled from default characters.
 
-**Visual toolkit gained:** PLOT/DRAW/CIRCLE, POINT, SIN/COS, pixel-coordinate thinking.
+**Visual toolkit gained:** UDGs via USR/BIN, animation frame cycling, character design as sprite design.
 
 #### Game 14: Blockstorm — *UDGs, animation, and machine code*
 
@@ -223,13 +223,13 @@ The wonder here isn't a visual technique. It's the moment the learner sees somet
 
 Machine code helpers handle fast room redraws and richer sound effects. SAVE/LOAD preserves the world state to tape. The learner's game has persistence — it outlasts a single session.
 
-#### Game 16: The Cursed Manor — *A living, illustrated world*
+#### Game 16: Thornwood Manor — *A living, top-down world*
 
-PLOT/DRAW illustrations for each room — real pictures, not character art or UDGs. A custom character set for the text interface: gothic, manor-appropriate, atmospheric. The command parser processes natural language. NPCs move autonomously through rooms the learner illustrated.
+Connected screens form a manor and its grounds, drawn with custom character tiles and UDGs. The player explores top-down, Zelda-style: rooms scroll into view as they cross screen boundaries. NPCs move autonomously between rooms on their own schedules. Items, doors, and combat use everything the learner has built across fifteen games.
 
-Attribute-based mood: frozen rooms are blue and cyan. As the curse lifts, rooms warm through yellow to white. The final moment: the curse breaks and colour floods back room by room — a cascading attribute POKE that transforms the manor from cold to alive.
+Attribute-based mood: cold rooms are blue and cyan. As the manor warms, rooms shift through yellow to white. The final moment: colour floods back room by room — a cascading attribute POKE that transforms the manor from frozen to alive.
 
-The learner who typed `10 PRINT "Hello"` in Game 1 has built a graphical adventure with illustrated rooms, autonomous characters, atmospheric lighting, a natural language parser, and hand-assembled machine code routines. Some learners will stay here and build more adventures. Others will look at those DATA/POKE/USR routines and think: what if I wrote the whole thing in assembly?
+The learner who typed `10 PRINT "Hello"` in Game 1 has built a top-down adventure with connected screens, autonomous characters, atmospheric lighting, items and combat, and hand-assembled machine code routines. Some learners will stay here and build more adventures. Others will look at those DATA/POKE/USR routines and think: what if I wrote the whole thing in assembly?
 
 Both paths lead somewhere worth going.
 
@@ -247,20 +247,20 @@ FOUNDATIONS — "It looks like a game"
   Game  6  Quiz Master .......... Structured, reusable presentation
 
 SKILLS — "It moves, it thinks, it fights back"
-  Game  7  Treasure Hunt ........ PEEK timing, smooth movement, screen transitions
+  Game  7  Snake ................ PEEK timing, continuous movement, arrays
   Game  8  Minefield ............ ATTR collision, colour as data, cascading reveals
-  Game  9  Word Worm ............ CHR$ graphic characters, polished screen framing
+  Game  9  Breakout ............. CHR$ block graphics, PLOT/DRAW, ball physics
   Game 10  Night Patrol ......... OVER 1 flicker-free movement, AI, level design
 
 PROJECTS — "This is real software"
-  Game 11  Draughts ............. Custom character set (POKE CHARS)
-  Game 12  Battleships .......... Direct attribute POKE, dramatic reveals
-  Game 13  Lattice .............. PLOT/DRAW/CIRCLE pixel graphics
-  Game 14  Blockstorm ........... UDGs, animation, machine code helpers
+  Game 11  Tarmac ............... Custom character set (POKE CHARS), tile design
+  Game 12  Flood ................ Direct attribute POKE, colour as mechanic
+  Game 13  Rooftops ............. UDGs, animation frames, jump physics
+  Game 14  Blockstorm ........... Machine code helpers, speed optimisation
 
 ADVANCED + CAPSTONE — "I own the machine"
   Game 15  Dungeons of Dorin .... Procedural generation, atmosphere, persistence
-  Game 16  The Cursed Manor ..... Illustrated rooms, autonomous NPCs, a living world
+  Game 16  Thornwood Manor ...... Connected screens, autonomous NPCs, a living world
 ```
 
 ---
