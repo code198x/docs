@@ -1,6 +1,6 @@
 # Sinclair ZX Spectrum BASIC — Visual Progression
 
-**Companion to:** sinclair-zx-spectrum-basic-curriculum.md (v5.0)
+**Companion to:** sinclair-zx-spectrum-basic-curriculum.md (v6.0)
 
 ---
 
@@ -12,7 +12,7 @@ Visual polish tracks genuine skill growth. Each game looks better than the last 
 
 ### The Subroutine Trick
 
-Early games use visual subroutines the learner doesn't yet fully understand. A rainbow title screen, a block-pixel font renderer, a temperature bar — these arrive as "type this in and see what happens" before the learner has the vocabulary to explain them. This is deliberate. The subroutines create wonder first and understanding later. Each visual technique is introduced separately: here's what it does, here's how to use it, and eventually, here's how it works.
+Early games use visual subroutines the learner doesn't yet fully understand. A rainbow title screen, a pixel-drawn digit renderer using PLOT and DRAW, a temperature bar — these arrive as "type this in and see what happens" before the learner has the vocabulary to explain them. This is deliberate. The subroutines create wonder first and understanding later. PLOT and DRAW appear from Game 1 as black boxes and are formally taught in Game 2. Each visual technique is introduced separately: here's what it does, here's how to use it, and eventually, here's how it works.
 
 ### The Hardware Arc
 
@@ -83,19 +83,19 @@ Each game introduces one visual dimension. By Game 6, the learner's programs loo
 
 #### Game 1: Lucky Number — *Colour and sound exist*
 
-Rainbow cascade title screen. Big block-pixel word art ("LUCKY NUMBER") rendered from DATA strings. A temperature bar that shifts from blue through yellow to red to white. Large digit display of the current guess. Border colour changes with distance. Victory celebration with ascending tones and colour flash.
+Rainbow cascade title screen. Title text drawn with PLOT and DRAW. A temperature bar that shifts from blue through yellow to red to white. Large pixel-drawn digits display the current guess. Border colour changes with distance. Victory celebration with ascending tones and colour flash.
 
-The learner types about 100 lines — many of them are subroutines they'll understand later. What matters now is the result: their first program looks like something from a magazine, not a textbook.
+The learner types about 100 lines — many of them are subroutines they'll understand later. What matters now is the result: their first program uses real pixel graphics and looks like something from a magazine, not a textbook.
 
-**Visual toolkit gained:** PAPER, INK, BORDER, BRIGHT, BEEP, block-pixel rendering from DATA.
+**Visual toolkit gained:** PAPER, INK, BORDER, BRIGHT, BEEP, PLOT/DRAW as black-box subroutines.
 
 #### Game 2: Wire Panic — *The screen reacts in real time*
 
-Big block-pixel digits count down on screen — reusing Game 1's digit renderer in a new context. A burning fuse creeps across the display with a red spark. Four coloured wires wait to be cut. The border shifts from safe green through warning yellow to danger red as time runs out. INKEY$ gives instant input — no waiting for ENTER. Cut the wrong wire and the screen strobes with an explosion.
+Pixel-drawn digits count down on screen — reusing Game 1's PLOT/DRAW renderer in a new context. A burning fuse drawn with DRAW creeps across the display. Four coloured wires wait to be cut. The border shifts from safe green through warning yellow to danger red as time runs out. INKEY$ gives instant input — no waiting for ENTER. Cut the wrong wire and the screen strobes with an explosion.
 
-The screen isn't static text any more — it reacts in real time, moment by moment.
+The screen isn't static text any more — it reacts in real time, moment by moment. PLOT and DRAW move from black boxes to understood tools.
 
-**Visual toolkit gained:** CLS, PRINT AT, PAUSE, BEEP, INKEY$, block-pixel digits in a new context.
+**Visual toolkit gained:** CLS, PRINT AT, PLOT, DRAW, PAUSE, BEEP, INKEY$.
 
 #### Game 3: Bright Spark — *I can fill the screen*
 
