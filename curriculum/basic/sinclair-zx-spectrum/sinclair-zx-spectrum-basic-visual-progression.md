@@ -89,7 +89,7 @@ The learner types about 100 lines — many of them are subroutines they'll under
 
 **Visual toolkit gained:** PAPER, INK, BORDER, BRIGHT, BEEP, block-pixel rendering from DATA.
 
-#### Game 2: Bomb Defusal — *The screen reacts in real time*
+#### Game 2: Wire Panic — *The screen reacts in real time*
 
 Big block-pixel digits count down on screen — reusing Game 1's digit renderer in a new context. A burning fuse creeps across the display with a red spark. Four coloured wires wait to be cut. The border shifts from safe green through warning yellow to danger red as time runs out. INKEY$ gives instant input — no waiting for ENTER. Cut the wrong wire and the screen strobes with an explosion.
 
@@ -97,7 +97,7 @@ The screen isn't static text any more — it reacts in real time, moment by mome
 
 **Visual toolkit gained:** CLS, PRINT AT, PAUSE, BEEP, INKEY$, block-pixel digits in a new context.
 
-#### Game 3: Colour Flood — *I can fill the screen*
+#### Game 3: Bright Spark — *I can fill the screen*
 
 Four chunky colour panels (7x8 blocks each) dominate the screen. Simon plays a sequence — each panel flashes with BRIGHT, accompanied by a distinct BEEP tone. The learner watches, then repeats. Sequences grow longer, stored in strings. GO SUB draws and redraws the panels cleanly. The learner experiments with all 15 colours (8 base + BRIGHT) and discovers colour as a system, not a decoration.
 
@@ -113,7 +113,7 @@ This is the first game with a proper game loop. The screen updates continuously,
 
 **Visual toolkit gained:** Game loop, continuous movement, erase-and-redraw, border as feedback.
 
-#### Game 5: Word Scramble — *Content comes from data*
+#### Game 5: Letter Soup — *Content comes from data*
 
 Words stored in DATA, read at runtime. Animated letter reveal — characters appear one at a time with ascending BEEP, building anticipation. The learner discovers they can change the game's content by editing DATA lines without touching the code.
 
@@ -133,7 +133,7 @@ GO SUB draws formatted question cards with coloured borders. Category headers in
 
 The leap from static displays to dynamic worlds. Characters move. Enemies chase. The screen transitions between levels. The learner's games have *life*.
 
-#### Game 7: Snake — *PEEK timing and continuous movement*
+#### Game 7: Tail Chase — *PEEK timing and continuous movement*
 
 Proper frame-rate timing via PEEK 23672 (the frames counter). The snake moves continuously — the learner steers, not steps. Movement is smooth and consistent regardless of what's happening on screen. The body trails behind in an array, growing with each pickup. Screen transitions between levels: attribute wipe (POKE to the attribute file, row by row, fading to black before redrawing). Hazards pulse with alternating INK.
 
@@ -149,7 +149,7 @@ The learner discovers that the screen isn't just output — it's readable data.
 
 **Visual toolkit gained:** ATTR for collision/state, colour as information, cascading visual effects.
 
-#### Game 9: Breakout — *CHR$ block graphics and pixel collision*
+#### Game 9: Brick Bash — *CHR$ block graphics and pixel collision*
 
 Bricks built from CHR$ block characters fill the top of the screen. The ball bounces via PLOT/DRAW, checked with POINT for pixel-level collision. The bat moves smoothly along the bottom. Block-graphic borders frame the play area. Bricks shatter row by row with colour changes and descending tones. The ball leaves trails when OVER 1 is active.
 
@@ -181,7 +181,7 @@ POKE to the CHARS system variable (23606/23607) installs a bespoke font. Track t
 
 **Visual toolkit gained:** Custom character sets via POKE CHARS, tile design, visual identity through character replacement.
 
-#### Game 12: Flood — *Attribute animation and colour as mechanic*
+#### Game 12: Ink Spill — *Attribute animation and colour as mechanic*
 
 Direct POKE to the attribute file (22528+) for fast colour effects. Each turn floods connected cells with a new colour — the fill ripples outward, cell by cell, with a cascading POKE that transforms the board in real time. Colour *is* the game: the player's strategy is about which colour to choose, and the screen reflects every decision instantly. Fast attribute updates make the board feel alive.
 
@@ -240,21 +240,21 @@ Both paths lead somewhere worth going.
 ```
 FOUNDATIONS — "It looks like a game"
   Game  1  Lucky Number ......... Colour + sound + block graphics
-  Game  2  Bomb Defusal ......... Real-time countdown, INKEY$, block digits
-  Game  3  Colour Flood ......... Chunky colour panels, BRIGHT, GO SUB
+  Game  2  Wire Panic ........... Real-time countdown, INKEY$, block digits
+  Game  3  Bright Spark ......... Chunky colour panels, BRIGHT, GO SUB
   Game  4  Hot and Cold ......... Game loop, continuous movement
-  Game  5  Word Scramble ........ Data-driven content
+  Game  5  Letter Soup .......... Data-driven content
   Game  6  Quiz Master .......... Structured, reusable presentation
 
 SKILLS — "It moves, it thinks, it fights back"
-  Game  7  Snake ................ PEEK timing, continuous movement, arrays
+  Game  7  Tail Chase ........... PEEK timing, continuous movement, arrays
   Game  8  Minefield ............ ATTR collision, colour as data, cascading reveals
-  Game  9  Breakout ............. CHR$ block graphics, PLOT/DRAW, ball physics
+  Game  9  Brick Bash ........... CHR$ block graphics, PLOT/DRAW, ball physics
   Game 10  Night Patrol ......... OVER 1 flicker-free movement, AI, level design
 
 PROJECTS — "This is real software"
   Game 11  Tarmac ............... Custom character set (POKE CHARS), tile design
-  Game 12  Flood ................ Direct attribute POKE, colour as mechanic
+  Game 12  Ink Spill ............ Direct attribute POKE, colour as mechanic
   Game 13  Rooftops ............. UDGs, animation frames, jump physics
   Game 14  Blockstorm ........... Machine code helpers, speed optimisation
 
