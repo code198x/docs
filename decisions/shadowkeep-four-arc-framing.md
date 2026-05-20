@@ -98,4 +98,4 @@ Shadowkeep's Arcs 3-4 (revised above) instead deepen the **flick-adventure** tra
 
 Active. Captured 2026-05-19. Same-day revision applied to Arcs 3.4 and 4 after honest-question audit identified genre-drift (combat / classes / branching narrative moved to V1.6 / V1.7 / V3.17 / V3.20 where canonically primary). Extends [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) — does not supersede. Anchored in [[spectrum-assembly]] (current-state Assembly summary).
 
-Per-unit refinements (point 4 above) need application to `knowledge/curriculum/shadowkeep-32-unit-plan.md` as the next concrete step. The redistributed techniques become primary teachings in their natural games when those games are spec'd.
+Per-unit refinements (point 4 above) need application to `docs/platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md` as the next concrete step. The redistributed techniques become primary teachings in their natural games when those games are spec'd.

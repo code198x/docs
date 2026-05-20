@@ -108,7 +108,7 @@ Stub curricula have been created for future platforms. See:
 - [curriculum/basic/](curriculum/basic/) - BASIC stubs (BBC BASIC, Locomotive, STOS/GFA, MSX-BASIC)
 - [curriculum/reference/future-platforms-complete.md](curriculum/reference/future-platforms-complete.md) - Full platform roadmap
 
-The methodology has been pressure-tested for generalisation across additional retro platforms — see [`knowledge/curriculum/methodology-generalisation-survey.md`](../knowledge/curriculum/methodology-generalisation-survey.md) for the full check (11 systems clean, 2 strain at edges, 2 break honestly outside domain). Future platform expansion remains post-October work and awaits Spectrum methodology validation through shipped games.
+The methodology has been pressure-tested for generalisation across additional retro platforms — see [`docs/tracker/methodology-generalisation-survey.md`](tracker/methodology-generalisation-survey.md) for the full check (11 systems clean, 2 strain at edges, 2 break honestly outside domain). Future platform expansion remains post-October work and awaits Spectrum methodology validation through shipped games.
 
 ## Related Repositories
 

@@ -51,7 +51,7 @@ The taxonomy applies to each platform, but the dates and named techniques differ
 - **NES:** hardware era 1985–1995. Modern scene includes advanced mapper homebrew and modern CHR techniques.
 - **Amiga:** hardware era 1985–1996. Modern scene includes post-Commodore demoscene Copper tricks and modern Paula audio.
 
-Detail per platform belongs in the platform-specific reference pages in `knowledge/platforms/`, not here.
+Detail per platform belongs in the platform-specific reference pages in `docs/platforms/`, not here.
 
 ## Drift triggers
 
