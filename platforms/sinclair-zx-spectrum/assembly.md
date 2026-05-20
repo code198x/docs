@@ -1,194 +1,284 @@
-# Sinclair ZX Spectrum Curriculum
+# Sinclair ZX Spectrum — Assembly Curriculum
 
 **Platform:** Sinclair ZX Spectrum
-**Killer Feature:** Attribute colour system
-**Assembly Games:** 4
-**Total Units:** 1,024 (4 × 256)
-**Curriculum bar:** mid-tier full-price — Hewson / Gremlin / Mikro-Gen / Durell era, ~£7.95 in period
+**Track:** Z80 Assembly
+**Shape:** 44 entries across 6 volumes (~2,396 units total)
+**October 2026 ship:** Shadowkeep (V1.1), Arcs 1+2 = 32 units
+**Status:** Active. v0.3 track structure locked.
 
-**Strategic context:** See `docs/decisions/curriculum-structure.md` for the per-game unit budget rationale and the acceleration assumption it depends on, `docs/decisions/real-retro-games.md` for the multi-disciplinary commitment, `docs/decisions/spiral-and-incremental.md` for the within-phase incremental and across-phase spiral progression model, and `docs/decisions/constraint-position.md` for the era-authenticity taxonomy each game declares.
-
----
-
-## Overview
-
-The ZX Spectrum curriculum teaches Z80 assembly programming through four complete games. The sequence begins with the attribute system — the Spectrum's defining characteristic that created its distinctive visual style — and progresses through software scrolling, isometric projection, and professional production techniques until learners can produce commercial-quality games.
-
-The Spectrum had no hardware sprites, no smooth scrolling, and a single-bit beeper for sound. Every impressive effect was achieved through software and creativity. This curriculum embraces those constraints, teaching learners to make the hardware sing through ingenuity.
-
-By the final game, learners will have skills matching professional Spectrum developers of the mid-to-late 1980s — equivalent to mid-tier studios shipping at the £7.95 full-price tier.
+**Strategic context:** Binding decisions are [decisions/spectrum-assembly-track.md](../../decisions/spectrum-assembly-track.md) (44-entry structure, layer model, branches), [decisions/spectrum-assembly-per-game-scope.md](../../decisions/spectrum-assembly-per-game-scope.md) (per-game unit estimates), [decisions/shadowkeep-32-unit-commitment.md](../../decisions/shadowkeep-32-unit-commitment.md) (Shadowkeep October scope), [decisions/shadowkeep-four-arc-framing.md](../../decisions/shadowkeep-four-arc-framing.md) (Shadowkeep full-game framing), [decisions/inspired-by-not-clones-naming.md](../../decisions/inspired-by-not-clones-naming.md) (naming convention), [decisions/curriculum-structure.md](../../decisions/curriculum-structure.md) (multi-disciplinary bar), [decisions/real-retro-games.md](../../decisions/real-retro-games.md), [decisions/spiral-and-incremental.md](../../decisions/spiral-and-incremental.md), [decisions/constraint-position.md](../../decisions/constraint-position.md). Live status: [tracker/revamp.md](../../tracker/revamp.md).
 
 ---
 
-## Assembly Track
+## North Star
 
-### Structure
+Four claims with explicit roles:
 
-| Game | Units | Role |
-|------|-------|------|
-| 1 | 256 | Accessible entry — attribute system as game mechanic |
-| 2 | 256 | Signature technique — software pixel scrolling |
-| 3 | 256 | Ambitious — isometric adventure with 128K features |
-| 4 | 256 | Capstone — commercial-quality dual-mode release |
-| **Total** | **1,024** | |
+- **Spine (outcome):** Commercial bar. *"You can ship a game CRASH would have reviewed."*
+- **Method (journey):** Legends technique-by-technique. Each entry pegged to a named legend (Smith, Ultimate, Crow, Hewson, Ritman, Singleton, Priestley, Crammond, Evans).
+- **Lens (framing):** Constraint as design language. 48K / 8×8 attribute / single-channel beeper limits ARE the design vocabulary, not obstacles around it.
+- **Depth (level of teaching):** The machine at the metal. Every claim grounded in real bytes.
 
-Per-game phase structure is declared in each game's brief. Phase sizes are powers of 2 (8, 16, 32, etc.). Phase 1 of each game is conventionally an 8-unit vertical slice (the launch-artefact pattern from `docs/decisions/shadowkeep-32-unit-commitment.md`); subsequent phases scale as the spiral revisit's natural scope dictates.
+Method, lens, and depth all serve the spine.
 
 ---
 
-### Game 1: Multi-room Top-down Adventure
+## Track structure
 
-**Units:** 256 (per-brief phase structure; Phase 1 = 8-unit vertical slice for October 2026 launch)
-**Genre:** Multi-room top-down adventure
-**Inspired by:** *Atic Atac* (Ultimate, 1983), *Sabre Wulf* (Ultimate, 1984)
-**Working title:** Shadowkeep
+**44 entries across 6 volumes.** Total scope ~2,396 units (per-game floors 28-96).
 
-**Concept:** A keep on a dark hill. Magic has gone wrong; the shadows walk its halls. The player enters alone to recover the Heart of the Keep, finds it, escapes. A multi-room top-down adventure where the Spectrum's attribute system *is* the entire game logic — walls are blue, treasure shines, hazards flash, doors hum cyan. Eight cell types decoded from a single attribute byte. The screen is the map; the attribute byte is the rule.
+| Volume | Identity | Entries | Layer |
+|---|---|---|---|
+| V1 *Rooms and Worlds* | Player navigates space | 8 games (1-8) | L0 |
+| V2 *Verticality and Gravity* | Player moves under constraint | 8 games (9-16) | L0 |
+| V3 *Motion and Threat* | World comes at the player | 8 games (17-24) | L0 |
+| V4 *Real World and Third Dimension* | Player operates a real-world thing | 8 games (25-32) | L0 |
+| V1-4 late additions | Genre gaps | 4 games (33-36) | L0 |
+| V5 *Beyond Games* | Demoscene productions | 4 productions (37-40) | L0 |
+| V6 *The Next Generation* | Spectrum Next-native productions | 4 productions (41-44) | L+4b |
 
-**Skills taught (across all 256 units, spiral-revisited across phases):**
+**Layer model** composes additional content onto a native L0 core:
 
-- Z80 fundamentals (registers, addressing modes, flags, stack, indexed iteration)
-- Screen memory layout ($4000-$57FF) and the three-thirds quirk
-- Attribute memory ($5800-$5AFF) — INK, PAPER, BRIGHT, FLASH bits
-- Keyboard input via port `$FE` half-row scanning
-- Character-cell movement (8-pixel grid) with erase-and-redraw
-- Bitmap sprite drawn over attribute-driven world with cell preservation
-- Attribute-based collision detection
-- Multi-room engine (room pointer table, N/S/E/W connection tables, state machine)
-- Single-voice beeper music driver (port `$FE` bit 4, tick-counter timing)
-- Beeper SFX layer interleaved with music
-- 2-frame walking animation
-- Multiple wandering enemy types with simple AI
-- Save/load (later phases)
-- AY-3-8912 music (128K, later phases)
-- Bank switching for additional rooms (128K, later phases)
-- Title screen with composed melody, attract mode, end-game sequence
-- 128K detection and dual 48K/128K code paths
-- Turbo tape loader and +3 disk support (capstone phases)
-
-**Why first:** The attribute system is the Spectrum. A multi-room top-down adventure makes attribute reads and writes the core mechanic from unit 1 — every cell on screen carries one byte that says what it is, and `LD A,(HL)` plus `BIT n,A` is the entire ruleset. The Spectrum's defining feature becomes the game's design tool. *Atic Atac* and *Sabre Wulf* in 1983–84 set the bar for what an ambitious bedroom-coded Spectrum adventure could be; Shadowkeep reaches toward that bar from a 2025 vantage.
-
-**Full design:** [`docs/platforms/sinclair-zx-spectrum/games/shadowkeep/brief.md`](../platforms/sinclair-zx-spectrum/games/shadowkeep/brief.md) (current v2.0; consolidates the earlier Phase 1 design doc).
-**Per-unit reference:** [`docs/platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md`](../platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md).
-**Beeper composition spec:** [`docs/platforms/sinclair-zx-spectrum/games/shadowkeep/beeper-spec.md`](../platforms/sinclair-zx-spectrum/games/shadowkeep/beeper-spec.md).
+- **L0** — 40 native 48K entries (V1-V5)
+- **L+1** — 128K AY audio enhancement on selected L0 games
+- **L+3** — Demoscene polish layer (from V5 techniques) on selected L0 title sequences and transitions
+- **L+4a** — Selective Next-enhanced variants of ~6 L0 games (V1.2 Greypeak, V2.10 Hollowhalls, V3.17 Hostraider, V3.18 Ironstreak, V4.29 Coldstar, V4.30 Coreworks)
+- **L+4b** — Volume 6: 4 Next-native productions designed specifically for Spectrum Next hardware
 
 ---
 
-### Game 2: Horizontal Scrolling Shoot 'Em Up
+## Lineup
 
-**Units:** 256 (unchanged in count from v4.0; now multi-disciplinary, so gameplay scope recalibrates during brief work)
-**Genre:** Horizontal scrolling shmup
-**Inspired by:** *R-Type*, *Zynaps*, *Nemesis*
-**Working title:** Ionfire
+Working-draft names per the [inspired-by-not-clones convention](../../decisions/inspired-by-not-clones-naming.md). Each entry has a player-facing headline (one word) and a design concept (the generalisable design idea).
 
-**Concept:** Pilot a ship through alien landscapes, fight waves of enemies, defeat massive bosses. The Spectrum has no hardware scroll registers, so every pixel of scrolling is achieved through software — shift operations across screen memory, timed to avoid visible tearing. Building this game is the Spectrum's crowning technical achievement.
+### Volume 1 — *Rooms and Worlds*
 
-**Skills taught:**
+| # | Name | Tradition | Headline (Design Concept) | Units |
+|---|------|-----------|---------------------------|-------|
+| 1 | **Shadowkeep** | Ultimate / Atic Atac / Knight Lore | Atmosphere (Sense of Place) | 64 |
+| 2 | Greypeak | Ritman / Ultimate / Knight Lore (iso) | Depth (Spatial Illusion) | 56 |
+| 3 | Underlight | Crow / Hewson / Starquake / Sabre Wulf | Openness (Non-Linear Geography) | 64 |
+| 4 | Whitewinter | Singleton / Lords of Midnight | Scale (Procedural Vastness) | 80 |
+| 5 | Brace and Boon | Ritman / Head Over Heels | Duality (Two-Character Mechanics) | 64 |
+| 6 | Embergate | Crow / Firelord, Gauntlet ports | Power (Equipment Progression) | 80 |
+| 7 | The Lantern Path | Melbourne House / Hobbit parser | Conversation (Modelled World) | 80 |
+| 8 | The Last Banner | Lothlorien / Yankee, Arnhem | Decision (Resource Trade-Offs) | 48 |
 
-- Software pixel scrolling (the hard technique — no hardware support)
-- Contended memory timing (ULA steals cycles during screen refresh)
-- Pixel-level shift operations across screen bytes
-- Double buffering approaches for flicker-free display
-- Background tile map management during scroll
-- Pixel-precise collision detection
-- Player ship with smooth multi-directional movement
-- Weapon systems (primary fire, power-ups, charge shots)
-- Enemy wave patterns and formation AI
-- Large multi-character boss sprites
-- Boss behaviour patterns (movement phases, weak points, attacks)
-- Parallax effects via software (background layers at different speeds)
-- Screen layout optimisation (attribute-friendly colour zones)
-- Beeper sound engine (music during gameplay)
-- Level progression with distinct visual themes
-- Lives, continues, score, and high score persistence
+### Volume 2 — *Verticality and Gravity*
 
-**Why here:** Software pixel scrolling is the hardest thing to do well on the Spectrum. There are no scroll registers — every frame, the code shifts pixels across memory while the ULA fights for bus access. Games like *R-Type* on the Spectrum were technical miracles. This game teaches the technique through necessity: the gameplay demands scrolling, so the learner builds it. By the end, they understand contended memory timing at a level that makes every other Spectrum technique feel straightforward.
+| # | Name | Tradition | Headline (Design Concept) | Units |
+|---|------|-----------|---------------------------|-------|
+| 9 | Salt Caverns | Smith / Manic Miner | Jump (Platform Physics) | 48 |
+| 10 | Hollowhalls | Smith / Jet Set Willy | Traversal (Connected World) | 72 |
+| 11 | Voidlift | Ultimate / Jetpac | Lift-off (Thrust Control) | 28 |
+| 12 | The Goblin's Larder | Priestley / Trapdoor | Personality (Character-Forward Design) | 36 |
+| 13 | Towerfast | Tehkan / Bombjack | Ascent (Vertical Progression) | 32 |
+| 14 | Brindlewood | Ultimate / Sabreman, Underwurlde | Adventure (Goal-Free Exploration) | 64 |
+| 15 | Twin Sparks | Taito / Bubble Bobble | Companionship (Shared-Screen Co-op) | 40 |
+| 16 | The Witch's Year | Palace / Cauldron II | Mastery (Difficulty as Content) | 52 |
 
----
+### Volume 3 — *Motion and Threat*
 
-### Game 3: Isometric Adventure
+| # | Name | Tradition | Headline (Design Concept) | Units |
+|---|------|-----------|---------------------------|-------|
+| 17 | Hostraider | Crow / Cybernoid II | Density (Single-Screen Composition) | 64 |
+| 18 | Ironstreak | Hewson / Zynaps | Speed (Horizontal Pressure) | 64 |
+| 19 | Skylash | Crow / Light Force, 1942 | Rising (Vertical Pressure) | 52 |
+| 20 | Edge of Iron | Beam / Way of the Exploding Fist | Combat (Animation-Driven Engagement) | 64 |
+| 21 | Hivefall | Namco ports / Galaxians | Pattern (Formation Behaviour) | 40 |
+| 22 | Wayguard | Williams ports / Defender | Patrol (Two-Sided Threat) | 52 |
+| 23 | Grinder | Williams ports / Robotron | Survival (Wave Endurance) | 40 |
+| 24 | March Iron | Konami ports / Green Beret | Onslaught (Auto-Scroll Forced Motion) | 44 |
 
-**Units:** 256 (revised down from 512 in v4.0 — design adjustment needed during brief work; Knight Lore scale at full 140-room scope is not achievable in 256 multi-disciplinary units, so the game's scale or scope will recalibrate)
-**Genre:** Isometric adventure
-**Inspired by:** *Knight Lore*, *Head Over Heels*, *Batman*
-**Working title:** Grimstone
+### Volume 4 — *Real World and Third Dimension*
 
-**Concept:** Explore a castle or fortress rendered in isometric 3D. Push blocks onto pressure plates, avoid enemies, collect items, solve environmental puzzles. The Spectrum invented this genre — Ultimate's *Knight Lore* was the first isometric adventure, and it changed what people believed the hardware could do.
+| # | Name | Tradition | Headline (Design Concept) | Units |
+|---|------|-----------|---------------------------|-------|
+| 25 | Ten Trials | Ocean / Daley Thompson | Rhythm (Cadence Input) | 52 |
+| 26 | Cup Saturday | Ritman / Match Day | Coordination (Team Simulation) | 64 |
+| 27 | Storm Bird | Digital Integration / Tornado | Flight (Aerial Control) | 64 |
+| 28 | Switchback | various / Buggy Boy, Chequered Flag | The Road (Pseudo-3D Driving) | 52 |
+| 29 | Coldstar | Bell/Braben port / Elite | Vastness (Wireframe Space) | 96 |
+| 30 | Coreworks | Incentive / Driller, Castle Master | Volume (Solid Space) | 80 |
+| 31 | The Long Passage | Malcolm Evans / 3D Monster Maze | Presence (First-Person View) | 32 |
+| 32 | Stillwatcher | Crammond / The Sentinel | Vantage (3D Strategy) | 52 |
 
-This is the first game to use 128K features: AY-3-8912 music, bank switching, and dual-page rendering.
+### V1-V4 late additions (genre gaps)
 
-**Skills taught:**
+| # | Name | Tradition | Headline (Design Concept) | Units |
+|---|------|-----------|---------------------------|-------|
+| 33 | Greycoat | Townsend / Saboteur II | Patience (Line-of-Sight Avoidance) | 56 |
+| 34 | The Drawn World | Melbourne House / Lord of the Rings | The Picture and the Word (Parser + Illustration) | 64 |
+| 35 | Quoin | Tetris-port tradition | Stacking (Cascading State) | 28 |
+| 36 | Baize | Sinclair / Steve Davis Snooker | Continuous Physics (Cue and Ball) | 48 |
 
-- Isometric projection mathematics (world-to-screen coordinate conversion)
-- Depth sorting (painter's algorithm — draw back-to-front)
-- Isometric tile and object rendering
-- Z-height collision detection (walking on raised platforms, falling)
-- Room-based world structure with transitions
-- Push-block puzzles (Sokoban-style within isometric space)
-- Pressure plates, doors, gates, keys
-- Multiple enemy types with distinct behaviours
-- Player abilities (jump, carry, push, use items)
-- Inventory system
-- Transformation or time mechanic (Knight Lore's werewolf, Head Over Heels' character switching)
-- 128K detection and adaptation
-- AY-3-8912 music (three channels, envelope, noise)
-- Bank switching for room data
-- Dual-screen rendering (draw off-screen, flip)
-- Themed zones with distinct visual palettes (within attribute constraints)
-- Save or password system for progress
-- Title screen with AY music, in-game ambient sound
+### Volume 5 — *Beyond Games* (demoscene productions)
 
-**Why here:** The isometric adventure is the Spectrum's unique gift to gaming. *Knight Lore* in 1984 made people believe the Spectrum could do 3D. This game teaches the mathematics behind the illusion — projection, depth sorting, Z-collision — while building a world large enough to justify 128K bank switching. It's where the curriculum's techniques come together: attribute mastery from Game 1, display timing from Game 2, and now spatial reasoning in isometric space.
+| # | Name | Tradition | Headline (Design Concept) | Units |
+|---|------|-----------|---------------------------|-------|
+| 37 | Hairline | Border tricks, raster colour | Beyond the Bitmap (Raster-Timed Tricks) | 20 |
+| 38 | Living Surfaces | Plasma, fire, sin-scroll, particles | Living Surfaces (Procedural Texture) | 24 |
+| 39 | Geometry's Pulse | Vector demos with music sync | Form in Motion (Vector + Music Sync) | 28 |
+| 40 | The Long Night | Multi-part assembly / megademo | Authorship of Time (Demo Architecture) | 32 |
 
-**Scope recalibration:** At 256 units rather than the v4.0 512, full Knight Lore room count (~140 rooms) is unrealistic. Expect the brief to land at 40–60 rooms with mid-tier full-price polish per room, rather than a sprawling 100+-room world at thinner quality.
+### Volume 6 — *The Next Generation* (Spectrum Next-native)
 
----
-
-### Game 4: Capstone
-
-**Units:** 256 (revised down from 512 in v4.0 — design adjustment needed during brief work)
-**Genre:** Scrolling action-platformer with exploration
-**Inspired by:** *Midnight Resistance*, *Ghosts 'n Goblins*, *Dan Dare III*
-**Working title:** Dawnreach
-
-**Concept:** A journey across the land toward the source of a spreading darkness. Five zones — Greenwood (forest), Ridgeway (mountains), Shorelands (coast), Ashfield (wasteland), and the Dawnreach (eastern tower) — each a scrolling landscape with unique terrain, enemies, and a guardian boss. The game combines techniques from Shadowkeep (attribute-driven gameplay, multi-room engine), Ionfire (scrolling, contended memory timing), and Grimstone (large-world structure, 128K features) into a single production.
-
-**Design implication of the Game 1 change:** Dawnreach was originally conceived as a scrolling action-platformer building on Gravelight's platformer foundations. With Game 1 now Shadowkeep (multi-room adventure, not a platformer), Dawnreach's genre needs recalibration during brief work. Two paths: either keep the scrolling-action-platformer genre and teach platforming fresh (within Dawnreach's 256 units), or recalibrate to a scrolling-adventure genre that builds directly on Shadowkeep's foundations. Brief decides.
-
-The capstone's new material is distribution and production: turbo tape loading, +3 disk support, 128K/48K dual-mode code paths, loading screens, and multi-load architecture. The finished game should look like it could sit on a shop shelf next to *Midnight Resistance* or *Dan Dare III*.
-
-**Skills taught:**
-
-- All techniques from Games 1-3 at mastery level
-- Scrolling world with varied terrain and enemy placement
-- Melee and ranged combat systems
-- Multi-zone world design (distinct themes, palettes, enemy sets)
-- 128K/48K dual-mode detection and code paths
-- AY music on 128K with beeper fallback on 48K
-- Turbo tape loader (custom loading routine, faster than ROM)
-- +3 disk version (accessing the uPD765 FDC)
-- Loading screen (displayed during tape/disk load)
-- Professional title sequence
-- Multiple difficulty levels
-- Password or save system
-- End-game sequence and credits
-- Testing across models (48K, 128K, +2, +2A, +3)
-
-**Why last:** The capstone proves the learner can ship a product. The game itself combines scrolling action with exploration — genres the learner has already mastered individually. The new challenge is production: making the game load from tape and disk, adapting to different Spectrum models, and presenting a professional package. Every game in the curriculum runs on real hardware; the capstone makes that fact visible through custom loaders and multi-model support.
-
-**Scope recalibration:** At 256 units rather than the v4.0 512, the five-zone structure may compress to three or four zones with deeper per-zone work, or zones may shrink in length. The brief decides.
+| # | Name | Tradition | Headline (Design Concept) | Units |
+|---|------|-----------|---------------------------|-------|
+| 41 | Newhall | Modern scene / hardware sprites + scroll | Sixteen-Bit Spectrum | 64 |
+| 42 | Iron Hundred | Modern scene / sprite density | A Hundred Sprites | 52 |
+| 43 | Truecolour | Incentive evolution / Layer 2 textured 3D | The Solid World | 72 |
+| 44 | The Marchlands | Modern scene / tilemap mode + 2MB RAM | World-Sized Memory | 88 |
 
 ---
 
-## BASIC Gateway
+## Per-entry design pattern
 
-The Sinclair BASIC curriculum is maintained separately. See `/docs/platforms/sinclair-zx-spectrum/basic.md`.
+Each entry carries three orthogonal axes:
+
+1. **Player-facing headline** — one-word player-felt experience (Atmosphere, Jump, Density)
+2. **Design concept** — the generalisable design idea (Sense of Place, Platform Physics, Single-Screen Composition)
+3. **Technique** — engineering implementation, mapped separately in a cross-game tech-tree (Y-Sort Rendering, Gravity Physics, Hand-Composed Hazard Layout)
+
+The game page renders headline + design concept as a dual-name. Techniques live separately as a cross-game matrix.
+
+---
+
+## Cross-cutting axes
+
+| Axis | Items | What it teaches | Track applicability |
+|------|-------|-----------------|---------------------|
+| Embedded Design Concepts | ~10 | The WHY — atmosphere through restraint, authored level design, difficulty as design, etc. | Both BASIC and Assembly |
+| Engineering Practices | 9 | The HOW-ENGINEERING — Z80 disciplines (LDIR, T-state counting, SMC, stack-as-data, etc.) | **Assembly only** — the differentiator from BASIC |
+| Production Craft | ~15 | The HOW-PIPELINE — art tools, music trackers, loading screens, custom loaders | Both, more pronounced in Assembly |
+
+### Engineering Practices first-encounter mapping
+
+| # | Practice | First introduced |
+|---|----------|------------------|
+| 1 | LDIR + block-copy basics | Shadowkeep U2 |
+| 2 | Pre-computed lookup tables | Shadowkeep U2 |
+| 3 | Register pair strategy | Shadowkeep U7 |
+| 4 | Loop unrolling | Shadowkeep U8 |
+| 5 | Software clipping at edges | Shadowkeep U8 |
+| 6 | Self-modifying code (runtime) | V3.17 Hostraider |
+| 7 | Stack-as-data-pointer | V3.17 Hostraider |
+| 8 | Dirty-rectangle redraw (named) | V3.17 Hostraider |
+| 9 | T-state counting | V3.18 Ironstreak |
+
+Five of nine are introduced in Shadowkeep; four in V3 (where action density makes them existential).
+
+---
+
+## Tech-tree (Trunk + Branches A-G)
+
+Techniques cluster into a Trunk + Branches model. Each layer's techniques are prerequisites for the next.
+
+- **Trunk (Layers 1-4)** — Shadowkeep introduces; every game inherits
+- **Branch A** — Adventure depth (Shadowkeep Arcs 3-4, flick-adventure tradition: items + multiple keeps + secrets + atmospheric cycles per [decisions/shadowkeep-four-arc-framing.md](../../decisions/shadowkeep-four-arc-framing.md))
+- **Branch B** — Platformer specifics (V2)
+- **Branch C** — Scrolling and density (V3)
+- **Branch D** — Real-world sim (V4 sport / vehicle)
+- **Branch E** — True 3D (V4 3D entries)
+- **Branch F** — Cross-cutting specials (parser, isometric, procedural)
+- **Branch G** — Audio hardware (AY + 128K — introduced V2.16 *The Witch's Year*, deepened V3.17 *Hostraider*)
+
+**Deprecation pairs are first-class teaching moments**, not refactors. When a richer technique replaces a simpler one, the transition is the lesson:
+
+- cell-snapped movement → pre-shifted sprite tables (Shadowkeep Arc 1.2)
+- single-draw rendering → Y-sort layered rendering (Shadowkeep Arc 1.3)
+- attribute-byte-as-collision → tile-map collision (Shadowkeep Arc 1.4)
+- flick transitions → smooth scroll (V3)
+- isometric → pseudo-3D → wireframe 3D → solid 3D (V4)
+
+---
+
+## Tier hierarchy
+
+- **Tier 1** = Games 1-16 (~960 units) — the spine; cut last
+- **Tier 2** = Games 17-32 + late additions 33-36 (~880 units) — expansion + genre gaps
+- **Tier 3** = V5 demoscene + V6 Next-native (~380 units)
+
+### Cut hierarchy (timeline tightens)
+
+1. V6 (L+4b) Next-native drops first
+2. L+4a Next variants
+3. V5 demoscene
+4. L+1 retroactive AY enhancements
+5. Tier 2 within V1-V4, inside-out by inverse-canonical-weight
+6. Tier 1 last; *The Last Banner* (#8, canon-thin) is the demote candidate if Tier 1 is touched
+
+Cuts apply only after a real timeline slip is identified. The default plan is the full 44.
+
+---
+
+## October 2026 ship
+
+**Only Shadowkeep Arcs 1-2 / 32 units ships.** All other track work is post-October.
+
+Shadowkeep (Volume 1, Game 1) is structured as four arcs of 16 units (64 total). October ships Arcs 1+2:
+
+- **Arc 1 — *Foundations and a Place*** (Units 1-16)
+- **Arc 2 — *Inhabitants and Identity*** (Units 17-32)
+- Arc 3 — *Beyond the Walls* (Units 33-48) — post-October Year 1
+- Arc 4 — *The Greater World* (Units 49-64) — post-October Year 2
+
+**Three engine commitments** introduced progressively across Arc 1:
+
+1. Pixel-level sprite movement (2-4 pixels per frame; pre-shifted sprite tables; masked sprite drawing)
+2. Back-to-front Y-sorted layered rendering
+3. Decoupled attribute / collision (collision lives in tile-map; attribute area becomes purely cosmetic)
+
+Reference points: *Atic Atac*, *Knight Lore*, *Cybernoid II*.
+
+**Genre honesty:** Shadowkeep stays in the flick-adventure tradition. Combat / classes / XP / spells / branching narrative / multi-NPC dialogue / quest state / full Singleton-class location-graph are NOT taught in Shadowkeep — they're primary teaching in V1.6 Embergate (action-RPG), V1.7 The Lantern Path (parser), V1.4 Whitewinter (procedural), V3.17 Hostraider (projectile), V3.20 Edge of Iron (combat). See [decisions/shadowkeep-four-arc-framing.md](../../decisions/shadowkeep-four-arc-framing.md) for the full redistribution table.
+
+**Existing 8 published units stay live** until hard-replaced. Engine evolution is the curriculum — new units introduce the new engine progressively, not presuppose it.
+
+**Full Shadowkeep design:** [games/shadowkeep/brief.md](games/shadowkeep/brief.md). Per-unit reference: [games/shadowkeep/per-unit-plan.md](games/shadowkeep/per-unit-plan.md). Plus sibling design docs: [engineering-plan.md](games/shadowkeep/engineering-plan.md), [memory-budget.md](games/shadowkeep/memory-budget.md), [object-system.md](games/shadowkeep/object-system.md), [sprite-shifter.md](games/shadowkeep/sprite-shifter.md), [tile-map.md](games/shadowkeep/tile-map.md), [beeper-spec.md](games/shadowkeep/beeper-spec.md).
+
+---
+
+## Per-game scope summary
+
+**Heavy hitters (≥80 units):** Coldstar 96, The Marchlands 88, Whitewinter / Embergate / The Lantern Path / Coreworks 80 each.
+
+**Small / focused (≤32 units):** Hairline 20, Living Surfaces 24, Voidlift / Quoin / Geometry's Pulse 28 each, Towerfast / The Long Passage / The Long Night 32 each.
+
+**Per-volume totals:** V1 536, V2 372, V3 420, V4 492, late additions 196, V5 104, V6 276. Per-entry rationale in [decisions/spectrum-assembly-per-game-scope.md](../../decisions/spectrum-assembly-per-game-scope.md).
+
+---
+
+## Realistic shipping timeline
+
+Multi-decade by design. Solo dev pace ~3-4 days per unit:
+
+| Period | Focus | Approx units |
+|--------|-------|--------------|
+| 2026 Oct | Shadowkeep Arcs 1-2 | 32 (committed) |
+| 2027-28 | Shadowkeep Arc 3 + BASIC V1 + start of V1.2 Greypeak | ~50 new Assembly |
+| 2028-30 | V1 Games 1-8 substantially complete | ~250 |
+| 2030-32 | V2 + late V1-4 additions | ~500 |
+| 2032-35 | V3 | ~400 |
+| 2035-38 | V4 | ~500 |
+| 2038-40 | V5 + V6 | ~400 |
+| 2040+ | Polish, naming workshops, late additions | rolling |
+
+The project's North Star is end-to-end vintage games-development education at canonical depth; that doesn't fit in a year.
+
+---
+
+## BASIC gateway
+
+The Sinclair BASIC curriculum is maintained separately. See [basic.md](basic.md) (32 games × 4 volumes × 8 per volume; v6.4 inspired-by-not-clones names; October ships Volume 1).
+
+Together the two tracks form one Spectrum journey: BASIC is the on-ramp; Assembly takes the learner to commercial bar.
 
 ---
 
 ## Changelog
 
-- **v5.0 (2026-05-13):** Substantial revision driven by decisions captured 2026-05-13 (see `docs/decisions/`). Per-game unit count standardised at 256 across all four games (was 128/256/512/512), aligning with the multi-disciplinary commitment and the mid-tier full-price target. Total platform units 1,408 → 1,024. Game 1 reconciled — name is Shadowkeep (was Gravelight in v4.0); genre is multi-room top-down adventure (was single-screen platformer); inspirations are *Atic Atac* / *Sabre Wulf* (were *Manic Miner* / *Jet Set Willy*). Phase structure now per-brief rather than fixed; Phase 1 is conventionally an 8-unit vertical slice. Games 3 and 4 down from 512 units; design adjustment flagged for the brief work on each. **The four v4.0 game outline files (`game-01-full-game-outline-zx-spectrum-gravelight.md` and siblings for Ionfire/Grimstone/Dawnreach) were deleted** — they documented the previous 128/256/512/512 code-led plan at the wrong unit scale and (for Gravelight) the wrong Game 1 design; preserved in git history rather than confusing future readers as apparently-current spec.
-- **v4.0 (2026-03-09):** Major restructure. Reduced from 16 to 4 assembly games. No-repetition rule across primary platforms. Every game inspired by a real commercial release. BASIC gateway expanded from 8 to 4 focused games. Previous 16-game curriculum preserved in game outline files for reference.
-- **v3.20 (2026-02-06):** Replaced Game 1 (Skyfire) with Shadowkeep.
-- **v3.0 (2026-01-18):** Initial 16-game curriculum.
+- **v0.3 (2026-05-19) — current.** Wholesale rewrite. Track structure expanded from 4 games to 44 entries across 6 volumes per [decisions/spectrum-assembly-track.md](../../decisions/spectrum-assembly-track.md). Working-draft inspired-by names locked for all 44 entries. Layer model (L0 + L+1 + L+3 + L+4a + L+4b) introduced. Three-axis design pattern (headline + concept + technique) replaces the old single-name pattern. Tech-tree with deprecation pairs (Trunk + Branches A-G) replaces the implicit progression. Three cross-cutting axes (Design Concepts / Engineering Practices / Production Craft) named. Shadowkeep four-arc framing (64 units, October ships Arcs 1+2 = 32) replaces the 256-unit / 17-phase v5.0 framing. Per-entry unit budgets per [decisions/spectrum-assembly-per-game-scope.md](../../decisions/spectrum-assembly-per-game-scope.md). Genre honesty applied to Shadowkeep (combat / classes / parser / branching narrative redistributed to V1.6 / V1.7 / V3.17 / V3.20). Three deleted v5.0 entries (Ionfire, Grimstone, Dawnreach) preserved in git history; their content was 4-game-track planning that no longer applies.
+- **v5.0 (2026-05-13):** 4 games × 256 units restructure under the multi-disciplinary commitment. Game 1 reconciled as Shadowkeep. Preserved in git history.
+- **v4.0 (2026-03-09):** Reduced from 16 to 4 assembly games. Preserved in git history.
+- **v3.x and earlier:** 16-game curriculum. Preserved in git history.
