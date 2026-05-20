@@ -132,10 +132,10 @@ After the position declaration, list:
 - **Hardware features deliberately avoided** — what the game doesn't use, and what game/phase the avoided features are reserved for.
 
 **Example (Shadowkeep):**
-> **Period-faithful.** Phase 1 (vertical slice) uses only techniques common in commercial 1984–87 Spectrum product. Position is consistent across all phases of the existing 16-unit Arc 1 spine; period-possible and modern-scene techniques are reserved for later arcs.
+> **Period-faithful.** Arcs 1–2 (the October ship, 32 units) use only techniques common in commercial 1984–87 Spectrum product. Position is consistent across both arcs; period-possible and modern-scene techniques are reserved for later games on the track.
 >
 > **In active use:** attribute memory ($5800–$5AFF), bitmap memory ($4000–$57FF) for the hero sprite, port `$FE` (keyboard + beeper), IRQ-driven update loop.
-> **Deliberately avoided:** 128K bank switching (Phase 7 territory), AY-3-8912 (Phase 7), software pixel scrolling (Game 2 territory), contended-memory mastery (Game 2).
+> **Deliberately avoided:** 128K bank switching (later games), AY-3-8912 (later games), software pixel scrolling (Game 2 territory), contended-memory mastery (Game 2).
 
 **Common failure:** Declaring period-faithful but using modern-scene techniques in a unit without realising it. Cross-check against the platform reference page in `docs/platforms/` if uncertain.
 

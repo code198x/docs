@@ -4,7 +4,9 @@ This repository contains curriculum specifications, platform references, and con
 
 ## What Is This Project?
 
-Code Like It's 198x teaches **retro raster-era hardware-craft game development through the canon**. Learners build real games on vintage platforms — Commodore 64, ZX Spectrum, Amiga, NES — using the same techniques developers used in the 1980s and 1990s. Every game in the curriculum is inspired by canonical traditions of the era but ships as its own original design.
+Code Like It's 198x teaches **retro raster-era hardware-craft game development through the canon**. Learners build real games on vintage platforms using the same techniques developers used in the 1980s and 1990s. Every game in the curriculum is inspired by canonical traditions of the era but ships as its own original design.
+
+The methodology is being established on the **ZX Spectrum** first — Shadowkeep (assembly) and Volume 1 of the BASIC track ship for the October 2026 launch. **Commodore 64, NES, and Amiga** are the next three platforms to come online once the Spectrum spine is validated, with twelve further retro systems mapped as pre-methodology drafts.
 
 No emulation wrappers. No modern engines. No high-level languages. Direct hardware access, assembly language, and the satisfaction of making a 40-year-old machine do something impressive.
 
