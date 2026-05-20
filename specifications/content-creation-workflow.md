@@ -743,7 +743,7 @@ Now is the time to create Pattern Library entries from standalone demos.
 
 **For each standalone demo in `techniques/`:**
 1. Review the demo - has the technique evolved during development?
-2. Create Pattern Library entry (see PATTERN-LIBRARY-SPECIFICATION.md)
+2. Create Pattern Library entry (see pattern-library.md)
 3. Optimise and add edge-case handling
 4. Add trade-offs table and related links
 5. Link from relevant units to the new pattern

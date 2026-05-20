@@ -7,7 +7,7 @@
 **Constraint position:** Period-faithful (across all phases) — see Section 5
 **Status:** Active (v1.0, 2026-05-13)
 
-Formal spec: [`docs/BRIEF-SPECIFICATION.md`](../../../../BRIEF-SPECIFICATION.md). Companion design doc: [`wiki/curriculum/shadowkeep-phase-1-design.md`](../../../../../wiki/curriculum/shadowkeep-phase-1-design.md). Composition spec: [`wiki/curriculum/shadowkeep-beeper-spec.md`](../../../../../wiki/curriculum/shadowkeep-beeper-spec.md).
+Formal spec: [`docs/specifications/brief.md`](../../../../specifications/brief.md). Companion design doc: [`wiki/curriculum/shadowkeep-phase-1-design.md`](../../../../../wiki/curriculum/shadowkeep-phase-1-design.md). Composition spec: [`wiki/curriculum/shadowkeep-beeper-spec.md`](../../../../../wiki/curriculum/shadowkeep-beeper-spec.md).
 
 ---
 
@@ -428,4 +428,4 @@ Vault entries this curriculum threads through. Per the Definition of Done in `wi
 
 ## Changelog
 
-- **v1.0 (2026-05-13):** Initial brief. First brief authored against `docs/BRIEF-SPECIFICATION.md` v1.0. Replaces the ad-hoc design content previously distributed across `wiki/curriculum/shadowkeep-phase-1-design.md` (which remains as the operational design doc) and various log entries. Anchors 256-unit total scope, 17-phase trajectory, period-faithful constraint position, mid-tier full-price endpoint bar, October vertical-slice deliverable.
+- **v1.0 (2026-05-13):** Initial brief. First brief authored against `docs/specifications/brief.md` v1.0. Replaces the ad-hoc design content previously distributed across `wiki/curriculum/shadowkeep-phase-1-design.md` (which remains as the operational design doc) and various log entries. Anchors 256-unit total scope, 17-phase trajectory, period-faithful constraint position, mid-tier full-price endpoint bar, October vertical-slice deliverable.

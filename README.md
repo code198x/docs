@@ -27,7 +27,7 @@ Each platform has a sequence of games, ordered by complexity:
 - **Skills compound** through the sequence — Game 1 teaches fundamentals, later games produce commercial-quality work
 - **Inspired-by-not-clones** — every game references a canonical tradition (Atic Atac, Manic Miner, Elite, Lords of Midnight, etc.) but ships as its own design with its own name and identity
 
-See [CURRICULUM-SPECIFICATION.md](CURRICULUM-SPECIFICATION.md) for the full model.
+See [specifications/curriculum.md](specifications/curriculum.md) for the full model.
 
 ## Repository Structure
 
@@ -58,22 +58,29 @@ See [CURRICULUM-SPECIFICATION.md](CURRICULUM-SPECIFICATION.md) for the full mode
 │   ├── commodore-amiga/
 │   └── nintendo-entertainment-system/
 │
-├── CURRICULUM-SPECIFICATION.md    # How curricula work
-├── UNIT-SPECIFICATION.md          # How to format unit files
-├── PATTERN-LIBRARY-SPECIFICATION.md
-├── VAULT-SPECIFICATION.md
-└── CONTENT-CREATION-WORKFLOW.md
+├── specifications/
+│   ├── curriculum.md               # How curricula work
+│   ├── unit.md                     # How to format unit files
+│   ├── brief.md                    # Per-game brief format
+│   ├── pattern-library.md          # Pattern library structure
+│   ├── vault.md                    # Vault entry structure
+│   ├── information-architecture.md
+│   └── content-creation-workflow.md
+├── decisions/                      # Binding decision records
+├── infrastructure/                 # Docker, capture pipeline, Astro
+├── log.md                          # Append-only event log
+└── index.md                        # Top-level navigation
 ```
 
 ## Key Documents
 
 | Document | Purpose |
 |----------|---------|
-| [CURRICULUM-SPECIFICATION.md](CURRICULUM-SPECIFICATION.md) | The games model, unit structure, pedagogical approach |
-| [UNIT-SPECIFICATION.md](UNIT-SPECIFICATION.md) | Technical formatting for unit files |
-| [VAULT-SPECIFICATION.md](VAULT-SPECIFICATION.md) | Encyclopedia of people, companies, games, techniques |
-| [PATTERN-LIBRARY-SPECIFICATION.md](PATTERN-LIBRARY-SPECIFICATION.md) | Reusable code patterns by platform |
-| [CONTENT-CREATION-WORKFLOW.md](CONTENT-CREATION-WORKFLOW.md) | End-to-end content creation process |
+| [specifications/curriculum.md](specifications/curriculum.md) | The games model, unit structure, pedagogical approach |
+| [specifications/unit.md](specifications/unit.md) | Technical formatting for unit files |
+| [specifications/vault.md](specifications/vault.md) | Encyclopedia of people, companies, games, techniques |
+| [specifications/pattern-library.md](specifications/pattern-library.md) | Reusable code patterns by platform |
+| [specifications/content-creation-workflow.md](specifications/content-creation-workflow.md) | End-to-end content creation process |
 
 ## Platform Status
 
@@ -81,7 +88,7 @@ See [CURRICULUM-SPECIFICATION.md](CURRICULUM-SPECIFICATION.md) for the full mode
 
 | Platform | Language | Curriculum | Status |
 |----------|----------|------------|--------|
-| ZX Spectrum | Z80 Assembly | [44 entries / 6 volumes / ~2,396 units](../knowledge/decisions/spectrum-assembly-track.md) | v0.3 track structure locked; Shadowkeep (Game 1) commits 64 units across 4 arcs; **Arcs 1-2 ship October 2026** |
+| ZX Spectrum | Z80 Assembly | [44 entries / 6 volumes / ~2,396 units](decisions/spectrum-assembly-track.md) | v0.3 track structure locked; Shadowkeep (Game 1) commits 64 units across 4 arcs; **Arcs 1-2 ship October 2026** |
 | Commodore 64 | 6510 Assembly | [16 games, ~1,536 units](curriculum/commodore-64-curriculum.md) | Game sequence defined; pre-methodology (concept locked) |
 | NES | 6502 Assembly | [16 games, ~1,536 units](curriculum/nintendo-nes-curriculum.md) | Game sequence defined; pre-methodology (concept locked) |
 | Amiga | 68000 Assembly | [16 games, ~2,048 units](curriculum/commodore-amiga-curriculum.md) | Game sequence defined; pre-methodology (concept locked) |
@@ -120,4 +127,4 @@ All units must:
 3. Include verified screenshots
 4. Use British English (except "program" for computer programs)
 
-See [CONTENT-CREATION-WORKFLOW.md](CONTENT-CREATION-WORKFLOW.md) for the full process.
+See [specifications/content-creation-workflow.md](specifications/content-creation-workflow.md) for the full process.
