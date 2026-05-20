@@ -97,7 +97,7 @@ See [specifications/curriculum.md](specifications/curriculum.md) for the full mo
 
 | Platform | Language | Curriculum | Status |
 |----------|----------|------------|--------|
-| ZX Spectrum | Sinclair BASIC | [32 games / 4 volumes](curriculum/basic/sinclair-zx-spectrum/) | v6.4 lineup (11 games renamed under inspired-by-not-clones convention); **Volume 1 (8 games) ships October 2026** |
+| ZX Spectrum | Sinclair BASIC | [32 games / 4 volumes](platforms/sinclair-zx-spectrum/basic.md) | v6.4 lineup (11 games renamed under inspired-by-not-clones convention); **Volume 1 (8 games) ships October 2026** |
 | Commodore 64 | BASIC V2 | [8 games, 512 units](curriculum/basic/commodore-64/) | Game sequence defined; pre-methodology |
 | Amiga | AMOS/Blitz BASIC | [16 games](curriculum/basic/commodore-amiga/) | Game sequence defined; pre-methodology |
 
