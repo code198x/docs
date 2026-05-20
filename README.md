@@ -4,17 +4,28 @@ This repository contains curriculum specifications, platform references, and con
 
 ## What Is This Project?
 
-Code Like It's 198x teaches retro game development through complete, playable games. Learners build real games on vintage platforms - Commodore 64, ZX Spectrum, Amiga, NES - using the same techniques developers used in the 1980s and 1990s.
+Code Like It's 198x teaches **retro raster-era hardware-craft game development through the canon**. Learners build real games on vintage platforms — Commodore 64, ZX Spectrum, Amiga, NES — using the same techniques developers used in the 1980s and 1990s. Every game in the curriculum is inspired by canonical traditions of the era but ships as its own original design.
 
-No emulation wrappers. No modern engines. Direct hardware access, assembly language, and the satisfaction of making a 40-year-old machine do something impressive.
+No emulation wrappers. No modern engines. No high-level languages. Direct hardware access, assembly language, and the satisfaction of making a 40-year-old machine do something impressive.
+
+## What this is, and what it isn't
+
+Code Like It's 198x is a **bounded craft tradition**, not a universal games-development curriculum.
+
+**This is:** retro raster-era hardware-craft game development through the canon. 8-16-bit-era home computers and consoles. Raster-display, framebuffer-based, hardware-constrained, single-machine programming. Cartridge / disk / tape media. Approximately 1977-1995.
+
+**This isn't:** modern engine-mediated development (Unity / Unreal / Godot). Mobile or Steam-era indie. 3D-first hardware (PlayStation / N64 and beyond). Vector-display tradition (Vectrex). Cloud / always-online / live-service game development.
+
+The methodology was developed for Spectrum, C64, NES, and Amiga, and generalises cleanly across 11+ retro platforms (Apple II, Atari 8-bit, Game Boy, SNES, Sega Master System, Mega Drive, BBC Micro, Dragon). It strains at the edges — Atari 2600 at the earliest, PSX/N64 at the latest — and breaks honestly outside its domain. Real boundaries are a feature. Within them, the curriculum teaches a defined craft tradition with depth and rigour.
 
 ## How The Curriculum Works
 
 Each platform has a sequence of games, ordered by complexity:
 
-- **Games** are complete, playable projects (8-32 units each)
+- **Games** are complete, playable projects (8-80+ units each, depending on canonical depth)
 - **Units** are 60-120 minute sessions producing working results
-- **Skills compound** through the sequence - Game 1 teaches fundamentals, Game 16 produces commercial-quality work
+- **Skills compound** through the sequence — Game 1 teaches fundamentals, later games produce commercial-quality work
+- **Inspired-by-not-clones** — every game references a canonical tradition (Atic Atac, Manic Miner, Elite, Lords of Midnight, etc.) but ships as its own design with its own name and identity
 
 See [CURRICULUM-SPECIFICATION.md](CURRICULUM-SPECIFICATION.md) for the full model.
 
@@ -70,18 +81,18 @@ See [CURRICULUM-SPECIFICATION.md](CURRICULUM-SPECIFICATION.md) for the full mode
 
 | Platform | Language | Curriculum | Status |
 |----------|----------|------------|--------|
-| Commodore 64 | 6510 Assembly | [16 games, 1,536 units](curriculum/commodore-64-curriculum.md) | Game sequence defined |
-| ZX Spectrum | Z80 Assembly | [16 games, 1,536 units](curriculum/sinclair-zx-spectrum-curriculum.md) | Game sequence defined |
-| NES | 6502 Assembly | [16 games, 1,536 units](curriculum/nintendo-nes-curriculum.md) | Game sequence defined |
-| Amiga | 68000 Assembly | [16 games, 2,048 units](curriculum/commodore-amiga-curriculum.md) | Game sequence defined |
+| ZX Spectrum | Z80 Assembly | [44 entries / 6 volumes / ~2,396 units](../knowledge/decisions/spectrum-assembly-track.md) | v0.3 track structure locked; Shadowkeep (Game 1) commits 64 units across 4 arcs; **Arcs 1-2 ship October 2026** |
+| Commodore 64 | 6510 Assembly | [16 games, ~1,536 units](curriculum/commodore-64-curriculum.md) | Game sequence defined; pre-methodology (concept locked) |
+| NES | 6502 Assembly | [16 games, ~1,536 units](curriculum/nintendo-nes-curriculum.md) | Game sequence defined; pre-methodology (concept locked) |
+| Amiga | 68000 Assembly | [16 games, ~2,048 units](curriculum/commodore-amiga-curriculum.md) | Game sequence defined; pre-methodology (concept locked) |
 
 ### BASIC Gateway Curricula (Optional)
 
 | Platform | Language | Curriculum | Status |
 |----------|----------|------------|--------|
-| Commodore 64 | BASIC V2 | [8 games, 512 units](curriculum/basic/commodore-64/) | Game sequence defined |
-| ZX Spectrum | Sinclair BASIC | [8 games, 512 units](curriculum/basic/sinclair-zx-spectrum/) | Game sequence defined |
-| Amiga | AMOS/Blitz BASIC | [16 games](curriculum/basic/commodore-amiga/) | Game sequence defined |
+| ZX Spectrum | Sinclair BASIC | [32 games / 4 volumes](curriculum/basic/sinclair-zx-spectrum/) | v6.4 lineup (11 games renamed under inspired-by-not-clones convention); **Volume 1 (8 games) ships October 2026** |
+| Commodore 64 | BASIC V2 | [8 games, 512 units](curriculum/basic/commodore-64/) | Game sequence defined; pre-methodology |
+| Amiga | AMOS/Blitz BASIC | [16 games](curriculum/basic/commodore-amiga/) | Game sequence defined; pre-methodology |
 
 ### Future Platforms (Stub Curricula)
 
@@ -89,6 +100,8 @@ Stub curricula have been created for future platforms. See:
 - [curriculum/assembly/](curriculum/assembly/) - Assembly stubs (Mega Drive, Atari ST, BBC Micro, SNES, etc.)
 - [curriculum/basic/](curriculum/basic/) - BASIC stubs (BBC BASIC, Locomotive, STOS/GFA, MSX-BASIC)
 - [curriculum/reference/future-platforms-complete.md](curriculum/reference/future-platforms-complete.md) - Full platform roadmap
+
+The methodology has been pressure-tested for generalisation across additional retro platforms — see [`knowledge/curriculum/methodology-generalisation-survey.md`](../knowledge/curriculum/methodology-generalisation-survey.md) for the full check (11 systems clean, 2 strain at edges, 2 break honestly outside domain). Future platform expansion remains post-October work and awaits Spectrum methodology validation through shipped games.
 
 ## Related Repositories
 
