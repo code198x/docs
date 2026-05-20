@@ -68,8 +68,9 @@ Per-game phase structure is declared in each game's brief. Phase sizes are power
 
 **Why first:** The attribute system is the Spectrum. A multi-room top-down adventure makes attribute reads and writes the core mechanic from unit 1 — every cell on screen carries one byte that says what it is, and `LD A,(HL)` plus `BIT n,A` is the entire ruleset. The Spectrum's defining feature becomes the game's design tool. *Atic Atac* and *Sabre Wulf* in 1983–84 set the bar for what an ambitious bedroom-coded Spectrum adventure could be; Shadowkeep reaches toward that bar from a 2025 vantage.
 
-**Full Phase 1 design:** `knowledge/curriculum/shadowkeep-phase-1-design.md`.
-**Beeper composition spec:** `docs/platforms/sinclair-zx-spectrum/games/shadowkeep/beeper-spec.md`.
+**Full design:** [`docs/platforms/sinclair-zx-spectrum/games/shadowkeep/brief.md`](../platforms/sinclair-zx-spectrum/games/shadowkeep/brief.md) (current v2.0; consolidates the earlier Phase 1 design doc).
+**Per-unit reference:** [`docs/platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md`](../platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md).
+**Beeper composition spec:** [`docs/platforms/sinclair-zx-spectrum/games/shadowkeep/beeper-spec.md`](../platforms/sinclair-zx-spectrum/games/shadowkeep/beeper-spec.md).
 
 ---
 

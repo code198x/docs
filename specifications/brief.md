@@ -10,7 +10,7 @@
 
 A brief is **the source of truth for a game's design intent**. It is written before unit MDX or code-samples work begins and is referenced throughout authoring. The brief is reviewable as a standalone artefact; a reader who has never seen the game should leave the brief able to predict what every phase ships and how each unit fits.
 
-A brief is **not** an implementation document. Per-phase or per-unit detail lives elsewhere (the existing `knowledge/curriculum/shadowkeep-phase-1-design.md` is the pattern: a sibling design doc that follows from the brief). The brief is strategic; design docs are operational.
+A brief is **not** an implementation document. Per-phase or per-unit detail lives in sibling files under the same `games/{slug}/` folder (Shadowkeep is the pattern: `per-unit-plan.md`, `engineering-plan.md`, `memory-budget.md`, `object-system.md`, `sprite-shifter.md`, `tile-map.md`, `beeper-spec.md` all sit alongside `brief.md`). The brief is strategic; design docs are operational.
 
 **Key principles:**
 
