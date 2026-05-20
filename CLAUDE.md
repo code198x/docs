@@ -2,6 +2,10 @@
 
 Retro game dev education. Complete games on vintage platforms (C64, ZX Spectrum, Amiga, NES).
 
+## Umbrella context
+
+This project lives under `~/Projects/198x/` alongside `Emu198x`. The umbrella binds rules that span both projects — see [`../../CLAUDE.md`](../../CLAUDE.md) and [`../../decisions/`](../../decisions/). Most relevantly: hardware reference is canonical in `Emu198x/knowledge/` (chip docs, system docs, decisions). When this project's `docs/platforms/` needs hardware facts, it should cite the Emu198x canonical source rather than duplicate it. See [`../../decisions/shared-hardware-reference-canon.md`](../../decisions/shared-hardware-reference-canon.md).
+
 ## Session start (October 2026 launch anchor)
 
 Before writing any code, state in the conversation which October launch artefact this session serves. The launch ships **Spectrum only** — see [`decisions/october-2026-launch-spec.md`](decisions/october-2026-launch-spec.md) for the binding scope and cut hierarchy.
@@ -137,6 +141,6 @@ Project documentation lives entirely in `docs/`. There is no separate "knowledge
 - `docs/log.md` — append-only event log.
 - `docs/tracker/` — live status. (Lands in Phase 1b.)
 
-For cross-project knowledge, read `/Users/stevehill/Projects/wiki/index.md`.
+For cross-project knowledge spanning Code198x and Emu198x, see `../../CLAUDE.md` (umbrella) and `../../decisions/`. For personal cross-cutting knowledge, see `~/knowledge/`.
 
 Update docs pages when you learn something future sessions need.
