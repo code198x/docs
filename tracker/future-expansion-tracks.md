@@ -70,7 +70,7 @@ Optional 128K-enhanced versions of select games (period-authentic, 1985+).
 
 ### Commodore Amiga → AGA
 
-**Already implemented.** See `/docs/curriculum/commodore-amiga-curriculum.md`.
+**Already implemented in the AGA enhancement layer.** See `/docs/platforms/commodore-amiga/assembly-skeleton.md` (post-October draft).
 
 | Game | Units | Enhancement Focus |
 |------|-------|-------------------|

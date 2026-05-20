@@ -88,9 +88,9 @@ The workflow has **six main phases**, each with detailed steps. Phases 1-5 apply
 **Purpose:** Verify curriculum alignment and make key decisions before writing begins.
 
 **Steps:**
-- Locate and read curriculum specification (`/docs/curriculum/{platform}-curriculum.md`)
+- Locate and read curriculum specification (`/docs/platforms/{system}/assembly.md`)
 - Verify current unit matches specification (if editing existing)
-- Validate skill tree prerequisites (check `/docs/curriculum/reference/SKILL-TREES.md`)
+- Validate skill tree prerequisites (check `/docs/specifications/skill-progression.md`)
 - Choose unit archetype based on concept
 - Identify prerequisites from previous units
 - Check for existing Pattern Library entries
@@ -158,8 +158,8 @@ The workflow has **six main phases**, each with detailed steps. Phases 1-5 apply
 **Before creating or editing ANY unit:**
 
 1. **Locate specification** (check in order):
-   - Platform curriculum: `/docs/curriculum/{platform}-curriculum.md`
-   - BASIC gateway curriculum (if applicable): `/docs/curriculum/basic/{platform}/`
+   - Platform curriculum: `/docs/platforms/{system}/assembly.md`
+   - BASIC gateway curriculum (if applicable): `/docs/platforms/{system}/basic.md`
 
 2. **Read specification completely** - Note game name, unit position, key concepts, skills taught
 
@@ -197,7 +197,7 @@ Choose archetype based on what you're teaching:
 
 Verify the unit's technique has its prerequisites taught in earlier units.
 
-**Check against skill tree** (`/docs/curriculum/reference/SKILL-TREES.md`):
+**Check against skill tree** (`/docs/specifications/skill-progression.md`):
 1. What skills does this unit's technique require?
 2. Have those skills been taught in earlier units of this game (or previous games)?
 3. If not, either:

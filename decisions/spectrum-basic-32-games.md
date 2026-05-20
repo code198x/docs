@@ -96,4 +96,4 @@ Pull this decision record up before proceeding if you see any of these patterns:
 - [october-2026-launch-spec.md](october-2026-launch-spec.md) (binding launch scope; Volume 1 ships)
 - [commercial-bar-revamp.md](commercial-bar-revamp.md) (assembly Game 1s — separate track; carries forward unchanged)
 - `docs/tracker/revamp.md` (live tracker, source of truth for *which games in which volume*)
-- `docs/curriculum/basic/sinclair-zx-spectrum/sinclair-zx-spectrum-basic-curriculum.md` (curriculum spec, source of truth for *what each game teaches*)
+- `docs/platforms/sinclair-zx-spectrum/basic.md` (curriculum spec, source of truth for *what each game teaches*)

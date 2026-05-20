@@ -6,7 +6,7 @@
 **Total Units:** 1,024 (4 × 256)
 **Curriculum bar:** mid-tier full-price — Hewson / Gremlin / Mikro-Gen / Durell era, ~£7.95 in period
 
-**Strategic context:** See `wiki/decisions/curriculum-structure.md` for the per-game unit budget rationale and the acceleration assumption it depends on, `wiki/decisions/real-retro-games.md` for the multi-disciplinary commitment, `wiki/decisions/spiral-and-incremental.md` for the within-phase incremental and across-phase spiral progression model, and `wiki/decisions/constraint-position.md` for the era-authenticity taxonomy each game declares.
+**Strategic context:** See `docs/decisions/curriculum-structure.md` for the per-game unit budget rationale and the acceleration assumption it depends on, `docs/decisions/real-retro-games.md` for the multi-disciplinary commitment, `docs/decisions/spiral-and-incremental.md` for the within-phase incremental and across-phase spiral progression model, and `docs/decisions/constraint-position.md` for the era-authenticity taxonomy each game declares.
 
 ---
 
@@ -32,7 +32,7 @@ By the final game, learners will have skills matching professional Spectrum deve
 | 4 | 256 | Capstone — commercial-quality dual-mode release |
 | **Total** | **1,024** | |
 
-Per-game phase structure is declared in each game's brief. Phase sizes are powers of 2 (8, 16, 32, etc.). Phase 1 of each game is conventionally an 8-unit vertical slice (the launch-artefact pattern from `wiki/decisions/october-2026-vertical-slice.md`); subsequent phases scale as the spiral revisit's natural scope dictates.
+Per-game phase structure is declared in each game's brief. Phase sizes are powers of 2 (8, 16, 32, etc.). Phase 1 of each game is conventionally an 8-unit vertical slice (the launch-artefact pattern from `docs/decisions/shadowkeep-32-unit-commitment.md`); subsequent phases scale as the spiral revisit's natural scope dictates.
 
 ---
 
@@ -68,8 +68,8 @@ Per-game phase structure is declared in each game's brief. Phase sizes are power
 
 **Why first:** The attribute system is the Spectrum. A multi-room top-down adventure makes attribute reads and writes the core mechanic from unit 1 — every cell on screen carries one byte that says what it is, and `LD A,(HL)` plus `BIT n,A` is the entire ruleset. The Spectrum's defining feature becomes the game's design tool. *Atic Atac* and *Sabre Wulf* in 1983–84 set the bar for what an ambitious bedroom-coded Spectrum adventure could be; Shadowkeep reaches toward that bar from a 2025 vantage.
 
-**Full Phase 1 design:** `wiki/curriculum/shadowkeep-phase-1-design.md`.
-**Beeper composition spec:** `wiki/curriculum/shadowkeep-beeper-spec.md`.
+**Full Phase 1 design:** `knowledge/curriculum/shadowkeep-phase-1-design.md`.
+**Beeper composition spec:** `docs/platforms/sinclair-zx-spectrum/games/shadowkeep/beeper-spec.md`.
 
 ---
 
@@ -181,13 +181,13 @@ The capstone's new material is distribution and production: turbo tape loading, 
 
 ## BASIC Gateway
 
-The Sinclair BASIC curriculum is maintained separately. See `/docs/curriculum/basic/sinclair-zx-spectrum/sinclair-zx-spectrum-basic-curriculum.md`.
+The Sinclair BASIC curriculum is maintained separately. See `/docs/platforms/sinclair-zx-spectrum/basic.md`.
 
 ---
 
 ## Changelog
 
-- **v5.0 (2026-05-13):** Substantial revision driven by decisions captured 2026-05-13 (see `wiki/decisions/`). Per-game unit count standardised at 256 across all four games (was 128/256/512/512), aligning with the multi-disciplinary commitment and the mid-tier full-price target. Total platform units 1,408 → 1,024. Game 1 reconciled — name is Shadowkeep (was Gravelight in v4.0); genre is multi-room top-down adventure (was single-screen platformer); inspirations are *Atic Atac* / *Sabre Wulf* (were *Manic Miner* / *Jet Set Willy*). Phase structure now per-brief rather than fixed; Phase 1 is conventionally an 8-unit vertical slice. Games 3 and 4 down from 512 units; design adjustment flagged for the brief work on each. **The four v4.0 game outline files (`game-01-full-game-outline-zx-spectrum-gravelight.md` and siblings for Ionfire/Grimstone/Dawnreach) were deleted** — they documented the previous 128/256/512/512 code-led plan at the wrong unit scale and (for Gravelight) the wrong Game 1 design; preserved in git history rather than confusing future readers as apparently-current spec.
+- **v5.0 (2026-05-13):** Substantial revision driven by decisions captured 2026-05-13 (see `docs/decisions/`). Per-game unit count standardised at 256 across all four games (was 128/256/512/512), aligning with the multi-disciplinary commitment and the mid-tier full-price target. Total platform units 1,408 → 1,024. Game 1 reconciled — name is Shadowkeep (was Gravelight in v4.0); genre is multi-room top-down adventure (was single-screen platformer); inspirations are *Atic Atac* / *Sabre Wulf* (were *Manic Miner* / *Jet Set Willy*). Phase structure now per-brief rather than fixed; Phase 1 is conventionally an 8-unit vertical slice. Games 3 and 4 down from 512 units; design adjustment flagged for the brief work on each. **The four v4.0 game outline files (`game-01-full-game-outline-zx-spectrum-gravelight.md` and siblings for Ionfire/Grimstone/Dawnreach) were deleted** — they documented the previous 128/256/512/512 code-led plan at the wrong unit scale and (for Gravelight) the wrong Game 1 design; preserved in git history rather than confusing future readers as apparently-current spec.
 - **v4.0 (2026-03-09):** Major restructure. Reduced from 16 to 4 assembly games. No-repetition rule across primary platforms. Every game inspired by a real commercial release. BASIC gateway expanded from 8 to 4 focused games. Previous 16-game curriculum preserved in game outline files for reference.
 - **v3.20 (2026-02-06):** Replaced Game 1 (Skyfire) with Shadowkeep.
 - **v3.0 (2026-01-18):** Initial 16-game curriculum.

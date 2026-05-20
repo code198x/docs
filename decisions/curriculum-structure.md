@@ -59,7 +59,7 @@ Realistic acceleration likely brings later games to 60–70% of Game 1's authori
 
 ### Relationship to existing curriculum docs
 
-The current `docs/curriculum/assembly/sinclair-zx-spectrum/sinclair-zx-spectrum-curriculum.md` (v4.0, 2026-03-09) has per-game unit counts of 128/256/512/512. Those revise to 256/256/256/256. The accompanying "concept," "skills taught," and "why" copy for Games 2–4 will need reconciliation when each game's brief is touched in turn — particularly Game 3 (Grimstone, isometric adventure), which was sized for Knight Lore scale and may need design adjustment to fit 256 units. That reconciliation is forthcoming work, not blocked on this decision.
+The current `docs/platforms/sinclair-zx-spectrum/assembly.md` (v4.0, 2026-03-09) has per-game unit counts of 128/256/512/512. Those revise to 256/256/256/256. The accompanying "concept," "skills taught," and "why" copy for Games 2–4 will need reconciliation when each game's brief is touched in turn — particularly Game 3 (Grimstone, isometric adventure), which was sized for Knight Lore scale and may need design adjustment to fit 256 units. That reconciliation is forthcoming work, not blocked on this decision.
 
 The curriculum doc previously named Game 1 as "Gravelight" (single-screen platformer) while implementation was Shadowkeep. Reconciliation completed 2026-05-13; spec is now at v5.0 and aligned. (Historical: the original v4.0 Dawnreach concept assumed Game 1 was a platformer; v5.0 flags the design implication of the Game 1 change for Dawnreach's eventual brief work.)
 
@@ -76,4 +76,4 @@ If curriculum-level planning shows any of these patterns, stop and re-read this 
 
 ## Status
 
-Active. Captured 2026-05-13. Descends from [real-retro-games.md](real-retro-games.md). The structural commitment that operationalises the multi-disciplinary bar at curriculum scale. Curriculum doc reconciliation in `docs/curriculum/` is forthcoming work flagged by this decision.
+Active. Captured 2026-05-13. Descends from [real-retro-games.md](real-retro-games.md). The structural commitment that operationalises the multi-disciplinary bar at curriculum scale. Per-platform curriculum docs now live under `docs/platforms/{system}/`.

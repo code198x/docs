@@ -32,45 +32,25 @@ See [specifications/curriculum.md](specifications/curriculum.md) for the full mo
 ## Repository Structure
 
 ```
-/
-├── curriculum/                    # Game sequences and curricula
-│   ├── commodore-64-curriculum.md
-│   ├── sinclair-zx-spectrum-curriculum.md
-│   ├── commodore-amiga-curriculum.md
-│   ├── nintendo-nes-curriculum.md
-│   ├── assembly/                  # Future platform assembly stubs
-│   │   ├── sega-mega-drive/
-│   │   ├── atari-st/
-│   │   ├── bbc-micro/
-│   │   └── ...
-│   ├── basic/                     # BASIC curricula and stubs
-│   │   ├── commodore-64/
-│   │   ├── sinclair-zx-spectrum/
-│   │   ├── commodore-amiga/
-│   │   ├── bbc-micro/
-│   │   └── ...
-│   ├── patterns/                  # Reusable code patterns
-│   └── reference/                 # Planning and reference docs
+docs/
+├── platforms/                      # System-first: each platform has its world here
+│   ├── sinclair-zx-spectrum/       # Active: reference.md + assembly.md + basic.md + games/
+│   ├── commodore-64/               # Deferred Game 1: reference.md + *-skeleton.md
+│   ├── commodore-amiga/            # Deferred Game 1: reference.md + *-skeleton.md
+│   ├── nintendo-entertainment-system/  # Deferred Game 1: reference.md + assembly-skeleton.md
+│   └── {12 far-future platforms}/  # Pre-methodology drafts (assembly-skeleton.md)
 │
-├── platforms/                     # Platform-specific references
-│   ├── commodore-64/              # Hardware refs, quick guides
-│   ├── sinclair-zx-spectrum/
-│   ├── commodore-amiga/
-│   └── nintendo-entertainment-system/
-│
-├── specifications/
-│   ├── curriculum.md               # How curricula work
-│   ├── unit.md                     # How to format unit files
-│   ├── brief.md                    # Per-game brief format
-│   ├── pattern-library.md          # Pattern library structure
-│   ├── vault.md                    # Vault entry structure
-│   ├── information-architecture.md
-│   └── content-creation-workflow.md
-├── decisions/                      # Binding decision records
-├── infrastructure/                 # Docker, capture pipeline, Astro
+├── decisions/                      # Binding policy records (~17 files)
+├── specifications/                 # Cross-cutting format/structure specs
+├── tracker/                        # Live state, plans, status
+├── infrastructure/                 # Docker, capture pipeline, Astro, investigation briefs
+├── emulators/                      # Emulator references
+├── vault/                          # Encyclopedia (people / companies / games / techniques)
 ├── log.md                          # Append-only event log
-└── index.md                        # Top-level navigation
+└── index.md                        # Top-level navigation map
 ```
+
+See [index.md](index.md) for a full file-by-file map.
 
 ## Key Documents
 
@@ -84,31 +64,32 @@ See [specifications/curriculum.md](specifications/curriculum.md) for the full mo
 
 ## Platform Status
 
-### Assembly Curricula (Main)
+### Assembly Curricula
 
-| Platform | Language | Curriculum | Status |
-|----------|----------|------------|--------|
-| ZX Spectrum | Z80 Assembly | [44 entries / 6 volumes / ~2,396 units](decisions/spectrum-assembly-track.md) | v0.3 track structure locked; Shadowkeep (Game 1) commits 64 units across 4 arcs; **Arcs 1-2 ship October 2026** |
-| Commodore 64 | 6510 Assembly | [16 games, ~1,536 units](curriculum/commodore-64-curriculum.md) | Game sequence defined; pre-methodology (concept locked) |
-| NES | 6502 Assembly | [16 games, ~1,536 units](curriculum/nintendo-nes-curriculum.md) | Game sequence defined; pre-methodology (concept locked) |
-| Amiga | 68000 Assembly | [16 games, ~2,048 units](curriculum/commodore-amiga-curriculum.md) | Game sequence defined; pre-methodology (concept locked) |
+| Platform | Language | Status |
+|----------|----------|--------|
+| ZX Spectrum | Z80 | **Active.** [44 entries / 6 volumes / ~2,396 units](decisions/spectrum-assembly-track.md). Shadowkeep (Game 1) commits 64 units across 4 arcs; **Arcs 1-2 ship October 2026**. See [platforms/sinclair-zx-spectrum/assembly.md](platforms/sinclair-zx-spectrum/assembly.md). |
+| Commodore 64 | 6510 | **Deferred post-October.** Lightweight skeleton at [platforms/commodore-64/assembly-skeleton.md](platforms/commodore-64/assembly-skeleton.md). Awaits Spectrum methodology validation. |
+| NES | 6502 | **Deferred post-October.** Lightweight skeleton at [platforms/nintendo-entertainment-system/assembly-skeleton.md](platforms/nintendo-entertainment-system/assembly-skeleton.md). |
+| Amiga | 68000 | **Deferred post-October.** Lightweight skeleton at [platforms/commodore-amiga/assembly-skeleton.md](platforms/commodore-amiga/assembly-skeleton.md). |
 
-### BASIC Gateway Curricula (Optional)
+### BASIC Gateway Curricula
 
-| Platform | Language | Curriculum | Status |
-|----------|----------|------------|--------|
-| ZX Spectrum | Sinclair BASIC | [32 games / 4 volumes](platforms/sinclair-zx-spectrum/basic.md) | v6.4 lineup (11 games renamed under inspired-by-not-clones convention); **Volume 1 (8 games) ships October 2026** |
-| Commodore 64 | BASIC V2 | [8 games, 512 units](curriculum/basic/commodore-64/) | Game sequence defined; pre-methodology |
-| Amiga | AMOS/Blitz BASIC | [16 games](curriculum/basic/commodore-amiga/) | Game sequence defined; pre-methodology |
+| Platform | Language | Status |
+|----------|----------|--------|
+| ZX Spectrum | Sinclair BASIC | **Active.** [32 games / 4 volumes](platforms/sinclair-zx-spectrum/basic.md), v6.4 inspired-by-not-clones names. **Volume 1 (8 games) ships October 2026.** |
+| Commodore 64 | BASIC V2 | **Pre-methodology draft.** [platforms/commodore-64/basic-skeleton.md](platforms/commodore-64/basic-skeleton.md). |
+| Amiga | AMOS/Blitz BASIC | **Pre-methodology draft.** [platforms/commodore-amiga/basic-skeleton.md](platforms/commodore-amiga/basic-skeleton.md). |
+| BBC Micro | BBC BASIC | **Pre-methodology draft.** [platforms/bbc-micro/basic-skeleton.md](platforms/bbc-micro/basic-skeleton.md). |
+| Amstrad CPC | Locomotive BASIC | **Pre-methodology draft.** [platforms/amstrad-cpc/basic-skeleton.md](platforms/amstrad-cpc/basic-skeleton.md). |
+| MSX | MSX BASIC | **Pre-methodology draft.** [platforms/msx/basic-skeleton.md](platforms/msx/basic-skeleton.md). |
+| Atari ST | STOS/GFA BASIC | **Pre-methodology draft.** [platforms/atari-st/basic-skeleton.md](platforms/atari-st/basic-skeleton.md). |
 
-### Future Platforms (Stub Curricula)
+### Far-future platforms
 
-Stub curricula have been created for future platforms. See:
-- [curriculum/assembly/](curriculum/assembly/) - Assembly stubs (Mega Drive, Atari ST, BBC Micro, SNES, etc.)
-- [curriculum/basic/](curriculum/basic/) - BASIC stubs (BBC BASIC, Locomotive, STOS/GFA, MSX-BASIC)
-- [curriculum/reference/future-platforms-complete.md](curriculum/reference/future-platforms-complete.md) - Full platform roadmap
+Twelve additional platforms have pre-methodology assembly drafts under `platforms/{system}/assembly-skeleton.md` — Acorn Archimedes, Amstrad CPC, Atari 8-bit, Atari ST, BBC Micro, Game Boy, MSX, Sega Master System, Sega Mega Drive, SNES, TurboGrafx-16, Vectrex. All await Spectrum methodology validation before any methodology investment.
 
-The methodology has been pressure-tested for generalisation across additional retro platforms — see [`docs/tracker/methodology-generalisation-survey.md`](tracker/methodology-generalisation-survey.md) for the full check (11 systems clean, 2 strain at edges, 2 break honestly outside domain). Future platform expansion remains post-October work and awaits Spectrum methodology validation through shipped games.
+The methodology has been pressure-tested for generalisation — see [tracker/methodology-generalisation-survey.md](tracker/methodology-generalisation-survey.md) for the full check (11 systems clean, 2 strain at edges, 2 break honestly outside domain). Coverage strategy and tier commitment in [tracker/coverage-strategy.md](tracker/coverage-strategy.md).
 
 ## Related Repositories
 

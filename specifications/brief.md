@@ -10,23 +10,23 @@
 
 A brief is **the source of truth for a game's design intent**. It is written before unit MDX or code-samples work begins and is referenced throughout authoring. The brief is reviewable as a standalone artefact; a reader who has never seen the game should leave the brief able to predict what every phase ships and how each unit fits.
 
-A brief is **not** an implementation document. Per-phase or per-unit detail lives elsewhere (the existing `wiki/curriculum/shadowkeep-phase-1-design.md` is the pattern: a sibling design doc that follows from the brief). The brief is strategic; design docs are operational.
+A brief is **not** an implementation document. Per-phase or per-unit detail lives elsewhere (the existing `knowledge/curriculum/shadowkeep-phase-1-design.md` is the pattern: a sibling design doc that follows from the brief). The brief is strategic; design docs are operational.
 
 **Key principles:**
 
-- **Multi-disciplinary from the brief downward.** Per [`real-retro-games`](../wiki/decisions/real-retro-games.md), the brief carries first-class fields for visuals, audio, level design, and polish alongside code-led concerns. A brief that names code targets but leaves visual/audio/level/polish sketchy is not a complete brief.
-- **Per-phase commitments.** Per [`phase-boundaries`](../wiki/decisions/phase-boundaries.md), each phase declares both what's new (incremental) and what revisits earlier work (spiral, per [`spiral-and-incremental`](../wiki/decisions/spiral-and-incremental.md)). Each phase end ships a complete game at the relevant commercial bar.
-- **Constraint position explicit.** Per [`constraint-position`](../wiki/decisions/constraint-position.md), each brief declares which 1980s the game inhabits — period-faithful, period-possible, or modern scene.
-- **British English throughout** (exception: "program" for computer programs, per [`british-english`](../wiki/decisions/british-english.md)).
-- **Magazine voice.** Warm, technical, opinionated, never condescending. See `wiki/curriculum/writing-voice.md`.
+- **Multi-disciplinary from the brief downward.** Per [`real-retro-games`](../decisions/real-retro-games.md), the brief carries first-class fields for visuals, audio, level design, and polish alongside code-led concerns. A brief that names code targets but leaves visual/audio/level/polish sketchy is not a complete brief.
+- **Per-phase commitments.** Per [`phase-boundaries`](../decisions/phase-boundaries.md), each phase declares both what's new (incremental) and what revisits earlier work (spiral, per [`spiral-and-incremental`](../decisions/spiral-and-incremental.md)). Each phase end ships a complete game at the relevant commercial bar.
+- **Constraint position explicit.** Per [`constraint-position`](../decisions/constraint-position.md), each brief declares which 1980s the game inhabits — period-faithful, period-possible, or modern scene.
+- **British English throughout** (exception: "program" for computer programs, per [`british-english`](../decisions/british-english.md)).
+- **Magazine voice.** Warm, technical, opinionated, never condescending. See `docs/specifications/writing-voice.md`.
 
 ---
 
 ## File Location
 
 ```
-docs/curriculum/assembly/{platform}/briefs/{game-slug}-brief.md
-docs/curriculum/basic/{platform}/briefs/{game-slug}-brief.md
+docs/platforms/{system}/games/{game-slug}/brief.md
+docs/platforms/{system}/games/{game-slug}/brief.md
 ```
 
 One brief per game. The brief is a versioned spec document, sitting alongside the platform-level curriculum doc.
@@ -118,7 +118,7 @@ For slower-paced games (exploration, puzzle, narrative), describe the **texture 
 
 ## Section 5: Constraint Position
 
-Declares which era-period techniques the game uses, per [`constraint-position`](../wiki/decisions/constraint-position.md):
+Declares which era-period techniques the game uses, per [`constraint-position`](../decisions/constraint-position.md):
 
 - **Period-faithful** — only techniques common in commercial era games.
 - **Period-possible** — techniques that existed in the era but were rare in commercial product.
@@ -137,13 +137,13 @@ After the position declaration, list:
 > **In active use:** attribute memory ($5800–$5AFF), bitmap memory ($4000–$57FF) for the hero sprite, port `$FE` (keyboard + beeper), IRQ-driven update loop.
 > **Deliberately avoided:** 128K bank switching (Phase 7 territory), AY-3-8912 (Phase 7), software pixel scrolling (Game 2 territory), contended-memory mastery (Game 2).
 
-**Common failure:** Declaring period-faithful but using modern-scene techniques in a unit without realising it. Cross-check against the platform reference page in `wiki/platforms/` if uncertain.
+**Common failure:** Declaring period-faithful but using modern-scene techniques in a unit without realising it. Cross-check against the platform reference page in `docs/platforms/` if uncertain.
 
 ---
 
 ## Section 6: Visual Direction
 
-**Bullets + one or two paragraphs.** First-class per [`real-retro-games`](../wiki/decisions/real-retro-games.md). The brief names visual ambition explicitly; the design doc (if any) goes deeper.
+**Bullets + one or two paragraphs.** First-class per [`real-retro-games`](../decisions/real-retro-games.md). The brief names visual ambition explicitly; the design doc (if any) goes deeper.
 
 Topics to cover (omit any that don't apply):
 
@@ -169,7 +169,7 @@ Topics:
 - **Sound integration** — how music and SFX coexist (interleaving on a single channel, voice sharing on AY/SID, etc.).
 - **Per-phase if the audio grows** — Phase 1 might ship title-only beeper; Phase 7 might add AY in-game music.
 
-A separate composition spec document may live in `wiki/curriculum/{game}-{audio}-spec.md` (precedent: `shadowkeep-beeper-spec.md`).
+A separate composition spec document may live in `docs/platforms/{system}/games/{game}/{audio}-spec.md` (precedent: `shadowkeep-beeper-spec.md`).
 
 **Common failure:** "Beeper title theme" as the entire audio section. That's the answer to "what music?", not the answer to "what's the audio direction?". Describe the *intent* and *texture*.
 
@@ -184,7 +184,7 @@ Topics:
 - **Scale** — room/screen/level count at full game endpoint, and at each phase boundary if it grows.
 - **Pacing** — early game eases the player in; mid game tests them; late game pushes them. Name the curve.
 - **Signposting** — how the game communicates rules, goals, and progress without prose.
-- **Difficulty curve** — onboarding strategy (early forgiveness) vs peak difficulty (1980s-bar, see `wiki/decisions/real-retro-games.md` and the difficulty discussion in `wiki/log.md`).
+- **Difficulty curve** — onboarding strategy (early forgiveness) vs peak difficulty (1980s-bar, see `docs/decisions/real-retro-games.md` and the difficulty discussion in `docs/log.md`).
 - **Onboarding** — what the first five minutes teach the player about the game's contract.
 
 **Common failure:** Stating scale without naming the pacing strategy. "50 rooms" tells you size, not whether the player is bored at room 20 or losing because room 49 spiked unfairly.
@@ -202,7 +202,7 @@ Topics:
 - **Options** — what the player can configure (controls, difficulty, sound on/off).
 - **Ending** — what happens when the player wins; what happens when the player loses.
 - **Accessibility** — control remapping, colour-blind considerations, frame-rate considerations.
-- **"Shippable" criteria** — what would have to be true for this game to ship on Itch.io alongside contemporary indie work (per the aspirational Itch.io bar discussed in `wiki/log.md`).
+- **"Shippable" criteria** — what would have to be true for this game to ship on Itch.io alongside contemporary indie work (per the aspirational Itch.io bar discussed in `docs/log.md`).
 
 **Common failure:** Deferring all polish concerns to "the final phase." Polish work compounds; per `phase-boundaries`, every phase ends at a shippable artefact at its bar, which means each phase carries appropriate polish for its scope.
 
@@ -262,7 +262,7 @@ The ship test is what a phase has to clear to count as shipped. It runs at phase
 
 Five axes:
 
-- **Code:** assembles cleanly, runs on emulator and real hardware, passes the Definition of Done (see `wiki/curriculum/revamp.md`).
+- **Code:** assembles cleanly, runs on emulator and real hardware, passes the Definition of Done (see `docs/tracker/revamp.md`).
 - **Visuals:** meets the phase's visual ambition; magazine-screenshot test passed.
 - **Audio:** music and SFX present per phase plan, mixed cleanly.
 - **Level design:** playable end-to-end; difficulty curve appropriate; signposting clear.
@@ -276,7 +276,7 @@ For each phase, the brief names the specific pass criteria across all five axes.
 
 ## Section 13: Pattern Library Extractions
 
-**Bullets, grouped by technique category.** What reusable techniques this game surfaces for promotion to the Pattern Library, per [`pattern-library`](../wiki/decisions/pattern-library.md).
+**Bullets, grouped by technique category.** What reusable techniques this game surfaces for promotion to the Pattern Library, per [`pattern-library`](../decisions/pattern-library.md).
 
 Categories (matching the existing library structure):
 
@@ -305,7 +305,7 @@ For cross-platform patterns (techniques that genuinely transcend the platform), 
 
 **Bullets.** Which vault entries this game's curriculum references — and which need to exist (or be expanded) for cross-references to resolve.
 
-Per the Definition of Done in `wiki/curriculum/revamp.md`, every unit's cross-references must resolve. The Vault Tie-ins section names the entries this game depends on so that vault completeness work can prioritise.
+Per the Definition of Done in `docs/tracker/revamp.md`, every unit's cross-references must resolve. The Vault Tie-ins section names the entries this game depends on so that vault completeness work can prioritise.
 
 Three categories of tie-in:
 
@@ -331,7 +331,7 @@ A brief may include a Risks section after Section 14 if the brief is for a game 
 
 Format: numbered bullets, each with the risk and a mitigation thought.
 
-If the brief skips this section, particularly novel risks can live in a sibling design doc (`wiki/curriculum/{game}-{phase}-design.md`) rather than the brief itself.
+If the brief skips this section, particularly novel risks can live in a sibling design doc (`docs/platforms/{system}/games/{game}/{phase}-design.md`) rather than the brief itself.
 
 ---
 
@@ -346,20 +346,20 @@ A brief is ready to anchor authoring when:
 - [ ] Sections 6–9 are written with the same care as Sections 1–5 (multi-disciplinary commitment).
 - [ ] Section 11 (phase trajectory) declares techniques + revisits + deliverable per phase.
 - [ ] Section 12 (ship test) covers all five axes per phase.
-- [ ] All cross-references in Section 14 resolve to real vault content (or are catalogued in `wiki/curriculum/lesson-references.md` as required).
+- [ ] All cross-references in Section 14 resolve to real vault content (or are catalogued in `docs/tracker/lesson-references.md` as required).
 - [ ] British English throughout (except "program").
-- [ ] Magazine voice — `wiki/curriculum/writing-voice.md` standards apply.
+- [ ] Magazine voice — `docs/specifications/writing-voice.md` standards apply.
 
 ---
 
 ## Anchored In
 
-- [`decisions/real-retro-games`](../wiki/decisions/real-retro-games.md) — multi-disciplinary commitment that makes Sections 6–9 first-class.
-- [`decisions/phase-boundaries`](../wiki/decisions/phase-boundaries.md) — phase-end commercial bar; gates Section 12.
-- [`decisions/constraint-position`](../wiki/decisions/constraint-position.md) — three-tier taxonomy used in Section 5.
-- [`decisions/spiral-and-incremental`](../wiki/decisions/spiral-and-incremental.md) — within/across phase progression; structures Section 11.
-- [`decisions/curriculum-structure`](../wiki/decisions/curriculum-structure.md) — per-game scope (256 units assembly; per-`revamp.md` for BASIC).
-- [`decisions/pattern-library`](../wiki/decisions/pattern-library.md) — what Section 13 feeds into.
+- [`decisions/real-retro-games`](../decisions/real-retro-games.md) — multi-disciplinary commitment that makes Sections 6–9 first-class.
+- [`decisions/phase-boundaries`](../decisions/phase-boundaries.md) — phase-end commercial bar; gates Section 12.
+- [`decisions/constraint-position`](../decisions/constraint-position.md) — three-tier taxonomy used in Section 5.
+- [`decisions/spiral-and-incremental`](../decisions/spiral-and-incremental.md) — within/across phase progression; structures Section 11.
+- [`decisions/curriculum-structure`](../decisions/curriculum-structure.md) — per-game scope (256 units assembly; per-`revamp.md` for BASIC).
+- [`decisions/pattern-library`](../decisions/pattern-library.md) — what Section 13 feeds into.
 
 ---
 

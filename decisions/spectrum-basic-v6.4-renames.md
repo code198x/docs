@@ -74,4 +74,4 @@ Active. Captured 2026-05-19. Descends from [inspired-by-not-clones-naming.md](in
 
 Anchored in [[spectrum-basic]] (the current-state memory entry).
 
-The existing [spectrum-basic-32-games.md](spectrum-basic-32-games.md) has been updated with the renamed lineup. The curriculum spec doc (`docs/curriculum/basic/sinclair-zx-spectrum/sinclair-zx-spectrum-basic-curriculum.md`) needs a v6.4 changelog entry — pending.
+The existing [spectrum-basic-32-games.md](spectrum-basic-32-games.md) has been updated with the renamed lineup. The curriculum spec doc (`docs/platforms/sinclair-zx-spectrum/basic.md`) needs a v6.4 changelog entry — pending.

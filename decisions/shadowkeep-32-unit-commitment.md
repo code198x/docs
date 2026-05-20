@@ -101,8 +101,8 @@ Cuts apply only after a runway slip is identified. Cuts are *not* the default pl
 - [october-2026-launch-spec.md](october-2026-launch-spec.md) — broader launch scope (this supersedes its Shadowkeep portion).
 - [commercial-bar-revamp.md](commercial-bar-revamp.md) — bar definitions per track.
 - [real-retro-games.md](real-retro-games.md) — multi-disciplinary bar.
-- [`docs/platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md`](../curriculum/shadowkeep-32-unit-plan.md) — full per-unit specifications.
-- [`docs/tracker/revamp.md`](../curriculum/revamp.md) — live status tracker.
+- [`docs/platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md`](../platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md) — full per-unit specifications.
+- [`docs/tracker/revamp.md`](../tracker/revamp.md) — live status tracker.
 
 ## Log
 

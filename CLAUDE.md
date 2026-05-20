@@ -89,9 +89,10 @@ Language auto-detected from path (Z80 for spectrum, 68000 for amiga, ca65 for NE
 - **Unit formatting**: `docs/specifications/unit.md`
 - **Brief format**: `docs/specifications/brief.md`
 - **Decisions (binding)**: `docs/decisions/`
-- **Platform curricula**: `docs/curriculum/{platform}-curriculum.md` (restructuring to `docs/platforms/{system}/` in Phase 1b)
-- **Platform refs**: `docs/platforms/{platform}/`
-- **Live tracker**: `docs/tracker/revamp.md` (arriving in Phase 1b)
+- **Platform curricula**: `docs/platforms/{system}/{assembly,basic,assembly-skeleton,basic-skeleton}.md`
+- **Per-game briefs**: `docs/platforms/{system}/games/{slug}/brief.md` (plus other per-game design docs)
+- **Platform refs**: `docs/platforms/{system}/reference.md` (plus existing hardware/language/graphics subdirs)
+- **Live tracker**: `docs/tracker/revamp.md`
 - **Event log**: `docs/log.md`
 
 ## Design Context

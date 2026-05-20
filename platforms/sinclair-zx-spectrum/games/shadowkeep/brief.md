@@ -7,7 +7,7 @@
 **Constraint position:** Period-faithful (across all phases) — see Section 5
 **Status:** Active (v1.0, 2026-05-13)
 
-Formal spec: [`docs/specifications/brief.md`](../../../../specifications/brief.md). Companion design doc: [`wiki/curriculum/shadowkeep-phase-1-design.md`](../../../../../wiki/curriculum/shadowkeep-phase-1-design.md). Composition spec: [`wiki/curriculum/shadowkeep-beeper-spec.md`](../../../../../wiki/curriculum/shadowkeep-beeper-spec.md).
+Formal spec: [`docs/specifications/brief.md`](../../../../specifications/brief.md). Companion design doc: [`knowledge/curriculum/shadowkeep-phase-1-design.md`](../../../../../knowledge/curriculum/shadowkeep-phase-1-design.md). Composition spec: [`docs/platforms/sinclair-zx-spectrum/games/shadowkeep/beeper-spec.md`](../../../../../platforms/sinclair-zx-spectrum/games/shadowkeep/beeper-spec.md).
 
 ---
 
@@ -93,7 +93,7 @@ Each room can shift its base PAPER colour to give different rooms different mood
 
 ## 7. Audio Direction
 
-**Title music.** Single-voice beeper, ~30–60 seconds, looping. D minor, ~110 BPM. *Manic Miner*'s "In the Hall of the Mountain King" precedent — period-faithful beeper carrying a real melody, monophonic and noisy but composed with care. Full composition spec in [`shadowkeep-beeper-spec.md`](../../../../../wiki/curriculum/shadowkeep-beeper-spec.md).
+**Title music.** Single-voice beeper, ~30–60 seconds, looping. D minor, ~110 BPM. *Manic Miner*'s "In the Hall of the Mountain King" precedent — period-faithful beeper carrying a real melody, monophonic and noisy but composed with care. Full composition spec in [`shadowkeep-beeper-spec.md`](../../../../../platforms/sinclair-zx-spectrum/games/shadowkeep/beeper-spec.md).
 
 **In-game music.**
 
@@ -127,7 +127,7 @@ Each room can shift its base PAPER colour to give different rooms different mood
 
 **Signposting.** The attribute palette *is* the signposting. There is no in-game tutorial. A first-time player learns by stepping carefully: a single death on a flashing red cell teaches the entire hazard rule. The colour vocabulary is consistent and total; once the player has read each cell type once, the rules are learned.
 
-**Difficulty curve.** Forgiving early, peak at 1987 chops late. Per the difficulty discussion in `wiki/log.md` and `decisions/real-retro-games.md`:
+**Difficulty curve.** Forgiving early, peak at 1987 chops late. Per the difficulty discussion in `docs/log.md` and `decisions/real-retro-games.md`:
 
 - Onboarding: early rooms can be cleared without losing a life if the player reads the palette.
 - Mid-game: pattern memorisation comes into play; a player may lose a life by misreading a cell.
@@ -183,7 +183,7 @@ A learner's Phase-2 build of Shadowkeep should be playable cleanly on Spectrum N
 - **No turbo-loader theatrics in Arc 1.** Standard ROM tape loader for Phase 1–2; turbo loader arrives in Phase 13.
 - **No procedural generation.** Every room hand-designed. Discovery comes from learning the keep's geography, not from a random seed.
 - **No modern-scene techniques.** 8x1 multicolour, software sprite engines, post-2010 AY tricks — all out of scope. Per Section 5.
-- **No vertical-slice unit count creep.** Phase 1 is 8 units. If runway slack appears, raise the per-unit bar; do not add a ninth unit (per [`october-2026-vertical-slice`](../../../../../wiki/decisions/october-2026-vertical-slice.md)).
+- **No vertical-slice unit count creep.** Phase 1 is 8 units. If runway slack appears, raise the per-unit bar; do not add a ninth unit (per [`october-2026-vertical-slice`](../../../../../decisions/shadowkeep-32-unit-commitment.md)).
 
 ---
 
@@ -216,7 +216,7 @@ A learner's Phase-2 build of Shadowkeep should be playable cleanly on Spectrum N
 **Phase 1 (8 units) — Vertical slice.**
 - *New:* one attribute write, attribute reads, drawing a room, hero sprite design + placement, movement, attribute-based collision, room transition, beeper title theme, complete title→play→end loop.
 - *Revisits:* n/a (foundational).
-- *Phase-end deliverable:* two beautifully designed rooms with attribute-driven gameplay, polished hero, working room transition, beeper title theme, complete title → play → end → restart loop. Vertical slice as defined in [`october-2026-vertical-slice`](../../../../../wiki/decisions/october-2026-vertical-slice.md).
+- *Phase-end deliverable:* two beautifully designed rooms with attribute-driven gameplay, polished hero, working room transition, beeper title theme, complete title → play → end → restart loop. Vertical slice as defined in [`october-2026-vertical-slice`](../../../../../decisions/shadowkeep-32-unit-commitment.md).
 
 **Phase 2 (8 units) — Arc 1 completion.**
 - *New:* full 9-room (3×3) keep, complete cell vocabulary (treasure, keys, locked doors, hazards, exit), lives system with hit-flash, score display, beeper SFX layer for key events.
@@ -302,7 +302,7 @@ A learner's Phase-2 build of Shadowkeep should be playable cleanly on Spectrum N
 
 ## 12. Ship Test (Multi-axis)
 
-Per-phase pass criteria across the five disciplines. Each phase passes only when *every* axis clears its row at the relevant bar. Definition of Done in `wiki/curriculum/revamp.md` applies to every unit in addition.
+Per-phase pass criteria across the five disciplines. Each phase passes only when *every* axis clears its row at the relevant bar. Definition of Done in `docs/tracker/revamp.md` applies to every unit in addition.
 
 | Phase | Code | Visuals | Audio | Level design | Polish |
 |---|---|---|---|---|---|
@@ -328,7 +328,7 @@ Per-phase pass criteria across the five disciplines. Each phase passes only when
 
 ## 13. Pattern Library Extractions
 
-Reusable techniques Shadowkeep surfaces for promotion to the Pattern Library, per [`pattern-library`](../../../../../wiki/decisions/pattern-library.md). Each extraction is a candidate; promotion happens when the technique proves reusable across multiple games.
+Reusable techniques Shadowkeep surfaces for promotion to the Pattern Library, per [`pattern-library`](../../../../../decisions/pattern-library.md). Each extraction is a candidate; promotion happens when the technique proves reusable across multiple games.
 
 **framework:**
 
@@ -374,7 +374,7 @@ Reusable techniques Shadowkeep surfaces for promotion to the Pattern Library, pe
 
 ## 14. Vault Tie-ins
 
-Vault entries this curriculum threads through. Per the Definition of Done in `wiki/curriculum/revamp.md`, every reference must resolve. Entries marked **GAP** need creating before the referencing units ship.
+Vault entries this curriculum threads through. Per the Definition of Done in `docs/tracker/revamp.md`, every reference must resolve. Entries marked **GAP** need creating before the referencing units ship.
 
 **Direct ancestors:**
 
@@ -428,4 +428,4 @@ Vault entries this curriculum threads through. Per the Definition of Done in `wi
 
 ## Changelog
 
-- **v1.0 (2026-05-13):** Initial brief. First brief authored against `docs/specifications/brief.md` v1.0. Replaces the ad-hoc design content previously distributed across `wiki/curriculum/shadowkeep-phase-1-design.md` (which remains as the operational design doc) and various log entries. Anchors 256-unit total scope, 17-phase trajectory, period-faithful constraint position, mid-tier full-price endpoint bar, October vertical-slice deliverable.
+- **v1.0 (2026-05-13):** Initial brief. First brief authored against `docs/specifications/brief.md` v1.0. Replaces the ad-hoc design content previously distributed across `knowledge/curriculum/shadowkeep-phase-1-design.md` (which remains as the operational design doc) and various log entries. Anchors 256-unit total scope, 17-phase trajectory, period-faithful constraint position, mid-tier full-price endpoint bar, October vertical-slice deliverable.

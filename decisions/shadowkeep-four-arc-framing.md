@@ -60,7 +60,7 @@ The Arc 1-2 plan benefits from refinements identified during the v0.1 brainstorm
 5. **Embedded Design Concepts section** added — Atmosphere through restraint, Authored level design, Animation budget, Identity through silhouette, Audio as place, Polish as discipline — listing surfacing units.
 6. **Extend per-unit Definition of Done** with "Headline + design concept made explicit in the prose" (point 10).
 
-These refinements need to land in [shadowkeep-32-unit-plan.md](../curriculum/shadowkeep-32-unit-plan.md) before October to give the launch the design-concept-clarity bar.
+These refinements need to land in [shadowkeep-32-unit-plan.md](../platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md) before October to give the launch the design-concept-clarity bar.
 
 ## Genre honesty — what Arcs 3-4 are NOT
 

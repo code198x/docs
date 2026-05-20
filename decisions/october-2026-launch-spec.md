@@ -8,7 +8,7 @@
 
 The October 2026 Crash! Live launch ships **Spectrum only**. C64, NES, and
 Amiga defer wholesale to post-October — coming-soon cards on the site, full
-design preserved in [revamp.md](../curriculum/revamp.md).
+design preserved in [revamp.md](../tracker/revamp.md).
 
 The Spectrum launch is **four artefacts at full quality bar**:
 
@@ -20,7 +20,7 @@ The Spectrum launch is **four artefacts at full quality bar**:
    from a shipped unit must exist.
 
 If runway tightens, count is cut, never the bar. Cut hierarchy lives in
-[revamp.md](../curriculum/revamp.md) and is binding.
+[revamp.md](../tracker/revamp.md) and is binding.
 
 ## October bar definition
 
@@ -51,7 +51,7 @@ the cut hierarchy. Cost-to-cut ratio doesn't favour cutting it.
 
 ## Cut hierarchy
 
-Per [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) (Shadowkeep cuts) and [revamp.md](../curriculum/revamp.md) (live tracker):
+Per [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) (Shadowkeep cuts) and [revamp.md](../tracker/revamp.md) (live tracker):
 
 1. Trim Shadowkeep Arc 2 sub-arcs back-to-front (2.4 → 2.3 → 2.2 → 2.1). Arc 1 alone (16 units) is the absolute floor.
 2. Only then begin BASIC V1 game cuts — and only below a 4-game floor.
@@ -89,11 +89,11 @@ this spec:
 
 When a drift trigger fires: name it as drift, decide whether the spec
 changes (with rationale captured as a log entry below), and capture
-deferred work in [revamp.md](../curriculum/revamp.md).
+deferred work in [revamp.md](../tracker/revamp.md).
 
 ## Anchored in
 
-- [revamp.md](../curriculum/revamp.md) — live status, source of truth for in-flight work.
+- [revamp.md](../tracker/revamp.md) — live status, source of truth for in-flight work.
 - [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) — Shadowkeep October scope.
 - [shadowkeep-four-arc-framing.md](shadowkeep-four-arc-framing.md) — full Shadowkeep four-arc framing.
 - [spectrum-basic-32-games.md](spectrum-basic-32-games.md) — BASIC lineup.

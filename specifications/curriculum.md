@@ -448,10 +448,10 @@ BASIC gateway tracks are added only when the platform has a historically signifi
 
 This specification defines how curricula work. The actual game details live in platform-specific files:
 
-- `/docs/curriculum/assembly/sinclair-zx-spectrum/sinclair-zx-spectrum-curriculum.md`
-- `/docs/curriculum/assembly/commodore-64/commodore-64-curriculum.md`
-- `/docs/curriculum/assembly/nintendo-nes/nintendo-nes-curriculum.md`
-- `/docs/curriculum/assembly/commodore-amiga/commodore-amiga-curriculum.md`
+- `/docs/platforms/sinclair-zx-spectrum/assembly.md`
+- `/docs/platforms/commodore-64/assembly-skeleton.md` (pre-methodology draft)
+- `/docs/platforms/nintendo-entertainment-system/assembly-skeleton.md` (pre-methodology draft)
+- `/docs/platforms/commodore-amiga/assembly-skeleton.md` (pre-methodology draft)
 
 Each platform curriculum file contains:
 

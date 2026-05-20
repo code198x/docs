@@ -28,7 +28,7 @@ A unit is reviewable only when every discipline has landed at the relevant bar. 
 
 ### In economics
 
-Multi-disciplinary units cost 2–3× the authoring time of code-led units. This is the correct cost of the commitment. The unit-count budgets in `docs/curriculum/` were sized for code-led work and need rebalancing under this decision — see the forthcoming curriculum-structure decision.
+Multi-disciplinary units cost 2–3× the authoring time of code-led units. This is the correct cost of the commitment. Earlier per-game unit-count budgets were sized for code-led work and were rebalanced under [curriculum-structure.md](curriculum-structure.md).
 
 ## Relationship to other decisions
 

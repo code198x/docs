@@ -17,7 +17,7 @@ Computed fields (layout, prevLesson, nextLesson, totalUnits, system, gameName) a
 
 ## Content collections
 
-Defined in `src/content.config.ts`. Three MDX collections + two YAML collections. See [content model](../curriculum/content-model.md) for details.
+Defined in `src/content.config.ts`. Three MDX collections + two YAML collections. See [content model](../specifications/content-model.md) for details.
 
 ## Key gotcha
 

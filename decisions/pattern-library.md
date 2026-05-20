@@ -37,7 +37,7 @@ Each pattern entry lives at `patterns/{platform}/{category}/{pattern-name}/` or 
 
 ### Existing entries are correctly categorised
 
-The current four BASIC patterns on Spectrum (seven-segment-digits, progress-bar, text-utilities, screen-frame) and the ten candidate patterns documented in `docs/curriculum/patterns/BASIC-PATTERN-ENTRIES.md` are correctly slotted into the technique categories. No structural rework needed.
+The current four BASIC patterns on Spectrum (seven-segment-digits, progress-bar, text-utilities, screen-frame) and the ten candidate patterns documented in `docs/specifications/basic-pattern-entries.md` are correctly slotted into the technique categories. No structural rework needed.
 
 ## Drift triggers
 
