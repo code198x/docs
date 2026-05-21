@@ -79,7 +79,7 @@ This replaces HALT and works reliably across all our test cases.
 
 ## Files referenced
 
-- pasmonext .asm sources at `/Users/stevehill/Projects/Code198x/code-samples/sinclair-zx-spectrum/game-01-shadowkeep/unit-05/` and `unit-06/`
+- pasmonext .asm sources at `/Users/stevehill/Projects/198x/Code198x/code-samples/sinclair-zx-spectrum/game-01-shadowkeep/unit-05/` and `unit-06/`
 - Compiled .sna files in the same directories
 - Memory entry capturing the workaround: `~/.claude/projects/-Users-stevehill-Projects-Code198x/memory/emu198x-halt-rate-limit.md`
 

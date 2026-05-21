@@ -69,7 +69,7 @@ specifically for batch tutorial-asset production. Two ways to invoke it.
 ### Fast path (one-line common case)
 
 ```bash
-EMU=/Users/stevehill/Projects/Emu198x/target/release/emu198x-script-spectrum
+EMU=/Users/stevehill/Projects/198x/Emu198x/target/release/emu198x-script-spectrum
 
 # Screenshot from a snapshot
 $EMU game.sna --frames 250 --screenshot game.png
