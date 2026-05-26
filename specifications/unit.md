@@ -17,6 +17,7 @@ Every unit is a standalone MDX file containing:
 
 **Key Principles:**
 - Each unit produces a working, runnable result
+- Each unit's code is a small diff from the previous unit's code (~5–8 lines changed; see [incremental-code-samples.md](../decisions/incremental-code-samples.md))
 - Code must compile/run and be verified with screenshots
 - British English throughout (except "program" for computer programs)
 - Platform-specific technical accuracy
