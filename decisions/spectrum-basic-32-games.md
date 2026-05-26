@@ -20,7 +20,7 @@ Rather than cut a canonical game to fit Asteroids (every game post-canon-first a
 
 ## The lineup
 
-Volume 1 — First Programs (slots 1-8): Banner, Lucky Number, **Oracle Stone**, Reflex, Dice Roller, Bright Spark, Hi-Lo, Touchdown.
+Volume 1 — First Programs (slots 1-8): **Story Builder**, Lucky Number, **Oracle Stone**, Reflex, Dice Roller, Bright Spark, Hi-Lo, Touchdown.
 
 Volume 2 — Patterns of State (slots 9-16): **Cipher**, Quiz Master, **Locksmith**, **Sonar**, **Three in a Row**, **The Caverns**, **Yearfall**, Crates.
 
@@ -28,7 +28,7 @@ Volume 3 — Worlds and Rules (slots 17-24): Tail Chase, **Volley**, Brick Bash,
 
 Volume 4 — Stories and Systems (slots 25-32): Rooftops Pt 1, Stonefall Pt 1, Rooftops Pt 2, Stonefall Pt 2, Dungeons of Dorin Pt 1, Thornwood Manor Pt 1, Dungeons of Dorin Pt 2, Thornwood Manor Pt 2.
 
-Bold marks the v6.4 renames from v6.3. See [spectrum-basic-v6.4-renames.md](spectrum-basic-v6.4-renames.md) for the rationale per name.
+Bold marks names changed from v6.3. **Story Builder** replaces Banner (v6.5, 2026-05-25) — Banner's "just PRINT" concept didn't sustain a standalone game; Story Builder teaches the same Output concept with interactivity via INPUT and a shareable Mad Libs payoff. See [spectrum-basic-v6.4-renames.md](spectrum-basic-v6.4-renames.md) for the v6.4 rename rationale.
 
 V4 uses **2-deep tour-then-deepen ordering**: introduce two storytelling forms (Rooftops, Stonefall), deepen both; introduce two more (Dorin, Thornwood), deepen both. Volume midpoint at slot 28/29 marks the shift from graphical traditions to narrative traditions.
 
