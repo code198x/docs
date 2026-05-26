@@ -2,23 +2,23 @@
 
 Live status for the October 2026 launch + the broader Spectrum-first commercial-bar revamp. See [decisions/commercial-bar-revamp.md](../decisions/commercial-bar-revamp.md) for the strategic call.
 
-## ⚠️ Hard deadline
+## October 2026 target
 
-**Spectrum content must ship by October 2026 for Crash! Live.**
+Spectrum content targets October 2026 for Crash! Live. Close to having enough to ship — BASIC V1 done, landing page shipped, Shadowkeep 8 of 32 units live. October is a target, not a hard deadline.
 
-Shadowkeep is the lead game. Cadence (C64), Nightshade (NES), Exodus (Amiga) defer wholesale to post-October. Binding decisions: [october-2026-launch-spec.md](../decisions/october-2026-launch-spec.md), [shadowkeep-32-unit-commitment.md](../decisions/shadowkeep-32-unit-commitment.md), [shadowkeep-four-arc-framing.md](../decisions/shadowkeep-four-arc-framing.md), [spectrum-basic-32-games.md](../decisions/spectrum-basic-32-games.md), [spectrum-basic-v6.4-renames.md](../decisions/spectrum-basic-v6.4-renames.md), [real-retro-games.md](../decisions/real-retro-games.md), [curriculum-structure.md](../decisions/curriculum-structure.md), [spectrum-assembly-track.md](../decisions/spectrum-assembly-track.md), [inspired-by-not-clones-naming.md](../decisions/inspired-by-not-clones-naming.md).
+Shadowkeep is the lead game. Cadence (C64), Nightshade (NES), Exodus (Amiga) defer wholesale to post-launch. Binding decisions: [october-2026-launch-spec.md](../decisions/october-2026-launch-spec.md), [shadowkeep-32-unit-commitment.md](../decisions/shadowkeep-32-unit-commitment.md), [shadowkeep-four-arc-framing.md](../decisions/shadowkeep-four-arc-framing.md), [spectrum-basic-32-games.md](../decisions/spectrum-basic-32-games.md), [spectrum-basic-v6.4-renames.md](../decisions/spectrum-basic-v6.4-renames.md), [real-retro-games.md](../decisions/real-retro-games.md), [curriculum-structure.md](../decisions/curriculum-structure.md), [spectrum-assembly-track.md](../decisions/spectrum-assembly-track.md), [inspired-by-not-clones-naming.md](../decisions/inspired-by-not-clones-naming.md).
 
 ## At-a-glance status
 
 | Order | Track | What | Stage | Target |
 |---|---|---|---|---|
-| **1** | Spectrum Assembly | **Shadowkeep** | 32-unit Arc 1+2 commitment with three engine changes; existing 8 units stay live until hard-replaced | Arc 1 + Arc 2 (32 units) by October |
-| **2** | Spectrum BASIC | **Volume 1 (8 games at v6.4 names)** | 2 games built (Lucky Number, Bright Spark) need migration; 6 new to write | Volume 1 ships October |
-| **3** | Spectrum vault | Review existing + fill referenced gaps | Pass 3b-style sweep | Every reference from a shipped unit resolves |
-| **4** | Spectrum landing | Polished page for QR-code visitors | Not started | Hero, copy, navigation |
-| 5 | C64 Assembly | Cadence | **Deferred** — [platforms/commodore-64/assembly-skeleton.md](../platforms/commodore-64/assembly-skeleton.md) | Post-October |
-| 6 | NES Assembly | Nightshade | **Deferred** — [platforms/nintendo-entertainment-system/assembly-skeleton.md](../platforms/nintendo-entertainment-system/assembly-skeleton.md) | Post-October |
-| 7 | Amiga Assembly | Exodus | **Deferred** — [platforms/commodore-amiga/assembly-skeleton.md](../platforms/commodore-amiga/assembly-skeleton.md) | Post-October |
+| **1** | Spectrum Assembly | **Shadowkeep** | 8 of 32 units shipped (Arc 1 sub-arc 1); three engine changes ahead | Arc 1 + Arc 2 (32 units) |
+| **2** | Spectrum BASIC | **Volume 1 (8 games)** | **Done.** V2 work (Cipher) started | ~~Volume 1 ships October~~ Shipped |
+| **3** | Spectrum vault | Review existing + fill referenced gaps | In progress | Every reference from a shipped unit resolves |
+| **4** | Spectrum landing | Polished page for QR-code visitors | **Done** (initial version) | Polish pass before event |
+| 5 | C64 Assembly | Cadence | **Deferred** — [platforms/commodore-64/assembly-skeleton.md](../platforms/commodore-64/assembly-skeleton.md) | Post-launch |
+| 6 | NES Assembly | Nightshade | **Deferred** — [platforms/nintendo-entertainment-system/assembly-skeleton.md](../platforms/nintendo-entertainment-system/assembly-skeleton.md) | Post-launch |
+| 7 | Amiga Assembly | Exodus | **Deferred** — [platforms/commodore-amiga/assembly-skeleton.md](../platforms/commodore-amiga/assembly-skeleton.md) | Post-launch |
 
 ## The principle that governs everything
 
@@ -36,17 +36,17 @@ This is the whole point of the project. Doing it half-arsed loses the reason to 
 - **Pattern (Shadowkeep):** incremental scaffold within sub-arcs, spiral progression across arcs. No typed-in engine scaffold. Deliberate divergence from the C64/NES/Amiga pattern. See [decisions/spiral-and-incremental.md](../decisions/spiral-and-incremental.md).
 - **Inspired-by, not clones:** every curriculum game references canon but ships as its own design. See [decisions/inspired-by-not-clones-naming.md](../decisions/inspired-by-not-clones-naming.md).
 
-## Cut hierarchy (October runway)
+## Cut hierarchy (if scope needs trimming)
 
 Per [decisions/shadowkeep-32-unit-commitment.md](../decisions/shadowkeep-32-unit-commitment.md):
 
 1. Trim Shadowkeep Arc 2 sub-arcs back-to-front (2.4 → 2.3 → 2.2 → 2.1). Arc 1 alone (16 units) is the absolute floor.
-2. Only then begin BASIC V1 cuts — and only below a 4-game floor.
+2. BASIC V1 is shipped — no longer on the cut path.
 3. Cuts to landing page or vault are last resort.
 
 Vault completeness is protected; review work is fast.
 
-Shadowkeep Arcs 3-4 and BASIC Volumes 2-4 are post-October work, not on the cut path for the October ship.
+Shadowkeep Arcs 3-4 and BASIC Volumes 2-4 are post-launch work.
 
 ## Definition of Done (per unit)
 
@@ -68,14 +68,14 @@ Every unit weaves in links to relevant **vault entries** (games, hardware, peopl
 
 **Catalogue references as we go.** Each new unit's references are logged in [lesson-references.md](lesson-references.md). The catalogue surfaces vault gaps and reuse patterns deserving care.
 
-## Crash! Live (October 2026) — locked scope
+## Crash! Live (October 2026) — launch scope
 
-**Hard requirements** (each at full bar; if any can't reach full bar by October, it gets deferred whole):
+**Launch artefacts** (each at full bar):
 
-1. **Shadowkeep Arcs 1+2 (32 units).** Three engine commitments: pixel-level sprite movement, Y-sorted layered rendering, decoupled attribute/collision. Reference points: *Atic Atac*, *Knight Lore*, *Cybernoid II*. See `decisions/shadowkeep-32-unit-commitment.md`.
-2. **Spectrum BASIC Volume 1 (8 games) at Usborne bar.** v6.4 inspired-by-not-clones names. Volumes 2-4 ship post-October through ~2028-29.
-3. **Spectrum vault: review existing + fill gaps.** Every reference from a shipped unit must resolve.
-4. **Polished Spectrum landing page** for QR-code visitors.
+1. **Shadowkeep Arcs 1+2 (32 units).** Three engine commitments: pixel-level sprite movement, Y-sorted layered rendering, decoupled attribute/collision. Reference points: *Atic Atac*, *Knight Lore*, *Cybernoid II*. See `decisions/shadowkeep-32-unit-commitment.md`. **8/32 shipped.**
+2. **Spectrum BASIC Volume 1 (8 games) at Usborne bar.** **Done.** V2 work started. Volumes 2-4 ship through ~2028-29.
+3. **Spectrum vault: review existing + fill gaps.** Every reference from a shipped unit must resolve. **In progress.**
+4. **Polished Spectrum landing page** for QR-code visitors. **Done** (initial version; polish pass before event).
 
 **Form factor at event:** flyers, t-shirt, QR code → site. Site is the artefact.
 
@@ -142,20 +142,20 @@ Shadowkeep stays in the flick-adventure tradition. Combat / classes / XP / spell
 
 Source of truth: [decisions/spectrum-basic-32-games.md](../decisions/spectrum-basic-32-games.md) (32-game lineup), [decisions/spectrum-basic-v6.4-renames.md](../decisions/spectrum-basic-v6.4-renames.md) (11 inspired-by renames). Topic counts replace unit counts; variable per game.
 
-### Volume 1 — First Programs (October launch ship)
+### Volume 1 — First Programs — SHIPPED
 
 | # | Game | Status | Headline |
 |---|---|---|---|
-| 1 | Banner | New | Output |
-| 2 | Lucky Number | Built (needs topic-schema migration) | Response |
-| 3 | Oracle Stone (was Magic 8-Ball) | New | Chance |
-| 4 | Reflex | New (replaces Wire Panic under v6.2) | Tension |
-| 5 | Dice Roller | New (v6.3 addition) | Accumulation |
-| 6 | Bright Spark | Built (needs migration) | Pattern |
-| 7 | Hi-Lo | New (v6.3 addition) | Narrowing |
-| 8 | Touchdown | New (replaces Hot and Cold under v6.2) | Descent (Game Loop) |
+| 1 | Banner | **Done** | Output |
+| 2 | Lucky Number | **Done** | Response |
+| 3 | Oracle Stone | **Done** | Chance |
+| 4 | Reflex | **Done** | Tension |
+| 5 | Dice Roller | **Done** | Accumulation |
+| 6 | Bright Spark | **Done** | Pattern |
+| 7 | Hi-Lo | **Done** | Narrowing |
+| 8 | Touchdown | **Done** | Descent (Game Loop) |
 
-**V1 launch ship: 6 new + 2 migration.** All new V1 games are small (3-6 topics each).
+**V1 shipped.** 8 games, ~48 units.
 
 ### Volume 2 — Patterns of State (post-October)
 
@@ -220,9 +220,9 @@ These built MDX folders need rename / cut to map to the v6.4 lineup:
 
 ---
 
-## Spectrum landing page
+## Spectrum landing page — DONE (initial)
 
-Not started. Polished page for QR-code visitors arriving from Crash! Live flyers and t-shirts. Requires hero, copy, navigation, QR-landing tested on a real phone from a printed flyer.
+Initial version shipped. Polish pass needed before event: QR-landing tested on a real phone from a printed flyer.
 
 `/sinclair-zx-spectrum/` (platform landing) and `/crash-live/` (event-specific) both planned.
 
@@ -277,3 +277,4 @@ See [platforms/commodore-amiga/assembly-skeleton.md](../platforms/commodore-amig
 | 2026-05-20 | **Docs/knowledge merge complete** — knowledge/ retired entirely; project documentation lives in docs/ as a single root. Path structure system-first: `platforms/{system}/` for per-platform refs, curricula, and games; `decisions/`, `specifications/`, `tracker/`, `infrastructure/` as other top-level dirs. |
 | 2026-05-20 | **Shadowkeep brief v2.0** consolidated from v1.0 brief + shadowkeep-phase-1-design + shadowkeep-unit-3-plan into a single current-state brief aligned to the 32-unit / four-arc framing. The earlier "attribute byte = game rule" mechanic retired; attribute is now visual vocabulary only, collision lives in a tile-map. |
 | 2026-05-20 | **Memory hoist + tracker tidy.** `memory/spectrum-assembly.md` and `memory/spectrum-basic.md` shrunk to pointers; structural curriculum content hoisted into `docs/platforms/sinclair-zx-spectrum/{assembly,basic}.md`. `assembly.md` rewritten from v5.0 (4 games × 256 units) to current v0.3 (44 entries × 6 volumes / Shadowkeep-V1.1). Tracker rewritten to align with 32-unit Shadowkeep commitment and current docs/ layout; Cadence/Nightshade/Exodus sections collapsed to pointers (full content preserved in git history). |
+| 2026-05-26 | **October reframed as target, not hard deadline.** BASIC V1 done (8 games, ~48 units); landing page shipped; Shadowkeep 8/32. Close enough that urgency feels artificial. Session-start gate removed from CLAUDE.md. Tracker status table updated to reflect current state. |

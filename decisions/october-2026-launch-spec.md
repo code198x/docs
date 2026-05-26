@@ -1,13 +1,13 @@
 # Decision: October 2026 Launch Spec
 
-**Status:** Active. Shadowkeep scope set by [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md); BASIC by [spectrum-basic-32-games.md](spectrum-basic-32-games.md). The two structural artefacts (landing page, vault) are spec'd in this doc.
+**Status:** Active. October is a target, not a hard deadline — the project is close to having enough to ship. Shadowkeep scope set by [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md); BASIC by [spectrum-basic-32-games.md](spectrum-basic-32-games.md). The two structural artefacts (landing page, vault) are spec'd in this doc.
 
-**Date:** 2026-05-06
+**Date:** 2026-05-06 | **Updated:** 2026-05-26
 
 ## The decision
 
 The October 2026 Crash! Live launch ships **Spectrum only**. C64, NES, and
-Amiga defer wholesale to post-October — coming-soon cards on the site, full
+Amiga defer wholesale to post-launch — coming-soon cards on the site, full
 design preserved in [revamp.md](../tracker/revamp.md).
 
 The Spectrum launch is **four artefacts at full quality bar**:
@@ -19,7 +19,7 @@ The Spectrum launch is **four artefacts at full quality bar**:
 4. **Spectrum vault: review pass + referenced gap-fill** — every entry linked
    from a shipped unit must exist.
 
-If runway tightens, count is cut, never the bar. Cut hierarchy lives in
+If scope needs trimming, count is cut, never the bar. Cut hierarchy lives in
 [revamp.md](../tracker/revamp.md) and is binding.
 
 ## October bar definition
@@ -81,11 +81,8 @@ Vault completeness is protected. Quality bar stays full at every step.
 If you find yourself proposing any of the following, stop and re-consult
 this spec:
 
-- Adding C64/NES/Amiga work to the October pile ("just one unit on Cadence").
-- Extending Shadowkeep past 32 units within October ("just one more unit"). Surplus time goes into polish within the 32, not new units.
-- Pattern library work that isn't downstream of a shipped unit's reference.
-- Vault entries beyond the review pass + reference gap-fill.
-- Adjusting the Definition of Done downward to fit runway.
+- Extending Shadowkeep past 32 units before the first 32 ship ("just one more unit"). Surplus energy goes into polish within the 32, not new units.
+- Adjusting the Definition of Done downward to fit timeline.
 
 When a drift trigger fires: name it as drift, decide whether the spec
 changes (with rationale captured as a log entry below), and capture
@@ -105,3 +102,4 @@ deferred work in [revamp.md](../tracker/revamp.md).
 | Date | Event |
 |---|---|
 | 2026-05-06 | Spec lifted into a binding decision doc. Floor numbers pinned (BASIC 128, Shadowkeep 16). Stretch separated from spec. |
+| 2026-05-26 | October reframed as target, not hard deadline. BASIC V1 done; landing page shipped; Shadowkeep 8/32 — close enough that urgency feels artificial. Session-start gate removed. Drift triggers trimmed to the two that still matter (scope creep past 32 units, DoD erosion). |

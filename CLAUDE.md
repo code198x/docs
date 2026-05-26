@@ -6,18 +6,18 @@ Retro game dev education. Complete games on vintage platforms (C64, ZX Spectrum,
 
 This project lives under `~/Projects/198x/` alongside `Emu198x`. The umbrella binds rules that span both projects — see [`../../CLAUDE.md`](../../CLAUDE.md) and [`../../decisions/`](../../decisions/). Most relevantly: hardware reference is **layered**. The primary library at `~/Projects/198x/reference/` is the source of truth (datasheets, manuals, magazines with sidecar metadata); `Emu198x/knowledge/` is a codebase-tied distillation; this project's `docs/platforms/` should be curriculum-flavoured and cite the library for facts. Full layered model and citation rules at [`../../decisions/shared-hardware-reference-canon.md`](../../decisions/shared-hardware-reference-canon.md).
 
-## Session start (October 2026 launch anchor)
+## Launch context (October 2026 target)
 
-Before writing any code, state in the conversation which October launch artefact this session serves. The launch ships **Spectrum only** — see [`decisions/october-2026-launch-spec.md`](decisions/october-2026-launch-spec.md) for the binding scope and cut hierarchy.
+October 2026 (Crash! Live) is the launch target, not a hard deadline. The project is close to having enough Spectrum content to ship. See [`decisions/october-2026-launch-spec.md`](decisions/october-2026-launch-spec.md) for scope and quality bar.
 
 The four launch artefacts:
 
-1. **Shadowkeep** — Spectrum assembly Volume 1 Game 1; Arcs 1+2 at 32 units for October at commercial bar. Full four-arc framing for the complete game lives in `docs/decisions/shadowkeep-four-arc-framing.md` (Arcs 3-4 post-October). 16-unit Phase 1 framing is superseded by 32-unit two-arc commitment.
-2. **Spectrum BASIC Volume 1** — 8 games at Usborne bar (v6.4 names: Banner, Lucky Number, Oracle Stone, Reflex, Dice Roller, Bright Spark, Hi-Lo, Touchdown). Full 32-game / 4-volume curriculum at `docs/decisions/spectrum-basic-32-games.md`; Volumes 2-4 are post-October.
-3. **Spectrum landing page** — for QR-code visitors arriving from Crash! Live flyers and t-shirts.
-4. **Spectrum vault** — review pass + referenced gap-fill.
+1. **Shadowkeep** — Spectrum assembly Volume 1 Game 1; Arcs 1+2 at 32 units at commercial bar. 8 of 32 units shipped; the remaining 24 are the main body of work. Full four-arc framing at `docs/decisions/shadowkeep-four-arc-framing.md`.
+2. **Spectrum BASIC Volume 1** — 8 games at Usborne bar. **Done.** V2 work (Cipher onward) has started.
+3. **Spectrum landing page** — for QR-code visitors. **Done** (initial version shipped).
+4. **Spectrum vault** — review pass + referenced gap-fill. **In progress.**
 
-If the requested work doesn't serve one of these — C64 / NES / Amiga work, Cadence / Nightshade / Exodus, Shadowkeep Arcs 3+ or other Spectrum Assembly Games 2-44, BASIC Volumes 2-4, pattern library or vault expansion not downstream of a shipped unit — **name it as post-October**, and ask whether to proceed or defer. Don't silently expand the October pile. Once the user confirms post-October work, proceed; the rule is to flag it, not to refuse it.
+No session-start gate — work on whatever makes sense. The quality bar and cut hierarchy remain valid regardless of timeline.
 
 ## Critical Rules
 - **7 separate git repos** — check all with `git status` before committing
