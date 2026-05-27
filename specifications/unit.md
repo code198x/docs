@@ -178,12 +178,14 @@ tags: ["assembly", "6502", "ppu", "scrolling", "platformer"]
 
 ### Standard Section Order
 
+This is a guide, not a straitjacket. The unit's job is to teach clearly. If a section doesn't serve that job for a particular unit, leave it out.
+
 1. **Opening paragraph** (required) - What this unit teaches, why it matters
 2. **Code Example(s)** (required) - Working demonstrations
 3. **Explanation section(s)** (required) - How the code works
 4. **From the Vault** (optional) - Links to related Vault entries
 5. **Pattern Library** (optional) - Links to reusable code patterns
-6. **What You've Learnt** (required) - Bullet summary
+6. **What You've Learnt** (optional) - Bullet summary; include when it genuinely helps the learner consolidate, not as a checklist item
 
 ### Section Guidelines
 
@@ -356,9 +358,9 @@ You can adapt these patterns for your own projects.
 - Highly specific one-off code
 - Incomplete demonstrations
 
-#### What You've Learnt (Required)
+#### What You've Learnt (Optional)
 
-**Purpose:** Concrete bullet-point summary of new capabilities.
+**Purpose:** Concrete bullet-point summary of new capabilities. Include when a unit introduces enough new concepts that a summary genuinely helps the learner consolidate. Short units that teach one thing clearly don't need it.
 
 **Format:**
 ```markdown
@@ -656,7 +658,7 @@ Before unit publication, verify:
 - [ ] Frontmatter complete and accurate
 - [ ] Tags appropriate and specific
 - [ ] Cross-links functional (Vault, Pattern Library)
-- [ ] "What You've Learnt" summarises actual capabilities
+- [ ] "What You've Learnt" included where it helps consolidation (optional)
 - [ ] Code formatting matches platform standards
 
 ---
