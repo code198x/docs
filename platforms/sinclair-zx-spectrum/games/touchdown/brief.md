@@ -34,11 +34,14 @@ The lander descends. Gravity pulls. Fuel burns. You fire the thruster — the de
 
 ## 4. Visual Direction
 
-- **Text-mode instrument panel.** Altitude, speed, fuel — three numbers at fixed screen positions (PRINT AT), updating every loop iteration. The numbers are the game. The learner's first real-time dashboard.
-- **Simple lander display.** A character (an asterisk, a `V`, or a simple text symbol) at a PRINT AT position that moves down the screen as altitude decreases. No pixel graphics — the position on screen *is* the altitude.
-- **Ground line.** A row of dashes or equals signs at the bottom of the screen. The lander approaches it. Contact at low speed = "TOUCHDOWN!" in green. Contact at high speed = "CRASH!" in red.
-- **Fuel gauge.** A horizontal bar (PRINT-character) that shrinks as fuel burns. Ambient feedback — the learner sees fuel draining peripherally while watching altitude.
-- **Magazine-screenshot test:** the lander symbol halfway down the screen, speed reading "12", fuel bar half-empty — the player in the middle of the decision. Will they burn fuel now or coast?
+- **UDG lander** (CHR$ 144) replacing text character. Moved with PRINT AT erase-then-draw. When SPACE held, UDG exhaust flame (CHR$ 145) prints below — visual thrust.
+- **PLOT stars** (~15 random PLOTs) at game start transform black screen into space.
+- **DRAW terrain** instead of dashes — DRAW line(s) in INK 4 (green) for the landing surface.
+- **Pixel fuel bar** — each fuel unit is one PLOT pixel. Depletes smoothly. Reinforces PLOT from Game 4.
+- **INVERSE dashboard** bar spanning full width: ALT, SPD, FUEL as white-on-black instrument panel.
+- **Crash animation** — UDG explosion (CHR$ 146) scattered 3-4 times at random offsets from landing point, each with BEEP.
+- **New unit: "The View"** (inserted after unit 12). Defines three UDGs and visual setup (stars, terrain, pixel fuel bar). Design concept: **Polish** — "Nothing about the physics changed. Everything about how it feels changed."
+- **Unit count: 14** (was 13).
 
 ---
 

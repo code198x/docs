@@ -34,10 +34,10 @@ Watch the panels flash. Listen to the tones. Repeat the sequence. Get one more r
 
 ## 4. Visual Direction
 
-- **Four coloured panels.** Large blocks drawn with PRINT and PAPER — red, blue, green, yellow. Each panel fills a quarter of the play area. Distinct, bold, unmistakable from across the room.
-- **Flash effect.** When a panel plays, it shifts to BRIGHT 1 (the brighter variant) for a beat, then returns to normal. The flash is the signal — the learner's first encounter with BRIGHT as a visual tool.
-- **Game over display.** The sequence length as the player's score: "The sequence was 7 long." Clean, simple, no fanfare — the number speaks for itself.
-- **Magazine-screenshot test:** four bold coloured panels mid-flash, one lit BRIGHT — instantly recognisable as Simon to anyone who grew up in the 1980s.
+- Four coloured panels (red, blue, green, yellow) are already the strongest visual in V1. Minimal changes.
+- INVERSE score display at the top. BRIGHT 1 on the title.
+- BRIGHT flash on panels unchanged (core mechanic).
+- BEEP with distinct pitches per panel unchanged.
 
 ---
 

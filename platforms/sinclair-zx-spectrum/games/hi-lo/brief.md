@@ -34,10 +34,12 @@ A number appears. Will the next one be higher or lower? Guess right — your str
 
 ## 4. Visual Direction
 
-- **The current number, large and central.** PRINT AT centre-screen, bold INK. The number is the focal point — everything else is peripheral.
-- **Streak counter.** A running count of correct guesses, displayed at a fixed position (PRINT AT). The number the player watches grow.
-- **Colour shift on result.** Green flash for correct (the streak lives), red flash for wrong (game over). Border colour for instant feedback, reinforcing the Lucky Number pattern.
-- **Magazine-screenshot test:** a large number centre-screen, streak count below, the player deciding — the simplicity is the appeal.
+- **Playing card display.** Each number shown as a card — PAPER 7 (white) rectangle drawn with PRINT AT (7 rows x 9 columns). Value (A, 2-9, 10, J, Q, K) at top-left and bottom-right corners.
+- **Suit UDGs.** Four 8x8 pixel characters (spade, heart, diamond, club) defined with DATA/READ/POKE at game start (CHR$ 144-147). Hearts and diamonds in INK 2 (red); spades and clubs in INK 0 (black) against the white card.
+- **Two-card layout.** Current card revealed (value + suit visible), next card face-down. Player guesses H or L, next card flips.
+- **New unit: "The Cards"** (inserted after unit 5). Defines suit UDGs, writes card-drawing subroutine, replaces number display with card visuals. Design concept: **Representation** — the same data shown differently changes the experience. "You just taught the Spectrum what a heart looks like."
+- INVERSE header bar with streak and best score. BRIGHT on title.
+- **Unit count: 11** (was 10).
 
 ---
 

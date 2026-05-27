@@ -34,10 +34,11 @@ You and the computer take turns placing marks on a 3×3 grid. The computer plays
 
 ## 4. Visual Direction
 
-- **The board.** A 3×3 grid drawn with PRINT characters (lines and intersections). Large cells — each one fills several character positions for readability.
-- **X and O.** Player's mark in one colour (cyan), computer's in another (red). Distinct at a glance.
-- **Position numbers.** Empty cells show their number (1–9) so the player knows which number to type.
-- **Magazine-screenshot test:** a mid-game board — X in the corner, O in the centre, two moves each — the reader analysing who has the advantage.
+- **DRAW pixel grid** — two horizontal + two vertical pixel lines creating 3×3 board. Each cell ~8 chars wide × ~5 rows tall, centred on screen. Pixel-perfect grid, not text characters.
+- **UDG X piece** (CHR$ 144) in INK 5 (cyan), printed 2×2 in each cell — four UDG characters forming a large, bold X. Each cell feels substantial.
+- **UDG O piece** (CHR$ 145) in INK 2 (red), same 2×2 layout. Visual contrast cyan X vs red O is immediate.
+- Position numbers in empty cells for input. INVERSE W/L/D score display at top.
+- Title screen: sample board with a few X's and O's as decoration. BRIGHT title.
 
 ---
 

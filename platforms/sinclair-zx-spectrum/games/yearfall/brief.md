@@ -34,10 +34,12 @@ You rule a small domain. Each year you allocate resources: how much grain to fee
 
 ## 4. Visual Direction
 
-- **Status report.** Each year opens with a text summary: population, grain in store, land owned, year number. PRINT AT positions for each stat. Clean, dashboard-like — the player reads the state before deciding.
-- **End-of-year report.** What happened: harvest yield, births, deaths, grain consumed. Colour-coded — green for growth, red for loss.
-- **No graphics.** Numbers and text are the interface. The kingdom lives in the player's imagination.
-- **Magazine-screenshot test:** a year-end report showing population growing from 100 to 112, grain increasing, the reader planning the next allocation.
+- DRAW castle silhouette on title screen — two towers (DRAW rectangles + triangle roofs) connected by wall (horizontal DRAW). Simple, immediately says "kingdom." ~8 DRAW commands.
+- INVERSE header bar: "*** YEARFALL ***  Year: N". Block-graphic divider between status and input areas.
+- **Population bar** — row of CHR$ 143 (solid blocks) in INK 4 (green), length proportional to population. Shrinks on starvation, grows on births. The player SEES the population, not just reads a number.
+- **Starvation alarm** — brief BORDER 2 (red) flash when people die. Like an alarm. ~1 line.
+- Year-end report: block-graphic coloured bars for metrics (green harvest, red starvation, cyan births). Mini Dice Roller style visualisation per year.
+- Austere palette maintained — this is a game about scarcity.
 
 ---
 

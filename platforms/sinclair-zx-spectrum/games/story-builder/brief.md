@@ -34,9 +34,11 @@ Answer a few silly questions, then read back the story the computer built from y
 
 ## 4. Visual Direction
 
-- Black screen, white text. No colour until the story reveal — then the story prints in a different INK (green or cyan) to distinguish it from the questions. The colour shift marks "now something happened."
-- The final story fills most of the screen — a wall of text the learner wants to read.
-- **Magazine-screenshot test:** a screen full of a ridiculous story — "The SMELLY wizard rode a BICYCLE to the land of SAUSAGES" — the kind of thing a 1983 reader would type in to show their friends.
+- Dark theme (BORDER 0, PAPER 0, INK 7) from unit 2 onwards — recipe line, taught formally in unit 8.
+- Title centred with PRINT AT, BRIGHT 1. DRAW quill/pen illustration on title screen (~4 DRAW commands).
+- Block-graphic divider (CHR$ 131) between title and questions in unit 8.
+- Story reveal: cyan INK on black — the colour shift marks "this is the output."
+- The screen looks designed from the start. No grey-on-grey units.
 
 ---
 

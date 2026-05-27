@@ -34,10 +34,11 @@ The computer picks a secret code — four coloured pegs (represented as digits 1
 
 ## 4. Visual Direction
 
-- **Code display.** Four coloured squares (PAPER blocks) per guess, arranged in rows — one row per attempt. The screen fills from top to bottom as guesses accumulate. Each guess is a visual record the player can refer back to.
-- **Clue display.** Bulls and cows shown alongside each guess row — small marks (asterisks for bulls, circles for cows) or a simple "2 bulls, 1 cow" text.
-- **Hidden code.** Revealed at game end — the "aha" moment.
-- **Magazine-screenshot test:** six rows of coloured guesses with clues beside each, the player narrowing in — you can read their reasoning from the screenshot.
+- INVERSE header bar. DRAW padlock on title screen (DRAW body + CIRCLE shackle, ~4 commands).
+- **UDG Mastermind pegs:** bull peg (CHR$ 144, filled circle, INK 2 red) and cow peg (CHR$ 145, ring outline, INK 7 white). Defined with DATA/READ/POKE at game start.
+- Each guess row shows: 4-digit guess, then UDG peg symbols for bulls and cows. Visual Mastermind language.
+- DRAW vertical separator between guess column and peg column. DRAW rectangle framing the history area.
+- Title screen: four block-graphic `?` characters in coloured cells — the hidden code visualised.
 
 ---
 

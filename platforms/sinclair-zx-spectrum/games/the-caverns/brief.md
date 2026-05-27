@@ -34,10 +34,12 @@ You are in a cave. Tunnels lead in several directions. You cannot see what is in
 
 ## 4. Visual Direction
 
-- **Text-only.** No map, no graphics, no grid. The screen shows a room description, available exits, and sensory clues. The visual is the player's imagination — this is deliberate.
-- **Colour as mood.** Dark blue PAPER, white INK. Sensory warnings in yellow (draft) or red (smell). Treasure in green. The palette is minimal — three colours for three types of information.
-- **No map display.** The player builds a mental map from text. Showing a map would destroy the atmosphere. The *absence* of visual information is the design choice.
-- **Magazine-screenshot test:** a dark blue screen with white text: "You are in a damp cave. Tunnels lead NORTH and EAST. You feel a cold draft..." — the reader's imagination does the rest.
+- **Deliberate restraint.** The darkness is the design. No map, no illustrations of rooms, no graphics in the play area. The player's imagination fills the gaps.
+- Blue theme (BORDER 1, PAPER 1, INK 7) from unit 1. Minimal, atmospheric.
+- INVERSE header bar: room number as navigation header.
+- BRIGHT 1 on sensory clue text (draft, smell, glint) to make warnings more visible against the blue.
+- Subtle compass rose using block graphics in the corner — four CHR$ characters showing N/S/E/W with available exits highlighted.
+- DRAW torch on title screen (handle + flame outline in INK 6, ~6 DRAW commands). Adds identity without breaking the text-first design.
 
 ---
 

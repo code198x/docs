@@ -34,10 +34,12 @@ Four categories, eight questions. Each question shows a prompt and four multiple
 
 ## 4. Visual Direction
 
-- **Question card.** A coloured header bar (category colour), the question text, and four numbered options below. Each category gets its own INK/PAPER combination — the learner sees colour-as-category for the first time.
-- **Score display.** Running total visible at all times, top-right via PRINT AT.
-- **Results screen.** Final score, per-category breakdown, and the earned rating in a distinct colour.
-- **Magazine-screenshot test:** a question card mid-quiz — coloured header, four options, score in the corner. Instantly recognisable as a quiz game.
+- INVERSE category header bar (solid colour, full width). Block-graphic borders around question area — frame it like a card.
+- Category colours unchanged (cyan, red, green, yellow per category).
+- Score display: INVERSE bar at top showing running total.
+- Per-category breakdown in results: block-graphic coloured bars (CHR$ 143) showing score tallies — callback to Dice Roller's bar chart.
+- FLASH 1 on "Quiz Master!" (top rating). BRIGHT on other ratings.
+- DRAW mortarboard hat on title screen (DRAW rectangle + diamond top, ~5 commands).
 
 ---
 

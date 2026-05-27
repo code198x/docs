@@ -34,10 +34,10 @@ A 10×10 grid hides three targets. You call coordinates — row and column. A mi
 
 ## 4. Visual Direction
 
-- **The grid.** 10×10 character cells, drawn with PRINT AT. Unexplored cells show as dots. Hits show as coloured markers. Misses show the distance number (1–9).
-- **Coordinate labels.** Row numbers down the left, column numbers across the top.
-- **Colour coding.** Hits in green/bright. Near misses (distance 1–2) in red/warm. Far misses (distance 5+) in blue/cool. The colour reinforces the distance.
-- **Magazine-screenshot test:** a half-explored grid — clusters of small numbers converging on a green hit, the reader tracing the search pattern.
+- **DRAW pixel grid** — horizontal and vertical pixel lines creating 8×8 board. Each cell 3 chars wide × 2 rows tall. Grid drawn via FOR loops with PLOT/DRAW. Reinforces DRAW in structured context. Grid looks like a proper board game.
+- Heat-map distance colours unchanged (red close, yellow medium, cyan far). Colours pop against the drawn grid.
+- **Probe ping animation:** BORDER flashes the distance colour for 5 frames, then resets. Visual "ping" feedback on each probe.
+- Title screen: DRAW radar sweep — three radial lines from a centre point with CIRCLE concentric rings (~3 CIRCLE + DRAW). Suggests sonar/radar scanning.
 
 ---
 

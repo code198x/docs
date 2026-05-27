@@ -34,10 +34,10 @@ Guess the number, watch the screen respond. The border shifts from cold blue to 
 
 ## 4. Visual Direction
 
-- **Border as thermometer.** Blue (cold, far away) through cyan, yellow, red to white (hot, very close). The player reads proximity from the edge of their vision before reading the text.
-- **Text feedback centre-screen.** "Too high" / "Too low" / "Got it!" — functional, not decorative.
-- **Win celebration.** Border strobes, ascending tones, congratulatory text with guess count. The only moment the program shouts.
-- **Magazine-screenshot test:** the screen mid-guess with a white-hot border, "Too low!" on screen, and six previous guesses scrolled above — you can read the player's strategy from the screenshot.
+- Dark theme from unit 1. INVERSE title bar ("*** LUCKY NUMBER ***") spanning full width from unit 1.
+- DRAW question mark on title screen (CIRCLE head + DRAW curve + PLOT dot, ~4 commands).
+- Border-as-thermometer unchanged (blue→cyan→yellow→red→white for distance). Core visual mechanic.
+- Centred INPUT prompts with PRINT AT. Ratings text centred, BRIGHT 1.
 
 ---
 

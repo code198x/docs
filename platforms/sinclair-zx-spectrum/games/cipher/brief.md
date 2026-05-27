@@ -34,10 +34,11 @@ A row of dashes — one per letter. Guess a letter. If it is in the word, it app
 
 ## 4. Visual Direction
 
-- **The word as dashes.** Centre-screen, large, clear. Each correct guess replaces a dash with a letter. The word gradually reveals itself — the visual payoff of each correct guess.
-- **Lives display.** A simple count or a row of symbols that shrinks. No gallows — the curriculum avoids the hangman imagery.
-- **Guessed letters.** A row of already-tried letters below the word, so the player does not repeat mistakes.
-- **Magazine-screenshot test:** a half-revealed word — `_ I _ H E _` — with 3 lives remaining and a row of guessed letters below. The reader wants to solve it.
+- INVERSE header bar with "*** CIPHER ***" + win/loss tally.
+- **UDG heart** (CHR$ 144) in INK 2 (red) for each remaining life. Seven hearts that diminish. Defined with DATA/READ/POKE at game start.
+- Wider letter spacing: each underscore/letter in a 2-character-wide cell, centred with PRINT AT. DRAW horizontal line below word display to frame the play area.
+- **Reveal flash:** BRIGHT 1 on a correctly guessed letter for ~10 frames, then BRIGHT 0. Each correct guess pulses visually.
+- DRAW lock/keyhole on title screen (DRAW rectangle + CIRCLE, ~5 commands).
 
 ---
 

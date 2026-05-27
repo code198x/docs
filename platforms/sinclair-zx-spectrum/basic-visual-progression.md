@@ -1,5 +1,7 @@
 # Sinclair ZX Spectrum BASIC — Visual Progression
 
+> **⚠ Outdated.** This document predates the v6.4 game lineup and the Visual Enhancement Pass decision (2026-05-27). The current visual approach is defined in [`decisions/visual-enhancement-pass.md`](../../decisions/visual-enhancement-pass.md) and in each game's brief at `games/*/brief.md`. The philosophy section below is still valid; the per-game specifics need rewriting to match the current 32-game lineup.
+
 **Companion to:** sinclair-zx-spectrum-basic-curriculum.md (v6.0)
 
 ---

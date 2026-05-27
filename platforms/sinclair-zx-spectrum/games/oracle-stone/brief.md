@@ -34,10 +34,11 @@ Type a question — any question. The screen pauses dramatically, then reveals t
 
 ## 4. Visual Direction
 
-- **Atmosphere through colour.** Dark background (black or dark blue PAPER) with bright mystical-feeling INK — green, cyan, or magenta for the Oracle's words. The screen should feel like a fortune-teller's booth, not a terminal.
-- **The answer appears alone.** CLS before the reveal — the Oracle's response gets the whole screen to itself for a moment. No clutter.
-- **Decorative border.** A simple frame of PRINT characters (asterisks, dashes) around the answer — the learner's first encounter with using PRINT for layout, not just text.
-- **Magazine-screenshot test:** a dark screen with a bright green answer — "THE STARS SAY... YES, BUT NOT ON A TUESDAY" — framed in asterisks. Mysterious and funny at the same time.
+- Blue theme (BORDER 1, PAPER 1, INK 7) from unit 1. Mystical atmosphere from the start, not deferred to unit 9.
+- DRAW crystal ball on title screen (CIRCLE + DRAW base, ~5 commands).
+- Pondering animation: dots appear one by one (`. . .`) with descending BEEP tones. Replaces static PAUSE/BEEP block.
+- FLASH 1 on the Oracle's answer — blinks on screen, mystical and arresting.
+- Block-graphic frame (CHR$ 143 in INK 5 cyan) around the answer instead of equals signs.
 
 ---
 

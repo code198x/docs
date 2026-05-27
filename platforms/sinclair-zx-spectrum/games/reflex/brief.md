@@ -34,10 +34,10 @@ Watch the screen. Wait. The signal appears — press a key. Your reaction time a
 
 ## 4. Visual Direction
 
-- **Telegraph bar.** A horizontal bar drawn with PLOT/DRAW that fills gradually before the signal — the learner's first pixel graphics. The bar telegraphs "something is about to happen" without saying when exactly. Take it out and the game still works; leave it in and the player's skill becomes reading the telegraph.
-- **Flash signal.** The screen changes colour (PAPER or BORDER) when the player should react. Bold, unmissable — this is not a game of subtlety.
-- **Result display.** Reaction time in large text, centre screen. A simple rating alongside ("Lightning!", "Quick", "Slow").
-- **Magazine-screenshot test:** a screen with a half-filled telegraph bar, the player waiting — you can feel the tension from the screenshot alone.
+- Dark theme (BORDER 0, PAPER 0, INK 7). DRAW lightning bolt on title screen (~5 DRAW commands).
+- DRAW rectangle frame around the telegraph bar area — the bar fills inside a drawn meter. Reinforces DRAW (taught in this game) in a practical context.
+- Red PAPER flash on signal unchanged (core mechanic).
+- BRIGHT 1 on rating text. Colour-coded feedback (green/cyan/yellow/red) unchanged.
 
 ---
 

@@ -34,10 +34,10 @@ Roll the dice. Watch the numbers appear. Roll again — five at once, then fifty
 
 ## 4. Visual Direction
 
-- **Dice faces.** Simple text representations — `[3]` or `***` — not graphical dice. The focus is on the numbers and their accumulation, not on drawing.
-- **Tally display.** A running count per face value (1 through 6), updated after each roll. PRINT AT positions each tally on a fixed line so the screen becomes a dashboard.
-- **Bar chart (final topic).** Horizontal bars drawn with PRINT (repeated characters) showing the frequency of each face. The visual payoff — randomness made visible.
-- **Magazine-screenshot test:** a screen showing 500 rolls tallied into six rows, each roughly equal — the pattern emerging from chaos.
+- Dark theme from start. INVERSE title bar. DRAW die face illustration on title screen (DRAW rectangle + 6 PLOT dots, ~10 commands).
+- Bar chart uses CHR$ 143 (solid block character) instead of asterisks — denser, chunkier, more like real data visualisation. Same code structure, one character swap.
+- Six colours per face unchanged (red, yellow, green, magenta, cyan, white).
+- PRINT AT dashboard with live-updating tallies unchanged.
 
 ---
 

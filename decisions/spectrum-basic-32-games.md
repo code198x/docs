@@ -84,7 +84,7 @@ Pull this decision record up before proceeding if you see any of these patterns:
 
 ## Cost accepted
 
-**V1 launch ship doubles** from 4 games to 8 games for October 2026. Six new V1 games to write (Banner, Magic 8-Ball, Reflex, Dice Roller, Hi-Lo, Touchdown) plus two existing built games to migrate (Lucky Number, Bright Spark). All new V1 games are small (3-6 topics each), so the topic-count growth is roughly 50%, not 100%. Achievable in the five-month runway but tighter than v6.2's V1 ship plan.
+**V1 launch ship doubles** from 4 games to 8 games for October 2026. Six new V1 games to write (Banner, Magic 8-Ball, Reflex, Dice Roller, Hi-Lo, Touchdown) plus two existing built games to migrate (Lucky Number, Bright Spark). All new V1 games are small (3-6 topics each), so the topic-count growth is roughly 50%, not 100%. (Post visual-enhancement-pass: Hi-Lo grows to **11** units with new unit "The Cards"; Touchdown grows to **14** units with new unit "The View".) Achievable in the five-month runway but tighter than v6.2's V1 ship plan.
 
 **Post-October curriculum doubles** from 16 games to 32. Multi-year commitment, ship through approximately 2028-29 instead of 2027-28.
 
