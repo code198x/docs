@@ -86,8 +86,11 @@ Custom 8×8 pixel characters for game-specific sprites and symbols. DRAW for vec
 | 8 Touchdown | 3 | Lander, exhaust flame, explosion |
 | 9 Cipher | 1 | Heart (lives) |
 | 11 Locksmith | 2 | Bull peg, cow peg |
-| 13 Three in a Row | 2 | Large X piece, large O piece |
-| **Total** | **12 of 21** | |
+| **Total** | **10 of 21** | |
+
+**Three in a Row uses DRAW instead of UDGs.** X is two crossed DRAW lines; O is a CIRCLE. Each piece fills a full grid cell (~24×24 pixels) — much larger and bolder than an 8×8 UDG character. The grid itself is also DRAW lines. At most 9 pieces per game, so the speed cost is trivial.
+
+**DRAW vs UDG rule of thumb:** DRAW for large symbols drawn rarely (board game pieces, grid lines, terrain, title illustrations). UDGs for small symbols that move or repeat frequently (lander sprite, lives, pegs, card suits).
 
 Each UDG costs 8 lines of DATA + a FOR/READ/POKE loop (~3 lines shared). The pixel grid diagrams in the prose connect code to visual output: "Each number is a row of pixels. Eight rows make a character."
 
