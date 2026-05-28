@@ -22,13 +22,19 @@ Each unit's code sample should differ from the previous by no more than ~5–8 l
 
 If a concept genuinely requires more than 8 lines of new code, split it into two units. "Too much new code" is the signal to split, not to batch.
 
-### 2. Stable line numbers
+### 2. Clean 10-step numbering, renumbered when too tight
 
-Choose line numbers with gaps from the start (10, 20, 30... or 100, 110, 120...). Don't renumber existing lines between units unless the renumbering IS the lesson. Renumbering is noise that makes the diff unreadable.
+Finished programs number in clean steps of 10 (10, 20, 30... or 100, 110, 120...). Choose enough spacing from the start that later units can drop new lines into 10-aligned gaps without disturbing their neighbours.
 
-### 3. New code goes in gaps, not restructured throughout
+When an insert leaves no 10-aligned slot — the numbering has got too tight — renumber the program to restore clean 10-step spacing. **Renumbering to fix tightness is correct and expected; it is not the "noise" this decision warns against.** What to avoid is *gratuitous* renumbering — shuffling numbers between units for no reason. Renumber for a reason (restore spacing), never for none.
 
-When adding a feature, use empty line-number gaps to insert new lines. Don't move existing code around to "make room." If you've run out of gaps, that's a sign the line numbering was too tight at the start — fix it in the game brief, not mid-curriculum.
+Never leave a finished program with off-step numbers like `65` or `145`. They read as unfinished, and a learner typing them in expects the canonical 10-step convention.
+
+### 3. New code goes in gaps; renumber when the gaps run out
+
+When adding a feature, drop new lines into empty 10-aligned gaps and leave existing code where it is. If you've run out of gaps, renumber the program — this unit and the units that share its code — so every line is a clean multiple of 10 again.
+
+Re-spacing in the game brief is how you *prevent* tightness (plan the final shape so features land on 10s). Renumbering is how you *fix* tightness once it's happened. Both are legitimate; the wrong move is to leave the off-step numbers in place.
 
 ### 4. One structural change per unit
 
@@ -52,8 +58,9 @@ The V1 BASIC games (Story Builder through Touchdown) and V2 games (Cipher, Quiz 
 
 ## Drift triggers
 
-- A code sample diff between consecutive units exceeds ~8 lines of meaningful change.
-- Line numbers are renumbered between units with no pedagogical reason.
+- A code sample diff between consecutive units exceeds ~8 lines of meaningful change (a deliberate renumber-to-restore-spacing is exempt — that renumber IS the unit's change, and should stand alone).
+- Line numbers are shuffled between units for no reason at all — not even to restore 10-step spacing. (Renumbering *because* the spacing got too tight is the correct fix, not a trigger.)
+- A finished program contains line numbers that aren't multiples of 10 (e.g. `65`, `145`) — the spacing got too tight and wasn't renumbered.
 - The final unit of a game has a diff larger than any intermediate unit.
 - A unit combines restructuring AND a new feature.
 - A brief plans fewer than 6 units for a game with 30+ lines of final code.
