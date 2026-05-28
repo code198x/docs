@@ -36,6 +36,10 @@ Each example is shown running via `<Figure>`. Capture the real program's output;
 
 Do not ration screenshots. A short unit with four examples gets four screenshots. Showing the result of even a trivial example (a one-word change) is worth more than the space it costs.
 
+### 4. Game index pages open with the finished game
+
+Each game's `index.mdx` shows a screenshot of the finished game near the top — the final unit's screenshot, reused (the index references the same file, not a copy). This is "show the end result early": a reader landing on the game page sees what they are about to build before the unit list. Caption it as the destination ("Where you are headed: …").
+
 ## Relationship to other decisions
 
 Builds on [incremental-code-samples.md](incremental-code-samples.md) (the code that goes in the files). The screenshot mechanics extend [../specifications/unit.md](../specifications/unit.md): its "Screenshot Requirements" already mandate capturing and verifying output — this decision adds that the verified screenshot is also *shown*, and that every runnable snippet is a file rather than an inline fence.
@@ -48,6 +52,7 @@ Builds on [incremental-code-samples.md](incremental-code-samples.md) (the code t
 - A screenshot sits small at native resolution. → 3× nearest-neighbor upscale.
 - Worked-example data differs between the prose and the screenshot. → make them match.
 - A screenshot path omits the track segment (`{platform}/{game}/…`). → mirror the page URL: `{platform}/{track}/{game}/…`.
+- A game index page has no screenshot of the finished game. → add the final unit's screenshot near the top, captioned as the destination.
 
 ## Status
 
