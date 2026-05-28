@@ -30,7 +30,7 @@ Each example is shown running via `<Figure>`. Capture the real program's output;
 - Run the program in Emu198x to a representative state; for INPUT-driven programs, feed worked-example data that matches the prose (the same sample story across a game's units).
 - `save_screenshot`, then upscale **3× with nearest-neighbor** (e.g. PIL `Image.NEAREST`) so the pixels stay crisp and the image fills the column instead of sitting at native ~352px.
 - Embed with `<Figure src="/images/..." alt="..." caption="..." />` — **no `frame`**. The platform frames round the corners and crop pixel-art edges; a pixel screenshot already includes its own border.
-- Store at `public/images/{platform}/{game}/{unit}/{name}.png`, named to match the example (`screenshot.png` for the unit's main program, `{example}.png` for asides).
+- Store at `public/images/{platform}/{track}/{game}/{unit}/{name}.png`, mirroring the page URL (`/{platform}/{track}/{game}/{unit}`). Name to match the example (`screenshot.png` for the unit's main program, `{example}.png` for asides).
 
 ### 3. Density is fine
 
@@ -47,6 +47,7 @@ Builds on [incremental-code-samples.md](incremental-code-samples.md) (the code t
 - A screenshot uses a platform `frame` and the pixel art looks cropped or rounded. → `frame="none"`.
 - A screenshot sits small at native resolution. → 3× nearest-neighbor upscale.
 - Worked-example data differs between the prose and the screenshot. → make them match.
+- A screenshot path omits the track segment (`{platform}/{game}/…`). → mirror the page URL: `{platform}/{track}/{game}/…`.
 
 ## Status
 
