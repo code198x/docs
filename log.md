@@ -2,6 +2,22 @@
 
 ---
 
+## 2026-05-29 — Quiz Master (game 10) review: two crashes + title-screen bug
+
+**Type:** bug fix (curriculum code) + prose sync + screenshots
+
+**Correction to the entry below:** the dead-`9000` cleanup was deferred on the premise of "no crash risk." That premise was **wrong**. The survey only checked for `GO SUB 9000` *callers*; it missed **fall-through**. In Quiz Master, units 01–09 run off the end of their logic (no `STOP`/`GO TO`) straight into the dead `9000`, which references undefined `y`/`a$` → `Variable not found, 9000:1` after the player finishes. So "dead" ≠ "harmless." Removed `9000`/`9010` from all 10 Quiz Master units now (crash fix, not deferred tidying); units end cleanly with the `0 OK` report. **Any future fall-through check must look at each unit's last logic line, not just `GO SUB` references.**
+
+**Second crash (units 02–03):** `Nonsense in BASIC, 190:1`. The question `READ q$,…` started at the first DATA line, which held the numeric answer key (line 550) — added prematurely, before unit-04 introduces the array code that consumes it. Reading numbers into string variables crashes. Fix (user-chosen): remove line 550 from units 01–03; the answer key debuts in unit-04 where it is read into the array and explained. Dropped unit-01's "mysterious line 550" foreshadow accordingly.
+
+**Title-screen bug (unit-10):** "Press any key to start" used `INK 0` on the black `PAPER 0` title → invisible; and the trophy `PLOT/DRAW` sat physically before the prompt so it only rendered by execution-order luck. Reordered, gave the prompt white `INK 7` and the trophy gold `INK 6`, moved the prompt clear of the trophy.
+
+**Prose/structure:** unit-10 falsely declared "Volume 1 complete / Ten games"; the catalogue puts Quiz Master as game 2 of Volume 2 (Cipher opened it). Replaced with a Locksmith pointer; relocated the cumulative-skills recap to Touchdown (game 8, the true end of Volume 1), reframed to the eight First Programs games. Corrected unit-10 line count (70→53) and unit-01 framing (the question is hardcoded, not from DATA).
+
+Commits: code-samples `9a04582`, website `52b7ec2e`.
+
+---
+
 ## 2026-05-29 — Tracked: curriculum-wide dead `9000` subroutine cleanup
 
 **Type:** deferred hygiene task (not yet started)
