@@ -1,5 +1,13 @@
 # Decision: October 2026 Launch Spec
 
+> **AMENDED 2026-05-29 by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md).**
+> The assembly launch artefact (#1 below) is reframed from "Shadowkeep Arcs 1–2, 32 units" to
+> **the gentle assembly opening: the Primer + a complete tiny first game + the start of the
+> re-scoped (cell-based) Shadowkeep.** Judged more achievable and a better first experience — a
+> learner *finishes* a real game in assembly by October, with the hardest engineering (pre-shift /
+> Y-sort / masking) off the critical path and deferred to later games. The Shadowkeep-specific cut
+> hierarchy below is superseded for the assembly artefact; re-derive against the new opening.
+
 **Status:** Active. October is a target, not a hard deadline — the project is close to having enough to ship. Shadowkeep scope set by [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md); BASIC by [spectrum-basic-32-games.md](spectrum-basic-32-games.md). The two structural artefacts (landing page, vault) are spec'd in this doc.
 
 **Date:** 2026-05-06 | **Updated:** 2026-05-26
@@ -12,7 +20,7 @@ design preserved in [revamp.md](../tracker/revamp.md).
 
 The Spectrum launch is **four artefacts at full quality bar**:
 
-1. **Shadowkeep Arc 1 + Arc 2** — 32-unit assembly track across two arcs at the bar of *Atic Atac*, *Knight Lore*, and *Cybernoid II*. The first chapter of a longer game. Per [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md).
+1. **The gentle assembly opening** — the Primer ("Meet the Machine"), a *complete* tiny first game, and the start of the re-scoped (cell-based) Shadowkeep, at the atmospheric bar of *Atic Atac* and *Knight Lore*. A learner finishes a real game in assembly by October; the hardest engineering is off the critical path. The shipped cell-snapped units largely survive into this opening. Per [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) and [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md).
 2. **Spectrum BASIC Volume 1 (8 games) complete** — Usborne 1984 bar, every topic passes DoD. Per [spectrum-basic-32-games.md](spectrum-basic-32-games.md) (full curriculum is 32 games / 4 volumes / 8 per volume; Volumes 2-4 ship post-October through ~2028-29).
 3. **Spectrum landing page** — designed for QR-code visitors arriving from
    Crash! Live flyers and t-shirts.
@@ -27,7 +35,7 @@ If scope needs trimming, count is cut, never the bar. Cut hierarchy lives in
 "October-ready" means **every shipped unit passes the 9-item Definition of
 Done**, plus four artefact-level gates:
 
-- **Shadowkeep Arcs 1+2:** 32 units pass DoD; game playable end-to-end on Spectrum Next — Arc 1 *Foundations and a Place* + Arc 2 *Inhabitants and Identity*. Three engine commitments: pixel-level sprite movement, Y-sorted layered rendering, decoupled attribute/collision.
+- **Assembly opening:** Primer complete; the tiny first game complete and playable end-to-end on Spectrum Next; the re-scoped Shadowkeep's opening units at the cell-based atmosphere bar. No pre-shift / Y-sort / masking in the October artefact — those teach later (Smooth Motion → Overlap → Greypeak) per [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md).
 - **BASIC games:** Volume 1 ships — 8 games at Usborne bar, every topic passes DoD. Topic counts variable per game (no fixed unit-count floor); rough V1 estimate ~30-50 topics across the 8 games. Volumes 2-4 ship through ~2028-29.
 - **Landing page:** designed, copy finalised, navigation working, QR landing
   tested on a real phone from a printed flyer.
@@ -103,3 +111,4 @@ deferred work in [revamp.md](../tracker/revamp.md).
 |---|---|
 | 2026-05-06 | Spec lifted into a binding decision doc. Floor numbers pinned (BASIC 128, Shadowkeep 16). Stretch separated from spec. |
 | 2026-05-26 | October reframed as target, not hard deadline. BASIC V1 done; landing page shipped; Shadowkeep 8/32 — close enough that urgency feels artificial. Session-start gate removed. Drift triggers trimmed to the two that still matter (scope creep past 32 units, DoD erosion). |
+| 2026-05-29 | Assembly launch artefact reframed per [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md): from "Shadowkeep Arcs 1–2, 32 units" to "Primer + complete tiny first game + start of re-scoped cell-based Shadowkeep". Hardest engineering (pre-shift / Y-sort / masking) deferred off the October critical path. |
