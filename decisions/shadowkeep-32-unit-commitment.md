@@ -1,5 +1,15 @@
 # Decision: Shadowkeep 32-Unit Arc 1+2 Commitment
 
+> **AMENDED 2026-05-29 by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md).**
+> The **three engine changes below — pixel-level/pre-shifted sprites, Y-sorted layered rendering,
+> attribute-decoupled tile-map collision — are RELOCATED out of Shadowkeep.** They spread across
+> the rendering games (Smooth Motion → Overlap → Greypeak), each motivated by a felt limitation.
+> Shadowkeep is re-scoped to a **cell-based atmospheric flick-adventure** that hits commercial bar
+> through art, lighting, room design and audio (the Manic Miner / Atic Atac route), reached by a
+> learner already onboarded via the Primer + tiny first game. The Arc 1–2 plan below is re-paced
+> accordingly; its body is preserved as the superseded engine-first design. The commercial-bar
+> *intent* stands — only the means change. (October artefact reframed in the launch spec.)
+
 **Status:** Active. Captured 2026-05-18. Descends from [commercial-bar-revamp.md](commercial-bar-revamp.md) and [real-retro-games.md](real-retro-games.md). (Supersedes an interim 8-unit vertical-slice decision from 2026-05-13; that earlier doc has been removed — git history preserves it.)
 
 ## The decision
@@ -110,3 +120,4 @@ Cuts apply only after a runway slip is identified. Cuts are *not* the default pl
 |---|---|
 | 2026-05-18 | Decision captured. 32-unit commitment in two arcs. Three engine changes (pixel sprites, layered render, decoupled attribute) committed. Vertical-slice framing retired. BASIC track stays at 16. |
 | 2026-05-19 | Extended by [shadowkeep-four-arc-framing.md](shadowkeep-four-arc-framing.md) — Arcs 3-4 added as post-October commitment. October ship scope unchanged. |
+| 2026-05-29 | Amended by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md). Three engine changes relocated out of Shadowkeep; game re-scoped to cell-based atmosphere; Arc 1–2 re-paced. Commercial-bar intent retained, now met via art/atmosphere. October artefact reframed (see launch spec). |
