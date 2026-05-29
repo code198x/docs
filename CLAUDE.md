@@ -12,7 +12,7 @@ October 2026 (Crash! Live) is the launch target, not a hard deadline. The projec
 
 The four launch artefacts:
 
-1. **Shadowkeep** — Spectrum assembly Volume 1 Game 1; Arcs 1+2 at 32 units at commercial bar. 8 of 32 units shipped; the remaining 24 are the main body of work. Full four-arc framing at `docs/decisions/shadowkeep-four-arc-framing.md`.
+1. **Assembly opening** — the gentle Spectrum-assembly on-ramp: a Primer ("Meet the Machine"), a complete tiny first game, and the start of the re-scoped (cell-based) Shadowkeep. Replaces the earlier "Shadowkeep Arcs 1+2 at 32 units" framing — the advanced rendering engine (pre-shift / masking / Y-sort) defers to later games so a learner can *finish* a real game in assembly by October. Governed by [`docs/decisions/spectrum-assembly-gentle-ramp.md`](decisions/spectrum-assembly-gentle-ramp.md); Shadowkeep four-arc framing (now cell-based) at `docs/decisions/shadowkeep-four-arc-framing.md`.
 2. **Spectrum BASIC Volume 1** — 8 games at Usborne bar. **Done.** V2 work (Cipher onward) has started.
 3. **Spectrum landing page** — for QR-code visitors. **Done** (initial version shipped).
 4. **Spectrum vault** — review pass + referenced gap-fill. **In progress.**
