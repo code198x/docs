@@ -1,5 +1,12 @@
 # Decision: Spectrum Assembly Per-Game Scope (v1 first-draft)
 
+> **AMENDED 2026-05-29 by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md).**
+> The opening adds budgeted entries ahead of Shadowkeep — **Primer ~8–12, tiny first game ~16–20,
+> Smooth Motion ~20, Overlap ~20**. **Shadowkeep's Arc 1–2 engineering scope drops** (cell-based;
+> no pre-shift/mask/Y-sort), while **Greypeak grows (~56)** to carry the relocated rendering Trunk
+> (Y-sort + iso). Volume 1's revised lineup and counts live in the gentle-ramp decision; the
+> per-game floors below are otherwise unchanged.
+
 ## The decision
 
 Per-game unit-count budgets for all 44 entries in the Spectrum Assembly track (per [spectrum-assembly-track.md](spectrum-assembly-track.md)). Total scope: **2,396 units across 44 entries**. First-draft estimates — single-pass with the inputs *tradition's canonical depth*, *techniques owned primarily vs inherited*, *art/audio budget*, *ship-bar requirements*. Numbers will firm up during build; treat as floors.
@@ -192,6 +199,6 @@ If timeline tightens during the multi-decade build, cuts work backwards:
 
 ## Status
 
-Active. Captured 2026-05-19. v1 first-draft. Descends from [spectrum-assembly-track.md](spectrum-assembly-track.md) (the structural decision providing the 44-entry lineup), [shadowkeep-four-arc-framing.md](shadowkeep-four-arc-framing.md) (the Shadowkeep Arc 3-4 redistribution that grew Embergate / Lantern Path / Edge of Iron). Anchored in [[spectrum-assembly]] (current-state Assembly summary).
+Active. Captured 2026-05-19. v1 first-draft. Descends from [spectrum-assembly-track.md](spectrum-assembly-track.md) (the structural decision providing the 44-entry lineup), [shadowkeep-four-arc-framing.md](shadowkeep-four-arc-framing.md) (the Shadowkeep Arc 3-4 redistribution that grew Embergate / Lantern Path / Edge of Iron). Amended 2026-05-29 by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) — opening entries (Primer, tiny game, Smooth Motion, Overlap) added; Shadowkeep Arc 1–2 engineering scope reduced; Greypeak grows to carry the rendering Trunk. Anchored in [[spectrum-assembly]] (current-state Assembly summary).
 
 Updates to specific game estimates will be captured as a log entry on this doc rather than as a new version, until per-game spec work proves a number wrong. At that point this doc may earn a v2.
