@@ -146,8 +146,12 @@ not four at once. Names for the two inserts are working-draft.
 ## Volume 1 — detailed (revised lineup)
 
 The thematic identity of Volume 1 (*Rooms and Worlds*) is preserved; the budget rule
-inserts/splits where the old 8-game lineup over-packs. Unit counts are rough floors,
-to firm during build.
+inserts/splits where the old 8-game lineup over-packs. Unit counts here are **illustrative scope markers, not targets**.
+
+> **On the numbers:** the technique budget is on *techniques per game*, **not** unit counts. The
+> project holds **no fixed unit counts** — every "~N units" / "32" in this decision and the linked
+> outlines is an illustrative marker, not a contract. Content and the quality bar decide how many
+> units; the counts firm up and move during build.
 
 | # | Entry | Headline / role | New major technique(s) | ~Units |
 |---|-------|-----------------|------------------------|--------|

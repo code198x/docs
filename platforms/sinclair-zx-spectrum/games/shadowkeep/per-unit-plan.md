@@ -45,8 +45,10 @@ boundary). Its genuinely *new* work is what makes it a *place*:
 **Removed and relocated** (do not teach in Shadowkeep): pixel-level/pre-shifted movement → *Smooth
 Motion*; masked sprite drawing → *Overlap*; Y-sorted layered rendering → *Greypeak*. The freed
 budget goes into **atmosphere, more designed rooms, and polish** — the "make it beautiful" work the
-old plan never had a unit for. Unit count stays at 32 for Arcs 1–2 (per the 32-unit commitment's
-own drift trigger: surplus goes to polish, not new units), re-weighted engine → atmosphere.
+old plan never had a unit for. Scope holds at roughly Arc 1–2's existing ambition,
+re-weighted engine → atmosphere (the "32" is an illustrative marker, not a target — the project
+holds no fixed unit counts; the budget freed by dropping the rendering Trunk goes to atmosphere and
+polish, not new mechanics, per the 32-unit commitment's own drift trigger).
 
 ## October cut — "the start of Shadowkeep"
 
