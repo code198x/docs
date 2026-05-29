@@ -1,5 +1,13 @@
 # Shadowkeep — The 32-Unit Plan
 
+> **SUPERSEDED IN PART, 2026-05-29 — pending re-pace. See [spectrum-assembly-gentle-ramp.md](../../../../decisions/spectrum-assembly-gentle-ramp.md).**
+> Shadowkeep is re-scoped to a **cell-based atmospheric** flick-adventure. The pre-shifted-sprite,
+> masked-drawing and Y-sorted-rendering units below (notably sub-arcs 1.2–1.3) are **removed** —
+> those techniques relocate to later games (Smooth Motion → Overlap → Greypeak). A learner now
+> reaches Shadowkeep already onboarded by the Primer + a tiny first game. The full unit-by-unit
+> re-pace to cell-based atmosphere is downstream content work and **not yet applied**; treat the
+> plan below as the superseded engine-first version until that re-pace lands.
+
 The canonical reference for Shadowkeep's October 2026 launch deliverable. Anchored to [`docs/decisions/shadowkeep-32-unit-commitment.md`](../../../../decisions/shadowkeep-32-unit-commitment.md) and extended by [`docs/decisions/shadowkeep-four-arc-framing.md`](../../../../decisions/shadowkeep-four-arc-framing.md) (Arcs 3-4, post-October).
 
 > *"The keep at night, complete. Foundations, a place, inhabitants, identity. The first chapter of a longer game."*
