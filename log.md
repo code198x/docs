@@ -2,6 +2,30 @@
 
 ---
 
+## 2026-05-29 — Tracked: curriculum-wide dead `9000` subroutine cleanup
+
+**Type:** deferred hygiene task (not yet started)
+
+**Trigger:** During the Cipher (game 9) review, the template centring subroutine `9000 PRINT AT y, (32 - LEN a$) / 2; BRIGHT 1; a$ / 9010 RETURN` was found defined but never called in units 01–07, then wired up (live) in units 08–09. A survey across the Spectrum BASIC track showed this is a track-wide pattern, not a Cipher quirk.
+
+**Survey results (dead = defined-but-never-called units / live = called units):**
+
+| Game | dead | live |
+|------|------|------|
+| 06 bright-spark | 9 | 1 |
+| 09 cipher | 7 | 2 |
+| 10 quiz-master | 10 | 0 (never called anywhere) |
+| 11 locksmith | 6 | 3 |
+| 13 three-in-a-row | 7 | 4 |
+
+(03 oracle-stone, 05 dice-roller, 07 hi-lo, 08 touchdown, 12 sonar, 14 the-caverns, 15 yearfall: 0 dead — `9000` called in every unit that defines it.)
+
+**Decision:** Do NOT clean piecemeal (would create cross-game inconsistency and violates the stay-on-target rule mid-review). Instead, do a deliberate pass *after* the game-by-game review finishes. The pass should: (1) remove `9000`/`9010` from units that never call them; (2) keep them where live; (3) introduce the subroutine in prose at the unit where it first becomes live — currently no unit's prose explains it. `game-10-quiz-master` is the priority case: `9000` is dead in all 10 units, so it can be removed outright there.
+
+**Notes:** No crash risk in any of these (the dead copies are unreachable — guess/main loops exit via unconditional `GO TO`, not fall-through). Distinct from the earlier fall-through crashes in bright-spark/hi-lo/touchdown, which were already fixed with `STOP` guards / removal where a *conditional* exit fell into `9000`.
+
+---
+
 ## 2026-05-19 — Project README updated with domain framing
 
 **Type:** public-facing README update
