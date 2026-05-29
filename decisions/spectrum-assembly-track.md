@@ -1,5 +1,14 @@
 # Decision: Spectrum Assembly Track Structure
 
+> **AMENDED 2026-05-29 by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md).**
+> The track now opens with a Primer ("Meet the Machine") and a tiny first game *ahead* of
+> Shadowkeep, and obeys a **technique budget** — at most 1–2 major new techniques per game;
+> split or insert where the lineup over-packs. Shadowkeep no longer introduces the full Trunk:
+> the advanced rendering Trunk (pre-shift → masking → Y-sort + iso) spreads across the opening
+> into Greypeak. Ordering is **hybrid** — the early sequence (opening → Greypeak) is strictly
+> monotonic; later volumes assume a competent learner and ramp within-theme. The 44-entry count
+> grows by the opening + rendering inserts; the gentle-ramp decision holds the revised lineup.
+
 ## The decision
 
 The Spectrum Assembly track is a **44-entry curriculum across 6 volumes**, organized by a layered model that composes additional content onto a native L0 core:
@@ -134,7 +143,7 @@ This matches BASIC v6.3's dual-name with an explicit third (technique) axis Asse
 
 Techniques cluster into a **Trunk + Branches** model:
 
-- **Trunk (Layers 1-4)** — Shadowkeep introduces; every game inherits
+- **Trunk (Layers 1-4)** — introduced *gently across the opening* (Primer → tiny game → Smooth Motion → Overlap → Greypeak), not front-loaded into Shadowkeep; every later game inherits. See [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md)
 - **Branches A-G** — genre-conditional specialisations
   - A: Adventure Depth — Shadowkeep Arcs 3-4 in the flick-adventure tradition: items (inventory + effects), world (multiple keeps + outdoor traversal), persistence (tape save/load), secrets and lore, atmospheric cycles, collection-based endings. Per [shadowkeep-four-arc-framing.md](shadowkeep-four-arc-framing.md). **Does NOT include combat / classes / XP / spells / branching narrative / multi-NPC dialogue / full Singleton-class location-graph — those are primary teaching in V1.4 / V1.6 / V1.7 / V3.17 / V3.20 per the genre-honesty redistribution.**
   - B: Platformer Specifics (V2)
@@ -144,7 +153,7 @@ Techniques cluster into a **Trunk + Branches** model:
   - F: Cross-cutting Specials (parser, isometric, procedural, etc.)
   - G: Audio Hardware (AY + 128K — V2.16 introduces, V3.17 deepens)
 
-Deprecation pairs are first-class — when a richer technique replaces a simpler one, this is a *teaching moment*, not a refactor. Shadowkeep itself models this (cell-snapped→pre-shifted, single-draw→Y-sort, attribute-collision→tile-map-collision).
+Deprecation pairs are first-class — when a richer technique replaces a simpler one, this is a *teaching moment*, not a refactor. These pairs now play out *across games* — the simple version shipped in an earlier game, the upgrade motivated by its felt limitation in a later one: cell-snapped movement (tiny game) → pre-shifted (Smooth Motion); single-draw (Shadowkeep) → masked (Overlap) → Y-sort (Greypeak); attribute-collision → tile-map-collision. Per [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md).
 
 ## Layer model
 
@@ -179,10 +188,13 @@ Cuts apply *only* after a real timeline slip is identified. The default plan is 
 - **Cloning canonical games** rather than designing inspired-by works (see [inspired-by-not-clones-naming.md](inspired-by-not-clones-naming.md)).
 - **Mixing axis content** — design concepts in the technique slot, techniques in the design slot. The three-axis pattern requires clean separation.
 - **Treating Engineering Practices as ad-hoc folklore** rather than named cross-cutting axis content.
+- **Exceeding the technique budget without a split or insert.** A game quietly growing to 3–4 major new techniques is the failure mode the gentle-ramp decision exists to prevent. Split it or insert a game ahead of it.
+- **Re-loading the first game with engine technique.** The opening (Primer + tiny game) deliberately carries the assembly-onboarding, not the engine course. If the tiny game or early Shadowkeep reaches for pre-shift / masking / Y-sort, that's the cliff returning — stop.
 
 ## Extended by
 
 - [spectrum-assembly-per-game-scope.md](spectrum-assembly-per-game-scope.md) (2026-05-19) — first-draft per-game unit-count estimates for all 44 entries. Total scope: 2,396 units (~67% of platform direction-of-travel). Cut hierarchy refined with scope as input.
+- [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) (2026-05-29) — adds the Primer + tiny-first-game opening, the per-game technique budget, the hybrid difficulty ordering, and the re-scope of Shadowkeep (advanced rendering Trunk relocated to Greypeak). Revises the entry count and the early-track lineup.
 
 ## Status
 
