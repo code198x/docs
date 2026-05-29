@@ -1,5 +1,13 @@
 # Decision: Shadowkeep Four-Arc Framing
 
+> **AMENDED 2026-05-29 by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md).**
+> Shadowkeep is re-scoped to a **cell-based atmospheric** flick-adventure — which *reinforces*
+> this doc's **Atmosphere (Sense of Place)** headline rather than contradicting it. The four-arc
+> structure stands, and **Arcs 3–4 are already cell-based-friendly**: inventory, item-gating,
+> tape save/load, hidden rooms, lore, day/night palette shifts and collection endings need no
+> pre-shift / masking / Y-sort. The advanced rendering Trunk relocates to Greypeak + inserts; the
+> Arc 1–2 per-unit refinements (point 4 below) are re-paced to cell-based atmosphere.
+
 ## The decision
 
 Extends [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) with a **full four-arc framing** for Shadowkeep:
@@ -96,6 +104,6 @@ Shadowkeep's Arcs 3-4 (revised above) instead deepen the **flick-adventure** tra
 
 ## Status
 
-Active. Captured 2026-05-19. Same-day revision applied to Arcs 3.4 and 4 after honest-question audit identified genre-drift (combat / classes / branching narrative moved to V1.6 / V1.7 / V3.17 / V3.20 where canonically primary). Extends [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) — does not supersede. Anchored in [[spectrum-assembly]] (current-state Assembly summary).
+Active. Captured 2026-05-19. Same-day revision applied to Arcs 3.4 and 4 after honest-question audit identified genre-drift (combat / classes / branching narrative moved to V1.6 / V1.7 / V3.17 / V3.20 where canonically primary). Extends [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) — does not supersede. Amended 2026-05-29 by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) — Shadowkeep re-scoped to cell-based atmosphere; four-arc structure and Arcs 3–4 stand; advanced rendering Trunk relocated to Greypeak. Anchored in [[spectrum-assembly]] (current-state Assembly summary).
 
 Per-unit refinements (point 4 above) need application to `docs/platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md` as the next concrete step. The redistributed techniques become primary teachings in their natural games when those games are spec'd.
