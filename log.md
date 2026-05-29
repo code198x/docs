@@ -2,6 +2,24 @@
 
 ---
 
+## 2026-05-29 — Spectrum Assembly: gentle complexity ramp + Shadowkeep re-scope
+
+**Type:** curriculum design decision (binding) — track-structure re-plan
+
+**Trigger:** Review of the Spectrum Assembly track's difficulty ramp. Shadowkeep (game 1) was carrying two of the curriculum's hardest loads at once — assembly-from-zero *and* the whole track's commercial-engine Trunk (pre-shifted sprites, masking, Y-sort, tile-map collision), which `spectrum-assembly-track.md` had it "introduce" for every later game to inherit. The shipped 8-unit slice shows the cliff (asm lines: u1–3 ≈50 → u4 230 → u5 396 → u6 515). Re-pacing within 32 units fixes the slope but not the ceiling.
+
+**Decision:** New governing decision [`spectrum-assembly-gentle-ramp.md`](decisions/spectrum-assembly-gentle-ramp.md). One rule generates it: **≤1–2 major new techniques per game; split or insert where the lineup over-packs.** Consequences: a **Primer** ("Meet the Machine"; programming-literacy floor, BASIC-first *recommended* not gated) and a **tiny first game** now precede Shadowkeep; **Shadowkeep is re-scoped** to the cell-based atmospheric flick-adventure its own *Atmosphere* headline already names (commercial bar via art / lighting / audio — the Manic Miner / Atic Atac route); the **advanced rendering Trunk relocates** to Greypeak + two small inserts (Smooth Motion → Overlap), each motivated by a felt limitation. Ordering is **hybrid** (early sequence monotonic; later volumes assume competence). This is the same move the genre-honesty redistribution already made for combat / parser / etc., applied to technique instead of genre.
+
+**October reframe:** launch artefact shifts from "Shadowkeep Arcs 1–2, 32 units" to "the gentle assembly opening — Primer + complete tiny game + start of re-scoped Shadowkeep". More achievable; hardest engineering off the critical path; the shipped cell-snapped units largely survive.
+
+**Records amended** (AMENDED banners): `spectrum-assembly-track.md`, `shadowkeep-32-unit-commitment.md`, `shadowkeep-four-arc-framing.md`, `spectrum-assembly-per-game-scope.md`, `october-2026-launch-spec.md`; `per-unit-plan.md` bannered superseded-pending-re-pace.
+
+**Downstream (not done here):** full unit-by-unit re-pace of Shadowkeep to cell-based; authoring of the Primer + tiny-game units; real names for the two inserts + the tiny game; `Code198x/CLAUDE.md`'s launch-context line still reads "Arcs 1+2 at 32 units / 8 of 32 shipped" and should be updated to the opening framing.
+
+Commits: docs `86a8406`, `33d11a0`, `5e6b606`, `2adc78b`, `736d05b`, `cc80ae7`, + this entry.
+
+---
+
 ## 2026-05-29 — Quiz Master (game 10) review: two crashes + title-screen bug
 
 **Type:** bug fix (curriculum code) + prose sync + screenshots
