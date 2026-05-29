@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shadowkeep · ZX Spectrum Assembly — synthesis mock (game landing)</title>
+<!--
+  SYNTHESIS MOCK · /sinclair-zx-spectrum/assembly/game-01-shadowkeep/ — game landing.
+  INSIDE a system, so Spectrum identity returns: rainbow, red accent, pixel-grid +
+  scanline atmosphere (the IA's "game landing" wash). Same skeleton as the rest.
+  The conversion page: sell the game (video), make the promise concrete (engine
+  commitments), put the arc rail + "Begin Unit 1" CTA where the eye lands.
+  Track-in-URL throughout. NOTE: copy is illustrative for layout.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Caveat:wght@500;600;700&display=swap" />
+<link rel="stylesheet" href="synthesis.css" />
+<style>
+  *{box-sizing:border-box;} html,body{margin:0;}
+  body{background:var(--bg);
+    background-image:radial-gradient(rgba(0,0,0,0.04) 1px,transparent 1.5px),radial-gradient(rgba(0,0,0,0.025) 1px,transparent 1.6px);
+    background-size:5px 5px,11px 11px;background-position:0 0,2px 3px;
+    color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+
+  .nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:20px;height:60px;padding:0 28px;
+       background:rgba(244,241,232,0.86);backdrop-filter:blur(10px);border-bottom:3px solid var(--fg);}
+  .logo{display:flex;align-items:center;} .logo-full{height:30px;display:block;} .logo-compact{height:30px;display:none;}
+  .nav nav{margin-left:auto;display:flex;gap:18px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;}
+  .nav nav a{color:var(--fg-2);text-decoration:none;} .nav nav a.here{color:var(--fg);box-shadow:inset 0 -3px 0 var(--spectrum);}
+  .nav .search{font-family:var(--mono);font-size:11px;color:var(--fg-2);border:1.5px solid var(--border-2);padding:4px 9px;}
+  .rainbow{display:flex;height:6px;} .rainbow div{flex:1;}
+  .rainbow .r{background:var(--rb-red);}.rainbow .y{background:var(--rb-yellow);}.rainbow .g{background:var(--rb-green);}.rainbow .c{background:var(--rb-cyan);}
+  .rainbow.bar{height:9px;width:200px;border:1.5px solid var(--fg);}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:16px 28px 60px;}
+  .eyebrow{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-2);}
+  .crumb{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--fg-2);}
+  .crumb .sep{color:var(--fg-muted);} .crumb .url{margin-left:auto;font-size:10.5px;background:var(--surface);border:1.5px solid var(--border);padding:3px 8px;}
+
+  /* hero with pixel-grid + scanline wash */
+  .hero{position:relative;overflow:hidden;margin-top:14px;padding:22px 24px;border:3px solid var(--fg);box-shadow:var(--shadow-lg);background:var(--surface);}
+  .hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(rgba(204,0,0,0.05) 1px,transparent 1px) 0 0/16px 16px,
+               linear-gradient(90deg,rgba(204,0,0,0.05) 1px,transparent 1px) 0 0/16px 16px;}
+  .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(0deg,rgba(0,0,0,0.03) 0 1px,transparent 1px 4px);}
+  .hero .in{position:relative;z-index:1;}
+  .hero .k{display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
+  .hero h1{font-family:var(--script);font-weight:700;font-size:88px;line-height:.82;margin:6px 0 0;}
+  .hero .pitch{font-size:16px;max-width:64ch;margin:12px 0 0;}
+  .hero .pitch .hl{background:linear-gradient(180deg,transparent 58%,rgba(204,0,0,0.16) 58%);padding:0 2px;}
+  .stamp{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+         border:2px solid var(--fg);color:var(--fg);padding:2px 8px;background:var(--surface);transform:rotate(-3deg);}
+  .liveunits{font-family:var(--mono);font-size:11px;color:var(--spectrum);font-weight:700;letter-spacing:.06em;}
+
+  .grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:26px;margin-top:24px;align-items:start;}
+  h2{font-family:var(--sans);font-weight:800;font-size:21px;margin:26px 0 10px;}
+  h2:first-child{margin-top:0;}
+  h2::before{content:"";display:inline-block;width:20px;height:3px;background:var(--spectrum);vertical-align:middle;margin:-4px 11px 0 0;}
+
+  /* gameplay video */
+  .video{border:3px solid var(--fg);background:#15171c;box-shadow:var(--shadow);}
+  .video .perf{display:flex;justify-content:space-between;padding:3px 5px;}
+  .video .perf i{width:7px;height:8px;background:#fff;opacity:.85;}
+  .video .scr{height:280px;display:flex;align-items:center;justify-content:center;position:relative;
+    background:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 4px),#16203a;}
+  .video .pl{width:62px;height:62px;border:3px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;}
+  .video .cap{position:absolute;bottom:8px;left:12px;font-family:var(--mono);font-size:11px;color:#aab;}
+  .video .badge{position:absolute;top:8px;right:10px;font-family:var(--mono);font-size:9px;color:#cdd;background:rgba(0,0,0,.45);padding:2px 7px;letter-spacing:.1em;}
+
+  /* engine commitments */
+  .commits{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .commit{border:3px solid var(--fg);background:var(--surface);box-shadow:var(--shadow);padding:12px 13px;}
+  .commit .n{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--spectrum);}
+  .commit h3{font-family:var(--sans);font-weight:800;font-size:15px;margin:4px 0 0;line-height:1.15;}
+  .commit p{font-size:12.5px;color:var(--fg-2);margin:6px 0 0;line-height:1.5;}
+
+  /* build photo */
+  .polaroid{width:260px;background:#fff;border:1px solid var(--border-2);box-shadow:3px 4px 0 rgba(0,0,0,.16);padding:8px 8px 0;transform:rotate(-1.5deg);}
+  .polaroid .img{height:170px;background:repeating-linear-gradient(135deg,rgba(0,0,0,.06) 0 6px,transparent 6px 12px),#e6dcc4;
+    display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--fg-2);text-align:center;padding:8px;}
+  .polaroid .cap{font-family:var(--script);font-size:18px;color:var(--fg-2);text-align:center;padding:7px 4px 10px;line-height:1.05;}
+
+  .afield{border:3px solid var(--border);background:rgba(45,138,207,0.07);padding:12px 15px;}
+  .afield ul{list-style:none;margin:8px 0 0;padding:0;font-size:13.5px;}
+  .afield li{padding:4px 0 4px 20px;position:relative;}
+  .afield li::before{content:"\2197";position:absolute;left:0;color:var(--rb-cyan);font-family:var(--mono);}
+  .afield a{color:var(--fg);font-weight:600;text-decoration:none;} .afield .d{color:var(--fg-2);font-weight:400;}
+
+  /* sidebar: arc rail + CTA + tools */
+  .side .card{border:3px solid var(--border);background:var(--surface);padding:14px 15px;margin-bottom:16px;}
+  .cta-card{border:3px solid var(--spectrum);background:var(--spectrum-tint);box-shadow:var(--shadow);}
+  .btn{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+       padding:13px 16px;border:3px solid var(--spectrum);background:var(--spectrum);color:#fff;text-decoration:none;
+       box-shadow:4px 4px 0 rgba(204,0,0,.28);display:block;text-align:center;}
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(204,0,0,.28);}
+  .progress{font-family:var(--mono);font-size:11px;color:var(--fg-2);margin-top:10px;text-align:center;}
+  .bar{height:8px;border:1.5px solid var(--fg);margin-top:6px;} .bar .fill{height:100%;width:25%;background:var(--spectrum);}
+
+  .arc{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--border-2);}
+  .arc:last-child{border-bottom:0;}
+  .arc .idx{font-family:var(--script);font-weight:700;font-size:26px;line-height:.9;color:var(--spectrum);width:26px;flex:0 0 auto;}
+  .arc.future .idx{color:var(--fg-2);}
+  .arc .body{flex:1;} .arc .t{font-weight:700;font-size:14px;} .arc .u{font-family:var(--mono);font-size:10px;color:var(--fg-2);margin-top:1px;}
+  .arc .pill{font-family:var(--mono);font-size:8.5px;font-weight:700;letter-spacing:.1em;padding:1px 6px;border:2px solid;align-self:flex-start;}
+  .arc .pill.now{border-color:var(--spectrum);color:var(--spectrum);} .arc .pill.soon{border-color:var(--fg-2);color:var(--fg-2);}
+  .tools{list-style:none;margin:8px 0 0;padding:0;font-size:13.5px;}
+  .tools li{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed var(--border-2);}
+  .tools li:last-child{border-bottom:0;} .tools .k{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);align-self:center;}
+
+  .floor{position:fixed;right:10px;bottom:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:var(--fg-2);
+    background:var(--surface);border:1.5px solid var(--border);padding:3px 7px;text-transform:uppercase;}
+
+  @media (max-width:860px){ .grid{grid-template-columns:1fr;} .side{order:2;} .commits{grid-template-columns:1fr;} h1{font-size:62px;} }
+  @media (max-width:720px){ .nav nav{display:none;} .logo-full{display:none;} .logo-compact{display:block;}
+    .hero h1{font-size:56px;} .crumb .url{display:none;} }
+</style>
+</head>
+<body>
+
+  <header class="nav">
+    <a class="logo" href="#" aria-label="Code Like It's 198x">
+      <img class="logo-full" src="logo-horizontal.svg" alt="Code Like It's 198x" />
+      <img class="logo-compact" src="logo-198x.svg" alt="Code Like It's 198x" />
+    </a>
+    <nav><a class="here" href="#">SYSTEMS</a><a href="#">TIMELINE</a><a href="#">VAULT</a><a href="#">PATTERNS</a><a href="#">CONTRIBUTE</a><a href="#">ABOUT</a></nav>
+    <span class="search">&#8981; SEARCH</span>
+  </header>
+  <div class="rainbow"><div class="r"></div><div class="y"></div><div class="g"></div><div class="c"></div></div>
+
+  <div class="wrap">
+    <div class="crumb">
+      <span>Spectrum</span><span class="sep">&rsaquo;</span><span>Assembly</span><span class="sep">&rsaquo;</span><span>Shadowkeep</span>
+      <span class="url">code198x.com/sinclair-zx-spectrum/assembly/game-01-shadowkeep/</span>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="in">
+        <div class="k">
+          <span class="eyebrow">Spectrum &middot; Assembly &middot; Game 01 &middot; the flagship</span>
+          <span class="stamp">Z80</span>
+          <span class="liveunits">&#9679; 8 of 32 units live</span>
+        </div>
+        <h1>Shadowkeep</h1>
+        <div class="rainbow bar" style="margin-top:12px;"><div class="r"></div><div class="y"></div><div class="g"></div><div class="c"></div></div>
+        <p class="pitch">An isometric adventure in hand-written Z80 — built at the bar of
+          <span class="hl">Atic Atac, Knight Lore and Cybernoid II</span>, the games that made the
+          Spectrum feel bigger than its 48K. Arcs 1 &amp; 2 ship now: thirty-two units that take you
+          from an empty screen to a living, explorable keep — and real <code>.sna</code> binaries
+          that run on the metal.</p>
+      </div>
+    </section>
+
+    <div class="grid">
+      <!-- MAIN -->
+      <div class="main">
+        <h2>See it run</h2>
+        <div class="video">
+          <div class="perf"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="scr">
+            <span class="pl">&#9654;</span>
+            <span class="badge">REAL SPECTRUM NEXT</span>
+            <span class="cap">&#9654; Shadowkeep — attract loop, Arc 1 &middot; 1:12</span>
+          </div>
+          <div class="perf"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+
+        <h2>What it proves</h2>
+        <div class="commits">
+          <div class="commit"><div class="n">01</div><h3>Pixel-level sprite movement</h3><p>Characters move by the pixel, not the 8&times;8 cell — smooth motion the hardware fights you on.</p></div>
+          <div class="commit"><div class="n">02</div><h3>Y-sorted layered rendering</h3><p>Back-to-front draw order so you can walk behind walls and pillars. The isometric depth trick.</p></div>
+          <div class="commit"><div class="n">03</div><h3>Decoupled attribute &amp; collision</h3><p>Colour and collision handled apart from the bitmap — beating attribute clash on its own turf.</p></div>
+        </div>
+
+        <h2>The actual rig</h2>
+        <div class="polaroid">
+          <div class="img">&#128247; build photo<br/>(Spectrum Next + Fuse + coffee)</div>
+          <div class="cap">where the .sna gets tested — on real iron</div>
+        </div>
+
+        <h2>In the lineage of</h2>
+        <div class="afield">
+          <ul>
+            <li><a href="#">Atic Atac</a> <span class="d">&middot; Ultimate, 1983 &middot; World of Spectrum</span></li>
+            <li><a href="#">Knight Lore</a> <span class="d">&middot; the Filmation engine &middot; World of Spectrum</span></li>
+            <li><a href="#">Cybernoid II</a> <span class="d">&middot; Hewson, 1988 &middot; World of Spectrum</span></li>
+            <li><a href="#">Ultimate Play the Game</a> <span class="d">&middot; in The Vault</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="side">
+        <div class="card cta-card">
+          <div class="eyebrow">Start building</div>
+          <p style="font-size:13px;color:var(--fg-2);margin:6px 0 12px;">Arc 1 opens on an empty screen. By Unit 1's end you've drawn your first room.</p>
+          <a class="btn" href="#">Begin Arc 1 &middot; Unit 1 &rarr;</a>
+          <div class="bar"><div class="fill"></div></div>
+          <div class="progress">8 / 32 units live</div>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">The four arcs</div>
+          <div class="arc"><span class="idx">1</span><div class="body"><div class="t">Foundations &amp; a Place</div><div class="u">units 1–16</div></div><span class="pill now">Now</span></div>
+          <div class="arc"><span class="idx">2</span><div class="body"><div class="t">Inhabitants &amp; Identity</div><div class="u">units 17–32</div></div><span class="pill now">Now</span></div>
+          <div class="arc future"><span class="idx">3</span><div class="body"><div class="t">Arc Three</div><div class="u">coming 2027</div></div><span class="pill soon">2027</span></div>
+          <div class="arc future"><span class="idx">4</span><div class="body"><div class="t">Arc Four</div><div class="u">coming 2027–8</div></div><span class="pill soon">2027–8</span></div>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">Tools you'll need</div>
+          <ul class="tools">
+            <li><span class="k">Emulator</span><span>Fuse</span></li>
+            <li><span class="k">Assembler</span><span>pasmonext</span></li>
+            <li><span class="k">Hardware</span><span>Spectrum Next (optional)</span></li>
+            <li><span class="k">Per session</span><span>~30 min</span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <span class="floor">synthesis mock &middot; game landing &middot; not production</span>
+</body>
+</html>

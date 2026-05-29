@@ -29,6 +29,14 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 - [British English](decisions/british-english.md) — colour, learnt, centre (exception: program)
 - [Seven repos](decisions/seven-repos.md) — repo layout, git status gotcha
 
+### Website / IA
+
+- [Systems, not platforms](decisions/systems-not-platforms.md) — "system" is the structural term (nav, URLs, collections, components); prose may use "platform"
+- [System URL structure](decisions/system-url-structure.md) — system-rooted URLs, explicit track segment, no `/curriculum//learn/` prefix
+- [Website design zoning](decisions/website-design-zoning.md) — character in the margins, legibility in the column; resolves "two winners" page types via template-vs-view
+- [Visual direction: synthesise, don't pivot](decisions/visual-direction-synthesis.md) — production's bones + the fanzine's soul as one language; re-role Inter/Mono/Caveat, no new fonts
+- [Synthesis build plan](tracker/synthesis-build-plan.md) — phased plan to evolve production into the synthesis; reference mocks at [design/synthesis/](design/synthesis/)
+
 ### Spectrum-specific
 
 - [Spectrum Assembly track structure](decisions/spectrum-assembly-track.md) — 44 entries × 6 volumes; layer model; tech-tree

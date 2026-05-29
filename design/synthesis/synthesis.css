@@ -1,0 +1,102 @@
+/* ============================================================
+   Code Like It's 198x — synthesis design tokens
+   ------------------------------------------------------------
+   Single source of truth for the six mock surfaces. Maps onto
+   production's src/layouts/Layout.astro token block, so this is
+   the seed for the real build, not throwaway mock-only CSS.
+
+   Re-roled type, NO new fonts: Inter (body + headings),
+   JetBrains Mono (machine voice — code/labels/badges),
+   Caveat (soul — display + accent only, ~28px floor).
+
+   CONTRAST CONTRACT
+   - --fg       body + primary text          (~15:1 on beige)
+   - --fg-2     small meta, labels, kickers   (~7:1 — AA for small text)
+   - --fg-muted DECORATIVE / large-only       (separators, ghost words,
+                swatches, big numerals) — never small informational text.
+   Tier de-emphasis (Edge / Beyond / locked) comes from border STYLE and
+   a step to --fg-2, never from dropping text opacity below readable.
+   ============================================================ */
+
+:root{
+  /* Surfaces */
+  --bg:#f4f1e8;            /* page · C64 beige (production) */
+  --surface:#fdfcf7;       /* cards / panels */
+  --read:#fbf9f2;          /* reading column · warm near-white */
+
+  /* Borders */
+  --border:#d6d3ca;
+  --border-2:#c7c3b6;
+
+  /* Text */
+  --fg:#1e293b;
+  --fg-2:#475569;
+  --fg-muted:#94a3b8;      /* decorative / large only */
+
+  /* House — neutral brand, deliberately not any platform colour */
+  --house:#3a2c1f;         /* deep newsprint brown */
+  --house-2:#c0512f;       /* brick — accent / CTAs */
+  --house-tint:rgba(192,81,47,0.10);
+
+  /* Track accents */
+  --basic:#2f9e44; --basic-tint:rgba(47,158,68,0.08);
+  --next-tint:rgba(232,177,31,0.20);
+
+  /* Platform colours — ONLY inside that system's pages/cards */
+  --spectrum:#cc0000; --spectrum-tint:rgba(204,0,0,0.07);
+  --c64:#4a4dff; --nes:#e30613; --amiga:#ff6600;
+
+  /* Spectrum rainbow — Spectrum pages only */
+  --rb-red:#d52b2b; --rb-yellow:#e8b11f; --rb-green:#2f9e44; --rb-cyan:#2d8acf;
+
+  /* Code */
+  --code-bg:#1e1e1e; --code-fg:#d4d4d4;
+
+  /* Chunky brutalist shadows (no blur, hard offset) */
+  --shadow:4px 4px 0 rgba(0,0,0,0.18);
+  --shadow-hi:6px 6px 0 rgba(0,0,0,0.18);
+  --shadow-lg:7px 7px 0 rgba(0,0,0,0.22);
+
+  /* Type — re-roled, no new fonts */
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  --script:"Caveat","Bradley Hand",cursive;
+
+  /* Layout */
+  --max:1160px;
+}
+
+*{box-sizing:border-box;}
+
+/* ============================================================
+   Dark mode — warm "ink on dark paper".
+   Deliberately NOT production's cool slate-navy: the brand is
+   warm newsprint, so night mode stays warm (charcoal + cream)
+   to preserve continuity. Accents brighten for contrast.
+   Toggle with <html data-theme="dark">. Component-level dark
+   tweaks (textures, sticky notes) live in each page's <style>.
+   ============================================================ */
+[data-theme="dark"]{
+  --bg:#1a1714;            /* warm near-black (the old ink colour) */
+  --surface:#242019;       /* cards — one step up */
+  --read:#211d17;          /* reading column */
+  --border:#3a342a;
+  --border-2:#4a4234;
+  --fg:#efe7d6;            /* warm off-white — body */
+  --fg-2:#b9ad96;          /* warm muted — small meta (AA on dark) */
+  --fg-muted:#8a7f6a;      /* decorative / large only */
+  --house:#caa46f;         /* tan — structural rules read on dark */
+  --house-2:#e0744a;       /* brick, brightened */
+  --house-tint:rgba(224,116,74,0.14);
+  --basic:#5bc46a; --basic-tint:rgba(91,196,106,0.12);
+  --next-tint:rgba(232,177,31,0.16);
+  --spectrum:#ff5048; --spectrum-tint:rgba(255,80,72,0.14);
+  --c64:#7d80ff; --nes:#ff4a3d; --amiga:#ff9046;
+  --rb-red:#ef5a52; --rb-yellow:#f1c64a; --rb-green:#56c46a; --rb-cyan:#4bb0ec;
+  --code-bg:#15130f; --code-fg:#e4ddcb;
+  /* Dark hard-shadow: a WARM offset lighter than the page (black-on-black
+     vanishes). Reads as a "second sheet behind the card" — print-offset, on brand. */
+  --shadow:4px 4px 0 #322a1c;
+  --shadow-hi:6px 6px 0 #322a1c;
+  --shadow-lg:7px 7px 0 #3a3020;
+}
