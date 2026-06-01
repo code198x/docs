@@ -54,6 +54,20 @@ Leave 10-aligned gaps where later units will insert lines, and tell the reader t
 
 This is the reader-facing half of rules 2 and 3: those keep the numbering clean, this makes the reserved space legible instead of arbitrary. The cost is honest — a gap reserved for content several units away (a title that arrives at unit-07) is harder to motivate than one filled next unit, so reserve where you can explain it, and lean on the call-back when you fill it. Story Builder unit-02's "Why line 130?" section is the model.
 
+## Assembly tracks
+
+The rules above were written for BASIC, and their *mechanics* are BASIC's: clean 10-step numbering, 10-aligned gaps, renumber-to-restore-spacing (rules 2, 3, 7). Assembly has no line numbers, so those three don't apply — but their **purpose** (a program grows without disturbing its neighbours) assembly gets for free: labels are position-independent, so a new routine or `CALL` drops in anywhere and nothing renumbers. The discipline rules — **1 (small diff), 4 (one structural change), 5 (no final-unit dumping), 6 (runnable)** — apply in full, and matter *more* here, not less: assembly is where the cliff happened.
+
+**Measure the diff in instructions, not raw lines.** Code198x assembly is heavily commented, uses `equ` constants for vocabulary, and includes data blocks. So:
+
+- **Comments and labels don't count** toward the ~5–8 budget — but don't smuggle 40 lines of new logic in under a comment header either. The budget is on *executable change*.
+- **A single coherent data block is one change**, like a BASIC `DATA` statement — an 8-byte sprite `DEFB` bitmap, or one level row, is one concept ("here is the lamplighter") even though it spans several lines. Two unrelated tables in one unit is two changes: split.
+- **`equ` constants are vocabulary, not logic** — naming `COBBLE equ %00000001` is the vocabulary-before-syntax move, not part of the diff budget.
+
+**One structural change per unit** reads, in assembly, as: add *one* subroutine and its `CALL`; or hoist inline code into a routine; or add the interrupt handler — never two at once. The restructuring IS the lesson (rule 4); name it out loud ("we're lifting the draw into a `CALL`").
+
+The shipped Shadowkeep slice is the canonical violation this section exists to prevent: units of 54, 54, 49, **230**, **396**, **515**, 43, 156 lines (per [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md)), with Unit 4 alone introducing ~12 concepts. An assembly unit that needs 230 lines is two dozen units wearing a trenchcoat — split until each is one concept with a visible result.
+
 ## Relationship to spiral-and-incremental.md
 
 [spiral-and-incremental.md](spiral-and-incremental.md) defines the conceptual progression model: incremental within a phase, spiral across phases. This decision adds a concrete mechanical constraint: the CODE must also progress incrementally. A unit can introduce one new concept AND change only a few lines — these reinforce each other.
@@ -61,6 +75,8 @@ This is the reader-facing half of rules 2 and 3: those keep the numbering clean,
 ## Implications for existing content
 
 The V1 BASIC games (Story Builder through Touchdown) and V2 games (Cipher, Quiz Master) predate this decision. Many have units where the diff is too large — particularly final units that add polish across the whole program. These need reworking to split large diffs into smaller intermediate steps. This is quality debt, not a style preference.
+
+The assembly track predates enforcement of this decision entirely — the rules existed but were never applied to it. The shipped Shadowkeep units (230/396/515-line units) are the starkest diff violations in the curriculum; the gentle-ramp re-pace ([spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md)) must bring them into compliance as it re-scopes Shadowkeep cell-based. New assembly authoring (Primer, Gloaming) is held to the *Assembly tracks* section from the first unit.
 
 ## Drift triggers
 
@@ -72,7 +88,10 @@ The V1 BASIC games (Story Builder through Touchdown) and V2 games (Cipher, Quiz 
 - A unit combines restructuring AND a new feature.
 - A brief plans fewer than 6 units for a game with 30+ lines of final code.
 - "We'll add that in the polish unit" — if "that" is more than 2–3 lines, it needs its own unit.
+- An assembly unit's diff exceeds ~5–8 *instructions* of meaningful change (data blocks and comments measured separately) — split it.
+- An assembly unit introduces two unrelated data blocks, or two structural changes, at once.
+- Reaching for BASIC's numbering/gap rules (2, 3, 7) on an assembly unit — they don't apply; labels make them unnecessary.
 
 ## Status
 
-Active. Captured 2026-05-26. Rule 7 (reserve gaps on purpose, and explain them) added 2026-05-28. Reinforces [spiral-and-incremental.md](spiral-and-incremental.md). Informs game briefs and the unit specification.
+Active. Captured 2026-05-26. Rule 7 (reserve gaps on purpose, and explain them) added 2026-05-28. *Assembly tracks* section + assembly drift triggers added 2026-06-01. Reinforces [spiral-and-incremental.md](spiral-and-incremental.md) and [deprecation-pairs.md](deprecation-pairs.md). Informs game briefs and the unit specification.

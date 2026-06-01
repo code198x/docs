@@ -16,12 +16,13 @@ Every unit is a standalone MDX file containing:
 - Cross-links to Vault entries and Pattern Library
 
 **Key Principles:**
+- **One concept per unit** — a unit introduces exactly one new idea and exercises it. If you can't name the unit's single concept in a sentence, it's bundling two; split it. This is the rule that keeps the ramp gentle (see [spiral-and-incremental.md](../decisions/spiral-and-incremental.md): "one new capability per unit"). On assembly, measure the concept by its *instruction* diff, not raw lines — see [incremental-code-samples.md](../decisions/incremental-code-samples.md) § *Assembly tracks*.
 - Each unit produces a working, runnable result
-- Each unit's code is a small diff from the previous unit's code (~5–8 lines changed; see [incremental-code-samples.md](../decisions/incremental-code-samples.md))
+- Each unit's code is a small diff from the previous unit's code (~5–8 lines/instructions changed; see [incremental-code-samples.md](../decisions/incremental-code-samples.md))
 - Code must compile/run and be verified with screenshots
 - British English throughout (except "program" for computer programs)
 - Platform-specific technical accuracy
-- Progressive complexity within each game
+- Progressive complexity within each game — **incremental** within a phase, **spiral** across phases ([spiral-and-incremental.md](../decisions/spiral-and-incremental.md)); hard techniques arrive as **deprecation pairs** (teach the naive version first, motivate the upgrade by its felt limit — [deprecation-pairs.md](../decisions/deprecation-pairs.md))
 
 ---
 

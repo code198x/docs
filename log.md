@@ -2,6 +2,94 @@
 
 ---
 
+## 2026-06-01 — Keystone: "Modules, not games" (design accepted, migration pending)
+
+**Type:** curriculum architecture decision (binding) — model change
+
+[`modules-not-games.md`](decisions/modules-not-games.md). The curriculum's unit of sequencing is the **module**, not the game. A *game* is a buildable artefact a module *teaches*; **one game can be taught by several modules** (revisits — the spiral model at game scale: build Gloaming, later revisit it to make movement glide). Module kinds: `game` / `teaching` (the Primer) / `interval`. Slugs are bare identities (`gloaming`, `shadowkeep`, `meet-the-machine`) with **no number** — order lives in the catalogue, so inserting a module renames nothing.
+
+Arrived at via two reframes in one session: "games are really just modules" → "this opens revisiting a game a second time." Drafting it confirmed it dissolves a stack of tensions: the original **Gloaming-vs-Shadowkeep `game-01` collision** (now just two slugs), the Primer's "game 0" hack (it's the first module), the catalogue-numbering cascade (order is data), intervals (a module kind), the stale-16-vs-gentle-ramp lineup (reorder, don't rename), Shadowkeep's arcs (later revisit modules), and number-in-slug fragility (gone).
+
+**Migration is planned but NOT executed** — ~1,000 edits across three repos + published URLs (7 catalogue YAMLs, 78 units YAMLs, 324 `game:` fields, 338 slug-ref files, ~93 dirs × 3 mirrors, helpers/layouts/routing, + redirects for shipped URLs). Sequenced + build-verified in the record; awaiting Steve's go. Then: wire the Primer as module 1, reconcile the lineup to gentle-ramp order, add revisit modules. Records to amend after: curriculum-structure, between-game-intervals (promote intervals to a module kind), gentle-ramp, CLAUDE.md, unit spec.
+
+---
+
+## 2026-06-01 — Primer expanded to 15 beats (arithmetic, bit-logic, 16-bit added on merit)
+
+**Type:** content (curriculum authoring) — extends the 12-beat Primer below
+
+Reviewing "are there other primer-appropriate topics we need?" surfaced one clear gap and two defensible ones — all added on merit (explicitly **not** to hit a round count; the no-fixed-unit-counts rule was named and held against the powers-of-2 pull):
+- **12 Adding and Taking Away** — `inc`/`dec`/`add`/`sub` + the carry flag. The clear gap: a BASIC-literate learner couldn't do `x = x + 1`. Pays off the carry deferred at Test, Then Jump. (cyan border, verified.)
+- **13 Working With Bits** — `and`/`or`/`xor` to clear/set/flip. The Primer could *test* a bit (Beat 8) but not change one; Gloaming ORs in BRIGHT. (magenta border, verified.)
+- **14 Bigger Than a Byte** — 16-bit register pairs + `add hl, de` to step by N. Gloaming Unit 1 already uses `add hl, de` for wall sides. (red column, verified.)
+
+Placed as a "round-out-your-fluency-before-the-game" block (12–14) so only the capstone renumbered (**The Machine Trusts You** 12 → **15**); all deferrals held at this position (carry was already deferred; `bit` introduced at input; 16-bit follows the pointer beat). **The memory-map** topic was judged interval material, *not* a beat — the one that would have reached 16 for neatness; declined. Final Primer length **15**, emergent not targeted.
+
+Recovery note: authoring the new Beat 12 in `unit-12/` clobbered the capstone's MDX + screenshot there (its source survived); moved `no-safety-net.asm` → `unit-15`, rebuilt, re-captured, rewrote the capstone MDX at unit-15; fixed Beat 11's forward-ref.
+
+---
+
+## 2026-06-01 — Primer fully authored (12 beats, to Definition of Done)
+
+**Type:** content (curriculum authoring) — the assembly track's opening artefact
+
+The **Primer** ("Meet the Machine") is drafted end-to-end — all 12 units assemble on pasmonext → `primer.sna`, run on Emu198x, and have verified screenshots; magazine prose; `CodeFromFile` listings + Try-this samples; one-concept-per-unit throughout. Working-tree drafts (uncommitted) at `website/.../assembly/primer/unit-01..12.mdx`, `code-samples/.../primer/unit-01..12/`, `website/public/images/.../primer/unit-01..12/`.
+
+**Final beat list (machine model → control flow → mindset):** 1 Assemble and Run · 2 LD Is Not LET · 3 Everything Is a Number · 4 A Street of Numbered Boxes · 5 The Screen Is Memory · 6 Colour Is a Separate Map · 7 Test, Then Jump · 8 The Machine Can Hear You · 9 **A Finger on the Boxes** (pointer — split out during authoring, Steve approved) · 10 Counting Toward Zero · 11 Call, Return, and a Stack You Can See · 12 The Machine Trusts You.
+
+**Design calls made while authoring:**
+- **`HL`/pointer split.** The outline had loops at beat 9 using `ld hl`; per one-concept, pointer was split into its own beat (9) ahead of DJNZ (10). Outline bannered, not renumbered.
+- **`HL` deferred from beat 5** (screen showpiece uses only beat 4's direct store) → paid off in beat 9.
+- **Chip-vs-tool seam at beat 7:** label case-sensitivity + leading-dot local labels named as *pasmonext's* rules, not the Z80's (Steve's framing). Verified empirically: mnemonics/registers case-insensitive, labels case-sensitive.
+- **Two cliff-hangers planted and deferred:** screen-thirds layout (beat 5 → an interval, per [between-game-intervals.md](decisions/between-game-intervals.md)); full keyboard matrix (beat 8 → the tiny game).
+- **Verified-not-assumed facts:** `ld a, 300` wraps silently to 44 (no error); the four literal notations emit identical `$41`; `out` only takes `A`.
+- **Interactive capture technique** discovered for beat 8 (hold a key headlessly via a raw `input` script step) — saved to behavioural memory; Gloaming movement units reuse it.
+
+**Still open:** wiring the Primer into the content collection is blocked on the deferred catalogue-numbering decision (frontmatter `game: 0` is a provisional placeholder; not yet routed). The Primer needs a real name (working slug "primer"). The two cliff-hangers await the tiny game / first interval.
+
+---
+
+## 2026-06-01 — In-curriculum WASM playground (door held open)
+
+**Type:** exploratory design note
+
+Captured [`in-curriculum-wasm-playground.md`](decisions/in-curriculum-wasm-playground.md) (status: held open, not binding). An in-page edit→assemble→run loop (WASM Asm198x + Emu198x core embedded in a unit) is a **post-launch multiplier, not an October gate** — launch is content-gated, Fuse + downloadable `.sna` is the shippable runtime, ~4-month runway must protect content. Key point recorded: **content authored now is forward-compatible** — every `CodeFromFile`-referenced `.asm` becomes a `CodePlayground` exhibit with no rewrite; screenshots stay as preview/fallback/OG. This is *why* the "code in files, never inline" rule is also future-proofing. Sequencing when the time comes: Asm198x→WASM first (cheap, clean single-binary Rust), then the Emu198x core (already headless/GUI-decoupled, proven by the capture pipeline), then swap the component. Distinct from Forge198x (standalone IDE, umbrella, deferred) but shares the WASM-tooling dependency.
+
+---
+
+## 2026-06-01 — Primer Beats 1–2 authored; between-game intervals (door held open)
+
+**Type:** content (curriculum authoring) + exploratory design note
+
+**Authored** the first two Primer units end-to-end to the Definition of Done (working-tree drafts): `primer/unit-01.mdx` "Assemble and Run" (the build-run loop; `OUT`/border) and `primer/unit-02.mdx` "LD Is Not LET" (registers; `LD` between registers, shown via a round-trip A→B→A on the border). Both assemble on pasmonext → `primer.sna` and have verified Emu198x screenshots (red border u1, cyan u2). The Primer's lesson surface is the *register/memory view*; where a beat's idea is invisible on screen, the border is reused as a visible proxy.
+
+**Verified, not assumed (two prose-facing facts):** pasmonext mnemonics/registers are case-**insensitive** but labels are case-**sensitive** (so u1's case note is scoped to instruction names; the label gotcha is deferred to Beat 7 where learners first write their own label). `ld a, 300` assembles **silently and wraps** to the low 8 bits (44) — it does *not* error; reframed as a "no safety net" Try-this in u2.
+
+**`game: 0`** is a provisional frontmatter placeholder for the unnumbered Primer, pending the deferred catalogue-numbering decision; not yet wired into the content collection.
+
+**Exploratory note added** — [`between-game-intervals.md`](decisions/between-game-intervals.md) (status: door held open, not binding). Recurring *intervals* between games that step out of application into the academic layer (the Primer is the prototype). A third axis alongside spiral (deepen a technique in a richer game) and deprecation pairs (replace a naive technique): intervals consolidate *knowledge* outside the per-game technique budget, and are the natural place to pay off deliberately-planted cliff-hangers. Open: cadence, core-vs-optional, numbering, first interval. Live constraint: don't foreclose it (keep numbering able to slot unnumbered intervals; keep planting cliff-hangers).
+
+**Files (uncommitted working-tree drafts):** `website/.../primer/unit-01.mdx`, `unit-02.mdx`; `code-samples/.../primer/unit-01/border.asm`, `unit-02/registers.asm` (+ `.sna`s); `website/public/images/.../primer/unit-0{1,2}/screenshot.png`; `docs/decisions/between-game-intervals.md`; `docs/specifications/unit.md` (one-concept principle); this entry.
+
+---
+
+## 2026-06-01 — Assembly gradualism: unit-level discipline + deprecation-pairs (binding)
+
+**Type:** curriculum design decision (binding) — pedagogy, extends the gentle ramp
+
+**Trigger:** Authoring Gloaming Unit 1 (the tiny first game) prompted the question of how to evolve the assembly curriculum so concepts are introduced gradually rather than all at once. Surveying the decisions folder first showed most of the proposed principles were **already binding** — `spiral-and-incremental.md` ("one new capability per unit") and `incremental-code-samples.md` (≤5–8-line diff; "too much new code is the signal to split"). The assembly cliff (Shadowkeep units of 230/396/515 lines) was therefore a **compliance gap**, not a missing principle: the diff discipline was written BASIC-first (line numbers, 10-step renumbering) and never enforced on assembly.
+
+**Decision (filed by responsibility, not folded into one doc):**
+- **Amended `incremental-code-samples.md`** with an *Assembly tracks* section: the diff rule restated for a track with no line numbers (measure in *instructions*; comments + `equ` vocabulary excluded; a coherent data block = one change like a BASIC `DATA` statement; BASIC rules 2/3/7 don't apply — labels are position-independent). Added the assembly compliance debt to *Implications* and three assembly drift triggers.
+- **New `deprecation-pairs.md`**: formalises the *teach-the-naive-version-first, motivate-the-upgrade-by-its-felt-limit* pedagogy (+ name-the-assumption-out-loud, vocabulary-before-syntax). Distinguished from spiral: spiral **deepens** a technique that stays; a deprecation pair **replaces** a deliberately-naive one. Gloaming is the root of the track's deprecation tree.
+- **Pointer added to `spectrum-assembly-gentle-ramp.md`**: per-game budget there; per-unit discipline in incremental-code-samples; naive-first pedagogy in deprecation-pairs.
+
+**Downstream (not done here):** propagate the *unit = one concept* rule into `docs/specifications/unit.md`; the gentle-ramp Shadowkeep re-pace must bring its 230/396/515-line units into compliance; reconcile the stale 16-game assembly catalogue to the gentle-ramp lineup (without pre-stubbing empty routed games).
+
+**Files (uncommitted working-tree drafts, left for review):** `docs/decisions/incremental-code-samples.md`, `docs/decisions/deprecation-pairs.md` (new), `docs/decisions/spectrum-assembly-gentle-ramp.md`, this entry.
+
+---
+
 ## 2026-05-29 — Spectrum Assembly: gentle complexity ramp + Shadowkeep re-scope
 
 **Type:** curriculum design decision (binding) — track-structure re-plan

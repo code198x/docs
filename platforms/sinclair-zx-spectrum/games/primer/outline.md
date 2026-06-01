@@ -4,6 +4,26 @@
 > [`spectrum-assembly-gentle-ramp.md`](../../../../decisions/spectrum-assembly-gentle-ramp.md).
 > Sits *ahead* of the tiny first game and Shadowkeep. "primer" is a working slug; a real name
 > can wait. This is a design outline (beats + intent), not authored unit prose.
+>
+> **Amended during authoring (2026-06-01):** a **pointer** beat — *A Finger on the Boxes* (`HL` as a
+> movable pointer; `ld hl` / `ld (hl)` / `inc hl`) — was split out *ahead* of the loop beat, per the
+> one-concept rule ([incremental-code-samples.md](../../../../decisions/incremental-code-samples.md)
+> § Assembly tracks): pointer-plus-loop is two concepts, and the loop's payoff (filling a row) needs
+> the pointer first. Three further beats were then added on merit (arithmetic, bit-logic, 16-bit
+> values), bringing the Primer to **15 beats**. The beat numbers in the headings below are
+> *pre-split*; the **authored units** carry the live numbering:
+>
+> 1 Assemble and Run · 2 LD Is Not LET · 3 Everything Is a Number · 4 A Street of Numbered Boxes ·
+> 5 The Screen Is Memory · 6 Colour Is a Separate Map · 7 Test, Then Jump · 8 The Machine Can Hear
+> You · 9 **A Finger on the Boxes** (pointer) · 10 Counting Toward Zero · 11 Call, Return, and a
+> Stack · 12 **Adding and Taking Away** (arithmetic + carry) · 13 **Working With Bits** (and/or/xor)
+> · 14 **Bigger Than a Byte** (16-bit, `add hl, de`) · 15 The Machine Trusts You.
+>
+> Beats 12–14 are a "round out your fluency before the game" block — each a genuine primer-level
+> need (you couldn't do arithmetic, set a bit, or handle a number > 255), *not* padding to reach a
+> round count; the no-fixed-unit-counts rule holds. Exit competencies gain: use a pointer to walk
+> memory; 8-bit arithmetic + the carry flag; set/clear/flip bits; 16-bit numbers and `add hl, de`
+> (the tiny game's wall-fill loop depends on these).
 
 ## What the Primer is
 

@@ -8,6 +8,14 @@
 > `spectrum-assembly-per-game-scope.md`, and `october-2026-launch-spec.md`. The four open
 > questions are resolved in § *Open questions*. The full unit-by-unit re-pace of Shadowkeep's
 > plan, and the authoring of the Primer / tiny-game units, are downstream content work.
+>
+> **Unit-level discipline (added 2026-06-01).** This decision sets the *per-game* technique
+> budget. The *per-unit* discipline that makes the ramp gentle in practice — one concept per
+> unit, measured in instructions — lives in [incremental-code-samples.md](incremental-code-samples.md)
+> § *Assembly tracks* (the mechanical diff rule, restated for a track with no line numbers). The
+> *naive-first, motivate-the-upgrade* pedagogy this decision names in passing is now binding in
+> [deprecation-pairs.md](deprecation-pairs.md). The shipped Shadowkeep line-count table below is
+> the canonical violation those records exist to prevent.
 
 ## The problem
 
