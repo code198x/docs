@@ -63,27 +63,35 @@ docker run --rm -v $(pwd)/code-samples:/code-samples <image> <assembler> <args>
 Options: `--wait N` (frames), `--input FILE` (input script), `--duration N` (video)
 
 ## Content Collections
+
+The curriculum sequences **modules**, not games — a game is a buildable artefact a
+module teaches; one game can span several modules. Module slugs are bare identities
+(no `game-NN-` prefix); ordering comes from catalogue array position. See
+[`docs/decisions/modules-not-games.md`](docs/decisions/modules-not-games.md).
+
 ```
 src/content/
-├── curriculum/                          # MDX pages (units, game indexes, getting-started)
-│   └── {platform}/{track}/{game}/       #   Rendered by src/pages/[...slug].astro
-├── games/{platform}/{track}.yaml        # Game catalogue
-└── units/{platform}/{track}/{game}.yaml # Unit details (source of truth for counts)
+├── curriculum/                            # MDX pages (units, module indexes, getting-started)
+│   └── {platform}/{track}/{slug}/         #   Rendered by src/pages/[...slug].astro
+├── modules/{platform}/{track}.yaml        # Module catalogue (ordered array)
+└── units/{platform}/{track}/{slug}.yaml   # Unit details (source of truth for counts)
 ```
 
 Three MDX page collections share `src/content/curriculum/` as base directory:
-- `unit-pages` — `**/unit-*.mdx` (480 files, Zod-validated frontmatter)
-- `game-pages` — `**/index.mdx` (94 game index pages)
-- `getting-started-pages` — `**/getting-started.mdx` (4 setup guides)
+- `unit-pages` — `**/unit-*.mdx` (Zod-validated frontmatter)
+- `module-pages` — `**/index.mdx` (module index pages)
+- `getting-started-pages` — `**/getting-started.mdx` (setup guides)
 
-Computed fields (layout, prevLesson, nextLesson, totalUnits, system, gameName) are derived from entry path in the `[...slug].astro` catch-all route — **never in frontmatter**.
+Computed fields (layout, prevLesson, nextLesson, totalUnits, system) are derived from
+entry path in the `[...slug].astro` catch-all route — **never in frontmatter**.
 
-Helper: `getGamesWithCounts(platform, track)`, `getUnitsEntry(platform, track, game)`
+Helper: `getModulesWithCounts(platform, track)`, `getUnitsEntry(platform, track, slug)`
+(in `src/lib/modules.ts`).
 
 ## CodeFromFile Usage
 ```mdx
 import CodeFromFile from "@components/CodeFromFile.astro";
-<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-08/symphony.asm" />
+<CodeFromFile src="commodore-64/assembly/sid-symphony/unit-08/symphony.asm" />
 ```
 
 Language auto-detected from path (Z80 for spectrum, 68000 for amiga, ca65 for NES, 6502 for C64).

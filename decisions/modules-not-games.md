@@ -146,12 +146,26 @@ The migration is mechanical once the model is fixed — large but well-defined, 
 
 ## Records to amend (after migration)
 
-- `curriculum-structure.md` — restate around modules.
+Done in the migration:
+
+- `CLAUDE.md` — Content Collections + CodeFromFile sections restated around modules
+  (collection `modules`, bare slugs, `module-pages`, `getModulesWithCounts`, uniform
+  `{platform}/{track}/{slug}/` paths). ✓
+- The deferred catalogue-numbering question — closed by this record. ✓
+
+Deferred — a dedicated docs-refresh pass, not gating the migration (build is green; these
+are prose that still says "game"/`game-NN-` but misleads no build step):
+
+- `docs/specifications/unit.md` — "game" → "module" language; also independently stale
+  (references `src/pages/…`).
+- `docs/specifications/curriculum.md` / `curriculum-structure.md` — restate around modules.
+- `docs/specifications/code-samples.md`, `information-architecture.md`,
+  `system-url-structure.md`, `content-creation-workflow.md` — path scheme + "game" language.
 - `between-game-intervals.md` — reframe intervals as a module kind (promote from exploratory).
-- `spectrum-assembly-gentle-ramp.md` — its lineup becomes a module sequence; *Smooth Motion* / *Overlap*
-  become candidate Gloaming revisits.
-- `CLAUDE.md`, `docs/specifications/unit.md` — "game" → "module" language; content-collection paths.
-- The deferred catalogue-numbering question — closed by this record.
+- `spectrum-assembly-gentle-ramp.md` — its lineup becomes a module sequence; *Smooth Motion* /
+  *Overlap* become candidate Gloaming revisits.
+- `design/synthesis/*.html` mockups — carry `game-NN-` URLs; historical, refresh when reworked.
+- `docs/log.md` and this record's migration plan — historical, left as written.
 
 ## Drift triggers
 
@@ -166,7 +180,8 @@ The migration is mechanical once the model is fixed — large but well-defined, 
 
 ## Status
 
-Accepted (design) 2026-06-01. Migration pending approval. Supersedes the deferred catalogue-numbering
+Accepted and migrated 2026-06-01 (Pass 1 namespacing, Pass 2 collection rename, Pass 3 wiring +
+redirects — all build-green; a docs-prose refresh is deferred, see "Records to amend"). Supersedes the deferred catalogue-numbering
 discussion. Relates to [spiral-and-incremental.md](spiral-and-incremental.md),
 [deprecation-pairs.md](deprecation-pairs.md), [between-game-intervals.md](between-game-intervals.md),
 [incremental-code-samples.md](incremental-code-samples.md),
