@@ -146,25 +146,35 @@ The migration is mechanical once the model is fixed — large but well-defined, 
 
 ## Records to amend (after migration)
 
-Done in the migration:
+Done in the migration (commit `de59533`):
 
 - `CLAUDE.md` — Content Collections + CodeFromFile sections restated around modules
   (collection `modules`, bare slugs, `module-pages`, `getModulesWithCounts`, uniform
   `{platform}/{track}/{slug}/` paths). ✓
 - The deferred catalogue-numbering question — closed by this record. ✓
 
-Deferred — a dedicated docs-refresh pass, not gating the migration (build is green; these
-are prose that still says "game"/`game-NN-` but misleads no build step):
+Done in the docs-refresh pass (commits `d2fe1fe`, this commit):
 
-- `docs/specifications/unit.md` — "game" → "module" language; also independently stale
-  (references `src/pages/…`).
-- `docs/specifications/curriculum.md` / `curriculum-structure.md` — restate around modules.
-- `docs/specifications/code-samples.md`, `information-architecture.md`,
-  `system-url-structure.md`, `content-creation-workflow.md` — path scheme + "game" language.
-- `between-game-intervals.md` — reframe intervals as a module kind (promote from exploratory).
-- `spectrum-assembly-gentle-ramp.md` — its lineup becomes a module sequence; *Smooth Motion* /
-  *Overlap* become candidate Gloaming revisits.
-- `design/synthesis/*.html` mockups — carry `game-NN-` URLs; historical, refresh when reworked.
+- `specifications/content-model.md` — hierarchy and collections restated around modules. ✓
+- `specifications/unit.md` — current path + minimal frontmatter; computed fields documented. ✓
+- `specifications/code-samples.md`, `information-architecture.md`,
+  `content-creation-workflow.md` — uniform `{platform}/{track}/{slug}/` paths. ✓
+- `decisions/system-url-structure.md` — contradiction resolved: bare module slugs,
+  re-ordering is a data edit; track-in-URL unchanged. ✓
+- `decisions/between-game-intervals.md` — module model supplies the mechanism (`kind:
+  interval`) and closes its placement/numbering question; stays exploratory pending cadence. ✓
+- `decisions/spectrum-assembly-gentle-ramp.md` — lineup reframed as a module sequence; tiny
+  game named Gloaming; *Smooth Motion* / *Overlap* noted as candidate Gloaming revisits. ✓
+- `decisions/curriculum-structure.md` — rewritten around the module spine, the technique
+  budget, and no-fixed-unit-counts (the 4×256 / powers-of-2 model retired). ✓
+- `specifications/curriculum.md` — checked; no module-structural staleness (only legitimate
+  `/vault/games/` links). ✓
+
+Still deferred — historical or low-traffic, no build impact:
+
+- `design/synthesis/*.html` mockups — carry `game-NN-` URLs; refresh when reworked.
+- `platforms/sinclair-zx-spectrum/games/shadowkeep/*`, `tracker/*` — platform content and
+  live trackers; touch when next edited.
 - `docs/log.md` and this record's migration plan — historical, left as written.
 
 ## Drift triggers

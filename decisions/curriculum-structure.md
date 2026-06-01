@@ -2,78 +2,132 @@
 
 ## The decision
 
-The curriculum's per-platform scope is locked at:
+The curriculum is a **sequence of modules** built to a **multi-disciplinary commercial
+quality bar**, with **no fixed game or unit counts**. A few things are locked; everything
+else falls out of them.
 
-- **4 platforms** (Spectrum, C64, NES, Amiga) for the assembly track.
-- **4 games per platform**, each at the multi-disciplinary commercial bar.
-- **256 units per game**, totalling 1,024 units per platform and 4,096 units across the curriculum.
+**Locked:**
 
-The quality bar at the endpoint of each game's full 256 units is **mid-tier full-price** — the £7.95 1987 Hewson/Gremlin/Mikro-Gen/Durell tier. Real commercial product, ambitious, not pretending to be Ultimate's absolute top.
+- **4 platforms** carry the assembly track: ZX Spectrum, C64, NES, Amiga. (Gateway
+  BASIC/HLL tracks exist where applicable — e.g. Spectrum BASIC — and are governed by
+  their own specs, not this one.)
+- **The quality bar.** Each game reaches **mid-tier full-price** — the £7.95 1987
+  Hewson / Gremlin / Mikro-Gen / Durell tier. Real commercial product, ambitious, not
+  pretending to be Ultimate's absolute top. From [real-retro-games.md](real-retro-games.md)
+  and [commercial-bar-revamp.md](commercial-bar-revamp.md).
+- **The pacing discipline.** Complexity rises gently and close to monotonically, governed
+  by the per-game **technique budget** ([spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md))
+  and the per-unit one-concept rule ([incremental-code-samples.md](incremental-code-samples.md),
+  [spiral-and-incremental.md](spiral-and-incremental.md), [deprecation-pairs.md](deprecation-pairs.md)).
 
-Internal phase structure is per-game brief. Phase sizes must be powers of 2 (8, 16, 32, etc.). Each game's brief sets its own phase trajectory; there is no universal "Phase 1 = N units" rule. Shadowkeep's Phase 1 commitment is Arc 1 at 16 units (see [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md)).
+**Not fixed — falls out of the locked parts:**
 
-The total represents roughly the same authoring time as the previous 1,408-unit-per-platform plan, because multi-disciplinary units are 2–3× the per-unit work of code-led units. The new bar doesn't cost more total time; it produces fewer-but-better games for the same time.
+- **Game count per platform.** A platform carries as many games as it takes to cover the
+  intended **genre breadth** while honouring the technique budget. Breadth across genres
+  is a primary goal — a new genre wants a new game ([modules-not-games.md](modules-not-games.md)).
+  The old "4 games per platform" lock is retired: the Spectrum assembly lineup alone now
+  sketches ~11 Volume-1 entries.
+- **Unit count per game or module.** No targets. Counts are **illustrative markers, not
+  contracts** — every "~N units" / "32" in the outlines is a marker that firms up and moves
+  during build. Content and the quality bar decide how many units; the technique budget,
+  not a unit total, is what caps authoring cost.
+- **Phase shape.** Phases divide where a game's spiral progression naturally divides. There
+  is no powers-of-2 phase-size rule (an earlier aesthetic preference, now dropped).
+
+### Module, not game, is the unit of sequencing
+
+The curriculum sequences **modules** ([modules-not-games.md](modules-not-games.md)). A
+module has a `kind`:
+
+- `game` — builds a buildable game (the common case);
+- `teaching` — a non-game on-ramp (e.g. the Primer, *Meet the Machine*);
+- `interval` — a short between-game step into conceptual/academic material
+  ([between-game-intervals.md](between-game-intervals.md), exploratory).
+
+One game can span several modules — a **revisit** returns to a game already built and
+upgrades a technique (the deprecation pair at game scale). So "how many games" and "how
+many modules" are different questions; the module sequence is the spine, and ordering is
+the module catalogue's array position, not anything encoded in a slug.
 
 ## Why
 
-Earlier curriculum versions oscillated between 16-game tracks (v3.0) and 4-game tracks (v4.0). The current 4-game structure is the right cut — each game can carry distinct platform-defining ambition (Spectrum: attribute system, software pixel scrolling, isometric, capstone production). But the v4.0 per-game unit counts (128/256/512/512) were sized for code-led work.
+Earlier curriculum versions oscillated between 16-game tracks (v3.0) and 4-game tracks
+(v4.0), with code-led per-game unit counts (128/256/512/512). Under
+[real-retro-games.md](real-retro-games.md), multi-disciplinary units cost 2–3× their
+code-led predecessors, and at those costs the v4.0 counts compound to multi-decade
+authoring time even at sustained pace.
 
-Under [real-retro-games.md](real-retro-games.md), multi-disciplinary units cost 2–3× their code-led predecessors. At those costs, the v4.0 counts compound to multi-decade authoring time even at sustained pace. Reducing per-game count is the only honest move that doesn't compromise the quality bar.
+The previous answer — lock every game to 256 units, phases to powers of 2 — had the right
+instinct (rein in the code-led counts) but the wrong mechanism. A fixed unit total
+legislates the *output* when the real constraint is the *input*: how much new hard
+technique a game introduces. The honest version caps that directly. The **technique
+budget** (1–2 major new core techniques per game; split or insert when a game would exceed
+it) is what actually governs authoring cost and learner load; unit and game counts are
+then free to be whatever the content and the quality bar require. This is why the structure
+is now budget-and-bar driven with counts illustrative, rather than a fixed grid.
 
-256 units per game is the target where:
+## The acceleration assumption (load-bearing)
 
-- The game credibly reaches mid-tier full-price scale (~80–300 rooms or equivalent gameplay scope, animated sprites, beeper + AY music, custom loaders, multi-level structure).
-- The authoring time per game is commensurate with what real mid-tier Spectrum/C64/NES/Amiga studios produced in 3–6 person-months.
-- The full curriculum (4 × 4 × 256 = 4,096 units) remains within the same total authoring envelope as the previous code-led plan.
-
-## What this means
-
-### Per-platform scope
-
-- **Spectrum:** Shadowkeep (Game 1), then three more games. Game 2 was Ionfire (scrolling shmup, 256 units in v4.0); Game 3 was Grimstone (isometric, 512); Game 4 was Dawnreach (capstone, 512). All rescope to 256; specific ambition recalibrates per game when each brief is touched.
-- **C64:** Cadence (Game 1), then three more games sized at 256 each. Game 2-4 TBD.
-- **NES:** Nightshade (Game 1), then three more games sized at 256 each. Game 2-4 TBD.
-- **Amiga:** Exodus (Game 1), then three more games sized at 256 each. Game 2-4 TBD.
-
-### Per-game phase structure
-
-Phase trajectories are declared in each game's brief. Phase sizes are powers of 2 (8, 16, 32, etc.). The number and shape of phases per game depends on how the game's spiral progression naturally divides — there is no universal pattern.
-
-Brief Section 7 (phase trajectory) declares the per-game phase breakdown. Shadowkeep's trajectory is the worked example: Arcs 1+2 at 16 units each for October (32 total), with Arcs 3+4 post-October. See [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) and [shadowkeep-four-arc-framing.md](shadowkeep-four-arc-framing.md).
-
-For some games, fewer larger phases may make more sense than many small ones. The brief decides.
-
-### Acceleration assumption
-
-The 4,096-unit total is only viable if authoring accelerates as the project matures. Specifically:
+A large module sequence across four platforms is only viable if authoring accelerates as
+the project matures. Specifically:
 
 - **Pattern reuse** compounds across games on the same platform.
 - **Brief format and authoring workflow** mature, reducing per-unit overhead.
-- **Visual/audio infrastructure** built for Game 1 generalises to Game 2.
+- **Visual/audio infrastructure** built for one game generalises to the next.
 - **LLM-assisted authoring** improves over the project's lifespan.
-- **Eventually, contributors and a community** generate patterns and reduce the solo-authoring load.
+- **Eventually, contributors and a community** generate patterns and reduce the
+  solo-authoring load.
 
-Realistic acceleration likely brings later games to 60–70% of Game 1's authoring time per platform — not the 10× speedup that would make 4,096 units a short project. The bet is that *combined* acceleration sources bend the curve enough to make the total viable across years rather than decades.
+Realistic acceleration likely brings later games to 60–70% of the first game's authoring
+time per platform — not the 10× speedup that would make the total a short project. The bet
+is that *combined* acceleration sources bend the curve enough to make the whole curriculum
+viable across years rather than decades.
 
-**This assumption is load-bearing.** If acceleration doesn't materialise, scope must be cut — fewer games per platform, fewer platforms, or longer timeline. The decision tree for that scenario is per-platform: if a platform's Game 1 takes longer than projected, defer Games 2–4 on that platform until acceleration materialises elsewhere first.
+**This assumption is load-bearing.** If acceleration doesn't materialise, scope must be
+cut — fewer games per platform, fewer platforms, or a longer timeline. The decision tree is
+per-platform: if a platform's first game takes longer than projected, defer its later games
+until acceleration materialises elsewhere first.
 
-### Relationship to existing curriculum docs
+## What this means per platform
 
-The current `docs/platforms/sinclair-zx-spectrum/assembly.md` (v4.0, 2026-03-09) has per-game unit counts of 128/256/512/512. Those revise to 256/256/256/256. The accompanying "concept," "skills taught," and "why" copy for Games 2–4 will need reconciliation when each game's brief is touched in turn — particularly Game 3 (Grimstone, isometric adventure), which was sized for Knight Lore scale and may need design adjustment to fit 256 units. That reconciliation is forthcoming work, not blocked on this decision.
+Per-platform lineups live in `docs/platforms/{system}/` and in the module catalogues
+(`src/content/modules/{platform}/{track}.yaml`), sized by genre breadth and the technique
+budget rather than a fixed count:
 
-The curriculum doc previously named Game 1 as "Gravelight" (single-screen platformer) while implementation was Shadowkeep. Reconciliation completed 2026-05-13; spec is now at v5.0 and aligned. (Historical: the original v4.0 Dawnreach concept assumed Game 1 was a platformer; v5.0 flags the design implication of the Game 1 change for Dawnreach's eventual brief work.)
+- **Spectrum (assembly).** The fully worked lineup. A `teaching` Primer (*Meet the
+  Machine*), then **Gloaming** (the tiny first game), then **Shadowkeep** (the first
+  substantial game, October flagship), then the rendering-technique sequence and the rest
+  of Volume 1 (~11 entries), with Volumes 2–6 sketched. See
+  [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md).
+- **C64 / NES / Amiga (assembly).** First substantial games are designed (Cadence,
+  Nightshade, Exodus); subsequent games are sized by genre breadth and budget when each
+  brief is touched. The same gentle-ramp discipline applies — these tracks will likely
+  grow their own opening (a teaching module + a tiny first game) when authored.
 
 ## Drift triggers
 
-If curriculum-level planning shows any of these patterns, stop and re-read this decision:
+If curriculum-level planning shows any of these, stop and re-read this decision:
 
-- A new game proposed at >256 units without explicit justification and a scope-cut elsewhere.
-- A new platform added without acknowledging it adds 1,024 units to the total.
-- Acceleration treated as guaranteed rather than load-bearing assumption.
-- Per-game scope creeping toward Ultimate top-tier (Knight Lore / Head Over Heels scale with multi-frame everywhere) — that's a 256+ unit ambition, not a 256-unit ambition.
-- Per-platform game count creeping past 4.
-- "Just one more game" or "let's also do platform X" without budget reconciliation.
+- Re-introducing a **fixed unit count** ("256 per game", "phase must be 16 units") as a
+  target — counts are illustrative markers; the budget is on *techniques*.
+- Re-introducing **powers-of-2 phase sizing** as a rule.
+- **Capping a platform at a fixed game count** by fiat rather than by genre breadth +
+  technique budget.
+- A new game proposed at **3–4 new major techniques** without a split or insert (the
+  gentle-ramp budget violation).
+- **Collapsing distinct genres into revisits** to shrink the game count — breadth across
+  genres is primary; a revisit is for returning to a *specific game we built*.
+- Treating **acceleration as guaranteed** rather than a load-bearing assumption.
+- Per-game scope creeping toward **Ultimate top-tier** (Knight Lore / Head Over Heels
+  scale with multi-frame everywhere).
 
 ## Status
 
-Active. Captured 2026-05-13. Descends from [real-retro-games.md](real-retro-games.md). The structural commitment that operationalises the multi-disciplinary bar at curriculum scale. Per-platform curriculum docs now live under `docs/platforms/{system}/`.
+Active. Captured 2026-05-13; **rewritten 2026-06-01** around the module model, the technique
+budget, and no-fixed-unit-counts. The original 4-games-per-platform / 256-units-per-game /
+powers-of-2-phases model is retired (see § Why) — the multi-disciplinary bar and the
+acceleration assumption are carried forward intact. Descends from
+[real-retro-games.md](real-retro-games.md); operationalised per-track by
+[spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md); structure model in
+[modules-not-games.md](modules-not-games.md). Per-platform curriculum docs live under
+`docs/platforms/{system}/`.
