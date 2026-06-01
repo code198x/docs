@@ -239,23 +239,19 @@ Track **nice-to-have** for later:
 **Frontmatter (YAML):**
 ```yaml
 ---
-layout: ../../../layouts/UnitLayout.astro
 title: "[Clear, Descriptive Title]"
-platform: "commodore-64"
-language: "basic-v2"  # or "6510-assembly", "z80-assembly", etc.
-game: 1
-gameSlug: "sid-symphony"
+description: "One sentence: what the unit teaches and what the learner builds."
+pubDate: YYYY-MM-DD
+game: 1          # module's game number; 0 for teaching/interval modules
 unit: 1
-unitSlug: "first-notes"
-totalUnits: 64
-prevUnit: "/commodore-64/game-01-sid-symphony/unit-00-..." # or null
-nextUnit: "/commodore-64/game-01-sid-symphony/unit-02-..." # or null
-objectives:
-  - 'First learning objective'
-  - 'Second learning objective'
-  - 'Third learning objective'
+tags: ["tag1", "tag2", "tag3"]
 ---
 ```
+
+Frontmatter is minimal. `layout`, `platform`, `language`, `totalUnits`, `prevUnit`/`nextUnit`,
+the module slug and `system` are **derived from the entry path** in `[...slug].astro`, never
+in frontmatter (see [unit.md](unit.md) and [content-model.md](content-model.md)). The older
+`gameSlug`/`unitSlug`/`objectives` fields are retired.
 
 **Content Sections (adapt as needed for archetype):**
 
@@ -273,7 +269,7 @@ objectives:
 
 ### Step 2.2: Code Examples
 
-**Location:** `/code-samples/{platform}/game-NN-{game-slug}/unit-NN/example-N.{ext}`
+**Location:** `/code-samples/{platform}/{track}/{module-slug}/unit-NN/example-N.{ext}`
 
 **Requirements:**
 - Must run standalone (all DATA, all setup)
@@ -291,7 +287,7 @@ Some techniques benefit from isolated demonstration. Create a standalone demo wh
 - Is a likely Pattern Library candidate
 - Benefits from experimentation outside game context
 
-**Location:** `/code-samples/{platform}/{game}/techniques/{technique-name}.asm`
+**Location:** `/code-samples/{platform}/{track}/{module-slug}/techniques/{technique-name}.asm`
 
 **Requirements:**
 - 50-100 lines (maximum 150)
@@ -1039,7 +1035,7 @@ The main workflow is forward-only (create units sequentially). This section cove
 3. **Fix in isolation:**
    ```bash
    # Create branch for the fix
-   git checkout -b fix/game-01-unit-05-bug
+   git checkout -b fix/shadowkeep-unit-05-bug
 
    # Make minimal fix
    # Re-validate code

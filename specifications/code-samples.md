@@ -6,8 +6,10 @@ All code lives in the `/code-samples/` repo, never inline in MDX.
 
 ```mdx
 import CodeFromFile from "@components/CodeFromFile.astro";
-<CodeFromFile src="commodore-64/game-01-sid-symphony/unit-08/symphony.asm" />
+<CodeFromFile src="commodore-64/assembly/sid-symphony/unit-08/symphony.asm" />
 ```
+
+Paths are uniform: `{platform}/{track}/{slug}/unit-NN/` — bare module slug, no `game-NN-` prefix.
 
 Language auto-detected from path:
 - Spectrum paths → Z80 highlighting

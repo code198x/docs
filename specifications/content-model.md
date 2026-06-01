@@ -1,38 +1,42 @@
 # Content Model
 
-How units, tracks, games, and platforms relate. The formal spec is in `docs/CURRICULUM-SPECIFICATION.md`; this page captures patterns and gotchas from applying it.
+How units, tracks, modules, and platforms relate. This page captures patterns and gotchas from applying the curriculum spec.
 
 ## Hierarchy
 
-**Platform** → **Track** → **Game** → **Unit**
+**Platform** → **Track** → **Module** → **Unit**
 
 - Platforms: C64, ZX Spectrum, Amiga, NES
 - Tracks: assembly, BASIC (where applicable)
-- Games: ~10 per track, progressive complexity
-- Units: ~5-15 per game, each produces a runnable result
+- Modules: the unit of sequencing. A module has a `kind` — `game` (teaches a buildable game), `teaching` (a non-game on-ramp like *Meet the Machine*), or `interval` (a short between-game step). One game can span several modules (revisits); a module may teach no game. See [decisions/modules-not-games.md](../decisions/modules-not-games.md).
+- Units: each produces a runnable result; count per module varies. Unit counts are illustrative markers, not targets (see [decisions/spectrum-assembly-gentle-ramp.md](../decisions/spectrum-assembly-gentle-ramp.md)).
+
+Module **slugs are bare identities** (no `game-NN-` prefix); ordering comes from the catalogue array position, not the slug.
 
 ## Content collections (Astro)
 
 Three MDX collections share `src/content/curriculum/` as base directory:
 
-| Collection | Pattern | Count |
-|------------|---------|-------|
-| `unit-pages` | `**/unit-*.mdx` | ~480 |
-| `game-pages` | `**/index.mdx` | ~94 |
-| `getting-started-pages` | `**/getting-started.mdx` | 4 |
+| Collection | Pattern |
+|------------|---------|
+| `unit-pages` | `**/unit-*.mdx` |
+| `module-pages` | `**/index.mdx` |
+| `getting-started-pages` | `**/getting-started.mdx` |
 
 YAML data collections:
-- `src/content/games/{platform}/{track}.yaml` — game catalogue
-- `src/content/units/{platform}/{track}/{game}.yaml` — unit details (source of truth for counts)
+- `src/content/modules/{platform}/{track}.yaml` — module catalogue (ordered array; each entry carries `kind` and, for `game` modules, the `game` it teaches)
+- `src/content/units/{platform}/{track}/{slug}.yaml` — unit details (source of truth for counts), keyed by `moduleSlug`
 
 ## Computed fields
 
-Layout, prevLesson, nextLesson, totalUnits, system, gameName are **derived from the entry path** in `[...slug].astro`. Never put these in frontmatter.
+Layout, prevLesson, nextLesson, totalUnits, system are **derived from the entry path** in `[...slug].astro`. Never put these in frontmatter.
 
 ## Key helpers
 
-- `getGamesWithCounts(platform, track)` — lists games with unit counts
-- `getUnitsEntry(platform, track, game)` — gets unit metadata
+In `src/lib/modules.ts`:
+
+- `getModulesWithCounts(platform, track)` — lists modules with unit counts
+- `getUnitsEntry(platform, track, slug)` — gets unit metadata for a module
 
 ## Unit archetypes
 

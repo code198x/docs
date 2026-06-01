@@ -16,6 +16,15 @@
 > *naive-first, motivate-the-upgrade* pedagogy this decision names in passing is now binding in
 > [deprecation-pairs.md](deprecation-pairs.md). The shipped Shadowkeep line-count table below is
 > the canonical violation those records exist to prevent.
+>
+> **Module model (added 2026-06-01).** The lineup below is a sequence of **modules**, not
+> games ([modules-not-games.md](modules-not-games.md)): the Primer is a `teaching` module, each
+> game a `game` module, and the two rendering inserts can be either their own `game` modules *or*
+> **revisits of Gloaming** — extra modules that return to the game already built and upgrade its
+> cell-sprite to pre-shifted / masked movement (the deprecation-pair done at game scale). That
+> reframe is the natural home for "Smooth Motion" / "Overlap"; whether they revisit Gloaming or
+> stand alone is a build-time call. The tiny first game has since been designed and named
+> **Gloaming** (resolving open question 4).
 
 ## The problem
 
@@ -104,7 +113,7 @@ Outcome: fluent in the machine; has not built a game yet.
 course; this track assumes you've met variables, loops and subroutines before."* A
 never-programmed learner may ignore it and dive in — that's their call, not ours to forbid.
 
-### Game 1 — a tiny first game (cell-based, single screen)
+### Game 1 — Gloaming, a tiny first game (cell-based, single screen)
 
 Deliberately small by game-design standards. The achievement is *"I finished a real
 game, in assembly,"* not ambition. Single screen, move a character (cell-based, with
@@ -164,7 +173,7 @@ inserts/splits where the old 8-game lineup over-packs. Unit counts here are **il
 | # | Entry | Headline / role | New major technique(s) | ~Units |
 |---|-------|-----------------|------------------------|--------|
 | — | **Primer** | Meet the Machine | (machine literacy, not a game) | ~8–12 |
-| 1 | **Tiny first game** | "I finished a game in asm" | game loop; cell sprite + collision | ~16–20 |
+| 1 | **Gloaming** | "I finished a game in asm" | game loop; cell sprite + collision | ~20 |
 | 2 | **Shadowkeep** | Atmosphere | room-data + flick; atmosphere craft | 32 (Oct, Arcs 1–2); 64 full |
 | 3 | **Smooth Motion** (insert) | smoothness | pre-shifted sprites | ~20 |
 | 4 | **Overlap** (insert) | sprites over scenery | masking | ~20 |
@@ -252,7 +261,8 @@ Final call on what anchors October is Steve's (see open questions).
    start of re-scoped Shadowkeep", replacing "32 units of Shadowkeep". Applied to the launch spec.
 3. **Insert names → deferred to build.** "Smooth Motion" / "Overlap" stay working titles; real
    inspired-by names when those games are spec'd.
-4. **Tiny first game → working concept for now.** Earns a name / tradition slot when designed.
+4. **Tiny first game → named Gloaming (resolved 2026-06-01).** Designed, named, and authored as a
+   module (Unit 1 shipped; 20 units planned). The lamplighter single-screen game.
 
 ## Drift triggers (preliminary)
 

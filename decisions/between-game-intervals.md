@@ -5,6 +5,12 @@
 > of application back into the more academic, conceptual layer. It is **not** a commitment to a
 > cadence or a content set — it is a constraint that current structural choices must not
 > foreclose, plus the reasoning for why the idea is worth keeping open.
+>
+> **Mechanism now exists (2026-06-01).** The module model ([modules-not-games.md](modules-not-games.md))
+> gives intervals a first-class home: an interval is a module with `kind: interval`, a bare slug, and
+> a catalogue position like any other. This *closes* the placement/numbering open question below — there
+> is no numbering scheme left to conflict with. What stays open is editorial: cadence and whether
+> intervals are spine or side-path. The decision stays exploratory until those firm up.
 
 ## The idea
 
@@ -47,22 +53,21 @@ A third axis, distinct from the two already recorded:
 - **Cadence** — after every game, every N games, or once per volume?
 - **Core or optional** — part of the spine, or a recommended-not-gated side-path like the Primer's
   BASIC signpost?
-- **Placement / numbering** — intervals are unnumbered, like the Primer. This must stay compatible
-  with the (still-open) catalogue-numbering decision: don't adopt a scheme that can't slot
-  unnumbered intervals between numbered games.
+- **Placement / numbering** — ✓ *resolved* by the module model: an interval is a `kind: interval`
+  module with a bare slug and a catalogue position. No numbering scheme to conflict with.
 - **The first one** — the natural first between-games interval after Gloaming is the
   screen-thirds / display-generation explanation that both Gloaming and the Primer defer.
 
 ## What this constrains now
 
-Nothing to build yet. The one live constraint: **don't foreclose it.** Keep the catalogue and
-numbering flexible enough to interleave unnumbered intervals, and keep planting honest cliff-hangers
-in application units — they are the seeds an interval pays off.
+Nothing to build yet. The structural constraint ("don't foreclose it") is now *satisfied* by the
+module model — intervals slot in as `kind: interval` modules. The live constraint is editorial: keep
+planting honest cliff-hangers in application units — they are the seeds an interval pays off.
 
 ## Status
 
-Exploratory, 2026-06-01. Door held open at Steve's request. Promote to binding (with a cadence and a
-first-interval spec) if and when the shape firms up. Relates to
-[spiral-and-incremental.md](spiral-and-incremental.md), [deprecation-pairs.md](deprecation-pairs.md),
-the [Primer outline](../platforms/sinclair-zx-spectrum/games/primer/outline.md), and the deferred
-catalogue-numbering question.
+Exploratory, 2026-06-01. Door held open at Steve's request; the module model now provides the
+mechanism (see header). Promote to binding once a cadence and a first-interval spec are settled.
+Relates to [spiral-and-incremental.md](spiral-and-incremental.md),
+[deprecation-pairs.md](deprecation-pairs.md), [modules-not-games.md](modules-not-games.md), and the
+Primer outline (`../platforms/sinclair-zx-spectrum/games/primer/outline.md`).

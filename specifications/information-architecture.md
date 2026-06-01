@@ -83,16 +83,16 @@ Six top-level destinations. Plus `/about/`, `/how-to-use/`, and the system/game/
 - Single-track systems (e.g. NES, assembly-only) still get an explicit track segment for consistency: `/nintendo-entertainment-system/assembly/`.
 - A bare `/{system-slug}/` lands on the system overview with both track cards.
 
-### Game landing
-`/{system-slug}/{track-slug}/game-{NN}-{game-slug}/`
-- Examples: `/sinclair-zx-spectrum/assembly/game-01-shadowkeep/`, `/commodore-64/assembly/game-01-sid-symphony/`, `/sinclair-zx-spectrum/basic/game-02-lucky-number/`.
-- The `game-{NN}-` prefix is zero-padded to two digits and reflects the canonical game order within the track. Matches the existing Astro convention (`src/pages/[system]/[track]/game-NN-[slug]/`).
-- Renaming a game is fine. Re-ordering games requires a redirect because the number is in the URL — a deliberate friction that makes us think before re-ordering.
+### Module landing
+`/{system-slug}/{track-slug}/{module-slug}/`
+- Examples: `/sinclair-zx-spectrum/assembly/shadowkeep/`, `/commodore-64/assembly/sid-symphony/`, `/sinclair-zx-spectrum/basic/lucky-number/`.
+- The `{module-slug}` is a **bare identity** — no `game-NN-` prefix. Canonical order is the module catalogue's array position (`src/content/modules/{system}/{track}.yaml`), not anything in the slug. See [decisions/modules-not-games.md](../decisions/modules-not-games.md).
+- Renaming *and* re-ordering are free — re-ordering is a data edit (catalogue position), not a URL change, so no redirect is needed. Shipped pre-module URLs keep working via redirects in `astro.config.mjs`.
 
 ### Unit page
-`/{system-slug}/{track-slug}/game-{NN}-{game-slug}/unit-{NN}/`
-- Examples: `/sinclair-zx-spectrum/assembly/game-01-shadowkeep/unit-01/`.
-- Unit page lives at `unit-NN.mdx` inside the game's directory. No descriptive slug — unit titles change but the number is stable. This matches existing Astro routing.
+`/{system-slug}/{track-slug}/{module-slug}/unit-{NN}/`
+- Examples: `/sinclair-zx-spectrum/assembly/shadowkeep/unit-01/`.
+- Unit page lives at `unit-NN.mdx` inside the module's directory. No descriptive slug — unit titles change but the number is stable. This matches existing Astro routing.
 
 ### Cross-cutting
 - `/timeline/` and `/timeline/by-region/` (path-based, matching the fleet lenses — not `?by=`)

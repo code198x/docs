@@ -31,18 +31,22 @@ Every unit is a standalone MDX file containing:
 ### Unit MDX Files
 
 ```
-/website/src/pages/{platform}/game-{NN}-{game-slug}/unit-{NN}-{unit-slug}.mdx
+/website/src/content/curriculum/{platform}/{track}/{module-slug}/unit-{NN}.mdx
 ```
 
+The module slug is a bare identity (no `game-NN-` prefix); the unit file is `unit-NN.mdx` — number only, no slug suffix.
+
 **Examples:**
-- `/website/src/pages/commodore-64/game-01-sid-symphony/unit-01-first-notes.mdx`
-- `/website/src/pages/sinclair-zx-spectrum/game-05-chambers/unit-12-enemy-chase.mdx`
-- `/website/src/pages/nintendo-entertainment-system/game-09-pixel-plains/unit-03-scroll-basics.mdx`
+- `/website/src/content/curriculum/commodore-64/assembly/sid-symphony/unit-01.mdx`
+- `/website/src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-01.mdx`
+- `/website/src/content/curriculum/nintendo-entertainment-system/assembly/pixel-plains/unit-03.mdx`
+
+MDX lives in `src/content/curriculum/`, **not** `src/pages/` (which holds only `.astro` routes).
 
 ### Code Samples
 
 ```
-/code-samples/{platform}/game-{NN}-{game-slug}/unit-{NN}-{unit-slug}/
+/code-samples/{platform}/{track}/{module-slug}/unit-{NN}/
 ```
 
 **Naming conventions:**
@@ -86,15 +90,14 @@ title: "Unit Title - Active Voice, No Gerunds"
 description: "One-sentence description of what this unit teaches and what the learner will build—concise, specific, outcome-focused."
 pubDate: YYYY-MM-DD
 game: 1
-gameSlug: "sid-symphony"
 unit: 1
-unitSlug: "first-notes"
 tags: ["tag1", "tag2", "tag3", "tag4"]
-prevUnit: "/{platform}/game-{NN}-{slug}/unit-{NN}-{slug}"
-nextUnit: "/{platform}/game-{NN}-{slug}/unit-{NN}-{slug}"
-layout: "../../../layouts/UnitLayout.astro"
 ---
 ```
+
+Frontmatter is deliberately minimal. The module slug, layout, prev/next links, total
+units, and system are **derived from the entry path** in `[...slug].astro` — never put
+them in frontmatter (see [content-model.md](content-model.md) § Computed fields).
 
 ### Field Specifications
 
@@ -128,22 +131,15 @@ layout: "../../../layouts/UnitLayout.astro"
 - Used for sorting and "last updated" tracking
 
 #### `game` (required)
-- Integer 1-16+ (game number within platform curriculum)
-- Matches game sequence in curriculum document
-
-#### `gameSlug` (required)
-- Lowercase, hyphen-separated game name
-- Must match directory name exactly
-- Examples: `sid-symphony`, `maze-raider`, `pixel-plains`
+- Integer. The module's game number within the platform curriculum.
+- `0` for teaching/interval modules that don't build a game (e.g. *Meet the Machine*).
+- Vestigial for ordering — the canonical order is the module catalogue array position
+  (`src/content/modules/{platform}/{track}.yaml`), and the slug is bare. Kept for now as
+  a display/grouping hint; the module slug comes from the directory name, not this field.
 
 #### `unit` (required)
-- Integer 1-64+ (unit number within game)
-- Sequential within the game
-
-#### `unitSlug` (required)
-- Lowercase, hyphen-separated unit name
-- Should be descriptive of unit content
-- Examples: `first-notes`, `joystick-input`, `enemy-patterns`
+- Integer (unit number within the module)
+- Sequential within the module
 
 #### `tags` (required)
 - Array of 3-6 strings
@@ -163,15 +159,11 @@ tags: ["basic", "sid", "sound", "music"]
 tags: ["assembly", "6502", "ppu", "scrolling", "platformer"]
 ```
 
-#### `prevUnit` / `nextUnit` (required)
-- Absolute path to previous/next unit
-- Use `null` for first/last unit in game
-- Path format: `/{platform}/game-{NN}-{slug}/unit-{NN}-{slug}`
-
-#### `layout` (required)
-- Relative path to Astro layout component
-- Typically `../../../layouts/UnitLayout.astro`
-- Adjust `../` depth based on folder nesting
+> **Computed, not in frontmatter:** `prevUnit`/`nextUnit`, `layout`, `totalUnits`,
+> `system`, and the module slug are all derived from the entry path in the
+> `[...slug].astro` catch-all route. Do not add them to frontmatter — older units that
+> carried `gameSlug`, `unitSlug`, `prevUnit`, `nextUnit`, or `layout` predate this and
+> should shed them when next touched.
 
 ---
 
@@ -672,13 +664,8 @@ title: "First Notes on the SID"
 description: "Play your first notes on the SID chip, learning voice registers and waveform selection to create simple tones."
 pubDate: 2026-01-07
 game: 1
-gameSlug: "sid-symphony"
 unit: 1
-unitSlug: "first-notes"
 tags: ["basic", "sid", "sound", "rhythm"]
-prevUnit: null
-nextUnit: "/commodore-64/game-01-sid-symphony/unit-02-adsr-envelopes"
-layout: "../../../layouts/UnitLayout.astro"
 ---
 
 The SID chip has three independent voices, each capable of producing sound.
@@ -698,7 +685,7 @@ This program plays a tone on SID voice 1:
 60 POKE 54276,0
 \```
 
-![SID playing a note](/images/commodore-64/game-01-sid-symphony/unit-01-first-notes/example-1.png)
+![SID playing a note](/images/commodore-64/basic/sid-symphony/unit-01/example-1.png)
 
 Run this and you'll hear a tone from the SID chip.
 
