@@ -108,12 +108,22 @@ This is why it's a keystone — it dissolves a stack of things we kept bumping i
 
 ## Migration plan (one-time; execute only after approval)
 
-Scope (from the survey): 7 catalogue YAMLs, 78 units YAMLs, 324 MDX `game:` fields, 338 files
-referencing `game-NN-` slugs, ~93 module directories × 3 mirrors (curriculum, code-samples, images),
-plus helpers/layouts/routing and published URLs. Sequenced so the build stays green:
+**Scope is the whole curriculum, in one pass.** The collection, schema, and routing are global, so the
+migration spans all **7 platform/track combos** (Spectrum assembly + BASIC, C64 assembly + BASIC,
+Amiga assembly + AMOS, NES assembly), **92 game modules**, **232 unit pages** — not Spectrum assembly
+alone. BASIC needs no design change (its games are already a module sequence) but rides the same
+rename; it is the only **shipped** track (8 complete Spectrum BASIC games, live landing), so its URLs
+change and get redirects. One pass keeps the slug convention consistent everywhere and cuts once;
+phasing was considered and rejected — site traffic is negligible so far, so the shipped-URL risk is
+low and not worth a two-pass split.
 
-1. **Name the slugs.** Map each existing `game-NN-slug` → bare `slug`; resolve collisions (e.g.
-   `game-03-cavern` vs the `the-caverns` design doc). Record current order for the catalogue.
+From the survey: 7 catalogue YAMLs, 78 units YAMLs, 324 MDX `game:` fields, 338 files referencing
+`game-NN-` slugs, ~93 module directories × 3 mirrors (curriculum, code-samples, images), plus
+helpers/layouts/routing and published URLs. Sequenced so the build stays green:
+
+1. **Name the slugs.** Map every existing `game-NN-slug` → bare `slug` across *all* platform/track
+   combos (~92 modules) — mostly mechanical (strip the prefix), checking uniqueness *within* each
+   platform+track and resolving any collisions. Record current order for each catalogue.
 2. **Schema** (`content.config.ts`): `games` → `modules` (base `content/games` → `content/modules`);
    add `kind`, `game`, `pass`; `units` `gameSlug` → `moduleSlug`; unit-pages drop the `game:` number
    (module identity is derived from the path, per the existing computed-fields philosophy) — keep
@@ -124,7 +134,10 @@ plus helpers/layouts/routing and published URLs. Sequenced so the build stays gr
    (`gameSlug` → `moduleSlug`); `[...slug].astro` (module name from the catalogue, not slug-derived;
    `gameName` → `moduleName`); `GameLayout` → `ModuleLayout`; the track-overview page.
 6. **Published URLs**: update the launch page, RSS, vault backlinks; add Astro **redirects** from the
-   old `/game-NN-slug/` URLs to the new ones (any shipped links must not 404).
+   old `/{platform}/{track}/game-NN-slug/` URLs to the new ones — concentrated on the shipped Spectrum
+   BASIC games. Redirects are cheap insurance here rather than critical: traffic to date is negligible,
+   so a missed redirect is low-cost. Don't *gate* the migration on perfect redirect coverage; add them,
+   prioritise the live BASIC URLs, move on.
 7. **Build + verify** (`npm run build`, Pagefind) green before commit.
 8. **Then, separately:** wire the Primer as the first module; reconcile the lineup to the gentle-ramp
    order (now just catalogue order); later, add revisit modules.
