@@ -28,7 +28,7 @@ The two tracks teach different things: AMOS teaches game design thinking with im
 | **Ease** | Gentler, more forgiving | Steeper, more structured |
 | **Hardware access** | Abstracted (BOB, SCREEN commands) | More direct (memory access, custom types) |
 | **Culture** | Hobbyist, learning, prototyping | Performance, commercial games |
-| **Commercial proof** | Guardian, Scorched Tanks, Ultimate Soccer Manager | Worms, Skidmarks, Super Skidmarks |
+| **Commercial proof** | Flight of the Amazon Queen, Scorched Tanks, Valhalla: Lord of Infinity, Jetstrike | Worms, Skidmarks, Super Skidmarks, Guardian (Acid Software's own showcase) |
 | **Bridge to assembly** | Indirect — same concepts, different interface | Direct — similar memory model and performance thinking |
 
 Teaching both shows that there is no single "right" tool — different problems reward different approaches.
