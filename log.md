@@ -13,7 +13,7 @@ The Shadowkeep design/engineering docs predated the 2026-05-29 re-pace and would
 - **beeper-spec.md** kept and repointed — it feeds sub-arc 1.4; audio survives the re-pace untouched.
 - **tracker/revamp.md** Shadowkeep section *body* rewritten (module trajectory, relocated-engine note, fixed pointers), not just banner-flagged.
 
-Decision records left as-is (they correctly carry amendment banners — history matters there). Residual, deliberately separate: a track-wide reconciliation (the "powers-of-2 locked decision", the pending ~1,000-edit modules-not-games migration).
+Decision records left as-is (they correctly carry amendment banners — history matters there). Residual, deliberately separate: a track-wide reconciliation of the engine-first framing in `assembly.md` / `spectrum-assembly-track.md` and the "powers-of-2 nested counts" locked-decision line. (The modules-not-games migration is **already done** — executed 2026-06-01; an earlier draft of this entry wrongly called it pending, off a stale status field.)
 
 ---
 
@@ -23,7 +23,7 @@ Decision records left as-is (they correctly carry amendment banners — history 
 
 Reset Shadowkeep from the old engine-first slice to the cell-based **Place** and authored it end-to-end through sub-arcs 1.1–1.3 (12 units), then consolidated.
 
-- **Records first.** Reconciled the Shadowkeep records to the module model + no-fixed-counts: amended `decisions/shadowkeep-32-unit-commitment.md` and `shadowkeep-four-arc-framing.md` (counts illustrative; **pass 1 = the Place**; Arc 2 + Arcs 3–4 become later *revisit modules*); per-unit-plan gained a Module-shape section; catalogue entry tagged `game: shadowkeep, pass: 1`. Consistent with the 2026-06-01 modules-not-games keystone (whose full ~1,000-edit migration is still pending Steve's go).
+- **Records first.** Reconciled the Shadowkeep records to the module model + no-fixed-counts: amended `decisions/shadowkeep-32-unit-commitment.md` and `shadowkeep-four-arc-framing.md` (counts illustrative; **pass 1 = the Place**; Arc 2 + Arcs 3–4 become later *revisit modules*); per-unit-plan gained a Module-shape section; catalogue entry tagged `game: shadowkeep, pass: 1`. Consistent with the 2026-06-01 modules-not-games keystone (the model — whose ~1,000-edit migration was executed the same day, 2026-06-01).
 - **Reset.** Old engine-first Units 1–8 retired (preserved in git); module reset to a coming-soon Place (Gloaming-shaped yaml, Place index); orphaned old assets cleaned.
 - **Authored 1.1–1.3 (Units 1–12).** Hooded Figure (identity) · The First Hall (**bitmap dithering** for textured/shaded stone — Steve's idea, the chief addition beyond the outline) · A Place to Move (Gloaming's movement/collision; save/restore over texture) · The Keep's Hand (room-as-data: palette + ASCII map) · The Room Graph · Through the Doorway (edge-matched re-entry) · The Hero Remembers (per-room RAM state + chalk persistence) · Three Rooms (designed keep) · Light and Shadow (dither-density lighting from a torch) · Furnishings (decoration; blocking-by-brightness) · Mood through Constraint (per-room falloff) · A Keep with Character (multi-torch nearest-light). Each verified on Emu198x; build 1742→1754 pages.
 - **Consolidation pass.** QA: all `CodeFromFile` refs resolve, all screenshots present, British English clean, unit numbers match, build green. Fixed unit `game:` frontmatter 3→2 (the index−1 convention; index stays 3). Updated this log, the revamp tracker (current-state banner over the superseded engine-first detail), and the per-unit plan's build status.
@@ -34,7 +34,7 @@ Reset Shadowkeep from the old engine-first slice to the cell-based **Place** and
 
 ---
 
-## 2026-06-01 — Keystone: "Modules, not games" (design accepted, migration pending)
+## 2026-06-01 — Keystone: "Modules, not games" (design accepted + migration executed, same day)
 
 **Type:** curriculum architecture decision (binding) — model change
 
@@ -42,7 +42,9 @@ Reset Shadowkeep from the old engine-first slice to the cell-based **Place** and
 
 Arrived at via two reframes in one session: "games are really just modules" → "this opens revisiting a game a second time." Drafting it confirmed it dissolves a stack of tensions: the original **Gloaming-vs-Shadowkeep `game-01` collision** (now just two slugs), the Primer's "game 0" hack (it's the first module), the catalogue-numbering cascade (order is data), intervals (a module kind), the stale-16-vs-gentle-ramp lineup (reorder, don't rename), Shadowkeep's arcs (later revisit modules), and number-in-slug fragility (gone).
 
-**Migration is planned but NOT executed** — ~1,000 edits across three repos + published URLs (7 catalogue YAMLs, 78 units YAMLs, 324 `game:` fields, 338 slug-ref files, ~93 dirs × 3 mirrors, helpers/layouts/routing, + redirects for shipped URLs). Sequenced + build-verified in the record; awaiting Steve's go. Then: wire the Primer as module 1, reconcile the lineup to gentle-ramp order, add revisit modules. Records to amend after: curriculum-structure, between-game-intervals (promote intervals to a module kind), gentle-ramp, CLAUDE.md, unit spec.
+**Migration EXECUTED the same day** (~1,000 edits across three repos + published URLs: catalogue YAMLs, units YAMLs, `game:` fields, slug-ref files, dirs × mirrors, helpers/layouts/routing, + redirects for shipped URLs). Website commits `8150b9c5` (Spectrum: drop `game-NN-`, namespace to platform/track/slug), `6360d667` (C64/Amiga/NES), `1652ba12` (rename the `games` collection to `modules`), `b884433b` (Primer + Gloaming wired as the first assembly modules), `8a2aa18c` (URL redirects). No `game-NN-` prefixes remain; catalogue is `modules/`; slugs are bare.
+
+> **Correction (2026-06-02):** this entry originally read "planned but NOT executed — awaiting Steve's go." That was never updated after the same-day execution above, and it misled a later session into treating the migration as still pending. Status fields in this log/the decision records are not a substitute for checking the tree.
 
 ---
 

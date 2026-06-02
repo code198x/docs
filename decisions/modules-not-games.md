@@ -1,10 +1,15 @@
 # Decision: Modules, not games
 
-> **STATUS: Accepted (design) 2026-06-01 — migration pending.** The curriculum's unit of
+> **STATUS: Accepted and migrated, 2026-06-01.** The curriculum's unit of
 > sequencing is the **module**, not the game. A *game* is a buildable artefact a module may teach;
-> one game can be taught by several modules (revisits). This record defines the model and the
-> one-time migration. **Nothing mechanical happens until the migration plan below is approved** —
-> it is ~1,000 edits across three repos plus published URLs, to be done exactly once.
+> one game can be taught by several modules (revisits). This record defines the model.
+> **The one-time migration was executed 2026-06-01** — website commits `8150b9c5` (Spectrum: drop
+> `game-NN-`, namespace to platform/track/slug), `6360d667` (C64/Amiga/NES namespacing), `1652ba12`
+> (rename the `games` collection to `modules`), `b884433b` (wire the Primer + Gloaming as the first
+> assembly modules), `8a2aa18c` (redirect shipped URLs). No `game-NN-` prefixes remain; the catalogue
+> is `modules/`; slugs are bare. It was carried out the **same day** the design was accepted, so the
+> original "migration pending / nothing mechanical happens until approved" wording was never updated
+> — **corrected 2026-06-02.** (The migration-plan detail below is preserved as the executed record.)
 
 ## The decision
 
