@@ -110,13 +110,19 @@ unit count.
 - **1 — A Hooded Figure.** The hero re-drawn as Shadowkeep's hooded thief (designed 8×8 sprite +
   idle), on the tiny game's `draw_hero`/save-restore. *Reuse + identity.*
 - **2 — The First Hall.** One designed keep room at the atmosphere bar — varied wall/floor tiles, a
-  composed layout (not the tiny game's debug room). *Reuse room-from-map; raise the art bar.*
+  composed layout (not the tiny game's debug room). **Stone is *dithered*** here: mixing INK and
+  PAPER pixels in the bitmap yields perceived shades *between* the cell's two colours (e.g. black
+  over blue → dim → dark slate by density), giving textured, properly dark stone that a flat
+  attribute wash (Unit 1's deliberate "before") cannot. No engine change — Gloaming's save/restore
+  already preserves the 8 bitmap bytes under the hero, so he walks over textured stone intact.
+  *Reuse room-from-map; raise the art bar; introduce bitmap dithering.*
 - **3 — A Place to Move.** Walk the hall: the tiny game's keyboard + cell movement + wall collision,
   now in the keep. *Reuse, confirm the engine carried over.*
 - **4 — The Keep's Hand.** Tooling for the keep: a clean tile/attribute palette + the room-data
   format Shadowkeep's many rooms will share. *Sets up 1.2.*
-- **Sub-arc major:** *(none new — consolidation + identity; this is the deliberate gentle on-ramp
-  into the bigger game.)*
+- **Sub-arc major:** *consolidation + identity, with one new craft technique — **bitmap dithering**
+  for textured, shaded stone (Unit 2), introduced gently here and exploited for lighting in 1.3.
+  The deliberate gentle on-ramp into the bigger game.*
 
 ### Sub-arc 1.2 — A Keep of Rooms (5–8) · **flick-screen world** *(major)*
 - **5 — The Room Graph.** Data for many rooms and how they connect (which room lies through each
@@ -128,12 +134,14 @@ unit count.
 - **Sub-arc major:** **multi-room world + flick transitions** (the defining flick-adventure mechanic).
 
 ### Sub-arc 1.3 — Mood and Light (9–12) · **atmosphere** *(major)*
-- **9 — Light and Shadow.** Attribute-driven lighting: mood through colour per cell/region (the
-  decoupled attribute layer the tiny game met as colour). *New: atmosphere as a discipline.*
+- **9 — Light and Shadow.** Lighting on two axes: attribute *colour* per cell/region, and **dither
+  density** (from Unit 2) varied by distance from a light — denser-to-black in the dark, sparser
+  near a torch. Shading falls straight out of the stone technique. *New: atmosphere as a discipline.*
 - **10 — Furnishings.** Decoration objects — pillars, altars, sconces — as non-blocking cell scenery
   that make a room *a place*.
-- **11 — Mood through Constraint.** Dark rooms, lit pools, contrast — sense of place within the 8×8
-  attribute limit (the constraint *is* the vocabulary).
+- **11 — Mood through Constraint.** Dark rooms, lit pools, contrast — sense of place within the two-
+  colours-per-cell limit, dither density buying the shades between them (the constraint *is* the
+  vocabulary).
 - **12 — A Keep with Character.** Atmosphere applied across all rooms; each room reads as somewhere.
 - **Sub-arc major:** **atmosphere — lighting, mood, designed decoration.**
 
