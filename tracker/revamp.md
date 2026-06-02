@@ -92,34 +92,28 @@ Every unit weaves in links to relevant **vault entries** (games, hardware, peopl
 
 **Genre:** Multi-room flick-adventure in the *Atic Atac* / *Knight Lore* tradition (cell-based; atmosphere via art, light and sound).
 
-**Constraint position:** Period-faithful through Arcs 1-2; period-possible techniques arrive in Arcs 3-4. See [decisions/constraint-position.md](../decisions/constraint-position.md).
+**Constraint position:** Period-faithful throughout — attribute graphics, bitmap dithering for shade and light, hand-pixelled tiles, flick-screen rooms, beeper. See [decisions/constraint-position.md](../decisions/constraint-position.md).
 
-**Pattern:** Incremental scaffold within sub-arcs; spiral progression across arcs. No typed-in engine scaffold.
+**Pattern:** Builds on Gloaming's engine; one named technique per unit; spiral across *modules* (later revisits grow the keep). No typed-in engine scaffold.
 
-**Full design:** [platforms/sinclair-zx-spectrum/games/shadowkeep/brief.md](../platforms/sinclair-zx-spectrum/games/shadowkeep/brief.md) (v2.0).
+**Design + reference:**
+- **Brief (v3.0, cell-based Place):** [platforms/sinclair-zx-spectrum/games/shadowkeep/brief.md](../platforms/sinclair-zx-spectrum/games/shadowkeep/brief.md)
+- **Per-unit plan:** [per-unit-plan.md](../platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md)
+- **Beeper theme spec (sub-arc 1.4):** [beeper-spec.md](../platforms/sinclair-zx-spectrum/games/shadowkeep/beeper-spec.md)
+- **Archived engine-first specs** (pre-shift/mask, Y-sort, decoupled collision — *relocated* to the rendering games): [superseded/](../platforms/sinclair-zx-spectrum/games/shadowkeep/superseded/)
 
-**Per-unit reference:** [platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md](../platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md).
+### Module trajectory (the module model; counts illustrative)
 
-**Engineering / design sibling docs** in `platforms/sinclair-zx-spectrum/games/shadowkeep/`: [beeper-spec.md](../platforms/sinclair-zx-spectrum/games/shadowkeep/beeper-spec.md), [engineering-plan.md](../platforms/sinclair-zx-spectrum/games/shadowkeep/engineering-plan.md), [memory-budget.md](../platforms/sinclair-zx-spectrum/games/shadowkeep/memory-budget.md), [object-system.md](../platforms/sinclair-zx-spectrum/games/shadowkeep/object-system.md), [sprite-shifter.md](../platforms/sinclair-zx-spectrum/games/shadowkeep/sprite-shifter.md), [tile-map.md](../platforms/sinclair-zx-spectrum/games/shadowkeep/tile-map.md).
+Shadowkeep is a game taught across several modules. Pass 1 is *the Place*; later content becomes revisit modules slotted into the lineup after intervening games.
 
-### Three engine commitments
+| Module (pass) | Content | Status |
+|---|---|---|
+| **the Place (pass 1)** | a lit, furnished, composed, winnable cell-based flick-adventure — 1.1 keep · 1.2 rooms · 1.3 light · 1.4 audio | **1.1–1.3 done (12 units); 1.4 remaining** |
+| inhabitants (revisit) | cell-based NPCs, threat, lives | later |
+| identity (revisit) | numeric HUD / digit rendering, room names, score | later |
+| beyond the walls (revisits) | items, tape save/load, multiple keeps, secrets & lore, atmospheric cycles, collection endings | later |
 
-Introduced progressively across Arc 1:
-
-1. **Pixel-level sprite movement.** 2-4 pixels per frame, pre-shifted sprite tables (8 versions per sprite), masked sprite drawing. Introduced Sub-arc 1.2.
-2. **Back-to-front Y-sorted layered rendering.** Hero passes behind/in-front of pillars depending on Y. Introduced Sub-arc 1.3.
-3. **Decoupled attribute / collision.** Collision lives in a separate tile-map data structure; attribute area becomes purely cosmetic (lighting, decoration, mood). Introduced Sub-arc 1.4.
-
-The earlier "attribute byte = game rule" mechanic from the 8-unit slice is retired. Attribute remains visual vocabulary; collision lives in a separate tile-map.
-
-### Arc structure
-
-| Arc | Theme | Sub-arcs | Status |
-|---|---|---|---|
-| **Arc 1** | *Foundations and a Place* | 1.1 First Pixels (1-4) / 1.2 The Hooded Thief (5-8) / 1.3 A World with Depth (9-12) / 1.4 The Keep Stands (13-16) | October ship |
-| **Arc 2** | *Inhabitants and Identity* | 2.1 Sound and Motion (17-20) / 2.2 A Presence in the Dark (21-24) / 2.3 A Game Knows Itself (25-28) / 2.4 Completion (29-32) | October ship |
-| Arc 3 | *Beyond the Walls* | Items / multiple keeps / tape save/load / secrets-and-lore | Post-October Year 1 |
-| Arc 4 | *The Greater World* | Atmospheric cycles / multiple keeps / collection endings / completion | Post-October Year 2 |
+The three old engine changes — pre-shifted/masked sprites, Y-sorted layered rendering, attribute-decoupled tile-map collision — are **relocated** to the rendering games (Smooth Motion / Overlap / Greypeak) as deprecation-pair upgrades of the Place's cell-based look, *not* built in Shadowkeep.
 
 ### Genre honesty
 

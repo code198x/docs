@@ -1,6 +1,6 @@
 # Shadowkeep — Beeper Composition Spec
 
-Companion to [shadowkeep-phase-1-design.md](shadowkeep-phase-1-design.md). The composition spec for the Shadowkeep title theme on the 48K Spectrum's beeper.
+Companion to [brief.md](brief.md) (§7 Audio) and [per-unit-plan.md](per-unit-plan.md). The composition spec for the Shadowkeep title theme on the 48K Spectrum's beeper — **the target for sub-arc 1.4 (The Keep Has a Voice)** of the cell-based Place. Still current: the beeper title theme survives the re-pace unchanged (audio was never part of the relocated rendering engine).
 
 ## Vital statistics
 

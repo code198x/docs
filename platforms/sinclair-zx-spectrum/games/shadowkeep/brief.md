@@ -2,358 +2,174 @@
 
 **Title (working):** Shadowkeep
 **System / Track:** ZX Spectrum / Assembly
-**Position:** Volume 1, Game 1 of 44 (per [decisions/spectrum-assembly-track.md](../../../../decisions/spectrum-assembly-track.md))
+**Position:** The second game of the assembly track, after *Gloaming* (the tiny first game) and the *Meet the Machine* Primer.
+**Module model:** Shadowkeep is a **game taught across several modules** ([modules-not-games.md](../../../../decisions/modules-not-games.md)). This brief covers **pass 1 — _the Place_**: a complete, finishable cell-based keep. Later content (inhabitants, identity, items, multiple keeps) becomes **later revisit modules**, not part of this pass.
 **Headline (design concept):** *Atmosphere (Sense of Place)*
-**Total scope:** 64 units across 4 arcs (per [decisions/shadowkeep-four-arc-framing.md](../../../../decisions/shadowkeep-four-arc-framing.md))
-**October 2026 ship:** Arcs 1+2 — 32 units (per [decisions/shadowkeep-32-unit-commitment.md](../../../../decisions/shadowkeep-32-unit-commitment.md))
-**Constraint position:** Period-faithful through Arcs 1-2; period-possible techniques arrive in Arcs 3-4
-**Status:** Active. v2.0 (2026-05-20) — consolidated from v1.0 brief + Phase 1 design doc into a single current-state document aligned to the 32-unit / four-arc framing.
+**Engine:** carries **Gloaming's engine** wholesale — cell-snapped movement, single-draw sprites with save/restore, attribute-coupled collision, a frame-locked loop, a title→play→win state machine. The Place adds *content and atmosphere*, not a new engine.
+**Counts:** illustrative, never targets ([curriculum-structure.md](../../../../decisions/curriculum-structure.md)). Pass 1 ran to ~16 units across four sub-arcs.
+**Status:** Active. **v3.0 (2026-06-02)** — rewritten for the cell-based Place after the 2026-05-29 re-pace and the module-model reconciliation. Supersedes v2.0's engine-first / 64-unit-four-arc framing (preserved in git).
 
-Formal spec format: [docs/specifications/brief.md](../../../../specifications/brief.md). Companion docs (all in this folder): [per-unit-plan.md](per-unit-plan.md) (the canonical 32-unit reference), [engineering-plan.md](engineering-plan.md), [memory-budget.md](memory-budget.md), [object-system.md](object-system.md), [sprite-shifter.md](sprite-shifter.md), [tile-map.md](tile-map.md), [beeper-spec.md](beeper-spec.md).
-
----
-
-## 1. Pedagogical Role
-
-Teach the ZX Spectrum's craft tradition at commercial bar: pixel-level sprite movement, masked drawing, Y-sorted layered rendering, decoupled attribute and collision, hand-pixelled tiles, beeper composition, attribute-driven atmosphere. By the end of Arc 2 the learner has built a complete three-room flick-adventure at the bar of *Atic Atac*, *Knight Lore*, and *Cybernoid II* — a game CRASH would have reviewed. Subsequent volumes inherit Shadowkeep's engine vocabulary (Y-sort, masking, tile-collision) as their Trunk Layers; Shadowkeep is the curriculum's engine introduction, not just its first game.
-
-The headline *Atmosphere (Sense of Place)* traces back through every unit. Every technique decision serves the player's sense of being *in* the keep.
+Formal spec format: [docs/specifications/brief.md](../../../../specifications/brief.md). Companion docs in this folder: [per-unit-plan.md](per-unit-plan.md) (the canonical per-unit reference) and [beeper-spec.md](beeper-spec.md) (the title-theme composition spec, for sub-arc 1.4). The original engine-first specs (sprite-shifter, object-system, tile-map, engineering-plan, memory-budget) are archived under [`superseded/`](superseded/) — they describe techniques **relocated** to later rendering games and are not current guidance.
 
 ---
 
-## 2. Classic Ancestors
+## 1. Pedagogical role
 
-Three reference points, ordered by load-bearing weight:
+Teach the ZX Spectrum's *atmospheric* craft tradition at commercial bar — not by building a new engine, but by taking the engine the learner already finished in *Gloaming* and growing it into a place worth being in. The load-bearing techniques are **bitmap dithering** (density as shade, then as light), **room-as-data** (a tile palette + readable maps), a **multi-room flick-screen world**, **persistent per-room state**, and **beeper sound**. By the end of pass 1 the learner has a complete cell-based flick-adventure — lit, furnished, composed, and winnable — at the bar of *Atic Atac* and *Knight Lore*.
 
-- ***Atic Atac*** (Ultimate, 1983) — multi-room top-down adventure with Y-sorted layered rendering. The engine archetype. 148 rooms in 48K.
-- ***Knight Lore*** (Ultimate, 1984) — atmospheric monochrome, masked sprite, animated character with weight. The mood archetype.
-- ***Cybernoid II*** (Hewson, 1988) — dense visual design, hand-crafted level art, Tim Follin music. The polish archetype.
+The headline *Atmosphere (Sense of Place)* traces through every unit: every decision serves the player's sense of being *in* the keep, and it's reached through **art, light and sound within the cell**, not through pixel-level rendering.
 
-Flick-adventure lineage extends to *Sabre Wulf* (Ultimate, 1984), *Pentagram* (Ultimate, 1986), and *Underwurlde* (Ultimate, 1984). Shadowkeep's Arcs 3-4 inherit from these for items / multiple keeps / atmospheric cycles per the genre-honesty discussion in [decisions/shadowkeep-four-arc-framing.md](../../../../decisions/shadowkeep-four-arc-framing.md).
-
-Opening-screen archetype: ***The Hobbit*** (Melbourne House, 1982) — economical title presentation, sparse but suggestive.
+> The three commercial-bar *rendering* techniques the old plan put here — pre-shifted/masked sprites, Y-sorted layered rendering, attribute-decoupled collision — are **relocated** to later rendering games (Smooth Motion, Overlap, Greypeak), each motivated by the felt limit of the Place's cell-based look (the deprecation-pair pedagogy). Shadowkeep is the curriculum's *atmosphere* introduction; those games are its *rendering* introduction.
 
 ---
 
-## 3. Remix Unit
+## 2. Classic ancestors
 
-**Same flick-adventure tropes, the engine evolution is the curriculum.** The Ultimate top-down keep-exploration tropes are preserved (hooded figure, multi-room layout, find-the-thing-and-escape, environmental hazards). What's new — and what makes this a *curriculum* rather than a *clone* — is that the engine evolves progressively across Arc 1, with each sub-arc introducing one of the three commercial-bar engine commitments:
+- ***Atic Atac*** (Ultimate, 1983) — the multi-room flick-screen adventure archetype. 148 rooms in 48K; the screen *is* the map; you flick room to room. The structural model for the Place.
+- ***Knight Lore*** (Ultimate, 1984) — the mood archetype: atmospheric, dark, every room a composed place. The Place chases this feeling with dither-lighting, not with Knight Lore's filmation/masking (that's Greypeak's tradition).
+- ***Sabre Wulf*** / ***Pentagram*** / ***Underwurlde*** (Ultimate, 1984–86) — flick-adventure lineage; the source of the explore-a-connected-world feel, and of the items / multiple-keeps content that later Shadowkeep *revisit* modules will carry.
+- ***Cybernoid II*** (Hewson, 1988) — held as the *polish* bar (dense hand-crafted art, Tim Follin audio), the standard the Place's atmosphere aims at.
 
-1. **Pixel-level sprite movement.** Hero moves 2 or 4 pixels per frame, not 8. Pre-shifted sprite tables (8 versions per sprite, one per X-offset 0-7). Masked sprite drawing preserves background pixels. Introduced Sub-arc 1.2.
-2. **Back-to-front layered rendering.** Y-sorted object list, drawn each frame. Hero passes behind pillars with lower Y; in front of pillars with higher Y. Introduced Sub-arc 1.3.
-3. **Decoupled attribute / collision.** Collision lives in a separate tile-map data structure. Attribute bytes become purely cosmetic — used for lighting, decoration, mood. Introduced Sub-arc 1.4.
-
-The earlier "every game rule is a bit-test on the attribute byte" mechanic (which defined the original 16-unit Arc 1 spine) is retired. Attribute remains the **visual vocabulary** — cells still look like floor, wall, treasure, hazard via attribute composition — but the game's *rules* read from a separate tile-map.
-
----
-
-## 4. Core Experience
-
-Walk the keep one pixel at a time, reading colour-coded space before stepping into it. The pleasure is in pattern recognition — learning to read the keep's vocabulary at a glance, then exploring confidently as it becomes intuitive. The game rewards careful observation rather than twitch reflex; a single session is a slow build of mastery over a small, dense, hand-painted world.
-
-What the player feels: *atmosphere*. What the design teaches: *sense of place* as a generalisable design concept — that constraint-rich worlds become memorable through what they show, not what they say.
+Opening-screen archetype: ***The Hobbit*** (Melbourne House, 1982) — economical, suggestive title presentation.
 
 ---
 
-## 5. Constraint Position
+## 3. What's new (beyond Gloaming)
 
-**Period-faithful through Arcs 1-2.** Every technique used in October ship — from the unit-1 framebuffer poke to the unit-32 verified Spectrum Next hardware test — appeared in commercial Spectrum games of 1984-89. A 1987 Ultimate or Hewson developer could have built any unit using only techniques in their day-to-day toolbox.
+Gloaming taught and shipped the engine; the Place reuses it and adds what makes a *place*:
 
-**Arcs 3-4** introduce period-possible techniques (tape save/load, more sophisticated location data, time-of-day cycles) — all post-October.
+1. **Dithered stone (Units 2, 9–12).** Mixing INK/PAPER in the bitmap gives perceived shades between a cell's two colours — texture, then, by distance from a torch, *lighting*; then per-room *mood* (falloff) and *character* (multiple flames). This is the Place's signature technique. (Steve's design call, 2026-06-02.)
+2. **Room-as-data (Unit 4).** A tile palette (a glyph names a tile) and rooms authored as readable ASCII maps; collision reads the cell's look (BRIGHT = solid).
+3. **A multi-room flick-screen world (Units 5–6, 8).** A room graph with N/S/E/W links; edge-matched doorway transitions (leave one edge, arrive at the opposite edge, same height).
+4. **Persistent per-room state (Unit 7).** Rooms live in RAM; what the thief changes (his chalk trail) survives leaving and returning.
 
-**Hardware in active use (Arcs 1-2):**
-- Bitmap memory ($4000-$57FF) — hand-pixelled tiles, masked sprite drawing
-- Attribute memory ($5800-$5AFF) — purely cosmetic; lighting, mood, room theming
+The Ultimate flick-adventure tropes are preserved (hooded thief, multi-room keep, explore-and-collect, atmosphere); what makes it a *curriculum* and not a clone is that each of these is a clean, named technique built on the prior game.
+
+---
+
+## 4. Core experience
+
+Walk a hooded thief through a dark keep, room by room, the screen flicking as you cross each threshold. Read the colour-coded, light-pooled space before stepping into it; learn the keep's geography; gather the gold; hold back the dark. The pleasure is exploration and atmosphere — a small, dense, hand-painted world that rewards observation over reflex. What the player feels is *atmosphere*; what the design teaches is *sense of place* as a generalisable idea — constraint-rich worlds become memorable through what they show.
+
+---
+
+## 5. Constraint position
+
+**Period-faithful throughout.** Every technique in the Place appeared in commercial Spectrum games of 1983–89: attribute graphics, bitmap dithering for shade, hand-pixelled tiles, flick-screen rooms, beeper sound, port `$FE` I/O, a 50 Hz `IM 1`/`HALT` loop. A 1986 Ultimate or Hewson developer had all of it in their toolbox.
+
+**Hardware in active use:**
+- Bitmap memory (`$4000–$57FF`) — dithered stone tiles, the hero, furniture, title art
+- Attribute memory (`$5800–$5AFF`) — colour, and (coupled) the solid/walkable rule
 - Port `$FE` — keyboard half-row scanning + beeper bit 4
-- IRQ-driven update loop at 50Hz
-- ROM-font character output (HUD)
+- `IM 1` + `HALT` 50 Hz frame lock
 
-**Hardware reserved for later arcs:**
-- Tape save/load (Arc 3 Sub-arc 3.3)
-- Bank-switched 128K rooms (later post-October — possibly Arc 5+)
-- AY-3-8912 audio (deferred — flick-adventure tradition is beeper)
-
-**Hardware deliberately avoided in Shadowkeep entirely:**
-- Software pixel scrolling — reserved for V3 entries (Ironstreak, Skylash)
-- Modern-scene techniques (Saukas-era 8x1 multicolour, post-2010 AY tricks) — out of scope
-- Combat state machine, projectile system, character classes — redistributed to V1.6 Embergate, V1.7 Lantern Path, V3.17 Hostraider, V3.20 Edge of Iron per the genre-honesty table
+**Reserved for later Shadowkeep revisit modules:** tape save/load, richer location data. **Reserved for other games entirely:** pre-shift/masking (Smooth Motion / Overlap), Y-sort + isometric (Greypeak), software scrolling (V3 entries), AY audio (the beeper is the flick-adventure tradition).
 
 ---
 
-## 6. Visual Direction
+## 6. Visual direction
 
-**Hand-pixelled stonework.** The keep's walls are designed tiles, not stippled blocks. By Unit 4, multiple wall types (plain stone, decorated stone, corner pieces, arched lintels) read as built architecture rather than abstract grid. Reference: Atic Atac's per-room tile palettes.
+**Cell-based, hand-composed, atmospheric.** No pixel-level sprite movement; the craft is in the *tiles, the dither, and the light*.
 
-**Cell visual vocabulary** (attribute-driven, collision-decoupled):
+- **Stone is dithered, not flat.** A ramp of blue/black dither tiles gives shades from lit to near-black; walls are a sparse, BRIGHT dither (lit stone), floor a denser dim dither (dark slate).
+- **Light is dither density by distance.** A torch (`T` in the map) casts a pool that fades through the shade ramp. Per-room *falloff* sets mood (broad Hall, tight crypt Vault); *multiple torches* (nearest wins) give a room character.
+- **Furniture is tiles.** Statues and banners (BRIGHT → solid, walk around), rubble (dim → walkable, walk over) — set-dressing placed by typing a glyph.
+- **The hooded thief** is a single 8×8 silhouette in bright red — identity through silhouette (Unit 1). His bytes: `$18, $3C, $7E, $7E, $7E, $7E, $3C, $24`.
 
-| Cell | Attribute composition | Role |
-|---|---|---|
-| Floor | PAPER 7 (white), INK 0 | clean walking surface |
-| Wall | INK 1 (blue) on PAPER 1 | solid stone (cosmetic — collision via tile-map) |
-| Open door | PAPER 5 (cyan), INK 0 | humming, passable |
-| Locked door | PAPER 5 + FLASH | pulsing cyan, requires key |
-| Treasure | PAPER 6 (yellow) + BRIGHT | gold, collectible |
-| Key | PAPER 6 + BRIGHT + FLASH | gold *and* shining, distinct from treasure |
-| Hazard | PAPER 2 (red) + FLASH | pulsing shadow, deadly |
-| Exit | PAPER 4 (green) | the winning cell |
+**Magazine-screenshot test.** The Vault: a flame on the altar, a tight pool of dithered light, the rest sunk to near-black, the thief a dim figure approaching. Reads as atmospheric, period-correct, instantly Spectrum — a *Crash* reviewer in 1986 would have screenshotted it.
 
-Each room can shift its base PAPER colour for mood — dungeon cool, kitchen warm, cloister magenta. Wall colour stays INK 1 for visual consistency. **Forbidden combination:** never PAPER 2 (red) for floor — the hero is INK 2 (red) and would vanish.
-
-**Sprite ambition (per arc):**
-
-- **Sub-arc 1.2 (Units 5-8):** Single-frame hooded thief, then four-frame walk cycle, then pixel-level positioning + pre-shifted sprites, then masked drawing
-- **Sub-arc 2.1 (Units 17-20):** Hero idle animation
-- **Sub-arc 2.2 (Units 21-24):** Wandering shadow enemies — 2 NPC types with animation
-- **Arc 3+ post-October:** Item active states (torch lit, glyph revealed), more enemy variation
-
-**Layered depth (Sub-arc 1.3):** Decorative objects (pillars, altars, sconces) sit in a Y-sorted object list. The hero passes behind objects with lower Y, in front of objects with higher Y. Attribute-driven lighting near torches.
-
-**Per-room visual richness target.** Every room visually distinct. Atmospheric details via PAPER variation, attribute composition, and Y-sorted decorative objects. Each room should be identifiable from a screenshot alone.
-
-**Magazine-screenshot test.** A screenshot of the antechamber at sub-arc 1.3 endpoint: cool blue PAPER for floor, magenta-tinted walls, a stone pillar with the hero passing behind it, a single FLASH cyan door humming at the eastern wall, attribute-driven torchlight rim near a sconce. Reads as atmospheric, period-correct, instantly Spectrum. A *Crash* reviewer in 1987 would have screenshotted this.
+**Forbidden combination:** never red PAPER for floor — the hero is red and would vanish.
 
 ---
 
-## 7. Audio Direction
+## 7. Audio direction (sub-arc 1.4)
 
-**Title music.** Single-voice beeper, ~30-60 seconds, looping. D minor, ~110 BPM. *Manic Miner*'s "In the Hall of the Mountain King" precedent — period-faithful beeper carrying a real melody, monophonic and noisy but composed with care. Full composition spec in [beeper-spec.md](beeper-spec.md). Lands Unit 15.
+**Title theme.** Single-voice beeper, ~30–60 s, looping; *Manic Miner* "In the Hall of the Mountain King" precedent — a real melody, monophonic, composed with care. Full spec in [beeper-spec.md](beeper-spec.md).
 
-**Pre-music in-game (Arc 1):** Period-correct silence broken only by event SFX. Atic Atac was largely silent in-game; we honour the precedent.
+**In-game.** Period-correct near-silence broken by event SFX — *Atic Atac* was largely silent in-game; we honour it. A small **SFX driver** on port `$FE` bit 4 (footsteps, a door, gold collected, the win) grown from Gloaming's single blip. Music and SFX share the one channel via interleaved scheduling.
 
-**SFX layers:**
-- **Sub-arc 1.4 (Unit 14):** SFX driver introduced (door open, treasure pickup, hazard hit, victory)
-- **Sub-arc 2.1 (Unit 17):** Footstep SFX overlay during movement; animated doors gain creak
-- **Sub-arc 2.4 (Unit 31):** SFX library expansion + music polish pass
-
-**Arc 4 (post-October):** Atmospheric layer (wind, distant echoes) interleaved on the single beeper channel; remains period-faithful.
-
-**Sound integration.** Music and SFX share port `$FE` bit 4 via interleaved scheduling — music can be temporarily preempted by an SFX event. AY-3-8912 work is deferred — flick-adventure tradition is beeper, and AY arrives elsewhere in the curriculum (V2.16 Witch's Year introduces; V3.17 Hostraider deepens per [decisions/spectrum-assembly-track.md](../../../../decisions/spectrum-assembly-track.md)).
+AY-3-8912 is deferred — the flick-adventure tradition is beeper; AY arrives elsewhere in the curriculum.
 
 ---
 
-## 8. Level Design Direction
+## 8. Level design direction
 
-**Scale per arc:**
+**Hand-designed, cell-based, flick-screen.** Pass 1 ships **a small real keep** — the built three rooms are the **Hall** (pillared, broadly lit), the **Gallery** (split by a wall with one gap to find), and the **Vault** (a central altar lit by its own flame). Doors **align** across connected rooms (east↔west share a row, north↔south a column) so crossings read as steps. Every room reads as somewhere from a screenshot alone.
 
-| Arc | Rooms | Notes |
-|---|---|---|
-| Arc 1 (October) | 2 designed rooms | Great Hall + Antechamber; hand-pixelled tilework |
-| Arc 2 (October) | 3 designed rooms | Plus a third room introduced in Sub-arc 2.3; HUD + room names |
-| Arc 3 (post-October Year 1) | + outdoor traversal + 2-3 areas beyond original keep | Multi-location traversal via per-location state |
-| Arc 4 (post-October Year 2) | + 2-3 distinct additional keeps | Outdoor traversal between locations; collection-based endings |
+**Signposting** is the light and the palette; there is no in-game tutorial. **Difficulty** is forgiving in pass 1 (exploration, not threat — threat is a later revisit module). **Onboarding:** the first minutes teach that the keep is dark, a torch lights a pool, QAOP moves the thief, doorways flick to new rooms, gold is the goal.
 
-Pre-procedural; every room hand-designed. The 16-room and 9-room scopes from earlier framings are retired — Arc 1+2 prioritises depth (three rooms at the visual/atmospheric bar of *Knight Lore*) over breadth.
-
-**Pacing.** The keep eases the player in. The Great Hall (Sub-arc 1.4) is safe — treasure, an open door. The Antechamber (Sub-arc 1.3) introduces the layered-rendering depth and the lighting work. Arc 2's third room (Sub-arc 2.3) introduces the score / HUD systems against the player's growing familiarity.
-
-**Signposting.** The attribute palette *is* the signposting. There is no in-game tutorial. The colour vocabulary is consistent; once the player has read each cell type once, the rules are learned.
-
-**Difficulty curve.** Forgiving early, peak at 1987 chops by Arc 2 sub-arc 2.2 (NPCs introduce twitch-reflex). Per the difficulty discussion in [docs/log.md](../../../../log.md) and [decisions/real-retro-games.md](../../../../decisions/real-retro-games.md). Peak difficulty sits where *Sabre Wulf* sat — memorable, occasionally unfair-feeling in the way good 1987 budget games were.
-
-**Onboarding.** The first five minutes teach the player: cells have colour, colour means something, the hero responds to QAOP or arrows, doors lead between rooms, treasure is good, hazards are bad, the exit is somewhere worth finding. Nothing said in prose — everything said in colour and layered space.
+Later Shadowkeep *revisit* modules grow the keep (more rooms, outdoor traversal, multiple keeps) — out of scope for the Place.
 
 ---
 
-## 9. Polish Direction
+## 9. Polish direction (sub-arc 1.4)
 
-**Title screen.**
-- **Sub-arc 1.4 (Unit 16):** Hand-pixelled title screen with logo art. Beeper theme playing. "Press any key to enter."
-- **Sub-arc 2.4 (Unit 32):** Title art polish + victory sequence + "completed" state.
+- **Title screen** with hand-pixelled logo + the beeper theme; "press a key to enter".
+- **The loop:** title → explore → win (the keep's gold cleared) → title.
+- **Real hardware:** verified on a Spectrum Next + a 48K tape image, as *Gloaming* closed.
 
-**Attract mode:** post-October (Arc 3 stretch).
-
-**Options:**
-- Arc 2: sound on/off
-- Arc 2.4 / Arc 3: control remap (QAOP, cursor keys, Kempston joystick)
-- Post-Arc 4: difficulty levels (post-October)
-
-**Ending:**
-- Arc 1 (Sub-arc 1.4): Title → play → victory → title loop
-- Arc 2 (Sub-arc 2.4): "Completed" state with credit; final presentation pass
-- Arc 4 (post-October): Collection-based true ending (find all lore items for full ending)
-
-**Accessibility:**
-- Control remap (Arc 2.4)
-- FLASH-off option for photosensitivity (post-October stretch)
-- ROM-font HUD text remains legible at all stock Spectrum colour combinations
-
-**"Shippable" criteria.** Arc 2 endpoint Shadowkeep should be playable cleanly on Spectrum Next + Fuse for ten-plus minutes per session, never confuse a first-time player about the goal, and could plausibly be uploaded to Itch.io alongside contemporary indie retro work as a small-but-polished release in the *Atic Atac* / *Knight Lore* tradition. By Arc 4 endpoint, the same Itch.io upload would read as a mid-tier full-price release with multi-keep scope and collection-based completion.
+Options (sound on/off, control remap) and richer endings belong to later revisit modules.
 
 ---
 
 ## 10. Anti-goals
 
-- **No combat, no weapons.** The hooded thief is a stealth intruder. Design is exploration-and-avoidance. Combat-as-mechanic lives in V3.20 Edge of Iron; action-RPG lives in V1.6 Embergate. See [decisions/shadowkeep-four-arc-framing.md](../../../../decisions/shadowkeep-four-arc-framing.md) Genre Honesty table.
-- **No character class choice.** Single hero, single playstyle. Class systems live in V1.6 Embergate.
-- **No parser dialogue, no quest state, no branching narrative.** Lives in V1.7 The Lantern Path.
-- **No full Singleton-class location-graph or day/night cycle.** Lives in V1.4 Whitewinter (Lords of Midnight tradition); Shadowkeep Arc 4 uses a lighter mood-palette variation only.
-- **No save/load in Arcs 1-2.** Arrives in Arc 3 Sub-arc 3.3 (tape save/load).
-- **No software pixel scrolling within rooms.** Reserved for V3 entries (Ironstreak, Skylash). Shadowkeep is screen-flip on room transitions.
-- **No isometric projection.** Reserved for V1.2 Greypeak (Knight Lore tradition).
-- **No procedural generation.** Every room hand-designed. Discovery comes from learning the keep's geography.
-- **No modern-scene techniques.** Shadowkeep is period-faithful through Arcs 1-2; period-possible in Arcs 3-4.
-- **No unit-count creep within October.** 32 units is the commitment. Surplus time goes into polish within the existing units, not new units. (Per [decisions/shadowkeep-32-unit-commitment.md](../../../../decisions/shadowkeep-32-unit-commitment.md) drift triggers.)
-- **No vertical-slice framing creeping back into marketing copy.** What ships is *"Shadowkeep, Arc 1 + Arc 2: foundations, a place, inhabitants, identity. The first chapter of a longer game."* Not a slice, not a demo, not a vertical-anything.
+- **No combat, no weapons.** The hooded thief is a stealth intruder; design is explore-and-avoid. Combat lives in V3.20 Edge of Iron; action-RPG in V1.6 Embergate. ([shadowkeep-four-arc-framing.md](../../../../decisions/shadowkeep-four-arc-framing.md) Genre-Honesty table.)
+- **No character classes, no parser/quest/branching narrative, no full Singleton-class location-graph.** V1.6 Embergate / V1.7 The Lantern Path / V1.4 Whitewinter respectively.
+- **No pre-shifted/masked sprites, no Y-sort, no isometric, no decoupled tile-collision** — these are the *relocated* rendering techniques (Smooth Motion / Overlap / Greypeak). The Place stays cell-based on purpose.
+- **No software pixel scrolling** (V3 entries); **no procedural generation** (every room hand-designed); **no modern-scene tricks** (period-faithful).
+- **No fixed unit count, no count-creep.** The Place ran to what it needed (~16 units); surplus effort goes into the bar, not into padding.
 
 ---
 
-## 11. Arc Trajectory
+## 11. Module trajectory (the module model)
 
-**Total: 64 units across 4 arcs of 16. October 2026 ships Arcs 1+2.**
+Shadowkeep is a game across several modules. **Pass 1 — _the Place_** is this brief. The old "Arc 1 + Arc 2 = 32, four arcs = 64" framing is retired; its content maps onto **later revisit modules**, sequenced into the lineup after intervening games, each within the per-game technique budget. Counts below are illustrative.
 
-Each arc has four sub-arcs of four units. Each sub-arc has a thematic identity; each unit has a single specific contribution. Full per-unit detail lives in [per-unit-plan.md](per-unit-plan.md).
+| Module (pass) | Content | Status |
+|---|---|---|
+| **Shadowkeep — the Place (pass 1)** | the keep as a lit, furnished, composed, winnable flick-adventure (identity · dithered stone · movement · room-as-data · room graph · doorways · persistence · three rooms · lighting · furnishings · mood · character · audio · win loop · real hardware) | **authoring** — 1.1–1.3 done, 1.4 (audio) remaining |
+| Shadowkeep — inhabitants (later revisit) | cell-based NPCs, threat, lives | later |
+| Shadowkeep — identity (later revisit) | numeric HUD / digit rendering, room names, score | later |
+| Shadowkeep — beyond the walls (later revisits) | items that matter, tape save/load, multiple keeps, secrets & lore, atmospheric cycles, collection endings | later |
 
-| Arc | Theme | Sub-arcs (units) | Status |
-|---|---|---|---|
-| **Arc 1** | *Foundations and a Place* | 1.1 First Pixels (1-4); 1.2 The Hooded Thief (5-8); 1.3 A World with Depth (9-12); 1.4 The Keep Stands (13-16) | **October ship** |
-| **Arc 2** | *Inhabitants and Identity* | 2.1 Sound and Motion (17-20); 2.2 A Presence in the Dark (21-24); 2.3 A Game Knows Itself (25-28); 2.4 Completion (29-32) | **October ship** |
-| **Arc 3** | *Beyond the Walls* | 3.1 Items that Matter (33-36); 3.2 Beyond One Keep (37-40); 3.3 The Persistent Hero (41-44); 3.4 Secrets and Lore (45-48) | post-October Year 1 |
-| **Arc 4** | *The Greater World* | 4.1 Atmospheric Cycles (49-52); 4.2 Multiple Keeps (53-56); 4.3 Endings (57-60); 4.4 Completion (61-64) | post-October Year 2 |
+Sub-arcs of pass 1 (illustrative; full detail in [per-unit-plan.md](per-unit-plan.md)):
+**1.1 Into the Keep** — Hooded Figure · First Hall (dither) · A Place to Move · The Keep's Hand.
+**1.2 A Keep of Rooms** — Room Graph · Through the Doorway · The Hero Remembers · Three Rooms.
+**1.3 Mood and Light** — Light and Shadow · Furnishings · Mood through Constraint · A Keep with Character.
+**1.4 The Keep Has a Voice** — footsteps/SFX · the gold goal · a beeper theme · the title→explore→win→title loop · real hardware.
 
-### Per-arc end-state deliverable
-
-**End of Arc 1 (16 units):** A complete two-room game with atmosphere, depth, and a designed first impression. Title → play → victory → title loop. Hand-pixelled tiles, hooded thief animated with weight, pillars the hero walks behind, atmospheric lighting near torches, gold cells with sparkle, composed beeper title music, hand-pixelled title screen with logo art.
-
-**End of Arc 2 (32 units, October ship):** A three-room game with inhabitants, lives, score, HUD, atmospheric polish, and verified real-hardware playability on Spectrum Next. Footstep SFX, animated doors, hero idle animation, varied floor tiles, a moving NPC, hero-vs-NPC collision, lives and respawn, HUD bar (score / gold / lives), room names, score persistence, atmosphere polish across all rooms, audio depth, final presentation pass.
-
-**End of Arc 3 (48 units, post-October Year 1):** Inventory with 6+ item types; multi-location traversal with 2-3 areas beyond the original keep; working tape save/load on real hardware; secrets-and-lore system with hidden content the player must discover.
-
-**End of Arc 4 (64 units, post-October Year 2):** Time-of-day cycle; 2-3 distinct additional keeps; collection-based true-ending unlock; final polished build on real Spectrum Next + TZX 48K. The complete game.
-
-### Spiral revisits across arcs
-
-- Arc 2 revisits **movement** (now interleaved with animation timing), **the beeper driver** (now handles SFX overlay), **the hero sprite** (now multi-frame with idle), **rendering** (now with NPCs in the Y-sort list).
-- Arc 3 revisits **collision** (now extends to inventory-affecting items), **room engine** (now multi-location traversal), **game state** (now must persist and restore via tape).
-- Arc 4 revisits **atmosphere** (now with time-of-day variation), **endings** (now collection-based), **integration** (final polish across all rooms and systems).
-
-### Cut hierarchy (per shadowkeep-32-unit-commitment)
-
-If runway tightens during October, cut order works backwards from Sub-arc 2.4:
-
-1. Trim Sub-arc 2.4 (units 29-32) — *Completion* polish defers. 28 units remains.
-2. Trim Sub-arc 2.3 (units 25-28) — HUD and room names defer. 24 units remains.
-3. Trim Sub-arc 2.2 (units 21-24) — NPCs and lives defer. 20 units remains. **Real lowest acceptable floor.**
-4. Trim Sub-arc 2.1 (units 17-20) — Arc 1 alone (16 units). **Genuine retreat — requires re-marketing.**
-5. Below 16: decision-record violation.
-
-Cuts apply only after a runway slip is identified. Default plan is *both arcs, 32 units, October.*
+**Deprecation-pair seeds** (what later games upgrade): cell-snapped movement → pre-shift (Smooth Motion); single-draw sprite → masking (Overlap); flat draw order → Y-sort + isometric (Greypeak).
 
 ---
 
-## 12. Ship Test (Multi-axis)
+## 12. Build status (2026-06-02)
 
-Per-sub-arc pass criteria across the five disciplines. Each sub-arc passes only when *every* axis clears its row at the relevant bar. Definition of Done in [docs/tracker/revamp.md](../../../../tracker/revamp.md) applies to every unit in addition.
-
-| Sub-arc | Code | Visuals | Audio | Level design | Polish |
-|---|---|---|---|---|---|
-| 1.1 First Pixels (1-4) | Framebuffer fundamentals stable; tile-map data structure; assembles on Fuse + Spectrum Next | Stone tiles hand-pixelled at mid-tier full-price bar; varied wall types; Great Hall composed | n/a | Great Hall reads as a designed room, not a grid | Tile-map and attribute decoupling clean |
-| 1.2 The Hooded Thief (5-8) | Pre-shifted sprite tables generated; pixel-level positioning; masked drawing preserves background | Hooded thief sprite reads on a magazine cover at 8×8; 4-frame walk cycle has weight | n/a (silent) | Movement feels fluid (2-4 pixels per frame) | Animation polish: hero feels alive |
-| 1.3 A World with Depth (9-12) | Y-sorted object list draws each frame; hero passes behind/in-front correctly | Decorative objects (pillars, altars, sconces) hand-pixelled; attribute-driven lighting visible near torches | n/a | Antechamber as designed second place; the room reads three-dimensional | Atmospheric depth from layered objects + lighting |
-| 1.4 The Keep Stands (13-16) | Tile collision works (decoupled from attribute); SFX driver introduced | Hand-pixelled title screen with logo art at magazine bar | Beeper title theme composed per beeper-spec.md; door open + treasure pickup SFX | Title → play → victory → title loop tight; first-time player understands goal in <60s | Title screen + theme + clean restart — Arc 1 complete |
-| 2.1 Sound and Motion (17-20) | Footstep timing stable at IRQ rate; door animation primitive | Animated doors; hero idle animation; varied floor tiles read as different | Footstep SFX overlay on beeper; doors creak | Sound supports place without overwhelming | Animation: keep feels inhabited |
-| 2.2 A Presence in the Dark (21-24) | NPC AI deterministic but unpredictable; hero-vs-NPC collision; lives + respawn | First NPC sprite animated and distinct from hero; second NPC variation reads as different threat | NPC proximity beeper cue | NPC placement supports avoidance gameplay; not gotcha | Dynamic feel: rooms have life |
-| 2.3 A Game Knows Itself (25-28) | HUD render robust; score persistence across death | HUD bar visually clean (score / gold / lives); room names render in ROM font at top centre | Score-tick SFX subtle | Third designed room introduces new spatial puzzle | HUD reads as professional |
-| 2.4 Completion (29-32) | No regressions across Arcs 1-2; runs cleanly on real Spectrum Next | Atmosphere polish across all rooms; victory sequence polished | SFX library expansion + music polish | Final balance pass on cell placement | "Completed" state; Arc 2 deliverable shippable |
-
-Arc 3 / Arc 4 ship tests defined post-October.
+**Units 1–12 authored, verified on Emu198x, and live** — sub-arcs 1.1, 1.2, 1.3 complete (identity → dithered stone → movement → room-as-data → graph → doorways → persistence → three rooms → lighting → furnishings → mood → character). The 8-unit October-cut floor (1.1–1.2) is met. **Remaining for the Place:** sub-arc **1.4** (audio + the complete chapter loop + real hardware). See [per-unit-plan.md](per-unit-plan.md) and the [tracker](../../../../tracker/revamp.md).
 
 ---
 
-## 13. Pattern Library Extractions
+## 13. Vault tie-ins
 
-Reusable techniques Shadowkeep surfaces for promotion to the Pattern Library, per [decisions/pattern-library.md](../../../../decisions/pattern-library.md). Promotion happens when a technique proves reusable across multiple games.
+Every reference from a shipped unit must resolve (Definition of Done; vault is a launch artefact — [october-2026-launch-spec.md](../../../../decisions/october-2026-launch-spec.md), [lesson-references.md](../../../../tracker/lesson-references.md)).
 
-**Framework:**
-- **Incremental scaffold pattern** — Unit 1 starts from nothing; each unit adds one capability. Cross-platform.
-- **Spiral revisit pattern** — phase boundaries revisit earlier work at higher levels. Cross-platform (also a curriculum-wide principle per [decisions/spiral-and-incremental.md](../../../../decisions/spiral-and-incremental.md)).
-- **Multi-room engine** — room pointer table, N/S/E/W connection tables, current-room state byte, generalised transition. Cross-platform.
-- **Game state machine** — title → play → win/die → restart loop. Cross-platform.
-
-**Rendering (Spectrum-specific in implementation; design ideas cross-platform):**
-- **Pre-shifted sprite tables** — 8 versions per sprite for sub-cell horizontal positioning. Spectrum-specific.
-- **Masked sprite drawing** — mask + image two-pass write preserves background. Spectrum-specific implementation; the design pattern (alpha-style masking) is cross-platform.
-- **Y-sorted object list** — back-to-front draw order from a sorted list. Cross-platform.
-- **Decoupled attribute / tile-map / collision** — visual vocabulary, game data, and collision query as three separate stores. Cross-platform conceptually.
-- **Hand-pixelled tile palette** — multiple wall/floor tile types loaded from a designer-authored tile set. Cross-platform.
-- **Attribute-driven lighting** — atmospheric mood via attribute composition near sources. Spectrum-specific (uses attribute granularity); idea generalises.
-- **HUD layout pattern** — lives / score / inventory / room-name strip in screen top rows. Cross-platform.
-
-**Input:**
-- **Port `$FE` half-row keyboard scanning** — Spectrum-specific.
-- **Control remap pattern** (Arc 2.4 surfacing) — translates physical input to game commands. Cross-platform.
-
-**Physics (loosely):**
-- **Tile-map collision query** — hero position resolves to tile coordinates; collision answered by tile-map lookup. Cross-platform.
-
-**Audio:**
-- **Single-voice beeper melody driver** — Spectrum-specific (port `$FE` bit 4 toggle, tick-counter timing).
-- **SFX overlay on single-channel** (Sub-arc 1.4 surfacing) — channel-sharing interleaving. Cross-platform design pattern.
-
-**AI:**
-- **Wandering NPC AI** (Sub-arc 2.2 surfacing) — random walk + chase patterns. Cross-platform.
-- **Per-object behaviour state machine** — Cross-platform.
-
-**Assembly (language-specific):**
-- Z80 idioms surfaced repeatedly: pre-shifted sprite table lookup; masked sprite inner loop; tile address arithmetic; `DJNZ` loops; `LDIR` for tile blits; stack-as-data for object lists.
+- **Games:** [Atic Atac](/vault/games/atic-atac), [Knight Lore](/vault/games/knight-lore), Sabre Wulf, Pentagram, Underwurlde, Cybernoid II, The Hobbit.
+- **Studios / people:** Ultimate Play the Game (Tim & Chris Stamper); Hewson (via Cybernoid II); Melbourne House (via The Hobbit); [Tim Follin](/vault/people/tim-follin).
+- **Hardware refs:** the attribute system (dither/lighting), bitmap memory layout, beeper / port `$FE`.
 
 ---
 
-## 14. Vault Tie-ins
+## 14. Risks
 
-Vault entries this curriculum threads through. Per the Definition of Done in [docs/tracker/revamp.md](../../../../tracker/revamp.md), every reference must resolve. Status (✓ live / GAP needs creating) noted.
-
-**Direct ancestors (Arcs 1-2):**
-- [Atic Atac](/vault/games/atic-atac) — Ultimate, 1983. The engine archetype. Referenced throughout.
-- [Knight Lore](/vault/games/knight-lore) — Ultimate, 1984. The mood archetype.
-- [Cybernoid II](/vault/games/cybernoid) — Hewson, 1988. The polish archetype.
-
-**Flick-adventure lineage references (Arcs 3-4 referencing):**
-- Sabre Wulf (Ultimate, 1984)
-- Pentagram (Ultimate, 1986)
-- Underwurlde (Ultimate, 1984)
-- The Hobbit (Melbourne House, 1982) — opening-screen archetype
-
-**Studio entries:**
-- Ultimate Play the Game — referenced in Arcs 1-2 ancestry; also throughout Arcs 3-4
-- Hewson Consultants — referenced via Cybernoid II
-- Melbourne House — referenced via The Hobbit
-
-**People entries:**
-- Tim and Chris Stamper (Ultimate founders) — referenced indirectly via Atic Atac / Knight Lore / Sabre Wulf
-- [Tim Follin](/vault/people/tim-follin) — referenced via Cybernoid II audio
-
-**Hardware reference pages:**
-- ZX Spectrum attribute system — referenced in Sub-arc 1.1 and 1.3 (lighting work)
-- ZX Spectrum beeper / port `$FE` — referenced in Sub-arc 1.4 (SFX driver) and Unit 15 (title theme)
-- ZX Spectrum bitmap memory layout — referenced in Sub-arc 1.1 (framebuffer fundamentals)
-
-**Pattern-library cross-references:** every pattern listed in Section 13 will cross-link back here from its pattern entry.
-
-Vault completeness is a launch artefact — see [docs/decisions/october-2026-launch-spec.md](../../../../decisions/october-2026-launch-spec.md) and [docs/tracker/lesson-references.md](../../../../tracker/lesson-references.md).
-
----
-
-## Risks
-
-1. **Engine evolution must read clearly across Arc 1.** The three engine commitments are introduced progressively, each replacing simpler precedents (cell-snapped → pre-shifted; single-draw → Y-sort; attribute-collision → tile-map-collision). Each transition needs to land as a *teaching moment*, not a refactor. Mitigation: per-unit-plan explicitly names the deprecation pair in each transitional unit; existing 8 published units stay live until each is hard-replaced (per [decisions/shadowkeep-32-unit-commitment.md](../../../../decisions/shadowkeep-32-unit-commitment.md) — engine evolution is the curriculum).
-
-2. **Pixel-art bar is the load-bearing visual risk.** Sub-arc 1.2's hooded thief sprite and Sub-arc 1.1's stone tile palette are the magazine-cover artefacts. If they don't land at the bar, the entire Arc 1 deliverable misses commercial bar. Mitigation: multiple iterations expected; treat the sprite as the project's single most-load-bearing piece of pixel art.
-
-3. **Beeper title composition (Unit 15).** Beeper music is unforgiving — one voice, no harmony, all timing and melody. The October launch hinges on the title theme landing. Mitigation: [beeper-spec.md](beeper-spec.md) scaffolds the composition; if Steve's composition stalls, fall back to a paid composer per the Cadence approach in [docs/tracker/revamp.md](../../../../tracker/revamp.md).
-
-4. **Build-before-publish window.** The new engine (pre-shifted sprites, masked drawing, Y-sort, tile-collision, pixel-art tooling, music workflow) requires ~1-2 months of infrastructure work before any new units publish. During that window, visitors see the existing 8 units at the old engine bar. Mitigation: communicate the engine evolution story; the early new units carry the case for the rest.
-
-5. **Authoring rate against October.** Thirty-two multi-disciplinary units against the engine-evolution commitment, alongside three other Spectrum launch artefacts (BASIC Volume 1, landing page, vault). Runway tight. Mitigation: cut hierarchy in [decisions/shadowkeep-32-unit-commitment.md](../../../../decisions/shadowkeep-32-unit-commitment.md) trims Arc 2 sub-arcs back-to-front; BASIC track has separate cut hierarchy.
-
-6. **Sub-arc 2.2 NPC dynamic-spike risk.** Adding the first moving NPC to the Y-sort list (Unit 21) is a non-trivial integration — the object list now contains the hero plus NPCs, all Y-sorted, all with per-frame movement and collision queries. Mitigation: prototype the multi-object Y-sort + collision pass ahead of Sub-arc 2.2 authoring.
-
-7. **Real-hardware testing target (Sub-arc 2.4).** Unit 31 is "Spectrum Next hardware testing" — a real-hardware-only discipline. Mitigation: real Spectrum Next access confirmed; testing cadence scheduled per [engineering-plan.md](engineering-plan.md).
-
-8. **Genre-drift in Arcs 3-4 planning.** Combat / classes / parser / branching narrative are NOT Shadowkeep — they're redistributed to V1.6 Embergate, V1.7 Lantern Path, V3.17 Hostraider, V3.20 Edge of Iron per [decisions/shadowkeep-four-arc-framing.md](../../../../decisions/shadowkeep-four-arc-framing.md). If future-session work reaches for those mechanics within Shadowkeep, that's drift to flag.
+1. **Beeper title composition (sub-arc 1.4).** One voice, no harmony — all melody and timing. [beeper-spec.md](beeper-spec.md) scaffolds it; fall back to a paid composer if it stalls.
+2. **Atmosphere bar.** The Place lives or dies on the *look* — the dither ramps, the lighting, the furnished rooms reading as a real keep. Iterate the tiles and palettes until a screenshot passes the magazine test.
+3. **Authoring rate against October.** Pass 1 + three other Spectrum launch artefacts (BASIC V1 done, landing page done, vault in progress). The October floor (1.1–1.2) is already met, which de-risks this.
+4. **Capture fidelity for dithering.** Fine dither is high-frequency; mp4 video averages it to flat colour. Dither-heavy units use crisp PNG stills; a video-pipeline bump + recapture is deferred work.
 
 ---
 
 ## Changelog
 
-- **v2.0 (2026-05-20):** Consolidated from v1.0 brief + `shadowkeep-phase-1-design.md` + `shadowkeep-unit-3-plan.md` into a single current-state document. Aligned to 32-unit Arc 1+2 October commitment (per [decisions/shadowkeep-32-unit-commitment.md](../../../../decisions/shadowkeep-32-unit-commitment.md)) and four-arc full-game framing (per [decisions/shadowkeep-four-arc-framing.md](../../../../decisions/shadowkeep-four-arc-framing.md)). Three engine commitments (pixel-level sprite movement, Y-sorted layered rendering, decoupled attribute/collision) introduced as the core remix. Genre honesty: combat / classes / parser / branching narrative are NOT Shadowkeep, redistributed to canonical-legend games per the redistribution table. Reference points expanded from *Atic Atac / Sabre Wulf* to *Atic Atac / Knight Lore / Cybernoid II*. Phase trajectory restructured from 17 phases / 256 units to 4 arcs / 64 units (with Arcs 3-4 post-October). Per-unit detail delegated to [per-unit-plan.md](per-unit-plan.md). The earlier "attribute byte is the rulebook" mechanic retired; attribute remains visual vocabulary, collision lives in a separate tile-map.
-- **v1.0 (2026-05-13):** Initial brief. First brief authored against `docs/specifications/brief.md` v1.0. Anchored 256-unit total scope, 17-phase trajectory, period-faithful constraint position, mid-tier full-price endpoint bar, October vertical-slice deliverable. Superseded by v2.0 above; preserved in git history.
+- **v3.0 (2026-06-02):** Rewritten for the cell-based **Place** (pass 1) under the module model. The three engine commitments (pre-shift/masked sprites, Y-sort, decoupled collision) removed as Shadowkeep content and noted as **relocated** to the rendering games; engine-first specs archived under `superseded/`. Scope reframed from 64-unit/four-arc to a game across modules with illustrative counts; **bitmap dithering** named as the signature technique. Build status (Units 1–12 live) added. Genre, ancestors, atmosphere, audio, level, anti-goals and vault tie-ins carried forward from v2.0 (reworded off the old engine where needed).
+- **v2.0 (2026-05-20):** Consolidated engine-first brief — 32-unit Arc 1+2 October / 64-unit four-arc full game; three engine commitments as the core remix; "attribute byte = rulebook" retired in favour of tile-map collision. Superseded by v3.0; preserved in git.
+- **v1.0 (2026-05-13):** Initial brief — 256-unit / 17-phase framing, October vertical slice. Superseded.

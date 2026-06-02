@@ -2,6 +2,21 @@
 
 ---
 
+## 2026-06-02 — Stale engine-first Shadowkeep docs rewritten / archived
+
+**Type:** docs hygiene (anti-drift)
+
+The Shadowkeep design/engineering docs predated the 2026-05-29 re-pace and would actively mislead (they spec pre-shifted/masked sprites, a Y-sort object system, and decoupled tile-map collision — none of which the cell-based Place uses). Rewritten or relocated so they can't steer future work wrong:
+
+- **brief.md → v3.0.** Rewritten for the cell-based Place + module model: pass 1 = the Place; engine is Gloaming's (carried, not rebuilt); **bitmap dithering** named the signature technique; the three engine commitments flagged as *relocated*; the 64-unit/four-arc scope replaced with a module trajectory (counts illustrative); build status (Units 1–12) added. Genre / ancestors / atmosphere / audio / anti-goals / vault carried forward, reworded off the old engine.
+- **Archived to `superseded/`** (with a README): engineering-plan, sprite-shifter, object-system, tile-map, memory-budget — frozen as-was; the relocated techniques map to Smooth Motion / Overlap / Greypeak, to be lifted when those games are built.
+- **beeper-spec.md** kept and repointed — it feeds sub-arc 1.4; audio survives the re-pace untouched.
+- **tracker/revamp.md** Shadowkeep section *body* rewritten (module trajectory, relocated-engine note, fixed pointers), not just banner-flagged.
+
+Decision records left as-is (they correctly carry amendment banners — history matters there). Residual, deliberately separate: a track-wide reconciliation (the "powers-of-2 locked decision", the pending ~1,000-edit modules-not-games migration).
+
+---
+
 ## 2026-06-02 — Shadowkeep reset to the cell-based Place; Units 1–12 authored
 
 **Type:** content (curriculum authoring) + records reconciliation
