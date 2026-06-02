@@ -2,6 +2,27 @@
 
 ---
 
+## 2026-06-02 — The Place completed (Units 13–16); track-wide engine-first framing reconciled
+
+**Type:** content (curriculum) + docs hygiene (anti-drift)
+
+Two threads closed in one session.
+
+**Shadowkeep's Place is complete — sub-arc 1.4 authored, Arc 1 done (16 units).** Units 13–16, each a clean superset of Unit 12's engine, assembled with pasmonext and verified on Emu198x:
+
+- **13 Footsteps and Doors** — a beeper SFX driver (one tone primitive, `beep`: B = duration, C = pitch), with a footfall under every step and a falling door creak per room transition.
+- **14 The Keep's Gold** — gold as walkable `G` map cells; collect on contact (cell → floor, chime, counter down); win when the counter hits zero. Collection verified live (coin lifted, thief stands on floor).
+- **15 A Theme in One Voice** — a note-table music player (pitch/duration pairs, chunked notes) + a composed D-minor title theme. Audio capture confirmed a multi-pitch melody (peak 16384).
+- **16 The Keep Stands** — a title → play → win → title state machine, a fresh resettable game each round, ROM-font (`$3D00`) title and win screens. Title screen + title→game transition verified by screenshot; the win-screen render reuses the same proven `clear_screen`/`print_string` as the title (a full 6-coin clear was deliberately *not* scripted — fragile navigation is the known time-sink).
+
+Build 1754→1758 pages. **Emulator note:** the `target/` `emu198x-spectrum` binaries were stale (pre-2026-05-22, before the `.sna`-interception in the headless script runner) — rebuilt headless (`--no-default-features`, ~33s); a `.sna` loads via a JSON `load_snapshot` step, not the postcard `--load-snapshot` flag.
+
+**Track-wide engine-first reconciliation (the residual flagged in the entry below — now closed).** `platforms/sinclair-zx-spectrum/assembly.md` → **v0.4**: removed the "Shadowkeep introduces Trunk Layers 1–4", four-arcs-of-16, "32 units ships in October", and three-engine-commitments framing; the rendering Trunk now spreads across the gentle opening; track sequenced as modules; counts illustrative. Banners added to `decisions/spectrum-assembly-track.md` (October reframe + migration executed) and `decisions/commercial-bar-revamp.md` (the one record with no superseding banner over "Arcs 1+2 / 32 units"). The **powers-of-2 / fixed-count** line was already retired in `curriculum-structure.md` (only a drift trigger now) — no live assertion remained.
+
+**Deferred (unchanged):** a video-capture-quality bump + recapture of the dither-heavy units (2, 3, 9–12) with crisp output. Status lines across brief / per-unit-plan / tracker / assembly.md updated from "12 units / 1.4 remaining" to "16 units / Arc 1 complete".
+
+---
+
 ## 2026-06-02 — Stale engine-first Shadowkeep docs rewritten / archived
 
 **Type:** docs hygiene (anti-drift)

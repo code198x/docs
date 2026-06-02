@@ -128,7 +128,7 @@ Shadowkeep is a game across several modules. **Pass 1 — _the Place_** is this 
 
 | Module (pass) | Content | Status |
 |---|---|---|
-| **Shadowkeep — the Place (pass 1)** | the keep as a lit, furnished, composed, winnable flick-adventure (identity · dithered stone · movement · room-as-data · room graph · doorways · persistence · three rooms · lighting · furnishings · mood · character · audio · win loop · real hardware) | **authoring** — 1.1–1.3 done, 1.4 (audio) remaining |
+| **Shadowkeep — the Place (pass 1)** | the keep as a lit, furnished, composed, winnable flick-adventure (identity · dithered stone · movement · room-as-data · room graph · doorways · persistence · three rooms · lighting · furnishings · mood · character · audio · win loop · real hardware) | **complete** — 1.1–1.4 done (16 units, Arc 1) |
 | Shadowkeep — inhabitants (later revisit) | cell-based NPCs, threat, lives | later |
 | Shadowkeep — identity (later revisit) | numeric HUD / digit rendering, room names, score | later |
 | Shadowkeep — beyond the walls (later revisits) | items that matter, tape save/load, multiple keeps, secrets & lore, atmospheric cycles, collection endings | later |
@@ -145,7 +145,7 @@ Sub-arcs of pass 1 (illustrative; full detail in [per-unit-plan.md](per-unit-pla
 
 ## 12. Build status (2026-06-02)
 
-**Units 1–12 authored, verified on Emu198x, and live** — sub-arcs 1.1, 1.2, 1.3 complete (identity → dithered stone → movement → room-as-data → graph → doorways → persistence → three rooms → lighting → furnishings → mood → character). The 8-unit October-cut floor (1.1–1.2) is met. **Remaining for the Place:** sub-arc **1.4** (audio + the complete chapter loop + real hardware). See [per-unit-plan.md](per-unit-plan.md) and the [tracker](../../../../tracker/revamp.md).
+**All 16 units authored, verified on Emu198x, and live — the Place is complete (Arc 1 done).** Sub-arcs 1.1–1.4 all shipped: identity → dithered stone → movement → room-as-data → graph → doorways → persistence → three rooms → lighting → furnishings → mood → character → footsteps/door SFX → the gold goal + win → a D-minor beeper theme → the title→play→win→title loop. The Place is a finishable, replayable cell-based flick-adventure. Verified via Emu198x screenshot (render + title screen) and beeper audio capture. **Deferred:** a video-capture-quality bump + recapture of the dither-heavy units (2, 3, 9–12) with crisp output. See [per-unit-plan.md](per-unit-plan.md) and the [tracker](../../../../tracker/revamp.md).
 
 ---
 
@@ -170,6 +170,7 @@ Every reference from a shipped unit must resolve (Definition of Done; vault is a
 
 ## Changelog
 
+- **v3.1 (2026-06-02):** Sub-arc 1.4 (audio + the complete game loop) authored and verified — the Place is **complete at 16 units** (Arc 1 done). Build status updated; SFX driver, gold goal/win, D-minor beeper theme, and title→play→win→title state machine all live.
 - **v3.0 (2026-06-02):** Rewritten for the cell-based **Place** (pass 1) under the module model. The three engine commitments (pre-shift/masked sprites, Y-sort, decoupled collision) removed as Shadowkeep content and noted as **relocated** to the rendering games; engine-first specs archived under `superseded/`. Scope reframed from 64-unit/four-arc to a game across modules with illustrative counts; **bitmap dithering** named as the signature technique. Build status (Units 1–12 live) added. Genre, ancestors, atmosphere, audio, level, anti-goals and vault tie-ins carried forward from v2.0 (reworded off the old engine where needed).
 - **v2.0 (2026-05-20):** Consolidated engine-first brief — 32-unit Arc 1+2 October / 64-unit four-arc full game; three engine commitments as the core remix; "attribute byte = rulebook" retired in favour of tile-map collision. Superseded by v3.0; preserved in git.
 - **v1.0 (2026-05-13):** Initial brief — 256-unit / 17-phase framing, October vertical slice. Superseded.

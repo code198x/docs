@@ -9,14 +9,15 @@
 
 > *"The keep at night, complete. A place, then its inhabitants and identity. The first chapter of a longer game."*
 
-> **Build status (2026-06-02): Units 1–12 authored and live** (pass-1 module *the Place*).
+> **Build status (2026-06-02): all 16 units authored and live — the Place is complete (Arc 1 done).**
 > Sub-arc **1.1 Into the Keep** ✅ (A Hooded Figure · The First Hall · A Place to Move · The Keep's
 > Hand), **1.2 A Keep of Rooms** ✅ (The Room Graph · Through the Doorway · The Hero Remembers ·
 > Three Rooms), **1.3 Mood and Light** ✅ (Light and Shadow · Furnishings · Mood through Constraint ·
-> A Keep with Character). **Remaining: 1.4 The Keep Has a Voice** (audio — footsteps/SFX, the gold
-> goal, a beeper theme, the title→explore→win→title loop, real hardware). As-built closely follows
-> the outline below; the chief addition was **bitmap dithering** as the stone-and-lighting technique
-> (Units 2, 9–12). The 8-unit October-cut floor (1.1–1.2) is met.
+> A Keep with Character), **1.4 The Keep Has a Voice** ✅ (Footsteps and Doors · The Keep's Gold ·
+> A Theme in One Voice · The Keep Stands). As-built closely follows the outline below; the chief
+> addition was **bitmap dithering** as the stone-and-lighting technique (Units 2, 9–12). The Place is
+> a finishable, replayable cell-based flick-adventure. **Deferred:** a video-capture-quality bump +
+> recapture of the dither-heavy units (2, 3, 9–12) with crisp output.
 
 ## Position in curriculum
 
