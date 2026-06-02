@@ -2,6 +2,23 @@
 
 ---
 
+## 2026-06-02 — Shadowkeep reset to the cell-based Place; Units 1–12 authored
+
+**Type:** content (curriculum authoring) + records reconciliation
+
+Reset Shadowkeep from the old engine-first slice to the cell-based **Place** and authored it end-to-end through sub-arcs 1.1–1.3 (12 units), then consolidated.
+
+- **Records first.** Reconciled the Shadowkeep records to the module model + no-fixed-counts: amended `decisions/shadowkeep-32-unit-commitment.md` and `shadowkeep-four-arc-framing.md` (counts illustrative; **pass 1 = the Place**; Arc 2 + Arcs 3–4 become later *revisit modules*); per-unit-plan gained a Module-shape section; catalogue entry tagged `game: shadowkeep, pass: 1`. Consistent with the 2026-06-01 modules-not-games keystone (whose full ~1,000-edit migration is still pending Steve's go).
+- **Reset.** Old engine-first Units 1–8 retired (preserved in git); module reset to a coming-soon Place (Gloaming-shaped yaml, Place index); orphaned old assets cleaned.
+- **Authored 1.1–1.3 (Units 1–12).** Hooded Figure (identity) · The First Hall (**bitmap dithering** for textured/shaded stone — Steve's idea, the chief addition beyond the outline) · A Place to Move (Gloaming's movement/collision; save/restore over texture) · The Keep's Hand (room-as-data: palette + ASCII map) · The Room Graph · Through the Doorway (edge-matched re-entry) · The Hero Remembers (per-room RAM state + chalk persistence) · Three Rooms (designed keep) · Light and Shadow (dither-density lighting from a torch) · Furnishings (decoration; blocking-by-brightness) · Mood through Constraint (per-room falloff) · A Keep with Character (multi-torch nearest-light). Each verified on Emu198x; build 1742→1754 pages.
+- **Consolidation pass.** QA: all `CodeFromFile` refs resolve, all screenshots present, British English clean, unit numbers match, build green. Fixed unit `game:` frontmatter 3→2 (the index−1 convention; index stays 3). Updated this log, the revamp tracker (current-state banner over the superseded engine-first detail), and the per-unit plan's build status.
+
+**Remaining for the Place:** sub-arc 1.4 *The Keep Has a Voice* (audio — SFX driver, the gold goal, a beeper theme, the title→explore→win→title loop, real hardware). The 8-unit October-cut floor (1.1–1.2) is met.
+
+**Deferred:** bump Emu198x video-capture quality (mp4 averages fine dithering to flat colour), then recapture the dither-heavy units (2, 3, 9–12) with motion video.
+
+---
+
 ## 2026-06-01 — Keystone: "Modules, not games" (design accepted, migration pending)
 
 **Type:** curriculum architecture decision (binding) — model change

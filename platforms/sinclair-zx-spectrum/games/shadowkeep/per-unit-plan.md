@@ -9,6 +9,15 @@
 
 > *"The keep at night, complete. A place, then its inhabitants and identity. The first chapter of a longer game."*
 
+> **Build status (2026-06-02): Units 1–12 authored and live** (pass-1 module *the Place*).
+> Sub-arc **1.1 Into the Keep** ✅ (A Hooded Figure · The First Hall · A Place to Move · The Keep's
+> Hand), **1.2 A Keep of Rooms** ✅ (The Room Graph · Through the Doorway · The Hero Remembers ·
+> Three Rooms), **1.3 Mood and Light** ✅ (Light and Shadow · Furnishings · Mood through Constraint ·
+> A Keep with Character). **Remaining: 1.4 The Keep Has a Voice** (audio — footsteps/SFX, the gold
+> goal, a beeper theme, the title→explore→win→title loop, real hardware). As-built closely follows
+> the outline below; the chief addition was **bitmap dithering** as the stone-and-lighting technique
+> (Units 2, 9–12). The 8-unit October-cut floor (1.1–1.2) is met.
+
 ## Position in curriculum
 
 **Volume 1, Game 2** of the Spectrum Assembly track — immediately after the Primer + tiny first

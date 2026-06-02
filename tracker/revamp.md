@@ -4,7 +4,9 @@ Live status for the October 2026 launch + the broader Spectrum-first commercial-
 
 ## October 2026 target
 
-Spectrum content targets October 2026 for Crash! Live. Close to having enough to ship — BASIC V1 done, landing page shipped, Shadowkeep 8 of 32 units live. October is a target, not a hard deadline.
+Spectrum content targets October 2026 for Crash! Live. Close to having enough to ship — BASIC V1 done, landing page shipped, Shadowkeep (re-paced to the cell-based **Place**, pass 1) at **12 units live** — sub-arcs 1.1–1.3 done, audio (1.4) remaining. October is a target, not a hard deadline.
+
+> **Reconciliation note (2026-06-02).** Shadowkeep was re-paced (2026-05-29, gentle-ramp) and reset this session to the **cell-based _Place_** — pass 1 of a game spanning several modules ([modules-not-games](../decisions/modules-not-games.md)), carrying Gloaming's engine; the three old engine changes (pre-shift movement, Y-sort, decoupled collision) are **relocated** to later rendering games. Unit counts are **illustrative, not targets** ([curriculum-structure](../decisions/curriculum-structure.md)). The amended decision records and the per-unit plan are current; **the engine-first / 32-64-unit / powers-of-2 detail elsewhere in this tracker is superseded** and kept for history pending a fuller tracker rewrite.
 
 Shadowkeep is the lead game. Cadence (C64), Nightshade (NES), Exodus (Amiga) defer wholesale to post-launch. Binding decisions: [october-2026-launch-spec.md](../decisions/october-2026-launch-spec.md), [shadowkeep-32-unit-commitment.md](../decisions/shadowkeep-32-unit-commitment.md), [shadowkeep-four-arc-framing.md](../decisions/shadowkeep-four-arc-framing.md), [spectrum-basic-32-games.md](../decisions/spectrum-basic-32-games.md), [spectrum-basic-v6.4-renames.md](../decisions/spectrum-basic-v6.4-renames.md), [real-retro-games.md](../decisions/real-retro-games.md), [curriculum-structure.md](../decisions/curriculum-structure.md), [spectrum-assembly-track.md](../decisions/spectrum-assembly-track.md), [inspired-by-not-clones-naming.md](../decisions/inspired-by-not-clones-naming.md).
 
@@ -12,7 +14,7 @@ Shadowkeep is the lead game. Cadence (C64), Nightshade (NES), Exodus (Amiga) def
 
 | Order | Track | What | Stage | Target |
 |---|---|---|---|---|
-| **1** | Spectrum Assembly | **Shadowkeep** | 8 of 32 units shipped (Arc 1 sub-arc 1); three engine changes ahead | Arc 1 + Arc 2 (32 units) |
+| **1** | Spectrum Assembly | **Shadowkeep — _the Place_** (pass 1) | 12 units live (1.1 keep · 1.2 rooms · 1.3 light); audio (1.4) remaining | A complete cell-based Place; counts illustrative |
 | **2** | Spectrum BASIC | **Volume 1 (8 games)** | **Done.** V2 work (Cipher) started | ~~Volume 1 ships October~~ Shipped |
 | **3** | Spectrum vault | Review existing + fill referenced gaps | In progress | Every reference from a shipped unit resolves |
 | **4** | Spectrum landing | Polished page for QR-code visitors | **Done** (initial version) | Polish pass before event |
@@ -72,7 +74,7 @@ Every unit weaves in links to relevant **vault entries** (games, hardware, peopl
 
 **Launch artefacts** (each at full bar):
 
-1. **Shadowkeep Arcs 1+2 (32 units).** Three engine commitments: pixel-level sprite movement, Y-sorted layered rendering, decoupled attribute/collision. Reference points: *Atic Atac*, *Knight Lore*, *Cybernoid II*. See `decisions/shadowkeep-32-unit-commitment.md`. **8/32 shipped.**
+1. **Shadowkeep — _the Place_ (pass 1).** Cell-based atmospheric flick-adventure carrying Gloaming's engine; the three old engine changes (pre-shift movement, Y-sort, decoupled collision) are **relocated** to later rendering games. Reference points: *Atic Atac*, *Knight Lore*. See `decisions/shadowkeep-32-unit-commitment.md` (amended) + `decisions/modules-not-games.md`. **12 units shipped** (sub-arcs 1.1–1.3); audio (1.4) remaining.
 2. **Spectrum BASIC Volume 1 (8 games) at Usborne bar.** **Done.** V2 work started. Volumes 2-4 ship through ~2028-29.
 3. **Spectrum vault: review existing + fill gaps.** Every reference from a shipped unit must resolve. **In progress.**
 4. **Polished Spectrum landing page** for QR-code visitors. **Done** (initial version; polish pass before event).
@@ -83,11 +85,12 @@ Every unit weaves in links to relevant **vault entries** (games, hardware, peopl
 
 ---
 
-## Shadowkeep (Spectrum Assembly Game 1) — PRIORITY 1
+## Shadowkeep (Spectrum Assembly) — PRIORITY 1
 
-**October ship: Arcs 1+2 = 32 units.** Full Shadowkeep is 64 units across 4 arcs (Arcs 3-4 post-October).
+> **Current state (2026-06-02) — read this first; the detail below is superseded.**
+> Shadowkeep is now the cell-based **_Place_** (pass 1 of a game taught across several modules — [modules-not-games](../decisions/modules-not-games.md)), carrying Gloaming's engine. **12 units authored and live:** sub-arc **1.1 Into the Keep** (Hooded Figure · First Hall/dither · A Place to Move · The Keep's Hand), **1.2 A Keep of Rooms** (Room Graph · Through the Doorway · The Hero Remembers · Three Rooms), **1.3 Mood and Light** (Light and Shadow · Furnishings · Mood through Constraint · A Keep with Character). **Remaining for the Place:** sub-arc **1.4 The Keep Has a Voice** (audio: footsteps/SFX, the gold goal, a beeper theme, the title→explore→win→title loop, real hardware). Counts are illustrative. The three engine changes and the "attribute-decoupled / tile-map collision / sprite-shifter / object-system" detail below belong to the **superseded engine-first plan** and are relocated to later rendering games; kept for history. Current sources of truth: the amended `decisions/shadowkeep-32-unit-commitment.md` + `shadowkeep-four-arc-framing.md`, `decisions/modules-not-games.md`, `decisions/curriculum-structure.md`, and `platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md`.
 
-**Genre:** Multi-room top-down adventure in the flick-adventure tradition (*Atic Atac*, *Knight Lore*, *Cybernoid II*).
+**Genre:** Multi-room flick-adventure in the *Atic Atac* / *Knight Lore* tradition (cell-based; atmosphere via art, light and sound).
 
 **Constraint position:** Period-faithful through Arcs 1-2; period-possible techniques arrive in Arcs 3-4. See [decisions/constraint-position.md](../decisions/constraint-position.md).
 
@@ -278,3 +281,6 @@ See [platforms/commodore-amiga/assembly-skeleton.md](../platforms/commodore-amig
 | 2026-05-20 | **Shadowkeep brief v2.0** consolidated from v1.0 brief + shadowkeep-phase-1-design + shadowkeep-unit-3-plan into a single current-state brief aligned to the 32-unit / four-arc framing. The earlier "attribute byte = game rule" mechanic retired; attribute is now visual vocabulary only, collision lives in a tile-map. |
 | 2026-05-20 | **Memory hoist + tracker tidy.** `memory/spectrum-assembly.md` and `memory/spectrum-basic.md` shrunk to pointers; structural curriculum content hoisted into `docs/platforms/sinclair-zx-spectrum/{assembly,basic}.md`. `assembly.md` rewritten from v5.0 (4 games × 256 units) to current v0.3 (44 entries × 6 volumes / Shadowkeep-V1.1). Tracker rewritten to align with 32-unit Shadowkeep commitment and current docs/ layout; Cadence/Nightshade/Exodus sections collapsed to pointers (full content preserved in git history). |
 | 2026-05-26 | **October reframed as target, not hard deadline.** BASIC V1 done (8 games, ~48 units); landing page shipped; Shadowkeep 8/32. Close enough that urgency feels artificial. Session-start gate removed from CLAUDE.md. Tracker status table updated to reflect current state. |
+| 2026-05-29 | **Shadowkeep re-paced — gentle ramp.** `decisions/spectrum-assembly-gentle-ramp.md`: the three engine changes (pre-shift movement, Y-sort render, decoupled attribute/collision) **relocated** out of Shadowkeep to later rendering games (Smooth Motion / Overlap / Greypeak). Shadowkeep re-scoped to a **cell-based atmospheric flick-adventure** carrying the tiny game's engine; commercial bar met via art/light/sound. The old engine-first Units 1–8 thereby superseded. |
+| 2026-06-02 | **Records reconciled to the module model + no-fixed-counts.** Shadowkeep re-framed as a game spanning several modules; **pass 1 = _the Place_**, Arc 2 + Arcs 3–4 become later revisit modules. Amended `shadowkeep-32-unit-commitment.md` + `shadowkeep-four-arc-framing.md`; per-unit plan gains a Module-shape section; bitmap **dithering** adopted as the stone/lighting technique (Steve's call). |
+| 2026-06-02 | **Shadowkeep reset + the Place authored (Units 1–12).** Old engine-first units retired (preserved in git); module reset to a coming-soon Place, then authored end-to-end through sub-arcs 1.1–1.3 — identity, dithered stone, movement, room-as-data, room graph, edge-matched doorways, per-room persistent state (chalk), three designed rooms, dither-density lighting, furnishings, per-room mood, multi-torch character. Each verified on Emu198x; build 1742→1754 pages. Unit `game:` frontmatter corrected to 2 (matching the index-1 convention). **Remaining: sub-arc 1.4 (audio).** |
