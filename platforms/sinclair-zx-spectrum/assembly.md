@@ -2,11 +2,11 @@
 
 **Platform:** Sinclair ZX Spectrum
 **Track:** Z80 Assembly
-**Shape:** 44 entries across 6 volumes (~2,396 units total)
-**October 2026 ship:** Shadowkeep (V1.1), Arcs 1+2 = 32 units
-**Status:** Active. v0.3 track structure locked.
+**Shape:** A sequence of **modules** across 6 volumes — a `teaching` Primer, then the Volume-1 game and revisit modules (~11 entries), with Volumes 2–6 sketched. The original 44-game lattice plus the gentle-ramp opening (Primer + *Gloaming* + two rendering inserts). ~2,400 units, illustrative. Modules — not games — are the unit of sequencing; one game can span several modules ([decisions/modules-not-games.md](../../decisions/modules-not-games.md)).
+**October 2026 ship:** The gentle assembly opening — Primer (*Meet the Machine*) + the complete tiny game *Gloaming* + the start of the cell-based *Shadowkeep* (its **Place**). 12 units of the Place are live.
+**Status:** Active. v0.4 — reconciled to the gentle-ramp + module model.
 
-**Strategic context:** Binding decisions are [decisions/spectrum-assembly-track.md](../../decisions/spectrum-assembly-track.md) (44-entry structure, layer model, branches), [decisions/spectrum-assembly-per-game-scope.md](../../decisions/spectrum-assembly-per-game-scope.md) (per-game unit estimates), [decisions/shadowkeep-32-unit-commitment.md](../../decisions/shadowkeep-32-unit-commitment.md) (Shadowkeep October scope), [decisions/shadowkeep-four-arc-framing.md](../../decisions/shadowkeep-four-arc-framing.md) (Shadowkeep full-game framing), [decisions/inspired-by-not-clones-naming.md](../../decisions/inspired-by-not-clones-naming.md) (naming convention), [decisions/curriculum-structure.md](../../decisions/curriculum-structure.md) (multi-disciplinary bar), [decisions/real-retro-games.md](../../decisions/real-retro-games.md), [decisions/spiral-and-incremental.md](../../decisions/spiral-and-incremental.md), [decisions/constraint-position.md](../../decisions/constraint-position.md). Live status: [tracker/revamp.md](../../tracker/revamp.md).
+**Strategic context:** The **governing** decision for the track's opening, the per-game technique budget, and the re-scope of Shadowkeep is [decisions/spectrum-assembly-gentle-ramp.md](../../decisions/spectrum-assembly-gentle-ramp.md). The track is sequenced as modules per [decisions/modules-not-games.md](../../decisions/modules-not-games.md) (migrated 2026-06-01: bare slugs, `modules/` catalogue, ordering = catalogue array position). The original track structure is [decisions/spectrum-assembly-track.md](../../decisions/spectrum-assembly-track.md) (44-entry lattice, layer model, branches — amended by the gentle-ramp), with [decisions/spectrum-assembly-per-game-scope.md](../../decisions/spectrum-assembly-per-game-scope.md) (per-game unit estimates, now illustrative). Shadowkeep's own records, both amended for the cell-based Place: [decisions/shadowkeep-32-unit-commitment.md](../../decisions/shadowkeep-32-unit-commitment.md) and [decisions/shadowkeep-four-arc-framing.md](../../decisions/shadowkeep-four-arc-framing.md). Also: [decisions/inspired-by-not-clones-naming.md](../../decisions/inspired-by-not-clones-naming.md) (naming), [decisions/curriculum-structure.md](../../decisions/curriculum-structure.md) (multi-disciplinary bar, no fixed unit counts), [decisions/real-retro-games.md](../../decisions/real-retro-games.md), [decisions/spiral-and-incremental.md](../../decisions/spiral-and-incremental.md), [decisions/constraint-position.md](../../decisions/constraint-position.md). Live status: [tracker/revamp.md](../../tracker/revamp.md).
 
 ---
 
@@ -25,7 +25,7 @@ Method, lens, and depth all serve the spine.
 
 ## Track structure
 
-**44 entries across 6 volumes.** Total scope ~2,396 units (per-game floors 28-96).
+**The 44-game L0 lattice across 6 volumes, plus the gentle-ramp opening.** The native-48K lattice is 44 entries (V1–V6 below); ahead of and within Volume 1 sit the `teaching` Primer, the tiny first game *Gloaming*, and the two rendering inserts (*Smooth Motion*, *Overlap*) that the [gentle-ramp decision](../../decisions/spectrum-assembly-gentle-ramp.md) adds. The track is sequenced as **modules** ([modules-not-games](../../decisions/modules-not-games.md)) — ordering is the module catalogue's array position, not the positional numbers in the tables below. Total scope ~2,400 units; **all unit counts here are illustrative markers, not targets** ([curriculum-structure](../../decisions/curriculum-structure.md)).
 
 | Volume | Identity | Entries | Layer |
 |---|---|---|---|
@@ -53,16 +53,24 @@ Working-draft names per the [inspired-by-not-clones convention](../../decisions/
 
 ### Volume 1 — *Rooms and Worlds*
 
-| # | Name | Tradition | Headline (Design Concept) | Units |
-|---|------|-----------|---------------------------|-------|
-| 1 | **Shadowkeep** | Ultimate / Atic Atac / Knight Lore | Atmosphere (Sense of Place) | 64 |
-| 2 | Greypeak | Ritman / Ultimate / Knight Lore (iso) | Depth (Spatial Illusion) | 56 |
-| 3 | Underlight | Crow / Hewson / Starquake / Sabre Wulf | Openness (Non-Linear Geography) | 64 |
-| 4 | Whitewinter | Singleton / Lords of Midnight | Scale (Procedural Vastness) | 80 |
-| 5 | Brace and Boon | Ritman / Head Over Heels | Duality (Two-Character Mechanics) | 64 |
-| 6 | Embergate | Crow / Firelord, Gauntlet ports | Power (Equipment Progression) | 80 |
-| 7 | The Lantern Path | Melbourne House / Hobbit parser | Conversation (Modelled World) | 80 |
-| 8 | The Last Banner | Lothlorien / Yankee, Arnhem | Decision (Resource Trade-Offs) | 48 |
+Revised lineup per the [gentle-ramp decision](../../decisions/spectrum-assembly-gentle-ramp.md): the Primer and *Gloaming* open the track, and the rendering Trunk spreads across two inserts into Greypeak rather than being front-loaded into Shadowkeep. Counts are illustrative.
+
+| # | Entry | Tradition | Headline / role | New major technique(s) | ~Units |
+|---|-------|-----------|-----------------|------------------------|--------|
+| — | **Primer** | — | Meet the Machine (`teaching`, not a game) | machine literacy | ~8–12 |
+| 1 | **Gloaming** | tiny first game | "I finished a game in asm" | game loop; cell sprite + collision | ~20 |
+| 2 | **Shadowkeep** | Ultimate / Atic Atac | Atmosphere (Sense of Place) | room-data + flick transitions; atmosphere craft | 32 (Oct) / 64 full |
+| 3 | **Smooth Motion** (insert) | — | smoothness | pre-shifted sprites (sub-cell movement) | ~20 |
+| 4 | **Overlap** (insert) | — | sprites over scenery | masked sprite drawing | ~20 |
+| 5 | **Greypeak** | Ritman / Knight Lore (iso) | Depth (Spatial Illusion) | Y-sort depth ordering + isometric projection | ~56 |
+| 6 | **Underlight** | Crow / Hewson / Starquake / Sabre Wulf | Openness (Non-Linear Geography) | large room-graph + map streaming | ~64 |
+| 7 | **Whitewinter** | Singleton / Lords of Midnight | Scale (Procedural Vastness) | procedural generation + location-graph | ~80 |
+| 8 | **Brace and Boon** | Ritman / Head Over Heels | Duality (Two-Character Mechanics) | dual-entity control + state | ~64 |
+| 9 | **Embergate** | Crow / Firelord, Gauntlet ports | Power (Equipment Progression) | combat state machine; classes / XP / spells | ~80 |
+| 10 | **The Lantern Path** | Melbourne House / Hobbit parser | Conversation (Modelled World) | parser + dialogue + quest state | ~80 |
+| 11 | **The Last Banner** | Lothlorien / Yankee, Arnhem | Decision (Resource Trade-Offs) | tactical grid | ~48 |
+
+*Numbering note:* the gentle-ramp opening renumbers Volume 1 (Gloaming = game 1). Volumes 2–6 below keep their original v0.3 positional numbers (9–44), and the L+4a variant labels (e.g. *V1.2 Greypeak* — now game 5, *V3.17 Hostraider*) likewise read against the old numbering. A full catalogue renumber is deferred; ordering is in any case the module catalogue's array position, not these labels ([modules-not-games](../../decisions/modules-not-games.md)). *Whitewinter / Embergate / Lantern Path* are each multi-technique and likely need internal sub-arc discipline or their own inserts when spec'd — flagged by the gentle-ramp budget rule.
 
 ### Volume 2 — *Verticality and Gravity*
 
@@ -156,17 +164,17 @@ The game page renders headline + design concept as a dual-name. Techniques live 
 
 | # | Practice | First introduced |
 |---|----------|------------------|
-| 1 | LDIR + block-copy basics | Shadowkeep U2 |
-| 2 | Pre-computed lookup tables | Shadowkeep U2 |
-| 3 | Register pair strategy | Shadowkeep U7 |
-| 4 | Loop unrolling | Shadowkeep U8 |
-| 5 | Software clipping at edges | Shadowkeep U8 |
-| 6 | Self-modifying code (runtime) | V3.17 Hostraider |
-| 7 | Stack-as-data-pointer | V3.17 Hostraider |
-| 8 | Dirty-rectangle redraw (named) | V3.17 Hostraider |
-| 9 | T-state counting | V3.18 Ironstreak |
+| 1 | LDIR + block-copy basics | Gloaming (cell save/restore) |
+| 2 | Pre-computed lookup tables | Gloaming / Shadowkeep (screen-address tables) |
+| 3 | Register pair strategy | Smooth Motion (pre-shift) |
+| 4 | Loop unrolling | Smooth Motion (pre-shift) |
+| 5 | Software clipping at edges | Overlap (masking) |
+| 6 | Self-modifying code (runtime) | V3 Hostraider |
+| 7 | Stack-as-data-pointer | V3 Hostraider |
+| 8 | Dirty-rectangle redraw (named) | V3 Hostraider |
+| 9 | T-state counting | V3 Ironstreak |
 
-Five of nine are introduced in Shadowkeep; four in V3 (where action density makes them existential).
+The first five are introduced across the gentle opening (Gloaming → Smooth Motion → Overlap), where the rendering Trunk now lives; four in V3, where action density makes them existential. (The old mapping filed practices 1–5 under engine-first Shadowkeep units 2–8 — those units were retired when Shadowkeep became the cell-based Place.)
 
 ---
 
@@ -174,8 +182,8 @@ Five of nine are introduced in Shadowkeep; four in V3 (where action density make
 
 Techniques cluster into a Trunk + Branches model. Each layer's techniques are prerequisites for the next.
 
-- **Trunk (Layers 1-4)** — Shadowkeep introduces; every game inherits
-- **Branch A** — Adventure depth (Shadowkeep Arcs 3-4, flick-adventure tradition: items + multiple keeps + secrets + atmospheric cycles per [decisions/shadowkeep-four-arc-framing.md](../../decisions/shadowkeep-four-arc-framing.md))
+- **Trunk (Layers 1-4)** — introduced *gently across the opening* (Primer → Gloaming → Smooth Motion → Overlap → Greypeak), **not** front-loaded into Shadowkeep; every later game inherits. See [decisions/spectrum-assembly-gentle-ramp.md](../../decisions/spectrum-assembly-gentle-ramp.md)
+- **Branch A** — Adventure depth (Shadowkeep's later revisit modules, flick-adventure tradition: items + multiple keeps + secrets + atmospheric cycles per [decisions/shadowkeep-four-arc-framing.md](../../decisions/shadowkeep-four-arc-framing.md))
 - **Branch B** — Platformer specifics (V2)
 - **Branch C** — Scrolling and density (V3)
 - **Branch D** — Real-world sim (V4 sport / vehicle)
@@ -183,11 +191,11 @@ Techniques cluster into a Trunk + Branches model. Each layer's techniques are pr
 - **Branch F** — Cross-cutting specials (parser, isometric, procedural)
 - **Branch G** — Audio hardware (AY + 128K — introduced V2.16 *The Witch's Year*, deepened V3.17 *Hostraider*)
 
-**Deprecation pairs are first-class teaching moments**, not refactors. When a richer technique replaces a simpler one, the transition is the lesson:
+**Deprecation pairs are first-class teaching moments**, not refactors. When a richer technique replaces a simpler one, the transition is the lesson. These pairs now play out *across games* — the simple version ships in an earlier game, the upgrade motivated by its felt limitation in a later one:
 
-- cell-snapped movement → pre-shifted sprite tables (Shadowkeep Arc 1.2)
-- single-draw rendering → Y-sort layered rendering (Shadowkeep Arc 1.3)
-- attribute-byte-as-collision → tile-map collision (Shadowkeep Arc 1.4)
+- cell-snapped movement (Gloaming) → pre-shifted sprite tables (Smooth Motion)
+- single-draw rendering (Shadowkeep, the Place) → masked drawing (Overlap) → Y-sort layered rendering (Greypeak)
+- attribute-byte-as-collision (Gloaming / Shadowkeep) → tile-map collision (Greypeak)
 - flick transitions → smooth scroll (V3)
 - isometric → pseudo-3D → wireframe 3D → solid 3D (V4)
 
@@ -214,24 +222,15 @@ Cuts apply only after a real timeline slip is identified. The default plan is th
 
 ## October 2026 ship
 
-> **Current state (2026-06-02).** Shadowkeep was re-paced to the cell-based **_Place_** (pass 1 of a game across several modules — [modules-not-games](../../decisions/modules-not-games.md)), carrying Gloaming's engine. **12 units live** (sub-arcs 1.1–1.3); audio (1.4) remaining; counts illustrative. The three engine commitments described below (pre-shift/masked sprites, Y-sort, decoupled collision) are **relocated** to later rendering games and are *not* built in Shadowkeep. The arc / 32-unit / engine detail in this section is **superseded** and wants a fuller rewrite of this track-wide doc (a separate task). Current sources: [tracker/revamp.md](../../tracker/revamp.md), the amended Shadowkeep decision records, and [games/shadowkeep/brief.md](games/shadowkeep/brief.md) (v3.0). (The modules-not-games migration is already executed — bare slugs, `modules/` catalogue.)
+The October artefact is **the gentle assembly opening**, not "32 units of Shadowkeep" ([gentle-ramp](../../decisions/spectrum-assembly-gentle-ramp.md) § October reframed):
 
-**Only Shadowkeep Arcs 1-2 / 32 units ships.** All other track work is post-October.
+> Primer (*Meet the Machine*) + the *complete* tiny game **Gloaming** + the start of the cell-based **Shadowkeep** (its **Place**).
 
-Shadowkeep (Volume 1, Game 1) is structured as four arcs of 16 units (64 total). October ships Arcs 1+2:
+This is the more achievable launch: a learner can actually *finish* a real game in assembly by October, and the hardest engineering is off the critical path. All other track work is post-October.
 
-- **Arc 1 — *Foundations and a Place*** (Units 1-16)
-- **Arc 2 — *Inhabitants and Identity*** (Units 17-32)
-- Arc 3 — *Beyond the Walls* (Units 33-48) — post-October Year 1
-- Arc 4 — *The Greater World* (Units 49-64) — post-October Year 2
+**Shadowkeep is the cell-based Place** — pass 1 of a game told across several modules ([modules-not-games](../../decisions/modules-not-games.md)), carrying Gloaming's engine. **12 units are live** (sub-arcs 1.1–1.3); the audio sub-arc (1.4) is remaining. Counts are illustrative. Its later arcs (items, multiple keeps, tape save/load, secrets, atmospheric cycles) become **later revisit modules**, sequenced into the lineup after intervening games — not a single 64-unit block. The signature technique is **bitmap dithering** (perceived shades from mixed INK/PAPER pixels), used for textured stone, distance-based lighting, and per-room mood.
 
-**Three engine commitments** introduced progressively across Arc 1:
-
-1. Pixel-level sprite movement (2-4 pixels per frame; pre-shifted sprite tables; masked sprite drawing)
-2. Back-to-front Y-sorted layered rendering
-3. Decoupled attribute / collision (collision lives in tile-map; attribute area becomes purely cosmetic)
-
-Reference points: *Atic Atac*, *Knight Lore*, *Cybernoid II*.
+**The advanced rendering engine is *not* built in Shadowkeep.** Pixel-level pre-shifted/masked sprite movement, Y-sort layered rendering, and tile-map-decoupled collision are **relocated** to the rendering games — *Smooth Motion* (pre-shift), *Overlap* (masking), *Greypeak* (Y-sort + iso) — each motivated by a felt limitation of the game before it. Shadowkeep hits commercial bar the Manic Miner / Atic Atac way: art, lighting, room design, audio, completeness. Reference points: *Atic Atac*, *Manic Miner*, *Knight Lore* (for Greypeak's iso).
 
 **Genre honesty:** Shadowkeep stays in the flick-adventure tradition. Combat / classes / XP / spells / branching narrative / multi-NPC dialogue / quest state / full Singleton-class location-graph are NOT taught in Shadowkeep — they're primary teaching in V1.6 Embergate (action-RPG), V1.7 The Lantern Path (parser), V1.4 Whitewinter (procedural), V3.17 Hostraider (projectile), V3.20 Edge of Iron (combat). See [decisions/shadowkeep-four-arc-framing.md](../../decisions/shadowkeep-four-arc-framing.md) for the full redistribution table.
 
@@ -257,8 +256,8 @@ Multi-decade by design. Solo dev pace ~3-4 days per unit:
 
 | Period | Focus | Approx units |
 |--------|-------|--------------|
-| 2026 Oct | Shadowkeep Arcs 1-2 | 32 (committed) |
-| 2027-28 | Shadowkeep Arc 3 + BASIC V1 + start of V1.2 Greypeak | ~50 new Assembly |
+| 2026 Oct | Gentle opening: Primer + Gloaming + start of cell-based Shadowkeep (Place) | ~40–50 across the opening; the Place's 12 live |
+| 2027-28 | Shadowkeep's later revisit modules + the rendering inserts (Smooth Motion / Overlap) + start of Greypeak | ~50 new Assembly |
 | 2028-30 | V1 Games 1-8 substantially complete | ~250 |
 | 2030-32 | V2 + late V1-4 additions | ~500 |
 | 2032-35 | V3 | ~400 |
@@ -280,7 +279,8 @@ Together the two tracks form one Spectrum journey: BASIC is the on-ramp; Assembl
 
 ## Changelog
 
-- **v0.3 (2026-05-19) — current.** Wholesale rewrite. Track structure expanded from 4 games to 44 entries across 6 volumes per [decisions/spectrum-assembly-track.md](../../decisions/spectrum-assembly-track.md). Working-draft inspired-by names locked for all 44 entries. Layer model (L0 + L+1 + L+3 + L+4a + L+4b) introduced. Three-axis design pattern (headline + concept + technique) replaces the old single-name pattern. Tech-tree with deprecation pairs (Trunk + Branches A-G) replaces the implicit progression. Three cross-cutting axes (Design Concepts / Engineering Practices / Production Craft) named. Shadowkeep four-arc framing (64 units, October ships Arcs 1+2 = 32) replaces the 256-unit / 17-phase v5.0 framing. Per-entry unit budgets per [decisions/spectrum-assembly-per-game-scope.md](../../decisions/spectrum-assembly-per-game-scope.md). Genre honesty applied to Shadowkeep (combat / classes / parser / branching narrative redistributed to V1.6 / V1.7 / V3.17 / V3.20). Three deleted v5.0 entries (Ionfire, Grimstone, Dawnreach) preserved in git history; their content was 4-game-track planning that no longer applies.
+- **v0.4 (2026-06-02) — current.** Reconciled to [spectrum-assembly-gentle-ramp.md](../../decisions/spectrum-assembly-gentle-ramp.md) and [modules-not-games.md](../../decisions/modules-not-games.md). Removed the engine-first framing throughout: "Shadowkeep introduces Trunk Layers 1–4 / every game inherits", the four-arcs-of-16 (64-unit) structure, the "32 units of Shadowkeep ships in October" anchor, and the three engine commitments as Shadowkeep content. The rendering Trunk now spreads across the gentle opening (Primer → Gloaming → Smooth Motion → Overlap → Greypeak); Shadowkeep is the cell-based *Place* (12 units live, signature technique bitmap dithering); the October artefact is the gentle opening. Volume 1 lineup, Engineering-Practice first-encounters, tech-tree Trunk and deprecation pairs, timeline, and header all updated. Track sequenced as **modules**, not games (bare slugs, catalogue array position). Unit counts marked illustrative per [curriculum-structure.md](../../decisions/curriculum-structure.md) (the powers-of-2 / fixed-count framing was already retired there). V2–V6 positional numbering left at v0.3 pending a full catalogue renumber (separate). v0.3 lineup and engine-first detail preserved in git history.
+- **v0.3 (2026-05-19).** Wholesale rewrite. Track structure expanded from 4 games to 44 entries across 6 volumes per [decisions/spectrum-assembly-track.md](../../decisions/spectrum-assembly-track.md). Working-draft inspired-by names locked for all 44 entries. Layer model (L0 + L+1 + L+3 + L+4a + L+4b) introduced. Three-axis design pattern (headline + concept + technique) replaces the old single-name pattern. Tech-tree with deprecation pairs (Trunk + Branches A-G) replaces the implicit progression. Three cross-cutting axes (Design Concepts / Engineering Practices / Production Craft) named. Shadowkeep four-arc framing (64 units, October ships Arcs 1+2 = 32) replaces the 256-unit / 17-phase v5.0 framing. Per-entry unit budgets per [decisions/spectrum-assembly-per-game-scope.md](../../decisions/spectrum-assembly-per-game-scope.md). Genre honesty applied to Shadowkeep (combat / classes / parser / branching narrative redistributed to V1.6 / V1.7 / V3.17 / V3.20). Three deleted v5.0 entries (Ionfire, Grimstone, Dawnreach) preserved in git history; their content was 4-game-track planning that no longer applies.
 - **v5.0 (2026-05-13):** 4 games × 256 units restructure under the multi-disciplinary commitment. Game 1 reconciled as Shadowkeep. Preserved in git history.
 - **v4.0 (2026-03-09):** Reduced from 16 to 4 assembly games. Preserved in git history.
 - **v3.x and earlier:** 16-game curriculum. Preserved in git history.

@@ -8,6 +8,19 @@
 > into Greypeak. Ordering is **hybrid** — the early sequence (opening → Greypeak) is strictly
 > monotonic; later volumes assume a competent learner and ramp within-theme. The 44-entry count
 > grows by the opening + rendering inserts; the gentle-ramp decision holds the revised lineup.
+>
+> **FURTHER (2026-06-02).** Two reframes since landed, both binding over this record's body:
+> (1) **October anchor reframed.** § *The decision* line *"October 2026 launch (Shadowkeep Arcs
+> 1-2 at 32 units) is unchanged"* is **superseded** — the launch artefact is now the gentle
+> opening (Primer + the tiny game *Gloaming* + the start of the cell-based *Shadowkeep*, its
+> *Place*), per [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) § October
+> reframed. Shadowkeep is the cell-based Place; its later arcs become **revisit modules**, not a
+> 64-unit block. (2) **Modules, not games.** The migration in [modules-not-games.md](modules-not-games.md)
+> was **executed 2026-06-01** — slugs are bare, ordering is the module catalogue's array position,
+> and a game can span several modules. Read "44 entries / games" throughout this body as
+> **modules**, and all unit counts as illustrative ([curriculum-structure.md](curriculum-structure.md);
+> the powers-of-2 / fixed-count framing is retired there). The current-state working doc is
+> [platforms/sinclair-zx-spectrum/assembly.md](../platforms/sinclair-zx-spectrum/assembly.md) (v0.4).
 
 ## The decision
 

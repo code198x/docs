@@ -1,6 +1,16 @@
 # Decision: Commercial Bar for Curriculum Revamp
 
-**Status:** Active for bar definitions. October scope was retargeted — see [october-2026-launch-spec.md](october-2026-launch-spec.md) (Spectrum-only ship) and [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) (Shadowkeep Arcs 1+2 / 32 units). Cadence / Nightshade / Exodus are deferred whole to post-October.
+> **AMENDED 2026-06-02.** The **commercial-bar definitions in this doc stand** — they are the
+> live bar for every Game 1. Only the *Shadowkeep scope phrasing* is superseded: "Shadowkeep
+> Arcs 1+2 / 32 units" (Status line + § The decision) is reframed by
+> [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) — the October artefact is
+> the **gentle assembly opening** (Primer + the tiny game *Gloaming* + the start of the cell-based
+> *Shadowkeep*, its *Place*), and Shadowkeep hits commercial bar through art / lighting / room
+> design / audio, not an advanced engine. Per [modules-not-games.md](modules-not-games.md)
+> (migrated 2026-06-01), the lineup is a sequence of **modules** and counts are illustrative.
+> Read "Arcs 1+2 / 32 units" below as the superseded framing.
+
+**Status:** Active for bar definitions. October scope was retargeted — see [october-2026-launch-spec.md](october-2026-launch-spec.md) (Spectrum-only ship) and [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) (Shadowkeep Arcs 1+2 / 32 units, now reframed — see banner). Cadence / Nightshade / Exodus are deferred whole to post-October.
 
 ## The decision
 
