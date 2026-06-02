@@ -214,6 +214,8 @@ Cuts apply only after a real timeline slip is identified. The default plan is th
 
 ## October 2026 ship
 
+> **Current state (2026-06-02).** Shadowkeep was re-paced to the cell-based **_Place_** (pass 1 of a game across several modules — [modules-not-games](../../decisions/modules-not-games.md)), carrying Gloaming's engine. **12 units live** (sub-arcs 1.1–1.3); audio (1.4) remaining; counts illustrative. The three engine commitments described below (pre-shift/masked sprites, Y-sort, decoupled collision) are **relocated** to later rendering games and are *not* built in Shadowkeep. The arc / 32-unit / engine detail in this section is **superseded**, kept pending a fuller rewrite of this track-wide doc (entangled with the pending modules-not-games migration). Current sources: [tracker/revamp.md](../../tracker/revamp.md), the amended Shadowkeep decision records, and [games/shadowkeep/brief.md](games/shadowkeep/brief.md) (v3.0).
+
 **Only Shadowkeep Arcs 1-2 / 32 units ships.** All other track work is post-October.
 
 Shadowkeep (Volume 1, Game 1) is structured as four arcs of 16 units (64 total). October ships Arcs 1+2:
@@ -233,9 +235,9 @@ Reference points: *Atic Atac*, *Knight Lore*, *Cybernoid II*.
 
 **Genre honesty:** Shadowkeep stays in the flick-adventure tradition. Combat / classes / XP / spells / branching narrative / multi-NPC dialogue / quest state / full Singleton-class location-graph are NOT taught in Shadowkeep — they're primary teaching in V1.6 Embergate (action-RPG), V1.7 The Lantern Path (parser), V1.4 Whitewinter (procedural), V3.17 Hostraider (projectile), V3.20 Edge of Iron (combat). See [decisions/shadowkeep-four-arc-framing.md](../../decisions/shadowkeep-four-arc-framing.md) for the full redistribution table.
 
-**Existing 8 published units stay live** until hard-replaced. Engine evolution is the curriculum — new units introduce the new engine progressively, not presuppose it.
+**The old engine-first Units 1–8 were retired** (2026-06-02) when Shadowkeep reset to the cell-based Place; preserved in git history. Units 1–12 of the Place are now live.
 
-**Full Shadowkeep design:** [games/shadowkeep/brief.md](games/shadowkeep/brief.md). Per-unit reference: [games/shadowkeep/per-unit-plan.md](games/shadowkeep/per-unit-plan.md). Plus sibling design docs: [engineering-plan.md](games/shadowkeep/engineering-plan.md), [memory-budget.md](games/shadowkeep/memory-budget.md), [object-system.md](games/shadowkeep/object-system.md), [sprite-shifter.md](games/shadowkeep/sprite-shifter.md), [tile-map.md](games/shadowkeep/tile-map.md), [beeper-spec.md](games/shadowkeep/beeper-spec.md).
+**Full Shadowkeep design:** [games/shadowkeep/brief.md](games/shadowkeep/brief.md) (v3.0, cell-based Place). Per-unit reference: [games/shadowkeep/per-unit-plan.md](games/shadowkeep/per-unit-plan.md). Beeper theme spec (sub-arc 1.4): [games/shadowkeep/beeper-spec.md](games/shadowkeep/beeper-spec.md). The engine-first specs (engineering-plan, memory-budget, object-system, sprite-shifter, tile-map) are archived under [games/shadowkeep/superseded/](games/shadowkeep/superseded/) — relocated techniques, not current.
 
 ---
 
