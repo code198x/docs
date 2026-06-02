@@ -8,6 +8,17 @@
 > pre-shift / masking / Y-sort. The advanced rendering Trunk relocates to Greypeak + inserts; the
 > Arc 1–2 per-unit refinements (point 4 below) are re-paced to cell-based atmosphere.
 
+> **AMENDED AGAIN 2026-06-02 by [modules-not-games.md](modules-not-games.md) +
+> [curriculum-structure.md](curriculum-structure.md).** The four arcs are **illustrative chapters,
+> not fixed 16-unit blocks**, and they now map onto the **module model**: a game can be taught by
+> several modules, and the four arcs are **separate modules**, not one ~64-unit game. **Arc 1 = the
+> `shadowkeep` pass-1 module (*the Place*)**, authored for October as an extension of Gloaming;
+> **Arcs 2–4 = later `game: shadowkeep` revisit modules** (pass 2+), slotted into the lineup after
+> intervening games, each within its own 1–2-majors budget. The "~64 units" total below is a
+> direction-of-travel marker, not a count. The genre-honesty table and drift triggers (no combat /
+> classes / spells / quest-state / branching narrative in Shadowkeep) **all still bind** — the
+> module split changes packaging and pacing, not what Shadowkeep *is*.
+
 ## The decision
 
 Extends [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) with a **full four-arc framing** for Shadowkeep:
@@ -104,6 +115,6 @@ Shadowkeep's Arcs 3-4 (revised above) instead deepen the **flick-adventure** tra
 
 ## Status
 
-Active. Captured 2026-05-19. Same-day revision applied to Arcs 3.4 and 4 after honest-question audit identified genre-drift (combat / classes / branching narrative moved to V1.6 / V1.7 / V3.17 / V3.20 where canonically primary). Extends [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) — does not supersede. Amended 2026-05-29 by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) — Shadowkeep re-scoped to cell-based atmosphere; four-arc structure and Arcs 3–4 stand; advanced rendering Trunk relocated to Greypeak. Anchored in [[spectrum-assembly]] (current-state Assembly summary).
+Active. Captured 2026-05-19. Same-day revision applied to Arcs 3.4 and 4 after honest-question audit identified genre-drift (combat / classes / branching narrative moved to V1.6 / V1.7 / V3.17 / V3.20 where canonically primary). Extends [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) — does not supersede. Amended 2026-05-29 by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) — Shadowkeep re-scoped to cell-based atmosphere; four-arc structure and Arcs 3–4 stand; advanced rendering Trunk relocated to Greypeak. Amended again 2026-06-02 by [modules-not-games.md](modules-not-games.md) + [curriculum-structure.md](curriculum-structure.md) — four arcs reframed as illustrative chapters mapping onto separate modules (Arc 1 = pass-1 *the Place*; Arcs 2–4 = later revisit modules); counts illustrative; genre-honesty table and drift triggers unchanged. Anchored in [[spectrum-assembly]] (current-state Assembly summary).
 
 Per-unit refinements (point 4 above) need application to `docs/platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md` as the next concrete step. The redistributed techniques become primary teachings in their natural games when those games are spec'd.

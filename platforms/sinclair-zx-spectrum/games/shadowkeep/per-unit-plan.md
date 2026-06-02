@@ -22,6 +22,34 @@ its look once the learner has felt the limits of cell-snapped movement and singl
 **Engine:** cell-based throughout. Cell-snapped movement, single-draw sprites with save/restore,
 attribute-driven lighting, tile-map collision — every one of these **carried in from the tiny game**.
 
+## Module shape — Shadowkeep is a game across several modules
+
+> **Added 2026-06-02.** Reconciles this plan with [`modules-not-games.md`](../../../../decisions/modules-not-games.md)
+> and the no-fixed-counts stance in [`curriculum-structure.md`](../../../../decisions/curriculum-structure.md).
+
+Per the module model, a game can be taught by **several modules**, and a *revisit* returns to it
+after intervening games. Shadowkeep is **not one ~64-unit block** — it is a game whose chapters are
+separate modules, each slotted into the lineup where the spiral wants it:
+
+- **Module `shadowkeep` (pass 1) — *the Place.*** The module authored for October. Roughly **Arc 1**
+  below: a multi-room, lit, atmospheric keep you explore and clear. Deliberately **an extension of
+  Gloaming in technique** — it carries Gloaming's engine wholesale and adds, at most, the one or two
+  majors a single module's budget allows (the flick-screen world, then atmosphere). A complete,
+  winnable game on its own.
+- **Later Shadowkeep revisit modules (pass 2, 3, …)** — each its own `game: shadowkeep` module,
+  placed *after* intervening games, each carrying its own one-or-two majors:
+  - *inhabitants* — cell-based NPCs, threat, lives (Arc 2's first half);
+  - *identity* — the numeric HUD / digit rendering Gloaming deferred, room names, score (Arc 2's
+    second half);
+  - the **Arc 3–4** content — items that matter, multiple keeps, tape save/load, secrets & lore,
+    atmospheric cycles, collection endings.
+
+This is why pass 1 stays small: the per-game **1–2-majors budget** is honoured by making each
+Shadowkeep chapter its own budget-sized module, not by cramming four arcs into one. The arc material
+below is the **design backlog** for those modules — not a single module's unit list, and not a fixed
+count. The "Arc N (Units X–Y)" and "four sub-arcs of four" labels that follow are **illustrative
+structure, not targets**; the project holds no fixed unit counts.
+
 ## The premise shift — what changed
 
 **Shadowkeep no longer teaches the foundations.** The tiny first game
@@ -52,10 +80,13 @@ polish, not new mechanics, per the 32-unit commitment's own drift trigger).
 
 ## October cut — "the start of Shadowkeep"
 
-The October launch artefact is *opening + complete tiny game + **the start of Shadowkeep***. Proposed
-October slice: **sub-arcs 1.1–1.2 (units 1–8)** — the keep established with its hooded hero, two or
-three designed rooms, and working flick-screen transitions. That shows the flick-adventure *begin*
-at the atmosphere bar. Arc 1.3 onward is post-October. (Author/Steve to confirm the exact cut.)
+The October launch artefact is *opening + complete tiny game (Gloaming) + **the start of
+Shadowkeep***. The "start of Shadowkeep" **is the pass-1 module — *the Place*** (Arc 1 below). How
+much of pass 1 ships *by* October is the only open cut: the minimum is the keep established with its
+hooded hero, two or three designed rooms, and working flick-screen transitions (the early sub-arcs)
+— enough to show the flick-adventure *begin* at the atmosphere bar — with the rest of pass 1
+following. Inhabitants, identity and Arcs 3–4 are **later revisit modules**, never part of the
+October cut. (Author/Steve to confirm how much of pass 1 lands by October.)
 
 ## Conventions (unchanged from the prior plan)
 
@@ -68,10 +99,12 @@ at the atmosphere bar. Arc 1.3 onward is post-October. (Author/Steve to confirm 
 
 ---
 
-## Arc 1 — *Foundations and a Place* (Units 1–16)
+## Arc 1 — *Foundations and a Place* — **module `shadowkeep` (pass 1)**
 
 *The foundations are the tiny game; this arc is **the Place** — turning that engine into the keep,
-giving it rooms, light, mood and a voice.* Four sub-arcs of four.
+giving it rooms, light, mood and a voice. This is the pass-1 module: an extension of Gloaming in
+technique, complete and winnable on its own.* The sub-arcs below are an illustrative shape, not a
+unit count.
 
 ### Sub-arc 1.1 — Into the Keep (1–4) · *the tiny engine becomes Shadowkeep*
 - **1 — A Hooded Figure.** The hero re-drawn as Shadowkeep's hooded thief (designed 8×8 sprite +
@@ -120,7 +153,12 @@ collect the gold, win — with light, mood and sound. A real game.
 
 ---
 
-## Arc 2 — *Inhabitants and Identity* (Units 17–32)
+## Arc 2 — *Inhabitants and Identity* — **later revisit modules (pass 2+)**
+
+> **Not pass 1, not October.** This material becomes one or two *later* `game: shadowkeep` revisit
+> modules — *inhabitants* (NPCs, threat, lives) and *identity* (HUD, names, score) — slotted into
+> the lineup after intervening games, each within its own 1–2-majors budget. It is the design
+> backlog for those revisits, not the back half of a single Shadowkeep block.
 
 *The keep is no longer empty, and the game knows itself. All cell-based — NPCs move cell-by-cell,
 drawn single-pass with save/restore (no masking; that's Overlap, a later game).*
@@ -160,12 +198,13 @@ identity, atmospheric polish, and verified real-hardware playability.
 
 ---
 
-## Arcs 3–4 (post-October)
+## Arcs 3–4 — **further revisit modules (post-October)**
 
 Unchanged in spirit by the re-pace — [`shadowkeep-four-arc-framing.md`](../../../../decisions/shadowkeep-four-arc-framing.md)
 already specifies them as **cell-based-friendly** (items, multiple keeps, tape save/load, secrets &
-lore, atmospheric cycles, collection endings — none need pre-shift/mask/Y-sort). They build on this
-re-paced Arc 1–2 foundation. Arc 3 *Beyond the Walls* (33–48); Arc 4 *The Greater World* (49–64).
+lore, atmospheric cycles, collection endings — none need pre-shift/mask/Y-sort). Each becomes its
+own later `game: shadowkeep` revisit module, building on the pass-1 Place. *Beyond the Walls*;
+*The Greater World* — illustrative groupings, not fixed unit blocks.
 
 ## Deprecation-pair seeds (what later games upgrade)
 
@@ -178,10 +217,11 @@ look — not refactors, and not something Shadowkeep itself should reach for.
 
 ## Open for the author
 
-- **October cut** — is 1.1–1.2 (units 1–8) the right "start of Shadowkeep" for October, or fewer/more?
-- **Sub-arc 1.1** is deliberately consolidation (no new major) to ease from the tiny game into the
-  bigger game — confirm that gentle on-ramp is wanted, or tighten 1.1 into 1.2 if it feels slack.
-- **Volume position** — Shadowkeep is "Game 1" by theme but reached after the opening + rendering
-  inserts; confirm how the lineup numbers it (the gentle-ramp lineup table is the source of truth).
+- **How much of pass 1 lands by October** — the whole Place, or the keep + flick-screen early
+  sub-arcs with the rest following? (The module is `shadowkeep` pass 1 either way.)
+- **Sub-arc 1.1** is deliberately consolidation (no new major) to ease from Gloaming into the bigger
+  game — confirm that gentle on-ramp is wanted, or tighten 1.1 into 1.2 if it feels slack.
+- **Where the revisit modules sit** — which intervening games precede *inhabitants* and *identity*
+  in the lineup (the catalogue array is the source of truth for order).
 - Full magazine-class per-unit prose, code samples, screenshots and audio captures are the
-  **authoring** step, not done in this re-pace.
+  **authoring** step, not done in this plan.

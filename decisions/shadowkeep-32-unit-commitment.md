@@ -10,6 +10,22 @@
 > accordingly; its body is preserved as the superseded engine-first design. The commercial-bar
 > *intent* stands — only the means change. (October artefact reframed in the launch spec.)
 
+> **AMENDED AGAIN 2026-06-02 by [modules-not-games.md](modules-not-games.md) +
+> [curriculum-structure.md](curriculum-structure.md).** Two framings in this doc are superseded:
+> **(1) The "32 units / two arcs of 16 / four sub-arcs of four" structure is illustrative, not a
+> target.** The project holds no fixed unit counts; the budget is on *techniques per game* and the
+> quality bar, not unit totals. Read every "32", "16", "4×4" and the cut hierarchy below as
+> *markers*, not commitments. **(2) Shadowkeep is a game spanning several modules, not one block.**
+> Per the module model, the October deliverable is the **`shadowkeep` pass-1 module — *the Place***
+> (≈ Arc 1: a complete, winnable multi-room atmospheric keep, an extension of Gloaming in technique).
+> **Arc 2 (inhabitants, identity) and Arcs 3–4 become *later revisit modules*** (`game: shadowkeep`,
+> pass 2+), slotted after intervening games, each within its own 1–2-majors budget — not the back
+> half of a single 32/64-unit commitment. The "first chapter of a longer game" framing is now
+> literal: the later chapters are revisit modules. Drift triggers below that police a hard 32-count
+> ("Extending past 32 units", "Treating Arc 2 as optional") are reinterpreted accordingly — Arc 2 is
+> still committed *as revisit modules*, just not as October pass-1 scope. See
+> [`per-unit-plan.md`](../platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md) § Module shape.
+
 **Status:** Active. Captured 2026-05-18. Descends from [commercial-bar-revamp.md](commercial-bar-revamp.md) and [real-retro-games.md](real-retro-games.md). (Supersedes an interim 8-unit vertical-slice decision from 2026-05-13; that earlier doc has been removed — git history preserves it.)
 
 ## The decision
@@ -121,3 +137,4 @@ Cuts apply only after a runway slip is identified. Cuts are *not* the default pl
 | 2026-05-18 | Decision captured. 32-unit commitment in two arcs. Three engine changes (pixel sprites, layered render, decoupled attribute) committed. Vertical-slice framing retired. BASIC track stays at 16. |
 | 2026-05-19 | Extended by [shadowkeep-four-arc-framing.md](shadowkeep-four-arc-framing.md) — Arcs 3-4 added as post-October commitment. October ship scope unchanged. |
 | 2026-05-29 | Amended by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md). Three engine changes relocated out of Shadowkeep; game re-scoped to cell-based atmosphere; Arc 1–2 re-paced. Commercial-bar intent retained, now met via art/atmosphere. October artefact reframed (see launch spec). |
+| 2026-06-02 | Amended again by [modules-not-games.md](modules-not-games.md) + [curriculum-structure.md](curriculum-structure.md). Unit counts (32/16/4×4 + cut hierarchy) reframed as illustrative, not targets. Shadowkeep re-cast as a game spanning several modules: October ships the **pass-1 module *the Place*** (≈ Arc 1, extension of Gloaming); Arc 2 + Arcs 3–4 become **later revisit modules** (pass 2+). Catalogue entry tagged `game: shadowkeep, pass: 1`. |
