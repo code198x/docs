@@ -19,6 +19,18 @@ Validated on the Spectrum, applied here. The C64 launch opening is two artefacts
 
 The bar is **Primer → Starfield**: "a real game you finish" on a second machine. The flagship (Cadence) and the rest of the lineup below follow afterwards, exactly as Shadowkeep's later arcs do on the Spectrum.
 
+### Starfield — committed shape (decided 2026-06-03)
+
+Scoped with the same concept-budget discipline as Gloaming — minimise the concepts introduced.
+
+- **Concept budget: two majors, the second trimmed.** The load-bearing major is **VIC-II hardware sprites** (ship, bullet, enemies all live under it). The second is **indirect-indexed addressing** (zero-page pointers + a row lookup table), kept because it's core 6502 and the only way to move the character-stars — sprites are too scarce to spend on a starfield. The **two-speed parallax** flourish is *cut* (single-speed stars). Collision stays in **software** (8-bit distance compare), deliberately *not* the VIC-II hardware collision registers. SID is **SFX only** — no envelopes/filters here.
+- **16 units, the "Ignition" phase.** Complete game loop: shoot, score, die, restart. The 128-unit scaffold (112 stub units + the Fleet/Firepower/Incoming/Stardust/… expansion phases) has been dropped from the catalogue.
+- **Canonical order** (Title Screen last, bookending the finished game as Gloaming does): Ship on Screen → Joystick Movement → **Screen Edges** → Fire Button Shoots → Laser Sound → Enemy Appears → Direct Hit → Explosion → Scoring Points → Enemy Waves → Player Death → Game Over → Three Lives → Life Lost Flash → Starfield → Title Screen.
+
+**Deferred to the DoD-finishing authoring pass** (not done in the trim): reorder Screen Edges from its current position 16 up to 3 — re-pointing the ~92 inter-unit cross-references by meaning, not by blind `+1`; rewrite the Starfield unit to single-speed; confirm the main loop is frame-paced (a raster-line wait — Gloaming had its "Heartbeat" unit, and Starfield has no obvious equivalent); then bring every unit to the Definition of Done and mark the game `complete`.
+
+**Deferred expansion (sketch, for later — not committed):** The Fleet (multiple enemy types) → Firepower (power-ups) → Incoming (enemies shoot back, raster-IRQ timing) → Stardust (custom chars, multicolour sprites, raster effects) → Waveform → Command → Launch. This is the Starfield equivalent of Shadowkeep's later arcs.
+
 ## Volume themes (working-draft)
 
 | Volume | Theme | What it teaches |
