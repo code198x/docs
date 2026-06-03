@@ -70,6 +70,42 @@ the other. The footer copyright/credits were a separate fix — a design-contrac
 violation (small text wrongly using `--color-text-muted`, which the token
 contract reserves for large/decorative text; switched to `--color-text-secondary`).
 
+## Prose accessibility (Vale + readability)
+
+We teach hard subject matter, so the prose itself shouldn't add *avoidable*
+difficulty on top. Two advisory checks watch for it — both signals, neither a
+gate:
+
+```bash
+cd website
+npm run prose:style   # Vale — words, voice, spelling
+npm run prose:read    # readability + long-sentence report
+npm run prose:check   # both
+```
+
+- **Vale** (`.vale.ini`, `styles/Code198x/`) encodes the project Writing
+  Principles as `suggestion`-level rules: `Substitutions` (short words beat
+  long), `Weasel` (filler/hedges), `Condescending` (the "never condescending"
+  voice — simply, obviously, trivial…), `BritishEnglish` (the British-English
+  Critical Rule). `Passive` exists but ships **off** (`Code198x.Passive = NO`):
+  regex passive-detection is the noisiest rule there is, and passive is often
+  correct in hardware prose ("the interrupt is raised"). Curriculum currently
+  draws ~217 suggestions across 357 files (~0.6 each) — a signal, not a
+  firehose. Rule rationale and tuning notes in `styles/Code198x/README.md`.
+- **Readability** (`scripts/prose-report.mjs`, zero-dependency) owns the thing
+  Vale can't measure: sentence length and grade level. Strips code, JSX, tables
+  and frontmatter, then reports Flesch-Kincaid grade and the sentences over ~30
+  words (the splittable kind of sprawl). `--long N` tightens the threshold;
+  pass paths to scope it.
+
+The framing that matters: readability formulas inflate grade level for
+unavoidable domain nouns ("Commodore", "emulator") and choke on tables, so their
+absolute scores are noisy. The one actionable number is long sentences. The
+curriculum averages grade **5.7** — its hardest assembly units score *easier*
+than the explainer pages, because the difficulty lives in the concepts and code,
+not the sentences. The vault (adult reference history) runs grade 11–13 by
+design; it's a different audience, not a regression.
+
 ## Gotcha: CLI Chrome screenshots are not mobile emulation
 
 Do not judge mobile layout with `chrome --headless --window-size=390,…
