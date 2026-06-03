@@ -1,6 +1,6 @@
 # Commodore 64 Track — Lightweight Skeleton
 
-**STATUS: Post-October work, lightweight only.** Per `docs/decisions/october-2026-launch-spec.md`, C64 / Cadence is deferred. This skeleton is *no-commit* — North Star, volume themes, candidate game lineup only. No per-game scope, no naming lock-in, no tech-tree detail. The Spectrum Assembly methodology (per [`decisions/spectrum-assembly-track.md`](../decisions/spectrum-assembly-track.md)) is build-untested; this skeleton awaits Spectrum's first shipped games for validation before becoming a full track structure.
+**STATUS: Opening committed (2026-06-03); the deeper track stays lightweight.** The precondition this skeleton was waiting on — *Spectrum validating the gentle-ramp methodology* — is met: Meet the Machine and a complete Gloaming have shipped. Per the [October 2026 launch spec](../../decisions/october-2026-launch-spec.md) (2026-06-03 amendment), C64 is now the **second platform brought to the finishable bar**, and its launch opening is committed: a C64 **Primer** + **Starfield** as the first complete game (see § Committed opening). Everything *beyond the opening* — the flagship (Cadence), V2–V4, the full ~16-game lineup, per-game scope, naming lock-in, tech-tree — stays **lightweight / no-commit**, as before. North Star, volume themes, and the candidate lineup remain working-draft.
 
 Captured 2026-05-19 alongside [nes-track-skeleton.md](nes-track-skeleton.md) and [amiga-track-skeleton.md](amiga-track-skeleton.md) for cross-platform methodology check.
 
@@ -8,7 +8,16 @@ Captured 2026-05-19 alongside [nes-track-skeleton.md](nes-track-skeleton.md) and
 
 The C64 teaches the *commercial 8-bit game in its fullest form*. Where Spectrum taught what you can do with bytes, attribute clash, and a beeper, **C64 teaches what you can do when the hardware is *generous***: 8 hardware sprites, true multi-color graphics, a 3-voice SID synthesiser with filters and envelopes, raster interrupts for split-screen tricks, and 64K to spend. The same legends crossed both platforms (Crow, Braybrook at Hewson; later Smith, Galway, Hubbard) but C64's design vocabulary is *different*. Hardware sprites change masking and Y-sort. SID is a completely different audio paradigm from beeper or AY. Multi-color graphics change pixel-art constraints. Disk loading replaces tape conventions.
 
-Cadence (Game 1, concept locked per [revamp.md](revamp.md)) is the canonical demonstration.
+Cadence is the canonical demonstration — the **flagship**, concept locked per [revamp.md](../../tracker/revamp.md). Under the gentle ramp it sits where Shadowkeep does on the Spectrum: the ambitious showcase, *off* the finishable-opening critical path and deferred. The game a learner actually *finishes* first is the smaller **Starfield**, reached via the Primer — see § Committed opening.
+
+## Committed opening — the finishable bar (2026-06-03)
+
+Validated on the Spectrum, applied here. The C64 launch opening is two artefacts, both at the full Definition-of-Done bar:
+
+1. **The C64 Primer** — a "Meet the Machine" equivalent: machine literacy, not a game. The 6502, the VIC-II and its hardware sprites, SID, and the C64 memory map — one idea at a time, before you build a thing. New authoring; C64 has had no on-ramp until now.
+2. **Starfield — the first complete game you finish.** The single-screen hardware-sprite shooter already started (~16 real units, "Ship on Screen" → "Screen Edges", with code samples). Re-scoped to exactly those units — the 112 auto-generated stub units dropped from the catalogue — finished to the bar and marked `complete`. This is the C64's Gloaming.
+
+The bar is **Primer → Starfield**: "a real game you finish" on a second machine. The flagship (Cadence) and the rest of the lineup below follow afterwards, exactly as Shadowkeep's later arcs do on the Spectrum.
 
 ## Volume themes (working-draft)
 
@@ -72,8 +81,8 @@ Plus possible additions: Pinball Construction Set (Budge), Cauldron II C64, Bruc
 - Cut hierarchy
 - Build order or timeline
 
-These follow after Spectrum's first games ship and the methodology is build-validated.
+These remain uncommitted **for the games beyond the opening**. Spectrum's first games have now shipped and validated the methodology, so the opening (Primer + Starfield) is committed in § Committed opening above; the deeper lineup still awaits per-game design.
 
 ## Status
 
-Skeleton — captured 2026-05-19. Post-October work. No commitment. Awaits Spectrum methodology validation (post Shadowkeep Arc 1 ship, ~Aug 2026 at earliest) before becoming a full track structure document.
+Captured 2026-05-19 as a no-commit skeleton. **Opening committed 2026-06-03** — the Spectrum validated the gentle-ramp (Meet the Machine + a complete Gloaming shipped), so the C64 launch opening (Primer + Starfield) is now binding per the [launch spec](../../decisions/october-2026-launch-spec.md). The deeper track (flagship Cadence, V2–V4, the full lineup, per-game scope) remains lightweight working-draft until the opening ships.

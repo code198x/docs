@@ -8,6 +8,20 @@
 > Y-sort / masking) off the critical path and deferred to later games. The Shadowkeep-specific cut
 > hierarchy below is superseded for the assembly artefact; re-derive against the new opening.
 
+> **AMENDED 2026-06-03 — C64 promoted to a second launch platform (focus sequenced, not widened).**
+> The time pressure that forced "Spectrum only" eased, and the Spectrum has now *validated the
+> gentle-ramp methodology* — Meet the Machine and a complete Gloaming shipped, the precondition the
+> C64 skeleton was explicitly waiting on. C64 is therefore promoted from "wholesale deferred /
+> coming-soon card" to **the second platform brought to the finishable bar**, by applying the same
+> ramp: a **C64 Primer** (a "Meet the Machine" equivalent — the 6502, the VIC-II and hardware
+> sprites, SID, the memory map) plus **Starfield** re-scoped to its real ~16 units (the 112 stub
+> units dropped), finished to the Definition of Done and marked complete — "a real game you finish"
+> on a second machine. The C64 **flagship (Cadence)** and **C64 BASIC** stay deferred, exactly as
+> Shadowkeep's later arcs and BASIC Volumes 2–4 are. **NES and Amiga remain deferred** — focus is
+> *sequenced* to a second platform, not *widened* to four, so the "erodes the bar" reasoning below
+> still holds. Supersedes the "Spectrum only" / "C64 … defer wholesale" framing below, for C64 only.
+> Track plan: [commodore-64/assembly-skeleton.md](../platforms/commodore-64/assembly-skeleton.md).
+
 **Status:** Active. October is a target, not a hard deadline — the project is close to having enough to ship. Shadowkeep scope set by [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md); BASIC by [spectrum-basic-32-games.md](spectrum-basic-32-games.md). The two structural artefacts (landing page, vault) are spec'd in this doc.
 
 **Date:** 2026-05-06 | **Updated:** 2026-05-26
@@ -69,7 +83,7 @@ Vault completeness is protected. Quality bar stays full at every step.
 
 ## Out of scope (explicit)
 
-- C64 / Cadence, NES / Nightshade, Amiga / Exodus — coming-soon cards.
+- C64 **flagship (Cadence)** and C64 BASIC — coming-soon (but the C64 **Primer + Starfield** are promoted to launch per the 2026-06-03 amendment above). NES / Nightshade, Amiga / Exodus — coming-soon cards.
 - Shadowkeep Arcs 3-4 — post-October per [shadowkeep-four-arc-framing.md](shadowkeep-four-arc-framing.md).
 - Pattern library work not downstream of a shipped unit's reference.
 - Vault expansion beyond review pass + referenced gap-fill.
@@ -112,3 +126,4 @@ deferred work in [revamp.md](../tracker/revamp.md).
 | 2026-05-06 | Spec lifted into a binding decision doc. Floor numbers pinned (BASIC 128, Shadowkeep 16). Stretch separated from spec. |
 | 2026-05-26 | October reframed as target, not hard deadline. BASIC V1 done; landing page shipped; Shadowkeep 8/32 — close enough that urgency feels artificial. Session-start gate removed. Drift triggers trimmed to the two that still matter (scope creep past 32 units, DoD erosion). |
 | 2026-05-29 | Assembly launch artefact reframed per [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md): from "Shadowkeep Arcs 1–2, 32 units" to "Primer + complete tiny first game + start of re-scoped cell-based Shadowkeep". Hardest engineering (pre-shift / Y-sort / masking) deferred off the October critical path. |
+| 2026-06-03 | C64 promoted to a second launch platform: a C64 Primer + Starfield (re-scoped to its real ~16 units; the 112 auto-generated stub units dropped) brought to the finishable bar. Trigger: time pressure eased and the Spectrum validated the gentle-ramp (Meet the Machine + a complete Gloaming shipped — the precondition the C64 skeleton was waiting on). C64 flagship (Cadence) and C64 BASIC stay deferred; NES/Amiga remain deferred. Focus *sequenced* to a second platform, not *widened* to four. |
