@@ -5,6 +5,13 @@
 **Games:** 4
 **Total Units:** 256 (4 × 64)
 
+> **When this ships — repoint the assembly Primer's beginner on-ramp.** The C64
+> assembly Primer (Meet the Machine, Unit 1) sends absolute beginners to the
+> *Spectrum* BASIC course (`/sinclair-zx-spectrum/basic`) because it's the only
+> shipped fundamentals on-ramp today. Once C64 BASIC ships, repoint it to
+> `/commodore-64/basic`. Find every instance with
+> `grep -rl "sinclair-zx-spectrum/basic" website/src/content/curriculum/commodore-64`.
+
 ---
 
 ## Overview
