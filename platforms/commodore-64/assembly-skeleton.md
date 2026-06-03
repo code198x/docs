@@ -14,10 +14,27 @@ Cadence is the canonical demonstration — the **flagship**, concept locked per 
 
 Validated on the Spectrum, applied here. The C64 launch opening is two artefacts, both at the full Definition-of-Done bar:
 
-1. **The C64 Primer** — a "Meet the Machine" equivalent: machine literacy, not a game. The 6502, the VIC-II and its hardware sprites, SID, and the C64 memory map — one idea at a time, before you build a thing. New authoring; C64 has had no on-ramp until now.
+1. **The C64 Primer ("Meet the Machine")** — machine literacy, not a game: the 6502, the C64 memory map, and the character screen with its colour RAM — one idea at a time, before you build a thing. Hardware sprites and SID are deliberately held back for Starfield, exactly as the Spectrum primer leaves sprites and sound to its games. New authoring; C64 has had no on-ramp until now.
 2. **Starfield — the first complete game you finish.** The single-screen hardware-sprite shooter already started (~16 real units, "Ship on Screen" → "Screen Edges", with code samples). Re-scoped to exactly those units — the 112 auto-generated stub units dropped from the catalogue — finished to the bar and marked `complete`. This is the C64's Gloaming.
 
 The bar is **Primer → Starfield**: "a real game you finish" on a second machine. The flagship (Cadence) and the rest of the lineup below follow afterwards, exactly as Shadowkeep's later arcs do on the Spectrum.
+
+### Meet the Machine (C64 Primer) — committed shape (decided 2026-06-03, a *flexible* lock)
+
+The C64 on-ramp. Same name as the Spectrum primer on purpose: **"Meet the Machine" is the universal on-ramp across every platform** — a teaching module (not a game), so exempt from the inspired-by game-naming rule. The content shares nothing with the Z80 version; the name is the signpost.
+
+**15 units, 4 phases, mirroring the Spectrum primer beat-for-beat**, with the C64's own concepts where the machine diverges:
+
+- *What the machine is* — 1 Assemble and Run (toolchain loop **+ the BASIC `SYS` stub**) · 2 LDA Is Not LET (A/X/Y are physical registers) · 3 Everything Is a Number · 4 A Street of Numbered Boxes (64K; **zero page** named here as the fast first block) · 5 The Screen Is Memory (`$0400`) · 6 Colour Is a Separate Map (`$D800` — the C64's attribute parallel).
+- *What it can do* — 7 Test, Then Jump (`CMP` + `BEQ`/`BNE`/`BCC`/`BCS`) · 8 The Machine Can Hear You (read the **joystick** port `$DC00`) · 9 A Finger on the Boxes (**indexed** addressing `,X` — true indirect-indexed pointers defer to Starfield) · 10 Counting Toward Zero (`DEX`/`BNE`) · 11 Call, Return, and a Stack You Can See (`JSR`/`RTS`, the page-1 stack).
+- *Rounding out* — 12 Adding and Taking Away (`ADC`/`SBC` **+ the `CLC`/`SEC` carry rule**) · 13 Working With Bits · 14 Bigger Than a Byte (**16-bit by hand** — no 16-bit registers; carry chained across two bytes).
+- *The mindset* — 15 The Machine Trusts You (no safety net; debugging via the VICE monitor).
+
+**Deliberately out, mirroring the Spectrum primer's scope:** hardware sprites and SID. The Spectrum primer teaches the screen and its colour but never sprites or sound — those are game concepts. So here too, Starfield owns sprites (its Unit 1) and SID (its Unit 5).
+
+**Where the C64 earns its keep (not transliteration):** the BASIC stub (1), the `CLC`/`SEC` carry discipline (12), and 16-bit-by-hand (14) — real 6502-isms with no Z80 equivalent.
+
+**Flexible lock.** 15 is the committed scope, but the count flexes *at authoring time*. Phase 3 is the likeliest split point — the carry rule (12) and 16-bit-by-hand (14) carry difficulty the Z80 versions didn't. If a concept won't sit gently in one unit when written, split it then; discover the shape by writing, not by guessing. The budget is on concepts-per-unit, never on the count.
 
 ### Starfield — committed shape (decided 2026-06-03)
 
