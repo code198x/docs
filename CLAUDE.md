@@ -62,6 +62,14 @@ docker run --rm -v $(pwd)/code-samples:/code-samples <image> <assembler> <args>
 
 Options: `--wait N` (frames), `--input FILE` (input script), `--duration N` (video)
 
+> **Migration in progress.** Capture is moving from these per-platform scripts to
+> **Emu198x**, and builds from the Docker assemblers to **Asm198x** — per-platform,
+> never a big-bang switch; the current tooling stays until each platform's
+> replacement is proven. This is why the `*-dev` repos' deleted capture scripts
+> are parked, not restored. Binding decision:
+> [`../../decisions/code198x-dev-tooling-migration.md`](../../decisions/code198x-dev-tooling-migration.md)
+> (fuller output-container detail in [`infrastructure/docker-toolchains.md`](infrastructure/docker-toolchains.md)).
+
 ## Content Collections
 
 The curriculum sequences **modules**, not games — a game is a buildable artefact a
