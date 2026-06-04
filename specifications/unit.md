@@ -1,8 +1,17 @@
 # Unit Specification
 
-**Version:** 2.0
-**Last Updated:** 2026-01-07
+**Version:** 3.0
+**Last Updated:** 2026-06-04
 **Purpose:** Complete specification for unit structure, content, and formatting across all platforms and games.
+
+> **v3.0 raises the bar.** A unit now teaches by *showing its construction* —
+> runnable milestones, each with its real result captured in the fitting medium
+> (still / video / audio). The binding decision is
+> [`incremental-construction-units.md`](../decisions/incremental-construction-units.md);
+> the format contract in § *Incremental construction format* is derived from the
+> first exemplar pair — **Starfield Unit 2 (Joystick Movement)** and **Unit 4
+> (Laser Sound)**. The old one-program-per-unit + `snippets/` shape is
+> **retired**. Existing units are not "done" until converted.
 
 ---
 
@@ -23,6 +32,94 @@ Every unit is a standalone MDX file containing:
 - British English throughout (except "program" for computer programs)
 - Platform-specific technical accuracy
 - Progressive complexity within each game — **incremental** within a phase, **spiral** across phases ([spiral-and-incremental.md](../decisions/spiral-and-incremental.md)); hard techniques arrive as **deprecation pairs** (teach the naive version first, motivate the upgrade by its felt limit — [deprecation-pairs.md](../decisions/deprecation-pairs.md))
+
+---
+
+## Incremental construction format (the raised bar)
+
+A unit shows its build. The reader reaches a real, runnable result at each
+meaningful step — never only at the end. This section is the format contract;
+the binding rationale is in
+[`incremental-construction-units.md`](../decisions/incremental-construction-units.md).
+
+### Code samples — cumulative steps, not snippets
+
+Each unit's code lives in `code-samples/{platform}/{track}/{module}/unit-{NN}/steps/`:
+
+- **`step-NN.asm`** files, each a complete, assemblable, runnable program. Step
+  *N* is step *N−1* plus this milestone's increment; the **last step is the
+  complete unit program**.
+- **`step-00.asm`** is the unit's starting point — the previous unit's end
+  state, carried in so every in-unit diff is clean and the unit is
+  self-contained. (For the first unit of a module, `step-00` is the bare
+  scaffold the unit builds on.)
+- **Identical header comment on every step.** Per-step narrative belongs in the
+  MDX prose, *not* in `.asm` comments — differing headers pollute the diffs.
+  Inline comments *inside* the changed code are good; they are the change.
+- **No `snippets/`.** The old non-runnable excerpts are retired. If a step has
+  no observable result, fold it into the next step that does.
+- A `Makefile` (or equivalent) assembles every step; the last step's `.prg`
+  must be byte-identical to the canonical complete program.
+
+### Showing the code — diff + expandable full state
+
+- Show each milestone as a **`CodeDiff`** between consecutive steps, with
+  **`context={3}`** so unchanged regions collapse to `…`. The default
+  (`context={0}`) renders the whole file — do not use it.
+- Offer the full cumulative state behind a `<details>` expander using
+  `CodeFromFile` pointed at that step.
+
+### Milestones and their results
+
+- **2–5 milestones**, chosen by observable state, not line count.
+- **Each milestone shows its result in the medium that fits it:** a **still**
+  (PNG) for a static state and for detail/dither-heavy graphics (video codecs
+  wash those out); a **video** (MP4) for motion — movement, scrolling,
+  animation; a **real audio clip** (WAV) for sound. A milestone may carry more
+  than one. An honest *absence* of a result is itself a result (e.g. Starfield
+  u4 step 1 records genuine silence to prove a configured voice stays quiet).
+- **Explain with whatever makes it clear** — `FlowDiagram`, GFM tables (register
+  maps, bit layouts), `RegisterBits`, alongside the captured results.
+- **Before/after bookend** — where the unit started, where it ended
+  (`ImageComparison` for visual units; a stated silence→sound recap for audio).
+
+### Capture — manifest-driven, scripts saved, cold-boot only
+
+- A per-unit **`capture/manifest.json`** lists every capture: the runnable
+  `step` program, the medium, and a `timeline` of boot + injected input + record
+  actions. One command (`code-samples/_capture/capture.py <manifest>`)
+  regenerates every still, clip, and recording for the unit.
+- **Every capture saves the exact script that produced it** — the generated
+  Emu198x `--script` JSON is written to `capture/{id}.script.json` and committed
+  *alongside* the media. The script is the source of truth; the media is its
+  build output, re-runnable and auditable for honesty (you can read the script
+  and see whether input was genuinely injected).
+- **Captures reproduce from a cold boot — no staging, ever.** Boot from ROM,
+  reach the state the way the learner is told to (autostart / `RUN`), inject the
+  real input, capture what is actually on screen. No monitor pokes, no
+  screen-clears, no entry-point jumps, no hand-set state. If a unit wants a
+  clean screen, the *program* clears it.
+- The manifest is **WASM-aware**: the same runnable `step-NN` that feeds captured
+  media is what an in-page Emu198x (WASM) runner will execute, so units are
+  authored once for both.
+
+### Depth, reach, care (non-negotiable)
+
+- **Debugging is a taught spine.** Every unit shows "when it's wrong, here's how
+  to *see* why" from the real machine's state (register/memory views), not
+  guesswork. Give it its own short section.
+- **Game feel is content.** Explain why timing, feedback, and tuning make a thing
+  *feel* good — the gap between "it works" and "a good game".
+- **Historical / craft claims are validated, never hand-waved.** Any attribution
+  to a specific game or demo must be sourced (disassembly, original source, a
+  credible write-up, the reference library) — exactly like every other
+  provenance claim. If it can't be sourced, don't say it; at most "a common
+  technique of the era," and only if that is true. Some units have nothing to
+  attribute — don't force one.
+- **Accessibility is a hard rule.** Alt text on every still and diagram; a
+  described "what you'll hear" for audio; captions / described action for video.
+  **No milestone's point may live only in a clip** — carry it in prose, diagram,
+  or table as well. (A silent audio result must say so in prose.)
 
 ---
 

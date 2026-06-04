@@ -36,7 +36,7 @@ real, runnable state with a real result:
   A **still** (PNG) for a static state — and *especially* for detail- or
   dither-heavy graphics, which a video codec washes out (the capture-pipeline
   CRF/dither gotcha); a **video** (MP4) for *motion* — movement, scrolling,
-  animation, parallax — things a still literally cannot show; a **real audio clip**
+  animation, parallax — things a still cannot show; a **real audio clip**
   for sound. A milestone can carry more than one (the ship *moves* and the laser
   *fires*). A step with no observable result folds into the next one that has one.
   All three are headless script steps the c64 supports (`--screenshot`,
@@ -102,7 +102,7 @@ artifact* — the Emu198x `--script` JSON (or VICE moncommands) plus the command
 ROMs, and `.prg`. The media is then never a mystery: any still, clip, or recording
 can be re-run, diffed when the code changes, and **audited for honesty** — you can
 read the script and see whether the fire button was genuinely injected or the state
-merely staged (the u8 question, made answerable). The script is the source; the
+was staged (the u8 question, made answerable). The script is the source; the
 media is a build output of it.
 
 **Captures reproduce from a cold boot — no staging, ever.** A capture boots the
@@ -160,10 +160,48 @@ exemplar does three jobs: the **reference implementation**, it forces the
 **cost-per-unit** — the number that tells us how big the corpus conversion truly is
 before we commit the calendar.
 
+## Cost per unit (measured from the exemplar, 2026-06-04)
+
+The exemplar (Starfield u2 + u4) is **built and verified**. What it cost, and
+what it tells us about the corpus conversion:
+
+**One-time costs — now paid, not per-unit:**
+
+- The capture pipeline: `code-samples/_capture/capture.py` (manifest → saved
+  Emu198x scripts → cold-boot run → media), reusable across every unit and platform.
+- **Two emulator bugs, found and fixed** because the bar's "if we can't capture
+  it honestly, it's a bug" rule forced real captures: the SID envelope 15-bit
+  rate counter (silent audio) and the VIC sprite-position register readback
+  (frozen movement). Both fixed in Emu198x with regression tests.
+- Site-wide fixes: GFM tables enabled for MDX (`remark-gfm`); `CodeDiff`
+  `context={3}` and the `step-00` / identical-header conventions established.
+
+**Per-unit cost in steady state (tooling now in place):**
+
+1. **Milestone decomposition + cumulative `step-NN.asm`** — low–moderate. The
+   complete program already exists; splitting it into runnable steps is largely
+   mechanical subtraction (+ a `step-00` baseline).
+2. **`capture/manifest.json` + run + honest verification** — low. Capture is one
+   command; the real work is *verifying* each artefact (view every still, check
+   audio peaks, confirm the saved script injected genuine input). Minutes, not hours.
+3. **MDX rewrite to the bar** — the dominant cost. A full authored unit
+   (~150 lines): milestones, diff prose, diagrams/tables, debugging spine, game
+   feel, accessibility. This is where the time goes.
+
+**The headline finding:** with the pipeline built, per-unit cost is dominated by
+**MDX authoring**, not capture — capture is cheap and regenerable. The genuine
+variable is **emulator hardening**: 2 of the first 2 units surfaced a core bug.
+Early units will keep finding gaps (each paid once, then gone); the rate should
+fall sharply as the cores harden. **Budget the conversion as authoring-bound,
+with an emulator-hardening tail that front-loads.** Concretely: a unit with no
+new emulator gap is a focused authoring session; a unit that hits one can cost
+several times that until the core is fixed. Plan the calendar around the
+authoring count, and treat the hardening tail as the schedule risk.
+
 ## Knock-ons to propagate
 
-- [`specifications/unit.md`](../specifications/unit.md) — detailed format amendment
-  (derive from the exemplar).
+- [`specifications/unit.md`](../specifications/unit.md) — **done (v3.0):** format
+  contract added (§ *Incremental construction format*), derived from the exemplar.
 - [`october-2026-launch-spec.md`](october-2026-launch-spec.md) — October bar now
   includes conversion; scope may shrink.
 - [`../platforms/commodore-64/games/starfield/finishing-pass.md`](../platforms/commodore-64/games/starfield/finishing-pass.md)

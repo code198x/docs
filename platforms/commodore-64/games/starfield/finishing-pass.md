@@ -1,6 +1,22 @@
 # Starfield — DoD-Finishing Pass (plan)
 
-**Status:** Not started. This is the deferred Definition-of-Done pass named in
+**Status:** Superseded in part by the v3.0 raised bar
+([`incremental-construction-units.md`](../../../../decisions/incremental-construction-units.md),
+[`specifications/unit.md`](../../../../specifications/unit.md) § *Incremental
+construction format*). **u2 (Joystick Movement) and u4 (Laser Sound) are converted
+to the bar as the exemplar pair** — cumulative `steps/`, manifest-driven honest
+captures (real movement video; real laser audio + a genuinely-silent step-1
+clip), diff+expandable, debugging spine, accessibility. The rest of Starfield is
+not yet converted.
+
+The **screenshot question below is resolved**: the visual convention is
+**per-milestone captures in the fitting medium (still / video / audio) + a
+before/after bookend**, manifest-driven and script-saved — not one hero per unit.
+The **reorder (Job A) and Primer-continuity (Job B) work still stands** and is
+independent of conversion; the exemplar deliberately stayed on the *current*
+numbering so the two passes don't entangle.
+
+This is the deferred Definition-of-Done pass named in
 [`assembly-skeleton.md`](../../assembly-skeleton.md) § *Starfield — committed shape*.
 Completing it closes the second half of the C64 finishable bar (Primer ✅ +
 Starfield) per the [Oct-2026 launch spec](../../../../decisions/october-2026-launch-spec.md).
