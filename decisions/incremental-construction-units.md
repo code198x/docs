@@ -50,7 +50,11 @@ real, runnable state with a real result:
 - **Code shown as the diff/addition.** What this step *adds*, highlighted, with the
   full cumulative state available expandable — not a re-dump of the whole program
   each time.
-- **Before/after bookend.** Where the unit started; where it ended.
+- **Before/after recap.** Where the unit started; where it ended — in the medium
+  that shows it. A still `ImageComparison` only when both states are static and
+  visually distinct; for motion/audio units the milestone media is the bookend and
+  a one-line prose recap suffices (a two-still comparison of a sprite at A vs B
+  doesn't sell it).
 
 ## The bar is also depth, reach, and care
 
@@ -62,11 +66,14 @@ Structure is necessary, not sufficient. The raised bar equally commits to:
    the per-unit manifest **WASM-aware now** (the same runnable `step-NN` feeds both
    captured media and a future in-page runner) so we don't re-do it later. Reading
    becomes doing.
-2. **Debugging is a taught spine, not an afterthought.** Emu198x is a *verifier* with
-   register / memory / state observability; the Primer planted "debug by observing"
-   (u15) then dropped it. Every unit shows **"when it's wrong, here's how to *see*
-   why"** from the real machine's state. We may be the only curriculum that teaches
-   debugging the actual hardware — lean in.
+2. **Debugging is a taught spine, not an afterthought.** The Primer planted "debug by
+   observing" (u15) then dropped it. Every unit shows **"when it's wrong, here's how
+   to *see* why"** by reading the machine's real state — the values that matter and
+   what each symptom implies. Keep it **tool-neutral**: the learner checks values in
+   their own code, and *if* their emulator has a monitor, live. Do **not** presuppose
+   a specific emulator, and do **not** lean on Emu198x's own debug surfaces in
+   learner-facing prose — Emu198x is *our* capture/verification tool, not necessarily
+   the learner's runtime (and its debug-view story isn't one to promote yet).
 3. **Historical / craft grounding — every attribution VALIDATED, never hand-waved.**
    Connect technique to the era's real software ("the starfield *Uridium* shipped",
    "why the pros flashed a frame on hit") — craft-with-heritage, on the 198x ethos.

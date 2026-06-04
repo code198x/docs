@@ -80,8 +80,13 @@ Each unit's code lives in `code-samples/{platform}/{track}/{module}/unit-{NN}/st
   u4 step 1 records genuine silence to prove a configured voice stays quiet).
 - **Explain with whatever makes it clear** — `FlowDiagram`, GFM tables (register
   maps, bit layouts), `RegisterBits`, alongside the captured results.
-- **Before/after bookend** — where the unit started, where it ended
-  (`ImageComparison` for visual units; a stated silence→sound recap for audio).
+- **Before/after recap** — a brief note of where the unit started and where it
+  ended. Use a still `ImageComparison` **only** when both states are *static and
+  visually distinct* (a new element on screen, a changed layout, text appearing).
+  For motion or audio units the milestone video/clip already bookends the arc —
+  a one-line **prose recap** is enough. Don't bolt on a two-still comparison of
+  near-identical sparse frames (a small sprite at position A vs position B); it
+  reads as weak and adds nothing the video didn't already show.
 
 ### Capture — manifest-driven, scripts saved, cold-boot only
 
@@ -106,8 +111,11 @@ Each unit's code lives in `code-samples/{platform}/{track}/{module}/unit-{NN}/st
 ### Depth, reach, care (non-negotiable)
 
 - **Debugging is a taught spine.** Every unit shows "when it's wrong, here's how
-  to *see* why" from the real machine's state (register/memory views), not
-  guesswork. Give it its own short section.
+  to *see* why" by reading the machine's real state — the values that matter and
+  what each symptom implies — not guesswork. Keep it **tool-neutral**: the learner
+  checks values in their own code, or live if their emulator has a monitor. Do not
+  presuppose a specific emulator or name our own tooling. Give it its own short
+  section.
 - **Game feel is content.** Explain why timing, feedback, and tuning make a thing
   *feel* good — the gap between "it works" and "a good game".
 - **Historical / craft claims are validated, never hand-waved.** Any attribution
