@@ -1,7 +1,9 @@
 # Decision seed: a cross-system foundation layer
 
-**Status:** IDEA / seed — broadened 2026-06-04 from
-[`number-systems-primer.md`](number-systems-primer.md). *Not committed.*
+**Status:** SUPERSEDED — 2026-06-05 by
+[`front-of-curriculum-architecture.md`](front-of-curriculum-architecture.md), which
+promoted this seed into the accepted Foundations layer. Kept for the design lineage;
+read the architecture doc for the binding decision.
 
 ## The idea
 

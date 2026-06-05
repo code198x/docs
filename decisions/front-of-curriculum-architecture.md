@@ -1,13 +1,14 @@
-# Decision (DRAFT): the front-of-curriculum architecture
+# Decision: the front-of-curriculum architecture
 
-**Status:** PROPOSED — 2026-06-05. Designed in one pass per the "rethink the whole
-front" call; all load-bearing decisions resolved the same day (see *Resolved*),
-leaving only naming and one grouping choice for build time. **Commits and broadens**
-the two seeds [`number-systems-primer.md`](number-systems-primer.md) and
+**Status:** ACCEPTED — 2026-06-05 (proposed and accepted the same day). Designed in
+one pass per the "rethink the whole front" call; all load-bearing decisions resolved,
+leaving only naming and one grouping choice for build time. **Supersedes** the two
+seeds [`number-systems-primer.md`](number-systems-primer.md) and
 [`cross-system-foundations.md`](cross-system-foundations.md), and amends the front
 of [`curriculum-structure.md`](curriculum-structure.md). Built natively to the
 raised bar ([`incremental-construction-units.md`](incremental-construction-units.md)).
-**Not yet built — this is the architecture to build against.**
+The General Programming primer (Foundations) is built; the rest is the architecture
+to build against.
 
 ## The problem it fixes
 

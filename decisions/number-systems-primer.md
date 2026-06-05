@@ -1,7 +1,10 @@
 # Decision seed: a cross-system "number systems" primer
 
-**Status:** IDEA / seed — floated 2026-06-04. *Not committed.* Captured at the
-moment of insight; promote to a real decision (or drop) deliberately.
+**Status:** SUPERSEDED — 2026-06-05 by
+[`front-of-curriculum-architecture.md`](front-of-curriculum-architecture.md), which
+promoted this seed into the accepted Foundations layer (Number Systems becomes a
+Foundations module). Kept for the design lineage; read the architecture doc for the
+binding decision.
 
 ## The idea
 
