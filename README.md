@@ -80,7 +80,7 @@ See [index.md](index.md) for a full file-by-file map.
 | Platform | Language | Status |
 |----------|----------|--------|
 | ZX Spectrum | Sinclair BASIC | **Active.** [32 games / 4 volumes](platforms/sinclair-zx-spectrum/basic.md), v6.4 inspired-by-not-clones names. **Volume 1 (8 games) ships October 2026.** |
-| Commodore 64 | BASIC V2 | **Pre-methodology draft.** [platforms/commodore-64/basic-skeleton.md](platforms/commodore-64/basic-skeleton.md). |
+| Commodore 64 | BASIC V2 | **Primer shipped; Volume 1 designed.** [platforms/commodore-64/basic.md](platforms/commodore-64/basic.md). |
 | Amiga | AMOS/Blitz BASIC | **Pre-methodology draft.** [platforms/commodore-amiga/basic-skeleton.md](platforms/commodore-amiga/basic-skeleton.md). |
 | BBC Micro | BBC BASIC | **Pre-methodology draft.** [platforms/bbc-micro/basic-skeleton.md](platforms/bbc-micro/basic-skeleton.md). |
 | Amstrad CPC | Locomotive BASIC | **Pre-methodology draft.** [platforms/amstrad-cpc/basic-skeleton.md](platforms/amstrad-cpc/basic-skeleton.md). |

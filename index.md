@@ -70,7 +70,7 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 ### Active (current curriculum work)
 
 - [Sinclair ZX Spectrum](platforms/sinclair-zx-spectrum/) — [reference](platforms/sinclair-zx-spectrum/reference.md), [assembly](platforms/sinclair-zx-spectrum/assembly.md) (Shadowkeep et al., 44 entries), [basic](platforms/sinclair-zx-spectrum/basic.md) (32 BASIC games), [games/](platforms/sinclair-zx-spectrum/games/)
-- [Commodore 64](platforms/commodore-64/) — [reference](platforms/commodore-64/reference.md), [assembly skeleton](platforms/commodore-64/assembly-skeleton.md), [basic skeleton](platforms/commodore-64/basic-skeleton.md) (Cadence deferred post-October)
+- [Commodore 64](platforms/commodore-64/) — [reference](platforms/commodore-64/reference.md), [assembly skeleton](platforms/commodore-64/assembly-skeleton.md) (Cadence deferred post-October), [BASIC curriculum](platforms/commodore-64/basic.md) (primer shipped, Volume 1 designed)
 - [Commodore Amiga](platforms/commodore-amiga/) — [reference](platforms/commodore-amiga/reference.md), [assembly skeleton](platforms/commodore-amiga/assembly-skeleton.md), [basic skeleton](platforms/commodore-amiga/basic-skeleton.md) (Exodus deferred)
 - [Nintendo NES](platforms/nintendo-entertainment-system/) — [reference](platforms/nintendo-entertainment-system/reference.md), [assembly skeleton](platforms/nintendo-entertainment-system/assembly-skeleton.md) (Nightshade deferred)
 
