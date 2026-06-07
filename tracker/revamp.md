@@ -15,7 +15,7 @@ Shadowkeep is the lead game. Cadence (C64), Nightshade (NES), Exodus (Amiga) def
 | Order | Track | What | Stage | Target |
 |---|---|---|---|---|
 | **1** | Spectrum Assembly | **Shadowkeep — _the Place_** (pass 1) | **Complete: 16 units live** (1.1 keep · 1.2 rooms · 1.3 light · 1.4 audio + win loop) | A complete cell-based Place; counts illustrative |
-| **2** | Spectrum BASIC | **Volume 1 (8 games)** | **Done.** V2 work (Cipher) started | ~~Volume 1 ships October~~ Shipped |
+| **2** | Spectrum BASIC | **Volumes 1–2 (16 games)** | **Done.** V1 shipped; **V2 complete** (8 games, front-of-curriculum, 6 units each). V3–V4 fresh | ~~Volume 1 ships October~~ Shipped; V2 done post-V1 |
 | **3** | Spectrum vault | Review existing + fill referenced gaps | In progress | Every reference from a shipped unit resolves |
 | **4** | Spectrum landing | Polished page for QR-code visitors | **Done** (initial version) | Polish pass before event |
 | 5 | C64 Assembly | Cadence | **Deferred** — [platforms/commodore-64/assembly-skeleton.md](../platforms/commodore-64/assembly-skeleton.md) | Post-launch |
@@ -154,18 +154,20 @@ Source of truth: [decisions/spectrum-basic-32-games.md](../decisions/spectrum-ba
 
 **V1 shipped.** 8 games, ~48 units.
 
-### Volume 2 — Patterns of State (post-October)
+### Volume 2 — Patterns of State — DONE
 
-| # | Game | Status | Headline |
-|---|---|---|---|
-| 9 | Cipher (was Hangman) | New | Data-Driven |
-| 10 | Quiz Master | Built (16 topics; needs migration + slot shift) | Progression |
-| 11 | Locksmith (was Mastermind) | New | Deduction |
-| 12 | Sonar (was Battleship) | New | Search |
-| 13 | Three in a Row (was Tic-Tac-Toe) | New | Adversary |
-| 14 | The Caverns (was Hunt the Wumpus) | New | Atmosphere |
-| 15 | Yearfall (was Hammurabi) | New | Consequences |
-| 16 | Crates | New | The Rule IS the Game |
+All 8 games re-scoped to **front-of-curriculum** (assume Meet BASIC + Volume 1): each opens on the game and reserves units for genuinely-new ideas, collapsed to **6 units**. Each has a `units.yaml`, reframed index, six rewritten units, a 6-step cumulative `.bas` set, fresh verified screenshots, and `status: complete` in `basic.yaml`. Built (nav verified) and pushed to website + code-samples.
+
+| # | Game | Status | Headline | New ideas reserved |
+|---|---|---|---|---|
+| 9 | Cipher (was Hangman) | **Done** (6 units) | Data-Driven | slice-assign; DATA-as-list |
+| 10 | Quiz Master | **Done** (6 units) | Progression | DIM arrays; RESTORE `<line>` |
+| 11 | Locksmith (was Mastermind) | **Done** (6 units) | Deduction | bulls/cows tally algorithm |
+| 12 | Sonar (was Battleship) | **Done** (6 units) | Search | 2D array board; Manhattan distance |
+| 13 | Three in a Row (was Tic-Tac-Toe) | **Done** (6 units) | Adversary | DATA win-line table; priority-rule AI |
+| 14 | The Caverns (was Hunt the Wumpus) | **Done** (6 units) | Atmosphere | graph in parallel arrays; hidden state by adjacency |
+| 15 | Yearfall (was Hammurabi) | **Done** (6 units) | Consequences | persistent state; delayed/compounding consequences |
+| 16 | Crates | **Done** (6 units) | The Rule IS the Game | 2D array as writable world; INKEY\$; two-cell push lookahead |
 
 ### Volume 3 — Worlds and Rules (post-October)
 
@@ -279,3 +281,4 @@ See [platforms/commodore-amiga/assembly-skeleton.md](../platforms/commodore-amig
 | 2026-06-02 | **Records reconciled to the module model + no-fixed-counts.** Shadowkeep re-framed as a game spanning several modules; **pass 1 = _the Place_**, Arc 2 + Arcs 3–4 become later revisit modules. Amended `shadowkeep-32-unit-commitment.md` + `shadowkeep-four-arc-framing.md`; per-unit plan gains a Module-shape section; bitmap **dithering** adopted as the stone/lighting technique (Steve's call). |
 | 2026-06-02 | **Shadowkeep reset + the Place authored (Units 1–12).** Old engine-first units retired (preserved in git); module reset to a coming-soon Place, then authored end-to-end through sub-arcs 1.1–1.3 — identity, dithered stone, movement, room-as-data, room graph, edge-matched doorways, per-room persistent state (chalk), three designed rooms, dither-density lighting, furnishings, per-room mood, multi-torch character. Each verified on Emu198x; build 1742→1754 pages. Unit `game:` frontmatter corrected to 2 (matching the index-1 convention). **Remaining: sub-arc 1.4 (audio).** |
 | 2026-06-02 | **The Place completed — sub-arc 1.4 authored (Units 13–16); Arc 1 done.** Footsteps and Doors (a beeper SFX driver — one tone primitive, footfall + door creak), The Keep's Gold (gold as walkable `G` cells, collect-on-contact, win at zero), A Theme in One Voice (a note-table music player + a composed D-minor title theme), The Keep Stands (a title→play→win→title state machine with a fresh resettable game and ROM-font `$3D00` title/win screens). Each a clean superset of Unit 12; verified on Emu198x by render + title-screen screenshot and beeper audio capture (peak 16384, multi-pitch melody). Build 1754→1758 pages. Shadowkeep's Place is now a complete, finishable, replayable cell-based flick-adventure. Also reconciled the track-wide doc + decision records (`assembly.md` v0.4, `spectrum-assembly-track.md` / `commercial-bar-revamp.md` banners) off the engine-first / 32-unit framing. **Deferred:** video-capture-quality bump + recapture of dither-heavy units (2, 3, 9–12). |
+| 2026-06-07 | **Spectrum BASIC Volume 2 — Patterns of State — complete.** All 8 games re-scoped to front-of-curriculum (assume Meet BASIC + Volume 1), each collapsed to 6 units that open on the game and reserve units for genuinely-new ideas: Cipher, Quiz Master, Locksmith, Sonar (10→6), Three in a Row (11→6), The Caverns (11→6), Yearfall (10→6), Crates (10→6, moved coming-soon → complete). Per game: `units.yaml` (fixing count + next-nav), reframed index, six rewritten units, restructured 6-step cumulative `.bas`, fresh screenshots verified by eye on Emu198x, `basic.yaml` skills + `status: complete`. Every build verified "Unit 6 of 6" / "6 units" / intact intra-game nav; website + code-samples pushed. Crates' finale signposts Volume 3 — *Worlds and Rules*. V3–V4 remain fresh authoring (deferred). |
