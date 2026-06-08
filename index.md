@@ -40,6 +40,7 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 
 - [Systems, not platforms](decisions/systems-not-platforms.md) — "system" is the structural term (nav, URLs, collections, components); prose may use "platform"
 - [System URL structure](decisions/system-url-structure.md) — system-rooted URLs, explicit track segment, no `/curriculum//learn/` prefix
+- [System readiness lives in `tier`](decisions/system-readiness-lives-in-tier.md) — one field drives the fleet wall, homepage band, active/coming-soon and routing; no parallel `status`/`curriculumStatus`
 - [Website design zoning](decisions/website-design-zoning.md) — character in the margins, legibility in the column; resolves "two winners" page types via template-vs-view
 - [Visual direction: synthesise, don't pivot](decisions/visual-direction-synthesis.md) — production's bones + the fanzine's soul as one language; re-role Inter/Mono/Caveat, no new fonts
 - [Synthesis build plan](tracker/synthesis-build-plan.md) — phased plan to evolve production into the synthesis; reference mocks at [design/synthesis/](design/synthesis/)
