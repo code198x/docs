@@ -36,7 +36,7 @@ A locked safe, a hidden code. You spin in a guess; the safe answers higher or lo
 
 - **A safe-cracking frame.** A drawn safe door fills the centre — a border of block characters POKEd into screen RAM with a combination dial at its face. The guess you type and the safe's answer ("HIGHER" / "LOWER") sit below it, redrawn each go so the screen is the dial, not a scroll of text.
 - **Colour carries the feedback.** The hint isn't only words — the screen says it in colour. Warmer as you close in (the background via `POKE 53281` shifts toward red/orange as the gap narrows), or a straight red-for-too-high / green-for-too-low split written into colour RAM. Either way the learner reads the safe's mood before they read the word.
-- **The tries remaining are on screen.** A row of dial marks, or a plain counter, POKEd into a fixed cell and decremented each guess — the player watches their stake shrink. Border (`POKE 53280`) flashes green on the crack, red on lockout.
+- **The tries remaining are on screen.** A row of dial marks, or a plain counter, POKEd into a fixed cell and decremented each guess — the player watches their stake shrink. The background (`POKE 53281`) goes green on the crack, red on lockout — the whole screen carrying the ending, since white-on-border doesn't read reliably in capture and the background is the bolder signal anyway.
 - **Magazine-screenshot test:** a Commodore-magazine screenshot — the safe drawn in PETSCII blocks, "HIGHER" under the dial in a warm colour, "GUESSES LEFT: 3" along the bottom. A reader flicking past would know the game at a glance.
 
 ---
