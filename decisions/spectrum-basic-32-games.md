@@ -95,5 +95,5 @@ Pull this decision record up before proceeding if you see any of these patterns:
 - [[spectrum-basic]] (project memory — current-state summary of the BASIC track)
 - [october-2026-launch-spec.md](october-2026-launch-spec.md) (binding launch scope; Volume 1 ships)
 - [commercial-bar-revamp.md](commercial-bar-revamp.md) (assembly Game 1s — separate track; carries forward unchanged)
-- `docs/tracker/revamp.md` (live tracker, source of truth for *which games in which volume*)
+- `website/src/content/modules/sinclair-zx-spectrum/basic.yaml` (catalogue, source of truth for *which games in which volume*; see [state-lives-in-catalogues.md](state-lives-in-catalogues.md))
 - `docs/platforms/sinclair-zx-spectrum/basic.md` (curriculum spec, source of truth for *what each game teaches*)

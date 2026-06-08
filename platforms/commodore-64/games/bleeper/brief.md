@@ -7,7 +7,6 @@
 **Embedded concept:** Escalation — each round raises the load
 **Topics:** 6–7 topics, ~8–10 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
 

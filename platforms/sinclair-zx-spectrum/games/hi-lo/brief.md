@@ -7,7 +7,6 @@
 **Embedded concept:** Feedback loops — each response refines the next action
 **Topics:** 5 topics, ~5–7 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
 

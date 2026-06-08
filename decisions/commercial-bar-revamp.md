@@ -59,3 +59,17 @@ See [october-2026-launch-spec.md](october-2026-launch-spec.md). Shadowkeep is th
 ## Drift triggers
 
 If any phase spec for the four Game 1s starts to look like "single-screen demo" or "infrastructure-only with the real game in the next phase", stop and re-read this decision. The bar is commercial, not pedagogical-minimum.
+
+## Definition of Done (per unit)
+
+The bar above is operational at unit scale through this checklist — the canonical 9-item Definition of Done (relocated here when the `tracker/revamp.md` status doc was retired; see [state-lives-in-catalogues.md](state-lives-in-catalogues.md)). A unit isn't shippable until all nine tick:
+
+- [ ] MDX written (magazine voice, length appropriate to the unit's teaching beat)
+- [ ] Code listing assembles cleanly with the platform's tools
+- [ ] Code listing runs correctly on the platform's emulator (Fuse for Spectrum, etc.)
+- [ ] Code listing runs correctly on real hardware (Spectrum Next for Spectrum)
+- [ ] At least one screenshot captured
+- [ ] All `<CodeFromFile>` snippets exist in code-samples and assemble
+- [ ] "Try this" experiments tested and produce the described result
+- [ ] "If it doesn't work" troubleshooting reflects actual failure modes encountered during testing
+- [ ] **All cross-references resolve to real content** — vault entries, pattern library entries, and other units linked from this unit must exist (or be catalogued as required, see [lesson-references.md](../tracker/lesson-references.md))

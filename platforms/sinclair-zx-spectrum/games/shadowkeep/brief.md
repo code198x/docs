@@ -7,7 +7,6 @@
 **Headline (design concept):** *Atmosphere (Sense of Place)*
 **Engine:** carries **Gloaming's engine** wholesale — cell-snapped movement, single-draw sprites with save/restore, attribute-coupled collision, a frame-locked loop, a title→play→win state machine. The Place adds *content and atmosphere*, not a new engine.
 **Counts:** illustrative, never targets ([curriculum-structure.md](../../../../decisions/curriculum-structure.md)). Pass 1 ran to ~16 units across four sub-arcs.
-**Status:** Active. **v3.0 (2026-06-02)** — rewritten for the cell-based Place after the 2026-05-29 re-pace and the module-model reconciliation. Supersedes v2.0's engine-first / 64-unit-four-arc framing (preserved in git).
 
 Formal spec format: [docs/specifications/brief.md](../../../../specifications/brief.md). Companion docs in this folder: [per-unit-plan.md](per-unit-plan.md) (the canonical per-unit reference) and [beeper-spec.md](beeper-spec.md) (the title-theme composition spec, for sub-arc 1.4). The original engine-first specs (sprite-shifter, object-system, tile-map, engineering-plan, memory-budget) are archived under [`superseded/`](superseded/) — they describe techniques **relocated** to later rendering games and are not current guidance.
 
@@ -145,7 +144,7 @@ Sub-arcs of pass 1 (illustrative; full detail in [per-unit-plan.md](per-unit-pla
 
 ## 12. Build status (2026-06-02)
 
-**All 16 units authored, verified on Emu198x, and live — the Place is complete (Arc 1 done).** Sub-arcs 1.1–1.4 all shipped: identity → dithered stone → movement → room-as-data → graph → doorways → persistence → three rooms → lighting → furnishings → mood → character → footsteps/door SFX → the gold goal + win → a D-minor beeper theme → the title→play→win→title loop. The Place is a finishable, replayable cell-based flick-adventure. Verified via Emu198x screenshot (render + title screen) and beeper audio capture. **Deferred:** a video-capture-quality bump + recapture of the dither-heavy units (2, 3, 9–12) with crisp output. See [per-unit-plan.md](per-unit-plan.md) and the [tracker](../../../../tracker/revamp.md).
+**All 16 units authored, verified on Emu198x, and live — the Place is complete (Arc 1 done).** Sub-arcs 1.1–1.4 all shipped: identity → dithered stone → movement → room-as-data → graph → doorways → persistence → three rooms → lighting → furnishings → mood → character → footsteps/door SFX → the gold goal + win → a D-minor beeper theme → the title→play→win→title loop. The Place is a finishable, replayable cell-based flick-adventure. Verified via Emu198x screenshot (render + title screen) and beeper audio capture. **Deferred:** a video-capture-quality bump + recapture of the dither-heavy units (2, 3, 9–12) with crisp output. See [per-unit-plan.md](per-unit-plan.md).
 
 ---
 

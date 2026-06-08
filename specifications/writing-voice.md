@@ -51,7 +51,7 @@ If your sentence sounds like a Wikipedia article, rewrite it.
 ## Tonal calibration by track
 
 - **Assembly tracks** — *Crash* / *Zzap!64* hardware features. Technical, opinionated, treats the chip as a character. Aimed at 16+ year olds and serious returners.
-- **BASIC track** — Usborne 1984 confidence-builder, *with* magazine wit. Aimed at kids, beginners, people-who-haven't-coded-in-years. Same voice, gentler ramp. Confidence over depth. (See `revamp.md` for the BASIC scope decisions that drive this calibration.)
+- **BASIC track** — Usborne 1984 confidence-builder, *with* magazine wit. Aimed at kids, beginners, people-who-haven't-coded-in-years. Same voice, gentler ramp. Confidence over depth. (See [spectrum-basic-32-games.md](../decisions/spectrum-basic-32-games.md) for the BASIC scope decisions that drive this calibration.)
 - **Vault** — magazine retrospective. Like a *Retro Gamer* feature but tighter. Treats games and people as worth caring about.
 
 ## Three quality criteria

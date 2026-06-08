@@ -128,7 +128,7 @@ Cuts apply only after a runway slip is identified. Cuts are *not* the default pl
 - [commercial-bar-revamp.md](commercial-bar-revamp.md) — bar definitions per track.
 - [real-retro-games.md](real-retro-games.md) — multi-disciplinary bar.
 - [`docs/platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md`](../platforms/sinclair-zx-spectrum/games/shadowkeep/per-unit-plan.md) — full per-unit specifications.
-- [`docs/tracker/revamp.md`](../tracker/revamp.md) — live status tracker.
+- [state-lives-in-catalogues.md](state-lives-in-catalogues.md) — project state lives in the `modules/*.yaml` catalogues + git, not in prose.
 
 ## Log
 

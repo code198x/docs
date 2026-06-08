@@ -2,12 +2,18 @@
 
 Project documentation lives entirely in `docs/`. This is the navigation map.
 
+> **Source of truth for state:** what is shipped / in-progress / planned is read from the
+> website module **catalogues** (`website/src/content/modules/<platform>/<track>.yaml`
+> `status:`), `units.yaml`, the shipped files, and git — **not** from these prose docs.
+> Planning prose is history and intent, not a live status claim. See
+> [State lives in the catalogues](decisions/state-lives-in-catalogues.md).
+
 ## Top-level layout
 
 - `decisions/` — binding policy records
 - `specifications/` — formal specs (cross-cutting format/structure rules)
 - `platforms/` — per-system reference + curriculum + games (16 systems)
-- `tracker/` — live state, plans, status
+- `tracker/` — plans, research, and design sketches (not live status — see banner above)
 - `infrastructure/` — Docker, capture pipeline, Astro
 - `emulators/` — emulator references
 - `vault/` — encyclopedia of people, companies, games, techniques
@@ -28,6 +34,7 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 - [Inspired-by, not clones (naming)](decisions/inspired-by-not-clones-naming.md) — 10-principle naming convention
 - [British English](decisions/british-english.md) — colour, learnt, centre (exception: program)
 - [Seven repos](decisions/seven-repos.md) — repo layout, git status gotcha
+- [State lives in the catalogues](decisions/state-lives-in-catalogues.md) — `modules/*.yaml` + git are authoritative for status; prose carries why/intent, not state
 
 ### Website / IA
 
@@ -93,7 +100,6 @@ Pre-methodology sketches for platforms outside the current 4. Awaits Spectrum me
 
 ## Tracker (live state / plans)
 
-- [Revamp](tracker/revamp.md) — live status of the four-Game-1 commercial-bar revamp
 - [Lesson references](tracker/lesson-references.md) — vault/pattern links from curriculum units; drives vault completeness work
 - [Methodology generalisation survey](tracker/methodology-generalisation-survey.md) — does the Spectrum methodology generalise to 11+ systems?
 - [Coverage strategy](tracker/coverage-strategy.md) — Tier 1/2/3 commitment levels per platform

@@ -7,7 +7,6 @@
 **Embedded concept:** AI personality — the computer's "style" emerges from simple rules
 **Topics:** 10 topics, ~10–14 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic.md`](../../../../specifications/brief-basic.md)
 

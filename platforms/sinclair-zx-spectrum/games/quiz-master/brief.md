@@ -7,7 +7,6 @@
 **Embedded concept:** Ratings as social proof — "Quiz Master" feels like an earned title
 **Topics:** 10 topics, ~10–14 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic.md`](../../../../specifications/brief-basic.md)
 

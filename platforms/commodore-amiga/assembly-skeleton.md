@@ -8,7 +8,7 @@ Captured 2026-05-19 alongside [c64-track-skeleton.md](c64-track-skeleton.md) and
 
 The Amiga teaches the *16-bit revolution* — what becomes possible when you cross from 8-bit constraints to 16-bit ambition. Where Spectrum / C64 / NES were 8-bit machines with 8-bit assembly (Z80 / 6502 / 6502 derivative), **Amiga is 16/32-bit Motorola 68000** — a fundamentally different CPU with a different assembly language and a different design model. Custom chips (Agnus, Denise, Paula) hardware-accelerate graphics and audio. The Copper is a programmable display-list co-processor running alongside the CPU. The Blitter is a dedicated graphics-blit chip. Sampled audio replaces synthesised. 32-color palettes (HAM mode goes to 4096) replace 16-color or 8-color. Multi-tasking Workbench OS coexists with games. Memory budgets are an order of magnitude larger.
 
-Exodus (Game 1, concept locked per [revamp.md](revamp.md) — Lost Vikings + 3 creatures concept) is the canonical demonstration.
+Exodus (Game 1, concept locked — Lost Vikings + 3 creatures concept) is the canonical demonstration.
 
 ## Volume themes (working-draft)
 

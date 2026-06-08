@@ -8,7 +8,7 @@ Captured 2026-05-19 alongside [c64-track-skeleton.md](c64-track-skeleton.md) and
 
 The NES teaches the *console game* — the dedicated platform that does one thing (play games) and does it with hardware optimised for tile-based action. Where Spectrum and C64 were home computers running games among other tasks, **NES was a games-only machine**. The design vocabulary is hardware sprites + tile maps + scrolling backgrounds + an APU built for music + a controller built for games. Mapper chips on cartridges extend memory transparently — the player doesn't see them but the developer designs around them. 60Hz NTSC pacing is faster than 50Hz PAL. The Famicom Disk System and PAL/NTSC variants add platform-internal complexity.
 
-Nightshade (Game 1, concept locked per [revamp.md](revamp.md)) is the canonical demonstration.
+Nightshade (Game 1, concept locked) is the canonical demonstration.
 
 ## Volume themes (working-draft)
 

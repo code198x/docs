@@ -6,7 +6,6 @@
 **Headline (design concept):** *Completion (I finished a real game, in assembly).*
 **Total scope:** ~16–18 units — **illustrative, not a target** (the project holds no fixed unit counts; the budget is on techniques, per the gentle-ramp).
 **October 2026 ship:** complete and playable end-to-end on Spectrum Next — it is one of the three pieces of the launch's assembly opening (Primer → **this** → start of re-scoped Shadowkeep).
-**Status:** Draft concept + unit spine, 2026-06-01. For Steve to react to; nothing authored yet.
 
 Governs nothing on its own — sits under the gentle-ramp decision. Companion docs to follow once the concept is blessed (per-unit-plan, engineering-plan, beeper-spec), matching the Shadowkeep folder.
 

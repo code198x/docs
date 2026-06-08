@@ -7,7 +7,6 @@
 **Embedded concept:** Juice — the non-essential signal that makes the essential feel alive
 **Topics:** 9 topics, ~10–15 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
 

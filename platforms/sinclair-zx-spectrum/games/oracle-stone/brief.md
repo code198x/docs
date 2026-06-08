@@ -7,7 +7,6 @@
 **Embedded concept:** Anticipation — the pause before the answer matters more than the answer
 **Topics:** 5 topics, ~5–7 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
 

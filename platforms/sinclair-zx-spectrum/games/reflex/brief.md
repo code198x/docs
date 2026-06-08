@@ -7,7 +7,6 @@
 **Embedded concept:** Telegraphing — showing the player what's about to happen so they can prepare
 **Topics:** 6 topics, ~7–9 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
 

@@ -7,7 +7,6 @@
 **Embedded concept:** Coordinates — addressing the screen by row and column
 **Topics:** 6 topics, ~6–8 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
 

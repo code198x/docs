@@ -7,7 +7,6 @@
 **Embedded concept:** Collision — the world pushes back
 **Topics:** 7 topics, ~9–12 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
 

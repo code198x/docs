@@ -7,7 +7,6 @@
 **Embedded concept:** Difficulty curve via content — longer words are harder without changing any code
 **Topics:** 8 topics, ~8–12 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic.md`](../../../../specifications/brief-basic.md)
 

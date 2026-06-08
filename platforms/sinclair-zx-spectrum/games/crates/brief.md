@@ -7,7 +7,6 @@
 **Embedded concept:** Constraint as gameplay — limitation creates the puzzle
 **Topics:** 12 topics, ~12–16 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic.md`](../../../../specifications/brief-basic.md)
 

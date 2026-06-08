@@ -1,6 +1,6 @@
 # Lesson References Catalogue
 
-A live inventory of vault entries, pattern library entries, and external references linked from curriculum lessons. Updated as units are written. See [revamp.md](revamp.md) for the cross-referencing discipline that drives this catalogue.
+A live inventory of vault entries, pattern library entries, and external references linked from curriculum lessons. Updated as units are written. See [commercial-bar-revamp.md](../decisions/commercial-bar-revamp.md) (Definition of Done) for the cross-referencing discipline that drives this catalogue.
 
 ## Why this exists
 

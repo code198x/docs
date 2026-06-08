@@ -112,8 +112,8 @@ Language auto-detected from path (Z80 for spectrum, 68000 for amiga, ca65 for NE
 - **Platform curricula**: `docs/platforms/{system}/{assembly,basic,assembly-skeleton,basic-skeleton}.md`
 - **Per-game briefs**: `docs/platforms/{system}/games/{slug}/brief.md` (plus other per-game design docs)
 - **Platform refs**: `docs/platforms/{system}/reference.md` (plus existing hardware/language/graphics subdirs)
-- **Live tracker**: `docs/tracker/revamp.md`
-- **Event log**: `docs/log.md`
+- **Project state (what's shipped)**: the `website/src/content/modules/*/*.yaml` catalogues + git — **not** a prose tracker. See `docs/decisions/state-lives-in-catalogues.md`.
+- **Event log**: `docs/log.md` (append-only history)
 
 ## Design Context
 - **Users**: Learners wanting to understand how computers work through building games
@@ -155,7 +155,7 @@ Project documentation lives entirely in `docs/`. There is no separate "knowledge
 - `docs/platforms/` — per-platform reference + curriculum + per-game briefs. (System-first restructure lands in Phase 1b.)
 - `docs/infrastructure/` — Docker, capture pipeline, Astro site notes.
 - `docs/log.md` — append-only event log.
-- `docs/tracker/` — live status. (Lands in Phase 1b.)
+- `docs/tracker/` — plans, research, and design sketches (not live status; state lives in the catalogues + git — see `decisions/state-lives-in-catalogues.md`).
 
 For cross-project knowledge spanning Code198x and Emu198x, see `../../CLAUDE.md` (umbrella) and `../../decisions/`. For personal cross-cutting knowledge, see `~/knowledge/`.
 

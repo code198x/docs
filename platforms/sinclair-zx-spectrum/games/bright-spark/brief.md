@@ -7,7 +7,6 @@
 **Embedded concept:** Signposting — using colour and sound to make the rules obvious without words
 **Topics:** 6 topics, ~7–9 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
 

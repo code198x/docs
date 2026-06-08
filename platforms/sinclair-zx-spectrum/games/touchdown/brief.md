@@ -7,7 +7,6 @@
 **Embedded concept:** Ambient feedback — the environment communicates game state without explicit UI
 **Topics:** 8 topics, ~10–14 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
 

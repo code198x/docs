@@ -7,7 +7,6 @@
 **Embedded concept:** Visualisation — show data as a picture
 **Topics:** 6 topics
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
 

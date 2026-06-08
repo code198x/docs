@@ -7,7 +7,6 @@
 **Embedded concept:** First impressions — what the player sees first shapes everything after
 **Topics:** 4 topics, ~4–6 hours
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
 

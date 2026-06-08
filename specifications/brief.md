@@ -43,7 +43,7 @@ Every brief opens with the same six-field header, in this order:
 **Title (working):** {confirmed or working title}
 **System / Track:** {platform name} / {assembly | BASIC}
 **Position:** Game {N} of {4 for assembly tracks; up to 16 for BASIC tracks}
-**Target unit count:** {256 for assembly Game 1–4; varies for BASIC per `revamp.md`}
+**Target unit count:** {256 for assembly Game 1–4; varies for BASIC per [spectrum-basic-32-games.md](../decisions/spectrum-basic-32-games.md)}
 **Constraint position:** {period-faithful | period-possible | modern scene} — see Section 5
 **Status:** {draft | active | superseded}
 ```
@@ -262,7 +262,7 @@ The ship test is what a phase has to clear to count as shipped. It runs at phase
 
 Five axes:
 
-- **Code:** assembles cleanly, runs on emulator and real hardware, passes the Definition of Done (see `docs/tracker/revamp.md`).
+- **Code:** assembles cleanly, runs on emulator and real hardware, passes the Definition of Done (see [commercial-bar-revamp.md](../decisions/commercial-bar-revamp.md)).
 - **Visuals:** meets the phase's visual ambition; magazine-screenshot test passed.
 - **Audio:** music and SFX present per phase plan, mixed cleanly.
 - **Level design:** playable end-to-end; difficulty curve appropriate; signposting clear.
@@ -305,7 +305,7 @@ For cross-platform patterns (techniques that genuinely transcend the platform), 
 
 **Bullets.** Which vault entries this game's curriculum references — and which need to exist (or be expanded) for cross-references to resolve.
 
-Per the Definition of Done in `docs/tracker/revamp.md`, every unit's cross-references must resolve. The Vault Tie-ins section names the entries this game depends on so that vault completeness work can prioritise.
+Per the Definition of Done in [commercial-bar-revamp.md](../decisions/commercial-bar-revamp.md), every unit's cross-references must resolve. The Vault Tie-ins section names the entries this game depends on so that vault completeness work can prioritise.
 
 Three categories of tie-in:
 
@@ -358,7 +358,7 @@ A brief is ready to anchor authoring when:
 - [`decisions/phase-boundaries`](../decisions/phase-boundaries.md) — phase-end commercial bar; gates Section 12.
 - [`decisions/constraint-position`](../decisions/constraint-position.md) — three-tier taxonomy used in Section 5.
 - [`decisions/spiral-and-incremental`](../decisions/spiral-and-incremental.md) — within/across phase progression; structures Section 11.
-- [`decisions/curriculum-structure`](../decisions/curriculum-structure.md) — per-game scope (256 units assembly; per-`revamp.md` for BASIC).
+- [`decisions/curriculum-structure`](../decisions/curriculum-structure.md) — per-game scope (256 units assembly; per [spectrum-basic-32-games.md](../decisions/spectrum-basic-32-games.md) for BASIC).
 - [`decisions/pattern-library`](../decisions/pattern-library.md) — what Section 13 feeds into.
 
 ---

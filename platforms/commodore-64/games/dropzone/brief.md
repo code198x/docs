@@ -7,7 +7,6 @@
 **Embedded concept:** Physics — velocity accumulates over time
 **Topics:** ~7 topics
 **Constraint position:** period-faithful
-**Status:** draft
 
 Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
 
