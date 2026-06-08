@@ -62,7 +62,7 @@ safety net). Toolchain: `vasm` + `xdftool` (`commodore-amiga` image, tagged
 fleet flips `next → live` when the primer is shippable, per
 [system-readiness-lives-in-tier.md](system-readiness-lives-in-tier.md).
 
-## Two notes for the future
+## Notes for the future
 
 - **A multi-language Amiga.** Assembly is first, but the Amiga is intended to get
   the richest language story of the family: **AMOS** (its accessible BASIC, with
@@ -74,3 +74,9 @@ fleet flips `next → live` when the primer is shippable, per
   assembly games predate the higher content bar. As with Spectrum and C64, they
   will be re-evaluated and likely rewritten to the new bar; the primer sets that
   bar, and is not constrained by the old game structure.
+- **Sound should reach the other assembly primers too.** The Amiga primer is the
+  first assembly "Meet the Machine" to teach sound (Paula, unit 18) — the
+  Spectrum / C64 / NES primers teach none (sound currently lives only in the
+  BASIC courses and the games). Once Paula lands, revisit retrofitting a gentle
+  sound unit (Spectrum beeper, C64 SID, NES APU) into those three so all four
+  are consistent. Audio is verified by `--audio-capture`, not a screenshot.
