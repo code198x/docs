@@ -21,6 +21,28 @@
 > *sequenced* to a second platform, not *widened* to four, so the "erodes the bar" reasoning below
 > still holds. Supersedes the "Spectrum only" / "C64 … defer wholesale" framing below, for C64 only.
 > Track plan: [commodore-64/assembly-skeleton.md](../platforms/commodore-64/assembly-skeleton.md).
+> **AMENDED 2026-06-09 — launch widened, deliberately, to all four core platforms.**
+> Confirmed by Steve: shipping a complete on-ramp on **every core platform** *is* the launch, and a
+> far stronger one than "Spectrum only." The Spectrum-only framing was an artefact of Crash! Live
+> being a Spectrum-focused event — not a scope ceiling. The October launch is now **all four live
+> platforms — Spectrum, C64, Amiga, NES — each with a complete, finishable on-ramp**, shipping **as
+> much as possible at the full DoD bar**:
+> - **Spectrum** — the assembly opening (Meet the Machine, Gloaming, Shadowkeep Arc 1) plus a large
+>   BASIC track (17 games live, more in progress).
+> - **C64** — assembly Primer + Starfield, *and* a complete BASIC volume (Meet C64 BASIC + 8 First
+>   Programs). BASIC was previously "deferred."
+> - **Amiga** — three on-ramps: Meet AMOS, Meet Blitz, and the assembly Meet the Machine.
+> - **NES** — the assembly Meet the Machine.
+>
+> This is the gentle-ramp methodology **generalised**: every machine gets a finishable on-ramp;
+> flagships (Cadence, Nightshade, Exodus, the Amiga/NES games, BASIC Volumes 2–4) stay
+> **coming-soon and sequenced**. The "widening erodes the bar" warning is *preserved*, not broken —
+> the expansion is in the **on-ramp layer** (complete primers at bar), not premature flagships.
+> **"Ship as much as possible" replaces "trim count to protect the bar" as the operating stance** —
+> the bar itself is unchanged: nothing ships below the 9-item DoD, but anything that clears it ships
+> rather than being held to a count. The "Spectrum only / C64-second / NES+Amiga deferred" framing
+> in the amendments above and the body below is superseded; the per-unit DoD bar and the four
+> structural Spectrum artefacts still stand, now joined by the other three platforms' on-ramps.
 
 **Status:** Active. October is a target, not a hard deadline — the project is close to having enough to ship. Shadowkeep scope set by [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md); BASIC by [spectrum-basic-32-games.md](spectrum-basic-32-games.md). The two structural artefacts (landing page, vault) are spec'd in this doc.
 

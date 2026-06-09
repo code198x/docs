@@ -8,16 +8,18 @@ This project lives under `~/Projects/198x/` alongside `Emu198x`. The umbrella bi
 
 ## Launch context (October 2026 target)
 
-October 2026 (Crash! Live) is the launch target, not a hard deadline. The project is close to having enough Spectrum content to ship. See [`decisions/october-2026-launch-spec.md`](decisions/october-2026-launch-spec.md) for scope and quality bar.
+October 2026 (Crash! Live) is the launch target, not a hard deadline. The launch is **all four core platforms — Spectrum, C64, Amiga, NES — each with a complete, finishable on-ramp**, shipping as much as possible at the full DoD bar. The earlier "Spectrum only" framing was an artefact of Crash! Live being a Spectrum event, not a scope ceiling — superseded by the **2026-06-09 amendment** in [`decisions/october-2026-launch-spec.md`](decisions/october-2026-launch-spec.md). Flagships stay coming-soon and sequenced; the expansion is in the on-ramp layer (complete primers at bar), so the "widening erodes the bar" warning still holds.
 
-The four launch artefacts:
+What's live now, per platform:
 
-1. **Assembly opening** — the gentle Spectrum-assembly on-ramp: a Primer ("Meet the Machine"), a complete tiny first game, and the start of the re-scoped (cell-based) Shadowkeep. Replaces the earlier "Shadowkeep Arcs 1+2 at 32 units" framing — the advanced rendering engine (pre-shift / masking / Y-sort) defers to later games so a learner can *finish* a real game in assembly by October. Governed by [`docs/decisions/spectrum-assembly-gentle-ramp.md`](decisions/spectrum-assembly-gentle-ramp.md); Shadowkeep four-arc framing (now cell-based) at `docs/decisions/shadowkeep-four-arc-framing.md`.
-2. **Spectrum BASIC Volume 1** — 8 games at Usborne bar. **Done.** V2 work (Cipher onward) has started.
-3. **Spectrum landing page** — for QR-code visitors. **Done** (initial version shipped).
-4. **Spectrum vault** — review pass + referenced gap-fill. **In progress.**
+1. **Spectrum** — the gentle assembly opening: a Primer ("Meet the Machine"), a complete first game (Gloaming), and Shadowkeep Arc 1 (cell-based; the advanced pre-shift / masking / Y-sort engine defers to later games). Plus BASIC — 17 games live (Volume 1 complete, V2 in progress). Governed by [`decisions/spectrum-assembly-gentle-ramp.md`](decisions/spectrum-assembly-gentle-ramp.md); Shadowkeep framing at `decisions/shadowkeep-four-arc-framing.md`; BASIC by [`decisions/spectrum-basic-32-games.md`](decisions/spectrum-basic-32-games.md).
+2. **C64** — assembly Primer ("Meet the Machine") + Starfield, *and* a complete BASIC volume (Meet C64 BASIC + 8 First Programs).
+3. **Amiga** — three on-ramps: Meet AMOS, Meet Blitz, and the assembly Meet the Machine. AMOS and Blitz are peer paths, not a hierarchy — see [`decisions/amiga-basic-amos-and-blitz.md`](decisions/amiga-basic-amos-and-blitz.md).
+4. **NES** — the assembly Meet the Machine.
 
-No session-start gate — work on whatever makes sense. The quality bar and cut hierarchy remain valid regardless of timeline.
+The two structural Spectrum artefacts still stand: the **landing page** (done) and the **vault** (review pass + referenced gap-fill, in progress).
+
+No session-start gate — work on whatever makes sense. The 9-item DoD bar holds for everything that ships; **"ship as much as possible" replaces trimming-to-a-count** as the operating stance.
 
 ## Critical Rules
 - **7 separate git repos** — check all with `git status` before committing
