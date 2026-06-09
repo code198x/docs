@@ -115,38 +115,32 @@ Three facts overturn the sequencing above, learned by building:
    non-interactive compile path). AmiBlitz3 remains the **licensing-clean shipping
    target**, gated on that Emu198x capability.
 
-3. **Original Blitz BASIC 2 is the AMOS-parallel short-term path — proven boot +
-   type, blocked only on a narrow emulator gap.** The real **BB2 v1.60 "Amiga
-   Format" single-disk** coverdisk release **self-boots** into the Ted editor on
-   emu198x-amiga (a500-plus / **KS2.04** — under KS1.3 the editor's console fails
-   to open; 2.04's ROM console is required) once its `s/startup-sequence` is edited
-   to launch `blitz2` directly (same trick as the AMOS template). **ASCII source
-   types in via the existing Amiga `type_string`** with correct syntax-highlighting
-   and symbols (US keymap matches), and BB2 source is **plain text** (no tokeniser —
-   more git-friendly than AMOS). **Verified 2026-06-09.**
+3. **Original Blitz BASIC 2 is the AMOS-parallel short-term path — full pipeline
+   PROVEN end-to-end.** The real **BB2 v1.60 "Amiga Format" single-disk** coverdisk
+   release **self-boots** into the Ted editor on emu198x-amiga (a500-plus / **KS2.04**
+   — under KS1.3 the editor's console fails to open; 2.04's ROM console is required)
+   once its `s/startup-sequence` is edited to launch `blitz2` directly (same trick as
+   the AMOS template). **ASCII source types in via the existing Amiga `type_string`**
+   with correct syntax-highlighting and symbols (US keymap matches), and BB2 source is
+   **plain text** (no tokeniser — more git-friendly than AMOS).
 
-   **The one blocker:** BB2's **Compile/Run is reachable only via the Intuition
-   right-mouse-button menu** — there is **no keyboard shortcut**. Confirmed against
-   the full BB2 User Guide (the complete Ted shortcut list — Amiga A/B/D/F/G/I/J/L/
-   N/P/Q/R/S/T/W/Y/Z/?/]/[ — is *editor* commands only; the Compiler-menu items
-   carry no command keys). The manual's "My First Program" is explicit: *"using the
-   right button select COMPILE&RUN from the top right menu."* So the headless
-   navigation target, once the right button works, is: hold right button → rightmost
-   menu (**Compiler**) → **top item** (COMPILE/RUN). (`Amiga-Z` opens a CLI from the
-   editor — a possible alternative compile route to explore later, but the menu is
-   the authentic front door.)
-   And the **right mouse button does not open the menu** headless in emu198x-amiga
-   — confirmed across repeated attempts with the pointer homed and the button held.
-   The right button is wired to Paula's POTGOR pot lines
-   (`set_pot_pin_level(POTGOR_BTN_PORT0_RIGHT, …)`), but Intuition doesn't act on
-   it; the left button (CIA FIR0) works. This is a **narrow Emu198x item** — make
-   the POTGOR/POTINP right-button read drive Intuition menus — *far* smaller than
-   the AmiBlitz3/HD lift. Until it lands (or a stock-UAE capture bridge is used),
-   the Blitz track cannot capture a compiled-program screenshot.
+   **Compile-and-run trigger: `right-Amiga + X`** (the Compiler menu's COMPILE/RUN
+   command key; RUN = ⌘M, CREATE FILE = ⌘E). The BB2 User Guide's *prose* shortcut
+   list omits these, but the Compiler **menu itself** shows the command keys — so
+   there IS a keyboard trigger, no fragile mouse-menu navigation needed. The full
+   loop **boot → `type_string` → right-Amiga+X → capture** produces the compiled
+   program's output ("Blitz 2 CLI Window"). The Blitz analogue of the AMOS F1 flow.
+   **Verified end-to-end 2026-06-09.**
+
+   *History: this was briefly blocked because the right mouse button didn't open
+   Intuition menus headless (emu198x [#63](https://github.com/emu198x/emu198x/issues/63),
+   fixed same day) — but the menu turned out unnecessary once the `right-Amiga+X`
+   command key was found. The earlier `right-Amiga+R` test did nothing only because
+   Amiga-R = Replace; the qualifier path was fine.*
 
 **Revised sequencing:** AMOS first (done). Blitz authored short-term on **BB2 (AF
-single-disk)** within the BB2 feature set (forward-compatible with AmiBlitz3),
-**gated on the right-mouse-menu emulator fix**; AmiBlitz3 becomes the
+single-disk)** within the BB2 feature set (forward-compatible with AmiBlitz3);
+AmiBlitz3 becomes the
 licensing-clean CI/shipping toolchain once Emu198x gains hard-disk support. The
 "contrast, not coverage" principle and the BB2-feature-set constraint are unchanged.
 
@@ -233,7 +227,7 @@ differently on the two tracks:
 ## Open actions
 
 > **2026-06-09 additions (Blitz-track gating, from the build):**
-> - [ ] **Right-mouse-button Intuition menus in emu198x-amiga** *(Emu198x session — gates the BB2 short-term path).* BB2's Compile/Run is right-button-menu only; the right button is wired to POTGOR pot lines but doesn't drive Intuition menus headless. Smallest unblock for capturing Blitz units.
+> - [x] ~~**Right-mouse-button Intuition menus in emu198x-amiga**~~ — **moot.** Filed as emu198x #63 and fixed same day, but the BB2 compile trigger turned out to be the keyboard command key **`right-Amiga+X`** (no menu needed). Full BB2 compile-and-run pipeline proven end-to-end 2026-06-09.
 > - [ ] **BB2-ADF redistribution** — original Blitz BASIC 2 binaries have no open licence (`nitrologic/blitz2` disclaims rights). Same tolerated-for-local-capture / not-for-CI status as the AMOS Pro ADF below. The AF coverdisk version was a deliberate free giveaway, but that is not a formal redistribution grant — do **not** bundle into CI/curriculum unresolved.
 > - [ ] **AmiBlitz3 on emu198x-amiga** *(Emu198x session — gates the licensing-clean shipping toolchain).* Needs HDF mount + a WB/AmiBlitz3 hard-disk image + a 68020/Fast-RAM model + a non-interactive compile path. Large; not required for short-term BB2 authoring.
 >
@@ -328,4 +322,5 @@ Precedent for a BASIC-track decision: [spectrum-basic-32-games.md](spectrum-basi
 | 2026-06-02 | AMOS-redistribution outreach to François Lionet. GitHub contact email bounced (stale); sent instead via LinkedIn DM (existing connection). Awaiting reply; build-from-source held as fallback. |
 | 2026-06-09 | **AMOS shipped first** — complete Meet AMOS primer (17 units) built and live, via type-into-editor (no tokeniser). Sequencing reality recorded; see "Update 2026-06-09". |
 | 2026-06-09 | **Pipeline reality found.** emu198x-amiga is single-floppy (no HDF) → AmiBlitz3 (35 MB HD / 8–12 MB / 68020 / WB2.1+ / no CLI) can't run on it; demoted to licensing-clean shipping target gated on Emu198x HD work. |
-| 2026-06-09 | **BB2 short-term path spiked.** Real BB2 v1.60 AF single-disk self-boots into Ted on a500-plus/KS2.04; ASCII source types via `type_string` (syntax-highlighted, plain-text). **Blocked only** on the right-mouse-button Intuition menu not opening headless (Compile/Run is menu-only). Narrow Emu198x fix. |
+| 2026-06-09 | **BB2 short-term path spiked.** Real BB2 v1.60 AF single-disk self-boots into Ted on a500-plus/KS2.04; ASCII source types via `type_string` (syntax-highlighted, plain-text). |
+| 2026-06-09 | **BB2 pipeline PROVEN end-to-end.** Compile-and-run trigger is the keyboard command key **`right-Amiga+X`** (Compiler→COMPILE/RUN); the loop boot→type→⌘X→capture produces the program's output. emu198x #63 (right-button menus) fixed same day but proved unnecessary. Blitz track unblocked. |
