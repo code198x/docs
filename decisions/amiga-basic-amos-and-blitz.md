@@ -78,6 +78,12 @@ structurally cannot do.
 
 ## Sequencing: Blitz first
 
+> **Superseded by reality — see "Update 2026-06-09" below.** AMOS shipped first.
+> The "Blitz is the easier track to stand up" reasoning assumed scriptable CLI
+> compilation *under our emulator*, which turned out false: emu198x-amiga is
+> single-floppy (ADF only; no HDF) and AmiBlitz3 needs a hard disk. The text
+> below is preserved as the 2026-06-02 position.
+
 Counter-intuitive (AMOS is the easier *language*) but correct (Blitz is the
 easier *track to stand up*). Blitz/AmiBlitz is licensing-clean, plain-text, and
 scriptably compilable today — it fits the build-and-screenshot pipeline with no
@@ -87,6 +93,55 @@ the pipeline; AMOS follows once its open actions close.
 
 The order also tells the historical story for free: AMOS was the entry drug the
 bedroom scene came in on; Blitz is where people went to ship serious work.
+
+## Update 2026-06-09 — pipeline reality (AMOS shipped first; Blitz path revised)
+
+Three facts overturn the sequencing above, learned by building:
+
+1. **AMOS shipped first, and works.** The complete **Meet AMOS** primer (17 units)
+   is built and live. The tokeniser snag was sidestepped entirely: we **type ASCII
+   source into the AMOS editor** via a headless `type_string` and press F1 — no
+   `.AMOS` round-trip needed. The AMOS Pro System disk **self-boots** into its
+   editor on emu198x-amiga (a500-plus / KS2.04, single floppy). See
+   [[code198x:amos-pro-headless-pipeline]] (global KB) for the proven recipe.
+
+2. **emu198x-amiga is single-floppy; AmiBlitz3 cannot run on it.** The emulator
+   exposes one `--disk` (ADF only; its MCP layer states *"Only `adf` is wired
+   today; `hdf`/`ipf` reserved"*). **AmiBlitz3** needs a **35 MB hard disk, 8–12 MB
+   RAM, 68020+, Workbench 2.1+**, and has **no documented CLI compiler** (IDE
+   only). So the record's "Blitz pipeline-ready, fits the Docker build directly"
+   is false *for our emulator*: standing AmiBlitz3 up is substantial **Emu198x**
+   work (HDF mount + a WB/AmiBlitz3 HD image + a 68020/Fast-RAM model + a
+   non-interactive compile path). AmiBlitz3 remains the **licensing-clean shipping
+   target**, gated on that Emu198x capability.
+
+3. **Original Blitz BASIC 2 is the AMOS-parallel short-term path — proven boot +
+   type, blocked only on a narrow emulator gap.** The real **BB2 v1.60 "Amiga
+   Format" single-disk** coverdisk release **self-boots** into the Ted editor on
+   emu198x-amiga (a500-plus / **KS2.04** — under KS1.3 the editor's console fails
+   to open; 2.04's ROM console is required) once its `s/startup-sequence` is edited
+   to launch `blitz2` directly (same trick as the AMOS template). **ASCII source
+   types in via the existing Amiga `type_string`** with correct syntax-highlighting
+   and symbols (US keymap matches), and BB2 source is **plain text** (no tokeniser —
+   more git-friendly than AMOS). **Verified 2026-06-09.**
+
+   **The one blocker:** BB2's **Compile/Run is reachable only via the Intuition
+   right-mouse-button menu** (no keyboard shortcut — confirmed against the BB2 User
+   Guide; Ted's Amiga-letter keys are *editor* commands, e.g. Amiga-R = Replace).
+   And the **right mouse button does not open the menu** headless in emu198x-amiga
+   — confirmed across repeated attempts with the pointer homed and the button held.
+   The right button is wired to Paula's POTGOR pot lines
+   (`set_pot_pin_level(POTGOR_BTN_PORT0_RIGHT, …)`), but Intuition doesn't act on
+   it; the left button (CIA FIR0) works. This is a **narrow Emu198x item** — make
+   the POTGOR/POTINP right-button read drive Intuition menus — *far* smaller than
+   the AmiBlitz3/HD lift. Until it lands (or a stock-UAE capture bridge is used),
+   the Blitz track cannot capture a compiled-program screenshot.
+
+**Revised sequencing:** AMOS first (done). Blitz authored short-term on **BB2 (AF
+single-disk)** within the BB2 feature set (forward-compatible with AmiBlitz3),
+**gated on the right-mouse-menu emulator fix**; AmiBlitz3 becomes the
+licensing-clean CI/shipping toolchain once Emu198x gains hard-disk support. The
+"contrast, not coverage" principle and the BB2-feature-set constraint are unchanged.
 
 ## The three-rung abstraction ladder
 
@@ -169,6 +224,13 @@ differently on the two tracks:
   above. This is the single biggest reason AMOS is sequenced second.
 
 ## Open actions
+
+> **2026-06-09 additions (Blitz-track gating, from the build):**
+> - [ ] **Right-mouse-button Intuition menus in emu198x-amiga** *(Emu198x session — gates the BB2 short-term path).* BB2's Compile/Run is right-button-menu only; the right button is wired to POTGOR pot lines but doesn't drive Intuition menus headless. Smallest unblock for capturing Blitz units.
+> - [ ] **BB2-ADF redistribution** — original Blitz BASIC 2 binaries have no open licence (`nitrologic/blitz2` disclaims rights). Same tolerated-for-local-capture / not-for-CI status as the AMOS Pro ADF below. The AF coverdisk version was a deliberate free giveaway, but that is not a formal redistribution grant — do **not** bundle into CI/curriculum unresolved.
+> - [ ] **AmiBlitz3 on emu198x-amiga** *(Emu198x session — gates the licensing-clean shipping toolchain).* Needs HDF mount + a WB/AmiBlitz3 hard-disk image + a 68020/Fast-RAM model + a non-interactive compile path. Large; not required for short-term BB2 authoring.
+>
+> The original AMOS-track actions below are largely **resolved in practice**: AMOS shipped via type-into-editor (no tokeniser needed), and "AMOS in Emu198x" is proven. Only AMOS-ADF *redistribution* (for CI) remains genuinely open — same bucket as BB2-ADF.
 
 These gate the AMOS track (not the Blitz track) and are explicit TODOs:
 
@@ -257,3 +319,6 @@ Precedent for a BASIC-track decision: [spectrum-basic-32-games.md](spectrum-basi
 | 2026-06-02 | Captured. Two-track fork formalised; AMOS-vs-Blitz licensing verified against primary sources; Blitz-first sequencing set; AMOS open actions enumerated. |
 | 2026-06-02 | Skeleton's commercial-proof attributions checked. *Guardian* (Acid/Sibly, Blitz) was miscredited to AMOS → moved to Blitz column; *Ultimate Soccer Manager* unsourced → removed. AMOS examples corrected to Scorched Tanks, Flight of the Amazon Queen, Valhalla, Jetstrike. |
 | 2026-06-02 | AMOS-redistribution outreach to François Lionet. GitHub contact email bounced (stale); sent instead via LinkedIn DM (existing connection). Awaiting reply; build-from-source held as fallback. |
+| 2026-06-09 | **AMOS shipped first** — complete Meet AMOS primer (17 units) built and live, via type-into-editor (no tokeniser). Sequencing reality recorded; see "Update 2026-06-09". |
+| 2026-06-09 | **Pipeline reality found.** emu198x-amiga is single-floppy (no HDF) → AmiBlitz3 (35 MB HD / 8–12 MB / 68020 / WB2.1+ / no CLI) can't run on it; demoted to licensing-clean shipping target gated on Emu198x HD work. |
+| 2026-06-09 | **BB2 short-term path spiked.** Real BB2 v1.60 AF single-disk self-boots into Ted on a500-plus/KS2.04; ASCII source types via `type_string` (syntax-highlighted, plain-text). **Blocked only** on the right-mouse-button Intuition menu not opening headless (Compile/Run is menu-only). Narrow Emu198x fix. |
