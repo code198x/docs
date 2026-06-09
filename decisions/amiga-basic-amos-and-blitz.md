@@ -126,8 +126,15 @@ Three facts overturn the sequencing above, learned by building:
    more git-friendly than AMOS). **Verified 2026-06-09.**
 
    **The one blocker:** BB2's **Compile/Run is reachable only via the Intuition
-   right-mouse-button menu** (no keyboard shortcut — confirmed against the BB2 User
-   Guide; Ted's Amiga-letter keys are *editor* commands, e.g. Amiga-R = Replace).
+   right-mouse-button menu** — there is **no keyboard shortcut**. Confirmed against
+   the full BB2 User Guide (the complete Ted shortcut list — Amiga A/B/D/F/G/I/J/L/
+   N/P/Q/R/S/T/W/Y/Z/?/]/[ — is *editor* commands only; the Compiler-menu items
+   carry no command keys). The manual's "My First Program" is explicit: *"using the
+   right button select COMPILE&RUN from the top right menu."* So the headless
+   navigation target, once the right button works, is: hold right button → rightmost
+   menu (**Compiler**) → **top item** (COMPILE/RUN). (`Amiga-Z` opens a CLI from the
+   editor — a possible alternative compile route to explore later, but the menu is
+   the authentic front door.)
    And the **right mouse button does not open the menu** headless in emu198x-amiga
    — confirmed across repeated attempts with the pointer homed and the button held.
    The right button is wired to Paula's POTGOR pot lines
