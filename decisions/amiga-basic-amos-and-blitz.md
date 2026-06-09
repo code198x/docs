@@ -144,16 +144,29 @@ AmiBlitz3 becomes the
 licensing-clean CI/shipping toolchain once Emu198x gains hard-disk support. The
 "contrast, not coverage" principle and the BB2-feature-set constraint are unchanged.
 
-## The three-rung abstraction ladder
+## Abstraction levels — alternatives, not a ranking
 
 The fork gives the Amiga a teaching spine no other system in the fleet has —
-three rungs of abstraction on one machine, building roughly comparable games:
+three tools at different abstraction levels on one machine, building roughly
+comparable games:
 
-> AMOS (high-level, interpreted) → Blitz (compiled, touches the hardware) →
+> AMOS (high-level, interpreted) · Blitz (compiled, touches the hardware) ·
 > 68000 assembly (the metal)
 
-Design the Blitz track as the deliberate bridge *into* the assembly track, not a
-dead end. A learner climbs down toward the hardware one rung at a time.
+**But level is not rank.** AMOS and Blitz are **parallel, equally valid entry
+points** — not a beginner rung and an advanced one. A learner does **not**
+"graduate" from AMOS to Blitz, and neither is the lesser tool. Each is better at
+*some* things: AMOS at immediacy and its rich built-in toolkit (Bobs, AMAL,
+sprites, sound); Blitz at raw speed and direct hardware access. You pick by
+temperament and by the game in front of you — except where one is genuinely
+stronger for a specific job, and then you pick that one.
+
+Because Blitz sits closer to the hardware, it makes a natural *bridge into* the
+assembly track for a learner who wants to go there — but that is adjacency of
+concepts, not Blitz being "above" AMOS. Assembly is a deeper, harder path, not a
+reward for finishing Blitz. (Corrected 2026-06-09: the earlier "three-rung
+ladder / climb down one rung at a time" framing wrongly implied a quality
+ranking with AMOS as the beginner rung. See drift triggers.)
 
 ## Licensing — verified
 
@@ -298,6 +311,13 @@ These gate the AMOS track (not the Blitz track) and are explicit TODOs:
 - **Framing the built-in AmigaBASIC as the BASIC track.** It was weak, dropped,
   and Kickstart/AGA-incompatible. The authentic Amiga BASIC story is AMOS and
   Blitz.
+- **Ranking AMOS and Blitz** — calling Blitz a "rung above" AMOS, the "middle
+  rung", a bridge you reach *after* AMOS, or AMOS a stepping-stone you "graduate"
+  from. They are parallel, equally valid entry points; the abstraction-level
+  difference (Blitz is closer to the metal) is not a seniority or quality
+  ranking. Watch for the words **"ladder", "rung", "pulls ahead of AMOS",
+  "between AMOS and assembly", "middle rung"**. Each is better at *some* things;
+  neither is better overall. Assembly is a deeper path, not a rung below Blitz.
 
 ## Status
 
@@ -327,5 +347,6 @@ Precedent for a BASIC-track decision: [spectrum-basic-32-games.md](spectrum-basi
 | 2026-06-09 | **Meet Blitz primer authored, 12 of 14 units live.** Phases 1–5 shipped (units 1–8, 10, 12–14). Two open: **unit 9** (Reading the Joystick) blocked on **emu198x #120** — `Joyx(1)/Joyy(1)` read −1 at neutral, ball drifts to corner; **unit 11** (collisions) parked on a `ShapesHit`-while-moving debug (suspected Blitz code, not emulator). |
 | 2026-06-09 | **Hardware sprites don't render in emu198x-amiga.** Unit 13 first tried `GetaSprite`/`ShowSprite` (the true "reach the hardware" demo): a 3-bitplane sprite source crashes to CLI; a 2-bitplane source runs but the sprite never appears (sprite DMA gap — Emu198x territory, like #120). **Pivoted unit 13 to colour-register cycling** via `RGB` — same "reach past the picture to the chips" point, proven end-to-end. Hardware-sprite support filed as **emu198x #455**. |
 | 2026-06-09 | **BB2 authoring gotchas (for future Blitz units).** Ted auto-capitalises any recognised keyword, which is the fastest way to spot a **reserved-word collision** — `off` and `step` both turn into keywords and error as variable names (use `n`/`c`). No **`mod`** operator (wrap by hand: `If c>6 Then c=c-7`). **`Dim` takes one array each** (`Dim r(6)` per line, not `Dim r(6),g(6)`); typed arrays via `Dim px.w(23)` work and are needed when values exceed a byte. Plain `Blit` still crashes off-bitmap — clamp positions hard before blitting. |
+| 2026-06-09 | **Framing corrected — AMOS and Blitz are peer alternatives, not a ranking.** Steve: "it's wrong to describe Blitz as the 'middle rung', it's a perfectly valid alternative path to AMOS, neither better nor worse (except for some things)." Removed the "three-rung ladder / climb down one rung" framing from the decision record and all curriculum/site copy (unit 11, 14, 15, the Meet Blitz index, and both Amiga pages). Reframed as two equally valid entry points with different strengths (AMOS: immediacy + built-in toolkit; Blitz: speed + hardware); assembly is a deeper path, not a rung below Blitz. New drift trigger added. |
 | 2026-06-09 | **emu198x #455 fixed — Hardware Sprites added as unit 14; primer now 15 units.** With `GetaSprite`/`ShowSprite` rendering (the emulator now honours direct SPRxPOS/CTL writes), the originally-intended "reach the hardware" sprite demo works. Added as its own unit (chip-overlay vs blitter, depth-2 source, 8 channels, `InFront`) *alongside* the shipped colour-cycling unit 13 — Steve's call, both are legitimate hardware topics. **The Blitz Way → unit 15.** Sprite gotcha for future units: the source bitmap must be **depth 2** (3 colours + transparent) or the program fails at run time. Also fixed gap-aware unit nav (`computeUnitNav` steps to nearest *available* unit number) — a parked middle unit previously broke the prev/next chain. Only unit 11 (collisions) open. |
 | 2026-06-09 | **emu198x #120 resolved — not an emulator bug; unit 9 shipped.** The "neutral drift" was a Code198x capture-harness artifact: the object-memory dismiss **left-click reads as `Joyb(0)` fire**, killing a `While Joyb(0)=0` loop on programs too small to raise the requester (boot-timing flakiness added the "intermittent" look). Both sides confirmed neutral reads `0` — a per-frame green/red diagnostic here, and an Emu198x `joy1dat`/`joy0dat` query path + 1000-frame `steer.bb2` run there (which also pinned a regression test and fixed two stale FIR0/FIR1 masks). **Unit 9 (Reading the Joystick) captured** by injecting a steer path on port 2 (→ `JOY1DAT` → `Joyx(1)`); programs using `Joyb(0)` to quit must raise the object-memory requester (click consumed) or set `object_memory:false`. **Primer now 13 of 14**; only unit 11 (collisions) open. |
