@@ -2,7 +2,7 @@
 
 **Title (working):** Rover
 **System / Track:** Commodore 64 / BASIC
-**Position:** Volume 1, Game 7 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Control — real-time, responsive movement
 **Embedded concept:** Collision — the world pushes back
 **Topics:** 7 topics, ~9–12 hours

@@ -213,7 +213,7 @@ Three core platforms run a BASIC track (counts flexible; lineup + state in the r
 
 | Platform | Language | Lineup record | Why |
 |----------|----------|---------------|-----|
-| ZX Spectrum | Sinclair BASIC | [spectrum-basic-32-games.md](../decisions/spectrum-basic-32-games.md) | How everyone started. Type-in listings, magazine culture. |
+| ZX Spectrum | Sinclair BASIC | [spectrum-basic-lineup.md](../decisions/spectrum-basic-lineup.md) | How everyone started. Type-in listings, magazine culture. |
 | Commodore 64 | BASIC V2 | [c64-basic-volumes-2-4.md](../decisions/c64-basic-volumes-2-4.md) | Stock BASIC reaches the hardware only by POKE/PEEK — memory-mapped I/O made tangible. |
 | Amiga | AMOS / Blitz (peer paths) | [amiga-basic-amos-and-blitz.md](../decisions/amiga-basic-amos-and-blitz.md) | Immediate, hobbyist (AMOS) vs compiled, commercial (Blitz — Worms, Skidmarks). |
 | NES | None | — | No high-level language. Assembly from the start. |

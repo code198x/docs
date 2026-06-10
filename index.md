@@ -26,7 +26,7 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 - [October 2026 launch spec](decisions/october-2026-launch-spec.md) — all four core platforms, complete on-ramps at full bar (2026-06-09 amendment)
 - [Real retro games](decisions/real-retro-games.md) — multi-disciplinary commitment (code/visuals/audio/level/polish co-equal)
 - [Commercial-bar revamp](decisions/commercial-bar-revamp.md) — Game 1s rewritten to commercially-shippable bar
-- [Curriculum structure](decisions/curriculum-structure.md) — 4 platforms × 4 games × 256 units (direction-of-travel)
+- [Curriculum structure](decisions/curriculum-structure.md) — modules to a quality bar; no fixed game or unit counts (technique budget governs)
 - [Phase boundaries](decisions/phase-boundaries.md) — pedagogy sequences within, commercial bar gates phase ends
 - [Constraint position](decisions/constraint-position.md) — period-faithful / period-possible / modern scene
 - [Spiral and incremental](decisions/spiral-and-incremental.md) — incremental within phases, spiral across phases
@@ -47,7 +47,7 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 ### Game lineups (per-track, 2026 replan)
 
 - [Spectrum assembly — gentle ramp](decisions/spectrum-assembly-gentle-ramp.md) — governing record: the rendering ladder, technique budget, Shadowkeep re-scope
-- [Spectrum BASIC 32-game lineup](decisions/spectrum-basic-32-games.md) — 32 games × 4 volumes; UDGs foundational; trig at Drift
+- [Spectrum BASIC lineup](decisions/spectrum-basic-lineup.md) — named volumes (uncounted arcs); UDGs foundational; trig at Drift
 - [C64 assembly lineup](decisions/c64-assembly-lineup.md) — VIC-II/6502 hardware ladder
 - [C64 BASIC Volumes 2–4](decisions/c64-basic-volumes-2-4.md) — twin concept + POKE-the-hardware ladders
 - [NES assembly lineup](decisions/nes-assembly-lineup.md) — PPU/6502 ladder; Dash re-scope; mappers late

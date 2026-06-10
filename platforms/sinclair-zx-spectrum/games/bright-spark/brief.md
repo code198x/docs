@@ -2,7 +2,7 @@
 
 **Title (working):** Bright Spark
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 1, Game 6 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Pattern — recognise, reproduce, extend
 **Embedded concept:** Signposting — using colour and sound to make the rules obvious without words
 **Topics:** 6 topics, ~7–9 hours

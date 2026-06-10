@@ -36,9 +36,9 @@ All marked **first-draft, needs-workshop**. Names may want refinement after livi
 
 ### In the BASIC curriculum spec
 
-The eight V1 games (October ship) become: Banner, Lucky Number, **Oracle Stone**, Reflex, Dice Roller, Bright Spark, Hi-Lo, Descent. Three of the eight V1 games are renamed from v6.3 (slot 3 Magic 8-Ball → Oracle Stone). Existing built games (Lucky Number, Bright Spark) keep their names — they already followed the convention.
+The Volume 1 games (October ship) become: Banner, Lucky Number, **Oracle Stone**, Reflex, Dice Roller, Bright Spark, Hi-Lo, Descent. Three of the Volume 1 games are renamed from v6.3 (Magic 8-Ball → Oracle Stone). Existing built games (Lucky Number, Bright Spark) keep their names — they already followed the convention.
 
-The full 32-game lineup lives in [spectrum-basic-32-games.md](spectrum-basic-32-games.md); current-state summary in [[spectrum-basic]].
+The full lineup lives in [spectrum-basic-lineup.md](spectrum-basic-lineup.md); current-state summary in [[spectrum-basic]].
 
 ### In existing MDX content
 
@@ -74,4 +74,4 @@ Active. Captured 2026-05-19. Descends from [inspired-by-not-clones-naming.md](in
 
 Anchored in [[spectrum-basic]] (the current-state memory entry).
 
-The existing [spectrum-basic-32-games.md](spectrum-basic-32-games.md) has been updated with the renamed lineup. The curriculum spec doc (`docs/platforms/sinclair-zx-spectrum/basic.md`) needs a v6.4 changelog entry — pending.
+The existing [spectrum-basic-lineup.md](spectrum-basic-lineup.md) has been updated with the renamed lineup. The curriculum spec doc (`docs/platforms/sinclair-zx-spectrum/basic.md`) needs a v6.4 changelog entry — pending.

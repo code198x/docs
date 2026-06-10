@@ -2,7 +2,7 @@
 
 **Title (working):** Reflex
 **System / Track:** Commodore 64 / BASIC
-**Position:** Volume 1, Game 3 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Tension — time pressure creates engagement
 **Embedded concept:** Telegraphing — showing the player what's about to happen so they can prepare
 **Topics:** 6 topics, ~7–9 hours

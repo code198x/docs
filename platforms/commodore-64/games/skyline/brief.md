@@ -2,7 +2,7 @@
 
 **Title (working):** Skyline
 **System / Track:** Commodore 64 / BASIC
-**Position:** Volume 1, Game 1 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Composition — placing parts to make a whole
 **Embedded concept:** Coordinates — addressing the screen by row and column
 **Topics:** 6 topics, ~6–8 hours

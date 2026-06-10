@@ -2,7 +2,7 @@
 
 **Title (working):** Cipher
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 2, Game 1 of 8 (slot 9)
+**Position:** Volume 2 — Patterns of State
 **Headline concept:** Data-Driven — the content shapes the experience, not the code
 **Embedded concept:** Difficulty curve via content — longer words are harder without changing any code
 **Topics:** 8 topics, ~8–12 hours

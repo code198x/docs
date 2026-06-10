@@ -353,7 +353,7 @@ Descends from [curriculum-structure.md](curriculum-structure.md),
 [inspired-by-not-clones-naming.md](inspired-by-not-clones-naming.md),
 [real-retro-games.md](real-retro-games.md),
 [examples-as-files-and-screenshots.md](examples-as-files-and-screenshots.md).
-Precedent for a BASIC-track decision: [spectrum-basic-32-games.md](spectrum-basic-32-games.md).
+Precedent for a BASIC-track decision: [spectrum-basic-lineup.md](spectrum-basic-lineup.md).
 
 ## Log
 

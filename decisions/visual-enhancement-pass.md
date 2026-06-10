@@ -10,7 +10,7 @@
 > **visual vocabulary, UDG budgets, and per-game proposals all stand**; only the numbering
 > convention is retired. Current order and state live in
 > `modules/sinclair-zx-spectrum/basic.yaml` and the lineup record
-> [spectrum-basic-32-games.md](spectrum-basic-32-games.md).
+> [spectrum-basic-lineup.md](spectrum-basic-lineup.md).
 
 ## The decision
 
@@ -429,7 +429,7 @@ If you find yourself doing any of the following, stop and re-consult this decisi
 
 ## Anchored in
 
-- [spectrum-basic-32-games.md](spectrum-basic-32-games.md) — game lineup (unit counts for Hi-Lo and Touchdown updated)
+- [spectrum-basic-lineup.md](spectrum-basic-lineup.md) — game lineup (unit counts for Hi-Lo and Touchdown updated)
 - [october-2026-launch-spec.md](october-2026-launch-spec.md) — V1 quality bar
 - [commercial-bar-revamp.md](commercial-bar-revamp.md) — Usborne 1984 bar definition
 - Game briefs at `platforms/sinclair-zx-spectrum/games/*/brief.md` — updated to reflect visual enhancements

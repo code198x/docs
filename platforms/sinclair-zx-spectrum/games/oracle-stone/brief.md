@@ -2,7 +2,7 @@
 
 **Title (working):** Oracle Stone
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 1, Game 3 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Chance — the program decides
 **Embedded concept:** Anticipation — the pause before the answer matters more than the answer
 **Topics:** 5 topics, ~5–7 hours
@@ -52,7 +52,7 @@ Type a question — any question. The screen pauses dramatically, then reveals t
 ## 6. Anti-goals
 
 - No real intelligence — the Oracle picks from a fixed list. No parsing of the question, no keyword matching. The question is ignored entirely; only the ceremony of asking matters.
-- No DATA/READ — answers are selected via chained IF/THEN on a random number, not read from a DATA block. DATA/READ arrives at Cipher (V2 slot 9).
+- No DATA/READ — answers are selected via chained IF/THEN on a random number, not read from a DATA block. DATA/READ arrives at Cipher (the first Volume 2 game).
 - No loops — the program runs once per question. The learner runs it again manually. GO TO is available from Lucky Number but deliberately unused here to keep the program linear and short.
 - No scoring or tracking — no count of questions asked, no history. Each consultation stands alone.
 - Maximum ~15–20 lines of BASIC.

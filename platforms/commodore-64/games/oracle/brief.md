@@ -2,7 +2,7 @@
 
 **Title (working):** Oracle
 **System / Track:** Commodore 64 / BASIC
-**Position:** Volume 1, Game 2 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Chance — the machine surprises you
 **Embedded concept:** Suspense — the pause before the reveal
 **Topics:** 6 topics, ~6–8 hours

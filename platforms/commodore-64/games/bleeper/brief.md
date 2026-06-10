@@ -2,7 +2,7 @@
 
 **Title (working):** Bleeper
 **System / Track:** Commodore 64 / BASIC
-**Position:** Volume 1, Game 5 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Memory — hold and reproduce a growing sequence
 **Embedded concept:** Escalation — each round raises the load
 **Topics:** 6–7 topics, ~8–10 hours

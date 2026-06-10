@@ -2,7 +2,7 @@
 
 **Title (working):** Quiz Master
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 2, Game 2 of 8 (slot 10)
+**Position:** Volume 2 — Patterns of State
 **Headline concept:** Progression — the player grows, the score climbs
 **Embedded concept:** Ratings as social proof — "Quiz Master" feels like an earned title
 **Topics:** 10 topics, ~10–14 hours

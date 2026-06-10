@@ -12,7 +12,7 @@ October 2026 (Crash! Live) is the launch target, not a hard deadline. The launch
 
 What's live now, per platform:
 
-1. **Spectrum** — the gentle assembly opening: a Primer ("Meet the Machine"), a complete first game (Gloaming), and Shadowkeep Arc 1 (cell-based; the advanced pre-shift / masking / Y-sort engine defers to later games). Plus BASIC — 17 games live (Volume 1 complete, V2 in progress). Governed by [`decisions/spectrum-assembly-gentle-ramp.md`](decisions/spectrum-assembly-gentle-ramp.md); Shadowkeep framing at `decisions/shadowkeep-four-arc-framing.md`; BASIC by [`decisions/spectrum-basic-32-games.md`](decisions/spectrum-basic-32-games.md).
+1. **Spectrum** — the gentle assembly opening: a Primer ("Meet the Machine"), a complete first game (Gloaming), and Shadowkeep Arc 1 (cell-based; the advanced pre-shift / masking / Y-sort engine defers to later games). Plus BASIC — 17 games live (Volume 1 complete, V2 in progress). Governed by [`decisions/spectrum-assembly-gentle-ramp.md`](decisions/spectrum-assembly-gentle-ramp.md); Shadowkeep framing at `decisions/shadowkeep-four-arc-framing.md`; BASIC by [`decisions/spectrum-basic-lineup.md`](decisions/spectrum-basic-lineup.md).
 2. **C64** — assembly Primer ("Meet the Machine") + Starfield, *and* a complete BASIC volume (Meet C64 BASIC + 8 First Programs).
 3. **Amiga** — three on-ramps: Meet AMOS, Meet Blitz, and the assembly Meet the Machine. AMOS and Blitz are peer paths, not a hierarchy — see [`decisions/amiga-basic-amos-and-blitz.md`](decisions/amiga-basic-amos-and-blitz.md).
 4. **NES** — the assembly Meet the Machine.

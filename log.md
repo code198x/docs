@@ -422,7 +422,7 @@ Shadowkeep stays at 64 units total. Arc shapes revised in content, not count. Cr
 - `spectrum-basic-v6.4-renames.md` — 11 BASIC games renamed under inspired-by-not-clones (Cut A — all 11, not just active trademarks)
 
 **Files edited:**
-- `knowledge/decisions/spectrum-basic-32-games.md` — title bumped to v6.4; lineup updated with 11 v6.4 names; cross-reference to v6.4-renames doc
+- `knowledge/decisions/spectrum-basic-lineup.md` — title bumped to v6.4; lineup updated with 11 v6.4 names; cross-reference to v6.4-renames doc
 - `knowledge/decisions/shadowkeep-32-unit-commitment.md` — added "Extended by" section pointing to shadowkeep-four-arc-framing; log row added
 - `knowledge/index.md` — five new Decision entries
 - `~/.claude/projects/.../memory/spectrum-basic-v6.4-reframe.md` — fixed slot 8 Touchdown reference (game name stays Touchdown; Descent is the player-facing concept)

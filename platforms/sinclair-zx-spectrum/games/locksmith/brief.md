@@ -2,7 +2,7 @@
 
 **Title (working):** Locksmith
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 2, Game 3 of 8 (slot 11)
+**Position:** Volume 2 — Patterns of State
 **Headline concept:** Deduction — encoded clues, reasoned through
 **Embedded concept:** Information layering — each guess reveals more than the answer
 **Topics:** 8 topics, ~8–12 hours

@@ -2,7 +2,7 @@
 
 **Title (working):** Safe Cracker
 **System / Track:** Commodore 64 / BASIC
-**Position:** Volume 1, Game 6 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Deduction — narrow hidden information
 **Embedded concept:** Stakes — a limited number of tries
 **Topics:** 6 topics, ~6–8 hours

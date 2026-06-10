@@ -1,11 +1,13 @@
 # Lineup replan — Spectrum · BASIC (PROPOSAL — not applied)
 
 > **APPLIED 2026-06-10.** This proposal was applied to the catalogue and the per-track decision record under `decisions/`; the "not applied" status below is historical. Kept as the signed-off provenance record. Some game names predate the 2026-06-10 naming pass.
+>
+> **SUPERSEDED IN PART 2026-06-10 (fixed counts retired).** This doc repeatedly asserts the "32-game / 4-volume / ~8-per-volume frame preserved" — that frame was retired later the same day. Volumes are now uncounted named arcs sized by genre breadth + technique budget; slot numbers are dropped. See [`spectrum-basic-lineup.md`](../../decisions/spectrum-basic-lineup.md) and [`curriculum-structure.md`](../../decisions/curriculum-structure.md). Read the count/slot framing below as historical; the game lineup and progression notes still hold.
 
 > **Status: proposal for review.** Not applied. On sign-off → written into
 > `website/src/content/modules/sinclair-zx-spectrum/basic.yaml` (re-sequence the
 > coming-soon stubs; the 17 shipped modules are untouched) + a decision-record
-> amendment to [`spectrum-basic-32-games.md`](../../decisions/spectrum-basic-32-games.md).
+> amendment to [`spectrum-basic-lineup.md`](../../decisions/spectrum-basic-lineup.md).
 > Counts flexible; genres may recur across tracks; progressive + spiral; each game
 > anchored to a real Spectrum classic; prefer more small games over fewer overwhelming ones.
 >
@@ -81,7 +83,7 @@ coming-soon stubs (slots 17–32); no shipped slug, order, or skill set changes.
 Each game adds **one rung** and revisits earlier families deeper. Inspirations are real
 Spectrum classics / Usborne type-in lineage (the commercial-bar + type-in anchor).
 Volume names and the 4-volume / ~8-per-volume frame from
-[`spectrum-basic-32-games.md`](../../decisions/spectrum-basic-32-games.md) are preserved.
+[`spectrum-basic-lineup.md`](../../decisions/spectrum-basic-lineup.md) are preserved.
 
 ### Volume 3 — Worlds and Rules (slots 17–24) — the pivot to real-time
 
@@ -149,7 +151,7 @@ No churn to the 17 shipped modules. No new games. No genre changes. This is a
 
 - **17 shipped modules locked** — Primer + V1 + V2 untouched (rungs 0–8).
 - **32-game / 4-volume / ~8-per-volume frame preserved** — per
-  [`spectrum-basic-32-games.md`](../../decisions/spectrum-basic-32-games.md); no cut, no add.
+  [`spectrum-basic-lineup.md`](../../decisions/spectrum-basic-lineup.md); no cut, no add.
 - **V4 Pt 1/Pt 2 splits preserved** — merging them is a drift trigger in the 32-game record.
 - **Concept ladder, not rendering ladder** — BASIC's spine is program structure under
   growing state; pixel-rendering rungs belong to the assembly track.

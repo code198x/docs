@@ -2,7 +2,7 @@
 
 **Title (working):** Crates
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 2, Game 8 of 8 (slot 16)
+**Position:** Volume 2 — Patterns of State
 **Headline concept:** The Rule IS the Game — the mechanic is the experience
 **Embedded concept:** Constraint as gameplay — limitation creates the puzzle
 **Topics:** 12 topics, ~12–16 hours

@@ -2,7 +2,7 @@
 
 **Title (working):** Dropzone
 **System / Track:** Commodore 64 / BASIC
-**Position:** Volume 1, Game 8 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Risk & reward — push your luck against gravity
 **Embedded concept:** Physics — velocity accumulates over time
 **Topics:** ~7 topics

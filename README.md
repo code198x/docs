@@ -84,7 +84,7 @@ See [index.md](index.md) for a full file-by-file map.
 
 | Platform | Language | On-ramp (live) | Lineup record |
 |----------|----------|----------------|---------------|
-| ZX Spectrum | Sinclair BASIC | 17 games (Volume 1 complete, V2 in progress) | [32-game lineup](decisions/spectrum-basic-32-games.md) |
+| ZX Spectrum | Sinclair BASIC | 17 games (Volume 1 complete, V2 in progress) | [Spectrum BASIC lineup](decisions/spectrum-basic-lineup.md) |
 | Commodore 64 | BASIC V2 | Meet C64 BASIC · 8 First Programs | [Volumes 2–4](decisions/c64-basic-volumes-2-4.md) |
 | Amiga | AMOS / Blitz | Meet AMOS · Meet Blitz | [AMOS + Blitz](decisions/amiga-basic-amos-and-blitz.md) — peer paths |
 

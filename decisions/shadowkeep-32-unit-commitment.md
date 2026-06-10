@@ -94,7 +94,7 @@ During the build months, visitors see a mixed-engine state: early units at the n
 
 The October 2026 launch spec's four artefacts are unchanged in count; the Shadowkeep deliverable is the only one that grows.
 
-- **BASIC track:** ships Volume 1 (8 games) for October per [spectrum-basic-32-games.md](spectrum-basic-32-games.md). Full curriculum is 32 games / 4 volumes; Volumes 2-4 post-October. Disciplined scoping required to keep BASIC from drifting into Shadowkeep budget.
+- **BASIC track:** ships Volume 1 (First Programs) for October per [spectrum-basic-lineup.md](spectrum-basic-lineup.md). The curriculum is named volumes as uncounted arcs; the later volumes ship post-October. Disciplined scoping required to keep BASIC from drifting into Shadowkeep budget.
 - **Spectrum landing page:** done. `/sinclair-zx-spectrum/` and `/crash-live/` both live.
 - **Spectrum vault:** done. 50+ entries reviewed/created across 10 sweep rounds. Minor touch-ups only.
 

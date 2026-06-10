@@ -2,7 +2,7 @@
 
 **Title (working):** The Caverns
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 2, Game 6 of 8 (slot 14)
+**Position:** Volume 2 — Patterns of State
 **Headline concept:** Atmosphere — fear of the unseen
 **Embedded concept:** Spatial reasoning — building a mental map from fragments
 **Topics:** 10 topics, ~10–14 hours

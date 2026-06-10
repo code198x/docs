@@ -2,7 +2,7 @@
 
 **Title (working):** Dice Roller
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 1, Game 5 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Accumulation — patterns emerge from randomness
 **Embedded concept:** Anticipation — the moment before the result; Mastery through practice — repeated play reveals the system
 **Topics:** 5 topics, ~5–7 hours

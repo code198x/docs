@@ -2,7 +2,7 @@
 
 **Title (working):** Sonar
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 2, Game 4 of 8 (slot 12)
+**Position:** Volume 2 — Patterns of State
 **Headline concept:** Search — coordinates as a way of knowing
 **Embedded concept:** Systematic search — pattern-based exploration beats random guessing
 **Topics:** 10 topics, ~10–14 hours

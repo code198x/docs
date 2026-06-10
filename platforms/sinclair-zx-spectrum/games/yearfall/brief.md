@@ -2,7 +2,7 @@
 
 **Title (working):** Yearfall
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 2, Game 7 of 8 (slot 15)
+**Position:** Volume 2 — Patterns of State
 **Headline concept:** Consequences — choices land later
 **Embedded concept:** Trade-offs — every allocation sacrifices something else
 **Topics:** 10 topics, ~10–14 hours

@@ -2,7 +2,7 @@
 
 **Title (working):** Three in a Row
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 2, Game 5 of 8 (slot 13)
+**Position:** Volume 2 — Patterns of State
 **Headline concept:** Adversary — the program plays against you
 **Embedded concept:** AI personality — the computer's "style" emerges from simple rules
 **Topics:** 10 topics, ~10–14 hours

@@ -2,7 +2,7 @@
 
 **Title (working):** Lucky Number
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 1, Game 2 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Response — the game communicates without words
 **Embedded concept:** Juice — the non-essential signal that makes the essential feel alive
 **Topics:** 9 topics, ~10–15 hours

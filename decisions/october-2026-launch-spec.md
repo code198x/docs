@@ -44,7 +44,7 @@
 > in the amendments above and the body below is superseded; the per-unit DoD bar and the four
 > structural Spectrum artefacts still stand, now joined by the other three platforms' on-ramps.
 
-**Status:** Active. October is a target, not a hard deadline — the project is close to having enough to ship. Shadowkeep scope set by [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md); BASIC by [spectrum-basic-32-games.md](spectrum-basic-32-games.md). The two structural artefacts (landing page, vault) are spec'd in this doc.
+**Status:** Active. October is a target, not a hard deadline — the project is close to having enough to ship. Shadowkeep scope set by [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md); BASIC by [spectrum-basic-lineup.md](spectrum-basic-lineup.md). The two structural artefacts (landing page, vault) are spec'd in this doc.
 
 **Date:** 2026-05-06 | **Updated:** 2026-05-26
 
@@ -57,7 +57,7 @@ design preserved in the per-platform `assembly-skeleton.md` drafts under `platfo
 The Spectrum launch is **four artefacts at full quality bar**:
 
 1. **The gentle assembly opening** — the Primer ("Meet the Machine"), a *complete* tiny first game, and the start of the re-scoped (cell-based) Shadowkeep, at the atmospheric bar of *Atic Atac* and *Knight Lore*. A learner finishes a real game in assembly by October; the hardest engineering is off the critical path. The shipped cell-snapped units largely survive into this opening. Per [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) and [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md).
-2. **Spectrum BASIC Volume 1 (8 games) complete** — Usborne 1984 bar, every topic passes DoD. Per [spectrum-basic-32-games.md](spectrum-basic-32-games.md) (full curriculum is 32 games / 4 volumes / 8 per volume; Volumes 2-4 ship post-October through ~2028-29).
+2. **Spectrum BASIC Volume 1 (First Programs) complete** — Usborne 1984 bar, every topic passes DoD. Per [spectrum-basic-lineup.md](spectrum-basic-lineup.md) (the curriculum is named volumes as uncounted arcs; the later volumes ship post-October over the following years).
 3. **Spectrum landing page** — designed for QR-code visitors arriving from
    Crash! Live flyers and t-shirts.
 4. **Spectrum vault: review pass + referenced gap-fill** — every entry linked
@@ -137,7 +137,7 @@ deferred work in the module catalogues (coming-soon cards).
 - [state-lives-in-catalogues.md](state-lives-in-catalogues.md) — project state lives in the `modules/*.yaml` catalogues + git, not in prose.
 - [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) — Shadowkeep October scope.
 - [shadowkeep-four-arc-framing.md](shadowkeep-four-arc-framing.md) — full Shadowkeep four-arc framing.
-- [spectrum-basic-32-games.md](spectrum-basic-32-games.md) — BASIC lineup.
+- [spectrum-basic-lineup.md](spectrum-basic-lineup.md) — BASIC lineup.
 - [commercial-bar-revamp.md](commercial-bar-revamp.md) — bar definitions per track.
 - [british-english.md](british-english.md), [seven-repos.md](seven-repos.md)
 
@@ -149,4 +149,4 @@ deferred work in the module catalogues (coming-soon cards).
 | 2026-05-26 | October reframed as target, not hard deadline. BASIC V1 done; landing page shipped; Shadowkeep 8/32 — close enough that urgency feels artificial. Session-start gate removed. Drift triggers trimmed to the two that still matter (scope creep past 32 units, DoD erosion). |
 | 2026-05-29 | Assembly launch artefact reframed per [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md): from "Shadowkeep Arcs 1–2, 32 units" to "Primer + complete tiny first game + start of re-scoped cell-based Shadowkeep". Hardest engineering (pre-shift / Y-sort / masking) deferred off the October critical path. |
 | 2026-06-03 | C64 promoted to a second launch platform: a C64 Primer + Starfield (re-scoped to its real ~16 units; the 112 auto-generated stub units dropped) brought to the finishable bar. Trigger: time pressure eased and the Spectrum validated the gentle-ramp (Meet the Machine + a complete Gloaming shipped — the precondition the C64 skeleton was waiting on). C64 flagship (Cadence) and C64 BASIC stay deferred; NES/Amiga remain deferred. Focus *sequenced* to a second platform, not *widened* to four. |
-| 2026-06-10 | 2026 lineup replan applied across all tracks. Each coming-soon lineup re-sequenced into an explicit ladder/spine and recorded in its own decision record. **NES Dash re-scoped to its real ~16 units** (112 stub units dropped, mirroring the Starfield precedent above) — see [nes-assembly-lineup.md](nes-assembly-lineup.md). Per-track records: [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) (tight ladder), [spectrum-basic-32-games.md](spectrum-basic-32-games.md) (UDGs earlier), [c64-assembly-lineup.md](c64-assembly-lineup.md), [c64-basic-volumes-2-4.md](c64-basic-volumes-2-4.md), [nes-assembly-lineup.md](nes-assembly-lineup.md), and the Amiga AMOS/Blitz/Assembly records. Coming-soon stub scaffolds torn down throughout. Launch artefacts unchanged — only post-opening lineups. |
+| 2026-06-10 | 2026 lineup replan applied across all tracks. Each coming-soon lineup re-sequenced into an explicit ladder/spine and recorded in its own decision record. **NES Dash re-scoped to its real ~16 units** (112 stub units dropped, mirroring the Starfield precedent above) — see [nes-assembly-lineup.md](nes-assembly-lineup.md). Per-track records: [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) (tight ladder), [spectrum-basic-lineup.md](spectrum-basic-lineup.md) (UDGs earlier), [c64-assembly-lineup.md](c64-assembly-lineup.md), [c64-basic-volumes-2-4.md](c64-basic-volumes-2-4.md), [nes-assembly-lineup.md](nes-assembly-lineup.md), and the Amiga AMOS/Blitz/Assembly records. Coming-soon stub scaffolds torn down throughout. Launch artefacts unchanged — only post-opening lineups. |

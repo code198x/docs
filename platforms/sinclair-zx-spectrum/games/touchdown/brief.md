@@ -2,7 +2,7 @@
 
 **Title (working):** Touchdown
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 1, Game 8 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Descent — the program runs whether you act or not
 **Embedded concept:** Ambient feedback — the environment communicates game state without explicit UI
 **Topics:** 8 topics, ~10–14 hours

@@ -2,7 +2,7 @@
 
 **Title (working):** Story Builder
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 1, Game 1 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Output — the first program speaks
 **Embedded concept:** First impressions — what the player sees first shapes everything after
 **Topics:** 4 topics, ~4–6 hours

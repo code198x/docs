@@ -153,5 +153,5 @@ The following full-brief sections are dropped for all BASIC games:
 ## Anchored In
 
 - [`specifications/brief.md`](brief.md) — full brief spec (assembly games)
-- [`decisions/spectrum-basic-32-games.md`](../decisions/spectrum-basic-32-games.md) — the 32-game lineup
+- [`decisions/spectrum-basic-lineup.md`](../decisions/spectrum-basic-lineup.md) — the Spectrum BASIC lineup (named volumes, uncounted)
 - `platforms/sinclair-zx-spectrum/basic.md` — curriculum spec with per-game details

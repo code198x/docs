@@ -2,7 +2,7 @@
 
 **Title (working):** Hi-Lo
 **System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 1, Game 7 of 8
+**Position:** Volume 1 — First Programs
 **Headline concept:** Narrowing — feedback brings you closer
 **Embedded concept:** Feedback loops — each response refines the next action
 **Topics:** 5 topics, ~5–7 hours

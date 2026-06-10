@@ -54,8 +54,10 @@ sandbox) · Masterwork (capstone — integrates everything).
   registers), not six.
 - **Glide scrolling (H9) is deliberately last** (Volume 4) — the C64's Amiga-envy effect, reached
   only once every sprite/char/collision/raster rung below it is owned.
-- **~8 games per volume** mirrors the shipped Volume 1 and the Spectrum BASIC lattice, but the budget
-  is *one new thing per game*, not a count.
+- **Volume size is uncounted.** A volume carries as many games as its theme and the *one-new-thing
+  per game* budget call for — there is no per-volume target. The shipped Volume 1 and the volumes
+  below happen to sit near eight games each, but that is an outcome, not a rule (per
+  [curriculum-structure.md](curriculum-structure.md)). Order and membership live in the catalogue.
 
 ## Still open
 

@@ -548,7 +548,7 @@ Three core platforms ship BASIC tracks (counts flexible — no fixed totals):
 
 | Platform | Track | Status | Lineup record |
 |----------|-------|--------|---------------|
-| **Spectrum** | Sinclair BASIC | Live — Volume 1 complete, more in progress | [spectrum-basic-32-games.md](../decisions/spectrum-basic-32-games.md) |
+| **Spectrum** | Sinclair BASIC | Live — Volume 1 complete, more in progress | [spectrum-basic-lineup.md](../decisions/spectrum-basic-lineup.md) |
 | **C64** | BASIC V2 (POKE-the-hardware) | Live on-ramp; Volumes 2–4 recorded | [c64-basic-volumes-2-4.md](../decisions/c64-basic-volumes-2-4.md) |
 | **Amiga** | AMOS / Blitz (peer paths) | Live on-ramps (Meet AMOS, Meet Blitz) | [amiga-basic-amos-and-blitz.md](../decisions/amiga-basic-amos-and-blitz.md) |
 
