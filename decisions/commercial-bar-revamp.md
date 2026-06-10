@@ -1,5 +1,12 @@
 # Decision: Commercial Bar for Curriculum Revamp
 
+> **AMENDED 2026-06-10.** The **bar definitions stand** (still KEEP), but two framings here are
+> overtaken: the **"Spectrum-only ship"** parenthetical is retired (launch is now all four core
+> platforms — [october-2026-launch-spec.md](october-2026-launch-spec.md), 2026-06-09), and the
+> **Cadence / Nightshade / Exodus "Game 1" lineup** is superseded by the 2026-06-10 per-track ladder
+> records (C64's first game is now Platform Panic with Starfield shipped; NES's is Dash; the flagships
+> Cadence/Nightshade are deferred). See the per-track lineup records under `decisions/`.
+
 > **AMENDED 2026-06-02.** The **commercial-bar definitions in this doc stand** — they are the
 > live bar for every Game 1. Only the *Shadowkeep scope phrasing* is superseded: "Shadowkeep
 > Arcs 1+2 / 32 units" (Status line + § The decision) is reframed by

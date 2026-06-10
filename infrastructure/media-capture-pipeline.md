@@ -15,7 +15,7 @@ This page reflects the Spectrum pipeline as of 2026-05-14, with the snapshot-dri
 
 The `scripts/` directory at the project root holds the modern Emu198x-script-driven wrappers (one binary, one JSON, headless). The older platform-specific dev directories (`{platform}-dev/scripts/`) hold a previous generation of scripts using xdotool / X displays / Docker; they predate the unified Emu198x scripting model and will be retired as each platform's pipeline migrates.
 
-The `code-samples/scripts/capture-spectrum-screenshot.sh` script is a higher-level wrapper that resolves Code198x's `game-NN-name/unit-NN/` directory convention into the right `.sna` and `.png` paths and calls Emu198x. Use it as the per-unit entry point; the lower-level `scripts/emu-*.sh` scripts are useful for one-off captures or ad-hoc work.
+The `code-samples/scripts/capture-spectrum-screenshot.sh` script is a higher-level wrapper that resolves Code198x's `<track>/<module-slug>/unit-NN/` directory convention into the right `.sna` and `.png` paths and calls Emu198x. Use it as the per-unit entry point; the lower-level `scripts/emu-*.sh` scripts are useful for one-off captures or ad-hoc work.
 
 ## Spectrum pipeline (current)
 

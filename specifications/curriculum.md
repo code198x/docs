@@ -1,8 +1,19 @@
 # Curriculum Specification
 
-**Version:** 4.1
-**Last Updated:** 2026-03-18
-**Purpose:** Defines the structure, philosophy, and content model for all platform curricula.
+**Version:** 5.0
+**Updated:** 2026-06-10
+**Purpose:** Defines the philosophy and content model for all platform curricula.
+
+> **v5.0 — architecture corrected to the current model.** The **philosophy** below (game design as
+> the subject, the design-concept framework, the craft principles, the pedagogy, voice, the
+> three-level technique model, Vault/Pattern integration, the no-repetition rule, real-hardware
+> compatibility) all **stand**. What's corrected: the old **fixed architecture** — "sixteen assembly
+> games per platform", the 128/256/512-unit tiers, 16-unit phases, and `Game N` / `SPEC-01-03`
+> naming — is **retired**. Each track is now a **ladder of modules** (not a fixed game count) recorded
+> in a **per-track lineup decision** under `decisions/`; **counts are flexible** ([modules-not-games.md](../decisions/modules-not-games.md),
+> no-fixed-counts); **state lives in the catalogue** (`website/src/content/modules/...`,
+> [state-lives-in-catalogues.md](../decisions/state-lives-in-catalogues.md)); modules carry **bare
+> slugs**, no `game-NN-` prefix.
 
 ---
 
@@ -109,7 +120,7 @@ By the capstone, the learner writes code that is both high-quality *and* perform
 
 The original curriculum model used abstract phases, tiers, and lessons — 4,096 per platform. This produced technically correct but lifeless content: lessons that taught concepts in isolation rather than building toward something the learner cared about.
 
-The games model fixes this. Each platform has sixteen assembly games, each one a real project that a reader would want to play. Concepts are introduced when the game needs them, not in abstract isolation. A learner always knows what they're building and why.
+The games model fixes this. Each platform has a ladder of game modules, each one a real project that a reader would want to play. Concepts are introduced when the game needs them, not in abstract isolation. A learner always knows what they're building and why.
 
 ### The No-Repetition Rule (Primary Systems)
 
@@ -131,65 +142,60 @@ Every game in the curriculum — assembly and BASIC — produces a binary that r
 
 ## Assembly Track
 
-### Sixteen Games Per Platform
+### A ladder of modules, not a fixed game count
 
-Each primary platform (ZX Spectrum, Commodore 64, NES, Amiga) has sixteen assembly games. The games are graduated in complexity:
+Each core platform's assembly track is a **ladder**: a sequence of game modules where each game
+headlines one new hardware/technique rung and revisits the rest, building from a finishable on-ramp
+to a capstone. The exact games, their order, and the rung each teaches live in the track's **lineup
+decision record** — [spectrum-assembly-gentle-ramp.md](../decisions/spectrum-assembly-gentle-ramp.md),
+[c64-assembly-lineup.md](../decisions/c64-assembly-lineup.md),
+[nes-assembly-lineup.md](../decisions/nes-assembly-lineup.md),
+[amiga-assembly-lineup.md](../decisions/amiga-assembly-lineup.md) — and the **catalogue** is the
+source of truth for what exists.
 
-| Games | Units each | Total | Role |
-|-------|-----------|-------|------|
-| 1-8 | 128 | 1,024 | **Foundation and breadth.** Each game teaches a different genre and a different hardware feature. The platform's killer feature appears in Game 1. |
-| 9-14 | 256 | 1,536 | **Depth and ambition.** Longer projects that combine multiple techniques. Commercial-quality results. |
-| 15-16 | 512 | 1,024 | **Mastery.** Everything the hardware can do, combined into large-scale projects. |
+**Counts are flexible.** There is no fixed games-per-platform or units-per-game number — a game is as
+long as its content and the quality bar require ([modules-not-games.md](../decisions/modules-not-games.md)).
+Pacing is governed by the **technique budget**: each game introduces one new major technique (two at
+most) and revisits the rest.
 
-Total per platform: 3,584 units. All games are subdivided into 16-unit phases.
+### The no-repetition rule (core systems)
 
-### Phase Structure
-
-Every game is divided into phases of 16 units. Each phase ends with a visible milestone — a new mechanic working, a new area playable, a new hardware feature integrated.
-
-| Game Units | Phases |
-|------------|--------|
-| 128 | 8 phases |
-| 256 | 16 phases |
-| 512 | 32 phases |
-
-### The No-Repetition Rule
-
-Across the four primary platforms, no two games share a genre within the same unit-count tier. With 16 games per platform and 4 platforms, there is room for variety — but the rule ensures each game earns its place by teaching something the hardware does uniquely.
-
-Future systems may repeat genres where the hardware genuinely demands it — a Game Boy platformer teaches different lessons from a Spectrum platformer.
+Across the four core platforms, no two games share a genre — each earns its place by teaching
+something that platform does uniquely (a Spectrum attribute-based platformer is a different lesson
+from an NES tile-scrolling one). Future systems may revisit genres where the hardware teaches
+genuinely different lessons.
 
 ---
 
 ## The Four Platforms
 
-Each platform has a killer feature that defines its teaching focus. The detailed game sequences — all 16 games with genres, inspirations, and unit counts — live in the platform-specific curriculum documents (see Platform Curriculum Files below). This section describes what makes each platform worth teaching.
+Each platform has a killer feature that defines its teaching focus. The detailed game sequence for each track — the games, their order, and the rung each teaches — lives in the track's **lineup decision record** under `decisions/`, with the catalogue as the source of truth. This section describes what makes each platform worth teaching.
 
 ### ZX Spectrum
 
 **Killer feature:** The attribute system — 256 bytes of colour define what the player sees. No other machine makes colour clash a game mechanic.
 
-**Assembly:** 16 games from single-screen maze explorer through scrolling shooters, platformers, and puzzle games to an isometric adventure capstone.
+**Assembly:** a ladder from single-screen maze explorer through scrolling shooters, platformers, and puzzle games to an isometric adventure capstone.
 
-**BASIC:** 16 games teaching game design from absolute zero through to machine code helpers and autonomous NPCs.
+**BASIC:** a track teaching game design from absolute zero through to machine code helpers and autonomous NPCs.
 
 ### Commodore 64
 
 **Killer feature:** The SID sound chip (three voices, filters, ring modulation) and hardware sprites. The C64 sounds like no other machine.
 
-**Assembly:** 16 games from sprite-based shooters through scrolling platformers, stealth puzzles, and run-and-gun action to demo-scene-quality capstone.
+**Assembly:** a ladder from sprite-based shooters through scrolling platformers, stealth puzzles, and run-and-gun action to demo-scene-quality capstone.
 
 ### Nintendo Entertainment System
 
 **Killer feature:** The PPU — tile-based graphics, hardware scrolling, and a sprite system that makes 52 colours look like millions.
 
-**Assembly:** 16 games from side-scrolling platformers through top-down adventures, Metroidvania exploration, and mapper-based large worlds.
+**Assembly:** a ladder from side-scrolling platformers through top-down adventures, Metroidvania exploration, and mapper-based large worlds.
 
 ### Commodore Amiga
 
 **Killer feature:** Three custom chips — Agnus (DMA, Copper, Blitter), Denise (video), Paula (audio) — working in concert. The Amiga does things no other 16-bit machine can match.
 
-**Assembly:** 16 games from Blitter-driven terrain puzzles through parallax showcases, pseudo-3D racing, and an OCS-to-AGA capstone.
+**Assembly:** a ladder from Blitter-driven terrain puzzles through parallax showcases, pseudo-3D racing, and an OCS-to-AGA capstone.
 
 ---
 
@@ -203,33 +209,20 @@ High-level language games are **not simplified versions of the assembly games.**
 
 ### Which Platforms
 
-| Platform | Language | Games | Units | Why |
-|----------|----------|-------|-------|-----|
-| ZX Spectrum | Sinclair BASIC | 16 | 336 | How everyone started. Type-in listings, magazine culture. |
-| Commodore 64 | BASIC V2 | TBD | TBD | Famously limited, but historically important. POKE teaches memory-mapped I/O. |
-| Amiga | AMOS | TBD | TBD | Friendly, immediate, hobbyist. BOBs, Copper, MOD playback accessible from BASIC. |
-| Amiga | Blitz Basic | TBD | TBD | Compiled, fast, commercial (Worms, Skidmarks). |
-| NES | None | — | — | No high-level language. Assembly from the start. |
+Three core platforms run a BASIC track (counts flexible; lineup + state in the record + catalogue):
 
-The Spectrum BASIC track is fully designed (see platform curriculum doc). Other tracks are planned but not yet detailed.
+| Platform | Language | Lineup record | Why |
+|----------|----------|---------------|-----|
+| ZX Spectrum | Sinclair BASIC | [spectrum-basic-32-games.md](../decisions/spectrum-basic-32-games.md) | How everyone started. Type-in listings, magazine culture. |
+| Commodore 64 | BASIC V2 | [c64-basic-volumes-2-4.md](../decisions/c64-basic-volumes-2-4.md) | Stock BASIC reaches the hardware only by POKE/PEEK — memory-mapped I/O made tangible. |
+| Amiga | AMOS / Blitz (peer paths) | [amiga-basic-amos-and-blitz.md](../decisions/amiga-basic-amos-and-blitz.md) | Immediate, hobbyist (AMOS) vs compiled, commercial (Blitz — Worms, Skidmarks). |
+| NES | None | — | No high-level language. Assembly from the start. |
 
-### Structure (Spectrum BASIC)
-
-The Spectrum BASIC track has 16 games in graduated difficulty:
-
-| Phase | Games | Units each | Total | Purpose |
-|-------|-------|-----------|-------|---------|
-| Foundations | 1-6 | 8 | 48 | Learn the language and core design patterns |
-| Skills | 7-10 | 16 | 64 | Build real-time games with hardware access |
-| Projects | 11-14 | 32 | 128 | Ambitious, visually distinctive software |
-| Advanced | 15 | 32 | 32 | Complex systems |
-| Capstone | 16 | 64 | 64 | A living world |
-
-Other platform BASIC tracks may follow different structures suited to their language and culture.
+Each track's volumes, games and pacing live in its record; the catalogue is the source of truth.
 
 ### Independence Between Tracks
 
-The assembly curriculum assumes no BASIC knowledge. A learner starting at assembly Game 1 should not feel they have missed something by skipping BASIC. The two tracks are independent paths that happen to cover the same platform. A learner who completes both gains reinforcement of the same game design concepts from two different angles.
+The assembly curriculum assumes no BASIC knowledge. A learner starting at an assembly track's first game should not feel they have missed something by skipping BASIC. The two tracks are independent paths that happen to cover the same platform. A learner who completes both gains reinforcement of the same game design concepts from two different angles.
 
 ---
 
@@ -246,15 +239,14 @@ The learner never types for an hour only to see an error message. Every unit end
 
 ### Unit Naming
 
-**Full format:** `[Platform] Game N: [Name], Unit M`
-- Example: "Spectrum Game 1: [Name], Unit 3"
+A unit is identified by its **track + module slug + unit number** — modules carry bare slugs, never a
+`game-NN-` prefix or a fixed game number ([modules-not-games.md](../decisions/modules-not-games.md)).
 
-**Shorthand:** `[Platform]-[Game]-[Unit]`
-- Example: "SPEC-01-03"
+**Path / identity:** `<platform>/<track>/<module-slug>/unit-NN`
+- Example: `sinclair-zx-spectrum/assembly/gloaming/unit-03`
 
-**Reference in Pattern Library/Vault:**
-- "Introduced in Spectrum Game 1, Unit 3"
-- "See SPEC-01-03 for initial implementation"
+**Reference in Pattern Library / Vault:** name the module and unit
+- "Introduced in Gloaming (Spectrum assembly), Unit 3"
 
 ---
 
@@ -385,7 +377,7 @@ Example header:
 ; =============================================================================
 ; SPRITE MULTIPLEXING - STANDALONE DEMO
 ; Demonstrates displaying >8 sprites using raster interrupts
-; Full tutorial: C64 Game 3, Unit 12
+; Full tutorial: Hornet (C64 assembly, sprite multiplexing), Unit 8
 ; =============================================================================
 ```
 
@@ -430,42 +422,31 @@ Units introduce techniques. Patterns provide the reference implementation. The V
 
 ## Scaling to Future Systems
 
-The four primary platforms (Spectrum, C64, NES, Amiga) each have sixteen assembly games. Future systems follow the same model but may vary in size:
+The four core platforms each run an assembly ladder; future systems follow the same model, with a
+ladder **as long as the hardware's depth warrants** — a shorter ladder for simpler machines (ZX81,
+VIC-20, Atari 2600), a fuller one for richer ones (Mega Drive, Atari ST, Game Boy, BBC Micro), longer
+still where a platform has unusual depth or multiple distinct modes. The length falls out of the
+content and the technique budget, not a fixed number.
 
-| Platform Complexity | Assembly Games | Examples |
-|---------------------|---------------|----------|
-| Minimal | 4-8 | ZX81, VIC-20, Atari 2600 |
-| Standard | 16 | Mega Drive, Atari ST, Game Boy, Master System, BBC Micro |
-| Extended | 16+ | Systems with unusual depth or multiple distinct modes |
-
-Future platforms may draw from the reserved genre pool or revisit genres already used by the primary four, where the hardware teaches genuinely different lessons. A Game Boy platformer and a Spectrum platformer are different enough to coexist — the constraint is about avoiding lazy repetition, not mechanical enforcement.
+Future platforms may revisit genres already used by the core four where the hardware teaches genuinely different lessons. A Game Boy platformer and a Spectrum platformer are different enough to coexist — the constraint is about avoiding lazy repetition, not mechanical enforcement.
 
 BASIC gateway tracks are added only when the platform has a historically significant high-level language (BBC BASIC, MSX BASIC, etc.).
 
 ---
 
-## Platform Curriculum Files
+## Where the game details live
 
-This specification defines how curricula work. The actual game details live in platform-specific files:
+This specification defines how curricula work. The actual game details live in three layers:
 
-- `/docs/platforms/sinclair-zx-spectrum/assembly.md`
-- `/docs/platforms/commodore-64/assembly-skeleton.md` (pre-methodology draft)
-- `/docs/platforms/nintendo-entertainment-system/assembly-skeleton.md` (pre-methodology draft)
-- `/docs/platforms/commodore-amiga/assembly-skeleton.md` (pre-methodology draft)
-
-Each platform curriculum file contains:
-
-1. **Platform overview** — the platform's killer feature and teaching focus
-2. **Game sequence** — the sixteen assembly games with descriptions
-3. **Game details** — for each game: genre, inspiration, unit count, skills taught, phase names
-4. **BASIC gateway** (if applicable) — the four BASIC games
-
-Platform curriculum files should be concise. They list what exists, not why the model works — that's this document's job.
+- **State (what exists, in what order):** the **catalogue** — `website/src/content/modules/<platform>/<track>.yaml`. Authoritative ([state-lives-in-catalogues.md](../decisions/state-lives-in-catalogues.md)).
+- **Lineup + rationale (the games, the ladder, the rung each teaches):** the per-track **lineup decision record** under `decisions/` (e.g. `spectrum-assembly-gentle-ramp.md`, `c64-assembly-lineup.md`, `nes-assembly-lineup.md`, `amiga-assembly-lineup.md`, and the three BASIC records).
+- **Per-game design:** the **briefs** under `platforms/<system>/games/<slug>/`, plus the per-system `reference.md` / `language/` for hardware and language facts.
 
 ---
 
 ## Version History
 
+- **5.0 (2026-06-10):** Architecture corrected to the current model. Retired the fixed "sixteen games per platform", the 128/256/512-unit tiers, 16-unit phases, and `Game N` / `SPEC-01-03` naming. Tracks are now ladders of modules (counts flexible) recorded in per-track lineup decisions; state lives in the catalogue; bare module slugs. The philosophy (design concepts, craft, pedagogy, voice, three-level model, no-repetition, hardware compatibility) is unchanged.
 - **4.1 (2026-03-18):** Added Programming Craft section: code quality principles (clear structure, meaningful names, no magic numbers, separation of concerns, boundary handling, deliberate shortcuts, verifiable correctness) and craft progression from Foundations through capstone. Code samples are models of good practice, not throwaway examples.
 - **4.0 (2026-03-18):** Game design as the primary subject. Core design concepts table. "Graphics from Day One" rule. Cross-platform design concept framework. Every game teaches both design and programming.
 - **3.0 (2026-03-09):** Major restructure. Introduced no-repetition rule across platforms. Every game inspired by a real commercial release. Real hardware compatibility made a baseline requirement, not a capstone feature.

@@ -1,5 +1,11 @@
 # Emulator Integration
 
+> **Stale snapshot (flagged 2026-06-10).** The "what boots today" status below (2026-04-09, ZX
+> Spectrum only) is well behind reality — Emu198x has since advanced substantially (Amiga booting
+> Workbench 3.1, C64, NES, 22+ harvested systems, Tom Harte 100%). Emu198x is a **sibling project
+> handled in its own session**; treat its current capability as owned there, not here. This doc's
+> *integration* notes (how Code198x drives Emu198x) remain useful; its shipped-systems table does not.
+
 **Last Updated:** 2026-04-09
 
 The emulation engine for Code Like It's 198x lives in a sibling project:

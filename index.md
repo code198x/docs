@@ -72,7 +72,6 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 - [Writing voice](specifications/writing-voice.md) — magazine-class, British English, anti-patterns
 - [Content model](specifications/content-model.md) — Astro collections, computed fields
 - [Code samples](specifications/code-samples.md) — CodeFromFile component, naming
-- [Skill progression](specifications/skill-progression.md) — per-platform skill dependency maps
 - [Graphics and audio coverage](specifications/graphics-and-audio.md) — per-platform A/V capability
 - [BASIC languages overview](specifications/basic-languages-overview.md) — cross-BASIC reference
 
@@ -102,4 +101,3 @@ Platforms outside the core four get their own per-system docs **when work begins
 - [Media capture pipeline](infrastructure/media-capture-pipeline.md) — screenshot / video / audio
 - [Astro site](infrastructure/astro-site.md) — dev/build commands, content routing, collection gotchas
 - [Site testing](infrastructure/site-testing.md) — Playwright e2e, axe a11y + baseline, Lighthouse budgets
-- [Emu198x HALT investigation brief](infrastructure/emu198x-halt-investigation-brief.md) — emulator bug investigation

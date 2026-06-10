@@ -1,6 +1,6 @@
 # Writing Voice
 
-The editorial voice across all Code198x content. Formal principles are in `docs/CONTENT-CREATION-WORKFLOW.md`; this captures the lived experience of applying them.
+The editorial voice across all Code198x content. Formal principles are in [content-creation-workflow.md](content-creation-workflow.md); this captures the lived experience of applying them.
 
 ## The voice
 

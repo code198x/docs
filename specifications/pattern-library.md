@@ -46,7 +46,7 @@ title: "Sprite Multiplexing (Basic)"
 platform: "Commodore 64"
 category: "Rendering"
 difficulty: "Intermediate"  # Beginner | Intermediate | Advanced
-taught_in: "Game 9, Unit 8"
+taught_in: "hornet, Unit 8"   # module slug (sprite multiplexing), not a game number
 tags: ["sprites", "raster", "vic-ii"]
 evolution:
   previous: null
@@ -76,7 +76,7 @@ The actual pattern - complete, commented, ready to use.
 
 ` ``asm
 ; SPRITE MULTIPLEXING - BASIC (8-24 sprites)
-; Taught: Game 9 (Sprite Storm), Unit 8
+; Taught: Hornet (C64 sprite multiplexing), Unit 8
 ; CPU: ~900 cycles/frame | Memory: ~400 bytes
 
 MAX_SPRITES = 24

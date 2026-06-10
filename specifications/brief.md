@@ -346,7 +346,7 @@ A brief is ready to anchor authoring when:
 - [ ] Sections 6–9 are written with the same care as Sections 1–5 (multi-disciplinary commitment).
 - [ ] Section 11 (phase trajectory) declares techniques + revisits + deliverable per phase.
 - [ ] Section 12 (ship test) covers all five axes per phase.
-- [ ] All cross-references in Section 14 resolve to real vault content (or are catalogued in `docs/tracker/lesson-references.md` as required).
+- [ ] All cross-references in Section 14 resolve to real vault content (or are catalogued as required).
 - [ ] British English throughout (except "program").
 - [ ] Magazine voice — `docs/specifications/writing-voice.md` standards apply.
 
