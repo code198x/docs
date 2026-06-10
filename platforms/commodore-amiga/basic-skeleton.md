@@ -1,5 +1,13 @@
 # Commodore Amiga BASIC Curriculum
 
+> **SUPERSEDED 2026-06-10 (lineup replan).** The fixed-count framing below (8 games, 512 units, 64
+> per game) and the per-track game lists are **retired**. The applied lineups are in the catalogue
+> (`website/src/content/modules/commodore-amiga/{amos,blitz}.yaml`) and recorded in
+> [decisions/amiga-basic-amos-and-blitz.md](../../decisions/amiga-basic-amos-and-blitz.md): **AMOS =
+> 9 games + a Block Drop bonus** (capability ladder to the Scroll Quest climax + Star-Lord capstone);
+> **Blitz = 7 games** (to the Skyfire parallax climax + Overdrive capstone). Counts are flexible (no
+> fixed unit counts). This skeleton's per-game prose below is historical only.
+
 **Platform:** Commodore Amiga
 **Languages:** AMOS Professional, Blitz Basic 2
 **Tracks:** 2
