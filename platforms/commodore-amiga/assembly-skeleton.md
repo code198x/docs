@@ -2,6 +2,8 @@
 
 **STATUS: Post-October work, lightweight only.** Per `docs/decisions/october-2026-launch-spec.md`, Amiga / Exodus is deferred. This skeleton is *no-commit* — North Star, volume themes, candidate game lineup only. No per-game scope, no naming lock-in, no tech-tree detail. Awaits Spectrum methodology validation before becoming a full track structure.
 
+> **2026-06-10 lineup-replan update.** The coming-soon lineup is now sequenced as a **custom-chip hardware ladder** and recorded in [decisions/amiga-assembly-lineup.md](../../decisions/amiga-assembly-lineup.md); the catalogue (`website/src/content/modules/commodore-amiga/assembly.yaml`) is authoritative. **Exodus is re-scoped** from the 128-unit "teaches everything" flagship to the Blitter rung-pair game (its 16 built units preserved) — so the "Exodus = Lost Vikings, the canonical demonstration" framing below is superseded: Exodus is now the Blitter game, not the everything-flagship. `venom`/`tetrad` are dropped; a "How the Copper Works" interval (a buildable demo) is added after Shatter Point.
+
 Captured 2026-05-19 alongside [c64-track-skeleton.md](c64-track-skeleton.md) and [nes-track-skeleton.md](nes-track-skeleton.md) for cross-platform methodology check.
 
 ## North Star
