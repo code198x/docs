@@ -7,18 +7,18 @@
 >
 > **AMOS (9 games + a bonus), an AMOS-capability ladder:** Star Catcher (sprites at speed) → Crate
 > Stack (Bobs + gravity) → Space Swarm (sprite arrays) → Bounce Back (SCREEN SWAP + music bed) →
-> Maze Runner (Banks + PASTE BOB) → Dungeon Doors (room data + save/load) → **Knight Watch** (new —
+> Warren (Banks + PASTE BOB) → Dungeon Doors (room data + save/load) → **Knight Watch** (new —
 > gives SAM audio + AMOS Music its own game) → Scroll Quest (SCREEN OFFSET, the AMOS climax) →
-> **Star-Lord** (new capstone). **Block Drop** is deferred to a post-capstone *bonus* (slug kept,
+> **Nomad** (new capstone). **Block Drop** is deferred to a post-capstone *bonus* (slug kept,
 > off the spine) so audio didn't have to be a third new thing on an existing game.
 >
 > **Blitz (7 games), a Blitz-capability ladder:** Flashpoint (many objects at compiled speed) →
 > Gridlock (arrays/lists/structure) → Tarmac (smooth hardware scrolling, anchored to **Super
 > Skidmarks** — built in Blitz BASIC 2) → **Star Drift** (new — hardware sprites + Copper split) →
-> **Salvo** (new — turn-based artillery over destructible terrain, the **Scorched Earth** tradition,
-> Blitter-as-mechanic) → **Skyfire** (new — dual-playfield parallax climax) → **Overdrive** (new
-> capstone). Salvo anchors at *genre* level only: the "scene shipped real games in Blitz" provenance
-> rides on Tarmac → Skidmarks, not on Salvo (Scorched Tanks' own toolchain is unverified and may be
+> **Ballistic** (new — turn-based artillery over destructible terrain, the **Scorched Earth** tradition,
+> Blitter-as-mechanic) → **Skyfire** (new — dual-playfield parallax climax) → **Slipstream** (new
+> capstone). Ballistic anchors at *genre* level only: the "scene shipped real games in Blitz" provenance
+> rides on Tarmac → Skidmarks, not on Ballistic (Scorched Tanks' own toolchain is unverified and may be
 > AMOS — not claimed here either way). Both tracks share genres (Breakout, maze, fixed shooter) by
 > design; each climaxes differently.
 

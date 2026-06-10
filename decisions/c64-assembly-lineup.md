@@ -2,7 +2,7 @@
 
 > **STATUS: Active.** Accepted 2026-06-10 as part of the 2026 lineup replan. Records the
 > re-sequenced assembly lineup. The two shipped anchors (`meet-the-machine`, `starfield`) are
-> **locked**. Counts flexible; names are working titles pending the naming pass. The catalogue is
+> **locked**. Counts flexible; names settled in the 2026-06-10 naming pass. The catalogue is
 > authoritative (`website/src/content/modules/commodore-64/assembly.yaml`).
 
 ## The decision
@@ -19,17 +19,17 @@ hardware ladder**: one rung per game, every later game inheriting the rungs belo
 | 2 | custom charsets + tile maps | Maze Raider |
 | (consolidation) | ball physics on a char field | Brick Basher |
 | 3 | raster interrupt / split screen | Night Raid |
-| 4 | smooth hardware scrolling | Scroll Runner |
-| 5 | sprite multiplexing | Sprite Storm |
+| 4 | smooth hardware scrolling | Velocity |
+| 5 | sprite multiplexing | Hornet |
 | 6 | interrupt-driven SID music | SID Symphony |
 | — | large scrolling world + items | Catacombs |
 | — | per-line raster road | Raster Rider |
-| 7 | raster-time budgeting (integration) | **Overdrive** (new) |
-| — | disk I/O + save | Dungeon Crawl |
-| — | isometric depth-sort (the hard render, last) | Isometric Quest |
+| 7 | raster-time budgeting (integration) | **Maelstrom** (new) |
+| — | disk I/O + save | Deephold |
+| — | isometric depth-sort (the hard render, last) | Tumbledown |
 
 Optional later **breadth** games (sequence when their rung is owned, not launch-gating): Mega
-Blaster (scroll-action platformer), Arena Fighter (beat-'em-up), Parallax Patrol (layered parallax).
+Blaster (scroll-action platformer), Knuckle (beat-'em-up), Strata (layered parallax).
 
 Sprites, SID and raster interrupts are *introduced* at primer level inside Starfield, so the games
 below **deepen** them rather than introducing them cold — the C64 equivalent of "Shadowkeep
@@ -37,15 +37,15 @@ introduces masking; Lamplight deepens it."
 
 ## Key choices
 
-- **`symphonys-end` dropped; `overdrive` added.** The old "capstone with demo-scene techniques"
+- **`symphonys-end` dropped; `maelstrom` added.** The old "capstone with demo-scene techniques"
   (`symphonys-end`) was a *duplicate* all-techniques capstone — the demo-scene / full-showcase role
   is the **Cadence** flagship's job. Its content (stable IRQ chains, raster bars, everything at once)
-  is exactly the rung-7 raster-budgeting material, which the new **Overdrive** integration game now
+  is exactly the rung-7 raster-budgeting material, which the new **Maelstrom** integration game now
   teaches. The `symphonys-end` slug is **parked** (not reused); the name could later return as a
   Cadence-track finale.
 - **Cadence stays the deferred post-launch flagship** — the music-driven showcase capstone, off the
   launch critical path (consistent with [commercial-bar-revamp.md](commercial-bar-revamp.md) and
-  the launch spec). Overdrive is the in-ladder integration game, not a Cadence substitute.
+  the launch spec). Maelstrom is the in-ladder integration game, not a Cadence substitute.
 - **`night-raid` re-sequenced earlier** (to the raster-split slot) so the raster interrupt is taught
   before the scroller leans on it.
 - **Isometric depth-sort is last** — by the time you reach it you own multiplexing-with-sorting,
@@ -61,8 +61,9 @@ rows but no module page; pages were added so the ladder's links resolve.
 
 ## Still open
 
-- **Naming** — `Overdrive` is a working title; could be where a re-scoped `symphonys-end` name
-  returns. Mega Blaster / Arena Fighter / Parallax Patrol breadth placement firms up when briefed.
+- **Naming** — settled in the 2026-06-10 naming pass (Velocity, Hornet, Maelstrom, Deephold,
+  Tumbledown, Knuckle, Strata). Breadth placement (Mega Blaster / Knuckle / Strata) firms up when
+  briefed.
 - **Brick Basher** is a consolidation game (no new rung); fine as a breather, or fold its mechanics
   elsewhere if the ladder wants tightening.
 
