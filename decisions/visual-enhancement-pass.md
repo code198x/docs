@@ -1,7 +1,16 @@
-# Decision: Visual Enhancement Pass — Spectrum BASIC Games 1-15
+# Decision: Visual Enhancement Pass — Spectrum BASIC Games
 
 **Status:** Active
 **Date:** 2026-05-27
+
+> **Framing note (2026-06-10).** This record predates [modules-not-games.md](modules-not-games.md)
+> and [state-lives-in-catalogues.md](state-lives-in-catalogues.md). The sequential **"Game N"**
+> labels and per-game **unit counts** below are the Volume 1 + early Volume 2 lineup in catalogue
+> order — read them as game *names* (the stable identity), not fixed positions or unit targets. The
+> **visual vocabulary, UDG budgets, and per-game proposals all stand**; only the numbering
+> convention is retired. Current order and state live in
+> `modules/sinclair-zx-spectrum/basic.yaml` and the lineup record
+> [spectrum-basic-32-games.md](spectrum-basic-32-games.md).
 
 ## The decision
 

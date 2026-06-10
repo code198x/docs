@@ -1,8 +1,8 @@
-# Game 15: Dungeons of Dorin
+# Dungeons of Dorin
 
 **Track:** Spectrum BASIC
 **Genre:** Dungeon crawl RPG
-**Units:** 32 (2 phases × 16 units)
+**Units (indicative):** ~32, in two build arcs
 **Language:** Sinclair BASIC
 **Max lines:** ~450
 **Save/load:** Yes — SAVE/LOAD game state to tape
@@ -15,7 +15,7 @@ The dwarven city of Dorin fell centuries ago. Its halls — once filled with lig
 
 Dungeons of Dorin is a turn-based dungeon crawler inspired by Rogue, early CRPGs, and the Fighting Fantasy gamebooks that filled every Spectrum owner's bookshelf. The player creates a character with three stats (HP, attack, defence), descends through procedurally generated dungeon floors, fights monsters in turn-based combat, collects equipment that modifies stats, and manages limited resources. Each run is different because the dungeon layout is generated fresh from RND and a set of placement rules.
 
-This is the most complex game the learner has built. Previous games had one or two interacting systems — movement plus collision, or a board plus rules. Dungeons of Dorin has five: movement, combat, inventory, procedural generation, and persistence. The learner must manage many variables, multiple arrays, and several subroutines that all depend on shared state. It is the proving ground for Game 16's autonomous NPCs and rich world simulation.
+This is the most complex game the learner has built. Previous games had one or two interacting systems — movement plus collision, or a board plus rules. Dungeons of Dorin has five: movement, combat, inventory, procedural generation, and persistence. The learner must manage many variables, multiple arrays, and several subroutines that all depend on shared state. It is the proving ground for the autonomous NPCs and rich world simulation that later games build on.
 
 ---
 
@@ -125,11 +125,11 @@ This teaches persistence — the idea that a program's state can survive beyond 
 
 ---
 
-## Phase Breakdown
+## Build Breakdown
 
-### Phase 1: The Descent (Units 1-16)
+### Arc 1: The Descent
 
-Build the dungeon, move through it, and fight monsters. By the end of this phase, the game is playable: procedurally generated floors, fog of war, turn-based combat, and multiple monster types.
+Build the dungeon, move through it, and fight monsters. By the end of this arc, the game is playable: procedurally generated floors, fog of war, turn-based combat, and multiple monster types.
 
 | Unit | Title | What the learner builds | New concepts |
 |------|-------|------------------------|-------------|
@@ -152,7 +152,7 @@ Build the dungeon, move through it, and fight monsters. By the end of this phase
 
 **Milestone:** A playable dungeon crawler with procedural generation, fog of war, turn-based combat with stats and dice rolls, 6 monster types across 10 floors, and win/lose conditions. The core game works.
 
-### Phase 2: Riches and Ruin (Units 17-32)
+### Arc 2: Riches and Ruin
 
 Add equipment, inventory, potions, save/load, and polish. By the end, the game is complete: a full RPG with interacting systems, persistence, and replayability.
 
@@ -167,7 +167,7 @@ Add equipment, inventory, potions, save/load, and polish. By the end, the game i
 | 23 | Healing Fountains | A new dungeon feature: fountains (cell value 4) restore HP to maximum when used. Each fountain works once. Placed rarely — one per floor at most, and not on every floor. | Single-use features, world state flags |
 | 24 | Combat Drama | Combat messages with visual weight: "The rat bites you for 3 damage", "You strike the troll for 5 damage". Screen shake via rapid `OUT 254` (the border port) — three fast border colour changes make the screen feel like it shakes on heavy hits. Health bars drain through attribute colour (POKE to the attribute file). Colour-code damage (red for player, green for monster). | `OUT` 254 (border port), screen shake, attribute-based health display |
 | 25 | Atmospheric Depth | Deeper floors get darker PAPER, lower BRIGHT. Floor 1 is well-lit. Floor 5 is dim. Floor 10 is almost black. The dungeon *feels* dangerous as you descend. Difficulty curves match the visuals: floors 1-3 are gentle, floors 7-9 are brutal, floor 10 is the gauntlet. | Atmosphere through colour, BRIGHT as depth indicator, difficulty curves |
-| 26 | Machine Code Helpers | Store machine code routines in DATA, POKE into RAM, call via RANDOMIZE USR — just like Game 14, but for different purposes. A fast room redraw that clears and redraws the viewport in one go. A richer sound effect routine that produces sounds BEEP can't. The game runs smoother than pure BASIC. | Machine code helpers (DATA/POKE/USR), fast redraw, richer audio |
+| 26 | Machine Code Helpers | Store machine code routines in DATA, POKE into RAM, call via RANDOMIZE USR — just like Blockstorm, but for different purposes. A fast room redraw that clears and redraws the viewport in one go. A richer sound effect routine that produces sounds BEEP can't. The game runs smoother than pure BASIC. | Machine code helpers (DATA/POKE/USR), fast redraw, richer audio |
 | 27 | Map Memory | When the player descends to a new floor, the old floor is lost — regenerating it on return would produce a different layout. Accept this limitation but show the player a "You descend deeper..." message. The one-way descent is part of the tension. | Design constraints, one-way progression |
 | 28 | Save Game | From the inventory screen, press S to save. Use SAVE with a DATA block: write `hp`, `mh`, `at`, `df`, `wp`, `ar`, `pi`, gold, floor number, and the current `d()` array to tape. | SAVE command, serialising game state |
 | 29 | Load Game | On the title screen, press L to load. READ the saved values back into variables and arrays. Resume play on the saved floor with the saved stats. Handle the case where no save exists (error trapping). | LOAD command, deserialising state, error handling |

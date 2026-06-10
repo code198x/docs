@@ -1,8 +1,8 @@
-# Game 14: Blockstorm
+# Blockstorm
 
 **Track:** Spectrum BASIC
 **Genre:** Vertical shooter with UDG graphics
-**Units:** 32 (2 phases × 16 units)
+**Units (indicative):** ~32, in two build arcs
 **Language:** Sinclair BASIC
 **Max lines:** ~400
 
@@ -205,11 +205,11 @@ Each UDG is 8 bytes, defined via BIN:
 
 ---
 
-## Phase Breakdown
+## Build Breakdown
 
-### Phase 1: Ship, Bullets, and First Contact (Units 1-16)
+### Arc 1: Ship, Bullets, and First Contact
 
-Build the UDG system, the player ship, bullets, and the first enemies. By the end of this phase, the learner has a playable shooter with one enemy type and basic collision.
+Build the UDG system, the player ship, bullets, and the first enemies. By the end of this arc, the learner has a playable shooter with one enemy type and basic collision.
 
 | Unit | Title | What the learner builds | New concepts |
 |------|-------|------------------------|---------------|
@@ -232,7 +232,7 @@ Build the UDG system, the player ship, bullets, and the first enemies. By the en
 
 **Milestone:** A playable vertical shooter with UDG graphics, one enemy type in formation, explosions, lives, scoring, and game over. The UDGs look like real sprites. The game feels like a game.
 
-### Phase 2: The Full Assault (Units 17-32)
+### Arc 2: The Full Assault
 
 Multiple enemy types, 10 waves, power-ups, optimisation, and the honest performance lesson.
 

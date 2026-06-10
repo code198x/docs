@@ -1,8 +1,8 @@
-# Game 06: Quiz Master
+# Quiz Master
 
 **Track:** Spectrum BASIC
 **Genre:** Multiple-choice quiz with categories
-**Units:** 8
+**Units (indicative):** ~8
 **Language:** Sinclair BASIC
 **Final size:** ~90 lines
 
@@ -14,7 +14,7 @@ A quiz game with multiple-choice questions. Each question appears on a formatted
 
 Eight questions from four categories (Science, History, Geography, Entertainment). After all questions, a results screen shows the total score, a breakdown by category with colour-coded labels, and a rating.
 
-This is the last Foundations game. After this, the learner has every basic tool: variables, strings, arrays, loops, decisions, input, colour, sound, screen positioning, data storage, and reusable subroutines. The Skills phase begins with Game 7, where these tools combine into real-time games.
+This is the last of the foundational data-and-logic games. After it, the learner has every basic tool: variables, strings, arrays, loops, decisions, input, colour, sound, screen positioning, data storage, and reusable subroutines. The later games combine these tools into real-time games.
 
 ---
 
@@ -76,7 +76,7 @@ This introduces `AND` for combining conditions.
 | 7 | Category Scores | `DIM s(4)` creates an array with four slots — one per category. Correct answers increment the matching slot. The header bar shows the running total. After all questions, print each category with its score. | `DIM` (simple arrays), array indexing (`s(p)`) |
 | 8 | The Finished Quiz | Title screen with category colours and instructions. Results screen with animated score count-up, colour-coded category breakdown, and rating tiers. `RESTORE` enables replay. The learner writes their own questions. | Title/results screens, `RESTORE`, rating tiers, program structure |
 
-**Milestone:** The learner has the full BASIC toolkit: variables, strings, arrays, loops, decisions, input, colour, sound, screen positioning, data storage, and reusable subroutines. Foundations complete.
+**Milestone:** The learner has the full BASIC toolkit: variables, strings, arrays, loops, decisions, input, colour, sound, screen positioning, data storage, and reusable subroutines. The foundational toolkit is complete.
 
 ---
 

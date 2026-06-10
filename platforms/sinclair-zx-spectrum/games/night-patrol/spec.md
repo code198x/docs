@@ -1,8 +1,8 @@
-# Game 10: Night Patrol
+# Night Patrol
 
 **Track:** Spectrum BASIC
 **Genre:** Top-down stealth game
-**Units:** 16
+**Units (indicative):** ~16
 **Language:** Sinclair BASIC
 **Max lines:** ~100
 
@@ -103,7 +103,7 @@ Lives: 3. No extra lives. Game over shows final score and floor reached.
 | 12 | Five Floors | All five floors defined in DATA. Each floor has its own map, guard count, guard routes, objective position, exit position, and player start. Floor number displayed in the HUD. Difficulty increases through guard count and patrol speed. | Level data in DATA blocks, RESTORE for each level, difficulty as data |
 | 13 | Sightline Polish | Erase old sightlines before drawing new ones when a guard turns a corner. Track the previous sightline cells so they can be cleared cleanly. Sightlines stop at walls AND at other guards (guards block line of sight). | Cleanup on state change, tracking previous positions, interaction between game objects |
 | 14 | Detection Drama | On detection: guard turns to face the player, exclamation mark appears above the guard, two-tone alarm BEEP, border flashes red twice, brief pause, then reset. Make it feel dramatic, not frustrating. The player always knows why they were caught. | Sequential animation, sound design, feedback pacing |
-| 15 | OVER 1 and Flicker-Free | Replace the erase-and-redraw movement with `OVER 1` (XOR mode). Print the player and guard characters with OVER 1 — printing them again at the same position erases them without destroying the maze underneath. Combined with PEEK 23672 timing from Game 7, movement is the smoothest yet. No more flicker when walking through corridors. | `OVER 1` (XOR drawing), flicker-free movement, `SCREEN$` for reading screen characters |
+| 15 | OVER 1 and Flicker-Free | Replace the erase-and-redraw movement with `OVER 1` (XOR mode). Print the player and guard characters with OVER 1 — printing them again at the same position erases them without destroying the maze underneath. Combined with PEEK 23672 frame timing, movement is the smoothest yet. No more flicker when walking through corridors. | `OVER 1` (XOR drawing), flicker-free movement, `SCREEN$` for reading screen characters |
 | 16 | The Finished Game | Complete all five floors. Victory screen: "YOU ESCAPED!" with ascending BEEP fanfare and final score. Title screen gets a building silhouette in block characters. Floor intro text before each level. Border colour changes per floor. Play all five floors in sequence. Test edge cases. Clean the listing. ~100 lines of working, tested code. | End game sequence, full integration testing, the finished product |
 
 **Milestone:** The learner can store map layouts as string data, draw a world from that data, implement simple patrol-route AI, manage multiple enemies with arrays, load different levels using RESTORE, and use OVER 1 for flicker-free movement. OVER 1 combined with PEEK timing makes this the smoothest-moving game so far. These skills — data-driven maps, enemy AI, level loading, and XOR drawing — are the foundation for every game that needs a world larger than one screen.
