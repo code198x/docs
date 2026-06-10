@@ -25,6 +25,18 @@
 > reframe is the natural home for "Smooth Motion" / "Overlap"; whether they revisit Gloaming or
 > stand alone is a build-time call. The tiny first game has since been designed and named
 > **Gloaming** (resolving open question 4).
+>
+> **Lineup tightened to a 10-game rendering ladder (2026-06-10).** The 2026-lineup-replan
+> resolves this track to a **tight ~10-game ladder** ending at the Spectral Legacy
+> capstone (catalogue is authoritative: `website/src/content/modules/sinclair-zx-spectrum/assembly.yaml`).
+> The themed back half this record once carried — **Underlight, Whitewinter, Brace and Boon,
+> Embergate, The Lantern Path, The Last Banner** — and the Volumes 2–6 sketches are
+> **RETIRED** (may return later, but we are content-bound and ship the tight ladder). The
+> "rendering Trunk" sub-sequence is realised as the ladder's first rungs (Lamplight = masked
+> sprite, Ricochet = pre-shift, Greypeak = Y-sort at the capstone end). The technique-budget
+> principle and the gentle-opening reasoning below are unchanged and still govern. See § *Volume 1*
+> for the applied lineup; `spectrum-assembly-track.md` (44-entry lattice) and
+> `spectrum-assembly-per-game-scope.md` (per-game budget table) are **superseded** for V1 by this.
 
 ## The problem
 
@@ -170,29 +182,30 @@ inserts/splits where the old 8-game lineup over-packs. Unit counts here are **il
 > outlines is an illustrative marker, not a contract. Content and the quality bar decide how many
 > units; the counts firm up and move during build.
 
-| # | Entry | Headline / role | New major technique(s) | ~Units |
-|---|-------|-----------------|------------------------|--------|
-| — | **Primer** | Meet the Machine | (machine literacy, not a game) | ~8–12 |
-| 1 | **Gloaming** | "I finished a game in asm" | game loop; cell sprite + collision | ~20 |
-| 2 | **Shadowkeep** | Atmosphere | room-data + flick; atmosphere craft | 32 (Oct, Arcs 1–2); 64 full |
-| 3 | **Smooth Motion** (insert) | smoothness | pre-shifted sprites | ~20 |
-| 4 | **Overlap** (insert) | sprites over scenery | masking | ~20 |
-| 5 | **Greypeak** | Depth (iso) | Y-sort + iso projection | ~56 |
-| 6 | **Underlight** | Openness (non-linear geography) | large room-graph + map streaming | ~64 |
-| 7 | **Whitewinter** | Scale (procedural vastness) | procedural generation + location-graph | ~80 |
-| 8 | **Brace and Boon** | Duality (two characters) | dual-entity control + state | ~64 |
-| 9 | **Embergate** | Power (action-RPG) | combat state machine; classes/XP/spells | ~80 |
-| 10 | **The Lantern Path** | Conversation (parser world) | parser + dialogue + quest state | ~80 |
-| 11 | **The Last Banner** | Decision (resource trade-offs) | tactical grid | ~48 |
+The applied lineup is the **rendering ladder** — each game's headline is one rung; later
+games inherit the rungs below. (Superseded the themed Underlight→Last Banner lineup, retired
+2026-06-10.) Unit counts deliberately omitted — the budget is on *techniques per game*, not units.
 
-**Flagged for the budget rule (need attention during detailed V1 build):**
-- **Whitewinter, Embergate, Lantern Path** are each ~80-unit, multi-technique games
-  (procedural + location-graph; combat + classes + XP + spells; parser + dialogue +
-  quest). At 1–2 majors per game they likely each need internal sub-arc discipline or
-  one or more inserts/splits. Detailed pacing deferred to their own spec passes, but
-  flagged now.
-- **Underlight** (non-linear geography) and **Brace and Boon** (two-character) are each
-  a clean 1–2 majors and look budget-compatible as single games.
+| # | Entry | Headline / role | New major technique(s) |
+|---|-------|-----------------|------------------------|
+| — | **Primer** | Meet the Machine | (machine literacy, not a game) |
+| 1 | **Gloaming** | "I finished a game in asm" | game loop; cell sprite + collision |
+| 2 | **Shadowkeep** | Atmosphere → cell→masked bridge | room-data + flick; atmosphere; a later arc introduces the first masked sprite (rung 1) |
+| 3 | **Lamplight** | first masked sprite (deepened) | masked sprite over a background; one threat |
+| 4 | **Ricochet** | smoothness | pre-shifted sprites; bounding-box collision |
+| 5 | **Deepdelve** | platforming | tile-map collision; jump physics |
+| 6 | **Nibble Run** | pursuit | chase/pathing AI; power-up state |
+| 7 | **Skyhawk** | many things at once | sprite multiplexing + smooth scrolling (the one 2-rung game) |
+| 8 | **Greypeak** | Depth (iso) | Y-sort + isometric projection |
+| 9 | **Starfall** | sound + bullets | 128K AY music; bullet patterns |
+| 10 | **Hard Rain** | bosses | state-machine AI; multi-directional action |
+| 11 | **Wyrmhold** | a big world | large multi-room world; inventory; save |
+| 12 | **Spectral Legacy** | capstone | parallax, multiload, polish — integrate everything |
+
+**Pacing note:** every game introduces **one** new major technique except **Skyhawk** (multiplex +
+smooth scroll), which sits at the 2-rung ceiling deliberately. Greypeak adds *one* concept (Y-sort)
+because masking, pre-shift and tiles are already owned by the time you reach it — the whole reason it
+moved late. No game exceeds two new majors.
 
 ## Open structural tension — thematic vs difficulty ordering
 
@@ -211,7 +224,12 @@ Three resolutions (a decision for Steve, not resolved here):
   a competent learner, ramping within-theme. **Recommended:** solves the real problem
   (the early cliff) without re-indexing a multi-decade track.
 
-## Volumes 2–6 — sketch only (per agreed scope)
+## Volumes 2–6 — sketch only (RETIRED 2026-06-10)
+
+> **Retired by the 2026 lineup-replan.** The track is now the tight 12-row ladder above
+> (Primer + 11 entries through Spectral Legacy). The Volumes 2–6 material below is kept for
+> historical reference only — it is **not** a committed lineup. Revive a specific game here only
+> via a fresh decision; do not treat the sketch as scheduled work.
 
 Not re-authored. Budget rule applied at low resolution to flag candidates:
 

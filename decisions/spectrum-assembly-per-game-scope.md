@@ -1,5 +1,11 @@
 # Decision: Spectrum Assembly Per-Game Scope (v1 first-draft)
 
+> **SUPERSEDED 2026-06-10 (lineup) by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) § Volume 1.**
+> The per-game **unit-budget table below covers the retired 44-game lineup** and no longer
+> describes the track. The track is now a tight ~10-game ladder with counts deliberately left
+> flexible (no fixed unit counts). The "keep canon games small" honesty principle here is still
+> sound; the specific per-game rows are dead.
+
 > **AMENDED 2026-05-29 by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md).**
 > The opening adds budgeted entries ahead of Shadowkeep — **Primer ~8–12, tiny first game ~16–20,
 > Smooth Motion ~20, Overlap ~20**. **Shadowkeep's Arc 1–2 engineering scope drops** (cell-based;

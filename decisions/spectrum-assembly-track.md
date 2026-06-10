@@ -1,5 +1,12 @@
 # Decision: Spectrum Assembly Track Structure
 
+> **SUPERSEDED 2026-06-10 (lineup) by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) § Volume 1.**
+> The **44-entry / 6-volume lattice below is retired.** The track is now a tight ~10-game
+> rendering ladder ending at the Spectral Legacy capstone (catalogue is authoritative). The
+> layer model and "commercial bar" reasoning here remain readable context, but the *lineup*
+> (V1 themed games + V2–6 branches) no longer binds. This satisfies this record's own
+> "adding/changing games needs a new track decision" drift trigger.
+
 > **AMENDED 2026-05-29 by [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md).**
 > The track now opens with a Primer ("Meet the Machine") and a tiny first game *ahead* of
 > Shadowkeep, and obeys a **technique budget** — at most 1–2 major new techniques per game;
