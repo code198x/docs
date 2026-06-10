@@ -155,4 +155,4 @@ The following full-brief sections are dropped for all BASIC games:
 - [`specifications/brief.md`](brief.md) — full brief spec (assembly games)
 - [`specifications/brief-basic-v1.md`](brief-basic-v1.md) — the V1 prototype this template supersedes
 - [`decisions/spectrum-basic-32-games.md`](../decisions/spectrum-basic-32-games.md) — the 32-game lineup
-- [`platforms/sinclair-zx-spectrum/basic.md`](../platforms/sinclair-zx-spectrum/basic.md) — curriculum spec with per-game details
+- `platforms/sinclair-zx-spectrum/basic.md` — curriculum spec with per-game details

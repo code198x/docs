@@ -45,13 +45,20 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 - [Visual direction: synthesise, don't pivot](decisions/visual-direction-synthesis.md) — production's bones + the fanzine's soul as one language; re-role Inter/Mono/Caveat, no new fonts
 - [Synthesis build plan](tracker/synthesis-build-plan.md) — phased plan to evolve production into the synthesis; reference mocks at [design/synthesis/](design/synthesis/)
 
+### Game lineups (per-track, 2026 replan)
+
+- [Spectrum assembly — gentle ramp](decisions/spectrum-assembly-gentle-ramp.md) — governing record: the rendering ladder, technique budget, Shadowkeep re-scope
+- [Spectrum BASIC 32-game lineup](decisions/spectrum-basic-32-games.md) — 32 games × 4 volumes; UDGs foundational; trig at Drift
+- [C64 assembly lineup](decisions/c64-assembly-lineup.md) — VIC-II/6502 hardware ladder
+- [C64 BASIC Volumes 2–4](decisions/c64-basic-volumes-2-4.md) — twin concept + POKE-the-hardware ladders
+- [NES assembly lineup](decisions/nes-assembly-lineup.md) — PPU/6502 ladder; Dash re-scope; mappers late
+- [Amiga assembly lineup](decisions/amiga-assembly-lineup.md) — custom-chip ladder; Exodus re-scope
+- [Amiga AMOS + Blitz lineups](decisions/amiga-basic-amos-and-blitz.md) — peer-path BASIC fork
+
 ### Spectrum-specific
 
-- Spectrum Assembly track structure — 44 entries × 6 volumes; layer model; tech-tree
-- Spectrum Assembly per-game scope — per-game unit estimates (~2,396 total)
 - [Shadowkeep 32-unit commitment](decisions/shadowkeep-32-unit-commitment.md) — Arc 1+2 / 32 units for October
 - [Shadowkeep four-arc framing](decisions/shadowkeep-four-arc-framing.md) — Arcs 3-4 post-October
-- [Spectrum BASIC 32-game lineup (v6.4)](decisions/spectrum-basic-32-games.md) — 32 games × 4 volumes × 8 per volume
 - [Spectrum BASIC v6.4 renames](decisions/spectrum-basic-v6.4-renames.md) — 11 BASIC games renamed under inspired-by-not-clones
 
 ## Specifications (formats and structures)
@@ -75,12 +82,14 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 
 ## Platforms
 
-### Active (current curriculum work)
+### Core platforms (live on-ramp + recorded lineup)
 
-- [Sinclair ZX Spectrum](platforms/sinclair-zx-spectrum/) — [reference](platforms/sinclair-zx-spectrum/reference.md), [assembly](platforms/sinclair-zx-spectrum/assembly.md) (pointer → rendering-ladder catalogue + gentle-ramp record), [basic](platforms/sinclair-zx-spectrum/basic.md) (pointer → 32-game catalogue + record), [games/](platforms/sinclair-zx-spectrum/games/)
-- [Commodore 64](platforms/commodore-64/) — [reference](platforms/commodore-64/reference.md), assembly skeleton (Cadence deferred post-October), [BASIC curriculum](platforms/commodore-64/basic.md) (primer shipped, Volume 1 designed)
-- [Commodore Amiga](platforms/commodore-amiga/) — [reference](platforms/commodore-amiga/reference.md), assembly skeleton, basic skeleton (Exodus deferred)
-- [Nintendo NES](platforms/nintendo-entertainment-system/) — [reference](platforms/nintendo-entertainment-system/reference.md), assembly skeleton (Nightshade deferred)
+State is the website catalogue (`website/src/content/modules/<platform>/<track>.yaml`); each track's lineup + rationale is the per-track record under § Game lineups above.
+
+- [Sinclair ZX Spectrum](platforms/sinclair-zx-spectrum/) — [reference](platforms/sinclair-zx-spectrum/reference.md), [games/](platforms/sinclair-zx-spectrum/games/) · Z80 assembly + Sinclair BASIC
+- [Commodore 64](platforms/commodore-64/) — [reference](platforms/commodore-64/reference.md) · 6510 assembly + BASIC V2
+- [Commodore Amiga](platforms/commodore-amiga/) — [reference](platforms/commodore-amiga/reference.md) · 68000 assembly + AMOS / Blitz BASIC
+- [Nintendo NES](platforms/nintendo-entertainment-system/) — [reference](platforms/nintendo-entertainment-system/reference.md) · 6502 assembly
 
 ### Far-future drafts
 
