@@ -150,7 +150,7 @@ Sub-arcs of pass 1 (illustrative; full detail in [per-unit-plan.md](per-unit-pla
 
 ## 13. Vault tie-ins
 
-Every reference from a shipped unit must resolve (Definition of Done; vault is a launch artefact — [october-2026-launch-spec.md](../../../../decisions/october-2026-launch-spec.md), [lesson-references.md](../../../../tracker/lesson-references.md)).
+Every reference from a shipped unit must resolve (Definition of Done; vault is a launch artefact — [october-2026-launch-spec.md](../../../../decisions/october-2026-launch-spec.md)).
 
 - **Games:** [Atic Atac](/vault/games/atic-atac), [Knight Lore](/vault/games/knight-lore), Sabre Wulf, Pentagram, Underwurlde, Cybernoid II, The Hobbit.
 - **Studios / people:** Ultimate Play the Game (Tim & Chris Stamper); Hewson (via Cybernoid II); Melbourne House (via The Hobbit); [Tim Follin](/vault/people/tim-follin).

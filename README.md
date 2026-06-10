@@ -6,7 +6,7 @@ This repository contains curriculum specifications, platform references, and con
 
 Code Like It's 198x teaches **retro raster-era hardware-craft game development through the canon**. Learners build real games on vintage platforms using the same techniques developers used in the 1980s and 1990s. Every game in the curriculum is inspired by canonical traditions of the era but ships as its own original design.
 
-All **four core platforms — ZX Spectrum, Commodore 64, NES, and Amiga** — ship a complete, finishable on-ramp for the October 2026 launch, each with its full coming-soon game lineup recorded and sequenced (the 2026 lineup replan). Twelve further retro systems are mapped as pre-methodology drafts.
+All **four core platforms — ZX Spectrum, Commodore 64, NES, and Amiga** — ship a complete, finishable on-ramp for the October 2026 launch, each with its full coming-soon game lineup recorded and sequenced (the 2026 lineup replan). Further retro systems get per-system curriculum work when we reach each one.
 
 No emulation wrappers. No modern engines. No high-level languages. Direct hardware access, assembly language, and the satisfaction of making a 40-year-old machine do something impressive.
 
@@ -39,11 +39,11 @@ docs/
 │   ├── sinclair-zx-spectrum/       # Core (live): reference.md + language/ + games/
 │   ├── commodore-64/               # Core (live): reference.md + games/
 │   ├── commodore-amiga/            # Core (live): reference.md + games/
-│   ├── nintendo-entertainment-system/  # Core (live): reference.md + games/
-│   └── {12 far-future platforms}/  # Pre-methodology drafts (assembly-skeleton.md)
+│   └── nintendo-entertainment-system/  # Core (live): reference.md + games/
 │
-# Lineups + state are the website catalogues (website/src/content/modules/);
-# each track's rationale is a per-track record under decisions/.
+# Only the four core systems have docs. Others get per-system docs when work
+# begins on each. Lineups + state are the website catalogues
+# (website/src/content/modules/); rationale is a per-track record under decisions/.
 │
 ├── decisions/                      # Binding policy records (~17 files)
 ├── specifications/                 # Cross-cutting format/structure specs
@@ -88,9 +88,9 @@ See [index.md](index.md) for a full file-by-file map.
 | Commodore 64 | BASIC V2 | Meet C64 BASIC · 8 First Programs | [Volumes 2–4](decisions/c64-basic-volumes-2-4.md) |
 | Amiga | AMOS / Blitz | Meet AMOS · Meet Blitz | [AMOS + Blitz](decisions/amiga-basic-amos-and-blitz.md) — peer paths |
 
-### Far-future platforms
+### Beyond the core four
 
-Twelve additional platforms have pre-methodology drafts under `platforms/{system}/{assembly,basic}-skeleton.md` — Acorn Archimedes, Amstrad CPC, Atari 8-bit, Atari ST, BBC Micro, Game Boy, MSX, Sega Master System, Sega Mega Drive, SNES, TurboGrafx-16, Vectrex. All await further methodology investment.
+Platforms outside the core four (Acorn Archimedes, Amstrad CPC, Atari 8-bit, Atari ST, BBC Micro, Game Boy, MSX, Sega Master System, Sega Mega Drive, SNES, TurboGrafx-16, Vectrex, and more) get their own per-system docs **when work begins on each**. The earlier pre-methodology skeleton sketches were removed 2026-06-10 (recoverable from git). Next-wave targets are in [decisions/next-tier-first-wave.md](decisions/next-tier-first-wave.md); the wider roadmap in [tracker/future-expansion-tracks.md](tracker/future-expansion-tracks.md).
 
 
 ## Related Repositories

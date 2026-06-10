@@ -72,4 +72,4 @@ The bar above is operational at unit scale through this checklist — the canoni
 - [ ] All `<CodeFromFile>` snippets exist in code-samples and assemble
 - [ ] "Try this" experiments tested and produce the described result
 - [ ] "If it doesn't work" troubleshooting reflects actual failure modes encountered during testing
-- [ ] **All cross-references resolve to real content** — vault entries, pattern library entries, and other units linked from this unit must exist (or be catalogued as required, see [lesson-references.md](../tracker/lesson-references.md))
+- [ ] **All cross-references resolve to real content** — vault entries, pattern library entries, and other units linked from this unit must exist (or be catalogued as required)

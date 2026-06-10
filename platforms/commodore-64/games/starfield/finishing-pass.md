@@ -16,8 +16,8 @@ The **reorder (Job A) and Primer-continuity (Job B) work still stands** and is
 independent of conversion; the exemplar deliberately stayed on the *current*
 numbering so the two passes don't entangle.
 
-This is the deferred Definition-of-Done pass named in
-[`assembly-skeleton.md`](../../assembly-skeleton.md) § *Starfield — committed shape*.
+This is the deferred Definition-of-Done pass for Starfield's committed shape
+(now recorded in [`decisions/c64-assembly-lineup.md`](../../../../decisions/c64-assembly-lineup.md) + the catalogue).
 Completing it closes the second half of the C64 finishable bar (Primer ✅ +
 Starfield) per the [Oct-2026 launch spec](../../../../decisions/october-2026-launch-spec.md).
 

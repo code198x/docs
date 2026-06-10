@@ -12,7 +12,7 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 
 - `decisions/` — binding policy records
 - `specifications/` — formal specs (cross-cutting format/structure rules)
-- `platforms/` — per-system reference + curriculum + games (16 systems)
+- `platforms/` — per-system reference + curriculum + games (the four core systems)
 - `tracker/` — plans, research, and design sketches (not live status — see banner above)
 - `infrastructure/` — Docker, capture pipeline, Astro
 - `emulators/` — emulator references
@@ -87,27 +87,13 @@ State is the website catalogue (`website/src/content/modules/<platform>/<track>.
 - [Commodore Amiga](platforms/commodore-amiga/) — [reference](platforms/commodore-amiga/reference.md) · 68000 assembly + AMOS / Blitz BASIC
 - [Nintendo NES](platforms/nintendo-entertainment-system/) — [reference](platforms/nintendo-entertainment-system/reference.md) · 6502 assembly
 
-### Far-future drafts
+### Beyond the core four
 
-Pre-methodology sketches for platforms outside the current 4. Awaits Spectrum methodology validation before any methodology investment.
-
-- [Acorn Archimedes](platforms/acorn-archimedes/)
-- [Amstrad CPC](platforms/amstrad-cpc/) — assembly + BASIC sketches
-- [Atari 8-bit](platforms/atari-8-bit/)
-- [Atari ST](platforms/atari-st/) — assembly + BASIC sketches
-- [BBC Micro](platforms/bbc-micro/) — assembly + BASIC sketches
-- [Game Boy](platforms/game-boy/)
-- [MSX](platforms/msx/) — assembly + BASIC sketches
-- [Sega Master System](platforms/sega-master-system/)
-- [Sega Mega Drive](platforms/sega-mega-drive/)
-- [SNES](platforms/snes/)
-- [TurboGrafx-16](platforms/turbografx-16/)
-- [Vectrex](platforms/vectrex/)
+Platforms outside the core four get their own per-system docs **when work begins on each one**. The earlier pre-methodology skeleton sketches were removed 2026-06-10 (recoverable from git). Next-wave targets and the wider roadmap: [next-tier-first-wave.md](decisions/next-tier-first-wave.md), [tracker/future-expansion-tracks.md](tracker/future-expansion-tracks.md).
 
 ## Tracker (live state / plans)
 
-- [Lesson references](tracker/lesson-references.md) — vault/pattern links from curriculum units; drives vault completeness work
-- [Methodology generalisation survey](tracker/methodology-generalisation-survey.md) — does the Spectrum methodology generalise to 11+ systems?
+- [Methodology generalisation survey](tracker/methodology-generalisation-survey.md) — closed-out pointer (answered by shipping four platforms)
 - [Future expansion tracks](tracker/future-expansion-tracks.md) — post-capstone (MEGA65, ZX Next, AGA)
 
 ## Infrastructure
