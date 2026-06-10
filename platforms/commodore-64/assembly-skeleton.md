@@ -2,6 +2,8 @@
 
 **STATUS: Opening committed (2026-06-03); the deeper track stays lightweight.** The precondition this skeleton was waiting on — *Spectrum validating the gentle-ramp methodology* — is met: Meet the Machine and a complete Gloaming have shipped. Per the [October 2026 launch spec](../../decisions/october-2026-launch-spec.md) (2026-06-03 amendment), C64 is now the **second platform brought to the finishable bar**, and its launch opening is committed: a C64 **Primer** + **Starfield** as the first complete game (see § Committed opening). Everything *beyond the opening* — the flagship (Cadence), V2–V4, the full ~16-game lineup, per-game scope, naming lock-in, tech-tree — stays **lightweight / no-commit**, as before. North Star, volume themes, and the candidate lineup remain working-draft.
 
+> **2026-06-10 lineup-replan update.** The deeper lineup is now sequenced as a **VIC-II / 6502 hardware ladder** and recorded in [decisions/c64-assembly-lineup.md](../../decisions/c64-assembly-lineup.md); the catalogue (`website/src/content/modules/commodore-64/assembly.yaml`) is authoritative. `symphonys-end` is dropped (slug parked; its showcase role belongs to the Cadence flagship) and a new **Overdrive** raster-budgeting integration game takes the rung-7 slot. The "candidate games" table further down is superseded by that ladder; Cadence stays the deferred flagship as described here.
+
 Captured 2026-05-19 alongside [nes-track-skeleton.md](nes-track-skeleton.md) and [amiga-track-skeleton.md](amiga-track-skeleton.md) for cross-platform methodology check.
 
 ## North Star
