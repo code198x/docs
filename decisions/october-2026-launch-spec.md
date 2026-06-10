@@ -20,7 +20,7 @@
 > Shadowkeep's later arcs and BASIC Volumes 2–4 are. **NES and Amiga remain deferred** — focus is
 > *sequenced* to a second platform, not *widened* to four, so the "erodes the bar" reasoning below
 > still holds. Supersedes the "Spectrum only" / "C64 … defer wholesale" framing below, for C64 only.
-> Track plan: [commodore-64/assembly-skeleton.md](../platforms/commodore-64/assembly-skeleton.md).
+> Track plan: commodore-64/assembly-skeleton.md.
 > **AMENDED 2026-06-09 — launch widened, deliberately, to all four core platforms.**
 > Confirmed by Steve: shipping a complete on-ramp on **every core platform** *is* the launch, and a
 > far stronger one than "Spectrum only." The Spectrum-only framing was an artefact of Crash! Live

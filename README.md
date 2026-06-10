@@ -70,10 +70,10 @@ See [index.md](index.md) for a full file-by-file map.
 
 | Platform | Language | Status |
 |----------|----------|--------|
-| ZX Spectrum | Z80 | **Active.** [44 entries / 6 volumes / ~2,396 units](decisions/spectrum-assembly-track.md). Shadowkeep (Game 1) commits 64 units across 4 arcs; **Arcs 1-2 ship October 2026**. See [platforms/sinclair-zx-spectrum/assembly.md](platforms/sinclair-zx-spectrum/assembly.md). |
-| Commodore 64 | 6510 | **Deferred post-October.** Lightweight skeleton at [platforms/commodore-64/assembly-skeleton.md](platforms/commodore-64/assembly-skeleton.md). Awaits Spectrum methodology validation. |
-| NES | 6502 | **Deferred post-October.** Lightweight skeleton at [platforms/nintendo-entertainment-system/assembly-skeleton.md](platforms/nintendo-entertainment-system/assembly-skeleton.md). |
-| Amiga | 68000 | **Deferred post-October.** Lightweight skeleton at [platforms/commodore-amiga/assembly-skeleton.md](platforms/commodore-amiga/assembly-skeleton.md). |
+| ZX Spectrum | Z80 | **Active.** 44 entries / 6 volumes / ~2,396 units. Shadowkeep (Game 1) commits 64 units across 4 arcs; **Arcs 1-2 ship October 2026**. See [platforms/sinclair-zx-spectrum/assembly.md](platforms/sinclair-zx-spectrum/assembly.md). |
+| Commodore 64 | 6510 | **Deferred post-October.** Lightweight skeleton at platforms/commodore-64/assembly-skeleton.md. Awaits Spectrum methodology validation. |
+| NES | 6502 | **Deferred post-October.** Lightweight skeleton at platforms/nintendo-entertainment-system/assembly-skeleton.md. |
+| Amiga | 68000 | **Deferred post-October.** Lightweight skeleton at platforms/commodore-amiga/assembly-skeleton.md. |
 
 ### BASIC Gateway Curricula
 
@@ -81,7 +81,7 @@ See [index.md](index.md) for a full file-by-file map.
 |----------|----------|--------|
 | ZX Spectrum | Sinclair BASIC | **Active.** [32 games / 4 volumes](platforms/sinclair-zx-spectrum/basic.md), v6.4 inspired-by-not-clones names. **Volume 1 (8 games) ships October 2026.** |
 | Commodore 64 | BASIC V2 | **Primer shipped; Volume 1 designed.** [platforms/commodore-64/basic.md](platforms/commodore-64/basic.md). |
-| Amiga | AMOS/Blitz BASIC | **Pre-methodology draft.** [platforms/commodore-amiga/basic-skeleton.md](platforms/commodore-amiga/basic-skeleton.md). |
+| Amiga | AMOS/Blitz BASIC | **Pre-methodology draft.** platforms/commodore-amiga/basic-skeleton.md. |
 | BBC Micro | BBC BASIC | **Pre-methodology draft.** [platforms/bbc-micro/basic-skeleton.md](platforms/bbc-micro/basic-skeleton.md). |
 | Amstrad CPC | Locomotive BASIC | **Pre-methodology draft.** [platforms/amstrad-cpc/basic-skeleton.md](platforms/amstrad-cpc/basic-skeleton.md). |
 | MSX | MSX BASIC | **Pre-methodology draft.** [platforms/msx/basic-skeleton.md](platforms/msx/basic-skeleton.md). |

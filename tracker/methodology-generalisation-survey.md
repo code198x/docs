@@ -2,7 +2,7 @@
 
 **STATUS: Methodology-check only. No-commit.** No skeleton specs, no candidate lineups, no design work — just the question *does the Spectrum methodology generalise to this system?*
 
-The Spectrum methodology being tested (per [`decisions/spectrum-assembly-track.md`](../decisions/spectrum-assembly-track.md)):
+The Spectrum methodology being tested (per `decisions/spectrum-assembly-track.md`):
 
 1. **Three-axis design pattern** — player-facing headline + design concept + technique (mapped separately)
 2. **Trunk + Branches tech tree** — shared foundations + genre-conditional specialisations

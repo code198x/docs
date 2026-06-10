@@ -4,7 +4,7 @@
 
 Apply [inspired-by-not-clones-naming.md](inspired-by-not-clones-naming.md) retroactively to Spectrum BASIC v6.3. Eleven games currently using canonical / trademarked / generic-mechanic names get renamed to inspired-by working-draft replacements.
 
-**Cut A applied** — rename all 11, not just active trademarks. Loses some computer-history specificity ("Wumpus" is *how* CS history names that mechanic) but gains cross-track consistency with [spectrum-assembly-track.md](spectrum-assembly-track.md).
+**Cut A applied** — rename all 11, not just active trademarks. Loses some computer-history specificity ("Wumpus" is *how* CS history names that mechanic) but gains cross-track consistency with spectrum-assembly-track.md.
 
 ## Why
 

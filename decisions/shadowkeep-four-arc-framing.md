@@ -35,7 +35,7 @@ October ship scope is UNCHANGED — still 32 units, Arcs 1+2 only. The drift tri
 Three reasons:
 
 1. **The "first chapter of a longer game" framing in the existing commitment doc needed a concrete plan.** The current doc has "Shadowkeep Arc 3+ ... post-October" in out-of-scope. Naming Arcs 3-4 turns vague "first chapter" into a real design.
-2. **Cross-game prerequisite seeding.** Several other curriculum games (V2.10 multi-screen platformer, V1.4 strategic procedural, V1.6 action-RPG, V1.7 parser per [spectrum-assembly-track.md](spectrum-assembly-track.md)) depend on techniques Arcs 3-4 introduce (tape save/load, location-graph data, combat state machine, quest state, item systems). With Arcs 3-4 explicit, the tech-tree is honest.
+2. **Cross-game prerequisite seeding.** Several other curriculum games (V2.10 multi-screen platformer, V1.4 strategic procedural, V1.6 action-RPG, V1.7 parser per spectrum-assembly-track.md) depend on techniques Arcs 3-4 introduce (tape save/load, location-graph data, combat state machine, quest state, item systems). With Arcs 3-4 explicit, the tech-tree is honest.
 3. **The 32-unit commitment underplays Shadowkeep's role.** Memory's direction-of-travel implies ~110-220 units per game on average across the curriculum. Shadowkeep at 32 was an October-relevant commitment, not a per-game total. Four-arc framing brings Shadowkeep to ~64 units — still conservative against direction-of-travel.
 
 ## What this means

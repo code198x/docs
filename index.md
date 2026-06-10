@@ -47,8 +47,8 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 
 ### Spectrum-specific
 
-- [Spectrum Assembly track structure](decisions/spectrum-assembly-track.md) — 44 entries × 6 volumes; layer model; tech-tree
-- [Spectrum Assembly per-game scope](decisions/spectrum-assembly-per-game-scope.md) — per-game unit estimates (~2,396 total)
+- Spectrum Assembly track structure — 44 entries × 6 volumes; layer model; tech-tree
+- Spectrum Assembly per-game scope — per-game unit estimates (~2,396 total)
 - [Shadowkeep 32-unit commitment](decisions/shadowkeep-32-unit-commitment.md) — Arc 1+2 / 32 units for October
 - [Shadowkeep four-arc framing](decisions/shadowkeep-four-arc-framing.md) — Arcs 3-4 post-October
 - [Spectrum BASIC 32-game lineup (v6.4)](decisions/spectrum-basic-32-games.md) — 32 games × 4 volumes × 8 per volume
@@ -77,10 +77,10 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 
 ### Active (current curriculum work)
 
-- [Sinclair ZX Spectrum](platforms/sinclair-zx-spectrum/) — [reference](platforms/sinclair-zx-spectrum/reference.md), [assembly](platforms/sinclair-zx-spectrum/assembly.md) (Shadowkeep et al., 44 entries), [basic](platforms/sinclair-zx-spectrum/basic.md) (32 BASIC games), [games/](platforms/sinclair-zx-spectrum/games/)
-- [Commodore 64](platforms/commodore-64/) — [reference](platforms/commodore-64/reference.md), [assembly skeleton](platforms/commodore-64/assembly-skeleton.md) (Cadence deferred post-October), [BASIC curriculum](platforms/commodore-64/basic.md) (primer shipped, Volume 1 designed)
-- [Commodore Amiga](platforms/commodore-amiga/) — [reference](platforms/commodore-amiga/reference.md), [assembly skeleton](platforms/commodore-amiga/assembly-skeleton.md), [basic skeleton](platforms/commodore-amiga/basic-skeleton.md) (Exodus deferred)
-- [Nintendo NES](platforms/nintendo-entertainment-system/) — [reference](platforms/nintendo-entertainment-system/reference.md), [assembly skeleton](platforms/nintendo-entertainment-system/assembly-skeleton.md) (Nightshade deferred)
+- [Sinclair ZX Spectrum](platforms/sinclair-zx-spectrum/) — [reference](platforms/sinclair-zx-spectrum/reference.md), [assembly](platforms/sinclair-zx-spectrum/assembly.md) (pointer → rendering-ladder catalogue + gentle-ramp record), [basic](platforms/sinclair-zx-spectrum/basic.md) (pointer → 32-game catalogue + record), [games/](platforms/sinclair-zx-spectrum/games/)
+- [Commodore 64](platforms/commodore-64/) — [reference](platforms/commodore-64/reference.md), assembly skeleton (Cadence deferred post-October), [BASIC curriculum](platforms/commodore-64/basic.md) (primer shipped, Volume 1 designed)
+- [Commodore Amiga](platforms/commodore-amiga/) — [reference](platforms/commodore-amiga/reference.md), assembly skeleton, basic skeleton (Exodus deferred)
+- [Nintendo NES](platforms/nintendo-entertainment-system/) — [reference](platforms/nintendo-entertainment-system/reference.md), assembly skeleton (Nightshade deferred)
 
 ### Far-future drafts
 

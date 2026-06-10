@@ -48,7 +48,7 @@ Three calls fix the shape:
    **AMOS Professional** (not AMOS 1.3, not AOZ).
 
 This record **formalises and supersedes the framing of** the existing working
-skeleton [platforms/commodore-amiga/basic-skeleton.md](../platforms/commodore-amiga/basic-skeleton.md),
+skeleton platforms/commodore-amiga/basic-skeleton.md,
 which already gestures at both tracks but predates the verified licensing facts
 below and still uses the retired fixed-count framing ("512 units / 8 games ×
 64"). Unit and game counts here are **illustrative**, per
@@ -292,7 +292,7 @@ These gate the AMOS track (not the Blitz track) and are explicit TODOs:
 
 ## Relationship to existing docs
 
-- [platforms/commodore-amiga/basic-skeleton.md](../platforms/commodore-amiga/basic-skeleton.md)
+- platforms/commodore-amiga/basic-skeleton.md
   — the working skeleton this record formalises. Its two-track structure stands;
   its **fixed-count framing ("512 units / 8 games × 64") is superseded** by the
   illustrative-counts position. Its commercial-proof examples were **checked
@@ -344,7 +344,7 @@ These gate the AMOS track (not the Blitz track) and are explicit TODOs:
 ## Status
 
 Active. Captured 2026-06-02. Formalises the two-track structure already sketched
-in [platforms/commodore-amiga/basic-skeleton.md](../platforms/commodore-amiga/basic-skeleton.md);
+in platforms/commodore-amiga/basic-skeleton.md;
 adds the verified licensing position, the Blitz-first sequencing, the
 abstraction-ladder framing, and the open actions that gate the AMOS track.
 
