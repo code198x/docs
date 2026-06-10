@@ -8,7 +8,7 @@
 **Topics:** 6 topics, ~6–8 hours
 **Constraint position:** period-faithful
 
-Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
+Format: [`specifications/brief-basic.md`](../../../../specifications/brief-basic.md)
 
 ---
 

@@ -8,7 +8,7 @@
 **Topics:** 6 topics
 **Constraint position:** period-faithful
 
-Format: [`specifications/brief-basic-v1.md`](../../../../specifications/brief-basic-v1.md)
+Format: [`specifications/brief-basic.md`](../../../../specifications/brief-basic.md)
 
 > **Design note (2026-06-08).** An earlier draft of this brief was statistically
 > self-contradictory: it specified one die counted across six faces (`DIM T(6)`),

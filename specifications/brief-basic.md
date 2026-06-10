@@ -2,7 +2,7 @@
 
 **Version:** 1.0
 **Last Updated:** 2026-05-26
-**Purpose:** Brief format for all Spectrum BASIC games (Volumes 1–4). Derived from the full brief spec (`brief.md`) by dropping sections that don't apply to single-phase BASIC games. Supersedes `brief-basic-v1.md`, which was the V1-only prototype of this template.
+**Purpose:** Brief format for all Spectrum BASIC games (Volumes 1–4). Derived from the full brief spec (`brief.md`) by dropping sections that don't apply to single-phase BASIC games. Supersedes the earlier V1-only prototype of this template (`brief-basic-v1.md`, removed 2026-06-10).
 
 ---
 
@@ -153,6 +153,5 @@ The following full-brief sections are dropped for all BASIC games:
 ## Anchored In
 
 - [`specifications/brief.md`](brief.md) — full brief spec (assembly games)
-- [`specifications/brief-basic-v1.md`](brief-basic-v1.md) — the V1 prototype this template supersedes
 - [`decisions/spectrum-basic-32-games.md`](../decisions/spectrum-basic-32-games.md) — the 32-game lineup
 - `platforms/sinclair-zx-spectrum/basic.md` — curriculum spec with per-game details

@@ -1,5 +1,7 @@
 # Lineup replan — Commodore 64 · Assembly (PROPOSAL)
 
+> **APPLIED 2026-06-10.** This proposal was applied to the catalogue and the per-track decision record under `decisions/`; the "not applied" status below is historical. Kept as the signed-off provenance record. Some game names predate the 2026-06-10 naming pass.
+
 > **Status: PROPOSAL — not applied.** For review. Not written to any catalogue.
 > On sign-off → reconciled into
 > `website/src/content/modules/commodore-64/assembly.yaml` (reorder + retagline

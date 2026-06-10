@@ -1,5 +1,7 @@
 # Lineup replan — Amiga · Assembly (PROPOSAL — not applied)
 
+> **APPLIED 2026-06-10.** This proposal was applied to the catalogue and the per-track decision record under `decisions/`; the "not applied" status below is historical. Kept as the signed-off provenance record. Some game names predate the 2026-06-10 naming pass.
+
 > **Status: proposal for review.** Not applied. On sign-off → written into
 > `website/src/content/modules/commodore-amiga/assembly.yaml` + a decision
 > record. Counts flexible; genres may recur across tracks; progressive + spiral.

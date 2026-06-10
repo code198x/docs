@@ -23,7 +23,7 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 
 ### Cross-cutting
 
-- [October 2026 launch spec](decisions/october-2026-launch-spec.md) — Spectrum-only ship, four artefacts at full bar
+- [October 2026 launch spec](decisions/october-2026-launch-spec.md) — all four core platforms, complete on-ramps at full bar (2026-06-09 amendment)
 - [Real retro games](decisions/real-retro-games.md) — multi-disciplinary commitment (code/visuals/audio/level/polish co-equal)
 - [Commercial-bar revamp](decisions/commercial-bar-revamp.md) — Game 1s rewritten to commercially-shippable bar
 - [Curriculum structure](decisions/curriculum-structure.md) — 4 platforms × 4 games × 256 units (direction-of-travel)
@@ -43,7 +43,6 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 - [System readiness lives in `tier`](decisions/system-readiness-lives-in-tier.md) — one field drives the fleet wall, homepage band, active/coming-soon and routing; no parallel `status`/`curriculumStatus`
 - [Website design zoning](decisions/website-design-zoning.md) — character in the margins, legibility in the column; resolves "two winners" page types via template-vs-view
 - [Visual direction: synthesise, don't pivot](decisions/visual-direction-synthesis.md) — production's bones + the fanzine's soul as one language; re-role Inter/Mono/Caveat, no new fonts
-- [Synthesis build plan](tracker/synthesis-build-plan.md) — phased plan to evolve production into the synthesis; reference mocks at [design/synthesis/](design/synthesis/)
 
 ### Game lineups (per-track, 2026 replan)
 
@@ -73,12 +72,9 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 - [Writing voice](specifications/writing-voice.md) — magazine-class, British English, anti-patterns
 - [Content model](specifications/content-model.md) — Astro collections, computed fields
 - [Code samples](specifications/code-samples.md) — CodeFromFile component, naming
-- [Skills inventory](specifications/skills.md) — cross-platform skill catalogue
 - [Skill progression](specifications/skill-progression.md) — per-platform skill dependency maps
-- [Game inspirations](specifications/game-inspirations.md) — per-game canonical references
 - [Graphics and audio coverage](specifications/graphics-and-audio.md) — per-platform A/V capability
 - [BASIC languages overview](specifications/basic-languages-overview.md) — cross-BASIC reference
-- [BASIC pattern entries](specifications/basic-pattern-entries.md) — reusable BASIC patterns
 
 ## Platforms
 
@@ -112,9 +108,7 @@ Pre-methodology sketches for platforms outside the current 4. Awaits Spectrum me
 
 - [Lesson references](tracker/lesson-references.md) — vault/pattern links from curriculum units; drives vault completeness work
 - [Methodology generalisation survey](tracker/methodology-generalisation-survey.md) — does the Spectrum methodology generalise to 11+ systems?
-- [Coverage strategy](tracker/coverage-strategy.md) — Tier 1/2/3 commitment levels per platform
 - [Future expansion tracks](tracker/future-expansion-tracks.md) — post-capstone (MEGA65, ZX Next, AGA)
-- [Other-platform BASIC curricula](tracker/other-platform-basic-curricula.md) — sketches for BBC, Atari ST, Amstrad CPC, Atari 8-bit BASIC
 
 ## Infrastructure
 

@@ -92,7 +92,6 @@ See [index.md](index.md) for a full file-by-file map.
 
 Twelve additional platforms have pre-methodology drafts under `platforms/{system}/{assembly,basic}-skeleton.md` — Acorn Archimedes, Amstrad CPC, Atari 8-bit, Atari ST, BBC Micro, Game Boy, MSX, Sega Master System, Sega Mega Drive, SNES, TurboGrafx-16, Vectrex. All await further methodology investment.
 
-The methodology has been pressure-tested for generalisation — see [tracker/methodology-generalisation-survey.md](tracker/methodology-generalisation-survey.md) for the full check (11 systems clean, 2 strain at edges, 2 break honestly outside domain). Coverage strategy and tier commitment in [tracker/coverage-strategy.md](tracker/coverage-strategy.md).
 
 ## Related Repositories
 

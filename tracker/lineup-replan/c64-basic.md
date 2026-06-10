@@ -1,5 +1,7 @@
 # Lineup replan — Commodore 64 · BASIC (PROPOSAL)
 
+> **APPLIED 2026-06-10.** This proposal was applied to the catalogue and the per-track decision record under `decisions/`; the "not applied" status below is historical. Kept as the signed-off provenance record. Some game names predate the 2026-06-10 naming pass.
+
 > **Status: PROPOSAL — not applied.** Not written into any catalogue. On sign-off →
 > sequenced into `website/src/content/modules/commodore-64/basic.yaml` (Volume 2+ as
 > `coming-soon` modules) plus a decision record. Counts FLEXIBLE; genres may recur
