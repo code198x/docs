@@ -1,5 +1,20 @@
 # Decision: Curriculum Structure
 
+> **AMENDED 2026-06-10 (technique budget reframed).** The original "1–2 major new core techniques
+> per game" budget is **retired as a per-game cap.** Evidence overruled it: the good shipped games
+> (Dash on NES — ~9 techniques across 16 units, one per unit) are good *because* they layer many
+> techniques gently, not because they headline one. The budget was only ever a proxy for capping
+> authoring cost — and cost is bounded by **unit count, not technique count** (a 16-unit game costs
+> the same to author whether it teaches 2 techniques or 10). So the real constraints are: **one new
+> thing per unit** (the cognitive ramp), **a bounded unit count per game** (the authoring cost),
+> **each game must be a good, commercial-quality game in its own right**, and **the spiral** defers
+> anything not yet earned to a later game. Techniques-per-game is **uncapped**. A game's ladder
+> identity is the *game itself* plus the techniques it *first introduces* — the ramp orders
+> first-introductions (sprites before the Blitter, etc.), not whole games. The anti-bloat wall is
+> unchanged in spirit (see Drift triggers); it's now enforced by unit-count + must-be-a-good-game,
+> not a technique cap. This is what un-stuck the Amiga reorder — see
+> [amiga-assembly-lineup.md](amiga-assembly-lineup.md).
+
 ## The decision
 
 The curriculum is a **sequence of modules** built to a **multi-disciplinary commercial
@@ -16,21 +31,23 @@ else falls out of them.
   pretending to be Ultimate's absolute top. From [real-retro-games.md](real-retro-games.md)
   and [commercial-bar-revamp.md](commercial-bar-revamp.md).
 - **The pacing discipline.** Complexity rises gently and close to monotonically, governed
-  by the per-game **technique budget** ([spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md))
-  and the per-unit one-concept rule ([incremental-code-samples.md](incremental-code-samples.md),
-  [spiral-and-incremental.md](spiral-and-incremental.md), [deprecation-pairs.md](deprecation-pairs.md)).
+  by the **per-unit one-concept rule** ([incremental-code-samples.md](incremental-code-samples.md),
+  [spiral-and-incremental.md](spiral-and-incremental.md), [deprecation-pairs.md](deprecation-pairs.md))
+  and a **bounded unit count per game** — not a per-game technique cap (retired; see the
+  2026-06-10 amendment above and [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md)).
 
 **Not fixed — falls out of the locked parts:**
 
 - **Game count per platform.** A platform carries as many games as it takes to cover the
-  intended **genre breadth** while honouring the technique budget. Breadth across genres
+  intended **genre breadth** while honouring the gentle ramp. Breadth across genres
   is a primary goal — a new genre wants a new game ([modules-not-games.md](modules-not-games.md)).
   The old "4 games per platform" lock is retired: the Spectrum assembly lineup alone now
   sketches ~11 Volume-1 entries.
-- **Unit count per game or module.** No targets. Counts are **illustrative markers, not
-  contracts** — every "~N units" / "32" in the outlines is a marker that firms up and moves
-  during build. Content and the quality bar decide how many units; the technique budget,
-  not a unit total, is what caps authoring cost.
+- **Unit count per game or module.** No fixed *targets* — counts are **illustrative markers,
+  not contracts** that firm up and move during build, set by the content and the quality bar.
+  But the unit count *is* the authoring-cost meter (one unit ≈ one unit of work), so a game stays
+  **bounded** — as long as it takes to be a good game at a gentle ramp, and no longer. That
+  bound, plus the per-unit one-concept rule, is what governs cost and load.
 - **Phase shape.** Phases divide where a game's spiral progression naturally divides. There
   is no powers-of-2 phase-size rule (an earlier aesthetic preference, now dropped).
 
@@ -58,13 +75,16 @@ code-led predecessors, and at those costs the v4.0 counts compound to multi-deca
 authoring time even at sustained pace.
 
 The previous answer — lock every game to 256 units, phases to powers of 2 — had the right
-instinct (rein in the code-led counts) but the wrong mechanism. A fixed unit total
-legislates the *output* when the real constraint is the *input*: how much new hard
-technique a game introduces. The honest version caps that directly. The **technique
-budget** (1–2 major new core techniques per game; split or insert when a game would exceed
-it) is what actually governs authoring cost and learner load; unit and game counts are
-then free to be whatever the content and the quality bar require. This is why the structure
-is now budget-and-bar driven with counts illustrative, rather than a fixed grid.
+instinct (rein in the code-led counts) but the wrong mechanism. The first correction (a
+"1–2 techniques per game" budget) had the *next* wrong mechanism: it legislated *technique
+breadth* when the real cost driver is *unit count*. A 16-unit game costs ~16 units to author
+whether it introduces two techniques or ten — and the good shipped games (Dash) introduce
+many, one per unit, and are better for it. So the honest version caps the thing that
+actually costs: **bounded unit count per game**, with the **per-unit one-concept rule** governing
+learner load and **the spiral** deferring un-earned depth to later games. Techniques-per-game
+is uncapped; the constraint is "stay a good game at a gentle ramp, no longer." This is why
+the structure is now ramp-and-bar driven with counts illustrative, rather than a fixed grid
+*or* a technique quota.
 
 ## The acceleration assumption (load-bearing)
 
@@ -91,8 +111,8 @@ until acceleration materialises elsewhere first.
 ## What this means per platform
 
 Per-platform lineups live in `docs/platforms/{system}/` and in the module catalogues
-(`src/content/modules/{platform}/{track}.yaml`), sized by genre breadth and the technique
-budget rather than a fixed count:
+(`src/content/modules/{platform}/{track}.yaml`), sized by genre breadth and the gentle ramp
+rather than a fixed count:
 
 - **Spectrum (assembly).** The fully worked lineup. A `teaching` Primer (*Meet the
   Machine*), then **Gloaming** (the tiny first game), then **Shadowkeep** (the first
@@ -113,8 +133,14 @@ If curriculum-level planning shows any of these, stop and re-read this decision:
 - Re-introducing **powers-of-2 phase sizing** as a rule.
 - **Capping a platform at a fixed game count** by fiat rather than by genre breadth +
   technique budget.
-- A new game proposed at **3–4 new major techniques** without a split or insert (the
-  gentle-ramp budget violation).
+- A **unit** that introduces **more than one new thing** (the one-concept rule is the real
+  ramp constraint — techniques-per-*game* is uncapped, per the 2026-06-10 amendment).
+- A game's **unit count ballooning** toward "teaches everything" (the original-Exodus trap:
+  128 units, 8 phases, never actually a game). Bounded unit count + must-be-a-good-game is the
+  anti-bloat wall now that the technique cap is gone.
+- A game **contorted to headline a single technique** ("the Blitter game", "the sprites game")
+  at the cost of being a good game — the Exodus mistake. Design the *game*; let it introduce
+  whatever techniques it needs, gently, with the spiral deepening later.
 - **Collapsing distinct genres into revisits** to shrink the game count — breadth across
   genres is primary; a revisit is for returning to a *specific game we built*.
 - Treating **acceleration as guaranteed** rather than a load-bearing assumption.

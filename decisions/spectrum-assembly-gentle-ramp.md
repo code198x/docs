@@ -9,6 +9,18 @@
 > questions are resolved in § *Open questions*. The full unit-by-unit re-pace of Shadowkeep's
 > plan, and the authoring of the Primer / tiny-game units, are downstream content work.
 >
+> **AMENDED 2026-06-10 (technique budget reframed — ceiling removed, floor not imposed).** The
+> curriculum-wide [curriculum-structure.md](curriculum-structure.md) retired the per-game "1–2
+> major techniques" *cap*: techniques-per-game is now uncapped, bounded instead by unit count + the
+> per-unit one-concept rule + must-be-a-good-game + the spiral. **This lineup still stands.** A
+> single-major-per-game ladder (Skyhawk = sprite, Ricochet = pre-shift, Greypeak = Y-sort) is one
+> perfectly valid way to honour the gentle ramp — the amendment *removes the ceiling, it does not
+> impose a floor*, so single-major games are fine and this track is **not** forced to re-plan. What
+> changes: a game here *may* grow richer (more than one new technique) where that makes a better
+> game, within the bounded-units + gentle-ramp guardrails; and "split/insert when over budget" now
+> triggers on unit-count bloat or a broken ramp, not on crossing a technique count. Whether to
+> actively re-open this worked lineup toward fewer/richer games is a separate, deferred question.
+>
 > **Unit-level discipline (added 2026-06-01).** This decision sets the *per-game* technique
 > budget. The *per-unit* discipline that makes the ramp gentle in practice — one concept per
 > unit, measured in instructions — lives in [incremental-code-samples.md](incremental-code-samples.md)
