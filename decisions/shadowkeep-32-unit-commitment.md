@@ -68,7 +68,7 @@ End-of-Arc-1 deliverable: a complete two-room game with atmosphere, depth, and a
 - **Sub-arc 2.3 — A Game Knows Itself (25-28):** HUD bar (score / gold / lives), room names, score persistence, a third designed room.
 - **Sub-arc 2.4 — Completion (29-32):** Atmosphere polish across all rooms, audio depth (SFX library expansion + music polish), Spectrum Next hardware testing, final presentation pass (title art polish, victory sequence, "completed" state).
 
-End-of-Arc-2 deliverable: a three-room game with inhabitants, lives, score, HUD, atmospheric polish, and verified real-hardware playability.
+End-of-Arc-2 deliverable: a three-room game with inhabitants, lives, score, HUD, atmospheric polish, and verified playability (on the emulator; real-hardware verification suspended — see [commercial-bar-revamp.md](commercial-bar-revamp.md)).
 
 ## Drift triggers
 

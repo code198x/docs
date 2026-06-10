@@ -19,7 +19,7 @@ What's live now, per platform:
 
 The two structural Spectrum artefacts still stand: the **landing page** (done) and the **vault** (review pass + referenced gap-fill, in progress).
 
-No session-start gate — work on whatever makes sense. The 9-item DoD bar holds for everything that ships; **"ship as much as possible" replaces trimming-to-a-count** as the operating stance.
+No session-start gate — work on whatever makes sense. The 8-item DoD bar holds for everything that ships (real-hardware verification is suspended for now — see [`decisions/commercial-bar-revamp.md`](decisions/commercial-bar-revamp.md)); **"ship as much as possible" replaces trimming-to-a-count** as the operating stance.
 
 ## Critical Rules
 - **7 separate git repos** — check all with `git status` before committing

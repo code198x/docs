@@ -69,14 +69,23 @@ If any phase spec for the four Game 1s starts to look like "single-screen demo" 
 
 ## Definition of Done (per unit)
 
-The bar above is operational at unit scale through this checklist — the canonical 9-item Definition of Done (relocated here when the `tracker/revamp.md` status doc was retired; see [state-lives-in-catalogues.md](state-lives-in-catalogues.md)). A unit isn't shippable until all nine tick:
+The bar above is operational at unit scale through this checklist — the canonical Definition of Done (relocated here when the `tracker/revamp.md` status doc was retired; see [state-lives-in-catalogues.md](state-lives-in-catalogues.md)). A unit isn't shippable until all eight tick:
 
 - [ ] MDX written (magazine voice, length appropriate to the unit's teaching beat)
 - [ ] Code listing assembles cleanly with the platform's tools
 - [ ] Code listing runs correctly on the platform's emulator (Fuse for Spectrum, etc.)
-- [ ] Code listing runs correctly on real hardware (Spectrum Next for Spectrum)
 - [ ] At least one screenshot captured
 - [ ] All `<CodeFromFile>` snippets exist in code-samples and assemble
 - [ ] "Try this" experiments tested and produce the described result
 - [ ] "If it doesn't work" troubleshooting reflects actual failure modes encountered during testing
 - [ ] **All cross-references resolve to real content** — vault entries, pattern library entries, and other units linked from this unit must exist (or be catalogued as required)
+
+> **Real-hardware verification suspended (2026-06-10).** A ninth item — *"runs correctly on
+> real hardware"* — used to sit between the emulator and screenshot checks. It is **dropped for
+> now.** Available hardware is limited (a C64 with an Ultimate-II+ and a Spectrum Next; no NES or
+> Amiga), so a hardware-test gate would block `complete` on two of the four launch platforms
+> outright and apply unevenly across the others. **Cycle-accurate emulation (Emu198x) is the
+> standing guarantee** that the binary is real — the code targets real machines and assembles to a
+> real-hardware image; we just don't hand-verify on physical hardware as a shipping gate at the
+> moment. Where a per-game brief's "Ship Test" still lists a real-hardware step, treat it as
+> suspended under this note. Revisit if/when hardware and capacity allow.

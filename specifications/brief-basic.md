@@ -109,7 +109,7 @@ The Lucky Number topic list in `basic.md` is the canonical exemplar for V1. V2�
 
 **Checklist.** What has to be true for this game to ship.
 
-- [ ] Every topic's code runs on a 48K Spectrum (emulator + real hardware)
+- [ ] Every topic's code runs on a 48K Spectrum (emulator)
 - [ ] Every topic produces a working, runnable result
 - [ ] One new BASIC concept per topic — no topic introduces two major ideas
 - [ ] Gradual progression — a reader can follow from topic 1 to final topic without gaps

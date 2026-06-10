@@ -262,7 +262,7 @@ The ship test is what a phase has to clear to count as shipped. It runs at phase
 
 Five axes:
 
-- **Code:** assembles cleanly, runs on emulator and real hardware, passes the Definition of Done (see [commercial-bar-revamp.md](../decisions/commercial-bar-revamp.md)).
+- **Code:** assembles cleanly, runs correctly on the emulator, passes the Definition of Done (see [commercial-bar-revamp.md](../decisions/commercial-bar-revamp.md)).
 - **Visuals:** meets the phase's visual ambition; magazine-screenshot test passed.
 - **Audio:** music and SFX present per phase plan, mixed cleanly.
 - **Level design:** playable end-to-end; difficulty curve appropriate; signposting clear.
@@ -270,7 +270,7 @@ Five axes:
 
 For each phase, the brief names the specific pass criteria across all five axes.
 
-**Common failure:** A single-sentence "ship test" that says "it works on real hardware." That's the code axis only. The multi-axis test is what makes the multi-disciplinary commitment operational.
+**Common failure:** A single-sentence "ship test" that says "it runs on the emulator." That's the code axis only. The multi-axis test is what makes the multi-disciplinary commitment operational.
 
 ---
 
