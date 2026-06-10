@@ -92,6 +92,24 @@ being taught*:
 Rule of thumb: **new genre → new game; deeper technique on a game we built → revisit; a clutch of
 small mechanics → a collection.**
 
+## Non-game artefacts — demos and tools
+
+"Module" never meant "game". Two non-game artefact shapes are first-class, and the catalogue may
+carry them alongside games and revisits (added 2026-06-10):
+
+- **A demo** — a small, buildable, single-technique effect (a Copper-bars split, a plasma, a
+  one-effect scroller) that isolates a technique with no game logic around it. Demos are the honest
+  home for techniques that don't map cleanly onto a game, and the purest expression of the
+  one-new-thing pedagogy. A demo rides as a `kind: interval` module — the between-game interval
+  ([between-game-intervals.md](between-game-intervals.md)) realised as something *built* rather than
+  read.
+- **A tool** — a utility the learner builds and then *uses* (a sprite or level editor, an OS-native
+  application). Tools teach UI, I/O and persistence the game tracks skip; they are mainly an
+  Amiga-C-track and post-launch concern. A tool rides as a `kind: teaching` module (or a future
+  `kind: tool` if it ever earns one).
+
+Neither needs a new schema kind today — demos are intervals, tools are teaching modules.
+
 ## Tensions this resolves
 
 This is why it's a keystone — it dissolves a stack of things we kept bumping into:

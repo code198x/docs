@@ -24,6 +24,11 @@ The track alternates two modes:
 The **Primer** ("Meet the Machine") is the prototype: a *pre-game* interval doing machine literacy.
 This note generalises that shape so intervals can recur *between* games, not just once at the start.
 
+An interval need not be prose theory — it can be a **buildable demo** (added 2026-06-10): a small,
+single-technique effect (Copper bars, a plasma, a one-effect scroller) that isolates a technique with
+no game around it. A demo is an interval you *build* rather than read — the honest home for techniques
+that don't map onto a game. See [modules-not-games.md](modules-not-games.md) § *Non-game artefacts*.
+
 ## Why it's worth keeping open
 
 - **Just-in-time theory.** A game makes you *feel* a concept (Gloaming makes you feel
