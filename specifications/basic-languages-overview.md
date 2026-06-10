@@ -1,8 +1,16 @@
 # BASIC Languages: Gateway to Game Development
 
-**Purpose:** Document BASIC variants across platforms, their capabilities for game development, and curriculum tracks for BASIC-based learning.
+**Purpose:** A cross-platform reference for the BASIC variants of the era — their capabilities for
+game development, the commercial games made in them, and how they map onto our BASIC tracks.
 
-**Last Updated:** 2026-01-18
+**Updated:** 2026-06-10
+
+> **Refreshed 2026-06-10.** The reference content (family tree, capability tiers, per-variant
+> capabilities, commercial-game provenance, the hybrid approach) stands. The retired bits — the
+> fixed-count "proposed curricula" table and the fabricated vault running-totals — are replaced with
+> pointers to the live BASIC tracks. Note the provenance preserved below: **Scorched Tanks and
+> Guardian were AMOS; Worms and the Skidmarks line were Blitz BASIC 2** — the basis for the Amiga
+> BASIC tracks' anchoring.
 
 ---
 
@@ -534,15 +542,18 @@ BBC BASIC excelled at this with its built-in assembler.
 | **Historical accuracy** | Many learned this way |
 | **Progression** | Gateway to assembly |
 
-### Proposed BASIC Curricula
+### The live BASIC tracks
 
-| Platform | Track | Games | Notes |
-|----------|-------|-------|-------|
-| **C64** | BASIC Gateway | 8 | Stock BASIC V2 + PEEK/POKE |
-| **Amiga** | AMOS Track | 8 | Full game development |
-| **Amiga** | Blitz Track | 8 | More advanced |
-| **BBC Micro** | BBC BASIC | 8-16 | Full curriculum possible |
-| **Spectrum** | Sinclair BASIC | 4-8 | Gateway track |
+Three core platforms ship BASIC tracks (counts flexible — no fixed totals):
+
+| Platform | Track | Status | Lineup record |
+|----------|-------|--------|---------------|
+| **Spectrum** | Sinclair BASIC | Live — Volume 1 complete, more in progress | [spectrum-basic-32-games.md](../decisions/spectrum-basic-32-games.md) |
+| **C64** | BASIC V2 (POKE-the-hardware) | Live on-ramp; Volumes 2–4 recorded | [c64-basic-volumes-2-4.md](../decisions/c64-basic-volumes-2-4.md) |
+| **Amiga** | AMOS / Blitz (peer paths) | Live on-ramps (Meet AMOS, Meet Blitz) | [amiga-basic-amos-and-blitz.md](../decisions/amiga-basic-amos-and-blitz.md) |
+
+BBC BASIC (excellent for this, with its built-in assembler) and the other enhanced BASICs above are
+future targets — each gets per-system docs when work begins on it.
 
 ### BASIC to Assembly Progression
 
@@ -555,21 +566,13 @@ BBC BASIC excelled at this with its built-in assembler.
 
 ---
 
-## Summary: New Vault Entries
+## Vault targets
 
-| Category | Entries |
-|----------|---------|
-| **Software** | AMOS, Blitz, STOS, various BASICs | 15 |
-| **People** | François Lionet | 1 |
-| **Companies** | Acid Software | 1 |
-| **Culture** | BASIC history, commercial BASIC games | 5 |
+Entries worth building as the BASIC tracks ship (created when a unit references them, per the
+required-vs-nice-to-have rule in [content-creation-workflow.md](content-creation-workflow.md)):
 
-**Total new entries: ~22**
-
----
-
-## Running Vault Total
-
-| Previous | This Document | New Total |
-|----------|---------------|-----------|
-| ~1570 | +22 | **~1592 entries** |
+- **Software** — AMOS, AMOS Professional, Blitz BASIC 2, STOS, GFA BASIC, Simons' BASIC, BBC BASIC,
+  Locomotive BASIC, Sinclair BASIC, C64 BASIC V2, and the other variants above.
+- **People** — François Lionet (AMOS/STOS).
+- **Companies** — Acid Software (Blitz, Skidmarks); Team17 (Worms).
+- **Culture** — BASIC history, Dartmouth/Microsoft BASIC, the commercial-BASIC-games story.
