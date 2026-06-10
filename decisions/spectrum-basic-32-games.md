@@ -1,5 +1,13 @@
 # Decision: Spectrum BASIC 32-game lineup (v6.4)
 
+> **AMENDED 2026-06-10 (lineup replan).** The 32-game / 4-volume frame is preserved; the replan
+> is a re-headline + spiral-annotation of the coming-soon slots, not a re-lineup. One progression
+> change: **UDGs move earlier — introduced at Tail Chase (slot 17), the first Volume-3 game, as a
+> foundational tool** so every later action game holds custom graphics; **Blockstorm (slot 24) now
+> *deepens* UDGs (animation + speed)** rather than introducing them. The trig split (SIN/COS/PI at
+> Drift/slot 20; TAN/ASN/ACS cut) is unchanged and already reflected in the catalogue. See the
+> updated progression-shift line and drift triggers below.
+
 ## The decision
 
 The Spectrum BASIC curriculum ships **32 games across 4 volumes, 8 games per volume**. Powers-of-2 hold per-volume (8) and total (32). Decided 2026-05-19 during a concept-progression brainstorm pass. v6.4 (2026-05-19) supersedes v6.3 same day with the [inspired-by-not-clones-naming.md](inspired-by-not-clones-naming.md) rename pass applied — see [spectrum-basic-v6.4-renames.md](spectrum-basic-v6.4-renames.md) for the 11 renamed games. Supersedes the v6.2 16-game / 4-per-volume lineup.
@@ -64,7 +72,7 @@ v6.3 is structural and naming work on top of v6.2's foundation, not a re-archite
 
 **Sixteen new games** join the existing 16: Banner, Magic 8-Ball, Dice Roller, Hi-Lo (V1); Battleship, TTT, Wumpus, Hammurabi (V2); Pong, Asteroids, Frogger, Pac-Man (V3); plus four V4 splits (Rooftops Pt 1+2, Stonefall Pt 1+2, Dorin Pt 1+2, Thornwood Pt 1+2).
 
-**BASIC progression shifts.** UDGs at Blockstorm (slot 24) not Rooftops. Trig (SIN/COS/PI) at Asteroids (slot 20); TAN/ASN/ACS cut as unused-in-BASIC-games. FOR/NEXT at Dice Roller (slot 5). 2D arrays at Battleship (slot 12). SAVE/LOAD at Dorin Pt 2 (slot 31).
+**BASIC progression shifts.** UDGs at Tail Chase (slot 17) — foundational from the first Volume-3 game (amended 2026-06-10; was Blockstorm/slot 24); Blockstorm deepens UDGs with animation + speed. Rooftops deepens further with sprite-plus-text. Trig (SIN/COS/PI) at Asteroids (slot 20); TAN/ASN/ACS cut as unused-in-BASIC-games. FOR/NEXT at Dice Roller (slot 5). 2D arrays at Battleship (slot 12). SAVE/LOAD at Dorin Pt 2 (slot 31).
 
 **Embedded concepts grow from 15 to 20:** Anticipation, Atmosphere, Trade-offs / delayed consequences, Authored experience, Emergent stories added.
 
@@ -80,7 +88,7 @@ Pull this decision record up before proceeding if you see any of these patterns:
 - Any suggestion to teach machine code from a BASIC game — clean separation from Assembly track still holds (per v6.2).
 - Trig functions TAN/ASN/ACS appearing in any BASIC game spec — these are cut.
 - "Pacing" appearing as a *headline* concept anywhere — it is now an *embedded* concept; Escalation is Blockstorm's headline.
-- UDGs introduced in a game before slot 24 (Blockstorm) — incorrect under v6.3.
+- UDGs introduced later than Tail Chase (slot 17) — incorrect under the 2026-06-10 amendment; UDGs are foundational from the first Volume-3 game, and Blockstorm/Rooftops only *deepen* them.
 
 ## Cost accepted
 

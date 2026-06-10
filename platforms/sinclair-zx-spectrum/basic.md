@@ -8,6 +8,15 @@
 > **v6.4 in progress (2026-05-19).** v6.4 is a *rename pass* on v6.3 — 11 games using canonical / trademarked names get inspired-by replacements per the [inspired-by-not-clones naming convention](../../../../decisions/inspired-by-not-clones-naming.md). All v6.3 structural decisions carry forward unchanged. The renames: Magic 8-Ball → **Oracle Stone**, Hangman → **Cipher**, Mastermind → **Locksmith**, Battleship → **Sonar**, Tic-Tac-Toe → **Three in a Row**, Hunt the Wumpus → **The Caverns**, Hammurabi → **Yearfall**, Pong → **Volley**, Asteroids → **Drift**, Frogger → **Quickstep**, Pac-Man → **The Hungry Maze**. All marked first-draft, needs-workshop. Source of truth: changelog entry below, plus `memory/spectrum-basic-v6.4-reframe.md` and `decisions/spectrum-basic-v6.4-renames.md`.
 >
 > **v6.3 in progress (carried over).** The top-of-document tables (volumes, design concepts, embedded concepts, scope estimates) reflect v6.3 + the v6.4 names. The per-game spec sections further down still describe the v6.2 16-game lineup and are scheduled for revision. The v6.4 rename applies to whatever per-game sections eventually get written for the 11 affected games.
+>
+> **2026-06-10 lineup-replan reconciliation.** Two progression facts in the per-game prose below are
+> **stale — the catalogue governs** ([state-lives-in-catalogues](../../decisions/state-lives-in-catalogues.md)):
+> (1) **Trigonometry lives at Drift (Asteroids, slot 20), not Brick Bash.** The Brick Bash sections
+> below that still teach the full SIN/COS/ATN/TAN/ASN/ACS family are superseded — Brick Bash uses only
+> POINT + simple bat-angle deflection; Drift owns SIN/COS/PI (TAN/ASN/ACS cut). (2) **UDGs are introduced
+> at Tail Chase (slot 17), foundational** from the first Volume-3 game; the "Stonefall/Rooftops introduce
+> UDGs" prose is superseded — those games now *deepen* UDGs. See
+> [spectrum-basic-32-games.md](../../decisions/spectrum-basic-32-games.md) (2026-06-10 amendment).
 
 ---
 
