@@ -2,6 +2,8 @@
 
 **STATUS: Post-October work, lightweight only.** Per `docs/decisions/october-2026-launch-spec.md`, NES / Nightshade is deferred. This skeleton is *no-commit* — North Star, volume themes, candidate game lineup only. No per-game scope, no naming lock-in, no tech-tree detail. Awaits Spectrum methodology validation before becoming a full track structure.
 
+> **2026-06-10 lineup-replan update.** The coming-soon lineup is now sequenced as a **PPU / 6502 hardware ladder** and recorded in [decisions/nes-assembly-lineup.md](../../decisions/nes-assembly-lineup.md); the catalogue (`website/src/content/modules/nintendo-entertainment-system/assembly.yaml`) is authoritative. Dash is re-scoped to its real ~16 units; mappers land late (MMC1 once at Iron Assault, MMC3 folded into the Echoes metroidvania); `arena-assault` is parked. The candidate-games table below (Nightshade as game 1, etc.) is superseded — Dash is the first game; Nightshade stays deferred.
+
 Captured 2026-05-19 alongside [c64-track-skeleton.md](c64-track-skeleton.md) and [amiga-track-skeleton.md](amiga-track-skeleton.md) for cross-platform methodology check.
 
 ## North Star
