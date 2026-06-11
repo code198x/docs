@@ -2,7 +2,11 @@
 
 **From:** Code198x session, 2026-06-11, authoring Flock units 6–7 (sprite collision).
 **Blocks:** Flock unit 6 (pulled from publication) and unit 7 (written, unverifiable, uncommitted).
-**For:** the Emu198x session — both findings verified against Emu198x source; pointers below.
+**For:** the Emu198x session — findings verified against Emu198x source; pointers below.
+**Filed as GitHub issues (2026-06-11):** [emu198x#457](https://github.com/emu198x/emu198x/issues/457)
+(CLXDAT read unwired — the blocker), [emu198x#458](https://github.com/emu198x/emu198x/issues/458)
+(Copper line-255 wrap), [emu198x#459](https://github.com/emu198x/emu198x/issues/459) (sprite shifter
+staleness). The issues are canonical; this brief is the local context.
 
 ## 1. CLXDAT read is unwired (the blocker)
 
