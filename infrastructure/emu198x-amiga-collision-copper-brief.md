@@ -60,3 +60,13 @@ trails once CLXDAT is readable. One `self.spr_current_code[sprite] = 0;` on shif
 - Flock unit 7 (`The Flock in Hand`) — code complete in
   `code-samples/commodore-amiga/assembly/flock/unit-07/` (uncommitted), including a CLXDAT
   latch-flush at squash-beat end and collision-safe parking for unused sprite channels.
+
+## 4. Deferred: audio character (emu198x#37, #38 — open)
+
+Flock unit 11's embedded recording (`public/audio/.../unit-11/baa-run.wav`) was captured while
+[emu198x#37](https://github.com/emu198x/emu198x/issues/37) (output RC/LED filter — currently
+unfiltered) and [emu198x#38](https://github.com/emu198x/emu198x/issues/38) (Paula volume-PWM /
+aliasing) remain open — so it's an idealised render, brighter than a real A500. **Behavioural
+verification stands** (trigger/slide/gate-off proven by RMS envelope); the unit's code targets the
+real programming model. **Follow-up:** re-capture the WAV when #37/#38 land. Same applies to any
+audio captured for later Flock units (and Shatter Point's sampled audio will care much more).
