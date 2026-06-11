@@ -147,6 +147,15 @@ Teaching moments *across games*, motivated by Flock's felt limits — not someth
 
 ## Open for the author
 
+- **Set-dressing lands late, not retroactively** (decided 2026-06-11, units 1–2 shipped plain).
+  Richer scene art — fence rails between the posts, gateposts at the pen openings, grass tufts
+  (the reserved `COLOUR_TUFT` hook), water shimmer, bridge planks, lane texture — arrives as a
+  **"dress the set" beat in Arc 2's polish run** (Unit 17–18, or its own unit if it earns one),
+  not by retrofitting early units. Each unit's listing copies the scene forward, so retroactive
+  art changes cost every later unit a re-edit and recapture; landing the upgrade as content costs
+  nothing and teaches drawing craft — the plain farmyard is the honest "before". Some of it is
+  already seeded as learner experiments (plank-the-bridge, the redrawable sheep grid).
+
 - **Per-level sprite-budget table.** The full cast (sheep, tractor, cart, Land Rover, cow, two
   bales, duck) exceeds eight channels — by design, no level fields them all at once. Each level's
   layout names its cast and proves it ≤ 8; the cow may want an attached pair (two channels) for
