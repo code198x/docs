@@ -1,7 +1,10 @@
 # Emu198x handoff — Amiga CLXDAT read unwired + Copper line-255 wrap
 
 **From:** Code198x session, 2026-06-11, authoring Flock units 6–7 (sprite collision).
-**Blocks:** Flock unit 6 (pulled from publication) and unit 7 (written, unverifiable, uncommitted).
+**Blocks:** ~~Flock unit 6 (pulled) and unit 7 (unverifiable)~~ **RESOLVED 2026-06-11** — all three
+issues fixed and closed the same day; emulator rebuilt; unit 6 re-verified with an honest capture
+and republished; unit 7 verified (two scripted losses → three icons) and published. Kept as the
+record of the diagnosis and the issue-driven handoff pattern.
 **For:** the Emu198x session — findings verified against Emu198x source; pointers below.
 **Filed as GitHub issues (2026-06-11):** [emu198x#457](https://github.com/emu198x/emu198x/issues/457)
 (CLXDAT read unwired — the blocker), [emu198x#458](https://github.com/emu198x/emu198x/issues/458)
