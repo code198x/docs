@@ -5,6 +5,21 @@
 > **locked**. Assembly is the *metal* path — a deeper road than AMOS/Blitz, **peer in worth, not
 > above them** (it ranks *techniques* by hardware difficulty, never the *tracks*). Counts flexible;
 > the catalogue is authoritative (`website/src/content/modules/commodore-amiga/assembly.yaml`).
+>
+> **AMENDED 2026-06-11 (sprites-first reorder).** The ladder now **leads with hardware sprites, not
+> the Blitter.** Rationale: sprites are the gentlest, most rewarding first moving-graphics technique
+> — a character you *steer* — consistent with the other platforms' direct-control first games (Dash
+> / Starfield / Gloaming); leading with the Blitter forced the old Exodus into "the Blitter must be
+> the whole gameplay" and produced a non-game (audit, 2026-06-11). So **rung 1 is now Flock** — a
+> new hardware-sprite sheep-crosser ([`games/flock/brief.md`](../platforms/commodore-amiga/games/flock/brief.md))
+> — and **Exodus moves to rung 2** as the Blitter game (its theme/name now **parked**;
+> [`games/exodus/brief.md`](../platforms/commodore-amiga/games/exodus/brief.md)). **Signal** is
+> reframed from "introduce sprites" to "deepen sprites" (multiplexing / Copper sprite-reuse), since
+> the introduction moved to Flock. Under the [curriculum-structure.md](curriculum-structure.md)
+> technique-budget reframe (2026-06-10), the table's "one rung per game" now reads as **the technique
+> each game *first introduces*** — a game may carry more, gently, with the spiral deepening later;
+> the *first-introduction order* is what the ladder fixes. Reordered table below; the original is in
+> the § *Key choices* history.
 
 ## The decision
 
@@ -12,23 +27,24 @@ The Amiga's hard part is driving the custom chips — Agnus/Denise/Paula — by 
 things cleanly. The track is a **hardware ladder**: one rung per game, every later game inheriting
 the rungs below.
 
-| # | Module | Rung / headline |
+| # | Module | Rung first-introduced / headline |
 |---|---|---|
-| 1 | **Exodus** | Blitter copy + masked (cookie-cut) blit — the Blitter is the gameplay (re-scoped) |
-| 2 | Shatter Point | Copper splits + first Paula samples |
+| 1 | **Flock** | **hardware sprites** — move, animate, **collide** (the sheep-crosser; new rung-1) |
+| 2 | **Exodus** | Blitter copy + masked (cookie-cut) blit (the Blitter game; theme/name parked) |
+| 3 | Shatter Point | Copper splits + first Paula samples |
 | — | **How the Copper Works** | *interval* — a built demo of Copper DMA (see below) |
-| 3 | Signal | hardware sprites (re-sequenced after Shatter Point) |
-| 4 | Ascent | jump physics + Blitter cookie-cut enemies |
-| 5 | Crypt | rooms + Copper transitions + state |
-| 6 | Gobble | Blitter tiles + ghost AI |
-| 7 | Wanderer | smooth hardware scrolling (Shadow of the Beast) |
-| 8 | Onslaught | full MOD replay on Paula + bullet patterns |
-| 9 | Highway | Copper road rendering + sprite scaling (Lotus) |
-| 10 | Parallax | dual playfield — multi-layer parallax + boss |
-| 11 | Brawler | Y-depth sorting + large Blitter objects |
-| 12 | Fortress | isometric projection + depth sort |
-| 13 | Echoes of the Ancients | connected metroidvania world + ability-gating + multi-disk |
-| 14 | Ascension: The Guru Meditation | capstone — custom loaders, deep combat, full save |
+| 4 | Signal | **deepen sprites** — multiplexing / Copper sprite-reuse (intro moved to Flock) |
+| 5 | Ascent | jump physics + Blitter cookie-cut enemies |
+| 6 | Crypt | rooms + Copper transitions + state |
+| 7 | Gobble | Blitter tiles + ghost AI |
+| 8 | Wanderer | smooth hardware scrolling (Shadow of the Beast) |
+| 9 | Onslaught | full MOD replay on Paula + bullet patterns |
+| 10 | Highway | Copper road rendering + sprite scaling (Lotus) |
+| 11 | Parallax | dual playfield — multi-layer parallax + boss |
+| 12 | Brawler | Y-depth sorting + large Blitter objects |
+| 13 | Fortress | isometric projection + depth sort |
+| 14 | Echoes of the Ancients | connected metroidvania world + ability-gating + multi-disk |
+| 15 | Ascension: The Guru Meditation | capstone — custom loaders, deep combat, full save |
 
 ## Key choices
 
@@ -36,11 +52,14 @@ the rungs below.
   "teaches-everything" flagship at 16/128 — the all-in-one model the ladder replaces. The **16 built
   units stay** (Copper Landscape → Integration and Polish — a finishable terrain game); the 112-unit
   future scaffold is dropped, and the Copper/Paula/sprite/scroll material it would have grown into
-  moves out to the dedicated rung-games. Exodus becomes **the Blitter game** (rungs 1–2). This
-  contradicted Exodus's old 128-unit frontmatter, which is why it needed an explicit decision; it
-  preserves shipped work while shrinking scope to one rung pair.
+  moves out to the dedicated rung-games. Exodus becomes **the Blitter game** (was rungs 1–2;
+  **now rung 2** after the 2026-06-11 sprites-first reorder, and its theme/name is since parked —
+  see banner). This contradicted Exodus's old 128-unit frontmatter, which is why it needed an
+  explicit decision; it preserves shipped work while shrinking scope.
 - **Signal re-sequenced after Shatter Point** so hardware sprites land as its *one* new rung (it had
-  implied Copper + sprites + Blitter + Paula all at once — a 4-new game).
+  implied Copper + sprites + Blitter + Paula all at once — a 4-new game). *(Superseded 2026-06-11:
+  sprites are now first-introduced by Flock at rung 1; Signal **deepens** them — multiplexing /
+  sprite-reuse.)*
 - **`venom` (Snake) and `tetrad` (Tetris) dropped.** Off the hardware ladder — the same call the
   Spectrum track made dropping its own snake/Tetris. Not re-anchored to a rung; removed.
 - **A "How the Copper Works" interval** sits after Shatter Point (which introduces Copper) — the
