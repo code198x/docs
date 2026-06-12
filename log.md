@@ -1057,3 +1057,27 @@ now in the curriculum). Audio captures remain idealised until
 emu198x#37/#38. The website flock catalogue and module status now read
 complete; the brief and per-unit plan in docs/platforms/commodore-amiga
 /games/flock/ are the design record.
+
+## 2026-06-12 — The last yard for every platform's first game
+
+Flock set a new bar; the cross-platform audit (one reviewer per track)
+found the same gaps in all three earlier first games: silent titles, no
+ending audio, and — on C64 and NES — no win condition or curve at all.
+One new final unit per game closes them. Gloaming unit 21 "Three
+Phrases" (beeper chime/fanfare/sting as straight-line code; the
+tune-as-data lesson deliberately left to Shadowkeep's theme unit).
+Starfield unit 17 "The Curve" (wave table + live fall speed, W readout,
+SID Twinkle-Twinkle title jingle, ui_lock dwells — fixing a real
+held-fire chain-through bug, verified frame-exact via script queries).
+Dash unit 17 "The Last Yard" (coin-clear level loop, L digit, pulse-1
+sequencer with loop/stop terminators, NMI blink — plus two fixes found
+the first time anything tried to WIN the game: an unjumpable spike gap
+and a missing respawn grace window; Dash units 5/11/12 also gained
+audio embeds). Lesson now in three curricula: winnability is a test.
+Emulator gaps filed: emu198x#471 (C64/NES script runners missing
+poke_byte/type_string handlers), #472 (APU pulse sweep negate target
+wraps to $FFFF and mutes — the canonical $08 idiom silences pulse 1).
+Shadowkeep Arc 1 audited strong (theme, SFX, win/replay all present);
+its remaining last-yard item (a pixel SHADOWKEEP nameplate) is deferred
+pending an arc-numbering decision — a new unit 17 would collide with
+Arc 2's planned numbering.
