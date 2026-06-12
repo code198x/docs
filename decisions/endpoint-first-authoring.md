@@ -82,9 +82,13 @@ screenshot verification.
 **5. Post-ship (the compounding)** — pattern extractions (brief §13); vault tie-ins
 (§14); `docs/log.md`; blog material from the discovery log.
 
-**Open action:** learner feedback becomes an input here from October — *where it lands*
-(issues on code-samples? a feedback channel?) is undecided and should be decided before
-launch rather than improvised at it.
+**Learner feedback (decided 2026-06-12):** from October, learner feedback arrives via
+**Discord** (community, real-time) and **GitHub Discussions** (durable, searchable).
+Routing rule: Discord is ephemeral — anything actionable (a stuck point, a suspected
+bug, a tuning complaint) gets promoted to a Discussion or an issue so it lands in the
+durable ledger; confirmed code bugs go to issues as ever. Standing both up — the server,
+the Discussions surface, and a "where to get help" pointer in every getting-started
+page — is a pre-launch checklist item.
 
 ## Drift triggers
 
