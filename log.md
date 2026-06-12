@@ -1101,3 +1101,23 @@ decided — *Exodus* reclaimed, a migration through hostile terrain
 per-unit-plan superseded by decompose-after-prototype; stale
 Lost-Vikings genre cell in commercial-bar-revamp corrected. Next:
 the Stage-1 brief revision, then the prototype.
+
+## 2026-06-12 — /design-stress born; Exodus gets its mountain
+
+New skill: **/design-stress** — adversarial game-design attack (ten
+dimensions, refutation stance, calibrated against the last-yard pass's
+four real specimens), wired into endpoint-first at Stage 1 (gates the
+prototype) and against the prototype itself. First run, against the
+Exodus brief: three BREAKS (trapped-walker soft-lock, undefined retry
+semantics, no plan-phase undo), the emotion mismatch (loss-aversion
+thesis vs free-retry structure), and the bridge-pricing level-design
+law. Same day, the design answered: Steve's **mountain vision** —
+side-on switchback descent/ascent on one screen, the sheep canon
+(Flock's flock on its journey home), route marked with tool icons the
+sheep execute on release. Agreed synthesis: **markers fire Blitter
+terrain ops through the sheep** (dig the cutting, build the causeway —
+the Lemmings unification), keeping the rung's Blitter-as-verb thesis
+while the icon model resolves two of the three BREAKS outright;
+parallax as blitted cloud drift (dual playfield stays reserved);
+toolbar capped at 4–5 icons. Stage-1 brief revision now has its full
+desk: resumed brief + stress report + vision note.
