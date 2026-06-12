@@ -204,6 +204,26 @@ Topics:
 - **Accessibility** — control remapping, colour-blind considerations, frame-rate considerations.
 - **"Shippable" criteria** — what would have to be true for this game to ship on Itch.io alongside contemporary indie work (per the aspirational Itch.io bar discussed in `docs/log.md`).
 
+**The Finish (added 2026-06-12, from the cross-platform last-yard pass).** Every brief answers
+these six explicitly — the first four games all shipped without some of them and needed
+retrofit units:
+
+- **The win** — what the player completes. A game that can only be lost is not finished.
+- **The curve** — what escalates, as a data table the systems read live
+  ([escalation-as-data](/patterns/cross-platform/framework/escalation-as-data)). No curve, no game —
+  a demo with a title screen.
+- **Music and stings** — a title tune, a win fanfare, a lose sting
+  ([tune sequencer](/patterns/cross-platform/audio/tune-sequencer)). Silent titles and silent
+  endings were the universal gap.
+- **Endings that land** — dwell on both ends of the loop
+  ([ending dwell](/patterns/cross-platform/framework/ending-dwell)).
+- **Feel** — input buffering, grace windows, edge detection: named per-game, not assumed.
+- **The go-again hook** — a high score (or equivalent) that survives the loop back to the title.
+
+**Common failure:** answering these with "yes" instead of with specifics. "Music: yes" is not
+a direction; "a looping two-voice rendition of X on the title, a four-note rising fanfare on
+level clear" is.
+
 **Common failure:** Deferring all polish concerns to "the final phase." Polish work compounds; per `phase-boundaries`, every phase ends at a shippable artefact at its bar, which means each phase carries appropriate polish for its scope.
 
 ---
@@ -265,7 +285,10 @@ Five axes:
 - **Code:** assembles cleanly, runs correctly on the emulator, passes the Definition of Done (see [commercial-bar-revamp.md](../decisions/commercial-bar-revamp.md)).
 - **Visuals:** meets the phase's visual ambition; magazine-screenshot test passed.
 - **Audio:** music and SFX present per phase plan, mixed cleanly.
-- **Level design:** playable end-to-end; difficulty curve appropriate; signposting clear.
+- **Level design:** playable end-to-end; difficulty curve appropriate; signposting clear — and
+  **winnable by scripted run** per the per-game winnability gate in
+  [commercial-bar-revamp.md](../decisions/commercial-bar-revamp.md) (the script checked into
+  `capture/`; Dash shipped sixteen clean units with an untraversable level before this gate existed).
 - **Polish:** title/attract/options/ending appropriate to the phase's scope; no soft-locks, no crashes.
 
 For each phase, the brief names the specific pass criteria across all five axes.
