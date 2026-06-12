@@ -101,7 +101,12 @@ A slow, held-breath puzzle: read the field, spend your rationed carves and raise
 
 - **Title screen.** "FLOCK", a sheep or two, the soft sky. Tone-setting: cosy and inviting.
 - **Attract mode.** Optional/deferred; if present, a hands-off level solving itself.
-- **Options.** Minimal — SFX on/off. Controls are point-and-act (mouse or joystick pointer to pick a spot, fire to carve/raise, a key to toggle verb).
+- **Options.** Minimal — SFX on/off. Controls are point-and-act: **mouse primary (decided
+  2026-06-12)** — period-true for the genre (Lemmings is the Amiga mouse game), and the rung's
+  second new lesson: quadrature counters in `JOY0DAT`, the left button on CIA PRA, and the
+  pointer as **hardware sprite 0** (Flock's technique re-cast as the cursor). Left button
+  carves/raises; a key or right button toggles verb. Joystick-pointer support is a "Try this",
+  not shipped scope.
 - **Ending.** Per level: gate clunks shut, sheep saved tally, instant retry on loss. Game end: a short "all flocks safe" beat — warm, brief, no epic.
 - **Loss feel.** A lost sheep is a small, legible, slightly comic-tragic moment — never punishing UI, just a quiet "oh no". Instant retry keeps it light.
 - **Shippable criteria.** Plays cleanly start to finish, no soft-locks; the carve/raise feel is crisp; the reveal reads. Would sit happily beside contemporary cosy indie puzzlers.
