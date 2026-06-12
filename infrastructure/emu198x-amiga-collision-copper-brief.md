@@ -68,5 +68,7 @@ Flock unit 11's embedded recording (`public/audio/.../unit-11/baa-run.wav`) was 
 unfiltered) and [emu198x#38](https://github.com/emu198x/emu198x/issues/38) (Paula volume-PWM /
 aliasing) remain open — so it's an idealised render, brighter than a real A500. **Behavioural
 verification stands** (trigger/slide/gate-off proven by RMS envelope); the unit's code targets the
-real programming model. **Follow-up:** re-capture the WAV when #37/#38 land. Same applies to any
-audio captured for later Flock units (and Shatter Point's sampled audio will care much more).
+real programming model. **Follow-up:** re-capture when #37/#38 land — five embeds now: unit-11
+`baa-run.wav`, unit-15 `chime.wav`, unit-17 `jingle.wav`, and unit-18's `win-sting.wav` and
+`lose-sting.wav` (the polish pass added the last two). Same applies to any audio captured for
+later Flock units (and Shatter Point's sampled audio will care much more).
