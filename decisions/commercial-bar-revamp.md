@@ -89,3 +89,37 @@ The bar above is operational at unit scale through this checklist — the canoni
 > real-hardware image; we just don't hand-verify on physical hardware as a shipping gate at the
 > moment. Where a per-game brief's "Ship Test" still lists a real-hardware step, treat it as
 > suspended under this note. Revisit if/when hardware and capacity allow.
+
+## Definition of Done (per game) — the winnability gate
+
+> **ADDED 2026-06-12.** Born of the cross-platform "last yard" pass: Dash shipped sixteen
+> units with a spike gap one pixel wider than its jump — the right half of its level had
+> *never been reached*, and no unit-scale check could have caught it (every unit assembled,
+> ran, and screenshotted cleanly on the level's left half). Mechanics verify at unit scale;
+> **games only verify end to end.**
+
+Before the module that makes a game winnable is marked `complete` in the catalogues — and
+again after any change to its mechanics, level data or tuning — two checks at game scale:
+
+- [ ] **The game has been driven to its win state by a scripted emulator run.** Real inputs
+      through the real game logic — engineered setups are fine (poke a counter, park a
+      hazard), bypassing the logic is not. The script lives in the game's `capture/`
+      directory so the run is repeatable and diffable.
+- [ ] **The loss path has been exercised the same way**, where the game can be lost — both
+      endings seen and heard, not just the happy one.
+
+For multi-arc games, this applies per arc: each arc ships a winnable game.
+
+What this gate catches that unit-scale checks structurally cannot: untraversable geometry,
+win conditions that never fire, resets that leak state between attempts (ghost hearts in
+the pens, a respawned coin collecting itself under the standing player), death cascades,
+and ending flows that snap past before they land. The scripted run is the floor, not the
+ceiling — it proves the game *finishes*; only hands on a real pad prove it *feels* right,
+and human playtest stays a separate, per-game follow-up.
+
+### Drift triggers (winnability gate)
+
+- *"The mechanics are all individually verified, the game is obviously completable"* —
+  Dash's were, and it wasn't. Run the script.
+- *"The win run is too hard to choreograph"* — that is information about the game, not the
+  gate. If a deterministic script can't reach the win, look hard at whether a player can.
