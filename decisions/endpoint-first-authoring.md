@@ -55,9 +55,14 @@ do, with provenance); "The Finish" (§9); deprecation pairs (what this game does
 The brief spec carries its own inputs note — see
 [specifications/brief.md](../specifications/brief.md).
 
+✦ **The design-stress pass** — the `/design-stress` skill attacks the revised brief before
+any prototype work: dominant strategies, tension collapses, unwinnable states, verb
+exploits, the boredom test. Its `BREAKS`-severity findings gate Stage 2; its open
+questions seed the prototype discovery log. It runs again against the playable prototype.
+
 **2. Prototype (the endpoint, real)** — Emu198x (runtime, capture, queries); the
 assemblers; Build198x for asset conversion; the winnability gate (win *and* loss scripts,
-checked into `capture/`); the playtest sheet and a human pass.
+checked into `capture/`); the playtest sheet and a human pass; the design-stress re-run.
 
 ✦ **The prototype discovery log** — `docs/platforms/{system}/games/{slug}/prototype-log.md`,
 kept *as the prototype is built*: every bug hit, dead end taken, surprise found, with
