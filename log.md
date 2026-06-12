@@ -1039,3 +1039,21 @@ Cut hierarchy under runway pressure: drop Shadowkeep phases (4 → 3 → 2 → f
 **Sources:** CLAUDE.md, docs/UNIT-SPECIFICATION.md, docs/CONTENT-CREATION-WORKFLOW.md, accumulated session knowledge
 **Pages created:** 10 pages across platforms/, curriculum/, infrastructure/, decisions/
 **Notes:** Seeded from existing project documentation and session knowledge. Formal specs remain in docs/; wiki captures experience applying them.
+
+## 2026-06-12 — Flock complete: the Amiga's first finished game
+
+All 18 units of Flock (Amiga assembly, game 1) are live — authored,
+captured and verified across three sessions (units 1–11, 12, 13–18).
+The sprites-first reorder paid off: a complete arcade crosser teaching
+hardware sprites, both collision laws (avoid/ride via shared CLXDAT
+bits disambiguated by position), the Copper list as writable data
+(sprite pointers, palette pokes), 16.16 fixed point, xorshift + player
+entropy, time pressure without a timer, the game state machine, a
+Paula sequencer (Baa Baa Black Sheep), levels-as-data and honest input
+buffering. Three emulator bugs found and fixed upstream along the way
+(emu198x #457/#458/#459/#468) plus one hardware-true find in our own
+code: the phantom vblank from torn VPOSR reads (unit 12's confirm-read,
+now in the curriculum). Audio captures remain idealised until
+emu198x#37/#38. The website flock catalogue and module status now read
+complete; the brief and per-unit plan in docs/platforms/commodore-amiga
+/games/flock/ are the design record.
