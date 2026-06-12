@@ -35,9 +35,20 @@ an idea previously pushed toward the text adventure.)
   Noted, not solved.
 - **Cap the cast** (the toolbar-cap lesson): a handful of inhabitants with a designed
   dependency graph, not a census.
-- **Open:** does the curse's source exist in-game? One environmental hazard (the briar — the
-  thing that froze them, still active) would add a loss-edge with zero AI; or it stays a
-  peaceful puzzle-explorer like the Place. Decide at its Stage 1.
+- **Threat: decided in principle (same day) — there is one, and it's the curse.** Getting
+  caught doesn't kill: **you join the sleepers** — the thief frozen mid-stride, a statue
+  among statues. No combat (the explore-and-avoid anti-goal holds). Two candidate shapes,
+  both with engine lineage: **the Warden** (the freezer still patrols — Gloaming's draught
+  grown up: deterministic cell patrols, memorisable, touch = stasis) and/or **the briar**
+  (static curse-tiles, denser in deeper rooms). Start with one; cap applies.
+- **Candidate economy: woken souls are your lives.** Caught with allies awake — one comes
+  and wakes you, spent. Caught alone — the keep sleeps forever, you among them. Progress is
+  the safety net; the dependency graph becomes an economy. Endings name themselves:
+  **The Keep Wakes** / **The Keep Sleeps** (the latter: your hooded figure, still, wherever
+  it ended).
+- **Stress-flag pinned with it:** allies-as-lives makes the start the most dangerous moment
+  (zero allies). The Exodus level-one rule applies: the first inhabitant is a near-gift,
+  woken in the first room — tutorial and first ally in one beat.
 
 ## Process notes
 
