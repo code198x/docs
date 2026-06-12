@@ -109,6 +109,15 @@ Later Shadowkeep *revisit* modules grow the keep (more rooms, outdoor traversal,
 
 Options (sound on/off, control remap) and richer endings belong to later revisit modules.
 
+> **Pass-1 note (2026-06-12):** the Place shipped its title in ROM font; the hand-pixelled
+> logo was acknowledged in-unit as deferred. The **nameplate lands in the _identity_ revisit
+> module**, and the pipeline for it now exists: **Build198x's image converter**
+> (`build198x image <png> --machine sinclair-zx-spectrum --format scr`, wave 1, live
+> 2026-06-11) turns hand-pixelled PNG art into a true 6912-byte SCREEN$ — smoke-tested
+> against this exact use. The identity unit teaches the full chain: draw → convert →
+> `incbin` → block-copy to `$4000` (the layout the learner already knows from the
+> Place's own units).
+
 ---
 
 ## 10. Anti-goals
@@ -129,7 +138,7 @@ Shadowkeep is a game across several modules. **Pass 1 — _the Place_** is this 
 |---|---|---|
 | **Shadowkeep — the Place (pass 1)** | the keep as a lit, furnished, composed, winnable flick-adventure (identity · dithered stone · movement · room-as-data · room graph · doorways · persistence · three rooms · lighting · furnishings · mood · character · audio · win loop · real hardware) | **complete** — 1.1–1.4 done (16 units, Arc 1) |
 | Shadowkeep — inhabitants (later revisit) | cell-based NPCs, threat, lives | later |
-| Shadowkeep — identity (later revisit) | numeric HUD / digit rendering, room names, score | later |
+| Shadowkeep — identity (later revisit) | numeric HUD / digit rendering, room names, score, the title nameplate (hand-pixelled PNG → SCREEN$ via Build198x `image`) | later |
 | Shadowkeep — beyond the walls (later revisits) | items that matter, tape save/load, multiple keeps, secrets & lore, atmospheric cycles, collection endings | later |
 
 Sub-arcs of pass 1 (illustrative; full detail in [per-unit-plan.md](per-unit-plan.md)):
