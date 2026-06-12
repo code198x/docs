@@ -42,6 +42,50 @@ unit 1's typed-in working systems must exist to be typed in.
   this sequences the work, not the teaching.
 - **No fixed unit counts** — decomposition produces however many units the route needs.
 
+## Inputs to the flow
+
+Each stage's inputs, so nothing gets improvised mid-game. Most are existing project
+layers; two are **new conventions this record creates**, marked ✦.
+
+**1. Brief (the endpoint, designed)** — the platform's lineup record (which rung, what
+technique budget); classic ancestors and **period magazines** as primary sources for the
+genre's shipping conventions; the layered hardware-reference canon (what the machine can
+do, with provenance); "The Finish" (§9); deprecation pairs (what this game does the
+"before" way on purpose); the pattern library (named reuses in, expected extractions out).
+The brief spec carries its own inputs note — see
+[specifications/brief.md](../specifications/brief.md).
+
+**2. Prototype (the endpoint, real)** — Emu198x (runtime, capture, queries); the
+assemblers; Build198x for asset conversion; the winnability gate (win *and* loss scripts,
+checked into `capture/`); the playtest sheet and a human pass.
+
+✦ **The prototype discovery log** — `docs/platforms/{system}/games/{slug}/prototype-log.md`,
+kept *as the prototype is built*: every bug hit, dead end taken, surprise found, with
+enough detail to re-tell. Under endpoint-first this is the only place confession material
+gets generated — by authoring time the route is solved — so the log is what keeps the
+units as honest as Flock's. It feeds the confessions, the "If It Doesn't Work" sections,
+and the blog.
+
+✦ **Commit-sized teachable increments** — the prototype is built in commit-sized steps
+that each add one teachable idea, so its git log is the decomposition's first draft.
+(This is the project's existing coding cadence applied with intent: the prototype's
+history is itself an artefact.)
+
+**3. Decompose (the route)** — the prototype's construction history; the discovery log
+(deciding *where* each confession is taught); the unit spec; the scaffold pattern chosen
+in the brief (incremental vs Lucky Number); phase boundaries.
+
+**4. Author (the telling)** — the unit spec and magazine voice; Vale; the capture
+pipeline, with the win script reused as capture choreography; the per-unit DoD;
+screenshot verification.
+
+**5. Post-ship (the compounding)** — pattern extractions (brief §13); vault tie-ins
+(§14); `docs/log.md`; blog material from the discovery log.
+
+**Open action:** learner feedback becomes an input here from October — *where it lands*
+(issues on code-samples? a feedback channel?) is undecided and should be decided before
+launch rather than improvised at it.
+
 ## Drift triggers
 
 - Authoring unit 1 of a game whose win state has never been reached.
@@ -49,3 +93,5 @@ unit 1's typed-in working systems must exist to be typed in.
 - A brief whose Finish section is unanswered while units are being written.
 - A prototype "too rough to playtest" that units are nonetheless being derived from —
   the prototype must pass the winnability gate *and* a human pass before decomposition.
+- A prototype built without its discovery log — if the log is empty at decomposition
+  time, the confession material is already lost.

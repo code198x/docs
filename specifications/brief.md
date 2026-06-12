@@ -20,6 +20,26 @@ A brief is **not** an implementation document. Per-phase or per-unit detail live
 - **British English throughout** (exception: "program" for computer programs, per [`british-english`](../decisions/british-english.md)).
 - **Magazine voice.** Warm, technical, opinionated, never condescending. See `docs/specifications/writing-voice.md`.
 
+**Inputs to a brief (added 2026-06-12).** A brief is written *from* these, not from a blank
+page — gather them before drafting:
+
+- **The platform's lineup record** — which rung of the ladder this game is, and the
+  technique budget it owns.
+- **Classic ancestors, through primary sources** — the era's real games, with period
+  magazines as the evidence for what the genre actually shipped with (reviews, adverts,
+  cover-tape liner notes — not just remembered reputations).
+- **The hardware-reference canon** — the layered reference (umbrella `reference/` →
+  syntheses → Emu198x knowledge → `docs/platforms/`) for what the machine can do, with
+  provenance.
+- **Deprecation pairs** — what this game deliberately does the "before" way for a later
+  game to upgrade.
+- **The pattern library** — existing patterns the game will reuse (named in the brief),
+  and the extractions it's expected to produce (§13).
+
+The brief is stage 1 of the endpoint-first flow — brief → prototype → decompose → author —
+whose full per-stage inputs (including the prototype discovery log) live in
+[`decisions/endpoint-first-authoring.md`](../decisions/endpoint-first-authoring.md).
+
 ---
 
 ## File Location
