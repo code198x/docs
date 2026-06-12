@@ -12,7 +12,7 @@
 > / Starfield / Gloaming); leading with the Blitter forced the old Exodus into "the Blitter must be
 > the whole gameplay" and produced a non-game (audit, 2026-06-11). So **rung 1 is now Flock** — a
 > new hardware-sprite sheep-crosser ([`games/flock/brief.md`](../platforms/commodore-amiga/games/flock/brief.md))
-> — and **Exodus moves to rung 2** as the Blitter game (its theme/name now **parked**;
+> — and **Exodus moves to rung 2** as the Blitter game (its theme/name **decided 2026-06-12: *Exodus*, reclaimed** — a migration through hostile terrain; carve rock, raise causeways;
 > [`games/exodus/brief.md`](../platforms/commodore-amiga/games/exodus/brief.md)). **Signal** is
 > reframed from "introduce sprites" to "deepen sprites" (multiplexing / Copper sprite-reuse), since
 > the introduction moved to Flock. Under the [curriculum-structure.md](curriculum-structure.md)
@@ -30,7 +30,7 @@ the rungs below.
 | # | Module | Rung first-introduced / headline |
 |---|---|---|
 | 1 | **Flock** | **hardware sprites** — move, animate, **collide** (the sheep-crosser; new rung-1) |
-| 2 | **Exodus** | Blitter copy + masked (cookie-cut) blit (the Blitter game; theme/name parked) |
+| 2 | **Exodus** | Blitter copy + masked (cookie-cut) blit (the Blitter game; *Exodus* reclaimed 2026-06-12) |
 | 3 | Shatter Point | Copper splits + first Paula samples |
 | — | **How the Copper Works** | *interval* — a built demo of Copper DMA (see below) |
 | 4 | Signal | **deepen sprites** — multiplexing / Copper sprite-reuse (intro moved to Flock) |
@@ -53,7 +53,7 @@ the rungs below.
   units stay** (Copper Landscape → Integration and Polish — a finishable terrain game); the 112-unit
   future scaffold is dropped, and the Copper/Paula/sprite/scroll material it would have grown into
   moves out to the dedicated rung-games. Exodus becomes **the Blitter game** (was rungs 1–2;
-  **now rung 2** after the 2026-06-11 sprites-first reorder, and its theme/name is since parked —
+  **now rung 2** after the 2026-06-11 sprites-first reorder; its theme/name was parked, then **reclaimed as *Exodus*** (2026-06-12) —
   see banner). This contradicted Exodus's old 128-unit frontmatter, which is why it needed an
   explicit decision; it preserves shipped work while shrinking scope.
 - **Signal re-sequenced after Shatter Point** so hardware sprites land as its *one* new rung (it had

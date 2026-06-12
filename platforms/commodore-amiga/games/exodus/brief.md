@@ -1,22 +1,31 @@
 # Exodus (rung-2 Blitter puzzle) — Brief
 
-**Title (working):** *parked — theme/name TBD* (the `exodus` module; was provisionally "Flock")
+**Title (working):** ***Exodus*** — name reclaimed 2026-06-12 (the `exodus` module; was provisionally "Flock")
 **System / Track:** Commodore Amiga / assembly
 **Position:** Rung 2 — the Blitter game (copy + masked cookie-cut blit), after the rung-1 sprite crosser. See [amiga-assembly-lineup.md](../../../decisions/amiga-assembly-lineup.md).
 **Scope:** indicative ~16 units across two build arcs; counts illustrative, not a target (per [curriculum-structure.md](../../../decisions/curriculum-structure.md)).
 **Constraint position:** period-faithful — see Section 5.
-**Status:** **parked** (mechanic design stands; theme + name on hold)
+**Status:** **resuming** — theme decided; brief revision (endpoint-first Stage 1) is the next step
 
-> **PARKED 2026-06-11 — theme and name on hold.** This is the rung-2 **Blitter** puzzle (the built
-> `exodus` module). Its **mechanic design below stands** — the god-hand carve/raise verbs, plan-then-
-> release, "don't lose one", the salvageable walker AI + pastoral rendering. What's changed since this
-> was drafted: the **"Flock" name and the sheep theme moved to the rung-1 crosser** (a sprite-led
-> sheep-Frogger — see `games/flock/brief.md`), and this game lost the front-door slot in the
-> sprites-first reorder. So the **sheep references and the title throughout this draft are now
-> placeholder** — the theme/name is genuinely undecided (might revisit sheep, might reclaim *Exodus*,
-> might be something else). Resume — and rebrief the theme — when rung 2 is scheduled. The built
-> 16 CPU-drawn units remain the salvage (walker AI + rendering structure; the Blitter work + player
-> verbs are still to author).
+> **RESUMED 2026-06-12 — theme decided: *Exodus*, reclaimed.** The game is a **migration through
+> hostile terrain**: a band of walkers led to safety by a god-hand that **carves through rock and
+> raises causeways over water** — the verbs *are* the theme (a raised path through the water is the
+> name made literal). The sheep references and pastoral framing throughout this draft are
+> **placeholder prose pending the Stage-1 brief revision**, which re-themes the sections and answers
+> "The Finish" ([specifications/brief.md](../../../specifications/brief.md) §9) per
+> [endpoint-first-authoring.md](../../../decisions/endpoint-first-authoring.md): brief → prototype
+> (winnability gate + human playtest, with the prototype discovery log running) → decompose →
+> author.
+>
+> **Per-unit-plan superseded (2026-06-12).** The desk-mapped `per-unit-plan.md` this draft promised
+> is not written and won't be: under endpoint-first, the prototype's commit history and discovery
+> log drive the decomposition, and the fate of the 16 shipped CPU-drawn units is decided *at
+> decomposition, with evidence* — not mapped speculatively first. The shipped units stay live and
+> untouched until then.
+
+> **(Superseded banner, kept for lineage)** *PARKED 2026-06-11 — theme and name on hold.* The
+> mechanic design stood; the "Flock" name and sheep theme had moved to the rung-1 crosser, leaving
+> theme/name undecided. Resolved above.
 
 ---
 
@@ -126,7 +135,8 @@ Two build arcs, indicative unit counts (per [curriculum-structure.md](../../../d
 *Revisits:* carve (now combined with raise in the same level), the budget (now two resources), plan-then-release (now planning around a dynamic hazard).
 *Deliverable:* the full Flock — carve *and* raise under budget across fields, rivers, cliffs and a road, every sheep home; a complete cosy puzzle game.
 
-*(Per-unit mapping — including which salvaged units carry over and which are rebuilt onto the Blitter — lives in a sibling `per-unit-plan.md`, written after this brief is accepted.)*
+*(Per-unit mapping is **superseded** — see the 2026-06-12 banner: decomposition follows the
+prototype under endpoint-first; no speculative `per-unit-plan.md` is written.)*
 
 ---
 
@@ -178,6 +188,6 @@ Per arc, all five axes must pass (verification is emulator-based — real-hardwa
 
 1. **Plan-then-release might play flat.** The reveal could feel passive rather than tense. *Mitigation:* prototype the release-and-reveal on one carve-only level first; if it's dull, try slow-real-time or pause-to-act before committing the arc. (Flagged as a held-loosely decision with the user.)
 2. **"Is it a game?" — agency.** This is the exact test the un-briefed Exodus failed. *Mitigation:* the two verbs + finite budget + all-survive *are* the agency; pressure-test this brief against that question before authoring.
-3. **Re-scope reconciliation.** The existing 16 units are CPU-drawn with no Blitter and no player verb. *Mitigation:* salvage the walker AI and pastoral rendering structure; the `per-unit-plan` maps old→new and marks each unit rebuild-on-Blitter vs carry-over.
+3. **Re-scope reconciliation.** The existing 16 units are CPU-drawn with no Blitter and no player verb. *Mitigation:* salvage the walker AI and rendering structure where the prototype's route matches; the call is made at decomposition with the working game in hand (endpoint-first), not desk-mapped first.
 4. **Determinism for dynamic hazards.** Roads (and any territorial threat) must be deterministic and visible at plan time, or plan-then-release breaks. *Mitigation:* fixed, looping, on-screen-during-planning traffic; no RNG in hazards.
 5. **Scope creep.** Roads and predators are seductive. *Mitigation:* the road is the one dynamic hazard; predators, if any, are territorial-only; the hunter, the open world, and the epic "lead a people" tone are all explicitly the sequel's — *Exodus* lives again as the big game later.

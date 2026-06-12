@@ -1081,3 +1081,23 @@ Shadowkeep Arc 1 audited strong (theme, SFX, win/replay all present);
 its remaining last-yard item (a pixel SHADOWKEEP nameplate) is deferred
 pending an arc-numbering decision — a new unit 17 would collide with
 Arc 2's planned numbering.
+
+## 2026-06-12 — Endpoint-first adopted; Exodus resumed as the first game through it
+
+Process decisions, born of the last-yard pass: the **winnability gate**
+(per-game DoD — a scripted run must reach the win, script checked into
+capture/), **"The Finish"** (six questions every brief answers before
+authoring: win, curve, music+stings, dwell, feel, go-again), and
+**endpoint-first authoring** (brief → prototype → decompose → author;
+the game is built, gated and playtested before units are written; the
+prototype keeps a discovery log so the confessions stay honest, and is
+built in commit-sized teachable increments so its git log drafts the
+decomposition). Six cross-platform patterns harvested from the pass
+(tune sequencer, escalation-as-data, three caps, ending dwell, blink,
+grace window). Learner feedback (from October): Discord + GitHub
+Discussions, with a promote-to-durable rule. **Exodus resumed**: theme
+decided — *Exodus* reclaimed, a migration through hostile terrain
+(carve rock, raise causeways; the verbs are the theme); the speculative
+per-unit-plan superseded by decompose-after-prototype; stale
+Lost-Vikings genre cell in commercial-bar-revamp corrected. Next:
+the Stage-1 brief revision, then the prototype.

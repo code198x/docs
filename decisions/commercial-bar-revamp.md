@@ -44,7 +44,7 @@ Setting the bar at "commercial 1986-1991" forces every Phase 1 to be a real game
 |---|---|---|---|
 | **Cadence** | C64 | Horizontal music-driven shooter (Otocky × Hubbard) | Replaces Starfield |
 | **Nightshade** | NES | Scrolling action platformer (Castlevania × Mega Man) | Replaces Dash |
-| **Exodus** | Amiga | Lost-Vikings-style 3-creature puzzle | Refined direction; old version dropped |
+| **Exodus** | Amiga | Lemmings-tradition god-hand Blitter puzzle (carve/raise) — the Lost-Vikings direct-control design is parked for a possible sequel (brief, 2026-06-11) | Refined direction; old version dropped |
 | **Shadowkeep** | Spectrum | Multi-room maze (Atic Atac scope) | Refined; expand single-room to multi |
 
 Signal (formerly Amiga Game 2) is dropped entirely. Replacement TBD after Phase 1 ships.
