@@ -62,6 +62,12 @@ Number systems first, then the bit logic that operates on them:
 5. **Shifting** — sliding bits left and right, and why that is multiplying and
    dividing by two.
 
+**Extended at build (2026-06-30) with a sixth unit — "Numbers That Aren't Whole"** —
+taking the number story from integers to fractions: floating-point vs fixed-point, with
+the contrast (and why games chose fixed-point) as the spine. A deliberate extension of the
+architecture's integers-only scope, kept **conceptual** — the bit-layout and the
+implementation (8.8/16.16, the shifts) stay in the machine courses.
+
 ## Drift triggers
 
 - Numbers & Bits teaches how the screen or a sound chip works — that's Meet the
