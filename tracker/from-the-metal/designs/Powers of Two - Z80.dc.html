@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #f4f1e8; }
+  .doc-frame { width: 100%; border-collapse: collapse; }
+  .doc-frame td { padding: 0; }
+  .hdr-space, .ftr-space { display: none; }
+  @page { size: letter; margin: 0; }
+  @media print {
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { margin: 0; padding: 0; background: #f4f1e8; }
+    .doc { max-width: none !important; margin: 0 !important; padding: 0 0.7in !important; }
+    .hdr-space, .ftr-space { display: table-cell; height: 0.7in; }
+    h1, h2, h3 { break-after: avoid; }
+    figure, pre, blockquote, table { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+  }
+</style>
+</helmet>
+<main class="doc" style="box-sizing:border-box; max-width:760px; margin:0 auto; background:inherit; padding:64px clamp(24px,5vw,40px) 96px; font-family:'Inter',sans-serif; color:#1e293b;">
+  <table class="doc-frame" role="presentation">
+    <thead><tr><td class="hdr-space"></td></tr></thead>
+    <tbody><tr><td>
+
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:32px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; letter-spacing:0.5px;">CODE LIKE IT'S 198<span style="color:#4a4dff;">x</span></span>
+        <span style="flex:1; height:3px; background:#e0d9c6;"></span>
+        <a href="From the Metal — Index.dc.html" style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8; text-decoration:none;" style-hover="color:#4a4dff;">← FROM THE METAL · Z80</a>
+      </div>
+
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; color:#cc0000; margin-bottom:18px;">// ARITHMETIC · WHAT'S UNDERNEATH //</div>
+
+      <h1 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:clamp(30px,5.2vw,44px); line-height:1.08; letter-spacing:-0.5px; margin:0 0 22px; text-wrap:balance;">Why everything is a power of two</h1>
+
+      <p style="font-size:20px; line-height:1.55; color:#475569; margin:0 0 40px; text-wrap:pretty;">You round your hash tables to 1,024. You write <code style="font-family:'JetBrains Mono',monospace; font-size:0.78em; background:#ece7d6; padding:2px 7px; border-radius:4px;">x &amp; (n-1)</code> instead of <code style="font-family:'JetBrains Mono',monospace; font-size:0.78em; background:#ece7d6; padding:2px 7px; border-radius:4px;">x % n</code> and half-trust that it works. You know a shift is "faster" than a multiply but you've never watched the difference. The Z80 in your Spectrum can't multiply at all — so it has to show you.</p>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:0 0 16px;">The Z80 cannot multiply</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 22px; text-wrap:pretty;">There is no multiply instruction. None. The Z80 has add, subtract, the logic ops and shifts — and that's the toolbox. To double a number you shift it left one bit, because a left shift <em style="font-style:italic;">is</em> a multiply by two. Anything else, you build by hand from shifts and adds.</p>
+
+      <figure style="margin:0 0 14px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#1e293b; padding:8px 16px; border:3px solid #1e293b; border-bottom:none;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8;">Z80 · MULTIPLY BY TEN</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#fca5a5;">52 T-states</span>
+        </div>
+        <pre style="margin:0; background:#0f172a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; font-size:14px; line-height:1.75; padding:20px 22px; overflow-x:auto; border:3px solid #1e293b;">        add hl,hl     <span style="color:#7d8da3;">; ×2          11 T</span>
+        ld   d,h      <span style="color:#7d8da3;">; stash ×2     4</span>
+        ld   e,l      <span style="color:#7d8da3;">;              4</span>
+        add  hl,hl    <span style="color:#7d8da3;">; ×4          11</span>
+        add  hl,hl    <span style="color:#7d8da3;">; ×8          11</span>
+        add  hl,de    <span style="color:#f0a868;">; ×8 + ×2 = ×10   11</span></pre>
+        <figcaption style="font-family:'Inter',sans-serif; font-style:italic; font-size:13px; color:#64748b; margin-top:10px;">A single multiply, assembled from shifts. Ten is cheap — it's 8 + 2. A prime like 23 is real misery.</figcaption>
+      </figure>
+
+      <p style="font-size:17px; line-height:1.68; margin:22px 0 22px; text-wrap:pretty;">Each <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">add hl,hl</code> doubles the value — that's your left shift. "Times ten" becomes six instructions because 10 factors into powers of two you can reach by shifting. The further a number is from a power of two, the more shuffling it takes.</p>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:36px 0 16px;">So a power of two costs nothing</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 22px; text-wrap:pretty;">If multiplying by ten is six instructions, multiplying by 256 is… zero. A 16-bit value sits in the register pair <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">HL</code> as a high byte <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">H</code> and a low byte <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">L</code>. Dividing by 256 is reading <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">H</code>. The remainder mod 256 is reading <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">L</code>. There is no operation — only a choice of register.</p>
+
+      <figure style="margin:0 0 14px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#1e293b; padding:8px 16px; border:3px solid #1e293b; border-bottom:none;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8;">Z80 · DIVIDE AND MOD BY 256</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#86efac;">free</span>
+        </div>
+        <pre style="margin:0; background:#0f172a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; font-size:14px; line-height:1.75; padding:20px 22px; overflow-x:auto; border:3px solid #1e293b;">        ld   a,l      <span style="color:#f0a868;">; a = value mod 256  — the low byte</span>
+        ld   a,h      <span style="color:#f0a868;">; a = value / 256    — the high byte</span></pre>
+        <figcaption style="font-family:'Inter',sans-serif; font-style:italic; font-size:13px; color:#64748b; margin-top:10px;"><code style="font-family:'JetBrains Mono',monospace; font-size:0.9em;">% 256</code> and <code style="font-family:'JetBrains Mono',monospace; font-size:0.9em;">/ 256</code> aren't operations here. They're which half of the register you look at.</figcaption>
+      </figure>
+
+      <p style="font-size:17px; line-height:1.68; margin:22px 0 22px; text-wrap:pretty;">This is the whole reason <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">x &amp; (n-1)</code> can stand in for <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">x % n</code> when <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">n</code> is a power of two: masking off the low bits <em style="font-style:italic;">is</em> the remainder. <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">x &amp; 255</code> keeps the low byte — which is exactly what <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">x % 256</code> means. Modulo by a power of two is free; modulo by anything else is a division routine you don't have. So ring buffers, hash tables and texture atlases get sized to 256, 1,024, 4,096 — not superstition, but because it turns a loop into a single masked read.</p>
+
+      <div style="margin-top:40px; padding:26px 28px; background:#fdfcf7; border:3px solid #e7e1cf; box-shadow:6px 6px 0 rgba(0,0,0,0.10);">
+        <p style="font-size:18px; line-height:1.6; margin:0; text-wrap:pretty;">A modern compiler handed <code style="font-family:'JetBrains Mono',monospace; font-size:0.8em; background:#ece7d6; padding:2px 7px; border-radius:4px;">x * 10</code> doesn't emit a multiply either — it emits the same shift-and-add chain, folded into a single address calculation. When you choose a power-of-two capacity, you're quietly handing every <code style="font-family:'JetBrains Mono',monospace; font-size:0.8em; background:#ece7d6; padding:2px 7px; border-radius:4px;">%</code> in your hot loop a free pass. The Z80 just itemises the bill.</p>
+      </div>
+
+      <div style="margin-top:32px; padding-top:24px; border-top:3px solid #e0d9c6; display:flex; align-items:center; gap:12px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#1e293b;">&gt;</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.5px; color:#475569;">Every great programmer started with one instruction.</span>
+      </div>
+
+    </td></tr></tbody>
+    <tfoot><tr><td class="ftr-space"></td></tr></tfoot>
+  </table>
+</main>
+</x-dc>
+</body>
+</html>

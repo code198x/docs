@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #f4f1e8; }
+  .doc-frame { width: 100%; border-collapse: collapse; }
+  .doc-frame td { padding: 0; }
+  .hdr-space, .ftr-space { display: none; }
+  @page { size: letter; margin: 0; }
+  @media print {
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { margin: 0; padding: 0; background: #f4f1e8; }
+    .doc { max-width: none !important; margin: 0 !important; padding: 0 0.7in !important; }
+    .hdr-space, .ftr-space { display: table-cell; height: 0.7in; }
+    h1, h2, h3 { break-after: avoid; }
+    figure, pre, blockquote, table { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+  }
+</style>
+</helmet>
+<main class="doc" style="box-sizing:border-box; max-width:760px; margin:0 auto; background:inherit; padding:64px clamp(24px,5vw,40px) 96px; font-family:'Inter',sans-serif; color:#1e293b;">
+  <table class="doc-frame" role="presentation">
+    <thead><tr><td class="hdr-space"></td></tr></thead>
+    <tbody><tr><td>
+
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:32px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; letter-spacing:0.5px;">CODE LIKE IT'S 198<span style="color:#4a4dff;">x</span></span>
+        <span style="flex:1; height:3px; background:#e0d9c6;"></span>
+        <a href="From the Metal — Index.dc.html" style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8; text-decoration:none;" style-hover="color:#4a4dff;">← FROM THE METAL · 68000</a>
+      </div>
+
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; color:#ff6600; margin-bottom:18px;">// HARDWARE · WHAT'S UNDERNEATH //</div>
+
+      <h1 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:clamp(30px,5.2vw,44px); line-height:1.08; letter-spacing:-0.5px; margin:0 0 22px; text-wrap:balance;">Why there's a chip that does nothing but move memory</h1>
+
+      <p style="font-size:20px; line-height:1.55; color:#475569; margin:0 0 40px; text-wrap:pretty;">You offload work to the GPU without thinking about why a second processor exists at all. You fire off a <code style="font-family:'JetBrains Mono',monospace; font-size:0.8em; background:#ece7d6; padding:2px 7px; border-radius:4px;">memcpy</code> and assume it's free. The Amiga had a coprocessor — the Blitter — whose entire job was moving blocks of memory while the CPU did something else. It's where "let dedicated hardware handle the bulk work" begins.</p>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:0 0 16px;">The CPU is the wrong tool for bulk copies</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 22px; text-wrap:pretty;">To move a sprite, the 68000 would <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">move</code> word after word after word, burning every cycle on plumbing while the game logic waits. Shifting a screen's worth of pixels at 50 frames a second is hopeless that way. So Commodore built a chip that does only this — block image transfer, "blit" — and the CPU's job shrinks to writing down <em style="font-style:italic;">what</em> to move and walking away:</p>
+
+      <figure style="margin:0 0 14px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#1e293b; padding:8px 16px; border:3px solid #1e293b; border-bottom:none;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8;">68000 · HANDING WORK TO THE BLITTER</span>
+        </div>
+        <pre style="margin:0; background:#0f172a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; font-size:14px; line-height:1.75; padding:20px 22px; overflow-x:auto; border:3px solid #1e293b;">        move.l #source,$dff050   <span style="color:#7d8da3;">; BLTAPT  — where to copy from</span>
+        move.l #dest,$dff054     <span style="color:#7d8da3;">; BLTDPT  — where to copy to</span>
+        move.w #$09f0,$dff040    <span style="color:#7d8da3;">; BLTCON0 — operation</span>
+        move.w #blitsize,$dff058 <span style="color:#f0a868;">; start it — and the CPU is free NOW</span>
+        ...                      <span style="color:#7d8da3;">; run game logic while it copies</span></pre>
+        <figcaption style="font-family:'Inter',sans-serif; font-style:italic; font-size:13px; color:#64748b; margin-top:10px;">A handful of register writes describe the job. The last one kicks it off, and the 68000 moves on while the Blitter grinds through the pixels in parallel.</figcaption>
+      </figure>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:36px 0 16px;">This is the whole idea behind a GPU</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 22px; text-wrap:pretty;">Describe the work, hand it to dedicated hardware, carry on, collect the result later. That's a Blitter in 1985 and a graphics card today — same bargain, more zeros. The asynchronous part is the point: the Blitter ran <em style="font-style:italic;">alongside</em> the CPU, which is exactly why you queue draw calls and why a <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">memcpy</code> on a modern machine is quietly handed to a DMA engine rather than executed one byte at a time.</p>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 22px; text-wrap:pretty;">It also explains a bug class you've met without naming. Start a blit, then touch the source memory before it finishes, and you corrupt the copy — the coprocessor is mid-read. "Wait for the GPU," "fence before you reuse the buffer," "don't write the array while the async job runs" — all the same hazard the Amiga taught with a single busy flag.</p>
+
+      <div style="margin-top:36px; padding:26px 28px; background:#fdfcf7; border:3px solid #e7e1cf; box-shadow:6px 6px 0 rgba(0,0,0,0.10);">
+        <p style="font-size:18px; line-height:1.6; margin:0; text-wrap:pretty;">Every time you reach for the GPU, a DMA copy or an async worker, you're using the Blitter's idea: the main processor shouldn't waste itself on bulk drudgery when a specialist can do it in parallel. The Amiga just made the specialist a chip you could see on the board.</p>
+      </div>
+
+      <div style="margin-top:32px; padding-top:24px; border-top:3px solid #e0d9c6; display:flex; align-items:center; gap:12px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#1e293b;">&gt;</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.5px; color:#475569;">Every great programmer started with one instruction.</span>
+      </div>
+
+    </td></tr></tbody>
+    <tfoot><tr><td class="ftr-space"></td></tr></tfoot>
+  </table>
+</main>
+</x-dc>
+</body>
+</html>

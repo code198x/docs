@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #f4f1e8; }
+  .doc-frame { width: 100%; border-collapse: collapse; }
+  .doc-frame td { padding: 0; }
+  .hdr-space, .ftr-space { display: none; }
+  @page { size: letter; margin: 0; }
+  @media print {
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { margin: 0; padding: 0; background: #f4f1e8; }
+    .doc { max-width: none !important; margin: 0 !important; padding: 0 0.7in !important; }
+    .hdr-space, .ftr-space { display: table-cell; height: 0.7in; }
+    h1, h2, h3 { break-after: avoid; }
+    figure, pre, blockquote, table { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+  }
+</style>
+</helmet>
+<main class="doc" style="box-sizing:border-box; max-width:760px; margin:0 auto; background:inherit; padding:64px clamp(24px,5vw,40px) 96px; font-family:'Inter',sans-serif; color:#1e293b;">
+  <table class="doc-frame" role="presentation">
+    <thead><tr><td class="hdr-space"></td></tr></thead>
+    <tbody><tr><td>
+
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:32px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; letter-spacing:0.5px;">CODE LIKE IT'S 198<span style="color:#4a4dff;">x</span></span>
+        <span style="flex:1; height:3px; background:#e0d9c6;"></span>
+        <a href="From the Metal — Index.dc.html" style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8; text-decoration:none;" style-hover="color:#4a4dff;">← FROM THE METAL · 68000</a>
+      </div>
+
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; color:#ff6600; margin-bottom:18px;">// ARCHITECTURE · WHAT'S UNDERNEATH //</div>
+
+      <h1 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:clamp(30px,5.2vw,44px); line-height:1.08; letter-spacing:-0.5px; margin:0 0 22px; text-wrap:balance;">"Stack overflow" is a real place</h1>
+
+      <p style="font-size:20px; line-height:1.55; color:#475569; margin:0 0 40px; text-wrap:pretty;">You've hit "Maximum call stack size exceeded." You know recursion "uses memory" and that local variables live "on the stack." On the Motorola 68000 in your Amiga, the stack isn't a metaphor — it's an address held in a register, walking downward through RAM. Watch it move and three mysteries solve at once.</p>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:0 0 16px;">The stack is a register pointing at memory</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 22px; text-wrap:pretty;">The 68000 has eight address registers. <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">A7</code> is special — it's the stack pointer, and it holds an address. "The stack" is simply the memory just below it. Calling a subroutine pushes the return address there and jumps:</p>
+
+      <figure style="margin:0 0 14px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#1e293b; padding:8px 16px; border:3px solid #1e293b; border-bottom:none;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8;">68000 · CALL &amp; RETURN</span>
+        </div>
+        <pre style="margin:0; background:#0f172a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; font-size:14px; line-height:1.75; padding:20px 22px; overflow-x:auto; border:3px solid #1e293b;">        bsr  draw_sprite   <span style="color:#f0a868;">; push 4-byte return addr, jump</span>
+        ...                <span style="color:#7d8da3;">; A7 is now 4 lower</span>
+draw_sprite:
+        ...
+        rts                <span style="color:#f0a868;">; pop it back into PC, return</span></pre>
+        <figcaption style="font-family:'Inter',sans-serif; font-style:italic; font-size:13px; color:#64748b; margin-top:10px;">Every <code style="font-family:'JetBrains Mono',monospace; font-size:0.9em;">bsr</code> drops <code style="font-family:'JetBrains Mono',monospace; font-size:0.9em;">A7</code> by four — the size of an address. <code style="font-family:'JetBrains Mono',monospace; font-size:0.9em;">rts</code> lifts it back.</figcaption>
+      </figure>
+
+      <p style="font-size:17px; line-height:1.68; margin:22px 0 22px; text-wrap:pretty;">The stack grows <em style="font-style:italic;">downward</em> — toward lower addresses — which is exactly why "the stack" and "the heap" are always drawn growing toward each other.</p>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:36px 0 16px;">Local variables are stack you borrowed</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 22px; text-wrap:pretty;">Where do a function's locals live? The 68000 has one instruction to carve them off the stack — <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">LINK</code> — and one to give them back — <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">UNLK</code>:</p>
+
+      <figure style="margin:0 0 14px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#1e293b; padding:8px 16px; border:3px solid #1e293b; border-bottom:none;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8;">68000 · A STACK FRAME</span>
+        </div>
+        <pre style="margin:0; background:#0f172a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; font-size:14px; line-height:1.75; padding:20px 22px; overflow-x:auto; border:3px solid #1e293b;">func:   link a6,#-8        <span style="color:#f0a868;">; reserve 8 bytes of locals</span>
+        move.l d0,-4(a6)   <span style="color:#7d8da3;">; a local, addressed off the frame</span>
+        ...
+        unlk a6            <span style="color:#f0a868;">; hand the 8 bytes back</span>
+        rts                <span style="color:#7d8da3;">; return addr is waiting just above</span></pre>
+        <figcaption style="font-family:'Inter',sans-serif; font-style:italic; font-size:13px; color:#64748b; margin-top:10px;"><code style="font-family:'JetBrains Mono',monospace; font-size:0.9em;">link</code> reserves locals by subtracting from the stack pointer. That subtraction is all a "stack frame" is.</figcaption>
+      </figure>
+
+      <p style="font-size:17px; line-height:1.68; margin:22px 0 24px; text-wrap:pretty;">That's what your debugger means by a "frame," and why a stack trace can exist at all: every return address is sitting in a chain in memory, each frame pointing back at the one that called it. Here it is laid out in RAM:</p>
+
+      <figure style="margin:0 0 14px;">
+        <pre style="margin:0; background:#0f172a; color:#cbd5e1; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.7; padding:20px 22px; overflow-x:auto; border:3px solid #1e293b;"> high addr   ┌─────────────────────┐
+   $40000    │   caller's frame    │
+             ├─────────────────────┤
+             │   return address    │  <span style="color:#f0a868;">push, by bsr</span>
+             ├─────────────────────┤
+             │   saved a6          │  <span style="color:#f0a868;">┐ the frame,</span>
+             │   locals (8 bytes)  │  <span style="color:#f0a868;">┘ by link</span>
+   A7 ─────► └─────────────────────┘
+ low addr        ...grows downward...</pre>
+        <figcaption style="font-family:'Inter',sans-serif; font-style:italic; font-size:13px; color:#64748b; margin-top:10px;">Each call stacks another block below the last, and <code style="font-family:'JetBrains Mono',monospace; font-size:0.9em;">A7</code> sinks with it.</figcaption>
+      </figure>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:36px 0 16px;">So overflow is literal</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 18px; text-wrap:pretty;">Every level of recursion does the whole dance again: another return address, another <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">link</code>, another few bytes off <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">A7</code>. Nest <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">factorial(n)</code> deep enough and <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">A7</code> marches straight past the memory the stack was given — on an Amiga, into someone else's RAM and a Guru Meditation.</p>
+
+      <div style="margin-top:28px; padding:26px 28px; background:#fdfcf7; border:3px solid #e7e1cf; box-shadow:6px 6px 0 rgba(0,0,0,0.10);">
+        <p style="font-size:18px; line-height:1.6; margin:0; text-wrap:pretty;">"Maximum call stack size exceeded" is just your runtime catching <code style="font-family:'JetBrains Mono',monospace; font-size:0.8em; background:#ece7d6; padding:2px 7px; border-radius:4px;">A7</code> before it walks off the edge. Recursion costs memory because each call is a physical push. Once you've watched the pointer move, the error message reads like a description of the hardware — because that's all it ever was.</p>
+      </div>
+
+      <div style="margin-top:32px; padding-top:24px; border-top:3px solid #e0d9c6; display:flex; align-items:center; gap:12px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#1e293b;">&gt;</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.5px; color:#475569;">Every great programmer started with one instruction.</span>
+      </div>
+
+    </td></tr></tbody>
+    <tfoot><tr><td class="ftr-space"></td></tr></tfoot>
+  </table>
+</main>
+</x-dc>
+</body>
+</html>

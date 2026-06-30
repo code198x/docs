@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #f4f1e8; }
+  .doc-frame { width: 100%; border-collapse: collapse; }
+  .doc-frame td { padding: 0; }
+  .hdr-space, .ftr-space { display: none; }
+  @page { size: letter; margin: 0; }
+  @media print {
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { margin: 0; padding: 0; background: #f4f1e8; }
+    .doc { max-width: none !important; margin: 0 !important; padding: 0 0.7in !important; }
+    .hdr-space, .ftr-space { display: table-cell; height: 0.7in; }
+    h1, h2, h3 { break-after: avoid; }
+    figure, pre, blockquote, table { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+  }
+</style>
+</helmet>
+<main class="doc" style="box-sizing:border-box; max-width:760px; margin:0 auto; background:inherit; padding:64px clamp(24px,5vw,40px) 96px; font-family:'Inter',sans-serif; color:#1e293b;">
+  <table class="doc-frame" role="presentation">
+    <thead><tr><td class="hdr-space"></td></tr></thead>
+    <tbody><tr><td>
+
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:32px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; letter-spacing:0.5px;">CODE LIKE IT'S 198<span style="color:#4a4dff;">x</span></span>
+        <span style="flex:1; height:3px; background:#e0d9c6;"></span>
+        <a href="From the Metal — Index.dc.html" style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8; text-decoration:none;" style-hover="color:#4a4dff;">← FROM THE METAL · 6502</a>
+      </div>
+
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; color:#b8860b; margin-bottom:18px;">// ARITHMETIC · WHAT'S UNDERNEATH //</div>
+
+      <h1 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:clamp(30px,5.2vw,44px); line-height:1.08; letter-spacing:-0.5px; margin:0 0 22px; text-wrap:balance;">Mario moves in fractions of a pixel</h1>
+
+      <p style="font-size:20px; line-height:1.55; color:#475569; margin:0 0 40px; text-wrap:pretty;">You learned never to keep money in a float. You've watched <code style="font-family:'JetBrains Mono',monospace; font-size:0.8em; background:#ece7d6; padding:2px 7px; border-radius:4px;">0.1 + 0.2</code> come back as <code style="font-family:'JetBrains Mono',monospace; font-size:0.8em; background:#ece7d6; padding:2px 7px; border-radius:4px;">0.30000000000000004</code> and shrugged. The NES has no floating point at all — and the trick that gives Mario his famous momentum is the same one your accounting code uses to count cents.</p>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:0 0 16px;">Half a pixel, with no fractions</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 22px; text-wrap:pretty;">The 6502 deals in whole bytes; there is no <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">0.5</code>. So you split a 16-bit number down the middle: the high byte is the pixel, the low byte is the fraction of a pixel — 256ths of one. The binary point sits, fixed, between the two bytes. Now <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">$01.80</code> means one-and-a-half pixels, because <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">$80</code> is 128/256 = 0.5.</p>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:36px 0 16px;">The carry is the glide</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 22px; text-wrap:pretty;">Each frame you add velocity to the fractional byte. Most frames Mario doesn't cross a whole pixel at all — the fraction just accrues. When it overflows, the carry rolls up into the pixel byte and he steps one across:</p>
+
+      <figure style="margin:0 0 14px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#1e293b; padding:8px 16px; border:3px solid #1e293b; border-bottom:none;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8;">6502 · 8.8 FIXED-POINT ADD</span>
+        </div>
+        <pre style="margin:0; background:#0f172a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; font-size:14px; line-height:1.75; padding:20px 22px; overflow-x:auto; border:3px solid #1e293b;">        clc
+        lda pos_lo     <span style="color:#7d8da3;">; the fraction (subpixels)</span>
+        adc vel_lo
+        sta pos_lo
+        lda pos_hi     <span style="color:#7d8da3;">; the whole pixel</span>
+        adc vel_hi     <span style="color:#f0a868;">; carry out of the fraction = one pixel moved</span>
+        sta pos_hi</pre>
+        <figcaption style="font-family:'Inter',sans-serif; font-style:italic; font-size:13px; color:#64748b; margin-top:10px;">A plain 16-bit add. The carry between the two bytes is the instant a pile of subpixels becomes a pixel — the glide, the skid, the famous "ice."</figcaption>
+      </figure>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:36px 0 16px;">Why floats drift and this doesn't</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 18px; text-wrap:pretty;">Fixed point is exact for everything it can hold — halves, quarters, 256ths, no surprises. A float trades that exactness for enormous range, and pays in tiny errors, because most decimals (<code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">0.1</code> among them) have no exact binary form, the way <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">1/3</code> has no exact decimal. That rounding is where <code style="font-family:'JetBrains Mono',monospace; font-size:0.82em; background:#ece7d6; padding:2px 7px; border-radius:4px;">0.1 + 0.2</code> drifts — and why money lives in integer cents or a decimal type, never a float.</p>
+
+      <div style="margin-top:28px; padding:26px 28px; background:#fdfcf7; border:3px solid #e7e1cf; box-shadow:6px 6px 0 rgba(0,0,0,0.10);">
+        <p style="font-size:18px; line-height:1.6; margin:0; text-wrap:pretty;">"Subpixel movement" and "store money as cents" are the same instinct: pick a small fixed unit, count it in whole numbers, and let a carry do the rounding. The NES had no other option — so it shows you the mechanism with nothing on top of it.</p>
+      </div>
+
+      <div style="margin-top:32px; padding-top:24px; border-top:3px solid #e0d9c6; display:flex; align-items:center; gap:12px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#1e293b;">&gt;</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.5px; color:#475569;">Every great programmer started with one instruction.</span>
+      </div>
+
+    </td></tr></tbody>
+    <tfoot><tr><td class="ftr-space"></td></tr></tfoot>
+  </table>
+</main>
+</x-dc>
+</body>
+</html>

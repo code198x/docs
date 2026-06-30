@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #f4f1e8; }
+  .doc-frame { width: 100%; border-collapse: collapse; }
+  .doc-frame td { padding: 0; }
+  .hdr-space, .ftr-space { display: none; }
+  @page { size: letter; margin: 0; }
+  @media print {
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { margin: 0; padding: 0; background: #f4f1e8; }
+    .doc { max-width: none !important; margin: 0 !important; padding: 0 0.7in !important; }
+    .hdr-space, .ftr-space { display: table-cell; height: 0.7in; }
+    h1, h2, h3 { break-after: avoid; }
+    figure, pre, blockquote, table { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+  }
+</style>
+</helmet>
+<main class="doc" style="box-sizing:border-box; max-width:760px; margin:0 auto; background:inherit; padding:64px clamp(24px,5vw,40px) 96px; font-family:'Inter',sans-serif; color:#1e293b;">
+  <table class="doc-frame" role="presentation">
+    <thead><tr><td class="hdr-space"></td></tr></thead>
+    <tbody><tr><td>
+
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:32px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; letter-spacing:0.5px;">CODE LIKE IT'S 198<span style="color:#4a4dff;">x</span></span>
+        <span style="flex:1; height:3px; background:#e0d9c6;"></span>
+        <a href="From the Metal — Index.dc.html" style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8; text-decoration:none;" style-hover="color:#4a4dff;">← FROM THE METAL · 68000</a>
+      </div>
+
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; color:#475569; margin-bottom:18px;">// MEMORY · WHAT'S UNDERNEATH //</div>
+
+      <h1 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:clamp(30px,5.2vw,44px); line-height:1.08; letter-spacing:-0.5px; margin:0 0 22px; text-wrap:balance;">Why your structs have holes in them</h1>
+
+      <p style="font-size:20px; line-height:1.55; color:#475569; margin:0 0 40px; text-wrap:pretty;">You've seen <code style="font-family:'JetBrains Mono',monospace; font-size:0.8em; background:#ece7d6; padding:2px 7px; border-radius:4px;">sizeof(struct)</code> come out bigger than its fields add up to. You've met <code style="font-family:'JetBrains Mono',monospace; font-size:0.8em; background:#ece7d6; padding:2px 7px; border-radius:4px;">#pragma pack</code> and <code style="font-family:'JetBrains Mono',monospace; font-size:0.8em; background:#ece7d6; padding:2px 7px; border-radius:4px;">alignas</code> and assumed they were compiler fussiness. They're not. On the 68000 in your Amiga, a misaligned read doesn't run slow — it <em style="font-style:italic;">crashes</em>. The padding is the silicon's rule, not the compiler's preference.</p>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:0 0 16px;">An odd address is illegal</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 22px; text-wrap:pretty;">A byte can sit anywhere. But a 16-bit word or a 32-bit long must begin at an <em style="font-style:italic;">even</em> address. Ask the 68000 to read a word from an odd one and it doesn't shrug and do it slowly — it raises an Address Error exception and traps. On an Amiga that's a one-way trip to the Guru Meditation screen.</p>
+
+      <figure style="margin:0 0 14px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#1e293b; padding:8px 16px; border:3px solid #1e293b; border-bottom:none;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8;">68000 · THE FAULT</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#fca5a5;">traps</span>
+        </div>
+        <pre style="margin:0; background:#0f172a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; font-size:14px; line-height:1.75; padding:20px 22px; overflow-x:auto; border:3px solid #1e293b;">        move.l #$00FF01,a0   <span style="color:#7d8da3;">; a0 = an odd address</span>
+        move.w (a0),d0       <span style="color:#f0a868;">; read a 16-bit word from it</span>
+                             <span style="color:#fca5a5;">; -> ADDRESS ERROR. the CPU traps here.</span></pre>
+        <figcaption style="font-family:'Inter',sans-serif; font-style:italic; font-size:13px; color:#64748b; margin-top:10px;">Same instruction, even address: fine. Odd address: exception. The hardware checks the low bit before it will fetch.</figcaption>
+      </figure>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:36px 0 16px;">So the compiler pads, to keep you legal</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 22px; text-wrap:pretty;">Lay out a struct with a byte followed by a word and the word would land on an odd address. The compiler can't allow that, so it slips an invisible pad byte in between — the field gets nudged to the next even slot:</p>
+
+      <figure style="margin:0 0 14px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#1e293b; padding:8px 16px; border:3px solid #1e293b; border-bottom:none;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#94a3b8;">68000 · WHAT THE PADDING BUYS</span>
+        </div>
+        <pre style="margin:0; background:#0f172a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; font-size:14px; line-height:1.75; padding:20px 22px; overflow-x:auto; border:3px solid #1e293b;">flags:   ds.b 1     <span style="color:#7d8da3;">; @ +0   one byte</span>
+         ds.b 1     <span style="color:#f0a868;">; @ +1   PAD — inserted by the compiler</span>
+count:   ds.w 1     <span style="color:#7d8da3;">; @ +2   even — legal word</span>
+pointer: ds.l 1     <span style="color:#7d8da3;">; @ +4   even — legal long</span></pre>
+        <figcaption style="font-family:'Inter',sans-serif; font-style:italic; font-size:13px; color:#64748b; margin-top:10px;">The pad byte holds no data. It buys one thing only: a legal address for <code style="font-family:'JetBrains Mono',monospace; font-size:0.9em;">count</code>. That's all struct padding has ever been.</figcaption>
+      </figure>
+
+      <p style="font-size:17px; line-height:1.68; margin:22px 0 22px; text-wrap:pretty;">It's also why reordering fields can shrink a struct: group the big, strongly-aligned members together and the holes between them vanish. "Order your struct members large-to-small" is folk wisdom with a hardware reason underneath — fewer gaps needed to keep every field on its boundary.</p>
+
+      <h2 style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:-0.2px; margin:36px 0 16px;">Even where it's "allowed," it still bites</h2>
+      <p style="font-size:17px; line-height:1.68; margin:0 0 18px; text-wrap:pretty;">Your laptop's x86 will quietly do a misaligned read — but it pays for it, splitting the access across two memory fetches or a cache line. Older ARM chips faulted just like the 68000. And alignment is what makes a value safe to update atomically, which is why lock-free code and DMA buffers insist on it. The 68000 just states the rule out loud instead of hiding the cost.</p>
+
+      <div style="margin-top:28px; padding:26px 28px; background:#fdfcf7; border:3px solid #e7e1cf; box-shadow:6px 6px 0 rgba(0,0,0,0.10);">
+        <p style="font-size:18px; line-height:1.6; margin:0; text-wrap:pretty;">You're right that alignment is a C and C++ topic — but only because those languages let you feel the floor. Drop one level further and the floor has teeth: the 68000 won't even <em style="font-style:italic;">fetch</em> a misaligned word. Once you've hit that exception, <code style="font-family:'JetBrains Mono',monospace; font-size:0.8em; background:#ece7d6; padding:2px 7px; border-radius:4px;">#pragma pack</code> stops being a mystery and starts being a promise you make to the hardware.</p>
+      </div>
+
+      <div style="margin-top:32px; padding-top:24px; border-top:3px solid #e0d9c6; display:flex; align-items:center; gap:12px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#1e293b;">&gt;</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.5px; color:#475569;">Every great programmer started with one instruction.</span>
+      </div>
+
+    </td></tr></tbody>
+    <tfoot><tr><td class="ftr-space"></td></tr></tfoot>
+  </table>
+</main>
+</x-dc>
+</body>
+</html>
