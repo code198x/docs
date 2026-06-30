@@ -4,7 +4,7 @@ Retro game dev education. Complete games on vintage platforms (C64, ZX Spectrum,
 
 ## Umbrella context
 
-This project lives under `~/Projects/198x/` alongside `Emu198x`. The umbrella binds rules that span both projects — see [`../../CLAUDE.md`](../../CLAUDE.md) and [`../../decisions/`](../../decisions/). Most relevantly: hardware reference is **layered**. The primary library at `~/Projects/198x/reference/` is the source of truth (datasheets, manuals, magazines with sidecar metadata); `Emu198x/knowledge/` is a codebase-tied distillation; this project's `docs/platforms/` should be curriculum-flavoured and cite the library for facts. Full layered model and citation rules at [`../../decisions/shared-hardware-reference-canon.md`](../../decisions/shared-hardware-reference-canon.md).
+This project lives under `~/Projects/198x/` alongside the other sibling projects. The umbrella binds rules that span the siblings — see [`../../CLAUDE.md`](../../CLAUDE.md) and [`../../decisions/`](../../decisions/). Most relevantly: hardware reference is **layered**. The primary library at `~/Projects/198x/reference/` is the source of truth (datasheets, manuals, magazines with sidecar metadata); `Emu198x/knowledge/` is a codebase-tied distillation; this project's `docs/platforms/` should be curriculum-flavoured and cite the library for facts. Full layered model and citation rules at [`../../decisions/shared-hardware-reference-canon.md`](../../decisions/shared-hardware-reference-canon.md).
 
 ## Launch context (October 2026 target)
 
