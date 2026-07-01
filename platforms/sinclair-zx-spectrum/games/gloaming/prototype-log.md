@@ -32,3 +32,35 @@ gold-plating; the baseline proves the game has no antagonist in practice.
 teachable increments; win + loss scripts re-run after each. Repairs first
 (speed gate, magenta), then the reshape (seek rule → dusk table → best-night pips),
 then re-playtest.
+
+## 2026-07-01 — round 2: repairs approved; the seek lands; the recoil discovery
+
+**Playtest round 2 (Steve), repaired build:** movement at `PLAYER_REPEAT 6` approved
+("that works"). New finding: **the dusk chime is weak** ("a bit crap") — audio polish
+item, deferred to its own pass alongside the three-phrases re-listen.
+
+**The seek rule landed** (brief §10): `draught_step`'s bounce replaced by
+seek-the-nearest-light — Manhattan scan over lit lamps *plus the lamplighter's own
+flame*, step one cell along the greater-distance axis, ties sideways, 4-connected.
+**Walls don't stop the night** — the wisp drifts through stone: fiction-true, more
+menacing, and it deletes the pathfinding/stuck-in-a-building problem class outright.
+Design call made in-session; playtest to confirm it reads.
+
+**Discovery — the recoil.** First menace probe (no input after Space): NIGHT FALLS in
+~250 frames — *too* fast. `lose_life` reset the player to START but left the draught
+standing at the catch-site; under the old bounce that was invisible, under the hunt it
+meant a catch stripped every remaining life in seconds (the wisp camps the respawn).
+Fix: the taking costs the night its reach — the wisp recoils to its far corner, so
+every life buys a whole fresh chase. Probe after: mid-game alive at frame 250 with the
+wisp bearing down; NIGHT FALLS by ~500 frames idle (~10s, Pac-Man-honest).
+**Confession material: a hunting antagonist exposes respawn-fairness assumptions the
+wallpaper version never tested.** Teach with unit 15 (lives).
+
+**Gate state:** win + loss scripts green on the seek build (tap choreography;
+poke addresses re-derived from the `.sym` after each layout shift — scripts now
+regenerate from symbols, not hardcoded addresses). Menace probe added as a third
+checked-in verification: an idle player must lose.
+
+**Open for round 3 (Steve):** does the dark feel like it *wants* the lamps? Is
+`DRAUGHT_SPEED 8` fair for dusk 1? Does wall-ghosting read as intent or bug? Then:
+the dusk table ("the night deepens") and the best-night pips.
