@@ -100,21 +100,22 @@ For modern-era games where the ancestors are obscure, link to vault entries.
 
 ## Section 3: Remix Unit
 
-**One phrase + one sentence.** Which transformation does this game perform on its ancestors?
+**One phrase + one sentence.** Which transformation does this game perform on its ancestors — or does it reproduce them faithfully?
 
-Four categories:
+Five categories:
 
 - **Same verb, new container** — the gameplay verb is the ancestor's, but the setting/world differs (*Boulder Dash*'s "dig and run from physics" relocated to a new context).
 - **Same tropes, new core mechanic** — the genre tropes are preserved (e.g., platformer with collectibles), but the mechanical foundation is novel (e.g., grappling-hook movement replaces jumping).
 - **Same aesthetic constraint, alien genre** — the look and sound feel 1985, but the gameplay is alien to the era.
 - **Same feel, different era's vocabulary** — period-tight controls combined with modern structural ideas (roguelite runs, metroidvania gating).
+- **Faithful reproduction — same game, new identity** — the mechanics are the ancestor's, reproduced as faithfully as you like; the only transformation is the identity (new name, world, characters, art). Use when the teaching goal is a genre's canonical technique built the way it was actually built. Credit the ancestor openly and name what was taken (§2). *(Added 2026-07-01 — see [decisions/inspired-by-not-clones-naming.md](../decisions/inspired-by-not-clones-naming.md).)*
 
-Pick one category; then state the specific move in a sentence.
+Pick one category; then state the specific move — or, for faithful reproduction, what you kept and what the new identity is — in a sentence.
 
 **Example (Shadowkeep):**
 > *Same tropes, new core mechanic.* The Atic Atac top-down keep-exploration tropes are preserved (hooded figure, multi-room layout, find-and-escape, environmental hazards) — but the mechanic is "every game rule is a bit-test on the screen attribute byte." No sprites for hazards, no separate collision tables, no map editor. The screen *is* the map; the attribute byte *is* the rule.
 
-**Common failure:** Picking no transformation at all (a clone) or several at once (no clear identity). If the remix unit doesn't fit cleanly into one of the four categories, the design isn't sharp enough yet.
+**Common failure:** Picking several transformations at once (no clear identity), or naming ancestors the game doesn't resemble. Faithful reproduction is now a legitimate fifth choice — "no mechanical transformation" is no longer a failure, *provided* the identity is the game's own (name, world, art) and the influence is credited openly. If the remix unit doesn't fit cleanly into one of the five categories, the design isn't sharp enough yet.
 
 ---
 

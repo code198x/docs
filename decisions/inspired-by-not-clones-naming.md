@@ -1,5 +1,32 @@
 # Decision: Inspired-By, Not Clones — Naming Convention
 
+> **AMENDED 2026-07-01 — the must-differentiate pressure is lifted; point to influences openly.**
+> Pillar #3 below ("Pedagogical depth") argued inspired-by naming should push the learner to
+> *design a divergence* from the genre rather than reproduce it. That pressure is withdrawn.
+> **Faithful mechanic reproduction is now first-class:** a curriculum game may reproduce a canonical
+> game's mechanics as faithfully as it likes — a maze-chase built the way Pac-Man built it — with
+> **no design divergence required.** Divergence is welcome where it makes a better game, never
+> mandatory.
+>
+> **The identity firewall is unchanged and still carries all the weight.** Pillars 1 (legal
+> cleanliness) and 2 (shippability) stand exactly as written: every game keeps its own name,
+> characters, art, and specific audiovisual expression. That is what stays legally clean — game
+> *mechanics and rules* are free to borrow (they aren't copyrightable); *names* (trademarks) and
+> *specific expression* (copyright) are what we keep original. Relaxing the pedagogy pillar costs
+> nothing here, because the firewall was never the pedagogy pillar.
+>
+> **Point to influences clearly and specifically.** "In the X tradition" is a floor, not a ceiling.
+> Briefs, curriculum prose, the vault, and marketing may name the exact ancestors and enumerate what
+> was borrowed — e.g. "Shadowkeep takes its room-graph and flip-screen from *Atic Atac*, its
+> silhouette-lit depth from *Knight Lore*." Credit the influence openly; homage and tribute are
+> encouraged framings. What stays barred is *identity substitution* — shipping the game AS the
+> canonical title, or calling it a "clone"/"remake" (both imply passing the original off as ours).
+>
+> **Operational follow-through:** the brief spec's Remix Unit (Section 3,
+> [../specifications/brief.md](../specifications/brief.md)) gains a fifth transformation category —
+> *faithful reproduction (same game, new identity)* — and no longer treats "no transformation" as a
+> design failure.
+
 ## The decision
 
 Every game in the Code198x curriculum is *inspired by* canonical Spectrum / arcade / textbook games, not a clone of them. The named legends and games in lineup tables are *references for tradition*, not titles to recreate. Each curriculum game ships with its own name, characters, art, and design identity.
@@ -35,6 +62,8 @@ Two-word phrasal names acceptable when compounds don't land (*Night Patrol*, *Ta
 
 When naming a new game, follow the convention. Reference canonical games as *traditions* and *legends*, never as titles to copy. Use phrases like "in the [Legend Name] tradition," "inspired by [Canonical Game]," "Game N descends from [Canonical Game]'s technique vocabulary."
 
+You may — and should — credit specific ancestors and name what was borrowed from each; the Classic Ancestors section (brief §2) is the home for that credit, and the Remix Unit (§3) records whether the borrowing is a transformation or a faithful reproduction. Precise, generous credit is the point — it names the shoulders the game stands on.
+
 ### In MDX prose
 
 Per-unit prose can name canonical games when discussing techniques or traditions (e.g., "the masked-sprite technique Ultimate pioneered in Atic Atac"). But the curriculum game being taught is always named by its own inspired-by name, never the canonical reference.
@@ -53,12 +82,12 @@ If discussion or copy shows any of these patterns, stop and re-read this decisio
 
 1. **A curriculum game named after a real product** (e.g., "Pong," "Pac-Man," "Battleship") in any new game spec or unit.
 2. **A unit's MDX prose framing the curriculum game AS the canonical game** (e.g., "In this unit you'll build Pac-Man" rather than "you'll build a maze-pursuit game in the Pac-Man tradition").
-3. **Marketing copy describing a curriculum game as a "clone" or "remake"** of any commercial title.
+3. **Marketing copy describing a curriculum game as a "clone" or "remake"** of any commercial title — these imply identity substitution (passing the original off as ours). Crediting influence openly ("a homage to X," "faithfully reproduces X's mechanics," "in the X tradition") is encouraged, not drift.
 4. **Vault entries treating curriculum games as alternative titles for canonical games.** They're different artefacts.
 5. **A new game proposal that picks a name based on the canonical title rather than the design** (e.g., "Pyong" for a Pong-inspired game).
 
 ## Status
 
-Active. Captured 2026-05-19. Descends from [real-retro-games.md](real-retro-games.md) (multi-disciplinary commitment) and the inspired-by framing already present in [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md). Consolidates the principle into a binding rule applicable to both Spectrum BASIC and Spectrum Assembly track design.
+Active. Captured 2026-05-19; **amended 2026-07-01** (must-differentiate pressure lifted, faithful reproduction made first-class, influence-crediting encouraged — see the amendment block at the top). Descends from [real-retro-games.md](real-retro-games.md) (multi-disciplinary commitment) and the inspired-by framing already present in [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md). Consolidates the principle into a binding rule applicable to both Spectrum BASIC and Spectrum Assembly track design.
 
 Anchored in [[spectrum-assembly]] (current-state Assembly summary) and [[spectrum-basic]] (current-state BASIC summary).
