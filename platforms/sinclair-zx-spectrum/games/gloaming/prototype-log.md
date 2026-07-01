@@ -64,3 +64,25 @@ checked-in verification: an idle player must lose.
 **Open for round 3 (Steve):** does the dark feel like it *wants* the lamps? Is
 `DRAUGHT_SPEED 8` fair for dusk 1? Does wall-ghosting read as intent or bug? Then:
 the dusk table ("the night deepens") and the best-night pips.
+
+## 2026-07-01 — round 3: "MUCH too aggressive" → the dusk table lands
+
+**Playtest round 3 (Steve), seek build:** the hunt at one step per 8 frames is
+**much too aggressive even as an opening** — the raw seek gave the wisp no gentle
+mode. The contracted fix was already queued: the curve.
+
+**The night deepens (brief §10), implemented:** `dusk_table` (16, 13, 11, 9, 8, 7,
+6, 5 frames per step; deeper dusks hold the last entry) replaces the constant —
+dusk 1 at half the round-3 aggression *on purpose*: the hunt must be readable
+before it's a threat. A run is now a night: THE NIGHT IS HELD is the dusk
+interstitial (Space → deeper dusk, square re-darkened, lives carried); only NIGHT
+FALLS ends the run. Score = dusks survived.
+
+**Verified:** win gate green; deepening screenshot-verified (fresh dusk, carried
+lives); loss gate green; idle probe still loses at dusk-1 pace.
+
+**Design question parked for Steve:** §10 contracted the endless-arcade shape
+(dusks until the night wins). The alternative with a *completion* beat: a fixed
+night — survive N dusks and **dawn breaks**, a true win that fits both the title
+and the track's "I finished a real game" headline. Decide before the best-night
+pips (it changes what they count).
