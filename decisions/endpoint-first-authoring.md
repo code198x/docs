@@ -1,7 +1,34 @@
 # Decision: the endpoint comes first — build the game, then author the route
 
-**Status:** Active. Applies from the game-2 wave (Exodus onward).
+**Status:** Active. Applies from the game-2 wave (Exodus onward) **and retroactively to the
+five shipped launch on-ramp games** — see the 2026-07-01 amendment.
 **Date:** 2026-06-12.
+
+> **AMENDED 2026-07-01 — extended retroactively to the launch games, as *validate-and-repair*.**
+> The original scope ("game-2 wave onward") is widened: the five shipped, forward-authored launch
+> on-ramp games — **Gloaming, Shadowkeep, Starfield, Dash, Flock** — are brought to the endpoint-first
+> bar before October. This reverses the forward-authoring debt the § *Why* describes, rather than
+> only avoiding it on new games.
+>
+> **Altitude: validate-and-repair, not from-scratch re-author.** Build the missing piece — the
+> winnable, playtested prototype — and let it prove or break the *existing* route; then re-author
+> only the units the prototype disproves. Endpoint-first applied as **rescue**: keep the prose that
+> survives contact with a working game; fix the Dash-class geometry/tuning bugs the gate catches.
+> **Pivot to full re-author only where a game genuinely doesn't work** — where the built game can't
+> be made winnable/coherent by repair. That judgement is made *with the prototype in hand*, not
+> speculatively.
+>
+> **Guardrails (binding on this amendment):**
+> - **Never regress the launch.** Each shipped game stays live and marked `complete` until its
+>   rebuilt version passes the winnability gate *and* the 8-item DoD. A rebuild replaces the old game
+>   only when the new one is provably better. Worst case is "we shipped what we already had," never
+>   "we tore down five games and ran out of clock."
+> - **Never more than one launch game in-flight at a time.** Sequential, not parallel — "done" does
+>   not become "in-progress on a deadline" across the whole slate.
+> - **Prove the pipeline once before committing to five.** No endpoint-first rebuild of a *launch*
+>   game has been done (Exodus, the intended first, is parked), so per-game cost is unknown. Start
+>   with **Gloaming** (smallest game, most mature tooling, partial win captures already present),
+>   time it end-to-end, then size the remaining four against a real number rather than hope.
 
 ## The decision
 
