@@ -440,8 +440,8 @@ The control register selects the waveform and gates the sound on/off.
 
 This unit demonstrates these reusable patterns:
 
-- [SID Voice Initialisation](/patterns/commodore-64/audio/sid-voice-init) - Setting up voices
-- [Note Frequency Table](/patterns/commodore-64/audio/note-frequencies) - Pitch lookup
+- [SID Voice Initialisation](/patterns/commodore-64/assembly/audio/sid-voice-init) - Setting up voices
+- [Note Frequency Table](/patterns/commodore-64/assembly/audio/note-frequencies) - Pitch lookup
 
 You can adapt these patterns for your own projects.
 ```
@@ -638,9 +638,9 @@ and three independent voices.
 ```markdown
 ## Pattern Library
 
-- [Sprite Multiplexing (Basic)](/patterns/commodore-64/rendering/sprite-multiplex-basic) -
+- [Sprite Multiplexing (Basic)](/patterns/commodore-64/assembly/rendering/sprite-multiplex-basic) -
   Game 9 technique for 16 sprites using sorted lists
-- [Sprite Multiplexing (Advanced)](/patterns/commodore-64/rendering/sprite-multiplex-advanced) -
+- [Sprite Multiplexing (Advanced)](/patterns/commodore-64/assembly/rendering/sprite-multiplex-advanced) -
   Game 12 optimisation with raster-stable timing
 ```
 

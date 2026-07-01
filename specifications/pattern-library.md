@@ -16,11 +16,15 @@ The Pattern Library is a collection of reusable code patterns taught throughout 
 
 ### URL Structure
 
+Every platform path carries a **language track** (`assembly`, `basic`, `amos`, `blitz`) between the platform and the category. Cross-platform is the one exception — it spans languages by definition, so it has no track level.
+
 ```
-/patterns/                           # Index: browse by platform or category
-/patterns/commodore-64/              # All C64 patterns
-/patterns/commodore-64/rendering/    # C64 rendering patterns
-/patterns/commodore-64/rendering/sprite-multiplexing-basic/
+/patterns/                                          # Index: browse by platform or category
+/patterns/commodore-64/                             # All C64 patterns
+/patterns/commodore-64/assembly/rendering/          # C64 assembly rendering patterns
+/patterns/commodore-64/assembly/rendering/sprite-multiplexing/
+/patterns/sinclair-zx-spectrum/basic/rendering/     # Spectrum BASIC rendering patterns
+/patterns/cross-platform/rendering/                 # Cross-platform — no track
 ```
 
 ### Categories
@@ -115,11 +119,11 @@ Links only - no prose.
 ```markdown
 ## Related
 
-**Patterns:** [Raster Interrupts](/patterns/commodore-64/framework/raster-interrupts) | [Sprite Animation](/patterns/commodore-64/rendering/sprite-animation)
+**Patterns:** [Raster Interrupts](/patterns/commodore-64/assembly/framework/raster-interrupts) | [Sprite Animation](/patterns/commodore-64/assembly/rendering/sprite-animation)
 
 **Vault:** [VIC-II Chip](/vault/vic-ii) | [Raster Tricks 101](/vault/raster-tricks-101)
 
-**Evolution:** Basic → [Sorted](/patterns/commodore-64/rendering/sprite-multiplexing-sorted) → [Advanced](/patterns/commodore-64/rendering/sprite-multiplexing-advanced)
+**Evolution:** Basic → [Sorted](/patterns/commodore-64/assembly/rendering/sprite-multiplexing-sorted) → [Advanced](/patterns/commodore-64/assembly/rendering/sprite-multiplexing-advanced)
 ```
 
 ---
@@ -185,41 +189,44 @@ Patterns are **not** tutorials. They assume you've done the curriculum or have e
 
 ## File Structure
 
+Pattern entries are MDX in the `patterns` content collection. The path is `{platform}/{track}/{category}/{name}.mdx` for every platform; `cross-platform` omits the track.
+
 ```
-/website/src/pages/patterns/
-  index.astro                              # Main index
+src/content/patterns/
   commodore-64/
-    index.astro                            # C64 patterns index
-    rendering/
-      sprite-multiplexing-basic.mdx
-      sprite-multiplexing-sorted.mdx
-      scrolling-character.mdx
-    input/
-      joystick-reading.mdx
-    audio/
-      sid-music-playback.mdx
-    framework/
-      raster-interrupts.mdx
-      game-loop.mdx
+    assembly/
+      rendering/
+        hardware-sprites.mdx
+        sprite-multiplexing.mdx
+      audio/
+        sid-multi-voice.mdx
+      framework/
+        game-loop-basic.mdx
+    basic/                                 # when BASIC patterns are extracted
+      ...
   sinclair-zx-spectrum/
-    index.astro
-    rendering/
-      software-sprites.mdx
-      attribute-clash.mdx
-    input/
-      keyboard-reading.mdx
-    framework/
-      interrupt-mode-2.mdx
+    assembly/
+      rendering/
+        ...
+    basic/
+      rendering/
+        seven-segment-digits.mdx
+        progress-bar.mdx
+      framework/
+        screen-frame.mdx
+        text-utilities.mdx
   commodore-amiga/
-    index.astro
-    ...
+    assembly/
+      ...
+    amos/                                  # when AMOS/Blitz patterns are extracted
+      ...
   nintendo-nes/
-    index.astro
-    ...
-  cross-platform/
-    sprite-collision.mdx                   # Comparison pages
-    game-loop.mdx
-    scrolling.mdx
+    assembly/                              # single track by nature — no BASIC target
+      rendering/
+        ...
+  cross-platform/                          # no track level — spans languages
+    rendering/
+      sprite-collision.mdx
 ```
 
 ---
@@ -263,13 +270,13 @@ Units link to both standalone demos and patterns:
 ```markdown
 > **Isolated Example:** See [techniques/sprite-multiplexing.asm](link) for a minimal demonstration.
 
-For a production-ready version, see [Pattern: Sprite Multiplexing](/patterns/commodore-64/rendering/sprite-multiplexing-basic).
+For a production-ready version, see [Pattern: Sprite Multiplexing](/patterns/commodore-64/assembly/rendering/sprite-multiplexing-basic).
 ```
 
 ### From Vault
 Vault articles link to implementations:
 ```markdown
-See the [Pattern Library](/patterns/commodore-64/rendering/sprite-multiplexing-basic) for working code.
+See the [Pattern Library](/patterns/commodore-64/assembly/rendering/sprite-multiplexing-basic) for working code.
 ```
 
 ### Relationship Summary

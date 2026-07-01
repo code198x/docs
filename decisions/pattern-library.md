@@ -29,7 +29,7 @@ When a curriculum unit produces a reusable technique — a sprite-flicker-avoida
 
 ### For pattern entries
 
-Each pattern entry lives at `patterns/{platform}/{category}/{pattern-name}/` or `patterns/cross-platform/{category}/{pattern-name}/`. The categories are fixed (see above); the pattern names follow each category's conventions.
+Each pattern entry lives at `patterns/{platform}/{track}/{category}/{pattern-name}/`, where `{track}` is the language (`assembly`, `basic`, `amos`, `blitz`…). Cross-platform patterns live at `patterns/cross-platform/{category}/{pattern-name}/` — no track, because they span languages by definition. The categories are fixed (see above); the pattern names follow each category's conventions. See the [2026-07-01 amendment](#amendment-2026-07-01-uniform-track-level) for why the track level is universal.
 
 ### For polish content
 
@@ -37,7 +37,7 @@ Each pattern entry lives at `patterns/{platform}/{category}/{pattern-name}/` or 
 
 ### Existing entries are correctly categorised
 
-The current four BASIC patterns on Spectrum (seven-segment-digits, progress-bar, text-utilities, screen-frame) and the further candidate BASIC patterns are correctly slotted into the technique categories. No structural rework needed.
+The four BASIC patterns on Spectrum (seven-segment-digits, progress-bar, text-utilities, screen-frame) and the further candidate BASIC patterns are correctly slotted into the technique categories. The *categorisation* was always right; only the *track placement* changed — see the [2026-07-01 amendment](#amendment-2026-07-01-uniform-track-level), which extended the track level to every platform.
 
 ## Drift triggers
 
@@ -49,6 +49,16 @@ If pattern-library planning shows any of these patterns, stop and re-read this d
 - Curriculum units written to "teach against" specific Pattern Library entries — that's reverse flow; units teach techniques, and patterns get extracted when units surface them.
 - Cross-platform patterns proposed without a clear platform-neutral implementation; cross-platform is for genuinely platform-neutral concepts, not for "we'll port this later."
 
+## Amendment (2026-07-01): uniform track level
+
+**What changed.** The language track (`assembly`, `basic`, …) is now a level in **every** platform's path, not only platforms that already hold patterns in two languages. C64, Amiga and NES patterns moved from `{platform}/{category}/` to `{platform}/assembly/{category}/`, matching the Spectrum's existing `assembly/` + `basic/` split. Cross-platform is the sole exception — it spans languages, so it stays `cross-platform/{category}/`.
+
+**Why this supersedes "no structural rework needed."** The original decision inserted a track bucket only where a platform *already* had both tracks in the library. That left C64 and Amiga flat — but both are multi-track platforms whose curricula (C64 BASIC, Amiga AMOS and Blitz) are already live, so their BASIC/AMOS/Blitz patterns are a near-certain near-term output, not a hypothetical. Under the old rule each of those would have forced a per-platform migration (moving existing assembly patterns into an `assembly/` bucket) at the moment the first second-track pattern landed. Making the track level universal now pays that cost once, while the library is small (~29 patterns), and yields a rule that is stateable without exceptions: *every pattern is `platform/track/category/name`*. NES keeps a single `assembly/` track by its nature — no BASIC dev target for the console ever existed — accepting one semantically-thin level in exchange for a layout with no special cases.
+
+**Why not a frontmatter field instead of a path segment.** Track has to stay in the path: the same technique (e.g. a game loop) will exist in both BASIC and assembly, and without the directory split those same-named entries would collide at one URL. A `track` frontmatter field could be *added* later for browse-by-language, but it cannot *replace* the path segment.
+
+**Cost paid.** ~29 pattern files moved; body links rewritten to insert `/assembly/`. Routing, breadcrumbs and filtering read the platform/category/difficulty from frontmatter, so only URLs changed; `evolution`/`related` use bare slugs and were unaffected. Pre-launch, so URL churn carries no external cost.
+
 ## Status
 
-Active. Captured 2026-05-13. Lighter-touch decision; codifies existing Pattern Library architecture and corrects two earlier framing errors (direction of flow, categorisation scheme). Descends from [real-retro-games.md](real-retro-games.md) — multi-disciplinary curriculum naturally surfaces patterns across all five disciplines.
+Active. Captured 2026-05-13; amended 2026-07-01 (uniform track level — see above). Lighter-touch decision; codifies existing Pattern Library architecture and corrects two earlier framing errors (direction of flow, categorisation scheme). Descends from [real-retro-games.md](real-retro-games.md) — multi-disciplinary curriculum naturally surfaces patterns across all five disciplines.

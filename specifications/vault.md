@@ -167,7 +167,7 @@ Rob Hubbard's C64 soundtracks pushed the SID chip to its limits. A classically t
 
 **Sections:** Overview, How It Works, Trade-offs, See Also
 
-Link to Pattern Library for actual code: "See [Pattern: Sprite Multiplexing](/patterns/commodore-64/rendering/sprite-multiplexing) for implementation."
+Link to Pattern Library for actual code: "See [Pattern: Sprite Multiplexing](/patterns/commodore-64/assembly/rendering/sprite-multiplexing) for implementation."
 
 ### Hardware
 
