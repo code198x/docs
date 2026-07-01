@@ -1,5 +1,11 @@
 # Gloaming — Brief (DRAFT for review)
 
+> **Reshape settled 2026-07-01 — see §10.** The antagonist's fiction is decided (the draught
+> is the dark itself, a malign intelligence), and with it the three Finish-test gaps this brief
+> shipped with: behaviour (seek the nearest light), curve (the night deepens), go-again (your
+> longest night). §10 is the design contract for the validate-and-repair pass; the full
+> alignment of this brief to the current 14-section spec happens in that pass.
+
 **Title (working):** Gloaming  *(name now settled: Gloaming)*
 **System / Track:** ZX Spectrum / Assembly
 **Position:** Volume 1, **Game 1** — the tiny first game, ahead of Shadowkeep (which becomes Game 2). Per [decisions/spectrum-assembly-gentle-ramp.md](../../../../decisions/spectrum-assembly-gentle-ramp.md).
@@ -148,3 +154,70 @@ Settled with Steve, 2026-06-01:
 4. **Art direction — accepted** (§6). Working defaults, tweakable during authoring: pale dusk-lit stone walls; a *fixed* night backdrop (no darkening sweep — pressure comes from the draught, not a clock); a hooded-figure-with-pole lamplighter glyph. The palette is what the hardware gives us — eight colours, two per cell — and the design leans into that limit rather than fighting it.
 
 **Next step:** the per-unit-plan (unit-by-unit detail + code listings, matching `shadowkeep/per-unit-plan.md`), then wiring the content-collection entries — the authoring the gentle-ramp scopes as the downstream work. The brief is the design contract; authoring builds against it.
+
+## 10. Reshape addendum (2026-07-01) — the dark is the antagonist
+
+Settled with Steve, 2026-07-01, ahead of the validate-and-repair pass
+([decisions/endpoint-first-authoring.md](../../../../decisions/endpoint-first-authoring.md),
+2026-07-01 amendment). The shipped game passed the winnability gate but fails three of the
+Finish test's six questions (curve, go-again, feel — the test postdates this brief). The root
+cause is a design gap, not a tuning gap: **the antagonist's fiction was never decided**, so its
+behaviour was never designed ("a slow patrol" is a guard's verb, not a wisp's). This section
+decides it.
+
+### The fiction: the draught is the dark itself
+
+Not weather. The draught is **a wisp of the night — the gloaming made animate, a malign
+intelligence probing the square**. The shipped game already named everything this way (the
+title, *Nightheld*, *the fall of night*, the nightfall sting, warm-against-cold throughout);
+the brief just never listened. The word "draught" stays (unit 13 is live) with its referent
+sharpened: *a draught of the coming night, a cold current of the dark*.
+
+### The behaviour: it seeks the nearest light — and the lamplighter is one
+
+One rule: every `DRAUGHT_SPEED` frames, the wisp steps toward the **nearest light source —
+lit lamp or the lamplighter, whichever is nearer**. Everything the game needs falls out:
+
+- **At dusk, nothing lit, it hunts *you*.** Menace from the first frame, no tutorial.
+- **Every lamp you light is a decoy** — it peels off to snuff the nearer light, so lighting
+  the town literally protects you by distracting the night. The premise ("light them all and
+  the square holds back the dark") becomes mechanically true.
+- **Your progress is its prey.** It snuffs what it reaches (shipped behaviour, kept) and
+  retargets — so "all lamps lit at once" is under live pressure and routing is the game.
+
+The intelligence is one compare-and-step rule reading as *intent* — the lesson of Namco's
+ghost AI in *Pac-Man*, where simple deterministic per-ghost rules read as personality and
+malice. Credited openly per
+[decisions/inspired-by-not-clones-naming.md](../../../../decisions/inspired-by-not-clones-naming.md)
+(2026-07-01 amendment). Still cell-step + save/restore — no new engine technique; the budget
+holds.
+
+### The curve: the night deepens
+
+Win a dusk → the square holds — then a deeper dusk falls, and the dark comes back faster.
+`DRAUGHT_SPEED` stops being a constant and becomes a per-dusk table the loop reads
+(e.g. 8, 6, 4, 3 — tuned in the prototype), the
+[escalation-as-data](/patterns/cross-platform/framework/escalation-as-data) pattern. At deep
+dusk it snuffs nearly as fast as you light — the run ends there, arcade-honest. Score becomes
+**dusks survived**.
+
+### The go-again hook: your longest night
+
+The title screen holds a second pip row — one pip per dusk survived, best run — surviving the
+loop back to the title. **Still no rendered digits** (that stays Shadowkeep's major); the best
+run is read in lamps, which is the right shape for this game anyway.
+
+### Feel (pending the human playtest)
+
+Held-key movement at one cell per frame is the sheet's top worry (wall-magnet). Expected fix
+is a repeat-gate constant (move on press, then every N frames held) — confirm by hand before
+touching. The playtest question for the behaviour sharpens from "menace or wallpaper?" to
+**"does the dark feel like it *wants* the lamps?"**
+
+### Blast radius (validate-and-repair, not re-author)
+
+The reshape disproves parts of units 13–15 (behaviour), 12 (*Nightheld* becomes the per-dusk
+win), and 19 (*Again* gains the best-night row); it may add one short unit for the dusk table.
+The other ~17 shipped units stand. Order of work: baseline human playtest of the shipped game
+first (the feel questions survive the reshape), then prototype the reshape, gate it (win *and*
+loss scripts re-run), playtest again, then re-author the disproved units.
