@@ -108,7 +108,7 @@ Five categories:
 - **Same tropes, new core mechanic** — the genre tropes are preserved (e.g., platformer with collectibles), but the mechanical foundation is novel (e.g., grappling-hook movement replaces jumping).
 - **Same aesthetic constraint, alien genre** — the look and sound feel 1985, but the gameplay is alien to the era.
 - **Same feel, different era's vocabulary** — period-tight controls combined with modern structural ideas (roguelite runs, metroidvania gating).
-- **Faithful reproduction — same game, new identity** — the mechanics are the ancestor's, reproduced as faithfully as you like; the only transformation is the identity (new name, world, characters, art). Use when the teaching goal is a genre's canonical technique built the way it was actually built. Credit the ancestor openly and name what was taken (§2). *(Added 2026-07-01 — see [decisions/inspired-by-not-clones-naming.md](../decisions/inspired-by-not-clones-naming.md).)*
+- **Faithful reproduction — same game, new identity** — the mechanics are the ancestor's, reproduced as faithfully as you like; the only transformation is the identity (new name, world, characters, art, **and level data** — specific maze layouts and level geometry are protectable expression, not mechanic, so they stay original along with the rest of the identity). Use when the teaching goal is a genre's canonical technique built the way it was actually built. Credit the ancestor openly and name what was taken (§2). *(Added 2026-07-01 — see [decisions/inspired-by-not-clones-naming.md](../decisions/inspired-by-not-clones-naming.md).)*
 
 Pick one category; then state the specific move — or, for faithful reproduction, what you kept and what the new identity is — in a sentence.
 

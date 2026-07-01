@@ -15,6 +15,12 @@
 > *specific expression* (copyright) are what we keep original. Relaxing the pedagogy pillar costs
 > nothing here, because the firewall was never the pedagogy pillar.
 >
+> **Faithful means the rules and feel, with our own level data.** Specific maze layouts, level
+> geometry, and playfield arrangements sit on the *expression* side of the line, not the mechanic
+> side — *Tetris Holding v. Xio* (2012) found even playfield dimensions and piece behaviour
+> protectable expression. So a faithful reproduction borrows the ancestor's systems, rules, and
+> tuning philosophy, but designs its own levels — alongside its own name, characters, and art.
+>
 > **Point to influences clearly and specifically.** "In the X tradition" is a floor, not a ceiling.
 > Briefs, curriculum prose, the vault, and marketing may name the exact ancestors and enumerate what
 > was borrowed — e.g. "Shadowkeep takes its room-graph and flip-screen from *Atic Atac*, its
