@@ -141,3 +141,22 @@ pool in one frame), idle probe. All green on the textured build.
 see if it feels right." Round-6 playtest decides whether the hybrid stays. Still
 queued behind it: gathering pause, interior buildings, corner rotation, dawn sweep,
 best-night pips, audio pass, the unassisted capstone run.
+
+## 2026-07-02 — round 6: absence doesn't read — the dark needs a body
+
+**Playtest round 6 (Steve):** two visual findings — the tendril hard to see, the
+walls not attractive enough.
+
+**The tendril fix is a design lesson worth teaching:** the dark was rendered as
+*absence* (black-on-black void cells), and absence doesn't read at cell scale — the
+eye skips a hole in sparse stipple. Mist is a *presence*: dark cells now carry a
+dense swirl texture in bright blue ink, and the tendril reads instantly as glowing
+cold veins. Same rule, same byte-compare structure — only the body changed.
+**Confession: we rendered "nothing" and expected it to look like something.**
+
+**Walls:** the brief's brickwork ("reads as built, solid") — mortar courses,
+staggered verticals — blitted wherever the wall attribute bit is set, so interior
+buildings will arrive pre-bricked and the win ramp turns the brick golden.
+
+All five checks green. Round 7 is the hybrid verdict proper, now that the hybrid
+can actually be seen.
