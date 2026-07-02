@@ -252,3 +252,21 @@ Brief §10 behaviour block annotated (rounds 10–12 evolution).
 
 All five checks green; idle probe still loses. Round 13: is watch 3 beatable,
 and does the whole hunt now read as a creature with a memory?
+
+## 2026-07-02 — round 13: the finishing tier — dawn sweep + the longest night
+
+**Tuning note first (Steve): "we may have made it too easy"** after oldest-lit —
+banked for the capstone calibration; every knob is data (dusk_table, dusk_lentab,
+WREST, GATHER).
+
+**Built:** the **dawn sweep** (morning descends row by row, ground to gold, mist
+burning off — a second of ceremony between the dawn text and the fanfare) and
+**your longest night** (five title pips, one per watch survived, best run, dawn
+fills it; recorded at NIGHT FALLS and the dawn, never reset in play; no digits).
+That was brief §10's last unbuilt feature — **the reshape's feature set is now
+complete.**
+
+Six checks green (the dawn script now continues to the title and verifies the
+golden row). **Remaining:** the audio pass (chime redo + a dawn phrase — needs
+Steve's ear), the difficulty calibration, then the unassisted title-to-dawn
+capstone run → decompose → re-author.
