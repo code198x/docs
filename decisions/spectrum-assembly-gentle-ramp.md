@@ -38,6 +38,26 @@
 > stand alone is a build-time call. The tiny first game has since been designed and named
 > **Gloaming** (resolving open question 4).
 >
+> **AMENDED 2026-07-02 — Gloaming spans two modules; the first revisit module is realised.**
+> The validate-and-repair pass (endpoint-first, retroactive) redesigned Gloaming through
+> fifteen playtest rounds into a five-watch night — a hunting, grudge-bearing,
+> tendril-trailing dark and a dawn ending. Provably better, and no longer *tiny*. The
+> tension resolves by the pattern this record already blessed above: **one game, two
+> modules** ([modules-not-games.md](modules-not-games.md)).
+> **Module 1 — "Gloaming"** keeps the tiny-first-game promise at the original scope
+> (~20 units: foundation, textured square, tamed movement, lamps, a draught that *hunts
+> you*, lives, a single-dusk win) — every baseline repair in, nothing heavier.
+> **Module 2 — working title "The Long Night"** (final name Steve's call) is the reshape
+> as a *revisit module* (~10 units: the pools, the tendril's ring buffer, the grudge
+> queue, the deepening watches, the dawn, the bells) — its secret curriculum is
+> **iteration itself**: the learner upgrades a finished game they already own, with the
+> prototype log's confessions taught where they were lived. The ladder reads
+> Primer → Gloaming → The Long Night → Shadowkeep. Module 1 replaces the shipped game
+> only when its derived cut passes the winnability gate (never-regress); module 2 is
+> pure addition. Plan:
+> `platforms/sinclair-zx-spectrum/games/gloaming/per-unit-plan.md`; discovery record:
+> `prototype-log.md` beside it.
+>
 > **Lineup tightened to a 10-game rendering ladder (2026-06-10).** The 2026-lineup-replan
 > resolves this track to a **tight ~10-game ladder** ending at the Spectral Legacy
 > capstone (catalogue is authoritative: `website/src/content/modules/sinclair-zx-spectrum/assembly.yaml`).

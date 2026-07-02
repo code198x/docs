@@ -346,3 +346,21 @@ absence-doesn't-read, the input-contract lesson, the eraser problem). Then:
 re-author the disproved units (12–15, 19, plus the new material — tendril,
 pools, dawn, bells), realign the brief to the 14-section spec, and only then
 does the rebuilt Gloaming replace the shipped one (never-regress guardrail).
+
+## 2026-07-02 — decompose: teaching order ≠ discovery order — and two modules
+
+**The decomposition settled with Steve.** Principle: the learner builds an iteration
+only where feeling the failure teaches (the wall-magnet, the eraser problem); dead
+iterations (the bounce, rules-before-canvas) are confessed, not built. Five calls made:
+no bounce unit; nearest-then-oldest both taught; texture at unit 2; audio in each
+module's finish phase; and the big one — **the reshaped game is no longer tiny, so
+Gloaming becomes one game spanning two modules** (the pattern modules-not-games and the
+gentle-ramp's revisit-modules amendment already blessed). Module 1 "Gloaming" (~20
+units) keeps the tiny promise: single dusk, a draught that hunts you, lives, the win.
+Module 2 (working title "The Long Night", ~10 units) is the reshape as a revisit
+module — its secret curriculum is iteration itself. Ladder: Primer → Gloaming → The
+Long Night → Shadowkeep. Gentle-ramp amended; per-unit-plan rewritten (supersedes
+2026-06-01).
+
+**Next:** derive + gate the module-1 cut from the proven prototype; realign the brief;
+author module 1.
