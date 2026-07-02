@@ -123,6 +123,40 @@ who has watched a real game get better under their own hands.
 
 ---
 
+## The route skeleton and the teachability gate (authoring contract, 2026-07-02)
+
+Unit code derives from the proven builds — but *correct* intermediate states are not
+automatically *teachable* ones, and one class of unit cannot be derived at all. The
+skeleton session works to this contract:
+
+**Backbone by reverse subtraction.** Most units' end-states are pure subsets of
+`gloaming-m1.asm` (module 2: of `gloaming.asm`); derive them mechanically, newest first,
+assert-anchored, assembling each.
+
+**Detours, authored forward.** Units that teach a *naive* version a later unit replaces
+exist in no subset of the final build — they are the deprecation-pair pedagogy in
+miniature and are authored by hand. Declared detours (module 1): units 5–8, the movement
+run — raw key scan, naive erase-and-redraw (now *visibly* wrong: the stipple shows the
+gouged trail, where the shipped course could only assert the flaw), the ungated
+wall-magnet, resolved by the gate and save/restore. A detour must **converge**: where it
+rejoins, its code is asserted identical to the subtraction backbone.
+
+**The teachability gate — four checks per unit, before any prose:**
+
+1. **Assembles and runs** (the standing bar).
+2. **Shows its idea** — a *proof shot* named in advance: the screenshot or interaction
+   demonstrating the unit's one idea. No nameable proof shot → wrong boundary. Proof
+   shots become the units' shipping screenshots.
+3. **Narrates as one idea** — the N−1→N diff explainable in one sentence. A scattered
+   diff means the boundary moves (counts are illustrative, never targets).
+4. **Converges** (detours only) — mechanical equality with the backbone at the rejoin.
+
+**Deliverable and checkpoint:** the skeleton session produces the twenty gated step
+files *and* a **route map** — one row per unit: method (subset/detour), the
+one-sentence narration, the proof shot, gate status. **Steve reviews the route map
+before prose begins** — a mis-set boundary costs a conversation there, a rewritten
+unit later.
+
 ## Carried forward
 
 - **Deprecation pairs intact:** cell-step movement and one-thing-per-cell save/restore
