@@ -1121,3 +1121,21 @@ while the icon model resolves two of the three BREAKS outright;
 parallax as blitted cloud drift (dual playfield stays reserved);
 toolbar capped at 4–5 icons. Stage-1 brief revision now has its full
 desk: resumed brief + stress report + vision note.
+
+## 2026-07-02 — Gloaming module 1: the route skeleton, gated
+
+The twenty unit end-states exist as builds. Backbone derived from
+`gloaming-m1.asm` by scripted, assert-anchored subtraction
+(`skeleton/derive-skeleton.py` — the m1 cut's own method, reused);
+detours 5–8 authored forward; unit 20 byte-identical to the gated m1
+snapshot, so the proven suite transfers. All twenty assemble, run
+headless, and carry verified proof shots (30 captures + a blip→fanfare
+WAV); every boundary diff audited as one idea; detour convergence
+mechanical (8→9 walls-only, 9→10 clamp-only). Route findings for
+review: unit 10 reinterpreted (no bounds exist in m1 — the detour
+gains a declared scaffold clamp that unit 10 retires: "the square
+itself is the boundary"), unit 4's proof is the pulse probe Try This,
+audio distributes 18=blip+fanfare+sting / 19=chime, and `unlight_pip`
+is dead code in the m1 cut. Deliverable:
+`platforms/sinclair-zx-spectrum/games/gloaming/route-map.md` —
+**stopped there; Steve reviews the map before any prose.**
