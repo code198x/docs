@@ -270,3 +270,34 @@ Six checks green (the dawn script now continues to the title and verifies the
 golden row). **Remaining:** the audio pass (chime redo + a dawn phrase — needs
 Steve's ear), the difficulty calibration, then the unassisted title-to-dawn
 capstone run → decompose → re-author.
+
+## 2026-07-02 — round 14: the audio pass — the ear got a fast loop
+
+**The enabling move first:** Build198x grew its second tool (the demand gate
+fired on this exact round): `build198x beeper` turns phrase notation into an
+audition WAV and the phrase's assembly block — same timing model both ways,
+calibrated by regenerating rounds 1–13's hand-authored constants exactly.
+Audition went from assemble→boot→capture→listen to edit→listen; every sound
+below was chosen by Steve's ear from generated candidates.
+
+**Chosen:** the title now *loops* — dusk bells (cold A4 tolls, the E5→C5
+motif, a warm rise, D5 left hanging so the loop leans home), one note per
+`title_step` pass, SPACE polled between notes. `chime_dusk` is retired, not
+redone: every one-axis variant failed Steve's ear because the two bells were
+a fragment doing a whole piece's job — inside the tune they already do it
+well. The dawn gains `chime_dawn` (dusk's bell reversed, ending on the
+dominant so `fanfare_held` answers it — auditioned *in sequence* with the
+fanfare, which is what settled the vote). `blip_lit` finally rises as brief
+§10 always said (C6→E6, the motif at blip speed); `blip_snuff` falls the
+same third an octave down. One motif, title to dawn.
+
+**Emulator verification caught a real bug:** with per-cell polling a 6-frame
+SPACE tap vanished into a blocking cell. Fix: per-note steps plus
+`title_rest` — the tune's silence polls every frame and latches the press.
+A tap can land inside a note, never inside a rest. Title capture is 62.6%
+audible over 10 s (the tune's own tone-to-rest ratio); the same tap that
+was eaten now starts the game.
+
+**Remaining:** the difficulty calibration ("we may have made it too easy" —
+banked from round 13), then the unassisted title-to-dawn capstone run →
+decompose → re-author. The audio pass is done.
