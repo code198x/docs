@@ -324,3 +324,25 @@ The dawn-candidates audition sheet committed as provenance.
 
 **Remaining:** difficulty calibration (the "too easy" flag) + the unassisted
 title-to-dawn capstone run → decompose.
+
+## 2026-07-02 — round 15: THE CAPSTONE — played end to end, and won
+
+**Steve, unassisted, title to DAWN BREAKS: "I love it. Played end to end. And
+yes, I won."** The winnability gate's human half is passed on the reshaped game;
+the six-script machine half is checked into `prototype/capture/` (win/deepening,
+dawn/pips, loss, menace probe, two audio captures) with its address-derivation
+and input-timing contract documented. The round-13 "too easy" flag did not
+survive the finished night — no re-tune requested at the capstone.
+
+**The prototype phase is complete.** The pilot's shape, for sizing the other
+four launch games: **two working sessions across two days (2026-07-01 evening →
+2026-07-02 afternoon), 15 playtest rounds, ~20 gated commits** — taking a
+shipped, forward-authored game through validate-and-repair into a redesigned,
+audio-complete, gate-proven prototype (plus a parallel audio session).
+
+**Next phase — decompose:** the prototype's commit history is the unit-sequence
+draft; this log holds the confessions (the recoil, the load-bearing stipple,
+absence-doesn't-read, the input-contract lesson, the eraser problem). Then:
+re-author the disproved units (12–15, 19, plus the new material — tendril,
+pools, dawn, bells), realign the brief to the 14-section spec, and only then
+does the rebuilt Gloaming replace the shipped one (never-regress guardrail).
