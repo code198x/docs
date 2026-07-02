@@ -191,3 +191,21 @@ player, ghosted by the wisp — the seek asymmetry made spatial).
 
 All five checks green. **Remaining:** dawn sweep, best-night pips, audio pass
 (weak chime + a dawn phrase), then the unassisted title-to-dawn capstone run.
+
+## 2026-07-02 — round 9: the buildings multiply the tendril — soften the opening
+
+**Playtest round 9 (Steve):** "the tendril makes life VERY difficult" — and he
+**lost at watch 2 with seven rounds of practice**. Diagnosis: the features
+multiplied — in the open square a tendril was an annoyance; with buildings the
+player moves in *lanes*, and a tendril across a lane is a closed door (the wisp
+even threads mist through the buildings themselves). Each dark cell became worth
+more the moment the geometry landed.
+
+**Fix (data-only):** dusk_lentab 6/9/12/15/18 → **3/6/9/13/18** — the opening
+watch shows a three-cell wake to learn from; the final watch still strangles.
+Same law as the pace table: **readable before it's a threat.** A practised
+player losing early is the calibration signal for a first game — the learner
+arrives with zero rounds of practice.
+
+All five checks green (data change, no layout shift). Round 10: does watch 1
+teach and watch 5 threaten?
