@@ -239,3 +239,16 @@ targeting (the dark reclaims the ground it lost first).
 
 All five checks green. Round 12: is watch 3 fair now, and does the whole night
 curve?
+
+## 2026-07-02 — round 12: oldest-lit — the night bears grudges
+
+**Chosen by Steve** after the rest beat left watch 3's pair-camping intact. The
+wisp now targets the **oldest lit lamp** (lit-order queue; push on light, remove
+on snuff) — its next grievance is usually across the square, so camping a pair is
+structurally impossible. With nothing lit it hunts the lamplighter's flame:
+**your first lamp turns the hunt away from you** — the opening teaches itself.
+Nearest-light scan and manhattan retired; chase step, withdrawal, rest unchanged.
+Brief §10 behaviour block annotated (rounds 10–12 evolution).
+
+All five checks green; idle probe still loses. Round 13: is watch 3 beatable,
+and does the whole hunt now read as a creature with a memory?

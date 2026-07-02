@@ -173,6 +173,15 @@ title, *Nightheld*, *the fall of night*, the nightfall sting, warm-against-cold 
 the brief just never listened. The word "draught" stays (unit 13 is live) with its referent
 sharpened: *a draught of the coming night, a cold current of the dark*.
 
+> **Behaviour evolved through play (2026-07-02, rounds 10–12):** greedy
+> nearest-light made the wisp a perfectly efficient eraser, so the hunt gained a
+> rhythm and a memory: **oldest-lit targeting** (the night reclaims the ground it
+> lost *first* — with nothing lit it hunts the lamplighter's own flame, so your
+> first lamp turns the hunt away from you), **withdrawal** (after a snuff it
+> carries its prize home to the watch's corner), and **the rest** (a fixed beat at
+> home, so the snuff window holds however close home sits). The seek mechanics
+> below describe the chase step itself, which is unchanged.
+
 ### The behaviour: it seeks the nearest light — and the lamplighter is one
 
 One rule: every `DRAUGHT_SPEED` frames, the wisp steps toward the **nearest light source —
