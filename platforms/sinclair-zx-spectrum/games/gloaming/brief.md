@@ -192,20 +192,27 @@ malice. Credited openly per
 (2026-07-01 amendment). Still cell-step + save/restore — no new engine technique; the budget
 holds.
 
-### The curve: the night deepens
+### The curve: the night deepens — and the dawn breaks *(amended 2026-07-01, same day)*
 
 Win a dusk → the square holds — then a deeper dusk falls, and the dark comes back faster.
-`DRAUGHT_SPEED` stops being a constant and becomes a per-dusk table the loop reads
-(e.g. 8, 6, 4, 3 — tuned in the prototype), the
-[escalation-as-data](/patterns/cross-platform/framework/escalation-as-data) pattern. At deep
-dusk it snuffs nearly as fast as you light — the run ends there, arcade-honest. Score becomes
-**dusks survived**.
+`DRAUGHT_SPEED` stops being a constant and becomes a per-dusk table the loop reads, the
+[escalation-as-data](/patterns/cross-platform/framework/escalation-as-data) pattern.
+
+**The night is five watches long, and it ends in dawn.** The original draft here was
+endless-arcade (dusks until the night wins). The prototype playtest overturned it: the
+human wall sits at one step per 8 frames ("damn near impossible") — an endless table
+below that pace is dead data, and every run ending in defeat at the same place is a poor
+shape for the track's *completion* headline. Instead: survive five watches — table
+**16, 13, 11, 9, 9** (the final watch is the pace the playtest *beat*, hard but winnable:
+the climax, not the ceiling) — and **DAWN BREAKS**: a true ending. Lives span the whole
+night; THE NIGHT IS HELD is the per-dusk interstitial; NIGHT FALLS is the loss.
 
 ### The go-again hook: your longest night
 
-The title screen holds a second pip row — one pip per dusk survived, best run — surviving the
-loop back to the title. **Still no rendered digits** (that stays Shadowkeep's major); the best
-run is read in lamps, which is the right shape for this game anyway.
+The title screen holds a second pip row — one pip per watch survived, best run, dawn
+filling it — surviving the loop back to the title. **Still no rendered digits** (that
+stays Shadowkeep's major); the best night is read in lamps, which is the right shape for
+this game anyway.
 
 ### Feel (pending the human playtest)
 

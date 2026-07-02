@@ -86,3 +86,29 @@ lives); loss gate green; idle probe still loses at dusk-1 pace.
 night — survive N dusks and **dawn breaks**, a true win that fits both the title
 and the track's "I finished a real game" headline. Decide before the best-night
 pips (it changes what they count).
+
+## 2026-07-01 — round 4: the wall found at dusk 5 → the dawn breaks
+
+**Playtest round 4 (Steve), deepening build:** held dusks 1–4 (paces 16, 13, 11, 9)
+first session — the curve works. **Dusk 5 at pace 8 is "damn near impossible"** —
+the same pace judged "much too aggressive" as a raw opening in round 3. Pace 8 is
+the human wall for this game; the old table's tail (7, 6, 5) was superhuman dead
+data nobody would ever see.
+
+**Decision (recommended in-session; Steve away, proceeding, trivially reversible):
+the night is five watches, and it ends in DAWN BREAKS.** Table retuned to
+16, 13, 11, 9, **9** — the final watch is the pace the playtest *beat*: the climax,
+not the ceiling. Endless-arcade dropped: a run that always dies at the same wall is
+the wrong shape for the track's completion headline; *you held the square until
+morning* is a real ending. Brief §10 amended same-day. STATE_DAWN added; Space
+after dawn returns to the title (the run is complete), THE NIGHT IS HELD stays the
+per-dusk interstitial.
+
+**Verified (six checks, screenshots):** dusk-1 win → held screen; Space → dusk 2
+with lives carried; fifth-watch win → DAWN BREAKS in the golden square; Space →
+title; loss → NIGHT FALLS; idle probe still hunted down. All green.
+
+**Remaining in the reshape:** the best-night pips (title-screen go-again row, dawn
+filling it), then the audio pass (weak chime + a dawn deserves better than the
+reused fanfare), then Steve's full unassisted run — title to DAWN BREAKS — as the
+reachability capstone before decompose/re-author.
