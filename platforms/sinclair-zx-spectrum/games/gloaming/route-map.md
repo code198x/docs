@@ -88,13 +88,14 @@ idea. Built here as: unit 18 = the beeper primitive with its three voices
 (blip / fanfare / sting — one diff, one idea), the dusk chime arrives with
 the title at 19 (it is the title's atmosphere), and 20 adds no audio.
 
-**4. Dead code found in `gloaming-m1.asm`: `unlight_pip`.** A snuff-era
-remnant the m1 subtraction kept — nothing in m1 calls it. The skeleton never
-teaches it (absent from units 13–19); it appears only in the verbatim unit 20,
-so the 19→20 diff carries it as noise. Recommend deleting it from
-`gloaming-m1.asm` and re-running the m1 gate (the variable block shifts, so
-capture pokes re-derive from the `.sym`) — but that edits a playtest-approved
-artefact, so it's your call, not mine.
+**4. Dead code found in `gloaming-m1.asm`: `unlight_pip` — stripped
+(approved by Steve, 2026-07-02).** A snuff-era remnant the m1 subtraction
+kept — nothing in m1 called it, and the skeleton never taught it. Removed
+from `gloaming-m1.asm` the same day; the variable block shifted −17 bytes,
+so the m1 suite's pokes were re-derived from the fresh `.sym` (won / sting /
+probe re-run, all green; the capture README's documented addresses updated)
+and unit 20 re-copied — still byte-identical to the stripped build. The
+19→20 diff is now clean of it.
 
 **5. Smaller authored-shape decisions** (all inside the detour's licence or
 forced by subtraction; visible in `derive-skeleton.py`):
