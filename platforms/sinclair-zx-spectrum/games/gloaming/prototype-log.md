@@ -381,3 +381,10 @@ directives after the last label.
 still hunted down) — all green, checked into capture/. **Remaining before module-1
 authoring:** Steve's playtest of the cut (pace 16 hunt-only may need a nudge — it
 has no snuff pressure), then the brief realignment, then units.
+
+## 2026-07-02 — module-1 cut playtested: approved
+
+**Steve on the tiny game: "It works for me, it's not TOO hard."** Pace-16
+hunt-only is the right gentleness for a learner's first game — no retune. The
+module-1 gate is fully closed: machine suite + human hands. Next: the brief
+realignment, then module-1 authoring.
