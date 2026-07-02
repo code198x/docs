@@ -224,3 +224,18 @@ If the pressure still reads as too laser-focused, the escalation is oldest-lit
 targeting (the dark reclaims the ground it lost first) — parked unless needed.
 
 All five checks green. Round 11: does the rhythm read, and is the window enough?
+
+## 2026-07-02 — round 11: geometry inequity — the night rests at home
+
+**Playtest round 11 (Steve):** still hard as the pace rises; watch 3 specifically
+brutal — its entry corner sits nearly on the close lamp pair by the walls, so the
+withdraw round-trip was a few cells and the snuff window vanished exactly where
+two lamps needed defending.
+
+**Fix:** WREST 48 — the wisp rests at home after each withdrawal, so the window
+holds regardless of corner-to-cluster distance. One constant evens all four
+watches' geometry. **Still parked if pair-camping persists:** oldest-lit
+targeting (the dark reclaims the ground it lost first).
+
+All five checks green. Round 12: is watch 3 fair now, and does the whole night
+curve?
