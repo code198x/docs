@@ -165,5 +165,32 @@ unit later.
   multi-room. Cells, attributes, tables, and straight-line code throughout.
 - **Cut hierarchy:** module 1 trims phase E first, never the game; module 2 trims units
   8–10 (audio/pips) first, never the night.
-- **Next steps:** build + gate the module-1 cut; realign `brief.md` to the 14-section
-  spec (two-module structure noted); then author module 1 to the DoD.
+- **Done since planning:** the module-1 cut built, gated, and playtest-approved;
+  `brief.md` realigned to the 14-section spec (both 2026-07-02).
+
+## Next session — the skeleton (cold start)
+
+Open at `Code198x/`. Inputs, in reading order: this plan (spine + the teachability
+gate), `code-samples/.../gloaming/prototype/gloaming-m1.asm` + its `.sym`,
+`prototype/capture/README.md` (addresses, input timing), and `prototype-log.md`
+(the confessions, for boundary sanity).
+
+The work:
+
+1. **Skeleton files** in `code-samples/.../gloaming/prototype/skeleton/` —
+   `unit-01.asm` … `unit-20.asm`, each a unit's *end state*. On main: the path is
+   non-shipping, so there is no regression surface and no worktree needed yet
+   (worktrees enter at prose time, when MDX must live at shipped paths — the
+   atomic-swap branch).
+2. **Backbone first, newest-first:** unit 20 = `gloaming-m1.asm` verbatim; derive
+   19, 18, … by assert-anchored subtraction, assembling each.
+3. **Detours (5–8) authored forward**, convergence asserted mechanically at unit 8.
+4. **Gate every unit:** assemble (docker/pasmonext), run (emu198x headless), capture
+   the named proof shot, write the one-sentence diff narration.
+5. **Deliverable: `route-map.md`** beside this plan — one row per unit: method,
+   narration, proof shot, gate status. **Stop there.** Steve reviews the route map
+   before any prose.
+
+After the map is approved: Phase A prose as the cadence pilot (four units through
+`/unit-media` + `/unit-write` + `/verify-unit`, review, and a per-unit number),
+then phases B–E at that cadence.
