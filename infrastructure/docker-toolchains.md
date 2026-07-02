@@ -7,9 +7,10 @@ Each platform has a Docker image containing its assembler. Images are hosted on 
 > **Emu198x** separately). They retire **per-platform** — once Asm198x produces
 > that platform's loadable artifact and a real unit is verified end-to-end —
 > never a big-bang delete, and no new features land here meanwhile. The current
-> gate is the *output container*: Amiga (hunk-exe) and NES (`.nes`) are already
-> covered by Asm198x; C64 (`.prg`) and Spectrum (`.sna`) need an output container
-> first. See the umbrella decision
+> gate is the *output container*: Asm198x now covers all four (hunk-exe, `.nes`,
+> `.prg`, `.sna`). **Spectrum is cut over (2026-07-02)** — full corpus proven
+> byte-identical, `capture.py` assembles via Asm198x, image retired bar the old
+> unit-20 tape manifest. See the umbrella decision
 > [Code198x dev-tooling migration](../../../decisions/code198x-dev-tooling-migration.md).
 
 ## Images
@@ -17,7 +18,7 @@ Each platform has a Docker image containing its assembler. Images are hosted on 
 | Platform | Image | Assembler |
 |----------|-------|-----------|
 | C64 | `ghcr.io/code198x/commodore-64:latest` | ACME |
-| ZX Spectrum | `ghcr.io/code198x/sinclair-zx-spectrum:latest` | pasmonext |
+| ZX Spectrum | **retired** — Asm198x native (`--dialect pasmonext --sna`) | asm198x |
 | Amiga | `ghcr.io/code198x/commodore-amiga:latest` | vasm |
 | NES | `ghcr.io/code198x/nintendo-nes:latest` | ca65 + ld65 |
 

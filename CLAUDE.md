@@ -34,7 +34,7 @@ No session-start gate — work on whatever makes sense. The 8-item DoD bar holds
 | `code-samples` | Working code per unit |
 | `docs` | Specs & curriculum |
 | `commodore-64-dev` | Docker + ACME |
-| `sinclair-zx-spectrum-dev` | Docker + pasmonext |
+| `sinclair-zx-spectrum-dev` | **Retired** (2026-07-02) — builds use Asm198x |
 | `commodore-amiga-dev` | Docker + vasm |
 | `nintendo-entertainment-system-dev` | Docker + ca65 |
 
@@ -44,15 +44,19 @@ No session-start gate — work on whatever makes sense. The 8-item DoD bar holds
 cd website && npm run dev    # Dev server :4321
 npm run build                # Prod build (runs Pagefind)
 
-# Build assembly (pattern for all platforms)
+# Build assembly (Docker pattern — C64/Amiga/NES; run from Code198x/)
 docker run --rm -v $(pwd)/code-samples:/code-samples <image> <assembler> <args>
+
+# ZX Spectrum builds use Asm198x directly (no Docker):
+asm198x --dialect pasmonext --sna <file.asm> -o <file.sna>
+# binary: ~/Projects/198x/Asm198x/asm198x/target/release/asm198x (or $ASM198X)
 ```
 
 ## Platform Build Quick Reference
 | Platform | Image | Assembler | Output |
 |----------|-------|-----------|--------|
 | C64 | `ghcr.io/code198x/commodore-64:latest` | `acme -f cbm` | `.prg` |
-| ZX Spectrum | `ghcr.io/code198x/sinclair-zx-spectrum:latest` | `pasmonext --sna` | `.sna` |
+| ZX Spectrum | — (Asm198x, native) | `asm198x --dialect pasmonext --sna` | `.sna` |
 | Amiga | `ghcr.io/code198x/commodore-amiga:latest` | `vasmm68k_mot -Fhunkexe -kick1hunks` | executable |
 | NES | `ghcr.io/code198x/nintendo-nes:latest` | `ca65` + `ld65` | `.nes` |
 
@@ -67,8 +71,10 @@ Options: `--wait N` (frames), `--input FILE` (input script), `--duration N` (vid
 > **Migration in progress.** Capture is moving from these per-platform scripts to
 > **Emu198x**, and builds from the Docker assemblers to **Asm198x** — per-platform,
 > never a big-bang switch; the current tooling stays until each platform's
-> replacement is proven. This is why the `*-dev` repos' deleted capture scripts
-> are parked, not restored. Binding decision:
+> replacement is proven. **Spectrum builds cut over 2026-07-02** (full corpus
+> byte-identical; capture.py assembles via Asm198x; the Docker image is retired
+> bar one legacy tape manifest). This is why the `*-dev` repos' deleted capture
+> scripts are parked, not restored. Binding decision:
 > [`../../decisions/code198x-dev-tooling-migration.md`](../../decisions/code198x-dev-tooling-migration.md)
 > (fuller output-container detail in [`infrastructure/docker-toolchains.md`](infrastructure/docker-toolchains.md)).
 
