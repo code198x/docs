@@ -38,7 +38,7 @@ hardcoded); artefacts land in `skeleton/capture/artefacts/` (not committed).
 | 1 | The Empty Square | subset | One attribute write per cell: a cobble field and a wall border make a square at dusk. | `u01-square` — blue-walled square on black | ✅ |
 | 2 | The Cobbles and the Brick | subset | The bitmap canvas arrives under the attributes: cobble stipple on the ground, mortar courses on the walls. | `u02-texture` — the same square, now built | ✅ |
 | 3 | The Lamplighter | subset | A glyph drawn from an 8-byte definition stands at the square's centre. | `u03-lamplighter` | ✅ |
-| 4 | The Heartbeat | subset | The program becomes a frame-locked loop: HALT, step, repeat — and the square holds steady. | `u04-steady` pair (identical, 100 frames apart) + `u04-pulse` pair (differ) — **see flag 2** | ✅ |
+| 4 | The Heartbeat | subset | The program becomes a frame-locked loop: HALT, step, repeat — and the square holds steady. | `u04-steady` pair (identical, 100 frames apart) + `u04-pulse.mp4` (the beat, watched) — **see flag 2** | ✅ |
 | 5 | Reading the Keys | detour | Scan a half-row; a zero bit is a pressed key — the lamplighter glows while one is down. | `u05-idle` / `u05-glow` (white → yellow) | ✅ |
 | 6 | One Step | detour | Each direction key moves him a cell per frame: erase old, draw new — and the erase gouges the stipple. | `u06-gouge` — the L-shaped trail | ✅ |
 | 7 | Taming the Key | detour | The repeat gate: instant first step, then one per `PLAYER_REPEAT` frames, re-armed on release — the same held keys now walk three cells, not fourteen. | `u07-tamed` vs `u06-gouge` (same input script) | ✅ |
@@ -73,14 +73,16 @@ and keeps the plan's declared convergence-at-8 true for the movement core
 (the 8→9 diff is walls-only). If you'd rather keep unit 10 as literal bounds
 arithmetic, the skeleton needs re-cutting — say the word.
 
-**2. Unit 4's proof shot is a probe, not the end-state.** A pure subset of
-the heartbeat shows a steady screen — its honest capture is two identical
-frames 100 apart, which proves stability, not the beat. The named Try This
-(`unit-04-pulse.asm`, one `inc (hl)` on a HUD attribute) makes the loop
-visible and photographs it; the unit's prose should build the probe, see it
-beat, then take it out. (Capture note: the probe cell's ink pixels are
-invisible over an empty bitmap — the paper bits are what cycle, every 8
-frames.)
+**2. Unit 4's proof is a probe, not the end-state — and it's a video
+(Steve's call, 2026-07-02).** A pure subset of the heartbeat shows a steady
+screen — its honest capture is two identical frames 100 apart, which proves
+stability, not the beat. The named Try This (`unit-04-pulse.asm`, one
+`inc (hl)` on a HUD attribute) makes the loop visible; the shipping proof is
+`u04-pulse.mp4` — three seconds of the corner cell counting frames, captured
+by the gate script alongside the still pair. The unit's prose should build
+the probe, watch it beat, then take it out. (Capture note: the probe cell's
+ink pixels are invisible over an empty bitmap — the paper bits are what
+cycle, every 8 frames.)
 
 **3. Audio grouping at 18.** The plan's row for unit 18 names only the blip;
 the fanfare and sting have to arrive by unit 20 and belong to no other unit's
