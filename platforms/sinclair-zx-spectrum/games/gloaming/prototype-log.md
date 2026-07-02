@@ -364,3 +364,20 @@ Long Night → Shadowkeep. Gentle-ramp amended; per-unit-plan rewritten (superse
 
 **Next:** derive + gate the module-1 cut from the proven prototype; realign the brief;
 author module 1.
+
+## 2026-07-02 — the module-1 cut: derived, assembled, gated
+
+**The tiny first game exists as a build.** `gloaming-m1.asm` derived from the
+proven prototype by scripted subtraction (assert-anchored transforms + label-span
+deletion; no hand-retyped code — provenance is the proven file). Out: pools,
+tendril, grudge queue, watches, dawn, title tune. In: texture, brick, buildings,
+tamed key, warm ramp, hunt-the-player at pace 16, recoil, gather, single-dusk
+win/loss, a best-lives pip row as the module-scale go-again, and a one-shot dusk
+chime voiced from the bells' opening tolls. One derivation gotcha for the record:
+the tail-label deletion swallowed `END start` — a subtraction script must respect
+directives after the last label.
+
+**Gate:** m1-won (held screen → title with pips), m1-sting, m1-probe (idle player
+still hunted down) — all green, checked into capture/. **Remaining before module-1
+authoring:** Steve's playtest of the cut (pace 16 hunt-only may need a nudge — it
+has no snuff pressure), then the brief realignment, then units.
