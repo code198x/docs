@@ -301,3 +301,26 @@ was eaten now starts the game.
 **Remaining:** the difficulty calibration ("we may have made it too easy" —
 banked from round 13), then the unassisted title-to-dawn capstone run →
 decompose → re-author. The audio pass is done.
+
+## 2026-07-02 — round 14: the audio pass lands (parallel session) — gate green on it
+
+**The audio pass arrived from Steve's parallel session** (code-samples f37c8a5):
+title dusk bells (cold A4 tolls, the E5→C5 motif "a lamp lit far off", D5 left
+hanging into the loop), the dawn phrase (dusk's bell reversed — C5-E5-G5, the G5
+leaning on the dominant so the fanfare's C answers it), and lamp blips that quote
+the dawn motif at blip speed (snuff falls the same third an octave down). Phrases
+authored as .bpr files, routines emitted by `build198x beeper` — the demand gate
+opened a beeper tool. The dawn sequence is now chime → sweep → fanfare ("G5
+hangs, the sweep holds the breath, the fanfare's C answers").
+
+**Gate re-verified on the audio build:** all endings + probe green; title-pips
+check green; both WAVs (bells loop, dawn sequence) recorded with signal. One
+script adaptation: the title now plays between polls, so gate-script Space taps
+on the *title* hold 30 frames (a press must land whichever bell cell is playing)
+— but the post-dawn tap had to stay short (4 frames): a 30-frame hold outlived
+the title's 25-frame input lock and started a fresh run. **Confession: a title
+tune changes the input contract of every screen that returns to the title.**
+The dawn-candidates audition sheet committed as provenance.
+
+**Remaining:** difficulty calibration (the "too easy" flag) + the unassisted
+title-to-dawn capstone run → decompose.
