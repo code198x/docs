@@ -177,3 +177,17 @@ antagonist was watchable — rendering exposed rules.** Pools still block nothin
 the DARK-blocks-player rule is unchanged.
 
 All five checks green. Round 8: the hybrid verdict, gap-free.
+
+## 2026-07-02 — round 8: hybrid approved; the routing update lands
+
+**Playtest round 8 (Steve): "this feels right so far"** — the hybrid stands. The
+gaps fix (round 7) held.
+
+**Landed behind the verdict:** the gathering (GATHER 120 — the dark holds ~2.4s at
+each dusk's start; recoil keeps the short beat), corner rotation (the dark enters
+NE/SE/SW/NW by watch, deterministic, recoil returns it to the watch's corner), and
+the brief-§6 interior buildings (two 4×3 brick blocks, data-driven, solid to the
+player, ghosted by the wisp — the seek asymmetry made spatial).
+
+All five checks green. **Remaining:** dawn sweep, best-night pips, audio pass
+(weak chime + a dawn phrase), then the unassisted title-to-dawn capstone run.
