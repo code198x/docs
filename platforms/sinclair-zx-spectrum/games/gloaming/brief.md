@@ -214,6 +214,23 @@ filling it — surviving the loop back to the title. **Still no rendered digits*
 stays Shadowkeep's major); the best night is read in lamps, which is the right shape for
 this game anyway.
 
+### The dark made visible: the tendril and the pools *(amended 2026-07-02)*
+
+The wisp alone left the dark thin as a character. Amended after the dawn build: the
+draught now **trails a tendril of solid night** — cells it crosses go dark and block the
+lamplighter (never harm him; the touch of the wisp itself keeps that). A fixed-length
+ring releases the oldest cell as each new one is taken, so the tendril snakes and
+strangles routes but can never permanently wall the square off; its reach lengthens as
+the night deepens (the curve's second axis). The counter-force: **lit lamps cast pools**
+— their neighbouring cells warm to dim gold, immune to the tendril. Ground the light
+holds. Lighting the square is now cell-by-cell territorial: the premise made mechanical.
+The creeping-dark character owes a debt to **Mashadar in Shadar Logoth** (*The Wheel of
+Time*) — credited openly per
+[decisions/inspired-by-not-clones-naming.md](../../../../decisions/inspired-by-not-clones-naming.md).
+The ground gained the §6 cobble stipple in the same stroke — built invisible without it,
+the stipple proved load-bearing: it is the visibility substrate for every ground-state
+change.
+
 ### Feel (pending the human playtest)
 
 Held-key movement at one cell per frame is the sheet's top worry (wall-magnet). Expected fix

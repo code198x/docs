@@ -112,3 +112,32 @@ title; loss → NIGHT FALLS; idle probe still hunted down. All green.
 filling it), then the audio pass (weak chime + a dawn deserves better than the
 reused fanfare), then Steve's full unassisted run — title to DAWN BREAKS — as the
 reachability capstone before decompose/re-author.
+
+## 2026-07-02 — round 5: the hybrid — the dark becomes a character
+
+**Dawn verdict (Steve): earned.** Then the design leap: Steve's vision of the dark as
+"a creeping pool of blackness" (Mashadar, *Wheel of Time* — creditable by name under
+the inspired-by amendment). Hybrid chosen over cosmetic-trail and full-replace: the
+wisp keeps hunting (all validated work stands) and now **trails a tendril of solid
+night** — ring-buffered so the oldest cell always releases (no permanent walls, no
+trap analysis, fixed memory); reach per watch = dusk_lentab 6/9/12/15/18, the curve's
+second axis. Counter-force: **light pools** — lit lamps warm their eight neighbours,
+pool cells are tendril-immune. Dark blocks the player, never kills; the wisp's touch
+keeps the lethality.
+
+**Discovery — the stipple is load-bearing.** First build: mechanics live, screen
+unchanged. The ground had no bitmap (another brief§6-vs-build divergence: "sparse
+stipple" was never drawn), so glow recolours painted nothing and dark-on-black
+vanished. fill_ground textures the square once at init — and pools + tendril became
+visible as pure attr changes. The magazine-screenshot test (§6) now passes: the held
+screen shows eight lamps in eight pools. **Confession: on the Spectrum, a feature's
+visibility can live in a different subsystem from its logic — we built the rules
+before the canvas.** Teach with the pools/tendril unit.
+
+**Verified (five checks):** held + deepen, dawn, loss, the character shot (tendril +
+pool in one frame), idle probe. All green on the textured build.
+
+**Steve's own framing, banked:** "this also makes it a slightly different game — let's
+see if it feels right." Round-6 playtest decides whether the hybrid stays. Still
+queued behind it: gathering pause, interior buildings, corner rotation, dawn sweep,
+best-night pips, audio pass, the unassisted capstone run.
