@@ -209,3 +209,18 @@ arrives with zero rounds of practice.
 
 All five checks green (data change, no layout shift). Round 10: does watch 1
 teach and watch 5 threaten?
+
+## 2026-07-02 — round 10: the eraser problem — the night withdraws
+
+**Playtest round 10 (Steve):** the greedy nearest-light rule made the wisp a
+perfectly efficient eraser — stuck behind a building, you watch it undo your
+latest lamp; "a pain in the bum to win."
+
+**Fix — the scatter lesson:** after a snuff, the wisp **withdraws** to its home
+corner and only resumes hunting on arrival (draught_mode flag; deterministic;
+reuses the corner machinery). Every snuff buys a guaranteed window; the re-entry
+quarter is plannable. Hunt → snuff → withdraw → hunt is the game's rhythm now.
+If the pressure still reads as too laser-focused, the escalation is oldest-lit
+targeting (the dark reclaims the ground it lost first) — parked unless needed.
+
+All five checks green. Round 11: does the rhythm read, and is the window enough?
