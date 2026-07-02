@@ -47,7 +47,7 @@
 > **Module 1 — "Gloaming"** keeps the tiny-first-game promise at the original scope
 > (~20 units: foundation, textured square, tamed movement, lamps, a draught that *hunts
 > you*, lives, a single-dusk win) — every baseline repair in, nothing heavier.
-> **Module 2 — working title "The Long Night"** (final name Steve's call) is the reshape
+> **Module 2 — "The Long Night"** (name settled 2026-07-02) is the reshape
 > as a *revisit module* (~10 units: the pools, the tendril's ring buffer, the grudge
 > queue, the deepening watches, the dawn, the bells) — its secret curriculum is
 > **iteration itself**: the learner upgrades a finished game they already own, with the

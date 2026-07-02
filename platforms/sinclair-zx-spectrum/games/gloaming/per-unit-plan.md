@@ -87,7 +87,7 @@ only when it passes).
 
 ---
 
-## Module 2 — The Long Night *(working title — final name TBD)*
+## Module 2 — The Long Night
 
 **Headline:** *Iteration — "a finished game becomes a better game."*
 **Endpoint:** the proven prototype exactly as gated 2026-07-02 (five watches, dawn,
