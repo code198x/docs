@@ -70,6 +70,13 @@ only when it passes).
 
 ### Phase D — jeopardy
 
+> The 15→16 seam is a teaching beat in its own right: unit 15 ends with a
+> *completable toy* — walk, light, warm, an ending — and unit 16 opens with the
+> indictment (our own baseline playtest, verbatim: a chore-list with no
+> antagonist). **A game needs a way to lose** is taught by the transition, not
+> by assertion. (Considered and rejected as a module boundary, 2026-07-02 —
+> the first finished thing must be a *game*; counts are never targets.)
+
 | # | Unit | The one idea | Primitive / confession |
 |---|------|--------------|------------------------|
 | 16 | The Draught | One rule reads as intent: step toward the player | Compare-and-step on the greater axis; the wisp ghosts through stone (the asymmetry named). **Confession:** the shipped draught *bounced*; the playtest called it "just bouncing — not very menacing". We never teach the bounce — Namco's ghosts (credited) knew better in 1980. Reuses unit 7's timer idiom. |
