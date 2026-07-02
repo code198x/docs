@@ -160,3 +160,20 @@ buildings will arrive pre-bricked and the win ramp turns the brick golden.
 
 All five checks green. Round 7 is the hybrid verdict proper, now that the hybrid
 can actually be seen.
+
+## 2026-07-02 — round 7: gaps in the night — two rules bugs, one design trade
+
+**Playtest round 7 (Steve):** graphics approved ("a lot better"), but visible
+*gaps* mid-tendril. Two causes: (1) re-crossing its own tail didn't refresh the
+ring's claim, so the old entry expired mid-vein; (2) pool immunity meant crossing
+a pool left a hole once the pool died.
+
+**Fixes:** re-crossed cells re-push and releases scan for newer claims
+(tendril_claimed); and — the design trade — **pool immunity became pool
+resilience**: the tendril takes pooled ground, but released cells inside a live
+pool return to glow (pooled_at). Better fiction too: the dark can cross spilt
+light, but the light returns. **Confession: both bugs were invisible until the
+antagonist was watchable — rendering exposed rules.** Pools still block nothing;
+the DARK-blocks-player rule is unchanged.
+
+All five checks green. Round 8: the hybrid verdict, gap-free.
