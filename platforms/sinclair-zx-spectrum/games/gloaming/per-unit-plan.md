@@ -125,28 +125,33 @@ on the same engine; Lamplight returns the lamp-and-dark fiction at the masked-sp
 **Module 2 ends:** the five-watch night the author beat on 2026-07-02 — and a learner
 who has watched a real game get better under their own hands.
 
-### Commercial-shape considerations (2026-07-03 — considerations, not commitments)
+### Commercial-shape considerations (2026-07-03 — both closed out)
 
 A period-viability review of the finished module 1 placed it comfortably inside the
 1982/early-83 commercial envelope, and module 2's delta clears the 1983-84 *design*
 bar (behavioural AI, tuned five-watch escalation, a reachable ending, ten-plus-minute
-sessions). Two checklist items stand between "passes the design bar" and "shippable
-1983-84 cassette" — both noted here so the module can acknowledge them without
-growing for them:
+sessions). Two checklist items stood between "passes the design bar" and "shippable
+1983-84 cassette"; both are now resolved (2026-07-03, after the module merged):
 
-1. **Kempston joystick** — on every 1984 inlay; absent from both modules. One `IN`
-   from port $1F OR'd into the existing gather idiom — a natural **try-this**
-   (module 2's input-contract unit, "The Dusk Bells", is the likeliest home), not
-   a unit. Teaching value: unit 5's port-reading lesson generalised to a second
-   device.
-2. **The tape master** — loader, SCREEN$ loading screen, and the 16K build. Product
-   packaging, not curriculum: a Build198x/mediaspec artefact when wanted. The 16K
-   build is **verified** (2026-07-03): a two-line change (`org 24576` + `ld sp, 32767`
+1. **Kempston joystick** — **shipped** as a try-this in module 2's input-contract
+   unit ("The Dusk Bells", unit 8), exactly the home predicted here. One `IN` from
+   port $1F OR'd into the gather idiom, plus the direction branches — generalising
+   unit 5's port-reading lesson to a second device. The try-this teaches the
+   active-high convention and the floating-port trap (unmapped $1F reads bus noise,
+   not zero — the reason the era's inlays gated joystick behind a *"Keyboard,
+   Kempston, Sinclair"* menu), verified against the emulator (the phantom-input
+   walk reproduces). Not a unit, as planned.
+2. **The tape master** — **booked** as a Build198x demand gate, not built here:
+   `Build198x/build198x/decisions/demand-gate-tape-master.md` fires the media-
+   mastering band on Gloaming's cassette packaging (auto-running BASIC loader +
+   SCREEN$ loading screen + CODE `.tap`). Product packaging, not curriculum, so it
+   lands as its own Build198x build session; the one open dependency is Gloaming's
+   loading-screen art (a Code198x deliverable). The 16K build is **verified**
+   (2026-07-03) as a payload option: a two-line change (`org 24576` + `ld sp, 32767`
    — the 48K snapshot had been supplying SP), 1,648 bytes, booted and played on the
    emulator's 16K variant via poke + `RANDOMIZE USR`, with the predicted contended-
-   memory detune measured at ~4% flat on the blip's first note. Candidate for a
-   unit-20 try-this in module 1 ("the machine half your customers owned") and/or
-   the tape artefact's inlay copy ("for any Spectrum").
+   memory detune measured at ~4% flat on the blip's first note — and teased in module
+   2's unit-10 try-this ("the machine half your customers owned").
 
 ---
 

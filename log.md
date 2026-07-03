@@ -1241,3 +1241,17 @@ Night, with Shadowkeep (renumbered module 4) in progress behind them.
 Gloaming is a two-module game in the catalogue (`game: gloaming`,
 passes 1 and 2) — the first realised revisit module, ten units,
 byte-gated to the shipped gloaming.sna at both seams.
+
+## 2026-07-03 — Gloaming commercial-shape items closed out
+
+Both considerations from the finished game's period-viability review
+are resolved. **Kempston** shipped as a try-this in The Long Night's
+unit 8 (the input-contract unit, as predicted) — port $1F OR'd into
+the gather idiom, teaching active-high input and the floating-port
+trap, verified on the emulator (website 84d1866e). **The tape master**
+booked as a Build198x demand gate (build198x 9a24b3b): the media-
+mastering band fires on Gloaming's cassette packaging (auto-running
+BASIC loader + SCREEN$ + CODE .tap), landing as its own Build198x
+build session with loading-screen art the one open dependency; the
+verified 16K build is the payload option. per-unit-plan's commercial-
+shape section updated to reflect both.
