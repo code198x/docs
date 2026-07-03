@@ -121,6 +121,29 @@ own arc.
 **Module 2 ends:** the five-watch night the author beat on 2026-07-02 — and a learner
 who has watched a real game get better under their own hands.
 
+### Commercial-shape considerations (2026-07-03 — considerations, not commitments)
+
+A period-viability review of the finished module 1 placed it comfortably inside the
+1982/early-83 commercial envelope, and module 2's delta clears the 1983-84 *design*
+bar (behavioural AI, tuned five-watch escalation, a reachable ending, ten-plus-minute
+sessions). Two checklist items stand between "passes the design bar" and "shippable
+1983-84 cassette" — both noted here so the module can acknowledge them without
+growing for them:
+
+1. **Kempston joystick** — on every 1984 inlay; absent from both modules. One `IN`
+   from port $1F OR'd into the existing gather idiom — a natural **try-this**
+   (module 2's input-contract unit, "The Dusk Bells", is the likeliest home), not
+   a unit. Teaching value: unit 5's port-reading lesson generalised to a second
+   device.
+2. **The tape master** — loader, SCREEN$ loading screen, and the 16K build. Product
+   packaging, not curriculum: a Build198x/mediaspec artefact when wanted. The 16K
+   build is **verified** (2026-07-03): a two-line change (`org 24576` + `ld sp, 32767`
+   — the 48K snapshot had been supplying SP), 1,648 bytes, booted and played on the
+   emulator's 16K variant via poke + `RANDOMIZE USR`, with the predicted contended-
+   memory detune measured at ~4% flat on the blip's first note. Candidate for a
+   unit-20 try-this in module 1 ("the machine half your customers owned") and/or
+   the tape artefact's inlay copy ("for any Spectrum").
+
 ---
 
 ## The route skeleton and the teachability gate (authoring contract, 2026-07-02)
