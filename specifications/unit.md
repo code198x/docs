@@ -571,6 +571,10 @@ visible. ✅
 - Software sprites (no hardware sprite system)
 - Attribute system colour management
 - UDG (User-Defined Graphics) techniques
+- **Assemble-and-run shows both assemblers** — Asm198x (`asm198x --dialect
+  pasmonext --sna`) first, pasmonext beside it — and names the source syntax
+  as pasmo. The toolchains are byte-identical on the corpus (see the umbrella
+  decision `code198x-dev-tooling-migration.md`); the learner picks either.
 
 **Specific challenges:**
 - Attribute clash explanations
