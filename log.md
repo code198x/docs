@@ -1195,3 +1195,16 @@ full each watch — `draw_lives` uses the constant), reproduced against
 the gated build, decision needed before unit 6 prose. Deliverable:
 `platforms/sinclair-zx-spectrum/games/gloaming/route-map-m2.md` —
 **stopped there; Steve reviews the map before any prose.**
+
+## 2026-07-03 — Gloaming m2 skeleton: findings settled, draw_lives fixed
+
+Steve's calls on the route map: the chime carry stands (units 5–7,
+`subset + m1 carry`), and the life-pip repaint bug is **fixed at the
+prototype level** — `draw_lives` now reads the carried `(lives)`.
+Re-gated end to end: six-script m2 suite green on the rebuilt
+`gloaming.sna` (pokes re-derived, +2 shift, README updated), skeleton
+re-derived with the fix arriving as part of unit 6's diff (units 1–5
+keep m1's constant-count repaint — honest with a single watch), both
+anchors re-verified, all twelve unit captures re-run — `u06-deeper`
+now photographs the lives carry (watch 2 opens with two pips). Route
+map updated; still stopped before prose.

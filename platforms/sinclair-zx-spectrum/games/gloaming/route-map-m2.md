@@ -58,7 +58,7 @@ derived from each unit's `.sym`, never hardcoded); artefacts land in
 | 3 | The Pools of Light | detour (final-form pools) | Lit lamps claim ground: `recompute_pools` re-derives every glow ring from lamp truth, restoring both movers first so their under-buffers stay honest through the recolour. | `u03-pool` — the glow ring on the stipple around the first lit lamp | ✅ |
 | 4 | The Tendril | detour (final-form tendril) | The wisp's walk darkens the ground behind it into a fixed-length ring of night whose oldest claim releases — territory, bounded by construction. | `u04-vein` / `u04-later` (the vein advances; the old tail heals) | ✅ |
 | 5 | The Night Bears Grudges | subset (convergence point) | The eraser problem answered: greedy-nearest camped your work, so the night now reclaims the ground it lost *first* — the lit-order queue replaces the Manhattan scan (the 4→5 diff is commit `87bf8ce`, exactly). | `u05-grudge` (two lamps lit; the wisp crosses the square for the older one, ignoring the nearer player and prize) / `u05-snuffed` | ✅ |
-| 6 | The Night Deepens | subset + m1 carry | Escalation becomes data on two axes — `dusk_table` pace, `dusk_lentab` reach, a new corner per watch — and the held screen becomes an interstitial: SPACE deepens the night instead of ending it. **See flags 3 and 5.** | `u06-held` / `u06-deeper` (watch 2 opens with the wisp probing from the SE corner) | ✅ |
+| 6 | The Night Deepens | subset + m1 carry | Escalation becomes data on two axes — `dusk_table` pace, `dusk_lentab` reach, a new corner per watch — the held screen becomes an interstitial, and lives become a *carried* quantity the redraw must respect. **See flags 3 and 5.** | `u06-held` / `u06-deeper` (watch 2 opens with the wisp probing from the SE corner and the carried two lives surviving the redraw) | ✅ |
 | 7 | Dawn Breaks | subset + m1 carry | A run gains an ending you can reach: hold the fifth watch and morning sweeps the square gold — the honest endless (watch 5 wrapping forever) dies here. | `u07-dawn` — DAWN BREAKS over the swept square | ✅ |
 | 8 | The Dusk Bells | subset + m1 carry | The one-shot dusk chime becomes the dusk bells — a tune that must yield the keyboard, polling between cells and listening through its rests — and the snuff finds its voice. **See flags 1 and 4.** | `u08-bells.wav` + `u08-title` / `u08-snuff.wav` + `u08-snuffed` | ✅ |
 | 9 | Your Longest Night | subset | What deserves to survive changed — the night got longer than a life: the best row counts watches now, not lives, and a lost night still banks the watches it survived. **See flag 2.** | `u09-nightfalls` / `u09-longest` (title with 2 of 5 watch pips lit after a lost dusk-2 run) | ✅ |
@@ -102,7 +102,8 @@ each; the derive audit confirms 06→07 contains no `end_step` lines.
 ## New findings
 
 **4. Units 5–7 carry m1's dusk chime — the "pure subsets" claim bends,
-by the seam's own logic.** The module seam forces the chain bottom to be
+by the seam's own logic (approved by Steve, 2026-07-03).** The module
+seam forces the chain bottom to be
 `gloaming-m1.asm`, which plays `chime_dusk` at boot and on every return to
 the title; `gloaming.asm` replaced it with the title tune. So units 5–7
 keep the chime (verbatim m1 text, cut by anchor — same treatment as the
@@ -112,21 +113,24 @@ the input-contract lesson now has a concrete "before" (a blocking one-shot
 chime) against the "after" (a tune that must poll). The audit's method
 column marks these units `subset + m1 carry`.
 
-**5. A real display bug found in `gloaming.asm`: life pips repaint in
-full on every watch.** `init_game` (which re-runs at each `.deeper`) calls
-`draw_lives`, and `draw_lives` paints `LIVES` (the constant, 3) pips
-regardless of the carried `(lives)`. Reproduced against the byte-identical
-unit-10 build: lose a life in watch 1, hold the dusk, and watch 2 opens
-showing three red pips while `(lives)` is 2; a later loss then erases pip
-index 1, leaving a lit–dark–lit row. m1 is unaffected (lives reset per
-game); the bug arrived with the run/watch split and survived the playtests.
-The skeleton reproduces it faithfully (verbatim-subset discipline;
-never-regress says the fix can't sneak in here). Decision needed before
-unit 6's prose: fix `gloaming.asm` (one line — `ld b, LIVES` → load
-`(lives)`… plus the erased-pip repaint question) and re-gate the prototype,
-or ship the module and confess it. My read: fix at the prototype level
-first, re-run the m2 suite, and let the skeleton re-derive — the change is
-inside unit 6's subset, so only units 6–10 shift.
+**5. A real display bug found in `gloaming.asm` — fixed the same day
+(Steve's call, 2026-07-03).** `init_game` (which re-runs at each
+`.deeper`) calls `draw_lives`, and `draw_lives` painted `LIVES` (the
+constant, 3) pips regardless of the carried `(lives)`. Reproduced against
+the byte-identical unit-10 build: lose a life in watch 1, hold the dusk,
+and watch 2 opened showing three red pips while `(lives)` was 2; a later
+loss then erased pip index 1, leaving a lit–dark–lit row. The bug arrived
+with the run/watch split and survived all fifteen playtest rounds; m1 is
+unaffected (lives reset per game). **The fix:** `draw_lives` reads the
+carried `(lives)` — display-only, the loss logic always read memory.
+Re-gated end to end: the six-script m2 suite green (poke addresses
+re-derived from the fresh `.sym`, a +2 shift; capture README updated), the
+skeleton re-derived against the rebuilt `gloaming.sna`, both anchors
+re-verified. On the route, units 1–5 keep m1's constant-count repaint —
+honest with a single watch, where lives are set once per game — and the
+fix arrives with unit 6's diff: the deepening is what turns lives into a
+*carried* quantity, so the redraw must read memory. `u06-deeper` now shows
+it — watch 2 opens with the carried two pips.
 
 **6. The stale draught banner is history speaking — units 1–4 make it
 true again.** `gloaming.asm`'s `draught_step` banner still says the wisp
@@ -145,8 +149,8 @@ comment trio — the ellipses reference the chime, so the trio arrives with
 `call dawn_sweep`); the tendril's reach in units 4–5 is the data byte's
 fixed 6 (history's own value until the deepening made it per-watch data);
 and unit 6's proof shot leans on the corner probe (SE entry at watch 2)
-because pace isn't visible in a still — the lives-carry half of the
-deepening is exactly what finding 5 makes un-photographable.
+plus the carried life row, because pace isn't visible in a still — the
+lives-carry half only became photographable once finding 5 was fixed.
 
 ## Reproducing the gate
 
@@ -165,6 +169,8 @@ Anchor checks: `cmp unit-10.sna ../gloaming.sna` and
 ## Next (after this map is approved)
 
 Module-2 prose at the module-1 cadence (worktree branch, MDX at shipped
-paths, capture via capture.py), preceded by the finding-5 decision and the
-module intro (the playtest sheet + the two-axis fork, per the plan). The
-flags above cost a conversation here; they'd cost rewritten units later.
+paths, capture via capture.py), opening with the module intro (the playtest
+sheet + the two-axis fork, per the plan). Findings 4 and 5 are settled
+(chime carry approved; draw_lives fixed and re-gated); flag 2's prose
+placement is the one open call. The flags above cost a conversation here;
+they'd cost rewritten units later.

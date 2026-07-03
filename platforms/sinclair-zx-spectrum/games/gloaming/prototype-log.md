@@ -388,3 +388,21 @@ has no snuff pressure), then the brief realignment, then units.
 hunt-only is the right gentleness for a learner's first game — no retune. The
 module-1 gate is fully closed: machine suite + human hands. Next: the brief
 realignment, then module-1 authoring.
+
+## 2026-07-03 — the deepening's one visible lie: draw_lives fixed
+
+**Found during the module-2 route skeleton** (unit 6's "lives carry"
+turned out to be un-photographable): `draw_lives` painted `LIVES` — the
+constant — so every watch's `init_game` repainted three pips regardless
+of the carried count. Lose a life, hold the dusk, and watch 2 opened
+with a full row; a later loss then erased index (lives−1), leaving a
+lit–dark–lit row. The bug arrived with the run/watch split and survived
+all fifteen playtest rounds — nobody read the life row across a watch
+boundary after a loss. m1 is unaffected (lives reset per game).
+
+**Fix, approved by Steve:** `draw_lives` reads the carried `(lives)`.
+Display-only — the loss logic always read memory. Re-gated: all six
+suite scripts green (poke addresses re-derived from the fresh `.sym`,
+a +2 shift; capture README updated), the skeleton re-derived, both
+chain anchors re-verified. The fix is unit 6's diff on the route —
+the deepening is what turns lives into a carried quantity.
