@@ -87,9 +87,11 @@ longer than a life.* The wrinkle: in units 5–8 the carried m1 machinery
 updates `best_lives` at m1's own site, the per-dusk win path — so on a
 multi-watch night it means "most lives you ever held a dusk with", a
 slightly odd interim metric that exists only inside those four unit states
-and is never taught as a headline. Confirm you're happy for the prose to
-ignore it (or unit 8's prose can name it as the strain that motivates
-unit 9's swap — my preference).
+and is never taught as a headline. **Decided (Steve, 2026-07-03): unit 8's
+prose names it** — the interim metric is the strain that motivates unit 9's
+swap ("the row still counts lives, but a night is longer than a life now —
+something has to give"), so unit 9 opens with a problem the learner has
+already felt.
 
 **3. Interstitial ownership — the 6/7 boundary survives the
 one-sentence test.** Unit 6's diff owns *all* of `end_step`'s change (the
@@ -170,7 +172,8 @@ Anchor checks: `cmp unit-10.sna ../gloaming.sna` and
 
 Module-2 prose at the module-1 cadence (worktree branch, MDX at shipped
 paths, capture via capture.py), opening with the module intro (the playtest
-sheet + the two-axis fork, per the plan). Findings 4 and 5 are settled
-(chime carry approved; draw_lives fixed and re-gated); flag 2's prose
-placement is the one open call. The flags above cost a conversation here;
-they'd cost rewritten units later.
+sheet + the two-axis fork, per the plan). Every flag and finding is now
+settled: snuff silent at 1 / voiced at 8, unit 8's prose names the interim
+best-lives strain, the 6/7 boundary holds, the chime carry is approved, and
+draw_lives is fixed and re-gated. The flags above cost a conversation here;
+they'd have cost rewritten units later.
