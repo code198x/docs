@@ -1255,3 +1255,19 @@ BASIC loader + SCREEN$ + CODE .tap), landing as its own Build198x
 build session with loading-screen art the one open dependency; the
 verified 16K build is the payload option. per-unit-plan's commercial-
 shape section updated to reflect both.
+
+## 2026-07-03 — Gloaming loading screen composed; tape-master home now TBC
+
+The tape master's one art dependency is resolved: Gloaming's cassette
+SCREEN$ (`code-samples/.../gloaming/loading-screen/`, committed
+5dc1496) — the dusk square built cell-by-cell from the game's own
+glyphs, textures and palette, converted byte-perfectly by build198x
+image (mean_error 0.0, "input appears already constrained"). This is
+the honest answer to sourcing Spectrum screen art: compose to the
+2-colour-per-cell grid, never generate. Separately, Steve flagged the
+tape master's *sibling home* as unsettled — a bootable tape sits on
+the program/media seam and may be an Asm198x program-framing output
+(next to .sna) rather than a Build198x media-mastering tool. The
+demand record is marked provisional with both readings (build198x
+bb1b0d7); it's an umbrella-level call, TBC. No tape code is written in
+either sibling until it resolves. per-unit-plan updated.

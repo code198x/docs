@@ -141,17 +141,25 @@ sessions). Two checklist items stood between "passes the design bar" and "shippa
    not zero — the reason the era's inlays gated joystick behind a *"Keyboard,
    Kempston, Sinclair"* menu), verified against the emulator (the phantom-input
    walk reproduces). Not a unit, as planned.
-2. **The tape master** — **booked** as a Build198x demand gate, not built here:
-   `Build198x/build198x/decisions/demand-gate-tape-master.md` fires the media-
-   mastering band on Gloaming's cassette packaging (auto-running BASIC loader +
-   SCREEN$ loading screen + CODE `.tap`). Product packaging, not curriculum, so it
-   lands as its own Build198x build session; the one open dependency is Gloaming's
-   loading-screen art (a Code198x deliverable). The 16K build is **verified**
-   (2026-07-03) as a payload option: a two-line change (`org 24576` + `ld sp, 32767`
-   — the 48K snapshot had been supplying SP), 1,648 bytes, booted and played on the
-   emulator's 16K variant via poke + `RANDOMIZE USR`, with the predicted contended-
-   memory detune measured at ~4% flat on the blip's first note — and teased in module
-   2's unit-10 try-this ("the machine half your customers owned").
+2. **The tape master** — **gate fired, tool deferred, sibling home TBC**. The
+   demand is recorded (`Build198x/build198x/decisions/demand-gate-tape-master.md`)
+   for the cassette packaging: auto-running BASIC loader + SCREEN$ loading screen +
+   CODE `.tap`. Two open threads, both explicitly parked (2026-07-03):
+   - *Which sibling owns it* — a bootable tape sits on the program/media seam
+     (media whose whole content is one framed program), so whether it's a Build198x
+     media-mastering tool or an Asm198x program-framing output (next to `.sna`) is
+     an umbrella-level question, TBC in a later conversation. No tape code is
+     written in either sibling until it resolves.
+   - *The loading-screen art* (the other dependency) is **done** regardless:
+     `code-samples/.../gloaming/loading-screen/` composes the dusk-square SCREEN$
+     from the game's own glyphs and converts it byte-perfectly via `build198x
+     image` (`mean_error 0.0`, "input appears already constrained").
+   The 16K build is **verified** (2026-07-03) as a payload option: a two-line change
+   (`org 24576` + `ld sp, 32767` — the 48K snapshot had been supplying SP), 1,648
+   bytes, booted and played on the emulator's 16K variant via poke + `RANDOMIZE USR`,
+   with the predicted contended-memory detune measured at ~4% flat on the blip's
+   first note — and teased in module 2's unit-10 try-this ("the machine half your
+   customers owned").
 
 ---
 
