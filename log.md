@@ -1271,3 +1271,24 @@ the program/media seam and may be an Asm198x program-framing output
 demand record is marked provisional with both readings (build198x
 bb1b0d7); it's an umbrella-level call, TBC. No tape code is written in
 either sibling until it resolves. per-unit-plan updated.
+
+## 2026-07-03 — Shadowkeep Arc 1 reframed to follow The Long Night
+
+Verified and fixed Shadowkeep Arc 1's continuity from The Long Night.
+Finding: Arc 1 was authored when the ladder was Primer → Gloaming →
+Shadowkeep, and The Long Night (now between them) was invisible — zero
+mentions across 16 units, while the intro sold attribute light/mood and
+audio as Shadowkeep's new work, the two things The Long Night now teaches
+first. The techniques don't collide (Shadowkeep lights by dither density,
+the night by attribute glow-rings; Shadowkeep's audio is environmental
+SFX, the night's was musical phrases), so this was reframing, not rework —
+no unit cut. Leaned in: index + unit-01 recast the predecessor as The Long
+Night and the headline novelty as *scale* (a place of many rooms), matching
+The Long Night's own forward-promise; unit-09/13/15 turn the overlaps into
+explicit "second way to do X" spirals (dither-vs-attribute light; the
+beeper recalled from the dusk bells; the keep's theme tied to the bells'
+title-tune discipline). Mechanical Gloaming references (draw_lamp, the
+glyph-draw) kept — accurate provenance. Metadata swept; four-arc-framing
+decision amended. Self-correction: The Long Night's game: field was 3 but
+it's the same game as Gloaming (pass 2) → game: 1 (game-counter scheme);
+Shadowkeep's 2 was right. Website 6a3e1794, site build green.

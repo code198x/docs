@@ -19,6 +19,19 @@
 > classes / spells / quest-state / branching narrative in Shadowkeep) **all still bind** — the
 > module split changes packaging and pacing, not what Shadowkeep *is*.
 
+> **AMENDED 2026-07-03 — Shadowkeep now follows *The Long Night*, not tiny Gloaming.**
+> Gloaming became a two-module game (Gloaming + the revisit module *The Long Night*), so the
+> rung immediately below Shadowkeep is no longer the single-screen first game — it is the full
+> five-watch night, which already teaches attribute light and mood (glow pools, the warming
+> ramp, the dawn sweep) and a full beeper audio pass (the dusk bells, the dawn phrase). Arc 1's
+> headline is therefore sharpened: its genuine novelty is **scale — a place of many rooms**, not
+> light/mood/audio, which the learner now arrives already owning. Those still feature in Arc 1's
+> phases 3–4, but reframed as *new instruments for existing skills*: the keep lights by
+> **dither density** (where The Long Night recoloured attributes) and speaks in **environmental
+> SFX** (where the night sang musical phrases) — a deliberate "second way to do X" spiral. Arc 1
+> curriculum reframed accordingly (index + units 1, 9, 12, 13; metadata). No unit was cut: the
+> techniques are genuinely complementary, only the framing skipped the module now sitting between.
+
 ## The decision
 
 Extends [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) with a **full four-arc framing** for Shadowkeep:
