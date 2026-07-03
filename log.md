@@ -1230,3 +1230,14 @@ pokes) and every screenshot read and verified — one capture bug
 (unit-07 pokes from a mis-pathed sym table crashing the build to the
 ROM banner) caught exactly that way. Site build green with pagefind.
 Remaining: Steve's review pass on the branch preview, then the merge.
+
+## 2026-07-03 — The Long Night: merged
+
+Steve's review pass on the branch preview approved without changes;
+both `gloaming-m2` branches fast-forwarded to main (code-samples
+`778b584`, website `4c63e07a`), worktrees and branches cleaned up.
+The Spectrum assembly track now ships Primer → Gloaming → The Long
+Night, with Shadowkeep (renumbered module 4) in progress behind them.
+Gloaming is a two-module game in the catalogue (`game: gloaming`,
+passes 1 and 2) — the first realised revisit module, ten units,
+byte-gated to the shipped gloaming.sna at both seams.
