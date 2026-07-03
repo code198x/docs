@@ -1161,3 +1161,15 @@ freezes the game ~5 frames per blip and desyncs open-loop capture
 routes (widen inter-leg waits); a scripted SPACE during the boot
 chime's freeze is never seen. Remaining before merge: Steve's review
 pass on the branch preview, then the atomic swap.
+
+## 2026-07-03 — Gloaming module 1: merged
+
+Steve read the full module on the branch preview and approved; both
+repos fast-forwarded `gloaming-m1` to main (code-samples `ee2c5fe`,
+website `8452b1e0`), the main-site build verified, and the worktrees
+and branch removed. The rebuilt twenty-unit Gloaming replaces the
+shipped course on main — the never-regress gate is satisfied by the
+full byte-identical convergence. Post-merge the module also carries
+the studio-framing touches (the verified 16K try-this, The Long Night
+named as the continuation, the software-house seed) recorded against
+the one-studio observation in the gentle-ramp decision.
