@@ -1139,3 +1139,25 @@ audio distributes 18=blip+fanfare+sting / 19=chime, and `unlight_pip`
 is dead code in the m1 cut. Deliverable:
 `platforms/sinclair-zx-spectrum/games/gloaming/route-map.md` —
 **stopped there; Steve reviews the map before any prose.**
+
+## 2026-07-03 — Gloaming module 1: all twenty units authored, full convergence
+
+The complete module-1 rebuild landed on the `gloaming-m1` worktree
+branch (code-samples + website): route map approved (flags 1/3/5
+resolved as built, flag 2 as a video, flag 4 stripped), then all
+twenty units authored at the per-unit cadence — steps derived by
+assert-anchored swaps from the previous unit, assembled with Asm198x,
+byte-compared against both skeleton anchors, captured cold-boot via
+capture.py, prose with donor material adapted from the old course.
+Unit 20's final step is byte-identical to gloaming-m1.sna: the full
+20-unit route lands on the shipped game exactly. Old-course units
+replaced slot-by-slot; the orphaned old unit 21 and the tape unit
+(last legacy Docker consumer) left at the swap; module index rewritten
+(fixing the snuffs-lamps misread — the m1 draught hunts the player).
+Recurrent mid-build lessons: stale old-course step files shadow failed
+derivations (clear the slot first); routine placement must match the
+skeleton exactly (byte-compare catches it); blocking beeper audio
+freezes the game ~5 frames per blip and desyncs open-loop capture
+routes (widen inter-leg waits); a scripted SPACE during the boot
+chime's freeze is never seen. Remaining before merge: Steve's review
+pass on the branch preview, then the atomic swap.
