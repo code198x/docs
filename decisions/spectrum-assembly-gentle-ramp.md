@@ -314,6 +314,26 @@ Final call on what anchors October is Steve's (see open questions).
 4. **Tiny first game → named Gloaming (resolved 2026-06-01).** Designed, named, and authored as a
    module (Unit 1 shipped; 20 units planned). The lamplighter single-screen game.
 
+## Observation (2026-07-03): the ladder reads as one studio, not one game
+
+Noted at Gloaming module-1 completion, during the period-viability review. The track
+is not one game taught across modules — but it *is* one **continuously evolving engine
+and a recurring fictional register**, expressed as a catalogue of distinct releases:
+Gloaming → The Long Night (same game, deeper), Shadowkeep ("built on Gloaming's
+engine" — the design/place fork), Lamplight (Gloaming's lamp-and-dark fiction returning
+at the masked-sprite bar — the presentation fork), Greypeak's keep, and Spectral Legacy
+integrating everything. The right name for this shape is the **one-person 1980s software
+house** — the Ultimate/Sabreman pattern: an engine lineage and a house fiction carried
+across separate releases, each raising one technical bar, recapitulating the industry's
+own 1982–85 evolution. The genre exercises (Ricochet, Deepdelve, Nibble Run, Skyhawk,
+Starfall, Hard Rain) are the same studio's range, not breaks in the story.
+
+Two uses, one guardrail. *Uses:* module intros may make the lineage explicit (The Long
+Night's intro should name the two-axis fork ahead of it), and voice/marketing may frame
+the track as "a studio's decade, compressed". *Guardrail:* this never collapses into one
+literal mega-game — the per-module completion promise is this decision's core emotional
+architecture, and it requires distinct, finished releases.
+
 ## Drift triggers (preliminary)
 
 - **Re-loading game 1 with engine technique.** The opening's whole point is that the

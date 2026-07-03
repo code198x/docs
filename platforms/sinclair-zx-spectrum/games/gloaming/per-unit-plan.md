@@ -103,7 +103,11 @@ own — and every redesign step is a real playtest finding from the prototype lo
 
 **Module intro (framing, not a build unit):** the playtest sheet — what a winnability
 gate proves and what only hands can. The module retells the pass's fifteen rounds as its
-own arc.
+own arc. The intro should also name the two-axis fork ahead (per the 2026-07-03
+observation in `spectrum-assembly-gentle-ramp.md`): the night the learner is deepening
+here will be taken further twice — Shadowkeep extends the *design* into place and scale
+on the same engine; Lamplight returns the lamp-and-dark fiction at the masked-sprite
+*presentation* bar. The track's structure becomes a promise the learner can see coming.
 
 | # | Unit | The one idea | Primitive / confession |
 |---|------|--------------|------------------------|
