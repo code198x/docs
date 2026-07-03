@@ -1208,3 +1208,25 @@ keep m1's constant-count repaint — honest with a single watch), both
 anchors re-verified, all twelve unit captures re-run — `u06-deeper`
 now photographs the lives carry (watch 2 opens with two pips). Route
 map updated; still stopped before prose.
+
+## 2026-07-03 — The Long Night: all ten units authored on the branch
+
+Module 2's full build landed on the `gloaming-m2` worktree branches
+(code-samples `778b584`, website `4c63e07a`). The course code layer is
+`the-long-night/derive-steps.py` — every unit's steps derived from
+Gloaming unit 20's final build (the module seam) by assert-anchored
+transforms, code verbatim from the route skeleton with course-voice
+comments; the gate holds byte-identity between each unit's final step
+and its skeleton snapshot, so unit 10's build is the shipped
+gloaming.sna. Ten units + module intro authored: the honest
+intermediates all built and captured (the guard that won't take, the
+restless homecoming, the pool ghost, the naive ring release, the
+constant-lives lie shown in two frames, the deaf rests), the interim
+best-lives strain named at unit 8 and resolved at 9 as decided, the
+dawn-phrase audition sheet rendered as three build198x WAVs. The
+catalogue gains module 3 (game: gloaming, pass: 2; later modules
+renumber); 47 artefacts captured via per-unit manifests (sym-derived
+pokes) and every screenshot read and verified — one capture bug
+(unit-07 pokes from a mis-pathed sym table crashing the build to the
+ROM banner) caught exactly that way. Site build green with pagefind.
+Remaining: Steve's review pass on the branch preview, then the merge.
