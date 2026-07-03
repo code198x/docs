@@ -1173,3 +1173,25 @@ full byte-identical convergence. Post-merge the module also carries
 the studio-framing touches (the verified 16K try-this, The Long Night
 named as the continuation, the software-house seed) recorded against
 the one-studio observation in the gentle-ramp decision.
+
+## 2026-07-03 — Gloaming module 2: the route skeleton, gated
+
+The Long Night's ten unit end-states exist as builds
+(`prototype/skeleton-m2/`). Backbone 5–10 derived from `gloaming.asm`
+by scripted, assert-anchored subtraction; the detour spine 1–4 carries
+the history's nearest-light hunt (`7463ded`..`b601157`, re-verified
+against the git blob on every derive run); convergence at unit 5 is
+commit `87bf8ce` inverted, exactly. Both chain anchors bind:
+unit-10.sna byte-identical to gloaming.sna, and the chain bottoms out
+at the module seam — unit-00-seam.asm byte-identical to
+gloaming-m1.asm. All units assemble (Asm198x, pasmo cross-check
+byte-identical), run headless, and carry verified proof shots
+(18 captures + three WAVs). Runbook flags resolved as built: snuff
+silent at 1 / voiced at 8; the unit-9 metric swap reads as one idea;
+the 6/7 interstitial boundary holds. New findings: units 5–7 carry
+m1's dusk chime (the seam forces it — unit 8 *replaces*, not adds);
+and a real display bug in the shipped prototype (life pips repaint in
+full each watch — `draw_lives` uses the constant), reproduced against
+the gated build, decision needed before unit 6 prose. Deliverable:
+`platforms/sinclair-zx-spectrum/games/gloaming/route-map-m2.md` —
+**stopped there; Steve reviews the map before any prose.**
