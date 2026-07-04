@@ -98,9 +98,53 @@ mover is data, like the lamps in Gloaming"), not new technique or budget.
 - **Needs a design decision before decompose:** B5 (lives vs the deferred allies economy).
 - **Can wait for playtest / later arcs:** B6 (curve).
 
+## Closures (2026-07-04, with Steve)
+
+**B1 (quarantine) — CLOSED by design.** Two moves: (a) every room the player must clear carries
+its **own Warden**, instantiated from a per-room table (start cell, patrol route, speed) — the
+same data-driven pattern the torches and gold already use; (b) each room's gold sits on
+**contested ground**, on or beside that room's Warden route, so reaching a coin means reading and
+timing the patrol. The Warden stands between the player and the objective, not off to one side.
+The "wait for the far sweep and ignore it" strategy dies because the thing you're waiting to reach
+*is* the thing the Warden guards. (Prototype-verified at the decompose's first step; see below.)
+
+**B2 (thin) — CLOSED with B1.** A Warden per room is the density the era bar wants, and it is one
+mechanic replicated from data — no new technique, no new budget. It's the engine's own
+generalisation lesson: *a second mover is a table entry, like Gloaming's lamps.*
+
+**B3 (door = free escape) — CLOSED.** The Warden now contests the **gold**, not the door, so
+fleeing through a door costs you the coin — you leave without it and must return and face the
+patrol. The residual leave-re-enter *reset* cheese is bounded by placing each Warden's
+route-start so it still contests its gold on entry (authoring tuning, confirmed at playtest).
+
+**B4 (death on entry) — CLOSED.** On room entry the current room's Warden resets to a fixed
+route-start chosen **clear of the player's entry cell**, and gathers ~N frames before it moves
+(Gloaming's gather beat, now per room). You never materialise onto the Warden; the first beat of
+every room is readable before it turns dangerous.
+
+**B5 (penalty) — DECIDED: (c) one hit → title.** Not merely "livable" but the fiction-true Arc-1
+state: the freeze is **binary** (free or a statue — not a health bar, which is Atic Atac's
+fiction, not this one), and you are **alone** — lives *are* allies, and allies are diegetically
+gated to the Waking revisit. Two caveats bind it, and they are load-bearing: **(i)** one-hit is
+fair *only* while every Warden stays deterministic and telegraphed — the decompose must not let
+per-room patrols or contested-gold placement create an unreadable death; **(ii)** it has a shelf
+life — right for the tiny Place, revisit the penalty when the keep grows or when the Waking's
+allies-as-lives lands. Do not let one-hit-to-title silently persist into a large keep.
+
+**B6 (curve) — DEFERRED.** To playtest / later arcs; pass-1 accepts a flat-but-real curve.
+
+## Decompose plan (gating now met)
+
+1. **Verify the closed design on the prototype first** — extend `shadowkeep-warden.asm` to
+   per-room Wardens + contested gold + per-room entry-gather, and **re-gate**: scripted runs to
+   *both* THE KEEP STANDS (win) and THE KEEP SLEEPS (loss), proving the Warden contests the
+   objective and no entry death exists. Only then is the design proven, not just answered.
+2. **Decompose** into a jeopardy sub-phase of Arc 1 and reconcile the Place's units (and the
+   "complete, finishable game" framing) — win *and* loss scripts in `capture/`.
+
 ## To the prototype discovery log
 
-- Confirm the row-11 crossing window empirically once wardens are per-room (does the timing stay
-  fair when several patrol at once?).
+- Confirm the crossing window stays fair once Wardens are per-room (several patrolling at once).
 - Does a *following* Warden (crosses doors with the thief) read as fairer or nastier than
-  per-room wardens? Only hands can say.
+  per-room Wardens? Only hands can say.
+- Tune each Warden's route-start so re-entry never hands a free grab (B3 residual).
