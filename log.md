@@ -1292,3 +1292,24 @@ glyph-draw) kept — accurate provenance. Metadata swept; four-arc-framing
 decision amended. Self-correction: The Long Night's game: field was 3 but
 it's the same game as Gloaming (pass 2) → game: 1 (game-counter scheme);
 Shadowkeep's 2 was right. Website 6a3e1794, site build green.
+
+## 2026-07-04 — Shadowkeep gains jeopardy: decision, prototype, design-stress
+
+Steve ruled a game is not a game without jeopardy — captured as
+a-game-needs-jeopardy.md (curriculum-wide; overrides the brief's "The
+Place stands complete without threat"). Brief + four-arc framing
+amended. Prototyped the Warden (a deterministic patrol-freezer; touch =
+THE KEEP SLEEPS) on the shipped Place engine — the Place is now losable,
+verified headless; caught a two-mover proposal-clobber bug on the way.
+Ran /design-stress against the prototype: the single-Hall Warden PROVES
+jeopardy works but isn't yet a game — the threat is quarantined from the
+objective (gold is off the patrol row and in threat-free rooms; optimal
+play is wait-for-the-far-sweep). Minimal real design = a Warden per room
+(data-driven — the engine's own generalisation lesson, curriculum-
+positive) + gold on contested ground + entry/first-death fairness
+(reconcile with the deferred allies-as-lives economy). Findings B1-B4
+gate the decompose; B5 (lives) needs a design call; B6 (curve) waits for
+playtest. Prototype: code-samples 25ee063. Report:
+platforms/.../shadowkeep/design-stress-2026-07-04.md. Stopped before
+decompose — it reworks shipped units and needs Steve's read of the
+findings.
