@@ -32,6 +32,15 @@
 > curriculum reframed accordingly (index + units 1, 9, 12, 13; metadata). No unit was cut: the
 > techniques are genuinely complementary, only the framing skipped the module now sitting between.
 
+> **AMENDED 2026-07-04 — Arc 1 gains jeopardy.** Per
+> [a-game-needs-jeopardy.md](a-game-needs-jeopardy.md), a game needs a reachable fail state.
+> Arc 1 ("the Place") shipped winnable-but-not-losable; that is now corrected — the curse
+> threat (the **Warden** patrol-freezer, "Gloaming's draught grown up"; caught → you join the
+> sleepers) comes into Arc 1 so it is a *game*, not only a place. The genre-honesty **no-combat**
+> guardrail below is untouched: the Warden is explore-and-avoid (touch = stasis), not combat —
+> exactly as Atic Atac's nasties and Knight Lore's guardians are. The fuller *inhabitants /
+> Waking* content stays a later revisit; only the *fail state* moves forward.
+
 ## The decision
 
 Extends [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) with a **full four-arc framing** for Shadowkeep:

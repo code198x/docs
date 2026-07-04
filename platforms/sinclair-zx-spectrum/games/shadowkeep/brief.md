@@ -1,5 +1,15 @@
 # Shadowkeep — Brief
 
+> **AMENDED 2026-07-04 — the Place gains jeopardy.** Per
+> [a-game-needs-jeopardy.md](../../../../decisions/a-game-needs-jeopardy.md), a game needs a
+> reachable fail state, so the "forgiving in pass 1 (exploration, not threat)" stance below is
+> **superseded**: the Place must be *losable* to ship as a game. The already-designed curse
+> threat (caught → you join the sleepers, no combat — the **Warden** patrol-freezer shape)
+> comes into the Place; the fuller *Waking* revisit (waking NPCs, puzzle graph, allies-as-lives)
+> stays later. Atmosphere and sense-of-place are untouched — jeopardy is *added* to them
+> (Knight Lore, this brief's own mood archetype, has guardians *and* mood). Being decomposed
+> and re-gated (win *and* loss) via the Gloaming flow; brief body updated as that lands.
+
 **Title (working):** Shadowkeep
 **System / Track:** ZX Spectrum / Assembly
 **Position:** The second game of the assembly track, after *Gloaming* (the tiny first game) and the *Meet the Machine* Primer.
@@ -95,7 +105,7 @@ AY-3-8912 is deferred — the flick-adventure tradition is beeper; AY arrives el
 
 **Hand-designed, cell-based, flick-screen.** Pass 1 ships **a small real keep** — the built three rooms are the **Hall** (pillared, broadly lit), the **Gallery** (split by a wall with one gap to find), and the **Vault** (a central altar lit by its own flame). Doors **align** across connected rooms (east↔west share a row, north↔south a column) so crossings read as steps. Every room reads as somewhere from a screenshot alone.
 
-**Signposting** is the light and the palette; there is no in-game tutorial. **Difficulty** is forgiving in pass 1 (exploration, not threat — threat is a later revisit module). **Onboarding:** the first minutes teach that the keep is dark, a torch lights a pool, QAOP moves the thief, doorways flick to new rooms, gold is the goal.
+**Signposting** is the light and the palette; there is no in-game tutorial. **Difficulty** is forgiving but no longer threat-free (superseded 2026-07-04 — see top banner): the Warden patrols, and being caught freezes you into the keep. Forgiving means a readable, memorisable, deterministic threat you route around, not an absent one. **Onboarding:** the first minutes teach that the keep is dark, a torch lights a pool, QAOP moves the thief, doorways flick to new rooms, gold is the goal.
 
 Later Shadowkeep *revisit* modules grow the keep (more rooms, outdoor traversal, multiple keeps) — out of scope for the Place.
 
