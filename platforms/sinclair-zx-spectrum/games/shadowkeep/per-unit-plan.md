@@ -10,24 +10,35 @@
 > *"The keep at night, complete. A place, then its inhabitants and identity. The first chapter of a longer game."*
 
 > **Build status (2026-06-02): units 1–16 authored and live** — the Place explores, lights, sounds
-> and *finishes*. Sub-arc **1.1 Into the Keep** ✅ (A Hooded Figure · The First Hall · A Place to
-> Move · The Keep's Hand), **1.2 A Keep of Rooms** ✅ (The Room Graph · Through the Doorway · The Hero
-> Remembers · Three Rooms), **1.3 Mood and Light** ✅ (Light and Shadow · Furnishings · Mood through
-> Constraint · A Keep with Character), **1.4 The Keep Has a Voice** ✅ (Footsteps and Doors · The
-> Keep's Gold · A Theme in One Voice · The Keep Stands). As-built closely follows the outline below;
-> the chief addition was **bitmap dithering** as the stone-and-lighting technique (Units 2, 9–12).
-> **Deferred:** a video-capture-quality bump + recapture of the dither-heavy units (2, 3, 9–12) with
-> crisp output.
+> and *finishes*. As-shipped sub-arcs (numbering pre-dates the 2026-07-04 weave below, which
+> reassigns 1.3 onward): **Into the Keep** ✅ (A Hooded Figure · The First Hall · A Place to Move ·
+> The Keep's Hand), **A Keep of Rooms** ✅ (The Room Graph · Through the Doorway · The Hero Remembers ·
+> Three Rooms), **Mood and Light** ✅ (Light and Shadow · Furnishings · Mood through Constraint · A
+> Keep with Character), **The Keep Has a Voice** ✅ (Footsteps and Doors · The Keep's Gold · A Theme in
+> One Voice · The Keep Stands). As-built closely follows the outline below; the chief addition was
+> **bitmap dithering** as the stone-and-lighting technique (shipped Units 2, 9–12). **Deferred:** a
+> video-capture-quality bump + recapture of the dither-heavy units with crisp output.
 >
-> **Jeopardy re-open (2026-07-04):** units 1–16 make the Place *finishable*, not *losable* — and per
+> **Jeopardy weave (2026-07-04):** units 1–16 make the Place *finishable*, not *losable* — and per
 > [`a-game-needs-jeopardy.md`](../../../../decisions/a-game-needs-jeopardy.md), **a place you cannot
-> lose is not yet a game.** Arc 1 gains a sixth sub-arc — **1.5 Hold Back the Dark** (the Warden) —
-> that gives the Place a threat and a fail state, decoupled from the full *Waking* revisit (lives
-> economy, behaviour tables, HUD — those stay Arc 2+). The closed design is **prototype-proven** —
-> winnable *and* losable, headless and deterministic (see
-> [`design-stress-2026-07-04.md`](design-stress-2026-07-04.md) § Prototype verification). Units
-> 17–22 below are the decompose; **authoring is the next step** (each unit its own byte-identity-gated
-> build, the Gloaming way). Only then does unit 16's "complete game" close change to hand off to 1.5.
+> lose is not yet a game.** The fix is **not a coda** appended after the finale — it is a
+> **resequence** so the Place is a game for most of its construction (Steve, 2026-07-04, "weave it
+> earlier"). A game is **want + threat + fail**; those three now come together as a **game core**
+> right after the world exists (new Sub-arc 1.3, units 9–12), and atmosphere and audio *deepen* a
+> thing that is already a game. The threat is a **curse, not combat** (the no-combat anti-goal in
+> [`shadowkeep-four-arc-framing.md`](../../../../decisions/shadowkeep-four-arc-framing.md) holds).
+> The closed design is **prototype-proven** — winnable *and* losable, headless and deterministic (see
+> [`design-stress-2026-07-04.md`](design-stress-2026-07-04.md) § Prototype verification).
+>
+> **What this re-opens.** Units **1–8 are unchanged** (the engine and the world). Units **9–19 are
+> re-derived**: the old atmosphere sub-arc (shipped units 9–12) moves back to 13–16; the old audio +
+> gold + theme + finale (shipped 13–16) redistribute (gold → new 9, SFX → 17, theme → 18, the
+> win-loop that was unit 16 folds into new unit 11's win/lose state machine); the game-core units
+> 10–12 are net-new. The warden is **lighting-agnostic** (its save/restore/draw preserve whatever
+> stone sits under it, textured or lit), so it builds cleanly on the pre-lighting base and the
+> atmosphere units layer on top without disturbing it. **Authoring is the next step** — each unit its
+> own byte-identity-gated build, the Gloaming way. The old append-style "1.5 Hold Back the Dark"
+> (units 17–22) is superseded by this weave.
 
 ## Position in curriculum
 
@@ -84,9 +95,9 @@ boundary). Its genuinely *new* work is what makes it a *place*:
 | New to Shadowkeep | Sub-arc |
 |---|---|
 | Multi-room world + flick-screen transitions | 1.2 |
-| Atmosphere — attribute lighting, mood, designed decoration | 1.3 |
-| Audio depth — SFX driver + composed theme (beyond the blip) | 1.4 |
-| Jeopardy — a second mover (the Warden), a deterministic patrol, contact = loss | 1.5 |
+| The game core — the gold (want), the Warden (a second mover + deterministic patrol), contact = loss | 1.3 |
+| Atmosphere — attribute lighting, mood, designed decoration | 1.4 |
+| Audio depth — SFX driver + composed theme (beyond the blip) | 1.5 |
 | Inhabitants *elaborated* — varied/multiple NPCs, the allies-as-lives economy | 2.1–2.2 |
 | Identity — numeric HUD, room names, score persistence | 2.3 |
 | Completion — polish, audio depth, hardware, presentation | 2.4 |
@@ -142,7 +153,7 @@ unit count.
 - **4 — The Keep's Hand.** Tooling for the keep: a clean tile/attribute palette + the room-data
   format Shadowkeep's many rooms will share. *Sets up 1.2.*
 - **Sub-arc major:** *consolidation + identity, with one new craft technique — **bitmap dithering**
-  for textured, shaded stone (Unit 2), introduced gently here and exploited for lighting in 1.3.
+  for textured, shaded stone (Unit 2), introduced gently here and exploited for lighting in 1.4.
   The deliberate gentle on-ramp into the bigger game.*
 
 ### Sub-arc 1.2 — A Keep of Rooms (5–8) · **flick-screen world** *(major)*
@@ -154,71 +165,77 @@ unit count.
 - **8 — Three Rooms.** Two or three designed, connected rooms — a small keep you can explore.
 - **Sub-arc major:** **multi-room world + flick transitions** (the defining flick-adventure mechanic).
 
-### Sub-arc 1.3 — Mood and Light (9–12) · **atmosphere** *(major)*
-- **9 — Light and Shadow.** Lighting on two axes: attribute *colour* per cell/region, and **dither
+### Sub-arc 1.3 — The Keep is a Game (9–12) · **the game core: want + threat + fail** *(major)*
+
+> **Woven 2026-07-04** per [`a-game-needs-jeopardy.md`](../../../../decisions/a-game-needs-jeopardy.md)
+> and Steve's "weave it earlier." A game is **want + threat + fail** — those three assemble *here*,
+> right after the world exists, so the Place is a game for most of its construction (not a coda after
+> the finale). The threat is a **curse, not combat** (the no-combat anti-goal in
+> [`shadowkeep-four-arc-framing.md`](../../../../decisions/shadowkeep-four-arc-framing.md) holds):
+> caught, you join the sleepers, frozen mid-stride. Closed design **prototype-proven** and re-gated
+> (win *and* loss) — see [`design-stress-2026-07-04.md`](design-stress-2026-07-04.md). Built on the
+> pre-lighting rooms of 1.2; the Warden is lighting-agnostic, so 1.4's atmosphere layers on top of it.
+
+- **9 — The Keep's Gold.** The **want**: gold scattered through the rooms, collect-all to clear the
+  keep — and the win half of the loop, reused from the tiny game's title → explore → win → title
+  state machine, scaled to the world (collect the last coin → THE KEEP STANDS → replay). *Reuse
+  collect/win + the state machine; the goal that the threat will contest.* Read-Alongside: Atic Atac's
+  treasure hunt.
+- **10 — Something in the Dark.** The **threat**: the Warden — a spectral hooded sentinel with its own
+  save / restore / draw and a private under-buffer (the two-mover shape the thief already uses, now a
+  *second occupant*), walking a **deterministic patrol** — a row or column, reversing at walls, after
+  a gather beat. A route you *learn and time* — Sabre Wulf's roaming beasts, **not** The Long Night's
+  hunting dark (a patroller, not a hunter). *Reuse the two-mover; new: a second sprite with a designed
+  spectral glyph, and patrol-movement state (propose-then-commit stepping).* Read-Alongside: Knight
+  Lore's guardians · Sabre Wulf's patrol.
+- **11 — Join the Sleepers.** The **fail**: contact is loss — the thief stepping toward the Warden
+  *and* the Warden's step landing on the thief; the loop gains its lose arm (title → explore → win
+  *or* lose → title); "THE KEEP SLEEPS" and a plunge-then-lock caught-sting. **This is the unit where
+  the Place becomes a game** — the direct echo of Gloaming's "a game needs a way to lose." *New: the
+  fail state; the win/lose state machine complete.* Read-Alongside: Atic Atac (touched = lost).
+- **12 — A Warden for Every Room.** From one Warden to a keep of them, **from data**: a warden table
+  (start cell, route, axis per room), each room instantiating its Warden on entry — gathering **clear
+  of the entry cell** so you never materialise onto it — and the **gold moved onto the routes** so
+  reaching a coin means reading the patrol and taking the gap (contested ground, want-*against*-threat
+  from the first placement, never taught safe-then-moved). *A second mover is a table entry — like
+  Gloaming's lamps, like the torches. New: the per-room table + jeopardy-first level design.*
+  Read-Alongside: Atic Atac's contested rooms.
+- **Sub-arc major:** **the game core — a want, a deterministic threat that contests it across the
+  keep, and a fail state. The Place is a game (playable, winnable, losable) from here.**
+
+### Sub-arc 1.4 — Mood and Light (13–16) · **atmosphere** *(major)*
+
+> The rooms of 1.1–1.3 carry textured *dithered stone* (Unit 2) but not yet lit modelling; this
+> sub-arc lights the keep the Warden already haunts. (Shipped as units 9–12; renumbered by the 1.3
+> weave — same content, now enriching a working game rather than an empty place.)
+
+- **13 — Light and Shadow.** Lighting on two axes: attribute *colour* per cell/region, and **dither
   density** (from Unit 2) varied by distance from a light — denser-to-black in the dark, sparser
   near a torch. Shading falls straight out of the stone technique. *New: atmosphere as a discipline.*
-- **10 — Furnishings.** Decoration objects — pillars, altars, sconces — as non-blocking cell scenery
+- **14 — Furnishings.** Decoration objects — pillars, altars, sconces — as non-blocking cell scenery
   that make a room *a place*.
-- **11 — Mood through Constraint.** Dark rooms, lit pools, contrast — sense of place within the two-
+- **15 — Mood through Constraint.** Dark rooms, lit pools, contrast — sense of place within the two-
   colours-per-cell limit, dither density buying the shades between them (the constraint *is* the
   vocabulary).
-- **12 — A Keep with Character.** Atmosphere applied across all rooms; each room reads as somewhere.
+- **16 — A Keep with Character.** Atmosphere applied across all rooms; each room reads as somewhere —
+  and the Warden's patrol now reads *against* lit stone, the threat legible in the mood.
 - **Sub-arc major:** **atmosphere — lighting, mood, designed decoration.**
 
-### Sub-arc 1.4 — The Keep Has a Voice (13–16) · **audio + the complete chapter** *(major)*
-- **13 — Footsteps and Doors.** An **SFX driver** (beyond the tiny game's single blip): footsteps,
-  a door creak — sound as place. *New: audio depth.*
-- **14 — The Keep's Gold.** The goal across the keep: collect the gold scattered through the rooms;
-  a win when the keep is cleared. *Reuse collect/win; scale to the world.*
-- **15 — A Theme in One Voice.** A composed **beeper theme** for the title — single-channel
+### Sub-arc 1.5 — The Keep's Voice (17–19) · **audio depth + the sealed chapter** *(major)*
+- **17 — Footsteps and Doors.** An **SFX driver** (beyond the tiny game's single blip): footsteps, a
+  door creak, the gold's chime — sound as place, joining the caught-sting the loss already sounds.
+  *New: audio depth.*
+- **18 — A Theme in One Voice.** A composed **beeper theme** for the title — single-channel
   composition discipline.
-- **16 — The Keep Stands.** Title screen (hand-pixelled logo) + the complete title → explore → win →
-  title loop for the multi-room keep. *(Reframe pending — see 1.5: this loop is finishable but not
-  yet losable; at 1.5 authoring, the unit's close names that gap and hands off, the way Gloaming's
-  Unit 15 → 16 pivot does.)*
-- **Sub-arc major:** **audio depth + the complete first-chapter loop.**
-
-### Sub-arc 1.5 — Hold Back the Dark (17–22) · **jeopardy — the Warden** *(major)*
-
-> **Added 2026-07-04** per [`a-game-needs-jeopardy.md`](../../../../decisions/a-game-needs-jeopardy.md).
-> The Place from 1.1–1.4 is finishable but not losable; this sub-arc gives it a threat and a fail
-> state — the *minimum* to make it a game. The threat is a **curse, not combat** (the no-combat
-> anti-goal in [`shadowkeep-four-arc-framing.md`](../../../../decisions/shadowkeep-four-arc-framing.md)
-> holds): caught, you join the sleepers, frozen mid-stride. Closed design **prototype-proven** and
-> re-gated (win *and* loss) — see [`design-stress-2026-07-04.md`](design-stress-2026-07-04.md).
-
-- **17 — Something in the Dark.** A **second mover**: the Warden — a spectral hooded sentinel with
-  its own save / restore / draw and a private under-buffer, drawn in the Hall. The two-mover shape
-  the thief already uses, now a *second occupant* ("one cell, one occupant," generalised). *Reuse the
-  two-mover; a second sprite; a designed spectral glyph.* Read-Alongside: Knight Lore's guardians.
-- **18 — A Route in the Stone.** The Warden's mind: a **deterministic patrol** along a row or column,
-  reversing at walls, after a gather beat. A route you *learn and time* — Sabre Wulf's roaming
-  beasts, **not** The Long Night's hunting dark (the antagonist must feel different: a patroller, not
-  a hunter). *New: patrol-movement state; propose-then-commit stepping.* Read-Alongside: Sabre Wulf.
-- **19 — Join the Sleepers.** **Contact is loss.** The thief stepping toward the Warden *and* the
-  Warden's step landing on the thief; the state machine's **fourth state** (title → explore → win
-  *or* lose → title); "THE KEEP SLEEPS" and a plunge-then-lock caught-sting. *The unit where the
-  Place becomes a game* — the direct echo of Gloaming's "a game needs a way to lose." *New: the fail
-  state.* Read-Alongside: Atic Atac (touched = lost).
-- **20 — A Warden for Every Room.** The **data-driven generalisation**: a warden table (start cell,
-  route, axis per room); each room instantiates its Warden on entry, gathering **clear of the entry
-  cell** so you never materialise onto it. *A second mover is a table entry — like Gloaming's lamps,
-  like the torches and gold already are.* Density from data, no new technique. *Reuse the table
-  pattern.*
-- **21 — Contested Ground.** The **level-design pass**: gold placed on the Wardens' routes, so
-  reaching a coin means reading the patrol and taking the gap — want-against-threat. The difference
-  between "losable" and "a game." *New: level design **as** jeopardy — placement and tuning, not
-  code.* Read-Alongside: Atic Atac's contested rooms.
-- **22 — Stand or Sleep.** The finished chapter: the complete title → explore → **win or lose** →
-  title loop, re-gated with **both** endings (THE KEEP STANDS *and* THE KEEP SLEEPS) — the
-  per-game winnability gate met properly (a scripted run to each ending in `capture/`). Now "a
-  complete, finishable game" is true: **losable and winnable.**
-- **Sub-arc major:** **jeopardy — a deterministic threat, a fail state, contested objectives.**
+- **19 — Stand or Sleep.** The **sealed chapter**: the title screen (hand-pixelled logo) over the
+  complete title → explore → **win or lose** → title loop, re-gated with **both** endings (THE KEEP
+  STANDS *and* THE KEEP SLEEPS) — the per-game winnability gate met properly (a scripted run to each
+  ending in `capture/`). The game built at 1.3 is dressed and closed: **losable and winnable.**
+- **Sub-arc major:** **audio depth + the sealed, re-gated first chapter.**
 
 **End of Arc 1:** a complete, beautiful, cell-based multi-room flick-adventure — explore the keep,
 collect the gold, **hold back the dark**, win *or* join the sleepers — with light, mood and sound.
-A real game, because now it can be lost.
+A real game, because it can be lost — and a game for most of its build, not just its last unit.
 
 ---
 
@@ -229,8 +246,9 @@ A real game, because now it can be lost.
 > the lineup after intervening games, each within its own 1–2-majors budget. It is the design
 > backlog for those revisits, not the back half of a single Shadowkeep block.
 
-> **Re-scoped 2026-07-04 by Sub-arc 1.5.** Minimal jeopardy — *one* deterministic Warden and a fail
-> state — now lands in **pass 1** (1.5 above), so 2.1–2.2 are no longer where threat *first* appears.
+> **Re-scoped 2026-07-04 by Sub-arc 1.3.** Minimal jeopardy — *one* deterministic Warden and a fail
+> state — now lands in **pass 1** (1.3 above, the game core), so 2.1–2.2 are no longer where threat
+> *first* appears.
 > They become the **elaboration**: 2.1 "Something Moves" widens the single Warden to varied,
 > multiple, animated inhabitants (behaviour tables, an object list); 2.2 "A Presence in the Dark"
 > replaces pass-1's one-hit-to-title with the **allies-as-lives economy** (the *Waking* vision —
