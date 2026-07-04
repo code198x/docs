@@ -142,6 +142,41 @@ allies-as-lives lands. Do not let one-hit-to-title silently persist into a large
 2. **Decompose** into a jeopardy sub-phase of Arc 1 and reconcile the Place's units (and the
    "complete, finishable game" framing) — win *and* loss scripts in `capture/`.
 
+## Prototype verification — DONE (2026-07-04)
+
+Stage 1 of the decompose plan is complete. The closed design is proven on the engine, not
+just answered on paper. Builder `prototype/build-warden-closed.py` extends the shipped Place
+(unit-16 step-01) to the closed design; `build-win-capture.py` generates the win run.
+
+- **A Warden in every room, from a table** (B1 density, B2): `warden_table` holds one
+  `(start col, start row, dir, axis)` row per room — Hall col 26 (vertical), Gallery col 24
+  (vertical, bottom chamber), Vault row 20 (horizontal) — instantiated by `warden_enter` on
+  `new_game` and every room change. One two-mover, replicated from data, exactly as the torches
+  and gold already are.
+- **Gold on contested ground** (B1): every coin sits on its room's Warden route — Hall (26,6)
+  (26,20), Gallery (24,11)(24,20), Vault (10,20)(20,20). Reaching a coin means reading the patrol.
+- **Guards the gold, not the door** (B3): routes cross the coins, not the exits.
+- **Entry clear + gather** (B4): each Warden's route-start is clear of the entry cell and gathers
+  `WARDEN_GATHER` (50) frames before moving.
+- **One hit → title** (B5): `check_caught` / `warden_step` set `caught`; the loop branches to
+  `show_lose`.
+- **A/V fixes carried in**: a spectral hooded-sentinel glyph (was a placeholder blob) and a
+  caught-sting that plunges then locks (was a plain descending sweep).
+
+**Re-gate (both paths, headless, deterministic):**
+
+- **Winnable** — `capture/closed-win.script.json` drives all six contested coins across the three
+  rooms to **THE KEEP STANDS**, verified by memory probe: `gold_remaining` 6→5→4→3→2→1→0,
+  `current_room` 0→1→2, and `caught=0` (a clean win, never touched a Warden).
+- **Losable** — `capture/closed-loss.script.json` steps the thief onto the Hall Warden's column;
+  the Warden's first post-gather step lands on it → **THE KEEP SLEEPS**.
+
+Two engine facts the decompose must carry into the shipped units: `draw_room` repaints ~18 frames
+on every room entry (the gather only counts *after* the draw); and the Warden reads the thief's
+cell as a wall, so the thief can never step *into* a Warden — only the Warden's step catches — and
+the thief-into-Warden case is caught by an explicit position compare (`check_caught`) before
+`wall_at`.
+
 ## To the prototype discovery log
 
 - Confirm the crossing window stays fair once Wardens are per-room (several patrolling at once).
