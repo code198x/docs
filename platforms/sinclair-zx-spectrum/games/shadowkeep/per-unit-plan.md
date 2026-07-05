@@ -36,9 +36,18 @@
 > win-loop that was unit 16 folds into new unit 11's win/lose state machine); the game-core units
 > 10–12 are net-new. The warden is **lighting-agnostic** (its save/restore/draw preserve whatever
 > stone sits under it, textured or lit), so it builds cleanly on the pre-lighting base and the
-> atmosphere units layer on top without disturbing it. **Authoring is the next step** — each unit its
+> atmosphere units layer on top without disturbing it. **Now authored and live** — each unit its
 > own byte-identity-gated build, the Gloaming way. The old append-style "1.5 Hold Back the Dark"
 > (units 17–22) is superseded by this weave.
+>
+> **Live (2026-07-05).** The weave is authored, verified, and **flipped live**. Units 9-19 rebuilt:
+> the code chain (each seam byte-identical back to unit 8, every unit winnable *and* losable by
+> memory-probed headless runs); 11 magazine-class MDX units with figures, gameplay video and beeper
+> audio; the catalogue renumbered to **five** sub-arcs (adding **1.3 The keep is a game**, 9-12,
+> with 1.4 Mood and Light at 13-16 and 1.5 The keep's voice at 17-19). The Place becomes a game at
+> unit 11 and is fully contested by 12; atmosphere and voice deepen a thing that already plays.
+> Per-unit `capture/manifest.json` recipes regenerate every still, clip and WAV via `capture.py`.
+> `units.yaml` is the live source of truth for titles and order; this plan is the design record.
 
 ## Position in curriculum
 
