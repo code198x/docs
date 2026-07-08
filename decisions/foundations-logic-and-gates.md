@@ -1,0 +1,116 @@
+# Decision: the Foundations "Logic & Gates" subtrack
+
+**Status:** ACCEPTED — 2026-07-08. Adds a **second Foundations subtrack** alongside
+[`foundations-numbers-and-bits.md`](foundations-numbers-and-bits.md). This **amends**
+[`front-of-curriculum-architecture.md`](front-of-curriculum-architecture.md)'s Layer 2b
+line that Foundations is "the whole of" Number Systems + Bit Logic: the layer now
+holds two subtracks. The amendment is deliberate and narrow — Logic & Gates passes
+the same three promotion tests the architecture doc inherited from the
+[`cross-system-foundations.md`](cross-system-foundations.md) seed, and it joins as a
+**recommended side-path, not spine** (see § Position). Decided; build is a later
+session, native to the raised bar.
+
+## The gap it fills
+
+Neither existing course teaches truth-functional reasoning. General Programming
+owns *what a conditional is*; Numbers & Bits unit 4 owns AND/OR/XOR/NOT *as bit
+tools* (masking, setting, clearing, eight lanes wide). Between them sits the
+reasoning itself — truth tables as a thinking tool, combining conditions,
+De Morgan's, proving two guards equivalent — which every track currently
+hand-waves: the BASIC games tangle with compound `IF`s from Volume 1, and the
+assembly tracks reason about flags and branch conditions with nothing upstream to
+lean on.
+
+The course is **one arc**: the reasoning first, then the payoff that the same
+truth tables *are* the machine — gates, then the adder that adds Numbers & Bits'
+numbers.
+
+## The promotion tests (all three pass)
+
+1. **Identical across machines** — truth tables and gates carry no
+   platform-specific substance.
+2. **Teachable without a specific machine** — pure concept plus trivial
+   illustration.
+3. **Removes real redundancy** — condition/flag reasoning is currently re-taught
+   (or skipped) per track; the adder demystification exists nowhere.
+
+## Name
+
+**"Logic & Gates."** Follows the layer's plain-neutral convention ("General
+Programming", "Numbers & Bits") and names both movements; "Logic & Truth Tables"
+named the first movement twice and the payoff not at all. Foundations sits outside
+the "Meet \<thing\>" family, so no "Meet Logic".
+
+## The shape (build target) — six units, two movements
+
+**Movement 1 — reasoning:**
+
+1. **True and false** — propositions, NOT; the truth table as the complete map of
+   a question.
+2. **AND, OR, XOR** — combining conditions, game-shaped throughout ("jump if
+   button pressed AND on the ground AND NOT stunned"); XOR as "different".
+3. **De Morgan's and simplification** — untangling nested `IF`s; why
+   "NOT (dead OR finished)" is "alive AND unfinished"; truth tables as the proof
+   that two different-looking guards are the same guard.
+
+**Movement 2 — the payoff:**
+
+4. **From conditions to gates** — the same three tables drawn as circuits; a
+   signal is true/false on a wire.
+5. **The half adder** — XOR is the sum, AND is the carry; adding two bits is
+   nothing but unit 2's tables.
+6. **The full adder and the ripple chain** — how the machine adds the numbers
+   from Numbers & Bits; closes with an honest signpost to *Meet the Machine*.
+
+**The runnable thread:** across movement 2 the learner builds the gates and then a
+working 8-bit ripple adder **in Sinclair BASIC** — feed it two numbers, watch the
+carry ripple. Concrete, working at every step, and the "it's just tables" point
+demonstrates itself. (Sinclair BASIC has no native XOR — building it, and noticing
+that `a<>b` *is* XOR on 0/1 values, is part of the lesson, not an obstacle.)
+
+## Build conventions
+
+- **Concreteness — pseudocode + one concrete vehicle (Sinclair BASIC)**, exactly
+  as Numbers & Bits: each idea stated neutrally, shown running in Spectrum BASIC,
+  framed as "here in BASIC; the same idea everywhere."
+- Built native to the raised bar; the General Programming primer remains the
+  exemplar.
+
+## Position — after Numbers & Bits, recommended side-path
+
+Sits in Foundations **after Numbers & Bits** (the adder needs binary place value
+in hand):
+
+```
+General Programming → Numbers & Bits → [recommended: Logic & Gates] → Meet the Machine
+```
+
+**Nothing gates on it.** *Meet the Machine* / *Meet Assembly* signpost it
+("if tangled conditions — or how a machine can possibly add — mystify you, this
+course exists") but keep their prerequisites unchanged, so it adds no October
+launch burden. Promotion to core spine is a separate, explicit decision to revisit
+once the course exists and Meet Assembly's flag units show whether they genuinely
+lean on it.
+
+## Drift triggers
+
+- It teaches what a conditional/loop/variable *is* — belongs in General
+  Programming, taught once.
+- A masking/setting/clearing example appears — that is Numbers & Bits unit 4;
+  here the operators are propositional, one lane at a time, citing N&B rather
+  than re-teaching it.
+- A latch, flip-flop, ALU, or CPU model appears — the adder is the terminus;
+  memory and the CPU stay concrete in *Meet the Machine* per the architecture
+  doc's Tier 3 ruling.
+- A per-chip specific (a flag register, a ULA quirk) appears — belongs
+  downstream.
+- Units go pure-abstract with no BASIC illustration — the over-extraction failure
+  the seed warned about.
+- Anything starts *requiring* Logic & Gates as a prerequisite — that is the
+  spine-promotion decision, made explicitly or not at all.
+
+## Log
+
+| Date | Event |
+|------|-------|
+| 2026-07-08 | Accepted. Brainstormed in the 198x umbrella session: arc scope (reasoning + gates-to-adder, latch/ALU explicitly out), terminus at the full adder, recommended-side-path position, and the name "Logic & Gates" all settled with Steve. Build deferred to its own session. |

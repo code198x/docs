@@ -166,6 +166,10 @@ needs them; assembly needs them constantly.
   (decimal/binary/hex, place value, bits/nibbles/bytes, two's complement) and
   **Bit Logic** (AND/OR/XOR/NOT, masking, shifting). Pass all three of the seed's
   tests; likely one combined primer or two small ones.
+  *Amended 2026-07-08:* Foundations gained a second subtrack — **Logic & Gates**
+  (truth-table reasoning → gates → the adder), a recommended side-path after
+  Numbers & Bits that gates nothing. See
+  [`foundations-logic-and-gates.md`](foundations-logic-and-gates.md).
 - **Display / Sound — DECIDED (2026-06-05): not promoted; cover lightly,
   just-in-time, concretely.** Tempting as Tier 2, but rejected. CRT *physics*
   (scanlines, phosphor) isn't worth a foundation — it only matters for advanced
