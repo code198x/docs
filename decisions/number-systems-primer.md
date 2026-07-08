@@ -52,10 +52,18 @@ Depth-vs-breadth: this **completes the foundation** of the on-ramp — it is not
 third system. Arguably depth, not the breadth the bar gates. Worth deciding
 explicitly when promoting.
 
-## Open questions
+## Open questions — all since resolved downstream
 
-- Name.
-- Universal, or assembly-track-specific? (Does the BASIC track want it too?)
-- Scope — how many concepts / units.
-- Does it need a *machine* at all, or is it pure concept + tiny illustrations
-  (and if it runs anything, on which emulator)?
+Answered by [`front-of-curriculum-architecture.md`](front-of-curriculum-architecture.md)
+(2026-06-05) and [`foundations-numbers-and-bits.md`](foundations-numbers-and-bits.md)
+(2026-06-30):
+
+- **Name** — ✓ "Numbers & Bits".
+- **Universal, or assembly-track-specific?** — ✓ positioned as the bridge into
+  assembly (after General Programming, before Meet the Machine); the BASIC track
+  barely needs it.
+- **Scope** — ✓ fixed by the architecture doc (number systems + bit logic, nothing
+  else); build added one conceptual "Numbers That Aren't Whole" unit.
+- **Machine?** — ✓ pseudocode + one concrete vehicle: Sinclair BASIC
+  (`BIN` literals, `CODE`/`CHR$`), framed as "here in BASIC; the same idea
+  everywhere".

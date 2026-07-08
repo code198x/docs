@@ -258,11 +258,17 @@ bar rather than blocked by it.
 - **C64 BASIC / AMOS primers** — per-platform parallels of the Spectrum primer;
   AMOS slightly more involved (in-emulator). (Layer 2a.)
 
-## Open questions (decide before/at build)
+## Open questions (decide before/at build) — both resolved 2026-06-30
 
-1. **Naming** — the General Programming primer and the Foundations primer(s) (the
-   seed floated "Meet the Numbers" / "How Computers Count"). Deferred — name at build.
-2. **Number Systems + Bit Logic** — one combined primer or two small ones.
+Resolved by [`foundations-numbers-and-bits.md`](foundations-numbers-and-bits.md):
+
+1. **Naming** — ✓ the Foundations primer is **"Numbers & Bits"** (the floated
+   "Meet the Numbers" / "How Computers Count" set aside — Foundations sits outside
+   the "Meet \<language\>" family); the General Programming primer kept its plain
+   name.
+2. **Number Systems + Bit Logic** — ✓ **one combined subtrack**, at
+   `curriculum/foundations/numbers-and-bits/` (extended at build with a sixth,
+   conceptual "Numbers That Aren't Whole" unit).
 
 ## Drift triggers
 
