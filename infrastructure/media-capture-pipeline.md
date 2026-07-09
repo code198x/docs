@@ -1,45 +1,70 @@
 # Media Capture Pipeline
 
-Screenshots, video, and audio captures verify that every code sample produces the expected output. The pipeline drives Emu198x's headless / script mode (and increasingly the MCP equivalent) directly from per-platform shell scripts.
+Screenshots, video, and audio captures verify that every code sample produces the expected output. The pipeline is **manifest-driven**: `code-samples/_capture/capture.py` reads a unit's `capture/manifest.json`, assembles each named `step-NN` program from source, expands the manifest's `timeline` into an Emu198x `--script` JSON, and runs it against a cold-booted machine. Media lands in the website's public asset dirs.
 
-This page reflects the Spectrum pipeline as of 2026-05-14, with the snapshot-driven flow that landed after Emu198x commit `ff02827` taught `LoadSnapshot` to accept portable `.sna` / `.z80` / `.zip` formats. The other three platforms are post-October work; their pipelines lag behind and will catch up as the curriculum reaches each one.
+One runner covers every machine; the manifest's top-level `machine` field selects the build and input model.
 
-## Scripts by platform and medium
+## The runner
 
-| Platform | Screenshot | Video | Audio |
-|---|---|---|---|
-| **ZX Spectrum** | `code-samples/scripts/capture-spectrum-screenshot.sh` | `code-samples/scripts/capture-spectrum-video.sh` | `code-samples/scripts/capture-spectrum-audio.sh` |
-| C64 | _post-October_ | _post-October_ | _post-October_ |
-| NES | _post-October_ | _post-October_ | _post-October_ |
-| Amiga | _post-October_ | _post-October_ | _post-October_ |
+```
+code-samples/_capture/capture.py <manifest.json> [--emu PATH] [--keep-build]
+```
 
-The per-unit capture wrappers live in `code-samples/scripts/`. Each resolves Code198x's `<track>/<module-slug>/unit-NN/` directory convention into the right `.sna` input and artefact output path, then calls Emu198x's headless binary directly (one binary, one JSON, headless). An earlier generation of per-platform dev scripts (xdotool / X displays / Docker under `{platform}-dev/scripts/`) has been retired in favour of this unified Emu198x model, along with the mid-level `scripts/emu-*-spectrum.sh` wrappers they were migrating toward — those added nothing over the per-unit wrappers once Emu198x owned the capture itself.
+Each capture in the manifest names a runnable `program` (a `step-NN.asm`, a `.bas`, or typed source) plus a `timeline` of boot / input / record actions. `capture.py` expands that timeline into an Emu198x `--script` JSON and **saves it next to the manifest** as `<capture-id>.script.json` — the honesty artifact: read the script and see exactly how the state was reached and what input was injected. The same runnable step is what an in-page Emu198x (WASM) needs to make a step a run-it / tweak-a-value widget, so the manifest is the single source for both captured media now and the in-page runner later.
 
-Use the `capture-spectrum-{screenshot,video,audio}.sh` wrappers as the per-unit entry points. For one-off or ad-hoc captures outside the unit convention, call Emu198x directly with a `--script` JSON, or drive it interactively over the `--mcp` transport.
+## Machines
 
-## Spectrum pipeline (current)
+| `machine` | Build | Input model |
+|---|---|---|
+| `commodore-64` | Asm198x/ACME `.asm` → `.prg`, `--load`, type RUN | joystick (port 0): up/down/left/right/fire; keys |
+| `sinclair-zx-spectrum` | Asm198x `.asm` → `.sna` (`--dialect pasmonext --sna`), or `.bas` via `load_basic_program` | keys A–Z/0–9/Space/Enter/CapsShift/SymbolShift; tape autoload |
+| `commodore-amiga` | AMOS Pro: typed into the editor, F1 to run (no host build) | joystick (port 2); keys |
+| `commodore-amiga-blitz` | Blitz BASIC 2: typed into Ted, compile-and-run (no host build) | joystick; keys; mouse |
+| `commodore-amiga-asm` | `.asm` → KS1.x hunkexe → bootable `.adf` (vasm + xdftool) | joystick (port 2) |
 
-### Input
+## Manifest shape
 
-`.sna` (or `.z80`, or `.zip` wrapping either). Built by pasmonext from the unit's `.asm` source via the Makefile in each unit directory.
+```json
+{ "machine": "sinclair-zx-spectrum",
+  "image_dir": "sinclair-zx-spectrum/assembly/<game>/unit-NN",
+  "captures": [
+    { "id": "step-01-dark", "program": "steps/step-01.asm",
+      "timeline": [ {"wait": 12}, {"screenshot": "step-01-dark.png"} ] }
+  ] }
+```
 
-`.tap` remains a Makefile target because it's the canonical format for real-hardware loading (Spectrum Next loads from tape). It is no longer the screenshot-pipeline input.
+`image_dir` is relative to `website/public/images/`. It follows the code-samples layout: `<machine>/<track>/<game>/unit-NN` (e.g. `sinclair-zx-spectrum/assembly/shadowkeep/unit-01`).
 
-### Flow
+## Timeline vocabulary
 
-1. `LoadSnapshot` step restores the snapshot directly into the live machine. No tape loader animation; no `Bytes: <name>` header on screen.
-2. `RunFrames` step gives the program time to execute (default 10 frames is enough for any unit's settle).
-3. `SaveScreenshot` / `StartVideoRecording` + `RunFrames` + `StopVideoRecording` / `SaveAudioCapture` writes the artefact.
+A shared vocabulary, mapped per machine by each `expand_timeline_*` function:
 
-### Output paths
+| Action | Effect |
+|---|---|
+| `{"wait": N}` | run N frames |
+| `{"boot_run": true}` | C64 only: wait for boot, type RUN + RETURN |
+| `{"key": "SPACE", "frames": N}` | key down, run N frames, key up |
+| `{"hold": "up"}` / `{"release": "up"}` | key/button down / up, held across steps |
+| `{"press": "fire", "frames": N}` | C64 joystick: button down, N frames, up |
+| `{"joy": "right", "frames": N}` / `{"joy_hold": …}` / `{"joy_release": …}` | Amiga joystick (port 2) |
+| `{"type": "ZOG\n"}` | Spectrum: type a string (`\n` = ENTER) |
+| `{"autoload": N}` | Spectrum: real pulse-driven tape load for up to N frames |
+| `{"poke": addr, "value": v}` | capture-setup write to CPU memory to reach a state cheaply |
+| `{"screenshot": "name.png"}` | save the current frame as PNG |
+| `{"record_video": "name.mp4"}` / `{"stop_video": true}` | start / finish + mux the MP4 (H.264 + AAC) |
+| `{"record_audio": "name.wav"}` / `{"stop_audio": true}` | start / finish the WAV (16-bit PCM) |
+
+## Output paths
+
+Media lands under `website/public/` at the `image_dir` the manifest declares:
 
 | Medium | Output path |
 |---|---|
-| Screenshot | `website/public/images/sinclair-zx-spectrum/<game>/<unit>/screenshot.png` |
-| Video | `website/public/videos/sinclair-zx-spectrum/<game>/<unit>/<name>.mp4` (H.264 + AAC, browser-embeddable) |
-| Audio | `website/public/audio/sinclair-zx-spectrum/<game>/<unit>/<name>.wav` (16-bit PCM, 44.1 kHz mono) |
+| Screenshot | `website/public/images/<image_dir>/<name>.png` |
+| Video | `website/public/images/<image_dir>/<name>.mp4` (H.264 + AAC, browser-embeddable) |
+| Audio | `website/public/images/<image_dir>/<name>.wav` (16-bit PCM) |
 
-### Timing guidelines
+## Timing guidelines
 
 | Scenario | Settle frames | Capture frames |
 |---|---|---|
@@ -52,30 +77,19 @@ Use the `capture-spectrum-{screenshot,video,audio}.sh` wrappers as the per-unit 
 
 Frame counts are native 50Hz video frames; 50 frames = 1 second of PAL.
 
-## Other platforms (legacy)
-
-Until each platform's pipeline migrates to the Emu198x-script model, the existing legacy scripts apply. The previous version of this page documented those; the key historical facts:
-
-- **C64**: Docker-driven (`commodore-64-dev/scripts/c64-screenshot.sh`). ROMs symlinked from `~/Projects/Reference/commodore/c64/extracted/`.
-- **Amiga**: Docker-driven (`commodore-amiga-dev/scripts/amiga-screenshot.sh`). Kickstart ROM required, not distributable, lives at `~/Projects/Reference/amiga/Firmware/`.
-- **NES**: Docker command (`nes-screenshot`). No ROMs needed.
-
-These will be replaced by per-unit `capture-{platform}-{screenshot,video,audio}.sh` wrappers in `code-samples/scripts/`, calling Emu198x's per-platform headless binaries (already present in the Emu198x release directory), as each platform's curriculum work begins.
-
 ## ROM requirements
 
-- **ZX Spectrum**: 48K ROM at `~/.emu198x/roms/sinclair-zx-spectrum-48k/48.rom`. Emu198x picks it up automatically from this conventional path.
-- **C64**: ROMs at `~/Projects/Reference/commodore/c64/extracted/` (symlinked from `commodore-64-dev/roms/`).
-- **Amiga**: Kickstart ROM at `~/Projects/Reference/amiga/Firmware/` (not distributable).
-- **NES**: no ROMs needed (the NES has no system ROM).
-
-The earlier claim on this page that Spectrum "no ROMs needed" was wrong. The Spectrum has a 16 KB BASIC/system ROM, and Emu198x needs a copy of it to boot.
+- **ZX Spectrum**: 48K ROM at `~/.emu198x/roms/sinclair-zx-spectrum-48k/48.rom`. Emu198x picks it up automatically. The Spectrum has a 16 KB BASIC/system ROM and needs a copy to boot.
+- **C64**: ROMs at `~/Projects/Reference/commodore/c64/extracted/`.
+- **Amiga**: Kickstart ROMs at `~/.emu198x/roms/commodore-amiga/` (`kick13.rom` for the assembly track, `kick204.rom` for AMOS/Blitz). Not distributable.
+- **NES**: no system ROM needed.
 
 ## Tooling requirements
 
-- **Emu198x binaries** at `~/Projects/198x/Emu198x/emu198x/target/release/emu198x-{platform}`. Build from the `emu198x/` workspace with `cargo build --release --bin emu198x-{platform}` (add `--no-default-features` for a headless-only build that skips winit/wgpu/muda).
-- **pasmonext** in the Spectrum Docker image (`ghcr.io/code198x/sinclair-zx-spectrum:latest`) used by the per-unit Makefile. Native install would let the Makefile skip Docker; pasmonext is Apple Silicon native.
+- **Emu198x binaries** at `~/Projects/198x/Emu198x/emu198x/target/{debug,release}/emu198x-{machine}`. Build from the `emu198x/` workspace with `cargo build --release --bin emu198x-{machine}` (add `--no-default-features` for a headless-only build that skips winit/wgpu/muda). `capture.py` resolves the binary per machine from `--emu`, then `$EMU198X_{MACHINE}`, then a default path.
+- **Asm198x** at `~/Projects/198x/Asm198x/asm198x/target/release/asm198x`, or `$ASM198X`. The family assembler; the Spectrum build path since 2026-07-02.
 - **ffmpeg** on PATH for video capture only. The Emu198x binary spawns ffmpeg for the H.264 + AAC mux.
+- **Pillow** (optional) for screenshot re-framing on the Amiga tracks (`frame_screenshot` centres the raw raster).
 
 ## Key rule
 
@@ -83,7 +97,7 @@ The earlier claim on this page that Spectrum "no ROMs needed" was wrong. The Spe
 
 ## See also
 
-- `code-samples/scripts/capture-spectrum-{screenshot,video,audio}.sh` — per-unit Spectrum capture wrappers.
-- `code-samples/scripts/mcp-capture-spectrum-screenshot.sh` — MCP-transport variant of the screenshot wrapper.
-- [`decisions/real-retro-games.md`](../decisions/real-retro-games.md) — multi-disciplinary commitment that makes video and audio capture part of every unit's Definition of Done.
-- The `.claude/skills/{screenshot,video}-spectrum/SKILL.md` skills — MCP-driven alternative to these shell scripts; same underlying Emu198x capability, different driver.
+- `code-samples/_capture/capture.py` — the manifest-driven capture runner.
+- A unit's `capture/manifest.json` + generated `capture/<id>.script.json` — the per-unit capture recipe and its honesty artifacts.
+- [`decisions/real-retro-games.md`](../decisions/real-retro-games.md) — the multi-disciplinary commitment that makes video and audio capture part of every unit's Definition of Done.
+- [`../../decisions/code198x-dev-tooling-migration.md`](../../decisions/code198x-dev-tooling-migration.md) — the migration to Asm198x + Emu198x as the family's own toolchain.
