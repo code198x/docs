@@ -19,7 +19,7 @@ Each capture in the manifest names a runnable `program` (a `step-NN.asm`, a `.ba
 | `commodore-64` | Asm198x `.asm` → `.prg` (`--dialect acme --prg`), `--load`, type RUN | joystick (port 0): up/down/left/right/fire; keys |
 | `sinclair-zx-spectrum` | Asm198x `.asm` → `.sna` (`--dialect pasmonext --sna`), or `.bas` via `load_basic_program` | keys A–Z/0–9/Space/Enter/CapsShift/SymbolShift; tape autoload |
 | `nintendo-entertainment-system` | Asm198x `.asm` → `.nes` (`--dialect ca65`, self-linking iNES), `--rom`, runs from power-on | controller 1 (port 1): up/down/left/right/a/b/select/start |
-| `commodore-amiga` | AMOS Pro: typed into the editor, F1 to run (no host build) | joystick (port 2); keys |
+| `commodore-amiga-amos` | AMOS Pro: typed into the editor, F1 to run (no host build) | joystick (port 2); keys |
 | `commodore-amiga-blitz` | Blitz BASIC 2: typed into Ted, compile-and-run (no host build) | joystick; keys; mouse |
 | `commodore-amiga-asm` | `.asm` → KS1.x hunkexe → bootable `.adf` (vasm + xdftool) | joystick (port 2) |
 
