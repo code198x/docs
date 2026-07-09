@@ -73,7 +73,7 @@ The earlier claim on this page that Spectrum "no ROMs needed" was wrong. The Spe
 
 ## Tooling requirements
 
-- **Emu198x binaries** at `~/Projects/Emu198x/target/release/emu198x-{platform}`. Build with `cargo build --release --bin emu198x-{platform}` (add `--no-default-features` for a headless-only build that skips winit/wgpu/muda).
+- **Emu198x binaries** at `~/Projects/198x/Emu198x/emu198x/target/release/emu198x-{platform}`. Build from the `emu198x/` workspace with `cargo build --release --bin emu198x-{platform}` (add `--no-default-features` for a headless-only build that skips winit/wgpu/muda).
 - **pasmonext** in the Spectrum Docker image (`ghcr.io/code198x/sinclair-zx-spectrum:latest`) used by the per-unit Makefile. Native install would let the Makefile skip Docker; pasmonext is Apple Silicon native.
 - **ffmpeg** on PATH for video capture only. The Emu198x binary spawns ffmpeg for the H.264 + AAC mux.
 
