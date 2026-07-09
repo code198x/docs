@@ -23,7 +23,7 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 
 ### Cross-cutting
 
-- [October 2026 launch spec](decisions/october-2026-launch-spec.md) — all four core platforms, complete on-ramps at full bar (2026-06-09 amendment)
+- [October 2026 launch spec](decisions/october-2026-launch-spec.md) — all four core platforms, complete on-ramps at full bar
 - [Real retro games](decisions/real-retro-games.md) — multi-disciplinary commitment (code/visuals/audio/level/polish co-equal)
 - [Commercial-bar revamp](decisions/commercial-bar-revamp.md) — Game 1s rewritten to commercially-shippable bar
 - [Curriculum structure](decisions/curriculum-structure.md) — modules to a quality bar; no fixed game or unit counts (technique budget governs)
@@ -33,7 +33,7 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 - [Pattern library](decisions/pattern-library.md) — populated from curriculum, technique-categorised
 - [Inspired-by, not clones (naming)](decisions/inspired-by-not-clones-naming.md) — 10-principle naming convention
 - [British English](decisions/british-english.md) — colour, learnt, centre (exception: program)
-- [Seven repos](decisions/seven-repos.md) — repo layout, git status gotcha
+- [Repo layout](decisions/seven-repos.md) — child-repo layout and git status gotcha
 - [State lives in the catalogues](decisions/state-lives-in-catalogues.md) — `modules/*.yaml` + git are authoritative for status; prose carries why/intent, not state
 
 ### Website / IA
@@ -58,7 +58,7 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 
 - [Shadowkeep 32-unit commitment](decisions/shadowkeep-32-unit-commitment.md) — Arc 1+2 / 32 units for October
 - [Shadowkeep four-arc framing](decisions/shadowkeep-four-arc-framing.md) — Arcs 3-4 post-October
-- [Spectrum BASIC v6.4 renames](decisions/spectrum-basic-v6.4-renames.md) — 11 BASIC games renamed under inspired-by-not-clones
+- [Spectrum BASIC naming](decisions/spectrum-basic-v6.4-renames.md) — BASIC game names under inspired-by-not-clones
 
 ## Specifications (formats and structures)
 
@@ -88,7 +88,7 @@ State is the website catalogue (`website/src/content/modules/<platform>/<track>.
 
 ### Beyond the core four
 
-Platforms outside the core four get their own per-system docs **when work begins on each one**. The earlier pre-methodology skeleton sketches were removed 2026-06-10 (recoverable from git). Next-wave targets and the wider roadmap: [next-tier-first-wave.md](decisions/next-tier-first-wave.md), [tracker/future-expansion-tracks.md](tracker/future-expansion-tracks.md).
+Platforms outside the core four get per-system docs when work begins on each one. Next-wave targets and the wider roadmap: [next-tier-first-wave.md](decisions/next-tier-first-wave.md), [tracker/future-expansion-tracks.md](tracker/future-expansion-tracks.md).
 
 ## Tracker (live state / plans)
 

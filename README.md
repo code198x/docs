@@ -90,7 +90,7 @@ See [index.md](index.md) for a full file-by-file map.
 
 ### Beyond the core four
 
-Platforms outside the core four (Acorn Archimedes, Amstrad CPC, Atari 8-bit, Atari ST, BBC Micro, Game Boy, MSX, Sega Master System, Sega Mega Drive, SNES, TurboGrafx-16, Vectrex, and more) get their own per-system docs **when work begins on each**. The earlier pre-methodology skeleton sketches were removed 2026-06-10 (recoverable from git). Next-wave targets are in [decisions/next-tier-first-wave.md](decisions/next-tier-first-wave.md); the wider roadmap in [tracker/future-expansion-tracks.md](tracker/future-expansion-tracks.md).
+Platforms outside the core four get per-system docs when work begins on each. Next-wave targets are in [decisions/next-tier-first-wave.md](decisions/next-tier-first-wave.md); the wider roadmap is in [tracker/future-expansion-tracks.md](tracker/future-expansion-tracks.md).
 
 
 ## Related Repositories
