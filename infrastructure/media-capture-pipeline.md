@@ -8,14 +8,14 @@ This page reflects the Spectrum pipeline as of 2026-05-14, with the snapshot-dri
 
 | Platform | Screenshot | Video | Audio |
 |---|---|---|---|
-| **ZX Spectrum** | `scripts/emu-screenshot-spectrum.sh` + `code-samples/scripts/capture-spectrum-screenshot.sh` | `scripts/emu-video-spectrum.sh` | `scripts/emu-audio-spectrum.sh` |
-| C64 | `scripts/emu-screenshot-c64.sh` | `scripts/emu-video-c64.sh` | _to do_ |
-| NES | `scripts/emu-screenshot-nes.sh` | `scripts/emu-video-nes.sh` | _to do_ |
-| Amiga | `scripts/emu-screenshot-amiga.sh` | `scripts/emu-video-amiga.sh` | _to do_ |
+| **ZX Spectrum** | `code-samples/scripts/capture-spectrum-screenshot.sh` | `code-samples/scripts/capture-spectrum-video.sh` | `code-samples/scripts/capture-spectrum-audio.sh` |
+| C64 | _post-October_ | _post-October_ | _post-October_ |
+| NES | _post-October_ | _post-October_ | _post-October_ |
+| Amiga | _post-October_ | _post-October_ | _post-October_ |
 
-The `scripts/` directory at the project root holds the modern Emu198x-script-driven wrappers (one binary, one JSON, headless). The older platform-specific dev directories (`{platform}-dev/scripts/`) hold a previous generation of scripts using xdotool / X displays / Docker; they predate the unified Emu198x scripting model and will be retired as each platform's pipeline migrates.
+The per-unit capture wrappers live in `code-samples/scripts/`. Each resolves Code198x's `<track>/<module-slug>/unit-NN/` directory convention into the right `.sna` input and artefact output path, then calls Emu198x's headless binary directly (one binary, one JSON, headless). An earlier generation of per-platform dev scripts (xdotool / X displays / Docker under `{platform}-dev/scripts/`) has been retired in favour of this unified Emu198x model, along with the mid-level `scripts/emu-*-spectrum.sh` wrappers they were migrating toward — those added nothing over the per-unit wrappers once Emu198x owned the capture itself.
 
-The `code-samples/scripts/capture-spectrum-screenshot.sh` script is a higher-level wrapper that resolves Code198x's `<track>/<module-slug>/unit-NN/` directory convention into the right `.sna` and `.png` paths and calls Emu198x. Use it as the per-unit entry point; the lower-level `scripts/emu-*.sh` scripts are useful for one-off captures or ad-hoc work.
+Use the `capture-spectrum-{screenshot,video,audio}.sh` wrappers as the per-unit entry points. For one-off or ad-hoc captures outside the unit convention, call Emu198x directly with a `--script` JSON, or drive it interactively over the `--mcp` transport.
 
 ## Spectrum pipeline (current)
 
@@ -60,7 +60,7 @@ Until each platform's pipeline migrates to the Emu198x-script model, the existin
 - **Amiga**: Docker-driven (`commodore-amiga-dev/scripts/amiga-screenshot.sh`). Kickstart ROM required, not distributable, lives at `~/Projects/Reference/amiga/Firmware/`.
 - **NES**: Docker command (`nes-screenshot`). No ROMs needed.
 
-These will be replaced by `scripts/emu-{screenshot,video,audio}-{c64,nes,amiga}.sh` calling Emu198x's per-platform headless binaries (already present in the Emu198x release directory) as each platform's curriculum work begins.
+These will be replaced by per-unit `capture-{platform}-{screenshot,video,audio}.sh` wrappers in `code-samples/scripts/`, calling Emu198x's per-platform headless binaries (already present in the Emu198x release directory), as each platform's curriculum work begins.
 
 ## ROM requirements
 
@@ -83,7 +83,7 @@ The earlier claim on this page that Spectrum "no ROMs needed" was wrong. The Spe
 
 ## See also
 
-- `code-samples/scripts/capture-spectrum-screenshot.sh` — per-unit Spectrum screenshot wrapper.
-- `scripts/emu-{screenshot,video,audio}-spectrum.sh` — lower-level Spectrum wrappers.
+- `code-samples/scripts/capture-spectrum-{screenshot,video,audio}.sh` — per-unit Spectrum capture wrappers.
+- `code-samples/scripts/mcp-capture-spectrum-screenshot.sh` — MCP-transport variant of the screenshot wrapper.
 - [`decisions/real-retro-games.md`](../decisions/real-retro-games.md) — multi-disciplinary commitment that makes video and audio capture part of every unit's Definition of Done.
 - The `.claude/skills/{screenshot,video}-spectrum/SKILL.md` skills — MCP-driven alternative to these shell scripts; same underlying Emu198x capability, different driver.

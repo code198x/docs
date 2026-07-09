@@ -1313,3 +1313,22 @@ playtest. Prototype: code-samples 25ee063. Report:
 platforms/.../shadowkeep/design-stress-2026-07-04.md. Stopped before
 decompose — it reworks shipped units and needs Steve's read of the
 findings.
+
+## 2026-07-09 — Capture pipeline collapses to one convention-aware layer
+
+Retired the mid-level `scripts/emu-{screenshot,video,audio}-spectrum.sh`
+wrappers. Once Emu198x owned screenshot/video/audio capture via `--script`
+and `--mcp`, these carried no capture logic — they only templated a few
+lines of JSON from CLI flags — and nothing called them programmatically; the
+per-unit `code-samples/scripts/capture-spectrum-screenshot.sh` reimplemented
+the same JSON independently rather than stacking on them. Deleted the trio
+(the audio one was never committed) and folded video + audio into the
+per-unit layer as `capture-spectrum-video.sh` and `capture-spectrum-audio.sh`,
+mirroring the screenshot wrapper and following the output-path convention
+already documented in `infrastructure/media-capture-pipeline.md` (videos/…,
+audio/…, `<name>` component). End state: one convention-aware wrapper per
+medium sitting directly on Emu198x, plus MCP for interactive capture.
+`Code198x/scripts/` now holds only its `.gitignore`. The per-game keypress
+`inputs/*.sh` recipes were already removed by the morning's container-workflow
+retirement — the snapshot-driven capture model (load a `.sna` at the wanted
+state) makes input-replay recipes unnecessary.
