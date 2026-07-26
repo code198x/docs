@@ -51,7 +51,7 @@ A warm, tense **top-down** crossing: steer one daft sheep up from the field, rea
 
 **Period-faithful.** Hardware sprites, sprite collision, and a static bitplane playfield are bog-standard 1985 Amiga; Frogger-class crossers were everywhere.
 
-- **In active use:** **hardware sprites** (data, the position/control words, sprite DMA) for the sheep and every hazard; **hardware sprite collision** (`CLXCON`/`CLXDAT`) — the core mechanic, in both its modes (Section 3); the **Copper** for playfield/colour setup; a **static bitplane** background (the farmyard scene, set up once); **joystick** input; simple **Paula** SFX.
+- **In active use:** **hardware sprites** (data, the position/control words, sprite DMA) for the sheep and every hazard; **hardware sprite collision** (`CLXCON`/`CLXDAT`) — the core mechanic, in both its modes (Section 3); the **Copper** for playfield/colour setup; a **static bitplane** background (the farmyard scene, set up once); **joystick** input; **Paula** SFX — tones, not samples.
 - **Deliberately avoided** (each reserved for its rung): the **Blitter** — the background is a static bitplane and every moving thing is a sprite, so nothing is blitted (the Blitter is rung 2); **scrolling** — single-screen (later); **sampled Paula instruments** — light tone-and-SFX only (Shatter Point's rung); **sprite multiplexing / Copper sprite-reuse** — Flock lives within the **8-sprite budget** (sparse, timing-focused lanes); populating busier lanes by reusing sprites down the screen is a *deepening* reserved for a later sprite game (Signal). **AGA** — OCS/A500 period hardware.
 
 ---
@@ -68,7 +68,7 @@ A warm, tense **top-down** crossing: steer one daft sheep up from the field, rea
 
 ## Section 7: Audio Direction
 
-- **Title.** A short, daft pastoral jingle — simple Paula tones, not samples.
+- **Title.** A short, daft pastoral jingle — Paula tones, not samples.
 - **In-game.** Silence-led so the SFX land — the quiet field makes the near-miss tense.
 - **SFX scope.** A soft "baa" on each hop; a squelchy *splat* (squashed) and a *sploosh* (drowned) on a loss; a contented bleat as a sheep reaches a pen; a little fanfare when the fold fills; a distinct **chime for the black sheep** home.
 - **Integration.** A couple of Paula channels, no mixing complexity — audio never becomes the lesson.
@@ -80,7 +80,7 @@ A warm, tense **top-down** crossing: steer one daft sheep up from the field, rea
 - **Scale.** Single-screen, self-contained levels; a finished game of roughly six to eight. No scrolling — the whole gauntlet is always on screen.
 - **Pacing (the technique ramp).** The road alone (avoid) → faster/more road → the **river inversion** (ride) → road + river both → **diving ducks** (the treacherous-platform timing layer) → the **black sheep** bonus → the **nervous-sheep timer** as the late escalator. Each level/unit adds one new idea, then combines.
 - **Signposting.** Entirely visual: the field is the start, the fold is the goal, hazards *are* the farmyard (a tractor reads as "avoid", a hay bale as "ride"). Lives show as little sheep icons; the fold shows progress as it fills.
-- **Difficulty curve.** Level one is near-trivial — a single slow lane to a pen — teaching the contract (read the lane, commit). Difficulty comes from lane speed/density, the ride/avoid combination, diving timing, and finally the clock — never from fiddly controls.
+- **Difficulty curve.** Level one is deliberately gentle — a single slow lane to a pen — teaching the contract (read the lane, commit). Difficulty comes from lane speed/density, the ride/avoid combination, diving timing, and finally the clock — never from fiddly controls.
 - **Onboarding.** First crossing teaches everything: one sheep, one gap, one pen. Cause and effect is immediate.
 
 ---
@@ -90,7 +90,7 @@ A warm, tense **top-down** crossing: steer one daft sheep up from the field, rea
 - **Title screen.** "FLOCK", a sheep (and a cheeky black one), the soft farmyard. Cosy and inviting.
 - **Attract mode.** Optional/deferred; if present, a hands-off crossing demoing the lanes.
 - **Options.** Minimal — SFX on/off; joystick is the only control (4-way grid steps).
-- **Ending.** Per level: the fold fills, a fanfare, on to a busier field. A **clean level (no losses) pays a shepherd's bonus**, so "don't lose one" rewards rather than merely avoids. Game end: a warm "whole flock safe" beat.
+- **Ending.** Per level: the fold fills, a fanfare, on to a busier field. A **clean level (no losses) pays a shepherd's bonus**, so "don't lose one" pays a reward, not only avoids a loss. Game end: a warm "whole flock safe" beat.
 - **Loss feel.** A lost sheep is a small, legible, comic-tragic moment (baa + splat/sploosh), a life-sheep gone — never punishing UI.
 - **Shippable criteria.** Plays cleanly start to finish, no soft-locks; the hop feel is crisp; the lanes read; the black-sheep risk/reward bites. Would sit happily beside a contemporary cosy arcade game.
 
@@ -143,7 +143,7 @@ Per arc, all five axes (verification is emulator-based — real-hardware verific
 - **Code:** ride-mode collision correct (carried by the platform; drown in open water); duck dive timing frame-stable; cow as a slow wide hazard; black-sheep spawn + scoring; the timer.
 - **Visuals:** hay bale/log/duck and cow render; the duck-dip reads; title screen done.
 - **Audio:** drown sploosh, pen bleat, fold fanfare, black-sheep chime, title jingle.
-- **Level design:** river and combined levels solvable; the ride/avoid inversion teaches cleanly; the black sheep is a real risk/reward; difficulty crests fairly into the timer.
+- **Level design:** river and combined levels solvable; the ride/avoid inversion teaches cleanly; the black sheep is a real risk/reward; difficulty crests into the timer at a pace the player can read.
 - **Polish:** clean-level bonus, game-over, SFX toggle; plays start to finish.
 
 ---
@@ -172,7 +172,7 @@ Per arc, all five axes (verification is emulator-based — real-hardware verific
 
 ## Optional: Risks
 
-1. **8-sprite budget vs a busy Frogger.** A dense crosser wants more than 8 sprites. *Mitigation:* design the lanes **sparse and timing-led** (Frogger is tense even with few objects per lane); reserve sprite multiplexing / Copper sprite-reuse for a later sprite game (Signal) rather than smuggling it into rung 1.
+1. **8-sprite budget vs a busy Frogger.** A dense crosser wants more than 8 sprites. *Mitigation:* design the lanes **sparse and timing-led** (Frogger is tense even with few objects per lane); reserve sprite multiplexing / Copper sprite-reuse for a later sprite game (Signal) instead of smuggling it into rung 1.
 2. **Inspired-by, not clone.** "Frogger with sheep" must not read as a reskin. *Mitigation:* the farmyard cast (cow rhythm, diving ducks), the fold meta, and especially the **black sheep** are the distinctive identity — lean on them; they're in Arc 2 for a reason.
 3. **Broad-but-shallow.** Under the uncapped-technique model, the danger is many systems half-built. *Mitigation:* Arc 1 ships a *complete* road game before Arc 2 starts; each system finished, not all started.
 4. **Sprite collision specifics.** `CLXCON`/`CLXDAT` masking and the per-frame read are fiddly. *Mitigation:* introduce collision on a single hazard first (Arc 1), one new wrinkle (ride-mode, then the duck dive) per later unit.
