@@ -2,8 +2,8 @@
 
 **Title (working):** Flock
 **System / Track:** Commodore Amiga / assembly
-**Position:** Rung 1 — the first game after the *Meet the Machine* primer; the **hardware-sprite** opener. See [amiga-assembly-lineup.md](../../../decisions/amiga-assembly-lineup.md).
-**Scope:** indicative ~16 units across two build arcs; counts illustrative, not a target (per [curriculum-structure.md](../../../decisions/curriculum-structure.md)).
+**Position:** Rung 1 — the first game after the *Meet the Machine* primer; the **hardware-sprite** opener. See [amiga-assembly-lineup.md](../../../../decisions/amiga-assembly-lineup.md).
+**Scope:** indicative ~16 units across two build arcs; counts illustrative, not a target (per [curriculum-structure.md](../../../../decisions/curriculum-structure.md)).
 **Constraint position:** period-faithful — see Section 5.
 **Status:** draft
 
@@ -13,7 +13,7 @@
 > control first games (Dash / Starfield / Gloaming). Flock is a **new** game, not the re-themed
 > `exodus` build; the "Flock" name and sheep theme moved here from that parked Blitter puzzle. A
 > brand-new sprite game with no salvage from the `exodus` units. Authored under the uncapped-technique
-> model (per [curriculum-structure.md](../../../decisions/curriculum-structure.md)): it *opens* with
+> model (per [curriculum-structure.md](../../../../decisions/curriculum-structure.md)): it *opens* with
 > sprites and layers collision, sound, score and lives across its units, Dash-style — one new thing
 > per unit.
 
@@ -111,7 +111,7 @@ A warm, tense **top-down** crossing: steer one daft sheep up from the field, rea
 
 ## Section 11: Build Trajectory
 
-Two build arcs, indicative unit counts (per [curriculum-structure.md](../../../decisions/curriculum-structure.md) — counts firm up at build time; the cap is one new thing per unit, not a unit total; techniques-per-game is uncapped). Each arc ends in a complete, playable game.
+Two build arcs, indicative unit counts (per [curriculum-structure.md](../../../../decisions/curriculum-structure.md) — counts firm up at build time; the cap is one new thing per unit, not a unit total; techniques-per-game is uncapped). Each arc ends in a complete, playable game.
 
 **Arc 1 — Cross the lane.**
 *New:* the static farmyard playfield (Copper + bitplane), the sheep as a hardware sprite (define, position, **steer** with the joystick, grid-step + a 2-frame amble), deterministic road-hazard sprites (tractor/cart/Land Rover looping across lanes), **avoid-mode sprite collision** (`CLXDAT` — touch a vehicle, you're lost), the field/fold, one-sheep-at-a-time, filling the pens, the life-pool, score, a hop SFX.
@@ -129,7 +129,7 @@ Two build arcs, indicative unit counts (per [curriculum-structure.md](../../../d
 
 ## Section 12: Ship Test (Multi-axis)
 
-Per arc, all five axes (verification is emulator-based — real-hardware verification is currently suspended per [commercial-bar-revamp.md](../../../decisions/commercial-bar-revamp.md)).
+Per arc, all five axes (verification is emulator-based — real-hardware verification is currently suspended per [commercial-bar-revamp.md](../../../../decisions/commercial-bar-revamp.md)).
 
 **Arc 1**
 - **Code:** all units assemble (vasm); the sheep sprite steers crisply; avoid-mode collision is correct (`CLXDAT` read per frame); lanes loop deterministically; passes the Definition of Done.
