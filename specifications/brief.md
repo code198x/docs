@@ -10,7 +10,7 @@
 
 A brief is **the source of truth for a game's design intent**. It is written before unit MDX or code-samples work begins and is referenced throughout authoring. The brief is reviewable as a standalone artefact; a reader who has never seen the game should leave the brief able to predict what every phase ships and how each unit fits.
 
-A brief is **not** an implementation document. Per-phase or per-unit detail lives in sibling files under the same `games/{slug}/` folder (Shadowkeep is the pattern: `per-unit-plan.md` and `beeper-spec.md` sit alongside `brief.md`; design specs that a re-pace supersedes are kept under a `superseded/` subfolder rather than deleted). The brief is strategic; design docs are operational.
+A brief is **not** an implementation document. Per-phase or per-unit detail lives in sibling files under the same `games/{slug}/` folder (Shadowkeep is the pattern: `per-unit-plan.md` and `beeper-spec.md` sit alongside `brief.md`; design specs that a re-pace supersedes are kept under a `superseded/` subfolder, not deleted). The brief is strategic; design docs are operational.
 
 **Key principles:**
 
@@ -26,7 +26,7 @@ page — gather them before drafting:
 - **The platform's lineup record** — which rung of the ladder this game is, and the
   technique budget it owns.
 - **Classic ancestors, through primary sources** — the era's real games, with period
-  magazines as the evidence for what the genre actually shipped with (reviews, adverts,
+  magazines as the evidence for what the genre shipped with at the time (reviews, adverts,
   cover-tape liner notes — not just remembered reputations).
 - **The hardware-reference canon** — the layered reference (umbrella `reference/` →
   syntheses → Emu198x knowledge → `docs/platforms/`) for what the machine can do, with
@@ -62,8 +62,8 @@ Every brief opens with the same six-field header, in this order:
 
 **Title (working):** {confirmed or working title}
 **System / Track:** {platform name} / {assembly | BASIC}
-**Position:** Game {N} of {4 for assembly tracks; up to 16 for BASIC tracks}
-**Target unit count:** {256 for assembly Game 1–4; varies for BASIC per [spectrum-basic-lineup.md](../decisions/spectrum-basic-lineup.md)}
+**Position:** Rung {N} — {the technique this module carries, and what it follows}. See the track's lineup decision.
+**Scope:** {indicative unit count} across {N} phases; counts illustrative, not a target (per [curriculum-structure.md](../decisions/curriculum-structure.md))
 **Constraint position:** {period-faithful | period-possible | modern scene} — see Section 5
 **Status:** {draft | active | superseded}
 ```
@@ -74,7 +74,7 @@ Every brief opens with the same six-field header, in this order:
 
 **One sentence.** The game's job in the curriculum. What must a reader be able to do after finishing this game that they couldn't before?
 
-A pedagogical role is *what subsequent games depend on*. Game 1 establishes foundational skills that Games 2, 3, and 4 build on; the brief names that foundation explicitly.
+A pedagogical role is *what later modules depend on*. The opening module establishes the foundation every rung above it builds on; the brief names that foundation explicitly.
 
 **Example (Shadowkeep):**
 > Teach the ZX Spectrum's attribute system as the entirety of game logic — every gameplay rule is a bit-test on a single attribute byte — so the reader leaves with the platform's defining hardware feature as a working tool.
@@ -108,7 +108,7 @@ Five categories:
 - **Same tropes, new core mechanic** — the genre tropes are preserved (e.g., platformer with collectibles), but the mechanical foundation is novel (e.g., grappling-hook movement replaces jumping).
 - **Same aesthetic constraint, alien genre** — the look and sound feel 1985, but the gameplay is alien to the era.
 - **Same feel, different era's vocabulary** — period-tight controls combined with modern structural ideas (roguelite runs, metroidvania gating).
-- **Faithful reproduction — same game, new identity** — the mechanics are the ancestor's, reproduced as faithfully as you like; the only transformation is the identity (new name, world, characters, art, **and level data** — specific maze layouts and level geometry are protectable expression, not mechanic, so they stay original along with the rest of the identity). Use when the teaching goal is a genre's canonical technique built the way it was actually built. Credit the ancestor openly and name what was taken (§2). *(Added 2026-07-01 — see [decisions/inspired-by-not-clones-naming.md](../decisions/inspired-by-not-clones-naming.md).)*
+- **Faithful reproduction — same game, new identity** — the mechanics are the ancestor's, reproduced as faithfully as you like; the only transformation is the identity (new name, world, characters, art, **and level data** — specific maze layouts and level geometry are protectable expression, not mechanic, so they stay original along with the rest of the identity). Use when the teaching goal is a genre's canonical technique built the way the original built it. Credit the ancestor openly and name what was taken (§2). *(Added 2026-07-01 — see [decisions/inspired-by-not-clones-naming.md](../decisions/inspired-by-not-clones-naming.md).)*
 
 Pick one category; then state the specific move — or, for faithful reproduction, what you kept and what the new identity is — in a sentence.
 
@@ -274,7 +274,7 @@ Examples of anti-goals worth declaring:
 
 Each phase declares:
 
-- **Phase number and unit count** (power of 2, per `curriculum-structure.md`).
+- **Phase number and indicative unit count** — a marker of authoring cost, not a target, and no longer a power of 2 (per `curriculum-structure.md`).
 - **What's new** — incremental additions for the phase (per `spiral-and-incremental`).
 - **What revisits earlier work** — the spiral declaration (per `spiral-and-incremental`).
 - **Constraint position for the phase** — only if it differs from the game-level declaration in Section 5.
@@ -375,7 +375,7 @@ A brief may include a Risks section after Section 14 if the brief is for a game 
 
 Format: numbered bullets, each with the risk and a mitigation thought.
 
-If the brief skips this section, particularly novel risks can live in a sibling design doc (`docs/platforms/{system}/games/{game}/{phase}-design.md`) rather than the brief itself.
+If the brief skips this section, particularly novel risks can live in a sibling design doc (`docs/platforms/{system}/games/{game}/{phase}-design.md`) instead of the brief itself.
 
 ---
 
@@ -402,11 +402,13 @@ A brief is ready to anchor authoring when:
 - [`decisions/phase-boundaries`](../decisions/phase-boundaries.md) — phase-end commercial bar; gates Section 12.
 - [`decisions/constraint-position`](../decisions/constraint-position.md) — three-tier taxonomy used in Section 5.
 - [`decisions/spiral-and-incremental`](../decisions/spiral-and-incremental.md) — within/across phase progression; structures Section 11.
-- [`decisions/curriculum-structure`](../decisions/curriculum-structure.md) — per-game scope (256 units assembly; per [spectrum-basic-lineup.md](../decisions/spectrum-basic-lineup.md) for BASIC).
+- [`decisions/curriculum-structure`](../decisions/curriculum-structure.md) — per-module scope: no fixed game or unit counts; counts are illustrative markers of authoring cost.
+- [`decisions/modules-not-games`](../decisions/modules-not-games.md) — why a brief describes a game that one or several modules may teach.
 - [`decisions/pattern-library`](../decisions/pattern-library.md) — what Section 13 feeds into.
 
 ---
 
 ## Changelog
 
+- **v1.1 (2026-07-26):** Removed the retired fixed-count model, which `curriculum-structure.md` had already superseded without this spec being updated. The header's **Target unit count** field (`256 for assembly Game 1–4`) becomes **Scope** — an indicative count, explicitly not a target — matching what every brief on disk had already drifted to. **Position** becomes the rung-and-technique form the lineup decisions use, replacing "Game {N} of 4", since tracks now run 10–17 rungs. Section 11 no longer requires phase unit counts to be powers of 2. Section 1 speaks of modules and rungs instead of "Games 2, 3, and 4". Found while writing Starfield's brief: the spec mandated a field no author had filled in correctly for months.
 - **v1.0 (2026-05-13):** Initial specification. Replaces the implicit 10-section format that existed in working memory and produced the Shadowkeep brief pressure-test. Adds Sections 6–9 (visual / audio / level / polish direction) as first-class fields, renames Section 4 from "Core verb" to "Core experience", restructures Sections 11 and 12 to reflect phase-boundary gating and spiral-progression declarations.
