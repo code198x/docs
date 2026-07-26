@@ -5,7 +5,7 @@
 **Position:** Rung 0 — the first game after the *Meet the Machine* primer, sharing rung 0 (char/screen + colour memory) with it. See [c64-assembly-lineup.md](../../../../decisions/c64-assembly-lineup.md); the two shipped anchors are locked.
 **Scope:** 18 units across two phases; counts illustrative, not a target (per [curriculum-structure.md](../../../../decisions/curriculum-structure.md)).
 **Constraint position:** period-faithful — see Section 5.
-**Status:** Written retrospectively, 2026-07-26. Records the game as shipped (units 1–17) and the summit designed for unit 18.
+**Status:** active — written retrospectively and approved 2026-07-26. Records the game as shipped (units 1–17) and the summit designed for unit 18.
 
 ---
 
