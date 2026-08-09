@@ -97,7 +97,6 @@ Platforms outside the core four get per-system docs when work begins on each one
 
 ## Infrastructure
 
-- [Docker toolchains](infrastructure/docker-toolchains.md) — per-platform images, volume mount gotcha
 - [Media capture pipeline](infrastructure/media-capture-pipeline.md) — screenshot / video / audio
 - [Astro site](infrastructure/astro-site.md) — dev/build commands, content routing, collection gotchas
 - [Site testing](infrastructure/site-testing.md) — Playwright e2e, axe a11y + baseline, Lighthouse budgets
