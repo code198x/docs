@@ -159,6 +159,24 @@ Rob Hubbard's C64 soundtracks pushed the SID chip to its limits. A classically t
 
 **Sections:** Overview, Fast Facts (founded, location, key people, notable products), See Also
 
+⚠⚠ **State the period an entry describes, and check for a change of owner.**
+A company that changes *name* leaves a visible seam and gets written up. A
+company that changes *owner* while keeping its name, logo and staff leaves no
+seam at all — every source before and after says the same word and means
+something different by it. Entries written without checking read as confidently
+wrong:
+
+| Company | Change | Missed because |
+|---|---|---|
+| Team17 | 1995, exclusive distribution by Ocean, dual-branded | name unchanged |
+| Palace | 1991, bought by Leisure Holding (French, owns Titus) | name unchanged |
+| Quicksilva | 1984, bought by Argus Press Software (later Grandslam) | name unchanged |
+
+Run `python3 ops/scripts/ownership_check.py <Company>` in the `198x` umbrella
+before publishing. It prints the magazine windows for a human to read; it does
+not decide. Where a change is found, say which years the entry's description
+covers.
+
 ### Games
 
 **Sections:** Overview, Fast Facts (developer, year, platform, genre), Technical Achievements (if notable), See Also
@@ -279,7 +297,13 @@ Every entry should link to 2-5 related entries:
 Before publishing:
 - [ ] Title, subtitle, summary filled in
 - [ ] 2-5 cross-links to related entries
+- [ ] **Every `/vault/...` link resolves** — the site build does NOT catch dead
+      Vault links, so check them directly
 - [ ] Technical details verified (dates, specs)
+- [ ] **Companies and studios: ownership checked** (`ownership_check.py`), and
+      the period the entry describes stated where it changed hands
+- [ ] Claims sourced — and where a claim comes from advertising or from one
+      side of a dispute, said so in the entry
 - [ ] Explains why this matters
 - [ ] Under 100 lines
 
