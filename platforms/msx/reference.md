@@ -22,11 +22,11 @@ begins; later generations (MSX2, MSX2+, TurboR) are noted where they matter.
 
 > **Source of truth.** Hardware facts below are distilled from the primary
 > reference library, chiefly
-> [`msx-reference.md`](../../../../reference/by-system/msx/msx-reference.md)
+> `reference/by-system/msx/msx-reference.md`
 > (the MSX System Reference), with the
-> [Sony MSX Technical Data Book](../../../../reference/by-system/msx/msx-technical-data-book.md)
+> `reference/by-system/msx/msx-technical-data-book.md`
 > and the
-> [Sony MSX-BASIC Programming Reference Manual](../../../../reference/by-system/msx/sony-msx-basic-programming-reference-manual.md)
+> `reference/by-system/msx/sony-msx-basic-programming-reference-manual.md`
 > behind it. When a fact here and a fact there disagree, the library wins. Deep
 > specifics this skeleton has not yet pinned down are flagged inline as TODOs.
 
@@ -72,7 +72,7 @@ asm198x asm code-samples/msx/assembly/input.asm -o code-samples/msx/assembly/out
 | Cartridge | 50-pin standardised edge connector |
 
 Source:
-[`msx-reference.md`](../../../../reference/by-system/msx/msx-reference.md) §§1–2,
+`reference/by-system/msx/msx-reference.md` §§1–2,
 4–6.
 
 Later generations keep the Z80A and AY-3-8910 but upgrade the video: MSX2 uses
@@ -80,7 +80,7 @@ the Yamaha V9938 (programmable palette, more colours, a hardware blitter, 80-col
 text), and MSX2+/TurboR use the V9958 (hardware horizontal scroll, YJK colour
 modes). The TurboR adds the faster, Z80-binary-compatible R800 CPU. The
 curriculum starts on MSX1; see
-[`msx-reference.md`](../../../../reference/by-system/msx/msx-reference.md) §§4.2–4.4
+`reference/by-system/msx/msx-reference.md` §§4.2–4.4
 and §15 for the deltas.
 
 ## Assembly dialect
@@ -104,13 +104,13 @@ instruction-set summary and the MSX BIOS calling conventions.
 
 The primary, source-of-truth documents for MSX hardware and BASIC:
 
-- [`reference/by-system/msx/msx-reference.md`](../../../../reference/by-system/msx/msx-reference.md)
+- `reference/by-system/msx/msx-reference.md`
   — MSX System Reference (all four generations; the main hardware document)
-- [`reference/by-system/msx/msx-technical-data-book.md`](../../../../reference/by-system/msx/msx-technical-data-book.md)
+- `reference/by-system/msx/msx-technical-data-book.md`
   — Sony MSX Technical Data Book (342 pp, OCR)
-- [`reference/by-system/msx/sony-msx-basic-programming-reference-manual.md`](../../../../reference/by-system/msx/sony-msx-basic-programming-reference-manual.md)
+- `reference/by-system/msx/sony-msx-basic-programming-reference-manual.md`
   — Sony MSX-BASIC Programming Reference Manual (200 pp)
-- [`reference/by-system/msx/index.md`](../../../../reference/by-system/msx/index.md)
+- `reference/by-system/msx/index.md`
   — the index for the above
 
 ## Gotchas

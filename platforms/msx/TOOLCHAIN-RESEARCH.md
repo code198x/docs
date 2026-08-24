@@ -63,7 +63,7 @@ the bytes in** is platform-specific, and MSX containers are not built yet.
     `AB` signature and init/entry pointers at `$4000`, mapping into page 1
     (`$4000–$7FFF`) and optionally page 2. Larger games need a mapper (Konami,
     ASCII8/16) — see
-    [`msx-reference.md`](../../../../reference/by-system/msx/msx-reference.md) §8.2.
+    `reference/by-system/msx/msx-reference.md` §8.2.
   - **`.com`** — MSX-DOS executable. MSX-DOS 1 is CP/M 2.2-compatible, so a `.com`
     is a flat program loaded at `$0100` and entered there
     (`msx-reference.md` §10.2). This is the *closest to flat `.bin`* of the three

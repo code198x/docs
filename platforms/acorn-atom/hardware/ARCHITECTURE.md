@@ -7,9 +7,9 @@ that, follow the citations into the primary reference library.
 
 > **Scaffold doc.** Established facts with citations, plus TODOs where depth is
 > still owed. `§` citations refer to the **Atom Technical Manual (Issue 2)** —
-> [`../../../../reference/by-system/acorn-atom/unknown-atom-technical-manual-issue-2.md`](../../../../reference/by-system/acorn-atom/unknown-atom-technical-manual-issue-2.md)
+> `reference/by-system/acorn-atom/unknown-atom-technical-manual-issue-2.md`
 > — and **Atomic Theory and Practice** —
-> [`../../../../reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md`](../../../../reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md)
+> `reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md`
 > — as noted. The Atom is **not** a BBC Micro; do not import BBC facts here. Both
 > sources are OCR'd scans, so treat addresses with care.
 
@@ -142,5 +142,5 @@ random contents of its memory through its internal loudspeaker").
 - [`../language/6502-quick-reference.md`](../language/6502-quick-reference.md) — instruction set + Atom notes.
 - [`../basic.md`](../basic.md) — Atom BASIC and its built-in assembler.
 - Primary library:
-  [`unknown-atom-technical-manual-issue-2.md`](../../../../reference/by-system/acorn-atom/unknown-atom-technical-manual-issue-2.md),
-  [`1980-atomic-theory-and-practice.md`](../../../../reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md).
+  `reference/by-system/acorn-atom/unknown-atom-technical-manual-issue-2.md`,
+  `reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md`.

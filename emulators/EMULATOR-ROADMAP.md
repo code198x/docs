@@ -75,7 +75,9 @@ specifically for batch tutorial-asset production. Two ways to invoke it.
 ### Fast path (one-line common case)
 
 ```bash
-EMU=/Users/stevehill/Projects/198x/Emu198x/target/release/emu198x-script-spectrum
+# Point this at your Emu198x checkout
+EMU198X=/path/to/emu198x
+EMU=$EMU198X/target/release/emu198x-script-spectrum
 
 # Screenshot from a snapshot
 $EMU game.sna --frames 250 --screenshot game.png

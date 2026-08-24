@@ -70,7 +70,7 @@ dev-tooling-migration decision (new platforms start on the new tooling). See
 | Released | October 1983 | §Acorn Electron Differences |
 
 Facts above are drawn from the shared BBC primary library reference
-[`bbc-micro-reference.md`](../../../../reference/by-system/bbc-micro/bbc-micro-reference.md),
+`reference/by-system/bbc-micro/bbc-micro-reference.md`,
 whose **§Acorn Electron Differences** section covers the Electron explicitly.
 There is no dedicated `acorn-electron` folder in the reference library — the
 Electron shares the BBC system tree.
@@ -145,13 +145,13 @@ highlighting (as the C64 and BBC do).
 ## Primary reference library
 
 The Electron **shares the BBC system tree** in the shared reference library at
-[`../../../../reference/by-system/bbc-micro/`](../../../../reference/by-system/bbc-micro/)
+`reference/by-system/bbc-micro/`
 — there is no separate `acorn-electron` folder:
 
-- [`bbc-micro-reference.md`](../../../../reference/by-system/bbc-micro/bbc-micro-reference.md) — distilled family reference. **§Acorn Electron Differences** and the family-overview table cover the Electron explicitly; the SHEILA table marks which registers exist on the Electron (the ULA at `&FE00`–`&FE0F`).
-- [`howtowriteadventuregamesforthebbcmicrocomputermodelbandacornelectron1984.md`](../../../../reference/by-system/bbc-micro/howtowriteadventuregamesforthebbcmicrocomputermodelbandacornelectron1984.md) — a 1984 book that **explicitly covers the Electron** alongside the Model B; useful for Electron-aware BASIC/adventure idioms.
-- [`1984-basic-rom-user-guide.md`](../../../../reference/by-system/bbc-micro/1984-basic-rom-user-guide.md) — BBC BASIC reference incl. the built-in assembler (the same BASIC the Electron runs).
-- [`index.md`](../../../../reference/by-system/bbc-micro/index.md) — library index for the BBC/Electron system tree.
+- `reference/by-system/bbc-micro/bbc-micro-reference.md` — distilled family reference. **§Acorn Electron Differences** and the family-overview table cover the Electron explicitly; the SHEILA table marks which registers exist on the Electron (the ULA at `&FE00`–`&FE0F`).
+- `reference/by-system/bbc-micro/howtowriteadventuregamesforthebbcmicrocomputermodelbandacornelectron1984.md` — a 1984 book that **explicitly covers the Electron** alongside the Model B; useful for Electron-aware BASIC/adventure idioms.
+- `reference/by-system/bbc-micro/1984-basic-rom-user-guide.md` — BBC BASIC reference incl. the built-in assembler (the same BASIC the Electron runs).
+- `reference/by-system/bbc-micro/index.md` — library index for the BBC/Electron system tree.
 
 When a curriculum unit needs an Electron-specific hardware fact not yet captured
 here, take it from the library (with provenance) rather than inventing it — and

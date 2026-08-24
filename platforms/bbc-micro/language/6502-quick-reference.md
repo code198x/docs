@@ -80,7 +80,7 @@ through fixed addresses in page `&FF`. Each is a `JSR` to a jump-table entry tha
 the OS routes (and that filing systems / the Tube can intercept). The standard
 practice is to define equates, e.g. `OSWRCH = &FFEE`, then `JSR OSWRCH`
 (reference: 1982 assembly book, "OSWRCH … every machine has"; jump table in
-[`bbc-micro-reference.md`](../../../../../reference/by-system/bbc-micro/bbc-micro-reference.md)
+`reference/by-system/bbc-micro/bbc-micro-reference.md`
 §Vectored OS Calls).
 
 ### The everyday calls
@@ -135,5 +135,5 @@ typically reached with `CALL` from BASIC — see [`../basic.md`](../basic.md)).
 - [`../hardware/ARCHITECTURE.md`](../hardware/ARCHITECTURE.md) — memory map, video, sound.
 - [`../basic.md`](../basic.md) — BBC BASIC and its inline 6502 assembler (the BASIC→assembly bridge).
 - Primary library:
-  [`1982-assembly-language-programming-for-the-bbc-microcomputer.md`](../../../../../reference/by-system/bbc-micro/1982-assembly-language-programming-for-the-bbc-microcomputer.md),
-  [`bbc-micro-reference.md`](../../../../../reference/by-system/bbc-micro/bbc-micro-reference.md) (§Vectored OS Calls, §OSBYTE Reference, §OSWORD Reference).
+  `reference/by-system/bbc-micro/1982-assembly-language-programming-for-the-bbc-microcomputer.md`,
+  `reference/by-system/bbc-micro/bbc-micro-reference.md` (§Vectored OS Calls, §OSBYTE Reference, §OSWORD Reference).

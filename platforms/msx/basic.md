@@ -8,9 +8,9 @@ hardware it exposes as first-class language: graphics, sprites, music, and
 joysticks are all built-in keywords, not POKE incantations.
 
 > **Source of truth:**
-> [`sony-msx-basic-programming-reference-manual.md`](../../../../reference/by-system/msx/sony-msx-basic-programming-reference-manual.md)
+> `reference/by-system/msx/sony-msx-basic-programming-reference-manual.md`
 > (the Sony MSX-BASIC Programming Reference Manual) and
-> [`msx-reference.md`](../../../../reference/by-system/msx/msx-reference.md) §13.
+> `reference/by-system/msx/msx-reference.md` §13.
 > Specifics this skeleton has not yet pinned down are flagged `TODO`.
 
 ## Where it sits among Microsoft BASICs
@@ -113,7 +113,7 @@ mismatch`. The full table is in `msx-reference.md` §13.
 
 ## See also
 
-- [`sony-msx-basic-programming-reference-manual.md`](../../../../reference/by-system/msx/sony-msx-basic-programming-reference-manual.md)
+- `reference/by-system/msx/sony-msx-basic-programming-reference-manual.md`
   — the full BASIC reference (per-keyword syntax)
 - [hardware/ARCHITECTURE.md](./hardware/ARCHITECTURE.md) — the VDP and PSG that the
   graphics and sound keywords drive

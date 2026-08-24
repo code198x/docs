@@ -89,8 +89,8 @@ assembler means BASIC and assembly meet in the middle:
 - [`language/6502-quick-reference.md`](language/6502-quick-reference.md) — the 6502 instruction set (points to the BBC) and Electron timing/OS notes.
 - [`hardware/ARCHITECTURE.md`](hardware/ARCHITECTURE.md) — the ULA contention model, MODE support, single-channel sound.
 - Primary library:
-  [`1984-basic-rom-user-guide.md`](../../../../reference/by-system/bbc-micro/1984-basic-rom-user-guide.md)
+  `reference/by-system/bbc-micro/1984-basic-rom-user-guide.md`
   (the BBC BASIC reference, incl. the inline assembler — the same BASIC the
   Electron runs);
-  [`howtowriteadventuregamesforthebbcmicrocomputermodelbandacornelectron1984.md`](../../../../reference/by-system/bbc-micro/howtowriteadventuregamesforthebbcmicrocomputermodelbandacornelectron1984.md)
+  `reference/by-system/bbc-micro/howtowriteadventuregamesforthebbcmicrocomputermodelbandacornelectron1984.md`
   (a 1984 book explicitly covering the Electron in BASIC).

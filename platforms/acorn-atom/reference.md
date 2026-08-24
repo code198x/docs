@@ -49,7 +49,7 @@ new platforms start on the new tooling). See
 | Language | Atom BASIC (integer-oriented, with a built-in 6502 assembler) | "Atomic Theory and Practice" §Assembler Programming |
 
 All facts above are drawn from the primary reference library at
-[`../../../../reference/by-system/acorn-atom/`](../../../../reference/by-system/acorn-atom/)
+`reference/by-system/acorn-atom/`
 — principally the **Atom Technical Manual (Issue 2, 1980)** and **Atomic Theory
 and Practice (1980)**. Section names (§) refer to their contents.
 
@@ -120,11 +120,11 @@ distinctive flavour is **not** the CPU but two period conventions:
 ## Primary reference library
 
 The source of truth for Atom hardware facts lives in the shared reference library
-at [`../../../../reference/by-system/acorn-atom/`](../../../../reference/by-system/acorn-atom/):
+at `reference/by-system/acorn-atom/`:
 
-- [`1980-atomic-theory-and-practice.md`](../../../../reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md) — the Atom programming book (BASIC + assembler + graphics modes), Acorn Computers, 1980 (second edition).
-- [`unknown-atom-technical-manual-issue-2.md`](../../../../reference/by-system/acorn-atom/unknown-atom-technical-manual-issue-2.md) — ATOM Technical Manual, Issue 2 (Acorn Computers, 1980-10) — hardware, block diagram, memory map, I/O.
-- [`magazines.md`](../../../../reference/by-system/acorn-atom/magazines.md) — period magazine coverage for the Atom.
+- `reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md` — the Atom programming book (BASIC + assembler + graphics modes), Acorn Computers, 1980 (second edition).
+- `reference/by-system/acorn-atom/unknown-atom-technical-manual-issue-2.md` — ATOM Technical Manual, Issue 2 (Acorn Computers, 1980-10) — hardware, block diagram, memory map, I/O.
+- `reference/by-system/acorn-atom/magazines.md` — period magazine coverage for the Atom.
 
 > **Note on provenance.** Both manuals are pdftotext extracts of TOSEC-PIX scans;
 > year/publisher are parsed from the TOSEC filenames and not yet line-verified

@@ -11,7 +11,7 @@ language a learner already knows, with no separate toolchain.
 > **Scaffold doc.** Overview + the inline-assembler angle, with citations and
 > TODOs for the per-game/per-unit depth. Facts cite the primary reference library;
 > `§` refers to
-> [`bbc-micro-reference.md`](../../../../reference/by-system/bbc-micro/bbc-micro-reference.md)
+> `reference/by-system/bbc-micro/bbc-micro-reference.md`
 > and the BASIC ROM User Guide is cited by section.
 
 ## Why BBC BASIC teaches well
@@ -50,7 +50,7 @@ switches from BASIC into assembling 6502 mnemonics, and `]` switches back
 Assembler" — "The built-in 6502 assembler in BASIC is a very useful tool").
 
 How it works, at the level a unit needs (BASIC ROM User Guide §1.6, ch. 6;
-cross-referenced in [`bbc-micro-reference.md`](../../../../reference/by-system/bbc-micro/bbc-micro-reference.md) §BBC BASIC):
+cross-referenced in `reference/by-system/bbc-micro/bbc-micro-reference.md` §BBC BASIC):
 
 - **`P%` is the location counter** — you set `P%` to the address where the code
   should assemble, and the assembler advances it as it emits bytes.
@@ -114,6 +114,6 @@ can meet in the middle. A natural BBC pedagogy:
 - [`language/6502-quick-reference.md`](language/6502-quick-reference.md) — the 6502 instruction set and BBC OS calls.
 - [`hardware/ARCHITECTURE.md`](hardware/ARCHITECTURE.md) — memory map, video, sound.
 - Primary library:
-  [`1984-basic-rom-user-guide.md`](../../../../reference/by-system/bbc-micro/1984-basic-rom-user-guide.md)
+  `reference/by-system/bbc-micro/1984-basic-rom-user-guide.md`
   (§1.6 The BASIC assembler; ch. 6 The Assembler) — the authoritative BBC BASIC
   reference incl. the inline assembler.

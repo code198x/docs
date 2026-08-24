@@ -45,7 +45,7 @@ per-platform; new platforms start on the new tooling). See
 | Language | BBC BASIC (with inline 6502 assembler) | §BBC BASIC |
 
 All facts in this table are drawn from the primary library reference
-[`bbc-micro-reference.md`](../../../../reference/by-system/bbc-micro/bbc-micro-reference.md).
+`reference/by-system/bbc-micro/bbc-micro-reference.md`.
 Section names (§) refer to its contents list.
 
 ## Assembly dialect
@@ -107,13 +107,13 @@ directly. See [`language/6502-quick-reference.md`](language/6502-quick-reference
 ## Primary reference library
 
 The source of truth for BBC hardware facts lives in the shared reference library
-at [`../../../../reference/by-system/bbc-micro/`](../../../../reference/by-system/bbc-micro/):
+at `reference/by-system/bbc-micro/`:
 
-- [`bbc-micro-reference.md`](../../../../reference/by-system/bbc-micro/bbc-micro-reference.md) — distilled family reference (memory map, video, sound, MOS, variants).
-- [`1982-assembly-language-programming-for-the-bbc-microcomputer.md`](../../../../reference/by-system/bbc-micro/1982-assembly-language-programming-for-the-bbc-microcomputer.md) — assembly tutorial (Macmillan, 1982).
-- [`1984-basic-rom-user-guide.md`](../../../../reference/by-system/bbc-micro/1984-basic-rom-user-guide.md) — BBC BASIC reference incl. the built-in assembler.
-- [`bbc-micro-advanced-user-guide.md`](../../../../reference/by-system/bbc-micro/bbc-micro-advanced-user-guide.md) — the Model B programmer's bible (Bray/Dickens/Holmes, 1983).
-- [`index.md`](../../../../reference/by-system/bbc-micro/index.md) — library index for the system.
+- `reference/by-system/bbc-micro/bbc-micro-reference.md` — distilled family reference (memory map, video, sound, MOS, variants).
+- `reference/by-system/bbc-micro/1982-assembly-language-programming-for-the-bbc-microcomputer.md` — assembly tutorial (Macmillan, 1982).
+- `reference/by-system/bbc-micro/1984-basic-rom-user-guide.md` — BBC BASIC reference incl. the built-in assembler.
+- `reference/by-system/bbc-micro/bbc-micro-advanced-user-guide.md` — the Model B programmer's bible (Bray/Dickens/Holmes, 1983).
+- `reference/by-system/bbc-micro/index.md` — library index for the system.
 
 When a curriculum unit needs a hardware fact not yet captured here, take it from
 the library (with provenance: source file, page where known) rather than

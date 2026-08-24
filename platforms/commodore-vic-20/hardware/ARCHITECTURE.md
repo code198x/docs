@@ -3,7 +3,7 @@
 **Purpose:** Memory map, CPU, and VIC-chip overview for curriculum authors.
 **Audience:** Lesson designers writing VIC-20 assembly and BASIC units.
 **Facts cite:** the reference library at
-`~/Projects/198x/reference/by-system/commodore-vic20/` — chiefly the
+`reference/by-system/commodore-vic20/` — chiefly the
 **Programmer's Reference Guide** (`vic-20-programmers-reference-guide-1st-edition-6th-printing`),
 the **Butterfield memory map** (`1983-vic-20-memory-map`), and the distilled
 **`vic20-reference.md`**. For any disputed fact, the Programmer's Reference Guide
@@ -172,5 +172,5 @@ from the video clock — ~17030 CPU cycles/frame NTSC, ~22132 PAL
 
 - [reference.md](../reference.md) — platform entry point + key specs.
 - [../language/6502-quick-reference.md](../language/6502-quick-reference.md) — instruction set + KERNAL calls.
-- `~/Projects/198x/reference/by-system/commodore-vic20/vic20-reference.md` — the full distilled system reference.
-- `~/Projects/198x/reference/by-system/commodore-vic20/vic-20-programmers-reference-guide-1st-edition-6th-printing` — primary source of truth.
+- `reference/by-system/commodore-vic20/vic20-reference.md` — the full distilled system reference.
+- `reference/by-system/commodore-vic20/vic-20-programmers-reference-guide-1st-edition-6th-printing` — primary source of truth.

@@ -9,7 +9,7 @@ Asm198x Z80 spec.
 > **Source of truth.** The Z80 is the same CPU the ZX Spectrum uses, so the
 > instruction set is standard Zilog. MSX-specific calling conventions and BIOS
 > addresses are from
-> [`reference/by-system/msx/msx-reference.md`](../../../../../reference/by-system/msx/msx-reference.md)
+> `reference/by-system/msx/msx-reference.md`
 > (§§4–7, 12). Instruction *encoding* is owned by the Asm198x Z80 ISA spec
 > (opcode-complete, dialect-validated). Specifics not yet pinned down are flagged
 > `TODO`.
@@ -143,7 +143,7 @@ Example — print a character:
 
 The full BIOS entry table (dozens of routines: tape, disk, printer, sprites,
 maths, the keyboard matrix) is in
-[`msx-reference.md`](../../../../../reference/by-system/msx/msx-reference.md) §12.
+`reference/by-system/msx/msx-reference.md` §12.
 
 <!-- TODO: confirm exact register in/out details for each BIOS call above against
      msx-reference.md §12.2 / msx-technical-data-book.md before using in a unit;
@@ -153,6 +153,6 @@ maths, the keyboard matrix) is in
 
 - [../hardware/ARCHITECTURE.md](../hardware/ARCHITECTURE.md) — the chips these
   instructions drive
-- [`msx-reference.md`](../../../../../reference/by-system/msx/msx-reference.md) §12
+- `reference/by-system/msx/msx-reference.md` §12
   — the complete BIOS entry table
 - [../basic.md](../basic.md) — MSX-BASIC, for the BASIC track

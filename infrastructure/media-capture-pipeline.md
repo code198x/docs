@@ -87,8 +87,8 @@ Frame counts are native 50Hz video frames; 50 frames = 1 second of PAL.
 
 ## Tooling requirements
 
-- **Emu198x binaries** at `~/Projects/198x/Emu198x/emu198x/target/{debug,release}/emu198x-{machine}`. Build from the `emu198x/` workspace with `cargo build --release --bin emu198x-{machine}` (add `--no-default-features` for a headless-only build that skips winit/wgpu/muda). `capture.py` resolves the binary per machine from `--emu`, then `$EMU198X_{MACHINE}`, then a default path.
-- **Asm198x** at `~/Projects/198x/Asm198x/asm198x/target/release/asm198x`, or `$ASM198X`. The family assembler; the Spectrum build path since 2026-07-02.
+- **Emu198x binaries** at `Emu198x/emu198x/target/{debug,release}/emu198x-{machine}`. Build from the `emu198x/` workspace with `cargo build --release --bin emu198x-{machine}` (add `--no-default-features` for a headless-only build that skips winit/wgpu/muda). `capture.py` resolves the binary per machine from `--emu`, then `$EMU198X_{MACHINE}`, then a default path.
+- **Asm198x** at `Asm198x/asm198x/target/release/asm198x`, or `$ASM198X`. The family assembler; the Spectrum build path since 2026-07-02.
 - **ffmpeg** on PATH for video capture only. The Emu198x binary spawns ffmpeg for the H.264 + AAC mux.
 - **Pillow** (optional) for screenshot re-framing on the Amiga tracks (`frame_screenshot` centres the raw raster).
 

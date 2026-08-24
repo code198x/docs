@@ -91,7 +91,7 @@ A related trap: the **VIC chip can only see the low 4 KB of CPU RAM**
 
 ## Reference library
 
-Primary sources live at `~/Projects/198x/reference/by-system/commodore-vic20/`
+Primary sources live at `reference/by-system/commodore-vic20/`
 (note: the library slug is `commodore-vic20`, no hyphen before `20`; the
 content/docs slug is `commodore-vic-20`, with the hyphen):
 

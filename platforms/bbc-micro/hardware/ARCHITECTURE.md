@@ -7,7 +7,7 @@ that, follow the citations into the primary reference library.
 
 > **Scaffold doc.** Established facts with citations, plus TODOs where depth is
 > still owed. All `§` citations refer to
-> [`bbc-micro-reference.md`](../../../../../reference/by-system/bbc-micro/bbc-micro-reference.md)
+> `reference/by-system/bbc-micro/bbc-micro-reference.md`
 > unless noted.
 
 ## CPU
@@ -157,5 +157,5 @@ event / `OSBYTE &13` (wait for vertical sync).
 - [`../reference.md`](../reference.md) — platform entry doc and toolchain.
 - [`../language/6502-quick-reference.md`](../language/6502-quick-reference.md) — instruction set + MOS calls.
 - Primary library:
-  [`bbc-micro-reference.md`](../../../../../reference/by-system/bbc-micro/bbc-micro-reference.md),
-  [`bbc-micro-advanced-user-guide.md`](../../../../../reference/by-system/bbc-micro/bbc-micro-advanced-user-guide.md).
+  `reference/by-system/bbc-micro/bbc-micro-reference.md`,
+  `reference/by-system/bbc-micro/bbc-micro-advanced-user-guide.md`.

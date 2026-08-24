@@ -11,7 +11,7 @@ machine where the metal is never far away.
 > **Scaffold doc.** Overview + the built-in-assembler angle and the BBC lineage,
 > with citations and TODOs for per-game/per-unit depth. Facts cite the primary
 > reference library, principally **Atomic Theory and Practice (1980)** —
-> [`../../../../reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md`](../../../../reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md).
+> `reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md`.
 > The Atom is earlier and more primitive than the BBC; do not import BBC BASIC
 > facts here.
 
@@ -146,5 +146,5 @@ two meet in the middle. A natural Atom pedagogy:
 - [`hardware/ARCHITECTURE.md`](hardware/ARCHITECTURE.md) — memory map, video (MC6847 + graphics modes), sound.
 - [`../bbc-micro/basic.md`](../bbc-micro/basic.md) — BBC BASIC's inline assembler, the matured descendant of the Atom's.
 - Primary library:
-  [`1980-atomic-theory-and-practice.md`](../../../../reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md)
+  `reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md`
   (§Assembler Programming; §11 Graphics) — the authoritative Atom BASIC + assembler reference.

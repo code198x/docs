@@ -10,7 +10,7 @@ This doc covers what the Electron does *differently* — and its centrepiece, th
 > **Scaffold doc.** Established facts with citations, plus TODOs where
 > Electron-specific depth is still owed. All `§` citations refer to the shared BBC
 > reference
-> [`bbc-micro-reference.md`](../../../../../reference/by-system/bbc-micro/bbc-micro-reference.md)
+> `reference/by-system/bbc-micro/bbc-micro-reference.md`
 > unless noted — its **§Acorn Electron Differences** section is the primary source
 > for Electron-specific facts.
 
@@ -143,5 +143,5 @@ with the Electron's two extra consequences:
 - BBC baseline:
   [`../../bbc-micro/hardware/ARCHITECTURE.md`](../../bbc-micro/hardware/ARCHITECTURE.md).
 - Primary library:
-  [`bbc-micro-reference.md`](../../../../../reference/by-system/bbc-micro/bbc-micro-reference.md)
+  `reference/by-system/bbc-micro/bbc-micro-reference.md`
   (§Acorn Electron Differences, §SHEILA, §Family Overview).

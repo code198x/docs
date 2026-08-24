@@ -111,3 +111,20 @@ All units must:
 4. Use British English (except "program" for computer programs)
 
 See [specifications/content-creation-workflow.md](specifications/content-creation-workflow.md) for the full process.
+
+## Citations to the primary reference library
+
+Paths written as `reference/by-system/...` refer to the project's **primary
+source library** — the manuals, datasheets, magazines and service documentation
+that hardware facts here are distilled from.
+
+That library is **not public, and will not be made public.** It holds
+third-party material the project may hold for reference but may not
+redistribute: manufacturer documentation, book and magazine scans, and mirrored
+community sites. Keeping it private is what makes holding it legitimate.
+
+These citations are therefore **provenance records, not links.** They name which
+document a fact came from so the claim is traceable and auditable, and so a
+reader can seek out the same source independently. The facts themselves are
+freely reusable — facts are not copyrightable, and this repository is openly
+licensed.

@@ -4,7 +4,7 @@
 the VIC-20-specific KERNAL call conventions.
 **Audience:** Curriculum designers writing VIC-20 assembly units.
 **Facts cite:** the **VIC-20 Programmer's Reference Guide**
-(`~/Projects/198x/reference/by-system/commodore-vic20/vic-20-programmers-reference-guide-1st-edition-6th-printing`)
+(`reference/by-system/commodore-vic20/vic-20-programmers-reference-guide-1st-edition-6th-printing`)
 and the distilled `vic20-reference.md` (KERNAL jump table, §18 and Appendix D).
 
 > **Scaffold + cousin doc.** The VIC-20 runs a stock **6502**, whose
@@ -131,4 +131,4 @@ classic beginner trap. <!-- TODO: add a VIC-20 PETSCII / screen-code table (cite
 
 - [../hardware/ARCHITECTURE.md](../hardware/ARCHITECTURE.md) — memory map, VIC chip, the moving-screen quirk.
 - [../../commodore-64/hardware/6510-quick-reference.md](../../commodore-64/hardware/6510-quick-reference.md) — full instruction tables, flag effects, worked patterns (the 6510 core matches the VIC-20's 6502).
-- `~/Projects/198x/reference/by-system/commodore-vic20/vic20-reference.md` §18 + Appendix D — KERNAL jump table.
+- `reference/by-system/commodore-vic20/vic20-reference.md` §18 + Appendix D — KERNAL jump table.

@@ -3,7 +3,7 @@
 **Purpose:** Curriculum-flavoured overview of the VIC-20's built-in BASIC.
 **Audience:** Lesson designers writing VIC-20 BASIC units.
 **Facts cite:** the **VIC-20 Programmer's Reference Guide** and `vic20-reference.md`
-§18 (`~/Projects/198x/reference/by-system/commodore-vic20/`).
+§18 (`reference/by-system/commodore-vic20/`).
 
 > **Scaffold.** Established facts with citations; deeper specifics carry `TODO`s
 > to confirm against the library before a unit ships.
@@ -90,4 +90,4 @@ not in this prose doc:
 - [reference.md](reference.md) — platform entry point.
 - [hardware/ARCHITECTURE.md](hardware/ARCHITECTURE.md) — memory map, the moving screen, VIC registers.
 - [../commodore-64/basic.md](../commodore-64/basic.md) — the C64 BASIC track (same BASIC v2; transferable).
-- `~/Projects/198x/reference/by-system/commodore-vic20/vic20-reference.md` §18 — BASIC + KERNAL.
+- `reference/by-system/commodore-vic20/vic20-reference.md` §18 — BASIC + KERNAL.

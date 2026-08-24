@@ -6,9 +6,9 @@ enough of a mental model to start writing code and to know which primary-source
 section to open when you need the exact bits.
 
 > **Source of truth:**
-> [`reference/by-system/msx/msx-reference.md`](../../../../../reference/by-system/msx/msx-reference.md)
+> `reference/by-system/msx/msx-reference.md`
 > (the MSX System Reference) and the
-> [Sony MSX Technical Data Book](../../../../../reference/by-system/msx/msx-technical-data-book.md).
+> `reference/by-system/msx/msx-technical-data-book.md`.
 > Section numbers below (e.g. §3) refer to the System Reference. Specifics this
 > skeleton has not yet pinned down are flagged `TODO`.
 
@@ -173,6 +173,6 @@ the PSG. (`msx-reference.md` §§5.1–5.2, 7.)
 - [../language/z80-quick-reference.md](../language/z80-quick-reference.md) — the Z80
   instruction set and the MSX BIOS calling conventions (how to actually drive the
   hardware above).
-- [`msx-reference.md`](../../../../../reference/by-system/msx/msx-reference.md) — the
+- `reference/by-system/msx/msx-reference.md` — the
   full hardware reference, including the BIOS entry table (§12), cartridge mappers
   (§8.2), and the keyboard matrix (§6.2).

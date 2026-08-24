@@ -151,6 +151,6 @@ Two routes a unit might take:
 - [`../basic.md`](../basic.md) — Atom BASIC and its built-in assembler (the lineage to BBC BASIC).
 - [`../reference.md`](../reference.md) — platform entry doc and toolchain.
 - Primary library:
-  [`1980-atomic-theory-and-practice.md`](../../../../reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md)
+  `reference/by-system/acorn-atom/1980-atomic-theory-and-practice.md`
   (§Assembler Programming, §Addressing Modes and Registers, §Assembler Mnemonics),
-  [`unknown-atom-technical-manual-issue-2.md`](../../../../reference/by-system/acorn-atom/unknown-atom-technical-manual-issue-2.md).
+  `reference/by-system/acorn-atom/unknown-atom-technical-manual-issue-2.md`.

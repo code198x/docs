@@ -80,5 +80,5 @@ code is typically reached with `CALL` from BBC BASIC — see [`../basic.md`](../
 - [`../hardware/ARCHITECTURE.md`](../hardware/ARCHITECTURE.md) — the ULA contention model, MODE support, sound.
 - [`../basic.md`](../basic.md) — BBC BASIC on the Electron and its inline 6502 assembler.
 - Primary library:
-  [`bbc-micro-reference.md`](../../../../../reference/by-system/bbc-micro/bbc-micro-reference.md)
+  `reference/by-system/bbc-micro/bbc-micro-reference.md`
   (§Acorn Electron Differences; §Vectored OS Calls, §OSBYTE/OSWORD Reference for the shared calls).
