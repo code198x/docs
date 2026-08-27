@@ -107,26 +107,59 @@ dissolved: 2001
 ---
 ```
 
-### Content Structure
+### Structure follows the material
 
-Every entry follows this pattern:
+There is no required set of sections and no required order. An entry is shaped by
+what its sources support, not by a template.
 
-```markdown
-## Overview
-2-3 paragraphs covering what this is and why it matters.
+**What an entry must do:**
 
-## Fast Facts
-- **Key detail:** Value
-- **Another detail:** Value
-- **Relevant stat:** Value
+- **Open on its subject.** The first thing a reader meets is the subject, not a
+  heading that names a slot. `## Overview` above a fifty-word paragraph tells the
+  reader nothing they did not get from the title.
+- **Ground every claim a reader could check**, and name the source in the prose
+  where it carries weight — the magazine, the issue, the date.
+- **Mark contested evidence, never editing.** See *Corrections are edits, not
+  content* below.
+- **End with links that resolve.** `## See also`, lowercase, pointing at entries
+  that exist. `npm run check:links` enforces this.
 
-## [Topic-specific section]
-Optional deeper content relevant to this entry type.
+**What an entry may do**, when the material calls for it and not otherwise:
 
-## See Also
-- [Related Entry 1](/vault/category/slug)
-- [Related Entry 2](/vault/category/slug)
-```
+- Carry a **fast-facts block** of `**Label:** value` pairs. Worth it where an
+  entry has hard data a reader will want to grab — founding dates, addresses,
+  prices, scores, personnel. Not worth it where the "facts" are restatements of
+  the prose.
+- Use **any headings the material suggests**. Good headings are claims, not
+  categories: "CRASH declined to score it" earns its place; "Reception" does not.
+  Where two entries cover the same kind of subject, their headings will often
+  differ, and that is correct.
+
+**⚠ belongs in prose, never in a facts block.** A warning needs room to say what the
+evidence is and why it is thin; a bullet does not have that room, so a ⚠ in a facts block is
+almost always one of two things wearing a warning sign:
+
+- **an attribution** — put the provenance in the label. Not
+  `- **Author of:** *Hunchback*.` followed by `⚠ these credits come from advertising`, but
+  `- **Credited in publishers' advertising, not in review boxes:** *Hunchback*.`
+- **a scope** — put the limit in the label. Not `⚠ that is the whole list for this title`,
+  but `- **Releases of this title, in full:**`.
+
+Method disclosure is a third case and simply goes. "Read by eye from the index, which is
+scanned badly" tells the reader about our reading. Either the figure is right and it is
+stated, or it is uncertain and it says so.
+
+Where a caveat genuinely needs to argue — sources that disagree, a claim resting on one
+source, a name confused with another — it goes in the prose, where there is room to give the
+evidence. The four corrections moved out of fast facts in `code198x/website#287` are the
+worked examples.
+
+**Casing:** sentence case throughout — `## Fast facts`, not `## Fast Facts`.
+Proper nouns keep their capitals.
+
+**Length:** whatever the evidence supports. A subject with one attested fact gets
+a short entry; padding it to a standard shape produces the filler this section
+exists to prevent.
 
 ### Corrections are edits, not content
 
