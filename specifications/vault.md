@@ -128,6 +128,36 @@ Optional deeper content relevant to this entry type.
 - [Related Entry 2](/vault/category/slug)
 ```
 
+### The entry is a public reference, not a record of our work
+
+Everything in the Vault is published. An entry is written for a reader who has
+arrived to learn about the subject, and who has no interest in — and should never
+be shown — how the entry came to be written.
+
+**Never narrate a correction.** Do not write "this entry previously said", "the
+error came from", "two titles have been removed from this list", or any variant.
+If a claim was wrong, fix it so the entry states the correct fact and cites its
+source. The record of what changed belongs in the commit message and, where it
+matters, in `tracker/`. It does not belong on the page.
+
+The test: would a reader who had never seen an earlier version understand why
+this sentence is here? If the sentence only makes sense as an apology to someone
+who read the old one, cut it.
+
+**Do not let the entry talk about itself.** "The entry's fast facts give…" and
+"this entry is here to make a point about…" are the same failure in a quieter
+form. Write about the subject.
+
+**What ⚠ is for.** Warning the reader about the *evidence*, not about us:
+
+- a date that contemporary and retrospective sources disagree on
+- a figure that is a period estimate rather than a verified total
+- a claim resting on a single source, or on one that is not in English
+- a name that is easily confused with another person's
+
+Those serve a reader deciding how much weight to give a fact. They are about the
+subject and its sources, and they stay.
+
 ---
 
 ## Entry Type Guidelines
