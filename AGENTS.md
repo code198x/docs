@@ -1,10 +1,12 @@
 # Code198x docs
 
+> Read [`PRINCIPLES.md`](PRINCIPLES.md) first.
+
 This repo owns Code198x curriculum specifications, platform references, decisions, and content workflow docs.
 
 ## Umbrella context
 
-The umbrella context is [`../../CLAUDE.md`](../../CLAUDE.md); cross-project decisions live in [`../../decisions/`](../../decisions/). Hardware facts cite the 198x source-of-truth layers rather than becoming canonical inside curriculum docs.
+The umbrella context is [`../../AGENTS.md`](../../AGENTS.md); cross-project decisions live in [`../../decisions/`](../../decisions/). Hardware facts cite the 198x source-of-truth layers rather than becoming canonical inside curriculum docs.
 
 ## Current launch context
 
