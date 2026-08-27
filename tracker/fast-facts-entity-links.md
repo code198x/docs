@@ -71,33 +71,44 @@ So:
 **Nothing here is decided.** A sidebar was raised as a possibility, not chosen, and the
 scope question it belongs to is still open. What follows is the design space as measured.
 
-### Where the facts could live
+### Two separate decisions
 
-The measurement above is a fact. What to do about it is not, and the choice is
-architectural rather than presentational.
+**How fast facts render** is presentational. **What form the underlying pairs take** is
+architectural. They are worth deciding together only because one pass would touch the same
+1,285 entries.
 
-**Option A — render them in the entry layout.** The Vault page already has
-`aside.vault-sidebar` at `1fr 260px`, carrying the table of contents, a **Details** block
-built from frontmatter, and Browse links. Fast facts would sit beside `Details`, which
-already duplicates part of it. Cheapest path; serves one consumer.
+The [Knowledge Model](../../PRINCIPLES.md) is a third thing again, and does not constrain
+either: it is an internal store for tracking connections between entities, never a published
+surface. A rendered fast-facts block is a *consumer* of facts, not a home for them.
 
-⚠ **This narrows the design space in the direction `PRINCIPLES.md` says to keep open.** The
-Knowledge Model puts facts above the documents that describe them — independently
-maintainable, carrying their own sources and confidence, reusable across the ecosystem, with
-pages assembling from shared knowledge rather than owning it. 5,822 `**Label:** value` pairs
-across 1,664 labels, plus 1,042 references to other entities, is a nascent entity–fact–
-relationship store. Binding it to one repo's page layout spends that.
+### Rendering
 
-**Option B — lift the pairs into structured data** that any consumer can read, attach
-evidence to each fact, and let the website render it. Serves the Knowledge Model directly.
-Much larger, and `PRINCIPLES.md` also says not to stop development to design a perfect
-ontology.
+The Vault page already has `aside.vault-sidebar` at `1fr 260px`, carrying the table of
+contents, a **Details** block built from frontmatter, and Browse links. Fast facts would sit
+beside `Details`, which already duplicates part of it — founding dates and platforms appear
+in both.
 
-**Option C — do neither yet.** Fix the 908 links in place, in the markdown, and leave the
-question of where facts live until the shape has been used more.
+Taking the pairs out of the prose flow is what actually frees the body to be freeform, which
+is the point of the structure change in the spec.
 
-The two are separable: *how fast facts render* and *where facts live* are different
-decisions, and treating them as one is what produced the sidebar-shaped answer.
+### Source format — the decision worth making carefully
+
+This is the seam a knowledge store would later attach to, so it is where optionality is
+worth preserving.
+
+All 5,822 pairs are already `**Label:** value`, so they are parseable today. But parsing
+prose to recover structure is fragile, and 1,664 distinct labels means no schema is being
+enforced — `Founded` and `Founder`, `Platform` and `Platforms`, `Creator` and `Creators` all
+coexist.
+
+If the pairs move into frontmatter or a typed block during the rendering work, they become
+directly consumable rather than recoverable-by-regex, at little extra cost over the same
+pass. If they stay as prose bullets, every future consumer re-implements the parse.
+
+⚠ **A typed format should not force a schema.** 1,664 labels is not sloppiness — a magazine
+entry and a CPU entry genuinely need different facts. Typing the *reference* (this value
+points at an entity) is separable from constraining the *label set*, and only the first is
+needed to make the 1,042 relationships machine-readable.
 
 ### Independent of that choice
 
