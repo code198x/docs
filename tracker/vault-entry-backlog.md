@@ -75,6 +75,21 @@ appear in the scan above, but recorded here so they are not lost.
 
 ---
 
+## Done
+
+- ~~**Widen the dead-link check to all of `src/`.**~~ Done 2026-08-27.
+  `scripts/check-vault-links.mjs` in the website repo now scans every source file
+  type under `src/`, fails the build rather than warning, and honours redirects
+  and category routes. Its first version produced 17 false positives — asset
+  paths containing `/vault/` as a substring, and template literals — both now
+  documented in the script.
+- ~~**Gitignore the contrast-audit artefacts.**~~ Done 2026-08-27.
+  `axedata-report.json` and `measure-report.json`.
+- ~~**Link the David Jones citations.**~~ Done 2026-08-27. Both entries linked him
+  only from See also; the first body mention now links too.
+
+---
+
 ## Non-person gaps
 
 - **Techniques depend on People.** 137 technique entries, one worked. Techniques were invented
