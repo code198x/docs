@@ -6,6 +6,12 @@
 
 ---
 
+## Related
+
+- [Fast Facts as entity references](fast-facts-entity-links.md) — 908 fast-facts values name
+  an entry and do not link to it. Same shape of problem as this list: demand that is already
+  documented but invisible.
+
 ## What this is
 
 Names and subjects the Vault **already cites** — usually in bold, in an entry that has been
