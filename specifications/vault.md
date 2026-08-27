@@ -135,6 +135,25 @@ what its sources support, not by a template.
   Where two entries cover the same kind of subject, their headings will often
   differ, and that is correct.
 
+**⚠ belongs in prose, never in a facts block.** A warning needs room to say what the
+evidence is and why it is thin; a bullet does not have that room, so a ⚠ in a facts block is
+almost always one of two things wearing a warning sign:
+
+- **an attribution** — put the provenance in the label. Not
+  `- **Author of:** *Hunchback*.` followed by `⚠ these credits come from advertising`, but
+  `- **Credited in publishers' advertising, not in review boxes:** *Hunchback*.`
+- **a scope** — put the limit in the label. Not `⚠ that is the whole list for this title`,
+  but `- **Releases of this title, in full:**`.
+
+Method disclosure is a third case and simply goes. "Read by eye from the index, which is
+scanned badly" tells the reader about our reading. Either the figure is right and it is
+stated, or it is uncertain and it says so.
+
+Where a caveat genuinely needs to argue — sources that disagree, a claim resting on one
+source, a name confused with another — it goes in the prose, where there is room to give the
+evidence. The four corrections moved out of fast facts in `code198x/website#287` are the
+worked examples.
+
 **Casing:** sentence case throughout — `## Fast facts`, not `## Fast Facts`.
 Proper nouns keep their capitals.
 
