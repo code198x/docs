@@ -66,27 +66,55 @@ So:
 - **Person references (183):** generate as *candidates*. Each needs a human to confirm the
   name in the credit is the person in the entry.
 
-## How this fits the sidebar
+## Options, not a plan
 
-The Vault entry layout already has `aside.vault-sidebar` at `1fr 260px`, carrying the table
-of contents, a **Details** block rendered from frontmatter, and Browse links. Fast facts
-belongs beside `Details` rather than in the prose flow — and `Details` already duplicates
-some of it, since founding dates and platforms appear in both.
+**Nothing here is decided.** A sidebar was raised as a possibility, not chosen, and the
+scope question it belongs to is still open. What follows is the design space as measured.
 
-Two open questions for that work:
+### Where the facts could live
 
-1. **Rail width.** At p90 of 88 characters, values wrap to two or three lines in 260px.
-   Fine for `Developer: Midway`, cramped for a list of six colleagues.
-2. **The 29 caveat bullets.** 29 fast-facts pairs carry a ⚠, and 28 of those are the long
+The measurement above is a fact. What to do about it is not, and the choice is
+architectural rather than presentational.
+
+**Option A — render them in the entry layout.** The Vault page already has
+`aside.vault-sidebar` at `1fr 260px`, carrying the table of contents, a **Details** block
+built from frontmatter, and Browse links. Fast facts would sit beside `Details`, which
+already duplicates part of it. Cheapest path; serves one consumer.
+
+⚠ **This narrows the design space in the direction `PRINCIPLES.md` says to keep open.** The
+Knowledge Model puts facts above the documents that describe them — independently
+maintainable, carrying their own sources and confidence, reusable across the ecosystem, with
+pages assembling from shared knowledge rather than owning it. 5,822 `**Label:** value` pairs
+across 1,664 labels, plus 1,042 references to other entities, is a nascent entity–fact–
+relationship store. Binding it to one repo's page layout spends that.
+
+**Option B — lift the pairs into structured data** that any consumer can read, attach
+evidence to each fact, and let the website render it. Serves the Knowledge Model directly.
+Much larger, and `PRINCIPLES.md` also says not to stop development to design a perfect
+ontology.
+
+**Option C — do neither yet.** Fix the 908 links in place, in the markdown, and leave the
+question of where facts live until the shape has been used more.
+
+The two are separable: *how fast facts render* and *where facts live* are different
+decisions, and treating them as one is what produced the sidebar-shaped answer.
+
+### Independent of that choice
+
+Two items hold whichever way the above goes.
+
+1. **The 29 caveat bullets.** 29 fast-facts pairs carry a ⚠, and 28 of those are the long
    ones — Gargoyle's "there was a third", CRL's provenance note, the "press evidence in this
-   library" coverage warnings. Those are arguments, not facts, and belong in the prose where
-   the argument lives. They should move before any migration, not during it.
+   library" coverage warnings. Those are arguments, not facts. They read better in prose and
+   would not survive a move into a data structure.
+2. **Rail width, if Option A.** At p90 of 88 characters, values wrap to two or three lines
+   in 260px.
 
-## Sequence
+### What would change the reading
 
-1. Spec floor — done, `code198x/docs#8`.
-2. Sidebar design: component, rail width, and the 29 caveats moved to prose.
-3. Entity-link pass: 859 mechanical, 183 by hand.
-4. Only then sweep `## Overview` out of the entries, against the final shape.
-
-Doing 4 before 2 means two large diffs across the same paragraphs.
+- If most of the 4,808 non-resolvable values turn out to be restatements of the prose, fast
+  facts is worth shrinking rather than relocating.
+- If the 183 person references have a high error rate on inspection, name-matching is
+  unsafe for the mechanical 859 too, and the whole pass becomes manual.
+- If a second consumer (Emu198x, Asm198x) wants these facts, Option A stops being viable and
+  C becomes a holding position rather than a choice.
