@@ -142,10 +142,18 @@ manufactured. A published date with no verification field does the opposite by d
 This was the clearest small case for whatever the fact format turned out to be: a `founded`
 value wants a source beside it, not a paragraph elsewhere on the page apologising for it.
 
-**Settled.** `sources` now carries per-field evidence, and CRL's 1980 is cited to Companies
-House — company 01472275, CRL Group Ltd, incorporated 1980-01-11. Twelve more company
-registrations were confirmed the same way. The general problem stands: most `founded` values
-still carry no source, and absence means only that nobody has checked.
+**Half settled.** `sources` now carries per-field evidence, and eleven company registrations
+are cited to Companies House.
+
+CRL is not one of them, and the near miss is worth keeping. Company 01472275 is "CRL Group
+Ltd", incorporated 1980-01-11 — matching this Vault's CRL on name and on year, which is
+exactly why it was believed. It was CLWYD REFRIGERATION LIMITED until 2016: a Conwy
+refrigeration business that took the name thirty-six years after Clement Chambers founded
+the games publisher. `previous_company_names` and the registered office settle it, and
+neither had been checked.
+
+So CRL's `founded: 1980` remains unsourced, and the general problem stands: most `founded`
+values carry no source, and absence means only that nobody has checked.
 
 ### What would change the reading
 
