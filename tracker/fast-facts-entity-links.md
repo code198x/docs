@@ -139,9 +139,13 @@ states apart.
 verification status, and separately that uncertainty should be preserved rather than
 manufactured. A published date with no verification field does the opposite by default.
 
-This is the clearest small case for whatever the fact format turns out to be: a `founded`
-value wants a source and a confidence beside it, not a paragraph elsewhere on the page
-apologising for it. Until then, `crl-group`'s 1980 is known-unsourced and recorded here.
+This was the clearest small case for whatever the fact format turned out to be: a `founded`
+value wants a source beside it, not a paragraph elsewhere on the page apologising for it.
+
+**Settled.** `sources` now carries per-field evidence, and CRL's 1980 is cited to Companies
+House — company 01472275, CRL Group Ltd, incorporated 1980-01-11. Twelve more company
+registrations were confirmed the same way. The general problem stands: most `founded` values
+still carry no source, and absence means only that nobody has checked.
 
 ### What would change the reading
 
