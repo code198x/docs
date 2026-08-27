@@ -121,6 +121,28 @@ Two items hold whichever way the above goes.
 2. **Rail width, if Option A.** At p90 of 88 characters, values wrap to two or three lines
    in 260px.
 
+### Verification status has nowhere to live
+
+Scrubbing the corpus-coverage boilerplate (`code198x/website#287`) surfaced a gap this
+tracker should hold.
+
+**238 of 239 company entries carry a `founded:` value in frontmatter**, rendered by the
+sidebar as "Active: 1980–…". Exactly one entry — `companies/crl-group` — said in prose that
+its value was unsourced, and that note has now gone with the rest of the boilerplate.
+
+The note was in the wrong place, but it was recording something real. CRL's `founded: 1980`
+is not supported by anything in this library, and the page asserts it anyway. The other 237
+are not thereby verified; they are simply unannotated, and there is no way to tell the two
+states apart.
+
+`PRINCIPLES.md` says each fact should where practical retain its sources, confidence and
+verification status, and separately that uncertainty should be preserved rather than
+manufactured. A published date with no verification field does the opposite by default.
+
+This is the clearest small case for whatever the fact format turns out to be: a `founded`
+value wants a source and a confidence beside it, not a paragraph elsewhere on the page
+apologising for it. Until then, `crl-group`'s 1980 is known-unsourced and recorded here.
+
 ### What would change the reading
 
 - If most of the 4,808 non-resolvable values turn out to be restatements of the prose, fast
