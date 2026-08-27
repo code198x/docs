@@ -128,6 +128,37 @@ Optional deeper content relevant to this entry type.
 - [Related Entry 2](/vault/category/slug)
 ```
 
+### Corrections are edits, not content
+
+Everything in the Vault is published. An entry is written for a reader who has
+arrived to learn about the subject, not to learn how the entry came to be written.
+
+**Incorporate the corrected information seamlessly into the entry. Remove
+superseded claims. Do not add correction notes, revision summaries, editorial
+commentary, "what changed" sections, or descriptions of the editing process
+unless explicitly requested.**
+
+The record of what changed belongs in the commit message and, where it matters,
+in `tracker/`. It does not belong on the page.
+
+The test: would a reader who had never seen an earlier version understand why
+this sentence is here? If it only makes sense as an apology to someone who read
+the old one, cut it. The same test catches the quieter form — an entry that
+discusses its own fast facts, or announces what it exists to demonstrate, is
+talking about itself rather than its subject.
+
+**One thing this does not ban: warning the reader about the evidence.** A
+correction note is about us. An evidence note is about the sources, and a reader
+weighing a fact needs it:
+
+- a date that contemporary and retrospective sources disagree on
+- a figure that is a period estimate rather than a verified total
+- a claim resting on a single source, or on one that is not in English
+- a name that is confused with another person's
+
+Those stay. The distinction is who the ⚠ is about — write "sources disagree on
+this date", never "this entry had this date wrong".
+
 ---
 
 ## Entry Type Guidelines
