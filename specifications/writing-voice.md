@@ -23,6 +23,7 @@ The reader is curious, possibly young, possibly returning to coding after years 
 
 - **British English** throughout: colour, learnt, centre, behaviour
 - **Exception**: "program" not "programme" (for computer programs)
+- Enforced by the `check-spelling` skill, which scans for American spellings. Run it before publishing.
 - **No nostalgia tourism**: focus on skills and hardware, not "remember when" feelings
 - **No modern engine references**: zero tolerance for Unity, Unreal, Godot, GameMaker
 
