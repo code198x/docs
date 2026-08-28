@@ -1,6 +1,6 @@
 # Code198x docs
 
-> Read [`PRINCIPLES.md`](PRINCIPLES.md) first.
+> Read [`PRINCIPLES.md`](PRINCIPLES.md) first. [`MANIFESTO.md`](MANIFESTO.md) is why the project exists.
 
 This repo owns Code198x curriculum specifications, platform references, decisions, and content workflow docs.
 
