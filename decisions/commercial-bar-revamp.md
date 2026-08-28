@@ -1,125 +1,70 @@
-# Decision: Commercial Bar for Curriculum Revamp
-
-> **AMENDED 2026-06-10.** The **bar definitions stand** (still KEEP), but two framings here are
-> overtaken: the **"Spectrum-only ship"** parenthetical is retired (launch is now all four core
-> platforms — [october-2026-launch-spec.md](october-2026-launch-spec.md), 2026-06-09), and the
-> **Cadence / Nightshade / Exodus "Game 1" lineup** is superseded by the 2026-06-10 per-track ladder
-> records (C64's first game is now Platform Panic with Starfield shipped; NES's is Dash; the flagships
-> Cadence/Nightshade are deferred). See the per-track lineup records under `decisions/`.
-
-> **AMENDED 2026-06-02.** The **commercial-bar definitions in this doc stand** — they are the
-> live bar for every Game 1. Only the *Shadowkeep scope phrasing* is superseded: "Shadowkeep
-> Arcs 1+2 / 32 units" (Status line + § The decision) is reframed by
-> [spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md) — the October artefact is
-> the **gentle assembly opening** (Primer + the tiny game *Gloaming* + the start of the cell-based
-> *Shadowkeep*, its *Place*), and Shadowkeep hits commercial bar through art / lighting / room
-> design / audio, not an advanced engine. Per [modules-not-games.md](modules-not-games.md)
-> (migrated 2026-06-01), the lineup is a sequence of **modules** and counts are illustrative.
-> Read "Arcs 1+2 / 32 units" below as the superseded framing.
-
-**Status:** Active for bar definitions. October scope was retargeted — see [october-2026-launch-spec.md](october-2026-launch-spec.md) (Spectrum-only ship) and [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md) (Shadowkeep Arcs 1+2 / 32 units, now reframed — see banner). Cadence / Nightshade / Exodus are deferred whole to post-October.
+# Decision: Commercial bar
 
 ## The decision
 
-The four assembly Game 1s (NES, C64, Amiga, Spectrum) are being rewritten to a **"commercially shippable in the era of the systems"** bar. A learner finishing each game's first phase should have built something that could plausibly have shipped on a budget label in 1986-1991. Per-phase unit counts are per-game brief — there is no universal floor.
+Every game is built to a **commercially shippable in the era of the system** bar. A learner finishing a game should have built something that could plausibly have shipped on a budget label between 1986 and 1991. Per-game scope is per-brief; there is no universal unit floor.
 
 ## Why
 
-The previous Game 1 content was technically clean but the games were small-screen demos rather than complete games. Single-screen platformer with one obstacle (Dash); single-enemy-type vertical shooter (Starfield); pre-Lemmings infrastructure with the actual game deferred to Phase 2 (Exodus). Shadowkeep was the only one that landed platform-native ambition.
+Earlier games were technically clean and were small-screen demos rather than complete games: a single-screen platformer with one obstacle, a single-enemy-type vertical shooter, infrastructure with the actual game deferred to a later phase.
 
-Setting the bar at "commercial 1986-1991" forces every Phase 1 to be a real game, not a tech demo with a title screen.
+Setting the bar at commercial forces every game to be a real game rather than a tech demo with a title screen. It is a commercial bar, not a pedagogical minimum.
 
-## What this means per platform
+## The bar per system
 
-| Platform | Era bar | Reference points |
+| System | Era bar | Reference points |
 |---|---|---|
-| NES (1985-90) | Multi-screen scrolling, mapper-driven world, music | Castlevania, Mega Man, Blaster Master |
-| C64 (1984-89) | Hubbard-grade SID, fast scrolling, sprite work | Sanxion, Wizball, Uridium, Last Ninja |
-| Amiga (1987-91) | Visual showpiece, sampled audio, polish | Lemmings, Speedball II, Shadow of the Beast |
-| Spectrum (1984-89) | Bedroom-coder ingenuity, attribute-clash discipline | Knight Lore, Atic Atac, Sabre Wulf |
+| NES (1985–90) | Multi-screen scrolling, mapper-driven world, music | Castlevania, Mega Man, Blaster Master |
+| C64 (1984–89) | Hubbard-grade SID, fast scrolling, sprite work | Sanxion, Wizball, Uridium, Last Ninja |
+| Amiga (1987–91) | Visual showpiece, sampled audio, polish | Lemmings, Speedball II, Shadow of the Beast |
+| Spectrum (1984–89) | Bedroom-coder ingenuity, attribute-clash discipline | Knight Lore, Atic Atac, Sabre Wulf |
 
-## The four games
+The endpoint of the curriculum is **mid-tier full-price** — the £7.95 Hewson / Gremlin / Mikro-Gen / Durell tier. Real commercial product, ambitious, not pretending to be Ultimate's absolute top. See [real-retro-games.md](real-retro-games.md) for the multi-disciplinary form of the same bar, and [game-completeness-bar.md](game-completeness-bar.md) for how a game is tested against it.
 
-| Title | Platform | Genre | Status of previous game |
-|---|---|---|---|
-| **Cadence** | C64 | Horizontal music-driven shooter (Otocky × Hubbard) | Replaces Starfield |
-| **Nightshade** | NES | Scrolling action platformer (Castlevania × Mega Man) | Replaces Dash |
-| **Exodus** | Amiga | Lemmings-tradition god-hand Blitter puzzle (carve/raise) — the Lost-Vikings direct-control design is parked for a possible sequel (brief, 2026-06-11) | Refined direction; old version dropped |
-| **Shadowkeep** | Spectrum | Multi-room maze (Atic Atac scope) | Refined; expand single-room to multi |
+Per-track lineups are owned by the per-track records under `decisions/`, not by this one.
 
-Signal (formerly Amiga Game 2) is dropped entirely. Replacement TBD after Phase 1 ships.
+## Scaffold pattern
 
-## Scope
+Two patterns, chosen per game and recorded in the game's brief.
 
-The bar applies to Game 1 across all four assembly tracks. Per-game scope is per-brief: Shadowkeep ships Arcs 1+2 (32 units) for October per [shadowkeep-32-unit-commitment.md](shadowkeep-32-unit-commitment.md), with Arcs 3+4 post-October per [shadowkeep-four-arc-framing.md](shadowkeep-four-arc-framing.md). Cadence / Nightshade / Exodus are deferred whole to post-October per [october-2026-launch-spec.md](october-2026-launch-spec.md).
+**Lucky Number scaffold** — a typed-in first unit contains working systems the learner experiences without understanding: a music driver, a scroll engine. The boxes open at scheduled later units.
 
-## Pattern (per game)
-
-Cadence / Nightshade / Exodus are designed for the Lucky Number scaffold pattern: typed-in Unit 1 contains working systems (music driver, scroll engine, etc.) that the learner experiences without understanding; the boxes open at scheduled later units.
-
-Shadowkeep is a deliberate divergence — incremental scaffold within phases, spiral progression across phases, starting from nothing. See [spiral-and-incremental.md](spiral-and-incremental.md). Pattern choice per game is captured in the game's brief.
-
-## Sequencing
-
-See [october-2026-launch-spec.md](october-2026-launch-spec.md). Shadowkeep is the October-only Game 1; the other three resume post-October.
-
-## Drift triggers
-
-If any phase spec for the four Game 1s starts to look like "single-screen demo" or "infrastructure-only with the real game in the next phase", stop and re-read this decision. The bar is commercial, not pedagogical-minimum.
+**Incremental from nothing** — incremental scaffold within phases, spiral progression across them, starting from an empty file. See [spiral-and-incremental.md](spiral-and-incremental.md).
 
 ## Definition of Done (per unit)
 
-The bar above is operational at unit scale through this checklist — the canonical Definition of Done (relocated here when the `tracker/revamp.md` status doc was retired; see [state-lives-in-catalogues.md](state-lives-in-catalogues.md)). A unit isn't shippable until all eight tick:
+The bar is operational at unit scale through this checklist. A unit is not shippable until all eight tick:
 
-- [ ] MDX written (magazine voice, length appropriate to the unit's teaching beat)
-- [ ] Code listing assembles cleanly with the platform's tools
-- [ ] Code listing runs correctly on the platform's emulator (Fuse for Spectrum, etc.)
+- [ ] MDX written, in the magazine voice, at a length appropriate to the unit's teaching beat
+- [ ] Code listing assembles cleanly with the system's tools
+- [ ] Code listing runs correctly on the system's emulator — Fuse for Spectrum, and so on
 - [ ] At least one screenshot captured
 - [ ] All `<CodeFromFile>` snippets exist in code-samples and assemble
-- [ ] "Try this" experiments tested and produce the described result
-- [ ] "If it doesn't work" troubleshooting reflects actual failure modes encountered during testing
-- [ ] **All cross-references resolve to real content** — vault entries, pattern library entries, and other units linked from this unit must exist (or be catalogued as required)
+- [ ] "Try this" experiments tested, and they produce the described result
+- [ ] "If it doesn't work" troubleshooting reflects failure modes encountered in testing
+- [ ] All cross-references resolve to real content — vault entries, pattern-library entries and other units must exist, or be catalogued as required
 
-> **Real-hardware verification suspended (2026-06-10).** A ninth item — *"runs correctly on
-> real hardware"* — used to sit between the emulator and screenshot checks. It is **dropped for
-> now.** Available hardware is limited (a C64 with an Ultimate-II+ and a Spectrum Next; no NES or
-> Amiga), so a hardware-test gate would block `complete` on two of the four launch platforms
-> outright and apply unevenly across the others. **Cycle-accurate emulation (Emu198x) is the
-> standing guarantee** that the binary is real — the code targets real machines and assembles to a
-> real-hardware image; we just don't hand-verify on physical hardware as a shipping gate at the
-> moment. Where a per-game brief's "Ship Test" still lists a real-hardware step, treat it as
-> suspended under this note. Revisit if/when hardware and capacity allow.
+**Real hardware is not a shipping gate.** Available hardware is limited to a C64 with an Ultimate-II+ and a Spectrum Next, so a hardware gate would block `complete` on two of the four systems outright and apply unevenly across the others. Cycle-accurate emulation is the standing guarantee that the binary is real: the code targets real machines and assembles to a real-hardware image. Where a brief's ship test lists a real-hardware step, it does not gate. Revisit when hardware and capacity allow.
 
 ## Definition of Done (per game) — the winnability gate
 
-> **ADDED 2026-06-12.** Born of the cross-platform "last yard" pass: Dash shipped sixteen
-> units with a spike gap one pixel wider than its jump — the right half of its level had
-> *never been reached*, and no unit-scale check could have caught it (every unit assembled,
-> ran, and screenshotted cleanly on the level's left half). Mechanics verify at unit scale;
-> **games only verify end to end.**
+Mechanics verify at unit scale; games only verify end to end. Before the module that makes a game winnable is marked `complete` — and again after any change to its mechanics, level data or tuning:
 
-Before the module that makes a game winnable is marked `complete` in the catalogues — and
-again after any change to its mechanics, level data or tuning — two checks at game scale:
+- [ ] **The game has been driven to its win state by a scripted emulator run.** Real inputs through the real game logic. Engineered setups are fine — poke a counter, park a hazard — but bypassing the logic is not. The script lives in the game's `capture/` directory so the run is repeatable and diffable.
+- [ ] **The loss path has been exercised the same way**, where the game can be lost. Both endings seen and heard, not just the happy one.
 
-- [ ] **The game has been driven to its win state by a scripted emulator run.** Real inputs
-      through the real game logic — engineered setups are fine (poke a counter, park a
-      hazard), bypassing the logic is not. The script lives in the game's `capture/`
-      directory so the run is repeatable and diffable.
-- [ ] **The loss path has been exercised the same way**, where the game can be lost — both
-      endings seen and heard, not just the happy one.
+For multi-arc games this applies per arc: each arc ships a winnable game.
 
-For multi-arc games, this applies per arc: each arc ships a winnable game.
+What this catches that unit-scale checks structurally cannot: untraversable geometry, win conditions that never fire, resets that leak state between attempts, death cascades, and ending flows that snap past before they land.
 
-What this gate catches that unit-scale checks structurally cannot: untraversable geometry,
-win conditions that never fire, resets that leak state between attempts (ghost hearts in
-the pens, a respawned coin collecting itself under the standing player), death cascades,
-and ending flows that snap past before they land. The scripted run is the floor, not the
-ceiling — it proves the game *finishes*; only hands on a real pad prove it *feels* right,
-and human playtest stays a separate, per-game follow-up.
+The scripted run is the floor, not the ceiling. It proves the game *finishes*; only hands on a real pad prove it *feels* right, and human playtest stays a separate per-game follow-up.
 
-### Drift triggers (winnability gate)
+## Drift triggers
 
-- *"The mechanics are all individually verified, the game is obviously completable"* —
-  Dash's were, and it wasn't. Run the script.
-- *"The win run is too hard to choreograph"* — that is information about the game, not the
-  gate. If a deterministic script can't reach the win, look hard at whether a player can.
+- A game spec that looks like a single-screen demo, or infrastructure-only with the real game in the next phase.
+- *"The mechanics are all individually verified, the game is obviously completable."* Dash's were, and it was not: the right half of its level had never been reached, because a spike gap was one pixel wider than its jump. Run the script.
+- *"The win run is too hard to choreograph."* That is information about the game, not about the gate. If a deterministic script cannot reach the win, look hard at whether a player can.
+
+## Status
+
+Active. The bar and both Definitions of Done are live for every game.

@@ -1,41 +1,12 @@
 # Decision: Inspired-By, Not Clones — Naming Convention
 
-> **AMENDED 2026-07-01 — the must-differentiate pressure is lifted; point to influences openly.**
-> Pillar #3 below ("Pedagogical depth") argued inspired-by naming should push the learner to
-> *design a divergence* from the genre rather than reproduce it. That pressure is withdrawn.
-> **Faithful mechanic reproduction is now first-class:** a curriculum game may reproduce a canonical
-> game's mechanics as faithfully as it likes — a maze-chase built the way Pac-Man built it — with
-> **no design divergence required.** Divergence is welcome where it makes a better game, never
-> mandatory.
->
-> **The identity firewall is unchanged and still carries all the weight.** Pillars 1 (legal
-> cleanliness) and 2 (shippability) stand exactly as written: every game keeps its own name,
-> characters, art, and specific audiovisual expression. That is what stays legally clean — game
-> *mechanics and rules* are free to borrow (they aren't copyrightable); *names* (trademarks) and
-> *specific expression* (copyright) are what we keep original. Relaxing the pedagogy pillar costs
-> nothing here, because the firewall was never the pedagogy pillar.
->
-> **Faithful means the rules and feel, with our own level data.** Specific maze layouts, level
-> geometry, and playfield arrangements sit on the *expression* side of the line, not the mechanic
-> side — *Tetris Holding v. Xio* (2012) found even playfield dimensions and piece behaviour
-> protectable expression. So a faithful reproduction borrows the ancestor's systems, rules, and
-> tuning philosophy, but designs its own levels — alongside its own name, characters, and art.
->
-> **Point to influences clearly and specifically.** "In the X tradition" is a floor, not a ceiling.
-> Briefs, curriculum prose, the vault, and marketing may name the exact ancestors and enumerate what
-> was borrowed — e.g. "Shadowkeep takes its room-graph and flip-screen from *Atic Atac*, its
-> silhouette-lit depth from *Knight Lore*." Credit the influence openly; homage and tribute are
-> encouraged framings. What stays barred is *identity substitution* — shipping the game AS the
-> canonical title, or calling it a "clone"/"remake" (both imply passing the original off as ours).
->
-> **Operational follow-through:** the brief spec's Remix Unit (Section 3,
-> [../specifications/brief.md](../specifications/brief.md)) gains a fifth transformation category —
-> *faithful reproduction (same game, new identity)* — and no longer treats "no transformation" as a
-> design failure.
-
 ## The decision
 
 Every game in the Code198x curriculum is *inspired by* canonical Spectrum / arcade / textbook games, not a clone of them. The named legends and games in lineup tables are *references for tradition*, not titles to recreate. Each curriculum game ships with its own name, characters, art, and design identity.
+
+**Faithful mechanic reproduction is first-class.** A curriculum game may reproduce a canonical game's mechanics as faithfully as it likes — a maze-chase built the way Pac-Man built it — with no design divergence required. Divergence is welcome where it makes a better game, never mandatory.
+
+**The identity firewall carries all the weight.** What is barred is *identity substitution*: shipping the game as the canonical title, or calling it a clone or a remake. Both imply passing the original off as ours.
 
 This convention applies across both tracks (Spectrum BASIC, Spectrum Assembly) and across all platforms (C64, NES, Amiga when their tracks design). Shadowkeep is the worked example — inspired by Atic Atac / Knight Lore / Sabre Wulf, but its own keep with its own hooded thief and its own atmosphere. Not a remake.
 

@@ -1,22 +1,13 @@
 # Decision: the endpoint comes first — build the game, then author the route
 
-**Status:** Active. Applies from the game-2 wave (Exodus onward) **and retroactively to the
-five shipped launch on-ramp games** — see the 2026-07-01 amendment.
-**Date:** 2026-06-12.
+**Status:** Active.
 
-> **AMENDED 2026-07-01 — extended retroactively to the launch games, as *validate-and-repair*.**
-> The original scope ("game-2 wave onward") is widened: the five shipped, forward-authored launch
-> on-ramp games — **Gloaming, Shadowkeep, Starfield, Dash, Flock** — are brought to the endpoint-first
-> bar before October. This reverses the forward-authoring debt the § *Why* describes, rather than
-> only avoiding it on new games.
->
-> **Altitude: validate-and-repair, not from-scratch re-author.** Build the missing piece — the
-> winnable, playtested prototype — and let it prove or break the *existing* route; then re-author
-> only the units the prototype disproves. Endpoint-first applied as **rescue**: keep the prose that
-> survives contact with a working game; fix the Dash-class geometry/tuning bugs the gate catches.
-> **Pivot to full re-author only where a game genuinely doesn't work** — where the built game can't
-> be made winnable/coherent by repair. That judgement is made *with the prototype in hand*, not
-> speculatively.
+## Scope
+
+Applies to every game, including the five shipped launch on-ramp games — Gloaming, Shadowkeep, Starfield, Dash and Flock.
+
+For a game already written, the altitude is **validate-and-repair, not from-scratch re-author**. Build the missing piece — the winnable, playtested prototype — and let it prove or break the existing route; then re-author only the units the prototype disproves. Keep the prose that survives contact with a working game, and fix the geometry and tuning bugs the winnability gate catches. Pivot to a full re-author only where a game genuinely does not work — where the built game cannot be made winnable or coherent by repair. That judgement is made with the prototype in hand, not speculatively.
+
 >
 > **Guardrails (binding on this amendment):**
 > - **Never regress the launch.** Each shipped game stays live and marked `complete` until its
