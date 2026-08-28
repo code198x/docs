@@ -18,7 +18,7 @@ This applies to all tracks, but it is load-bearing for **assembly**, where the h
 
 The Spectrum assembly cliff ([spectrum-assembly-gentle-ramp.md](spectrum-assembly-gentle-ramp.md)) was not only *too much per unit* — it was *advanced technique with no motivation*. Masking, taught before the learner has ever seen a sprite erase the wall it walked over, is an abstract chore. Taught *after* — when their own lamplighter has just rubbed a hole in the scenery — it is the obvious fix to a problem they can see on screen. Same technique, opposite reception.
 
-Motivation precedes technique. The naive version manufactures the motivation: it is the "before" picture that makes the "after" land. This is also how real development feels — you write the simple thing, hit its wall, and reach for the better thing. Teaching the upgrade first inverts the genuine order and teaches a technique as dogma rather than as a solution.
+Motivation precedes technique. The naive version manufactures the motivation: it is the "before" picture that makes the "after" land. This is the curriculum's instance of the family method in [`PRACTICE.md`](https://github.com/code198x/.github/blob/main/PRACTICE.md) § *Teaching through limitation* — the limitation raises the question, and the technique is the answer to it. This is also how real development feels — you write the simple thing, hit its wall, and reach for the better thing. Teaching the upgrade first inverts the genuine order and teaches a technique as dogma rather than as a solution.
 
 The naive version is not a mistake we apologise for. It is a correct, shippable solution at its scale — and the deliberate "before" half of the pedagogy.
 
