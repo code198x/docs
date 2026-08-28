@@ -129,10 +129,11 @@ rather than a fixed count:
 If curriculum-level planning shows any of these, stop and re-read this decision:
 
 - Re-introducing a **fixed unit count** ("256 per game", "phase must be 16 units") as a
-  target — counts are illustrative markers; the budget is on *techniques*.
+  target — counts are illustrative markers; the bound is on *unit count per game*,
+  held by the per-unit one-concept rule and must-be-a-good-game.
 - Re-introducing **powers-of-2 phase sizing** as a rule.
 - **Capping a platform at a fixed game count** by fiat rather than by genre breadth +
-  technique budget.
+  the gentle ramp.
 - A **unit** that introduces **more than one new thing** (the one-concept rule is the real
   ramp constraint — techniques-per-*game* is uncapped, per the 2026-06-10 amendment).
 - A game's **unit count ballooning** toward "teaches everything" (the original-Exodus trap:
