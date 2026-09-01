@@ -96,6 +96,32 @@ appear in the scan above, but recorded here so they are not lost.
 
 ---
 
+## Surfaced in the 2026-09-01 LightWave and Video Toaster pass
+
+Grounding `lightwave-3d`, `newtek`, `tim-jenison` and `tobias-richter` against Jimmy Maher's
+*The Future Was Here* and the 1991–95 Amiga press left eight names load-bearing and unlinkable.
+The cluster is unusually self-contained: writing three or four of these would close most of the
+citations at once.
+
+| Person | Source context |
+|---|---|
+| **Allen Hastings** | Wrote Videoscape 3D, shown at the Second Amiga Developer's Conference in November 1986 and published by Aegis. Per Maher, "Videoscape begat LightWave 3D" after publishing moved to NewTek — so LightWave's origin story runs through him, not the Toaster. He bought an Amiga 1000 in November 1985 and was "at the forefront of developments in Amiga-based 3D graphics" from that point. The `lightwave-3d` entry now rests on him and cannot link him. |
+| **Ron Thornton** | Foundation Imaging's visual effects director on *Babylon 5*. Both of the figures that replaced the entry's discarded "first TV series with all-CGI effects" claim are his: *The Last Starfighter*'s $15 million Cray X-MP against twelve Toaster-equipped Amigas, and the pilot's $250,000 effects budget at roughly a quarter of a *TNG* episode. The most load-bearing missing person in this cluster. |
+| **Paul Montgomery** | NewTek's "eventual vice president" (Maher). Named in both `newtek` and `tim-jenison`, linked from neither. He is also the source of the company's stated motive — wanting "video productions on a budget... that did not look like amateur creations". |
+| **"Mojo"** | Foundation Imaging artist who wrote *Amiga Shopper*'s "The Three Ds of 3D" tutorial series while *Babylon 5* was airing, bylined in issue 46 as "the man who works with Ron Thornton". ⚠ The source gives only the nickname; a real name is needed before an entry, so this one is research before it is writing. |
+
+Non-person subjects from the same pass. These do not fit the categories above, but they are
+cited by grounded entries on exactly the same terms.
+
+| Subject | Category | Source context |
+|---|---|---|
+| **Videoscape 3D** | tools | Hastings's Aegis-published 3D package and LightWave's direct ancestor. The `lightwave-3d` platform table now begins with it in 1986, four years before the Toaster. |
+| **Foundation Imaging** | companies | The effects house *Babylon 5*'s producers hired "to create the show's space-borne sequences using a suite of Toaster-equipped Amigas". Cited in `lightwave-3d` and `tobias-richter`; the obvious partner entry to Ron Thornton. |
+| **Aegis** | companies | Videoscape 3D's original publisher, and a substantial Amiga software house in its own right. Currently cited only in passing. |
+| **ColorWare** / **CocoMax** | companies / tools | Where Tim Jenison worked before founding NewTek, as "both hardware and software engineer" on the eight-bit Tandy TRS-80 Color Computer, and the "MacPaint-like paint program" he is best known for there. Both `newtek` and `tim-jenison` now turn on this, because it makes the Video Toaster the work of a Color Computer developer. |
+
+---
+
 ## Non-person gaps
 
 - **Techniques depend on People.** 137 technique entries, one worked. Techniques were invented
