@@ -6,7 +6,7 @@ which decided the split on 2026-06-05 and has been built for every language
 except assembly. This record decides only the *sequence*, because doing it as
 one job means re-cutting 69 published units a month before Crash! Live.
 
-## Where the tree actually is
+## Where the tree is
 
 Counted from `src/content/curriculum/` on 2026-09-03, not from a tracker:
 
