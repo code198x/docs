@@ -131,7 +131,50 @@ lists "content markers, cards, headings, platform badges" as places machine
 colour may appear. This was allowed rather than required, and removing it is a
 judgement about how the pages read, not a compliance fix.
 
-### 7. OG images are generated per page
+### 7. Diagrams are SVG, and the kit gives them six tokens
+
+Diagrams get used more widely across the family, drawn as SVG.
+
+**Why SVG rather than monospace figures.** A figure drawn in box-drawing
+characters renders at the mercy of the reader's font stack: the Spectrum memory
+map in the machine briefing had to be redrawn in plain ASCII because the mono
+face carries no `┌ ─ ┤` glyphs and fell back to a proportional font, so the
+verticals missed the horizontals. SVG has no such failure mode.
+
+**The theming, which is not much.** Six tokens in the kit, resolving per theme
+through `light-dark()` like everything else:
+
+| Token | Job |
+|---|---|
+| `--h-dia-ground` | the diagram's own background |
+| `--h-dia-ink` | labels and text |
+| `--h-dia-line` | strokes, rules, axes |
+| `--h-dia-fill` | neutral block fill |
+| `--h-dia-fill-alt` | a second fill, for banding |
+| `--h-dia-accent` | the one thing the diagram is pointing at |
+
+An author writes `fill="var(--h-dia-fill)"` and never thinks about themes again.
+`currentColor` covers the rest for free, since SVG inherits `color`.
+
+**Inline SVG only.** Custom properties do not cross into an externally
+referenced file, so a diagram shipped as a `.svg` and dropped in with `<img src>`
+cannot see these tokens and cannot be themed. Diagrams are Astro components that
+emit inline `<svg>`. This is the thing to get wrong — exporting flat SVGs from a
+drawing tool is the obvious move and it forecloses theming entirely.
+
+**What the identity record already constrains.** §3's axis table applies
+unchanged: machine colour may appear, project colour may not, and a diagram that
+colours categories is a chart — its colours live inside it, keyed to a legend.
+
+**The six existing diagrams stay here and get ported.** `MemoryMap`,
+`RegisterBits`, `SpectrumBitmapLayout`, `FlowDiagram`, `SpriteGrid` and
+`SpriteEditor` are curriculum pedagogy and do not move. But **none of the six
+reacts to theme** — no `data-theme` or `prefers-color-scheme` rule between them,
+and 38 hardcoded colours, including `#1a1714`, which is the kit's *dark* page
+base sitting in a light-mode diagram. Porting them onto the six tokens is what
+makes them correct, and it is separable from moving anything.
+
+### 8. OG images are generated per page
 
 The current one is a single static PNG shared by roughly 2,300 pages, and it
 breaks the identity record in four places:
