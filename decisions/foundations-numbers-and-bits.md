@@ -2,7 +2,7 @@
 
 **Status:** ACCEPTED — 2026-06-30. Resolves the two build-time open questions left
 by [`front-of-curriculum-architecture.md`](front-of-curriculum-architecture.md) for
-the Foundations Layer 2b primer (Number Systems + Bit Logic). Does not change the
+the Foundations Numbers & Bits primer (Number Systems + Bit Logic). Does not change the
 scope or position that decision fixed; it only settles name and shape and records the
 build conventions. Built native to the raised bar
 ([`incremental-construction-units.md`](incremental-construction-units.md)); the
@@ -10,14 +10,18 @@ General Programming primer is the exemplar.
 
 ## What the architecture doc already fixed
 
-Foundations Layer 2b is **Number Systems** (decimal/binary/hex, place value,
+The Numbers & Bits subtrack is **Number Systems** (decimal/binary/hex, place value,
 bits/nibbles/bytes, two's complement, why binary, base conversion) **+ Bit Logic**
 (AND/OR/XOR/NOT, masking, shifting) — and nothing else. It is the **bridge into
-assembly**: the BASIC track barely needs it, assembly leans on it constantly. It sits
-after General Programming, before Meet the Machine:
+assembly**: the BASIC track does not need it, assembly leans on it constantly. So it
+sits on the assembly arm — after the machine briefing, where the learner has chosen a
+language, and before Meet Assembly:
 
 ```
-General Programming → Numbers & Bits → Meet the Machine → Meet Assembly → games
+General Programming → Meet the Machine ─┬─→ Meet BASIC → games
+                                        │
+                                        └─→ Numbers & Bits → From Source to Silicon
+                                                                → Meet Assembly → games
 ```
 
 ## Resolved here

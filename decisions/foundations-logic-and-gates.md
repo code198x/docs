@@ -2,9 +2,9 @@
 
 **Status:** ACCEPTED — 2026-07-08. Adds a **second Foundations subtrack** alongside
 [`foundations-numbers-and-bits.md`](foundations-numbers-and-bits.md). This **amends**
-[`front-of-curriculum-architecture.md`](front-of-curriculum-architecture.md)'s Layer 2b
-line that Foundations is "the whole of" Number Systems + Bit Logic: the layer now
-holds two subtracks. The amendment is deliberate and narrow — Logic & Gates passes
+[`front-of-curriculum-architecture.md`](front-of-curriculum-architecture.md)'s
+line that Foundations' number/bit primer is "the whole of" Number Systems + Bit
+Logic: it now holds two subtracks. The amendment is deliberate and narrow — Logic & Gates passes
 the same three promotion tests the architecture doc inherited from the
 [`cross-system-foundations.md`](cross-system-foundations.md) seed, and it joins as a
 **recommended side-path, not spine** (see § Position). Decided; build is a later
