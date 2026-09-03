@@ -211,7 +211,7 @@ that dependency gets asked about before it lands.
 
    The hazard is leading, not count: fifty of the eighty declarations pair the
    face with a `line-height` under 1.0, down to 0.7. That is safe for a script
-   face with a small x-height and not obviously safe for a text serif. Checked
+   face with a small x-height and untested for a text serif. Checked
    rather than assumed — every sub-0.85 case is a single line or a single glyph,
    and the longest module title on the site wraps to two lines at 0.82 and
    clears. No line-heights needed changing.
