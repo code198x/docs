@@ -51,6 +51,20 @@ Set by the family record §4. Three faces, and the site does not add a fourth.
 
 **Caveat and Inter are retired**, along with Special Elite, Russo One, Oxanium and Orbitron. Caveat's display role — masthead, hero, pull-quotes, drop caps, marginalia — passes to Literata at display optical size. The character that face was carrying comes from the palette, from Literata, and from the writing.
 
+**Display headings reserve their descender.** Line-heights here are unitless
+multipliers, and display headings set them below 1 for tight multi-line stacking.
+Literata's content area is about 1.48em, so at any usable display ratio its ink
+drops past the element box and collides with whatever sits close beneath — the
+Vault strapline was the first casualty. Measured at 84px: 0.82 overlaps by
+19.6px, 1.0 by 12.5px, and **the family record's own display ratio of
+`calc(68 / 64)` still overlaps by 9.8px**. Nothing clears until about 1.35, which
+is body leading on a display heading.
+
+So the fix is `padding-bottom: 0.25em` on the heading, in em so it tracks the
+`clamp()`, rather than loosening the leading. This is a property of the face, not
+a symptom of badly-tuned line-heights, and it applies to anything setting Literata
+large — the kit's type scale included.
+
 Muted tokens (`#94a3b8`) are decorative and large-only, **never small informational text**. `--color-text-muted` currently holds that value and is used as though it were body-safe; that is a live defect against this rule.
 
 ## What carries over from production
@@ -82,5 +96,8 @@ The brand is warm newsprint, so night mode stays warm rather than turning cool s
 - Mono-uppercase returning as the default heading style.
 - A bespoke per-machine motif system competing with the system manifest.
 - New typefaces added before the family roster of three is proven insufficient.
+- **Removing a display heading's `padding-bottom` as redundant**, or "fixing" the
+  collision it prevents by loosening the leading. Literata does not clear its own
+  descender until about 1.35; see § Type.
 - **Reinstating the chunky offset shadow**, or reading square corners and 3px borders as needing a hard shadow to complete them. They carry the signature alone; the shadow was retired on 2026-09-03.
 - **Overlap or bleed built into a unit's reading column.** Character is zoned to the margins there for a stated reason — a learner is in that column for thirty to ninety minutes.
