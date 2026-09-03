@@ -80,11 +80,46 @@ at `v0.5.1`, so they are already behind.
 | `SiteNav` trailing slot | **Kit change** | `SiteNav` has no slots. The site's bar carries four links plus search plus the theme toggle. A slot lets a host mount those without the kit learning what they are. |
 | `SiteNav` mobile disclosure | **Kit change** | Its whole mobile story is `flex-direction: column` at 40rem. That is right for a landing page with three links and wrong for six controls. |
 | `Breadcrumbs` | **Promote to the kit** | Split the way `SiteNav` already splits: the kit renders a trail it is handed, the host resolves it. The site's version imports `getAllPlatforms` and carries a label map, but that is data resolution and it stays here. The rendering is generic. |
+| `ImageComparison` | **Promote to the kit** | 260 lines, no imports. Emu198x's whole job is fidelity, and emulator output against real hardware is a before/after slider exactly. Asm198x can show source against output. |
+| `Figure` | **Promote to the kit** | Every site shows captioned images, and it carries the credit and licence machinery every site needs the moment it reuses third-party imagery. |
+| `TableOfContents` | **Promote to the kit** | 273 lines, no imports. Asm198x reference pages and the Emu198x docs both want one. |
+| A generic `Callout` | **New in the kit** | Not `SetupCallout`, which is Docker- and platform-specific and stays. The *shape* — a bordered aside carrying a role — is wanted on every docs surface. |
+
+Probably, once a second consumer appears: the media primitives `VideoEmbed`,
+`VideoPlayer` and `AudioClip`. Play198x is a media player and Emu198x shows
+captures; `AudioClip`'s own header already calls it "an IA v3 media primitive".
 
 `Search` stays site-local: 233 lines and 22 Pagefind references. The kit must not
-depend on a search index.
+depend on a search index. `Attribution` stays too — with credit on `Figure`, what
+is left of it is magazine and archive sourcing, which is Vault work.
 
-### 5. Section headings lose their coloured rule
+**`ThemeToggle` rolls out across the family**, not only into the kit. Every site
+inherits the three-state contract the moment it takes the kit's tokens, and a
+contract with no control is what left the site carrying its own.
+
+**The extraction rule, alongside "components, not layouts".** The kit takes a
+component when a **second site needs it**, not when one looks generic.
+The six teaching diagrams make the case: `SpriteEditor`, `MemoryMap`,
+`RegisterBits`, `SpectrumBitmapLayout`, `FlowDiagram` and `SpriteGrid` are 1,842
+lines with no imports between them, which makes them look like prime candidates.
+No imports means self-contained, not generic — they are curriculum pedagogy and
+they stay. Without this rule the shared layer becomes a dumping ground three
+sites have to negotiate over, which is the failure "components, not layouts" was
+written against.
+
+### 5. `Figure` loses its platform frames
+
+`Figure` could wrap an image in a per-machine CRT treatment — a coloured outer
+glow and an inset vignette over the picture. Ten call sites used one; six passed
+`frame="none"` to opt out.
+
+It goes because decoration over a capture is wrong on a site where a capture is
+evidence: a screen that should look like a CRT should look that way when it is
+captured. It also removes the component's only tie to a fixed list of four
+machines, which was the blocker on promoting it. If per-machine framing returns
+it reads `machines.json` and its 156 systems.
+
+### 6. Section headings lose their coloured rule
 
 A short coloured bar sat before every `h2` — five declarations across four
 files, in three sizes and three colours, the machine colour twice and the rust
@@ -96,7 +131,7 @@ lists "content markers, cards, headings, platform badges" as places machine
 colour may appear. This was allowed rather than required, and removing it is a
 judgement about how the pages read, not a compliance fix.
 
-### 6. OG images are generated per page
+### 7. OG images are generated per page
 
 The current one is a single static PNG shared by roughly 2,300 pages, and it
 breaks the identity record in four places:
