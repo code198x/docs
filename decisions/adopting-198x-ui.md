@@ -24,8 +24,9 @@ not, most are not gaps:
 | Status and difficulty colours | 12 | Stay site-local. The identity record's drift trigger keeps a data axis inside its chart. |
 | Platform colours | 8 | Not a token gap. Move to the kit's `machines.json`, which carries 156 systems against the site's 8. |
 | Extra surfaces | 7 | **Real gap.** `bg-secondary`, `read`, `surface-translucent`, `accent-dark` have no kit equivalent. |
+| — | — | *(Corrected 2026-09-03: the chunky-shadow row below was first written as a gap. It is a conflict with a binding local record, which is a different problem.)* |
 | Off-ladder spacing | 4 | **Real gap.** `space-5/10/14/20` are not on the kit's 4px ladder. |
-| Chunky shadows | 2 | **Real gap.** `4px 4px 0` brutalist offsets; the kit's lift ladder is soft only. |
+| Chunky shadows | 2 | **Conflict, not a gap.** `website-visual-language.md` makes "square corners, 3px borders and the chunky offset shadow" *the structural signature, held constant everywhere so the site never feels like two sites*. The kit's lift ladder is soft-only and has no rung for a hard offset. One of the two records has to move; this is not a token to fill in. |
 | Paper texture | 2 | Stay site-local. Decoration the kit does not carry. |
 | Layout | 2 | Stay site-local. The kit is components, not layouts. |
 
@@ -204,7 +205,9 @@ that dependency gets asked about before it lands.
 2. **Drop the heading rules.** Purely subtractive, five declarations, no rule
    broken and nothing orphaned — `--systemColor` and `--sys` keep six and
    thirteen other uses between them.
-3. **Fix `--color-text-muted`.** It is `#94a3b8` — byte-identical to the kit's
+3. **Fix `--color-text-muted`.** `website-visual-language.md` already rules that
+   `#94a3b8` is "decorative and large-only, never small informational text", so
+   this is the site breaking **its own** record, not only the kit's guidance. It is `#94a3b8` — byte-identical to the kit's
    `--h-ink-faint`, which the kit marks *decorative and large only, never small
    informational text*, at 2.27:1. The site's token name invites exactly the use
    the kit forbids. This is a bug, not a restyle, and it is not contingent on any
