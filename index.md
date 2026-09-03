@@ -30,6 +30,7 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 - [Phase boundaries](decisions/phase-boundaries.md) — pedagogy sequences within, commercial bar gates phase ends
 - [Constraint position](decisions/constraint-position.md) — period-faithful / period-possible / modern scene
 - [Spiral and incremental](decisions/spiral-and-incremental.md) — incremental within phases, spiral across phases
+- [What earns a fleet entry](decisions/what-earns-a-fleet-entry.md) — the fleet is a position on a machine; the Vault is an encyclopedia
 - [Curriculum routes](decisions/curriculum-routes.md) — modules declare what they depend on; the road to a chosen game is shown, with the destination named from day one
 - [Pattern library](decisions/pattern-library.md) — populated from curriculum, technique-categorised
 - [Inspired-by, not clones (naming)](decisions/inspired-by-not-clones-naming.md) — 10-principle naming convention
