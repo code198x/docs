@@ -1,6 +1,6 @@
 # Decision: how the assembly on-ramp gets split, and in what order
 
-**Status:** Proposed — 2026-09-03. Implements
+**Status:** ACCEPTED — 2026-09-03. Implements
 [`front-of-curriculum-architecture.md`](front-of-curriculum-architecture.md),
 which decided the split on 2026-06-05 and has been built for every language
 except assembly. This record decides only the *sequence*, because doing it as
