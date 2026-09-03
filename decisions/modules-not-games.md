@@ -42,7 +42,10 @@ tagline, skills, phase?, thumbnail?
 ```
 
 - **Order lives in the catalogue, not the slug.** Modules are an ordered list. Inserting one is
-  inserting a row — it renames nothing.
+  inserting a row — it renames nothing. Re-ordering stays a data edit, with one condition added by
+  [curriculum-routes.md](curriculum-routes.md): a move may not put a module ahead of something it
+  requires. The build check catches it, which is the point — a reorder that silently inverted a
+  dependency used to be invisible.
 - **Slugs are clean identities:** `meet-the-machine`, `gloaming`, `shadowkeep`, `smooth-motion`.
   No `game-NN-` prefix. The number that used to encode order is gone; order is data.
 - **A game** is just the `game:` value shared by the modules that teach it. Its code samples and
