@@ -1,5 +1,18 @@
 # Decision: Website visual language
 
+**Scope.** This record owns what the site *looks like*. It sits under
+[`198x/decisions/family-visual-identity.md`](https://github.com/198x/198x/blob/main/decisions/family-visual-identity.md),
+which is umbrella-scoped and binds the wordmark, palette and type roster of every
+sibling. Where the two meet, the family record wins unless this one names the
+rule it is overriding and why. **Sequencing and migration mechanics live in
+[`adopting-198x-ui.md`](adopting-198x-ui.md)** — decisions about the language go
+here, not there.
+
+**Reconciled with the family record 2026-09-03.** The type section below had gone
+stale: it still re-roled Caveat and Inter eight days after the family record
+retired both, without naming it. That is the quiet shadowing `CLAUDE.md` warns
+about, and it is fixed in place rather than noted as superseded.
+
 The site's visual language is a **synthesis**: the production design system's architecture carrying the fanzine exploration's period character, as one language whose density is dialled by surface.
 
 It is not a pivot to the fanzine wireframes, and not the shipped production aesthetic left alone. Evolving production only keeps the dev-tool genericness; pivoting wholesale abandons working infrastructure; running two visually separate zones risks reading as two sites.
@@ -28,19 +41,23 @@ Where two page designs both look right, the test is whether the alternate is a d
 
 Six maintained templates collapse to three, each with a couple of modes. That matters for a solo maintainer.
 
-## Type — re-role, no new fonts
+## Type — the family roster, three faces, three jobs
 
-Inter, JetBrains Mono and Caveat are already loaded. They are re-roled rather than replaced.
+Set by the family record §4. Three faces, and the site does not add a fourth.
 
-- **Caveat** (`--font-script`) — display only: masthead, hero, pull-quotes, drop caps, marginalia. Hard size floor around 28px.
-- **Inter** — body at 16–17px; headings in **Inter 800/900, sentence case**. Replacing mono-uppercase headings is the single biggest de-genericiser.
+- **Nebula Sans** — interface, headings, the slogan. Headings are **sentence case**; replacing mono-uppercase headings is the single biggest de-genericiser.
+- **Literata** — long-form reading, editorial display, all captions. Unit prose is long-form reading, so it sets here rather than inheriting the interface face. Its optical-size axis is the mechanism when a surface wants a different voice — not another family.
 - **JetBrains Mono** — the machine voice only: code, terminal and CRT blocks, status badges, eyebrows, data labels.
-- Special Elite, Russo One, Oxanium and Orbitron leave the working set.
-- Muted tokens (`--c-fg-muted` `#94a3b8`, the fanzine's `--ink-faint`) are decorative and large-only, never small informational text.
+
+**Caveat and Inter are retired**, along with Special Elite, Russo One, Oxanium and Orbitron. Caveat's display role — masthead, hero, pull-quotes, drop caps, marginalia — passes to Literata at display optical size. The character that face was carrying comes from the palette, from Literata, and from the writing.
+
+Muted tokens (`#94a3b8`) are decorative and large-only, **never small informational text**. `--color-text-muted` currently holds that value and is used as though it were body-safe; that is a live defect against this rule.
 
 ## What carries over from production
 
-Token architecture, spacing scale, semantic colours, dark mode, responsive layer, `prose.css`. The **67-system manifest with auto-emitted `--p-{id}-primary` tokens and the 25° hue-collision rule** — the binding answer to per-system identity, superseding any bespoke-motif-per-machine approach. The lesson diagram primitives. Square corners, 3px borders and the chunky offset shadow as the structural signature, held constant everywhere so the site never feels like two sites. Real saturated system colours, used only inside that system's pages, with site chrome staying neutral.
+Token architecture, spacing scale, semantic colours, dark mode, responsive layer, `prose.css`. The **67-system manifest with auto-emitted `--p-{id}-primary` tokens and the 25° hue-collision rule** — the binding answer to per-system identity, superseding any bespoke-motif-per-machine approach. The lesson diagram primitives. Square corners and 3px borders as the structural signature, held constant everywhere so the site never feels like two sites.
+
+**The chunky offset shadow is retired** (2026-09-03). It was named here as part of that signature; it went because it was not liked, and the family record's lift ladder — soft shadow in light, neutral glow in dark — replaces it. Square corners and the border weight carry the signature on their own. Real saturated system colours, used only inside that system's pages, with site chrome staying neutral.
 
 ## Reconciled conflicts
 
@@ -52,16 +69,18 @@ Token architecture, spacing scale, semantic colours, dark mode, responsive layer
 
 The brand is warm newsprint, so night mode stays warm rather than turning cool slate-navy: warm-charcoal page `#1a1714`, cream text `#efe7d6`, accents brightened. It reads as the same product with the lights down, not a separate theme. It lives as a `[data-theme="dark"]` token block in the shared token sheet.
 
-- **Hard shadows flip to a warm offset lighter than the page** (~`#322a1c`). Black on near-black vanishes; a lighter offset reads as a second sheet behind the card, which is on brand for print.
+- **Lift changes medium rather than colour.** Shadow models ink on paper and a dark ground is not paper, so lift becomes a neutral glow in dark — the thing emits rather than casts, which is what these machines did. One ladder, two renderings, from the family record §6.
 - Textures invert to faint light dots; bright elements dim to avoid glare; already-dark code blocks are unchanged.
 - **Theme control is three-way: Auto / Light / Dark.** Auto follows `prefers-color-scheme`; the two overrides persist in `localStorage` and apply through an inline no-FOUC `<head>` script before paint.
 
 ## Drift triggers
 
-- Setting unit-page body prose or a code listing in a handwriting face.
+- Setting unit-page body prose or a code listing in a display face, or reaching for a fourth family when a surface wants a different voice. Literata's optical-size axis is the mechanism.
 - Marginalia built with absolute positioning or hardcoded offsets — it will not survive variable content.
 - Proposing a second full page template where a view or a mode over an existing one would do.
 - A wholesale pivot to either pole: "let's just go full fanzine", "drop the paper stuff and ship it clean".
 - Mono-uppercase returning as the default heading style.
 - A bespoke per-machine motif system competing with the system manifest.
-- New typefaces added before the re-roled three are proven insufficient.
+- New typefaces added before the family roster of three is proven insufficient.
+- **Reinstating the chunky offset shadow**, or reading square corners and 3px borders as needing a hard shadow to complete them. They carry the signature alone; the shadow was retired on 2026-09-03.
+- **Overlap or bleed built into a unit's reading column.** Character is zoned to the margins there for a stated reason — a learner is in that column for thirty to ninety minutes.

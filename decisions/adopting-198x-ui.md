@@ -4,8 +4,13 @@
 [`198x/decisions/family-visual-identity.md`](https://github.com/198x/198x/blob/main/decisions/family-visual-identity.md),
 which settled the family's wordmark, palette and type roster on 2026-08-20 and
 recorded the Code198x move as sequenced for the October launch, "not a verdict".
-This record decides *how* and *in what order*, and answers two questions the
-identity record left open.
+**This record owns sequencing and migration mechanics only.** Decisions about
+what the site looks like live in
+[`website-visual-language.md`](website-visual-language.md), which was reconciled
+against the family record on the same day. Where this record touched the visual
+language — the type roles, the chunky shadow, how diagrams theme — those
+decisions have moved there and are summarised here only as the thing being
+migrated to.
 
 ## What the spike found
 
@@ -24,25 +29,23 @@ not, most are not gaps:
 | Status and difficulty colours | 12 | Stay site-local. The identity record's drift trigger keeps a data axis inside its chart. |
 | Platform colours | 8 | Not a token gap. Move to the kit's `machines.json`, which carries 156 systems against the site's 8. |
 | Extra surfaces | 7 | **Real gap.** `bg-secondary`, `read`, `surface-translucent`, `accent-dark` have no kit equivalent. |
-| — | — | *(Corrected 2026-09-03: the chunky-shadow row below was first written as a gap. It is a conflict with a binding local record, which is a different problem.)* |
 | Off-ladder spacing | 4 | **Real gap.** `space-5/10/14/20` are not on the kit's 4px ladder. |
-| Chunky shadows | 2 | **Conflict, not a gap.** `website-visual-language.md` makes "square corners, 3px borders and the chunky offset shadow" *the structural signature, held constant everywhere so the site never feels like two sites*. The kit's lift ladder is soft-only and has no rung for a hard offset. One of the two records has to move; this is not a token to fill in. |
+| Chunky shadows | 2 | **Resolved 2026-09-03: retired.** They were a conflict rather than a gap — `website-visual-language.md` named the chunky offset shadow as part of the structural signature, and the kit's lift ladder is soft-only. The shadow is retired there; square corners and 3px borders carry the signature alone, and the site takes the kit's ladder. |
 | Paper texture | 2 | Stay site-local. Decoration the kit does not carry. |
 | Layout | 2 | Stay site-local. The kit is components, not layouts. |
 
-So roughly **13 genuine decisions**, not 37.
+That left roughly 13 genuine decisions. Retiring the chunky shadow settles two
+of them, so **11 remain**: the four off-ladder spacing steps and the seven extra
+surfaces.
 
 ## The decision
 
-### 1. Reading copy moves to the serif — this is the migration's actual payload
+### 1. Reading copy moves to the serif — this is the migration's payload
 
-`Layout.astro` sets `body` to the interface face and unit prose inherits it. The
-identity record gives Literata "long-form reading". Unit prose *is* long-form
-reading, so it sets in Literata.
-
-This is the change a reader sees. The palette shift is subtle; the face change
-is not, and it is what makes reading and interface distinguishable at a glance —
-which §4 gives as the reason the serif is in the roster at all.
+Decided in [`website-visual-language.md`](website-visual-language.md) § *Type*.
+Recorded here because it sizes the work: `Layout.astro` sets `body` to the
+interface face and unit prose inherits it, so the change is three lines and it
+is the one a reader sees. The palette shift is subtle; the face change is not.
 
 ### 2. The plate replaces the logo, and the homepage carries the full name
 
@@ -143,7 +146,9 @@ face carries no `┌ ─ ┤` glyphs and fell back to a proportional font, so th
 verticals missed the horizontals. SVG has no such failure mode.
 
 **The theming, which is not much.** Six tokens in the kit, resolving per theme
-through `light-dark()` like everything else:
+through `light-dark()` like everything else. The rule that diagrams use only
+these, and nothing hardcoded, belongs to
+[`website-visual-language.md`](website-visual-language.md):
 
 | Token | Job |
 |---|---|
