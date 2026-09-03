@@ -17,18 +17,29 @@ The cost is that "platform" is marginally more familiar to a modern developer sk
 System at the root, track always explicit:
 
 ```
-/{system-slug}/                                       system landing
-/{system-slug}/{track-slug}/                          track overview
-/{system-slug}/{track-slug}/{module-slug}/            module landing
-/{system-slug}/{track-slug}/{module-slug}/unit-{NN}/  unit page
+/systems/{system-slug}/                                       system landing
+/systems/{system-slug}/{track-slug}/                          track overview
+/systems/{system-slug}/{track-slug}/{module-slug}/            module landing
+/systems/{system-slug}/{track-slug}/{module-slug}/unit-{NN}/  unit page
 ```
 
+Cross-platform sections keep their shallower shape and do **not** move: `/foundations/{module}/unit-{NN}`, `/craft/{module}/unit-{NN}`.
+
 - **Track is in the URL on every system**, including single-track ones. A system that gains a second track later does not break the first's URLs, and the fleet stays consistent.
-- **No `/curriculum/` or `/learn/` prefix.** `/{system}/` is the QR-code entry point printed on flyers and t-shirts.
+- **Systems live under `/systems/`.** Amended 2026-09-03; see below.
+- **No `/curriculum/` or `/learn/` prefix.**
 - **`{module-slug}` is a bare identity** — no `game-NN-` prefix. Order is the module catalogue's array position, so renaming *and* re-ordering are free, and re-ordering needs no redirect.
 - **Unit is `unit-{NN}`** — number only. Titles change; numbers are stable.
 
 Shipped pre-module URLs keep working through redirects in `astro.config.mjs`.
+
+## Why systems moved under `/systems/` (2026-09-03)
+
+The original rule put a system at the site root because `/{system}/` was the QR-code entry point printed on flyers and t-shirts. Nothing had been printed when this was revisited, and only the QR code will be printed — never the URL as text — so the length that bought the root namespace never mattered.
+
+What the root placement cost was ongoing. 156 system slugs occupied the root, so every future top-level page had to avoid colliding with a machine name. And a breadcrumb trail had no segment to derive "Systems" from: the trail read `Home › Commodore 64`, skipping the level a reader climbs back to, and could only be fixed by inserting a crumb the path did not contain.
+
+Redirects from the old root paths are **permanent, not transitional** — `rss.xml` published absolute root URLs to feed readers before the move.
 
 ## Readiness lives in `tier`
 
@@ -48,6 +59,8 @@ This is the presentation-layer sibling of [state-lives-in-catalogues.md](state-l
 ## Drift triggers
 
 - Naming a nav item, URL segment, collection key or component "platform…", or putting the fleet at `/platforms/`.
+- Moving a cross-platform section under `/systems/`. Foundations and The Craft are not systems.
+- Parsing a curriculum path by position without accounting for the `/systems/` prefix — the layouts read `pathParts[0]` as the machine, and a stray prefix silently yields the wrong platform rather than an error.
 - A unit or module URL without a `{track-slug}` segment.
 - Re-introducing `/curriculum/`, `/learn/`, a `game-{NN}-` module prefix, or a descriptive slug on `unit-{NN}`.
 - Treating slug position as the source of order — order is catalogue data.
