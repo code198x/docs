@@ -100,6 +100,14 @@ They join the existing `modules` collection rather than a new one, since they ca
 
 Every step carries its `why`. Those lines are the load-bearing text of the whole feature — a route without them is a list of names.
 
+## Edges are a design tool, not only a description
+
+For a game that exists, `requires` records what it depends on. For a game that does not, the same field states what it is *for* — which thread it extends, and what it earns a learner who arrives having played the games before it. Written that way it is a design brief, and it is a sharper one than a tagline, because it forces the question a lineup rarely asks out loud: what can this game do that the ones before it could not?
+
+This is the honest answer to authoring edges on unbuilt modules. Guessing at a coming-soon game's dependencies is worthless — the guess would be checked against nothing. **Deciding** them while designing the game is the opposite: the edge is a commitment the game is then built to honour, and the build check keeps the lineup's order and its dependencies agreeing as both move.
+
+A new game whose edges cannot be written is a game whose purpose in the sequence has not been decided yet. That is worth knowing before it is authored rather than after.
+
 ## Validation
 
 `scripts/check-curriculum-routes.mjs`, run in `npm run build` beside the existing `check-vault-*.mjs` scripts:
@@ -127,6 +135,7 @@ The report prints per-track columns — entry points, thread vocabulary, longest
 - Putting the bridge or Game Feel in `requires`. They are `suggests`; making either a prerequisite rebuilds a gate the curriculum removed on purpose.
 - Repeating the upstream chain on individual game modules instead of reaching it through the track's on-ramp.
 - Inventing thread names per module rather than reusing a track's small vocabulary.
+- Authoring edges on an unbuilt game by guessing what it will teach, rather than deciding what it is for. A guess is checked against nothing; a decision is a commitment the game is built to honour.
 - Reaching for a skill-level dependency graph before the module-level one has proved out. That is a normalised vocabulary across ninety modules and four systems, and it should be earned by evidence that module edges are too coarse.
 - Hand-keeping an order list in a page component instead of a catalogue.
 
