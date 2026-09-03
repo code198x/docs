@@ -203,10 +203,18 @@ that dependency gets asked about before it lands.
 **Before CRASH! Live — three things.**
 
 1. **Retire Caveat.** Already decided by the identity record; deferred there only
-   to be done alongside the type move. It is 10 declarations across 8 files —
-   `SystemHero`, `FleetBoard` ×2, `ModuleLayout`, `SectionIndexLayout`,
-   `UpdatesLayout`, `FieldNotesLayout`, `Photo`, and `UnitLayout` ×2. The record
-   estimated five components; it is eight, and it never mentions the drop cap.
+   to be done alongside the type move. **It is 80 declarations across 46 files** —
+   corrected 2026-09-03. This record first said ten across eight, a figure taken
+   from a grep truncated by `head` and never rechecked; the identity record's own
+   estimate of five components is wrong for the same reason. Caveat carries most
+   of the site's display headings, not a handful of components.
+
+   The hazard is leading, not count: fifty of the eighty declarations pair the
+   face with a `line-height` under 1.0, down to 0.7. That is safe for a script
+   face with a small x-height and not obviously safe for a text serif. Checked
+   rather than assumed — every sub-0.85 case is a single line or a single glyph,
+   and the longest module title on the site wraps to two lines at 0.82 and
+   clears. No line-heights needed changing.
 2. **Drop the heading rules.** Purely subtractive, five declarations, no rule
    broken and nothing orphaned — `--systemColor` and `--sys` keep six and
    thirteen other uses between them.
