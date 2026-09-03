@@ -549,7 +549,7 @@ git commit -m "Compute the route from a module's declared dependencies"
 
 - [ ] **Step 1: Write the Foundations catalogue**
 
-Create `src/content/modules/foundations.yaml`. Taglines are lifted verbatim from each module's `index.mdx` `description`; do not invent new ones.
+Create `src/content/modules/foundations.yaml`. Use the taglines exactly as given below. They are card subtitles, not the module's `description` — the house convention is that a tagline tightens the description rather than repeating it, as every shipped module does.
 
 ```yaml
 # The cross-platform section. Only General Programming is universal — Numbers &
