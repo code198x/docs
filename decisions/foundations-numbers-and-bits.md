@@ -12,17 +12,15 @@ General Programming primer is the exemplar.
 
 The Numbers & Bits subtrack is **Number Systems** (decimal/binary/hex, place value,
 bits/nibbles/bytes, two's complement, why binary, base conversion) **+ Bit Logic**
-(AND/OR/XOR/NOT, masking, shifting) — and nothing else. It is the **bridge into
-assembly**: the BASIC track does not need it, assembly leans on it constantly. So it
-sits on the assembly arm — after the machine briefing, where the learner has chosen a
-language, and before Meet Assembly:
+(AND/OR/XOR/NOT, masking, shifting) — and nothing else.
 
-```
-General Programming → Meet the Machine ─┬─→ Meet BASIC → games
-                                        │
-                                        └─→ Numbers & Bits → From Source to Silicon
-                                                                → Meet Assembly → games
-```
+**Position superseded.** This record placed the subtrack on the assembly arm, on the
+grounds that it was the bridge into assembly and that the BASIC track did not need it.
+That second claim was wrong: the Spectrum BASIC track defines user-defined graphics with
+`POKE USR CHR$` across four units, which is drawing a character as bit patterns, and its
+own prose calls it a "recipe". Numbers & Bits is language-neutral and sits with the rest
+of Foundations, gating nothing; assembly requires it, BASIC needs it the moment UDGs turn
+up. See [foundations-is-language-neutral.md](foundations-is-language-neutral.md).
 
 ## Resolved here
 
@@ -42,9 +40,11 @@ General Programming → Meet the Machine ─┬─→ Meet BASIC → games
 - **Concreteness — pseudocode + one concrete vehicle (Sinclair BASIC).** Each idea is
   stated in neutral pseudocode and shown running in Spectrum BASIC, framed as "here in
   BASIC; the same idea everywhere." Spectrum BASIC suits it (`BIN` for binary literals,
-  `CODE`/`CHR$` for character codes), and this subtrack sits on the assembly arm, after
-  the learner has chosen a machine — so a concrete vehicle costs them nothing they will
-  not use. General Programming, which is universal and reaches learners whose machine has
+  `CODE`/`CHR$` for character codes). **Under review:** the reason on file for keeping a
+  vehicle here was that this subtrack sat on the assembly arm, after the learner had chosen
+  a machine, so it cost them nothing they would not use. It no longer sits there — see
+  [foundations-is-language-neutral.md](foundations-is-language-neutral.md) — so the question
+  is open, and belongs to a content pass over the six units. General Programming, which is universal and reaches learners whose machine has
   no BASIC at all, does not take one: see
   [general-programming-is-language-neutral.md](general-programming-is-language-neutral.md).
 - **Exclusions held** (per the architecture doc's Tier decisions and drift triggers):
@@ -82,5 +82,6 @@ implementation (8.8/16.16, the shifts) stay in the machine courses.
   Machine; here, only that a value *is* a number.
 - A specific chip register or machine quirk appears — belongs downstream.
 - It teaches what a loop/variable/conditional *is* — belongs in General Programming.
-- It goes pure-abstract with no BASIC illustration — the over-extraction failure the
-  seed warned about.
+- It goes pure-abstract with nothing to look at — the over-extraction failure the seed
+  warned about. (Whether the concrete thing has to be a BASIC listing is the open question
+  above; tables, bit columns and diagrams may serve.)

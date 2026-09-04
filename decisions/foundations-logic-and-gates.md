@@ -21,9 +21,21 @@ hand-waves: the BASIC games tangle with compound `IF`s from Volume 1, and the
 assembly tracks reason about flags and branch conditions with nothing upstream to
 lean on.
 
-The course is **one arc**: the reasoning first, then the payoff that the same
-truth tables *are* the machine — gates, then the adder that adds Numbers & Bits'
+The course was designed as **one arc**: the reasoning first, then the payoff that the
+same truth tables *are* the machine — gates, then the adder that adds Numbers & Bits'
 numbers.
+
+**Amended:** it ships as two modules, because that arc has a dependency running through its
+middle. The reasoning belongs directly after General Programming's decisions, while `AND`
+and `OR` are fresh; the adder lands for nobody who has not met binary, so it follows
+Numbers & Bits. See
+[foundations-is-language-neutral.md](foundations-is-language-neutral.md).
+
+**Also amended:** the gap statement below says General Programming owns *what a conditional
+is*, which held when this was written. It now owns *joining* conditions too, since it
+cannot lean on a side-path to check that a guess is in range. The boundary is the tool
+against the reasoning: General Programming teaches you to write `alive AND ammo`; this
+teaches you that `NOT (a AND b)` is `NOT a OR NOT b`.
 
 ## The promotion tests (all three pass)
 
