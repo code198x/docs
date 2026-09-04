@@ -34,6 +34,14 @@ heading for assembly runs General Programming → Meet the Machine → Numbers &
 Meet Assembly and never meets a BASIC. Until now, that learner was taught a 1982
 string-naming rule on the way past.
 
+**Abstraction is the point, not the cost.** The obvious objection to dropping the BASIC is
+that the track gets more abstract, and it does. That is the trade being made deliberately:
+a listing teaches a language's syntax alongside the idea, and a beginner cannot always tell
+which half they are learning. Stripping the syntax away leaves the principle with nothing
+to hide behind. It also means the reader cannot mistake fluency in one dialect for
+understanding — the failure this track exists to prevent, since its whole promise is that
+what they learn here travels.
+
 **Concreteness is not abandoned, it changes form.** What the BASIC listing was standing
 in for — a thing to look at, so nothing stays abstract — is better served by the
 diagrams and trace tables the track has been gaining: a flow diagram shows the shape a
