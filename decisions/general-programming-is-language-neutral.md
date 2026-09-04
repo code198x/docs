@@ -106,6 +106,12 @@ Notes on the choices:
 - **A condition takes a connector; a range does not.** `IF … THEN`, `WHILE … DO`: where a
   condition could run on, a word marks where the body starts. `FOR i = 1 TO 10` is
   self-delimiting, so it takes none. The asymmetry is the rule, not an oversight.
+- **`+` is arithmetic only; the comma joins.** Text goes together with the comma in
+  `SHOW`, never with `+`. This removes the commonest trap a beginner meets in Python or
+  JavaScript, where `"7" + "5"` is `"75"`, without a word being spent on it: in this
+  grammar that expression cannot arise. Numbers and text stay separate kinds of thing,
+  which unit 6 says in a sentence, and the languages downstream each hold the reader to
+  it their own way.
 - **The comma joins and adds nothing.** `SHOW "Hello, ", name` prints `Hello, Ada`;
   `SHOW "Hello,", name` prints `Hello,Ada`. This is deliberate: two of the course's
   debugging bullets teach that the space belongs inside the quotes, and an auto-spacing
