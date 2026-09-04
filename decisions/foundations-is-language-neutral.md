@@ -82,19 +82,29 @@ The line that holds it is gating. Position and requirement are different questio
 this record only answers the first. Nothing here gates a machine track, every module says
 plainly who needs it, and a reader who wants to start a game on day one can.
 
+## Numbers & Bits goes to pseudocode too
+
+Settled after reading the six units. The vehicle goes, for the same reason it went from
+General Programming, and the reading made the case stronger than the argument did.
+
+Every BASIC snippet in the track is one line, and every one of them is `PRINT` with an
+expression after it: `PRINT BIN 101`, `PRINT 256 - 1`, `PRINT 5 * 2`, `PRINT 1/3`. The
+whole contribution is *here is a value, and here is what it comes to* — which is `SHOW` and
+an output block, in a grammar the reader already has.
+
+The explanations were never in the BASIC. Unit 4 teaches AND, OR, XOR and NOT in markdown
+truth tables with the bit columns in plain text blocks; the listing arrives afterwards to
+confirm the answer. Take it away and the teaching is untouched.
+
+And the vehicle was costing the track something. Sinclair BASIC has no hex literal, so the
+unit about hexadecimal can write `FF` in prose and in a table but never as a value in a
+program. `HEX FF` says what that unit has spent six sections explaining. A vehicle that
+cannot express the thing being taught is not paying for its seat.
+
 ## Reopened by this, not settled here
 
-Numbers & Bits keeps a concrete vehicle, and the reason on file is that it "sits on the
-assembly arm, after the learner has chosen a machine — so a concrete vehicle costs them
-nothing they will not use". This record removes that reason. The same argument that took
-Sinclair BASIC out of General Programming now applies, and the vehicle looks like it is
-carrying less than the record implies: unit 4 teaches AND, OR, XOR and NOT in markdown truth
-tables with the bit columns in plain text blocks, and the BASIC arrives afterwards as a
-`PRINT BIN` check with a screenshot.
-
-Explaining in tables and confirming on a real machine may be exactly right, or the vehicle
-may go the way General Programming's did. That is a content pass, not a placement decision,
-and it wants somebody reading the six units rather than reasoning from this record.
+Whether Logic & Gates' two halves want different treatment from each other, and where
+From Source to Silicon's own concreteness sits, are questions for when those get built.
 
 ## Drift triggers
 

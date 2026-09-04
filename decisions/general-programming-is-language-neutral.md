@@ -83,6 +83,9 @@ LET x = double(5)                    use what it hands back
 
 LET secret = RANDOM 1 TO 10          a value you cannot predict
 
+SHOW BIN 1111                        a number written in binary
+SHOW HEX FF                          a number written in hex
+
 LET scores = [10, 20, 30]            a list
 LET first = scores[1]                one item, counting from 1
 LET scores[2] = 99                   change one item
@@ -103,6 +106,12 @@ Notes on the choices:
   teaches the first two; `WHILE` exists in the grammar and is not yet taught.
 - **No type sigils and no naming rules.** Names are names. The `n$` single-letter trap
   disappears rather than being restated.
+- **`BIN` and `HEX` write a number in a base.** Numbers & Bits needs to put a binary
+  number on the page and ask what it comes to, which is the one thing its Sinclair BASIC
+  was doing. `BIN` keeps BASIC's word, on the same grounds as `LET` and `FOR`: it was
+  already clear. `HEX` has no BASIC ancestor — Sinclair has no hex literal, which is why
+  that unit could only ever write hex in prose and tables. The pseudocode says something
+  the vehicle could not.
 - **`RANDOM 1 TO 10` reuses the range `FOR` already uses.** No new punctuation and no
   function to explain: a reader who has met `FOR i = 1 TO 10` can read it on sight. Both
   ends are included. Randomness earns its place in a course that builds a guessing game,
