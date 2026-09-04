@@ -53,7 +53,20 @@ If your sentence sounds like a Wikipedia article, rewrite it.
 
 - **Assembly tracks** — *Crash* / *Zzap!64* hardware features. Technical, opinionated, treats the chip as a character. Aimed at 16+ year olds and serious returners.
 - **BASIC track** — Usborne 1984 confidence-builder, *with* magazine wit. Aimed at kids, beginners, people-who-haven't-coded-in-years. Same voice, gentler ramp. Confidence over depth. (See [spectrum-basic-lineup.md](../decisions/spectrum-basic-lineup.md) for the BASIC scope decisions that drive this calibration.)
+- **Foundations / General Programming** — the gentlest setting in the family, because it is the only track whose reader has never written a line of code. Usborne again, but further along that dial than the BASIC track: shorter sentences, one idea to a paragraph, nothing held in the reader's head across a page. There is no machine and no language to be curious about yet, so the interest has to come from the idea itself being clear. Confidence over completeness.
 - **Vault** — magazine retrospective. Like a *Retro Gamer* feature but tighter. Treats games and people as worth caring about.
+
+### Writing for a reader who has never programmed
+
+Foundations only. The tells that a unit has drifted off this setting:
+
+- **Two ideas in one sentence.** Split it. A subordinate clause after an em dash is usually a second sentence that has not been let go.
+- **A metaphor carrying the explanation.** A metaphor can decorate a point already made plainly. It cannot make the point. The reader has nothing to check it against.
+- **An aside that is true but not needed here.** Correctness is not a reason to include something. Anything that does not serve the unit's one idea is an obstacle, however accurate.
+- **Explaining the same thing twice** in different words, in case the first landed badly. Pick the better one.
+- **A word the reader would have to look up**, where a shorter one would do.
+
+The test is the reader, not the word count, but the counts are a useful smell: a unit here reads closer to 400 words than 800. If it is much longer, it is usually carrying an aside or saying something twice.
 
 ## Three quality criteria
 
