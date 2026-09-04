@@ -37,15 +37,14 @@ up. See [foundations-is-language-neutral.md](foundations-is-language-neutral.md)
 
 ## Build conventions
 
-- **Concreteness — pseudocode + one concrete vehicle (Sinclair BASIC).** Each idea is
-  stated in neutral pseudocode and shown running in Spectrum BASIC, framed as "here in
-  BASIC; the same idea everywhere." Spectrum BASIC suits it (`BIN` for binary literals,
-  `CODE`/`CHR$` for character codes). **Under review:** the reason on file for keeping a
-  vehicle here was that this subtrack sat on the assembly arm, after the learner had chosen
-  a machine, so it cost them nothing they would not use. It no longer sits there — see
-  [foundations-is-language-neutral.md](foundations-is-language-neutral.md) — so the question
-  is open, and belongs to a content pass over the six units. General Programming, which is universal and reaches learners whose machine has
-  no BASIC at all, does not take one: see
+- **Concreteness — pseudocode alone.** Superseded 2026-09-04: this record used to
+  specify a concrete vehicle, Sinclair BASIC, on the grounds that the subtrack sat on the
+  assembly arm where a chosen machine cost the learner nothing. It does not sit there, and
+  the vehicle is gone. Reading the six units settled it — every listing was one line of
+  `PRINT` with an expression after it, while the explanations lived in truth tables and bit
+  columns. The pseudocode grammar gained `BIN`, `HEX`, the `BIT*` operators and the shifts,
+  so it now writes what these units teach; Sinclair BASIC could not write a hex literal at
+  all. See [foundations-is-language-neutral.md](foundations-is-language-neutral.md) and
   [general-programming-is-language-neutral.md](general-programming-is-language-neutral.md).
 - **Exclusions held** (per the architecture doc's Tier decisions and drift triggers):
   - **No display or sound model** — those stay concrete in Meet the Machine, where
@@ -83,5 +82,4 @@ implementation (8.8/16.16, the shifts) stay in the machine courses.
 - A specific chip register or machine quirk appears — belongs downstream.
 - It teaches what a loop/variable/conditional *is* — belongs in General Programming.
 - It goes pure-abstract with nothing to look at — the over-extraction failure the seed
-  warned about. (Whether the concrete thing has to be a BASIC listing is the open question
-  above; tables, bit columns and diagrams may serve.)
+  warned about. Tables, bit columns, diagrams and worked output are what serve that now.

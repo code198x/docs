@@ -7,7 +7,7 @@ line that Foundations' number/bit primer is "the whole of" Number Systems + Bit
 Logic: it now holds two subtracks. The amendment is deliberate and narrow — Logic & Gates passes
 the same three promotion tests the architecture doc inherited from the
 [`cross-system-foundations.md`](cross-system-foundations.md) seed, and it joins as a
-**recommended side-path, not spine** (see § Position). Decided; build is a later
+**recommended side-path, not spine** (see § Position). **Amended 2026-09-04** by [foundations-is-language-neutral.md](foundations-is-language-neutral.md): this subtrack becomes two modules, Truth Tables and Gates and the Adder, split at the dependency in its middle — the adder needs binary and the reasoning does not. Its "recommended side-path, not spine" now holds for the whole Foundations shelf rather than this course alone. Decided; build is a later
 session, native to the raised bar.
 
 ## The gap it fills
@@ -75,16 +75,21 @@ the "Meet \<thing\>" family, so no "Meet Logic".
    from Numbers & Bits; closes with an honest signpost to *Meet the Machine*.
 
 **The runnable thread:** across movement 2 the learner builds the gates and then a
-working 8-bit ripple adder **in Sinclair BASIC** — feed it two numbers, watch the
-carry ripple. Concrete, working at every step, and the "it's just tables" point
-demonstrates itself. (Sinclair BASIC has no native XOR — building it, and noticing
-that `a<>b` *is* XOR on 0/1 values, is part of the lesson, not an obstacle.)
+working 8-bit ripple adder — feed it two numbers, watch the carry ripple. Concrete,
+working at every step, and the "it's just tables" point demonstrates itself.
+
+**Open: what the adder is written in.** This record specified Sinclair BASIC, and made a
+virtue of its missing XOR — noticing that `a<>b` *is* XOR on 0/1 values was to be part of
+the lesson. Both halves have moved. Numbers & Bits dropped its vehicle, so "exactly as
+Numbers & Bits" no longer names a concrete language; and the pseudocode grammar now has
+`BITXOR`, so the gap the lesson was built around is not there to notice. Decide this when
+the module is built, not by inheritance.
 
 ## Build conventions
 
-- **Concreteness — pseudocode + one concrete vehicle (Sinclair BASIC)**, exactly
-  as Numbers & Bits: each idea stated neutrally, shown running in Spectrum BASIC,
-  framed as "here in BASIC; the same idea everywhere."
+- **Concreteness — pseudocode**, as Numbers & Bits, which dropped its Sinclair BASIC
+  vehicle on 2026-09-04. Whether the movement 2 adder wants something more concrete than
+  the grammar is the open question above.
 - Built native to the raised bar; the General Programming primer remains the
   exemplar.
 
@@ -116,8 +121,8 @@ lean on it.
   doc's Tier 3 ruling.
 - A per-chip specific (a flag register, a ULA quirk) appears — belongs
   downstream.
-- Units go pure-abstract with no BASIC illustration — the over-extraction failure
-  the seed warned about.
+- Units go pure-abstract with nothing to look at — the over-extraction failure the seed
+  warned about. Truth tables, gate diagrams and worked output answer it.
 - Anything starts *requiring* Logic & Gates as a prerequisite — that is the
   spine-promotion decision, made explicitly or not at all.
 

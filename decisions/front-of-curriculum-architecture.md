@@ -71,7 +71,7 @@ The constraints belong in the briefing specifically because they are **felt, not
 ## Where a concept belongs
 
 - **A concept true in every language** — what a loop *is*, what a variable *is* — belongs in General Programming, taught once.
-- **Number and bit literacy** — binary and hex, two's complement, masking, shifting — belongs in Numbers & Bits, on the assembly arm.
+- **Number and bit literacy** — binary and hex, two's complement, masking, shifting — belongs in Numbers & Bits, which is language-neutral and gates nothing.
 - **How source becomes something a machine runs** — interpreting versus assembling, and why that choice decides whether a game keeps up — belongs in From Source to Silicon. It is the last step before Meet Assembly, and the answer a BASIC learner arrives at from the other direction once their game runs out of speed.
 - **A technique any game needs, in a form no chip has yet made local** — a direction as a lookup, a grace window as a timer — belongs in The Craft, taught beside the games rather than before them.
 - **A machine's own constraints** — its colour map, its sound hardware, its memory — belong in that machine's briefing.
@@ -87,7 +87,7 @@ The work is not a file move. The seam runs through the middle of the existing un
 
 ## Drift triggers
 
-- Reading "Foundations" as a sequence every learner walks. It is a section holding modules with different audiences: General Programming is universal, Numbers & Bits and From Source to Silicon are the assembly arm.
+- Reading "Foundations" as a sequence every learner walks. It is a section holding modules with different audiences: General Programming and Numbers & Bits are language-neutral, and From Source to Silicon is the assembly arm.
 - Gating Meet BASIC on Numbers & Bits or From Source to Silicon, or presenting either as required before any machine route.
 - A module named *Meet the Machine* that teaches a language, or a `Meet <language>` module that teaches the hardware.
 - Two modules on one system sharing a display name.
@@ -108,6 +108,7 @@ The work is not a file move. The seam runs through the middle of the existing un
 | 2026-06-30 | Naming and grouping resolved by [foundations-numbers-and-bits.md](foundations-numbers-and-bits.md): the primer is *Numbers & Bits*, as one combined subtrack. |
 | 2026-07-08 | Logic & Gates accepted as a recommended Foundations side-path that gates nothing — [foundations-logic-and-gates.md](foundations-logic-and-gates.md). |
 | 2026-09-03 | Rewritten to say what is true now. From Source to Silicon and The Craft added to the record; neither appeared in it before. Foundations is named as a **section, not a sequence**: General Programming is the one universal step, while Numbers & Bits and From Source to Silicon are the assembly arm, cross-platform so they are taught once rather than per system. Checked against the content rather than the folder name — From Source to Silicon tells BASIC learners in its own text that they can skip it, and Meet BASIC's fifteen units mention bit work once. The June branch shape is therefore restored, not replaced. Two placements added that the June record predates: From Source to Silicon is also the **bridge back from BASIC**, offered after the games raise the question rather than gating them, and so the route by which the on-ramp audience reaches assembly; and The Craft is recorded as two entry points — Maths for Games behind Numbers & Bits, Game Feel behind a working game. Sequencing moved out to [splitting-the-assembly-on-ramp.md](splitting-the-assembly-on-ramp.md), accepted the same day, so this record states the architecture and that one states the order. |
+| 2026-09-04 | Numbers & Bits leaves the assembly arm. It and Logic & Gates are language-neutral modules that gate nothing, and Logic & Gates splits in two at the dependency in its middle — [foundations-is-language-neutral.md](foundations-is-language-neutral.md). The 2026-09-03 row above states the arrangement as it stood that day; the assembly arm is now From Source to Silicon alone. Numbers & Bits also dropped its Sinclair BASIC vehicle, so both language-neutral modules are taught in one pseudocode grammar. |
 
 ## Relates to
 
