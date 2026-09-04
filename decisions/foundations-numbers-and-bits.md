@@ -39,10 +39,14 @@ General Programming → Meet the Machine ─┬─→ Meet BASIC → games
 
 ## Build conventions
 
-- **Concreteness — pseudocode + one concrete vehicle (Sinclair BASIC)**, exactly as
-  Layer 1. Each idea is stated in neutral pseudocode and shown running in Spectrum
-  BASIC, framed as "here in BASIC; the same idea everywhere." Spectrum BASIC suits it
-  (`BIN` for binary literals, `CODE`/`CHR$` for character codes).
+- **Concreteness — pseudocode + one concrete vehicle (Sinclair BASIC).** Each idea is
+  stated in neutral pseudocode and shown running in Spectrum BASIC, framed as "here in
+  BASIC; the same idea everywhere." Spectrum BASIC suits it (`BIN` for binary literals,
+  `CODE`/`CHR$` for character codes), and this subtrack sits on the assembly arm, after
+  the learner has chosen a machine — so a concrete vehicle costs them nothing they will
+  not use. General Programming, which is universal and reaches learners whose machine has
+  no BASIC at all, does not take one: see
+  [general-programming-is-language-neutral.md](general-programming-is-language-neutral.md).
 - **Exclusions held** (per the architecture doc's Tier decisions and drift triggers):
   - **No display or sound model** — those stay concrete in Meet the Machine, where
     the byte-becomes-pixel is *felt*, not lectured. Number representation (a

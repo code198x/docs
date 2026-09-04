@@ -38,6 +38,13 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 - [Repo layout](decisions/seven-repos.md) — child-repo layout and git status gotcha
 - [State lives in the catalogues](decisions/state-lives-in-catalogues.md) — `modules/*.yaml` + git are authoritative for status; prose carries why/intent, not state
 
+### Foundations
+
+- [Front of curriculum architecture](decisions/front-of-curriculum-architecture.md) — the layers and their names; General Programming is the one universal step
+- [General Programming is language-neutral](decisions/general-programming-is-language-neutral.md) — pseudocode alone, fixed grammar; Sinclair BASIC moves to Meet BASIC
+- [Numbers & Bits](decisions/foundations-numbers-and-bits.md) — one combined subtrack on the assembly arm; keeps a concrete vehicle
+- [Logic & Gates](decisions/foundations-logic-and-gates.md) — a second Foundations subtrack alongside Numbers & Bits
+
 ### Website / IA
 
 - [Systems, not platforms](decisions/systems-not-platforms.md) — "system" is the structural term (nav, URLs, collections, components); prose may use "platform"
