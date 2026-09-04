@@ -78,12 +78,23 @@ the "Meet \<thing\>" family, so no "Meet Logic".
 working 8-bit ripple adder — feed it two numbers, watch the carry ripple. Concrete,
 working at every step, and the "it's just tables" point demonstrates itself.
 
-**Open: what the adder is written in.** This record specified Sinclair BASIC, and made a
-virtue of its missing XOR — noticing that `a<>b` *is* XOR on 0/1 values was to be part of
-the lesson. Both halves have moved. Numbers & Bits dropped its vehicle, so "exactly as
-Numbers & Bits" no longer names a concrete language; and the pseudocode grammar now has
-`BITXOR`, so the gap the lesson was built around is not there to notice. Decide this when
-the module is built, not by inheritance.
+**Settled 2026-09-04: the diagram is the runnable thing.** This record specified Sinclair
+BASIC, and made a virtue of its missing XOR — noticing that `a<>b` *is* XOR on 0/1 values
+was to be part of the lesson. Both halves moved: Numbers & Bits dropped its vehicle, and
+the grammar gained `BITXOR`, so the gap that lesson was built around is gone.
+
+The answer is not another language. Movement 2's claim is that a truth table and a circuit
+are the same object, so the circuit itself carries the table: `LogicCircuit` draws the
+gates from their own wiring and, with `interactive`, lets a reader toggle the inputs and
+watch the wires carry, while a paired `TruthTable` highlights the row they have just set.
+A carry rippling along a chain is better watched than printed. Pseudocode stays available
+as a second view for readers who want one; it is not the vehicle.
+
+**The scale beat.** The module ends by saying what these gates add up to: a half adder is
+two of them, a full adder a handful, an 8-bit ripple chain a few dozen — and a modern
+processor holds billions of transistors, of which a gate is a handful. That is the payoff
+the whole arc is buying, and it only lands because the reader has just built one by hand.
+Check the figure against a current part at build rather than quoting this record.
 
 ## Build conventions
 
