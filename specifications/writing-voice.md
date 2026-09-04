@@ -65,6 +65,7 @@ Foundations only. The tells that a unit has drifted off this setting:
 - **An aside that is true but not needed here.** Correctness is not a reason to include something. Anything that does not serve the unit's one idea is an obstacle, however accurate.
 - **Explaining the same thing twice** in different words, in case the first landed badly. Pick the better one.
 - **A word the reader would have to look up**, where a shorter one would do.
+- **The passive voice.** "The ideas are written in pseudocode" hides who is doing it; "we write each idea in pseudocode" does not. The house voice already rules out passive walls of text, but it slips in here more than anywhere else, where the writing keeps reaching for the neutral and impersonal. Name the actor: the computer, the program, you, we.
 
 The test is the reader, not the word count, but the counts are a useful smell: a unit here reads closer to 400 words than 800. If it is much longer, it is usually carrying an aside or saying something twice.
 
