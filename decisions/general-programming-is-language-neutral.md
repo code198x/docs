@@ -3,8 +3,8 @@
 ## The decision
 
 **General Programming drops Sinclair BASIC.** Every idea is taught in one neutral
-pseudocode and nothing else. The `.bas` examples, the screenshots, and the
-Spectrum-specific material move to *Meet BASIC*, where they open the track.
+pseudocode and nothing else. The Spectrum-specific material is **retired rather than
+relocated**: *Meet BASIC* already teaches every piece of it, unit by unit.
 
 The pseudocode is a **fixed grammar**, written down below, rather than prose invented
 per unit. Units author to it.
@@ -134,25 +134,41 @@ once. It is also deliberately small and non-general: it runs this course's examp
 is not a language anyone writes programs in. If it ever grows past that, the growth
 needs its own record.
 
-## What moves to Meet BASIC
+## What happens to the BASIC
 
-Not deleted — relocated to the track that owns it. It gives *Meet BASIC* a first
-chapter built from material that already exists and is already verified:
+It is retired from General Programming rather than migrated, because *Meet BASIC*
+already teaches every piece of it — at more length, and without apologising for the
+language:
 
-| From | What |
+| General Programming taught | Meet BASIC unit that already owns it |
 |---|---|
-| Units 1–11 | The `.bas` step files and their 21 verified screenshots |
-| Unit 2 | Line numbers set execution order, not typing order |
-| Units 4, 5 | The `$` sigil and the single-letter rule for text variables |
-| Unit 9 | Building a loop-until from a test and `GO TO` |
-| Unit 10 | `GO SUB` / `RETURN` identifying a block by line number |
-| Unit 11 | The Spectrum's report lines, read as real diagnostics |
+| Line numbers set execution order | 2 — "The Line Number Is an Address" |
+| `PRINT`, and joining text to a value | 3 — "PRINT, Properly" |
+| The `$` sigil, the single-letter rule, the C64's first-two-letters | 4 — "LET, and What You May Name" |
+| `INPUT` | 5 — "INPUT — the Program Listens" |
+| `IF` / `THEN` | 6 — "IF / THEN, the Spectrum Way" |
+| `FOR` / `NEXT` | 7 — "FOR / NEXT Counts For You" |
+| `GO TO` as a loop, `GO SUB` by line number | 8 — "GO TO, GO SUB, and the Game Loop" |
+| The report lines, read as real diagnostics | 15 — "When It's Wrong" |
+
+**That table is the strongest evidence for this decision.** The material was misplaced
+by the architecture record's rule, and duplicated besides: General Programming has been
+teaching a compressed,
+apologetic version of a fifteen-unit track that already exists downstream and does the
+job properly. What General Programming unit 4 covers in a parenthesis, Meet BASIC unit 4
+covers as its subject. What General Programming unit 11 lists in three bullets, Meet
+BASIC unit 15 is about.
+
+So nothing needs writing to receive it, and this record mandates no migration. The
+`.bas` step files and their 21 verified screenshots stay where they are; whether a Meet
+BASIC unit wants any of them is that track's call.
 
 Unit 11's debugging *method* — observe, localise, read the line, do not guess — is
-language-neutral and stays. What moves is the specific catalogue of Spectrum reports.
-The lesson that travels is that a learner's tools write them a message naming a problem
-and a place; each `Meet <language>` then shows its own real ones, since an assembly
-learner meets an assembler error and never `2 Variable not found`.
+language-neutral and stays in General Programming. What leaves is the catalogue of
+Spectrum reports, which Meet BASIC unit 15 already carries. The lesson that travels is
+that a learner's tools write them a message naming a problem and a place; each
+`Meet <language>` shows its own, since an assembly learner meets an assembler error and
+never `2 Variable not found`.
 
 ## What this changes in the units
 
