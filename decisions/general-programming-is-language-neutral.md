@@ -85,6 +85,9 @@ LET secret = RANDOM 1 TO 10          a value you cannot predict
 
 SHOW BIN 1111                        a number written in binary
 SHOW HEX FF                          a number written in hex
+a BITAND b   a BITOR b   a BITXOR b  the bit tools, column by column
+BITNOT a                             every bit flipped
+a SHIFTLEFT 1   a SHIFTRIGHT 1       the whole row slid sideways
 
 LET scores = [10, 20, 30]            a list
 LET first = scores[1]                one item, counting from 1
@@ -93,6 +96,7 @@ APPEND 40 TO scores                  grow it
 LENGTH(scores)                       how many
 
 + - * /        = <> < > <= >=        AND OR NOT
+(2 + 3) * 4                          brackets: work this out first
 ```
 
 Notes on the choices:
@@ -106,6 +110,16 @@ Notes on the choices:
   teaches the first two; `WHILE` exists in the grammar and is not yet taught.
 - **No type sigils and no naming rules.** Names are names. The `n$` single-letter trap
   disappears rather than being restated.
+- **`*` and `/` get explained, not just used.** They are on the page because `×` and `÷`
+  were not on the keyboard, which is a hardware constraint a beginner can see the shape
+  of and this curriculum is about anyway. Precedence and brackets are taught with them,
+  in the arithmetic unit: the track used `NOT (guess = 7)` six units before it explained
+  a round bracket, and used two different jobs for the same symbol without saying so.
+- **The bit tools are spelt apart from the logical ones.** `AND` asks one question
+  about two whole answers. `BITAND` works down the columns of two numbers and gives a
+  number back. They are different operations and the old Numbers & Bits unit had to
+  spend a section warning that Sinclair BASIC spells them the same; naming them apart
+  turns that warning into the point.
 - **`BIN` and `HEX` write a number in a base.** Numbers & Bits needs to put a binary
   number on the page and ask what it comes to, which is the one thing its Sinclair BASIC
   was doing. `BIN` keeps BASIC's word, on the same grounds as `LET` and `FOR`: it was
