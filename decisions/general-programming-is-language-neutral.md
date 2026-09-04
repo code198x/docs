@@ -124,6 +124,12 @@ Notes on the choices:
   `LET x = double(5)` uses one that hands a value back. Keeping them visibly different
   teaches the distinction rather than hiding it. `CALL` takes no empty parentheses when
   there is nothing to pass — `CALL divider`, not `CALL divider()`.
+- **A job's names are its own.** The name in `DEFINE double(n)` holds a copy of whatever
+  the caller passed, and changing it inside the job changes nothing outside. This is the
+  other semantics the grammar was silent on, and it is the one languages disagree about
+  most, so a course that says nothing has still said something by example. Unit 13 states
+  it plainly and does not go further: what a language does about references is a language's
+  business.
 - **Lists count from 1.** The first item is item 1, because for an absolute beginner the
   alternative is a stumbling block that is not the lesson. Where indexing starts is a
   language's own convention — which the architecture record places downstream — and the
