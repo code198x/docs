@@ -4,7 +4,7 @@ This file holds bounded next work and proposals. [PROJECT.md](PROJECT.md) owns a
 
 ## Spectrum sequences
 
-**Status: BASIC opening direction agreed; remaining game lineups under review.** The [Meet BASIC specification](platforms/sinclair-zx-spectrum/basic/meet-basic.md) owns the guided introduction through short projects and the recommended opening into Bright Spark and Touchdown. The [lesson and source mapping](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) is prepared; implementation remains to do. The [project charter](PROJECT.md) and [game-brief specification](specifications/brief.md) govern the work. The agreed quality standard is a complete, enjoyable and deliberately finished game for its scope; BASIC games need not meet commercial standards.
+**Status: BASIC opening direction agreed; remaining game lineups under review.** The [Meet BASIC specification](platforms/sinclair-zx-spectrum/basic/meet-basic.md) owns the guided introduction through short projects and the recommended opening into Bright Spark and Touchdown. The [lesson and source mapping](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) has an A1/A2 implementation slice: draft lessons and seven verified BASIC checkpoints. Review them together and resolve [Emu198x #1446](https://github.com/emu198x/emu198x/issues/1446), then verify the native keyboard/save/reopen workflow before publishing. The remaining arcs are not yet implemented. The [project charter](PROJECT.md) and [game-brief specification](specifications/brief.md) govern the work. The agreed quality standard is a complete, enjoyable and deliberately finished game for its scope; BASIC games need not meet commercial standards.
 
 ### Evidence to start from
 

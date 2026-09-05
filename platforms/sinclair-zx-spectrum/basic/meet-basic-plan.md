@@ -1,6 +1,6 @@
 # Meet BASIC: lesson and source mapping
 
-**Status: implementation plan for the [agreed module direction](meet-basic.md); revised lessons and samples are not yet implemented.**
+**Status: implementation plan for the [agreed module direction](meet-basic.md). A1/A2 have draft lessons and verified sample checkpoints; publication is blocked on the native save/reopen workflow. The remaining arcs are not yet implemented.**
 
 The four arcs are agreed. The lesson boundaries below are a concrete authoring plan, adjustable when source development or reader testing reveals an overloaded step. The fifteen working lessons are not a required count. This plan replaces the combined progression of feature demonstrations followed by substantially repeated early projects; it does not append another course to them.
 
@@ -220,8 +220,12 @@ At publication, update these website surfaces as one coherent change:
 
 Do not mark new units available before their source, prose and media pass verification. Keep the remaining Spectrum sequence decisions separate from this migration.
 
-## Next implementation slice
+## Current implementation slice
 
-Begin with **A1 and A2 together**: entering and changing a greeting, introducing a stored name, then saving and reopening it in one named 48K environment. The concrete deliverable is the small source sequence, checked setup/keyboard/save instructions, matching captures and lesson drafts. This tests the beginner's whole working cycle before a larger writing pass.
+**A1/A2 are drafted, not published.** [Sample PR #6](https://github.com/code198x/code-samples/pull/6) contains seven complete BASIC checkpoints and a reproducible keyboard/tape verification driver. [Website PR #412](https://github.com/code198x/website/pull/412) contains the two lesson drafts and review instructions under `src/drafts/meet-basic/`; existing curriculum URLs and samples remain intact.
 
-After that, finish Story Builder, then Lucky Number, Oracle Stone and the movement experiment. Resolve lesson-boundary changes against observed teaching load. This mapping supplies no new runtime evidence and makes no lesson-content changes itself.
+The 48K Emu198x MCP run passed 16 named checks: immediate output, numbered-line growth, editing, variable assignment and a deliberate error, ROM SAVE, TAP export, fresh-process loading, an exact recovered listing, running and a further edit. The sample README and recorded results own versions, hashes and limits. Native GUI operation and original hardware have not been verified.
+
+[Emu198x #1446](https://github.com/emu198x/emu198x/issues/1446) tracks desktop export of recorded BASIC tape data. Before publishing A2, complete and test the learner's destination-file, export, close/reopen and load instructions. Check native keyboard/editor operation too. Do not silently substitute a snapshot for a BASIC tape save.
+
+Review these two lessons together, resolve the remaining workflow check, then finish Story Builder, Lucky Number, Oracle Stone and the movement experiment. Resolve lesson boundaries against observed teaching load. Publishing still requires the route/catalogue migration above, including both Spectrum track landing pages as their respective work ships.

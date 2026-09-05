@@ -18,6 +18,8 @@ System material follows **system → track → module → unit**; shared materia
 
 Catalogue status, authored pages, downloadable sources, successful builds and observed execution answer different questions. Do not infer one from another or keep duplicate prose completion totals. `requires` and `suggests` express useful knowledge and routes, not attendance checks.
 
+When a revised game or module ships, update the system and track landing pages in the same release as its catalogue, module index and entry lesson. Check the recommended starting point, independent-entry wording, target configuration, tools, shared-subject links and every availability claim. Derive module lists and counts from authored content where possible; do not leave fixed game quotas or future lineups in introductory copy. For the Spectrum, this includes both the Sinclair BASIC and Z80 Assembly landing pages.
+
 Unit-page frontmatter currently requires a title and numeric `game` and `unit` fields. Other collections have their own schemas; inspect them instead of maintaining duplicate templates. Layout, neighbours and counts are derived by the website.
 
 Shared routes use `/foundations/{module}/unit-NN/` and `/craft/{module}/unit-NN/`; system lessons use `/systems/{system}/{track}/{module}/unit-NN/`. The Vault uses `/vault/{category}/{slug}/`; patterns use `/patterns/{system}/{track}/{category}/{slug}/`, with cross-platform entries omitting the track. Route code remains authoritative. Preserve published redirects when moving content.
