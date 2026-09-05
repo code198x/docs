@@ -60,6 +60,7 @@ borrowed from BASIC where BASIC was already clear.
 # a comment runs to the end of the line
 
 LET score = 0                        assignment
+LET alive = TRUE                     a box holding yes or no
 LET score = score + 10               a box updated from its own value
 
 SHOW "Score: ", score                output; the comma joins and adds nothing
@@ -128,6 +129,10 @@ Notes on the choices:
   number back. They are different operations and the old Numbers & Bits unit had to
   spend a section warning that Sinclair BASIC spells them the same; naming them apart
   turns that warning into the point.
+- **`TRUE` and `FALSE` are values.** The track used `alive` as a bare condition in three places
+  and never said a box could hold a yes or a no; every condition it taught was a comparison.
+  A flag is the pattern every game runs on, so it gets a unit of its own, between `ELSE` and
+  joining questions, which is the first unit that uses one.
 - **Division says what it does with the leftover.** The grammar had `/` and never said
   what `7 / 2` gives, while Numbers & Bits already leaned on whole-number division to
   explain a right shift. `/` gives the whole answer, `ROUND DOWN` gives how many fit,
