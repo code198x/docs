@@ -100,3 +100,7 @@ Apply the charter’s plain-language navigation and publishing guidance during t
 Prepare a What’s New entry when the House UI is ready to release, linking to the finished site and explaining the reader-facing improvements. Consider From the Metal or Field Notes only where the work yields a useful explanation or an evidenced investigation. No release announcement is implied by the existence of a preview.
 
 Try a small explanatory illustration before adding a site-wide visual treatment. Later candidates include verified game captures on relevant system cards and asset close-ups linked to lessons. Check the actual assets, provenance and target configuration before selecting them.
+
+## Prose reuse terms
+
+The existing Press, Teaching and Contribute pages have described prose as CC-BY, but the website and documentation checkouts have no canonical prose licence file specifying a version and applicable material. The code-samples repository has an MIT `LICENSE`. Resolve the intended prose licence version, copyright notice and scope with the maintainer, then publish a canonical notice and make the public pages consistent. Keep third-party images, software and other assets under their own stated terms. Do not silently select a new licence or extend one to third-party material.
