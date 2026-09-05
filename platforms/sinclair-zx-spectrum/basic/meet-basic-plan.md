@@ -230,4 +230,6 @@ The 48K Emu198x MCP run passed 16 named checks: immediate output, numbered-line 
 
 A3 passed six input scenarios with 20 named prompt/output checks: changed names, changed story words, empty answers and long answers. Complete output rows, including wrapping, were compared. Its story capture was visually inspected. The lesson links to Foundations’ “Asking the Player” while explaining Spectrum input syntax and supplied quotes locally.
 
+The drafts use Host Keyboard mode from [Emu198x PR #1448](https://github.com/emu198x/emu198x/pull/1448), built locally: ordinary host punctuation is translated into target key presses, while BASIC keyword entry remains native. Original Keyboard remains available for direct target combinations. The adapter passed real-ROM entry tests and shared held-key tests; native host-layout/menu operation still needs checking.
+
 Review these three lessons together, resolve the remaining workflow check, then finish Story Builder, Lucky Number, Oracle Stone and the movement experiment. Resolve lesson boundaries against observed teaching load. Publishing still requires the route/catalogue migration above, including both Spectrum track landing pages as their respective work ships.
