@@ -45,6 +45,7 @@ topic either: every `IF` anyone writes in any language is truth-functional reaso
 | Counting in Twos | `counting-in-twos` | binary, hex, two bytes, two's complement |
 | Working the Bits | `working-the-bits` | the bit tools, shifting, character codes, floating- and fixed-point |
 | Gates and the Adder | `gates-and-the-adder` | the same tables as circuits, then the adder |
+| From Source to Silicon | `from-source-to-silicon` | text against numbers, the interpreter's cost, building an assembler, the price of speed |
 
 **Built 2026-09-05.** This is the shape as shipped, which differs from the first draft of
 this table in two places. Working It Out is its own module rather than the back of The
@@ -55,11 +56,17 @@ fixed-point stays with the bit tools because it is shifting applied. Sizes run 5
 Every old URL under `general-programming` and `numbers-and-bits` redirects to the unit that
 now holds it.
 
-Ten modules on one shelf is the runway this record warned about, and the answer is the
-same one: nothing gates a machine, and the shelf page says so. Ten short modules read as
-less of a wall than one of nineteen units did, but the count alone will look like a
-syllabus to a reader who does not know that, so the shelf has to make the side-path nature
-visible.
+**The shelf renders in three groups.** Ten modules on one shelf is the runway this record
+warned about, and the answer is the same one, nothing gates a machine, but a flat list of
+ten cards said "syllabus" whatever the copy underneath claimed. So the catalogue declares
+groups and the shelf page renders them with a heading and a strap each: **Programming**
+(the five every learner takes, in order), **Numbers** (how a machine counts, two modules),
+and **The machine underneath** (Truth Tables, Gates and the Adder, From Source to Silicon —
+what it is made of and how your program reaches it). Truth Tables sits in the third group on
+the shelf even though its record wants it read straight after Decisions; the Decisions index
+links to it sideways, which is where the adjacency matters. Numbering restarts
+inside each group. The groups are catalogue data (`groups:` and a per-module `group:`), not a
+list in the page.
 
 Two orderings carry weight. **Truth Tables sits directly after Decisions**, while `AND` and
 `OR` are still fresh from a reader having just written them. **Gates and the Adder follows
