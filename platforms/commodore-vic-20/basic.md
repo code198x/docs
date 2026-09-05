@@ -75,7 +75,7 @@ expansion-relocation behaviour). <!-- TODO: decide and record the BASIC track's 
 
 ## Lineup and state
 
-Per [`state-lives-in-catalogues`](../../decisions/state-lives-in-catalogues.md),
+Per [Content model](../../specifications/content-model.md),
 the authoritative lineup and shipped-state for this track live in the catalogue,
 not in this prose doc:
 

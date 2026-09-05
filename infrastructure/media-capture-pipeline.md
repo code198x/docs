@@ -21,7 +21,7 @@ Each capture in the manifest names a runnable `program` (a `step-NN.asm`, a `.ba
 | `nintendo-entertainment-system` | Asm198x `.asm` → `.nes` (`--dialect ca65`, self-linking iNES), `--rom`, runs from power-on | controller 1 (port 1): up/down/left/right/a/b/select/start |
 | `commodore-amiga-amos` | AMOS Pro: typed into the editor, F1 to run (no host build) | joystick (port 2); keys |
 | `commodore-amiga-blitz` | Blitz BASIC 2: typed into Ted, compile-and-run (no host build) | joystick; keys; mouse |
-| `commodore-amiga-asm` | `.asm` → KS1.x hunkexe → bootable `.adf` (vasm + xdftool) | joystick (port 2) |
+| `commodore-amiga-asm` | `.asm` → KS1.x hunkexe → bootable `.adf` (Asm198x + Build198x) | joystick (port 2) |
 
 ## Manifest shape
 
@@ -76,12 +76,12 @@ Media lands under `website/public/` at the `image_dir` the manifest declares:
 | Audio — title theme loop | 0–10 | 1500–3000 (30–60 sec) |
 | Audio — SFX clip | 0 | 50–200 (1–4 sec) |
 
-Frame counts are native 50Hz video frames; 50 frames = 1 second of PAL.
+Frame counts are emulator video frames. The examples above assume 50 Hz; use the actual target model and video standard when converting frames to seconds. Do not apply PAL timing to every system or configuration.
 
 ## ROM requirements
 
 - **ZX Spectrum**: 48K ROM at `~/.emu198x/roms/sinclair-zx-spectrum-48k/48.rom`. Emu198x picks it up automatically. The Spectrum has a 16 KB BASIC/system ROM and needs a copy to boot.
-- **C64**: ROMs at `~/Projects/Reference/commodore/c64/extracted/`.
+- **C64**: configure the BASIC, KERNAL and character ROMs expected by the capture runner and emulator. Inspect their current options rather than relying on an author-specific source path.
 - **Amiga**: Kickstart ROMs at `~/.emu198x/roms/commodore-amiga/` (`kick13.rom` for the assembly track, `kick204.rom` for AMOS/Blitz). Not distributable.
 - **NES**: no system ROM needed.
 
@@ -94,11 +94,11 @@ Frame counts are native 50Hz video frames; 50 frames = 1 second of PAL.
 
 ## Key rule
 
-**Every captured media artefact must be verified with the Read tool before use.** Check for rendering errors, audio glitches, video corruption — and document what you see. The capture script returning success is necessary but not sufficient; the output file is what ships.
+**Inspect each captured media artefact before use.** View images, watch video and listen to audio with appropriate tools; check for rendering errors, audio glitches and corruption, and record what was actually verified. The capture script returning success is necessary but not sufficient; the output file is what ships.
 
 ## See also
 
 - `code-samples/_capture/capture.py` — the manifest-driven capture runner.
 - A unit's `capture/manifest.json` + generated `capture/<id>.script.json` — the per-unit capture recipe and its honesty artifacts.
-- [`decisions/real-retro-games.md`](../decisions/real-retro-games.md) — the multi-disciplinary commitment that makes video and audio capture part of every unit's Definition of Done.
-- [`../../decisions/code198x-dev-tooling-migration.md`](../../decisions/code198x-dev-tooling-migration.md) — the migration to Asm198x + Emu198x as the family's own toolchain.
+- [Graphics, sound effects and music](../specifications/graphics-and-audio.md) — how assets and evidence support the lesson, at a depth appropriate to its scope.
+- [`../../../decisions/code198x-dev-tooling-migration.md`](../../../decisions/code198x-dev-tooling-migration.md) — the migration to Asm198x + Emu198x as the family's own toolchain.

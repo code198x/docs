@@ -1,5 +1,7 @@
 # Story Builder — Brief
 
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
 **Title (working):** Story Builder
 **System / Track:** Sinclair ZX Spectrum / BASIC
 **Position:** Volume 1 — First Programs
@@ -8,7 +10,7 @@
 **Topics:** 4 topics, ~4–6 hours
 **Constraint position:** period-faithful
 
-Format: [`specifications/brief-basic.md`](../../../../specifications/brief-basic.md)
+Format: [Game brief](../../../../specifications/brief.md)
 
 ---
 

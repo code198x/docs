@@ -86,4 +86,4 @@ tables, `OBSTACLE_SPEED` baseline, spike position in `level_ground_spike_row`.
 
 After the pass: tuning edits land per game with the win script re-run (the gate applies
 after any mechanics/tuning change — see the winnability gate in
-[`decisions/commercial-bar-revamp.md`](../decisions/commercial-bar-revamp.md)).
+[Code198x: purpose and direction](../PROJECT.md)).

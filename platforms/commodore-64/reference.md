@@ -1,27 +1,25 @@
-# Commodore 64
+# Commodore 64: curriculum tooling
 
-## Toolchain
+Read the [project charter](../../PROJECT.md) and the actual lesson, source and capture manifest before changing a target or promising execution. This page describes the current source-defined tool path; it is not a hardware reference manual or a claim that every local tool is installed.
 
-| Component | Tool | Notes |
-|-----------|------|-------|
-| Assembler | ACME | `acme -f cbm` → `.prg` |
-| Docker image | `ghcr.io/code198x/commodore-64:latest` | Mount `/code-samples` not individual files |
-| Emulator | Emu198x (when available) | Screenshots via `/scripts/c64-screenshot.sh` |
-| ROMs | `~/Projects/Reference/commodore/c64/extracted/` | Symlinked from `commodore-64-dev/roms/` |
+## Cross-development
 
-## Build command
+The development host runs Asm198x with the `acme` dialect. The target runs the built program. Build198x prepares media where required; Emu198x supplies the configured execution and capture environment. Retired platform Docker repositories are not the starting point for new tooling work.
 
-```bash
-docker run --rm -v $(pwd)/code-samples:/code-samples ghcr.io/code198x/commodore-64:latest \
-  acme -f cbm -o /code-samples/output.prg /code-samples/input.asm
+```sh
+asm198x --dialect acme --prg input.asm -o output.prg
 ```
 
-## Assembly dialect
+A `.prg` with a load address. The capture runner loads it and sends RUN at the BASIC prompt.
 
-6502 assembly via ACME. Language detection in `CodeFromFile` maps C64 paths to `6502` highlighting.
+These commands reflect `code-samples/_capture/capture.py` and the corresponding unit Makefiles. Use the unit’s complete recipe, input files and explicit options for a reproducible result. The website’s `scripts/build-artefacts.sh` owns release-tool pins and publishing; installed tools may differ, so record their versions when reporting validation.
 
-## Gotchas
+BASIC and assembly have independent teaching routes. Explain BASIC syntax, screen and colour memory, and ROM calls where the example needs them.
 
-- **Docker volume mounts**: always mount `/code-samples` directory, not individual files. Docker caches inodes, so edited mounted files may not reflect in container.
-- **ROM requirements**: ROMs must be symlinked from `~/Projects/Reference/` — not committed to the repo.
-- **Screenshot timing**: simple programs need ~50 frames wait. Programs that load from disk/tape need 500+.
+## Configuration and evidence
+
+Name the model, memory, video standard, input, storage and any extension required by the program. A modern host or transfer method does not add target capabilities. A successor running a compatibility program is distinct from a successor-specific project.
+
+Configure firmware and other runtime dependencies according to the emulator and lesson setup instructions. A built program image is not evidence that no firmware is needed. Do not make blanket redistribution or licensing claims; use the applicable public source and obtain required files through the documented route.
+
+Inspect the capture runner’s actual supported options and manifests. Choose settle times and inputs from the program’s behaviour rather than a universal frame count. View screenshots, watch video and listen to audio before using them as evidence, and label the emulator/model tested. See [Media capture](../../infrastructure/media-capture-pipeline.md).

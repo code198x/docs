@@ -1,5 +1,7 @@
 # Dungeons of Dorin
 
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
 **Track:** Spectrum BASIC
 **Genre:** Dungeon crawl RPG
 **Units (indicative):** ~32, in two build arcs
@@ -279,8 +281,3 @@ The Spectrum 48K has no ELSE keyword. All branching uses IF/THEN with GO TO to s
 Because the game is turn-based, there is no frame rate pressure. The interpreter can take as long as it needs to process a turn — the player waits for input, the game processes, and the result is displayed. This is a deliberate contrast with Blockstorm's real-time performance ceiling. Complex systems are viable in BASIC when you remove the clock.
 
 ---
-
-## Changelog
-
-- **v1.1 (2026-03-16):** Added OUT 254 screen shake (Unit 24), atmospheric depth via BRIGHT/PAPER (Unit 25), machine code helpers (Unit 26). Per visual progression plan.
-- **v1.0 (2026-03-13):** Initial game outline for v5.0 curriculum.

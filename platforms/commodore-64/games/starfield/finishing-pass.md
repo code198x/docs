@@ -1,7 +1,7 @@
 # Starfield — DoD-Finishing Pass (plan)
 
 **Status:** Superseded in part by the v3.0 raised bar
-([`incremental-construction-units.md`](../../../../decisions/incremental-construction-units.md),
+([Unit specification](../../../../specifications/unit.md),
 [`specifications/unit.md`](../../../../specifications/unit.md) § *Incremental
 construction format*). **u2 (Joystick Movement) and u4 (Laser Sound) are converted
 to the bar as the exemplar pair** — cumulative `steps/`, manifest-driven honest
@@ -16,10 +16,7 @@ The **reorder (Job A) and Primer-continuity (Job B) work still stands** and is
 independent of conversion; the exemplar deliberately stayed on the *current*
 numbering so the two passes don't entangle.
 
-This is the deferred Definition-of-Done pass for Starfield's committed shape
-(now recorded in [`decisions/c64-assembly-lineup.md`](../../../../decisions/c64-assembly-lineup.md) + the catalogue).
-Completing it closes the second half of the C64 finishable bar (Primer ✅ +
-Starfield) per the [Oct-2026 launch spec](../../../../decisions/october-2026-launch-spec.md).
+This retained finishing plan describes the earlier Starfield design. Check the current brief, catalogue and implementation before acting on it; apply the [project charter](../../../../PROJECT.md) to any new scope.
 
 Cross-repo: edits land in **website** (MDX, images, `units.yaml`) and
 **code-samples** (per-unit `.asm` dirs). Commit per repo, like the primer.

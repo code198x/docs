@@ -1,5 +1,7 @@
 # Night Patrol
 
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
 **Track:** Spectrum BASIC
 **Genre:** Top-down stealth game
 **Units (indicative):** ~16
@@ -218,8 +220,3 @@ Five floors of map data (5 × 18 rows × 28 chars = ~2.5 KB) plus guard routes a
 BEEP blocks the program. Keep all BEEPs very short (0.05 seconds) except during detection drama and victory, where the pause is intentional.
 
 ---
-
-## Changelog
-
-- **v1.1 (2026-03-16):** Added OVER 1 for flicker-free movement (Unit 15), moved victory/polish to Unit 16. Per visual progression plan.
-- **v1.0 (2026-03-13):** Adapted from Game 02 (v4.0, 64 units) to Game 10 (v5.0, 16 units). Compressed from 8 floors to 5. Removed fog of war, difficulty select, doors, bonus collectibles, par times, high score tracking, and minimap. Retained the core stealth loop: map from data, visible sightlines, patrol-route AI, pattern reading.

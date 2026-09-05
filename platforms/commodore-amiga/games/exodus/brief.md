@@ -1,9 +1,11 @@
 # Exodus (rung-2 Blitter puzzle) — Brief
 
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
 **Title (working):** ***Exodus*** — name reclaimed 2026-06-12 (the `exodus` module; was provisionally "Flock")
 **System / Track:** Commodore Amiga / assembly
-**Position:** Rung 2 — the Blitter game (copy + masked cookie-cut blit), after the rung-1 sprite crosser. See [amiga-assembly-lineup.md](../../../../decisions/amiga-assembly-lineup.md).
-**Scope:** indicative ~16 units across two build arcs; counts illustrative, not a target (per [curriculum-structure.md](../../../../decisions/curriculum-structure.md)).
+**Position:** Rung 2 — the Blitter game (copy + masked cookie-cut blit), after the rung-1 sprite crosser. See [System design material](../../../README.md).
+**Scope:** indicative ~16 units across two build arcs; counts illustrative, not a target (per [Curriculum design](../../../../specifications/curriculum.md)).
 **Constraint position:** period-faithful — see Section 5.
 **Status:** **resuming** — theme decided; brief revision (endpoint-first Stage 1) is the next step
 
@@ -13,7 +15,7 @@
 > name made literal). The sheep references and pastoral framing throughout this draft are
 > **placeholder prose pending the Stage-1 brief revision**, which re-themes the sections and answers
 > "The Finish" ([specifications/brief.md](../../../../specifications/brief.md) §9) per
-> [endpoint-first-authoring.md](../../../../decisions/endpoint-first-authoring.md): brief → prototype
+> [Content creation workflow](../../../../specifications/content-creation-workflow.md): brief → prototype
 > (winnability gate + human playtest, with the prototype discovery log running) → decompose →
 > author.
 >
@@ -128,7 +130,7 @@ A slow, held-breath puzzle: read the field, spend your rationed carves and raise
 
 ## Section 11: Build Trajectory
 
-Two build arcs, indicative unit counts (per [curriculum-structure.md](../../../../decisions/curriculum-structure.md) — counts firm up at build time; the cap is one new technique per unit, not a unit total). Each arc ends in a complete, playable game at the commercial bar.
+Two build arcs, indicative unit counts (counts firm up during re-specification; keep each stage explainable). Each arc ends in a complete, playable game for its agreed scope.
 
 **Arc 1 — The hand that carves.**
 *New:* the Blitter as renderer (bitplane playfield, Copper sky), the flock as masked cookie-cut blits, autonomous walker behaviour (walk / turn / fall / terrain-collide — salvaged from the existing build), the **carve** verb (cookie-cut terrain away), the plan-then-release loop, the gate/win, the carve budget.
@@ -147,7 +149,7 @@ prototype under endpoint-first; no speculative `per-unit-plan.md` is written.)*
 
 ## Section 12: Ship Test (Multi-axis)
 
-Per arc, all five axes must pass (verification is emulator-based — real-hardware verification is currently suspended per [commercial-bar-revamp.md](../../../../decisions/commercial-bar-revamp.md)).
+Per arc, all five axes must pass (these checks use an emulator; report its version and configuration, and any hardware verification separately).
 
 **Arc 1**
 - **Code:** all units assemble (vasm); the carve verb is a correct masked cookie-cut blit; plan-then-release runs without lock-ups; passes the Definition of Done.

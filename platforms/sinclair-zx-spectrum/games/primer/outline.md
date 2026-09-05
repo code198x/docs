@@ -1,13 +1,14 @@
 # Primer — "Meet the Machine" (outline)
 
-> **Status:** Draft outline, 2026-05-29. The assembly track's opening artefact, per
-> [`spectrum-assembly-gentle-ramp.md`](../../../../decisions/spectrum-assembly-gentle-ramp.md).
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
+> **Status:** Existing draft outline, 2026-05-29. Review alongside the authored assembly opening and [current sequence scope](../../curriculum-review.md).
 > Sits *ahead* of the tiny first game and Shadowkeep. "primer" is a working slug; a real name
 > can wait. This is a design outline (beats + intent), not authored unit prose.
 >
 > **Amended during authoring (2026-06-01):** a **pointer** beat — *A Finger on the Boxes* (`HL` as a
 > movable pointer; `ld hl` / `ld (hl)` / `inc hl`) — was split out *ahead* of the loop beat, per the
-> one-concept rule ([incremental-code-samples.md](../../../../decisions/incremental-code-samples.md)
+> one-concept rule ([Code samples and built outputs](../../../../specifications/code-samples.md)
 > § Assembly tracks): pointer-plus-loop is two concepts, and the loop's payoff (filling a row) needs
 > the pointer first. Three further beats were then added on merit (arithmetic, bit-logic, 16-bit
 > values), bringing the Primer to **15 beats**. The beat numbers in the headings below are

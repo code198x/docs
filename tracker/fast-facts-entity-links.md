@@ -77,7 +77,7 @@ scope question it belongs to is still open. What follows is the design space as 
 architectural. They are worth deciding together only because one pass would touch the same
 1,285 entries.
 
-The [Knowledge Model](../../PRINCIPLES.md) is a third thing again, and does not constrain
+The [Knowledge Model](../PRINCIPLES.md) is a third thing again, and does not constrain
 either: it is an internal store for tracking connections between entities, never a published
 surface. A rendered fast-facts block is a *consumer* of facts, not a home for them.
 

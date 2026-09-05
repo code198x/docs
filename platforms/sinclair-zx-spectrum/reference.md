@@ -1,26 +1,25 @@
-# ZX Spectrum
+# ZX Spectrum: curriculum tooling
 
-## Toolchain
+Read the [project charter](../../PROJECT.md) and the actual lesson, source and capture manifest before changing a target or promising execution. This page describes the current source-defined tool path; it is not a hardware reference manual or a claim that every local tool is installed.
 
-| Component | Tool | Notes |
-|-----------|------|-------|
-| Assembler | pasmonext | `pasmonext --sna` → `.sna` snapshot |
-| Docker image | `ghcr.io/code198x/sinclair-zx-spectrum:latest` | |
-| Emulator | Emu198x | Screenshots via `/scripts/spectrum-screenshot.sh` or Emu198x directly |
-| ROMs | Not needed | Spectrum ROMs are open source |
+## Cross-development
 
-## Build command
+The development host runs Asm198x with the `pasmonext` dialect. The target runs the built program. Build198x prepares media where required; Emu198x supplies the configured execution and capture environment. Retired platform Docker repositories are not the starting point for new tooling work.
 
-```bash
-docker run --rm -v $(pwd)/code-samples:/code-samples ghcr.io/code198x/sinclair-zx-spectrum:latest \
-  pasmonext --sna /code-samples/input.asm /code-samples/output.sna
+```sh
+asm198x --dialect pasmonext --sna input.asm -o output.sna
 ```
 
-## Assembly dialect
+A `.sna` snapshot for the capture path. Follow each lesson’s tape build and loading instructions when it teaches tape loading.
 
-Z80 assembly via pasmonext. Language detection in `CodeFromFile` maps Spectrum paths to `z80` highlighting.
+These commands reflect `code-samples/_capture/capture.py` and the corresponding unit Makefiles. Use the unit’s complete recipe, input files and explicit options for a reproducible result. The website’s `scripts/build-artefacts.sh` owns release-tool pins and publishing; installed tools may differ, so record their versions when reporting validation.
 
-## Gotchas
+Spectrum BASIC can run on the target or through the capture runner’s BASIC-loading path. State which workflow is being used.
 
-- **No ROMs needed** — Spectrum ROMs are freely distributable under Amstrad's blanket permission, and pasmonext outputs .sna snapshots that skip the ROM entirely.
-- **Screenshot source**: prefer Emu198x for screenshots when available (matches the project's own emulator).
+## Configuration and evidence
+
+Name the model, memory, video standard, input, storage and any extension required by the program. A modern host or transfer method does not add target capabilities. A successor running a compatibility program is distinct from a successor-specific project.
+
+Configure firmware and other runtime dependencies according to the emulator and lesson setup instructions. A built program image is not evidence that no firmware is needed. Do not make blanket redistribution or licensing claims; use the applicable public source and obtain required files through the documented route.
+
+Inspect the capture runner’s actual supported options and manifests. Choose settle times and inputs from the program’s behaviour rather than a universal frame count. View screenshots, watch video and listen to audio before using them as evidence, and label the emulator/model tested. See [Media capture](../../infrastructure/media-capture-pipeline.md).

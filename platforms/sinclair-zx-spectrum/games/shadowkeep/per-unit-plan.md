@@ -1,6 +1,8 @@
 # Shadowkeep — The Plan (re-paced, cell-based)
 
-> **Re-paced 2026-05-29** per [`spectrum-assembly-gentle-ramp.md`](../../../../decisions/spectrum-assembly-gentle-ramp.md).
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
+> **Existing plan, re-paced 2026-05-29.** Reconcile with the [current sequence review](../../curriculum-review.md).
 > Shadowkeep is now a **cell-based atmospheric flick-adventure** that **builds on the tiny first
 > game**, not a from-scratch engine course. The advanced rendering Trunk (pre-shift / masking /
 > Y-sort) is **gone from here** — relocated to the rendering games. The prior engine-first per-unit
@@ -20,13 +22,13 @@
 > video-capture-quality bump + recapture of the dither-heavy units with crisp output.
 >
 > **Jeopardy weave (2026-07-04):** units 1–16 make the Place *finishable*, not *losable* — and per
-> [`a-game-needs-jeopardy.md`](../../../../decisions/a-game-needs-jeopardy.md), **a place you cannot
+> [Current game quality requirements](../../../../PROJECT.md), **a place you cannot
 > lose is not yet a game.** The fix is **not a coda** appended after the finale — it is a
 > **resequence** so the Place is a game for most of its construction (Steve, 2026-07-04, "weave it
 > earlier"). A game is **want + threat + fail**; those three now come together as a **game core**
 > right after the world exists (new Sub-arc 1.3, units 9–12), and atmosphere and audio *deepen* a
 > thing that is already a game. The threat is a **curse, not combat** (the no-combat anti-goal in
-> [`shadowkeep-four-arc-framing.md`](../../../../decisions/shadowkeep-four-arc-framing.md) holds).
+> [the game brief](brief.md) holds).
 > The closed design is **prototype-proven** — winnable *and* losable, headless and deterministic (see
 > [`design-stress-2026-07-04.md`](design-stress-2026-07-04.md) § Prototype verification).
 >
@@ -64,8 +66,8 @@ attribute-driven lighting, tile-map collision — every one of these **carried i
 
 ## Module shape — Shadowkeep is a game across several modules
 
-> **Added 2026-06-02.** Reconciles this plan with [`modules-not-games.md`](../../../../decisions/modules-not-games.md)
-> and the no-fixed-counts stance in [`curriculum-structure.md`](../../../../decisions/curriculum-structure.md).
+> **Added 2026-06-02.** Reconciles this plan with [Content model](../../../../specifications/content-model.md)
+> and the no-fixed-counts stance in [Curriculum design](../../../../specifications/curriculum.md).
 
 Per the module model, a game can be taught by **several modules**, and a *revisit* returns to it
 after intervening games. Shadowkeep is **not one ~64-unit block** — it is a game whose chapters are
@@ -92,9 +94,7 @@ structure, not targets**; the project holds no fixed unit counts.
 
 ## The premise shift — what changed
 
-**Shadowkeep no longer teaches the foundations.** The tiny first game
-([`../first-game/outline.md`](../first-game/outline.md)) already taught, and the learner has
-already shipped: the cell→screen-address helper, room-as-data, a cell sprite with save/restore, the
+**Knowledge used by this existing plan.** Its starting engine comes from Gloaming. Explain these routines locally and provide access to their sources without assuming the reader attended that game: the cell→screen-address helper, room-as-data, a cell sprite with save/restore, the
 game loop, the full keyboard matrix, cell-snapped movement, tile-map collision, a beeper blip, and a
 title→play→win state machine.
 
@@ -176,11 +176,11 @@ unit count.
 
 ### Sub-arc 1.3 — The Keep is a Game (9–12) · **the game core: want + threat + fail** *(major)*
 
-> **Woven 2026-07-04** per [`a-game-needs-jeopardy.md`](../../../../decisions/a-game-needs-jeopardy.md)
+> **Woven 2026-07-04** per [Current game quality requirements](../../../../PROJECT.md)
 > and Steve's "weave it earlier." A game is **want + threat + fail** — those three assemble *here*,
 > right after the world exists, so the Place is a game for most of its construction (not a coda after
 > the finale). The threat is a **curse, not combat** (the no-combat anti-goal in
-> [`shadowkeep-four-arc-framing.md`](../../../../decisions/shadowkeep-four-arc-framing.md) holds):
+> [the game brief](brief.md) holds):
 > caught, you join the sleepers, frozen mid-stride. Closed design **prototype-proven** and re-gated
 > (win *and* loss) — see [`design-stress-2026-07-04.md`](design-stress-2026-07-04.md). Built on the
 > pre-lighting rooms of 1.2; the Warden is lighting-agnostic, so 1.4's atmosphere layers on top of it.
@@ -305,8 +305,7 @@ identity, atmospheric polish, and verified real-hardware playability.
 
 ## Arcs 3–4 — **further revisit modules (post-October)**
 
-Unchanged in spirit by the re-pace — [`shadowkeep-four-arc-framing.md`](../../../../decisions/shadowkeep-four-arc-framing.md)
-already specifies them as **cell-based-friendly** (items, multiple keeps, tape save/load, secrets &
+The earlier plan proposes later modules that remain **cell-based-friendly** (items, multiple keeps, tape save/load, secrets &
 lore, atmospheric cycles, collection endings — none need pre-shift/mask/Y-sort). Each becomes its
 own later `game: shadowkeep` revisit module, building on the pass-1 Place. *Beyond the Walls*;
 *The Greater World* — illustrative groupings, not fixed unit blocks.

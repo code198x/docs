@@ -1,46 +1,16 @@
-# Code198x docs
+# Code198x documentation
 
-> Read [`PRINCIPLES.md`](PRINCIPLES.md) first. [`MANIFESTO.md`](MANIFESTO.md) is why the project exists.
+Read [PRINCIPLES.md](PRINCIPLES.md), then [PROJECT.md](PROJECT.md). [MANIFESTO.md](MANIFESTO.md) explains the family's purpose. [index.md](index.md) routes to current guidance.
 
-This repo owns Code198x curriculum specifications, platform references, decisions, and content workflow docs.
+This repository owns the current curriculum goals, authoring specifications, system design material and content workflow. The project charter owns direction; specifications apply it. Edit current documents when intent changes and explain the change in the pull request. Superseded reasoning belongs in Git history, not competing decision records.
 
-## Umbrella context
+- Use British English and “program” for software.
+- Work in the repository that owns each file. Check its Git status and preserve unrelated changes.
+- Keep runnable samples in `code198x/code-samples`; the website includes them through `CodeFromFile`.
+- Read source and actual lessons before claiming a subject is taught or a program works.
+- Distinguish proposals, specifications, builds, execution and configuration-specific verification.
+- Cite original, checkable sources. Public content and repositories must not mention private source collections or local library paths.
+- Keep the docs index and incoming links correct when moving or deleting guidance.
+- Retained platform briefs and trackers are bounded design evidence, not project policy or live status.
 
-The umbrella context is [`../../AGENTS.md`](../../AGENTS.md); cross-project decisions live in [`../../decisions/`](../../decisions/). Hardware facts cite the 198x source-of-truth layers rather than becoming canonical inside curriculum docs.
-
-## Current launch context
-
-October 2026 is the public launch target. The launch surface is the four core platforms, each with a complete on-ramp at the current Definition of Done bar:
-
-- ZX Spectrum
-- Commodore 64
-- Commodore Amiga
-- Nintendo Entertainment System
-
-Current shipped/planned state lives in the website module catalogues and git, not in prose trackers. Decision records explain the rationale.
-
-## Working rules
-
-- Keep this repo focused on specs, platform references, curriculum decisions, and content workflow docs.
-- Put binding Code198x decisions in `decisions/`.
-- Put formal format/structure rules in `specifications/`.
-- Put learner-facing system material in `platforms/`.
-- Use British English, except use “program” for computer programs.
-- Treat hardware facts as derived from `reference/`, `syntheses/`, and Emu198x knowledge.
-- Update `index.md` when adding or moving docs that future sessions need to find.
-
-## Current layout
-
-| Path | Purpose |
-|---|---|
-| `index.md` | Navigation map. |
-| `decisions/` | Binding Code198x decision records. |
-| `specifications/` | Formal specs for curriculum, units, briefs, Vault, Pattern Library, content model, and voice. |
-| `platforms/` | Per-platform reference, curriculum framing, and per-game docs. |
-| `infrastructure/` | Docker, capture pipeline, Astro, and testing notes. |
-| `tracker/` | Plans, research, and design sketches; not authoritative live status. |
-| `log.md` | Append-only event log. |
-
-## State source
-
-Project state is read from the website catalogues, unit files, shipped files, and git. Prose docs carry rationale and navigation.
+Website catalogues, authored pages, sample files and Git establish implementation state. The immediate curriculum task is Spectrum BASIC and assembly re-specification; new lineups require agreement before bulk lesson development. BASIC games need not meet commercial standards. See [system design material](platforms/README.md).

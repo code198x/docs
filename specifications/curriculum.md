@@ -1,455 +1,99 @@
-# Curriculum Specification
+# Curriculum design
 
-**Version:** 5.0
-**Updated:** 2026-06-10
-**Purpose:** Defines the philosophy and content model for all platform curricula.
+Apply [Project purpose and direction](../PROJECT.md). This specification assigns teaching responsibilities; it does not assert that every subject below has been written or commit to a new navigation structure.
 
-> **v5.0 — architecture corrected to the current model.** The **philosophy** below (game design as
-> the subject, the design-concept framework, the craft principles, the pedagogy, voice, the
-> three-level technique model, Vault/Pattern integration, the no-repetition rule, real-hardware
-> compatibility) all **stand**. What's corrected: the old **fixed architecture** — "sixteen assembly
-> games per platform", the 128/256/512-unit tiers, 16-unit phases, and `Game N` / `SPEC-01-03`
-> naming — is **retired**. Each track is now a **ladder of modules** (not a fixed game count) recorded
-> in a **per-track lineup decision** under `decisions/`; **counts are flexible** ([modules-not-games.md](../decisions/modules-not-games.md),
-> no-fixed-counts); **state lives in the catalogue** (`website/src/content/modules/...`,
-> [state-lives-in-catalogues.md](../decisions/state-lives-in-catalogues.md)); modules carry **bare
-> slugs**, no `game-NN-` prefix.
+## Shared subjects
 
----
+### Foundations
 
-## Overview
+Teach programming concepts in [pseudocode](pseudocode.md), supported by diagrams, trace tables and concrete examples. Distinguish understanding sequence, variables, decisions, repetition and decomposition from learning a language's syntax.
 
-"Code Like It's 198x" teaches game design through retro game development. The platforms and languages are the medium — the real subject is the craft of making games.
+The rewritten material includes lists, named jobs and parameters, debugging, binary and hexadecimal, bit operations, floating- and fixed-point representation, truth tables, gates, and source-to-execution explanations. Use the actual lesson bodies to judge what they teach. Do not assume their existence makes them a prerequisite.
 
-Every game in the curriculum is a complete, playable project, deliberately finished for its agreed scope. Small games and ambitious later projects both belong here. BASIC games in particular need not meet a commercial standard. Historical games can inform the work without setting a universal requirement for scale or saleability; see [the scope-relative quality bar](../decisions/scope-relative-game-quality.md).
+Basic collections and tracing belong here. Further data-structure and algorithm teaching should grow from game problems rather than enlarging the beginner on-ramp indefinitely.
 
-A learner who completes any track — BASIC, assembly, or any future language — can make games. Not just retro games. Games. The vintage hardware is the first workshop. The craft is portable.
+### Maths for Games
 
----
+Maths for Games currently sits within The Craft. Develop position, distance, direction, movement, probability and numerical representation through concrete game problems. Readers should be able to arrive when they need a tool, without completing a separate prerequisite course.
 
-## Game Design as the Primary Subject
+Explain the useful model before its optimisation. Fixed-point accumulators, lookup tables, root-free distance comparisons and approximation are applications, not the whole subject. Costs depend on language, CPU and workload. A direct pursuer is not an obstacle-solving pathfinder.
 
-Every game teaches two things in parallel:
+Foundations explains what a representation means; Maths for Games explains how it helps solve a game problem; system lessons implement it within a measured budget.
 
-1. **A universal game design concept** — feedback, tension, physics, AI, pattern recognition, procedural generation. These concepts apply to any platform, any language, any era. They are the curriculum's organising principle.
+### The Craft
 
-2. **A platform-specific implementation** — the commands, hardware registers, or language features that bring the design concept to life on a particular machine.
+The Craft supplies developed, language-neutral explanations of game-making decisions. Paper, counters, diagrams and pseudocode can make an experiment concrete. Organise coherent sequences around questions, not a new top-level module for every item:
 
-The design concepts are defined once and shared across all platforms and tracks. A learner doing C64 assembly learns *feedback* through VIC-II colour registers and SID voices. A learner doing Spectrum BASIC learns *feedback* through INK/PAPER and BEEP. A learner doing both recognises the same pattern implemented with different tools. Repetition across tracks is reinforcement, not redundancy.
+- Rules, state, goals, actions and consequences; decisions and trade-offs.
+- The program loop (input, update, output) and the player's recurring activity (observe, decide, act, interpret feedback).
+- Space, movement, collision and boundaries as design choices.
+- Turn-based and real-time play; time, rhythm, pacing and pressure.
+- Controls, responsiveness, forgiveness and game feel.
+- Visual and audio feedback, readability and anticipation.
+- Challenge, learning, difficulty, failure and retrying.
+- Resources, scarcity, rewards and scoring.
+- Opponents, interacting systems, uncertainty, predictability and fairness.
+- Levels, encounters, progression, prototyping, playtesting and deliberate iteration.
 
-### Core Design Concepts
+A system lesson must still explain its immediate design decision. A link supplies depth or alternatives, not missing instructions.
 
-These are taught across the curriculum, each introduced by a specific game and reinforced by later ones:
+### Game AI
 
-| Design concept | What the learner understands |
-|---------------|------------------------------|
-| **Feedback** | The game communicates through colour, sound, and display — not just text |
-| **Tension** | Time pressure, scarcity, and escalation create engagement |
-| **Pattern** | Recognise, reproduce, extend — the basis of difficulty curves |
-| **The game loop** | Input → update → draw, running continuously — the universal heartbeat |
-| **Content vs logic** | Separate what varies from what's fixed — the basis of data-driven design |
-| **Structure** | Reusable pieces, organised code — programs you can change and extend |
-| **Timing** | Frame-rate independence — the game behaves consistently regardless of load |
-| **Information design** | The screen communicates meaning — colour as data, layout as language |
-| **Physics** | Objects obey rules that feel right — collision, momentum, weight |
-| **Opponent behaviour** | Simple rules produce emergent challenge — AI that feels intelligent |
-| **Visual identity** | A world built from designed pieces — authored feel, consistent aesthetic |
-| **Mechanics as meaning** | When the game system IS the experience, not a simulation of something else |
-| **Character** | A sprite that feels alive — animation, weight, personality through movement |
-| **Performance** | When design exceeds hardware, optimise — the bridge to lower-level thinking |
-| **Procedural generation** | The computer as co-creator — systems that produce surprise |
-| **Living worlds** | Autonomous agents, atmosphere, emergent narrative |
+Name the subject early: behaviour and decision-making for game entities. Machine learning is not a prerequisite.
 
-Each platform curriculum maps these concepts to specific games. The mapping varies by platform — a Spectrum BASIC game about feedback looks different from a C64 assembly game about feedback — but the concept is the same.
+Progress from patterns, patrols, pursuit, escape and reactions to states and transitions, perception, limited knowledge, memory, navigation, obstacle avoidance, pathfinding, priorities, weighted choices, controlled randomness and coordination.
 
-### Graphics from Day One
+The Craft explains behavioural intent and player experience. Maths supplies relevant tools; Foundations supplies programming concepts; system tracks build the behaviour. An opponent can be interesting because it warns, hesitates, makes mistakes or behaves predictably. Strongest possible play is not the universal goal.
 
-Every track uses the platform's graphics capabilities from the first game. Pixel-level drawing (PLOT/DRAW on the Spectrum, sprite registers on the C64, PPU writes on the NES) appears in Game 1 as part of the starter program or initial setup. It is formally taught within the first few games, not deferred to a later "graphics" game.
+### Data structures and algorithms
 
-The learner's first program should look like a real game, not a text exercise. Character-cell workarounds, ASCII art, and text-only output are not acceptable when the hardware can draw. The machine can draw. We teach that from the start.
+Give these deliberate coverage. Provisionally develop game-specific representation and algorithm work within The Craft, building on Foundations' lists and structure. Reassess that placement when a coherent sequence exists; a new top-level course is not yet settled.
 
-### Every Game Teaches Both Tracks
+Use enemies, bullets and pickups to compare arrays, records, collections, fixed pools and allocation. Use levels to compare grids, tile maps and sparse representations. Use nearby-object queries for searching and spatial partitioning; routes for graphs, queues, breadth-first search and later heuristics; events and undo for queues, stacks and histories; storage for encoding, compression and space–time trade-offs.
 
-When writing unit content for any platform, name the design patterns explicitly alongside the programming concepts:
+Start with what data represents and how much work an operation performs. Trace examples and count operations at different scales. Introduce complexity notation when it clarifies that experience. Compare plausible solutions and their costs on the relevant language and machine.
 
-- "You just added a border colour change. That's *feedback* — the game telling the player something without words."
-- "The countdown creates *tension*. Remove it and the game still works, but it stops being exciting."
-- "These two lines — move toward the player, avoid walls — are *AI*. Simple rules that create the illusion of intelligence."
+### Graphics, sound effects and music
 
-The learner builds vocabulary for game design at the same time as they build vocabulary for programming. Both are skills. Both transfer.
+Asset creation is taught, not merely supplied. [Graphics and audio](graphics-and-audio.md) covers creating assets, preparing them for a machine and integrating them into a game. Keep shared artistic principles connected to the target's actual facilities.
 
----
+## Practices across the games
 
-## Programming Craft
+Plan recurring opportunities for:
 
-The code samples in this curriculum are not throwaway examples. They are models of how to write well-structured, high-quality code — code that happens to be a game. A learner who studies these samples should absorb good habits by example, not just learn what works.
+- Debugging through reproduction, hypotheses, state inspection, tracing and reduced examples.
+- Testing boundaries, unusual input, regressions and game-rule correctness.
+- Decomposition, data representation and managing growing programs.
+- Saving work, version control, source and asset organisation, reproducible builds and conversion.
+- Instructions, controls, readable information, pause behaviour and alternatives to colour-only or sound-only cues.
+- Scope, polish, credits, provenance, permissions, packaging, distribution and feedback.
+- Multiplayer, beginning with shared-screen play where suitable.
+- Narrative, dialogue, environmental storytelling and character expressed through behaviour.
 
-### Principles
+These are coverage responsibilities, not a checklist every game or machine must exhaust.
 
-**Clear structure.** Every program has logical sections with a visible organisation. Subroutines do one thing. Related code is grouped together. A reader can find their way around without reading every line. In BASIC this means well-chosen line number ranges and section comments. In assembly it means labelled blocks, consistent entry/exit conventions, and documented register usage.
+## Guided development and multiple entry points
 
-**Meaningful names.** Variable names, labels, and subroutines are chosen for clarity within the constraints of the language. In Sinclair BASIC, `n` is the secret number, `g` is the guess, `c` is the count — not arbitrary letters. In assembly, labels like `draw_sprite`, `check_collision`, and `game_over` describe what the code does. Naming is the first act of documentation.
+A module groups a coherent learning experience; it may teach concepts, build a game or revisit one. A unit develops a focused idea through meaningful, inspectable stages. Shared units may produce a trace, diagram or paper experiment; system-building units produce runnable results.
 
-**No magic numbers.** If a value has meaning, it should be readable. When `22528` appears (the Spectrum's attribute file base address), it is explained once and referenced by purpose thereafter. When `20` appears as a countdown duration, the learner knows what it means and why it was chosen. Constants should be self-evident or documented, never mysterious.
+There are no universal unit durations, fixed code-diff limits or required counts. Keep changes small enough to explain, and split overloaded stages. A richer game can introduce several techniques across an understandable sequence.
 
-**Separation of concerns.** Game logic is separate from display code. Data is separate from the code that reads it. Subroutines handle one responsibility. In BASIC, this means the digit renderer is a GO SUB, not inline code pasted everywhere. In assembly, this means clean interfaces between modules. The principle is the same in every language: code that does one thing is code you can understand, test, and change.
+For each arrival, state the knowledge used and explain enough to proceed. Within a game, continue from the preceding runnable state. Across games, show exactly which files and ideas are reused and where to obtain and understand them. Independent entry does not mean unexplained starter engines.
 
-**Boundary handling.** What happens when the player types 0? Or 101? Or presses a key during the title screen? Every game handles edge cases explicitly, and the curriculum calls out *why*: "What happens if we remove this validation? Try it. Type 200. Now you see why the check exists." Correct behaviour at boundaries is not defensive programming — it is the program working as designed.
+Teach a naive approach before an upgrade when experiencing its limitation makes the upgrade meaningful. Do not manufacture failure or repeat a detour solely to satisfy a formula. Restructuring can itself be a lesson when its purpose and effects are visible.
 
-**Deliberate shortcuts.** Performance constraints on vintage hardware sometimes demand trade-offs: short variable names for speed, unrolled loops, self-modifying code. These are taught as *conscious decisions*, not habits. The curriculum explains what was sacrificed (readability, maintainability) and why (the game needs to run at 50fps). A shortcut without an explanation is not a shortcut — it is a bad habit.
+Offer optional experiments after guided work. Do not introduce pass/fail gates, hints-and-restores systems or gamification without an educational need. Production verification is separate from learner assessment.
 
-**Verifiable correctness.** Every game should have a clear definition of correct behaviour. The learner should be able to answer: "How do I know this works? What would prove it's broken?" In the curriculum, this manifests as:
+## Choosing system projects
 
-- Checkpoints with expected output ("After typing these lines, you should see X")
-- Boundary tests ("Try typing 0. The program should reject it")
-- Before/after comparisons ("Remove line 720. What happens? Now put it back")
+Use [the game brief](brief.md) to compare appeal, teaching value and suitability. Retain, reshape or replace existing ideas on those grounds. Assembly is independent of BASIC; it need not port every BASIC game.
 
-The emulator tooling supports automated verification: loading programs, feeding inputs, and checking outputs against expected results. Every code sample should be verifiable, and the verification should run as part of the content production process.
+Choose projects that reveal each system's character. Compare language design, CPU architecture, memory, graphics, sound, input, storage, timing and bandwidth, and the circumstances behind those choices. Explain what transfers and what changes without assuming the Spectrum came first or portraying another machine as deficient.
 
-### The Craft Progresses
+State the target configuration and development workflow for every game. Read existing model and successor-machine decisions before changing scope. A modern host, emulator or transfer device does not silently change what a stock target can do.
 
-Early games (Foundations) have simple structure — a few sections, a few subroutines, single-letter variables. The learner absorbs the basics: organise your code, name things well, handle the edges.
+## Connections
 
-Later games (Skills, Projects) demand more discipline — multiple subroutines calling each other, arrays managing state, display code separated from logic. The learner experiences why structure matters: because without it, a 300-line program is unmaintainable.
+A useful link explains why to follow it: “The Foundations unit on binary numbers explores how these eight bits represent the row.” Avoid “you will remember”. Supply enough context locally to continue.
 
-Advanced games push into deliberate trade-offs — speed optimisation, machine code helpers, memory management. The learner makes conscious choices about where to sacrifice clarity for performance, and documents those choices.
-
-By the capstone, the learner writes code that is both high-quality *and* performant — not because they never take shortcuts, but because every shortcut is deliberate, documented, and justified. That is the craft of programming.
-
-### Why Games, Not Lessons
-
-The original curriculum model used abstract phases, tiers, and lessons — 4,096 per platform. This produced technically correct but lifeless content: lessons that taught concepts in isolation rather than building toward something the learner cared about.
-
-The games model fixes this. Each platform has a ladder of game modules, each one a real project that a reader would want to play. Concepts are introduced when the game needs them, not in abstract isolation. A learner always knows what they're building and why.
-
-### The No-Repetition Rule (Primary Systems)
-
-Across the four primary platforms (Spectrum, C64, NES, Amiga), no two games share a genre. If the Spectrum has a platformer, no other primary platform does. If the C64 has a shoot 'em up, that genre is taken.
-
-This rule applies strictly to the first four systems. Future systems may repeat genres where the hardware genuinely demands it — a Game Boy platformer teaches different lessons from a Spectrum platformer, and by the time both exist, the curriculum has enough variety that repetition won't feel lazy.
-
-For the primary four, the rule exists because:
-
-1. **Every game teaches something only that platform can teach.** A platformer on the Spectrum (Manic Miner, attribute-based collision) is a fundamentally different lesson from a platformer on the NES (Super Mario Bros, tile-based scrolling). Spending a game slot on a genre another platform already covers wastes the opportunity to teach something unique.
-
-2. **It forces better choices.** The constraint pushes each platform toward the genres that defined it, rather than defaulting to the same safe picks across all four.
-
-### Real Hardware Compatibility
-
-Every game in the curriculum — assembly and BASIC — produces a binary that runs on real hardware. This is not a capstone feature; it is a baseline requirement. If the code assembles, it runs on the machine. The emulators are cycle-accurate specifically so that this guarantee holds.
-
----
-
-## Assembly Track
-
-### A ladder of modules, not a fixed game count
-
-Each core platform's assembly track is a **ladder**: a sequence of game modules where each game
-headlines one new hardware/technique rung and revisits the rest, building from a finishable on-ramp
-to a capstone. The exact games, their order, and the rung each teaches live in the track's **lineup
-decision record** — [spectrum-assembly-gentle-ramp.md](../decisions/spectrum-assembly-gentle-ramp.md),
-[c64-assembly-lineup.md](../decisions/c64-assembly-lineup.md),
-[nes-assembly-lineup.md](../decisions/nes-assembly-lineup.md),
-[amiga-assembly-lineup.md](../decisions/amiga-assembly-lineup.md) — and the **catalogue** is the
-source of truth for what exists.
-
-**Counts are flexible.** There is no fixed games-per-platform or units-per-game number — a game is as
-long as its content and the quality bar require ([modules-not-games.md](../decisions/modules-not-games.md)).
-Pacing is governed by the **technique budget**: each game introduces one new major technique (two at
-most) and revisits the rest.
-
-### The no-repetition rule (core systems)
-
-Across the four core platforms, no two games share a genre — each earns its place by teaching
-something that platform does uniquely (a Spectrum attribute-based platformer is a different lesson
-from an NES tile-scrolling one). Future systems may revisit genres where the hardware teaches
-genuinely different lessons.
-
----
-
-## The Four Platforms
-
-Each platform has a killer feature that defines its teaching focus. The detailed game sequence for each track — the games, their order, and the rung each teaches — lives in the track's **lineup decision record** under `decisions/`, with the catalogue as the source of truth. This section describes what makes each platform worth teaching.
-
-### ZX Spectrum
-
-**Killer feature:** The attribute system — 256 bytes of colour define what the player sees. No other machine makes colour clash a game mechanic.
-
-**Assembly:** a ladder from single-screen maze explorer through scrolling shooters, platformers, and puzzle games to an isometric adventure capstone.
-
-**BASIC:** a track teaching game design from absolute zero through to machine code helpers and autonomous NPCs.
-
-### Commodore 64
-
-**Killer feature:** The SID sound chip (three voices, filters, ring modulation) and hardware sprites. The C64 sounds like no other machine.
-
-**Assembly:** a ladder from sprite-based shooters through scrolling platformers, stealth puzzles, and run-and-gun action to demo-scene-quality capstone.
-
-### Nintendo Entertainment System
-
-**Killer feature:** The PPU — tile-based graphics, hardware scrolling, and a sprite system that makes 52 colours look like millions.
-
-**Assembly:** a ladder from side-scrolling platformers through top-down adventures, Metroidvania exploration, and mapper-based large worlds.
-
-### Commodore Amiga
-
-**Killer feature:** Three custom chips — Agnus (DMA, Copper, Blitter), Denise (video), Paula (audio) — working in concert. The Amiga does things no other 16-bit machine can match.
-
-**Assembly:** a ladder from Blitter-driven terrain puzzles through parallax showcases, pseudo-3D racing, and an OCS-to-AGA capstone.
-
----
-
-## BASIC and High-Level Language Tracks
-
-### Purpose
-
-Some platforms have an accessible high-level language that provides a gentler entry point. These tracks teach both game design and programming fundamentals through complete, playable games.
-
-High-level language games are **not simplified versions of the assembly games.** They are separate projects suited to the language's strengths and the platform's culture. They follow the same game design principles as the assembly track — every game teaches a universal design concept alongside platform-specific programming.
-
-### Which Platforms
-
-Three core platforms run a BASIC track (counts flexible; lineup + state in the record + catalogue):
-
-| Platform | Language | Lineup record | Why |
-|----------|----------|---------------|-----|
-| ZX Spectrum | Sinclair BASIC | [spectrum-basic-lineup.md](../decisions/spectrum-basic-lineup.md) | How everyone started. Type-in listings, magazine culture. |
-| Commodore 64 | BASIC V2 | [c64-basic-volumes-2-4.md](../decisions/c64-basic-volumes-2-4.md) | Stock BASIC reaches the hardware only by POKE/PEEK — memory-mapped I/O made tangible. |
-| Amiga | AMOS / Blitz (peer paths) | [amiga-basic-amos-and-blitz.md](../decisions/amiga-basic-amos-and-blitz.md) | Immediate, hobbyist (AMOS) vs compiled, commercial (Blitz — Worms, Skidmarks). |
-| NES | None | — | No high-level language. Assembly from the start. |
-
-Each track's volumes, games and pacing live in its record; the catalogue is the source of truth.
-
-### Independence Between Tracks
-
-The assembly curriculum assumes no BASIC knowledge. A learner starting at an assembly track's first game should not feel they have missed something by skipping BASIC. The two tracks are independent paths that happen to cover the same platform. A learner who completes both gains reinforcement of the same game design concepts from two different angles.
-
----
-
-## Unit Structure
-
-### Unit Duration and Outcome
-
-Each unit is:
-- **60-120 minutes** of focused work
-- **Self-contained** — produces a working, runnable result
-- **Incremental** — builds on the previous unit's code
-
-The learner never types for an hour only to see an error message. Every unit ends with something that works, even if incomplete.
-
-### Unit Naming
-
-A unit is identified by its **track + module slug + unit number** — modules carry bare slugs, never a
-`game-NN-` prefix or a fixed game number ([modules-not-games.md](../decisions/modules-not-games.md)).
-
-**Path / identity:** `<platform>/<track>/<module-slug>/unit-NN`
-- Example: `sinclair-zx-spectrum/assembly/gloaming/unit-03`
-
-**Reference in Pattern Library / Vault:** name the module and unit
-- "Introduced in Gloaming (Spectrum assembly), Unit 3"
-
----
-
-## Pedagogical Approach
-
-The teaching style is modelled on 1980s British programming books: Usborne, INPUT magazine, the Home Computer Course. These materials taught through complete programs with rich visual annotation. The program was the lesson.
-
-### Program-First Teaching
-
-Every unit centres on a working program. Concepts are introduced when the program needs them, not in abstract isolation.
-
-**Not this:**
-> "Now we will learn about collision detection. Collision detection determines when two objects overlap..."
-
-**This:**
-> "The player needs to know when they've hit a wall. Here's how we check whether the next tile is solid..."
-
-### Visual Density
-
-Units are visually rich:
-- Screenshots of expected output at each checkpoint
-- The finished result shown before the learner types a line
-- Diagrams where they clarify (memory maps, screen layouts)
-- Code surrounded by explanation, not buried in prose
-
-The learner should be able to flip through a unit and immediately understand what they're building.
-
-### Wonder-First Framing
-
-Lead with what's exciting, not what's technically accurate.
-
-**Not this:**
-> "This lesson covers the SID chip's ADSR envelope registers."
-
-**This:**
-> "Let's make the SID sing. By the end of this unit, pressing a key will play a note."
-
-Technical accuracy matters, but it serves the wonder, not the other way around.
-
-### Single-Session Completion
-
-Each unit produces a working result in one sitting. The learner should never:
-- Stop mid-unit with broken code
-- Wait until "next time" to see something run
-- Type for an hour only to see an error
-
-If a unit cannot be completed in 60-120 minutes, it is too big. Split it.
-
----
-
-## Voice and Tone
-
-### The Magazine Voice
-
-The framing borrows from 1980s British gaming magazines — Your Sinclair, ZZAP!64, Crash. Irreverent, enthusiastic, occasionally conspiratorial. The reader is a co-conspirator, not a student.
-
-**Not this:**
-> "In this unit, you will learn to configure the VIC-II sprite registers."
-
-**This:**
-> "Don't panic. The BASIC stub is just a magic incantation that launches our machine code. Type it exactly, and we'll explain what it's doing once we're safely in assembly land."
-
-The instruction itself remains precise and thorough. The irreverence is in the framing, not the technical content.
-
-### Honesty About Difficulty
-
-Some things are hard. Say so.
-
-> "Calculating row × 40 in 6502 is a faff. There's no multiply instruction, so we'll use a lookup table. It's not elegant, but it's fast."
-
-Don't pretend everything is easy. Don't apologise for difficulty either. Just acknowledge it and move on.
-
-### British English
-
-Use British spelling throughout:
-- colour, grey, centre, organise, learnt
-
-**Exception:** "program" for computer programs (not "programme").
-
-### What to Avoid
-
-- Marketing speak ("amazing", "incredible", "revolutionary")
-- Excessive exclamation marks
-- Condescension ("As you can see...", "Simply...", "Just...")
-- Apologies for the platform ("Unfortunately, the C64 can only...")
-- Forced nostalgia ("Back in the day...", "Remember when...")
-
----
-
-## Standalone Technique Examples
-
-Some techniques benefit from isolated demonstration before integration into a game. The `techniques/` directory provides minimal, focused examples.
-
-### The Three-Level Model
-
-```
-Unit (game context)          → "Why do I need this? How does it fit?"
-Standalone (isolated demo)   → "How does this technique work on its own?"
-Pattern Library (reference)  → "Give me production-ready code to copy"
-```
-
-Each level serves a different purpose:
-- **Units** teach techniques within game context (game-first pedagogy)
-- **Standalone demos** provide isolated reference (50-100 lines, just the technique)
-- **Patterns** provide optimised, production-ready implementations
-
-### When to Create Standalone Demos
-
-Create a standalone demo when a technique:
-- Is complex enough that seeing it in isolation aids understanding
-- Will be reused across multiple games
-- Is a likely Pattern Library candidate
-- Benefits from experimentation outside game context
-
-**Not everything needs a standalone demo.** Simple techniques (reading a joystick, playing a sound effect) are better taught purely in game context.
-
-### Standalone Demo Requirements
-
-A standalone demo should:
-- Be **minimal** — 50-100 lines, absolute maximum 150
-- Be **complete** — compile and run without dependencies
-- Be **focused** — demonstrate exactly one technique
-- **Include comments** — enough to understand without the unit
-- **Produce visible output** — show that it works
-
-Example header:
-```asm
-; =============================================================================
-; SPRITE MULTIPLEXING - STANDALONE DEMO
-; Demonstrates displaying >8 sprites using raster interrupts
-; Full tutorial: Hornet (C64 assembly, sprite multiplexing), Unit 8
-; =============================================================================
-```
-
----
-
-## Integration with Vault and Pattern Library
-
-Units don't exist in isolation. They link to the Vault for context and the Pattern Library for reusable code.
-
-### The Vault
-
-The Vault is an encyclopedia of people, companies, games, techniques, hardware, events, and culture. Units link to Vault entries when context enriches understanding.
-
-**Inline links:**
-> "This sprite multiplexing technique was pioneered by [Andrew Braybrook](/vault/people/andrew-braybrook) in [Uridium](/vault/games/uridium)."
-
-**When to link:**
-- The person/game/technique is directly relevant to what's being built
-- The link adds context the learner might want to explore
-- The reference is specific, not generic
-
-**When not to link:**
-- Every unit mentioning sprites doesn't need a VIC-II link
-- Forced connections ("This was released the same year as...")
-- Links that interrupt the flow of instruction
-
-### The Pattern Library
-
-The Pattern Library contains production-ready code patterns. Units teach concepts; patterns provide copy-paste implementations.
-
-**Reference format:**
-> "For a complete, optimised implementation, see [Sprite Multiplexing (Basic)](/patterns/c64/rendering/sprite-multiplexing-basic)."
-
-**Pattern evolution:**
-Patterns exist at multiple complexity levels. Reference the appropriate version:
-- "C64-01-03 introduces the basic pattern"
-- "C64-03-05 covers the optimised version"
-
-Units introduce techniques. Patterns provide the reference implementation. The Vault provides the history.
-
----
-
-## Scaling to Future Systems
-
-The four core platforms each run an assembly ladder; future systems follow the same model, with a
-ladder **as long as the hardware's depth warrants** — a shorter ladder for simpler machines (ZX81,
-VIC-20, Atari 2600), a fuller one for richer ones (Mega Drive, Atari ST, Game Boy, BBC Micro), longer
-still where a platform has unusual depth or multiple distinct modes. The length falls out of the
-content and the technique budget, not a fixed number.
-
-Future platforms may revisit genres already used by the core four where the hardware teaches genuinely different lessons. A Game Boy platformer and a Spectrum platformer are different enough to coexist — the constraint is about avoiding lazy repetition, not mechanical enforcement.
-
-BASIC gateway tracks are added only when the platform has a historically significant high-level language (BBC BASIC, MSX BASIC, etc.).
-
----
-
-## Where the game details live
-
-This specification defines how curricula work. The actual game details live in three layers:
-
-- **State (what exists, in what order):** the **catalogue** — `website/src/content/modules/<platform>/<track>.yaml`. Authoritative ([state-lives-in-catalogues.md](../decisions/state-lives-in-catalogues.md)).
-- **Lineup + rationale (the games, the ladder, the rung each teaches):** the per-track **lineup decision record** under `decisions/` (e.g. `spectrum-assembly-gentle-ramp.md`, `c64-assembly-lineup.md`, `nes-assembly-lineup.md`, `amiga-assembly-lineup.md`, and the three BASIC records).
-- **Per-game design:** the **briefs** under `platforms/<system>/games/<slug>/`, plus the per-system `reference.md` / `language/` for hardware and language facts.
-
----
-
-## Version History
-
-- **5.0 (2026-06-10):** Architecture corrected to the current model. Retired the fixed "sixteen games per platform", the 128/256/512-unit tiers, 16-unit phases, and `Game N` / `SPEC-01-03` naming. Tracks are now ladders of modules (counts flexible) recorded in per-track lineup decisions; state lives in the catalogue; bare module slugs. The philosophy (design concepts, craft, pedagogy, voice, three-level model, no-repetition, hardware compatibility) is unchanged.
-- **4.1 (2026-03-18):** Added Programming Craft section: code quality principles (clear structure, meaningful names, no magic numbers, separation of concerns, boundary handling, deliberate shortcuts, verifiable correctness) and craft progression from Foundations through capstone. Code samples are models of good practice, not throwaway examples.
-- **4.0 (2026-03-18):** Game design as the primary subject. Core design concepts table. "Graphics from Day One" rule. Cross-platform design concept framework. Every game teaches both design and programming.
-- **3.0 (2026-03-09):** Major restructure. Introduced no-repetition rule across platforms. Every game inspired by a real commercial release. Real hardware compatibility made a baseline requirement, not a capstone feature.
-- **2.1 (2026-01-19):** Added Standalone Technique Examples section (three-level model: units → standalone demos → patterns).
-- **2.0 (2025-11-25):** Complete rewrite. Replaced phases/tiers/lessons model with games model.
-- **1.0 (2025-01-15):** Original specification using 4,096 lessons per platform.
+Lessons guide building; shared subjects develop concepts; the Vault gives fuller context; patterns make techniques reusable. Link in both directions where useful. Do not duplicate canonical explanations or turn the lesson into a list of compulsory excursions.

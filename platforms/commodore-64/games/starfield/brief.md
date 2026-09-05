@@ -1,9 +1,11 @@
 # Starfield — Brief
 
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
 **Title (working):** Starfield
 **System / Track:** Commodore 64 / assembly
-**Position:** Rung 0 — the first game after the *Meet the Machine* primer, sharing rung 0 (char/screen + colour memory) with it. See [c64-assembly-lineup.md](../../../../decisions/c64-assembly-lineup.md); the two shipped anchors are locked.
-**Scope:** 18 units across two phases; counts illustrative, not a target (per [curriculum-structure.md](../../../../decisions/curriculum-structure.md)).
+**Position:** Rung 0 — the first game after the *Meet the Machine* primer, sharing rung 0 (char/screen + colour memory) with it. This is the existing position; assess it using the [system design guidance](../../../README.md).
+**Scope:** 18 units across two phases; counts illustrative, not a target (per [Curriculum design](../../../../specifications/curriculum.md)).
 **Constraint position:** period-faithful — see Section 5.
 **Status:** active — written retrospectively and approved 2026-07-26. Records the game as shipped (units 1–17) and the summit designed for unit 18.
 
@@ -100,7 +102,7 @@ Title screen with its jingle and a fire debounce (`ui_lock`), so a held button c
 
 ## Section 12: Ship Test (Multi-axis)
 
-Per phase, all five axes. Verification is emulator-based; real-hardware verification is suspended per [commercial-bar-revamp.md](../../../../decisions/commercial-bar-revamp.md).
+Per phase, all five axes. These checks use an emulator. Record its version and configuration, and report hardware verification separately.
 
 **Ignition**
 
@@ -144,22 +146,16 @@ All of these resolve today.
 
 ## Optional: Risks
 
-1. **The summit changes a shipped game.** *Mitigation:* never-regress — Starfield stays `complete` in the catalogue until the rebuilt program provably passes both the winnability gate and the Definition of Done, per [endpoint-first-authoring.md](../../../../decisions/endpoint-first-authoring.md) as amended 2026-07-01.
+1. **The summit changes a shipped game.** *Mitigation:* never-regress — preserve the working published version while verifying a replacement against the agreed brief; keep catalogue status accurate, following the [content workflow](../../../../specifications/content-creation-workflow.md).
 2. **The captures are blocked on tooling.** The win and loss runs need Emu198x built, and no binaries exist locally. The design does not depend on their outcome, but the gate cannot close until they run.
 3. **Nine waves is a long run to script.** *Mitigation:* the gate permits engineered setups, so the win script pokes `wave` and `remaining` instead of playing out ninety kills.
 
 ## Anchored In
 
-- [c64-assembly-lineup.md](../../../../decisions/c64-assembly-lineup.md) — rung and lineup position; the shipped anchors are locked.
-- [commercial-bar-revamp.md](../../../../decisions/commercial-bar-revamp.md) — the Definition of Done and the per-game winnability gate.
-- [a-game-needs-jeopardy.md](../../../../decisions/a-game-needs-jeopardy.md) — a fail state is constitutive; the mirror of the gap this brief closes.
-- [constraint-position.md](../../../../decisions/constraint-position.md) — period-faithful, period-possible, modern scene.
-- [incremental-construction-units.md](../../../../decisions/incremental-construction-units.md) — the cumulative `steps/` format unit 18 is built to.
-- [october-2026-launch-spec.md](../../../../decisions/october-2026-launch-spec.md) — Starfield as half of the C64 finishable bar.
+- [System design material](../../../README.md) — how to review the existing position.
+- [Code198x: purpose and direction](../../../../PROJECT.md) — current goals and scope-relative quality.
+- [Current game quality requirements](../../../../PROJECT.md) — a fail state is constitutive; the mirror of the gap this brief closes.
+- [Game brief](../../../../specifications/brief.md) — runtime configuration, tools, evidence and historical comparisons.
+- [Unit specification](../../../../specifications/unit.md) — the cumulative `steps/` format unit 18 is built to.
+- [Code198x: purpose and direction](../../../../PROJECT.md) — the wider curriculum and independent system entry points.
 - [design-stress-2026-07-05.md](design-stress-2026-07-05.md) — the adversarial pass that found the game unlosable, and whose repairs landed in unit 17.
-
-## Changelog
-
-| Date | Change |
-|---|---|
-| 2026-07-26 | Written retrospectively. Records the game as shipped through unit 17 and the summit designed for unit 18 — wave 9 as a finite cohort, cleared by kills, ending in `ALL CLEAR`. Fills the gap the launch-readiness review found: Starfield shipped `complete` with no brief, so its win condition had no canonical home and its absence went unnoticed until the winnability gate was audited. |
