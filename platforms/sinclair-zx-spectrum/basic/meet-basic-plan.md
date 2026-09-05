@@ -1,6 +1,6 @@
 # Meet BASIC: lesson and source mapping
 
-**Status: implementation plan for the [agreed module direction](meet-basic.md). A1–A4 are published with verified sample checkpoints. This complete Story Builder arc uses Emu198x v0.22.0; the remaining arcs are not yet implemented.**
+**Status: implementation plan for the [agreed module direction](meet-basic.md). A1–A4 are published with verified sample checkpoints. This complete Story Builder arc uses Emu198x v0.22.0; B1/B2 are drafted for review; the rest is not yet implemented.**
 
 The four arcs are agreed. The lesson boundaries below are a concrete authoring plan, adjustable when source development or reader testing reveals an overloaded step. The fifteen working lessons are not a required count. This plan replaces the combined progression of feature demonstrations followed by substantially repeated early projects; it does not append another course to them.
 
@@ -250,9 +250,29 @@ public Apple silicon archive is identical to the package used for the 74 checks.
 The lesson deployment and emulator downloads-page refresh completed on 5 September
 2026. The old reference URLs remain available through the redirects below.
 
-Continue with Lucky Number, Oracle Stone and the movement experiment. Resolve
-lesson boundaries against observed teaching load; four published opening units
-do not declare the whole planned module complete.
+**B1/B2 are drafted as units 5 and 6**, with three complete checkpoints each:
+[website PR #415](https://github.com/code198x/website/pull/415) and
+[sample PR #7](https://github.com/code198x/code-samples/pull/7). They use a known
+secret of 7, add lower/equal/higher clues, then a repeat loop, count and validation.
+Separate range checks keep the first validation readable without also teaching
+`OR`; `INT` is introduced locally. The rejection handler requires an explicit
+`STOP` after success so execution cannot fall into it.
+
+All 60 checkpoint/tape checks and 12 experiment checks passed on the released
+Apple silicon v0.22.0 emulator through MCP. Source hashes and observed screen rows
+are committed with the samples. The website build, all 78 tests and desktop/mobile
+light/dark checks passed locally with the companion sources. Draft navigation uses
+the canonical `unit-05-give-a-useful-clue` and `unit-06-keep-guessing` routes.
+These are not published; reader review and publication dates remain pending.
+
+Host Keyboard v0.22.0 does not expose every keyword chord. The lessons explain
+brief Original Keyboard switches for `THEN`, `<>`, `INT` and `STOP`. The chords
+were ROM-tested and native mappings source-checked; native reader acceptance is
+still needed. No emulator execution blocker was found.
+
+Review B1/B2, then develop B3/B4: random secrets, feedback and another round.
+Oracle Stone and the movement experiment follow. Resolve lesson boundaries against
+observed teaching load; six authored units do not declare the whole module complete.
 
 ## Opening release routes
 
