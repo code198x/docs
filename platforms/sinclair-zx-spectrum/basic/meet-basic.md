@@ -49,7 +49,7 @@ The shorter projects remain valuable on their own. Their treatment here does not
 
 ## Teaching responsibilities and connections
 
-Explain unfamiliar terms and syntax where they first matter. A beginner arriving directly must be able to follow the example without leaving to acquire its essential explanation. Use selective links to Foundations for deeper treatments of variables, decisions, repetition, routines and debugging. Inspect its actual pseudocode lessons rather than implying that readers have already learnt Sinclair syntax there.
+Explain unfamiliar terms and syntax where they first matter. A beginner arriving directly must be able to follow the example without leaving to acquire its essential explanation. Use selective links to Foundations for deeper treatments of variables, decisions, repetition, routines and debugging. The [Foundations connection map](meet-basic-plan.md#foundations-connections) names the relevant authored units, the reason to link and the explanation that must stay local. Inspect its actual pseudocode lessons rather than implying that readers have already learnt Sinclair syntax there.
 
 Use maths in the service of the program: number ranges, comparisons, counting and row/column positions. Use The Craft for deeper questions about clues, anticipation, feedback and responsiveness when those explanations exist. Planned shared units cannot carry missing instructions.
 
