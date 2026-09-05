@@ -6,7 +6,7 @@
 > [`brief.md`](brief.md) (with its §10 reshape contract), the fifteen-round
 > [`prototype-log.md`](prototype-log.md), and the proven prototype
 > (`code-samples/.../gloaming/prototype/gloaming.asm`, gate suite in `prototype/capture/`).
-> The existing design uses one game across two modules; its future position is subject to the [sequence review](../../curriculum-review.md). This is the per-unit **outline** —
+> The existing design uses one game across two modules; its future position is subject to the [sequence review](../../../../work.md#spectrum-sequences). This is the per-unit **outline** —
 > headlines, the one idea, the primitive, and the confession each unit carries. Prose,
 > listings, and captures are the authoring step.
 

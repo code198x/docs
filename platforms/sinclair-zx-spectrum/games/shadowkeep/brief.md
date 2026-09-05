@@ -7,12 +7,12 @@
 **Title (working):** Shadowkeep
 **System / Track:** ZX Spectrum / Assembly
 **Position:** The second game of the assembly track, after *Gloaming* (the tiny first game) and the *Meet the Machine* Primer.
-**Module model:** Shadowkeep is a **game taught across several modules** ([Content model](../../../../specifications/content-model.md)). This brief covers **pass 1 — _the Place_**: a complete, finishable cell-based keep. Later content (inhabitants, identity, items, multiple keeps) becomes **later revisit modules**, not part of this pass.
+**Module model:** Shadowkeep is a **game taught across several modules** ([Content model](../../../../website.md#content-and-navigation)). This brief covers **pass 1 — _the Place_**: a complete, finishable cell-based keep. Later content (inhabitants, identity, items, multiple keeps) becomes **later revisit modules**, not part of this pass.
 **Headline (design concept):** *Atmosphere (Sense of Place)*
 **Engine:** carries **Gloaming's engine** wholesale — cell-snapped movement, single-draw sprites with save/restore, attribute-coupled collision, a frame-locked loop, a title→play→win state machine. The Place adds *content and atmosphere*, not a new engine.
 **Counts:** illustrative, never targets ([Curriculum design](../../../../specifications/curriculum.md)). Pass 1 ran to ~16 units across four sub-arcs.
 
-Formal spec format: [docs/specifications/brief.md](../../../../specifications/brief.md). Companion docs in this folder: [per-unit-plan.md](per-unit-plan.md) (the canonical per-unit reference) and [beeper-spec.md](beeper-spec.md) (the title-theme composition spec, for sub-arc 1.4). Earlier engine-first specifications remain in Git history. Their proposed techniques need reassessment against the [current sequence review](../../curriculum-review.md).
+Formal spec format: [docs/specifications/brief.md](../../../../specifications/brief.md). Companion docs in this folder: [per-unit-plan.md](per-unit-plan.md) (the canonical per-unit reference) and [beeper-spec.md](beeper-spec.md) (the title-theme composition spec, for sub-arc 1.4). Earlier engine-first specifications remain in Git history. Their proposed techniques need reassessment against the [current sequence review](../../../../work.md#spectrum-sequences).
 
 ---
 
@@ -126,7 +126,7 @@ Options (sound on/off, control remap) and richer endings belong to later revisit
 
 ## 10. Anti-goals
 
-- **No combat, no weapons.** The hooded thief is a stealth intruder; design is explore-and-avoid. Combat lives in V3.20 Edge of Iron; action-RPG in V1.6 Embergate. The scope of other games will be assessed in the [sequence review](../../curriculum-review.md).
+- **No combat, no weapons.** The hooded thief is a stealth intruder; design is explore-and-avoid. Combat lives in V3.20 Edge of Iron; action-RPG in V1.6 Embergate. The scope of other games will be assessed in the [sequence review](../../../../work.md#spectrum-sequences).
 - **No character classes, no parser/quest/branching narrative, no full Singleton-class location-graph.** V1.6 Embergate / V1.7 The Lantern Path / V1.4 Whitewinter respectively.
 - **No pre-shifted/masked sprites, no Y-sort, no isometric, no decoupled tile-collision** — these are the *relocated* rendering techniques (Smooth Motion / Overlap / Greypeak). The Place stays cell-based on purpose.
 - **No software pixel scrolling** (V3 entries); **no procedural generation** (every room hand-designed); **no modern-scene tricks** (period-faithful).

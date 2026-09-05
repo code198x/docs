@@ -1,6 +1,6 @@
 # Unit specification
 
-A unit gives a focused explanation and a meaningful result within a guided sequence. Apply [curriculum design](curriculum.md) and [writing voice](writing-voice.md); use [the content model](content-model.md) for paths and schema.
+A unit gives a focused explanation and a meaningful result within a guided sequence. Apply [curriculum design](curriculum.md) and [writing voice](writing-voice.md); use [the content model](../website.md#content-and-navigation) for paths and schema.
 
 ## Teaching shape
 
@@ -39,7 +39,7 @@ A unit's size follows its teaching load, not a fixed line count or duration. Exp
 
 ## Media and execution
 
-Use [capture manifests](../infrastructure/media-capture-pipeline.md) where the supported tooling permits. Keep the input sequence and initial state reproducible. Distinguish a cold boot or real tape load from direct program injection or a snapshot. If setup writes alter game state, record them; never present that setup as an ordinary playthrough.
+Use [capture manifests](../website.md#capture-and-execution) where the supported tooling permits. Keep the input sequence and initial state reproducible. Distinguish a cold boot or real tape load from direct program injection or a snapshot. If setup writes alter game state, record them; never present that setup as an ordinary playthrough.
 
 Inspect screenshots at their displayed size. Use video or interaction checks for movement, timing and input. Listen to sound examples. Captions describe the observed state and why it matters. Provide readable alternatives where information would otherwise depend only on colour or sound.
 

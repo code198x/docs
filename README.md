@@ -1,21 +1,27 @@
 # Code198x documentation
 
-Code198x is a games development and programming curriculum built around understanding vintage machines and using that understanding to create.
+Start with **[PROJECT.md](PROJECT.md)** for the goals, audience, scope and teaching principles. This README is the documentation index. [Current work](work.md) identifies the next bounded tasks and proposals; it does not redefine project policy.
 
-Start with **[Project purpose and direction](PROJECT.md)**. It is the current statement of goals, audience, scope and teaching principles. [The documentation index](index.md) routes work to the practical specifications.
+## Teaching and authoring
 
-The immediate curriculum focus is re-specifying the ZX Spectrum BASIC and assembly sequences. Existing projects are evidence to inspect; new lineups and lesson specifications require agreement before authoring.
+| Guide | Responsibility |
+|---|---|
+| [Curriculum design](specifications/curriculum.md) | Shared subjects, progression, independent entry and checks for understanding |
+| [Game brief](specifications/brief.md) | The experience, target, teaching, runnable stages and verification of one game |
+| [Unit](specifications/unit.md) | Guided construction, local explanations, questions and publishing checks |
+| [Content workflow](specifications/content-creation-workflow.md) | Research, agreement, prototyping, authoring and verification |
+| [Writing voice](specifications/writing-voice.md) | Clear British English, audience and responsible historical treatment |
+| [Pseudocode](specifications/pseudocode.md) | Shared explanatory notation |
+| [Graphics and audio](specifications/graphics-and-audio.md) | Creating, preparing and integrating assets |
+| [Vault](specifications/vault.md) | Sourced encyclopaedic context |
+| [Pattern Library](specifications/pattern-library.md) | Adaptable implementations and their contracts |
 
-## Where things live
+[Website and publishing](website.md) connects these specifications to the current schemas, source organisation, capture, testing and deployment. [Game-design material](platforms/README.md) lists the concrete existing designs worth consulting during re-specification.
 
-- This repository owns the charter, curriculum and editorial specifications, workflows and system design material.
-- The [website repository](https://github.com/code198x/website) owns the public site, lessons, catalogues, Vault and Pattern Library.
-- The [code-samples repository](https://github.com/code198x/code-samples) owns runnable sources, assets and verification inputs.
+## Ownership and maintenance
 
-Catalogues, content and code establish implemented state. Planning prose does not. See [Content model](specifications/content-model.md).
+The [website](https://github.com/code198x/website) owns public lessons, catalogues and components. [Code samples](https://github.com/code198x/code-samples) owns runnable sources, assets and verification recipes. Those files establish implementation state; plans and prose counts do not.
 
-## Maintaining the documentation
+Keep one explanation for each responsibility. Update current guidance when a decision changes, remove completed working notes, and preserve superseded material in Git history. Do not keep old site mock-ups, parallel hardware summaries, sibling roadmaps or past implementation handoffs in the active documentation tree.
 
-Edit the current guidance when a decision changes. Keep one authoritative explanation for each responsibility and link to it. Git history preserves superseded policy; contributors should not have to reconstruct today's rules from old decisions.
-
-Existing system briefs and plans are identified as design material pending reconciliation. They preserve concrete game and implementation knowledge, not an alternative curriculum policy. Their index is [System design material](platforms/README.md).
+[PRINCIPLES.md](PRINCIPLES.md) and [MANIFESTO.md](MANIFESTO.md) are inherited family documents, maintained at family level. [AGENTS.md](AGENTS.md) contains repository working instructions; `CLAUDE.md` points to it. These have distinct roles and are not competing project charters.
