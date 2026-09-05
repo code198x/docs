@@ -83,6 +83,14 @@ LET x = double(5)                    use what it hands back
 
 LET secret = RANDOM 1 TO 10          a value you cannot predict
 
+SHOW 7 / 2                           3.5, the whole answer
+SHOW ROUND DOWN (7 / 2)              3, how many whole ones fit
+SHOW 7 REMAINDER 2                   1, the part left over
+SHOW ROUND 3.7                       4, the nearest whole number
+
+SHOW CODE "A"                        65, the number a character is stored as
+SHOW CHARACTER 65                    A, the other way round
+
 SHOW BIN 1111                        a number written in binary
 SHOW HEX FF                          a number written in hex
 a BITAND b   a BITOR b   a BITXOR b  the bit tools, column by column
@@ -120,6 +128,16 @@ Notes on the choices:
   number back. They are different operations and the old Numbers & Bits unit had to
   spend a section warning that Sinclair BASIC spells them the same; naming them apart
   turns that warning into the point.
+- **Division says what it does with the leftover.** The grammar had `/` and never said
+  what `7 / 2` gives, while Numbers & Bits already leaned on whole-number division to
+  explain a right shift. `/` gives the whole answer, `ROUND DOWN` gives how many fit,
+  `REMAINDER` gives what is left, and `ROUND` goes to the nearest. A remainder of nought is
+  how a program spots every second or every fourth thing, which is why this is not an
+  advanced topic.
+- **`CODE` and `CHARACTER` cross between a letter and its number.** A byte holds a number,
+  so a character is a number too, and which number is an agreement rather than a fact. The
+  pair also carries the trap that `"7"` is 55, which is the same confusion behind the
+  arithmetic unit's `75` instead of `12`.
 - **`BIN` and `HEX` write a number in a base.** Numbers & Bits needs to put a binary
   number on the page and ask what it comes to, which is the one thing its Sinclair BASIC
   was doing. `BIN` keeps BASIC's word, on the same grounds as `LET` and `FOR`: it was
