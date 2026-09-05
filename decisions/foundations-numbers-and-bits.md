@@ -40,7 +40,7 @@ up. See [foundations-is-language-neutral.md](foundations-is-language-neutral.md)
 - **Concreteness — pseudocode alone.** Superseded 2026-09-04: this record used to
   specify a concrete vehicle, Sinclair BASIC, on the grounds that the subtrack sat on the
   assembly arm where a chosen machine cost the learner nothing. It does not sit there, and
-  the vehicle is gone. Reading the six units settled it — every listing was one line of
+  the vehicle is gone. Reading the whole track settled it — every listing was one line of
   `PRINT` with an expression after it, while the explanations lived in truth tables and bit
   columns. The pseudocode grammar gained `BIN`, `HEX`, the `BIT*` operators and the shifts,
   so it now writes what these units teach; Sinclair BASIC could not write a hex literal at
@@ -69,11 +69,17 @@ Number systems first, then the bit logic that operates on them:
 5. **Shifting** — sliding bits left and right, and why that is multiplying and
    dividing by two.
 
-**Extended at build (2026-06-30) with a sixth unit — "Numbers That Aren't Whole"** —
-taking the number story from integers to fractions: floating-point vs fixed-point, with
-the contrast (and why games chose fixed-point) as the spine. A deliberate extension of the
-architecture's integers-only scope, kept **conceptual** — the bit-layout and the
-implementation (8.8/16.16, the shifts) stay in the machine courses.
+**Extended at build (2026-06-30) with fractions**, taking the number story from integers
+onwards: a deliberate extension of the architecture's integers-only scope, kept
+**conceptual** — the bit-layout and the implementation (8.8/16.16, the shifts) stay in the
+machine courses.
+
+**Split in two on 2026-09-05.** One unit carrying both schemes ran to 935 words against a
+track averaging around 600, and the two halves are a problem and its answer rather than one
+idea: unit 6 lets the point float and finds it approximate and, on these machines, slow;
+unit 7 nails it down and gets the fast arithmetic back. The split also gave fixed-point room
+for what it costs you and how to choose a scale, which had been compressed into
+troubleshooting bullets.
 
 ## Drift triggers
 

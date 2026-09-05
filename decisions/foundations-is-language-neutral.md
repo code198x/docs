@@ -84,7 +84,7 @@ plainly who needs it, and a reader who wants to start a game on day one can.
 
 ## Numbers & Bits goes to pseudocode too
 
-Settled after reading the six units. The vehicle goes, for the same reason it went from
+Settled after reading the whole track. The vehicle goes, for the same reason it went from
 General Programming, and the reading made the case stronger than the argument did.
 
 Every BASIC snippet in the track is one line, and every one of them is `PRINT` with an
