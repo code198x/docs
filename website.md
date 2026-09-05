@@ -50,7 +50,7 @@ Graphical material should earn its place: show a real result, explain a represen
 
 Include maintained executable listings through `CodeFromFile`. Source paths generally follow `{system}/{track}/{module}/unit-NN/`. Check the component’s language detection when adding a dialect. Pseudocode and labelled schematic fragments can remain in MDX.
 
-Keep meaningful intermediate states using the sample repository’s existing `steps/` convention where appropriate, and use `CodeDiff` to explain changes. There is no fixed line quota. Explain supplied routines and assets before readers depend on them; provide their contracts and provenance.
+Keep meaningful intermediate states using the sample repository’s existing `steps/` convention where appropriate. Follow [the unit guidance on showing changes](specifications/unit.md#showing-changes): explicit editing instructions and ordinary code in introductory lessons, with complete short checkpoints; diffs are optional comparisons after their notation has been explained. There is no fixed line quota. Explain supplied routines and assets before readers depend on them; provide their contracts and provenance.
 
 The website’s `scripts/build-artefacts.sh` builds and stages downloads. Source Makefiles and capture manifests specify individual builds. Record tool versions and target configuration when reporting validation. Keep reproducible source in Git and publish generated outputs through the build path; remove existing tracked binaries only after verifying equivalent builds and downloads.
 

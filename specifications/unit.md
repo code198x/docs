@@ -31,7 +31,17 @@ Check worked answers against the stated pseudocode or target program, and verify
 
 ## Continuity
 
-Keep complete runnable states in the sample repository and show focused changes with `CodeDiff` where appropriate. `CodeFromFile` supplies an inspectable full state. Use named `steps/step-NN` files when a unit has multiple runnable stages.
+Keep complete runnable states in the sample repository. `CodeFromFile` supplies an inspectable full state. Use named `steps/step-NN` files when a unit has multiple runnable stages.
+
+### Showing changes
+
+In introductory lessons, state the editing action explicitly: “Replace line 10”, “Add lines 30, 40 and 50”, or name the routine and the exact insertion point. Show ordinary code containing exactly what to enter, without diff markers or deleted code. Explain deletions separately. In BASIC, distinguish the program's line numbers from positions in a source file; avoid adding a second set of numbers beside the listing.
+
+While programs are short, show the complete listing at each runnable checkpoint and identify which lines to enter or replace. A separate changed-lines block is useful only when it makes the action clearer; do not duplicate every short listing mechanically. Follow the change with an expected result and a purposeful prediction or experiment.
+
+As programs grow, show the changed routine or a focused excerpt with enough context and precise placement instructions, and provide the complete source separately. Keep excerpts tied to maintained samples so they agree with the runnable state.
+
+Do not use `CodeDiff` as the required editing instructions in introductory lessons. Reserve diffs for optional comparisons after explaining their notation, or for lessons that teach tools such as version control. The essential building sequence must remain understandable without reading a diff.
 
 Do not hide essential implementation in unexplained starter code. When reusing files from a previous game, name them, explain their contracts and provide a clear route to understanding them. Restructuring should be motivated and taught as a visible change.
 
