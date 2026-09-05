@@ -45,7 +45,7 @@ topic either: every `IF` anyone writes in any language is truth-functional reaso
 | Counting in Twos | `counting-in-twos` | binary, hex, two bytes, two's complement |
 | Working the Bits | `working-the-bits` | the bit tools, shifting, character codes, floating- and fixed-point |
 | Gates and the Adder | `gates-and-the-adder` | the same tables as circuits, then the adder |
-| From Source to Silicon | `from-source-to-silicon` | text against numbers, the interpreter's cost, building an assembler, the price of speed |
+| From Source to Silicon | `from-source-to-silicon` | text against numbers, the interpreter's cost, building an assembler, the price of speed, put it on the clock |
 
 **Built 2026-09-05.** This is the shape as shipped, which differs from the first draft of
 this table in two places. Working It Out is its own module rather than the back of The

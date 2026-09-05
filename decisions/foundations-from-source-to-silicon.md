@@ -1,19 +1,24 @@
-# Decision: From Source to Silicon is four units of pseudocode, and the clock moves to the machine
+# Decision: From Source to Silicon is five units of pseudocode, and the clock moves to the machine
 
 **Status:** ACCEPTED — 2026-09-05. Builds the last Foundations module. Amends the seven-unit
 sketch that lived in the module folder as `UNIT-BREAKDOWN.md`, now deleted.
 
 ## The decision
 
-**Four units, in the same pseudocode as the rest of the shelf.** The program is not what
+**Five units, in the same pseudocode as the rest of the shelf.** The program is not what
 runs; translating as you go; translating once, in which the reader builds an assembler out
-of two lists and a loop; what speed costs you.
+of two lists and a loop; what speed costs you; put it on the clock. The last two were one
+unit at first, a bill of three costs with the send-off tacked on its end. The send-off is
+where the module has been heading, so it is a unit of its own: what speed buys, and the
+measurement pseudocode cannot make.
 
 **The timed demonstration leaves the module.** The sketch's device was "the idea twice —
 shape, then timed in Sinclair BASIC", and two of its seven units were empirical: put a
 near-empty loop on a frame counter and watch the time climb. Pseudocode has no clock. Those
-units go to the machine tracks, where the clock is real, as one unit per machine: *the same
-thousand, three ways*, timed. That unit is filed, not built.
+units go to the machine tracks, where the clock is real, as one unit per machine in *Meet
+Assembly*: *the same thousand, three ways*, timed. That unit is filed, not built. The
+hand-off names Meet the Machine for the briefing and the clock, and Meet Assembly for the
+table, which is the distinction the architecture record's drift trigger exists to keep.
 
 **Requires `structure` and `counting-in-twos`**, not `working-the-bits`. The toy assembler
 uses lists; the numbers a processor runs are the ones from Counting in Twos. Nothing here
@@ -36,7 +41,7 @@ the assembler is eight lines the reader already has the grammar for, and it prod
 of numbers unit 1 showed as the machine's version of a program. The names (`INC`, `DOUBLE`,
 `SHOW`) are invented so that they belong to no machine.
 
-What it gives up is its biggest moment, and it says so. Unit 4 ends by telling the reader
+What it gives up is its biggest moment, and it says so. Unit 5 ends by telling the reader
 that everything here was counted because there is no clock in pseudocode, and that the first
 thing worth doing on a real machine is timing the loop both ways. The architecture record
 already places this module as the bridge a BASIC learner reaches *after* games have made
