@@ -7,7 +7,7 @@ line that Foundations' number/bit primer is "the whole of" Number Systems + Bit
 Logic: it now holds two subtracks. The amendment is deliberate and narrow — Logic & Gates passes
 the same three promotion tests the architecture doc inherited from the
 [`cross-system-foundations.md`](cross-system-foundations.md) seed, and it joins as a
-**recommended side-path, not spine** (see § Position). **Amended 2026-09-04** by [foundations-is-language-neutral.md](foundations-is-language-neutral.md): this subtrack becomes two modules, Truth Tables and Gates and the Adder, split at the dependency in its middle — the adder needs binary and the reasoning does not. Its "recommended side-path, not spine" now holds for the whole Foundations shelf rather than this course alone. Decided; build is a later
+**recommended side-path, not spine** (see § Position). **Amended 2026-09-04** by [foundations-is-language-neutral.md](foundations-is-language-neutral.md): this subtrack becomes two modules, Truth Tables and Gates and the Adder, split at the dependency in its middle — the adder needs binary and the reasoning does not. Its "recommended side-path, not spine" now holds for the whole Foundations shelf rather than this course alone. **Built 2026-09-05** as two modules at `curriculum/foundations/truth-tables/` and `curriculum/foundations/gates-and-the-adder/`, three units each, both catalogued and neither gating anything. Decided; build was a later
 session, native to the raised bar.
 
 ## The gap it fills
