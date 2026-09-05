@@ -1,6 +1,6 @@
 # Meet BASIC: lesson and source mapping
 
-**Status: implementation plan for the [agreed module direction](meet-basic.md). A1–A3 have approved draft lessons and verified sample checkpoints; Steve has tested the revised units and confirmed the native host-keyboard fix. Publication still requires the coordinated curriculum migration. A4 is drafted for review; the remaining arcs are not yet implemented.**
+**Status: implementation plan for the [agreed module direction](meet-basic.md). A1–A4 are published with verified sample checkpoints. This complete Story Builder arc uses Emu198x v0.22.0; the remaining arcs are not yet implemented.**
 
 The four arcs are agreed. The lesson boundaries below are a concrete authoring plan, adjustable when source development or reader testing reveals an overloaded step. The fifteen working lessons are not a required count. This plan replaces the combined progression of feature demonstrations followed by substantially repeated early projects; it does not append another course to them.
 
@@ -222,14 +222,60 @@ Do not mark new units available before their source, prose and media pass verifi
 
 ## Current implementation slice
 
-**A1–A3 are approved drafts, not published as curriculum.** Steve reports testing the revised units and approves them, including explicit confirmation that the host-keyboard fix works well in the native emulator. [Sample PR #6](https://github.com/code198x/code-samples/pull/6) contains nine complete BASIC checkpoints and reproducible keyboard/tape and input verification drivers. [Website PR #412](https://github.com/code198x/website/pull/412) contains the first two lesson drafts and review instructions under `src/drafts/meet-basic/`; existing curriculum URLs and samples remain intact. [Website PR #414](https://github.com/code198x/website/pull/414) adds A3: a fixed greeting becomes an input greeting, then three supplied words form a sentence.
+**A1–A4 are [published](https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/) as a complete opening project.** Steve has
+reviewed all four lessons and reports native testing of A1–A3, including the
+host-keyboard fix. [Sample PR #6](https://github.com/code198x/code-samples/pull/6)
+is merged and supplies eleven complete checkpoints. The canonical lesson files,
+navigation, retained references and release announcement were published through
+[website PR #414](https://github.com/code198x/website/pull/414).
 
-The 48K Emu198x MCP run passed 16 named checks: immediate output, numbered-line growth, editing, variable assignment and a deliberate error, ROM SAVE, TAP export, fresh-process loading, an exact recovered listing, running and a further edit. The sample README and recorded results own versions, hashes and limits. Native acceptance is user-reported, separate from these automated checks. Original hardware has not been verified.
+The 48K ROM verification runs cover 16 greeting/editing/tape checks, 20 input
+checks, 32 story/editing/layout/tape checks and six named-load checks. The latter
+finds `story` after an earlier greeting on a combined tape. Recorded sample
+results own source and binary hashes and the distinction between MCP execution,
+user-reported native acceptance and original hardware, which has not been tested.
 
-[Emu198x PR #1447](https://github.com/emu198x/emu198x/pull/1447) implements desktop tape export and has been built locally. A2 now describes the export, close/reopen and load route. Its obsolete missing-command warning is removed. The export adapter and rebuilt binary passed automated tape round trips; [Emu198x #1446](https://github.com/emu198x/emu198x/issues/1446) tracks the export fix. Steve has accepted the revised units in native testing; this does not establish separate coverage of every file-picker cancellation or error-dialog case. Do not silently substitute a snapshot for a BASIC tape save.
+The packaged Apple silicon v0.22.0 executable also passed all 74 checks. Its final
+story screenshot is byte-identical to the lesson image. The [release verification
+record](meet-basic-release-verification.json) records the archive and executable
+hashes, source hashes, expected output and observed screen rows. This is MCP
+execution evidence for the 48K configuration, not native-menu or original-hardware
+verification.
 
-A3 passed six input scenarios with 20 named prompt/output checks: changed names, changed story words, empty answers and long answers. Complete output rows, including wrapping, were compared. Its story capture was visually inspected. The lesson links to Foundations’ “Asking the Player” while explaining Spectrum input syntax and supplied quotes locally.
+[Emu198x PR #1447](https://github.com/emu198x/emu198x/pull/1447) adds desktop tape
+export; [PR #1448](https://github.com/emu198x/emu198x/pull/1448) adds Host Keyboard
+mode. Both are shipped in [v0.22.0](https://github.com/emu198x/emu198x/releases/tag/v0.22.0).
+All four Spectrum platform archives were downloaded and checksum-checked. The
+public Apple silicon archive is identical to the package used for the 74 checks.
+The lesson deployment and emulator downloads-page refresh completed on 5 September
+2026. The old reference URLs remain available through the redirects below.
 
-The drafts use Host Keyboard mode from [Emu198x PR #1448](https://github.com/emu198x/emu198x/pull/1448), built locally: ordinary host punctuation is translated into target key presses, while BASIC keyword entry remains native. Original Keyboard remains available for direct target combinations. The adapter passed real-ROM entry tests and shared held-key tests; Steve has also confirmed the fix in native use. Other host layouts are not covered by that report.
+Continue with Lucky Number, Oracle Stone and the movement experiment. Resolve
+lesson boundaries against observed teaching load; four published opening units
+do not declare the whole planned module complete.
 
-A4 now has two complete draft checkpoints: a setting and second event, then a plain title, CLS and deliberate line spacing. ROM keyboard verification covers the edits from A3, normal/changed/empty/long answers and a fresh-process tape round trip. It awaits reader review. After that review, continue with Lucky Number, Oracle Stone and the movement experiment. Resolve lesson boundaries against observed teaching load. Publishing still requires the route/catalogue migration above, including both Spectrum track landing pages as their respective work ships.
+## Opening release routes
+
+The first release publishes four units, with later arcs named as forthcoming on
+the index. Lesson numbers remain 1–4; descriptive filenames supply their stable
+public identities under `/systems/sinclair-zx-spectrum/basic/meet-basic/`:
+
+| Unit | Public filename |
+|---|---|
+| A1 | `unit-01-make-the-spectrum-answer` |
+| A2 | `unit-02-remember-and-save` |
+| A3 | `unit-03-ask-and-use-the-answer` |
+| A4 | `unit-04-a-story-worth-sharing` |
+
+For each number 01–15, the old `meet-basic/unit-NN` URL redirects to
+`basic-reference/unit-NN`, retaining the original explanation and heading IDs.
+Both `/systems/sinclair-zx-spectrum/basic/…` and the older
+`/sinclair-zx-spectrum/basic/…` forms are covered. The website's
+`src/lib/meet-basic-redirects.mjs` is the executable mapping; all thirty redirects
+were checked against the built pages and their images. Existing feed identities
+are retained so moved references are not announced as new lessons.
+
+Source files remain under `meet-basic/opening/`, separately from those still used
+by reference pages. Local review bookmarks point to the public lesson identities;
+production has no review routes. New questions or corrections belong in the
+canonical curriculum files, not duplicate review copies.

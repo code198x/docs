@@ -1,6 +1,6 @@
 # Meet BASIC
 
-**Status: agreed module direction; [lesson and source mapping](meet-basic-plan.md) prepared; implementation pending.**
+**Status: agreed module direction; [lesson and source mapping](meet-basic-plan.md) prepared; four opening lessons published; later arcs pending.**
 
 Meet BASIC is the guided introduction to programming in Sinclair BASIC on the ZX Spectrum. It teaches through short projects, combining the useful existing primer and early programs rather than placing both sequences one after the other. Apply the [curriculum specification](../../../specifications/curriculum.md) and [unit guidance](../../../specifications/unit.md).
 
