@@ -40,6 +40,8 @@ Inspect existing posts and collection schemas before drafting. Add a What’s Ne
 
 Prepare updates alongside the work, but do not describe an unmerged preview or proposed curriculum as released. Use the existing draft and publication-date controls; verify the page, destination links and feed before publication. Preserve original dates when correcting older posts. RSS can trigger Discord announcements after deployment, so publishing an entry is also a distribution decision; follow the announcement workflow below.
 
+Track landing pages use the House UI’s plain headings, readable prose and shared page alignment. Explain entry choices and useful connections in ordinary text and links; do not reintroduce “Where you are” panels, numbered curriculum-stage labels or heavy bordered prerequisite cards. Keep a clear starting link and distinguish available lessons from developing plans.
+
 Graphical material should earn its place: show a real result, explain a representation or help compare choices. Verify capture provenance and permissions, give explanatory illustrations accurate captions, reserve media dimensions and provide useful text alternatives. Do not present an illustrative mock-up as executed game output. Keep existing public URLs when changing display labels; provide redirects if a route genuinely needs to move.
 
 ## Code and artefacts
