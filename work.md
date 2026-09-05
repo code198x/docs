@@ -4,7 +4,7 @@ This file holds bounded next work and proposals. [PROJECT.md](PROJECT.md) owns a
 
 ## Spectrum sequences
 
-**Status: BASIC opening direction agreed; remaining game lineups under review.** The [Meet BASIC specification](platforms/sinclair-zx-spectrum/basic/meet-basic.md) owns the guided introduction through short projects and the recommended opening into Bright Spark and Touchdown. The [lesson and source mapping](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) has an A1/A2 implementation slice: draft lessons and seven verified BASIC checkpoints. Review them together and resolve [Emu198x #1446](https://github.com/emu198x/emu198x/issues/1446), then verify the native keyboard/save/reopen workflow before publishing. The remaining arcs are not yet implemented. The [project charter](PROJECT.md) and [game-brief specification](specifications/brief.md) govern the work. The agreed quality standard is a complete, enjoyable and deliberately finished game for its scope; BASIC games need not meet commercial standards.
+**Status: BASIC opening direction agreed; remaining game lineups under review.** The [Meet BASIC specification](platforms/sinclair-zx-spectrum/basic/meet-basic.md) owns the guided introduction through short projects and the recommended opening into Bright Spark and Touchdown. The [lesson and source mapping](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) has an A1–A3 implementation slice: draft lessons and nine verified BASIC checkpoints, including input and sentence-building. Review them together and resolve [Emu198x #1446](https://github.com/emu198x/emu198x/issues/1446), then verify the native keyboard/save/reopen workflow before publishing. The remaining arcs are not yet implemented. The [project charter](PROJECT.md) and [game-brief specification](specifications/brief.md) govern the work. The agreed quality standard is a complete, enjoyable and deliberately finished game for its scope; BASIC games need not meet commercial standards.
 
 ### Evidence to start from
 
@@ -32,7 +32,7 @@ Keep useful contrasts with C64, Amiga, NES and future systems visible. Reusing a
 
 ### Next output
 
-Use the [Meet BASIC lesson and source mapping](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) for implementation. The first slice is A1/A2: enter and edit a greeting, introduce a stored name, then save and reopen the program in one named 48K environment, with checked instructions and matching source/media. Reconcile Bright Spark and Touchdown's briefs with that opening. Keep subsequent BASIC and assembly choices as proposals for joint review.
+Use the [Meet BASIC lesson and source mapping](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) for implementation. A1–A3 are drafted with verified target-side checkpoints; review them together. Next, A4 finishes Story Builder with a setting, another event and readable presentation. Complete and verify the native save/reopen workflow before publishing the opening arc. Reconcile Bright Spark and Touchdown's briefs with that opening. Keep subsequent BASIC and assembly choices as proposals for joint review.
 
 Produce reviewable game briefs and a sequence mapping before lesson rewrites. Record concrete missing shared explanations, Vault entries, patterns and component needs. Resolve substantive conflicts with the briefing and separate recommendations from decisions. Historical versions remain in Git; the current specifications should not require reading amendment chains to discover the project goals.
 

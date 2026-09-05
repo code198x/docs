@@ -1,6 +1,6 @@
 # Meet BASIC: lesson and source mapping
 
-**Status: implementation plan for the [agreed module direction](meet-basic.md). A1/A2 have draft lessons and verified sample checkpoints; publication is blocked on the native save/reopen workflow. The remaining arcs are not yet implemented.**
+**Status: implementation plan for the [agreed module direction](meet-basic.md). A1–A3 have draft lessons and verified sample checkpoints; publication is blocked on the native save/reopen workflow. The remaining arcs are not yet implemented.**
 
 The four arcs are agreed. The lesson boundaries below are a concrete authoring plan, adjustable when source development or reader testing reveals an overloaded step. The fifteen working lessons are not a required count. This plan replaces the combined progression of feature demonstrations followed by substantially repeated early projects; it does not append another course to them.
 
@@ -222,10 +222,12 @@ Do not mark new units available before their source, prose and media pass verifi
 
 ## Current implementation slice
 
-**A1/A2 are drafted, not published.** [Sample PR #6](https://github.com/code198x/code-samples/pull/6) contains seven complete BASIC checkpoints and a reproducible keyboard/tape verification driver. [Website PR #412](https://github.com/code198x/website/pull/412) contains the two lesson drafts and review instructions under `src/drafts/meet-basic/`; existing curriculum URLs and samples remain intact.
+**A1–A3 are drafted, not published as curriculum.** [Sample PR #6](https://github.com/code198x/code-samples/pull/6) contains nine complete BASIC checkpoints and reproducible keyboard/tape and input verification drivers. [Website PR #412](https://github.com/code198x/website/pull/412) contains the first two lesson drafts and review instructions under `src/drafts/meet-basic/`; existing curriculum URLs and samples remain intact. [Website PR #414](https://github.com/code198x/website/pull/414) adds A3: a fixed greeting becomes an input greeting, then three supplied words form a sentence.
 
 The 48K Emu198x MCP run passed 16 named checks: immediate output, numbered-line growth, editing, variable assignment and a deliberate error, ROM SAVE, TAP export, fresh-process loading, an exact recovered listing, running and a further edit. The sample README and recorded results own versions, hashes and limits. Native GUI operation and original hardware have not been verified.
 
 [Emu198x #1446](https://github.com/emu198x/emu198x/issues/1446) tracks desktop export of recorded BASIC tape data. Before publishing A2, complete and test the learner's destination-file, export, close/reopen and load instructions. Check native keyboard/editor operation too. Do not silently substitute a snapshot for a BASIC tape save.
 
-Review these two lessons together, resolve the remaining workflow check, then finish Story Builder, Lucky Number, Oracle Stone and the movement experiment. Resolve lesson boundaries against observed teaching load. Publishing still requires the route/catalogue migration above, including both Spectrum track landing pages as their respective work ships.
+A3 passed six input scenarios with 20 named prompt/output checks: changed names, changed story words, empty answers and long answers. Complete output rows, including wrapping, were compared. Its story capture was visually inspected. The lesson links to Foundations’ “Asking the Player” while explaining Spectrum input syntax and supplied quotes locally.
+
+Review these three lessons together, resolve the remaining workflow check, then finish Story Builder, Lucky Number, Oracle Stone and the movement experiment. Resolve lesson boundaries against observed teaching load. Publishing still requires the route/catalogue migration above, including both Spectrum track landing pages as their respective work ships.
