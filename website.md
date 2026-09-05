@@ -22,7 +22,23 @@ Unit-page frontmatter currently requires a title and numeric `game` and `unit` f
 
 Shared routes use `/foundations/{module}/unit-NN/` and `/craft/{module}/unit-NN/`; system lessons use `/systems/{system}/{track}/{module}/unit-NN/`. The Vault uses `/vault/{category}/{slug}/`; patterns use `/patterns/{system}/{track}/{category}/{slug}/`, with cross-platform entries omitting the track. Route code remains authoritative. Preserve published redirects when moving content.
 
-A link should explain why it helps. Keep the essential explanation local and offer deeper shared concepts, context or patterns as useful connections. Fleet badges do not establish emulator, assembler or curriculum support interchangeably.
+A link should explain why it helps. Keep the essential explanation local and offer deeper shared concepts, context or patterns as useful connections. System badges do not establish emulator, assembler or curriculum support interchangeably.
+
+## Editorial updates
+
+Review these publishing targets as part of substantial curriculum, tool and website work:
+
+| Destination | Reader benefit | Evidence to include |
+|---|---|---|
+| **What’s New** (`/updates/`) | Find a useful addition or change and where to try it | What is available, who it helps, a working link and any relevant scope limit |
+| **From the Metal** (`/from-the-metal/`) | Understand a programming choice through concrete machine behaviour | A focused question, sourced explanation or reproducible example, trade-offs and limits of modern comparisons |
+| **Field Notes** (`/field-notes/`) | Follow the investigation behind the work | What prompted it, what was tried, observations, uncertainty and what the evidence changed |
+
+Inspect existing posts and collection schemas before drafting. Add a What’s New entry for a meaningful reader-facing release; consider a longer essay or development account when the work supports one. Small corrections can remain edits. Do not manufacture discoveries, personal experiences or a publication cadence to fill a feed. First-person accounts must reflect the author’s actual experience.
+
+Prepare updates alongside the work, but do not describe an unmerged preview or proposed curriculum as released. Use the existing draft and publication-date controls; verify the page, destination links and feed before publication. Preserve original dates when correcting older posts. RSS can trigger Discord announcements after deployment, so publishing an entry is also a distribution decision; follow the announcement workflow below.
+
+Graphical material should earn its place: show a real result, explain a representation or help compare choices. Verify capture provenance and permissions, give explanatory illustrations accurate captions, reserve media dimensions and provide useful text alternatives. Do not present an illustrative mock-up as executed game output. Keep existing public URLs when changing display labels; provide redirects if a route genuinely needs to move.
 
 ## Code and artefacts
 

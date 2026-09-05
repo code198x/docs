@@ -80,3 +80,11 @@ Check existing entries and their source citations before creating new ones. Two 
 - Identify missing entries from real curriculum and Vault links. Earlier work found candidate clusters around British software publishers and the LightWave/Video Toaster ecosystem. Check which entries now exist, retain precise source evidence for any remaining gap, and prioritise entries that help an actual lesson. An old backlog is not evidence that someone still lacks an entry.
 
 For game playtesting, work from the current program and its brief: held as well as tapped inputs, buffered actions, repeated title/retry cycles, readable feedback, audio timing, difficulty and whether the game remains interesting after its rules are understood. Record findings with the game and distinguish scripted correctness from human playtesting.
+
+## Website editorial follow-through
+
+Apply the charter’s plain-language navigation and publishing guidance during the House UI review. Review About, the systems directory and the three editorial hubs together with the homepage. “Systems” replaces “The Fleet”; further renaming remains a proposal until reviewed in context.
+
+Prepare a What’s New entry when the House UI is ready to release, linking to the finished site and explaining the reader-facing improvements. Consider From the Metal or Field Notes only where the work yields a useful explanation or an evidenced investigation. No release announcement is implied by the existence of a preview.
+
+Try a small explanatory illustration before adding a site-wide visual treatment. Later candidates include verified game captures on relevant system cards and asset close-ups linked to lessons. Check the actual assets, provenance and target configuration before selecting them.

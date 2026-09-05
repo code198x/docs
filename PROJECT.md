@@ -20,7 +20,7 @@ The family covers computing from the 1960s through the early 2000s, with the 197
 
 Consider period, cultural and geographic coverage, support surface, form factor and role, and distribution or political-economic context when choosing a subject. A home computer, console, handheld, kit or workstation need not teach the same things.
 
-Name the support surface precisely. Curriculum coverage, an emulator that boots a variant, and an assembler that supports its CPU are different capabilities. A system's presence in the Vault or fleet does not prove any of them.
+Name the support surface precisely. Curriculum coverage, an emulator that boots a variant, and an assembler that supports its CPU are different capabilities. A system's presence in the Vault or systems directory does not prove any of them.
 
 The Spectrum is our first re-specification focus, not the destination every learner should choose or the template other systems must follow. C64, Amiga and NES tracks already provide other approaches. Wider systems enter through a concrete teaching purpose, not through a requirement to duplicate every existing game or language route.
 
@@ -37,6 +37,16 @@ Use BASIC or FORTH where the machine provides an appropriate environment. Where 
 - **The Pattern Library** supplies concrete techniques readers can adapt, with their assumptions and trade-offs.
 
 These are responsibilities, not a mandate to create a top-level module for every subject. [Curriculum design](specifications/curriculum.md) places the shared subjects and explains progression. Existing navigation and authored content are evidence of implementation, not limits on the intended coverage.
+
+## Public presentation and publishing
+
+The website should make its purpose and routes clear to a first-time visitor. Prefer familiar, descriptive navigation labels over invented names. Use “Systems” for the machine directory. Editorial series may have distinctive names, but their introductions and links should explain what readers will find. Review names in context rather than renaming every resource at once.
+
+Use graphical touches to illuminate the subject: verified game captures, readable diagrams, asset studies and small visual experiments. Each should show something worth noticing or making. Preserve the House UI’s clear typography, accessible contrast and space for reading; avoid adding generic retro decoration to every page.
+
+Keep the About page centred on the promise, audience and learning approach. Distinguish current material from intended coverage, explain independent entry points and describe verification honestly. Personal history supports the mission without replacing it.
+
+Publishing includes the curriculum and its supporting editorial pages. Consider **What’s New**, **From the Metal** and **Field Notes** whenever substantial work produces something useful to share. Choose the format to suit the evidence and reader benefit; not every change needs three articles. [Website and publishing workflow](website.md#editorial-updates) defines their responsibilities.
 
 ## Entry and progression
 
