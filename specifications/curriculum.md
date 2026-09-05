@@ -21,7 +21,7 @@
 
 "Code Like It's 198x" teaches game design through retro game development. The platforms and languages are the medium — the real subject is the craft of making games.
 
-Every game in the curriculum is a complete, playable project inspired by a commercially released title from the platform's era. Learners don't build toy examples — they build games that look and feel like the ones that defined these machines.
+Every game in the curriculum is a complete, playable project, deliberately finished for its agreed scope. Small games and ambitious later projects both belong here. BASIC games in particular need not meet a commercial standard. Historical games can inform the work without setting a universal requirement for scale or saleability; see [the scope-relative quality bar](../decisions/scope-relative-game-quality.md).
 
 A learner who completes any track — BASIC, assembly, or any future language — can make games. Not just retro games. Games. The vintage hardware is the first workshop. The craft is portable.
 

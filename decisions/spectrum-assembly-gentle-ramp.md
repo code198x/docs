@@ -269,7 +269,7 @@ Not re-authored. Budget rule applied at low resolution to flag candidates:
   1–2 majors. The AY/128K audio introduction (The Witch's Year) is a single major —
   fine. No obvious over-pack.
 - **V3 (Motion and Threat):** Hostraider (Cybernoid — dense art + projectile pools +
-  Follin music) and Ironstreak (smooth scroll + T-state counting) each look like 2+
+  Dave Rogers music) and Ironstreak (smooth scroll + T-state counting) each look like 2+
   majors; candidate split/insert points. Flag for their spec passes.
 - **V4 (Real World / 3D):** Coldstar (Elite, 96u) and Coreworks (Freescape, 80u) are
   canonically huge multi-technique engines — strong split/sub-arc candidates.

@@ -37,7 +37,7 @@ The headline *Atmosphere (Sense of Place)* traces through every unit: every deci
 - ***Atic Atac*** (Ultimate, 1983) — the multi-room flick-screen adventure archetype. 148 rooms in 48K; the screen *is* the map; you flick room to room. The structural model for the Place.
 - ***Knight Lore*** (Ultimate, 1984) — the mood archetype: atmospheric, dark, every room a composed place. The Place chases this feeling with dither-lighting, not with Knight Lore's filmation/masking (that's Greypeak's tradition).
 - ***Sabre Wulf*** / ***Pentagram*** / ***Underwurlde*** (Ultimate, 1984–86) — flick-adventure lineage; the source of the explore-a-connected-world feel, and of the items / multiple-keeps content that later Shadowkeep *revisit* modules will carry.
-- ***Cybernoid II*** (Hewson, 1988) — held as the *polish* bar (dense hand-crafted art, Tim Follin audio), the standard the Place's atmosphere aims at.
+- ***Cybernoid II*** (Hewson, 1988) — held as the *polish* bar (dense hand-crafted art, Dave Rogers audio), the standard the Place's atmosphere aims at.
 
 Opening-screen archetype: ***The Hobbit*** (Melbourne House, 1982) — economical, suggestive title presentation.
 
@@ -172,7 +172,7 @@ Sub-arcs of pass 1 (illustrative; full detail in [per-unit-plan.md](per-unit-pla
 Every reference from a shipped unit must resolve (Definition of Done; vault is a launch artefact — [october-2026-launch-spec.md](../../../../decisions/october-2026-launch-spec.md)).
 
 - **Games:** [Atic Atac](/vault/games/atic-atac), [Knight Lore](/vault/games/knight-lore), Sabre Wulf, Pentagram, Underwurlde, Cybernoid II, The Hobbit.
-- **Studios / people:** Ultimate Play the Game (Tim & Chris Stamper); Hewson (via Cybernoid II); Melbourne House (via The Hobbit); [Tim Follin](/vault/people/tim-follin).
+- **Studios / people:** Ultimate Play the Game (Tim & Chris Stamper); Hewson (via Cybernoid II); Melbourne House (via The Hobbit); [Dave Rogers](/vault/people/dave-rogers).
 - **Hardware refs:** the attribute system (dither/lighting), bitmap memory layout, beeper / port `$FE`.
 
 ---

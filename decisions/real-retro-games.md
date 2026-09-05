@@ -1,5 +1,7 @@
 # Decision: Multi-disciplinary Commitment
 
+> **Amended 2026-09-05:** [Game quality is relative to the agreed scope](scope-relative-game-quality.md) supersedes the universal commercial bar below. Games must be complete and deliberately finished for their scope; BASIC games need not meet a commercial standard. Applicable progression and verification requirements remain.
+
 ## The decision
 
 Code198x builds real retro games, not toy examples. Every unit and every brief considers **code, visual design, audio, level design, and polish** in equal measure. A unit is complete when all five disciplines have landed at the relevant phase's commercial bar, not just when the code compiles.

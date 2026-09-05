@@ -1,5 +1,7 @@
 # Decision: Commercial bar
 
+> **Amended 2026-09-05:** [Game quality is relative to the agreed scope](scope-relative-game-quality.md) supersedes the universal commercial bar below. Games must be complete and deliberately finished for their scope; BASIC games need not meet a commercial standard. Applicable progression and verification requirements remain.
+
 ## The decision
 
 Every game is built to a **commercially shippable in the era of the system** bar. A learner finishing a game should have built something that could plausibly have shipped on a budget label between 1986 and 1991. Per-game scope is per-brief; there is no universal unit floor.

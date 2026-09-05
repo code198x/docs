@@ -2,6 +2,8 @@
 
 **Status: PROPOSED — draft for review, 2026-08-28.** Nothing descends from this yet.
 
+> **Review context, 2026-09-05:** [The adopted scope-relative quality bar](scope-relative-game-quality.md) does not adopt this proposal’s universal commercial-comparator gate. This document remains a proposal.
+
 ## The decision
 
 A game is measured against a **named comparator** from its platform's era, at three scales, before its final module is marked `complete`.

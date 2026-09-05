@@ -6,6 +6,10 @@
 
 ---
 
+## Game quality and scope
+
+Apply [the scope-relative quality bar](../decisions/scope-relative-game-quality.md): complete, enjoyable, readable, responsive and deliberately finished for the agreed scope. BASIC games do not need to meet a commercial standard; selected ambitious projects may declare one. State the finished experience and observable checks in the brief. Historical comparisons inform design rather than impose feature parity.
+
 ## Header
 
 ```markdown
