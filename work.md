@@ -36,6 +36,18 @@ Produce reviewable game briefs and a sequence mapping before lesson rewrites. Re
 
 Use the [retained game-design material](platforms/README.md) alongside current sources. Existing sample/prototype files and capture manifests are the starting point for execution, not an old prose claim that a tool or game is verified.
 
+### Entry-route findings for joint review
+
+A source review of the current Spectrum entry route found these conflicts to resolve alongside the game specifications. They are findings, not an adopted replacement sequence:
+
+- The BASIC track landing says no previous programming experience is assumed, but `basic/meet-basic/index.mdx` and its first unit direct complete beginners to Foundations. Unit 1 also refers to having written `SHOW` in General Programming. Decide the local explanation needed for independent entry before revising the primer.
+- The track metadata calls BASIC a gateway preparing readers for assembly, while its body correctly says the routes are independent. Align this framing when reviewing the track.
+- The general setup page foregrounds an assembler. Spectrum `getting-started.mdx` covers both assembly and BASIC conversion, but its final action sends everyone to assembly. A BASIC beginner needs a clearly signposted route to the emulator and keyword editor.
+- Spectrum getting-started and native-setup pages give different macOS Fuse installation commands (`fuse-emulator` and `fuse`). The native page also foregrounds Pasmo while getting-started recommends Asm198x. Verify current installation instructions and choose a clear canonical setup path; do not infer installer success from the existence of the tools locally.
+- The first BASIC unit uses two step files and two captures that exist in the samples and website trees. It explains `P` for `PRINT`, but then says to type `RUN` without explaining how to enter that keyword in the chosen emulator. Include the exact target/editor configuration and a first-run check in the joint review.
+
+The reviewed navigation is Systems → ZX Spectrum → BASIC → Meet BASIC → Unit 1. File and page presence establishes availability only. This review has not verified a fresh installation, replayed the first program or established that a screenshot matches execution. Keep those checks explicit in the subsequent Spectrum work.
+
 ## Website components
 
 This is an assessment for the current curriculum direction, not a commitment to build every idea. Component names below refer to implementations in the website's `src/components/`; their props and tests remain authoritative. No new curriculum interface is required before the Spectrum specifications can be agreed.
