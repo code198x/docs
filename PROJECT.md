@@ -50,7 +50,7 @@ Within a game, provide a guided development sequence. Readers are not expected t
 
 A game should be complete, enjoyable, readable, responsive and deliberately finished for its agreed scope. BASIC games in particular need not meet commercial standards. A single room, a small puzzle or a short session can fulfil a worthwhile promise.
 
-The existing requirement that a game has a reachable losing state remains in force while its universal scope is reviewed. This documentation consolidation does not remove that rule or alter a game’s agreed failure mechanic.
+Choose failure and retry behaviour to suit each game. A reachable losing state is not compulsory: puzzles, creative games and exploration projects can provide meaningful decisions and satisfying outcomes without one. Where failure serves the experience, explain its purpose, consequences and recovery. This principle does not automatically remove failure mechanics from existing designs.
 
 Selected later projects can be substantially more ambitious. Their scope must serve their experience and teaching, not match a commercial price tier or feature census. Assembly does not automatically require commercial scale.
 

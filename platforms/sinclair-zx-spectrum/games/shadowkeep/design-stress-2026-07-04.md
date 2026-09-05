@@ -1,7 +1,6 @@
 # Shadowkeep — design-stress: the Warden jeopardy (2026-07-04)
 
-Adversarial pass on the Warden — the fail state added to make the Place a *game*
-([Current game quality requirements](../../../../PROJECT.md)). Run against the
+Historical playtest of the Warden threat. Its findings describe this prototype; the [current game quality requirements](../../../../PROJECT.md) do not require every game to have a losing state. Run against the
 working prototype (`code-samples/.../shadowkeep/prototype/shadowkeep-warden.asm`): a single
 deterministic patrol-freezer on row 11 of the Hall, touch = THE KEEP SLEEPS. Refutation, not
 review — every finding is a scenario a bored clever player runs.

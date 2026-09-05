@@ -2,15 +2,7 @@
 
 > **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
 
-> **AMENDED 2026-07-04 — the Place gains jeopardy.** Per
-> [Current game quality requirements](../../../../PROJECT.md), a game needs a
-> reachable fail state, so the "forgiving in pass 1 (exploration, not threat)" stance below is
-> **superseded**: the Place must be *losable* to ship as a game. The already-designed curse
-> threat (caught → you join the sleepers, no combat — the **Warden** patrol-freezer shape)
-> comes into the Place; the fuller *Waking* revisit (waking NPCs, puzzle graph, allies-as-lives)
-> stays later. Atmosphere and sense-of-place are untouched — jeopardy is *added* to them
-> (Knight Lore, this brief's own mood archetype, has guardians *and* mood). Being decomposed
-> and re-gated (win *and* loss) via the Gloaming flow; brief body updated as that lands.
+> **Design scope:** the existing Warden plan adds a curse threat: caught → join the sleepers, without combat. It is retained for assessment as a choice for Shadowkeep’s experience, not a universal condition for calling a project a game. Assess its pacing and recovery under the [current game quality requirements](../../../../PROJECT.md). The fuller Waking revisit remains a separate design proposal.
 
 **Title (working):** Shadowkeep
 **System / Track:** ZX Spectrum / Assembly

@@ -6,7 +6,7 @@ Store a brief at `platforms/<system>/games/<slug>/brief.md`. Use a stable identi
 
 ## Experience and scope
 
-Describe the central mechanic, the player's recurring activity, decisions and feedback. Explain why it is enjoyable to build and play, why it suits the target and language, and what makes the finished project complete. Name content scale, ending or repeatable cycle, and intended session length where useful. Under the existing project rule, a game must have a reachable losing state; explain it and how retrying works. The universal scope of that rule is awaiting review. Identify deliberate exclusions and design risks.
+Describe the central mechanic, the player's recurring activity, decisions and feedback. Explain why it is enjoyable to build and play, why it suits the target and language, and what makes the finished project complete. Name content scale, ending or repeatable cycle, and intended session length where useful. Choose failure and retry behaviour for this game rather than requiring a losing state. Explain how consequences, feedback and progress support its intended experience, including recovery where relevant. Identify deliberate exclusions and design risks.
 
 A small BASIC game need not be commercially saleable. Selected ambitious projects may state a higher target. Scope must justify itself through experience and teaching rather than feature parity with another game.
 

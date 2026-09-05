@@ -12,6 +12,23 @@ System-building stages should run. A Foundations or Craft stage may instead prod
 
 Give instructions, useful troubleshooting and optional experiments. Use headings that fit the material; introductions, summaries, Vault boxes and modern comparisons are not compulsory repeated sections.
 
+## Questions and feedback
+
+Use a short check where it advances the explanation, for example before revealing a result, after a tricky distinction or when combining ideas. Consider:
+
+- **Predict:** what will this loop display, or where will the object move next?
+- **Trace:** record the score and lives after this sequence of events.
+- **Explain:** why does this collision rule treat touching edges differently?
+- **Diagnose:** find the first point where this trace disagrees with the intended rule.
+- **Change and observe:** alter one value, predict its effect, then compare with the result.
+- **Compare:** which sprite remains readable against this background, and what would you change?
+
+State the assumptions and give enough information to reason about the answer. Use plausible alternatives when testing a misconception; avoid trick wording, irrelevant trivia and questions answerable only by remembering a term from another page. Offer occasional short module-level checks that combine ideas, without forcing a test after every unit.
+
+Give the answer with its reasoning and, where helpful, explain a tempting wrong answer. Open design questions need examples and criteria rather than an automatic right/wrong mark. Make explanations easy to reveal after an attempt, without withholding them until a score is reached. A parent or teacher should be able to use the same question and explanation in conversation or on paper.
+
+Check worked answers against the stated pseudocode or target program, and verify claimed experimental results. An answer-reveal component does not execute the example or prove it correct. Questions can begin as ordinary prose with a clearly separated explanation; interactive scoring is not required.
+
 ## Continuity
 
 Keep complete runnable states in the sample repository and show focused changes with `CodeDiff` where appropriate. `CodeFromFile` supplies an inspectable full state. Use named `steps/step-NN` files when a unit has multiple runnable stages.

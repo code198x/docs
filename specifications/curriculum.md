@@ -84,6 +84,16 @@ Teach a naive approach before an upgrade when experiencing its limitation makes 
 
 Offer optional experiments after guided work. Do not introduce pass/fail gates, hints-and-restores systems or gamification without an educational need. Production verification is separate from learner assessment.
 
+## Checking understanding
+
+Consider short quizzes and other checks within units and at useful points across a module. Their purpose is to let readers try an idea, explain their reasoning and recognise what needs another look. Choose the form and placement for that purpose; there is no required quiz count or end-of-unit template.
+
+Mix prediction, tracing, explanation, diagnosis and small changes to a worked example. A question can revisit an earlier concept in a new game context without assuming the reader attended its original lesson. Supply enough context to attempt it and link to a fuller explanation where useful.
+
+Multiple-choice questions can expose a specific misconception, but recognition alone is not the whole of understanding. Include opportunities to produce an answer, explain a choice or run an experiment. For design and asset questions, several answers may be defensible; discuss the trade-offs rather than inventing a single correct preference.
+
+Keep feedback explanatory, available without penalty and useful to parents or teachers discussing the work. Readers can pause, retry or continue. Do not make progress depend on a score, add time pressure by default, or turn optional checks into a compulsory examination. See [Unit guidance](unit.md#questions-and-feedback) for authoring examples.
+
 ## Choosing system projects
 
 Use [the game brief](brief.md) to compare appeal, teaching value and suitability. Retain, reshape or replace existing ideas on those grounds. Assembly is independent of BASIC; it need not port every BASIC game.
