@@ -2,7 +2,7 @@
 
 > **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
 
-> **Existing plan, re-paced 2026-05-29.** Reconcile with the [current sequence review](../../curriculum-review.md).
+> **Existing plan, re-paced 2026-05-29.** Reconcile with the [current sequence review](../../../../work.md#spectrum-sequences).
 > Shadowkeep is now a **cell-based atmospheric flick-adventure** that **builds on the tiny first
 > game**, not a from-scratch engine course. The advanced rendering Trunk (pre-shift / masking /
 > Y-sort) is **gone from here** — relocated to the rendering games. The prior engine-first per-unit
@@ -59,7 +59,7 @@ attribute-driven lighting, tile-map collision — every one of these **carried i
 
 ## Module shape — Shadowkeep is a game across several modules
 
-> **Added 2026-06-02.** Reconciles this plan with [Content model](../../../../specifications/content-model.md)
+> **Added 2026-06-02.** Reconciles this plan with [Content model](../../../../website.md#content-and-navigation)
 > and the no-fixed-counts stance in [Curriculum design](../../../../specifications/curriculum.md).
 
 Per the module model, a game can be taught by **several modules**, and a *revisit* returns to it

@@ -6,7 +6,7 @@
 > [`brief.md`](brief.md) (with its §10 reshape contract), the fifteen-round
 > [`prototype-log.md`](prototype-log.md), and the proven prototype
 > (`code-samples/.../gloaming/prototype/gloaming.asm`, gate suite in `prototype/capture/`).
-> The existing design uses one game across two modules; its future position is subject to the [sequence review](../../curriculum-review.md). This is the per-unit **outline** —
+> The existing design uses one game across two modules; its future position is subject to the [sequence review](../../../../work.md#spectrum-sequences). This is the per-unit **outline** —
 > headlines, the one idea, the primitive, and the confession each unit carries. Prose,
 > listings, and captures are the authoring step.
 
@@ -207,91 +207,3 @@ unit later.
   8–10 (audio/pips) first, never the night.
 - **Done since planning:** the module-1 cut built, gated, and playtest-approved;
   `brief.md` realigned to the 14-section spec (both 2026-07-02).
-
-## Next session — the skeleton (cold start)
-
-Open at `Code198x/`. Inputs, in reading order: this plan (spine + the teachability
-gate), `code-samples/.../gloaming/prototype/gloaming-m1.asm` + its `.sym`,
-`prototype/capture/README.md` (addresses, input timing), and `prototype-log.md`
-(the confessions, for boundary sanity).
-
-The work:
-
-1. **Skeleton files** in `code-samples/.../gloaming/prototype/skeleton/` —
-   `unit-01.asm` … `unit-20.asm`, each a unit's *end state*. On main: the path is
-   non-shipping, so there is no regression surface and no worktree needed yet
-   (worktrees enter at prose time, when MDX must live at shipped paths — the
-   atomic-swap branch).
-2. **Backbone first, newest-first:** unit 20 = `gloaming-m1.asm` verbatim; derive
-   19, 18, … by assert-anchored subtraction, assembling each.
-3. **Detours (5–8) authored forward**, convergence asserted mechanically at unit 8.
-4. **Gate every unit:** assemble (docker/pasmonext), run (emu198x headless), capture
-   the named proof shot, write the one-sentence diff narration.
-5. **Deliverable: `route-map.md`** beside this plan — one row per unit: method,
-   narration, proof shot, gate status. **Stop there.** Steve reviews the route map
-   before any prose.
-
-After the map is approved: Phase A prose as the cadence pilot (four units through
-`/unit-media` + `/unit-write` + `/verify-unit`, review, and a per-unit number),
-then phases B–E at that cadence.
-
-## Module 2 — the skeleton session (cold start, prepared 2026-07-03)
-
-The boundary analysis is done; this section is the session's hot-start input.
-Open at `Code198x/`. Read: this section, the module-2 unit table above, the
-teachability-gate contract, and `prototype-log.md`'s decompose entry.
-
-**The shape discovered (2026-07-03):**
-
-- **Units 5–10 are pure subsets** of `gloaming.asm`, derived newest-first:
-  10 = verbatim; 9 = minus `chime_dawn` (+call at `.thedawn`); 8 = minus
-  `best_dusk` (four sites: the dawn set, the title row at `$5800+11*32+13`,
-  the lose-path max, the data byte) **swapped back to m1's `best_lives`
-  machinery** — the full game *replaced* the metric, so unit 9's diff is the
-  swap itself ("the row now counts watches"); 7 = minus the title tune
-  (`title_tune`/`title_rest`/`title_music_step`/`title_key_seen` + the
-  title-step integration) and `blip_snuff`'s call/routine (see flag below);
-  6 = minus dawn (`STATE_DAWN`, `dawn_sweep`, `draw_dawn_screen`,
-  `dawn_text`, `DAWN_COL`, the `.thedawn` path — watch 5 wraps forever:
-  the honest "endless died at the playtest" state); 5 = minus watches
-  (`dusk_table`/`dusk_lentab`/`dusk`/`dusk_speed`, the `init_run`/watch-init
-  split, the interstitial, per-watch corners `corner_tab` + gathering) —
-  single watch, grudge queue live. **Unit-05 is the convergence point.**
-- **Units 1–4 are a detour spine** (like m1's 5–8): they run the
-  nearest-light Manhattan hunt that round 12 replaced. Source it from the
-  prototype's own history — the commits ARE the unit-sequence draft:
-  `7463ded` (seek + snuff: `manhattan`, `seek_best`, the lit-lamp scan, and
-  snuffing as **the buffer-edit trick performed by the villain** —
-  `under_draught+8` rewritten, `unlight_pip` — m1 unit 12 mirrored),
-  `456cd3a` + `b601157` (withdraw/rest: `draught_mode`, home, `WREST`),
-  `b312c1c` → `24b6235` → `6fcb5d8` (pools + tendril + the gap-bug fixes).
-  Detour states = final-subset minus queue/watches/dawn/audio, plus the
-  history-sourced nearest-scan — so convergence at unit 5 stays mechanical
-  (the assert: unit-04 == unit-05 with the queue/oldest swap inverted).
-- **Both chain anchors bind:** unit-10 == `gloaming.sna` (verified verbatim
-  2026-07-03), and the chain must bottom out **byte-identical to
-  `gloaming-m1.sna`** — the module seam. The seam assert is the skeleton's
-  most important single check.
-- **Started scaffold:** `prototype/skeleton-m2/unit-10.asm` and `unit-09.asm`
-  are derived, assembled, and unit-10 verified verbatim. The derive script
-  should follow m1's pattern (assert-anchored swaps, committed as
-  provenance — `derive-skeleton-m2.py`).
-
-**Flags to resolve in the route map (Steve reviews before prose):**
-
-1. **`blip_snuff` placement** — it exists from round 2 in history, but the
-   cut hierarchy batches audio at units 8–10. Proposed: snuff arrives
-   *silent* at unit 1 and finds its voice in unit 8's audio batch (m1
-   precedent: sound is a finish-phase concern). Alternative: voiced from
-   unit 1, arguing feedback-with-event.
-2. **Unit 9's metric swap** — best_lives → best_dusk is a *replacement*,
-   not an addition: the only backbone unit whose diff removes m1 code.
-   Confirm the boundary reads as one idea ("what deserves to survive
-   changed: the night got longer than a life").
-3. **Interstitial ownership** — the held-screen-becomes-interstitial change
-   (unit 6) touches the state machine unit 7 also touches; check the 6/7
-   boundary survives the one-sentence-narration test when derived.
-
-**Then:** gate all ten (assemble, headless run, named proof shots — the
-plan table's confessions suggest them), write `route-map-m2.md` beside the
-m1 map, **stop for review**.

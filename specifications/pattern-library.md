@@ -25,4 +25,4 @@ The current schema requires `title`, `summary`, `platform`, `category` and `diff
 
 `taught_in` is an optional string, tags default to an empty array, and optional `evolution` and `related` objects carry neighbouring patterns and Vault links. Check `src/content.config.ts` and current route helpers before authoring these fields. Extending the curriculum to another system may require a deliberate schema change; the current enum does not define the project's ultimate scope.
 
-Runnable code follows [Code samples](code-samples.md). Schematic pseudocode is labelled and follows the shared [notation](pseudocode.md). Link both ways between a pattern and its lesson where useful. Confirm links and rendered code, and retain machine-specific assumptions rather than hiding them behind a “production-ready” label.
+Runnable code follows [Code samples](../website.md#code-and-artefacts). Schematic pseudocode is labelled and follows the shared [notation](pseudocode.md). Link both ways between a pattern and its lesson where useful. Confirm links and rendered code, and retain machine-specific assumptions rather than hiding them behind a “production-ready” label.
