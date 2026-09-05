@@ -1,5 +1,7 @@
 # Safe Cracker — Brief
 
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
 **Title (working):** Safe Cracker
 **System / Track:** Commodore 64 / BASIC
 **Position:** Volume 1 — First Programs
@@ -8,7 +10,7 @@
 **Topics:** 6 topics, ~6–8 hours
 **Constraint position:** period-faithful
 
-Format: [`specifications/brief-basic.md`](../../../../specifications/brief-basic.md)
+Format: [Game brief](../../../../specifications/brief.md)
 
 ---
 

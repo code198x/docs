@@ -1,122 +1,33 @@
-# Graphics and Audio — the A/V dimension of every path
+# Graphics, sound effects and music
 
-**Updated:** 2026-06-10
-**Purpose:** Graphics and audio are taught as a **first-class dimension of every curriculum path**,
-not a separate art/music course. This spec is the per-platform reference and the fold-into-the-paths
-model.
+Asset creation is part of the curriculum. Apply [the charter](../PROJECT.md) and record each game's approach in [its brief](brief.md). Supplied assets can support a learner, but do not replace teaching how assets are made and why they work.
 
-> **The fold (2026-06-10).** A/V is **co-equal with code** ([real-retro-games.md](../decisions/real-retro-games.md):
-> code / visuals / audio / level design / polish are co-equal). So every game on every track carries
-> a **graphics focus and an audio focus alongside its code rung**, and A/V skills **spiral** the same
-> way code does — introduced once, revisited deeper, then owned. This replaces the old fixed
-> "Games 1-4 / 5-8 / 9-16" framing (retired with the 2026 lineup replan); A/V now maps onto each
-> track's ladder, not to fixed game numbers. Most bedroom coders weren't trained artists or
-> musicians — they learned enough, worked within constraints, and collaborated. The curriculum
-> teaches that same competence.
+## Create
 
----
+Teach drawing, silhouette, contrast, composition, colour, animation, sound design, composition and arrangement through concrete needs. Show enough of the creative process to make a choice deliberate: sketch alternatives, compare them in context and revise.
 
-## How A/V folds into a path
+A sprite must remain visible in its environment. An animation should communicate action without making controls sluggish. Sound can anticipate, confirm or distinguish events. Music can establish rhythm and mood, but more notes are not automatically better.
 
-Each game's brief and units carry three threads at once:
+## Prepare for the target
 
-- **Code rung** — the new hardware/technique the game headlines (from the track's lineup record).
-- **Graphics focus** — what the learner draws and *why it reads* on this hardware.
-- **Audio focus** — what the learner makes the sound chip do, and when sound should fire.
+Explain the applicable palette, character set, tile, sprite, sample, instrument, channel, format and storage constraints. Different machines have different facilities; do not transfer one machine's terminology or capabilities without checking.
 
-A/V spirals across the ladder: early games teach **readability and feedback** (silhouette, contrast,
-a hit sound), middle games teach **craft** (tile variety, animation, ADSR, jingles), late games teach
-**exploitation** (dithering, palette tricks, filter sweeps, dynamic music). Each track also has at
-least one **audio-foregrounded game** where the sound chip *is* the headline — e.g. C64 **SID Symphony**
-(interrupt-driven SID) and **Soundsmith** (BASIC, full SID), Spectrum **Starfall** (128K AY), NES
-**Thunder Run** (APU engine), Amiga **Onslaught** (MOD replay) and AMOS **Knight Watch** (SAM + AMOS
-Music). When a game is briefed, its A/V focuses are recorded in its brief alongside the code rung.
+Show the relationship between the authored asset and its encoded bytes. Teach conversion settings and budgets, not only editor buttons. Separate work paid during the build from decoding, transfer and rendering paid while the game runs. Record source files and repeatable conversion steps.
 
----
+Spectrum projects must distinguish stock beeper, model-specific sound hardware and extensions. Other tracks should expose their own meaningful constraints and opportunities rather than reproduce the Spectrum's sequence.
 
-## Per-platform graphics constraints (reference)
+## Integrate
 
-- **C64 (VIC-II)** — sprites 24×21, 3 colours + transparent (or 12×21 multicolour); characters 8×8,
-  4 colours in multicolour; 40×25 screen, 16 colours. *The skill:* flexible character graphics around
-  limited sprite colour.
-- **ZX Spectrum (ULA)** — **no hardware sprites** (all software); **attribute clash** — 8×8 cells,
-  2 colours each (ink + paper); 256×192, 32×24 cells. *The skill:* designing around colour clash is
-  the whole game.
-- **NES (PPU)** — sprites 8×8 / 8×16, 3 colours + transparent; background 8×8 tiles, 4 palettes;
-  16×16 attribute regions share a palette. *The skill:* careful palette planning under tight limits.
-- **Amiga (Denise/Agnus)** — hardware sprites 16px wide, 3 colours + transparent; BOBs any size via
-  the Blitter (at CPU/Blitter cost); up to 32 colours (5 bitplanes), 64/4096 in special modes.
-  *The skill:* the most flexible — but BOB rendering costs performance.
+Develop assets alongside gameplay: readability at the intended scale, animation timing, transitions, sound priorities, channel competition, memory and frame budgets. Explain which resource a visual or sound uses and what else needs it.
 
-## Per-platform audio (reference)
+Offer alternatives to colour-only and sound-only information. Test against the actual background, motion and competing audio. A loading-screen illustration, sprite sheet or tune heard alone is not proof that it works in the game.
 
-- **C64 (SID)** — 3 voices, each waveform (triangle/saw/pulse/noise) + ADSR + frequency; one shared
-  filter (low/high/band); ring mod + sync. *Constraint:* 3 voices for music **and** SFX.
-- **ZX Spectrum** — 48K: single 1-bit **beeper** (costs CPU time); 128K: **AY-3-8912**, 3 voices +
-  noise. *Constraint:* beeper is tightly limited; AY is crisp.
-- **NES (APU)** — 2 pulse (duty cycle), 1 triangle (bass/melody), 1 noise (percussion), 1 DMC
-  (1-bit samples). *Constraint:* few voices; DMC is fiddly.
-- **Amiga (Paula)** — 4 channels of 8-bit **sampled** audio (1&4 left, 2&3 right). *Constraint:*
-  sample memory and mixing balance, not synthesis limits.
+## Progression and evidence
 
----
+Early work can use a few self-authored glyphs and short feedback tones. Later work can deepen animation, tiles, instruments, melodic phrases, arrangements and dynamic responses where the target and game justify them. No fixed asset count or compulsory soundtrack applies to every game.
 
-## Technique ladders (intro → deepen → own)
+Use available tools and document their role. Build198x supplies conversion and preparation where implemented; Play198x can assist audition or inspection where its supported formats fit. Tool existence is not a promise of access or compatibility.
 
-**Graphics:** silhouette & contrast (readability) → colour-coding & grid/tile design → minimal
-animation → tile variety & character personality → UI/HUD clarity → attribute-aware layout →
-dithering, sub-pixel animation, palette tricks. Attribute-aware design is *foundational* on the
-Spectrum (colour clash) and the NES (16×16 palette regions), *advanced* elsewhere.
+Keep editable originals, conversion instructions, provenance, permissions and credits. Verify output in the named target configuration and listen to the integrated audio. Public examples must be suitable for educational use and legally distributable.
 
-**Audio:** feedback sounds & pitch variation (a hit, a jump) → sound priority & short melodies →
-ADSR shaping, arpeggios, jingles, tracker basics → audio pacing (tempo matches gameplay) → filter
-sweeps, PWM, ring mod, dynamic music (responds to game state), DMC/digi-drums. Each technique attaches
-to the game whose hardware introduces it (e.g. ADSR + arpeggios at the SID game; DMC at the NES audio
-capstone; ring mod at a C64 capstone).
-
----
-
-## Tools (vault-worthy)
-
-**Historical graphics:** Deluxe Paint (Amiga) · OCP Art Studio (C64/Spectrum) · Koala Painter (C64) ·
-The Graphics Machine (Spectrum). **Modern:** Aseprite · Pro Motion NG · Multipaint (handles
-attribute constraints) · YY-CHR / NES Screen Tool (NES) · Charpad / Spritepad (C64) · GIMP/Photoshop
-with an indexed palette.
-
-**Historical audio:** SoundTracker / ProTracker (Amiga) · SID Wizard / Sound Monitor (C64) ·
-Wham! Music Box (Spectrum AY). **Modern:** FamiTracker (NES) · DefleMask (multi-platform) ·
-Vortex Tracker II (Spectrum AY) · OpenMPT (MOD) · BFXR/SFXR (quick SFX).
-
-## Vault targets
-
-A/V deserves the same vault depth as code. Still-to-build entries:
-
-- **Artists** — Bernie Drummond, Oliver Frey, Bob Wakelin, Mark Ferrari, Henk Nieborg, Paul Robertson.
-- **Composers** — Jeroen Tel, Fred Gray, Jonathan Dunn, Matt Furniss, Neil Baldwin, Manami Matsumae,
-  Hirokazu "Hip" Tanaka, Yuzo Koshiro (plus the SID/AY names already catalogued).
-- **Techniques** — dithering, attribute-aware design, palette cycling, pixel clusters, tile variation,
-  arpeggio, PWM, filter sweep, vibrato, echo/delay, digi-drums.
-- **Tools** — the lists above (Deluxe Paint, ProTracker, FamiTracker, SID Wizard, DefleMask, …).
-
-(Created as the units that reference them ship — the required-vs-nice-to-have rule in
-[content-creation-workflow.md](content-creation-workflow.md).)
-
----
-
-## Asset provision and the honest truth
-
-For learners who struggle with art/audio: provide **base assets** they can modify, optional **asset
-packs** (focus on code), point to **communities** for sharing, and ship **tool tutorials**.
-
-What we *can* teach: the technical constraints (you must understand them to make anything), the
-principles (readability, feedback, communication), the tools and workflows, the historical context,
-the platform-specific tricks. What's harder: raw artistic talent and a musical ear — but **constraints
-breed creativity** (a limited palette forces good design), modern tools are excellent, communities
-exist, and "programmer art" is a respected genre (Tetris, Elite's wireframe, Rogue/Dwarf Fortress's
-ASCII). Many bedroom legends — Matthew Smith, Jeff Minter — learned *enough*, and personality beat
-polish.
-
----
-
-**The principle:** no game ships as code-only. Every path teaches you to make it *look* and *sound*
-like it belongs on the machine.
+The Craft develops shared principles; system lessons implement them; the Vault supplies sourced context; the Pattern Library records genuinely reusable techniques. Link these instead of maintaining parallel explanations.

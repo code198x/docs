@@ -1,5 +1,7 @@
 # Blockstorm
 
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
 **Track:** Spectrum BASIC
 **Genre:** Vertical shooter with UDG graphics
 **Units (indicative):** ~32, in two build arcs
@@ -368,9 +370,3 @@ The Spectrum 48K has no ELSE keyword. All branching uses `IF condition THEN GO T
 - Total: ~11-13 KB — comfortable on a 48K Spectrum
 
 ---
-
-## Changelog
-
-- **v2.1 (2026-03-16):** Added machine code helpers via DATA/POKE/USR (Unit 31), IN 31 Kempston joystick support. Per visual progression plan.
-- **v2.0 (2026-03-13):** Rewritten for v5.0 curriculum. Now Game 14 with 32 units (was Game 4 with 64 units). Compressed from 20 waves to 10, 4 power-ups to 2, removed bosses, attract mode, and difficulty select. Core experience preserved: UDG graphics, formation shooting, the performance ceiling lesson.
-- **v1.0 (2026-03-09):** Initial game outline as Game 4 in the v4.0 curriculum. 64 units across 4 phases.

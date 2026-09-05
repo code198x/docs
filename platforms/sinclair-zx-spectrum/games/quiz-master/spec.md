@@ -1,5 +1,7 @@
 # Quiz Master
 
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
 **Track:** Spectrum BASIC
 **Genre:** Multiple-choice quiz with categories
 **Units (indicative):** ~8
@@ -132,9 +134,3 @@ All four conditions must be true (the key is not A AND not B AND not C AND not D
 Questions display at column 4 on a 32-column screen, giving 28 characters before wrapping. Keep questions under 28 characters. Drop "What is the" prefixes — "Closest planet to the Sun?" reads better than "What is the closest planet to the Sun?" anyway.
 
 ---
-
-## Changelog
-
-- **v2.0 (2026-03-17):** Complete rework for visual progression. GO SUB for question card and key mapping. Category colours. Animated results. Fixed c$ variable clash. Prototype tested in Emu198x.
-- **v1.1 (2026-03-16):** Added GO SUB/RETURN per visual progression plan.
-- **v1.0 (2026-03-13):** Initial game outline for v5.0 curriculum.

@@ -1,8 +1,9 @@
 # Gloaming — Brief
 
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
 **System / Track:** ZX Spectrum / Assembly
-**Position:** Volume 1 — **two modules, one game** (per the 2026-07-02 amendment to
-[spectrum-assembly-gentle-ramp.md](../../../../decisions/spectrum-assembly-gentle-ramp.md)):
+**Existing design:** Volume 1 — **two modules, one game**:
 **Module 1 "Gloaming"** (the tiny first game, after the Primer) and **Module 2 "The Long
 Night"** (the revisit that deepens it), ahead of Shadowkeep.
 **Status:** Realigned to the 14-section spec 2026-07-02, superseding the 2026-06-01 draft
@@ -36,7 +37,7 @@ never blocks a newcomer.
   small, complete, polished, classic. Module 1's shape and its lesson — a tiny finished
   game beats a sprawling unfinished one — are this tradition's.
 - ***Pac-Man*** (Namco, 1980) — the antagonist's grammar, credited openly per
-  [inspired-by-not-clones-naming.md](../../../../decisions/inspired-by-not-clones-naming.md):
+  [Game brief](../../../../specifications/brief.md):
   simple deterministic rules read as *intent* and *personality*; scatter rhythm keeps
   relentless pursuit fair. Gloaming's wisp is a one-ghost application of those lessons.
 

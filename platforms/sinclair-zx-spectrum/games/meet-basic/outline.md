@@ -1,8 +1,10 @@
 # Primer — "Meet BASIC" (outline)
 
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
 > **Status:** Approved to build, 2026-06-05 (read and signed off by Steve; open
 > questions resolved — see *Open for the author*). The BASIC track's opening artefact, per
-> [`front-of-curriculum-architecture.md`](../../../../decisions/front-of-curriculum-architecture.md)
+> [Curriculum design](../../../../specifications/curriculum.md)
 > (Layer 2a). Sits *ahead* of Story Builder and the rest of Volume 1, and *after*
 > the General Programming primer (Foundations, Layer 1). "meet-basic" is the working
 > slug; a real name can wait. This is a design outline (beats + intent), not authored

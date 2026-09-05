@@ -1,9 +1,9 @@
 # Flock — The Plan (the first Amiga game)
 
-> **Outline, 2026-06-11.** Derived from [`brief.md`](brief.md) and governed by
-> [`amiga-assembly-lineup.md`](../../../../decisions/amiga-assembly-lineup.md) (sprites-first
-> reorder) and [`curriculum-structure.md`](../../../../decisions/curriculum-structure.md)
-> (uncapped techniques; one new thing per unit). This is the per-unit **outline** — headlines,
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
+> **Outline, 2026-06-11.** Derived from [`brief.md`](brief.md). Reconcile it with the
+> [current curriculum guidance](../../../../specifications/curriculum.md) before authoring. This is the per-unit **outline** — headlines,
 > intent, and the one new thing each unit introduces. Full magazine-class prose, the `.asm`
 > listings (in `code-samples/`, referenced via `CodeFromFile`), screenshots and audio captures
 > are the **authoring** step, not done here.
@@ -46,8 +46,7 @@ with a Llamasoft twinkle.
 - Each unit meets the per-unit **Definition of Done**: assembles on **vasm → bootable ADF**; runs
   on **Emu198x** (`emu198x-amiga`, script-mode capture); magazine-class prose; ≥1 verified
   screenshot; `CodeFromFile` refs exist + assemble; ≥2 "Try this"; "If it doesn't work"; vault refs
-  resolve. (Real-hardware verification is suspended — see
-  [`commercial-bar-revamp.md`](../../../../decisions/commercial-bar-revamp.md).)
+  resolve. Record emulator and hardware verification separately.
 - **The 8-channel budget is a design rule, not a footnote.** Each level's on-screen cast — the
   sheep plus every hazard and rideable — must fit eight sprite channels. Level layouts are
   budgeted in the level table during authoring; sprite reuse down the screen is **Signal's**

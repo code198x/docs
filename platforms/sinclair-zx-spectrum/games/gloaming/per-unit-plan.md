@@ -1,11 +1,12 @@
 # Gloaming — The Plan (two modules, one game)
 
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
 > **Outline, 2026-07-02.** Supersedes the 2026-06-01 single-module outline. Derived from
 > [`brief.md`](brief.md) (with its §10 reshape contract), the fifteen-round
 > [`prototype-log.md`](prototype-log.md), and the proven prototype
 > (`code-samples/.../gloaming/prototype/gloaming.asm`, gate suite in `prototype/capture/`).
-> Governed by [`spectrum-assembly-gentle-ramp.md`](../../../../decisions/spectrum-assembly-gentle-ramp.md)
-> (2026-07-02 amendment: one game, two modules). This is the per-unit **outline** —
+> The existing design uses one game across two modules; its future position is subject to the [sequence review](../../curriculum-review.md). This is the per-unit **outline** —
 > headlines, the one idea, the primitive, and the confession each unit carries. Prose,
 > listings, and captures are the authoring step.
 
@@ -103,8 +104,7 @@ own — and every redesign step is a real playtest finding from the prototype lo
 
 **Module intro (framing, not a build unit):** the playtest sheet — what a winnability
 gate proves and what only hands can. The module retells the pass's fifteen rounds as its
-own arc. The intro should also name the two-axis fork ahead (per the 2026-07-03
-observation in `spectrum-assembly-gentle-ramp.md`): the night the learner is deepening
+own arc. The earlier plan proposed two possible directions for the next games: the night the learner is deepening
 here will be taken further twice — Shadowkeep extends the *design* into place and scale
 on the same engine; Lamplight returns the lamp-and-dark fiction at the masked-sprite
 *presentation* bar. The track's structure becomes a promise the learner can see coming.

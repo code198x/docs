@@ -1,8 +1,6 @@
 # Gloaming — prototype discovery log (validate-and-repair pass)
 
-The endpoint-first discovery log (✦ convention in
-[decisions/endpoint-first-authoring.md](../../../../decisions/endpoint-first-authoring.md)),
-kept for the 2026-07 validate-and-repair pass. The shipped game (unit 21, `step-01.asm`)
+The prototype discovery log, kept for the 2026-07 validate-and-repair pass. The shipped game (unit 21, `step-01.asm`)
 is the starting point; the reshape contract is brief §10.
 
 ## 2026-07-01 — baseline: gate re-run + first human playtest

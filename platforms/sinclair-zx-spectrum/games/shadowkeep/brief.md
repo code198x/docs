@@ -1,7 +1,9 @@
 # Shadowkeep — Brief
 
+> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+
 > **AMENDED 2026-07-04 — the Place gains jeopardy.** Per
-> [a-game-needs-jeopardy.md](../../../../decisions/a-game-needs-jeopardy.md), a game needs a
+> [Current game quality requirements](../../../../PROJECT.md), a game needs a
 > reachable fail state, so the "forgiving in pass 1 (exploration, not threat)" stance below is
 > **superseded**: the Place must be *losable* to ship as a game. The already-designed curse
 > threat (caught → you join the sleepers, no combat — the **Warden** patrol-freezer shape)
@@ -13,12 +15,12 @@
 **Title (working):** Shadowkeep
 **System / Track:** ZX Spectrum / Assembly
 **Position:** The second game of the assembly track, after *Gloaming* (the tiny first game) and the *Meet the Machine* Primer.
-**Module model:** Shadowkeep is a **game taught across several modules** ([modules-not-games.md](../../../../decisions/modules-not-games.md)). This brief covers **pass 1 — _the Place_**: a complete, finishable cell-based keep. Later content (inhabitants, identity, items, multiple keeps) becomes **later revisit modules**, not part of this pass.
+**Module model:** Shadowkeep is a **game taught across several modules** ([Content model](../../../../specifications/content-model.md)). This brief covers **pass 1 — _the Place_**: a complete, finishable cell-based keep. Later content (inhabitants, identity, items, multiple keeps) becomes **later revisit modules**, not part of this pass.
 **Headline (design concept):** *Atmosphere (Sense of Place)*
 **Engine:** carries **Gloaming's engine** wholesale — cell-snapped movement, single-draw sprites with save/restore, attribute-coupled collision, a frame-locked loop, a title→play→win state machine. The Place adds *content and atmosphere*, not a new engine.
-**Counts:** illustrative, never targets ([curriculum-structure.md](../../../../decisions/curriculum-structure.md)). Pass 1 ran to ~16 units across four sub-arcs.
+**Counts:** illustrative, never targets ([Curriculum design](../../../../specifications/curriculum.md)). Pass 1 ran to ~16 units across four sub-arcs.
 
-Formal spec format: [docs/specifications/brief.md](../../../../specifications/brief.md). Companion docs in this folder: [per-unit-plan.md](per-unit-plan.md) (the canonical per-unit reference) and [beeper-spec.md](beeper-spec.md) (the title-theme composition spec, for sub-arc 1.4). The original engine-first specs (sprite-shifter, object-system, tile-map, engineering-plan, memory-budget) are archived under [`superseded/`](superseded/) — they describe techniques **relocated** to later rendering games and are not current guidance.
+Formal spec format: [docs/specifications/brief.md](../../../../specifications/brief.md). Companion docs in this folder: [per-unit-plan.md](per-unit-plan.md) (the canonical per-unit reference) and [beeper-spec.md](beeper-spec.md) (the title-theme composition spec, for sub-arc 1.4). Earlier engine-first specifications remain in Git history. Their proposed techniques need reassessment against the [current sequence review](../../curriculum-review.md).
 
 ---
 
@@ -132,7 +134,7 @@ Options (sound on/off, control remap) and richer endings belong to later revisit
 
 ## 10. Anti-goals
 
-- **No combat, no weapons.** The hooded thief is a stealth intruder; design is explore-and-avoid. Combat lives in V3.20 Edge of Iron; action-RPG in V1.6 Embergate. ([shadowkeep-four-arc-framing.md](../../../../decisions/shadowkeep-four-arc-framing.md) Genre-Honesty table.)
+- **No combat, no weapons.** The hooded thief is a stealth intruder; design is explore-and-avoid. Combat lives in V3.20 Edge of Iron; action-RPG in V1.6 Embergate. The scope of other games will be assessed in the [sequence review](../../curriculum-review.md).
 - **No character classes, no parser/quest/branching narrative, no full Singleton-class location-graph.** V1.6 Embergate / V1.7 The Lantern Path / V1.4 Whitewinter respectively.
 - **No pre-shifted/masked sprites, no Y-sort, no isometric, no decoupled tile-collision** — these are the *relocated* rendering techniques (Smooth Motion / Overlap / Greypeak). The Place stays cell-based on purpose.
 - **No software pixel scrolling** (V3 entries); **no procedural generation** (every room hand-designed); **no modern-scene tricks** (period-faithful).
@@ -169,7 +171,7 @@ Sub-arcs of pass 1 (illustrative; full detail in [per-unit-plan.md](per-unit-pla
 
 ## 13. Vault tie-ins
 
-Every reference from a shipped unit must resolve (Definition of Done; vault is a launch artefact — [october-2026-launch-spec.md](../../../../decisions/october-2026-launch-spec.md)).
+Every reference from a shipped unit must resolve (Definition of Done; vault is a launch artefact — [Code198x: purpose and direction](../../../../PROJECT.md)).
 
 - **Games:** [Atic Atac](/vault/games/atic-atac), [Knight Lore](/vault/games/knight-lore), Sabre Wulf, Pentagram, Underwurlde, Cybernoid II, The Hobbit.
 - **Studios / people:** Ultimate Play the Game (Tim & Chris Stamper); Hewson (via Cybernoid II); Melbourne House (via The Hobbit); [Dave Rogers](/vault/people/dave-rogers).
@@ -185,10 +187,3 @@ Every reference from a shipped unit must resolve (Definition of Done; vault is a
 4. **Capture fidelity for dithering.** Fine dither is high-frequency; mp4 video averages it to flat colour. Dither-heavy units use crisp PNG stills; a video-pipeline bump + recapture is deferred work.
 
 ---
-
-## Changelog
-
-- **v3.1 (2026-06-02):** Sub-arc 1.4 (audio + the complete game loop) authored and verified — the Place is **complete at 16 units** (Arc 1 done). Build status updated; SFX driver, gold goal/win, D-minor beeper theme, and title→play→win→title state machine all live.
-- **v3.0 (2026-06-02):** Rewritten for the cell-based **Place** (pass 1) under the module model. The three engine commitments (pre-shift/masked sprites, Y-sort, decoupled collision) removed as Shadowkeep content and noted as **relocated** to the rendering games; engine-first specs archived under `superseded/`. Scope reframed from 64-unit/four-arc to a game across modules with illustrative counts; **bitmap dithering** named as the signature technique. Build status (Units 1–12 live) added. Genre, ancestors, atmosphere, audio, level, anti-goals and vault tie-ins carried forward from v2.0 (reworded off the old engine where needed).
-- **v2.0 (2026-05-20):** Consolidated engine-first brief — 32-unit Arc 1+2 October / 64-unit four-arc full game; three engine commitments as the core remix; "attribute byte = rulebook" retired in favour of tile-map collision. Superseded by v3.0; preserved in git.
-- **v1.0 (2026-05-13):** Initial brief — 256-unit / 17-phase framing, October vertical slice. Superseded.

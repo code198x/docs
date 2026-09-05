@@ -1,7 +1,6 @@
 # The Rendering Games — Smooth Motion → Overlap → Greypeak (outline)
 
-> **Status:** Draft outline, 2026-05-29, per
-> [`spectrum-assembly-gentle-ramp.md`](../../../../decisions/spectrum-assembly-gentle-ramp.md).
+> **Status:** Existing draft outline for review. Apply the [current sequence review](../curriculum-review.md); this is not an adopted replacement lineup.
 > These three games **spread the advanced rendering Trunk** that the old plan crammed into
 > Shadowkeep. They come *after* Shadowkeep (cell-based), each motivated by a felt limitation of the
 > one before. "Smooth Motion" and "Overlap" are working titles (small games); **Greypeak** is the

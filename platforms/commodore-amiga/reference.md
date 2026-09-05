@@ -1,27 +1,26 @@
-# Commodore Amiga
+# Commodore Amiga: curriculum tooling
 
-## Toolchain
+Read the [project charter](../../PROJECT.md) and the actual lesson, source and capture manifest before changing a target or promising execution. This page describes the current source-defined tool path; it is not a hardware reference manual or a claim that every local tool is installed.
 
-| Component | Tool | Notes |
-|-----------|------|-------|
-| Assembler | vasm (m68k, mot syntax) | `vasmm68k_mot -Fhunkexe -kick1hunks` → executable |
-| Docker image | `ghcr.io/code198x/commodore-amiga:latest` | |
-| Emulator | Emu198x (when available) | Screenshots via `/scripts/amiga-screenshot.sh` |
-| ROMs | Kickstart ROM required | `~/Projects/Reference/amiga/Firmware/` — **not distributable** |
+## Cross-development
 
-## Build command
+The development host runs Asm198x with the `vasm` dialect. The target runs the built program. Build198x prepares media where required; Emu198x supplies the configured execution and capture environment. Retired platform Docker repositories are not the starting point for new tooling work.
 
-```bash
-docker run --rm -v $(pwd)/code-samples:/code-samples ghcr.io/code198x/commodore-amiga:latest \
-  vasmm68k_mot -Fhunkexe -kick1hunks -o /code-samples/output /code-samples/input.asm
+```sh
+asm198x --dialect vasm --exe input.asm -o program
+build198x adf program -o program.adf
 ```
 
-## Assembly dialect
+A hunk executable, then a bootable disk image. Unit Makefiles specify volume and executable names.
 
-68000 assembly via vasm (Motorola syntax). Language detection maps Amiga paths to `68000` highlighting.
+These commands reflect `code-samples/_capture/capture.py` and the corresponding unit Makefiles. Use the unit’s complete recipe, input files and explicit options for a reproducible result. The website’s `scripts/build-artefacts.sh` owns release-tool pins and publishing; installed tools may differ, so record their versions when reporting validation.
 
-## Gotchas
+AMOS and Blitz are peer language routes with different facilities, alongside assembly. The capture runner uses prepared language environments for those routes; they are not host assembly builds.
 
-- **Kickstart ROM is not distributable** — learners must supply their own. Document this clearly in getting-started guides.
-- **Screenshot timing**: Amiga boots slowly in emulation. Use `--wait` with high frame counts.
-- **ADF creation**: use the `build-amiga-adf` skill to create bootable disk images from executables.
+## Configuration and evidence
+
+Name the model, memory, video standard, input, storage and any extension required by the program. A modern host or transfer method does not add target capabilities. A successor running a compatibility program is distinct from a successor-specific project.
+
+Configure firmware and other runtime dependencies according to the emulator and lesson setup instructions. A built program image is not evidence that no firmware is needed. Do not make blanket redistribution or licensing claims; use the applicable public source and obtain required files through the documented route.
+
+Inspect the capture runner’s actual supported options and manifests. Choose settle times and inputs from the program’s behaviour rather than a universal frame count. View screenshots, watch video and listen to audio before using them as evidence, and label the emulator/model tested. See [Media capture](../../infrastructure/media-capture-pipeline.md).
