@@ -1,6 +1,6 @@
 # Meet BASIC
 
-**Status: agreed module direction; detailed lesson breakdown and implementation pending.**
+**Status: agreed module direction; [lesson and source mapping](meet-basic-plan.md) prepared; implementation pending.**
 
 Meet BASIC is the guided introduction to programming in Sinclair BASIC on the ZX Spectrum. It teaches through short projects, combining the useful existing primer and early programs rather than placing both sequences one after the other. Apply the [curriculum specification](../../../specifications/curriculum.md) and [unit guidance](../../../specifications/unit.md).
 
@@ -82,4 +82,4 @@ Use Steven Vickers, edited by Robin Bradbeer, *ZX Spectrum BASIC Programming* fo
 7. Ask a reader new to the environment to follow the opening without verbal rescue; use observed difficulties to repair explanations and setup. This is an authoring check, not a learner examination.
 8. Update catalogue ordering, descriptions, links and redirects with the lesson changes. Keep Bright Spark's sequence storage and indexing explanations local rather than expanding the primer to pre-teach them. Publish only when the revised route and its artefacts have been checked.
 
-This specification supplies no new build or execution result. The next deliverable is a concrete lesson-and-source mapping for Meet BASIC, followed by checked implementation; the remainder of the Spectrum game sequence stays under review.
+The [lesson and source mapping](meet-basic-plan.md) assigns existing material to concrete runnable stages, records new work and defines the first implementation slice. This specification supplies no new build or execution result; the remainder of the Spectrum game sequence stays under review.

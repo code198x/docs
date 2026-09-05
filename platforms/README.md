@@ -8,7 +8,7 @@ Use these designs alongside authored lessons, sample sources and capture manifes
 
 | System | Module | Status |
 |---|---|---|
-| ZX Spectrum | [Meet BASIC](sinclair-zx-spectrum/basic/meet-basic.md) | Direction agreed; lesson mapping and implementation pending |
+| ZX Spectrum | [Meet BASIC](sinclair-zx-spectrum/basic/meet-basic.md) | Direction agreed; [lesson/source plan](sinclair-zx-spectrum/basic/meet-basic-plan.md) prepared; implementation pending |
 
 ## Existing briefs
 

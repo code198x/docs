@@ -21,6 +21,7 @@ Original prose is licensed under **CC BY 4.0**. See [LICENSE.md](LICENSE.md) for
 [Website and publishing](website.md) connects these specifications to the current schemas, source organisation, capture, testing and deployment. [Game-design material](platforms/README.md) lists the concrete existing designs worth consulting during re-specification.
 
 The [Spectrum Meet BASIC specification](platforms/sinclair-zx-spectrum/basic/meet-basic.md) defines the agreed introduction through short projects and its relationship to the first substantial games.
+Its [lesson and source mapping](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) identifies reusable material, new checkpoints, verification and route migration work.
 
 ## Ownership and maintenance
 
