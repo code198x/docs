@@ -20,6 +20,8 @@ Catalogue status, authored pages, downloadable sources, successful builds and ob
 
 When a revised game or module ships, update the system and track landing pages in the same release as its catalogue, module index and entry lesson. Check the recommended starting point, independent-entry wording, target configuration, tools, shared-subject links and every availability claim. Derive module lists and counts from authored content where possible; do not leave fixed game quotas or future lineups in introductory copy. For the Spectrum, this includes both the Sinclair BASIC and Z80 Assembly landing pages.
 
+Module indexes can opt into the plain House UI overview with `presentation: house`. Its starting link and grouped lesson list come from the canonical units collection; keep the current catalogue and published lesson identities intact while replacements are being developed. Review the module’s actual content before applying the layout elsewhere.
+
 Unit-page frontmatter currently requires a title and numeric `game` and `unit` fields. Other collections have their own schemas; inspect them instead of maintaining duplicate templates. Layout, neighbours and counts are derived by the website.
 
 Shared routes use `/foundations/{module}/unit-NN/` and `/craft/{module}/unit-NN/`; system lessons use `/systems/{system}/{track}/{module}/unit-NN/`. The Vault uses `/vault/{category}/{slug}/`; patterns use `/patterns/{system}/{track}/{category}/{slug}/`, with cross-platform entries omitting the track. Route code remains authoritative. Preserve published redirects when moving content.
