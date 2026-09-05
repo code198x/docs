@@ -2,7 +2,9 @@
 
 ## The decision
 
-**General Programming drops Sinclair BASIC.** Every idea is taught in one neutral
+**General Programming drops Sinclair BASIC.** (Since 2026-09-05 the track is five modules,
+The Basics through Structure, at `curriculum/foundations/{basics,working-it-out,decisions,repeating,structure}/`; this
+record keeps the old name because it is about the pseudocode, which all five share.) Every idea is taught in one neutral
 pseudocode and nothing else. The Spectrum-specific material is **retired rather than
 relocated**: *Meet BASIC* already teaches every piece of it, unit by unit.
 

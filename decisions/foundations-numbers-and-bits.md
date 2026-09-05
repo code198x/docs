@@ -25,7 +25,9 @@ up. See [foundations-is-language-neutral.md](foundations-is-language-neutral.md)
 ## Resolved here
 
 1. **One combined subtrack, not two.** Number Systems flows into Bit Logic as a
-   single arc, at `curriculum/foundations/numbers-and-bits/`. They pair too tightly
+   single arc, at `curriculum/foundations/numbers-and-bits/` — **since 2026-09-05 two
+   modules, `counting-in-twos/` and `working-the-bits/`, cut between reading a byte and
+   doing things to one; see [foundations-is-language-neutral.md](foundations-is-language-neutral.md)**. They pair too tightly
    to split — masking and shifting are meaningless until binary and place value are
    in hand — and one cohesive track mirrors General Programming. The architecture doc
    named one combined primer the likely shape; this confirms it.

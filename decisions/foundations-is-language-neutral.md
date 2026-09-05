@@ -34,15 +34,32 @@ topic either: every `IF` anyone writes in any language is truth-functional reaso
 
 ## The shape
 
-| Module | Holds |
-|---|---|
-| The Basics | a program, order, output, memory, input, arithmetic |
-| Decisions | `IF`, `ELSE` and the chain, joining questions |
-| Truth Tables | Logic & Gates movement 1: propositions, the table as a complete map, De Morgan's, proving two guards the same |
-| Repeating | counted loop, loop-until, the loop that checks first |
-| Structure | lists, named jobs, jobs that take and give back, debugging |
-| Numbers & Bits | binary, hex, two's complement, the bit tools |
-| Gates and the Adder | Logic & Gates movement 2: the same tables as circuits, then the adder |
+| Module | Slug | Holds |
+|---|---|---|
+| The Basics | `basics` | a program, order, output, memory, input |
+| Working It Out | `working-it-out` | arithmetic and precedence, the counter, remainder and rounding |
+| Decisions | `decisions` | `IF`, `ELSE` and the chain, flags, joining questions |
+| Truth Tables | `truth-tables` | propositions, the table as a complete map, De Morgan's, proving two guards the same |
+| Repeating | `repeating` | counted loop, loop-until, the loop that checks first |
+| Structure | `structure` | lists, named jobs, jobs that take and give back, debugging |
+| Counting in Twos | `counting-in-twos` | binary, hex, two bytes, two's complement |
+| Working the Bits | `working-the-bits` | the bit tools, shifting, character codes, floating- and fixed-point |
+| Gates and the Adder | `gates-and-the-adder` | the same tables as circuits, then the adder |
+
+**Built 2026-09-05.** This is the shape as shipped, which differs from the first draft of
+this table in two places. Working It Out is its own module rather than the back of The
+Basics, because arithmetic, the counter and remainder are one idea and they are the one the
+number modules depend on; splitting them out lets Counting in Twos require exactly what it
+needs. Numbers & Bits is two modules, cut between reading a byte and doing things to one;
+fixed-point stays with the bit tools because it is shifting applied. Sizes run 5/3/4/3/3/4/4/5/3.
+Every old URL under `general-programming` and `numbers-and-bits` redirects to the unit that
+now holds it.
+
+Ten modules on one shelf is the runway this record warned about, and the answer is the
+same one: nothing gates a machine, and the shelf page says so. Ten short modules read as
+less of a wall than one of nineteen units did, but the count alone will look like a
+syllabus to a reader who does not know that, so the shelf has to make the side-path nature
+visible.
 
 Two orderings carry weight. **Truth Tables sits directly after Decisions**, while `AND` and
 `OR` are still fresh from a reader having just written them. **Gates and the Adder follows
