@@ -265,11 +265,13 @@ light/dark checks passed locally with the companion sources. Draft navigation us
 the canonical `unit-05-give-a-useful-clue` and `unit-06-keep-guessing` routes.
 These are not published; reader review and publication dates remain pending.
 
-[Emu198x PR #1449](https://github.com/emu198x/emu198x/pull/1449) supplies keyword
+Merged [Emu198x PR #1449](https://github.com/emu198x/emu198x/pull/1449) supplies keyword
 chords within Host Keyboard: Tab for SYMBOL SHIFT and Shift+Tab for extended
 mode. The lesson drafts use these chords instead of repeated mode switches.
 Shared input tests and a configured-ROM test pass; a local desktop binary is
-built. Native reader acceptance remains pending. The public v0.22.0 download
+built. Native testing was reported unsuccessful; [issue #1450](https://github.com/emu198x/emu198x/issues/1450)
+tracks the unconfirmed chord, build and observed result. Do not treat the desktop
+behaviour as verified until that report is resolved. The public v0.22.0 download
 does not contain this fix: before publishing B1/B2, ship the emulator change,
 update the setup's minimum version/downloads and verify the released package.
 
