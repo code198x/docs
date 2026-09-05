@@ -226,7 +226,7 @@ Do not mark new units available before their source, prose and media pass verifi
 
 The 48K Emu198x MCP run passed 16 named checks: immediate output, numbered-line growth, editing, variable assignment and a deliberate error, ROM SAVE, TAP export, fresh-process loading, an exact recovered listing, running and a further edit. The sample README and recorded results own versions, hashes and limits. Native GUI operation and original hardware have not been verified.
 
-[Emu198x #1446](https://github.com/emu198x/emu198x/issues/1446) tracks desktop export of recorded BASIC tape data. Before publishing A2, complete and test the learner's destination-file, export, close/reopen and load instructions. Check native keyboard/editor operation too. Do not silently substitute a snapshot for a BASIC tape save.
+[Emu198x PR #1447](https://github.com/emu198x/emu198x/pull/1447) implements desktop tape export and has been built locally. A2 now describes the export, close/reopen and load route. Its obsolete missing-command warning is removed. The export adapter and rebuilt binary passed automated tape round trips; [Emu198x #1446](https://github.com/emu198x/emu198x/issues/1446) remains open for native acceptance. Before publication, exercise the written file-picker/export/reopen route and keyboard/editor operation in the native interface. Do not silently substitute a snapshot for a BASIC tape save.
 
 A3 passed six input scenarios with 20 named prompt/output checks: changed names, changed story words, empty answers and long answers. Complete output rows, including wrapping, were compared. Its story capture was visually inspected. The lesson links to Foundations’ “Asking the Player” while explaining Spectrum input syntax and supplied quotes locally.
 
