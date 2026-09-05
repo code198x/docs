@@ -1,8 +1,14 @@
-# Game-design material
+# System curriculum and game-design material
 
-This directory retains concrete game briefs, development plans and prototype investigations for review. It does not contain canonical hardware references, language manuals or system-support status. [PROJECT.md](../PROJECT.md) governs direction; [current work](../work.md#spectrum-sequences) scopes the next review.
+This directory holds system-specific curriculum specifications alongside retained game briefs, development plans and prototype investigations for review. It does not contain canonical hardware references, language manuals or system-support status. [PROJECT.md](../PROJECT.md) governs direction; [current work](../work.md#spectrum-sequences) scopes the next review.
 
 Use these designs alongside authored lessons, sample sources and capture manifests. Their mechanics and observations are useful evidence; old counts, ordering, tool availability and historical comparisons need checking. No existing brief becomes an approved replacement sequence by surviving this cleanup.
+
+## Agreed module specifications
+
+| System | Module | Status |
+|---|---|---|
+| ZX Spectrum | [Meet BASIC](sinclair-zx-spectrum/basic/meet-basic.md) | Direction agreed; lesson mapping and implementation pending |
 
 ## Existing briefs
 

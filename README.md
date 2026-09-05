@@ -20,6 +20,8 @@ Original prose is licensed under **CC BY 4.0**. See [LICENSE.md](LICENSE.md) for
 
 [Website and publishing](website.md) connects these specifications to the current schemas, source organisation, capture, testing and deployment. [Game-design material](platforms/README.md) lists the concrete existing designs worth consulting during re-specification.
 
+The [Spectrum Meet BASIC specification](platforms/sinclair-zx-spectrum/basic/meet-basic.md) defines the agreed introduction through short projects and its relationship to the first substantial games.
+
 ## Ownership and maintenance
 
 The [website](https://github.com/code198x/website) owns public lessons, catalogues and components. [Code samples](https://github.com/code198x/code-samples) owns runnable sources, assets and verification recipes. Those files establish implementation state; plans and prose counts do not.

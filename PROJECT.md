@@ -108,7 +108,7 @@ Original Code198x prose is licensed under Creative Commons Attribution 4.0 Inter
 
 ## Current work and authority
 
-The immediate task is to re-specify the ZX Spectrum BASIC and assembly game sequences, then develop the lessons from agreed specifications. Retain, reshape or replace existing choices for their appeal, teaching value and suitability. The recommended sequences in the initial review remain proposals; only the scope-relative quality standard has been agreed from that review.
+The immediate task is to re-specify the ZX Spectrum BASIC and assembly game sequences, then develop the lessons from agreed specifications. Retain, reshape or replace existing choices for their appeal, teaching value and suitability. The [Meet BASIC module direction](platforms/sinclair-zx-spectrum/basic/meet-basic.md) is agreed: a guided introduction through short projects, leading into Bright Spark and Touchdown. Detailed lesson development remains pending; the remaining BASIC and assembly lineups remain proposals.
 
 The website catalogues, lesson files, sample sources and Git establish what exists. A plan is not an implementation, a catalogue entry is not execution proof, and a future subject is not an authored module. The October 2026 launch target and four initial system on-ramps remain planning context, not evidence of completion or a boundary on the curriculum's purpose.
 
