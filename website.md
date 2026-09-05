@@ -68,6 +68,8 @@ Useful contextual entries belong in the public Vault; reusable implementations b
 
 Use the website’s current Astro/MDX rendering path, Sätteri integration and theme-aware highlighting; inspect the package manifest, lockfile and highlighting plugin before changing them. Follow existing family tokens and components rather than the retired HTML mock-ups. Nebula Sans, Literata and JetBrains Mono have distinct interface, reading and code roles; existing editorial templates also use Literata for display headings.
 
+Use one outer page frame: the navigation, breadcrumb trail, main page containers and footer share `--container-max-width` and `--gutter`. Keep card padding and readable prose widths inside that frame; do not centre each page within a different fixed-width wrapper. Wider layouts can use contents columns or supplementary figures while prose retains a comfortable line length. Check alignment at narrow, ordinary desktop and wide desktop widths.
+
 Maintain readable contrast, keyboard focus, narrow-screen layouts and reduced-motion support. Keep decorative motifs away from essential information. Native-image decoding uses Play198x WebAssembly: follow `scripts/build-wasm.mjs` and the website README for its workspace and generated-decoder requirements.
 
 Contributor data for the colophon comes from `scripts/build-colophon.mjs`; updates are reviewed source changes, not network lookups during rendering. Curate tools and typeface credits and do not rank people by commit totals.
