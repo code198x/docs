@@ -22,6 +22,12 @@ This is an assessment for the current curriculum direction, not a commitment to 
 4. **Spatial and behavioural experiments.** Use existing grids and diagrams for distance, collision, pursuit and route finding. Build an interactive grid only when a worked game demonstrates the need to vary obstacles, tie-breaking or perception. Show the rule and its limits; avoid a general simulation framework before there is a lesson to validate it.
 5. **Asset comparisons.** Reuse image/audio primitives to compare palette, animation timing, channel allocation and readability. Extend export/conversion tools only around an agreed target format. A tracker, animation studio or universal asset editor is not implied by asset-creation coverage.
 
+## Questions and answer feedback
+
+A lightweight question-and-explanation presentation is a candidate for the checks described in [Unit guidance](../specifications/unit.md#questions-and-feedback). Begin with authored questions and separated answers; standard HTML `details`/`summary` can provide an accessible reveal without a quiz engine. Check the current MDX rendering and print behaviour before adopting it as a repeated pattern.
+
+If several lessons need a shared component, first specify a prompt, optional choices and an explanatory answer. Multiple-choice feedback should explain the misconception; open questions should allow discussion rather than automatic grading. Keep answers readable on paper, controls keyboard-accessible and feedback understandable without colour alone. Do not require accounts, persistent scores, completion tracking or a passing mark. This remains a component proposal, not an implemented facility.
+
 ## Acceptance conditions for any addition
 
 Essential explanation remains readable without running an interaction. Provide keyboard operation, visible focus, labelled controls, touch targets of at least 44 CSS pixels and narrow-screen layouts without page overflow. Do not depend solely on colour, sound, hover or animation. Respect reduced motion and user-controlled playback; reserve media dimensions to prevent layout shifts.

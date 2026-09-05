@@ -21,14 +21,7 @@
 > **bitmap dithering** as the stone-and-lighting technique (shipped Units 2, 9–12). **Deferred:** a
 > video-capture-quality bump + recapture of the dither-heavy units with crisp output.
 >
-> **Jeopardy weave (2026-07-04):** units 1–16 make the Place *finishable*, not *losable* — and per
-> [Current game quality requirements](../../../../PROJECT.md), **a place you cannot
-> lose is not yet a game.** The fix is **not a coda** appended after the finale — it is a
-> **resequence** so the Place is a game for most of its construction (Steve, 2026-07-04, "weave it
-> earlier"). A game is **want + threat + fail**; those three now come together as a **game core**
-> right after the world exists (new Sub-arc 1.3, units 9–12), and atmosphere and audio *deepen* a
-> thing that is already a game. The threat is a **curse, not combat** (the no-combat anti-goal in
-> [the game brief](brief.md) holds).
+> **Existing Warden sequence:** the plan introduces the curse during construction rather than appending it after the finale. For this design, the objective, threat and failure response come together after the world exists (Sub-arc 1.3, units 9–12); atmosphere and audio then deepen the experience. This is a game-specific choice, not a universal definition of a game. The threat is a **curse, not combat**, as described in [the game brief](brief.md).
 > The closed design is **prototype-proven** — winnable *and* losable, headless and deterministic (see
 > [`design-stress-2026-07-04.md`](design-stress-2026-07-04.md) § Prototype verification).
 >
@@ -200,7 +193,7 @@ unit count.
 - **11 — Join the Sleepers.** The **fail**: contact is loss — the thief stepping toward the Warden
   *and* the Warden's step landing on the thief; the loop gains its lose arm (title → explore → win
   *or* lose → title); "THE KEEP SLEEPS" and a plunge-then-lock caught-sting. **This is the unit where
-  the Place becomes a game** — the direct echo of Gloaming's "a game needs a way to lose." *New: the
+  the Warden threat gains its consequence** — a failure mechanic chosen for this design. *New: the
   fail state; the win/lose state machine complete.* Read-Alongside: Atic Atac (touched = lost).
 - **12 — A Warden for Every Room.** From one Warden to a keep of them, **from data**: a warden table
   (start cell, route, axis per room), each room instantiating its Warden on entry — gathering **clear

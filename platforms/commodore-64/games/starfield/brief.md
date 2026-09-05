@@ -154,7 +154,7 @@ All of these resolve today.
 
 - [System design material](../../../README.md) — how to review the existing position.
 - [Code198x: purpose and direction](../../../../PROJECT.md) — current goals and scope-relative quality.
-- [Current game quality requirements](../../../../PROJECT.md) — a fail state is constitutive; the mirror of the gap this brief closes.
+- [Current game quality requirements](../../../../PROJECT.md) — failure behaviour is chosen for the game; Starfield’s threat and loss mechanics remain part of this design.
 - [Game brief](../../../../specifications/brief.md) — runtime configuration, tools, evidence and historical comparisons.
 - [Unit specification](../../../../specifications/unit.md) — the cumulative `steps/` format unit 18 is built to.
 - [Code198x: purpose and direction](../../../../PROJECT.md) — the wider curriculum and independent system entry points.
