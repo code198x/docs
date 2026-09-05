@@ -1,290 +1,123 @@
 # Decision: the front-of-curriculum architecture
 
-**Status:** ACCEPTED — 2026-06-05 (proposed and accepted the same day). Designed in
-one pass per the "rethink the whole front" call; all load-bearing decisions resolved,
-leaving only naming and one grouping choice for build time. **Supersedes** the two
-seeds [`number-systems-primer.md`](number-systems-primer.md) and
-[`cross-system-foundations.md`](cross-system-foundations.md), and amends the front
-of [`curriculum-structure.md`](curriculum-structure.md). Built natively to the
-raised bar ([`incremental-construction-units.md`](incremental-construction-units.md)).
-The General Programming primer (Foundations) is built; the rest is the architecture
-to build against.
+How a learner gets from knowing nothing to writing code on a specific machine, and what each layer is called.
 
-## The problem it fixes
+## The decision
 
-Three faults, one root:
-
-1. **The BASIC games teach the language, not games.** Volume-1 "First Programs"
-   skills are bare keywords — Story Builder = `PRINT`/`CLS`/`INPUT`/strings;
-   Lucky Number = `LET`/`IF`/`GO TO`/`RND`. Each game's unit-01 re-teaches
-   first-principles (typing, `RUN`, line numbers, the dark-screen setup) before
-   the game proper. There is no primer, so the language is taught game-by-game,
-   and every game opens with a discontinuity (Story Builder u1 ends on a throwaway
-   welcome demo; u2 starts a fresh program with an unexplained
-   `BORDER 0: PAPER 0: INK 7: CLS`).
-
-2. **"General programming" was conflated with BASIC.** *Meet the Machine* assumes
-   "variables, loops, conditionals, subroutines — our BASIC course." But that
-   makes BASIC a prerequisite for assembly.
-
-3. **Not every target machine has BASIC.** The NES has no built-in BASIC or HLL.
-   A learner targeting NES assembly has nowhere on-platform to learn to program —
-   so a BASIC-keyed on-ramp strands them.
-
-The root: the front of the curriculum had no clean separation between *learning
-to program* (universal), *learning a language* (BASIC, per-platform), and
-*learning a machine* (per-system).
-
-## The decision — the front layers
-
-**Refined 2026-06-05** to separate *learning the machine* from *learning a
-language*. "Meet the Machine" becomes a per-system **briefing** (what the machine
-was, its era, the constraints it imposed — colours, sound, memory); the language
-on-ramps become the **"Meet \<language\>"** family (Meet BASIC, Meet Assembly, and
-later Meet C, Meet FORTH), so a machine is approached through whatever language
-*fits* it. One machine briefing then feeds every language path for that machine.
+One universal step, then a per-machine branch that forks by language. **Foundations is a section of the site, not a sequence every learner walks** — only General Programming is universal.
 
 ```
-General Programming primer   (language-neutral, universal — every learner)
+General Programming                    (universal — every learner)
         |
-        v
-Meet the Machine — per-system briefing
-        |   what it was · its era · its constraints (colours, sound, memory),
-        |   shown concretely — the "why it's limited" lives here
-        v
-   +----+----------------------+---------------------------+
-   v                           v                           v
-Meet BASIC                Foundations                 Meet C · Meet FORTH
-   (where BASIC exists)    (Number Systems + Bit        (machines those fit —
-   |                        Logic; the asm bridge)       e.g. C on Amiga/ST,
-   v                       v                             FORTH on the Jupiter Ace)
-BASIC games           Meet Assembly                     |
-(game-dev ideas)          |                             v
-                          v                          their games
-                     assembly games -> flagship
+   Meet the Machine                    (per-system briefing, taught once per system)
+        |
+   ┌────┴──────────────────────┐
+   v                           v
+Meet BASIC              Numbers & Bits ──────→ Maths for Games
+   |                           |
+   v                           v
+BASIC games            From Source to Silicon
+   |                           ^        |
+   └─── "why is this ──────────┘        v
+         so slow?"                Meet Assembly
+        (the bridge)                    |
+                                        v
+                                 assembly games
+
+Game Feel — once a game of yours runs, on either arm
 ```
 
-Every box except General Programming is per-language and/or per-machine; the
-General Programming primer is the one universal, cross-platform base. The "Meet
-\<language\>" family is open-ended — a machine gets on-ramps for the languages
-that actually shipped on it.
+**General Programming is the one universal step.** What a program is; sequence, variables, input and output, conditionals, loops, subroutines. Language-neutral, so it serves a learner whose machine has no BASIC at all.
 
-### The machine/language split (refinement, 2026-06-05)
+**A machine track opens with the briefing.** *Meet the Machine* is a per-system briefing: what this machine was, when it sat, and the specific constraints it imposed — the colour limits, the sound hardware, the memory. It teaches you *about* the machine and stops short of teaching you a language for it. One briefing feeds every language track for that system, so the hardware is taught once.
 
-The original *Meet the Machine* taught the Z80 **through** assembly — you learned
-the screen by writing bytes to it. That conflated two jobs. The split:
+**From Source to Silicon is the assembly arm.** Numbers & Bits left it: see
+[foundations-is-language-neutral.md](foundations-is-language-neutral.md), which found the
+BASIC track already working around the same material with a `POKE USR` recipe.
 
-- **Meet the Machine — the machine, not a language.** A per-system briefing: what
-  this machine was, when it sat, who used it, and the **specific constraints it
-  imposed** — the colour limits, the sound hardware, the memory, the quirks. This
-  is the concrete home for the display/sound/memory limits that earlier had no
-  natural place (the CRT/sound question): "15 colours with attribute clash, a
-  one-bit beeper, 48K" belongs *here*, shown running on the machine, not lectured
-  abstractly upstream. It must **stay concrete** — show the constraints live — or it
-  trips the same over-extraction wire one level up. It teaches you *about* the
-  machine; it stops short of teaching you to write a language for it.
-- **Meet \<language\> — the language, on that machine.** Meet BASIC, Meet Assembly,
-  and later Meet C, Meet FORTH. Each teaches a language's toolkit, assuming the
-  General Programming concepts and the machine briefing. A machine gets the
-  on-ramps for the languages that fit it: **the Jupiter Ace's native ROM language
-  was FORTH** — Meet FORTH is its only honest on-ramp; **C is how most people
-  shipped on the Amiga / ST** — Meet C belongs there. One *Meet the Machine:
-  Spectrum* briefing feeds *both* Meet BASIC and Meet Assembly for the Spectrum,
-  with the hardware taught once.
+It lives in the Foundations section because it is cross-platform — shared by four assembly tracks, so taught once rather than four times — but it is not universal. It is what an interpreter, a compiler and an assembler each are, and why *when* the translating happens decides whether an enemy chases you sixty times a second or stutters. That is a question a learner has to have earned, which is why it stays on the arm rather than joining the language-neutral shelf.
 
-**Consequence — real rework.** The just-converted *Meet the Machine* (15 units,
-the v3.0 conversion) re-splits: the machine-orientation parts (what the screen is,
-the colour map, the constraints) become the **briefing**; the Z80/assembly toolkit
-(LD, compare-and-jump as `IF`, loops, subroutines, the build-run loop, debugging)
-becomes **Meet Assembly**. The conversion work isn't lost — it's re-cut along this
-seam. Budget it as a known cost of adopting the split.
+**From Source to Silicon is also the bridge back from BASIC.** A BASIC learner reaches it not as a prerequisite but as an answer, after games have made the question real — *why is this so slow?* It is written for that arrival, timing a BASIC loop that crawls while doing almost nothing. So it is offered from the BASIC games, late, rather than gating them; and because it ends by explaining what assembly buys, it is the path by which a BASIC learner becomes an assembly learner. That route matters: BASIC is the on-ramp audience, and nothing else carries them across.
 
-**Naming.** The "Meet \<language\>" family is settled in spirit (Meet BASIC, Meet
-Assembly, Meet C, Meet FORTH); *Meet the Machine* keeps its name in its new
-briefing role. The **General Programming primer**'s name is still open — it sits
-*outside* the Meet-a-language family (it's language-neutral), so "Meet Programming"
-is tempting but may mislead; TBD.
+**The Craft is two modules with two entry points, neither of them upfront.** *Maths for Games* — the cheap answer to sums these machines are hostile to: a lookup instead of a sine, a comparison with no square root in it — needs Numbers & Bits behind it. It stays on the assembly arm on its own merits rather than by inheritance, now that Numbers & Bits has left it: the techniques answer questions a game running too slowly raises, and a reader who has not hit that wall has nothing to hang them on. *Game Feel* — grace windows, visible feedback, ending dwells — needs a working game rather than any particular number sense, so it sits beside the games on either arm, once the first moving version runs. Neither gates a machine track.
 
-### Layer 1 — General Programming primer (language-neutral, universal)
+**Then a language, named for the language.** The `Meet <language>` family — Meet BASIC, Meet Assembly, Meet C, Meet FORTH — teaches a language's toolkit on that machine. A machine gets on-ramps for the languages that shipped on it: FORTH is the Jupiter Ace's only honest on-ramp; C is how most people shipped on the Amiga and ST.
 
-A short primer teaching the concepts that are true in *every* language: what a
-program is; sequence; variables; input/output; conditionals; loops; subroutines.
-**Language-neutral**, so it serves every learner — including those whose target
-machine (NES) has no BASIC. It is the universal first step and the new prerequisite
-for everything downstream.
+## Vocabulary
 
-- `kind: teaching` module, **cross-platform** (lives outside any one system).
-- Replaces "our BASIC course" as the stated prerequisite of every *Meet the
-  Machine* and of the BASIC primer.
-- **Concreteness — DECIDED (2026-06-05): pseudocode + a single concrete vehicle.**
-  [`cross-system-foundations.md`](cross-system-foundations.md) warns that
-  pure-abstract primers go dry, and a language-neutral primer is the sharpest case.
-  Resolution: each concept is stated in neutral pseudocode and shown running in
-  *one* concrete vehicle — **Spectrum BASIC**, as the gentlest — with the prose
-  framing it as "here in BASIC; the same idea everywhere." Concrete enough to avoid
-  dry, honest that the concept transcends the vehicle. A NES learner reads the BASIC
-  illustration as an *example*, not a track they must complete.
+These are the terms the site, the catalogues and these records all use.
 
-### Layer 2a — Meet BASIC (per-platform language primer)
+| Term | Means |
+|---|---|
+| **Foundations** | The cross-platform *section*: General Programming, Numbers & Bits, From Source to Silicon. A folder, not a sequence — its modules have different audiences. |
+| **The Craft** | The transferable-technique section: Maths for Games (needs Numbers & Bits) and Game Feel (needs a working game). Two entry points, not one. |
+| **Meet the Machine** | A per-system briefing about the hardware. Never a language course. |
+| **Meet \<language\>** | A language on-ramp: Meet BASIC, Meet Assembly, Meet C, Meet FORTH. |
 
-*(Named "Meet BASIC" per the machine/language split above; described as "the BASIC
-primer" throughout this section.)*
+The name of a module says which of these it is. A module teaching a language is named for that language.
 
-Teaches **Sinclair BASIC the language** — the *fat* primer: the full toolkit as
-standalone one-concept beats, the way *Meet the Machine* teaches the Z80 toolkit.
-It **assumes** the General Programming primer (the learner already knows what a
-loop or a conditional *is*), so it teaches BASIC's *expression* of each — syntax,
-idiom, the Spectrum's keyword-entry, the gotchas — not the underlying concept.
+## Why the machine and the language are separate
 
-Illustrative beats (count is a marker, not a contract —
-[`curriculum-structure.md`](curriculum-structure.md)):
+The original *Meet the Machine* taught the Z80 **through** assembly — you learned the screen by writing bytes to it. That conflated two jobs, and the conflation caused three faults:
 
-- Type a line, `RUN`, the report line — the build-run loop on a live machine.
-- Line numbers as addresses; editing, replacing, `LIST`, deleting.
-- Several lines in order; `CLS`; numbering in tens (the reserved-gap habit —
-  [`incremental-code-samples.md`](incremental-code-samples.md) rule 7).
-- The dark-screen canvas — `BORDER`/`PAPER`/`INK` (the setup every game opens on,
-  finally taught where it belongs, not smuggled into a game's u1).
-- `INPUT` and a variable; string vs numeric variables; `LET` and arithmetic.
-- `IF`/`THEN`; `FOR`/`NEXT`; `GO TO`; `GO SUB`/`RETURN`; `RND`/`INT`.
-- When it's wrong, see why — read the program's state and the report line (the
-  debugging spine the bar requires).
+1. **BASIC was an accidental prerequisite for assembly.** *Meet the Machine* assumed "variables, loops, conditionals, subroutines — our BASIC course", so a learner heading for assembly was routed through BASIC to get there.
+2. **Machines without BASIC stranded the learner.** The NES has no built-in BASIC or HLL. A BASIC-keyed on-ramp leaves an NES learner nowhere to start.
+3. **The hardware was taught once per language.** A learner doing both BASIC and assembly on one machine met its constraints twice, and a machine with three tracks would teach them three times.
 
-Per-platform: a **C64 BASIC primer** and **Amiga AMOS primer** are parallels of
-the same shape, built when those tracks are. The Spectrum one is canonical (launch
-platform). The **AMOS primer is expected to be slightly more involved** — AMOS is
-an in-emulator environment (you work inside the Amiga, not just type lines), so its
-primer carries more setup than a built-in-BASIC primer does.
+Splitting the briefing from the language fixes all three at the root: the hardware is taught once per system, and each language on-ramp assumes it.
 
-### Layer 2b — Foundations (cross-platform, the bridge to low-level)
+The constraints belong in the briefing specifically because they are **felt, not lectured**. "15 colours with attribute clash, a one-bit beeper, 48K" lands when shown running on the machine. That is why there is no upstream display or sound primer in Foundations, and why the briefing must stay concrete.
 
-Machine-independent primers that sit between general programming and *Meet the
-Machine* — the foundation the assembly on-ramp stands on. The BASIC track barely
-needs them; assembly needs them constantly.
+## Where a concept belongs
 
-- **Promote (Tier 1) — the whole of Foundations:** **Number Systems**
-  (decimal/binary/hex, place value, bits/nibbles/bytes, two's complement) and
-  **Bit Logic** (AND/OR/XOR/NOT, masking, shifting). Pass all three of the seed's
-  tests; likely one combined primer or two small ones.
-  Foundations carries a second subtrack — **Logic & Gates**
-  (truth-table reasoning → gates → the adder), a recommended side-path after
-  Numbers & Bits that gates nothing. See
-  [`foundations-logic-and-gates.md`](foundations-logic-and-gates.md).
-- **Display / Sound — DECIDED (2026-06-05): not promoted; cover lightly,
-  just-in-time, concretely.** Tempting as Tier 2, but rejected. CRT *physics*
-  (scanlines, phosphor) isn't worth a foundation — it only matters for advanced
-  per-machine beam-racing, taught when a game needs it. What modern (LCD/LED-raised)
-  learners actually lack is simpler and lands best *concretely*: that the screen
-  **is** memory you write to, that there's a fixed refresh you **sync** to, and
-  **why** the colours and sound are so limited. Those are felt — the byte becoming
-  a pixel, the one-bit beeper heard — far better than lectured upstream. So the
-  display and sound models stay **in *Meet the Machine* and the games**, covered
-  with a light "here's why it's this limited" touch at the point of first use. No
-  upstream display/sound primer.
-- **Keep concrete (Tier 3):** the CPU model, memory model, game loop, 2D space —
-  stay in *Meet the Machine*, where you see the byte become a pixel. (Same logic
-  as display/sound: concrete beats abstract for everything machine-shaped.)
+- **A concept true in every language** — what a loop *is*, what a variable *is* — belongs in General Programming, taught once.
+- **Number and bit literacy** — binary and hex, two's complement, masking, shifting — belongs in Numbers & Bits, which is language-neutral and gates nothing.
+- **How source becomes something a machine runs** — interpreting versus assembling, and why that choice decides whether a game keeps up — belongs in From Source to Silicon. It is the last step before Meet Assembly, and the answer a BASIC learner arrives at from the other direction once their game runs out of speed.
+- **A technique any game needs, in a form no chip has yet made local** — a direction as a lookup, a grace window as a timer — belongs in The Craft, taught beside the games rather than before them.
+- **A machine's own constraints** — its colour map, its sound hardware, its memory — belong in that machine's briefing.
+- **A language's expression of a concept** — syntax, idiom, the gotchas — belongs in that language's `Meet <language>`.
 
-### Layer 3 — Meet the Machine (briefing) + Meet \<language\> + games (per-system)
+## Applying it to the four systems
 
-Reshaped by the machine/language split above. The assembly decisions still hold,
-re-cut along the seam:
+The split is built for every language except assembly, and the machine briefing exists on no system in finished form. Every non-assembly track already carries a correctly named on-ramp — `meet-basic`, `meet-c64-basic`, `meet-amos`, `meet-blitz` — while all four assembly tracks still call theirs *Meet the Machine*. That is why the Spectrum currently serves two different pages under that one title, on `/machine/` and on `/assembly/`.
 
-- *Meet the Machine* is now the per-system **briefing** (the machine + its
-  constraints), not the assembly course; **Meet Assembly** carries the Z80/assembly
-  toolkit. The current converted *Meet the Machine* re-splits into the two.
-- Its prerequisite line changes from "our BASIC course" to **the General
-  Programming primer** (so BASIC-less learners qualify).
-- *Meet Assembly* may **assume** number/bit literacy once Foundations exists,
-  letting units like "Everything Is a Number" / "Working With Bits" lean out (the
-  seed's "strengthens the existing primers" point) — or drop, now that the machine
-  briefing covers what the machine *is* and Foundations covers number systems.
+The work is not a file move. The seam runs through the middle of the existing units rather than between them: a single assembly unit introduces a machine fact and then teaches the instruction that exercises it, because teaching the machine *through* assembly is the conflation this record exists to end.
 
-## How the BASIC games re-scope
-
-With the language taught in the BASIC primer, the **First Programs** games stop
-being keyword-delivery vehicles and become **game-dev-idea** vehicles, each using
-the toolkit the learner already has:
-
-- **Story Builder** — building output from user input (the mad-lib shape, screen
-  layout, a title) — not "here is `INPUT`".
-- **Lucky Number** — chance as a design material, feedback loops, a guess-until-win
-  loop — not "here is `IF`/`RND`".
-- ... and so on through Volume 1.
-
-Each game opens as a real program (the dark canvas and typing are primer'd), and
-each unit's diff stays within the ~5–8 line budget
-([`incremental-code-samples.md`](incremental-code-samples.md)) — the discontinuity
-that started this is designed out at the root, not patched per game.
-
-The later phases (*Patterns of State*, *Worlds and Rules*, *Stories and Systems*)
-already teach game-dev ideas (arrays, AI, physics, parsers) and need far less
-re-scoping than Volume 1.
-
-## Sequencing and build order
-
-The architecture is built **top-down**, native to the v3.0 bar, before the
-existing games are converted — because converting the games first would rework
-every game intro twice (the thing the "rethink the front" call avoids):
-
-1. **General Programming primer** — greenfield, native-to-bar; unblocks everything.
-2. **Spectrum BASIC primer** — the language; lets the games re-scope cleanly.
-3. **Re-scope + convert the Volume-1 BASIC games** — now game-dev-idea vehicles,
-   each at the v3.0 bar, in the agreed order (Story Builder → rest of Volume 1).
-4. **Foundations (Number Systems + Bit Logic)** — greenfield; bridges to assembly.
-   Buildable in parallel; not on the BASIC critical path.
-5. Volume 2+ BASIC games and the per-system primers follow.
-
-**October interaction — CONFIRMED fits (2026-06-05).** The launch content is
-Spectrum-only and includes the BASIC games; this adds two new build items (the
-General Programming primer and the Spectrum BASIC primer) ahead of them. With the
-runway from June, this fits the window — no scope concern. The guiding stance still
-holds if anything slips: per
-[`october-2026-launch-spec.md`](october-2026-launch-spec.md), ship fewer
-fully-formed games behind a real primer rather than more games at the old bar.
-
-## Relationship to the raised bar
-
-Everything here is **new content built native to the bar** (incremental milestones,
-multi-media honest captures, debugging spine, accessibility) — not conversion. It
-**completes the foundation** of the on-ramp; per the depth-before-breadth stance it
-is foundation-completion, not the breadth the bar gates, so it is welcomed by the
-bar rather than blocked by it.
-
-## Resolved (2026-06-05)
-
-- **General Programming primer concreteness** — pseudocode + a single concrete
-  vehicle (Spectrum BASIC), framed as universal. (Layer 1.)
-- **Display / Sound** — *not* a Foundations primer; covered lightly and concretely
-  at the point of first use in *Meet the Machine* and the games. Foundations is
-  Number Systems + Bit Logic only. (Layer 2b.)
-- **October** — the two-primers-first ordering fits the launch window.
-- **C64 BASIC / AMOS primers** — per-platform parallels of the Spectrum primer;
-  AMOS slightly more involved (in-emulator). (Layer 2a.)
-
-## Open questions (decide before/at build) — both resolved 2026-06-30
-
-Resolved by [`foundations-numbers-and-bits.md`](foundations-numbers-and-bits.md):
-
-1. **Naming** — ✓ the Foundations primer is **"Numbers & Bits"** (the floated
-   "Meet the Numbers" / "How Computers Count" set aside — Foundations sits outside
-   the "Meet \<language\>" family); the General Programming primer kept its plain
-   name.
-2. **Number Systems + Bit Logic** — ✓ **one combined subtrack**, at
-   `curriculum/foundations/numbers-and-bits/` (extended at build with a sixth,
-   conceptual "Numbers That Aren't Whole" unit).
+**The sequence is decided separately, in [splitting-the-assembly-on-ramp.md](splitting-the-assembly-on-ramp.md).** That record owns the order, the per-system scope, the `machine` pseudo-track segment, and the accepted temporary duplication. This record owns only what the layers are and what they are called.
 
 ## Drift triggers
 
-- A BASIC game's unit-01 re-teaches typing/`RUN`/line-numbers/the dark canvas —
-  that belongs in the BASIC primer; the game opens as a real program.
-- A "First Programs" game's stated skill is a bare keyword (`IF/THEN`, `FOR/NEXT`)
-  rather than a game-dev idea — the keyword is the primer's job now.
-- *Meet the Machine* (any system) names "the BASIC course" as its prerequisite
-  instead of the General Programming primer.
-- The General Programming primer reads as dry abstraction with no concrete
-  illustration — the over-extraction failure the seed warned about.
-- A general-programming concept (what a loop *is*) is taught in Foundations or
-  *Meet the Machine* — it belongs in Layer 1, once.
-- Foundations grows a per-chip specific (a SID register, a ULA quirk) — that
-  belongs in *Meet the Machine*.
+- Reading "Foundations" as a sequence every learner walks. It is a section holding modules with different audiences: General Programming and Numbers & Bits are language-neutral, and From Source to Silicon is the assembly arm.
+- Gating Meet BASIC on Numbers & Bits or From Source to Silicon, or presenting either as required before any machine route.
+- A module named *Meet the Machine* that teaches a language, or a `Meet <language>` module that teaches the hardware.
+- Two modules on one system sharing a display name.
+- Making a Craft module a prerequisite for a machine track, or treating The Craft as one placement — Maths for Games needs Numbers & Bits behind it, Game Feel needs a game that already runs.
+- Presenting From Source to Silicon to a BASIC learner as a prerequisite rather than as an answer reached after the games raise the question.
+- A general-programming concept (what a loop *is*) taught in Numbers & Bits, a briefing, or a language on-ramp — it belongs in General Programming, once.
+- A briefing growing a language toolkit, or a Foundations module growing a per-chip specific (a SID register, a ULA quirk) — that belongs in the briefing.
+- Prose in a Foundations module naming *Meet the Machine* where it means *Meet Assembly*.
+- A BASIC game's unit-01 re-teaching typing, `RUN`, line numbers or the dark canvas — that is Meet BASIC's job; the game opens as a real program.
+- A "First Programs" game whose stated skill is a bare keyword (`IF`/`THEN`, `FOR`/`NEXT`) rather than a game-design idea.
+- Shipping a module slug rename without redirects.
+
+## Log
+
+| Date | Event |
+|---|---|
+| 2026-06-05 | Architecture recorded and accepted the same day. Superseded the `number-systems-primer` and `cross-system-foundations` seeds. Established the machine/language split: *Meet the Machine* becomes a per-system briefing, language on-ramps become the `Meet <language>` family. Resolved General Programming's concreteness (pseudocode plus one concrete vehicle, Spectrum BASIC), and ruled out an upstream display/sound primer. |
+| 2026-06-30 | Naming and grouping resolved by [foundations-numbers-and-bits.md](foundations-numbers-and-bits.md): the primer is *Numbers & Bits*, as one combined subtrack. |
+| 2026-07-08 | Logic & Gates accepted as a recommended Foundations side-path that gates nothing — [foundations-logic-and-gates.md](foundations-logic-and-gates.md). |
+| 2026-09-03 | Rewritten to say what is true now. From Source to Silicon and The Craft added to the record; neither appeared in it before. Foundations is named as a **section, not a sequence**: General Programming is the one universal step, while Numbers & Bits and From Source to Silicon are the assembly arm, cross-platform so they are taught once rather than per system. Checked against the content rather than the folder name — From Source to Silicon tells BASIC learners in its own text that they can skip it, and Meet BASIC's fifteen units mention bit work once. The June branch shape is therefore restored, not replaced. Two placements added that the June record predates: From Source to Silicon is also the **bridge back from BASIC**, offered after the games raise the question rather than gating them, and so the route by which the on-ramp audience reaches assembly; and The Craft is recorded as two entry points — Maths for Games behind Numbers & Bits, Game Feel behind a working game. Sequencing moved out to [splitting-the-assembly-on-ramp.md](splitting-the-assembly-on-ramp.md), accepted the same day, so this record states the architecture and that one states the order. |
+| 2026-09-05 | The shelf is built and complete: ten modules in three groups — Programming (five), Numbers (two), The machine underneath (three). From Source to Silicon is five units of pseudocode with the timed demonstration moved to the machine tracks — [foundations-from-source-to-silicon.md](foundations-from-source-to-silicon.md). |
+| 2026-09-04 | Numbers & Bits leaves the assembly arm. It and Logic & Gates are language-neutral modules that gate nothing, and Logic & Gates splits in two at the dependency in its middle — [foundations-is-language-neutral.md](foundations-is-language-neutral.md). The 2026-09-03 row above states the arrangement as it stood that day; the assembly arm is now From Source to Silicon alone. Numbers & Bits also dropped its Sinclair BASIC vehicle, so both language-neutral modules are taught in one pseudocode grammar. |
+
+## Relates to
+
+- [splitting-the-assembly-on-ramp.md](splitting-the-assembly-on-ramp.md) — the order this split is applied in.
+- [curriculum-structure.md](curriculum-structure.md) — the module spine this front feeds.
+- [modules-not-games.md](modules-not-games.md) — module `kind`, bare slugs, order as catalogue data.
+- [foundations-numbers-and-bits.md](foundations-numbers-and-bits.md) — the Numbers & Bits subtrack.
+- [foundations-logic-and-gates.md](foundations-logic-and-gates.md) — the Logic & Gates side-path.
+- [craft-and-pattern-library.md](craft-and-pattern-library.md) — what The Craft is, and how it differs from the Pattern Library.
+- [october-2026-launch-spec.md](october-2026-launch-spec.md) — launch scope and the cut hierarchy.
+- [website-information-architecture.md](website-information-architecture.md) — URL shape and the track segment.
