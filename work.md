@@ -101,6 +101,6 @@ Prepare a What’s New entry when the House UI is ready to release, linking to t
 
 Try a small explanatory illustration before adding a site-wide visual treatment. Later candidates include verified game captures on relevant system cards and asset close-ups linked to lessons. Check the actual assets, provenance and target configuration before selecting them.
 
-## Prose reuse terms
+## Shared module outline review
 
-The existing Press, Teaching and Contribute pages have described prose as CC-BY, but the website and documentation checkouts have no canonical prose licence file specifying a version and applicable material. The code-samples repository has an MIT `LICENSE`. Resolve the intended prose licence version, copyright notice and scope with the maintainer, then publish a canonical notice and make the public pages consistent. Keep third-party images, software and other assets under their own stated terms. Do not silently select a new licence or extend one to third-party material.
+Review the Maths for Games and Game Feel outlines and their catalogue metadata against the charter before developing their units. Maths currently assumes completion of Numbers & Bits, uses Sinclair BASIC as its shared demonstrator and makes sweeping claims about arithmetic costs across machines. Distinguish pursuit from pathfinding and behaviour design from arithmetic. Game Feel needs a review of universal prescriptions about grace periods, feedback and timing. Retain useful examples while making entry independent, language-neutral explanations concrete and machine claims specific. The Craft index offers a paper experiment and identifies both modules as outlines; it does not establish completed units or settle a new module structure.

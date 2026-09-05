@@ -102,6 +102,10 @@ Distinguish proposed design, source-checked claims, code that builds, behaviour 
 
 For people and organisations, distinguish established facts, recollections, disputed accounts, allegations and interpretation. Do not invent dialogue, motives or anecdotes. Acknowledge documented wrongdoing proportionately without sensationalising it or treating technical achievement as an excuse. Use age-appropriate language without concealing relevant facts. Avoid unsupported “first”, “invented by” and single-author origin stories.
 
+## Licensing
+
+Original Code198x prose is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0), permitting reuse and adaptation, including commercial reuse, with the required attribution and notices. [LICENSE.md](LICENSE.md) defines the scope and exclusions. Executable code, media, marks, inherited material and third-party works retain their separate terms; the maintained code-samples repository uses MIT. New original prose contributions use CC BY 4.0 unless another arrangement is explicitly agreed and recorded.
+
 ## Current work and authority
 
 The immediate task is to re-specify the ZX Spectrum BASIC and assembly game sequences, then develop the lessons from agreed specifications. Retain, reshape or replace existing choices for their appeal, teaching value and suitability. The recommended sequences in the initial review remain proposals; only the scope-relative quality standard has been agreed from that review.

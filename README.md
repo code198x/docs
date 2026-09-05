@@ -2,6 +2,8 @@
 
 Start with **[PROJECT.md](PROJECT.md)** for the goals, audience, scope and teaching principles. This README is the documentation index. [Current work](work.md) identifies the next bounded tasks and proposals; it does not redefine project policy.
 
+Original prose is licensed under **CC BY 4.0**. See [LICENSE.md](LICENSE.md) for scope, attribution and exclusions; software and third-party material retain their own terms.
+
 ## Teaching and authoring
 
 | Guide | Responsibility |
