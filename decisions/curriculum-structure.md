@@ -2,12 +2,12 @@
 
 ## The decision
 
-The curriculum is a **sequence of modules** built to a **multi-disciplinary commercial quality bar**, with **no fixed game or unit counts**. A few things are locked; everything else falls out of them.
+The curriculum is a **sequence of modules** built to a **multi-disciplinary quality bar appropriate to each game’s agreed scope**, with **no fixed game or unit counts**. A few things are locked; everything else falls out of them.
 
 **Locked:**
 
 - **Four systems carry the assembly track**: ZX Spectrum, C64, NES, Amiga. Gateway BASIC and HLL tracks exist where applicable and are governed by their own specs.
-- **The quality bar.** Each game reaches **mid-tier full-price** — the £7.95 1987 Hewson / Gremlin / Mikro-Gen / Durell tier. Real commercial product, ambitious, not pretending to be Ultimate's absolute top. From [real-retro-games.md](real-retro-games.md) and [commercial-bar-revamp.md](commercial-bar-revamp.md).
+- **The quality bar.** Each game is complete, enjoyable, readable, responsive and deliberately finished for its agreed scope. Commercial ambition belongs to selected projects, not every game; BASIC games in particular need not meet a commercial standard. See [scope-relative-game-quality.md](scope-relative-game-quality.md).
 - **The pacing discipline.** Complexity rises gently and close to monotonically, governed by the **per-unit one-concept rule** ([incremental-code-samples.md](incremental-code-samples.md), [spiral-and-incremental.md](spiral-and-incremental.md), [deprecation-pairs.md](deprecation-pairs.md)) and a **bounded unit count per game**.
 
 **Not fixed — falls out of the locked parts:**
@@ -22,7 +22,7 @@ Four constraints, and no cap on technique count:
 
 1. **One new thing per unit** — the cognitive ramp.
 2. **A bounded unit count per game** — the authoring cost.
-3. **Each game must be a good, commercial-quality game in its own right.**
+3. **Each game must fulfil its agreed scope as a good, finished game in its own right.**
 4. **The spiral** defers anything not yet earned to a later game.
 
 Techniques per game are **uncapped**. A game's ladder identity is the game itself plus the techniques it *first introduces*; the ramp orders first-introductions — sprites before the Blitter — not whole games.

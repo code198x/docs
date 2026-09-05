@@ -1,5 +1,7 @@
 # Decision: Pedagogy Sequences, Commercial Bar Gates Phase Ends
 
+> **Amended 2026-09-05:** [Game quality is relative to the agreed scope](scope-relative-game-quality.md) supersedes the universal commercial bar below. Games must be complete and deliberately finished for their scope; BASIC games need not meet a commercial standard. Applicable progression and verification requirements remain.
+
 ## The decision
 
 Within a phase, **pedagogy sets the sequence** — which technique each unit teaches, in which order, building on what came before. At every phase boundary, **the commercial bar gates the output** — the game must be a complete, playable, mid-tier full-price-bar artefact using only the techniques covered to that point.

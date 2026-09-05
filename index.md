@@ -23,11 +23,13 @@ Project documentation lives entirely in `docs/`. This is the navigation map.
 
 ### Cross-cutting
 
+- [Scope-relative game quality](decisions/scope-relative-game-quality.md) — complete, deliberately finished games; commercial standards are not universal, particularly for BASIC
+
 - [October 2026 launch spec](decisions/october-2026-launch-spec.md) — all four core platforms, complete on-ramps at full bar
 - [Real retro games](decisions/real-retro-games.md) — multi-disciplinary commitment (code/visuals/audio/level/polish co-equal)
-- [Commercial-bar revamp](decisions/commercial-bar-revamp.md) — Game 1s rewritten to commercially-shippable bar
+- [Commercial-bar revamp](decisions/commercial-bar-revamp.md) — original commercial-bar rationale and verification requirements; universal commercial bar superseded
 - [Curriculum structure](decisions/curriculum-structure.md) — modules to a quality bar; no fixed game or unit counts, bounded unit count per game
-- [Phase boundaries](decisions/phase-boundaries.md) — pedagogy sequences within, commercial bar gates phase ends
+- [Phase boundaries](decisions/phase-boundaries.md) — pedagogy and finished phase deliverables; commercial requirement superseded
 - [Constraint position](decisions/constraint-position.md) — period-faithful / period-possible / modern scene
 - [Spiral and incremental](decisions/spiral-and-incremental.md) — incremental within phases, spiral across phases
 - [What earns a fleet entry](decisions/what-earns-a-fleet-entry.md) — the fleet is a position on a machine; the Vault is an encyclopedia

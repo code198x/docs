@@ -1,5 +1,10 @@
 # Brief Specification
 
+## Game quality and scope
+
+Apply [the scope-relative quality bar](../decisions/scope-relative-game-quality.md): complete, enjoyable, readable, responsive and deliberately finished for the agreed scope. BASIC games do not need to meet a commercial standard; selected ambitious projects may declare one. State the finished experience and observable checks in the brief. Historical comparisons inform design rather than impose feature parity.
+
+
 **Version:** 1.0
 **Last Updated:** 2026-05-13
 **Purpose:** Format specification for game design briefs. A brief is the strategic design document for a single game in the Code198x curriculum — what it is, what it teaches, what each phase ships, and what it costs to authors and learners.
@@ -15,7 +20,7 @@ A brief is **not** an implementation document. Per-phase or per-unit detail live
 **Key principles:**
 
 - **Multi-disciplinary from the brief downward.** Per [`real-retro-games`](../decisions/real-retro-games.md), the brief carries first-class fields for visuals, audio, level design, and polish alongside code-led concerns. A brief that names code targets but leaves visual/audio/level/polish sketchy is not a complete brief.
-- **Per-phase commitments.** Per [`phase-boundaries`](../decisions/phase-boundaries.md), each phase declares both what's new (incremental) and what revisits earlier work (spiral, per [`spiral-and-incremental`](../decisions/spiral-and-incremental.md)). Each phase end ships a complete game at the relevant commercial bar.
+- **Per-phase commitments.** Per [`phase-boundaries`](../decisions/phase-boundaries.md), each phase declares both what's new (incremental) and what revisits earlier work (spiral, per [`spiral-and-incremental`](../decisions/spiral-and-incremental.md)). Each phase end ships a complete game at the agreed scope-relative quality bar.
 - **Constraint position explicit.** Per [`constraint-position`](../decisions/constraint-position.md), each brief declares which 1980s the game inhabits — period-faithful, period-possible, or modern scene.
 - **British English throughout** (exception: "program" for computer programs, per [`british-english`](../decisions/british-english.md)).
 - **Magazine voice.** Warm, technical, opinionated, never condescending. See `docs/specifications/writing-voice.md`.
@@ -278,7 +283,7 @@ Each phase declares:
 - **What's new** — incremental additions for the phase (per `spiral-and-incremental`).
 - **What revisits earlier work** — the spiral declaration (per `spiral-and-incremental`).
 - **Constraint position for the phase** — only if it differs from the game-level declaration in Section 5.
-- **Phase-end deliverable** — the complete game that exists at phase end at the relevant commercial bar (per `phase-boundaries`).
+- **Phase-end deliverable** — the complete game that exists at phase end at the agreed scope-relative quality bar (per `phase-boundaries`).
 
 **Example (Shadowkeep Phase 3):**
 > *Phase 3: Animation and life (8 units).*
@@ -399,7 +404,7 @@ A brief is ready to anchor authoring when:
 ## Anchored In
 
 - [`decisions/real-retro-games`](../decisions/real-retro-games.md) — multi-disciplinary commitment that makes Sections 6–9 first-class.
-- [`decisions/phase-boundaries`](../decisions/phase-boundaries.md) — phase-end commercial bar; gates Section 12.
+- [`decisions/phase-boundaries`](../decisions/phase-boundaries.md) — phase-end scope-relative quality bar; gates Section 12.
 - [`decisions/constraint-position`](../decisions/constraint-position.md) — three-tier taxonomy used in Section 5.
 - [`decisions/spiral-and-incremental`](../decisions/spiral-and-incremental.md) — within/across phase progression; structures Section 11.
 - [`decisions/curriculum-structure`](../decisions/curriculum-structure.md) — per-module scope: no fixed game or unit counts; counts are illustrative markers of authoring cost.
