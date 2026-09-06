@@ -1,6 +1,6 @@
 {
   "date": "2026-09-06",
-  "status": "Drafts verified for reader review; not published",
+  "status": "Approved and published; all fifteen Meet BASIC lessons live",
   "website_pr": "https://github.com/code198x/website/pull/417",
   "samples_pr": "https://github.com/code198x/code-samples/pull/8",
   "website_commit": "f013e2e4",
@@ -29,9 +29,21 @@
   },
   "limits": [
     "ROM keyboard entry via MCP is not native host keyboard testing.",
-    "Audio is recorded and signal-measured; listening and native output remain review work.",
+    "Audio is recorded and signal-measured; reader approval is not an additional instrumented native-output test.",
     "Motion is observed across sampled emulated frames, not original hardware.",
-    "Finite random samples do not establish fairness.",
-    "New lessons have no publication dates; merge the companion samples first and rerun source-dependent CI before website publication."
-  ]
+    "Finite random samples do not establish fairness."
+  ],
+  "website_merge_commit": "c24abe76694749245d7a87646af22548dbe08b1d",
+  "samples_merge_commit": "eb253f79dc4029ac256d2b40da30196d23da8925",
+  "deployment": "https://github.com/code198x/website/actions/runs/34050723684",
+  "live_checks": {
+    "status": "passed",
+    "lessons": 15,
+    "new_lessons": 9,
+    "complete_new_listings": 20,
+    "navigation": "1 through 15, forwards and backwards",
+    "rss": "all nine new entries",
+    "screenshots": "all ten public images match verified captures"
+  },
+  "reader_approval": "Steve reviewed all nine remaining lessons and approved merging on 2026-09-06."
 }

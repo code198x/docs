@@ -1,6 +1,6 @@
 # Meet BASIC: lesson and source mapping
 
-**Status: implementation plan for the [agreed module direction](meet-basic.md). A1–A4 are published with verified sample checkpoints. The Story Builder arc and B1/B2 have passed verification on Emu198x v0.22.1. B1/B2 are published. B3–D4 are drafted and execution-checked as units 7–15, awaiting reader review and publication.**
+**Status: implementation plan for the [agreed module direction](meet-basic.md). A1–A4 are published with verified sample checkpoints. The Story Builder arc and B1/B2 have passed verification on Emu198x v0.22.1. B1/B2 are published. B3–D4 are published as units 7–15 following reader approval. All fifteen lessons are live.**
 
 The four arcs are agreed. The lesson boundaries below are a concrete authoring plan, adjustable when source development or reader testing reveals an overloaded step. The fifteen working lessons are not a required count. This plan replaces the combined progression of feature demonstrations followed by substantially repeated early projects; it does not append another course to them.
 
@@ -284,10 +284,11 @@ user-reported; these automated runs use MCP, not native window events.
 published setup's minimum version and download links. B1/B2 received separate
 lesson approval before publication.
 
-**B3–D4 now have nine lesson drafts and twenty complete checkpoints**, finishing
+**B3–D4 are published as nine lessons with twenty complete checkpoints**, finishing
 Lucky Number, Oracle Stone and the movement experiment. The [website completion PR #417](https://github.com/code198x/website/pull/417)
-links the fifteen-unit route through canonical descriptive URLs. Units
-7–15 have no publication dates; the six approved lessons remain the live surface.
+links the fifteen-unit route through canonical descriptive URLs. Steve reviewed
+all nine lessons and approved publication on 6 September 2026. Both completion
+PRs are merged, and the catalogue marks Meet BASIC complete.
 
 The completion checks passed on the released Apple silicon Spectrum v0.22.1:
 99 checks for units 7–14, 17 for corrected unit 15, and 11 additional experiments.
@@ -302,8 +303,8 @@ emulator blocker was identified.
 The [sample completion PR #8](https://github.com/code198x/code-samples/pull/8)
 contains the scripts, source hashes and results. Three audio captures have the
 expected measured pitch order. This is signal evidence, not listening or native
-host-output verification. Native control feel and listening remain part of
-reader review before publication; original hardware has not been tested.
+host-output verification. Steve has reviewed the lessons and approved publication;
+that approval does not establish a new native-audio or original-hardware test.
 
 All 78 website tests and the production build passed. Browser checks cover all
 nine new lessons at 1440 and 390 pixels, in both themes, including listings,
@@ -311,11 +312,12 @@ images, overflow, accessibility and navigation from unit 6 through unit 15 to th
 module index. Screenshot assets were inspected; motion illustrations come from
 successive frame samples, rather than inferring animation from its final state.
 
-Review can proceed by arc: units 7–8 finish Lucky Number; 9–11 build Oracle Stone;
-12–15 develop movement and input. Once approved, merge samples before the website,
-rerun source-dependent CI against samples main, assign publication dates and
-verify the live navigation and feed. The completed fifteen-unit authoring sequence
-does not imply approval to publish the remaining drafts.
+Units 7–8 finish Lucky Number; 9–11 build Oracle Stone; 12–15 develop movement
+and input. Samples were merged first, fresh source-dependent CI passed, then the
+website was merged and deployed successfully. Live checks confirmed all fifteen
+lessons and their forward/backward navigation, all twenty new complete listings,
+ten screenshot assets matching the verified captures, and nine new RSS entries.
+The deployment and announcement workflow completed successfully on 6 September 2026.
 
 ## Opening release routes
 
