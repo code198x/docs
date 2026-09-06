@@ -265,18 +265,24 @@ light/dark checks passed locally with the companion sources. Draft navigation us
 the canonical `unit-05-give-a-useful-clue` and `unit-06-keep-guessing` routes.
 These are not published; reader review and publication dates remain pending.
 
-The initial Host Keyboard keyword implementation in [Emu198x PR #1449](https://github.com/emu198x/emu198x/pull/1449)
-used Tab. Reader testing produced Option-generated `©` and `˙`; the intended
-modifier was then explicitly changed to **left Option/Alt**, with
+[Emu198x v0.22.1](https://github.com/emu198x/emu198x/releases/tag/v0.22.1)
+ships the agreed **left Option/Alt** modifier for SYMBOL SHIFT and
 **Shift+left Option/Alt** for extended mode. Right Option/Alt/AltGr retains
-host-layout input. The lesson drafts reflect that choice.
+host-layout character input. The lesson drafts use that mapping. Steve confirmed
+it works in native use; [PR #1453](https://github.com/emu198x/emu198x/pull/1453)
+is merged and [issue #1450](https://github.com/emu198x/emu198x/issues/1450) is closed.
 
-The follow-up emulator change has passing routing tests for the reported
-characters and a configured-ROM keyword test. The local desktop binary is rebuilt;
-native reader acceptance remains pending. [Issue #1450](https://github.com/emu198x/emu198x/issues/1450)
-tracks the report. Before publishing B1/B2, ship the revised modifier mapping,
-update the setup's minimum version/downloads and verify the released package.
-The public v0.22.0 archives do not contain either keyword-modifier change.
+All four public Spectrum archives were downloaded and checksum-checked. The
+Apple silicon package passed 88 checks covering the opening's greeting/editing/
+tape sequence, Lucky Number's six checkpoints and its input experiments. Both
+Lucky Number screenshots match the release captures exactly. The [v0.22.1
+verification record](meet-basic-0.22.1-verification.json) contains archive and
+binary hashes, source hashes and screen observations. Native acceptance is
+user-reported; these automated runs use MCP, not native window events.
+
+[Website PR #416](https://github.com/code198x/website/pull/416) updates only the
+published setup's minimum version and download links. B1/B2 remain unpublished
+in their separate review PR; the keyboard confirmation is not lesson approval.
 
 Review B1/B2, then develop B3/B4: random secrets, feedback and another round.
 Oracle Stone and the movement experiment follow. Resolve lesson boundaries against
