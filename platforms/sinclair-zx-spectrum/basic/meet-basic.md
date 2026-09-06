@@ -1,12 +1,12 @@
 # Meet BASIC
 
-**Status: agreed module direction; [lesson and source mapping](meet-basic-plan.md) prepared; four opening lessons published; later arcs pending.**
+**Status: agreed module direction; all fifteen lessons published. The [lesson, source and verification record](meet-basic-plan.md) documents the completed sequence.**
 
 Meet BASIC is the guided introduction to programming in Sinclair BASIC on the ZX Spectrum. It teaches through short projects, combining the useful existing primer and early programs rather than placing both sequences one after the other. Apply the [curriculum specification](../../../specifications/curriculum.md) and [unit guidance](../../../specifications/unit.md).
 
 ## Place in the curriculum
 
-The recommended opening is **Meet BASIC → Bright Spark → Touchdown**. This settles the opening direction, not the remaining BASIC lineup or any assembly sequence. Bright Spark and Touchdown still need their individual briefs reconciled with the sequence review before lesson development.
+The recommended opening is **Meet BASIC → Bright Spark → Touchdown**. This settles the opening direction, not the remaining BASIC lineup or any assembly sequence. The [Bright Spark replacement specification](../games/bright-spark/brief.md) is prepared for review; Touchdown still needs its individual brief reconciled before lesson development.
 
 Foundations explains programming concepts through pseudocode. Meet BASIC introduces the Spectrum's language, editor and working environment, explaining the concepts locally for readers who have not attended Foundations. The games then develop larger, sustained projects with increasingly interesting mechanics.
 
