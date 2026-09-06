@@ -4,7 +4,11 @@ This file holds bounded next work and proposals. [PROJECT.md](PROJECT.md) owns a
 
 ## Spectrum sequences
 
-**Status: BASIC opening direction agreed; remaining game lineups under review.** The [Meet BASIC specification](platforms/sinclair-zx-spectrum/basic/meet-basic.md) owns the guided introduction through short projects and the recommended opening into Bright Spark and Touchdown. The [lesson and source mapping](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) has an approved A1–A4 opening: four lessons and eleven verified BASIC checkpoints, ending in a finished story. Steve has approved A1–A4 and reports native testing of A1–A3, including the host-keyboard fix. The four units are published with the coordinated route/catalogue migration and Emu198x v0.22.0. Lucky Number B1/B2 are drafted as units 5/6 with six checkpoints and 72 passing emulator checks; reader review is pending. Later lessons are not yet implemented. The [project charter](PROJECT.md) and [game-brief specification](specifications/brief.md) govern the work. The agreed quality standard is a complete, enjoyable and deliberately finished game for its scope; BASIC games need not meet commercial standards.
+**Status: Meet BASIC published; Bright Spark specification agreed.** All fifteen introductory lessons are live. The [lesson, source and verification record](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) owns the implementation evidence. The agreed opening remains Meet BASIC → Bright Spark → Touchdown.
+
+The next bounded task is to prototype the board and cue stages of the [agreed Bright Spark brief](platforms/sinclair-zx-spectrum/games/bright-spark/brief.md). It retains the four-panel memory game, separates sequence representation from playback and input, and specifies score, replay, input hand-off and a finite ending. Seven teaching groups and a 16-round challenge are agreed starting defaults, not fixed curriculum constraints. Existing Bright Spark lessons remain published while the replacement is developed.
+
+The [project charter](PROJECT.md) and [game-brief specification](specifications/brief.md) govern the work. The remaining BASIC and assembly lineups stay under review; BASIC games need not meet commercial standards.
 
 ### Evidence to start from
 

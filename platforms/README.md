@@ -4,11 +4,12 @@ This directory holds system-specific curriculum specifications alongside retaine
 
 Use these designs alongside authored lessons, sample sources and capture manifests. Their mechanics and observations are useful evidence; old counts, ordering, tool availability and historical comparisons need checking. No existing brief becomes an approved replacement sequence by surviving this cleanup.
 
-## Agreed module specifications
+## Current specifications
 
 | System | Module | Status |
 |---|---|---|
-| ZX Spectrum | [Meet BASIC](sinclair-zx-spectrum/basic/meet-basic.md) | Direction agreed; [lesson/source plan](sinclair-zx-spectrum/basic/meet-basic-plan.md) prepared; implementation pending |
+| ZX Spectrum | [Meet BASIC](sinclair-zx-spectrum/basic/meet-basic.md) | All fifteen lessons published; [lesson/source and verification record](sinclair-zx-spectrum/basic/meet-basic-plan.md) |
+| ZX Spectrum | [Bright Spark](sinclair-zx-spectrum/games/bright-spark/brief.md) | Replacement specification agreed; seven provisional teaching groups; prototype next |
 
 ## Existing briefs
 
@@ -25,7 +26,6 @@ Use these designs alongside authored lessons, sample sources and capture manifes
 | Commodore 64 | [Tally](commodore-64/games/tally/brief.md) |
 | Commodore Amiga | [Exodus (rung-2 Blitter puzzle)](commodore-amiga/games/exodus/brief.md) |
 | Commodore Amiga | [Flock](commodore-amiga/games/flock/brief.md) |
-| ZX Spectrum | [Bright Spark](sinclair-zx-spectrum/games/bright-spark/brief.md) |
 | ZX Spectrum | [Cipher](sinclair-zx-spectrum/games/cipher/brief.md) |
 | ZX Spectrum | [Crates](sinclair-zx-spectrum/games/crates/brief.md) |
 | ZX Spectrum | [Dice Roller](sinclair-zx-spectrum/games/dice-roller/brief.md) |
