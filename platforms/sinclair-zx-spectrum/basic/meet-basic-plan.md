@@ -1,6 +1,6 @@
 # Meet BASIC: lesson and source mapping
 
-**Status: implementation plan for the [agreed module direction](meet-basic.md). A1–A4 are published with verified sample checkpoints. This complete Story Builder arc uses Emu198x v0.22.0; B1/B2 are drafted for review; the rest is not yet implemented.**
+**Status: implementation plan for the [agreed module direction](meet-basic.md). A1–A4 are published with verified sample checkpoints. The Story Builder arc and B1/B2 have passed verification on Emu198x v0.22.1. B1/B2 are published; the rest is not yet implemented.**
 
 The four arcs are agreed. The lesson boundaries below are a concrete authoring plan, adjustable when source development or reader testing reveals an overloaded step. The fifteen working lessons are not a required count. This plan replaces the combined progression of feature demonstrations followed by substantially repeated early projects; it does not append another course to them.
 
@@ -250,7 +250,7 @@ public Apple silicon archive is identical to the package used for the 74 checks.
 The lesson deployment and emulator downloads-page refresh completed on 5 September
 2026. The old reference URLs remain available through the redirects below.
 
-**B1/B2 are drafted as units 5 and 6**, with three complete checkpoints each:
+**B1/B2 are published as units 5 and 6**, with three complete checkpoints each:
 [website PR #415](https://github.com/code198x/website/pull/415) and
 [sample PR #7](https://github.com/code198x/code-samples/pull/7). They use a known
 secret of 7, add lower/equal/higher clues, then a repeat loop, count and validation.
@@ -261,14 +261,14 @@ Separate range checks keep the first validation readable without also teaching
 All 60 checkpoint/tape checks and 12 experiment checks passed on the released
 Apple silicon v0.22.0 emulator through MCP. Source hashes and observed screen rows
 are committed with the samples. The website build, all 78 tests and desktop/mobile
-light/dark checks passed locally with the companion sources. Draft navigation uses
+light/dark checks passed locally with the companion sources. Navigation uses
 the canonical `unit-05-give-a-useful-clue` and `unit-06-keep-guessing` routes.
-These are not published; reader review and publication dates remain pending.
+Steve approved both lessons on 6 September 2026. Their samples and website PRs are merged, and deployment completed that day. Live checks confirmed the complete listings, screenshots, navigation and RSS entries.
 
 [Emu198x v0.22.1](https://github.com/emu198x/emu198x/releases/tag/v0.22.1)
 ships the agreed **left Option/Alt** modifier for SYMBOL SHIFT and
 **Shift+left Option/Alt** for extended mode. Right Option/Alt/AltGr retains
-host-layout character input. The lesson drafts use that mapping. Steve confirmed
+host-layout character input. The lessons use that mapping. Steve confirmed
 it works in native use; [PR #1453](https://github.com/emu198x/emu198x/pull/1453)
 is merged and [issue #1450](https://github.com/emu198x/emu198x/issues/1450) is closed.
 
@@ -281,10 +281,10 @@ binary hashes, source hashes and screen observations. Native acceptance is
 user-reported; these automated runs use MCP, not native window events.
 
 [Website PR #416](https://github.com/code198x/website/pull/416) updates only the
-published setup's minimum version and download links. B1/B2 remain unpublished
-in their separate review PR; the keyboard confirmation is not lesson approval.
+published setup's minimum version and download links. B1/B2 received separate
+lesson approval before publication.
 
-Review B1/B2, then develop B3/B4: random secrets, feedback and another round.
+Next, develop B3/B4: random secrets, feedback and another round.
 Oracle Stone and the movement experiment follow. Resolve lesson boundaries against
 observed teaching load; six authored units do not declare the whole module complete.
 
