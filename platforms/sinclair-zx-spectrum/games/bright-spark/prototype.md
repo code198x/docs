@@ -28,6 +28,6 @@ The opening lessons now have seven verified checkpoints: row, rectangle, drawing
 
 ## Next bounded work
 
-Review the two opening lesson drafts, including their local explanations, optional Foundations links, keyboard instructions and note vocabulary. They remain development-only review routes and do not replace the published Bright Spark pages. The drafts use plain changed-line listings and full checkpoints; navigation stays within the review pair.
+Review the [two opening lesson drafts](https://github.com/code198x/website/pull/418), including their local explanations, optional Foundations links, keyboard instructions and note vocabulary. They remain development-only review routes and do not replace the published Bright Spark pages. The drafts use plain changed-line listings and full checkpoints; navigation stays within the review pair.
 
 Then develop representation and fixed-sequence playback from the verified cue contract. The timing choice above settles the first prototype question; further changes must retain the interference and repeated-cue checks. Sequence comparison, growth, the 16-round boundary, score and replay remain unimplemented in this replacement.
