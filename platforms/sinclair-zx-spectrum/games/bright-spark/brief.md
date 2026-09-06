@@ -1,6 +1,6 @@
 # Bright Spark
 
-**Status: agreed replacement specification, approved on 6 September 2026.** The opening route **Meet BASIC → Bright Spark → Touchdown** is agreed. The seven teaching groups and 16-round challenge are implementation defaults to test and refine; revised lessons are not yet written. The [board-and-cue prototype record](prototype.md) distinguishes implementation and execution evidence from the specification.
+**Status: agreed replacement specification, approved on 6 September 2026.** The opening route **Meet BASIC → Bright Spark → Touchdown** is agreed. The seven teaching groups and 16-round challenge are implementation defaults to test and refine; the first two replacement lessons are drafted for review. The [board-and-cue prototype record](prototype.md) distinguishes implementation and execution evidence from the specification.
 
 **Target:** stock 48K ZX Spectrum, 50 Hz display configuration, Sinclair BASIC, keyboard and beeper. No expansion, Spectrum Next feature or assembly helper.
 
@@ -87,7 +87,7 @@ The cue routine must leave its panel resting, retain/repaint its label, and rest
 
 Use **one captured reading per polling attempt**. Empty input loops back to capture; unrelated input is ignored and released; a valid choice is echoed once and then requires release before the next choice. A transition into YOUR TURN first drains any held playback/start key. A key held for two expected identical items must count only once.
 
-Propose lower-case **q** as the ordinary quit key during input and readiness/result prompts, matching the marker experiment. During playback, check for q between cues; a `BEEP` is allowed to finish before exit. Document and measure the resulting delay instead of promising instantaneous interruption. If a direction/number is held in a release loop, release it before q; Spectrum BREAK remains an emergency route, not the only normal exit.
+Propose lower-case **q** as the ordinary quit key during input and readiness/result prompts, matching the marker experiment. During playback, check for q between cues and instruct the player to hold it until exit; a `BEEP` is allowed to finish before exit. Document and measure the resulting delay instead of promising instantaneous interruption. If a direction/number is held in a release loop, release it before q; Spectrum BREAK remains an emergency route, not the only normal exit.
 
 The world does not advance while the player considers a response; there is no response deadline in the baseline. A pause menu and time pressure are optional future variations, not necessary infrastructure. A sequence-length challenge is sufficient.
 
@@ -97,7 +97,7 @@ Use four fixed character-cell panels with one persistent digit each. Keep instru
 
 The learner chooses and auditions four short notes with stable panel associations. Their exact pitches and durations remain implementation defaults to test, not a demand to reproduce a historical device's sound. Use a brief, distinct failure cue without a punitive prolonged buzz. Silence between cues creates separation, particularly for `"22"`. No backing music competes with the cue vocabulary.
 
-Explain that changing an attribute selection is not the same as repainting existing cells. Explain that `BEEP` occupies the program while sounding, and `PAUSE` can be interrupted by a key. Early stages may expose that behaviour as an experiment. Before shipping playback, either provide a measured, explained wait that meets the key-interference tests, or explicitly define a permitted interruption behaviour that preserves readable cues. Do not quietly substitute a calibrated busy loop and call it an accurate timer. This is a prototype question, not a reason to expand Meet BASIC or introduce machine code.
+Explain that changing an attribute selection is not the same as repainting existing cells. Explain that `BEEP` occupies the program while sounding, and `PAUSE` can be interrupted by a key. Early stages may expose that behaviour as an experiment. Before shipping playback, either provide a measured, explained wait that meets the key-interference tests, or explicitly define a permitted interruption behaviour that preserves readable cues. Do not quietly substitute a calibrated busy loop and call it an accurate timer. The [prototype](prototype.md) supports permitting the extra pause to shorten while retaining the complete note and repaint. This is the current implementation choice; revisit it if cue drawing, duration or target changes.
 
 Create the panel design and sound vocabulary within the lessons: compare candidate contrasts, active indicators, intervals and durations. The assets are source text, character-cell arrangement and note data. No external image editor or supplied art pack is needed. The original artwork/code terms and any historical reference credits must be clear when sharing the game.
 
