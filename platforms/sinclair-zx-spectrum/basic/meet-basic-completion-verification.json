@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-06",
+  "status": "Approved and published; all fifteen Meet BASIC lessons live",
+  "website_pr": "https://github.com/code198x/website/pull/417",
+  "samples_pr": "https://github.com/code198x/code-samples/pull/8",
+  "website_commit": "f013e2e4",
+  "samples_commit": "7209ca6",
+  "emulator": "Emu198x Spectrum v0.22.1, released Apple silicon executable, 48K ROM configuration",
+  "checks": {
+    "units_07_14": 99,
+    "corrected_unit_15": 17,
+    "experiments": 11,
+    "website_tests": 78,
+    "production_build": "passed with all final screenshot assets",
+    "browser": "All nine lessons at 1440 and 390 px, light and dark; complete listings, images, no page overflow, no serious/critical WCAG A/AA findings; navigation 6 through 15 to module overview"
+  },
+  "evidence_location": "code-samples/sinclair-zx-spectrum/basic/meet-basic/completion-verification",
+  "media_sha256": {
+    "unit-08.png": "48f3e4fc2664bc803df237eb77544d137f785b354829facc526fbb07a95f8cec",
+    "unit-09.png": "4534fc30f9f27590bea8a7078d82eea29e3abe75ea1ee5ac2da163a98cff00f5",
+    "unit-10.png": "584e65408f1094b6e780e845bb91ac97c98384b4f48bf78ec3c9e91a199b3327",
+    "unit-11.png": "0db2d84ca175506dafa5b6705a22e5b8f7eea3cc5f4cada120ac091e9c5866ba",
+    "unit-12.png": "bd80d8f89438b9f81fd33790538299e2ccb37d802f0acbf8ff066a076824769f",
+    "unit-13-erased.png": "41778cd1f61f59e42b38b186a3a04e49de4c373dff5085582be5d0e870fe1ce9",
+    "unit-13-trail.png": "0f5575600aac99d90ab3879f0a2635e88c159221a965fbedfb3f99ce2e20d220",
+    "unit-13.png": "5747591f8cb4610543e04aad36f0790fcecf7a0f459d1757a3c412f615a3b51e",
+    "unit-14.png": "cbbb314b5d7b74731aea04cae38944b51abfa479ae2755a42ab9cd638d7bc0ae",
+    "unit-15.png": "dff343dad27f5afe391f4a003b18cb20338f4bdf1af42e680e9a9ffb0361e655"
+  },
+  "limits": [
+    "ROM keyboard entry via MCP is not native host keyboard testing.",
+    "Audio is recorded and signal-measured; reader approval is not an additional instrumented native-output test.",
+    "Motion is observed across sampled emulated frames, not original hardware.",
+    "Finite random samples do not establish fairness."
+  ],
+  "website_merge_commit": "c24abe76694749245d7a87646af22548dbe08b1d",
+  "samples_merge_commit": "eb253f79dc4029ac256d2b40da30196d23da8925",
+  "deployment": "https://github.com/code198x/website/actions/runs/34050723684",
+  "live_checks": {
+    "status": "passed",
+    "lessons": 15,
+    "new_lessons": 9,
+    "complete_new_listings": 20,
+    "navigation": "1 through 15, forwards and backwards",
+    "rss": "all nine new entries",
+    "screenshots": "all ten public images match verified captures"
+  },
+  "reader_approval": "Steve reviewed all nine remaining lessons and approved merging on 2026-09-06."
+}

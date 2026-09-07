@@ -2,6 +2,8 @@
 
 Start with **[PROJECT.md](PROJECT.md)** for the goals, audience, scope and teaching principles. This README is the documentation index. [Current work](work.md) identifies the next bounded tasks and proposals; it does not redefine project policy.
 
+Original prose is licensed under **CC BY 4.0**. See [LICENSE.md](LICENSE.md) for scope, attribution and exclusions; software and third-party material retain their own terms.
+
 ## Teaching and authoring
 
 | Guide | Responsibility |
@@ -17,6 +19,9 @@ Start with **[PROJECT.md](PROJECT.md)** for the goals, audience, scope and teach
 | [Pattern Library](specifications/pattern-library.md) | Adaptable implementations and their contracts |
 
 [Website and publishing](website.md) connects these specifications to the current schemas, source organisation, capture, testing and deployment. [Game-design material](platforms/README.md) lists the concrete existing designs worth consulting during re-specification.
+
+The [Spectrum Meet BASIC specification](platforms/sinclair-zx-spectrum/basic/meet-basic.md) defines the agreed introduction through short projects and its relationship to the first substantial games.
+Its [lesson and source mapping](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) identifies reusable material, new checkpoints, verification and route migration work.
 
 ## Ownership and maintenance
 
