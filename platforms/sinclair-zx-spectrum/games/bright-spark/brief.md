@@ -1,6 +1,6 @@
 # Bright Spark
 
-**Status: agreed replacement specification, approved on 6 September 2026.** The opening route **Meet BASIC → Bright Spark → Touchdown** is agreed. The seven teaching groups and 16-round challenge are implementation defaults to test and refine; the first two replacement lessons are drafted for review. The [board-and-cue prototype record](prototype.md) distinguishes implementation and execution evidence from the specification.
+**Status: agreed replacement specification, approved on 6 September 2026.** The opening route **Meet BASIC → Bright Spark → Touchdown** is agreed. The seven teaching groups and 16-round challenge are implementation defaults to test and refine; the first two replacement lessons were approved on 7 September 2026. The [board-and-cue prototype record](prototype.md) distinguishes implementation and execution evidence from the specification.
 
 **Target:** stock 48K ZX Spectrum, 50 Hz display configuration, Sinclair BASIC, keyboard and beeper. No expansion, Spectrum Next feature or assembly helper.
 

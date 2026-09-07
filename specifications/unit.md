@@ -73,3 +73,20 @@ Use existing components for code, outputs, traces and diagrams. Pseudocode can b
 - The prose follows the editorial standard and the relevant site checks pass.
 
 These are authoring checks, not learner pass/fail gates. At game completion, also run the end-to-end and playtesting checks in [the workflow](content-creation-workflow.md).
+
+## Source notes
+
+Use the website's shared `Sources.astro` component for a standalone source section:
+
+```mdx
+import Sources from '@components/Sources.astro';
+
+<Sources>
+
+Author, *Title*, edition (publisher, year), chapter and page numbers.
+Explain which claims the source supports where useful.
+
+</Sources>
+```
+
+Use one section per page. The component supplies the Sources heading, readable typography and `sources` anchor; preserve another existing anchor with its `id` prop where necessary. Its slot accepts ordinary Markdown paragraphs, links and lists. Do not add a second heading, inline small-print styling or a page-specific Sources wrapper. Keep citations close to individual claims when needed; the section complements those citations rather than replacing them. This component is also used for standalone source notes in the Vault.
