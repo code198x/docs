@@ -1,6 +1,6 @@
 # Bright Spark prototype
 
-**Status: opening checkpoints and playback policy checked; two opening lessons approved, 7 September 2026.** The [approved brief](brief.md) remains the specification. The replacement game is not yet complete or published.
+**Status: all seven replacement lessons drafted; complete-game emulator checks passed, 8 September 2026.** The [approved brief](brief.md) remains the specification. The first two lessons were approved on 7 September; the remaining drafts await review. The replacement is not published.
 
 ## Implementation
 
@@ -26,10 +26,16 @@ Holding q from the first active marker ended playback after 22 observed frames, 
 
 The opening lessons now have seven verified checkpoints: row, rectangle, drawing routine, four-panel board; persistent active cue, returning audio/visual cue, four-cue demonstration. Checks followed the editing sequence through the ROM, rather than loading each state independently. An initial editing run failed; allowing extra settling time after entries made the unchanged sources pass. This is recorded as an automation limitation, not an isolated emulator defect.
 
+## Remaining lessons and complete game
+
+The third lesson develops representation through three checkpoints. Four further drafts cover fixed playback, fresh validated input and comparison, random growth and completed-round scoring, then instructions/replay/saving. There are eighteen maintained checkpoints across seven drafts. The existing published Bright Spark pages remain in place; the development-only review route now connects all seven drafts.
+
+Released Emu198x Spectrum v0.22.1 passed ROM edit continuity from the final representation checkpoint through every later checkpoint. Further checks cover `314`, `22`, `1234`, repeated-cue interference, wrong first/middle/last answers, held and irrelevant keys, idle polling and release hand-off. A run seeded with `RANDOMIZE 1234` completed all sixteen rounds using responses derived from observed playback; every new order preserved its prefix. The result showed sixteen completed rounds without another playback. Replay reset the sequence and score; first-round failure scored zero and fourth-round failure after three completed rounds scored three. A named tape was saved, loaded in a fresh process, played, replayed and quit. Reproducible runners and source hashes live in `opening/verification/` on the sample branch.
+
+The release routine captures into `a$` so it cannot erase the accepted `k$` before comparison. It checks q while waiting. Empty input loops directly back to capture; release waits follow a consumed key or a phase transition. Cues remain blocking and do not buffer typing ahead, which the player instructions state explicitly. The final saved name is `spark16`, distinct from the earlier `spark` checkpoints. A supplementary run verified that exact named save/load in a fresh process, a temporary two-round cap, rejected keys below/above the valid range, separate short repeated presses, held replay, playback quit and the proposed shorter-note experiment. The two harness corrections needed were the existing ROM-edit settling allowance and excluding the intentional partial CLS transition from label-retention assertions; no BASIC change was needed. Alternative audio was captured, not subjectively reviewed.
+
+The final success capture was inspected with labels, completed count and replay prompt intact. The website build passed (69 tests passed, 9 skipped). The four new drafts rendered at 390 and 1440 pixels in both themes, with expanded checkpoints and answers, no document overflow or missing samples/images, and no serious/critical accessibility findings. Local links and navigation from lesson 3 into lesson 4 passed.
+
 ## Next bounded work
 
-The [two opening lesson drafts](https://github.com/code198x/website/pull/418) were approved on 7 September 2026, with a request to standardise Sources presentation through a shared component. They remain development-only review routes and do not replace the published Bright Spark pages. The drafts use plain changed-line listings and full checkpoints; navigation stays within the review pair.
-
-The third lesson, “Remember an order”, now has three runnable checkpoints and a development-only draft awaiting review. Emu198x Spectrum v0.22.1 passed sequential ROM edits from lesson 2: stored `314`, length and first/last character diagnostics, then literal append to `3142`. Re-running resets the literal before appending; a repeated-choice experiment produces `3144`. The final captured screen was inspected with all labels intact and diagnostics on rows 18–21. Reproducible checks and source hashes are in `opening/verification/sequence.py` and `sequence-results.json` in the sample branch. The website production build passed (69 tests, 9 skipped), and the third review route rendered at 390 and 1440 pixels in both themes with expanded checkpoints, no overflow or missing samples, and no serious/critical accessibility findings. Review neighbour links returned successfully. This is representation evidence, not lesson approval or playback acceptance.
-
-Next develop fixed-sequence playback from the verified cue contract. The timing choice above settles the first prototype question; further changes must retain the interference and repeated-cue checks. Sequence comparison, growth, the 16-round boundary, score and replay remain unimplemented in this replacement.
+Review lessons 3–7 for teaching clarity and conduct independent learner/native-control and subjective-listening review. Original hardware remains unverified. The first two lesson approvals do not imply approval of the later drafts or publication. At release, follow the brief's requirements for the game index, catalogue, old URLs and incoming links, keeping existing published samples available until their consumers are accounted for.
