@@ -69,14 +69,14 @@ Explain this as a reusable drawing technique, not a promise of smooth pixel moti
 
 Maintained Volley sources and website listings retain readable keyword spacing. The local entry helper suppresses redundant spaces only when converting source lines or verification edits into ROM keystrokes, preserving strings and compound token names. `verification/spacing.py` checks the stored tokenised program, including numeric payloads and string contents. `spacing-source-map.json` maps readable source hashes to the verified normalised entry hashes. Restoring readable sources produces exactly the same normalised input and does not require changing the corrected tape.
 
-## Lesson draft hand-off
+## Approved lessons
 
 The website holds a module overview and eight descriptive lesson files in `src/drafts/volley/`, following the checkpoint titles above. Development-only review routes use the existing module and unit layouts and show Volley as Game 2. The production catalogue remains unchanged until publication.
 
-Each lesson states its starting program, exact edits, locally explained syntax, expected observations and a question with explanatory feedback. Short opening programs are shown in full; longer changes use maintained snippets plus complete-program disclosures. Keyboard help is optional. The last two lessons preserve the colour-only/erase-first version and then explain consecutive erase/draw and selective paddle updates. The final lesson includes tape save/load and a fresh-session play/retry/quit check.
+Each lesson states its starting program, exact edits, locally explained syntax, expected observations and a question with explanatory feedback. Short opening programs are shown in full; longer changes use maintained snippets plus complete-program disclosures. The last two lessons preserve the colour-only/erase-first version and then explain consecutive erase/draw and selective paddle updates. The final lesson includes tape save/load and a fresh-session play/retry/quit check.
 
 `verification/lessons.py` checks the website roster's eight edit sets and the five change snippets against the complete checkpoints. The drawing verifier re-enters the baseline as well, ensuring its timing evidence matches current keyword spacing. Earlier runtime checks still establish the original stages; the source-spacing map and token-stream equivalence check connect them to the readable listings and their normalised ROM input.
 
-Publication needs the unit catalogue, the new module position and corresponding number/link updates. Promote overview links from review-relative to module-relative paths when moving its MDX into the content collection. No deployed availability is implied by these drafts.
+The publication change adds the unit catalogue, places Volley after Bright Spark, reconciles module numbers and links, and redirects the review bookmarks. `website/scripts/volley-roster.json` retains the edit sets used by the sample verifier. Deployment remains a separate check.
 
 Draft validation passed the eight edit-set checks and all 36 browser combinations (overview plus eight lessons, two widths and two themes), including source availability, links, keyboard question reveals, image loading, overflow and serious/critical Axe checks. The website production build passed with 69 tests passing and nine existing skips; a final static build confirmed that the review routes are excluded. The maintained website review checker can repeat the browser checks.
