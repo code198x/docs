@@ -4,11 +4,11 @@ This file holds bounded next work and proposals. [PROJECT.md](PROJECT.md) owns a
 
 ## Spectrum sequences
 
-**Status: Meet BASIC published; Bright Spark specification agreed.** All fifteen introductory lessons are live. The [lesson, source and verification record](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) owns the implementation evidence. The agreed opening remains Meet BASIC → Bright Spark → Touchdown.
+**Status: Meet BASIC and Bright Spark published; Touchdown scope agreed.** All fifteen Meet BASIC lessons and seven replacement Bright Spark lessons are live. The agreed opening is Meet BASIC → Bright Spark → Touchdown. See the [Meet BASIC implementation record](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) and [Bright Spark verification record](platforms/sinclair-zx-spectrum/games/bright-spark/prototype.md). Native control/audio and independent learner observations remain useful Bright Spark follow-up work.
 
-The board and manual cue stages of the [agreed Bright Spark brief](platforms/sinclair-zx-spectrum/games/bright-spark/brief.md) are implemented and checked; see the [prototype record](platforms/sinclair-zx-spectrum/games/bright-spark/prototype.md). The extra pause may shorten under key interference while complete notes and repaints retain cue separation. Two opening lesson drafts were approved on 7 September 2026. All seven replacement lessons now have drafts and eighteen maintained checkpoints; complete-game emulator checks include the sixteen-round ending, score boundaries, replay and a fresh-process tape load. The full sequence was approved for publication on 9 September. Native control/audio and independent learner observations remain useful follow-up work. It retains the four-panel memory game, separates sequence representation from playback and input, and specifies score, replay, input hand-off and a finite ending. Seven teaching groups and a 16-round challenge are agreed starting defaults, not fixed curriculum constraints. The publication change replaces the earlier Bright Spark lessons while retaining their URLs through redirects.
+The [Touchdown brief](platforms/sinclair-zx-spectrum/games/touchdown/brief.md) now specifies a moving lander, sideways control and thrust, limited fuel, and a landing pad within a fixed screen of uneven terrain. Build a playable 48K BASIC prototype to establish controls, responsiveness, terrain/contact representation and a complete retry cycle before fixing the lesson breakdown. The scope is agreed; implementation and execution remain to be established.
 
-The [project charter](PROJECT.md) and [game-brief specification](specifications/brief.md) govern the work. The remaining BASIC and assembly lineups stay under review; BASIC games need not meet commercial standards.
+The [project charter](PROJECT.md) and [game-brief specification](specifications/brief.md) govern the work. Subsequent BASIC choices and the remaining assembly lineup stay under review; BASIC games need not meet commercial standards.
 
 ### Evidence to start from
 
@@ -36,7 +36,7 @@ Keep useful contrasts with C64, Amiga, NES and future systems visible. Reusing a
 
 ### Next output
 
-Use the [Bright Spark prototype record](platforms/sinclair-zx-spectrum/games/bright-spark/prototype.md) for the next implementation pass and the [Meet BASIC lesson and source mapping](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) for optional concept connections. All fifteen Meet BASIC lessons are published. Keep subsequent BASIC and assembly choices as proposals for joint review.
+Inspect Touchdown’s existing lessons and sample sources, then build the bounded prototype described in its [agreed brief](platforms/sinclair-zx-spectrum/games/touchdown/brief.md). Record actual target/tool configuration, runnable source, rule checks and human play observations. Use those findings to propose the lesson and checkpoint breakdown. Keep subsequent BASIC and assembly choices as proposals for joint review.
 
 Produce reviewable game briefs and a sequence mapping before lesson rewrites. Record concrete missing shared explanations, Vault entries, patterns and component needs. Resolve substantive conflicts with the briefing and separate recommendations from decisions. Historical versions remain in Git; the current specifications should not require reading amendment chains to discover the project goals.
 
