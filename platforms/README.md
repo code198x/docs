@@ -10,7 +10,7 @@ Use these designs alongside authored lessons, sample sources and capture manifes
 |---|---|---|
 | ZX Spectrum | [Meet BASIC](sinclair-zx-spectrum/basic/meet-basic.md) | All fifteen lessons published; [lesson/source and verification record](sinclair-zx-spectrum/basic/meet-basic-plan.md) |
 | ZX Spectrum | [Bright Spark](sinclair-zx-spectrum/games/bright-spark/brief.md) | Seven replacement lessons published |
-| ZX Spectrum | [Volley](sinclair-zx-spectrum/games/volley/brief.md) | Brief accepted for prototype work; [eight-checkpoint prototype and teaching review](sinclair-zx-spectrum/games/volley/prototype.md) |
+| ZX Spectrum | [Volley](sinclair-zx-spectrum/games/volley/brief.md) | Specification agreed; eight lesson drafts ready for review; [prototype and teaching record](sinclair-zx-spectrum/games/volley/prototype.md) |
 | ZX Spectrum | [Touchdown](sinclair-zx-spectrum/games/touchdown/brief.md) | Moving lander and landscape scope agreed; prototype and lesson breakdown pending |
 
 ## Existing briefs

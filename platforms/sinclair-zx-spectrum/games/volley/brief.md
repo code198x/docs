@@ -1,8 +1,8 @@
 # Volley — Brief
 
-**Status:** Brief accepted as the basis for prototype work. Eight checkpoint sources are implemented; see the [prototype and teaching review](prototype.md). The final course order awaits play and teaching-stage review.
+**Status:** Specification and lesson plan agreed. Eight verified checkpoint sources, eight lesson drafts and a module overview are ready for editorial review; see the [prototype and teaching review](prototype.md). The agreed opening is Meet BASIC → Bright Spark → Volley → Touchdown. Publication is pending.
 **System / track:** Sinclair ZX Spectrum / BASIC.
-**Working route:** Meet BASIC → Bright Spark → Volley → Touchdown.
+**Route:** Meet BASIC → Bright Spark → Volley → Touchdown.
 **Target:** Stock 48K Spectrum, PAL timing, Sinclair BASIC, keyboard input and tape save/load. No expansion required.
 
 Apply the [project charter](../../../../PROJECT.md), [curriculum design](../../../../specifications/curriculum.md) and [game-brief specification](../../../../specifications/brief.md).
@@ -89,7 +89,7 @@ The teaching review must identify the new concepts at each checkpoint, the expla
 
 ## Sources, connections and current evidence
 
-The website catalogue has a coming-soon Volley entry tagged “Paddle physics”; no Volley lessons are authored. Eight prototype checkpoint sources now live under the sample area below. The [prototype record](prototype.md) and maintained verification results establish the scope of execution evidence; the catalogue entry alone does not.
+The website catalogue has a coming-soon Volley entry tagged “Paddle physics”; the eight lesson drafts are not yet published. Eight prototype checkpoint sources now live under the sample area below. The [prototype record](prototype.md) and maintained verification results establish the scope of execution evidence; the catalogue entry alone does not.
 
 Implementation locations:
 
