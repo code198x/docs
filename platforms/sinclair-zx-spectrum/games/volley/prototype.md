@@ -40,7 +40,7 @@ The drawing comparison executed the same no-input path in checkpoints 7 and 8:
 | 7: colour, erase first | 328 | 206 (63%) | 6 frames |
 | 8: calculate first, consecutive erase/draw | 204 | 0 | 0 frames |
 
-With X held, the respective counts were 208 absent frames out of 291, and zero out of 204. These figures were refreshed using the compact keyword-entry sources before writing the lesson. These are frame-by-frame samples of decoded screen memory, not emitted-video measurements or a claim that no raster artefact is possible. The shorter run shows that reduced drawing work also increases cadence with the same PAUSE setting.
+With X held, the respective counts were 208 absent frames out of 291, and zero out of 204. These figures were refreshed using ROM entry without redundant token spaces before writing the lesson. These are frame-by-frame samples of decoded screen memory, not emitted-video measurements or a claim that no raster artefact is possible. The shorter run shows that reduced drawing work also increases cadence with the same PAUSE setting.
 
 Both coloured checkpoints passed checks for cyan walls, black score background, upper/lower yellow paddle limits and restoring every visited ball/paddle cell to blue. Checkpoint 8 passed centre, both paddle edges, both adjacent misses and a wall–paddle corner; its exported tape passed fresh-process play, held retry and quit. An automated player sustained eight returns on that tape, with the score advancing from 1 to 8. The coloured rally averaged about 5.35 PAL frames between observed positions, including startup in the measured intervals.
 
@@ -67,7 +67,7 @@ Explain this as a reusable drawing technique, not a promise of smooth pixel moti
 
 ## Keyword entry
 
-Maintained Volley sources omit literal spaces immediately after Sinclair BASIC keyword tokens. The local entry helper enforces this for both source lines and verification-only edits, while preserving strings and compound token names. `verification/spacing.py` rebuilds the final tape through the ROM and compares the stored tokenised program, retaining numeric payloads and all string contents. Earlier execution hashes map to the compact entry sources through `spacing-source-map.json`; rendering changes are separate from this spacing-only correction.
+Maintained Volley sources and website listings retain readable keyword spacing. The local entry helper suppresses redundant spaces only when converting source lines or verification edits into ROM keystrokes, preserving strings and compound token names. `verification/spacing.py` checks the stored tokenised program, including numeric payloads and string contents. `spacing-source-map.json` maps readable source hashes to the verified normalised entry hashes. Restoring readable sources produces exactly the same normalised input and does not require changing the corrected tape.
 
 ## Lesson draft hand-off
 
@@ -75,7 +75,7 @@ The website holds a module overview and eight descriptive lesson files in `src/d
 
 Each lesson states its starting program, exact edits, locally explained syntax, expected observations and a question with explanatory feedback. Short opening programs are shown in full; longer changes use maintained snippets plus complete-program disclosures. Keyboard help is optional. The last two lessons preserve the colour-only/erase-first version and then explain consecutive erase/draw and selective paddle updates. The final lesson includes tape save/load and a fresh-session play/retry/quit check.
 
-`verification/lessons.py` checks the website roster's eight edit sets and the five change snippets against the complete checkpoints. The drawing verifier re-enters the baseline as well, ensuring its timing evidence matches current keyword spacing. Earlier runtime checks still establish the original stages; the source-spacing map and token-stream equivalence check connect them to the compact entry listings.
+`verification/lessons.py` checks the website roster's eight edit sets and the five change snippets against the complete checkpoints. The drawing verifier re-enters the baseline as well, ensuring its timing evidence matches current keyword spacing. Earlier runtime checks still establish the original stages; the source-spacing map and token-stream equivalence check connect them to the readable listings and their normalised ROM input.
 
 Publication needs the unit catalogue, the new module position and corresponding number/link updates. Promote overview links from review-relative to module-relative paths when moving its MDX into the content collection. No deployed availability is implied by these drafts.
 
