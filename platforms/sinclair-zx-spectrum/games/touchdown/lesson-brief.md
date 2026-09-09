@@ -1,6 +1,6 @@
 # Touchdown — lesson brief
 
-**Status:** Agreed eleven-lesson sequence. Sixteen teaching checkpoints and a separate input diagnostic are implemented and verified; the overview and eleven lesson drafts are ready for review. See the [lesson implementation record](lessons.md).
+**Status:** Agreed eleven-lesson sequence. Sixteen teaching checkpoints and a separate input diagnostic are implemented and verified; the overview and eleven lesson drafts are approved for publication. See the [lesson implementation record](lessons.md).
 **Route:** Meet BASIC → Bright Spark → Volley → Touchdown.
 **Target:** Stock 48K ZX Spectrum, PAL, Sinclair BASIC, keyboard and tape save/load.
 **Scope and evidence:** [Game brief](brief.md), [prototype and play review](prototype.md), and maintained samples under `code-samples/sinclair-zx-spectrum/basic/touchdown/prototype/`.
@@ -85,4 +85,4 @@ Play the final tape after loading it in a fresh emulator session. Inspect moveme
 
 Draft the overview and lessons outside the public collections until reviewed. Check full and inline listings, snippets, navigation, questions, images and source availability in the browser at narrow and wide widths in both themes. Obtain lesson approval before publication. Replace the existing Touchdown content, reconcile its unit catalogue and current module number, preserve or deliberately redirect all published lesson URLs, and update the BASIC landing page and Volley's onward route in the same release. Run the required website build and content checks before merging and deploying.
 
-**Next output:** review the implemented overview and eleven lesson drafts, especially the reorganisation and input explanations. Publication follows lesson approval.
+**Next output:** publish the approved overview and eleven lessons with their catalogue, links and redirects.
