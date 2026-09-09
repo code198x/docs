@@ -4,9 +4,9 @@ This file holds bounded next work and proposals. [PROJECT.md](PROJECT.md) owns a
 
 ## Spectrum sequences
 
-**Status: Meet BASIC and Bright Spark published; Touchdown scope agreed.** All fifteen Meet BASIC lessons and seven replacement Bright Spark lessons are live. The agreed opening is Meet BASIC → Bright Spark → Touchdown. See the [Meet BASIC implementation record](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) and [Bright Spark verification record](platforms/sinclair-zx-spectrum/games/bright-spark/prototype.md). Native control/audio and independent learner observations remain useful Bright Spark follow-up work.
+**Status: Meet BASIC and Bright Spark published; Touchdown scope agreed.** All fifteen Meet BASIC lessons and seven replacement Bright Spark lessons are live. Meet BASIC → Bright Spark is published. The preferred continuation is a small Volley game → Touchdown, pending prototype and teaching-stage review. See the [Meet BASIC implementation record](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) and [Bright Spark verification record](platforms/sinclair-zx-spectrum/games/bright-spark/prototype.md). Native control/audio and independent learner observations remain useful Bright Spark follow-up work.
 
-The [Touchdown brief](platforms/sinclair-zx-spectrum/games/touchdown/brief.md) now specifies a moving lander, sideways control and thrust, limited fuel, and a landing pad within a fixed screen of uneven terrain. Build a playable 48K BASIC prototype to establish controls, responsiveness, terrain/contact representation and a complete retry cycle before fixing the lesson breakdown. The scope is agreed; implementation and execution remain to be established.
+The [Touchdown brief](platforms/sinclair-zx-spectrum/games/touchdown/brief.md) now specifies a moving lander, sideways control and thrust, limited fuel, and a landing pad within a fixed screen of uneven terrain. Retain this scope while investigating a smaller continuous-movement game first. Touchdown will still need a playable 48K BASIC prototype establishing controls, responsiveness, terrain/contact representation and a complete retry cycle before fixing the lesson breakdown. The scope is agreed; implementation and execution remain to be established.
 
 The [project charter](PROJECT.md) and [game-brief specification](specifications/brief.md) govern the work. Subsequent BASIC choices and the remaining assembly lineup stay under review; BASIC games need not meet commercial standards.
 
@@ -36,7 +36,13 @@ Keep useful contrasts with C64, Amiga, NES and future systems visible. Reusing a
 
 ### Next output
 
-Inspect Touchdown’s existing lessons and sample sources, then build the bounded prototype described in its [agreed brief](platforms/sinclair-zx-spectrum/games/touchdown/brief.md). Record actual target/tool configuration, runnable source, rule checks and human play observations. Use those findings to propose the lesson and checkpoint breakdown. Keep subsequent BASIC and assembly choices as proposals for joint review.
+Investigate a small paddle-and-ball game, provisionally Volley, as the bridge between Bright Spark and Touchdown. Begin by inspecting the actual catalogue and any existing design/sample material; the name does not imply the inherited scope is adopted.
+
+The preferred candidate has one vertically moving paddle and one ball travelling at fixed speed across a fixed screen. Walls return the ball; the player keeps a rally going, a miss ends it, and retry is immediate. Exclude opponent AI, levels and increasing speed initially. Define a complete, enjoyable rally game rather than an exercise whose only purpose is preparation.
+
+Prototype responsiveness in 48K BASIC and compare its teaching stages with Touchdown before confirming the order. Separate ball movement, boundary bounces, paddle control and collision into understandable runnable stages. Check whether simultaneous input and motion, collision timing and drawing introduce hidden complexity that defeats the intended bridge. Record target/tool configuration, rule checks and human play observations separately from the teaching review. Do not start a bulk lesson rewrite on the strength of this preference alone.
+
+For Touchdown, separate constant-speed falling from acceleration, establish a playable vertical landing game before sideways movement, and add a pad on flat ground before uneven terrain. Give custom-character construction its own understandable step. Across both games, map what each checkpoint introduces, recalls and combines; execution success alone does not establish an appropriate learning progression. Keep subsequent BASIC and assembly choices as proposals for joint review.
 
 Produce reviewable game briefs and a sequence mapping before lesson rewrites. Record concrete missing shared explanations, Vault entries, patterns and component needs. Resolve substantive conflicts with the briefing and separate recommendations from decisions. Historical versions remain in Git; the current specifications should not require reading amendment chains to discover the project goals.
 
