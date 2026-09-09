@@ -1,6 +1,6 @@
 # Volley prototype and teaching review
 
-**Status:** Six runnable checkpoint sources implemented; execution findings are recorded below. This is a prototype, not published curriculum or final approval of the course order.
+**Status:** Eight runnable checkpoint sources implemented; execution findings are recorded below. This is a prototype, not published curriculum or final approval of the course order.
 
 The [brief](brief.md) owns the proposed game and scope. Sources live in `code-samples/sinclair-zx-spectrum/basic/volley/prototype/`; each `steps/step-NN.bas` is a complete program. Verification scripts, source hashes and results belong beside the sources.
 
@@ -8,7 +8,7 @@ The [brief](brief.md) owns the proposed game and scope. Sources live in `code-sa
 
 One three-cell paddle moves vertically at the left of a character court. A one-cell ball travels diagonally in fixed steps. Top, bottom and right boundaries reflect it. Paddle contact adds one return; missing ends the rally. A/Z move, S serves, R returns to the serve screen after a miss, and Q exits. Serving and retry require release before advancing.
 
-The prototype is silent. It uses existing characters and a provisional `PAUSE 2`; this is not a fixed wall-clock update guarantee. The first review can concentrate on input, motion and contact without sound or custom graphics introducing extra work.
+The prototype is silent. Checkpoints 7–8 add a blue PAPER playfield, cyan walls, a yellow PAPER paddle and a white ball. They retain a provisional `PAUSE 2`; this is not a fixed wall-clock update guarantee. The first review can concentrate on input, motion and contact without sound or custom graphics introducing extra work.
 
 Candidate contact resolves the vertical boundary before testing the paddle's inclusive three-row interval. The ball reflects into the court rather than occupying the paddle cell. A miss returns a flag to the main loop before the result screen: retry must not accumulate unfinished `GO SUB` calls.
 
@@ -22,6 +22,8 @@ Candidate contact resolves the vertical boundary before testing the paddle's inc
 | Paddle demonstration | Poll input without stopping movement; constrain the entire paddle | The ball still returns automatically at the left boundary in this intermediate demonstration; explain that paddle contact is not implemented yet |
 | Rally collision | Candidate position, overlap and update order | Largest conceptual step; split into multiple lesson checkpoints if traces and source edits become crowded |
 | Complete game | Serve, score, miss, retry and exit | Mainly recalls counters, input hand-off and reset behaviour from Bright Spark; still explain each locally |
+| Colour the court | PAPER-coloured spaces, temporary PRINT colours and restoring the background | Recall colour from Bright Spark; keep the original drawing order for comparison |
+| Keep the ball visible | Calculate before erasing; draw old/new cells consecutively; update only paddle endpoints | Compare the actual versions and explain both visibility and any change in cadence |
 
 The transition into collision restructures direct position updates into candidate coordinates. Teach the reason before the change: contact must be decided before drawing, including the row after a wall reflection. The miss flag is communication from a routine, not a new game engine.
 
@@ -29,10 +31,36 @@ This supports the proposed bridge: Volley establishes position/direction, contin
 
 ## Verification and remaining review
 
-The initial run checked all six checkpoints, upper/lower paddle limits, misses, retry, six contact boundaries and a fresh-process tape load. A subsequent screen-observed rally exposed a score-column error (the first return displayed as 10); the source now aligns score updates with the initial counter. The corrected final game passed a fresh-process tape load, serve, miss, retry and exit, plus centre/edge/miss/corner contact checks. A screen-observed automated player completed eight returns, with the score advancing exactly from 1 through 8. Results and source/tape hashes are maintained with the samples. Use those results and hashes for exact execution coverage. ROM editing, MCP-driven keyboard events and screen observations are configuration-specific evidence; they are not native host-keyboard or original-hardware acceptance.
+The baseline run checked the original six checkpoints, upper/lower paddle limits, misses, retry, six contact boundaries and a fresh-process tape load. A subsequent screen-observed rally exposed a score-column error (the first return displayed as 10); the source now aligns score updates with the initial counter. The corrected final game passed a fresh-process tape load, serve, miss, retry and exit, plus centre/edge/miss/corner contact checks. A screen-observed automated player completed eight returns, with the score advancing exactly from 1 through 8. Results and source/tape hashes are maintained with the samples. Use those results and hashes for exact execution coverage. ROM editing, MCP-driven keyboard events and screen observations are configuration-specific evidence; they are not native host-keyboard or original-hardware acceptance.
 
-The automated rally observed roughly eight to nine PAL frames between drawn ball positions on average; this is an observation of this run, not a fixed timing guarantee. Drawing includes an erase interval, so inspect flicker as well as speed. The intentionally simple visuals and silence leave those questions visible.
+The drawing comparison executed the same no-input path in checkpoints 7 and 8:
+
+| Checkpoint | Sampled frames | Frames with no decoded ball | Longest absent run |
+|---|---:|---:|---:|
+| 7: colour, erase first | 328 | 209 (64%) | 6 frames |
+| 8: calculate first, consecutive erase/draw | 206 | 0 | 0 frames |
+
+With X held, the respective counts were 209 absent frames out of 291, and zero out of 204. These are frame-by-frame samples of decoded screen memory, not emitted-video measurements or a claim that no raster artefact is possible. The shorter run shows that reduced drawing work also increases cadence with the same PAUSE setting.
+
+Both coloured checkpoints passed checks for cyan walls, black score background, upper/lower yellow paddle limits and restoring every visited ball/paddle cell to blue. Checkpoint 8 passed centre, both paddle edges, both adjacent misses and a wall–paddle corner; its exported tape passed fresh-process play, held retry and quit. An automated player sustained eight returns on that tape, with the score advancing from 1 to 8. The coloured rally averaged about 5.35 PAL frames between observed positions, including startup in the measured intervals.
+
+The inspected court capture holds the initial ball with a declared test-only PAUSE 0. The distributed tape restores PAUSE 2. Source/tape hashes, measurements and the capture manifest live with the samples. Native review of the new cadence and flashing remains distinct from these checks.
 
 Before confirming the order and writing lessons, review the playable tape for readable motion, responsiveness under held and tapped keys, fair recovery time and whether repeated trajectories sustain interest. Check whether keeping the paddle stationary can exploit the geometry. Automated interception alone cannot answer enjoyment or learner comprehension.
 
 If human play exposes a need for richer return rules, assess their teaching cost before extending the game. A smaller game is useful here only if its implementation and explanations stay smaller too.
+
+## Teaching the drawing improvement
+
+Use checkpoints 7 and 8 side by side. Ask the reader to locate the erase, calculation and draw operations before changing them. Trace one update with the ball already visible: input and contact calculation do not require removing its image.
+
+Checkpoint 8 removes the early erase and the unconditional paddle redraw. Once contact is resolved, line 248 restores the old ball cell and draws the new one consecutively. The loop returns to input, so it does not perform a duplicate draw at its beginning. Paddle movement clears only the trailing cell and paints only the leading cell.
+
+Useful authored questions and explanatory feedback:
+
+- **What can the player see while the collision code runs?** The current ball remains visible. The next position can be calculated without changing the displayed position.
+- **Why does clearing with a space sometimes leave a patch?** A space still has a PAPER colour. Restore the court's blue rather than the paddle's yellow or the score strip's black.
+- **Which cells change when a three-cell paddle moves one row?** One trailing cell clears and one leading cell appears; the other two stay occupied.
+- **Will fewer PRINT operations leave the speed unchanged?** Not necessarily. This loop's work contributes to its cadence; compare the result before adjusting pacing.
+
+Explain this as a reusable drawing technique, not a promise of smooth pixel motion or an introduction to double buffering. The current character-cell movement is still deliberately discrete.

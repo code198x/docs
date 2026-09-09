@@ -1,6 +1,6 @@
 # Volley — Brief
 
-**Status:** Brief accepted as the basis for prototype work. Six checkpoint sources are implemented; see the [prototype and teaching review](prototype.md). The final course order awaits play and teaching-stage review.
+**Status:** Brief accepted as the basis for prototype work. Eight checkpoint sources are implemented; see the [prototype and teaching review](prototype.md). The final course order awaits play and teaching-stage review.
 **System / track:** Sinclair ZX Spectrum / BASIC.
 **Working route:** Meet BASIC → Bright Spark → Volley → Touchdown.
 **Target:** Stock 48K Spectrum, PAL timing, Sinclair BASIC, keyboard input and tape save/load. No expansion required.
@@ -15,7 +15,7 @@ The recurring activity is to read the ball's path, move to intercept it and reco
 
 Use a modest paddle length and fixed ball speed, selected through playtesting. Begin with simple diagonal movement and reflection. Whether this creates an enjoyable challenge is a prototype question: if the trajectory repeats too predictably, do not quietly add spin, acceleration or random deflections. Compare a small, explicitly taught return rule with the simpler version and review its teaching cost before adopting it.
 
-No opponent AI, second player, levels, increasing speed, gravity, fuel or terrain. No custom-character construction is required: build a deliberate court, paddle and ball from readable existing characters. There is no fixed line limit or lesson count.
+No opponent AI, second player, levels, increasing speed, gravity, fuel or terrain. No custom-character construction is required. Use PAPER to establish a blue court, solid cyan walls and a yellow paddle, with a white ball and a separate dark score strip. Teach colour restoration and drawing order through explicit refinement checkpoints. There is no fixed line limit or lesson count.
 
 ## Why it sits here
 
@@ -60,6 +60,16 @@ These are teaching groups to test, not a mandated number of lessons. Each checkp
 
 Scoring and retry recall ideas already explained in the opening course, but still need enough local explanation to follow their implementation. Keep detailed keyword-entry help optional. Use the shared question presentation for prompts and explanatory answers; do not make progress depend on a quiz score.
 
+## Drawing refinement and comparison
+
+After the complete rally-and-retry checkpoint, introduce the coloured playfield with the existing drawing order intact. Use PAPER-coloured spaces for solid walls and the paddle. Explain the difference between the persistent playfield colour and temporary PRINT colour controls: an erased object must restore blue, while score updates remain on black.
+
+Then compare a separate checkpoint that leaves the ball visible during input, paddle handling and collision calculation. Erase its old cell and draw the new one consecutively in one PRINT statement, after contact is resolved. Do not erase the ball again at the beginning of the next iteration.
+
+Update the paddle only when it moves: clear the trailing cell and draw the leading cell. Its two overlapping cells need no rewrite. This is a concrete example of doing only the drawing that changed, without introducing a general rendering engine.
+
+The game rules remain the same. Compare path, readability and cadence: doing less work can change timing in a BASIC loop, so do not promise unchanged wall-clock speed. PAUSE is a provisional pace control, not a fixed-frame scheduler. Check absent intervals in screen memory and inspect native play separately; a screenshot cannot prove reduced flashing.
+
 ## Prototype and acceptance
 
 Build a bounded prototype before writing replacement curriculum pages. Record exact BASIC sources, conversion/build commands, emulator release, ROM/target configuration, controls and observations. Keep source checkpoints and any original asset data in the sample repository; produce a loadable tape and verify saving/loading through the chosen learner workflow. Host conversion is a development convenience, not a runtime expansion. Check the established workflow before promising particular tools or integration.
@@ -79,7 +89,7 @@ The teaching review must identify the new concepts at each checkpoint, the expla
 
 ## Sources, connections and current evidence
 
-The website catalogue has a coming-soon Volley entry tagged “Paddle physics”; no Volley lessons are authored. Six prototype checkpoint sources now live under the sample area below. The [prototype record](prototype.md) and maintained verification results establish the scope of execution evidence; the catalogue entry alone does not.
+The website catalogue has a coming-soon Volley entry tagged “Paddle physics”; no Volley lessons are authored. Eight prototype checkpoint sources now live under the sample area below. The [prototype record](prototype.md) and maintained verification results establish the scope of execution evidence; the catalogue entry alone does not.
 
 Implementation locations:
 
