@@ -1,126 +1,88 @@
-# Sonar — Brief
+# Sonar — proposed replacement brief
 
-> **Selected next for re-specification.** Sonar follows the completed Meet BASIC → Bright Spark → Volley → Touchdown opening. The replacement should explore turn-based spatial deduction: begin with one hidden target, make distance clues understandable, and introduce a board that remembers probes. This is the starting direction for a fresh brief and prototype, not approval of the older implementation below. Multiple targets, exact board size and lesson count remain to be decided.
+**Status:** Sonar is selected as the next Spectrum BASIC project. This is the proposed scope and development plan; the replacement has not been prototyped or approved for lesson writing.
+**Route:** Meet BASIC → Bright Spark → Volley → Touchdown → Sonar.
+**Target:** Stock 48K ZX Spectrum, PAL, Sinclair BASIC, keyboard and tape save/load.
+**Next session:** Begin with the bounded prototype task at the end of this brief. No work is scheduled automatically.
 
-The retained design below is evidence to assess. Its old prerequisites and fixed counts do not govern the replacement.
+Apply the [project charter](../../../../PROJECT.md), [game brief specification](../../../../specifications/brief.md) and [curriculum design](../../../../specifications/curriculum.md). Earlier design assumptions remain in Git history.
 
-**Title (working):** Sonar
-**System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 2 — Patterns of State
-**Headline concept:** Search — coordinates as a way of knowing
-**Embedded concept:** Systematic search — pattern-based exploration beats random guessing
-**Topics:** 10 topics, ~10–14 hours
-**Constraint position:** period-faithful
+## The game to investigate
 
-Format: [Game brief](../../../../specifications/brief.md)
+A hidden object lies in one cell of a sea grid. Choose a row and column, send a probe, and read a distance clue. Each probe leaves its result on the board. Use the accumulated clues to choose the next position; finding the object ends the round. The board should let the player explain a choice, not just guess until something happens.
 
----
+Start with one target on an 8×8 board. Count distinct valid probes; repeated cells and invalid input do not consume a probe. Allow as long as the player needs, and do not impose a guess limit, invented par or judgemental rating. Show the result, offer another round, and allow a clean exit. A completed small game includes instructions, play, discovery, retry, exit and a saved tape that reloads.
 
-## 1. Pedagogical Role
+The proposed first version uses orthogonal distance: row difference plus column difference, with no diagonal shortcut. Explain this as the game's chosen clue rule, not a simulation of sound travelling through water. With target row 3, column 6, a probe at row 1, column 2 gives `2+4=6`; a probe at the target gives zero. The clue reports distance without direction.
 
-Teach 2D arrays as a grid data structure — so the learner arrives at Three in a Row able to represent and reason about a board with rows and columns.
+## The decision to make before writing lessons
 
----
+A single target with exact distances is mathematically easy to locate. On an 8×8 board, distances from opposite ends of the top row determine both target coordinates: `d1=(r-1)+(c-1)` and `d2=(r-1)+(8-c)`, hence `r=(d1+d2-5)/2` and `c=(d1-d2+9)/2`. A third probe can find it. This is a useful discovery to teach, but it may not sustain repeated rounds.
 
-## 2. Classic Ancestors
+Play the exact-distance version before deciding whether it is a compact deduction game worth keeping as-is. Ask whether the player can understand a clue, make a reasoned next choice and enjoy discovering the shortcut. Do not promise a long search or obscure the shortcut merely to stretch play.
 
-- **Battleship** (Milton Bradley, 1967) — the grid-based guessing game. Place ships on a hidden grid; the opponent calls coordinates; you report hit or miss. The mechanic: spatial reasoning through coordinate-based search.
-- **Hunt the Wumpus** proximity variant — the "you sense something nearby" mechanic, where distance-based clues guide the search.
+If it is too slight, compare one change at a time:
 
----
+- First try distance bands with explicit meanings, such as 1–2, 3–4 and 5 or more, while retaining a distinct hit. This changes the information supplied without introducing several hidden objects or a nearest-target search.
+- Consider two targets only if the one-target alternatives still lack worthwhile play. Define which target a clue refers to and whether found targets continue to affect later clues. Removing a target can make earlier nearest-target clues misleading; do not silently reinterpret old numbers or build a lesson around that ambiguity.
 
-## 3. Core Experience
+The target count and clue precision for the finished course are unresolved until this comparison. Multiple targets are not a promised final feature. A change to the central clue rule must be reflected in the brief before lesson drafting.
 
-A 10×10 grid hides three targets. You call coordinates — row and column. A miss shows how far the nearest target is. A hit marks the cell. Find all three targets in as few guesses as possible. The distance clue turns blind guessing into informed search — each probe narrows the possibilities.
+## What it adds after Touchdown
 
----
+Touchdown stores one height per column. Sonar stores information at a row and column, and the player's earlier actions change that information. A turn-based program gives time to inspect the board and trace its rules without a flight loop running in the background.
 
-## 4. Visual Direction
+Introduce two-dimensional arrays, the distinction between hidden state and the player's recorded knowledge, input validation before indexing, and distance calculated from two coordinates. Reinforce PRINT AT, PAPER, variables, conditions, nested loops, small routines and reset. Recall each idea locally; neither earlier games nor Foundations are attendance requirements.
 
-- **DRAW pixel grid** — horizontal and vertical pixel lines creating 8×8 board. Each cell 3 chars wide × 2 rows tall. Grid drawn via FOR loops with PLOT/DRAW. Reinforces DRAW in structured context. Grid looks like a proper board game.
-- Heat-map distance colours unchanged (red close, yellow medium, cyan far). Colours pop against the drawn grid.
-- **Probe ping animation:** BORDER flashes the distance colour for 5 frames, then resets. Visual "ping" feedback on each probe.
-- Title screen: DRAW radar sweep — three radial lines from a centre point with CIRCLE concentric rings (~3 CIRCLE + DRAW). Suggests sonar/radar scanning.
+Keep the target in two scalar variables initially. Introduce an array because the board needs to remember probes, not merely because the module is supposed to teach DIM. A proposed record is `g(row,column)=-1` for unprobed and a non-negative distance for a probe; zero means found. Explain that sentinel explicitly and initialise it with nested loops. This is a representation to test, not a claim that it is already implemented.
 
----
+The board is a view of stored information. Redrawing must not generate new clues or change the hidden target. This prepares a possible later Crates project, where actions change a world grid; Crates is not yet an agreed successor.
 
-## 5. Audio Direction
+## Appearance, controls and sound
 
-- **Hit.** Ascending fanfare — a target found.
-- **Near miss (distance 1–2).** A tense high tone — close.
-- **Far miss (distance 5+).** A low flat tone — nothing here.
-- **All found.** Celebration.
+Use bold PAPER-coloured cells from the first board, a contrasting frame, clear row/column labels and a visible probe count. Trial three character columns by two character rows per cell: an 8×8 board occupies 24×16 character cells, leaving space to investigate labels, prompts and results. Distances can reach 14, so every cell must accommodate two digits. Confirm the complete layout against the ROM's input area before fixing it.
 
----
+Unknown cells, previous clues, the latest probe and a discovered target must remain distinguishable without colour. Use a symbol for a hit and a marker or highlight for the latest probe; colour reinforces the printed result. No continuous animation is needed. Explain every asset locally; custom graphics are optional only if they improve a tested display problem.
 
-## 6. Level Design Direction
+Use row/column entry first, with short string input so Q can leave and invalid text can be rejected before numeric conversion. Start with the displayed range 1–8. A keyboard-steered cursor would add repeat handling and movement state; defer it until coordinate entry proves inadequate in play.
 
-- **Content source:** Three targets placed randomly on the grid at game start. Stored in a 2D array or as coordinate pairs.
-- **Difficulty curve.** The grid size (10×10) and target count (3) are the difficulty parameters. Fewer targets on a bigger grid is harder. The learner can adjust both.
-- **Scale:** One grid per round. A round lasts 15–30 guesses for a methodical player.
-- **Pacing.** Early guesses are uninformed — the player is mapping the space. Mid-game, distance clues create convergence zones. Late-game, the last target is the hardest — the grid is full of old clues.
-- **Onboarding.** The first guess teaches the distance mechanic — whatever number appears, the player learns "that number means distance."
+Add short probe/discovery sounds only after the information display works. Test them by listening and ensure they do not hide essential feedback. Do not repeat sounds while waiting for input. Flight-style simultaneous controls and detailed Emu198x typing instruction are unnecessary here.
 
----
+## Runnable development sequence
 
-## 7. Anti-goals
+These are prototype checkpoints, not a fixed public lesson count. Keep changes small enough to explain and test independently.
 
-- No ships or elongated targets — targets are single cells. Ship placement and hit/sink tracking are beyond V2 scope.
-- No two-player mode — the computer hides targets, the player searches.
-- No fog of war clearing — every cell shows its result permanently. The grid is a record of the search.
-- Maximum ~50 lines of BASIC.
+| Stage | Result | New idea and changes | Check |
+|---|---|---|---|
+| 1. See the board | A labelled, coloured 8×8 board and a visible fixed target | Translate board coordinates to PRINT AT positions; recall nested loops | Corners, labels and two-digit values fit; prompts do not overwrite the board |
+| 2. Send a probe | Enter a coordinate and get a hit or miss against the fixed target | Validate both coordinates before using them; separate input from the rule | Empty, fractional, out-of-range and non-numeric entries are rejected; Q exits |
+| 3. Read a distance | Each valid probe reports exact orthogonal distance | Explain ABS and add the two differences; hide the target during play | Same cell, same row/column, corners and reversed differences; work the example by hand |
+| 4. Remember the search | Previous clues survive and repeated cells are recognised | Introduce the 2D probe array, sentinel, lookup and full redraw from state | Repeated probes preserve the count; redraw reproduces every clue |
+| 5. Finish a round | Instructions, count, discovery, retry and exit form a complete small game | Add result handling and an explicit reset contract | Find the fixed target, replay several times, quit at prompts; no state leaks between rounds |
+| 6. Search a new site | A fresh random target makes each round new | Recall RND and range conversion; change target placement only | Targets always lie within the board; repeated positions on separate rounds remain valid |
+| 7. Test the information | A selected clue rule supports understandable, worthwhile play | Compare exact distances with bands only if necessary; retain both sources for comparison | Human play notes explain choices and whether repeat play is worthwhile; settle scope here |
+| 8. Finish and keep it | Clear display, short sounds if useful, credits and a reloadable game | Refine only observed presentation problems; explain save/load briefly | Listen, inspect both large clues and hits, save, fresh-load, play, retry and exit |
 
----
+Stages 1–3 are the first investigation. Stage 5 fulfils the small fixed-site play cycle; stages 6–8 establish the intended replayable package. If array state, input or presentation makes a step too dense, split it. Do not inherit the older six lessons or invent a line limit.
 
-## 8. Topic Progression
+## Verification and evidence
 
-1. **The grid.** `DIM g(10,10)`. Draw a 10×10 grid of dots with nested FOR loops and PRINT AT. Add row and column labels. **New:** DIM with two dimensions, nested FOR for grid drawing. **Program:** ~10 lines.
+Use deterministic target positions first. Check every cell's clue against a separately calculated expectation, including the maximum distance 14 and the zero-distance hit. Check that changing only a row or column changes the expected term, and that display coordinates and array indices cannot be confused.
 
-2. **Hidden targets.** Place three targets at random positions: `LET g(r,c) = 1` for each. The grid still shows dots — the targets are invisible. **New:** using a 2D array to store hidden state. **Program:** ~16 lines.
+Exercise input cancellation at both coordinate prompts, invalid inputs, repeated misses, the winning probe, repeated retries and quitting from each permitted phase. Reset the target, board, counter, latest-probe marker, messages and temporary input state. Count the winning probe once. Do not count rejected input. Test the renderer by rebuilding the display from the stored board.
 
-3. **Probing a cell.** INPUT row and column. Check `g(r,c)` — if 1, it is a hit; mark it. If 0, it is a miss. Display the result on the grid. **New:** 2D array lookup by player-supplied coordinates. **Program:** ~20 lines.
+Use ROM keyboard entry and actual execution for maintained checkpoints, preserving readable keyword spaces in source. Record source hashes, emulator version, ROM/target configuration, captures and test-only starting edits separately from ordinary play. Existing Touchdown verification helpers are donors to inspect, not evidence that Sonar works. Emu198x Spectrum 0.22.1 was used for the preceding course; recheck the available release and configuration when resuming.
 
-4. **Distance clues.** On a miss, calculate the distance to the nearest target. Display that number in the cell instead of a blank miss marker. The distance is the game's core information channel. **New:** distance calculation across a 2D grid (loop through targets, compute `ABS(r1-r2) + ABS(c1-c2)`, keep the minimum). **Program:** ~26 lines.
+For play review, record the actual probes, what the player thought each clue meant, and why they chose the next position. Separate this from scripted correctness. Inspect the board and listen to any sounds; capture output only from execution. Test tape saving and loading in a fresh session before calling the package finished. No new execution, native-input, audio or original-hardware result is claimed by this plan.
 
-5. **Colour by distance.** Near misses (1–2) in red, medium (3–4) in yellow, far (5+) in blue. The grid becomes a heat map — the player sees warm and cool zones before reasoning about specific numbers. **New:** colour-coding driven by computed values (reinforces Lucky Number's border pattern, now in 2D). **Program:** ~30 lines.
+Source Sinclair BASIC details from Steven Vickers, edited by Robin Bradbeer, *ZX Spectrum BASIC Programming*, second edition (Sinclair Research, 1983): chapters 4–5 (loops and routines), 7–9 (expressions, strings and functions), 11 (random numbers), 12 (arrays), 15–16 (printing and colour), 18–20 (input, sound and tape). Confirm precise passages during implementation. Original program and graphics use the samples repository's licence; prose follows the documentation licence.
 
-6. **Counting and winning.** Track hits. When all 3 targets are found, the player wins. Display the guess count. If guesses exceed 30, game over — reveal the remaining targets. **New:** win condition across multiple scattered targets, revealing hidden state at game end. **Program:** ~34 lines.
+## Resume here
 
-7. **Guess history.** The grid itself *is* the history — every probed cell shows its result permanently. Add a guess counter visible at all times. Add sound (hit/near/far). The grid is now a visual record of a systematic search. **New:** sound-by-distance (reinforces Reflex rating pattern). **Program:** ~40 lines.
+1. Open the Code198x docs, code-samples and website repositories and read their current agent instructions/status. Read this brief and `docs/work.md`; preserve unrelated local work.
+2. Inspect the older Sonar source at `code-samples/sinclair-zx-spectrum/basic/sonar/unit-01/` through `unit-06/` and its existing website lessons. They are donors and reference, not the starting program to patch into a new course. Their array mixes target and probe state and they start with three targets.
+3. Create a new samples branch and `sinclair-zx-spectrum/basic/sonar/prototype/`. Implement only stages 1–3: labelled PAPER board, fixed target, validated probes and exact distance. Show the target in a diagnostic version, then hide it. Retain separate complete checkpoints.
+4. Run those checkpoints on the configured 48K ROM, verify the layout and worked distance examples, and make the prototype available for native play. That runnable prototype and its evidence are the first deliverable when work resumes.
+5. Continue to remembered probes and a complete round, then review the clue-rule decision with human play evidence. Fix the lesson breakdown only after the prototype supports it. Draft the replacement overview and lessons outside public collections. Use maintained CodeFromFile listings, readable keyword spacing in full and inline code, and the shared Question presentation; do not add Keyboard notes sections. Obtain lesson approval before publication and preserve the existing Sonar URLs.
 
-8. **Duplicate checking.** Reject guesses for cells already probed: `IF g(r,c) <> 0 THEN PRINT "Already probed!"`. Saves the player from wasting guesses. **New:** state-based input validation. **Program:** ~42 lines.
-
-9. **Replay and difficulty.** "Play again?" + new random targets. Optional: INPUT grid size (5×5 easy, 10×10 standard, 15×15 hard) and target count. `DIM g(n,n)` resizes. **New:** parameterised grid dimensions. **Program:** ~46 lines.
-
-10. **Make it yours.** Title screen. Add a rating based on guess efficiency — par for 3 targets on a 10×10 grid is about 15 guesses. Under par is "Sonar expert!", over 25 is "Keep searching." Teach the design lesson: the same grid engine works for any search game — treasure hunts, minesweepers, exploration. **New:** none (polish + design reflection). **Program:** ~50 lines.
-
----
-
-## 9. Ship Test
-
-- [ ] Every topic's code runs on a 48K Spectrum
-- [ ] 2D array correctly sized and indexed
-- [ ] Three targets placed at distinct random positions (no overlap)
-- [ ] Distance calculation is correct (Manhattan distance to nearest target)
-- [ ] Colour coding maps correctly to distance ranges
-- [ ] Already-probed cells are rejected
-- [ ] Win condition fires when all 3 targets found
-- [ ] British English throughout
-- [ ] Code samples in `/code-samples/`
-- [ ] Magazine voice
-
----
-
-## 10. Pattern Library Extractions
-
-- **basic** — DIM 2D arrays: grid storage for spatial game state. The foundation of every board game, map, and level layout.
-- **basic** — nearest-target distance: loop through targets, compute Manhattan distance, keep minimum. The simplest spatial-proximity algorithm.
-- **rendering** — colour-by-value on a grid: mapping computed values to INK colours at specific PRINT AT positions. A 2D heat map in character cells.
-
----
-
-## 11. Vault Tie-ins
-
-- **Battleship** (Milton Bradley, 1967) — grid-based search as cultural ancestor.
-- **Coordinate geometry in games** — the design principle that spatial reasoning through coordinates creates a different quality of engagement than pixel-level interaction.
-- **Systematic search** — the strategy principle that patterned exploration (every third cell, diagonal sweeps) outperforms random probing.
+This planning task ends with the saved brief. It does not start implementation or schedule a reminder. On return, “Pick up Sonar from the plan” is enough to begin at step 1.
