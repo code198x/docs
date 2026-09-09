@@ -71,7 +71,7 @@ Maintained Volley sources and website listings retain readable keyword spacing. 
 
 ## Approved lessons
 
-The website holds a module overview and eight descriptive lesson files in `src/drafts/volley/`, following the checkpoint titles above. Development-only review routes use the existing module and unit layouts and show Volley as Game 2. The production catalogue remains unchanged until publication.
+The approved overview and eight lessons live in `website/src/content/curriculum/sinclair-zx-spectrum/basic/volley/`. The canonical routes use the existing module and unit layouts and show Volley as Game 2.
 
 Each lesson states its starting program, exact edits, locally explained syntax, expected observations and a question with explanatory feedback. Short opening programs are shown in full; longer changes use maintained snippets plus complete-program disclosures. The last two lessons preserve the colour-only/erase-first version and then explain consecutive erase/draw and selective paddle updates. The final lesson includes tape save/load and a fresh-session play/retry/quit check.
 
@@ -79,4 +79,4 @@ Each lesson states its starting program, exact edits, locally explained syntax, 
 
 The publication change adds the unit catalogue, places Volley after Bright Spark, reconciles module numbers and links, and redirects the review bookmarks. `website/scripts/volley-roster.json` retains the edit sets used by the sample verifier. Deployment remains a separate check.
 
-Draft validation passed the eight edit-set checks and all 36 browser combinations (overview plus eight lessons, two widths and two themes), including source availability, links, keyboard question reveals, image loading, overflow and serious/critical Axe checks. The website production build passed with 69 tests passing and nine existing skips; a final static build confirmed that the review routes are excluded. The maintained website review checker can repeat the browser checks.
+Production-page validation passed the eight edit-set checks and all 36 browser combinations (overview plus eight lessons, two widths and two themes), including source availability, links, keyboard question reveals, image loading, overflow and serious/critical Axe checks. The website production build passed with 69 tests passing and nine existing skips; the review bookmarks redirect to the canonical pages. The maintained website review checker can repeat the browser checks.
