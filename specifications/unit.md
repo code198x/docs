@@ -55,6 +55,8 @@ chords in optional keyboard notes. Avoid repeating familiar chords in the main
 explanation. Link to the canonical setup/save workflow and retain the meaningful
 recovery check locally: reopen the saved program, play, replay and quit.
 
+For Sinclair BASIC, keyword tokens already provide their displayed spacing. Do not insert literal spaces after keywords in maintained entry sources or send an extra Space keystroke after entering a token. For example, enter `PRINT"Hello"`; the ROM supplies the displayed gap. Preserve spaces inside strings and the internal spelling of compound token names such as `GO TO` and `GO SUB`. Check the stored program, not only how the listing looks.
+
 ## Continuity
 
 Keep complete runnable states in the sample repository. `CodeFromFile` supplies an inspectable full state. Use named `steps/step-NN` files when a unit has multiple runnable stages.

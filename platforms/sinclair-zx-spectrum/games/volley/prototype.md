@@ -64,3 +64,7 @@ Useful authored questions and explanatory feedback:
 - **Will fewer PRINT operations leave the speed unchanged?** Not necessarily. This loop's work contributes to its cadence; compare the result before adjusting pacing.
 
 Explain this as a reusable drawing technique, not a promise of smooth pixel motion or an introduction to double buffering. The current character-cell movement is still deliberately discrete.
+
+## Keyword entry
+
+Maintained Volley sources omit literal spaces immediately after Sinclair BASIC keyword tokens. The local entry helper enforces this for both source lines and verification-only edits, while preserving strings and compound token names. `verification/spacing.py` rebuilds the final tape through the ROM and compares the stored tokenised program, retaining numeric payloads and all string contents. Earlier execution hashes map to the compact entry sources through `spacing-source-map.json`; rendering changes are separate from this spacing-only correction.
