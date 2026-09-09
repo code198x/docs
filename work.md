@@ -36,7 +36,7 @@ Keep useful contrasts with C64, Amiga, NES and future systems visible. Reusing a
 
 ### Next output
 
-Review the playable Touchdown prototype, then derive the lesson sequence from its six checkpoints: constant falling, acceleration/thrust, fuel, a pad on flat ground, uneven terrain and final craft presentation. Give custom-character construction its own understandable step. Across both games, map what each checkpoint introduces, recalls and combines; execution success alone does not establish an appropriate learning progression. Keep subsequent BASIC and assembly choices as proposals for joint review.
+Review the proposed [Touchdown lesson brief](platforms/sinclair-zx-spectrum/games/touchdown/lesson-brief.md): eleven lessons separate scaled position, gravity, thrust, retry, fuel, sideways movement, simultaneous input, a flat height array, uneven terrain, custom graphics and finishing. After review, build and verify the teaching checkpoints before drafting lessons. Give custom-character construction its own understandable step. Across both games, map what each checkpoint introduces, recalls and combines; execution success alone does not establish an appropriate learning progression. Keep subsequent BASIC and assembly choices as proposals for joint review.
 
 Produce reviewable game briefs and a sequence mapping before lesson rewrites. Record concrete missing shared explanations, Vault entries, patterns and component needs. Resolve substantive conflicts with the briefing and separate recommendations from decisions. Historical versions remain in Git; the current specifications should not require reading amendment chains to discover the project goals.
 

@@ -1,6 +1,6 @@
 # Touchdown — Brief
 
-**Status:** Scope agreed on 9 September 2026; six-stage playable prototype implemented for review; lesson breakdown pending.
+**Status:** Scope agreed on 9 September 2026; six-stage playable prototype implemented and played; [eleven-lesson brief](lesson-brief.md) proposed for review.
 **System / track:** Sinclair ZX Spectrum / BASIC.
 **Route:** After the published Meet BASIC and Bright Spark opening. Volley is the published intervening game; see [current work](../../../../work.md#next-output). Use the game identity rather than an inherited numbered slot.
 **Target:** Stock 48K Spectrum, PAL timing, Sinclair BASIC, keyboard input, tape save/load. No expansion required.
@@ -39,7 +39,7 @@ Create original teaching assets and retain their editable data with the maintain
 
 ## Runnable development sequence
 
-These are prototype stages, not an agreed lesson count. Split or combine them according to what the working program demonstrates.
+These are the prototype groups. The [proposed lesson brief](lesson-brief.md) separates them into teaching steps; its eleven-lesson sequence remains a proposal.
 
 | Stage | Inspectable or playable result | New idea and changes | Check |
 |---|---|---|---|
@@ -78,4 +78,4 @@ Existing material is evidence to inspect, not implementation of this agreed repl
 - Existing lessons: `website/src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/`.
 - Sample area: `code-samples/sinclair-zx-spectrum/basic/touchdown/`.
 
-With Volley published, the next Touchdown work is to inspect the existing lessons and samples, build and play the bounded prototype, record configuration-specific findings, then derive the lesson/checkpoint breakdown. Separate constant-speed falling from acceleration; establish vertical landing before sideways movement, then a pad on flat ground before uneven terrain. Teach custom-character construction in a distinct, understandable step. Preserve published URLs when replacement lessons are eventually published.
+Review the [lesson brief](lesson-brief.md), then build and verify its maintained teaching checkpoints before writing replacement lessons. The [prototype record](prototype.md) establishes the existing execution and play evidence; it does not establish that the proposed lesson endpoints have been implemented. Preserve published URLs when replacement lessons are eventually published.
