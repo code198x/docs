@@ -4,7 +4,7 @@ This file holds bounded next work and proposals. [PROJECT.md](PROJECT.md) owns a
 
 ## Spectrum sequences
 
-**Status: Meet BASIC and Bright Spark published; Touchdown scope agreed.** All fifteen Meet BASIC lessons and seven replacement Bright Spark lessons are live. Meet BASIC → Bright Spark is published. The agreed continuation is Volley → Touchdown. Volley’s eight lessons and overview are approved for publication. See the [Meet BASIC implementation record](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) and [Bright Spark verification record](platforms/sinclair-zx-spectrum/games/bright-spark/prototype.md). Native control/audio and independent learner observations remain useful Bright Spark follow-up work.
+**Status: Meet BASIC and Bright Spark published; Touchdown scope agreed.** All fifteen Meet BASIC lessons and seven replacement Bright Spark lessons are live. Meet BASIC → Bright Spark is published. The agreed continuation is Volley → Touchdown. Volley’s approved eight lessons and overview are integrated into the website. See the [Meet BASIC implementation record](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) and [Bright Spark verification record](platforms/sinclair-zx-spectrum/games/bright-spark/prototype.md). Native control/audio and independent learner observations remain useful Bright Spark follow-up work.
 
 The [Touchdown brief](platforms/sinclair-zx-spectrum/games/touchdown/brief.md) now specifies a moving lander, sideways control and thrust, limited fuel, and a landing pad within a fixed screen of uneven terrain. Build on Volley’s fixed-step movement and contact checks. Touchdown will still need a playable 48K BASIC prototype establishing controls, responsiveness, terrain/contact representation and a complete retry cycle before fixing the lesson breakdown. The scope is agreed; implementation and execution remain to be established.
 
@@ -35,8 +35,6 @@ A later expanded-machine project may be valuable if it explains the extension, w
 Keep useful contrasts with C64, Amiga, NES and future systems visible. Reusing a mechanic should illuminate a difference in language, CPU, memory, display, sound or input; it is not a requirement for identical projects or lesson counts.
 
 ### Next output
-
-Publish the approved Volley lessons and verified samples. The [prototype and lesson record](platforms/sinclair-zx-spectrum/games/volley/prototype.md) maps the teaching progression and execution evidence. Keep the later BASIC lineup under review.
 
 For Touchdown, separate constant-speed falling from acceleration, establish a playable vertical landing game before sideways movement, and add a pad on flat ground before uneven terrain. Give custom-character construction its own understandable step. Across both games, map what each checkpoint introduces, recalls and combines; execution success alone does not establish an appropriate learning progression. Keep subsequent BASIC and assembly choices as proposals for joint review.
 
