@@ -29,6 +29,32 @@ Give the answer with its reasoning and, where helpful, explain a tempting wrong 
 
 Check worked answers against the stated pseudocode or target program, and verify claimed experimental results. An answer-reveal component does not execute the example or prove it correct. Questions can begin as ordinary prose with a clearly separated explanation; interactive scoring is not required.
 
+### Presenting questions
+
+Use `Question.astro` for a visible thinking prompt with an optional explanation:
+
+```mdx
+import Question from '@components/Question.astro';
+
+<Question prompt="Why does the count stay at three?">
+
+The fourth round failed before the completed-round increment.
+
+</Question>
+```
+
+Its quiet border and tint separate questions from the surrounding explanation.
+The prompt stays visible; a native disclosure reveals the reasoning with keyboard
+support. Full-source checkpoints remain ordinary details, not Question blocks.
+
+### Keyboard and emulator help
+
+Keep syntax, meaning and exact add/replace/delete instructions in the lesson.
+Give the target and one entry reminder at the opening, then place new-keyword
+chords in optional keyboard notes. Avoid repeating familiar chords in the main
+explanation. Link to the canonical setup/save workflow and retain the meaningful
+recovery check locally: reopen the saved program, play, replay and quit.
+
 ## Continuity
 
 Keep complete runnable states in the sample repository. `CodeFromFile` supplies an inspectable full state. Use named `steps/step-NN` files when a unit has multiple runnable stages.
@@ -89,4 +115,4 @@ Explain which claims the source supports where useful.
 </Sources>
 ```
 
-Use one section per page. The component supplies the Sources heading, readable typography and `sources` anchor; preserve another existing anchor with its `id` prop where necessary. Its slot accepts ordinary Markdown paragraphs, links and lists. Do not add a second heading, inline small-print styling or a page-specific Sources wrapper. Keep citations close to individual claims when needed; the section complements those citations rather than replacing them. This component is also used for standalone source notes in the Vault.
+Use one section per page. The component supplies a compact inline Sources label, smaller readable typography and the `sources` anchor; preserve another existing anchor with its `id` prop where necessary. Its slot accepts ordinary Markdown paragraphs, links and lists. Do not add a second heading, hand-written small-print styling or a page-specific Sources wrapper. Keep the smaller presentation in the component so every page follows the same choice. Keep citations close to individual claims when needed; the section complements those citations rather than replacing them. This component is also used for standalone source notes in the Vault.

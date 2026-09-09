@@ -1,6 +1,6 @@
 # Bright Spark prototype
 
-**Status: all seven replacement lessons drafted; complete-game emulator checks passed, 8 September 2026.** The [approved brief](brief.md) remains the specification. The first two lessons were approved on 7 September; the remaining drafts await review. The replacement is not published.
+**Status: seven replacement lessons approved for publication, 9 September 2026; complete-game emulator checks passed.** The [approved brief](brief.md) remains the specification. The complete sequence was approved on 9 September. Publication uses descriptive lesson URLs, with topic-preserving redirects and heading aliases for the six old numbered pages.
 
 ## Implementation
 
@@ -28,7 +28,7 @@ The opening lessons now have seven verified checkpoints: row, rectangle, drawing
 
 ## Remaining lessons and complete game
 
-The third lesson develops representation through three checkpoints. Four further drafts cover fixed playback, fresh validated input and comparison, random growth and completed-round scoring, then instructions/replay/saving. There are eighteen maintained checkpoints across seven drafts. The existing published Bright Spark pages remain in place; the development-only review route now connects all seven drafts.
+The third lesson develops representation through three checkpoints. Four further drafts cover fixed playback, fresh validated input and comparison, random growth and completed-round scoring, then instructions/replay/saving. There are eighteen maintained checkpoints across seven drafts. The publication change replaces the old pages with these seven lessons and redirects review links to their public destinations.
 
 Released Emu198x Spectrum v0.22.1 passed ROM edit continuity from the final representation checkpoint through every later checkpoint. Further checks cover `314`, `22`, `1234`, repeated-cue interference, wrong first/middle/last answers, held and irrelevant keys, idle polling and release hand-off. A run seeded with `RANDOMIZE 1234` completed all sixteen rounds using responses derived from observed playback; every new order preserved its prefix. The result showed sixteen completed rounds without another playback. Replay reset the sequence and score; first-round failure scored zero and fourth-round failure after three completed rounds scored three. A named tape was saved, loaded in a fresh process, played, replayed and quit. Reproducible runners and source hashes live in `opening/verification/` on the sample branch.
 
@@ -36,6 +36,15 @@ The release routine captures into `a$` so it cannot erase the accepted `k$` befo
 
 The final success capture was inspected with labels, completed count and replay prompt intact. The website build passed (69 tests passed, 9 skipped). The four new drafts rendered at 390 and 1440 pixels in both themes, with expanded checkpoints and answers, no document overflow or missing samples/images, and no serious/critical accessibility findings. Local links and navigation from lesson 3 into lesson 4 passed.
 
-## Next bounded work
+## Publication and remaining observation
 
-Review lessons 3–7 for teaching clarity and conduct independent learner/native-control and subjective-listening review. Original hardware remains unverified. The first two lesson approvals do not imply approval of the later drafts or publication. At release, follow the brief's requirements for the game index, catalogue, old URLs and incoming links, keeping existing published samples available until their consumers are accounted for.
+The user approved publication on 9 September. The seven public lessons use optional
+keyboard notes, with syntax and editing actions kept in the main explanation.
+Question prompts have a shared, subtle visual treatment and an optional explanation;
+full-source checkpoints remain separate. Bright Spark is game 1 after Meet BASIC.
+The remaining published games retain their relative order, with numbering updated
+to match the catalogue. Old samples and images remain available.
+
+Native-control feel, subjective listening, independent learner observation and
+original hardware remain unverified. These limits accompany the emulator evidence;
+publication approval does not turn scripted input into human playtesting.
