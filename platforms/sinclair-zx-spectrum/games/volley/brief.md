@@ -1,6 +1,6 @@
 # Volley — Brief
 
-**Status:** Proposed specification for review. A smaller game before Touchdown is the preferred direction; this detailed design and the final order await prototype and teaching-stage review.
+**Status:** Brief accepted as the basis for prototype work. Six checkpoint sources are implemented; see the [prototype and teaching review](prototype.md). The final course order awaits play and teaching-stage review.
 **System / track:** Sinclair ZX Spectrum / BASIC.
 **Working route:** Meet BASIC → Bright Spark → Volley → Touchdown.
 **Target:** Stock 48K Spectrum, PAL timing, Sinclair BASIC, keyboard input and tape save/load. No expansion required.
@@ -79,14 +79,14 @@ The teaching review must identify the new concepts at each checkpoint, the expla
 
 ## Sources, connections and current evidence
 
-The existing website catalogue has a coming-soon Volley entry tagged “Paddle physics”. No Volley lesson directory or sample files were found in the inspected curriculum and sample trees when preparing this brief. That catalogue entry does not establish a playable implementation or an approved scope.
+The website catalogue has a coming-soon Volley entry tagged “Paddle physics”; no Volley lessons are authored. Six prototype checkpoint sources now live under the sample area below. The [prototype record](prototype.md) and maintained verification results establish the scope of execution evidence; the catalogue entry alone does not.
 
 Implementation locations:
 
 - Existing catalogue: `website/src/content/modules/sinclair-zx-spectrum/basic.yaml`.
 - Intended lesson area: `website/src/content/curriculum/sinclair-zx-spectrum/basic/volley/`.
-- Intended sample area: `code-samples/sinclair-zx-spectrum/basic/volley/`.
+- Maintained sample area: `code-samples/sinclair-zx-spectrum/basic/volley/`.
 
 Potential shared connections are position/direction, the game loop, boundary and overlap checks, readable feedback and retry design. Verify specific authored pages before linking; the local lessons must contain the essential explanations. Extract reusable patterns only from the working game. Historical comparisons are optional and need original, checkable sources; this proposal makes no historical origin claim.
 
-Next output: a review of this brief, followed by the bounded prototype and a checkpoint/concept comparison with Touchdown. No implementation or execution is claimed here.
+Current output: the [prototype and teaching review](prototype.md), backed by maintained sources and configuration-specific verification in the sample repository. Use that evidence to review play and the checkpoint/concept comparison with Touchdown before confirming the course order.
