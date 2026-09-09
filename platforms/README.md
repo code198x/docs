@@ -9,7 +9,9 @@ Use these designs alongside authored lessons, sample sources and capture manifes
 | System | Module | Status |
 |---|---|---|
 | ZX Spectrum | [Meet BASIC](sinclair-zx-spectrum/basic/meet-basic.md) | All fifteen lessons published; [lesson/source and verification record](sinclair-zx-spectrum/basic/meet-basic-plan.md) |
-| ZX Spectrum | [Bright Spark](sinclair-zx-spectrum/games/bright-spark/brief.md) | Replacement specification agreed; seven provisional teaching groups; prototype next |
+| ZX Spectrum | [Bright Spark](sinclair-zx-spectrum/games/bright-spark/brief.md) | Seven replacement lessons published |
+| ZX Spectrum | [Volley](sinclair-zx-spectrum/games/volley/brief.md) | Specification agreed; eight lesson drafts ready for review; [prototype and teaching record](sinclair-zx-spectrum/games/volley/prototype.md) |
+| ZX Spectrum | [Touchdown](sinclair-zx-spectrum/games/touchdown/brief.md) | Moving lander and landscape scope agreed; prototype and lesson breakdown pending |
 
 ## Existing briefs
 
@@ -41,7 +43,6 @@ Use these designs alongside authored lessons, sample sources and capture manifes
 | ZX Spectrum | [Story Builder](sinclair-zx-spectrum/games/story-builder/brief.md) |
 | ZX Spectrum | [The Caverns](sinclair-zx-spectrum/games/the-caverns/brief.md) |
 | ZX Spectrum | [Three in a Row](sinclair-zx-spectrum/games/three-in-a-row/brief.md) |
-| ZX Spectrum | [Touchdown](sinclair-zx-spectrum/games/touchdown/brief.md) |
 | ZX Spectrum | [Yearfall](sinclair-zx-spectrum/games/yearfall/brief.md) |
 
 Additional designs without a `brief.md` are [Blockstorm](sinclair-zx-spectrum/games/blockstorm/spec.md), [Dorin](sinclair-zx-spectrum/games/dorin/spec.md) and [Night Patrol](sinclair-zx-spectrum/games/night-patrol/spec.md). The [NES Dash investigation](nintendo-entertainment-system/games/dash/design-stress-2026-07-05.md) and [The Long Night investigation](sinclair-zx-spectrum/games/the-long-night/design-stress-2026-07-05.md) also remain useful review evidence. Other files beside the briefs contain specific game specifications, prototype observations or development plans. Source and executable evidence remain in the sample repository; this directory does not prove the current build or playability of a game.

@@ -1,121 +1,81 @@
 # Touchdown — Brief
 
-> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+**Status:** Scope agreed on 9 September 2026; playable prototype and lesson breakdown pending.
+**System / track:** Sinclair ZX Spectrum / BASIC.
+**Route:** After the published Meet BASIC and Bright Spark opening. A small Volley game is the preferred intervening project, pending prototype and teaching-stage review; see [current work](../../../../work.md#next-output). Use the game identity rather than an inherited numbered slot.
+**Target:** Stock 48K Spectrum, PAL timing, Sinclair BASIC, keyboard input, tape save/load. No expansion required.
 
-**Title (working):** Touchdown
-**System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 1 — First Programs
-**Headline concept:** Descent — the program runs whether you act or not
-**Embedded concept:** Ambient feedback — the environment communicates game state without explicit UI
-**Topics:** 8 topics, ~10–14 hours
-**Constraint position:** period-faithful
+Apply the [project charter](../../../../PROJECT.md) and [game-brief specification](../../../../specifications/brief.md).
 
-Format: [Game brief](../../../../specifications/brief.md)
+## Experience and agreed scope
 
----
+Land a small craft on a clearly marked pad within one fixed screen of uneven terrain. Gravity keeps the craft falling while the player decides when to thrust and how to move sideways. Fuel is limited. Reaching the pad and arriving gently must both matter: the landscape participates in the challenge.
 
-## 1. Pedagogical Role
+A fixed starting situation lets players learn from repeated attempts. Each attempt ends in a safe landing or a collision, followed by a quick retry option. Fuel exhaustion stops the engine; it does not automatically end the attempt, because coasting to safety should remain possible. Give a clear result explaining the outcome and a way to leave the game.
 
-Teach that a game loop can run continuously — updating state every iteration whether the player acts or not — so the learner crosses into Volume 2 understanding the difference between "wait for input, then act" (Lucky Number's model) and "the world runs, input steers it" (every real-time game's model). Touchdown is the bridge from turn-based to real-time.
+The moving lander and landscape carry the experience. A compact instrument panel supplies fuel and descent speed; the craft's position makes altitude apparent. The finished game includes readable instructions, responsive controls, visible thrust, understandable collision and landing feedback, and a repeatable play cycle.
 
----
+Start with direct sideways movement alongside vertical thrust. Horizontal momentum is an experiment, not a requirement. Prototype the controls and display on the target before choosing movement increments, landing thresholds, fuel quantities or terrain detail. In particular, establish how sideways control and thrust can work together.
 
-## 2. Classic Ancestors
+Scrolling, multiple screens and procedural terrain are outside the initial scope. There is no fixed line limit or lesson count. A single carefully designed landing site should fulfil the complete-game promise.
 
-- **Lunar Lander** (various, 1969 onwards) — one of the oldest computer games. Originally a text simulation on DEC PDP-8 (Jim Storer, 1969), then graphical versions on every platform. The mechanic: gravity pulls you down, thrust pushes you up, fuel is finite. Land gently or crash.
-- **Jupiter Lander** (HAL Labs, 1982) — the Commodore 64 graphical version that defined how the genre looked on 8-bit home computers. Spectrum type-in variants appeared in *Your Computer*, *Sinclair Programs*, and *Computer Spacegames* (Usborne, 1982).
+## Learning role
 
----
+Bright Spark waits for the player's response; Touchdown updates the world while the player decides. Introduce a continuous game loop, position and velocity, gravity and thrust, resource limits, screen coordinates and collision rules through visible consequences.
 
-## 3. Core Experience
+Explain the maths locally: speed changes altitude; gravity and thrust change speed. Distinguish the simulation's position from its rounded screen position. Construct the craft and landscape with the reader, explaining their representation and how the same terrain data supports drawing and contact checks.
 
-The lander descends. Gravity pulls. Fuel burns. You fire the thruster — the descent slows, the fuel drops. Too fast at the ground and you crash. Too slow and you run out of fuel. The pleasure is in the last ten metres: watching the speed number, nursing the fuel, timing the final burst. Every landing is a negotiation with physics.
+Reinforce variables, conditions, loops, input, arrays where useful, screen placement and small reusable routines. Explain syntax at its first local use and provide enough recall for readers arriving from elsewhere. Neither Foundations nor attendance at earlier games is a prerequisite. Shared maths, design and pattern explanations can offer depth without supplying essential missing instructions.
 
----
+## Graphics, sound and content
 
-## 4. Visual Direction
+Create a small custom-character lander, a visible flame and a readable landing pad within uneven terrain. Teach how the character is drawn and represented. Select terrain representation through the prototype; favour a form whose rendering and collision behaviour readers can understand together.
 
-- **UDG lander** (CHR$ 144) replacing text character. Moved with PRINT AT erase-then-draw. When SPACE held, UDG exhaust flame (CHR$ 145) prints below — visual thrust.
-- **PLOT stars** (~15 random PLOTs) at game start transform black screen into space.
-- **DRAW terrain** instead of dashes — DRAW line(s) in INK 4 (green) for the landing surface.
-- **Pixel fuel bar** — each fuel unit is one PLOT pixel. Depletes smoothly. Reinforces PLOT from Game 4.
-- **INVERSE dashboard** bar spanning full width: ALT, SPD, FUEL as white-on-black instrument panel.
-- **Crash animation** — UDG explosion (CHR$ 146) scattered 3-4 times at random offsets from landing point, each with BEEP.
-- **New unit: "The View"** (inserted after unit 12). Defines three UDGs and visual setup (stars, terrain, pixel fuel bar). Design concept: **Polish** — "Nothing about the physics changed. Everything about how it feels changed."
-- **Unit count: 14** (was 13).
+Erasing and redrawing the craft must preserve the landscape and instruments. Keep craft, flame, ground and pad distinguishable without relying on colour alone. The ground and instruments must agree with the model at contact.
 
----
+Use concise thrust and outcome sounds where they help. Check their effect on the update rate and controls before adopting them. Instruments remain legitimate play information; landing by colour and sound alone is not an acceptance condition. Decorative stars and elaborate explosions are optional later refinements, not initial requirements.
 
-## 5. Audio Direction
+Create original teaching assets and retain their editable data with the maintained samples. Historical comparisons and Vault links can be added after checking their sources; they are not required to establish the mechanic.
 
-- **Thrust sound.** A short BEEP on each frame when the player holds the thrust key. The sound of burning fuel.
-- **Crash.** A low, harsh tone — unmistakable failure.
-- **Touchdown.** An ascending fanfare — brief, celebratory.
-- **Low-fuel warning.** A distinct repeating tone when fuel drops below 20%. Ambient feedback through sound — the player hears trouble before they see it.
+## Runnable development sequence
 
----
+These are prototype stages, not an agreed lesson count. Split or combine them according to what the working program demonstrates.
 
-## 6. Anti-goals
+| Stage | Inspectable or playable result | New idea and changes | Check |
+|---|---|---|---|
+| Falling craft | A visible craft descends towards flat ground | Position, screen coordinates, erase/redraw and an updating loop | Old positions clear; craft stays within the display; contact ends the descent |
+| Gravity and thrust | The player can brake the fall | Velocity, acceleration and input within the loop | Released and held thrust produce understandable movement; safe and hard contact differ |
+| Limited fuel | Burns consume a visible reserve | Resource state and conditional thrust | Fuel never becomes negative; an empty tank disables thrust but permits continued flight |
+| Reach the pad | Sideways control makes alignment matter | Horizontal position, screen boundaries and a landing region | Thrust and steering are usable together; edge and off-pad contact have explicit rules |
+| Shape the site | Uneven terrain changes the approach | Terrain data, drawing and collision | Visible terrain matches contact; the craft cannot skip through ground between updates |
+| Finish and retry | A complete landing challenge with final craft, flame, instruments and sound | Feedback, instructions, results, reset and exit | A full attempt explains its outcome; retry restores all state and remains responsive |
 
-- No horizontal movement — the lander goes straight down. Horizontal movement and wind arrive in V3 games.
-- No terrain — flat ground only. Terrain generation is V4 territory.
-- No pixel-level graphics — the lander is a text character. Smooth movement is an assembly-track concern.
-- No physics beyond gravity and thrust — no rotation, no angular momentum, no atmospheric drag.
-- No multiple lives — one attempt per run. The learner restarts the program.
-- Maximum ~35 lines of BASIC.
+Introduce readable provisional graphics from the beginning and develop the final assets alongside the rules they communicate. Avoid a large unexplained graphics replacement at the end.
 
----
+## Prototype and verification
 
-## 7. Topic Progression
+The first deliverable is a playable prototype establishing whether steering towards a pad while managing descent and fuel feels responsive in 48K BASIC. Record the actual source, conversion/build command, emulator version, ROM/target configuration, controls and timing observations. Use the established sample and capture workflow after checking it still applies; no new execution is claimed by this brief.
 
-1. **Falling.** A number counts down: `LET alt = 100`, loop with `LET alt = alt - 1`, `PRINT AT 10, 10; alt; " "`. The number decreases — the lander is falling. When `alt = 0`, `PRINT "LANDED"`. No input, no control — just gravity. The program runs without the player doing anything. That's the headline: **Descent**. **New:** the concept of a continuously-running loop that updates state (the game loop). **Program:** ~6 lines. **Polish beat:** how fast should it fall? PAUSE inside the loop controls the pace. Find the speed that feels like falling, not counting.
+Check at least:
 
-2. **Speed.** Add velocity: `LET spd = 0`, `LET spd = spd + 1` each iteration (gravity accelerates), `LET alt = alt - spd`. The lander falls faster and faster. Display speed alongside altitude. At touchdown, check speed: `IF spd > 5 THEN PRINT "CRASH!"` else `PRINT "TOUCHDOWN!"`. Now the outcome depends on something. **New:** acceleration (velocity changes over time), outcome based on state at a specific moment. **Program:** ~10 lines. **Polish beat:** what speed threshold feels fair? Too low and landing is impossible; too high and there's no challenge.
+- Safe landing is achievable, repeatable and requires a meaningful approach.
+- Excessive descent speed, terrain contact and off-pad contact produce consistent results; define pad-edge and craft-footprint rules explicitly.
+- Held, tapped, released and combined controls behave predictably, including during sounds and retry transitions.
+- Screen edges, ascent above the play area, empty fuel and movement across more than one terrain position cannot produce invalid coordinates or missed collisions.
+- Redrawing restores scenery; flame and instrument updates leave no debris or misleading values.
+- A complete play cycle includes safe landing, crash, fuel exhaustion, retry and exit. Retry resets movement, fuel, graphics and input state.
+- Saving and loading in a fresh session preserves a playable starting program.
 
-3. **Thrust.** Add `IF INKEY$ = " " THEN LET spd = spd - 2` inside the loop. Press space — speed drops. Release — gravity takes over. The player now controls the descent. The game exists: gravity vs thrust, falling vs braking. **New:** INKEY$ inside a game loop (combining the Reflex polling pattern with continuous-update state). **Program:** ~12 lines. **Polish beat:** how much thrust per press? `spd - 1` is subtle; `spd - 3` is dramatic. The number shapes the game feel.
+Use actual execution for captures. Separate scripted rule checks from human observations of responsiveness, readability, sound and enjoyment. Record unverified hardware or native-input claims honestly. If the full scene is too slow, first simplify drawing and tune the update work while preserving the agreed moving craft and meaningful landscape. A substantive scope change requires discussion.
 
-4. **Fuel.** Add `LET fuel = 50`. Each thrust burns one unit: `IF INKEY$ = " " AND fuel > 0 THEN LET spd = spd - 2: LET fuel = fuel - 1`. Display fuel alongside altitude and speed. When fuel hits zero, thrust stops working — the player coasts on whatever speed they have. Finite resources create the core tension: brake too early and you run out; brake too late and you crash. **New:** resource management (fuel as a depletable resource), AND for compound conditions in INKEY$ checks. **Program:** ~16 lines. **Polish beat:** how much fuel is fair? 50 units means every burn matters. 200 means the player can hover. Find the number where fuel is scarce but sufficient.
+After the prototype, specify maintained runnable checkpoints and reviewable lessons. Keep detailed keyword-entry help optional and use the shared question presentation for authored prompts and explanations.
 
-5. **The dashboard.** Replace scrolling PRINT output with a fixed dashboard: PRINT AT positions for altitude, speed, and fuel, updated every loop. Add labels: "ALT:", "SPD:", "FUEL:". Clear each value before reprinting (trailing spaces). The screen is now an instrument panel, not a scrolling log. **New:** PRINT AT dashboard (reinforces Dice Roller), clearing previous values with spaces. **Program:** ~20 lines. **Polish beat:** where should each instrument sit? The layout is a design decision — altitude top, speed middle, fuel bottom? Or all in a row?
+## Implementation locations and next output
 
-6. **The lander on screen.** Add a character that moves down the screen: `PRINT AT 20 - alt/5, 15; "V"`. Clear the previous position first. The lander's position *is* the altitude — no separate display needed. Add the ground line: `PRINT AT 20, 0;` followed by dashes. The player now sees the lander approaching the ground. **New:** PRINT AT with computed position (a variable controlling screen placement), clearing previous character position. **Program:** ~25 lines. **Polish beat:** the moment the "V" touches the dashes — does it feel like landing? The visual and the number should agree.
+Existing material is evidence to inspect, not implementation of this agreed replacement:
 
-7. **Ambient feedback.** Add BORDER colour that shifts with altitude: blue at high altitude (safe), cyan in the middle, yellow getting close, red near the ground. Add the low-fuel warning: `IF fuel < 10 THEN BEEP 0.02, 20` inside the loop — a rapid tick when fuel is critical. Add the thrust sound: a brief BEEP when space is pressed. The environment now communicates game state through colour and sound without the player reading numbers. That's **ambient feedback**. **New:** BORDER driven by game state (reinforces Lucky Number), conditional sound inside the game loop. **Program:** ~30 lines. **Polish beat:** play with the dashboard hidden (cover it with your hand). Can you land using only the ambient feedback? If yes, the feedback works.
+- Website catalogue: `website/src/content/modules/sinclair-zx-spectrum/basic.yaml`.
+- Existing lessons: `website/src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/`.
+- Sample area: `code-samples/sinclair-zx-spectrum/basic/touchdown/`.
 
-8. **Make it yours.** Add a title screen: "*** TOUCHDOWN ***" with instructions ("SPACE to thrust"). Add a landing rating based on speed at contact: `IF spd <= 2 THEN PRINT "Perfect landing!"`, `IF spd <= 5 THEN PRINT "Bumpy but safe"`, otherwise `"CRASH!"`. Add the fuel bar: a shrinking row of PRINT characters alongside the fuel number. Add a replay prompt. The V1 curriculum ends here — the learner has built a real-time game with physics, resource management, and ambient feedback in ~35 lines of BASIC. **New:** landing rating, fuel bar visualisation, replay loop. **Program:** ~35 lines. **Polish beat:** this is the V1 capstone. Does it feel like a game someone would play for five minutes, not just run once? If yes, Volume 1 is done.
-
----
-
-## 8. Ship Test
-
-- [ ] Every topic's code runs on a 48K Spectrum (emulator + real hardware)
-- [ ] Every topic produces a working, runnable result
-- [ ] The game loop runs continuously — state updates whether the player presses a key or not
-- [ ] Gravity acceleration feels physical — the lander speeds up over time
-- [ ] Thrust feels responsive — pressing space immediately affects speed
-- [ ] Fuel depletion creates genuine tension — the player must budget burns
-- [ ] Soft landing is achievable but requires skill — not trivially easy, not impossible
-- [ ] Dashboard updates without screen flicker (trailing-space clearing works)
-- [ ] Ambient feedback (BORDER colour + sound) carries enough information to land without reading numbers
-- [ ] British English throughout
-- [ ] Screenshots show actual running programs
-- [ ] Code samples in `/code-samples/`
-- [ ] Magazine voice
-
----
-
-## 9. Pattern Library Extractions
-
-- **framework** — the continuous game loop: a `GO TO` loop that updates state every iteration whether the player acts or not. The structural foundation of every real-time game. Cross-platform.
-- **physics** — gravity + thrust model: `spd = spd + gravity`, `IF thrust THEN spd = spd - power`. The simplest physics simulation — two forces, one variable. The pattern behind every platformer's jump, every vehicle's acceleration.
-- **framework** — resource depletion: `fuel = fuel - 1` gated by `fuel > 0`. Finite resources as a tension mechanic. Cross-platform.
-- **rendering** — PRINT AT with computed position: `PRINT AT row_from_variable, col; character`. The pattern behind every character-cell game's movement — the variable *is* the position.
-
----
-
-## 10. Vault Tie-ins
-
-- **Lunar Lander** (Jim Storer, 1969; DEC PDP-8) — one of the oldest computer games. The original text simulation.
-- **Jupiter Lander** (HAL Labs, 1982) — the C64 graphical version that defined the genre on 8-bit.
-- *Computer Spacegames* (Usborne, 1982) — includes a Lunar Lander variant as one of its type-in programs.
-- **The game loop** — the structural concept that distinguishes real-time programs from turn-based. Every game from V2 onwards inherits this.
+First investigate the smaller Volley bridge and compare teaching stages as recorded in current work. For Touchdown: inspect the existing lessons and samples, build and play the bounded prototype, record configuration-specific findings, then derive the lesson/checkpoint breakdown. Separate constant-speed falling from acceleration; establish vertical landing before sideways movement, then a pad on flat ground before uneven terrain. Teach custom-character construction in a distinct, understandable step. Preserve published URLs when replacement lessons are eventually published.
