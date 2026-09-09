@@ -1,6 +1,8 @@
 # Sonar — Brief
 
-> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+> **Selected next for re-specification.** Sonar follows the completed Meet BASIC → Bright Spark → Volley → Touchdown opening. The replacement should explore turn-based spatial deduction: begin with one hidden target, make distance clues understandable, and introduce a board that remembers probes. This is the starting direction for a fresh brief and prototype, not approval of the older implementation below. Multiple targets, exact board size and lesson count remain to be decided.
+
+The retained design below is evidence to assess. Its old prerequisites and fixed counts do not govern the replacement.
 
 **Title (working):** Sonar
 **System / Track:** Sinclair ZX Spectrum / BASIC

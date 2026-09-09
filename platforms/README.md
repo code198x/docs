@@ -32,12 +32,9 @@ Use these designs alongside authored lessons, sample sources and capture manifes
 | ZX Spectrum | [Crates](sinclair-zx-spectrum/games/crates/brief.md) |
 | ZX Spectrum | [Dice Roller](sinclair-zx-spectrum/games/dice-roller/brief.md) |
 | ZX Spectrum | [Gloaming](sinclair-zx-spectrum/games/gloaming/brief.md) |
-| ZX Spectrum | [Hi-Lo](sinclair-zx-spectrum/games/hi-lo/brief.md) |
 | ZX Spectrum | [Locksmith](sinclair-zx-spectrum/games/locksmith/brief.md) |
 | ZX Spectrum | [Lucky Number](sinclair-zx-spectrum/games/lucky-number/brief.md) |
 | ZX Spectrum | [Oracle Stone](sinclair-zx-spectrum/games/oracle-stone/brief.md) |
-| ZX Spectrum | [Quiz Master](sinclair-zx-spectrum/games/quiz-master/brief.md) |
-| ZX Spectrum | [Reflex](sinclair-zx-spectrum/games/reflex/brief.md) |
 | ZX Spectrum | [Shadowkeep](sinclair-zx-spectrum/games/shadowkeep/brief.md) |
 | ZX Spectrum | [Sonar](sinclair-zx-spectrum/games/sonar/brief.md) |
 | ZX Spectrum | [Story Builder](sinclair-zx-spectrum/games/story-builder/brief.md) |

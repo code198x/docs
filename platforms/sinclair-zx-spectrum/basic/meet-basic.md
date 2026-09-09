@@ -67,7 +67,7 @@ The existing website has fifteen authored Meet BASIC units and separate early-pr
 
 - [Meet BASIC lessons](https://github.com/code198x/website/tree/main/src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic) and the [BASIC module catalogue](https://github.com/code198x/website/blob/main/src/content/modules/sinclair-zx-spectrum/basic.yaml).
 - [BASIC lesson sources](https://github.com/code198x/website/tree/main/src/content/curriculum/sinclair-zx-spectrum/basic) and [sample programs](https://github.com/code198x/code-samples/tree/main/sinclair-zx-spectrum/basic).
-- Retained briefs for [Story Builder](../games/story-builder/brief.md), [Lucky Number](../games/lucky-number/brief.md), [Oracle Stone](../games/oracle-stone/brief.md), [Reflex](../games/reflex/brief.md) and [Dice Roller](../games/dice-roller/brief.md). Their old unit counts, exclusions and prior-learning assumptions do not govern this module.
+- Retained briefs for [Story Builder](../games/story-builder/brief.md), [Lucky Number](../games/lucky-number/brief.md), [Oracle Stone](../games/oracle-stone/brief.md) and [Dice Roller](../games/dice-roller/brief.md). Their old unit counts, exclusions and prior-learning assumptions do not govern this module.
 
 Use Steven Vickers, edited by Robin Bradbeer, *ZX Spectrum BASIC Programming* for source checking: chapters 1–3 for initial programs, decisions and input; chapters 4–5 for repetition and subroutines; chapter 11 for random numbers; chapters 15–19 for screen output, colour, graphics, keyboard polling and sound; chapter 20 for tape storage. Check the edition and exact passage when citing a technical claim in a lesson. Historical context belongs only where sourced and useful; it is not needed to justify these small programs.
 
