@@ -1,6 +1,6 @@
 # Touchdown — Brief
 
-**Status:** Scope agreed on 9 September 2026; six-stage playable prototype implemented and played; [eleven-lesson brief](lesson-brief.md) agreed; [implemented lesson drafts](lessons.md) approved for publication.
+**Status:** Scope agreed on 9 September 2026; six-stage playable prototype implemented and played; [eleven-lesson brief](lesson-brief.md) agreed; [implemented lesson drafts](lessons.md) published.
 **System / track:** Sinclair ZX Spectrum / BASIC.
 **Route:** After the published Meet BASIC and Bright Spark opening. Volley is the published intervening game; see [current work](../../../../work.md#next-output). Use the game identity rather than an inherited numbered slot.
 **Target:** Stock 48K Spectrum, PAL timing, Sinclair BASIC, keyboard input, tape save/load. No expansion required.

@@ -1,6 +1,6 @@
 # Touchdown — lesson implementation
 
-**Status:** The eleven-lesson brief is agreed. The overview and eleven replacement lessons are approved and integrated for publication.
+**Status:** The eleven-lesson brief is agreed. The overview and eleven replacement lessons are published.
 
 ## Maintained work
 
@@ -25,3 +25,7 @@ The user played the native prototype and reported that it works well and is quit
 The catalogue contains eleven units, the overview uses the House presentation, and the BASIC landing page and Volley link onward to Touchdown. The old eight numbered lesson URLs map by topic to the replacement lessons; old system-root URLs and review links also redirect. All 29 explicit redirects and their built destinations pass checks. Readable keyword spaces and the shared questions are preserved; there are no Keyboard notes sections.
 
 The production build passes. Publication browser checks cover the twelve generated pages at narrow and wide widths in both themes. A What’s New entry is prepared outside the public collections for separate editorial/distribution review.
+
+Release changes: [website PR 421](https://github.com/code198x/website/pull/421), [samples PR 11](https://github.com/code198x/code-samples/pull/11), and [documentation PR 21](https://github.com/code198x/docs/pull/21).
+
+[Pages deployment 34365662926](https://github.com/code198x/website/actions/runs/34365662926) succeeded for website commit `7ff4ceb8f9c692403ba44e36dadc496f417f5aa5`. Live checks passed the overview, all eleven lesson pages and all eight old numbered redirects. The full 48-combination production browser sweep and all 29 built redirects passed before merge.
