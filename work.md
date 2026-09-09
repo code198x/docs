@@ -12,7 +12,7 @@ The [project charter](PROJECT.md) and [game-brief specification](specifications/
 
 ### Evidence to start from
 
-The website presents Meet BASIC → Bright Spark → Volley → Touchdown as the current BASIC course. Eleven earlier games remain separately available for review, and the BASIC reference remains optional. The duplicated standalone Story Builder, Lucky Number and Oracle Stone lessons are retired with redirects into Meet BASIC. Sample sources and [retained game plans](platforms/README.md) remain evidence for the next briefs. Inspect the website’s `src/content/modules/sinclair-zx-spectrum/`, the corresponding unit metadata and authored MDX, and `code-samples/sinclair-zx-spectrum/` together. Availability labels alone are insufficient evidence of what a learner can build.
+The website presents Meet BASIC → Bright Spark → Volley → Touchdown as the current BASIC course. Eight earlier games remain separately available for review, and the BASIC reference remains optional. The duplicated standalone Story Builder, Lucky Number and Oracle Stone lessons are retired with redirects into Meet BASIC. Sample sources and [retained game plans](platforms/README.md) remain evidence for the next briefs. Inspect the website’s `src/content/modules/sinclair-zx-spectrum/`, the corresponding unit metadata and authored MDX, and `code-samples/sinclair-zx-spectrum/` together. Availability labels alone are insufficient evidence of what a learner can build.
 
 Existing ideas include introductory BASIC programs, deduction and guessing games, quizzes and stories, grid puzzles, resource decisions and action games. The assembly material includes machine/language introductions, Gloaming and Shadowkeep, with plans extending beyond the implemented opening. Retain these as candidates and evidence, not an instruction to port each BASIC game to assembly.
 
@@ -36,7 +36,9 @@ Keep useful contrasts with C64, Amiga, NES and future systems visible. Reusing a
 
 ### Next output
 
-Review the next BASIC game brief and the remaining sequence together. Meet BASIC → Bright Spark → Volley → Touchdown now supplies the agreed opening. The [Touchdown implementation record](platforms/sinclair-zx-spectrum/games/touchdown/lessons.md) links its eleven lessons and verified samples. Subsequent BASIC and assembly choices remain proposals.
+Re-specify [Sonar](platforms/sinclair-zx-spectrum/games/sonar/brief.md) next. It provides a turn-based change of pace after Volley and Touchdown, extending a one-dimensional terrain array into a two-dimensional board. Start the proposed prototype with one hidden target and understandable distance clues, then add a record of probes; assess multiple targets only after that smaller game works. Do not inherit the old six lessons, three-target opening or prerequisite chain. Crates remains a possible later continuation, not an agreed next project.
+
+Reflex, Hi-Lo and Quiz Master are retired rather than queued for rewrites. Dice Roller and Cipher retain their current earlier-material status; no further retirement is agreed.
 
 Produce reviewable game briefs and a sequence mapping before lesson rewrites. Record concrete missing shared explanations, Vault entries, patterns and component needs. Resolve substantive conflicts with the briefing and separate recommendations from decisions. Historical versions remain in Git; the current specifications should not require reading amendment chains to discover the project goals.
 
