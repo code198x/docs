@@ -1,6 +1,6 @@
 # Touchdown — Brief
 
-**Status:** Scope agreed on 9 September 2026; six-stage playable prototype implemented and played; [eleven-lesson brief](lesson-brief.md) proposed for review.
+**Status:** Scope agreed on 9 September 2026; six-stage playable prototype implemented and played; [eleven-lesson brief](lesson-brief.md) agreed; [implemented lesson drafts](lessons.md) ready for review.
 **System / track:** Sinclair ZX Spectrum / BASIC.
 **Route:** After the published Meet BASIC and Bright Spark opening. Volley is the published intervening game; see [current work](../../../../work.md#next-output). Use the game identity rather than an inherited numbered slot.
 **Target:** Stock 48K Spectrum, PAL timing, Sinclair BASIC, keyboard input, tape save/load. No expansion required.
@@ -39,7 +39,7 @@ Create original teaching assets and retain their editable data with the maintain
 
 ## Runnable development sequence
 
-These are the prototype groups. The [proposed lesson brief](lesson-brief.md) separates them into teaching steps; its eleven-lesson sequence remains a proposal.
+These are the prototype groups. The [agreed lesson brief](lesson-brief.md) separates them into eleven teaching lessons.
 
 | Stage | Inspectable or playable result | New idea and changes | Check |
 |---|---|---|---|
@@ -78,4 +78,4 @@ Existing material is evidence to inspect, not implementation of this agreed repl
 - Existing lessons: `website/src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/`.
 - Sample area: `code-samples/sinclair-zx-spectrum/basic/touchdown/`.
 
-Review the [lesson brief](lesson-brief.md), then build and verify its maintained teaching checkpoints before writing replacement lessons. The [prototype record](prototype.md) establishes the existing execution and play evidence; it does not establish that the proposed lesson endpoints have been implemented. Preserve published URLs when replacement lessons are eventually published.
+Review the [implemented lesson drafts](lessons.md), which follow the [agreed lesson brief](lesson-brief.md). Their maintained checkpoints have separate execution evidence alongside the [prototype record](prototype.md). Preserve published URLs when replacement lessons are eventually published.
