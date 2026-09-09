@@ -36,7 +36,7 @@ Keep useful contrasts with C64, Amiga, NES and future systems visible. Reusing a
 
 ### Next output
 
-Re-specify [Sonar](platforms/sinclair-zx-spectrum/games/sonar/brief.md) next. It provides a turn-based change of pace after Volley and Touchdown, extending a one-dimensional terrain array into a two-dimensional board. Start the proposed prototype with one hidden target and understandable distance clues, then add a record of probes; assess multiple targets only after that smaller game works. Do not inherit the old six lessons, three-target opening or prerequisite chain. Crates remains a possible later continuation, not an agreed next project.
+The [Sonar replacement plan](platforms/sinclair-zx-spectrum/games/sonar/brief.md) is saved for resumption. Sonar is selected next; detailed scope remains proposed. When the user resumes, first build stages 1–3: a labelled PAPER board, one fixed target, validated row/column probes and exact distance clues, with ROM execution evidence and native play available. Do not begin implementation automatically. The brief records subsequent checkpoints and the key design risk: two well-chosen exact-distance probes locate a single target, so test whether that discovery sustains worthwhile play before deciding on bands or multiple targets. Fix the public lesson count after the prototype, not before it.
 
 Reflex, Hi-Lo and Quiz Master are retired rather than queued for rewrites. Dice Roller and Cipher retain their current earlier-material status; no further retirement is agreed.
 
