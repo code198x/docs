@@ -36,7 +36,7 @@ Keep useful contrasts with C64, Amiga, NES and future systems visible. Reusing a
 
 ### Next output
 
-Investigate a small paddle-and-ball game, provisionally Volley, as the bridge between Bright Spark and Touchdown. Begin by inspecting the actual catalogue and any existing design/sample material; the name does not imply the inherited scope is adopted.
+Review the [proposed Volley brief](platforms/sinclair-zx-spectrum/games/volley/brief.md) for a small paddle-and-ball bridge between Bright Spark and Touchdown. The catalogue has a coming-soon entry; no authored Volley lessons or samples were found in the inspected trees. The detailed specification remains proposed, with a bounded prototype and teaching-stage comparison next.
 
 The preferred candidate has one vertically moving paddle and one ball travelling at fixed speed across a fixed screen. Walls return the ball; the player keeps a rally going, a miss ends it, and retry is immediate. Exclude opponent AI, levels and increasing speed initially. Define a complete, enjoyable rally game rather than an exercise whose only purpose is preparation.
 
