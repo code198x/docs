@@ -12,7 +12,7 @@ The [project charter](PROJECT.md) and [game-brief specification](specifications/
 
 ### Evidence to start from
 
-The website has a substantial BASIC sequence and an assembly opening, with sample sources and [retained game plans](platforms/README.md). Inspect the website’s `src/content/modules/sinclair-zx-spectrum/`, the corresponding unit metadata and authored MDX, and `code-samples/sinclair-zx-spectrum/` together. Availability labels alone are insufficient evidence of what a learner can build.
+The website presents Meet BASIC → Bright Spark → Volley → Touchdown as the current BASIC course. Eleven earlier games remain separately available for review, and the BASIC reference remains optional. The duplicated standalone Story Builder, Lucky Number and Oracle Stone lessons are retired with redirects into Meet BASIC. Sample sources and [retained game plans](platforms/README.md) remain evidence for the next briefs. Inspect the website’s `src/content/modules/sinclair-zx-spectrum/`, the corresponding unit metadata and authored MDX, and `code-samples/sinclair-zx-spectrum/` together. Availability labels alone are insufficient evidence of what a learner can build.
 
 Existing ideas include introductory BASIC programs, deduction and guessing games, quizzes and stories, grid puzzles, resource decisions and action games. The assembly material includes machine/language introductions, Gloaming and Shadowkeep, with plans extending beyond the implemented opening. Retain these as candidates and evidence, not an instruction to port each BASIC game to assembly.
 
