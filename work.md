@@ -6,7 +6,7 @@ This file holds bounded next work and proposals. [PROJECT.md](PROJECT.md) owns a
 
 **Status: Meet BASIC and Bright Spark published; Touchdown scope agreed.** All fifteen Meet BASIC lessons and seven replacement Bright Spark lessons are live. Meet BASIC → Bright Spark is published. The agreed continuation is Volley → Touchdown. Volley’s approved eight lessons and overview are integrated into the website. See the [Meet BASIC implementation record](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) and [Bright Spark verification record](platforms/sinclair-zx-spectrum/games/bright-spark/prototype.md). Native control/audio and independent learner observations remain useful Bright Spark follow-up work.
 
-The [Touchdown brief](platforms/sinclair-zx-spectrum/games/touchdown/brief.md) now specifies a moving lander, sideways control and thrust, limited fuel, and a landing pad within a fixed screen of uneven terrain. Build on Volley’s fixed-step movement and contact checks. Touchdown will still need a playable 48K BASIC prototype establishing controls, responsiveness, terrain/contact representation and a complete retry cycle before fixing the lesson breakdown. The scope is agreed; implementation and execution remain to be established.
+The [Touchdown brief](platforms/sinclair-zx-spectrum/games/touchdown/brief.md) now specifies a moving lander, sideways control and thrust, limited fuel, and a landing pad within a fixed screen of uneven terrain. Build on Volley’s fixed-step movement and contact checks. The [six-stage prototype](platforms/sinclair-zx-spectrum/games/touchdown/prototype.md) runs through the 48K ROM, including a scripted safe approach, combined steering and thrust, fuel exhaustion and retry. Review its native controls, appearance and pace before fixing the lesson breakdown.
 
 The [project charter](PROJECT.md) and [game-brief specification](specifications/brief.md) govern the work. Subsequent BASIC choices and the remaining assembly lineup stay under review; BASIC games need not meet commercial standards.
 
@@ -36,7 +36,7 @@ Keep useful contrasts with C64, Amiga, NES and future systems visible. Reusing a
 
 ### Next output
 
-For Touchdown, separate constant-speed falling from acceleration, establish a playable vertical landing game before sideways movement, and add a pad on flat ground before uneven terrain. Give custom-character construction its own understandable step. Across both games, map what each checkpoint introduces, recalls and combines; execution success alone does not establish an appropriate learning progression. Keep subsequent BASIC and assembly choices as proposals for joint review.
+Review the playable Touchdown prototype, then derive the lesson sequence from its six checkpoints: constant falling, acceleration/thrust, fuel, a pad on flat ground, uneven terrain and final craft presentation. Give custom-character construction its own understandable step. Across both games, map what each checkpoint introduces, recalls and combines; execution success alone does not establish an appropriate learning progression. Keep subsequent BASIC and assembly choices as proposals for joint review.
 
 Produce reviewable game briefs and a sequence mapping before lesson rewrites. Record concrete missing shared explanations, Vault entries, patterns and component needs. Resolve substantive conflicts with the briefing and separate recommendations from decisions. Historical versions remain in Git; the current specifications should not require reading amendment chains to discover the project goals.
 
