@@ -4,7 +4,7 @@ This file holds bounded next work and proposals. [PROJECT.md](PROJECT.md) owns a
 
 ## Spectrum sequences
 
-**Status: Meet BASIC, Bright Spark and Volley published; Touchdown published.** All fifteen Meet BASIC lessons and seven replacement Bright Spark lessons are live. Meet BASIC → Bright Spark is published. The agreed continuation is Volley → Touchdown. Volley’s approved eight lessons and overview are integrated into the website. See the [Meet BASIC implementation record](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) and [Bright Spark verification record](platforms/sinclair-zx-spectrum/games/bright-spark/prototype.md). Native control/audio and independent learner observations remain useful Bright Spark follow-up work.
+**Status: Meet BASIC, Bright Spark, Volley, Touchdown and Sonar published.** All fifteen Meet BASIC lessons and seven replacement Bright Spark lessons are live. Meet BASIC → Bright Spark is published. The agreed continuation is Volley → Touchdown. Volley’s approved eight lessons and overview are integrated into the website. See the [Meet BASIC implementation record](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) and [Bright Spark verification record](platforms/sinclair-zx-spectrum/games/bright-spark/prototype.md). Native control/audio and independent learner observations remain useful Bright Spark follow-up work.
 
 The [Touchdown brief](platforms/sinclair-zx-spectrum/games/touchdown/brief.md) now specifies a moving lander, sideways control and thrust, limited fuel, and a landing pad within a fixed screen of uneven terrain. Build on Volley’s fixed-step movement and contact checks. The [six-stage prototype](platforms/sinclair-zx-spectrum/games/touchdown/prototype.md) runs through the 48K ROM, including a scripted safe approach, combined steering and thrust, fuel exhaustion and retry. Native play feedback was positive but found the game hard. The eleven-lesson sequence is agreed, and its [teaching checkpoints and drafts](platforms/sinclair-zx-spectrum/games/touchdown/lessons.md) are published.
 
@@ -12,7 +12,7 @@ The [project charter](PROJECT.md) and [game-brief specification](specifications/
 
 ### Evidence to start from
 
-The website presents Meet BASIC → Bright Spark → Volley → Touchdown as the current BASIC course. Eight earlier games remain separately available for review, and the BASIC reference remains optional. The duplicated standalone Story Builder, Lucky Number and Oracle Stone lessons are retired with redirects into Meet BASIC. Sample sources and [retained game plans](platforms/README.md) remain evidence for the next briefs. Inspect the website’s `src/content/modules/sinclair-zx-spectrum/`, the corresponding unit metadata and authored MDX, and `code-samples/sinclair-zx-spectrum/` together. Availability labels alone are insufficient evidence of what a learner can build.
+The website presents Meet BASIC → Bright Spark → Volley → Touchdown → Sonar as the current BASIC course. Seven earlier games remain separately available for review, and the BASIC reference remains optional. The duplicated standalone Story Builder, Lucky Number and Oracle Stone lessons are retired with redirects into Meet BASIC. Sample sources and [retained game plans](platforms/README.md) remain evidence for the next briefs. Inspect the website’s `src/content/modules/sinclair-zx-spectrum/`, the corresponding unit metadata and authored MDX, and `code-samples/sinclair-zx-spectrum/` together. Availability labels alone are insufficient evidence of what a learner can build.
 
 Existing ideas include introductory BASIC programs, deduction and guessing games, quizzes and stories, grid puzzles, resource decisions and action games. The assembly material includes machine/language introductions, Gloaming and Shadowkeep, with plans extending beyond the implemented opening. Retain these as candidates and evidence, not an instruction to port each BASIC game to assembly.
 
@@ -36,7 +36,7 @@ Keep useful contrasts with C64, Amiga, NES and future systems visible. Reusing a
 
 ### Next output
 
-The [Sonar replacement plan](platforms/sinclair-zx-spectrum/games/sonar/brief.md) is saved for resumption. Sonar is selected next; detailed scope remains proposed. When the user resumes, first build stages 1–3: a labelled PAPER board, one fixed target, validated row/column probes and exact distance clues, with ROM execution evidence and native play available. Do not begin implementation automatically. The brief records subsequent checkpoints and the key design risk: two well-chosen exact-distance probes locate a single target, so test whether that discovery sustains worthwhile play before deciding on bands or multiple targets. Fix the public lesson count after the prototype, not before it.
+Sonar’s nine lessons are published; the [implementation record](platforms/sinclair-zx-spectrum/games/sonar/lessons.md) owns publication evidence. Select and brief the next Spectrum BASIC project from the retained candidates before developing another sequence. A larger Sonar board remains an optional extension, not queued work.
 
 Reflex, Hi-Lo and Quiz Master are retired rather than queued for rewrites. Dice Roller and Cipher retain their current earlier-material status; no further retirement is agreed.
 
