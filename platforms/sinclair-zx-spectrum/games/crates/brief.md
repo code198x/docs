@@ -1,129 +1,82 @@
-# Crates — Brief
+# Crates — replacement brief
 
-> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+**Status:** The user accepted the three-room prototype and agreed to settle that game scope and develop the teaching sequence. The array holds game state and rendering remains separate. The [lesson brief](lesson-brief.md) defines the approved eleven-lesson course, supported by thirteen executed checkpoints. The approved overview and eleven lessons are published; legacy samples remain available.
+**Route:** Meet BASIC → Bright Spark → Volley → Touchdown → Sonar → Crates. Crates is not the final BASIC project or an assumed prerequisite for a named successor.
+**Target:** Stock 48K ZX Spectrum, PAL, Sinclair BASIC; keyboard input and tape save/load.
+**Publication:** The [implementation record](lessons.md) owns executed teaching checkpoints, website checks and live publication evidence.
 
-**Title (working):** Crates
-**System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 2 — Patterns of State
-**Headline concept:** The Rule IS the Game — the mechanic is the experience
-**Embedded concept:** Constraint as gameplay — limitation creates the puzzle
-**Topics:** 12 topics, ~12–16 hours
-**Constraint position:** period-faithful
+Apply the [project charter](../../../../PROJECT.md), [game brief specification](../../../../specifications/brief.md) and [curriculum design](../../../../specifications/curriculum.md). The [source assessment](assessment.md) distinguishes the retained brief, authored lessons and actual samples. Earlier reasoning remains in Git history.
 
-Format: [Game brief](../../../../specifications/brief.md)
+## The game
 
----
+Move around a warehouse and push each crate onto a target. Walking into a crate attempts a push: the player needs space to stand behind it and the cell beyond it must be free. Crates cannot be pulled or pushed in pairs. The interesting choice is often where to stand before pushing, or which crate to move first. A locally legal push can leave the room impossible to finish.
 
-## 1. Pedagogical Role
+A completed room needs instructions, visible targets and crates, deliberate single-step controls, a clear success state, restart, replay and exit. One well-designed room can fulfil that promise. It is not automatically a demo because it has only one level.
 
-Teach that a single mechanic rule — "you can push a crate but not pull it" — creates the entire game, and that ATTR (reading attribute bytes) enables character-cell collision detection — so the learner arrives at Volume 3 with attribute-driven game logic as a working tool.
+The agreed finished package is **three short original rooms**, each fitting an 8×8 board. The first demonstrates pushing and delivery, the second requires a change of approach, and the third uses two crates to make access matter. All three have executed solutions and were accepted in native play. Keep their layouts and visual direction as the teaching endpoint; do not add a larger campaign or treat the solver's shortest routes as learner performance targets.
 
----
+Allow the player time to think. A move counter records successful player steps, including pushes; blocked moves and unrelated keys do not increment it. Do not introduce a timer, lives, compulsory par or rating. Restart restores the current room. After completion, let the player explicitly continue, replay or quit; after the last room, offer a fresh run or exit.
 
-## 2. Classic Ancestors
+## What changes after Sonar
 
-- **Sokoban** (Hiroyuki Imabayashi, 1982) — the warehouse puzzle. Push crates onto target squares. Cannot pull. Cannot push two crates at once. The mechanic is the constraint; the constraint is the puzzle. One of the most deeply studied puzzle games in computing.
-- **Spectrum warehouse puzzles** — published in magazines from 1984 onwards. The Sokoban mechanic translates perfectly to character-cell graphics.
+Sonar's array records knowledge about a hidden object. Crates' array describes the warehouse, and a successful push changes it. The teaching focus is **inspect the proposed change, decide whether it is legal, then update the affected state**.
 
----
+New work includes decoding text maps with the DATA/READ techniques introduced in Touchdown, identifying the cell beyond a crate, preserving the underlying target when an object moves, checking the goal condition, and reloading a known starting state. Two-dimensional arrays, nested loops, PRINT AT, colour, routine calls, conditions and reset already have local precedents. Recall them briefly at the point of use.
 
-## 3. Core Experience
+INKEY$ and keyboard polling are not first-time concepts on the current route. The useful contrast is between Touchdown's continuously changing world and a puzzle that changes only on accepted commands. One step per key press is a choice for this puzzle, not a universal input technique. No attendance at Cipher, Three in a Row or The Caverns is assumed; recall DATA, READ and RESTORE locally and explain string slicing when it is used.
 
-Push crates onto target squares in a small warehouse. You can only push, never pull. You can only push one crate at a time. Push a crate into a corner and it is stuck forever. Each level is a spatial puzzle — the solution is a sequence of pushes that avoids trapping any crate. Short levels (5–10 moves) that feel like "I almost had it."
+## Representation
 
----
+Retain the existing sample's useful model: one numeric grid, with player row and column stored separately. Use explicit cell codes: 0 floor, 1 wall, 2 target, 3 crate on floor and 4 crate on target. The last code represents a combination; it does not make the underlying target disappear. A player standing on a target leaves code 2 in the grid.
 
-## 4. Visual Direction
+A walk checks the destination before updating the player position. A push checks both the adjacent crate cell and the cell beyond before changing anything. Restore the old crate cell to floor or target, place the crate on its new floor or target, then advance the player. A rejected action changes neither the player, grid nor count.
 
-- **Character-cell warehouse.** Walls as solid PAPER blocks. Floor as dark background. Crates as coloured characters (BRIGHT 1 blocks). Targets as differently coloured marks on the floor. Player as a distinct character.
-- **ATTR-driven.** The colour of each cell *is* its identity: wall cells have one PAPER colour, floor cells another, crates another, targets another. The player reads the screen through colour, and the code reads the screen through ATTR.
-- **Small levels.** 8×8 or 10×10. The entire level fits on screen without scrolling.
-- **Magazine-screenshot test:** a small warehouse — walls, three crates, three targets, the player mid-puzzle — the reader tracing the solution.
+Draw cells from the grid and overlay the player at its coordinates. Moving the player away should redraw the underlying cell from the grid, avoiding a second variable that duplicates whether the player stands on a target. Reuse the cell renderer for ordinary changes and full reconstruction. The accepted prototype verifies this without a duplicate `ps` display flag.
 
----
+Use the array as the authority for movement and victory. Colour and symbols present its values. ATTR is not needed to decide collisions here; a later investigation of reading screen attributes would be a separate machine-specific comparison.
 
-## 5. Audio Direction
+Begin with one known map. Show why repeated assignments become awkward before introducing readable row strings and a loader. When the second room makes a single DATA section insufficient, introduce explicit level selection and RESTORE. Do not require an opaque framework to draw the first warehouse or bind level identity to an unexplained arithmetic line-number convention.
 
-- **Push.** Short tone when a crate moves.
-- **Crate on target.** Ascending chime — progress.
-- **Level complete.** Fanfare — all crates on targets.
-- **Move.** Quiet click — the player's movement, distinct from pushing.
+Before indexing, establish that candidate coordinates lie within the grid. Enclosing walls help level design, but malformed or learner-edited maps must not cause out-of-range array access. Define and check the map contract: eight rows of eight recognised symbols, exactly one player, at least one crate, equal crate and target totals, and legal starting occupancy. Count combined states in both totals. Structural validity does not establish solvability.
 
----
+## Controls, appearance and recovery
 
-## 6. Level Design Direction
+Use I/J/K/L for up/left/down/right, matching the retained game, with R to restart and Q to quit. Show the mapping on screen. Accept either case; ignore other keys. Remember the previous key so a held direction cannot race across a small room. A different direction can be accepted immediately; an empty reading clears the remembered key. Check held and overlapping keys, restart, and the transition into completion prompts. A movement key must not also dismiss success or begin the next room.
 
-- **Content source:** DATA statements hold level layouts as strings — one string per row. Each character represents a cell type: `#` = wall, `.` = floor, `@` = player, `$` = crate, `*` = target, `+` = crate on target.
-- **Difficulty curve.** Level 1: one crate, one target, no traps possible. Level 2: two crates, a corner to avoid. Level 3+: three crates, multiple dead-end risks. The constraint (push only, one at a time) creates the difficulty — the level designer just provides the space.
-- **Scale:** 5–8 hand-designed levels. The learner designs their own.
-- **Onboarding.** Level 1 is solvable in 3 pushes. The player learns: push works, pull doesn't, corners are death.
+Use the accepted square 16×16-pixel UDG tiles, dark floor, brick walls, wooden crates, target rings and small player. A target beneath the player remains visible; delivered crates turn green. Collision reads only the array. Teach how the tiles are made and assembled rather than supplying an unexplained asset bank. Assess an additional non-colour delivery cue during source preparation, as described in the lesson brief.
 
----
+Keep the accepted game silent. Sound, scrolling and animation are not unfinished requirements.
 
-## 7. Anti-goals
+Restart is part of the first complete room, not late polish. The old blanket ban on undo is not retained: first test whether restarting these short rooms is comfortable. If play reveals that recovering from a mistaken input dominates the puzzle, compare a single-step undo or smaller rooms before adding more content. Undo history is not a prerequisite for proving the push mechanic.
 
-- No undo — push a crate into a corner and it is stuck. Restart the level. The consequence *is* the puzzle's discipline.
-- No pull mechanic — push only. Pulling would halve the puzzle's difficulty.
-- No scrolling — every level fits on one screen.
-- No animation — movement is instant (PRINT AT, clear old position, draw new). Smooth animation is V3 territory.
-- Maximum ~60 lines of BASIC + DATA.
+## Runnable investigation
 
----
+These development stages describe observable results. The [lesson brief](lesson-brief.md) now owns the teaching order and its provisional unit boundaries. Keep each source complete and readable, and split a checkpoint if its teaching load is too large.
 
-## 8. Topic Progression
+| Stage | Result | Change to explain | Check |
+|---|---|---|---|
+| 1. Inspect a room | A small fixed warehouse with a player, crate and target | Cell codes, grid-to-screen positions, player overlay; start with explicit state | Symbols are distinguishable; drawing does not change state |
+| 2. Walk deliberately | One step per command; walls and board edges block movement | Direction offsets, candidate coordinates, bounds before lookup, release handling | All directions, blocked/invalid input, long holds and Q exit |
+| 3. Push a crate | A legal push moves the crate and player; a blocked push changes nothing | Two-cell lookahead and coordinated updates | Push towards floor, wall and another crate; preserve crate count |
+| 4. Complete one room | Targets survive movement; success, restart, replay and exit work | Combined cell state, renderer from state, goal check and reset | Push onto and off a target; walk across targets; restart after getting stuck; held keys do not skip success |
+| 5. Make the map editable | The same room loads from readable DATA strings | Parsing symbols and map validation; replace the awkward initial setup visibly | Loaded state equals the earlier room; reject malformed data; redraw reconstructs the same picture |
+| 6. Give each room a purpose | A small sequence of verified puzzles, with explicit transitions | Reuse the loader, select DATA, reset per-room state and finish the sequence | Solve every room; restart each; no state leaks; compare human decisions and recovery costs |
+| 7. Keep the game | Saved program starts reliably and supports a complete visit | Instructions, provenance, tape save/load and any justified presentation refinements | Fresh-load, play, solve, advance, restart, finish, replay and exit |
 
-1. **The warehouse.** Draw a level from DATA: walls, floor, targets. Use PRINT AT with PAPER colours for each cell type. The level is a visual grid — walls in one colour, floor in another, targets in a third. **New:** DATA-driven level layout, colour-as-type. **Program:** ~10 lines + DATA.
+Stage 4 is already a complete fixed-room game. The accepted prototype extends it to three rooms. The teaching loader is implemented and checked against the accepted layouts; the prototype retains its explicit assignments.
 
-2. **The player.** Place the player character (`@`) on the floor. Move with INKEY$ (or INPUT for turn-based). Clear old position, draw new. Walls block movement — check the cell before moving. **New:** character movement with wall collision (check before move). **Program:** ~18 lines + DATA.
+## Evidence and finishing
 
-3. **ATTR.** Instead of checking a separate array, read the *screen* directly: `LET a = ATTR(row, col)`. The attribute byte encodes INK and PAPER for that cell. If the PAPER matches the wall colour, the cell is a wall. The screen *is* the data. **New:** ATTR function, reading the screen as game state. **Program:** ~22 lines + DATA.
+Read and reuse donor routines deliberately; do not inherit their verification claims. Sources belong in `code-samples/sinclair-zx-spectrum/basic/crates/prototype/`, separate from the six published legacy checkpoints. Keep verification helpers and executed captures with the prototype. Use released Emu198x Spectrum with the configured stock 48K ROM; record the executable version and hash, ROM identity, input sequence and source hash. Type source and any declared test edits through the ROM editor, and save/load through ROM commands. Do not claim original-hardware behaviour from emulator checks.
 
-4. **Pushing a crate.** When the player moves toward a crate, check the cell *beyond* the crate. If it is floor (or target), push: move the crate one cell, move the player into the crate's old position. If the cell beyond is a wall or another crate, the push fails. **New:** two-cell lookahead (player → crate → beyond), conditional move. **Program:** ~30 lines + DATA.
+For each accepted action, compare the complete grid and player coordinates before and after. Crate count and target count must remain constant; only a push changes crate positions. A blocked action must preserve the whole state. Check zero, one and multiple uncovered targets, including a player standing on an uncovered target. Do not accept an empty or invalid map as an immediate win.
 
-5. **Crate on target.** When a crate lands on a target cell, mark it (change colour or character). Track how many crates are on targets. When all crates are placed, the level is complete. **New:** state tracking per object (crate placed vs unplaced), win condition. **Program:** ~34 lines + DATA.
+Redraw after clearing the display and verify the same state and picture. Reset must restore the original layout, player, counter and messages. Test keys held through restart and completion, lowercase/uppercase commands and every exit phase. Test coordinate bounds even when an edge wall is missing.
 
-6. **Multiple levels.** Store several levels in DATA. When a level is complete, read the next one and redraw. A level counter shows progress. **New:** sequential DATA-driven levels, level transitions. **Program:** ~40 lines + DATA.
+Record actual puzzle solutions and verify them through the target program. A separate solver can check solvability or compare layouts, but it does not establish BASIC correctness or human enjoyment. A crate in a non-target wall corner is a useful trap demonstration; a crate already on a corner target is not automatically a failure. Other deadlocks also exist. Never teach that equal counts or an absence of corner crates proves a level solvable.
 
-7. **Restart.** If the player gets stuck (crate in a corner), a key (R) restarts the current level by re-reading its DATA. The RESTORE + counted READ pattern from Cipher, applied to level data. **New:** level restart without program restart. **Program:** ~44 lines + DATA.
+Ask the player which push changed their plan and whether restarting was useful or frustrating. Reconsider the room designs or recovery mechanic if play becomes mostly retracing known moves. Reconsider presentation if targets beneath objects are hard to recognise. Keep original level maps and character graphics, state their licence, and add only sourced historical context that helps the lesson.
 
-8. **Move counter.** Track pushes per level. Display on screen. The player's goal shifts from "solve" to "solve efficiently." The optimal push count for each level is a target to beat. **New:** efficiency metric, optimal-play target. **Program:** ~48 lines + DATA.
+Source language details from Steven Vickers, edited by Robin Bradbeer, *ZX Spectrum BASIC Programming*, second edition (Sinclair Research, 1983): chapters 4–5 (loops and routines), 6 (DATA/READ/RESTORE), 8 (strings), 12 (arrays), 15–16 (printing and colour), 18 (keyboard input), 19 (sound, if used) and 20 (tape). Confirm the relevant passages during implementation. The samples use the repository's MIT licence.
 
-9. **Designing levels.** The learner writes their own level DATA. Rules for valid levels: every crate must have a reachable target, no crate should start in a corner (unsolvable). The DATA format is the level editor — change the strings, change the puzzle. **New:** level design as a discipline. **Program:** ~52 lines + DATA.
-
-10. **INKEY$ for smooth movement.** Replace INPUT with INKEY$ polling — the player presses Q/A/O/P (or cursor equivalents) and the character moves immediately, one step per press. Key draining prevents repeated movement from a held key. **New:** INKEY$ for responsive movement (reinforces Bright Spark's key drain pattern). **Program:** ~56 lines + DATA.
-
-11. **Polish.** Title screen. Per-level par display ("Par: 8 pushes"). Level select (INPUT a level number). Colour refinement — make the warehouse look like a warehouse. **New:** level select menu. **Program:** ~58 lines + DATA.
-
-12. **Make it yours.** The design lesson: the rule ("push, don't pull, one at a time") *is* the entire game. No power-ups, no enemies, no timer. The constraint creates the puzzle. That is the headline concept: **The Rule IS the Game**. When the mechanic is simple enough, the level design carries everything. **New:** none (design reflection). **Program:** ~60 lines + DATA.
-
----
-
-## 9. Ship Test
-
-- [ ] Every topic's code runs on a 48K Spectrum
-- [ ] ATTR correctly identifies wall, floor, crate, and target cells
-- [ ] Pushing works: player → crate → empty cell moves both
-- [ ] Pushing fails: crate against wall or another crate does not move
-- [ ] Crate-on-target detection works and updates the display
-- [ ] All levels are solvable (test each by hand)
-- [ ] Restart correctly reloads the current level
-- [ ] Level transition works when all crates are placed
-- [ ] British English throughout
-- [ ] Code samples in `/code-samples/`
-- [ ] Magazine voice
-
----
-
-## 10. Pattern Library Extractions
-
-- **basic** — ATTR-based collision: reading the screen's attribute byte to determine cell type. The Spectrum-specific technique that makes the screen itself the game map. Avoids maintaining a separate collision array.
-- **physics** — push mechanic: two-cell lookahead (player position + direction = crate; crate position + direction = destination). The pattern behind every push-block puzzle.
-- **framework** — DATA-driven levels with restart: string-encoded level layouts, RESTORE for level select and restart. The simplest level-loading system.
-
----
-
-## 11. Vault Tie-ins
-
-- **Sokoban** (Hiroyuki Imabayashi, 1982) — the warehouse puzzle as direct ancestor.
-- **ZX Spectrum ATTR function** — the hardware feature that makes colour-as-collision possible.
-- **Constraint-based game design** — the design principle that a single restrictive rule can generate infinite puzzle depth.
+Potential later Pattern Library material includes two-cell movement checks, reconstructing a display from stored state and loading a restartable map. Link these back to the finished game if extracted; they are not additional requirements for the first prototype. A level editor, large campaign, automatic deadlock detection, solver, scoring targets and extended undo history remain possible later work, not the assumed ending of BASIC.
