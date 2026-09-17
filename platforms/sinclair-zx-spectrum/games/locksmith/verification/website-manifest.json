@@ -1,0 +1,167 @@
+{
+  "status": "passed",
+  "publication": "User approved the overview and nine lessons; published in Boards and deduction after Crates. See publication.json.",
+  "pages": [
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/index.mdx",
+      "sha256": "8cf27a9a6fa624121032f4db28678b1a727cea1eb46ec238033cdc1327c36ff7",
+      "sources": []
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-01-make-room-for-a-guess.mdx",
+      "sha256": "7d2e05a3c2c162174ae81736792adc9c4aa99ebc5132645c905a6b947c6f9e62",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/board/locksmith.bas",
+          "sha256": "a9310e7fb8b22f77907feac2e43cc6a61b569a5428f6cc584f174e86e13619b2"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-02-edit-four-digits.mdx",
+      "sha256": "974ee06effccaf5e10a18f01c32dd40a7d077dd997362db0d750dc0fea843e5d",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/editor/changes.bas",
+          "sha256": "34cf386fcab4079d2525bf77d8eb7b6e893393248b8fb9db236e4214113b4b75"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/editor/locksmith.bas",
+          "sha256": "67f09f555fe02ddad3a134645719501e1f196ae29bd80551cd7c1be7f7acd2ab"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-03-check-the-places.mdx",
+      "sha256": "35dec79388bb9dff92ab56aa92752e53c7813c63af28bfee9ce90893384e1e97",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/exact/changes.bas",
+          "sha256": "7d184b7f5519f6ac9a1cfaca3b9fcefece1043f8b2523f6b0f60fad9ab095d4e"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/exact/locksmith.bas",
+          "sha256": "546b42056621ab30a90bae93badc890713e56ae0c608fe14005882e1915a6526"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-04-count-each-digit-once.mdx",
+      "sha256": "4cb742d2cec7c42aa26137bdf914a3e44a62fcb1327b33985d07b3a2f75c95e3",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/clues/changes.bas",
+          "sha256": "e8a10a78fd7f54d9316615e8dc5a2b3d8ee046a217f2eb2b216f56ff134266c7"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/clues/locksmith.bas",
+          "sha256": "9d71f356901ea1d89ce99c3581d6b6e7ba0ef62aec838bbff9afb2db07952390"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-05-keep-earlier-clues.mdx",
+      "sha256": "2a3c2b20729f4e078c760ecef98d4145eae7fdb747886c7b9a0599a1d65fde1a",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/history/changes.bas",
+          "sha256": "6bc3e8e5e21b961616f31bd254ddf5afb8c6c6e1f5bf2980c0167f27b310af75"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/history/locksmith.bas",
+          "sha256": "24b0b0b81a504d87602b3b880fc0f88d1838d56a404bb07f04a5555dfb69a5a8"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-06-put-the-clues-together.mdx",
+      "sha256": "7529cd8043bcba9b701299ae3f2e50789923ef882dc000cbb03abec5c48c9abf",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/history/locksmith.bas",
+          "sha256": "24b0b0b81a504d87602b3b880fc0f88d1838d56a404bb07f04a5555dfb69a5a8"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-07-hide-a-new-code.mdx",
+      "sha256": "8ec7beb7fc64fad106a733d2cd0d3159dfcbc190b1632fc4b44218e7dd904c1b",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/round/changes.bas",
+          "sha256": "533ba4a2e5c501b6bead1479834d2bc67f26a31f3780a1a31658f1f8efce43de"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/round/locksmith.bas",
+          "sha256": "e4e33cc6065278f5f9696044db03819b9e06a307d10003bfef8479f8195aa2be"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-08-invite-the-player-in.mdx",
+      "sha256": "db2d043c73f99a984dc2c42f6166b6ea27c9c766978471b3e067bce3cedbf8f0",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/finished/changes.bas",
+          "sha256": "9a4c005259ad1ea1947e7064ff2aa065b5c2c4791c6ef8504791a52f9f1af4d7"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/finished/locksmith.bas",
+          "sha256": "0006a16d65447802016ae4597d079fa3b28bb6f6365f79b8075404c8a9d19f9b"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-09-keep-the-game.mdx",
+      "sha256": "3d6ff46320c280d23d97b421e9db09fea8e50c97240bae180147062d04b3901e",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/locksmith/teaching/finished/locksmith.bas",
+          "sha256": "0006a16d65447802016ae4597d079fa3b28bb6f6365f79b8075404c8a9d19f9b"
+        }
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "source": "sinclair-zx-spectrum/basic/locksmith/teaching/verification/evidence/finished/open.png",
+      "website": "public/images/sinclair-zx-spectrum/basic/locksmith/teaching/open.png",
+      "sha256": "75486307566e82c8ed29383341272d3121d47aa61fb33e8b6acec264637337ad",
+      "visuallyInspected": true
+    },
+    {
+      "source": "sinclair-zx-spectrum/basic/locksmith/teaching/verification/evidence/finished/title.png",
+      "website": "public/images/sinclair-zx-spectrum/basic/locksmith/teaching/title.png",
+      "sha256": "dac265b87f56ebd3d005314c52b413ea0cc90c8db2a76410b4471e4104462651",
+      "visuallyInspected": true
+    },
+    {
+      "source": "sinclair-zx-spectrum/basic/locksmith/teaching/verification/evidence/history/deduction.png",
+      "website": "public/images/sinclair-zx-spectrum/basic/locksmith/teaching/deduction.png",
+      "sha256": "0002d505f0b85b65268ee370e355753f0f6ce5eba8086defdf46c41312a6bc57",
+      "visuallyInspected": true
+    }
+  ],
+  "productionBuild": {
+    "status": "passed",
+    "testsPassed": 69,
+    "testsSkipped": 9
+  },
+  "browserReview": {
+    "pageChecks": 40,
+    "sourceBlocks": 15,
+    "localLinks": 13,
+    "seriousOrCriticalAccessibilityViolations": 0,
+    "desktopAndMobile": true,
+    "lightAndDark": true
+  },
+  "legacyRedirects": 12,
+  "proseReview": {
+    "errors": 0,
+    "warnings": 0,
+    "suggestions": 2,
+    "note": "Two uses of easy describe editing and visual legibility, not learner ability; retained."
+  },
+  "sampleBaseline": "0cb6a31",
+  "gameRulesChanged": false
+}
