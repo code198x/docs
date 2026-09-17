@@ -1,6 +1,6 @@
 # Locksmith — teaching implementation
 
-The user accepted the native baseline and authorised the teaching progression. Seven independently ROM-entered checkpoints now support the [nine-lesson brief](lesson-brief.md). Sources live under `code-samples/sinclair-zx-spectrum/basic/locksmith/teaching/`. The final source is byte-identical to the accepted prototype at samples commit `e8272b9`. Replacement lesson prose and publication remain outstanding.
+The user accepted the native baseline and authorised the teaching progression. Seven independently ROM-entered checkpoints now support the [nine-lesson brief](lesson-brief.md). Sources live under `code-samples/sinclair-zx-spectrum/basic/locksmith/teaching/`. The final source is byte-identical to the accepted prototype at samples commit `e8272b9`. The replacement overview and nine lessons are authored on website branch `curriculum/locksmith-lessons`. Local review passes; user lesson approval and publication remain outstanding.
 
 ## Maintained programs
 
@@ -38,8 +38,12 @@ The actual history trial records:
 
 `verification/evidence/history/deduction.json` retains these values. A host enumeration of the 1,296 possible codes verifies the candidate counts. The learner can reason through the final six arrangements without implementing that enumeration. This is a visible-code worked example; no solver or hint system is added to the game.
 
-## Authoring handoff
+## Website authoring and review
 
-Author the overview and nine lessons from the maintained listings and exact transitions. Treat the first program as new rather than enumerating every line to add. Explain each temporary practice behaviour and its replacement. Keep input, stored numeric state, scoring and the printed history distinct: the endpoint does not keep a history array or read its picture to apply rules.
+The overview and nine lessons use the maintained listings through CodeFromFile, with exact add/replace instructions and full source disclosures. The first program is introduced as new. The lessons explain temporary practice behaviours, repeated-digit counterexamples, the recorded deduction trace and the difference between retained printed history and an array of guesses.
 
-Check the brief's primary-manual source leads and shared setup/save routes during prose authoring. Include repeated-digit counterexamples and the recorded deduction trace. Native approval applies to the final game; independent learner outcomes remain untested. Performance/assembly investigations stay deferred, and the earlier published Locksmith lessons remain available until replacements are approved.
+The review catalogue places Locksmith after Crates in Boards and deduction while preserving its numeric identity, 13, and the other games' identifiers. Twelve redirects preserve the six older lesson topics under both URL prefixes. A What's New entry remains a draft. Three original execution captures accompany the overview, deduction and title lessons.
+
+The public manual chapters were checked during authoring, including chapter 4 for FOR loops and chapter 11 for random numbers. Setup and tape recovery link to Meet BASIC. The production build passes, including 69 tests with nine existing skips. All 40 desktop/mobile and light/dark page checks pass: 15 rendered source blocks match the samples, all 13 local links and anchors resolve, question disclosures respond to the keyboard, and no overflow, broken images, browser errors or serious/critical accessibility findings were detected. Twelve topic redirects resolve with noindex. Vale reports no errors or warnings; two advisory uses of “easy” were retained because they describe editing and visual legibility. Original capture bytes match their website copies, and representative desktop/mobile renders were inspected. See [website-review.json](verification/website-review.json) and [website-manifest.json](verification/website-manifest.json).
+
+Native approval applies to the final game; independent learner outcomes remain untested. Performance/assembly investigations stay deferred. The earlier published lessons remain available until the replacements are approved and published.

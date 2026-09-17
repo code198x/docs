@@ -1,6 +1,6 @@
 # Locksmith — BASIC prototype brief
 
-**Status:** The user selected Locksmith after the remaining-course review. The user accepted the native trial: “Locksmith is great”. Retain its rules and ten-guess difficulty as the BASIC baseline; the [nine-lesson progression](lesson-brief.md) now has seven [verified checkpoints](lessons.md). See the [execution record](prototype.md).
+**Status:** The user selected Locksmith after the remaining-course review. The user accepted the native trial: “Locksmith is great”. Retain its rules and ten-guess difficulty as the BASIC baseline; the [nine-lesson progression](lesson-brief.md) now has seven [verified checkpoints](lessons.md). The overview and nine replacement lessons are authored for local review. See the [execution record](prototype.md).
 **Target:** Stock 48K PAL ZX Spectrum, Sinclair BASIC, keyboard and ROM-loaded tape. No machine-code helper.
 **Evidence:** The earlier six lessons and `code-samples/sinclair-zx-spectrum/basic/locksmith/unit-06/locksmith.bas` supply the repeated-digit scoring algorithm. The new trial lives in `code-samples/sinclair-zx-spectrum/basic/locksmith/prototype/`. Existing published lessons remain available during development.
 
@@ -22,7 +22,7 @@ The title's lock panel is original text artwork. No borrowed assets or custom fo
 
 ## Teaching role
 
-Locksmith is a candidate for Boards and deduction alongside Sonar and Crates. It extends combining clues with an algorithm for matching repeated values. Arrays and loops are recalled locally rather than treated as attendance requirements. Separate the stored code, current editable guess, scoring and display.
+The replacement website catalogue places Locksmith in Boards and deduction alongside Sonar and Crates. It extends combining clues with an algorithm for matching repeated values. Arrays and loops are recalled locally rather than treated as attendance requirements. Separate the stored code, current editable guess, scoring and display.
 
 The central algorithm counts each digit in both arrays, sums the smaller count for each value, then subtracts exact matches to obtain OTHER. Compare it with a naive pairwise search that can count one occurrence several times. A worked example with repeated digits is essential. A later Pattern Library entry could explain matching multisets, but the game must supply its own explanation.
 

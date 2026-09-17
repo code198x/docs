@@ -1,6 +1,6 @@
 # Locksmith — teaching progression
 
-**Status:** The user accepted the native game and authorised development of its teaching progression. This nine-lesson decomposition uses seven independently runnable programs. Verification evidence belongs in the [implementation record](lessons.md); full replacement lesson prose and publication are later work.
+**Status:** The user accepted the native game and authorised development of its teaching progression. This nine-lesson decomposition uses seven independently runnable programs. Verification evidence belongs in the [implementation record](lessons.md); the overview and nine replacement lessons are now authored for local review. Publication awaits lesson approval.
 
 **Endpoint:** Preserve `code-samples/sinclair-zx-spectrum/basic/locksmith/prototype/locksmith.bas` at samples commit `e8272b9`. The final checkpoint must be byte-identical. Four digits from 1–6, repeated digits, ten attempts, numeric EXACT/OTHER clues, visible history, editable input, R for a new round, Q to quit and deliberate silence remain unchanged.
 
@@ -38,7 +38,7 @@ Use 1122 as the visible code. Compare 1111, 2222, 2211, 1212, 1234, 1112, 3456, 
 
 For lesson six, the executed history trace supports 1111 → 2/0, 2222 → 2/0, and 2211 → 0/4. A host enumeration can establish candidate counts as verification evidence; the learner reasons through the final six arrangements. Do not add a solver or hint feature to the game.
 
-During prose authoring, check Steven Vickers, edited by Robin Bradbeer, *ZX Spectrum BASIC Programming*, second edition (1983): chapters 5 (subroutines), 7–9 (expressions, strings and functions), 11–14 (loops, arrays, conditions and characters), 15–16 (PRINT and colour), 18 (keyboard input) and 20 (tape files). These are source leads, not completed publication citations. Check the canonical Meet BASIC setup/save routes and Foundations array material when linking them; keep the essential explanations local.
+During prose authoring, check Steven Vickers, edited by Robin Bradbeer, *ZX Spectrum BASIC Programming*, second edition (1983): chapters 4–5 (loops and subroutines), 7–9 (expressions, strings and functions), 11–14 (random numbers, arrays, conditions and characters), 15–16 (PRINT and colour), 18 (keyboard input) and 20 (tape files). The authored lessons cite the relevant public manual chapters and link the canonical Meet BASIC setup/save routes. Essential explanations remain local.
 
 ## Verification and boundaries
 
