@@ -1,6 +1,6 @@
 # Locksmith — BASIC prototype brief
 
-**Status:** The user selected Locksmith after the remaining-course review. The user accepted the native trial: “Locksmith is great”. Retain its rules and ten-guess difficulty as the BASIC baseline; the replacement lesson progression remains to be defined. See the [execution record](prototype.md).
+**Status:** The user selected Locksmith after the remaining-course review. The user accepted the native trial: “Locksmith is great”. Retain its rules and ten-guess difficulty as the BASIC baseline; the [nine-lesson progression](lesson-brief.md) now has seven [verified checkpoints](lessons.md). See the [execution record](prototype.md).
 **Target:** Stock 48K PAL ZX Spectrum, Sinclair BASIC, keyboard and ROM-loaded tape. No machine-code helper.
 **Evidence:** The earlier six lessons and `code-samples/sinclair-zx-spectrum/basic/locksmith/unit-06/locksmith.bas` supply the repeated-digit scoring algorithm. The new trial lives in `code-samples/sinclair-zx-spectrum/basic/locksmith/prototype/`. Existing published lessons remain available during development.
 
@@ -26,18 +26,9 @@ Locksmith is a candidate for Boards and deduction alongside Sonar and Crates. It
 
 The central algorithm counts each digit in both arrays, sums the smaller count for each value, then subtracts exact matches to obtain OTHER. Compare it with a naive pairwise search that can count one occurrence several times. A worked example with repeated digits is essential. A later Pattern Library entry could explain matching multisets, but the game must supply its own explanation.
 
-## Candidate runnable progression
+## Teaching progression
 
-| Stage | Result | New relationship | Check |
-|---|---|---|---|
-| Enter a guess | Four editable digit cells | Input state, length and allowed values | Empty, short, full, excess, delete and held input |
-| Find exact matches | One known practice code and exact count | Position-by-position array comparison | Zero through four matches |
-| Count the other matches | Correct scores with repeated digits | Frequency counts and limiting each occurrence | Overrepresented guesses, swapped positions, no matches |
-| Keep the evidence | One board with guess history | A result must remain available for later reasoning | Every row preserves its input and score |
-| Play a complete round | Hidden random code, ten attempts, outcomes and replay | State lifetime and the complete play cycle | Win, exhaustion, fresh code and quit |
-| Keep the game | Self-starting saved tape | Program entry and recoverable storage | Fresh ROM load reproduces the game |
-
-These are candidate stages, not an agreed lesson count. The initial deliverable is the complete playable trial.
+The [lesson brief](lesson-brief.md) defines nine lessons supported by seven [executed checkpoints](lessons.md): board, editable guess, exact scoring, repeated-digit clues, visible history, hidden random rounds and the accepted title/game. Deduction and saving reuse existing programs. The final teaching source is byte-identical to the accepted prototype. Full replacement lesson prose and publication are next.
 
 ## Tools and verification
 

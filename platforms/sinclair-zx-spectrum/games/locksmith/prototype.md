@@ -18,6 +18,6 @@ Checks cover ignored characters, incomplete submission, D and ROM DELETE, deleti
 
 Original title, board, mid-round, win and loss captures were visually inspected. The review found stale “enter four digits” advice behind the revealed code; line 5200 now clears that row. Line 5000 uses “Attempts used” to avoid a plural label on a one-guess win. Both changes were entered through the ROM and saved, followed by the complete fresh-load regression run. The user played the version with source SHA-256 `b094a9a92c854ba3e6c1f09e57e39ab7aed3735c1b726ae48bd5df67a56d7d85`; the maintained version differs only in these result-display lines. Native acceptance applies to the same rules and difficulty; the subsequent display cleanup has automated and visual verification.
 
-## Next work
+## Teaching handoff
 
-Retain this baseline and define the teaching progression. The brief's candidate stages are not yet an agreed lesson count. Develop explicit repeated-digit examples, exact source transitions and independently executed checkpoints before authoring replacement lessons. Published earlier Locksmith lessons remain unchanged. Assembly and performance investigations remain deferred.
+The [nine-lesson progression](lesson-brief.md) has seven [executed teaching checkpoints](lessons.md), with the final source identical to this baseline. Next author the overview and replacement lessons from those maintained programs. Published earlier Locksmith lessons remain unchanged. Assembly and performance investigations remain deferred.
