@@ -1,6 +1,6 @@
 # Quickstep — game brief
 
-**Status:** Agreed BASIC baseline after native play. The user accepted the expanded six-lane version and authorised its teaching progression. The [lesson brief](lesson-brief.md) defines ten planned lessons using eight source checkpoints; intermediate listings and lessons remain to be developed.
+**Status:** Agreed BASIC baseline after native play. The user accepted the expanded six-lane version and authorised its teaching progression. The [lesson brief](lesson-brief.md) defines ten lessons supported by eight [executed checkpoints](lessons.md); full lesson prose remains to be developed.
 **Target:** Stock 48K PAL ZX Spectrum, Sinclair BASIC, keyboard and ROM-loaded tape. No machine-code helper or expansion.
 **Sources:** `code-samples/sinclair-zx-spectrum/basic/quickstep/prototype/`. The earlier catalogue supplies only the name and hazard-pattern theme; no earlier playable implementation was found.
 
@@ -28,7 +28,7 @@ Potential teaching includes periodic events, different update rates, input buffe
 
 ## Development and verification
 
-The [teaching progression](lesson-brief.md) builds a one-lane crossing before expanding to the accepted board. Timing, collision order and buffered input receive separate explanations and checks. Derive and execute its maintained intermediate programs before authoring the full lessons.
+The [teaching progression](lesson-brief.md) builds a one-lane crossing before expanding to the accepted board. Timing, collision order and buffered input receive separate explanations and checks. Its maintained intermediate programs are derived and executed; author the full lessons from those verified states.
 
 Enter the maintained source through the stock ROM keyboard, save a self-starting tape, and load it in a fresh process. Check source identity, an independent host occupancy model, both wrap directions, safe waits, bounds, both contact phases, a complete crossing, frozen results, retry and phase exits. Check short and held input with ordinary video-frame execution separately from CPU-stepped state checks. Retain original screenshots, source/tape/executable hashes and observed timing. The six-lane baseline is accepted after native play; original-hardware performance remains unmeasured.
 

@@ -1,6 +1,6 @@
 # Quickstep — lesson brief
 
-**Status:** The user accepted the expanded native trial — “Yes, that's a much more complete game” — and agreed to retain it as the BASIC baseline and define the teaching progression. This decomposition plans ten lessons and eight standalone source checkpoints. Intermediate programs have not yet been derived or executed; the lesson count can change if that work exposes an explanation that needs more room.
+**Status:** The user accepted the expanded native trial — “Yes, that's a much more complete game” — and agreed to retain it as the BASIC baseline and define the teaching progression. Eight independently ROM-entered and executed checkpoints now support this ten-lesson decomposition; see the [implementation record](lessons.md). Full lesson prose remains to be authored.
 
 **Endpoint:** `code-samples/sinclair-zx-spectrum/basic/quickstep/prototype/quickstep.bas`, accepted at samples commit `298e5cd`. Preserve its 15×9 board, six lanes, three vehicles per lane, original artwork, phases, periods, collision order, controls, input handling and silence. Stock 48K PAL Sinclair BASIC, with no machine-code helper. The final teaching source must be byte-identical to this listing. Apply the [game brief](brief.md), [unit specification](../../../../specifications/unit.md) and [execution record](prototype.md).
 
@@ -60,7 +60,7 @@ Only due lanes redraw. A resting player need not disappear while other lanes are
 
 ## Derivation, verification and sources
 
-Next derive complete sources under `quickstep/teaching/`, with exact editing transitions. Enter each through the stock ROM, save an auto-starting tape and load it in a fresh emulator process. Verify stored lines, literal branch targets, tape checksums, source identities and the final byte-for-byte match. Intermediate checkpoints are not verified by the endpoint's 20 passed check groups.
+Complete sources and exact editing transitions are maintained under `quickstep/teaching/`; the [implementation record](lessons.md) owns their execution evidence. Enter each through the stock ROM, save an auto-starting tape and load it in a fresh emulator process. Verify stored lines, literal branch targets, tape checksums, source identities and the final byte-for-byte match. Intermediate checkpoints are not verified by the endpoint's 20 passed check groups.
 
 Check the practice board's bounds and background restoration; manual lane wrap and string/phase agreement; countdown and frame-byte wraps; both collision phases; the one-lane victory; all full-board row mappings; input before and after buffering; frozen results; reset; and title/play/result exits. Compare keyboard-driven state transitions with an independent occupied-cell model. Observe ordinary video frames separately from CPU-stepped checks, retain original captures and compare their bitmap and attributes with live RAM. No game-state injection may be described as ordinary play. Preserve the regression that observes update counters rather than assuming every brief visit to the polling line will be sampled.
 

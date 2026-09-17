@@ -1,6 +1,6 @@
 # Quickstep prototype record
 
-The user chose crossing and timing as the next BASIC prototype after Drift. The [bounded brief](brief.md) now has a runnable 48K PAL Sinclair BASIC listing and self-starting tape in `code-samples/sinclair-zx-spectrum/basic/quickstep/prototype/`. The first native trial worked, but the user found it too easy and too small. The user accepted the larger six-lane revision: “Yes, that's a much more complete game”. They agreed to retain it as the BASIC baseline and develop the [teaching progression](lesson-brief.md). The intermediate checkpoints and lessons are not yet implemented; nothing is published on the website.
+The user chose crossing and timing as the next BASIC prototype after Drift. The [bounded brief](brief.md) now has a runnable 48K PAL Sinclair BASIC listing and self-starting tape in `code-samples/sinclair-zx-spectrum/basic/quickstep/prototype/`. The first native trial worked, but the user found it too easy and too small. The user accepted the larger six-lane revision: “Yes, that's a much more complete game”. They agreed to retain it as the BASIC baseline and develop the [teaching progression](lesson-brief.md). Eight [executed teaching checkpoints](lessons.md) now preserve this endpoint. Full lesson prose is not yet authored, and nothing is published on the website.
 
 ## Implemented trial
 
