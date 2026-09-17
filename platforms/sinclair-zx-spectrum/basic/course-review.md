@@ -1,6 +1,6 @@
 # Spectrum BASIC — grouping and remaining-course review
 
-The user agreed the four groups below. The website module catalogue owns their membership and order. This review recommends how to assess the remaining material; it does not approve a new lineup, retire existing lessons or authorise a prototype.
+The user agreed the four groups below. The website module catalogue owns their membership and order. This review recommends how to assess the remaining material; it does not approve a new lineup or retire existing lessons. The user subsequently selected Locksmith for the next bounded prototype; its [current brief](../games/locksmith/brief.md) owns that trial.
 
 ## Agreed grouping
 

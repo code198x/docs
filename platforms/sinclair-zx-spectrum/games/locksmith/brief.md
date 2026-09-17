@@ -1,119 +1,48 @@
-# Locksmith — Brief
+# Locksmith — BASIC prototype brief
 
-> **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
+**Status:** The user selected Locksmith after the remaining-course review. The user accepted the native trial: “Locksmith is great”. Retain its rules and ten-guess difficulty as the BASIC baseline; the replacement lesson progression remains to be defined. See the [execution record](prototype.md).
+**Target:** Stock 48K PAL ZX Spectrum, Sinclair BASIC, keyboard and ROM-loaded tape. No machine-code helper.
+**Evidence:** The earlier six lessons and `code-samples/sinclair-zx-spectrum/basic/locksmith/unit-06/locksmith.bas` supply the repeated-digit scoring algorithm. The new trial lives in `code-samples/sinclair-zx-spectrum/basic/locksmith/prototype/`. Existing published lessons remain available during development.
 
-**Title (working):** Locksmith
-**System / Track:** Sinclair ZX Spectrum / BASIC
-**Position:** Volume 2 — Patterns of State
-**Headline concept:** Deduction — encoded clues, reasoned through
-**Embedded concept:** Information layering — each guess reveals more than the answer
-**Topics:** 8 topics, ~8–12 hours
-**Constraint position:** period-faithful
+## Experience
 
-Format: [Game brief](../../../../specifications/brief.md)
+Crack one hidden four-digit code. Each digit is 1–6 and may repeat. Submit a guess, read two aggregate clues, and combine them with earlier results. EXACT counts correct digits in their correct positions; OTHER counts correct digits in different positions. Each occurrence can contribute only once. The clues describe the guess as a whole, not individual positions.
 
----
+The first trial allows ten guesses, retains every submitted guess and both counts on one screen, and reveals the code after success or exhaustion. Repeating a guess consumes a turn. R begins a new random code; Q quits from title, play or result. The ten-guess limit is retained after native acceptance. Repeated digits are part of the baseline, reconciling the old source and the contradictory old brief.
 
-## 1. Pedagogical Role
+The pleasure should come from testing a hypothesis and narrowing the possibilities. There is no timer, reflex requirement, changing secret or misleading clue. Initial scope excludes a computer solver, hints, difficulty modes, cumulative scores, campaign and encryption narrative. If ten guesses encourage arbitrary attempts rather than reasoning, revise the budget or feedback after native play.
 
-Teach numeric arrays as indexed storage for game state — so the learner arrives at Sonar able to use arrays for grids, not just lists.
+## Presentation and controls
 
----
+Use a dark one-screen board with four spaced digit cells per row, clearly labelled EXACT and OTHER columns, and an editable guess beneath the history. Digits and numeric clues carry all essential information. Colour reinforces the labels but never determines scoring or which digit matched. Title instructions explain repetitions and single counting. Deliberate silence keeps the trial focused on deduction.
 
-## 2. Classic Ancestors
+Digits 1–6 fill the guess. D or the Spectrum DELETE key removes its last digit. Enter submits exactly four digits. Other characters and excess digits do not change the guess; incomplete submission keeps the same attempt. A held digit produces one entry until released. Input editing and replay are part of the game, not ROM command-entry exercises.
 
-- **Mastermind** (Mordecai Meirowitz, 1970) — the code-breaking board game. The mechanic: guess a hidden sequence, receive clues ("right colour right place", "right colour wrong place"), reason your way to the answer.
-- **Bulls and Cows** — the pencil-and-paper predecessor. "Bulls" for exact matches, "cows" for right-digit-wrong-position. Predates Mastermind by decades.
+The title's lock panel is original text artwork. No borrowed assets or custom font are needed for this trial.
 
----
+## Teaching role
 
-## 3. Core Experience
+Locksmith is a candidate for Boards and deduction alongside Sonar and Crates. It extends combining clues with an algorithm for matching repeated values. Arrays and loops are recalled locally rather than treated as attendance requirements. Separate the stored code, current editable guess, scoring and display.
 
-The computer picks a secret code — four coloured pegs (represented as digits 1–6). You guess a code. The computer tells you how many are the right colour in the right position (bulls) and how many are the right colour in the wrong position (cows). Reason through the clues. Crack the code in as few guesses as possible.
+The central algorithm counts each digit in both arrays, sums the smaller count for each value, then subtracts exact matches to obtain OTHER. Compare it with a naive pairwise search that can count one occurrence several times. A worked example with repeated digits is essential. A later Pattern Library entry could explain matching multisets, but the game must supply its own explanation.
 
----
+## Candidate runnable progression
 
-## 4. Visual Direction
+| Stage | Result | New relationship | Check |
+|---|---|---|---|
+| Enter a guess | Four editable digit cells | Input state, length and allowed values | Empty, short, full, excess, delete and held input |
+| Find exact matches | One known practice code and exact count | Position-by-position array comparison | Zero through four matches |
+| Count the other matches | Correct scores with repeated digits | Frequency counts and limiting each occurrence | Overrepresented guesses, swapped positions, no matches |
+| Keep the evidence | One board with guess history | A result must remain available for later reasoning | Every row preserves its input and score |
+| Play a complete round | Hidden random code, ten attempts, outcomes and replay | State lifetime and the complete play cycle | Win, exhaustion, fresh code and quit |
+| Keep the game | Self-starting saved tape | Program entry and recoverable storage | Fresh ROM load reproduces the game |
 
-- INVERSE header bar. DRAW padlock on title screen (DRAW body + CIRCLE shackle, ~4 commands).
-- **UDG Mastermind pegs:** bull peg (CHR$ 144, filled circle, INK 2 red) and cow peg (CHR$ 145, ring outline, INK 7 white). Defined with DATA/READ/POKE at game start.
-- Each guess row shows: 4-digit guess, then UDG peg symbols for bulls and cows. Visual Mastermind language.
-- DRAW vertical separator between guess column and peg column. DRAW rectangle framing the history area.
-- Title screen: four block-graphic `?` characters in coloured cells — the hidden code visualised.
+These are candidate stages, not an agreed lesson count. The initial deliverable is the complete playable trial.
 
----
+## Tools and verification
 
-## 5. Audio Direction
+Build on the existing ROM keyboard-entry harness, using Emu198x Spectrum 0.25.0 and a configured lawful 48K ROM. SAVE produces a self-starting TAP; verification loads it through the ROM in fresh emulator processes. The host enters source and drives keys; it supplies no runtime helper.
 
-- **Bull.** High short tone per bull in the clue.
-- **Cow.** Lower short tone per cow.
-- **No bulls, no cows.** A flat tone — nothing matched.
-- **Code cracked.** Ascending fanfare.
+Compare actual BASIC scores with an independent host occurrence-matching model over multiple real rounds. Observe the randomly generated code for verification without writing it or any game state. Check four exact matches, zero matches where available, repeated-digit overcount cases, valid score bounds, full ten-row history, incomplete and invalid input, deletion, overflow, held digits, win, loss, new rounds and quit. Check tape blocks and stored-source identity. Retain and visually inspect original emulator captures.
 
----
-
-## 6. Level Design Direction
-
-- **Content source:** The secret code is randomly generated at the start — no DATA needed. Code length (4) and colour count (6) are the difficulty parameters.
-- **Difficulty curve.** Fixed difficulty — 4 pegs from 6 colours. The inherent difficulty of the deduction is the curve. Optional: the learner can adjust code length (3 for easy, 5 for hard) or colour count.
-- **Scale:** 10 guesses allowed. Experienced Mastermind players can solve in 5–6; 10 gives beginners room.
-- **Onboarding:** First guess is always uninformed — any 4 digits. The clue from the first guess is where deduction begins.
-
----
-
-## 7. Anti-goals
-
-- No computer-as-guesser mode — the player always guesses, the computer always sets. AI codebreaking is beyond V2 scope.
-- No duplicate-colour option at first — each colour appears at most once in the code (simplifies the bulls/cows algorithm). Duplicates are an optional extension.
-- No graphical pegs — colours shown as PAPER blocks or coloured numbers.
-- Maximum ~45 lines of BASIC.
-
----
-
-## 8. Topic Progression
-
-1. **A secret code.** Generate a random 4-digit code using a numeric array: `DIM c(4)`. Fill with random values 1–6: `FOR i = 1 TO 4: LET c(i) = INT(RND*6)+1: NEXT i`. Display as hidden: `? ? ? ?`. **New:** DIM for numeric arrays, filling arrays with a FOR loop. **Program:** ~8 lines.
-
-2. **The player guesses.** INPUT a 4-digit guess. Store in a second array: `DIM g(4)`. Parse the input digit by digit. Display the guess as coloured blocks. **New:** parsing a multi-digit input into array positions, displaying array contents. **Program:** ~14 lines.
-
-3. **Counting bulls.** Compare each position: `IF c(i) = g(i)` — that is a bull. Count them. Display the bull count after the guess. **New:** position-by-position array comparison. **Program:** ~18 lines.
-
-4. **Counting cows.** For each guess digit that is not a bull, check if it appears *anywhere* in the code (nested loop). Count cows. The nested loop — checking one array against another — is the core algorithm. **New:** nested FOR loops for cross-array searching. **Program:** ~24 lines.
-
-5. **Multiple guesses.** Wrap in a loop: up to 10 guesses. Each guess prints on a new row with its clue alongside. Previous guesses remain visible — the screen is a history of reasoning. **New:** accumulating display (no CLS between guesses), guess-limited loop. **Program:** ~28 lines.
-
-6. **Win and lose.** If all 4 are bulls, the player wins — reveal the code, show the guess count. If 10 guesses pass, reveal the code — "The code was: 3 1 5 2." **New:** win/lose conditions, revealing hidden state. **Program:** ~32 lines.
-
-7. **Colour and polish.** Each digit value mapped to a PAPER colour (1=red, 2=blue, etc.). Guess rows display as coloured blocks instead of numbers. The visual record becomes a colour puzzle. Add the title screen and replay prompt. **New:** numeric-to-colour mapping, the game as a visual artefact. **Program:** ~40 lines.
-
-8. **Make it yours.** Adjust the difficulty: code length 3 (easy) or 5 (hard), colour count 4 (easy) or 8 (hard). The arrays resize with DIM — the algorithm works unchanged. The design lesson: parameterised difficulty via array dimensions. **New:** parameterised design (one variable changes the game's feel). **Program:** ~45 lines.
-
----
-
-## 9. Ship Test
-
-- [ ] Every topic's code runs on a 48K Spectrum
-- [ ] Bull counting is correct (right colour, right position)
-- [ ] Cow counting is correct (right colour, wrong position) — no double-counting
-- [ ] Guess history displays correctly without overwriting previous rows
-- [ ] Win detection works (4 bulls)
-- [ ] Code reveal works at game end (win or lose)
-- [ ] British English throughout
-- [ ] Code samples in `/code-samples/`
-- [ ] Magazine voice
-
----
-
-## 10. Pattern Library Extractions
-
-- **basic** — DIM numeric arrays: indexed storage for game state. The foundation of grids, inventories, and positional data.
-- **basic** — position-by-position comparison: `IF a(i) = b(i)` across two arrays. The pattern behind every "how similar are these two sequences?" check.
-- **basic** — nested FOR search: checking whether a value from one array appears anywhere in another. The simplest "contains?" algorithm.
-
----
-
-## 11. Vault Tie-ins
-
-- **Mastermind** (Mordecai Meirowitz, 1970) — the code-breaking board game as direct ancestor.
-- **Bulls and Cows** — the pencil-and-paper predecessor to Mastermind.
-- **Deduction as game design** — the principle that each move reveals information, and the player's skill is in extracting maximum information per guess.
+Automated checks establish configuration-specific execution. The user accepted the native experience. Independent learner outcomes remain untested. Define and verify the teaching checkpoints before authoring replacement lessons.
