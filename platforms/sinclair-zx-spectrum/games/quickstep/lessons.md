@@ -1,6 +1,6 @@
 # Quickstep — teaching implementation
 
-Eight independently ROM-entered checkpoints now support the [ten-lesson progression](lesson-brief.md). They live under `code-samples/sinclair-zx-spectrum/basic/quickstep/teaching/`. The final source is byte-identical to the accepted six-lane prototype. Full lesson prose and website publication remain outstanding.
+Eight independently ROM-entered checkpoints now support the [ten-lesson progression](lesson-brief.md). They live under `code-samples/sinclair-zx-spectrum/basic/quickstep/teaching/`. The final source is byte-identical to the accepted six-lane prototype. The overview and ten lessons are authored and locally verified. User review and website publication remain outstanding.
 
 ## Maintained programs
 
@@ -45,8 +45,18 @@ These small, configuration-specific samples describe update commits, not input l
 
 `verification/evidence/planning.json` extracts two consecutive-update examples from actual `six-lanes` keyboard trials. At (9,4), waiting on the central strip lets lanes advance, then moving to (9,3) succeeds. In the second example, a sideways move from (7,7) to (8,7) succeeds, but waiting there lets the bottom lane advance from phase 9 to 8 and catch the player. Each example retains all starting phases and countdowns, so the lesson can ask for a prediction with enough information to answer it. Neither example relies on injected setup state.
 
-## Authoring handoff
+## Website authoring and local review
 
-Write the overview and ten lessons from these sources and exact transitions. Explain the practice-board expansion, scalar-to-array change, string rotation, collision order and one-key buffering locally. Use the verified planning examples for lesson seven and the short-tap comparison for lesson eight. Check primary BASIC citations and shared-page links during prose authoring; the lesson brief currently supplies source leads, not completed citations.
+The overview and ten lessons are authored on website branch `curriculum/quickstep-lessons`. Seventeen CodeFromFile blocks include maintained listings and exact editing transitions. The first listing begins a new program. Planning and saving reuse existing programs. Worked examples explain cell coordinates, character bytes, string rotation, frame-counter wrap, both collision checks, independent countdowns and the one-key input latch. Optional answer reveals give the reasoning.
 
-Keep the accepted six-lane game's rules, controls, artwork, silence and difficulty. Native acceptance applies to that unchanged endpoint; the intermediate programs have automated execution evidence, not independent learner review. Assembly and performance comparisons remain deferred until the initial BASIC versions are complete.
+Primary citations identify the relevant chapters of the original Sinclair BASIC Programming manual, including its system-variable table. Shared setup, saving and Foundations links were checked. Three unmodified emulator captures illustrate the practice board, six-lane crossing and successful finish.
+
+The production build passed: 69 tests passed and 9 skipped, followed by content checks, Astro generation and search indexing. Vale reports no errors or warnings and two suggestions. All prose add/replace/delete lists agree with the maintained transitions.
+
+`scripts/check-quickstep-review.mjs` passed 44 browser page checks: eleven pages on desktop and Pixel 7, in light and dark themes. All seventeen rendered code blocks match their maintained sources. Checks cover keyboard answer reveals, expanded listings, links and anchors, loaded images, one main heading, horizontal overflow and serious/critical Axe findings. Representative desktop and mobile captures were visually inspected. `verification/website-review.json` retains the browser results; `verification/website-manifest.json` identifies pages, included sources and original figures.
+
+The preview catalogue places Quickstep after Drift as game 9, with all ten lessons available. Existing later catalogue identifiers move up to make room; their URLs stay stable. The update article remains a draft and is absent from the built update pages and RSS feed. No merge or publication has occurred.
+
+## Review handoff
+
+Review the overview and ten lessons in the local website preview before publication. The accepted six-lane game's rules, controls, artwork, silence and difficulty are preserved. Native acceptance applies to that unchanged endpoint; intermediate programs have automated execution evidence, not independent learner review. Assembly and performance comparisons remain deferred until the initial BASIC versions are complete.
