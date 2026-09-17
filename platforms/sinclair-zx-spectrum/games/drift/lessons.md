@@ -1,6 +1,6 @@
 # Drift teaching implementation
 
-The user accepted the version with velocity feedback after native docking and agreed to build the teaching progression. Six standalone checkpoints now support the [eight-lesson brief](lesson-brief.md). The final listing is byte-identical to the accepted prototype. The overview and lesson prose have not yet been authored or published.
+The user accepted the version with velocity feedback after native docking and agreed to build the teaching progression. Six standalone checkpoints now support the [eight-lesson brief](lesson-brief.md). The final listing is byte-identical to the accepted prototype. The overview and eight lessons are authored on website branch `curriculum/drift-lessons` for local review. They are not yet approved or published.
 
 ## Checkpoints
 
@@ -29,8 +29,18 @@ Every retained PNG is original emulator output. Captures come from normal video-
 
 The audit replays every source transition, checks all literal branch targets, verifies fresh-loaded line identities and both TAP block checksums, and compares the final listing byte for byte with the accepted prototype. The final teaching tape also passes the maintained prototype control and timing tools.
 
+## Website authoring and local review
+
+The overview and eight lessons use the maintained checkpoints through CodeFromFile. The first listing is a new program; later edits name exact additions, replacements and deletions. Counterthrust and saving reuse their existing sources. Worked examples trace axis-aligned and diagonal triangle geometry, equal opposite burns, resultant speed and the joint position/speed docking test. Optional answer reveals include the reasoning.
+
+Primary citations point to the Sinclair manual’s relevant chapters for functions, arrays, graphics, control flow, keyboard input and tape files. The Foundations collection lesson and canonical Meet BASIC setup/save links were read and checked. Three unchanged emulator captures illustrate the first drawing, title and completed dock; the drawing caption identifies its STOP report.
+
+`npm run build` passed with 69 tests passed and 9 skipped, followed by the required content checks, Astro build and search index. Vale reports no errors, warnings or suggestions in the nine new pages. The source audit and all prose edit lists agree with the maintained checkpoint transitions.
+
+`scripts/check-drift-review.mjs` passed 36 browser page checks: overview plus eight lessons, desktop and Pixel 7, light and dark. Thirteen rendered source blocks match their maintained files byte for byte. Checks include keyboard answer reveals, expanded listings, local links and anchors, loaded images, one main heading, no horizontal page overflow and no serious/critical Axe findings. Representative captures were visually inspected. `verification/website-review.json` records browser results; `verification/website-manifest.json` identifies authored files, source references and original figures.
+
 ## Limits and next work
 
 The final teaching source has the same measured behaviour as the accepted endpoint. Its ordinary-frame run observed a median of 19 PAL frames at rest and 44 during held thrust; the latter sample includes the transition into burning. These are observations of one configuration, not fixed timing promises, host-input latency or original-hardware measurements. Intermediate programs perform less work and may run faster. CPU-stepped model traces are not timing benchmarks.
 
-Native approval belongs to the final game. Independent learner outcomes for the stages remain untested. The next bounded task is authoring the overview and eight lessons for local review, with precise primary citations, checked conceptual links and appropriate captures. No catalogue availability or publication state has changed. Performance/assembly revisits remain deferred.
+Native approval belongs to the final game. Independent learner outcomes for the stages remain untested. The next bounded task is user review of the overview and eight lessons in the built local preview. The branch catalogue places Drift after Brick Bash and exposes all eight pages locally. Drift becomes game 8. The earlier Dice Roller entry moves from identifier 8 to the unused 9, with its existing URLs and lesson prose unchanged. Public availability has not changed. Performance/assembly revisits remain deferred.

@@ -1,6 +1,6 @@
 # Drift — lesson brief
 
-**Status:** The user reported successful docking with the revised velocity display: “Yeah, I can dock fine”. They agreed to keep that BASIC version and develop its teaching progression. This decomposition uses six standalone checkpoints for eight lessons; counterthrust and saving reuse existing programs. Website prose and publication remain separate work.
+**Status:** The user reported successful docking with the revised velocity display: “Yeah, I can dock fine”. They agreed to keep that BASIC version and develop its teaching progression. This decomposition uses six standalone checkpoints for eight lessons; counterthrust and saving reuse existing programs. The overview and all eight lessons are now authored for local review. Publication remains pending.
 
 **Endpoint:** `code-samples/sinclair-zx-spectrum/basic/drift/prototype/drift.bas`. Keep the accepted eight headings, vector ship, arena, initial position, acceleration, speed cap, low-speed docking threshold, readout, controls and silence. Stock 48K PAL Sinclair BASIC, no machine-code helper. The final teaching listing must be byte-identical to the accepted prototype. Apply the [game brief](brief.md), [unit specification](../../../../specifications/unit.md) and [prototype evidence](prototype.md).
 
@@ -37,6 +37,6 @@ Graphics are original BASIC vector artwork. Keep the accepted colours, silence a
 
 Use fresh ROM keyboard entry and ROM-saved tapes for every checkpoint, then fresh loading and keyboard-driven execution. Read state and bitmap memory without injection. Verify exact line-edit transitions, literal branch targets, tape checksums and final-source identity. Retain observed traces and unmodified captures; compare captures with the live bitmap before using them in prose. Separate automated rules from native play feedback and original-hardware claims.
 
-For the later prose pass, check SIN/COS/PI, array indexing, graphics/OVER and tape commands against Steven Vickers, edited by Robin Bradbeer, *ZX Spectrum BASIC Programming* (Sinclair Research, second edition, 1983), using precise chapter/page locators. Source inspection and emulator execution establish this program's behaviour; they do not replace primary citations for general language or hardware claims. Select existing Foundations and Maths for Games links after checking the destination text. These are authoring tasks, not missing runtime dependencies.
+The authored prose checks SIN/COS/PI, array indexing, graphics/OVER and tape commands against Steven Vickers, edited by Robin Bradbeer, *ZX Spectrum BASIC Programming* (Sinclair Research, second edition, 1983), using precise chapter/page locators. Source inspection and emulator execution establish this program's behaviour; they do not replace primary citations for general language or hardware claims. The authored pages link to the Foundations collection lesson after explaining BASIC arrays locally, and to the canonical Meet BASIC entry/save workflow. No Maths for Games link is needed to understand the supplied geometry.
 
 The agreed performance/assembly revisit remains deferred until the initial BASIC versions are complete.
