@@ -1,0 +1,153 @@
+{
+  "status": "passed",
+  "publication": "User approved the overview and ten lessons; published after Drift as game 9. See publication.json.",
+  "pages": [
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/index.mdx",
+      "sha256": "ca8e86ff0989b3a5cf7d5519e03959f9fe47c9fc9cec71b9319e51fe30f327d3",
+      "sources": []
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-01-make-a-place-to-cross.mdx",
+      "sha256": "f0ccf90fcd6800cc37259371d298a88620760e45c7b33e266070d168aabcd7e5",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/board/quickstep.bas",
+          "sha256": "8250430cf4ca837d7cd9b1f4698e12a3cbc6b2d421e8b25b81cfcc54b1752951"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-02-take-one-step.mdx",
+      "sha256": "600c7e867f914498e685ceb857d3abe878a51402097fb1f3582b8331ab5219cf",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/walk/changes.bas",
+          "sha256": "7ae599fa561cc03c827b7d9770abcfd688361d348d1be6ddb932efcb64d420ac"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/walk/quickstep.bas",
+          "sha256": "5fbf80ae7d0db138a1b5572cb678415a0908921b0ea4373f28d25f3bcc5da4be"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-03-move-a-lane-around.mdx",
+      "sha256": "3e6dedadb862dfa6f43285b0ce4e5d391fc1e0d78fc61c3bc44f3c211931ece9",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/lane/changes.bas",
+          "sha256": "8e8fd3691127a5b5835587f911d05950b2cdbc81f9ef46f0675aa81add986b46"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/lane/quickstep.bas",
+          "sha256": "83a269e7375d015eaa60b31620a8c0368c1d856331a14a34e583534bcbd09942"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-04-let-traffic-keep-moving.mdx",
+      "sha256": "3ef4ebea02bdbfec1976345a947a10bdb7879760660a997078084a15ba8bb075",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/clock/changes.bas",
+          "sha256": "3d5b119032e8671422cb9ed7b6af6430fd2eec37d09ebae88de4fa440fa3ee34"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/clock/quickstep.bas",
+          "sha256": "fe8dc868422cc9a99f45f56a5a13d42a8f399e4c1f5f9c9e094796a73e16afcf"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-05-check-the-gap-twice.mdx",
+      "sha256": "85cc25a75b2dfdd331713ab2af89a1deaa4bb222ddd33ae5d6f007b392af0e09",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/crossing/changes.bas",
+          "sha256": "988e9ca3fa7989aac0511868fd3535c36ff199ec439f13c8b3f3eb792c03d22e"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/crossing/quickstep.bas",
+          "sha256": "691cf5c1e0f2ad288390869e638fd8d5537b67697a6fbb1282655547588b9b24"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-06-cross-two-banks-of-traffic.mdx",
+      "sha256": "dbaf488c0b6e9bffb8891e8b4c852eab35480799137f4182c6980ced5f55f693",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/six-lanes/changes.bas",
+          "sha256": "8841e44083d751b8dcf0dc356715ed222dc0f607942f2d244e00c3593f993b4b"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/six-lanes/quickstep.bas",
+          "sha256": "ff2326e1aa1f34c3b9a9b5d5a49d401be13effeed9c23291094158907bfba301"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-07-look-beyond-the-next-gap.mdx",
+      "sha256": "fa6f65af4c80bd366ed05762cdc63ee53964ec3d3fc65e67ccfbd4f2b43975b9",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/six-lanes/quickstep.bas",
+          "sha256": "ff2326e1aa1f34c3b9a9b5d5a49d401be13effeed9c23291094158907bfba301"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-08-remember-a-short-press.mdx",
+      "sha256": "274a496ea8099aad98e113f2ad65851c416e347e75ef13de09e7a88852e9e28e",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/buffered/changes.bas",
+          "sha256": "f32e87e978cd3f49d4b59fde3fbebe6eb47393f0ae3400b6bad5457818f9a918"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/buffered/quickstep.bas",
+          "sha256": "560ce84e08d7c4e967d7574123278d3f75ec0b2e6579c17af85fcc34456f8324"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-09-present-the-crossing.mdx",
+      "sha256": "9e72e23052800ef4427bec8e9eca04ab1e65310c9ff1edf7b0cfe47f01e59557",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/finished/changes.bas",
+          "sha256": "406d196d162d6df814453e32a6d33e8fb991fe0489bb7a526ca79508fbdbc2c9"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/finished/quickstep.bas",
+          "sha256": "18ef52cc1bb9fb2b77851dc160040835ab39b5aa14a4588125e77e4681a3e123"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-10-keep-the-game.mdx",
+      "sha256": "d95e813a14f7049b55a908488e18ab0e75446f143b6321b10512945580dbf55b",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/quickstep/teaching/finished/quickstep.bas",
+          "sha256": "18ef52cc1bb9fb2b77851dc160040835ab39b5aa14a4588125e77e4681a3e123"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "path": "public/images/sinclair-zx-spectrum/basic/quickstep/teaching/across.png",
+      "sha256": "af11f0fc02b3173e5a0f655fa2b0aa182c9304640b1f90c83b466a6e934d737e"
+    },
+    {
+      "path": "public/images/sinclair-zx-spectrum/basic/quickstep/teaching/board.png",
+      "sha256": "e77c0a081324ac96154b86035277a333a1b3df96ebfb91189f3d33ac5a14d138"
+    },
+    {
+      "path": "public/images/sinclair-zx-spectrum/basic/quickstep/teaching/six-lanes.png",
+      "sha256": "525b3411dd9c4193edeef70606bd47a659470c46f48285ebfe180ddc0f2a1983"
+    }
+  ]
+}
