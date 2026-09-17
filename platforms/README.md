@@ -13,6 +13,10 @@ Use these designs alongside authored lessons, sample sources and capture manifes
 | ZX Spectrum | [Volley](sinclair-zx-spectrum/games/volley/brief.md) | Eight approved lessons published; [prototype and teaching record](sinclair-zx-spectrum/games/volley/prototype.md) |
 | ZX Spectrum | [Touchdown](sinclair-zx-spectrum/games/touchdown/brief.md) | Moving lander and landscape scope agreed; [six-stage prototype](sinclair-zx-spectrum/games/touchdown/prototype.md) played; [eleven-lesson brief](sinclair-zx-spectrum/games/touchdown/lesson-brief.md) proposed for review |
 
+| ZX Spectrum | [Tail Chase](sinclair-zx-spectrum/games/tail-chase/brief.md) | Native prototype accepted; [execution record](sinclair-zx-spectrum/games/tail-chase/prototype.md); [twelve checkpoints and ten published lessons](sinclair-zx-spectrum/games/tail-chase/lessons.md) |
+
+The [BASIC performance-revisit proposal](sinclair-zx-spectrum/basic/performance-revisits.md) has an agreed basis but is deferred while the initial BASIC versions take priority. It explores how measured limits in existing games could motivate selected assembly work. It does not establish a performance ceiling or a replacement assembly sequence.
+
 ## Existing briefs
 
 | System | Game |
