@@ -1,6 +1,6 @@
 # Quickstep — teaching implementation
 
-Eight independently ROM-entered checkpoints now support the [ten-lesson progression](lesson-brief.md). They live under `code-samples/sinclair-zx-spectrum/basic/quickstep/teaching/`. The final source is byte-identical to the accepted six-lane prototype. The overview and ten lessons are authored and locally verified. User review and website publication remain outstanding.
+Eight independently ROM-entered checkpoints now support the [ten-lesson progression](lesson-brief.md). They live under `code-samples/sinclair-zx-spectrum/basic/quickstep/teaching/`. The final source is byte-identical to the accepted six-lane prototype. The overview and ten lessons are authored and locally verified. The user approved the overview and ten lessons after local review. They are published after Drift as game 9, with live publication checks passed.
 
 ## Maintained programs
 
@@ -55,8 +55,14 @@ The production build passed: 69 tests passed and 9 skipped, followed by content 
 
 `scripts/check-quickstep-review.mjs` passed 44 browser page checks: eleven pages on desktop and Pixel 7, in light and dark themes. All seventeen rendered code blocks match their maintained sources. Checks cover keyboard answer reveals, expanded listings, links and anchors, loaded images, one main heading, horizontal overflow and serious/critical Axe findings. Representative desktop and mobile captures were visually inspected. `verification/website-review.json` retains the browser results; `verification/website-manifest.json` identifies pages, included sources and original figures.
 
-The preview catalogue places Quickstep after Drift as game 9, with all ten lessons available. Existing later catalogue identifiers move up to make room; their URLs stay stable. The update article remains a draft and is absent from the built update pages and RSS feed. No merge or publication has occurred.
+The published catalogue places Quickstep after Drift as game 9, with all ten lessons available. Existing later catalogue identifiers move up to make room; their URLs stay stable. The update article remains a draft and is absent from the built update pages and RSS feed. The approved samples and lessons are merged and published.
 
-## Review handoff
+## Approval and scope
 
-Review the overview and ten lessons in the local website preview before publication. The accepted six-lane game's rules, controls, artwork, silence and difficulty are preserved. Native acceptance applies to that unchanged endpoint; intermediate programs have automated execution evidence, not independent learner review. Assembly and performance comparisons remain deferred until the initial BASIC versions are complete.
+The user approved the overview and ten lessons: “That looks good to me”. The approved samples were merged before the website; live publication checks pass. The accepted six-lane game's rules, controls, artwork, silence and difficulty are preserved. Native acceptance applies to that unchanged endpoint; intermediate programs have automated execution evidence, not independent learner review. Assembly and performance comparisons remain deferred until the initial BASIC versions are complete.
+
+## Publication
+
+The approved sources are merged in [samples PR 17](https://github.com/code198x/code-samples/pull/17), and the overview and ten lessons in [website PR 430](https://github.com/code198x/website/pull/430). All PR checks passed. The [Pages deployment](https://github.com/code198x/website/actions/runs/35237495270) succeeded. The live overview is [Quickstep](https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/).
+
+`verification/publication.json` records eleven live page responses and canonical URLs, seventeen source blocks matching maintained files, three original image hashes, eight published teaching tape hashes and the BASIC track link. The update article remains a draft and is absent from RSS. The approved game source is unchanged.

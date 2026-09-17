@@ -1,6 +1,6 @@
 # Quickstep — lesson brief
 
-**Status:** The user accepted the expanded native trial — “Yes, that's a much more complete game” — and agreed to retain it as the BASIC baseline and define the teaching progression. Eight independently ROM-entered and executed checkpoints now support this ten-lesson decomposition; see the [implementation record](lessons.md). The overview and ten lessons are authored and locally verified, awaiting user review before publication.
+**Status:** The user accepted the expanded native trial — “Yes, that's a much more complete game” — and agreed to retain it as the BASIC baseline and define the teaching progression. Eight independently ROM-entered and executed checkpoints now support this ten-lesson decomposition; see the [implementation record](lessons.md). The overview and ten lessons are approved by the user after local review; the overview and lessons are published after Drift as game 9.
 
 **Endpoint:** `code-samples/sinclair-zx-spectrum/basic/quickstep/prototype/quickstep.bas`, accepted at samples commit `298e5cd`. Preserve its 15×9 board, six lanes, three vehicles per lane, original artwork, phases, periods, collision order, controls, input handling and silence. Stock 48K PAL Sinclair BASIC, with no machine-code helper. The final teaching source must be byte-identical to this listing. Apply the [game brief](brief.md), [unit specification](../../../../specifications/unit.md) and [execution record](prototype.md).
 

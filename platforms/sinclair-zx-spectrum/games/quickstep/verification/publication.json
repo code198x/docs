@@ -1,0 +1,121 @@
+{
+  "tapes": [
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/quickstep/teaching/verification/evidence/board/quickstep.tap",
+      "sha256": "85dbc785fb7f957516a4e5d275603b17afb999ca277849f27d47b670e28d875b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/quickstep/teaching/verification/evidence/buffered/quickstep.tap",
+      "sha256": "a1b8291efb9f4a52decd0ba0ba8238a9a6009d7eb2c412c68152da22ed5a97e5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/quickstep/teaching/verification/evidence/clock/quickstep.tap",
+      "sha256": "81e945b29bf5ed8ccd0212eb854ce932bc8423829021422cffdef42a3808b2e1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/quickstep/teaching/verification/evidence/crossing/quickstep.tap",
+      "sha256": "b87c59cd8d46394482e96bf625b72a4d3034357322a4142c8a390d89d21595de"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/quickstep/teaching/verification/evidence/finished/quickstep.tap",
+      "sha256": "b1320f399aad0757011a4045f569c72992058d88c11a2632a6cadebb5e346398"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/quickstep/teaching/verification/evidence/lane/quickstep.tap",
+      "sha256": "7862274473e6964295e5bf9e3413500ab85244e071b3f090ae6737dae9f548da"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/quickstep/teaching/verification/evidence/six-lanes/quickstep.tap",
+      "sha256": "ad9426de6b607d454283b6a7f335ae041a16dd19a7e321d002cf82fd87c12727"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/quickstep/teaching/verification/evidence/walk/quickstep.tap",
+      "sha256": "80a05956eb0a3cc031a1a44926aa46ada5f69d37c1825dbc1360d53d963c4912"
+    }
+  ],
+  "status": "passed",
+  "pages": [
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/",
+      "status": "passed",
+      "source_blocks": 0,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-01-make-a-place-to-cross/",
+      "status": "passed",
+      "source_blocks": 1,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-01-make-a-place-to-cross/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-02-take-one-step/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-02-take-one-step/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-03-move-a-lane-around/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-03-move-a-lane-around/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-04-let-traffic-keep-moving/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-04-let-traffic-keep-moving/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-05-check-the-gap-twice/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-05-check-the-gap-twice/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-06-cross-two-banks-of-traffic/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-06-cross-two-banks-of-traffic/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-07-look-beyond-the-next-gap/",
+      "status": "passed",
+      "source_blocks": 1,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-07-look-beyond-the-next-gap/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-08-remember-a-short-press/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-08-remember-a-short-press/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-09-present-the-crossing/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-09-present-the-crossing/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-10-keep-the-game/",
+      "status": "passed",
+      "source_blocks": 1,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/quickstep/unit-10-keep-the-game/"
+    }
+  ],
+  "images": [
+    {
+      "url": "https://code198x.com/images/sinclair-zx-spectrum/basic/quickstep/teaching/across.png",
+      "sha256": "af11f0fc02b3173e5a0f655fa2b0aa182c9304640b1f90c83b466a6e934d737e"
+    },
+    {
+      "url": "https://code198x.com/images/sinclair-zx-spectrum/basic/quickstep/teaching/board.png",
+      "sha256": "e77c0a081324ac96154b86035277a333a1b3df96ebfb91189f3d33ac5a14d138"
+    },
+    {
+      "url": "https://code198x.com/images/sinclair-zx-spectrum/basic/quickstep/teaching/six-lanes.png",
+      "sha256": "525b3411dd9c4193edeef70606bd47a659470c46f48285ebfe180ddc0f2a1983"
+    }
+  ],
+  "landing": "Quickstep linked from BASIC track",
+  "announcement": "Draft excluded from RSS"
+}

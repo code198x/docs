@@ -1,6 +1,6 @@
 # Quickstep — game brief
 
-**Status:** Agreed BASIC baseline after native play. The user accepted the expanded six-lane version and authorised its teaching progression. The [lesson brief](lesson-brief.md) defines ten lessons supported by eight [executed checkpoints](lessons.md); the overview and ten lessons are authored and locally verified, awaiting user review before publication.
+**Status:** Agreed BASIC baseline after native play. The user accepted the expanded six-lane version and authorised its teaching progression. The [lesson brief](lesson-brief.md) defines ten lessons supported by eight [executed checkpoints](lessons.md); the overview and ten lessons are approved by the user after local review; the overview and lessons are published after Drift as game 9.
 **Target:** Stock 48K PAL ZX Spectrum, Sinclair BASIC, keyboard and ROM-loaded tape. No machine-code helper or expansion.
 **Sources:** `code-samples/sinclair-zx-spectrum/basic/quickstep/prototype/`. The earlier catalogue supplies only the name and hazard-pattern theme; no earlier playable implementation was found.
 
