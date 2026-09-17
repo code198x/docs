@@ -23,6 +23,8 @@ Original prose is licensed under **CC BY 4.0**. See [LICENSE.md](LICENSE.md) for
 The [Spectrum Meet BASIC specification](platforms/sinclair-zx-spectrum/basic/meet-basic.md) defines the agreed introduction through short projects and its relationship to the first substantial games.
 Its [lesson and source mapping](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) identifies reusable material, new checkpoints, verification and route migration work.
 
+The [Spectrum BASIC course review](platforms/sinclair-zx-spectrum/basic/course-review.md) records the agreed navigation groups and recommendations for the remaining games and proposals.
+
 ## Ownership and maintenance
 
 The [website](https://github.com/code198x/website) owns public lessons, catalogues and components. [Code samples](https://github.com/code198x/code-samples) owns runnable sources, assets and verification recipes. Those files establish implementation state; plans and prose counts do not.
