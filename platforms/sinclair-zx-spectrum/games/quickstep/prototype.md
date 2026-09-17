@@ -1,6 +1,6 @@
 # Quickstep prototype record
 
-The user chose crossing and timing as the next BASIC prototype after Drift. The [bounded brief](brief.md) now has a runnable 48K PAL Sinclair BASIC listing and self-starting tape in `code-samples/sinclair-zx-spectrum/basic/quickstep/prototype/`. The first native trial worked, but the user found it too easy and too small. A larger, harder revision is now open for play. The endpoint, difficulty and lesson sequence await further user feedback; nothing is published on the website.
+The user chose crossing and timing as the next BASIC prototype after Drift. The [bounded brief](brief.md) now has a runnable 48K PAL Sinclair BASIC listing and self-starting tape in `code-samples/sinclair-zx-spectrum/basic/quickstep/prototype/`. The first native trial worked, but the user found it too easy and too small. The user accepted the larger six-lane revision: “Yes, that's a much more complete game”. They agreed to retain it as the BASIC baseline and develop the [teaching progression](lesson-brief.md). The intermediate checkpoints and lessons are not yet implemented; nothing is published on the website.
 
 ## Implemented trial
 
@@ -18,12 +18,12 @@ The CPU-stepped checks compare keyboard-driven outcomes with an independent host
 
 Separate ordinary-frame checks exercise held movement at a boundary, a four-frame tap during update work, a complete crossing, retry, collision, and quit from title, active play and result. Original title, arena, success and collision PNGs are retained. Their top 176 display rows are compared with the live RAM bitmap and colour attributes; screenshots are neither reconstructed nor edited. Captures were visually inspected.
 
-`verification/evidence/manifest.json` records 20 passed execution check groups and audits the results, source/stored-line identities, both TAP block checksums and original capture hashes. CPU-stepped checks establish state transitions, not animation or timing. The native user's judgement of clarity, response and appeal remains a separate next check.
+`verification/evidence/manifest.json` records 20 passed execution check groups and audits the results, source/stored-line identities, both TAP block checksums and original capture hashes. CPU-stepped checks establish state transitions, not animation or timing. The subsequent native acceptance is separate evidence; the retained automated manifest predates that feedback.
 
 ## Timing and refinements
 
-The retained 1,200-frame resting trial observed 22 consecutive commit intervals, with a median of 46 PAL frames and a range of 25–99. This is slower than the smaller board’s median of 39 frames. These are commit-to-commit intervals, not input latency: lane work varies and the commit happens later within busy updates. The 32-frame target spaces update starts; it is not a fixed-rate guarantee. No catch-up burst occurs after an overrun. These observations apply to this emulator/configuration and are not original-hardware measurements. Native review needs to judge whether the fuller crossing remains responsive enough.
+The retained 1,200-frame resting trial observed 22 consecutive commit intervals, with a median of 46 PAL frames and a range of 25–99. This is slower than the smaller board’s median of 39 frames. These are commit-to-commit intervals, not input latency: lane work varies and the commit happens later within busy updates. The 32-frame target spaces update starts; it is not a fixed-rate guarantee. No catch-up burst occurs after an overrun. These observations apply to this emulator/configuration and are not original-hardware measurements. The user accepted this native version; that feedback does not establish original-hardware timing.
 
 The ordinary-frame crossing harness observes the update counter directly. Waiting specifically to sample line 200 could miss several updates on the busier board, leaving its planned commands behind the traffic. This was an observation error in the trial, not a change to the game’s collision rules. The revised harness completes the 16-update route, and the separate cadence check confirms every consecutive update was observed.
 
-The buffered input still passes the four-frame tap and held-key checks. The revised board and original captures have been inspected, and the native preview reopened. Difficulty and final teaching scope remain unapproved.
+The buffered input still passes the four-frame tap and held-key checks. The revised board and original captures have been inspected. Preserve the accepted source, difficulty and observed timing while deriving the teaching checkpoints; defer the assembly comparison until the initial BASIC versions are complete.
