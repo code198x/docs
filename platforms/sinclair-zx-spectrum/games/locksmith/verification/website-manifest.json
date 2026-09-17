@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "publication": "Local review only; awaiting user lesson approval. Earlier published lessons remain live.",
+  "publication": "User approved the overview and nine lessons; published in Boards and deduction after Crates. See publication.json.",
   "pages": [
     {
       "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/index.mdx",

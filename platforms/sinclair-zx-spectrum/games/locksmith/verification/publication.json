@@ -1,0 +1,181 @@
+{
+  "redirects": [
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-01/",
+      "target": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-02-edit-four-digits/",
+      "status": "passed"
+    },
+    {
+      "url": "https://code198x.com/sinclair-zx-spectrum/basic/locksmith/unit-01/",
+      "target": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-02-edit-four-digits/",
+      "status": "passed"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-02/",
+      "target": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-03-check-the-places/",
+      "status": "passed"
+    },
+    {
+      "url": "https://code198x.com/sinclair-zx-spectrum/basic/locksmith/unit-02/",
+      "target": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-03-check-the-places/",
+      "status": "passed"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-03/",
+      "target": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-04-count-each-digit-once/",
+      "status": "passed"
+    },
+    {
+      "url": "https://code198x.com/sinclair-zx-spectrum/basic/locksmith/unit-03/",
+      "target": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-04-count-each-digit-once/",
+      "status": "passed"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-04/",
+      "target": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-05-keep-earlier-clues/",
+      "status": "passed"
+    },
+    {
+      "url": "https://code198x.com/sinclair-zx-spectrum/basic/locksmith/unit-04/",
+      "target": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-05-keep-earlier-clues/",
+      "status": "passed"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-05/",
+      "target": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-07-hide-a-new-code/",
+      "status": "passed"
+    },
+    {
+      "url": "https://code198x.com/sinclair-zx-spectrum/basic/locksmith/unit-05/",
+      "target": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-07-hide-a-new-code/",
+      "status": "passed"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-06/",
+      "target": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-08-invite-the-player-in/",
+      "status": "passed"
+    },
+    {
+      "url": "https://code198x.com/sinclair-zx-spectrum/basic/locksmith/unit-06/",
+      "target": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-08-invite-the-player-in/",
+      "status": "passed"
+    }
+  ],
+  "announcement": "Prepared update remains draft; absent from RSS",
+  "status": "passed",
+  "pages": [
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/",
+      "status": "passed",
+      "source_blocks": 0,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-01-make-room-for-a-guess/",
+      "status": "passed",
+      "source_blocks": 1,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-01-make-room-for-a-guess/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-02-edit-four-digits/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-02-edit-four-digits/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-03-check-the-places/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-03-check-the-places/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-04-count-each-digit-once/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-04-count-each-digit-once/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-05-keep-earlier-clues/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-05-keep-earlier-clues/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-06-put-the-clues-together/",
+      "status": "passed",
+      "source_blocks": 1,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-06-put-the-clues-together/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-07-hide-a-new-code/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-07-hide-a-new-code/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-08-invite-the-player-in/",
+      "status": "passed",
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-08-invite-the-player-in/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-09-keep-the-game/",
+      "status": "passed",
+      "source_blocks": 1,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/locksmith/unit-09-keep-the-game/"
+    }
+  ],
+  "images": [
+    {
+      "url": "https://code198x.com/images/sinclair-zx-spectrum/basic/locksmith/teaching/open.png",
+      "sha256": "75486307566e82c8ed29383341272d3121d47aa61fb33e8b6acec264637337ad"
+    },
+    {
+      "url": "https://code198x.com/images/sinclair-zx-spectrum/basic/locksmith/teaching/title.png",
+      "sha256": "dac265b87f56ebd3d005314c52b413ea0cc90c8db2a76410b4471e4104462651"
+    },
+    {
+      "url": "https://code198x.com/images/sinclair-zx-spectrum/basic/locksmith/teaching/deduction.png",
+      "sha256": "0002d505f0b85b65268ee370e355753f0f6ce5eba8086defdf46c41312a6bc57"
+    }
+  ],
+  "tapes": [
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/locksmith/teaching/verification/evidence/board/locksmith.tap",
+      "sha256": "37906a0f7ea8dda493c801c37411f4a6708c3bcbc3527de66373a22d52cae4e3"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/locksmith/teaching/verification/evidence/clues/locksmith.tap",
+      "sha256": "923b4db7b73d83cfd3d6cfb8ffc85d782eb9e1f48cb2973c92d6609616a5cdf8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/locksmith/teaching/verification/evidence/editor/locksmith.tap",
+      "sha256": "54f67a3ecac0abf2f9e3229c58c14eeca740b7f22ef683a0aaf4a528327159e2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/locksmith/teaching/verification/evidence/exact/locksmith.tap",
+      "sha256": "79add3fe2677458bc709d37f94bd925a8cd0d8b9bb2bdebbad4159f39314fe24"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/locksmith/teaching/verification/evidence/finished/locksmith.tap",
+      "sha256": "df6d2e2ef18d78be701ca54bd3e6cf303a2e394dc732596a5d71725a4bcb02e7"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/locksmith/teaching/verification/evidence/history/locksmith.tap",
+      "sha256": "75a62762f3dc429dd4976424bf7b5ceca8c3fa9297b88223080e56c0675ddb7f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/locksmith/teaching/verification/evidence/round/locksmith.tap",
+      "sha256": "d0edd7c78fb4207d6d02692ca16e1c2ac47b2fc1efb94623e7aba8b18f4dd707"
+    }
+  ],
+  "course_group": "Boards and deduction",
+  "checks": 34,
+  "website_pr": "https://github.com/code198x/website/pull/432",
+  "samples_pr": "https://github.com/code198x/code-samples/pull/18",
+  "website_commit": "489885fe1db2d5f55c7ba1a8b8921b724a2a367a",
+  "samples_commit": "33d88ef5ee68f656de173b592b101cc98a78eb80",
+  "deployment": "https://github.com/code198x/website/actions/runs/35245117857",
+  "approval": "User approved the overview and nine lessons and authorised publication.",
+  "date": "2026-09-17"
+}

@@ -1,6 +1,6 @@
 # Locksmith — teaching progression
 
-**Status:** The user accepted the native game and authorised development of its teaching progression. This nine-lesson decomposition uses seven independently runnable programs. Verification evidence belongs in the [implementation record](lessons.md); the overview and nine replacement lessons are now authored for local review. Publication awaits lesson approval.
+**Status:** The user accepted the native game and authorised development of its teaching progression. This nine-lesson decomposition uses seven independently runnable programs. Verification evidence belongs in the [implementation record](lessons.md); the user-approved overview and nine replacement lessons are published, with live checks passed.
 
 **Endpoint:** Preserve `code-samples/sinclair-zx-spectrum/basic/locksmith/prototype/locksmith.bas` at samples commit `e8272b9`. The final checkpoint must be byte-identical. Four digits from 1–6, repeated digits, ten attempts, numeric EXACT/OTHER clues, visible history, editable input, R for a new round, Q to quit and deliberate silence remain unchanged.
 

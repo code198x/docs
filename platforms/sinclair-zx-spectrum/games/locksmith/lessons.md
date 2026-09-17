@@ -1,6 +1,6 @@
 # Locksmith — teaching implementation
 
-The user accepted the native baseline and authorised the teaching progression. Seven independently ROM-entered checkpoints now support the [nine-lesson brief](lesson-brief.md). Sources live under `code-samples/sinclair-zx-spectrum/basic/locksmith/teaching/`. The final source is byte-identical to the accepted prototype at samples commit `e8272b9`. The replacement overview and nine lessons are authored on website branch `curriculum/locksmith-lessons`. Local review passes; user lesson approval and publication remain outstanding.
+The user accepted the native baseline and authorised the teaching progression. Seven independently ROM-entered checkpoints now support the [nine-lesson brief](lesson-brief.md). Sources live under `code-samples/sinclair-zx-spectrum/basic/locksmith/teaching/`. The final source is byte-identical to the accepted prototype at samples commit `e8272b9`. The user-approved replacement overview and nine lessons are published through [website PR 432](https://github.com/code198x/website/pull/432), with samples published through [PR 18](https://github.com/code198x/code-samples/pull/18). Local and live checks pass.
 
 ## Maintained programs
 
@@ -42,8 +42,12 @@ The actual history trial records:
 
 The overview and nine lessons use the maintained listings through CodeFromFile, with exact add/replace instructions and full source disclosures. The first program is introduced as new. The lessons explain temporary practice behaviours, repeated-digit counterexamples, the recorded deduction trace and the difference between retained printed history and an array of guesses.
 
-The review catalogue places Locksmith after Crates in Boards and deduction while preserving its numeric identity, 13, and the other games' identifiers. Twelve redirects preserve the six older lesson topics under both URL prefixes. A What's New entry remains a draft. Three original execution captures accompany the overview, deduction and title lessons.
+The published catalogue places Locksmith after Crates in Boards and deduction while preserving its numeric identity, 13, and the other games' identifiers. Twelve redirects preserve the six older lesson topics under both URL prefixes. A What's New entry remains a draft. Three original execution captures accompany the overview, deduction and title lessons.
 
 The public manual chapters were checked during authoring, including chapter 4 for FOR loops and chapter 11 for random numbers. Setup and tape recovery link to Meet BASIC. The production build passes, including 69 tests with nine existing skips. All 40 desktop/mobile and light/dark page checks pass: 15 rendered source blocks match the samples, all 13 local links and anchors resolve, question disclosures respond to the keyboard, and no overflow, broken images, browser errors or serious/critical accessibility findings were detected. Twelve topic redirects resolve with noindex. Vale reports no errors or warnings; two advisory uses of “easy” were retained because they describe editing and visual legibility. Original capture bytes match their website copies, and representative desktop/mobile renders were inspected. See [website-review.json](verification/website-review.json) and [website-manifest.json](verification/website-manifest.json).
 
-Native approval applies to the final game; independent learner outcomes remain untested. Performance/assembly investigations stay deferred. The earlier published lessons remain available until the replacements are approved and published.
+Native approval applies to the final game; independent learner outcomes remain untested. Performance/assembly investigations stay deferred. The six earlier lesson URLs redirect by topic to their replacements.
+
+## Publication
+
+The approved release deployed successfully on 2026-09-17. Live checks confirm all ten pages and canonical URLs, all fifteen source blocks, three original images and seven downloadable teaching tapes. Twelve earlier URLs preserve topic redirects with noindex. The BASIC track lists Locksmith in Boards and deduction, and the prepared What's New post remains absent from RSS. See [publication.json](verification/publication.json) for URLs, hashes and the deployment record.

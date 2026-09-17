@@ -20,4 +20,4 @@ Original title, board, mid-round, win and loss captures were visually inspected.
 
 ## Teaching handoff
 
-The [nine-lesson progression](lesson-brief.md) has seven [executed teaching checkpoints](lessons.md), with the final source identical to this baseline. The overview and nine replacement lessons are authored from those maintained programs for local review. Published earlier Locksmith lessons remain unchanged until lesson approval. Assembly and performance investigations remain deferred.
+The [nine-lesson progression](lesson-brief.md) has seven [executed teaching checkpoints](lessons.md), with the final source identical to this baseline. The user-approved overview and nine replacement lessons are published from those maintained programs. Earlier URLs redirect by topic, and live publication checks pass. Assembly and performance investigations remain deferred.
