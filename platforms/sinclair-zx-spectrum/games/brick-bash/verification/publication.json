@@ -1,0 +1,162 @@
+{
+  "status": "passed",
+  "samples_pr": "https://github.com/code198x/code-samples/pull/15",
+  "samples_merge": "3f8476c878b46722263e29d0d61c96c68fa46e09",
+  "website_pr": "https://github.com/code198x/website/pull/428",
+  "website_merge": "7303b9623e674f7970c3576c5eb8b5106f627d22",
+  "deployment": "https://github.com/code198x/website/actions/runs/35215033753",
+  "browser": {
+    "local_page_checks": 44,
+    "live_desktop_light_pages_passed": 10,
+    "live_full_review": "Two attempts interrupted by network navigation timeouts; complete live HTML/source, canonical, image, tape and course checks used below.",
+    "live_source_blocks": 18
+  },
+  "checks": [
+    {
+      "url": "https://code198x.com/images/sinclair-zx-spectrum/basic/brick-bash/teaching/complete.png",
+      "status": 200,
+      "sha256": "3cb820fb8165d84d3f5dd4b56b15715019235e6fe014630da054b0f1b842c63b"
+    },
+    {
+      "url": "https://code198x.com/images/sinclair-zx-spectrum/basic/brick-bash/teaching/drawing.png",
+      "status": 200,
+      "sha256": "2dd49be0a086f50501a590fe4b0f60696192468265c9b2be0c5d5a75f8f7e5b7"
+    },
+    {
+      "url": "https://code198x.com/images/sinclair-zx-spectrum/basic/brick-bash/teaching/inspector.png",
+      "status": 200,
+      "sha256": "b17d5c1f0bb6bb65d412c9a63f41df998bc531db7999b82d0d3a3cb1d2fd2377"
+    },
+    {
+      "url": "https://code198x.com/images/sinclair-zx-spectrum/basic/brick-bash/teaching/one-brick-complete.png",
+      "status": 200,
+      "sha256": "e55316e23607b80115be9f402f2c57b89366f9ace3e18ffe65e59e603083a9fe"
+    },
+    {
+      "url": "https://code198x.com/images/sinclair-zx-spectrum/basic/brick-bash/teaching/ready.png",
+      "status": 200,
+      "sha256": "9f6371a93d1bb3868342f8fe21388a2d56dbe9f668e328f90d2545a1a5b2efe7"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/brick-bash/prototype/verification/bricks.tap",
+      "status": 200,
+      "sha256": "b1740ec0100b76aa463b1d9b960599e43bf3b9fd4b7fe5ee98ee646d3d81fca1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-01/bricks.tap",
+      "status": 200,
+      "sha256": "b84dc9d0053ba4e5e6cfa9f93bf278da2dc0db958f53aa1ce6f0c7bce0d1a90d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-02/bricks.tap",
+      "status": 200,
+      "sha256": "5ffaa9c993d4eafcfb352777ee50ed2c0b92e40f4ee8c3cd8cc0a9f1fb25117b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-03/bricks.tap",
+      "status": 200,
+      "sha256": "5b6e2f4d8e9f7703265530e1c2ddf5f2fa038b8fbfa888f05691d2e973e884d5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-04/bricks.tap",
+      "status": 200,
+      "sha256": "84ecb1850332249d77ae4368111ef5131998fe185c1963abb9ceaf6352e87d0c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-05/bricks.tap",
+      "status": 200,
+      "sha256": "934037d0301982f5af383eeb5ded6e8ddebfa6d900ead13be5817cc98e098c18"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-06/bricks.tap",
+      "status": 200,
+      "sha256": "eeb6bfd2d083fb9044b262c742a658af1cb74e7d964d6edd65e1ad8397e6f9b4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-07/bricks.tap",
+      "status": 200,
+      "sha256": "9bf7b3b94c9bcfad664aba4e2612deb5554918e819f00e4fe443617d18ad07f2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-08/bricks.tap",
+      "status": 200,
+      "sha256": "15aa3507d401309712df900876e6f27d1f895b0fa9c422294783d938f7ed0656"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-09/bricks.tap",
+      "status": 200,
+      "sha256": "b1740ec0100b76aa463b1d9b960599e43bf3b9fd4b7fe5ee98ee646d3d81fca1"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/",
+      "status": 200,
+      "course_order": "Tail Chase \u2192 Brick Bash"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/",
+      "status": 200,
+      "source_blocks": 0,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-01-draw-below-the-character-grid/",
+      "status": 200,
+      "source_blocks": 1,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-01-draw-below-the-character-grid/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-02-send-the-ball-bouncing/",
+      "status": 200,
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-02-send-the-ball-bouncing/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-03-put-the-paddle-under-your-control/",
+      "status": 200,
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-03-put-the-paddle-under-your-control/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-04-catch-the-falling-ball/",
+      "status": 200,
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-04-catch-the-falling-ball/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-05-break-one-brick/",
+      "status": 200,
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-05-break-one-brick/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-06-give-the-wall-an-address/",
+      "status": 200,
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-06-give-the-wall-an-address/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-07-break-the-whole-wall/",
+      "status": 200,
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-07-break-the-whole-wall/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-08-aim-with-the-paddle/",
+      "status": 200,
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-08-aim-with-the-paddle/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-09-finish-the-round/",
+      "status": 200,
+      "source_blocks": 2,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-09-finish-the-round/"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-10-keep-the-game/",
+      "status": 200,
+      "source_blocks": 1,
+      "canonical": "https://code198x.com/systems/sinclair-zx-spectrum/basic/brick-bash/unit-10-keep-the-game/"
+    }
+  ]
+}
