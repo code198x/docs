@@ -1,6 +1,6 @@
 # Spectrum BASIC — grouping and remaining-course review
 
-The user agreed the four groups below. The website module catalogue owns their membership and order. This review recommends how to assess the remaining material; it does not approve a new lineup or retire existing lessons. Locksmith’s approved replacement lessons are now published. The user subsequently selected [Three in a Row’s opponent review](../games/three-in-a-row/review.md); its [proposed prototype brief](../games/three-in-a-row/brief.md) awaits scope agreement.
+The user agreed the four groups below. The website module catalogue owns their membership and order. This review recommends how to assess the remaining material; it does not approve a new lineup or retire existing lessons. Locksmith’s approved replacement lessons are now published. The user subsequently selected [Three in a Row’s opponent review](../games/three-in-a-row/review.md); its [prototype brief](../games/three-in-a-row/brief.md) is authorised for implementation.
 
 ## Agreed grouping
 
@@ -60,7 +60,7 @@ This yields thirteen distinct concepts to review: six existing projects and seve
 ## Recommended sequence of decisions
 
 1. Locksmith’s bounded prototype and replacement lessons are accepted and published. Retain its verified ten-guess baseline.
-2. Three in a Row’s opponent review is complete; decide its proposed bounded prototype next. The Caverns and Yearfall remain later candidates for contrasting forms of persistent state.
+2. Three in a Row’s opponent review is complete; its bounded prototype is implemented and verified, awaiting native acceptance. The Caverns and Yearfall remain later candidates for contrasting forms of persistent state.
 3. Keep Dice Roller and Cipher available while deciding how short optional projects should appear in navigation. No retirement or relocation is approved here.
 4. Settle Night Patrol's identity and assess the seven proposal families individually. New groups should follow accepted experiences; do not publish empty groups or a promised finale sequence.
 

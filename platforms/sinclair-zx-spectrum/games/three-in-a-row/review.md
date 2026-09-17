@@ -1,6 +1,6 @@
 # Three in a Row — opponent review
 
-**Status:** The user selected this review after Locksmith's publication. The next prototype scope in [brief.md](brief.md) is a recommendation, not an accepted game. Existing public lessons and samples remain unchanged.
+**Status:** The user selected this review after Locksmith's publication. The user subsequently authorised the prototype scope in [brief.md](brief.md). The resulting game still needs native play acceptance. Existing public lessons and samples remain unchanged.
 
 ## What the source implements
 

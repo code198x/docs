@@ -1,8 +1,8 @@
-# Three in a Row — proposed BASIC prototype
+# Three in a Row — BASIC prototype brief
 
-**Status:** The user selected an opponent-design review. This bounded prototype is recommended by the [source review](review.md); its specific scope and play experience are not yet accepted. Existing published lessons remain available during development.
+**Status:** The user approved prototyping the scope recommended by the [source review](review.md). The [implemented prototype](prototype.md) passes execution checks and is open for native play; user acceptance remains outstanding. Existing published lessons remain available during development.
 
-**Target:** Stock 48K PAL ZX Spectrum, Sinclair BASIC. No machine-code helper or expansion. Maintain prototype sources in `code-samples/sinclair-zx-spectrum/basic/three-in-a-row/prototype/` when implementation begins. Enter and save through the ROM, then fresh-load a self-starting tape for execution checks and native play.
+**Target:** Stock 48K PAL ZX Spectrum, Sinclair BASIC. No machine-code helper or expansion. Maintain prototype sources in `code-samples/sinclair-zx-spectrum/basic/three-in-a-row/prototype/` as the maintained prototype. Enter and save through the ROM, then fresh-load a self-starting tape for execution checks and native play.
 
 ## Experience
 
