@@ -1,0 +1,181 @@
+{
+  "status": "passed",
+  "publication": "User approved the overview and eight lessons; published after Brick Bash as game 8. See publication.json.",
+  "pages": [
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/index.mdx",
+      "sha256": "c7f041121287a7153c4bb8bc8cca08ee20ff0ea3f8911bb51c4e414fd15a419a",
+      "sources": []
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-01-give-the-ship-a-nose.mdx",
+      "sha256": "dca25da55f7ade3c00a8474c5d165c2657c43fe128dd6db34040e546fbe77210",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/draw-ship/drift.bas",
+          "sha256": "ce33f6bf67b810f02dde5e278ca1b18f1ec7d17abd951db94387d086fda43035"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-02-point-somewhere-else.mdx",
+      "sha256": "e4b92dc2cec6447a7d1fd89a5c052447e3f5841303687f7517b235ce1d228b87",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/heading/changes.bas",
+          "sha256": "79b788818b06235768b2a1311769d94f4833b7a48cf88eaa2db777e872b2dafc"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/heading/drift.bas",
+          "sha256": "e62ebcf7df5a0d0873703464be403d0b8b69b60bf481c90d4511d652c2b470db"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-03-burn-then-let-go.mdx",
+      "sha256": "e04fc18c8e57c633be1630d73ce364a2dc7ecb1bdd7b20a2a2589ce57dcd360c",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/flight/changes.bas",
+          "sha256": "bd1ce8a9711e340849a4feb88a3e6fb60002d517557dbd64ca86d8ca1e44cc6c"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/flight/drift.bas",
+          "sha256": "a37193af663dca523060dc4805c7c1aac5d5c735d056c8d42a859501d3536b5b"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-04-turn-back-to-brake.mdx",
+      "sha256": "f1057d95a0cda3cabf9d9b86f6432b7a30e40afa1eea266b2d84e9c3285cbe13",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/flight/drift.bas",
+          "sha256": "a37193af663dca523060dc4805c7c1aac5d5c735d056c8d42a859501d3536b5b"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-05-read-the-motion.mdx",
+      "sha256": "47052141f76778aa75d2b04a7cb237d3eafb7548f27fa645456a93fc2c9db162",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/readout/changes.bas",
+          "sha256": "4f642099324bbd4b004f06e3af705eee10fcf2d9fcec700560a83e0b66653e18"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/readout/drift.bas",
+          "sha256": "c4332d10cfff1f86dd831782565b50f1d9330b25c3fea750d0f079e9be0f997e"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-06-arrive-gently.mdx",
+      "sha256": "e1f356a9df922c012e281d19af4f20f61607a4ee1c4c84825387a0c963f82482",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/docking/changes.bas",
+          "sha256": "54f09dc8d559e4be1f7e8e7e8676893719cc4e5e39cf95fa021215cf308e9a2d"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/docking/drift.bas",
+          "sha256": "4df340762bcbb10fdfab56baa77789e1b99317c762149e52243fb410dc57305e"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-07-finish-the-flight.mdx",
+      "sha256": "1dfbe991341097bac4d35fc5edd07af401dc83cca87c67b38f44efc78c6f463c",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/finished/changes.bas",
+          "sha256": "4ed73cb87f68ef4a382aa7e7f45d77b4e68f2a30f90eb7c882cddb54d7b5d811"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/finished/drift.bas",
+          "sha256": "c25fa64ce5b99280ed29659f30b6f589f481772f8b1736127031322e2e2b422c"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-08-keep-the-game.mdx",
+      "sha256": "b0a5ae0cc462de36f5b201442ef5d2458a85cb164bc1d60dfef1945d991271ba",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/drift/teaching/finished/drift.bas",
+          "sha256": "c25fa64ce5b99280ed29659f30b6f589f481772f8b1736127031322e2e2b422c"
+        }
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "path": "public/images/sinclair-zx-spectrum/basic/drift/teaching/drawing.png",
+      "sha256": "502d154d8fcdadf946c83b544ffea7ac4a745b5b91df7ebc9c93e035b9bb3b3e",
+      "original": "sinclair-zx-spectrum/basic/drift/teaching/verification/evidence/draw-ship/drawing.png"
+    },
+    {
+      "path": "public/images/sinclair-zx-spectrum/basic/drift/teaching/docked.png",
+      "sha256": "28b1fa51f02c2f6eef9fb2c6040b677c8495bdedf17ad17aa44a995772a50e68",
+      "original": "sinclair-zx-spectrum/basic/drift/teaching/verification/evidence/docking/docked.png"
+    },
+    {
+      "path": "public/images/sinclair-zx-spectrum/basic/drift/teaching/instructions.png",
+      "sha256": "1d788dabe4ef57497293677e68ad5f16af2c7c252fbbfbb31d8a060da6bfb8fb",
+      "original": "sinclair-zx-spectrum/basic/drift/teaching/verification/evidence/finished/instructions.png"
+    }
+  ],
+  "integration": [
+    {
+      "path": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+      "sha256": "ecd22ebdab4160c4bc5c7a0538f6791d039a520945f9a710bfabba0eb959d6d2"
+    },
+    {
+      "path": "src/content/units/sinclair-zx-spectrum/basic/drift.yaml",
+      "sha256": "f38b455f5ba91b3466e60d99398146aa396a19c98c1ac342e1bf6db9b9f2938b"
+    },
+    {
+      "path": "src/pages/systems/sinclair-zx-spectrum/basic/index.astro",
+      "sha256": "4560b4a4e8304b9c3f9cf7a0fbee3632831c200a7d8b51900a43f25be1eebdad"
+    },
+    {
+      "path": "scripts/check-drift-review.mjs",
+      "sha256": "61be1dd885b0398a3a9de1d6ec169cdfe625b19e9310557c3b4f225952da2767"
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/dice-roller/index.mdx",
+      "sha256": "8e71b2ce07488cac94c2170de3bc7db1428231a9b7f7ac0303d35de0ac8f37a3"
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/dice-roller/unit-01.mdx",
+      "sha256": "f6edcb93ccc36bd3fe979d576d89ae018afaaa472ce6eec6b86552c55b38d051"
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/dice-roller/unit-02.mdx",
+      "sha256": "69e810815bbee3e6d876de108b4b424ec8f9df7c5b821bf03f951374847b4447"
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/dice-roller/unit-03.mdx",
+      "sha256": "60883468cdac98c9a5197752265fd06d852f1376cb2b902f1ad4927ed4a3e035"
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/dice-roller/unit-04.mdx",
+      "sha256": "8f0837c37de90fece3b4137ce9dfb17a30b065609ffdc9c2e75c75c1419e602d"
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/dice-roller/unit-05.mdx",
+      "sha256": "fc11e5ebf2d7ffcae90a463c1305c24fd2e836833cd61ee051718a1e0d0743e2"
+    }
+  ],
+  "checks": {
+    "build": "npm run build passed: 69 tests passed, 9 skipped; all required route, template, imagery, link, Astro and search checks completed.",
+    "prose": "Vale: 9 files, no errors, warnings or suggestions.",
+    "edits": "Every prose add/replace/delete list equals the maintained edits.json; source audit passed for six checkpoints and 79 recorded execution groups.",
+    "browser": {
+      "pageChecks": 36,
+      "sourceBlocks": 13,
+      "localLinks": 21
+    },
+    "visual": "Original figures and representative desktop/mobile, light/dark pages inspected; capture hashes unchanged."
+  }
+}

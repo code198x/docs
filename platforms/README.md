@@ -16,6 +16,7 @@ Use these designs alongside authored lessons, sample sources and capture manifes
 | ZX Spectrum | [Tail Chase](sinclair-zx-spectrum/games/tail-chase/brief.md) | Native prototype accepted; [execution record](sinclair-zx-spectrum/games/tail-chase/prototype.md); [twelve checkpoints and ten published lessons](sinclair-zx-spectrum/games/tail-chase/lessons.md) |
 
 | ZX Spectrum | [Brick Bash](sinclair-zx-spectrum/games/brick-bash/brief.md) | Native feedback: working and surprisingly tough; [fourteen-check execution record](sinclair-zx-spectrum/games/brick-bash/prototype.md); [ten-lesson progression](sinclair-zx-spectrum/games/brick-bash/lesson-brief.md) with [nine executed checkpoints](sinclair-zx-spectrum/games/brick-bash/lessons.md); approved overview and ten lessons published after Tail Chase |
+| ZX Spectrum | [Drift](sinclair-zx-spectrum/games/drift/brief.md) | Accepted after native docking with velocity feedback; [six executed checkpoints](sinclair-zx-spectrum/games/drift/lessons.md) support an [eight-lesson progression](sinclair-zx-spectrum/games/drift/lesson-brief.md), with the approved overview and eight lessons published after Brick Bash |
 
 The [BASIC performance-revisit proposal](sinclair-zx-spectrum/basic/performance-revisits.md) has an agreed basis but is deferred while the initial BASIC versions take priority. It explores how measured limits in existing games could motivate selected assembly work. It does not establish a performance ceiling or a replacement assembly sequence.
 
