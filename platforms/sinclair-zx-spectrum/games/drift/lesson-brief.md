@@ -1,6 +1,6 @@
 # Drift — lesson brief
 
-**Status:** The user reported successful docking with the revised velocity display: “Yeah, I can dock fine”. They agreed to keep that BASIC version and develop its teaching progression. This decomposition uses six standalone checkpoints for eight lessons; counterthrust and saving reuse existing programs. The overview and all eight lessons are now authored for local review. Publication remains pending.
+**Status:** The user reported successful docking with the revised velocity display: “Yeah, I can dock fine”. They agreed to keep that BASIC version and develop its teaching progression. This decomposition uses six standalone checkpoints for eight lessons; counterthrust and saving reuse existing programs. The user approved the overview and all eight lessons after local review; they are now published after Brick Bash.
 
 **Endpoint:** `code-samples/sinclair-zx-spectrum/basic/drift/prototype/drift.bas`. Keep the accepted eight headings, vector ship, arena, initial position, acceleration, speed cap, low-speed docking threshold, readout, controls and silence. Stock 48K PAL Sinclair BASIC, no machine-code helper. The final teaching listing must be byte-identical to the accepted prototype. Apply the [game brief](brief.md), [unit specification](../../../../specifications/unit.md) and [prototype evidence](prototype.md).
 

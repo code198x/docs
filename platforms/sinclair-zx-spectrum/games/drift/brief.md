@@ -1,6 +1,6 @@
 # Drift — prototype brief
 
-**Status:** The user agreed to try a bounded stock BASIC prototype after Brick Bash, noting that it might be challenging in BASIC. The user subsequently docked successfully but found speed hard to read. The revised speed/direction readout and docking cue were accepted after further successful docking. The user agreed to develop the [teaching progression](lesson-brief.md); [six executed checkpoints](lessons.md) now support eight lessons, authored with their overview for local review.
+**Status:** The user agreed to try a bounded stock BASIC prototype after Brick Bash, noting that it might be challenging in BASIC. The user subsequently docked successfully but found speed hard to read. The revised speed/direction readout and docking cue were accepted after further successful docking. The user agreed to develop the [teaching progression](lesson-brief.md); [six executed checkpoints](lessons.md) now support eight approved lessons published with their overview after Brick Bash.
 **Target:** Stock 48K PAL ZX Spectrum, Sinclair BASIC, keyboard, ROM tape loading. No machine-code helper or runtime extension.
 **Sources:** `code-samples/sinclair-zx-spectrum/basic/drift/prototype/`. The inherited catalogue proposal supplies a name and rotation/inertia theme, not an agreed full design.
 

@@ -1,6 +1,6 @@
 # Drift teaching implementation
 
-The user accepted the version with velocity feedback after native docking and agreed to build the teaching progression. Six standalone checkpoints now support the [eight-lesson brief](lesson-brief.md). The final listing is byte-identical to the accepted prototype. The overview and eight lessons are authored on website branch `curriculum/drift-lessons` for local review. They are not yet approved or published.
+The user accepted the version with velocity feedback after native docking and agreed to build the teaching progression. Six standalone checkpoints now support the [eight-lesson brief](lesson-brief.md). The final listing is byte-identical to the accepted prototype. The user approved the overview and eight lessons after local review: “Looks fine. Let’s go.” They are now published after Brick Bash as game 8.
 
 ## Checkpoints
 
@@ -43,4 +43,10 @@ Primary citations point to the Sinclair manual’s relevant chapters for functio
 
 The final teaching source has the same measured behaviour as the accepted endpoint. Its ordinary-frame run observed a median of 19 PAL frames at rest and 44 during held thrust; the latter sample includes the transition into burning. These are observations of one configuration, not fixed timing promises, host-input latency or original-hardware measurements. Intermediate programs perform less work and may run faster. CPU-stepped model traces are not timing benchmarks.
 
-Native approval belongs to the final game. Independent learner outcomes for the stages remain untested. The next bounded task is user review of the overview and eight lessons in the built local preview. The branch catalogue places Drift after Brick Bash and exposes all eight pages locally. Drift becomes game 8. The earlier Dice Roller entry moves from identifier 8 to the unused 9, with its existing URLs and lesson prose unchanged. Public availability has not changed. Performance/assembly revisits remain deferred.
+Native approval belongs to the final game. Independent learner outcomes for the stages remain untested. The approved catalogue places Drift after Brick Bash and exposes all eight published lessons. Drift is game 8. The earlier Dice Roller entry moves from identifier 8 to the unused 9, with its existing URLs and lesson prose unchanged. Performance/assembly revisits remain deferred.
+
+## Publication
+
+The approved samples and lessons are merged in [samples PR 16](https://github.com/code198x/code-samples/pull/16) and [website PR 429](https://github.com/code198x/website/pull/429). The [Pages deployment](https://github.com/code198x/website/actions/runs/35225169058) succeeded. The live overview is [Drift](https://code198x.com/systems/sinclair-zx-spectrum/basic/drift/).
+
+`verification/publication.json` records 19 live checks: nine page responses and canonical URLs, thirteen rendered source blocks matching maintained files, three original image hashes, six teaching tape hashes and the Tail Chase → Brick Bash → Drift course order. No game rules or difficulty changed during publication.
