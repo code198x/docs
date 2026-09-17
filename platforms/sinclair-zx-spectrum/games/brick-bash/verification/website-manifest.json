@@ -1,0 +1,189 @@
+{
+  "status": "passed",
+  "publication": "User approved overview and ten lessons: Looks and reads fine. Published after Tail Chase; live checks passed. See publication.json.",
+  "pages": [
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/index.mdx",
+      "sha256": "7fae51dc60b96ce711fff52def198ddeb0bea4ee4d929260ac875ec008302e48",
+      "sources": []
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-01-draw-below-the-character-grid.mdx",
+      "sha256": "35ab5d02e2c6f881dd5e1beeb78400b90914ed914d9f6b9f0020a33edcf41ee0",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-01/brick-bash.bas",
+          "sha256": "0da17dd08bc694a64beee89c8cee2678c4846922a5f8797de8fe1839c2c8e6c3"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-02-send-the-ball-bouncing.mdx",
+      "sha256": "5eeb02e9bbb0adb1a1ec5921ed0438f944402198d866f68be874dd28341d610f",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-02/changes.bas",
+          "sha256": "352eb53fcba2db5eb598f58d58c89de73bcb4a348a0a2a5edb6097705246181a"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-02/brick-bash.bas",
+          "sha256": "f01652e06a04b49fbaf4ac03fae4ed47f9f3efdd67729e151f2a340eafa7fc4e"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-03-put-the-paddle-under-your-control.mdx",
+      "sha256": "5f44c2138730c3a1c52f52b8c797b395cc8eca2632de2274f07679e1b6adcc31",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-03/changes.bas",
+          "sha256": "c2935e6399a578a097c8cf7876e3ac750cbf78397bdaa22fb1c1858d3a133b68"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-03/brick-bash.bas",
+          "sha256": "369bedfa46fd25371477d88936d7079f815c14abb87f833451215a559218e510"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-04-catch-the-falling-ball.mdx",
+      "sha256": "c3ba5e6aa114e671b3bf4fd5962a7e8d2dfba41cacff7bce394f4735c62a7d1d",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-04/changes.bas",
+          "sha256": "d36341e70f776f4cbe85470945b7cb55d0469c96da6b05950fb1e63e97d117cd"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-04/brick-bash.bas",
+          "sha256": "5a014bb87888b0cab1e4912c83721723926bde264b3532fd7ead63c9552fb921"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-05-break-one-brick.mdx",
+      "sha256": "0567d9ca22fc77fb50f53819befee102e85a225f306099aa017a368ef183d937",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-05/changes.bas",
+          "sha256": "44a9ea551c4f8e70a3822bd04f7c4344b730d9c2ff0daab5dd6ec0b23d8351ab"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-05/brick-bash.bas",
+          "sha256": "e4451dc1000495bf8c150a0c6df12c0dbbefc7a55d92a12f916dba358049e330"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-06-give-the-wall-an-address.mdx",
+      "sha256": "ec06176d30a8d0359ece9326b60a3b3711f47375dbd6c295f585d4cbeb65a791",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-06/changes.bas",
+          "sha256": "36cdf3fb7bc5f123b44776cfa4af78d5af1a7aaf565c6ccdd2792232fd73eb57"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-06/brick-bash.bas",
+          "sha256": "410f7eb1c3e8211fbd94cc55fd4c8045d532af91e821960c7864a29b8125904e"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-07-break-the-whole-wall.mdx",
+      "sha256": "14e7a5cc8b5132eae57f43b48044336d1d4560b8b7b92f289549ee9484b68e24",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-07/changes.bas",
+          "sha256": "54def1e0ecd2ee3062d7213eeb4a19df509e6abdd5ab334af1fd099240806223"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-07/brick-bash.bas",
+          "sha256": "fc0348ddde9941d375c78f33b3cde4be5fc4a07cffd05a67ae261cad14c3eb0c"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-08-aim-with-the-paddle.mdx",
+      "sha256": "3a15345506f2c6a75ac4d7937a5c579a6c126ab9c32937f4b6169f10c72fc75e",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-08/changes.bas",
+          "sha256": "0738406752b9555aa3ad357ad3dc3f82f157483f5cfe94e4e1764854e96d6aff"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-08/brick-bash.bas",
+          "sha256": "81f0cd0bfe028187013a6ee43051d755a04a0131989f25e43a546fdacba2ca43"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-09-finish-the-round.mdx",
+      "sha256": "d5ed34ecb898737f71863c32243fa6e672c2242de0a51abd6dfe4adf929a7c17",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-09/changes.bas",
+          "sha256": "f2d1cd2848284035bc505858739e0a67b5529d3a5f983bd2571caffde604ef92"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-09/brick-bash.bas",
+          "sha256": "db066770a5516c0452d62234f5ddcb48c31a1ba6fbd047e9c14e7430817f362d"
+        }
+      ]
+    },
+    {
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-10-keep-the-game.mdx",
+      "sha256": "9ef05bd9ebf4c61bb9bf54657ae675c674145d40a0e5007adbb490192c62fa77",
+      "sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-09/brick-bash.bas",
+          "sha256": "db066770a5516c0452d62234f5ddcb48c31a1ba6fbd047e9c14e7430817f362d"
+        }
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "path": "public/images/sinclair-zx-spectrum/basic/brick-bash/teaching/drawing.png",
+      "sha256": "2dd49be0a086f50501a590fe4b0f60696192468265c9b2be0c5d5a75f8f7e5b7",
+      "source": "sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-01/drawing.png"
+    },
+    {
+      "path": "public/images/sinclair-zx-spectrum/basic/brick-bash/teaching/one-brick-complete.png",
+      "sha256": "e55316e23607b80115be9f402f2c57b89366f9ace3e18ffe65e59e603083a9fe",
+      "source": "sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-05/complete.png"
+    },
+    {
+      "path": "public/images/sinclair-zx-spectrum/basic/brick-bash/teaching/inspector.png",
+      "sha256": "b17d5c1f0bb6bb65d412c9a63f41df998bc531db7999b82d0d3a3cb1d2fd2377",
+      "source": "sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-06/inspector.png"
+    },
+    {
+      "path": "public/images/sinclair-zx-spectrum/basic/brick-bash/teaching/ready.png",
+      "sha256": "9f6371a93d1bb3868342f8fe21388a2d56dbe9f668e328f90d2545a1a5b2efe7",
+      "source": "sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-09/ready.png"
+    },
+    {
+      "path": "public/images/sinclair-zx-spectrum/basic/brick-bash/teaching/complete.png",
+      "sha256": "3cb820fb8165d84d3f5dd4b56b15715019235e6fe014630da054b0f1b842c63b",
+      "source": "sinclair-zx-spectrum/basic/brick-bash/teaching/verification/evidence/unit-09/complete.png"
+    }
+  ],
+  "metadata": {
+    "src/content/modules/sinclair-zx-spectrum/basic.yaml": "fde9c74e16970f830b3a095f099fbab9bb8cd7a32995b97ac2835ae221897c72",
+    "src/content/units/sinclair-zx-spectrum/basic/brick-bash.yaml": "e18fd996edd44f83c7569fd8aa9c74dab4d79b7f9a88bab408b67008086643ec",
+    "src/pages/systems/sinclair-zx-spectrum/basic/index.astro": "3781e822cd9e5305266a209fc36068cd79f78edd976c4f8263046807a5f2bcd0"
+  },
+  "source_edits": "Every authored add/replace/delete instruction matches the verified checkpoint transition. First lesson starts a new program; final lesson reuses unit nine.",
+  "build": {
+    "command": "npm run build",
+    "passed_tests": 69,
+    "skipped_tests": 9,
+    "built_pages": 2371
+  },
+  "browser": {
+    "page_checks": 44,
+    "maintained_source_blocks": 18,
+    "local_links": 24,
+    "report": "website-review.json"
+  },
+  "preview": "http://127.0.0.1:4331/systems/sinclair-zx-spectrum/basic/brick-bash/"
+}
