@@ -1,8 +1,8 @@
 # Yearfall — teaching implementation
 
-**Status:** Thirteen replacement lessons and eleven verified programs are ready
-for local review. The accepted native game is unchanged. Publication awaits
-lesson approval. The [lesson brief](lesson-brief.md) defines the progression.
+**Status:** Thirteen approved replacement lessons and eleven verified programs
+are published. Production and live checks pass. The accepted native game is
+unchanged. The [lesson brief](lesson-brief.md) defines the progression.
 
 ## Maintained sources
 
@@ -50,7 +50,7 @@ settlements. Saving the program does not save campaign state.
 Thirteen topic-named lessons replace the old six. They include exact editing
 instructions, complete source, questions with explanations, keyboard guidance
 and original manual chapter references. Yearfall appears beside The Caverns in
-Hidden worlds in the local catalogue. Canonical and legacy old topic paths
+Hidden worlds in the published catalogue. Canonical and legacy old topic paths
 redirect to the corresponding new lessons; numeric identities are preserved.
 The What's New entry remains `draft: true`.
 
@@ -64,6 +64,17 @@ lessons, with no axe violations. Rendered desktop lesson and mobile overview
 captures were visually inspected. Compact browser evidence is retained in
 `verification/lesson-browser.json` and `verification/lesson-accessibility.json`.
 
-The local preview is at
-<http://127.0.0.1:4335/systems/sinclair-zx-spectrum/basic/yearfall/>.
-No publication or live-site claim is made.
+## Publication
+
+Samples PR [21](https://github.com/code198x/code-samples/pull/21) is merged at
+`a2f5bdd`. Website PR [435](https://github.com/code198x/website/pull/435) is merged
+at `857b82a3`. Samples CI, website CI and code analysis pass. Pages deployment
+[35336797507](https://github.com/code198x/website/actions/runs/35336797507)
+succeeded. Twenty-nine live HTTP checks cover the overview, all thirteen lessons,
+six canonical and six legacy topic redirects, the current-course listing and
+both unchanged native images. Evidence is retained in
+`verification/lesson-live.json`.
+
+The [published lessons](https://code198x.com/systems/sinclair-zx-spectrum/basic/yearfall/)
+are available in Hidden worlds. The release note remains a draft. All eighteen
+unrelated local edits retain their pre-work contents or deletion state.

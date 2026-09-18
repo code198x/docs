@@ -1,0 +1,147 @@
+[
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/",
+    "status": 200,
+    "check": "Read the settlement"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-01-read-the-settlement/",
+    "status": 200,
+    "check": "Read the settlement"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-02-feed-the-people/",
+    "status": 200,
+    "check": "Feed the people"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-03-share-the-grain/",
+    "status": 200,
+    "check": "Share the grain"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-04-resolve-a-harvest/",
+    "status": 200,
+    "check": "Resolve a harvest"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-05-edit-an-allocation/",
+    "status": 200,
+    "check": "Edit an allocation"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-06-plan-before-committing/",
+    "status": 200,
+    "check": "Plan before committing"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-07-carry-the-year-forward/",
+    "status": 200,
+    "check": "Carry the year forward"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-08-buy-and-sell-land/",
+    "status": 200,
+    "check": "Buy and sell land"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-09-read-a-shortage/",
+    "status": 200,
+    "check": "Read a shortage"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-10-welcome-travellers/",
+    "status": 200,
+    "check": "Welcome travellers"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-11-keep-ruling/",
+    "status": 200,
+    "check": "Keep ruling"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-12-invite-the-ruler/",
+    "status": 200,
+    "check": "Invite the ruler"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-13-keep-the-settlement/",
+    "status": 200,
+    "check": "Keep the settlement"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-01/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-01-read-the-settlement/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/yearfall/unit-01/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-01-read-the-settlement/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-02/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-02-feed-the-people/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/yearfall/unit-02/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-02-feed-the-people/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-03/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-03-share-the-grain/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/yearfall/unit-03/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-03-share-the-grain/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-04/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-07-carry-the-year-forward/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/yearfall/unit-04/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-07-carry-the-year-forward/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-05/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-08-buy-and-sell-land/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/yearfall/unit-05/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-08-buy-and-sell-land/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-06/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-12-invite-the-ruler/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/yearfall/unit-06/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/yearfall/unit-12-invite-the-ruler/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/",
+    "status": 200,
+    "check": "Hidden worlds"
+  },
+  {
+    "path": "/images/sinclair-zx-spectrum/basic/yearfall/teaching/planning.png",
+    "status": 200,
+    "check": "identical image bytes"
+  },
+  {
+    "path": "/images/sinclair-zx-spectrum/basic/yearfall/teaching/travellers-offer.png",
+    "status": 200,
+    "check": "identical image bytes"
+  }
+]

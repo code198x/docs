@@ -2,9 +2,8 @@
 
 **Status:** The user accepted the native BASIC prototype, including separate
 buy/sell controls, decade continuation and traveller offers. The accepted source
-is samples commit `03afc02`. The user authorised the [teaching progression](lesson-brief.md); replacement
-lessons are [verified and ready for local review](lessons.md). The existing published lessons
-remain available.
+is samples commit `03afc02`. The user authorised the [teaching progression](lesson-brief.md); the approved replacement
+lessons are [published in Hidden worlds](lessons.md).
 
 ## Experience and scope
 
@@ -86,7 +85,7 @@ The authorised [thirteen-lesson progression](lesson-brief.md) begins with a
 settlement ledger, adds feeding and seed constraints, resolves one harvest, then
 introduces editable plans, retained years, land trading, travellers and decade
 reviews. Eleven runnable checkpoints preserve the accepted game as their
-endpoint. The replacement pages are ready for local review before publication.
+endpoint. The approved replacement pages are published in Hidden worlds.
 
 ## Verification and design risks
 

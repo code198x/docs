@@ -1,8 +1,8 @@
 # Yearfall — teaching progression
 
-**Status:** The native game is accepted and the user authorised lesson development.
-Thirteen lessons use eleven independently runnable checkpoints. The local lesson
-preview remains subject to review; publication has not been authorised.
+**Status:** The native game and thirteen replacement lessons are approved.
+Eleven independently runnable checkpoints preserve the accepted endpoint.
+The [implementation record](lessons.md) tracks verification and publication.
 
 **Endpoint:** `code-samples/sinclair-zx-spectrum/basic/yearfall/prototype/yearfall.bas`
 at samples commit `03afc02`. The finished checkpoint is byte-identical. Preserve

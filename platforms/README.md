@@ -22,7 +22,7 @@ Use these designs alongside authored lessons, sample sources and capture manifes
 | ZX Spectrum | [Three in a Row](sinclair-zx-spectrum/games/three-in-a-row/brief.md) | Native BASIC game accepted; ten replacement lessons published with eight verified checkpoints |
 
 | ZX Spectrum | [The Caverns](sinclair-zx-spectrum/games/the-caverns/brief.md) | Native BASIC game accepted; [ten lessons and eight checkpoints](sinclair-zx-spectrum/games/the-caverns/lesson-brief.md) published in Hidden worlds |
-| ZX Spectrum | [Yearfall](sinclair-zx-spectrum/games/yearfall/brief.md) | Native BASIC game accepted, including decade continuation and travellers; 43 execution checks pass; thirteen lessons and eleven checkpoints ready for local review; 140 execution groups and production/browser/accessibility checks pass |
+| ZX Spectrum | [Yearfall](sinclair-zx-spectrum/games/yearfall/brief.md) | Thirteen approved lessons published in Hidden worlds; eleven verified checkpoints preserve the accepted game; 140 execution groups and production/browser/accessibility/live checks pass |
 
 The [BASIC performance-revisit proposal](sinclair-zx-spectrum/basic/performance-revisits.md) has an agreed basis but is deferred while the initial BASIC versions take priority. It explores how measured limits in existing games could motivate selected assembly work. It does not establish a performance ceiling or a replacement assembly sequence.
 
