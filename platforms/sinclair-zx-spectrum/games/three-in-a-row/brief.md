@@ -1,6 +1,6 @@
 # Three in a Row — BASIC prototype brief
 
-**Status:** The user accepted the native prototype: it works well and their games mostly drew. They authorised lesson development while retaining this difficulty. The [teaching progression](lesson-brief.md) preserves the accepted endpoint. Replacement lessons are prepared locally for review; the earlier published lessons remain live until publication.
+**Status:** The user accepted the native prototype: it works well and their games mostly drew. They authorised lesson development while retaining this difficulty. The [teaching progression](lesson-brief.md) preserves the accepted endpoint. The approved replacement overview and ten lessons are published, with production and live checks passed.
 
 **Target:** Stock 48K PAL ZX Spectrum, Sinclair BASIC. No machine-code helper or expansion. Maintain prototype sources in `code-samples/sinclair-zx-spectrum/basic/three-in-a-row/prototype/` as the maintained prototype. Enter and save through the ROM, then fresh-load a self-starting tape for execution checks and native play.
 

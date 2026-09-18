@@ -1,6 +1,6 @@
 # Three in a Row — teaching implementation
 
-**Status:** The accepted prototype has been decomposed into eight verified programs and ten replacement lessons, prepared locally for review. Earlier production lessons remain live until coordinated publication. The [lesson brief](lesson-brief.md) defines the progression.
+**Status:** The user-approved overview and ten replacement lessons are published, supported by eight verified programs. Production and live checks pass. The [lesson brief](lesson-brief.md) defines the progression.
 
 ## Maintained sources
 
@@ -29,9 +29,9 @@ Native feedback accepted the final game's feel and reported mostly draws. It doe
 
 ## Website integration
 
-The overview uses the existing House presentation. Ten topic-named lessons replace the older six locally, with exact add/replace/delete instructions, full source checkpoints, questions with explanations, keyboard notes and original manual chapter citations. Old canonical and legacy URLs redirect to corresponding topics. Numeric catalogue and lesson identities are preserved. Three in a Row joins Boards and deduction after Locksmith; the BASIC landing description includes opponent decisions. System and assembly entry pages remain accurate and need no content change.
+The overview uses the existing House presentation. Ten topic-named lessons replace the older six, with exact add/replace/delete instructions, full source checkpoints, questions with explanations, keyboard notes and original manual chapter citations. Old canonical and legacy URLs redirect to corresponding topics. Numeric catalogue and lesson identities are preserved. Three in a Row joins Boards and deduction after Locksmith; the BASIC landing description includes opponent decisions. System and assembly entry pages remain accurate and need no content change.
 
-A What's New entry is prepared with `draft: true`; it is not announced. The fork supplies a concrete lesson example without requiring a separate essay. Publication remains outstanding pending review of the rendered lessons.
+A What's New entry is prepared with `draft: true`; it is not announced. The fork supplies a concrete lesson example without requiring a separate essay. The user approved the rendered lessons and authorised publication.
 
 ## Site validation
 
@@ -44,7 +44,17 @@ additional desktop/mobile light/dark accessibility checks cover the overview,
 first coding lesson and fork lesson, with no axe violations. Original emulator
 captures and rendered overview/lesson screenshots were inspected.
 
-Samples are committed locally at `adf0af6` (checkpoint sources and evidence in
+Samples were developed at `adf0af6` (checkpoint sources and evidence in
 `09391c5`, retained ROM-saved tapes in `adf0af6`). The final accepted source is
 unchanged. All eighteen unrelated local edits were checked against the retained
 baseline and are unchanged.
+
+## Publication
+
+Samples PR [19](https://github.com/code198x/code-samples/pull/19) is merged at
+`23906e8`. Website PR [433](https://github.com/code198x/website/pull/433) is
+merged at `ea56fbed`. Pages deployment
+[35322776090](https://github.com/code198x/website/actions/runs/35322776090)
+succeeded. Nineteen live HTTP checks cover the overview, all ten lessons, six
+topic redirects, current-course listing and unchanged fork image. The release
+note remains a draft; no separate community announcement was requested.

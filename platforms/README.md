@@ -19,7 +19,7 @@ Use these designs alongside authored lessons, sample sources and capture manifes
 | ZX Spectrum | [Drift](sinclair-zx-spectrum/games/drift/brief.md) | Accepted after native docking with velocity feedback; [six executed checkpoints](sinclair-zx-spectrum/games/drift/lessons.md) support an [eight-lesson progression](sinclair-zx-spectrum/games/drift/lesson-brief.md), with the approved overview and eight lessons published after Brick Bash |
 | ZX Spectrum | [Quickstep](sinclair-zx-spectrum/games/quickstep/brief.md) | Six-lane BASIC baseline accepted; overview and ten approved lessons [published with live checks](sinclair-zx-spectrum/games/quickstep/lessons.md) |
 | ZX Spectrum | [Locksmith](sinclair-zx-spectrum/games/locksmith/brief.md) | Approved BASIC overview and nine lessons published; seven [executed checkpoints](sinclair-zx-spectrum/games/locksmith/lessons.md), live checks passed |
-| ZX Spectrum | [Three in a Row](sinclair-zx-spectrum/games/three-in-a-row/brief.md) | Native BASIC game accepted; ten replacement lessons and eight checkpoints prepared for review |
+| ZX Spectrum | [Three in a Row](sinclair-zx-spectrum/games/three-in-a-row/brief.md) | Native BASIC game accepted; ten replacement lessons published with eight verified checkpoints |
 
 The [BASIC performance-revisit proposal](sinclair-zx-spectrum/basic/performance-revisits.md) has an agreed basis but is deferred while the initial BASIC versions take priority. It explores how measured limits in existing games could motivate selected assembly work. It does not establish a performance ceiling or a replacement assembly sequence.
 

@@ -1,6 +1,6 @@
 # Three in a Row — teaching progression
 
-**Status:** Native game accepted; lesson development authorised. Ten lessons use eight independently runnable checkpoints. Replacement prose and navigation are prepared locally for review, not published.
+**Status:** Native game accepted; lesson development authorised. Ten lessons use eight independently runnable checkpoints. The user-approved overview and ten replacement lessons are published, with production and live checks passed.
 
 **Endpoint:** Preserve `code-samples/sinclair-zx-spectrum/basic/three-in-a-row/prototype/three.bas` from samples commit `46ca3c6` byte-for-byte. The human plays X, the computer O. Win → block → centre → first free corner → last free edge remains the deliberately fallible policy. Visible reasons, silence, retained results, session tally, alternating completed-round starters and R/Q controls remain unchanged.
 
