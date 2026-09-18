@@ -1,8 +1,9 @@
 # Dice Roller — native prototype
 
 The compact probability experiment is implemented in
-`code-samples/sinclair-zx-spectrum/basic/dice-roller/prototype/`. Replacement
-lessons and publication await play review. The user requested live results
+`code-samples/sinclair-zx-spectrum/basic/dice-roller/prototype/`. The user
+approved the native prototype after trying the live-results revision.
+Replacement lessons and publication are the next separate stages. The user requested live results
 rather than a separate progress screen; the chart now develops during a batch.
 
 ## Behaviour
@@ -43,4 +44,5 @@ commit: `6f129e6`.
 
 Some headless PNG captures show incomplete glyph rendering even after allowing
 additional frames, while screen-memory checks pass. Retain these as diagnostic
-evidence, not publication assets; native play review remains the visual gate.
+evidence, not publication assets; the user has accepted the native preview. The capture issue remains separate
+from that acceptance and must be resolved before using these images publicly.

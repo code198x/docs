@@ -1,8 +1,8 @@
 # Dice Roller — BASIC prototype brief
 
-**Status:** The user selected a compact probability experiment and authorised
-its native prototype. Existing lessons remain available; no replacement lesson
-count or publication is authorised yet. See the [source review](review.md) and [prototype record](prototype.md).
+**Status:** The user approved the native prototype with live results. Existing
+lessons remain available; replacement lesson count and publication remain to
+be settled. See the [source review](review.md) and [prototype record](prototype.md).
 
 ## Experience and scope
 
