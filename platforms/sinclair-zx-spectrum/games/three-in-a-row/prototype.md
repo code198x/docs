@@ -1,6 +1,6 @@
 # Three in a Row — prototype record
 
-**Status:** The user authorised the [bounded prototype](brief.md). It is implemented and verified, and the native game is open for user play. Human acceptance and lesson development remain outstanding. Earlier published lessons are unchanged.
+**Status:** The user accepted the native game after play, reporting that it works well and mostly draws. They agreed to retain this difficulty and develop lessons. The [teaching progression](lesson-brief.md) preserves the accepted source.
 
 ## Implemented game
 
@@ -26,4 +26,4 @@ The released Emu198x Spectrum 0.25.0 executable and the current local checkout a
 
 The original fork-win captures from both builds are byte-identical. A separate diagnostic compares all 49,152 screen bitmap pixels with the emitted PNG's foreground, checking black paper, non-black ink and FLASH off. It reads original image pixels and never edits the PNG. This makes the capture check independent of an image preview's appearance. `renderer-comparison.json` records both executable hashes and links their capture checks; `release-results.json` retains the release's gameplay run separately.
 
-The maintained verification commands are in the sample README. `manifest.json` binds the final source, tape, results and captures. Native playability still requires the user's judgement; no original-hardware timing or learner-outcome claim is made. Accept or revise this game before deriving teaching checkpoints or replacing the six existing lessons.
+The maintained verification commands are in the sample README. `manifest.json` binds the final source, tape, results and captures. Native playability is accepted. The user's report of mostly drawn games is qualitative feedback, not a measured frequency or an unbeatable-policy claim. No original-hardware timing or learner-outcome claim is made.

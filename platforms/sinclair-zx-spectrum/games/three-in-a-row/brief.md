@@ -1,6 +1,6 @@
 # Three in a Row — BASIC prototype brief
 
-**Status:** The user approved prototyping the scope recommended by the [source review](review.md). The [implemented prototype](prototype.md) passes execution checks and is open for native play; user acceptance remains outstanding. Existing published lessons remain available during development.
+**Status:** The user accepted the native prototype: it works well and their games mostly drew. They authorised lesson development while retaining this difficulty. The [teaching progression](lesson-brief.md) preserves the accepted endpoint. Replacement lessons are prepared locally for review; the earlier published lessons remain live until publication.
 
 **Target:** Stock 48K PAL ZX Spectrum, Sinclair BASIC. No machine-code helper or expansion. Maintain prototype sources in `code-samples/sinclair-zx-spectrum/basic/three-in-a-row/prototype/` as the maintained prototype. Enter and save through the ROM, then fresh-load a self-starting tape for execution checks and native play.
 
@@ -24,7 +24,7 @@ Keep a nine-element board and the eight winning triples from the existing implem
 
 The central idea is **a decision depends on both the rules and their priority**. Taking a win before blocking is observable. So is the limitation of considering only the next move: a fork offers two threats that cannot both be blocked. The retained counterexample provides an experiment before any stronger strategy is introduced.
 
-Suggested runnable teaching stages, subject to the accepted prototype:
+The accepted prototype supports these teaching responsibilities; the [lesson brief](lesson-brief.md) now defines their concrete sequence:
 
 | Stage | Result | Idea to explain | Check |
 |---|---|---|---|
@@ -35,7 +35,7 @@ Suggested runnable teaching stages, subject to the accepted prototype:
 | Explain the fallback | Centre/corner/edge choices have visible reasons | Heuristics and their limits | Retained fork trace and a drawn game |
 | Finish the session | Both starters, retained result, replay, tally and tape | Round versus session state | Complete fresh-load, play, replay and quit cycle |
 
-These are teaching possibilities, not an agreed unit count. Introduce presentation and input quality during development, not as an unexplained final rewrite.
+The lesson brief sets out ten lessons using eight runnable programs. Introduce presentation and input quality during development, not as an unexplained final rewrite.
 
 ## Boundaries and verification
 

@@ -1,0 +1,182 @@
+{
+  "checks": [
+    {
+      "viewport": "desktop",
+      "page": "overview",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-01-draw-nine-squares",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-02-place-a-cross",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-03-take-turns",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-04-read-a-winning-line",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-05-choose-an-empty-square",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-06-win-before-blocking",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-07-prefer-useful-squares",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-08-make-two-threats",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-09-finish-the-session",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-10-keep-the-game",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 1,
+      "to": "unit-01-draw-nine-squares"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 2,
+      "to": "unit-02-place-a-cross"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 3,
+      "to": "unit-04-read-a-winning-line"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 4,
+      "to": "unit-06-win-before-blocking"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 5,
+      "to": "unit-07-prefer-useful-squares"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 6,
+      "to": "unit-09-finish-the-session"
+    },
+    {
+      "viewport": "desktop",
+      "check": "current-course-placement"
+    },
+    {
+      "viewport": "mobile",
+      "page": "overview",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-01-draw-nine-squares",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-02-place-a-cross",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-03-take-turns",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-04-read-a-winning-line",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-05-choose-an-empty-square",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-06-win-before-blocking",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-07-prefer-useful-squares",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-08-make-two-threats",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-09-finish-the-session",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-10-keep-the-game",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 1,
+      "to": "unit-01-draw-nine-squares"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 2,
+      "to": "unit-02-place-a-cross"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 3,
+      "to": "unit-04-read-a-winning-line"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 4,
+      "to": "unit-06-win-before-blocking"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 5,
+      "to": "unit-07-prefer-useful-squares"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 6,
+      "to": "unit-09-finish-the-session"
+    },
+    {
+      "viewport": "mobile",
+      "check": "current-course-placement"
+    }
+  ]
+}
