@@ -1,8 +1,8 @@
 # Yearfall — prototype record
 
 **Status:** The user accepted the extended native game: “Yep, that'll do”.
-Samples commit `03afc02` is the accepted endpoint. Replacement lessons remain
-to be planned and authored. The [brief](brief.md) defines the rules;
+Samples commit `03afc02` is the accepted endpoint. The user authorised the [teaching progression](lesson-brief.md), preserving
+this source. Replacement lessons are [verified and ready for local review](lessons.md). The [brief](brief.md) defines the rules;
 the [source review](review.md) records the inherited economy problems.
 
 ## Implementation

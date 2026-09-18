@@ -2,8 +2,9 @@
 
 **Status:** The user accepted the native BASIC prototype, including separate
 buy/sell controls, decade continuation and traveller offers. The accepted source
-is samples commit `03afc02`. Replacement lessons remain to be planned and
-authored; the existing published lessons remain available.
+is samples commit `03afc02`. The user authorised the [teaching progression](lesson-brief.md); replacement
+lessons are [verified and ready for local review](lessons.md). The existing published lessons
+remain available.
 
 ## Experience and scope
 
@@ -81,11 +82,11 @@ changes. Maths includes a resource ledger, bounded randomness and rounded
 population growth. The Caverns offers a useful contrast: state there describes
 an unseen place, while here it limits future decisions.
 
-A later lesson progression could begin with a settlement ledger, add feeding,
-seed and workforce constraints, resolve one harvest, retain several years,
-then introduce trade, planning edits, decade reviews and traveller choices. That is a direction
-for teaching the accepted game, not an authorised lesson count or a completed
-replacement for the published pages.
+The authorised [thirteen-lesson progression](lesson-brief.md) begins with a
+settlement ledger, adds feeding and seed constraints, resolves one harvest, then
+introduces editable plans, retained years, land trading, travellers and decade
+reviews. Eleven runnable checkpoints preserve the accepted game as their
+endpoint. The replacement pages are ready for local review before publication.
 
 ## Verification and design risks
 

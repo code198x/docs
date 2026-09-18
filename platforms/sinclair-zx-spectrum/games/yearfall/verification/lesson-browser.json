@@ -1,0 +1,212 @@
+{
+  "checks": [
+    {
+      "viewport": "desktop",
+      "page": "overview",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-01-read-the-settlement",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-02-feed-the-people",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-03-share-the-grain",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-04-resolve-a-harvest",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-05-edit-an-allocation",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-06-plan-before-committing",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-07-carry-the-year-forward",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-08-buy-and-sell-land",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-09-read-a-shortage",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-10-welcome-travellers",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-11-keep-ruling",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-12-invite-the-ruler",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-13-keep-the-settlement",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 1,
+      "to": "unit-01-read-the-settlement"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 2,
+      "to": "unit-02-feed-the-people"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 3,
+      "to": "unit-03-share-the-grain"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 4,
+      "to": "unit-07-carry-the-year-forward"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 5,
+      "to": "unit-08-buy-and-sell-land"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 6,
+      "to": "unit-12-invite-the-ruler"
+    },
+    {
+      "viewport": "desktop",
+      "check": "current-course-placement"
+    },
+    {
+      "viewport": "mobile",
+      "page": "overview",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-01-read-the-settlement",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-02-feed-the-people",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-03-share-the-grain",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-04-resolve-a-harvest",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-05-edit-an-allocation",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-06-plan-before-committing",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-07-carry-the-year-forward",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-08-buy-and-sell-land",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-09-read-a-shortage",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-10-welcome-travellers",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-11-keep-ruling",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-12-invite-the-ruler",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-13-keep-the-settlement",
+      "checks": "HTTP, local links, code, images, overflow, available question disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 1,
+      "to": "unit-01-read-the-settlement"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 2,
+      "to": "unit-02-feed-the-people"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 3,
+      "to": "unit-03-share-the-grain"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 4,
+      "to": "unit-07-carry-the-year-forward"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 5,
+      "to": "unit-08-buy-and-sell-land"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 6,
+      "to": "unit-12-invite-the-ruler"
+    },
+    {
+      "viewport": "mobile",
+      "check": "current-course-placement"
+    }
+  ]
+}
