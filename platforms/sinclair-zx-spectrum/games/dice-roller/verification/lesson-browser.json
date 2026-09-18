@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-01/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-02/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-03/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-04/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-05/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "BASIC landing",
+      "checks": "optional experiment placement; no empty earlier section"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-01/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-02/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-03/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-04/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-05/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "BASIC landing",
+      "checks": "optional experiment placement; no empty earlier section"
+    },
+    {
+      "path": "legacy/",
+      "checks": "preserved redirect"
+    },
+    {
+      "path": "legacy/unit-01/",
+      "checks": "preserved redirect"
+    },
+    {
+      "path": "legacy/unit-02/",
+      "checks": "preserved redirect"
+    },
+    {
+      "path": "legacy/unit-03/",
+      "checks": "preserved redirect"
+    },
+    {
+      "path": "legacy/unit-04/",
+      "checks": "preserved redirect"
+    },
+    {
+      "path": "legacy/unit-05/",
+      "checks": "preserved redirect"
+    }
+  ]
+}

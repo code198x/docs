@@ -124,3 +124,7 @@ Review the Maths for Games and Game Feel outlines and their catalogue metadata a
 ## Cipher publication
 
 The user selected [Cipher](platforms/sinclair-zx-spectrum/games/cipher/brief.md). The user authorised the compact lesson sequence. The approved [six lessons and five checkpoints](platforms/sinclair-zx-spectrum/games/cipher/lessons.md) are published in Boards and deduction: 57 execution groups and production/browser/accessibility/live checks pass, preserving the prototype endpoint. The user accepts that some remaining proposals may not be developed; assess each on its value rather than filling the catalogue.
+
+## Remaining BASIC proposals
+
+Dice Roller’s approved [five lessons and checkpoints](platforms/sinclair-zx-spectrum/games/dice-roller/lessons.md) are published in Optional experiments. This completes the review of the previously unchanged published BASIC projects. Remaining game proposals are optional candidates, not a completion quota; assess their distinct teaching value before selecting another prototype. The later BASIC/assembly performance investigations remain deferred until the initial BASIC scope is settled.

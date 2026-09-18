@@ -1,0 +1,148 @@
+{
+  "checks": [
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-01/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-01/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-02/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-02/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-03/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-03/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-04/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-04/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-05/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-05/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-01/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-01/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-02/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-02/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-03/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-03/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-04/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-04/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-05/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-05/",
+      "theme": "dark",
+      "violations": 0
+    }
+  ]
+}
