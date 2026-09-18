@@ -1,9 +1,8 @@
 # Dice Roller — teaching progression
 
-**Status:** The user authorised the teaching sequence and runnable checkpoints
-following acceptance of the live prototype. This specification defines five
-building lessons, supported by [five verified checkpoints](lessons.md). The user subsequently authorised website authoring. The overview and five
-replacement lessons are prepared locally; publication awaits review.
+**Status:** The user approved the five lessons and authorised publication.
+The overview and five building lessons are published in Optional experiments,
+supported by [five verified checkpoints](lessons.md).
 
 ## Endpoint and audience
 

@@ -3,7 +3,8 @@
 The compact probability experiment is implemented in
 `code-samples/sinclair-zx-spectrum/basic/dice-roller/prototype/`. The user
 approved the native prototype after trying the live-results revision.
-Replacement lessons and publication are the next separate stages. The user requested live results
+Current lesson and publication status is maintained in the
+[implementation record](lessons.md). The user requested live results
 rather than a separate progress screen; the chart now develops during a batch.
 
 ## Behaviour

@@ -1,9 +1,9 @@
 # Dice Roller — BASIC prototype brief
 
-**Status:** The user approved the native prototype with live results. Existing
-lessons remain available. The user authorised a compact teaching sequence and
-runnable checkpoints; the [teaching specification](lesson-brief.md) defines
-five building lessons. Publication remains a later stage. See the [source review](review.md) and [prototype record](prototype.md).
+**Status:** The user approved the native prototype and five replacement lessons,
+then authorised publication. The lessons are published in Optional experiments.
+See the [teaching specification](lesson-brief.md), [publication record](lessons.md),
+[source review](review.md) and [prototype record](prototype.md).
 
 ## Experience and scope
 
@@ -56,10 +56,10 @@ bounded picture of those proportions. Use a six-element array rather than
 preserving the old prohibition on arrays. The relative size of samples and the
 difference between extending and restarting are part of the experiment.
 
-A later compact teaching sequence may start with rolls, accumulate counts,
-compute shares, draw the chart and compare runs. It should follow the accepted
-prototype rather than inherit a five-unit quota or preceding-course assumptions.
-Decide the optional experiment's navigation placement after play review.
+The compact teaching sequence starts with rolls, accumulates counts, computes
+shares, draws the live chart and compares runs. Its five stages follow the
+accepted prototype rather than a fixed quota or preceding-course assumptions.
+The published project belongs in Optional experiments.
 
 ## Verification and review gate
 

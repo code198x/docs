@@ -4,8 +4,8 @@ The [teaching specification](lesson-brief.md) defines five building lessons:
 roll a die, keep tallies, compare shares, watch the live distribution, and
 compare experiments. Complete runnable programs and exact editing metadata are
 prepared in `code-samples/sinclair-zx-spectrum/basic/dice-roller/teaching/`.
-The overview and five replacement lessons are authored locally for review.
-The existing published lessons remain unchanged until publication.
+The approved overview and five replacement lessons are published in Optional
+experiments. Production and live checks pass.
 
 The endpoint is byte-identical to the user-approved prototype. The first four
 checkpoints expose separate observable results, rather than providing a hidden
@@ -58,5 +58,17 @@ violations. Themes were measured with transitions disabled. The desktop overview
 and mobile live-chart lesson were visually inspected. Compact records are in
 `verification/lesson-browser.json` and `verification/lesson-accessibility.json`.
 
-The local production preview is available for user review. Publication is not
-performed, and the release note remains draft.
+## Publication
+
+Samples PR [24](https://github.com/code198x/code-samples/pull/24) is merged at
+`339af67`. Website PR [437](https://github.com/code198x/website/pull/437) is
+merged at `10902cfd`. Samples CI, website CI and code analysis pass. Pages
+[deployment 35350907524](https://github.com/code198x/website/actions/runs/35350907524)
+succeeded.
+
+Nineteen live checks cover the overview, five lessons, six legacy redirects,
+optional-experiment navigation, all five published checkpoint sources and the
+release note's absence from RSS. Evidence is in `verification/lesson-live.json`.
+The [published lessons](https://code198x.com/systems/sinclair-zx-spectrum/basic/dice-roller/)
+retain their existing URLs. The release note remains draft. All eighteen
+unrelated Code198x edits retain their prior contents or deletion state.
