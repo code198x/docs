@@ -8,10 +8,10 @@ The user agreed the four groups below. The website module catalogue owns their m
 |---|---|---|
 | First programs | Meet BASIC, Bright Spark | Small responsive programs, then remembering and repeating a sequence |
 | Movement and control | Volley, Touchdown | Continuous motion, contact, acceleration and braking |
-| Boards and deduction | Sonar, Crates, Locksmith | Reading a grid, combining clues and changing board state safely |
+| Boards and deduction | Sonar, Crates, Locksmith, Three in a Row | Reading a grid, combining clues and changing board state safely |
 | Worlds that keep moving | Tail Chase, Brick Bash, Drift, Quickstep | Ordered bodies, destructible worlds, independent velocity and multiple moving hazards |
 
-These are navigation groups, not prerequisites or separate courses. All current game numbers, URLs and relative order remain unchanged. Five earlier games remain separately available, and the BASIC reference remains optional. Revised games can join the group that fits their activity; Locksmith now belongs to Boards and deduction.
+These are navigation groups, not prerequisites or separate courses. All current game numbers, URLs and relative order remain unchanged. Four earlier games remain separately available, and the BASIC reference remains optional. Revised games can join the group that fits their activity; Locksmith and Three in a Row now belong to Boards and deduction.
 
 ## Review evidence and limits
 
@@ -60,7 +60,7 @@ This yields thirteen distinct concepts to review: six existing projects and seve
 ## Recommended sequence of decisions
 
 1. Locksmith’s bounded prototype and replacement lessons are accepted and published. Retain its verified ten-guess baseline.
-2. Three in a Row’s opponent review is complete; its native prototype is accepted and ten replacement lessons are published. The Caverns and Yearfall remain later candidates for contrasting forms of persistent state.
+2. Three in a Row’s opponent review is complete; its native prototype is accepted and ten replacement lessons are published. The user selected The Caverns next; its fixed cave and patrol are accepted, and the ten replacement lessons are published in Hidden worlds. Yearfall remains a later candidate for contrasting persistent state.
 3. Keep Dice Roller and Cipher available while deciding how short optional projects should appear in navigation. No retirement or relocation is approved here.
 4. Settle Night Patrol's identity and assess the seven proposal families individually. New groups should follow accepted experiences; do not publish empty groups or a promised finale sequence.
 

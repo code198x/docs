@@ -1,0 +1,20 @@
+{
+  "source": "sinclair-zx-spectrum/basic/the-caverns/unit-06/caverns.bas",
+  "source_sha256": "ea1b412876164519ae6aef5414b6e2e124488360dc8c8d5a696ab78dd4dc320b",
+  "rooms_reachable_without_hazards": 20,
+  "start_neighbours": [
+    0,
+    5,
+    2,
+    0
+  ],
+  "counterexample": {
+    "player": 1,
+    "pit": 20,
+    "creature": 6,
+    "player_action": "south to room 5",
+    "creature_action": "west to room 5",
+    "observation": "No initial creature-adjacency clue at room 1, but the same turn can end in capture after moving to room 5."
+  },
+  "limits": "Source-derived graph and turn-order evidence. No emulator execution of the retained game."
+}
