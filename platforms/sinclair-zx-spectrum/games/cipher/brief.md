@@ -2,7 +2,7 @@
 
 **Status:** The user authorised the compact [six-lesson progression](lesson-brief.md)
 around the native prototype, with five independently runnable checkpoints.
-The [replacement lessons](lessons.md) are verified and ready for local review. The source review is in [review.md](review.md).
+The approved [replacement lessons](lessons.md) are published in Boards and deduction. The source review is in [review.md](review.md).
 
 ## Experience and scope
 
@@ -44,8 +44,7 @@ used letters; play updates one alphabet cell and the changing fields instead
 of clearing and rebuilding the board after every guess. DATA separates the word
 list from the game rules. A release gate makes one press one guess.
 
-The intended home is a compact project in Boards and deduction, subject to play
-and lesson review. Do not inherit the old Volume 2 prerequisites, fixed line
+The compact project is published in Boards and deduction. Do not inherit the old Volume 2 prerequisites, fixed line
 budget, eight-topic quota or claims about word length. DATA and arrays alone do
 not justify a long progression after the revised board games.
 

@@ -1,8 +1,8 @@
 # Cipher — native prototype record
 
 **Status:** The bounded native trial is built and verified. The user authorised
-the [compact lesson sequence](lesson-brief.md) around this endpoint. The
-replacement lesson preview is subject to review before publication. The [brief](brief.md) defines scope and [review](review.md) records
+the [compact lesson sequence](lesson-brief.md) around this endpoint. The approved
+[replacement lessons](lessons.md) are published in Boards and deduction. The [brief](brief.md) defines scope and [review](review.md) records
 the inherited source findings.
 
 ## Implementation
@@ -50,4 +50,5 @@ reaction times or original-hardware measurements.
 The opening, revealed word, repeated guess, missed letter, pause and both ending
 captures were inspected. Native execution establishes behaviour; player feedback
 must still establish whether the word choices and pacing are enjoyable. The
-existing website lessons are unchanged, and the prototype is not published.
+approved replacement lessons are published; the finished teaching source is
+identical to this prototype.

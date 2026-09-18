@@ -1,9 +1,8 @@
 # Cipher — teaching implementation
 
-**Status:** Six replacement lessons and five verified programs are ready for
-local review. The [lesson brief](lesson-brief.md) defines the progression.
-The user authorised lessons around the native prototype; publication awaits
-review of these pages.
+**Status:** Six approved replacement lessons and five verified programs are
+published. Production and live checks pass. The [lesson brief](lesson-brief.md)
+defines the progression. The finished game is unchanged.
 
 ## Maintained sources and scope
 
@@ -42,7 +41,7 @@ independent learner success or original-hardware timing.
 
 The overview and six topic-named lessons replace the earlier six. They provide
 local explanations, exact editing actions, complete source, questions with
-reasoning, keyboard notes and original manual chapter references. The local
+reasoning, keyboard notes and original manual chapter references. The published
 catalogue places Cipher in Boards and deduction, preserving numeric identities.
 Six canonical and six legacy topic paths redirect by subject. The system and
 assembly landing pages contain no conflicting Cipher-specific claims; the BASIC
@@ -60,6 +59,19 @@ The overview uses the original prototype's native miss capture, whose source is
 identical to finished. The board checkpoint's two-T capture was also inspected
 against its worked example. No altered-state diagnostic image is used publicly.
 
-The local preview is
-<http://127.0.0.1:4336/systems/sinclair-zx-spectrum/basic/cipher/>.
-No publication or live-site claim is made.
+## Publication
+
+Samples PR [22](https://github.com/code198x/code-samples/pull/22) is merged at
+`56bf2da`. README follow-up [23](https://github.com/code198x/code-samples/pull/23)
+is merged at `953e809`. Website PR
+[436](https://github.com/code198x/website/pull/436) is merged at `3ba81b75`.
+Samples CI, website CI and code analysis pass. Pages deployment
+[35344745828](https://github.com/code198x/website/actions/runs/35344745828)
+succeeded. Twenty-one live HTTP checks cover the overview, all six lessons,
+six canonical and six legacy topic redirects, the current-course listing and
+unchanged native image. Evidence is retained in `verification/lesson-live.json`.
+
+The [published lessons](https://code198x.com/systems/sinclair-zx-spectrum/basic/cipher/)
+are available in Boards and deduction. The release note remains a draft. All
+eighteen unrelated local edits retain their pre-publication contents or deletion
+state.

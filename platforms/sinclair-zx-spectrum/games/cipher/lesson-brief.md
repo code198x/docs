@@ -1,8 +1,8 @@
 # Cipher — teaching progression
 
-**Status:** The user authorised the compact lesson sequence around the native
-prototype. Six lessons use five runnable checkpoints; the local lesson preview
-requires review before publication. No larger game scope is introduced.
+**Status:** The user approved the compact lesson sequence and authorised
+publication. Six lessons with five verified checkpoints are published in Boards
+and deduction. The native prototype endpoint is preserved.
 
 ## Endpoint and teaching shape
 
