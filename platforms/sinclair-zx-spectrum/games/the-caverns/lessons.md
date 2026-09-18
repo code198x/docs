@@ -1,7 +1,7 @@
 # The Caverns — teaching implementation
 
-**Status:** Ten replacement lessons and eight verified programs are prepared
-locally for review. The native prototype is accepted; publication is pending.
+**Status:** Ten approved replacement lessons and eight verified programs are
+published. Production and live checks pass. The native prototype is accepted.
 The [lesson brief](lesson-brief.md) defines the progression.
 
 ## Maintained sources
@@ -50,9 +50,8 @@ Ten topic-named lessons replace the old six. Each has exact editing instructions
 complete source, questions with explanations, relevant keyboard notes and
 original manual chapter references. The overview uses the existing House
 presentation. Old canonical and legacy topic URLs redirect to corresponding
-new lessons; numeric identities are preserved. The local BASIC listing places
-The Caverns in a new Hidden worlds group after Quickstep. That grouping is part
-of this review. The prepared What's New entry remains `draft: true`.
+new lessons; numeric identities are preserved. The approved BASIC listing places
+The Caverns in a new Hidden worlds group after Quickstep. That grouping is approved. The prepared What's New entry remains `draft: true`.
 
 The production build passes: seven test files, 69 tests and nine existing skips,
 followed by content validation, static generation and search indexing.
@@ -63,5 +62,16 @@ accessibility checks cover the overview and two representative lessons, with
 no axe violations. Rendered desktop lesson and mobile overview captures were
 visually inspected. Compact browser evidence is retained alongside this record.
 
-Local preview: <http://127.0.0.1:4334/systems/sinclair-zx-spectrum/basic/the-caverns/>.
-These lessons have not been published or announced.
+## Publication
+
+Samples PR [20](https://github.com/code198x/code-samples/pull/20) is merged at
+`80c3ee2`. Website PR [434](https://github.com/code198x/website/pull/434) is merged
+at `0dbfc671`. Samples CI, website CI and code analysis pass. Pages deployment
+[35327408943](https://github.com/code198x/website/actions/runs/35327408943)
+succeeded. Twenty-five live HTTP checks cover the overview, all ten lessons,
+six canonical and six legacy topic redirects, the current-course listing and
+unchanged arrival image. Evidence is retained in `verification/lesson-live.json`.
+
+The [published lessons](https://code198x.com/systems/sinclair-zx-spectrum/basic/the-caverns/)
+are available in Hidden worlds. The release note remains a draft. All eighteen
+unrelated local edits retain their pre-work contents or deletion state.

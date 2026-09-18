@@ -60,7 +60,7 @@ This yields thirteen distinct concepts to review: six existing projects and seve
 ## Recommended sequence of decisions
 
 1. Locksmith’s bounded prototype and replacement lessons are accepted and published. Retain its verified ten-guess baseline.
-2. Three in a Row’s opponent review is complete; its native prototype is accepted and ten replacement lessons are published. The user selected The Caverns next; its fixed cave and patrol are accepted, and replacement lessons are prepared for review. Yearfall remains a later candidate for contrasting persistent state.
+2. Three in a Row’s opponent review is complete; its native prototype is accepted and ten replacement lessons are published. The user selected The Caverns next; its fixed cave and patrol are accepted, and the ten replacement lessons are published in Hidden worlds. Yearfall remains a later candidate for contrasting persistent state.
 3. Keep Dice Roller and Cipher available while deciding how short optional projects should appear in navigation. No retirement or relocation is approved here.
 4. Settle Night Patrol's identity and assess the seven proposal families individually. New groups should follow accepted experiences; do not publish empty groups or a promised finale sequence.
 

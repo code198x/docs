@@ -1,0 +1,127 @@
+[
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/",
+    "status": 200,
+    "check": "Name a room"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-01-name-a-room/",
+    "status": 200,
+    "check": "Name a room"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-02-connect-the-rooms/",
+    "status": 200,
+    "check": "Connect the rooms"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-03-follow-a-tunnel/",
+    "status": 200,
+    "check": "Follow a tunnel"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-04-leave-a-glint/",
+    "status": 200,
+    "check": "Leave a glint"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-05-warn-about-the-pit/",
+    "status": 200,
+    "check": "Warn about the pit"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-06-give-the-creature-a-route/",
+    "status": 200,
+    "check": "Give the creature a route"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-07-leave-time-to-escape/",
+    "status": 200,
+    "check": "Leave time to escape"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-08-bring-the-treasures-home/",
+    "status": 200,
+    "check": "Bring the treasures home"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-09-invite-the-explorer/",
+    "status": 200,
+    "check": "Invite the explorer"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-10-keep-the-expedition/",
+    "status": 200,
+    "check": "Keep the expedition"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-01/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-02-connect-the-rooms/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/the-caverns/unit-01/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-02-connect-the-rooms/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-02/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-03-follow-a-tunnel/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/the-caverns/unit-02/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-03-follow-a-tunnel/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-03/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-05-warn-about-the-pit/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/the-caverns/unit-03/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-05-warn-about-the-pit/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-04/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-06-give-the-creature-a-route/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/the-caverns/unit-04/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-06-give-the-creature-a-route/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-05/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-04-leave-a-glint/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/the-caverns/unit-05/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-04-leave-a-glint/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-06/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-09-invite-the-explorer/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/the-caverns/unit-06/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-09-invite-the-explorer/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/",
+    "status": 200,
+    "check": "Hidden worlds"
+  },
+  {
+    "path": "/images/sinclair-zx-spectrum/basic/the-caverns/teaching/arrival.png",
+    "status": 200,
+    "check": "identical image bytes"
+  }
+]

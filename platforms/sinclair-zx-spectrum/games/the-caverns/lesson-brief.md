@@ -1,6 +1,6 @@
 # The Caverns — teaching progression
 
-**Status:** The user accepted the native prototype and authorised lesson development. Ten lessons use eight independently runnable programs. The accepted endpoint is preserved; replacement lessons are prepared locally for review, not published.
+**Status:** The user accepted the native prototype and authorised lesson development. Ten lessons use eight independently runnable programs. The accepted endpoint is preserved; the approved replacement lessons are published.
 
 **Endpoint:** `code-samples/sinclair-zx-spectrum/basic/the-caverns/prototype/caverns.bas` at samples commit `7c3fcfe`. The finished checkpoint must be byte-identical: twelve named rooms, a fixed pit, three treasures returned to the entrance, an eight-room patrol, directional clues, an escape turn after arrival, no real-time deadline and deliberate silence.
 

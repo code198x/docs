@@ -1,6 +1,6 @@
 # The Caverns — prototype record
 
-**Status:** The user accepted the native game, reporting that it works quite well, and authorised lessons. The [teaching progression](lesson-brief.md) preserves this endpoint. Existing website lessons remain live during development.
+**Status:** The user accepted the native game, reporting that it works quite well, and authorised lessons. The [teaching progression](lesson-brief.md) preserves this endpoint. The approved replacement lessons are published; see the [implementation record](lessons.md).
 
 ## Implemented trial
 
