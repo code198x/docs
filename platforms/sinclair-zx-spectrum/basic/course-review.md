@@ -1,6 +1,6 @@
 # Spectrum BASIC — grouping and remaining-course review
 
-The user agreed the four groups below. The website module catalogue owns their membership and order. This review recommends how to assess the remaining material; it does not approve a new lineup or retire existing lessons. Locksmith’s approved replacement lessons are now published. The user subsequently selected [Three in a Row’s opponent review](../games/three-in-a-row/review.md); its native prototype is accepted and the approved [teaching progression](../games/three-in-a-row/lesson-brief.md) is published.
+The user agreed the navigation groups below. The website module catalogue owns their membership and order. This review recommends how to assess the remaining material; it does not approve a new lineup or retire existing lessons. Locksmith’s approved replacement lessons are now published. The user subsequently selected [Three in a Row’s opponent review](../games/three-in-a-row/review.md); its native prototype is accepted and the approved [teaching progression](../games/three-in-a-row/lesson-brief.md) is published.
 
 ## Agreed grouping
 
@@ -10,8 +10,9 @@ The user agreed the four groups below. The website module catalogue owns their m
 | Movement and control | Volley, Touchdown | Continuous motion, contact, acceleration and braking |
 | Boards and deduction | Sonar, Crates, Locksmith, Three in a Row | Reading a grid, combining clues and changing board state safely |
 | Worlds that keep moving | Tail Chase, Brick Bash, Drift, Quickstep | Ordered bodies, destructible worlds, independent velocity and multiple moving hazards |
+| Hidden worlds | The Caverns | Named places, unseen state and timely warnings |
 
-These are navigation groups, not prerequisites or separate courses. All current game numbers, URLs and relative order remain unchanged. Four earlier games remain separately available, and the BASIC reference remains optional. Revised games can join the group that fits their activity; Locksmith and Three in a Row now belong to Boards and deduction.
+These are navigation groups, not prerequisites or separate courses. All current game numbers, URLs and relative order remain unchanged. Three earlier games remain separately available, and the BASIC reference remains optional. Revised games can join the group that fits their activity; Locksmith and Three in a Row now belong to Boards and deduction.
 
 ## Review evidence and limits
 
@@ -60,7 +61,7 @@ This yields thirteen distinct concepts to review: six existing projects and seve
 ## Recommended sequence of decisions
 
 1. Locksmith’s bounded prototype and replacement lessons are accepted and published. Retain its verified ten-guess baseline.
-2. Three in a Row’s opponent review is complete; its native prototype is accepted and ten replacement lessons are published. The user selected The Caverns next; its fixed cave and patrol are accepted, and the ten replacement lessons are published in Hidden worlds. Yearfall remains a later candidate for contrasting persistent state.
+2. Three in a Row’s opponent review is complete; its native prototype is accepted and ten replacement lessons are published. The user selected The Caverns next; its fixed cave and patrol are accepted, and the ten replacement lessons are published in Hidden worlds. The user selected Yearfall next and authorised a bounded economy reconciliation and BASIC prototype for contrasting persistent state. Native acceptance and replacement lessons remain pending.
 3. Keep Dice Roller and Cipher available while deciding how short optional projects should appear in navigation. No retirement or relocation is approved here.
 4. Settle Night Patrol's identity and assess the seven proposal families individually. New groups should follow accepted experiences; do not publish empty groups or a promised finale sequence.
 
