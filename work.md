@@ -120,3 +120,7 @@ Try a small explanatory illustration before adding a site-wide visual treatment.
 ## Shared module outline review
 
 Review the Maths for Games and Game Feel outlines and their catalogue metadata against the charter before developing their units. Maths currently assumes completion of Numbers & Bits, uses Sinclair BASIC as its shared demonstrator and makes sweeping claims about arithmetic costs across machines. Distinguish pursuit from pathfinding and behaviour design from arithmetic. Game Feel needs a review of universal prescriptions about grace periods, feedback and timing. Retain useful examples while making entry independent, language-neutral explanations concrete and machine claims specific. The Craft index offers a paper experiment and identifies both modules as outlines; it does not establish completed units or settle a new module structure.
+
+## Cipher publication
+
+The user selected [Cipher](platforms/sinclair-zx-spectrum/games/cipher/brief.md). The user authorised the compact lesson sequence. The approved [six lessons and five checkpoints](platforms/sinclair-zx-spectrum/games/cipher/lessons.md) are published in Boards and deduction: 57 execution groups and production/browser/accessibility/live checks pass, preserving the prototype endpoint. The user accepts that some remaining proposals may not be developed; assess each on its value rather than filling the catalogue.

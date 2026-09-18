@@ -1,0 +1,107 @@
+[
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/",
+    "status": 200,
+    "check": "Reveal the matches"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/unit-01-reveal-the-matches/",
+    "status": 200,
+    "check": "Reveal the matches"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/unit-02-choose-a-letter/",
+    "status": 200,
+    "check": "Choose a letter"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/unit-03-make-a-round/",
+    "status": 200,
+    "check": "Make a round"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/unit-04-read-the-board/",
+    "status": 200,
+    "check": "Read the board"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/unit-05-choose-another-word/",
+    "status": 200,
+    "check": "Choose another word"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/unit-06-keep-cipher/",
+    "status": 200,
+    "check": "Keep Cipher"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/unit-01/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/cipher/unit-01-reveal-the-matches/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/cipher/unit-01/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/cipher/unit-01-reveal-the-matches/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/unit-02/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/cipher/unit-03-make-a-round/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/cipher/unit-02/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/cipher/unit-03-make-a-round/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/unit-03/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/cipher/unit-04-read-the-board/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/cipher/unit-03/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/cipher/unit-04-read-the-board/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/unit-04/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/cipher/unit-05-choose-another-word/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/cipher/unit-04/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/cipher/unit-05-choose-another-word/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/unit-05/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/cipher/unit-05-choose-another-word/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/cipher/unit-05/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/cipher/unit-05-choose-another-word/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/cipher/unit-06/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/cipher/unit-05-choose-another-word/"
+  },
+  {
+    "path": "/sinclair-zx-spectrum/basic/cipher/unit-06/",
+    "status": 200,
+    "check": "/systems/sinclair-zx-spectrum/basic/cipher/unit-05-choose-another-word/"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/",
+    "status": 200,
+    "check": "Boards and deduction"
+  },
+  {
+    "path": "/images/sinclair-zx-spectrum/basic/cipher/teaching/board.png",
+    "status": 200,
+    "check": "identical image bytes"
+  }
+]

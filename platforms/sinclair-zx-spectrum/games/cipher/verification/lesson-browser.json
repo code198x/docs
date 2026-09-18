@@ -1,0 +1,142 @@
+{
+  "checks": [
+    {
+      "viewport": "desktop",
+      "page": "overview",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-01-reveal-the-matches",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-02-choose-a-letter",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-03-make-a-round",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-04-read-the-board",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-05-choose-another-word",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "page": "unit-06-keep-cipher",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 1,
+      "to": "unit-01-reveal-the-matches"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 2,
+      "to": "unit-03-make-a-round"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 3,
+      "to": "unit-04-read-the-board"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 4,
+      "to": "unit-05-choose-another-word"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 5,
+      "to": "unit-05-choose-another-word"
+    },
+    {
+      "viewport": "desktop",
+      "redirect": 6,
+      "to": "unit-05-choose-another-word"
+    },
+    {
+      "viewport": "desktop",
+      "check": "current-course-placement"
+    },
+    {
+      "viewport": "mobile",
+      "page": "overview",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-01-reveal-the-matches",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-02-choose-a-letter",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-03-make-a-round",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-04-read-the-board",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-05-choose-another-word",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "page": "unit-06-keep-cipher",
+      "checks": "HTTP, local links, source includes, images, overflow, question keyboard disclosure"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 1,
+      "to": "unit-01-reveal-the-matches"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 2,
+      "to": "unit-03-make-a-round"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 3,
+      "to": "unit-04-read-the-board"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 4,
+      "to": "unit-05-choose-another-word"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 5,
+      "to": "unit-05-choose-another-word"
+    },
+    {
+      "viewport": "mobile",
+      "redirect": 6,
+      "to": "unit-05-choose-another-word"
+    },
+    {
+      "viewport": "mobile",
+      "check": "current-course-placement"
+    }
+  ]
+}
