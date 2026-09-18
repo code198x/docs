@@ -7,7 +7,7 @@ remain available during the trial.
 
 ## Experience and scope
 
-Manage one settlement for ten years. Each year, inspect people, grain, land and
+Manage one settlement, reviewing the results every ten years. Each year, inspect people, grain, land and
 the offered land price. Edit a combined plan for trading land, feeding people
 and planting, then commit it. The recurring choice is how much grain to retain
 against a poor harvest and how much to invest in productive land. Selling land
@@ -27,13 +27,23 @@ then newcomers. When everyone is fed, newcomers equal five per cent of the
 opening population, rounded down. Otherwise none arrive. Newcomers join after
 the harvest and cannot work that year. Grain, land and people persist.
 
-The game ends after year ten or when the settlement is empty. The report shows
-remaining resources and cumulative deaths. End text describes actual outcomes;
-it does not award an unreachable population rating. Restart is available from
+Every ten years the report shows remaining resources, cumulative deaths and
+travellers welcomed. C continues ruling the same settlement; R starts again.
+An empty settlement ends the run and cannot continue. Summary text describes
+actual outcomes; it does not award an unreachable population rating. Restart is available from
 the plan, report and ending. The title is a separate first-entry screen.
 
-No combat, upgrades, extra events, saved campaigns or assembly helper belong to
-this trial. Harvest and market variation are the only random elements. There
+The user authorised one occasional traveller event before planning. The first
+visit occurs in year 3–5, then visits are spaced 3–5 years apart. Each offers
+3–6 people for six grain each. Acceptance immediately spends the welcome cost
+and adds those people; they require food and can work in the same year. The
+screen shows the cost, remaining grain and total food need. Y welcomes them only
+if the stock covers both welcome and food; N declines with no resource change.
+The harvest report accounts for welcome costs separately from food and seed.
+Restart and quit remain available at the offer.
+
+No combat, upgrades, additional event catalogue, saved campaigns or assembly
+helper belong to this trial. Harvest, market and traveller variation are random. There
 is no claim that every random sequence can be rescued. A session's duration
 and enjoyment require native play, not a forecast from source size.
 
@@ -73,14 +83,14 @@ an unseen place, while here it limits future decisions.
 
 A later lesson progression could begin with a settlement ledger, add feeding,
 seed and workforce constraints, resolve one harvest, retain several years,
-then introduce trade, planning edits and a finite ending. That is a direction
+then introduce trade, planning edits, decade reviews and traveller choices. That is a direction
 for teaching after acceptance, not an authorised lesson count or an excuse to
 replace published pages before playtesting.
 
 ## Verification and design risks
 
 Check combined costs, negative trades, land and fed-worker limits, partial
-rations, excess feeding, reset, empty settlement and ten-year completion.
+rations, excess feeding, reset, empty settlement, ten-year reviews, continued state and traveller acceptance/refusal.
 The editor must reject expressions and unwanted characters, bound input length,
 handle deletion and cancellation, and avoid repeated actions from held keys.
 Check every resource delta against the model during legal tape-driven play.
