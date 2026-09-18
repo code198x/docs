@@ -124,3 +124,7 @@ Review the Maths for Games and Game Feel outlines and their catalogue metadata a
 ## Cipher publication
 
 The user selected [Cipher](platforms/sinclair-zx-spectrum/games/cipher/brief.md). The user authorised the compact lesson sequence. The approved [six lessons and five checkpoints](platforms/sinclair-zx-spectrum/games/cipher/lessons.md) are published in Boards and deduction: 57 execution groups and production/browser/accessibility/live checks pass, preserving the prototype endpoint. The user accepts that some remaining proposals may not be developed; assess each on its value rather than filling the catalogue.
+
+## Dice Roller native trial
+
+The user authorised the [compact probability prototype](platforms/sinclair-zx-spectrum/games/dice-roller/brief.md). The user requested live results during each batch. Verify the [native prototype](platforms/sinclair-zx-spectrum/games/dice-roller/prototype.md), including live counts, scale and comparison semantics, then obtain play feedback before authoring lessons. Remaining game proposals are optional candidates, not a completion quota.
