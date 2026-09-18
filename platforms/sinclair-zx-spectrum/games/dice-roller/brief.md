@@ -1,8 +1,9 @@
 # Dice Roller — BASIC prototype brief
 
 **Status:** The user approved the native prototype with live results. Existing
-lessons remain available; replacement lesson count and publication remain to
-be settled. See the [source review](review.md) and [prototype record](prototype.md).
+lessons remain available. The user authorised a compact teaching sequence and
+runnable checkpoints; the [teaching specification](lesson-brief.md) defines
+five building lessons. Publication remains a later stage. See the [source review](review.md) and [prototype record](prototype.md).
 
 ## Experience and scope
 

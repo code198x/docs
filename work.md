@@ -127,4 +127,4 @@ The user selected [Cipher](platforms/sinclair-zx-spectrum/games/cipher/brief.md)
 
 ## Dice Roller teaching sequence
 
-The user approved the [native prototype](platforms/sinclair-zx-spectrum/games/dice-roller/prototype.md) with live results during each batch. Its 19 execution checks pass. Next, shape a compact teaching sequence around rolling, tallying, proportions, the live chart and comparing samples, with runnable checkpoints leading to the accepted endpoint. Remaining game proposals are optional candidates, not a completion quota.
+The user approved the [native prototype](platforms/sinclair-zx-spectrum/games/dice-roller/prototype.md) with live results during each batch. Its 19 execution checks pass. The [five-stage teaching sequence and checkpoints](platforms/sinclair-zx-spectrum/games/dice-roller/lessons.md) are prepared around rolling, tallying, proportions, the live chart and comparing samples. Next, author the replacement website lessons from those maintained states and verify their editing instructions and rendered pages. Remaining game proposals are optional candidates, not a completion quota.
