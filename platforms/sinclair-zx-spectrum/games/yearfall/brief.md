@@ -46,13 +46,17 @@ loads that tape in a fresh process for execution checks. The development host
 also runs a separate Python economy model. Neither adds runtime capability to
 the Spectrum.
 
-S starts. T/F/P edit trade, food and planting. Digits enter a new amount;
-minus sells land; Enter accepts; Delete erases and X cancels an edit. Space
+S starts. B buys land and S sells land, each taking a positive number of acres.
+Zero clears the land plan; choosing one action replaces the other planned land
+action. F/P edit food and planting. Digits enter a new amount; Enter accepts;
+Delete erases and X cancels an edit. Space
 commits a valid plan or continues a report. R restarts and Q quits outside the
 number editor. Held keys count once. Blank entry leaves the previous plan.
 
 The screen is a compact ledger with aligned quantities and costs. It shows
 remaining grain, food requirements, land after trading and fed-worker capacity.
+Buying and selling have separate visible rows. The plan states how much grain
+will be spent or received, and the report labels land purchases and sales.
 A valid plan includes its possible post-harvest grain range. The report accounts
 for opening grain, trade, food, seed and harvest before showing the balance.
 Text carries each meaning; colour separates headings and totals. The game is

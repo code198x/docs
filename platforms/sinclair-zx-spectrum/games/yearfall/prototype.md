@@ -12,11 +12,23 @@ planting recalculates cost, food-supported workers, land and possible harvest
 balances. Space resolves only valid allocations. A report accounts for every
 resource change; reports wait for a separate key press before continuing.
 
-Input is a bounded whole-number editor, not a BASIC expression prompt. A minus
-sign is allowed only at the beginning of a land trade. Empty entry retains the
+Input is a bounded whole-number editor, not a BASIC expression prompt. Buying
+and selling have separate visible controls and accept unsigned acre counts.
+The selected action supplies the direction of the internal land change. A new
+land action replaces the previous one; zero clears it. The plan explicitly
+states grain spent or received, and the report labels each direction. Empty entry retains the
 old amount; deletion, cancellation and held-key release are explicit. Invalid
 plans can remain visible while the player edits another field, but cannot spend
 resources or advance the year. The completed game is deliberately silent.
+
+## Native feedback and control revision
+
+The user found the game tough and could not understand how to recover. They
+then explained that buying and selling land had not both been apparent. The
+user approved separate Buy land and Sell land controls, with positive amounts
+and explicit grain costs or proceeds. This revision addresses that confusion;
+the economy is unchanged. Broader recovery guidance remains a possible follow-up,
+not an implemented change. Further native feedback is pending.
 
 ## Economy evidence
 
@@ -51,7 +63,7 @@ of the final run must be understood as a seeded legal playthrough.
 
 ## Native verification
 
-Twenty-six native execution groups pass on stock 48K PAL. The final tape was
+Thirty-two native execution groups pass on stock 48K PAL. The final tape was
 entered in a fresh ROM using keyword keys and `SAVE "yearfall" LINE 10`, then
 loaded in a separate process. The executable reports Emu198x 0.24.0, locally
 built from `e1f49c7e8e20ff8cf1cab8453955f2b212dab4e3`; its SHA-256 is recorded in
@@ -61,13 +73,14 @@ string updates are retried for at most eight frames.
 Checks cover fresh tape and token identity, title/start/quit, ignored keys,
 whole-number entry, deletion, cancellation, held digits, bounded input,
 combined budgets, excess food, ownership and planting limits, fed labour,
-buying/selling, partial rations, persistent state, all ten yearly ledgers,
+buying/selling, replacement and cancellation of land plans, zero clearing,
+unsigned acre entry, explicit cost/proceeds, partial rations, persistent state, all ten yearly ledgers,
 retained reports, both endings, held Space, uppercase controls and restart.
 The seeded ten-year run ends with 93 people, 576 grain, 178 acres and no deaths.
 
 The final audit confirms ordered unique line numbers, literal branch targets,
 source/build/model/result identities, tape checksums, auto-start line 10 and
-stored token identity. Original planning, editing, invalid-plan, harvest and
+stored token identity. Original planning, purchase, sale, editing, invalid-plan, harvest and
 ending captures were visually inspected. The native emulator was launched from
 the final TAP for the user's playtest.
 
