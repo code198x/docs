@@ -1,6 +1,6 @@
 # The Caverns — BASIC prototype brief
 
-**Status:** The user selected The Caverns after the recommendation to trial a small authored cave with useful warnings and deliberate evasion. The concrete rules below define the first implementation for native play, not an accepted final game or lesson sequence. Earlier published lessons remain unchanged.
+**Status:** The user accepted the native game, reporting that it works quite well, and authorised lesson development. The [ten-lesson progression](lesson-brief.md) preserves this fixed cave and its rules. Replacement lessons are being prepared locally for review; the earlier published lessons remain live.
 
 **Target:** Stock 48K PAL ZX Spectrum, Sinclair BASIC, keyboard and tape. No machine code or expansion. Sources belong in `code-samples/sinclair-zx-spectrum/basic/the-caverns/prototype/`; enter through the ROM and fresh-load a self-starting tape for verification.
 

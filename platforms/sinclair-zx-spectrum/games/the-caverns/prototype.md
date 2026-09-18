@@ -1,6 +1,6 @@
 # The Caverns — prototype record
 
-**Status:** The selected BASIC exploration trial is implemented and verified, ready for native play. The user has not yet accepted this game or its difficulty. Existing website lessons remain unchanged.
+**Status:** The user accepted the native game, reporting that it works quite well, and authorised lessons. The [teaching progression](lesson-brief.md) preserves this endpoint. Existing website lessons remain live during development.
 
 ## Implemented trial
 
@@ -44,7 +44,7 @@ The audit binds source, saved tokens, self-starting tape, executable identity,
 results and captures. Configuration is stock 48K PAL using the local Emu198x
 build at `e1f49c7e8e20ff8cf1cab8453955f2b212dab4e3`, reporting 0.24.0. Original
 entrance, arrival and ending images were inspected. No original-hardware timing,
-independent learner testing or native acceptance is claimed.
+independent learner testing is claimed. Native playability is accepted.
 
 ## Native questions
 
