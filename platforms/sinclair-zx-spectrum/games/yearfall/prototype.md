@@ -1,7 +1,8 @@
 # Yearfall — prototype record
 
-**Status:** The user authorised this bounded BASIC trial. Native play acceptance
-and replacement lessons remain pending. The [brief](brief.md) defines the rules;
+**Status:** The user accepted the extended native game: “Yep, that'll do”.
+Samples commit `03afc02` is the accepted endpoint. Replacement lessons remain
+to be planned and authored. The [brief](brief.md) defines the rules;
 the [source review](review.md) records the inherited economy problems.
 
 ## Implementation
@@ -28,7 +29,7 @@ then explained that buying and selling land had not both been apparent. The
 user approved separate Buy land and Sell land controls, with positive amounts
 and explicit grain costs or proceeds. This revision addresses that confusion;
 the economy is unchanged. Broader recovery guidance remains a possible follow-up,
-not an implemented change. Further native feedback is pending.
+not an implemented change. The subsequent extended game is accepted.
 
 ## Economy evidence
 
@@ -104,7 +105,7 @@ identity audits pass. No incomplete-snapshot retries were needed in this run.
 
 Original traveller offer, unaffordable offer and decade-summary captures were
 visually inspected. The updated TAP was launched in the native emulator for
-playtesting. Native acceptance of the extended game remains pending. The allocation editor currently
+playtesting. The user accepted this extended version. The allocation editor currently
 accepts four digits; this is a practical limit on very long runs. The trial does
 not establish indefinite play at arbitrarily large populations. No replacement
 lessons or website change are published.

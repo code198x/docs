@@ -1,9 +1,9 @@
 # Yearfall — BASIC prototype brief
 
-**Status:** The user selected Yearfall next and authorised economy reconciliation
-and a bounded BASIC prototype. Native acceptance and replacement lessons remain
-pending. This brief replaces the inherited plan; the existing published lessons
-remain available during the trial.
+**Status:** The user accepted the native BASIC prototype, including separate
+buy/sell controls, decade continuation and traveller offers. The accepted source
+is samples commit `03afc02`. Replacement lessons remain to be planned and
+authored; the existing published lessons remain available.
 
 ## Experience and scope
 
@@ -84,8 +84,8 @@ an unseen place, while here it limits future decisions.
 A later lesson progression could begin with a settlement ledger, add feeding,
 seed and workforce constraints, resolve one harvest, retain several years,
 then introduce trade, planning edits, decade reviews and traveller choices. That is a direction
-for teaching after acceptance, not an authorised lesson count or an excuse to
-replace published pages before playtesting.
+for teaching the accepted game, not an authorised lesson count or a completed
+replacement for the published pages.
 
 ## Verification and design risks
 
