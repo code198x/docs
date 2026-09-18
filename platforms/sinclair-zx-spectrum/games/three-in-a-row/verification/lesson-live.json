@@ -1,0 +1,97 @@
+[
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/",
+    "status": 200,
+    "expected": "Build the decision"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-01-draw-nine-squares/",
+    "status": 200,
+    "expected": "Nine values, one board"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-02-place-a-cross/",
+    "status": 200,
+    "expected": "Complete source"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-03-take-turns/",
+    "status": 200,
+    "expected": "Complete source"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-04-read-a-winning-line/",
+    "status": 200,
+    "expected": "Complete source"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-05-choose-an-empty-square/",
+    "status": 200,
+    "expected": "Complete source"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-06-win-before-blocking/",
+    "status": 200,
+    "expected": "Complete source"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-07-prefer-useful-squares/",
+    "status": 200,
+    "expected": "Complete source"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-08-make-two-threats/",
+    "status": 200,
+    "expected": "Complete source"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-09-finish-the-session/",
+    "status": 200,
+    "expected": "Complete source"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-10-keep-the-game/",
+    "status": 200,
+    "expected": "Complete source"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-01/",
+    "status": 200,
+    "expected": "unit-01-draw-nine-squares"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-02/",
+    "status": 200,
+    "expected": "unit-02-place-a-cross"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-03/",
+    "status": 200,
+    "expected": "unit-04-read-a-winning-line"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-04/",
+    "status": 200,
+    "expected": "unit-06-win-before-blocking"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-05/",
+    "status": 200,
+    "expected": "unit-07-prefer-useful-squares"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-06/",
+    "status": 200,
+    "expected": "unit-09-finish-the-session"
+  },
+  {
+    "path": "/systems/sinclair-zx-spectrum/basic/",
+    "status": 200,
+    "expected": "Build an opponent and discover what its rules miss"
+  },
+  {
+    "path": "/images/sinclair-zx-spectrum/basic/three-in-a-row/teaching/fork.png",
+    "status": 200,
+    "expected": null
+  }
+]

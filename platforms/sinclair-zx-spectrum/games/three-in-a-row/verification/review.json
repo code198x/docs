@@ -1,0 +1,142 @@
+{
+  "status": "passed",
+  "method": "Exhaustive host traversal of legal integer player replies against a source-pinned translation of the deterministic BASIC policy. Not native execution.",
+  "source": "sinclair-zx-spectrum/basic/three-in-a-row/unit-06/three-in-a-row.bas",
+  "sha256": "aa7940d439adf48abaf001357b04f7e4b4cfeb45406ffaa2073669d5b44e1d26",
+  "terminal_move_sequences": {
+    "computer_win": 350,
+    "draw": 127,
+    "player_win": 12
+  },
+  "computer_positions": 247,
+  "priority_counts_on_distinct_positions": {
+    "centre": 8,
+    "block": 78,
+    "win": 125,
+    "corner": 34,
+    "edge": 2
+  },
+  "shortest_examples": {
+    "computer_win": [
+      {
+        "mark": "X",
+        "cell": 1,
+        "reason": "player"
+      },
+      {
+        "mark": "O",
+        "cell": 5,
+        "reason": "centre"
+      },
+      {
+        "mark": "X",
+        "cell": 2,
+        "reason": "player"
+      },
+      {
+        "mark": "O",
+        "cell": 3,
+        "reason": "block"
+      },
+      {
+        "mark": "X",
+        "cell": 4,
+        "reason": "player"
+      },
+      {
+        "mark": "O",
+        "cell": 7,
+        "reason": "win"
+      }
+    ],
+    "draw": [
+      {
+        "mark": "X",
+        "cell": 1,
+        "reason": "player"
+      },
+      {
+        "mark": "O",
+        "cell": 5,
+        "reason": "centre"
+      },
+      {
+        "mark": "X",
+        "cell": 2,
+        "reason": "player"
+      },
+      {
+        "mark": "O",
+        "cell": 3,
+        "reason": "block"
+      },
+      {
+        "mark": "X",
+        "cell": 7,
+        "reason": "player"
+      },
+      {
+        "mark": "O",
+        "cell": 4,
+        "reason": "block"
+      },
+      {
+        "mark": "X",
+        "cell": 6,
+        "reason": "player"
+      },
+      {
+        "mark": "O",
+        "cell": 9,
+        "reason": "corner"
+      },
+      {
+        "mark": "X",
+        "cell": 8,
+        "reason": "player"
+      }
+    ],
+    "player_win": [
+      {
+        "mark": "X",
+        "cell": 1,
+        "reason": "player"
+      },
+      {
+        "mark": "O",
+        "cell": 5,
+        "reason": "centre"
+      },
+      {
+        "mark": "X",
+        "cell": 8,
+        "reason": "player"
+      },
+      {
+        "mark": "O",
+        "cell": 3,
+        "reason": "corner"
+      },
+      {
+        "mark": "X",
+        "cell": 7,
+        "reason": "player"
+      },
+      {
+        "mark": "O",
+        "cell": 9,
+        "reason": "block"
+      },
+      {
+        "mark": "X",
+        "cell": 4,
+        "reason": "player"
+      }
+    ]
+  },
+  "limitations": [
+    "Sequence counts are not human win probabilities.",
+    "Only the existing player-first mode is modelled.",
+    "No input, drawing, sound, ROM loading or human playability claims."
+  ]
+}
