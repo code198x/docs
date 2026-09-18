@@ -4,8 +4,8 @@ The [teaching specification](lesson-brief.md) defines five building lessons:
 roll a die, keep tallies, compare shares, watch the live distribution, and
 compare experiments. Complete runnable programs and exact editing metadata are
 prepared in `code-samples/sinclair-zx-spectrum/basic/dice-roller/teaching/`.
-Website lesson prose is not yet authored and the existing published lessons
-remain unchanged.
+The overview and five replacement lessons are authored locally for review.
+The existing published lessons remain unchanged until publication.
 
 The endpoint is byte-identical to the user-approved prototype. The first four
 checkpoints expose separate observable results, rather than providing a hidden
@@ -36,7 +36,27 @@ zero/100% and accumulation-limit ROM-command fixtures. Captures from those
 fixtures are diagnostic, not ordinary play. Known imperfect headless captures
 are not suitable for publication.
 
-This is emulator execution evidence, not independent learner review. Website
-authoring still needs learner-facing explanations, exact editing instructions,
-questions with worked reasoning, primary source links, navigation decisions,
-rendered-page checks and review. No further game proposals are made mandatory.
+This is emulator execution evidence, not independent learner review. The
+website lessons include local explanations, exact editing instructions, source
+disclosures, questions with worked reasoning, keyboard notes and primary manual
+chapter links. Numeric identities and existing unit URLs are preserved. The
+BASIC landing page places Dice Roller in Optional experiments; its empty earlier
+games section is hidden. The release note stays draft. No native PNG is used
+publicly, and no further game proposals are made mandatory.
+
+## Website validation
+
+Production build passes: seven test files, 69 tests and nine existing skips,
+then content checks, static generation and search indexing. Five lesson/source
+mappings and every add/replace instruction match the checkpoint metadata.
+
+Twenty browser groups pass across desktop and Pixel 7 mobile emulation: all six
+pages, local links, source includes, keyboard question disclosure, expanded-code
+overflow, optional-experiment navigation and six preserved legacy redirects.
+Twenty-four light/dark WCAG 2 A/AA and 2.1 AA accessibility checks report no axe
+violations. Themes were measured with transitions disabled. The desktop overview
+and mobile live-chart lesson were visually inspected. Compact records are in
+`verification/lesson-browser.json` and `verification/lesson-accessibility.json`.
+
+The local production preview is available for user review. Publication is not
+performed, and the release note remains draft.

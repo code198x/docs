@@ -2,8 +2,8 @@
 
 **Status:** The user authorised the teaching sequence and runnable checkpoints
 following acceptance of the live prototype. This specification defines five
-building lessons, supported by [five verified checkpoints](lessons.md). Website replacement and publication are not part of this
-checkpoint preparation; existing lessons remain available.
+building lessons, supported by [five verified checkpoints](lessons.md). The user subsequently authorised website authoring. The overview and five
+replacement lessons are prepared locally; publication awaits review.
 
 ## Endpoint and audience
 
