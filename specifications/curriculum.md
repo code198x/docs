@@ -16,6 +16,8 @@ Basic collections and tracing belong here. Further data-structure and algorithm 
 
 Maths for Games currently sits within The Craft. Develop position, distance, direction, movement, probability and numerical representation through concrete game problems. Readers should be able to arrive when they need a tool, without completing a separate prerequisite course.
 
+Dice Roller belongs here as a probability experiment, rather than in the Spectrum BASIC game sequence. Its five lessons build the runnable experiment in Sinclair BASIC while teaching counts, shares and sample size. Keep the target and setup explicit; other maths topics need not precede it. Preserve the existing lesson links when moving its pages.
+
 Explain the useful model before its optimisation. Fixed-point accumulators, lookup tables, root-free distance comparisons and approximation are applications, not the whole subject. Costs depend on language, CPU and workload. A direct pursuer is not an obstacle-solving pathfinder.
 
 Foundations explains what a representation means; Maths for Games explains how it helps solve a game problem; system lessons implement it within a measured budget.

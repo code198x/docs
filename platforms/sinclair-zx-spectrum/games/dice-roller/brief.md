@@ -1,7 +1,8 @@
 # Dice Roller — BASIC prototype brief
 
 **Status:** The user approved the native prototype and five replacement lessons,
-then authorised publication. The lessons are published in Optional experiments.
+then authorised publication. The user chose Maths for Games as its home; the five lessons are published there
+as a probability experiment. The native Spectrum implementation is unchanged.
 See the [teaching specification](lesson-brief.md), [publication record](lessons.md),
 [source review](review.md) and [prototype record](prototype.md).
 

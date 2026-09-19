@@ -1,0 +1,148 @@
+{
+  "checks": [
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-01/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-01/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-02/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-02/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-03/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-03/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-04/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-04/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-05/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-05/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-01/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-01/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-02/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-02/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-03/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-03/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-04/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-04/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-05/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-05/",
+      "theme": "dark",
+      "violations": 0
+    }
+  ]
+}

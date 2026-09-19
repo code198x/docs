@@ -25,7 +25,7 @@ Use these designs alongside authored lessons, sample sources and capture manifes
 | ZX Spectrum | [Yearfall](sinclair-zx-spectrum/games/yearfall/brief.md) | Thirteen approved lessons published in Hidden worlds; eleven verified checkpoints preserve the accepted game; 140 execution groups and production/browser/accessibility/live checks pass |
 | ZX Spectrum | [Cipher](sinclair-zx-spectrum/games/cipher/brief.md) | Six approved lessons published in Boards and deduction; five verified checkpoints; 57 execution groups and production/browser/accessibility/live checks pass |
 | ZX Spectrum | [Night Patrol](sinclair-zx-spectrum/games/night-patrol/brief.md) | Corner-scanning prototype approved; ten-lesson progression agreed; eight teaching checkpoints verified (96 native groups); approved overview and ten lessons published in Hidden worlds; release and live checks pass |
-| ZX Spectrum | [Dice Roller](sinclair-zx-spectrum/games/dice-roller/brief.md) | Five approved lessons published in Optional experiments; five checkpoints and 35 execution groups verified |
+| ZX Spectrum | [Dice Roller](sinclair-zx-spectrum/games/dice-roller/brief.md) | Five approved lessons published in Maths for Games as a probability experiment; Spectrum source and five checkpoints retained; 35 native groups verified |
 
 The [BASIC performance-revisit proposal](sinclair-zx-spectrum/basic/performance-revisits.md) has an agreed basis but is deferred while the initial BASIC versions take priority. It explores how measured limits in existing games could motivate selected assembly work. It does not establish a performance ceiling or a replacement assembly sequence.
 

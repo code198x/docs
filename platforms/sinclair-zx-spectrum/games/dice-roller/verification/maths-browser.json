@@ -1,0 +1,130 @@
+{
+  "checks": [
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-01/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-02/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-03/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-04/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/craft/maths-for-games/unit-05/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "BASIC and Craft landings",
+      "checks": "Maths home, no standalone BASIC experiment group"
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-01/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-02/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-03/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-04/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/craft/maths-for-games/unit-05/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "BASIC and Craft landings",
+      "checks": "Maths home, no standalone BASIC experiment group"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/dice-roller/",
+      "checks": "redirect to matching Maths lesson"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/dice-roller/unit-01/",
+      "checks": "redirect to matching Maths lesson"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/dice-roller/unit-02/",
+      "checks": "redirect to matching Maths lesson"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/dice-roller/unit-03/",
+      "checks": "redirect to matching Maths lesson"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/dice-roller/unit-04/",
+      "checks": "redirect to matching Maths lesson"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/dice-roller/unit-05/",
+      "checks": "redirect to matching Maths lesson"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/",
+      "checks": "redirect to matching Maths lesson"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-01/",
+      "checks": "redirect to matching Maths lesson"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-02/",
+      "checks": "redirect to matching Maths lesson"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-03/",
+      "checks": "redirect to matching Maths lesson"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-04/",
+      "checks": "redirect to matching Maths lesson"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-05/",
+      "checks": "redirect to matching Maths lesson"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/game-05-dice-roller",
+      "checks": "numeric overview redirect"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/game-05-dice-roller",
+      "checks": "numeric overview redirect"
+    }
+  ]
+}
