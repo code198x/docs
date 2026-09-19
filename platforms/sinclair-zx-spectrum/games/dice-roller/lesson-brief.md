@@ -1,7 +1,7 @@
 # Dice Roller — teaching progression
 
 **Status:** The user approved the five lessons and authorised publication.
-The overview and five building lessons are published in Optional experiments,
+The five building lessons are published in Maths for Games as a probability experiment,
 supported by [five verified checkpoints](lessons.md).
 
 ## Endpoint and audience

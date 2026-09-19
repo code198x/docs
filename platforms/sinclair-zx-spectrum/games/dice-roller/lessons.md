@@ -4,8 +4,8 @@ The [teaching specification](lesson-brief.md) defines five building lessons:
 roll a die, keep tallies, compare shares, watch the live distribution, and
 compare experiments. Complete runnable programs and exact editing metadata are
 prepared in `code-samples/sinclair-zx-spectrum/basic/dice-roller/teaching/`.
-The approved overview and five replacement lessons are published in Optional
-experiments. Production and live checks pass.
+The approved five lessons are published as the opening probability experiment
+in Maths for Games. Production and live checks pass.
 
 The endpoint is byte-identical to the user-approved prototype. The first four
 checkpoints expose separate observable results, rather than providing a hidden
@@ -44,7 +44,7 @@ BASIC landing page places Dice Roller in Optional experiments; its empty earlier
 games section is hidden. The release note stays draft. No native PNG is used
 publicly, and no further game proposals are made mandatory.
 
-## Website validation
+## Original Spectrum website validation
 
 Production build passes: seven test files, 69 tests and nine existing skips,
 then content checks, static generation and search indexing. Five lesson/source
@@ -58,7 +58,7 @@ violations. Themes were measured with transitions disabled. The desktop overview
 and mobile live-chart lesson were visually inspected. Compact records are in
 `verification/lesson-browser.json` and `verification/lesson-accessibility.json`.
 
-## Publication
+## Original Spectrum publication
 
 Samples PR [24](https://github.com/code198x/code-samples/pull/24) is merged at
 `339af67`. Website PR [437](https://github.com/code198x/website/pull/437) is
@@ -72,3 +72,35 @@ release note's absence from RSS. Evidence is in `verification/lesson-live.json`.
 The [published lessons](https://code198x.com/systems/sinclair-zx-spectrum/basic/dice-roller/)
 retain their existing URLs. The release note remains draft. All eighteen
 unrelated Code198x edits retain their prior contents or deletion state.
+
+## Maths for Games placement
+
+The user selected Maths for Games as Dice Roller's home on 2026-09-19. Its five
+lessons become the opening probability experiment at
+`/craft/maths-for-games/unit-01/` through `unit-05/`. The source and verified
+native checkpoints remain in the Spectrum samples tree; the target stays stock
+48K Sinclair BASIC. No program or teaching-body changes accompany the move.
+
+The shared overview describes probability and the available experiment, while
+movement, direction and distance remain planned topics. There is no Numbers &
+Bits prerequisite for this entry point. The Craft and BASIC landings point to
+Maths for Games; the separate BASIC experiment catalogue and empty shelf are
+removed. All twelve former overview/lesson URLs and both older numeric overview
+URLs redirect directly to the new home or corresponding lesson.
+
+The production build and five lesson-body identity comparisons pass. All 28
+browser groups and 24 light/dark accessibility checks pass, including fourteen
+redirects, keyboard disclosures, expanded-source overflow and navigation from
+both landing pages. The desktop overview and mobile chart lesson were visually
+inspected. The shared section card's small Start label now uses the main text
+colour to meet dark-theme contrast. Compact evidence is in
+`verification/maths-browser.json` and `verification/maths-accessibility.json`.
+
+Website PR [439](https://github.com/code198x/website/pull/439) is merged at
+`75572417`. CI and offline link checks pass. Pages deployment
+[35431001850](https://github.com/code198x/website/actions/runs/35431001850) succeeded.
+All 28 live checks pass: the new overview and five lessons, fourteen redirects,
+both landing pages, all five published source identities and the draft release
+note’s absence from RSS. Evidence is in `verification/maths-live.json`.
+The [current home](https://code198x.com/craft/maths-for-games/) is Maths for Games.
+The release note stays draft and no new feed identity is introduced.

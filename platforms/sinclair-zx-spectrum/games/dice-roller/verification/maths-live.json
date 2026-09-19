@@ -1,0 +1,164 @@
+{
+  "checks": [
+    {
+      "path": "/craft/maths-for-games/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/",
+      "title": "Maths for Games"
+    },
+    {
+      "path": "/craft/maths-for-games/unit-01/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-01/",
+      "title": "Roll a die"
+    },
+    {
+      "path": "/craft/maths-for-games/unit-02/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-02/",
+      "title": "Keep the tallies"
+    },
+    {
+      "path": "/craft/maths-for-games/unit-03/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-03/",
+      "title": "Compare shares"
+    },
+    {
+      "path": "/craft/maths-for-games/unit-04/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-04/",
+      "title": "Watch the distribution"
+    },
+    {
+      "path": "/craft/maths-for-games/unit-05/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-05/",
+      "title": "Compare experiments"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/",
+      "title": "Maths for Games"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-01/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-01/",
+      "title": "Roll a die"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-02/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-02/",
+      "title": "Keep the tallies"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-03/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-03/",
+      "title": "Compare shares"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-04/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-04/",
+      "title": "Watch the distribution"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/dice-roller/unit-05/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-05/",
+      "title": "Compare experiments"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/dice-roller/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/",
+      "title": "Maths for Games"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/dice-roller/unit-01/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-01/",
+      "title": "Roll a die"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/dice-roller/unit-02/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-02/",
+      "title": "Keep the tallies"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/dice-roller/unit-03/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-03/",
+      "title": "Compare shares"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/dice-roller/unit-04/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-04/",
+      "title": "Watch the distribution"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/dice-roller/unit-05/",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/unit-05/",
+      "title": "Compare experiments"
+    },
+    {
+      "path": "/systems/sinclair-zx-spectrum/basic/game-05-dice-roller",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/",
+      "title": "Maths for Games"
+    },
+    {
+      "path": "/sinclair-zx-spectrum/basic/game-05-dice-roller",
+      "status": 200,
+      "final_url": "https://code198x.com/craft/maths-for-games/",
+      "title": "Maths for Games"
+    },
+    {
+      "path": "https://code198x.com/systems/sinclair-zx-spectrum/basic/",
+      "status": 200,
+      "check": "probability experiment points to Maths"
+    },
+    {
+      "path": "https://code198x.com/craft/",
+      "status": 200,
+      "check": "probability sequence available from The Craft"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/dice-roller/teaching/roll/dice-roller.bas",
+      "status": 200,
+      "sha256": "f7da13bfdc6446a55a5c13aed94c3d849a411b04ec8ae8ef63af5967942cd85d"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/dice-roller/teaching/tally/dice-roller.bas",
+      "status": 200,
+      "sha256": "2bf84f976724d38e0c8e827ada4860a784d605277639951c3acc17ad586c99b8"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/dice-roller/teaching/shares/dice-roller.bas",
+      "status": 200,
+      "sha256": "82b453cfa1826c6bcaafe0499abbfaf2db56a3e837782fad2391a78b4bd4b4b0"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/dice-roller/teaching/live/dice-roller.bas",
+      "status": 200,
+      "sha256": "4d7b114ed8f266d19e31d53744624ee62475fa9045c19e3c8e11ca612f9674c2"
+    },
+    {
+      "path": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/dice-roller/teaching/finished/dice-roller.bas",
+      "status": 200,
+      "sha256": "fafa55c90e8090054e2b24ff87cdb079139df0d1f21b8f3d675b3c270754253d"
+    },
+    {
+      "path": "https://code198x.com/rss.xml",
+      "status": 200,
+      "check": "release note remains draft"
+    }
+  ]
+}

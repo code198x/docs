@@ -46,7 +46,7 @@ The basis of revisiting games to explore BASIC’s limits is agreed, but the use
 
 Sonar’s nine lessons are published; the [implementation record](platforms/sinclair-zx-spectrum/games/sonar/lessons.md) owns publication evidence. Crates now follows Sonar in the published course. Its [source assessment](platforms/sinclair-zx-spectrum/games/crates/assessment.md) and [replacement brief](platforms/sinclair-zx-spectrum/games/crates/brief.md) reconcile the earlier finale framing with the current route. The [three-room prototype](platforms/sinclair-zx-spectrum/games/crates/prototype.md) passes scripted 48K execution checks for safe movement/pushing, target preservation, restart, replay, exit and fresh tape loading. The three-room scope and visual direction are agreed after native play. The [lesson brief](platforms/sinclair-zx-spectrum/games/crates/lesson-brief.md) defines eleven lessons. The [implementation record](platforms/sinclair-zx-spectrum/games/crates/lessons.md) owns thirteen executed checkpoints, including the map loader and validation. The approved overview and eleven lessons are published with maintained samples, the textual goal cue and topic-based legacy redirects. Live publication checks passed. A larger Sonar board remains an optional extension, not queued work.
 
-Reflex, Hi-Lo and Quiz Master are retired rather than queued for rewrites. Dice Roller and Cipher retain their current earlier-material status; no further retirement is agreed.
+Reflex, Hi-Lo and Quiz Master are retired rather than queued for rewrites. Cipher is published in Boards and deduction; Dice Roller is a probability experiment in Maths for Games. No further retirement is agreed.
 
 Produce reviewable game briefs and a sequence mapping before lesson rewrites. Record concrete missing shared explanations, Vault entries, patterns and component needs. Resolve substantive conflicts with the briefing and separate recommendations from decisions. Historical versions remain in Git; the current specifications should not require reading amendment chains to discover the project goals.
 
@@ -127,7 +127,7 @@ The user selected [Cipher](platforms/sinclair-zx-spectrum/games/cipher/brief.md)
 
 ## Remaining BASIC proposals
 
-Dice Roller’s approved [five lessons and checkpoints](platforms/sinclair-zx-spectrum/games/dice-roller/lessons.md) are published in Optional experiments. This completes the review of the previously unchanged published BASIC projects. Remaining game proposals are optional candidates, not a completion quota; assess their distinct teaching value before selecting another prototype. The later BASIC/assembly performance investigations remain deferred until the initial BASIC scope is settled.
+Dice Roller’s approved [five lessons and checkpoints](platforms/sinclair-zx-spectrum/games/dice-roller/lessons.md) are published as the opening probability experiment in Maths for Games. Old Spectrum lesson URLs redirect to the matching Maths pages; the BASIC program is unchanged. This completes the review of the previously unchanged published BASIC projects. Remaining game proposals are optional candidates, not a completion quota; assess their distinct teaching value before selecting another prototype. The later BASIC/assembly performance investigations remain deferred until the initial BASIC scope is settled.
 
 ## Night Patrol lesson authoring
 
