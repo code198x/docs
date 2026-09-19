@@ -1,0 +1,268 @@
+{
+  "checks": [
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-01/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-01/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-02/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-02/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-03/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-03/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-04/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-04/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-05/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-05/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-06/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-06/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-07/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-07/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-08/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-08/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-09/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-09/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-10/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-10/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-01/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-01/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-02/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-02/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-03/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-03/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-04/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-04/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-05/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-05/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-06/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-06/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-07/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-07/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-08/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-08/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-09/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-09/",
+      "theme": "dark",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-10/",
+      "theme": "light",
+      "violations": 0
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-10/",
+      "theme": "dark",
+      "violations": 0
+    }
+  ]
+}

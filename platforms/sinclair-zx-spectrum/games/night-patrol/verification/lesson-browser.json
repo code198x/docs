@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-01/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-02/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-03/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-04/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-05/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-06/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-07/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-08/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-09/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-10/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "desktop",
+      "path": "BASIC landing",
+      "checks": "Night Patrol navigation"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-01/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-02/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-03/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-04/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-05/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-06/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-07/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-08/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-09/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-10/",
+      "checks": "HTTP, local links, source rendering, keyboard disclosure, expanded-source overflow"
+    },
+    {
+      "mode": "mobile",
+      "path": "BASIC landing",
+      "checks": "Night Patrol navigation"
+    }
+  ]
+}

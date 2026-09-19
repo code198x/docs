@@ -1,5 +1,9 @@
 # Night Patrol
 
+The current stealth scope and larger-map trial are defined in the
+[prototype brief](brief.md). This retained design does not set the trial’s
+floor count, lesson count or line budget.
+
 > **Design material for review.** This existing game plan does not establish current project policy or implementation status. Apply the [project charter](../../../../PROJECT.md) when re-specifying it; retain useful mechanics and evidence, and replace superseded scope, quality or prerequisite assumptions.
 
 **Track:** Spectrum BASIC

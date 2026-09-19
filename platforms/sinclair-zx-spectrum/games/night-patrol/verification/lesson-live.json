@@ -1,0 +1,133 @@
+{
+  "checks": [
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/night-patrol/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/night-patrol/unit-01/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/night-patrol/unit-02/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/night-patrol/unit-03/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/night-patrol/unit-04/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/night-patrol/unit-05/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/night-patrol/unit-06/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/night-patrol/unit-07/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/night-patrol/unit-08/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/night-patrol/unit-09/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/night-patrol/unit-10/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/assembly/",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://code198x.com/images/sinclair-zx-spectrum/basic/night-patrol/candidate-fan.svg",
+      "status": 200,
+      "check": "expected content and available includes"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/night-patrol/teaching/archive/night-patrol.bas",
+      "status": 200,
+      "check": "source SHA-256 matches"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/night-patrol/teaching/movement/night-patrol.bas",
+      "status": 200,
+      "check": "source SHA-256 matches"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/night-patrol/teaching/mission/night-patrol.bas",
+      "status": 200,
+      "check": "source SHA-256 matches"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/night-patrol/teaching/patrol/night-patrol.bas",
+      "status": 200,
+      "check": "source SHA-256 matches"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/night-patrol/teaching/scans/night-patrol.bas",
+      "status": 200,
+      "check": "source SHA-256 matches"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/night-patrol/teaching/sight/night-patrol.bas",
+      "status": 200,
+      "check": "source SHA-256 matches"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/night-patrol/teaching/stealth/night-patrol.bas",
+      "status": 200,
+      "check": "source SHA-256 matches"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/night-patrol/teaching/finished/night-patrol.bas",
+      "status": 200,
+      "check": "source SHA-256 matches"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/night-patrol/prototype/verification/level.py",
+      "status": 200,
+      "check": "source SHA-256 matches"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/code198x/code-samples/main/sinclair-zx-spectrum/basic/night-patrol/prototype/verification/model.py",
+      "status": 200,
+      "check": "source SHA-256 matches"
+    },
+    {
+      "url": "https://code198x.com/rss.xml",
+      "check": "draft release note absent"
+    }
+  ]
+}
