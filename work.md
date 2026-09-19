@@ -128,3 +128,7 @@ The user selected [Cipher](platforms/sinclair-zx-spectrum/games/cipher/brief.md)
 ## Remaining BASIC proposals
 
 Dice Roller’s approved [five lessons and checkpoints](platforms/sinclair-zx-spectrum/games/dice-roller/lessons.md) are published in Optional experiments. This completes the review of the previously unchanged published BASIC projects. Remaining game proposals are optional candidates, not a completion quota; assess their distinct teaching value before selecting another prototype. The later BASIC/assembly performance investigations remain deferred until the initial BASIC scope is settled.
+
+## Night Patrol lesson authoring
+
+The user approved the corner-scanning game and agreed the [ten-lesson progression](platforms/sinclair-zx-spectrum/games/night-patrol/lesson-brief.md). All [eight teaching checkpoints](platforms/sinclair-zx-spectrum/games/night-patrol/lessons.md) are independently ROM-built and verified: 96 native execution groups, editing-transition and prepared-data audits, source/token/TAP identities and final source preservation. The overview and ten lessons are now authored for local review, explaining visibility preparation without requiring Python. They use an original candidate-fan diagram, not the unreliable diagnostic captures. Next: review the lesson pages; publication remains separate.
