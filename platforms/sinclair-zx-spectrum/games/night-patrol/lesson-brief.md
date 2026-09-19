@@ -4,7 +4,8 @@
 and verification of its eight teaching checkpoints. The prototype endpoint is
 approved. All eight checkpoints are implemented, with 96 native execution groups passed;
 see [implementation and evidence](lessons.md).
-The overview and ten website lessons are now authored for local review. Publication remains separate.
+The overview and ten website lessons are approved and published; see the
+[implementation record](lessons.md) for release and live checks.
 
 ## Endpoint and audience
 
@@ -163,5 +164,5 @@ local instructions must remain sufficient. Check catalogue grouping and the
 retained Night Patrol numeric identity against current site data. No new family,
 assembly revisit, extra guard, random patrol or multi-floor campaign is implied.
 
-The checkpoints and lesson pages are implemented. Review the local overview and
-ten lessons before publication; the approved gameplay source remains unchanged.
+The checkpoints and approved lesson pages are published. The implementation
+record owns release evidence; the approved gameplay source remains unchanged.

@@ -6,7 +6,8 @@ prototype is approved, including the 30 × 18 corridor map, widening sight fan
 and stationary corner scans. Preserve this gameplay endpoint when planning
 lessons. The user agreed the [ten-lesson progression](lesson-brief.md); its
 [eight checkpoints](lessons.md) are implemented with 96 native check groups passed.
-Website lessons and publication remain separate steps.
+The user-approved overview and ten lessons are published in Hidden worlds;
+[publication evidence](lessons.md#publication) records release and live checks.
 
 ## Experience and first scope
 

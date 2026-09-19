@@ -5,7 +5,7 @@ eight teaching checkpoints. The complete sources, precise editing transitions,
 prepared-data excerpts and execution evidence are implemented in
 `code-samples/sinclair-zx-spectrum/basic/night-patrol/teaching/`.
 The user subsequently authorised authoring. The overview and ten website lessons
-are approved for publication. Release checks and deployment are in progress.
+are approved and published in Hidden worlds. Release and live checks pass.
 
 ## Runnable states
 
@@ -118,4 +118,11 @@ Samples PR [25](https://github.com/code198x/code-samples/pull/25) is merged at
 [438](https://github.com/code198x/website/pull/438) is merged at `c31bc01c`;
 website CI, offline link checks and code analysis pass. Pages deployment
 [35430407066](https://github.com/code198x/website/actions/runs/35430407066)
-is in progress.
+succeeded.
+
+Twenty-six live checks verify the overview, ten lessons, Spectrum landing pages,
+fan diagram, all eight published checkpoint source hashes, both preparation
+utilities and the draft release note’s absence from RSS. Evidence is in
+`verification/lesson-live.json`. The [published overview](https://code198x.com/systems/sinclair-zx-spectrum/basic/night-patrol/)
+links the complete sequence. All eighteen unrelated local edits retain their
+prior contents or deletion state.
