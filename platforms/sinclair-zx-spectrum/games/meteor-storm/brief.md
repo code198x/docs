@@ -2,8 +2,8 @@
 
 **Status:** The user selected Meteor Storm as the first replacement assembly
 project. The [implemented prototype](prototype.md) is accepted after native play. Its
-[teaching progression](lesson-brief.md) is proposed; checkpoints and lesson prose
-are not yet implemented.
+[teaching progression](lesson-brief.md) has [executed checkpoints](checkpoints.md); lesson prose
+is not yet authored.
 **Target:** Stock 48K ZX Spectrum, PAL, Z80 assembly, keyboard, tape loading.
 **Role:** First-game trial under the [replacement opening](../../assembly/opening.md).
 

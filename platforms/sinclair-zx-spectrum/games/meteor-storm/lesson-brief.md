@@ -1,9 +1,11 @@
 # Meteor Storm — teaching progression
 
 **Status:** The user accepted the native game: “Sorted. Perfect. Let's proceed
-with this.” The user also agreed the separate introductory/game split. The eight introductory
-and fourteen game lessons remain provisional boundaries; checkpoints and lessons
-are not yet implemented.
+with this.” The user also agreed the separate introductory/game split. Meet Assembly is published. Seventeen complete native teaching programs now implement
+the game progression and its smaller graphics/clock experiments; see the
+[checkpoint execution record](checkpoints.md). Game lesson prose remains to be authored.
+The user explicitly permits as many lessons as understanding requires; the earlier
+fourteen-row outline is not a lesson-count target.
 
 Apply the [opening design](../../assembly/opening.md), [game brief](brief.md),
 [unit specification](../../../../specifications/unit.md) and [execution record](prototype.md).
@@ -22,8 +24,10 @@ That introduction owns the first build, bytes and memory, simple drawing, flags,
 loops, calls and stack, keyboard input, bounded marker movement, clock awareness
 and the first debugger exercise. The game applies and deepens those ideas.
 
-The fourteen game lessons below propose thirteen new runnable checkpoints; the
-final reload lesson reuses the finished source. These boundaries remain provisional.
+The outline below groups thirteen game checkpoints by purpose; the final reload
+activity reuses the finished source. Four smaller runnable experiments now precede
+the relevant drawing/clock checkpoints: one-row-shift, eight-shifts, interrupt-clock
+and half-rate-clock. These are source states, not fixed lesson boundaries.
 No BASIC or Foundations attendance is required. Readers arrive from the introductory
 module or with equivalent experience; recap immediate concepts locally.
 
@@ -32,7 +36,7 @@ basis, explicitly linked to the introductory experiments. No unexplained engine 
 prior game binary is inherited. A controllable ship develops into a one-meteor
 dodge before pools, scores and records.
 
-## Proposed sequence
+## Working progression
 
 | Lesson | Runnable result | Main explanation and evidence |
 |---|---|---|
@@ -104,6 +108,9 @@ hardware/instruction sources when authoring; emulator observations establish
 this program's behaviour, not the whole hardware specification. Listen to any
 published sound capture before claiming its audio has been reviewed.
 
-Next work: implement the separate introductory experiments first, then the
-Meteor Storm handoff, smooth ship movement and one-meteor dodge. This brief does not
-authorise publication or retire existing URLs by itself.
+Next work: author the game lessons and browser investigations from the executed
+checkpoints, beginning with the hand-worked shifts and smooth-movement handoff.
+Split a checkpoint across several lessons where explanation needs room. Develop
+private interrupt setup through the two isolated clock programs before coupling it
+to steering. This brief does not authorise publication or retire existing URLs
+by itself.

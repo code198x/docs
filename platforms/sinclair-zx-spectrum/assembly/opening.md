@@ -1,7 +1,9 @@
 # Spectrum assembly — replacement opening
 
 **Status:** Replacement direction agreed following the [opening review](course-review.md).
-This is the working teaching design. Meteor Storm is accepted after native play; its [proposed teaching progression](../games/meteor-storm/lesson-brief.md) now needs executed checkpoints.
+This is the working teaching design. Meteor Storm is accepted after native play; its [teaching progression](../games/meteor-storm/lesson-brief.md) now has
+[seventeen executed programs](../games/meteor-storm/checkpoints.md). Full game lessons
+are the next authoring work, with no fixed lesson-count target.
 
 ## Promise
 
@@ -48,8 +50,8 @@ first project: race through a fixed scattered storm, dodging gently drifting
 meteors and collecting vertical stars. One hit ends the run. Unlimited held boost
 doubles course progress and star value; faster finishes earn a larger bonus.
 Separate session records reward fastest completion and highest score. The user
-accepted this native endpoint. Develop its teaching checkpoints before full
-lesson authoring. A driving game remains a later possibility, not a promised sequel.
+accepted this native endpoint. Author from its executed teaching checkpoints, splitting lessons wherever
+understanding requires a smaller step. A driving game remains a later possibility, not a promised sequel.
 
 Aim for an early playable choice, then deepen it. Build graphics, sound and
 readability as their mechanics arrive. A title and retry should complete a game

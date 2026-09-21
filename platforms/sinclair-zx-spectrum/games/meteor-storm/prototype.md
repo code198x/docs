@@ -79,5 +79,6 @@ that a human can read the route comfortably or that the game is enjoyable.
 
 Flight and result captures are retained with the route and impact audio.
 The user accepted the game after native play. Independent listening of the
-retained sound capture is not separately recorded. Next, execute the proposed
-teaching checkpoints before authoring or publishing replacement lessons.
+retained sound capture is not separately recorded. The separate [teaching checkpoints](checkpoints.md) are now executed; the accepted
+prototype remains unchanged as their behavioural reference. Full lesson authoring
+and publication are separate steps.
