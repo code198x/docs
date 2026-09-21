@@ -3,7 +3,7 @@
 **Status:** The user selected Meteor Storm as the first replacement assembly
 project. The [implemented prototype](prototype.md) is accepted after native play. Its
 [teaching progression](lesson-brief.md) has nineteen [executed checkpoints](checkpoints.md)
-and twenty-four [authored lessons](lessons.md), awaiting user review and publication.
+and twenty-four [authored lessons](lessons.md), approved by the user and published.
 **Target:** Stock 48K ZX Spectrum, PAL, Z80 assembly, keyboard, tape loading.
 **Role:** First-game trial under the [replacement opening](../../assembly/opening.md).
 

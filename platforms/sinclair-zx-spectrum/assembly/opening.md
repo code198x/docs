@@ -3,8 +3,8 @@
 **Status:** Replacement direction agreed following the [opening review](course-review.md).
 This is the working teaching design. Meteor Storm is accepted after native play; its [teaching progression](../games/meteor-storm/lesson-brief.md) now has
 [nineteen executed programs](../games/meteor-storm/checkpoints.md) and
-[twenty-four authored lessons](../games/meteor-storm/lessons.md), awaiting user
-review and publication. Lesson boundaries follow the teaching needs.
+[twenty-four user-approved lessons](../games/meteor-storm/lessons.md), now published
+and live-verified. Lesson boundaries follow the teaching needs.
 
 ## Promise
 

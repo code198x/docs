@@ -3,7 +3,7 @@
 **Status:** Nineteen complete teaching programs are implemented and executed in
 `code-samples/sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/`. The accepted
 prototype is preserved. Twenty-four [authored lessons and browser investigations](lessons.md)
-await user review; no new game module is published by this work.
+are user-approved, published and live-verified.
 
 The user explicitly permits as many lessons as understanding requires. These
 source states do not settle the final lesson count. The [teaching progression](lesson-brief.md)
@@ -104,5 +104,5 @@ bitmap memory. They remain excluded from lesson illustrations. The finished
 browser result has now been visually inspected, and all 640 pixels of its score
 line agree with bitmap RAM and the actual ROM font. This establishes correct
 browser presentation; the native capture discrepancy itself is not diagnosed.
-Impact audio remains captured but not separately listening-reviewed. No physical
-hardware testing or user acceptance of the new lessons is claimed.
+Impact audio remains captured but not separately listening-reviewed. The user approved the lessons. No physical
+hardware testing is claimed.

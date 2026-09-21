@@ -1,7 +1,7 @@
 # Meteor Storm — lesson implementation
 
-**Status:** Twenty-four lessons and an overview are authored locally, using
-nineteen complete runnable programs. They await user review and publication.
+**Status:** The user approved all twenty-four lessons and the overview, using
+nineteen complete runnable programs. The module is published and live-verified.
 The accepted native game remains the endpoint; its one-hit loss, unlimited boost,
 vertical stars, gentle meteor drift and separate time/score records are preserved.
 Meet Assembly is already published and leads into this module.
@@ -56,7 +56,7 @@ the paused CPU; the picture can show the last rendered frame. Downloaded tape
 uses the edited source and artwork. No fabricated animation stands in for code
 execution, and no checkpoint needs to load from tape before a browser experiment.
 
-The module sits after Meet Assembly in the local assembly catalogue. Existing
+The module sits after Meet Assembly in the published assembly catalogue. Existing
 legacy lesson routes are preserved. The lesson markers wrap on narrow screens,
 so lesson count no longer determines whether navigation fits.
 
@@ -89,8 +89,17 @@ not the 1046-frame native benchmark. Browser result screenshots are inspected;
 older incomplete batched native screenshots are not illustrations. Their capture
 root cause remains undiagnosed. No physical-hardware result is claimed.
 
-## Next action
+## Publication
 
-Review the authored module locally, amend teaching where needed, then seek the
-user's publication approval. Neither lesson approval nor deployment is implied
-by the accepted game prototype or the instruction to author these lessons.
+The user approved the completed module and explicitly authorised publication.
+Website [PR #442](https://github.com/code198x/website/pull/442) publishes the
+lessons and catalogue; samples are published at `c3995d4`. Required CI checks,
+GitHub Pages deployment and the live verification pass. The release retains the
+What's New entry as a draft, matching the existing editorial publication state.
+
+Live verification repeats all twenty-four browser programs, source and companion
+identity, selected edits, collision stepping, loss/retry/title, downloads,
+representative accessibility and responsive-layout checks. A separate keyboard
+route verifies the complete winning result and its bitmap/ROM/canvas agreement.
+The release record and reports accompany this document in `publication/`.
+No unrelated local BASIC, Maths or Craft work is included in the release.

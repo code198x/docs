@@ -4,7 +4,7 @@
 with this.” The user also agreed the separate introductory/game split. Meet Assembly is published. Nineteen complete native teaching programs now implement
 the game progression and its smaller graphics/clock experiments; see the
 [checkpoint execution record](checkpoints.md). Twenty-four [authored lessons](lessons.md)
-now implement this progression and await user review; they are not published.
+now implement this progression. The user approved the complete module; it is published and live-verified.
 The user explicitly permits as many lessons as understanding requires; the earlier
 fourteen-row outline is not a lesson-count target.
 
