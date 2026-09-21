@@ -1,0 +1,110 @@
+{
+  "date": "2026-09-21",
+  "website_commit": "0ab014f2355568050140a6837699ffcd85b7c59a",
+  "website_pr": "https://github.com/code198x/website/pull/441",
+  "deployment": "https://github.com/code198x/website/actions/runs/35605986253",
+  "emulator_pr": "https://github.com/emu198x/emu198x/pull/1511",
+  "npm_release": "@emu198x/zx-spectrum@0.4.0",
+  "samples_commit": "97356e60e9ca19b16b0f4e2b26f2bc4523ded4f2",
+  "http": [
+    {
+      "route": "/systems/sinclair-zx-spectrum/",
+      "status": 200,
+      "bytes": 33958
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/",
+      "status": 200,
+      "bytes": 47142
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/",
+      "status": 200,
+      "bytes": 35325
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/",
+      "status": 200,
+      "bytes": 77885
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/",
+      "status": 200,
+      "bytes": 79489
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-03/",
+      "status": 200,
+      "bytes": 98311
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-04/",
+      "status": 200,
+      "bytes": 102252
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-05/",
+      "status": 200,
+      "bytes": 98346
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-06/",
+      "status": 200,
+      "bytes": 126042
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-07/",
+      "status": 200,
+      "bytes": 137448
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-08/",
+      "status": 200,
+      "bytes": 66161
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-01/",
+      "status": 200,
+      "bytes": 74312
+    },
+    {
+      "route": "/images/sinclair-zx-spectrum/assembly/meet-assembly/experiment.png",
+      "status": 200,
+      "bytes": 910
+    }
+  ],
+  "smoke": {
+    "checks": [
+      "Existing introductory lesson remains reachable in Chrome",
+      "Published thumbnail loads; recommended start opens lesson 1; editable code changes actual border red to green"
+    ],
+    "errors": []
+  },
+  "debugger": [
+    "Initial symptom reproduced with real O/P input; hypothesis and observation retained; registers progressively disclosed; source beside instruction; explanations only after stepping",
+    "Learner repair restores ordinary branch and protects zero edge; edited source requires reassembly",
+    "Second case has working branch and faulty erase; HL and actual pointed bytes identify it; independent repair supplies eight zeros; Revert remains supplied case 1",
+    "Mobile layout, keyboard stepping and zero scoped axe violations"
+  ],
+  "lesson_theme_audits": {
+    "axe-7-dark": [],
+    "axe-1-light": [],
+    "axe-1-dark": [],
+    "axe-4-light": [],
+    "axe-6-dark": [],
+    "axe-3-light": [],
+    "axe-6-light": [],
+    "axe-5-dark": [],
+    "axe-5-light": [],
+    "axe-8-dark": [],
+    "axe-8-light": [],
+    "axe-3-dark": [],
+    "axe-7-light": [],
+    "axe-4-dark": [],
+    "axe-2-dark": [],
+    "axe-2-light": []
+  },
+  "served_wasm_matches_registry": true,
+  "wasm_sha256": "70e1fa2c4ba1786c8a6b563f2cfa9aede5df403998a37368e5e1582f246e6dd7",
+  "limits": "The long live navigation sweep encountered two request timeouts on different landing/legacy pages after completing the lesson/theme checks. The second attempt completed responsive checks before its final legacy-page timeout. Separate fresh-browser checks of the legacy route, recommended entry, thumbnail, edited border and both debugger cases passed; all 13 requested pages/assets returned HTTP 200. Local production checks passed as a complete suite. This is emulated execution evidence, not original hardware."
+}

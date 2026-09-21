@@ -132,3 +132,19 @@ Dice Roller’s approved [five lessons and checkpoints](platforms/sinclair-zx-sp
 ## Night Patrol lesson authoring
 
 The user approved the corner-scanning game and agreed the [ten-lesson progression](platforms/sinclair-zx-spectrum/games/night-patrol/lesson-brief.md). All [eight teaching checkpoints](platforms/sinclair-zx-spectrum/games/night-patrol/lessons.md) are independently ROM-built and verified: 96 native execution groups, editing-transition and prepared-data audits, source/token/TAP identities and final source preservation. The approved overview and ten lessons are published in Hidden worlds, explaining visibility preparation without requiring Python. They use an original candidate-fan diagram, not the unreliable diagnostic captures. Production, 24 browser, 44 accessibility and 26 live checks pass. The initial BASIC scope and later performance investigations remain separate.
+
+## Meet Assembly publication
+
+[Meet Assembly](https://code198x.com/systems/sinclair-zx-spectrum/assembly/meet-assembly/)
+is published as the recommended Spectrum assembly starting point. All eight
+lessons are user-approved. Seven runnable checkpoints and two deliberate fault
+cases support the browser experiments and the independent Asm198x/Pasmo route.
+The published `@emu198x/zx-spectrum` 0.4.0 package supplies direct ROM-backed
+launch, actual memory inspection, bounded recordings and debugger controls.
+
+The [implementation record](platforms/sinclair-zx-spectrum/assembly/meet-assembly-opening.md)
+owns release evidence. All eighteen native tape loads, the production build,
+interactive browser checks and live publication checks pass. Existing lesson URLs
+remain available. Meteor Storm teaching checkpoints are next; its accepted
+prototype is not yet an authored game module. The BASIC editor remains a local
+trial, and unrelated Maths for Games and Craft planning continues separately.

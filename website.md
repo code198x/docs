@@ -97,3 +97,12 @@ Preserve absolute feed URLs and resolve relative ones against the site origin. T
 Run offline regressions with `python3 -m unittest discover -s scripts -p 'test_discord_*.py'`. The `new-items` artifact retains the full item list and prepared messages for seven days. An offline test proves request construction, not delivery.
 
 This is a feed difference, not a delivery ledger. Later deployments do not replay failed posts. Inspect delivery in each channel before recovery because a partially successful retry can duplicate messages. Old workflow reruns still use old code; use the corrected builder with the retained item list for an authorised recovery. Never expose webhook URLs in source or logs.
+
+## Meet Assembly browser lessons
+
+Meet Assembly uses the published `@emu198x/zx-spectrum` 0.4.0 package. Production
+builds need no `SPECTRUM_WEB_PACKAGE` override. The optional override remains for
+local API trials. Inspectors and debugger controls use actual emulator state;
+replays identify captured execution and incomplete traces. Verify the eight-lesson
+route and the installed registry package before publishing a changed browser API.
+See the [implementation record](platforms/sinclair-zx-spectrum/assembly/meet-assembly-opening.md).
