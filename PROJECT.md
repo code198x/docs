@@ -31,7 +31,7 @@ Use BASIC or FORTH where the machine provides an appropriate environment. Where 
 - **Lessons** guide readers through making things in meaningful stages.
 - **Foundations** develops language-neutral programming concepts in pseudocode, including representation and reasoning about execution.
 - **Maths for Games** develops mathematical tools through game problems, without becoming an upfront prerequisite course.
-- **The Craft** develops game design, behavioural intent and practical game-making judgement in a language-neutral way.
+- **The Craft** develops game design, behavioural intent and practical game-making judgement in a language-neutral way. It can use runnable programs and inspectable real code; the explanation must remain approachable without prior knowledge of the demonstration language.
 - **System tracks** implement those ideas in concrete languages, tools and hardware.
 - **The Vault** supplies encyclopaedic historical, cultural and technical context.
 - **The Pattern Library** supplies concrete techniques readers can adapt, with their assumptions and trade-offs.

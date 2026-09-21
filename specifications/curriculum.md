@@ -28,7 +28,7 @@ Foundations explains what a representation means; Maths for Games explains how i
 
 ### The Craft
 
-The Craft supplies developed, language-neutral explanations of game-making decisions. Paper, counters, diagrams and pseudocode can make an experiment concrete. Organise coherent sequences around questions, not a new top-level module for every item:
+The Craft supplies developed, language-neutral explanations of game-making decisions. Language-neutral does not mean code-free: runnable programs and inspectable real code can make a choice concrete. Explain essentials in plain language and pseudocode so knowledge of the host language is not an entry requirement. Label the language and target; distinguish browser demonstrations from native-machine implementations and performance evidence. Keep runnable sources in code-samples and include maintained routines rather than illustrative copies. Paper, counters and diagrams remain useful experiments. Organise coherent sequences around questions, not a new top-level module for every item:
 
 - Rules, state, goals, actions and consequences; decisions and trade-offs.
 - The program loop (input, update, output) and the player's recurring activity (observe, decide, act, interpret feedback).

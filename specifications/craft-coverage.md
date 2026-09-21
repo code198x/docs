@@ -114,7 +114,17 @@ overviews, and the movement playground after reviewing the local preview. The
 prototype is accepted as the basis for teaching; the overview and playground are now published and live-verified in website PR #445.
 This does not establish authored Game Feel lessons.
 
-Next develop granular controls-and-response lessons from the accepted movement
-comparison, separating immediate response, acceleration, release braking and
-reversal so readers can explain each difference. Game AI's first proposed
+Four controls-and-response lessons are now authored locally for review, separating
+immediate response, acceleration, release braking and reversal. The comparisons
+change one setting at a time and expose a single-update trace. Optional JavaScript
+comes from the actual running functions; plain language and pseudocode explain
+the rule independently of JavaScript knowledge. These lessons are not yet approved
+or published. After their review, Game Design then Game AI are the agreed next
+subjects to develop. Game AI's first proposed
 experience remains perception, memory and decisions.
+
+The local four-lesson build passes 72 website tests (nine decoder-dependent
+checks skipped locally) and ten movement-model tests. Browser verification covers
+worked traces, input, setting resets, code disclosures, navigation, both themes,
+390/1280-pixel layouts and iframe sizing, with no page errors or scoped Axe
+violations. These checks establish the local draft behaviour, not publication.
