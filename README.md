@@ -25,6 +25,10 @@ Its [lesson and source mapping](platforms/sinclair-zx-spectrum/basic/meet-basic-
 
 The [Spectrum BASIC course review](platforms/sinclair-zx-spectrum/basic/course-review.md) records the agreed navigation groups and recommendations for the remaining games and proposals.
 
+The [Spectrum assembly review](platforms/sinclair-zx-spectrum/assembly/course-review.md) records the approved replacement direction, with source-build and emulator smoke evidence. The [replacement opening](platforms/sinclair-zx-spectrum/assembly/opening.md) and [accepted first game](platforms/sinclair-zx-spectrum/games/meteor-storm/brief.md) establish the route through a separate [introductory module](platforms/sinclair-zx-spectrum/assembly/meet-assembly.md) and the [published game progression](platforms/sinclair-zx-spectrum/games/meteor-storm/lesson-brief.md).
+
+The [Craft coverage map](specifications/craft-coverage.md) defines seven agreed module homes and distinguishes available material from planned lessons. The [Maths for Games specification](specifications/maths-for-games.md) develops geometry, trigonometry, matrix algebra, 3D, curves, probability and fixed-point applications.
+
 ## Ownership and maintenance
 
 The [website](https://github.com/code198x/website) owns public lessons, catalogues and components. [Code samples](https://github.com/code198x/code-samples) owns runnable sources, assets and verification recipes. Those files establish implementation state; plans and prose counts do not.

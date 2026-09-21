@@ -106,3 +106,10 @@ local API trials. Inspectors and debugger controls use actual emulator state;
 replays identify captured execution and incomplete traces. Verify the eight-lesson
 route and the installed registry package before publishing a changed browser API.
 See the [implementation record](platforms/sinclair-zx-spectrum/assembly/meet-assembly-opening.md).
+
+## Editable BASIC browser lessons
+
+`BasicAndRun.astro` is approved for normal builds in one Meet BASIC and one Sonar lesson. The installed 0.4.0 package supplies its APIs; `SPECTRUM_WEB_PACKAGE` is only
+needed to try further unpublished emulator changes. See
+the [trial record](platforms/sinclair-zx-spectrum/basic/browser-trial.md) for scope,
+execution evidence, keyboard behaviour, remaining limits and repeatable checks.

@@ -29,6 +29,8 @@ Use these designs alongside authored lessons, sample sources and capture manifes
 
 The [BASIC performance-revisit proposal](sinclair-zx-spectrum/basic/performance-revisits.md) has an agreed basis but is deferred while the initial BASIC versions take priority. It explores how measured limits in existing games could motivate selected assembly work. It does not establish a performance ceiling or a replacement assembly sequence.
 
+The [Spectrum assembly opening review](sinclair-zx-spectrum/assembly/course-review.md) and replacement direction are approved. The [opening design](sinclair-zx-spectrum/assembly/opening.md) and [Meteor Storm brief](sinclair-zx-spectrum/games/meteor-storm/brief.md) define the selected first native trial; the [implemented prototype](sinclair-zx-spectrum/games/meteor-storm/prototype.md) is accepted after native play. Its [teaching progression](sinclair-zx-spectrum/games/meteor-storm/lesson-brief.md) now supports the approved, published twenty-four-lesson course; the separate [Meet the Machine / Meet Assembly introduction](sinclair-zx-spectrum/assembly/meet-assembly.md) supplies the first experiments before the game checkpoints. Review evidence separates builds and smoke execution from teaching suitability.
+
 ## Existing briefs
 
 | System | Game |
@@ -61,3 +63,7 @@ The [BASIC performance-revisit proposal](sinclair-zx-spectrum/basic/performance-
 Additional designs without a `brief.md` are [Blockstorm](sinclair-zx-spectrum/games/blockstorm/spec.md) and [Dorin](sinclair-zx-spectrum/games/dorin/spec.md). The [NES Dash investigation](nintendo-entertainment-system/games/dash/design-stress-2026-07-05.md) and [The Long Night investigation](sinclair-zx-spectrum/games/the-long-night/design-stress-2026-07-05.md) also remain useful review evidence. Other files beside the briefs contain specific game specifications, prototype observations or development plans. Source and executable evidence remain in the sample repository; this directory does not prove the current build or playability of a game.
 
 When a design is re-specified, replace obsolete passages and retire redundant companion files rather than appending amendment banners. Create new game briefs only for agreed review work, using the [brief specification](../specifications/brief.md).
+
+The [editable BASIC browser trial](sinclair-zx-spectrum/basic/browser-trial.md)
+covers one Meet BASIC and one Sonar lesson, with local worker execution and
+browser-to-native tape download checks. It is not a whole-course retrofit.

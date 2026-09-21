@@ -117,9 +117,24 @@ Prepare a What’s New entry when the House UI is ready to release, linking to t
 
 Try a small explanatory illustration before adding a site-wide visual treatment. Later candidates include verified game captures on relevant system cards and asset close-ups linked to lessons. Check the actual assets, provenance and target configuration before selecting them.
 
-## Shared module outline review
+## Z80 assembly opening review
 
-Review the Maths for Games and Game Feel outlines and their catalogue metadata against the charter before developing their units. Maths currently assumes completion of Numbers & Bits, uses Sinclair BASIC as its shared demonstrator and makes sweeping claims about arithmetic costs across machines. Distinguish pursuit from pathfinding and behaviour design from arithmetic. Game Feel needs a review of universal prescriptions about grace periods, feedback and timing. Retain useful examples while making entry independent, language-neutral explanations concrete and machine claims specific. The Craft index offers a paper experiment and identifies both modules as outlines; it does not establish completed units or settle a new module structure.
+The user approved replacing the compulsory introduction/game chain after the
+[opening assessment](platforms/sinclair-zx-spectrum/assembly/course-review.md).
+The agreed route is **Meet Assembly → Meteor Storm**. All eight introductory
+lessons are approved and the native Meteor Storm endpoint is accepted. The
+[opening design](platforms/sinclair-zx-spectrum/assembly/opening.md) and
+[implementation record](platforms/sinclair-zx-spectrum/assembly/meet-assembly-opening.md)
+describe the current scope. Meteor Storm now has nineteen executed checkpoints and twenty-four [authored lessons](platforms/sinclair-zx-spectrum/games/meteor-storm/lessons.md), approved, published and live-verified;
+no later game lineup is settled. Existing published material remains available.
+
+## Shared subjects and assembly review
+
+The user considers the revised BASIC curriculum a solid basis, with further concepts possible rather than a requirement to finish every proposal. The [Craft coverage map](specifications/craft-coverage.md) records the shared-subject direction. Game AI is agreed as its own module within The Craft. Game Design, Game Data and Algorithms, Graphics and Animation, and Sound and Music are now agreed module homes, alongside Maths for Games, Game Feel and Game AI.
+
+The [Maths for Games specification](specifications/maths-for-games.md) defines the broader coverage. Six aiming lessons and the compact overview are approved for publication alongside the existing probability sequence. The Game Feel overview and movement playground are approved; focused controls-and-response lessons follow this release.
+
+Game AI's initial perception, memory and decision-making experience remains to develop. BASIC performance investigations remain deferred. The approved seven-module Craft structure does not claim authored lessons for the planned modules.
 
 ## Cipher publication
 
@@ -132,6 +147,24 @@ Dice Roller’s approved [five lessons and checkpoints](platforms/sinclair-zx-sp
 ## Night Patrol lesson authoring
 
 The user approved the corner-scanning game and agreed the [ten-lesson progression](platforms/sinclair-zx-spectrum/games/night-patrol/lesson-brief.md). All [eight teaching checkpoints](platforms/sinclair-zx-spectrum/games/night-patrol/lessons.md) are independently ROM-built and verified: 96 native execution groups, editing-transition and prepared-data audits, source/token/TAP identities and final source preservation. The approved overview and ten lessons are published in Hidden worlds, explaining visibility preparation without requiring Python. They use an original candidate-fan diagram, not the unreliable diagnostic captures. Production, 24 browser, 44 accessibility and 26 live checks pass. The initial BASIC scope and later performance investigations remain separate.
+
+## Editable BASIC browser trial
+
+The user authorised the [bounded BASIC/WASM trial](platforms/sinclair-zx-spectrum/basic/browser-trial.md): one Meet BASIC greeting and Sonar's clue-band lesson. Both now have local, opt-in editable playgrounds with direct RAM loading and real ROM execution in a worker, restore, keyboard/touch input and tape download. The user accepted the trial and requested execution without a tape wait; both BASIC and the assembly lesson runner now support that path. A wider retrofit remains a separate scope. Normal builds keep the trial disabled; the additive emulator package API is not published.
+
+## Meet Assembly release and next game
+
+All eight Meet Assembly lessons are user-approved, including the revised guided
+debugging investigation. The complete module review is finished. The emulator
+package 0.4.0 is published; website publication and live verification are complete. The [implementation record](platforms/sinclair-zx-spectrum/assembly/meet-assembly-opening.md)
+owns the release evidence.
+
+The Meteor Storm checkpoints now execute successfully; see the
+[verification record](platforms/sinclair-zx-spectrum/games/meteor-storm/checkpoints.md).
+Twenty-four [lessons and browser activities](platforms/sinclair-zx-spectrum/games/meteor-storm/lessons.md) now use nineteen runnable programs. The user approved the complete module; publication and live verification pass.
+Keep the first game independently buildable, explain the drawing/input basis at
+use, and preserve the accepted one-hit timed run, unlimited boost, drifting meteors,
+straight-falling stars and separate time/score records. The authored lessons preserve those rules.
 
 ## Meet Assembly publication
 

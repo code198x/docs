@@ -2,8 +2,8 @@
 
 **Status:** The user approved the local prototype and its six-part teaching
 direction. The [focused progression](aiming-progression.md) and its six local teaching pages
-are approved. Website integration is implemented for review; no site routes are
-published by this work.
+are approved. Website integration is approved for publication; live status is recorded after
+deployment.
 
 Source: `code-samples/craft/maths-for-games/aiming/`. Its README owns launch and
 verification instructions and the model's mathematical contract.

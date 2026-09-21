@@ -4,6 +4,10 @@ Apply [Project purpose and direction](../PROJECT.md). This specification assigns
 
 ## Shared subjects
 
+The [Craft coverage map](craft-coverage.md) records module responsibilities, agreed
+direction and planned coverage. [Maths for Games](maths-for-games.md) defines
+the broader mathematical coverage and recurring fixed-point applications.
+
 ### Foundations
 
 Teach programming concepts in [pseudocode](pseudocode.md), supported by diagrams, trace tables and concrete examples. Distinguish understanding sequence, variables, decisions, repetition and decomposition from learning a language's syntax.
@@ -14,7 +18,7 @@ Basic collections and tracing belong here. Further data-structure and algorithm 
 
 ### Maths for Games
 
-Maths for Games currently sits within The Craft. Develop position, distance, direction, movement, probability and numerical representation through concrete game problems. Readers should be able to arrive when they need a tool, without completing a separate prerequisite course.
+Maths for Games currently sits within The Craft. Develop geometry, trigonometry, vectors, matrix algebra, coordinate spaces, 3D projection, curves, surfaces, motion, probability and numerical methods through concrete game problems. Explain the mathematical relationships as well as their applications; fixed-point calculation is a recurring practical thread. Readers should be able to arrive when they need a tool, without completing a separate prerequisite course.
 
 Dice Roller belongs here as a probability experiment, rather than in the Spectrum BASIC game sequence. Its five lessons build the runnable experiment in Sinclair BASIC while teaching counts, shares and sample size. Keep the target and setup explicit; other maths topics need not precede it. Preserve the existing lesson links when moving its pages.
 
@@ -41,7 +45,7 @@ A system lesson must still explain its immediate design decision. A link supplie
 
 ### Game AI
 
-Name the subject early: behaviour and decision-making for game entities. Machine learning is not a prerequisite.
+Game AI is agreed as a separate module within The Craft. Name the subject early: behaviour and decision-making for game entities. Machine learning is not a prerequisite.
 
 Progress from patterns, patrols, pursuit, escape and reactions to states and transitions, perception, limited knowledge, memory, navigation, obstacle avoidance, pathfinding, priorities, weighted choices, controlled randomness and coordination.
 
@@ -49,7 +53,7 @@ The Craft explains behavioural intent and player experience. Maths supplies rele
 
 ### Data structures and algorithms
 
-Give these deliberate coverage. Provisionally develop game-specific representation and algorithm work within The Craft, building on Foundations' lists and structure. Reassess that placement when a coherent sequence exists; a new top-level course is not yet settled.
+Give these deliberate coverage. Develop game-specific representation and algorithm work in the agreed Game Data and Algorithms module within The Craft, building on Foundations' lists and structure. It is a module home, not a separate prerequisite course.
 
 Use enemies, bullets and pickups to compare arrays, records, collections, fixed pools and allocation. Use levels to compare grids, tile maps and sparse representations. Use nearby-object queries for searching and spatial partitioning; routes for graphs, queues, breadth-first search and later heuristics; events and undo for queues, stacks and histories; storage for encoding, compression and space–time trade-offs.
 
