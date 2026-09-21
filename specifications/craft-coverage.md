@@ -26,7 +26,7 @@ Agreement on a home does not mean its lessons exist or have been approved.
 |---|---|---|
 | Maths for Games | Existing module; broader direction agreed | Explain mathematical relationships and their use in games, including numerical representations and approximations |
 | Game AI | Separate module within The Craft agreed; lessons not authored | Explain how entities perceive, remember, decide, move and coordinate |
-| Game Feel | Broader outline and movement prototype approved; not published | Controls, responsiveness, anticipation, feedback, forgiveness and the moment-to-moment experience |
+| Game Feel | Broader outline and movement playground published; focused lessons next | Controls, responsiveness, anticipation, feedback, forgiveness and the moment-to-moment experience |
 | Game Design | Agreed module; lessons not authored | Rules, goals, choices, resources, challenge, levels and progression; why a functioning game is interesting |
 | Game Data and Algorithms | Agreed module; lessons not authored | Represent game worlds and entities; compare operations, algorithms and their costs |
 | Graphics and Animation | Agreed module; lessons not authored | Create images and animation; connect pixels, sprites, tiles, palettes, fonts and rendering to the intended result |
@@ -92,7 +92,7 @@ application. Introduce notation with its meaning; do not replace mathematical
 substance with controls that hide the calculation. Paper models, diagrams and
 pseudocode remain valid alongside interaction.
 
-Maths for Games now has six locally integrated aiming lessons alongside the five
+Maths for Games now has six published aiming lessons alongside the five
 published probability lessons. Its overview distinguishes available sequences
 from further planned explorations. The Craft overview uses the agreed seven-module
 map without linking to empty modules.
@@ -101,7 +101,7 @@ Game Feel uses play, compare, explain. Its planned sequences are controls and
 response; jumping and forgiveness; impact and feedback; cameras and attention;
 readability and anticipation; and failure and recovery. The movement playground
 compares three ships under identical input and top speed with different
-acceleration and braking rules. It is a local browser prototype, not a completed
+acceleration and braking rules. It is a published browser playground, not a completed
 lesson sequence or evidence of target-machine performance. Existing patterns for
 blinking, protection and input gates remain examples, not universal prescriptions.
 
@@ -111,8 +111,8 @@ the relevant modules before any case for separate navigation is considered.
 
 The user approved the seven-module Craft structure, refreshed Craft and Game Feel
 overviews, and the movement playground after reviewing the local preview. The
-prototype is accepted as the basis for teaching; this does not establish authored
-Game Feel lessons or publication.
+prototype is accepted as the basis for teaching; the overview and playground are now published and live-verified in website PR #445.
+This does not establish authored Game Feel lessons.
 
 Next develop granular controls-and-response lessons from the accepted movement
 comparison, separating immediate response, acceleration, release braking and

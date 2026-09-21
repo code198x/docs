@@ -1,9 +1,8 @@
 # Aiming — six-part teaching progression
 
 **Status:** The user approved the aiming prototype and this six-part direction.
-The user also approved the six locally authored teaching pages. They are now
-integrated into the website as a local preview, with focused experiments, worked
-examples and Question disclosures. Publication has not been authorised.
+The six authored lessons are published and live-verified, with focused experiments,
+worked examples and Question disclosures. Website PR #445 publishes this route.
 
 The maintained source is `code-samples/craft/maths-for-games/aiming/`.
 Open `lessons.html?step=1` through its documented local server. The accepted
@@ -71,13 +70,13 @@ The parent accepts height messages only from its own iframe and origin. Embedded
 pages are excluded from search indexing; the lessons remain the discoverable entry.
 
 The accepted standalone playground and focused prototypes remain available in the
-sample repository. The website integration is ready for review before publication.
+sample repository. The website integration is published.
 
 ## Integration verification
 
-An isolated production snapshot containing the maths changes passes the website's
-required build checks: 72 tests pass and 9 decoder-dependent tests are skipped.
-This excludes unrelated local work, including an unfinished CRASH Live page edit.
+The complete production release passes the website's required build checks:
+72 tests pass locally and 9 decoder-dependent tests are skipped; CI provisions
+the decoder and passes. GitHub Pages deployment and live browser verification pass.
 `website/scripts/verification/aiming-integration.mjs` verifies both entry routes,
 unchanged probability URLs, independent sequence boundaries, progress counters,
 embedded coordinates/radians/aiming/fixed-point behaviour, content-height resizing,

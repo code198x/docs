@@ -128,8 +128,8 @@ fixed-point practice and numerical robustness also need deliberate treatment.
 
 The [aiming prototype](experiments/aiming.md) now implements the first angle,
 triangle, sine/cosine, atan2 and fixed-point investigation locally for review.
-Its six authored website lessons and overview are approved for publication;
-the live release is recorded separately after deployment.
+Its six authored website lessons and overview are published and live-verified
+in website PR #445.
 
 The initial proposed experiment was a point moving around a circle, with adjustable
 angle and radius, visible horizontal/vertical projections and a right triangle.

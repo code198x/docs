@@ -132,7 +132,7 @@ no later game lineup is settled. Existing published material remains available.
 
 The user considers the revised BASIC curriculum a solid basis, with further concepts possible rather than a requirement to finish every proposal. The [Craft coverage map](specifications/craft-coverage.md) records the shared-subject direction. Game AI is agreed as its own module within The Craft. Game Design, Game Data and Algorithms, Graphics and Animation, and Sound and Music are now agreed module homes, alongside Maths for Games, Game Feel and Game AI.
 
-The [Maths for Games specification](specifications/maths-for-games.md) defines the broader coverage. Six aiming lessons and the compact overview are approved for publication alongside the existing probability sequence. The Game Feel overview and movement playground are approved; focused controls-and-response lessons follow this release.
+The [Maths for Games specification](specifications/maths-for-games.md) defines the broader coverage. Six aiming lessons and the compact overview are published alongside the existing probability sequence. The Game Feel overview and movement playground are published; focused controls-and-response lessons are next. The two approved editable BASIC integrations are also published and live-verified.
 
 Game AI's initial perception, memory and decision-making experience remains to develop. BASIC performance investigations remain deferred. The approved seven-module Craft structure does not claim authored lessons for the planned modules.
 

@@ -144,3 +144,9 @@ owns release evidence. All eighteen native tape loads, the production build,
 interactive browser checks and live publication checks pass. Existing lesson URLs
 remain available. Meteor Storm has nineteen executed teaching programs and twenty-four [authored lessons](platforms/sinclair-zx-spectrum/games/meteor-storm/lessons.md). The user-approved module is published and live-verified. The BASIC editor remains a local
 trial, and unrelated Maths for Games and Craft planning continues separately.
+
+The Craft release in [website PR #445](https://github.com/code198x/website/pull/445)
+is published and live-verified: six aiming lessons, refreshed Maths and Craft
+overviews, the Game Feel movement playground, and editable BASIC in the reviewed
+Meet BASIC and Sonar lessons. The remaining Craft modules are planned homes;
+Game Feel's focused controls-and-response lessons are the next authoring step.

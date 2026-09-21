@@ -1,6 +1,6 @@
 # Editable BASIC in the browser — bounded trial
 
-**Status:** The user approved shipping the two reviewed lesson integrations. Its emulator APIs are published in npm 0.4.0. The user authorised a
+**Status:** The two user-approved lesson integrations are published and live-verified in website PR #445. Its emulator APIs are published in npm 0.4.0. The user authorised a
 Meet BASIC and Sonar trial after reviewing the editable assembly lessons. This
 is evidence for a possible shared component, not a decision to retrofit the
 whole BASIC curriculum.
@@ -105,3 +105,11 @@ all three assembly lesson checks. The wrapper and shared runtime pass 109 Rust
 tests and scoped wasm-target Clippy. The full trial website build passes,
 including 69 active site tests (nine existing skips). Current direct-loading
 evidence is under `website/scripts/verification/evidence/direct-load/`.
+
+## Publication verification
+
+The production build enables both playgrounds without a trial flag. Live browser
+checks pass for edited source, responsive worker boot, ROM syntax errors, restore,
+physical and virtual Sonar input, target changes, restart, quit, focus isolation,
+mobile geometry and forced-colours source visibility. Both live-downloaded TAPs
+match the freshly native-tested tapes byte-for-byte. CI and Pages deployment pass.
