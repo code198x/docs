@@ -26,7 +26,7 @@ Agreement on a home does not mean its lessons exist or have been approved.
 |---|---|---|
 | Maths for Games | Existing module; broader direction agreed | Explain mathematical relationships and their use in games, including numerical representations and approximations |
 | Game AI | Separate module within The Craft agreed; lessons not authored | Explain how entities perceive, remember, decide, move and coordinate |
-| Game Feel | Broader outline and movement prototype in local review | Controls, responsiveness, anticipation, feedback, forgiveness and the moment-to-moment experience |
+| Game Feel | Broader outline and movement prototype approved; not published | Controls, responsiveness, anticipation, feedback, forgiveness and the moment-to-moment experience |
 | Game Design | Agreed module; lessons not authored | Rules, goals, choices, resources, challenge, levels and progression; why a functioning game is interesting |
 | Game Data and Algorithms | Agreed module; lessons not authored | Represent game worlds and entities; compare operations, algorithms and their costs |
 | Graphics and Animation | Agreed module; lessons not authored | Create images and animation; connect pixels, sprites, tiles, palettes, fonts and rendering to the intended result |
@@ -109,6 +109,12 @@ Accessibility, debugging and performance recur where they affect decisions.
 Physics, collision, cameras, procedural generation and level design develop within
 the relevant modules before any case for separate navigation is considered.
 
-Next review the movement experience with the user, then develop granular teaching
-experiments. Game AI's first proposed experience remains perception, memory and
-decisions. No publication is authorised by these local changes.
+The user approved the seven-module Craft structure, refreshed Craft and Game Feel
+overviews, and the movement playground after reviewing the local preview. The
+prototype is accepted as the basis for teaching; this does not establish authored
+Game Feel lessons or publication.
+
+Next develop granular controls-and-response lessons from the accepted movement
+comparison, separating immediate response, acceleration, release braking and
+reversal so readers can explain each difference. Game AI's first proposed
+experience remains perception, memory and decisions.
