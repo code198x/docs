@@ -1,9 +1,9 @@
 # Aiming — six-part teaching progression
 
 **Status:** The user approved the aiming prototype and this six-part direction.
-Six locally authored teaching pages now have focused experiments, worked examples
-and prediction/answer disclosures. They await review in this form. They are not
-integrated into the website and have not been approved for publication.
+The user also approved the six locally authored teaching pages. They are now
+integrated into the website as a local preview, with focused experiments, worked
+examples and Question disclosures. Publication has not been authorised.
 
 The maintained source is `code-samples/craft/maths-for-games/aiming/`.
 Open `lessons.html?step=1` through its documented local server. The accepted
@@ -52,11 +52,36 @@ hardware results. JavaScript numbers represent the bounded scaled integers exact
 no retro overflow behaviour is emulated. The reference is floating point, not
 infinite precision. Contact uses movement segments and the target radius of 5.
 
-## Review and integration
+## Website integration
 
-Review the six focused pages as a teaching sequence. The next implementation step
-is website integration with maintained experiment assets, normal lesson navigation
-and Question components, preserving the existing probability URLs. Keep the
-independent geometry entry rather than making Dice Roller a prerequisite. Broader
-matrices, coordinate transformations, gravity, interception and lookup-table work
-remain outside this slice.
+The six lessons live at `/craft/maths-for-games/unit-06/` through `unit-11/`.
+The existing probability URLs (`unit-01/` through `unit-05/`) are unchanged.
+An optional `sequence` field groups the module into **Chance and samples** and
+**Aiming and movement**. Both have their own local lesson numbers, progress
+markers and previous/next boundaries; neither makes the other a prerequisite.
+The module overview offers both entry links and grouped lesson lists.
+
+Website MDX owns the learner-facing prose and uses the normal Question component.
+`AimingExperiment` embeds the maintained sample renderer and model through static
+build-time routes under `/experiments/aiming/`. The build reads the sample files
+using `CODE_SAMPLES_PATH`; there is no fetch from a repository at runtime. The
+embedded document hides the standalone teaching/navigation, supplies a labelled
+landmark and accessible heading, and reports its content height to its parent.
+The parent accepts height messages only from its own iframe and origin. Embedded
+pages are excluded from search indexing; the lessons remain the discoverable entry.
+
+The accepted standalone playground and focused prototypes remain available in the
+sample repository. The website integration is ready for review before publication.
+
+## Integration verification
+
+An isolated production snapshot containing the maths changes passes the website's
+required build checks: 72 tests pass and 9 decoder-dependent tests are skipped.
+This excludes unrelated local work, including an unfinished CRASH Live page edit.
+`website/scripts/verification/aiming-integration.mjs` verifies both entry routes,
+unchanged probability URLs, independent sequence boundaries, progress counters,
+embedded coordinates/radians/aiming/fixed-point behaviour, content-height resizing,
+and all six pages at narrow and desktop widths. Axe passes in light and dark
+site themes, including embedded documents, after theme transitions settle.
+Evidence and inspected screenshots live in the website's
+`scripts/verification/evidence/aiming-integration/` directory.

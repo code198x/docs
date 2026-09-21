@@ -1,8 +1,9 @@
 # Maths for Games — aiming experiment
 
 **Status:** The user approved the local prototype and its six-part teaching
-direction. The [focused progression](aiming-progression.md) now has six local
-teaching pages for review. No site routes are published by this work.
+direction. The [focused progression](aiming-progression.md) and its six local teaching pages
+are approved. Website integration is implemented for review; no site routes are
+published by this work.
 
 Source: `code-samples/craft/maths-for-games/aiming/`. Its README owns launch and
 verification instructions and the model's mathematical contract.
