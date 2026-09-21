@@ -1,8 +1,8 @@
 # Maths for Games — aiming experiment
 
-**Status:** Implemented locally for user review. No lessons or site routes are
-published by this work. The user authorised a playable prototype following the
-agreed geometry, trigonometry and fixed-point direction.
+**Status:** The user approved the local prototype and its six-part teaching
+direction. The [focused progression](aiming-progression.md) now has six local
+teaching pages for review. No site routes are published by this work.
 
 Source: `code-samples/craft/maths-for-games/aiming/`. Its README owns launch and
 verification instructions and the model's mathematical contract.
@@ -26,8 +26,9 @@ Five model tests and browser interaction/accessibility/layout checks pass.
 Desktop and mobile screenshots were inspected. The simulation uses host-side
 arithmetic; it is not evidence about any retro CPU's speed or overflow behaviour.
 
-The next decision is whether this makes the mathematical relationships useful
-and engaging enough to support lesson authoring. Review the amount shown at once,
-how clearly the triangle connects to movement, and whether fixed-point comparison
-should be a separate teaching step. Matrices, local/world transforms, gravity and
-moving-target interception remain outside this bounded prototype.
+The complete playground remains available for free exploration. The approved
+next direction separates coordinates, triangles, sine/cosine, radians, atan2 and
+fixed point into focused teaching steps. Their implementation and remaining
+review/integration work are owned by the [progression](aiming-progression.md).
+Matrices, local/world transforms, gravity and moving-target interception remain
+outside this bounded prototype.
