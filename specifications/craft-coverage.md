@@ -116,15 +116,16 @@ This does not establish authored Game Feel lessons.
 
 Four controls-and-response lessons are now authored locally for review, separating
 immediate response, acceleration, release braking and reversal. The comparisons
-change one setting at a time and expose a single-update trace. Optional JavaScript
-comes from the actual running functions; plain language and pseudocode explain
-the rule independently of JavaScript knowledge. These lessons are not yet approved
+change one setting at a time and expose a single-update trace. The lesson pages
+use plain language, worked arithmetic, pseudocode and the inspector, with no
+JavaScript disclosures. An unobtrusive source link retains access to the actual
+routine. These lessons are not yet approved
 or published. After their review, Game Design then Game AI are the agreed next
 subjects to develop. Game AI's first proposed
 experience remains perception, memory and decisions.
 
 The local four-lesson build passes 72 website tests (nine decoder-dependent
 checks skipped locally) and ten movement-model tests. Browser verification covers
-worked traces, input, setting resets, code disclosures, navigation, both themes,
+worked traces, input, setting resets, source links, navigation, both themes,
 390/1280-pixel layouts and iframe sizing, with no page errors or scoped Axe
 violations. These checks establish the local draft behaviour, not publication.
