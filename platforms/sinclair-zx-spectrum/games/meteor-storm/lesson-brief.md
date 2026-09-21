@@ -1,9 +1,10 @@
 # Meteor Storm — teaching progression
 
 **Status:** The user accepted the native game: “Sorted. Perfect. Let's proceed
-with this.” The user also agreed the separate introductory/game split. Meet Assembly is published. Seventeen complete native teaching programs now implement
+with this.” The user also agreed the separate introductory/game split. Meet Assembly is published. Nineteen complete native teaching programs now implement
 the game progression and its smaller graphics/clock experiments; see the
-[checkpoint execution record](checkpoints.md). Game lesson prose remains to be authored.
+[checkpoint execution record](checkpoints.md). Twenty-four [authored lessons](lessons.md)
+now implement this progression and await user review; they are not published.
 The user explicitly permits as many lessons as understanding requires; the earlier
 fourteen-row outline is not a lesson-count target.
 
@@ -25,9 +26,9 @@ loops, calls and stack, keyboard input, bounded marker movement, clock awareness
 and the first debugger exercise. The game applies and deepens those ideas.
 
 The outline below groups thirteen game checkpoints by purpose; the final reload
-activity reuses the finished source. Four smaller runnable experiments now precede
-the relevant drawing/clock checkpoints: one-row-shift, eight-shifts, interrupt-clock
-and half-rate-clock. These are source states, not fixed lesson boundaries.
+activity reuses the finished source. Six smaller runnable experiments now precede
+the relevant drawing/clock checkpoints: one-row-shift, eight-shifts, pixel-address,
+draw-ship, interrupt-clock and half-rate-clock. These are source states, not fixed lesson boundaries.
 No BASIC or Foundations attendance is required. Readers arrive from the introductory
 module or with equivalent experience; recap immediate concepts locally.
 

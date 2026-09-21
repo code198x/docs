@@ -145,6 +145,5 @@ launch, actual memory inspection, bounded recordings and debugger controls.
 The [implementation record](platforms/sinclair-zx-spectrum/assembly/meet-assembly-opening.md)
 owns release evidence. All eighteen native tape loads, the production build,
 interactive browser checks and live publication checks pass. Existing lesson URLs
-remain available. Meteor Storm has seventeen executed teaching programs; [game lesson authoring](platforms/sinclair-zx-spectrum/games/meteor-storm/checkpoints.md) is next. Its accepted
-prototype and teaching endpoint are not yet an authored game module. The BASIC editor remains a local
+remain available. Meteor Storm has nineteen executed teaching programs and twenty-four [authored lessons](platforms/sinclair-zx-spectrum/games/meteor-storm/lessons.md). The local module awaits user review and publication. The BASIC editor remains a local
 trial, and unrelated Maths for Games and Craft planning continues separately.

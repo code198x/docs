@@ -1,16 +1,17 @@
 # Meteor Storm — checkpoint execution record
 
-**Status:** Seventeen complete teaching programs are implemented and executed in
+**Status:** Nineteen complete teaching programs are implemented and executed in
 `code-samples/sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/`. The accepted
-prototype is preserved. Full game lessons and browser investigations remain to
-be authored; no new game module is published by this work.
+prototype is preserved. Twenty-four [authored lessons and browser investigations](lessons.md)
+await user review; no new game module is published by this work.
 
 The user explicitly permits as many lessons as understanding requires. These
 source states do not settle the final lesson count. The [teaching progression](lesson-brief.md)
-now includes four small experiments around the thirteen game stages:
+now includes six small experiments around the thirteen game stages:
 
 - `one-row-shift` and `eight-shifts` make the byte carry and table data visible
   before the full ship uses pre-shifted artwork.
+- `pixel-address` and `draw-ship` separate bitmap addressing from the complete drawing routine.
 - `interrupt-clock` isolates the private IM2 handler and frame counter.
 - `half-rate-clock` isolates the alternate-frame gate before clocked steering.
 
@@ -30,13 +31,15 @@ corresponding state becomes necessary.
 ## Executed evidence
 
 Target: stock 48K PAL Spectrum, original Z80. Asm198x 0.0.58 builds every source;
-upstream Pasmo 0.5.5 emits identical raw machine code for all seventeen programs.
+upstream Pasmo 0.5.5 emits identical raw machine code for all nineteen programs.
 The native emulator executable and each source/data hash are recorded in
 `verification/evidence/` in the sample repository.
 
 - `checkpoints.json`: 142 checks across seventeen programs, including actual
   screen-memory shifts, movement bounds, clean XOR erasure, clocks across byte
   wrap, idle losses, keyboard-driven completions, retries, pickups and pool bounds.
+- `opening-additions.json`: 20 checks for the new bitmap-address and static ship
+  experiments, including all sixteen ship rows and independent Pasmo byte parity.
 - `boundaries.json`: four keyboard-driven first-dodge cases. With meteor X=116,
   ship X=100 or 132 misses; X=102 or 130 hits. The strict comparison at separation
   16 is observable on both sides.
@@ -90,18 +93,16 @@ one-life rule, art, course, controls, movement, drift, boost, scoring and record
 remain intact. Runtime comparisons establish behavioural agreement, not source
 or binary identity.
 
-## Remaining authoring work
+## Lesson review
 
-Author small lessons from the executed states, starting with the shift experiments
-and smooth-movement handoff. Use the browser assembler, actual memory inspection
-and the debugger where they illuminate the change. Do not combine private-vector
-setup, handler preservation, HALT and the update gate into one unexplained listing.
-The same freedom to split applies to pools, time formatting and render scheduling.
+The [lesson implementation record](lessons.md) maps twenty-four authored lessons
+onto the nineteen programs. Browser source editing, companion artwork, actual RAM,
+collision stepping and downloadable tape now support the progression.
 
-Selected title, flight and collision captures have been visually inspected. Some
-batched native result captures show incomplete text even when the bitmap-memory
-check finds the complete score line. Those captures are not lesson illustrations;
-review the rendered result screen through the browser/native interactive runner
-before publication and investigate the capture discrepancy if it persists.
-Impact audio remains captured but not separately listening-reviewed. No
-physical-hardware testing or finished lesson/publication acceptance is claimed.
+Some earlier batched native result captures show incomplete text despite complete
+bitmap memory. They remain excluded from lesson illustrations. The finished
+browser result has now been visually inspected, and all 640 pixels of its score
+line agree with bitmap RAM and the actual ROM font. This establishes correct
+browser presentation; the native capture discrepancy itself is not diagnosed.
+Impact audio remains captured but not separately listening-reviewed. No physical
+hardware testing or user acceptance of the new lessons is claimed.
