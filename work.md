@@ -4,7 +4,7 @@ This file holds bounded next work and proposals. [PROJECT.md](PROJECT.md) owns a
 
 ## Do next
 
-1. **The Vault.** The [September 2026 content audit](audit/2026-09-content-audit/REPORT.md) found no Vault entry reviewed and a sample of checked claims wrong one time in six (H1). The owner has made the Vault the next priority and chose the review process in [the Vault specification](specifications/vault.md#reviewing-existing-entries): batches of about ten, one pull request each, owner approval as sign-off, and unreviewed entries kept out of search engines. Batch 1 (eleven Spectrum and UK entries) is website PR #450. Batch 2 starts with Rare and a new ZX80 entry; [candidates](vault-candidates.md) lists missing entries. See [Vault editorial work](#vault-editorial-work).
+1. **The Vault.** The [September 2026 content audit](audit/2026-09-content-audit/REPORT.md) found no Vault entry reviewed and a sample of checked claims wrong one time in six (H1). The owner has made the Vault the next priority and chose the review process in [the Vault specification](specifications/vault.md#reviewing-existing-entries): batches of about ten, one pull request each, owner approval as sign-off, and unreviewed entries kept out of search engines. Batch 1 (eleven Spectrum and UK entries) merged as website PR #450; batch 2 (Ultimate, Liverpool, the Sinclair magazines, a new ZX80 entry and the merged crash entry) is PR #456, awaiting sign-off. [Candidates](vault-candidates.md) lists missing entries. See [Vault editorial work](#vault-editorial-work).
 2. **Browser-player integration design.** All 30 families' players are published on system pages and lessons, under the umbrella decision `decisions/browser-player-rollout.md`. Where a player sits on a page, what it shows first, how it relates to the lesson or system text, and what readers are invited to try are not yet designed. Propose a treatment for a system page and a lesson, review it in context, then apply it. The [House UI preview design](https://github.com/code198x/website/blob/main/docs/superpowers/specs/2026-09-21-house-ui-preview-design.md) covers the same pages and should be reconciled with it.
 3. **Content audit follow-ups.** Work through the audit's remaining findings that need no further decision: framing copy that calls Maths for Games an outline or presents AMOS, Blitz, C64 BASIC and Foundations as gateways (M4, M5); published units that promise unpublished games, such as The Long Night pointing to Lamplight and Starfield to Platform Panic (H4); and the low-severity housekeeping (L3–L8). H2, H3, H5, H7, H8 and L1 are fixed.
 4. **Decisions the audit left with the owner.** Whether to publish the eleven What's New drafts for released work (publishing posts to Discord); whether the 71 Vault entries and 10 timeline events from 2005 onwards stay in scope; and whether C64 BASIC keeps its "reflex" and "quizmaster" games, whose names were retired from Spectrum BASIC.
@@ -94,6 +94,13 @@ The [content audit](audit/2026-09-content-audit/REPORT.md) sets the Vault's agen
 - **Private-collection wording (H6, M2, M3):** 207 rendered pages refer to "this library" or "held here", and frontmatter names local paths. Rewrite as statements about public sources; keep uncertainty, drop edit history.
 - **Citations (M1):** the template renders only date citations, so most frontmatter sources are invisible, and 69% of entries cite nothing.
 - **Consistency (M9, M12, L6, L7):** hype superlatives, synonymous platform identifiers, unverified manufacturer dates and stale entries.
+
+Reviewers found problems in these entries outside their batch; include them in the next one:
+
+- `people/rick-dickinson` credits him with the ZX80's industrial design, but his own interview in *Edge* 137 (2004) credits John Pemberton.
+- `people/teresa-maughan` claims 48 issues as editor; the mastheads show 28 (issues 14–41). It also uses private-library wording.
+- `companies/software-projects` still has research boxes and unsupported claims, including "a quarter of a million copies" and Jet Set Willy "in April 1984".
+- `people/matthew-smith`: its "Why he matters here" section comes close to curriculum positioning, and *CRASH* 1 (February 1984) supports his 1966 birth year.
 
 Two earlier investigations remain useful:
 
