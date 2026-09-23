@@ -54,7 +54,7 @@ Keep meaningful intermediate states using the sample repository’s existing `st
 
 The website’s `scripts/build-artefacts.sh` builds and stages downloads. Source Makefiles and capture manifests specify individual builds. Record tool versions and target configuration when reporting validation. Keep reproducible source in Git and publish generated outputs through the build path; remove existing tracked binaries only after verifying equivalent builds and downloads.
 
-`AssembleAndRun` currently supplies a Spectrum assembly loop with the family tools. It complements local build instructions and downloads. Browser convenience does not expand target hardware or establish support for another language or system.
+`AssembleAndRun` supplies the Spectrum assembly loop with the family tools. `NesAssembleAndRun` supplies an editable ca65-dialect NES example, compiling with Asm198x's 6502 WASM build and running the resulting cartridge in the shared Emu198x player. Both read maintained source from code-samples. Cartridge downloads from the NES editor assemble its current text; errors retain the running program and identify the source line. Units that provide their own player declare `inlinePlayer: true` to omit the generic end-of-lesson launcher. Browser components complement local build instructions and downloads; they do not establish support for another language or system.
 
 ## Capture and execution
 

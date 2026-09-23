@@ -13,4 +13,4 @@ This repository owns the current curriculum goals, authoring specifications, sys
 - Keep the README index and incoming links correct when moving or deleting guidance.
 - Retained game briefs are design evidence, not project policy or live status. Keep bounded proposals in `work.md`; remove completed notes.
 
-Website catalogues, authored pages, sample files and Git establish implementation state. The immediate curriculum task is Spectrum BASIC and assembly re-specification; new lineups require agreement before bulk lesson development. BASIC games need not meet commercial standards. See [system design material](platforms/README.md).
+Website catalogues, authored pages, sample files and Git establish implementation state. The agreed Spectrum BASIC rewrite is complete and published. The progression queue in `work.md` deepens existing material; the separate Spectrum assembly rewrite continues. New lineups require agreement before bulk lesson development. BASIC games need not meet commercial standards. See [system design material](platforms/README.md).

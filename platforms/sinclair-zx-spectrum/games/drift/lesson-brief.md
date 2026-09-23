@@ -39,4 +39,4 @@ Use fresh ROM keyboard entry and ROM-saved tapes for every checkpoint, then fres
 
 The authored prose checks SIN/COS/PI, array indexing, graphics/OVER and tape commands against Steven Vickers, edited by Robin Bradbeer, *ZX Spectrum BASIC Programming* (Sinclair Research, second edition, 1983), using precise chapter/page locators. Source inspection and emulator execution establish this program's behaviour; they do not replace primary citations for general language or hardware claims. The authored pages link to the Foundations collection lesson after explaining BASIC arrays locally, and to the canonical Meet BASIC entry/save workflow. No Maths for Games link is needed to understand the supplied geometry.
 
-The agreed performance/assembly revisit remains deferred until the initial BASIC versions are complete.
+The agreed performance/assembly revisit remains deferred until the owner chooses to resume that thread.

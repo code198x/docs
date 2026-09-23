@@ -59,7 +59,7 @@ The published catalogue places Quickstep after Drift as game 9, with all ten les
 
 ## Approval and scope
 
-The user approved the overview and ten lessons: “That looks good to me”. The approved samples were merged before the website; live publication checks pass. The accepted six-lane game's rules, controls, artwork, silence and difficulty are preserved. Native acceptance applies to that unchanged endpoint; intermediate programs have automated execution evidence, not independent learner review. Assembly and performance comparisons remain deferred until the initial BASIC versions are complete.
+The user approved the overview and ten lessons: “That looks good to me”. The approved samples were merged before the website; live publication checks pass. The accepted six-lane game's rules, controls, artwork, silence and difficulty are preserved. Native acceptance applies to that unchanged endpoint; intermediate programs have automated execution evidence, not independent learner review. Assembly and performance comparisons remain deferred until the owner chooses to resume that thread.
 
 ## Publication
 

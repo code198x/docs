@@ -1,6 +1,6 @@
 # Revisiting games at BASIC's limits
 
-**Status:** Basis agreed; deferred until the initial BASIC versions have been developed. Current work stays focused on those games and their teaching sequences. No performance ceiling, specific experiment, assembly port or replacement course sequence is agreed.
+**Status:** Basis agreed; deferred until the owner chooses to resume this thread. The initial BASIC rewrite is complete and published; current progression exercises deepen those games and their teaching sequences. No performance ceiling, specific experiment, assembly port or replacement course sequence is agreed.
 
 ## The question to answer
 

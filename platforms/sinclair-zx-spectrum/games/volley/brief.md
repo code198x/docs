@@ -1,6 +1,6 @@
 # Volley — Brief
 
-**Status:** Specification and lesson plan agreed. Eight verified checkpoint sources, eight lesson drafts and a module overview are ready for editorial review; see the [prototype and teaching review](prototype.md). The agreed opening is Meet BASIC → Bright Spark → Volley → Touchdown. Publication is pending.
+**Status:** The approved eight lessons and module overview are published in [website PR #420](https://github.com/Code198x/website/pull/420), recorded in website commit `fe37e18c`. Eight verified checkpoint sources support them; see the [prototype and teaching review](prototype.md). The implemented opening is Meet BASIC → Bright Spark → Volley → Touchdown.
 **System / track:** Sinclair ZX Spectrum / BASIC.
 **Route:** Meet BASIC → Bright Spark → Volley → Touchdown.
 **Target:** Stock 48K Spectrum, PAL timing, Sinclair BASIC, keyboard input and tape save/load. No expansion required.

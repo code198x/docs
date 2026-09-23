@@ -1,6 +1,6 @@
 # Volley prototype and teaching review
 
-**Status:** Eight runnable checkpoint sources implemented; execution findings are recorded below. The prototype and plan are approved as the basis for the agreed course order; eight lessons and an overview are drafted but not yet published.
+**Status:** Eight runnable checkpoint sources and eight approved lessons with their overview are implemented and published. Website commit `fe37e18c` records [publication PR #420](https://github.com/Code198x/website/pull/420). Execution findings are recorded below; reconciling this publication status does not constitute a new execution or live-site check.
 
 The [brief](brief.md) owns the proposed game and scope. Sources live in `code-samples/sinclair-zx-spectrum/basic/volley/prototype/`; each `steps/step-NN.bas` is a complete program. Verification scripts, source hashes and results belong beside the sources.
 

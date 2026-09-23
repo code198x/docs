@@ -1,6 +1,6 @@
 # Bright Spark prototype
 
-**Status: seven replacement lessons approved for publication, 9 September 2026; complete-game emulator checks passed.** The [approved brief](brief.md) remains the specification. The complete sequence was approved on 9 September. Publication uses descriptive lesson URLs, with topic-preserving redirects and heading aliases for the six old numbered pages.
+**Status: seven approved replacement lessons published in [website PR #418](https://github.com/Code198x/website/pull/418), recorded in website commit `5512bb2a`; complete-game emulator checks passed.** The [approved brief](brief.md) remains the specification. The complete sequence was approved on 9 September. Publication uses descriptive lesson URLs, with topic-preserving redirects and heading aliases for the six old numbered pages.
 
 ## Implementation
 
