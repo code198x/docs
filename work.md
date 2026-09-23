@@ -1,182 +1,111 @@
 # Current work
 
-This file holds bounded next work and proposals. [PROJECT.md](PROJECT.md) owns agreed direction; source files and catalogues establish implementation state. Remove completed items instead of keeping a second status history.
+This file holds bounded next work and proposals. [PROJECT.md](PROJECT.md) owns agreed direction; source files, catalogues and Git establish implementation state. The linked specifications and evidence records own the detail of finished work. Remove an item when it is done; do not keep a second status history here.
+
+## Do next
+
+1. **The Vault.** The [September 2026 content audit](audit/2026-09-content-audit/REPORT.md) found that no Vault entry has been reviewed and that a sample of checked claims was wrong about one time in six (finding H1). The owner has made the Vault the next priority. Decide the approach first: review the Spectrum-facing entries before CRASH! Live and take unreviewed entries out of search indexing, or unpublish unreviewed entries. The sample already lists the errors in the Spectrum-facing entries. See [Vault editorial work](#vault-editorial-work).
+2. **Browser-player integration design.** All 30 families' players are published on system pages and lessons, under the umbrella decision `decisions/browser-player-rollout.md`. Where a player sits on a page, what it shows first, how it relates to the lesson or system text, and what readers are invited to try are not yet designed. Propose a treatment for a system page and a lesson, review it in context, then apply it. The [House UI preview design](https://github.com/code198x/website/blob/main/docs/superpowers/specs/2026-09-21-house-ui-preview-design.md) covers the same pages and should be reconciled with it.
+3. **Content audit follow-ups.** Work through the audit's remaining findings that need no further decision: framing copy that calls Maths for Games an outline or presents AMOS, Blitz, C64 BASIC and Foundations as gateways (M4, M5); published units that promise unpublished games, such as The Long Night pointing to Lamplight and Starfield to Platform Panic (H4); and the low-severity housekeeping (L3–L8). H2, H3, H5, H7, H8 and L1 are fixed.
+4. **Decisions the audit left with the owner.** Whether to publish the eleven What's New drafts for released work (publishing posts to Discord); whether the 71 Vault entries and 10 timeline events from 2005 onwards stay in scope; and whether C64 BASIC keeps its "reflex" and "quizmaster" games, whose names were retired from Spectrum BASIC.
+
+## Curriculum implementation queue
+
+The C and R numbers group related progression work; each checkbox is an independently reviewable delivery. The linked specifications own teaching detail and hold the evidence for the deliveries already accepted. Work on one item at a time, and do not treat approval to continue as approval to publish or to change the game lineup.
+
+### Review what was published without its recorded review
+
+The progression additions (C01–C04, C06–C09d and R2–R4e) were published with website PR #449 on 23 September 2026 at the owner's request, together with the four Game Feel controls-and-response lessons. Several had not completed the review their records call for:
+
+- [ ] **Bright Spark:** confirm muted readability of labels, asterisks and result text during play and replay (C01), and review units 02/04/06/07 in the rendered site, distinguishing audible trials from paper exercises (R1).
+- [ ] **R4e:** review the tune-sequencer pattern's contracts against the Flock 17/18, Starfield 17 and Dash 17 players ([evidence](specifications/experiments/audio-progression.md#sequencer-contract-review)).
+- [ ] **C09c:** review Dash unit 17's complete-request companion ([evidence](../code-samples/nintendo-entertainment-system/assembly/dash/unit-17/handoff/README.md)).
+- [ ] **R5 — Game Feel:** review the four controls-and-response lessons before adding more Game Feel content ([coverage map](specifications/craft-coverage.md)).
+- [ ] **Learner trials:** most accepted C-series exercises record a pending learner trial. For a new exercise form, ask: can someone identify the relevant state, choose an observation and explain one changed case with the available hints? Record help needed and revise confusing wording.
+
+### Open deliveries
+
+- [ ] **C03a follow-up — linked audio examples.** Before promoting them as runnable starting points, repair `sinclair-zx-spectrum/assembly/audio/sound-beep.mdx` (HL changes the repetition count while the delay stays fixed; validate claimed pitch changes and local-label scope), `nintendo-nes/assembly/audio/square-wave.mdx` (DMC/sample wording, sweep muting and length-load semantics), `commodore-64/assembly/audio/sid-note-trigger.mdx` (non-instant rate 0, retrigger and ownership assumptions, unverified cost estimates) and `commodore-amiga/assembly/audio/playing-a-sample.mdx` (period versus waveform pitch, DMA cost, ownership, one-shot interrupt timing). Deliver each with its own executable check.
+- [ ] **Triangle held output in Emu198x.** Before using Emu198x to teach the NES triangle's held output or clicks, fix `emu198x-ricoh-apu-2a03`'s `Triangle::output()`, which returns zero when gated, contrary to the held-output hardware contract. File it as an emu198x issue with a focused regression; do not change the lesson to match the emulator.
+- [ ] **C05 — Meteor Storm: measure, overload and repair one drawing path.** Build the unit 20 profiling companion around its existing counters and `verification/checkpoints.py` (baseline, bounded extra render work, diagnosis, repair), preserving collision, simulation, course events, random-call order and input schedule. Coordinate with the Spectrum assembly rewrite first. Plans: [profiling](specifications/experiments/profiling-progression.md), [headroom](specifications/experiments/scheduling-ownership-headroom.md).
+- [ ] **C09e — Dash: connect collection to feedback.** After the triangle fix, trace the input/state/audio/PPU path; compare muted collection with an isolated, bounded delayed cue. Preserve score and collision events. Plan: [feedback](specifications/experiments/timing-and-player-feedback.md).
+- [ ] **C10a — Dice Roller: demonstrate mapping bias.** Enumerate remainder mapping, compare a correctly specified rejection mapping, then inspect short samples; state the different source domains for a uniform byte and a non-zero LFSR. No statistics framework. Plan: [randomness](specifications/experiments/randomness-and-reproducibility.md).
+- [ ] **C11a — Port one input rule between Spectrum and NES.** Two isolated newly-pressed-action fixtures sharing one logical input/state table; test hardware readers separately from injected input, including reset while held and release/repress. Keep two understandable implementations. Plan: [abstraction and portability](specifications/experiments/abstraction-and-portability.md).
+
+### How a delivery is done
+
+Before editing a runnable item, record its exact baseline source and revision, target/model/region, tool versions, build/load route and recovery copy in the project's verification notes. Choose the placement deliberately: replace an explanation, add a short inline exercise, create a linked optional companion or revisit later. For timing work, measure the unchanged workload first, then name the boundary, workload and acceptable result. Record maximum observed costs as observations, not bounds.
+
+At review, inspect the rendered exercise and ask for a prediction before revealing the answer. Check rendered length, hint ordering, keyboard-accessible reveals, backward links and the optional/essential boundary. Record static and build checks separately from native observation, listening and any learner trial.
+
+### Keep for later, with a trigger
+
+- **Later audio engines and advanced hardware:** AY/IM 2, SID Symphony, Thunder Run and Onslaught extensions follow a reviewed game brief. MIDI and PC sound remain explicit future coverage.
+- **Replay and procedural layouts:** only when a reproducible failure or agreed mechanic justifies them and input/reset/update contracts are stable.
+- **Loading recovery and OS return:** when a real loader or environment-return requirement exists. Flock's halt loop is not a Workbench exit.
+- **Host profiling, compression and broad pipelines:** require a measured bottleneck or storage constraint.
+- **BASIC performance revisits:** stay deferred until the owner resumes [that thread](platforms/sinclair-zx-spectrum/basic/performance-revisits.md); the progression companions do not resume it.
+
+## Audio and performance
+
+Audio work is part of the queue above: the C03a follow-up, the triangle fix, C05 and C09e. The [audio direction](specifications/graphics-and-audio.md) and [four-system progression](specifications/experiments/audio-progression.md) own scope and teaching detail. Do not keep a separate audio to-do list.
 
 ## Spectrum sequences
 
-**Status: Meet BASIC, Bright Spark, Volley, Touchdown, Sonar, Crates, Tail Chase, Brick Bash and Drift published; Quickstep published.** All fifteen Meet BASIC lessons and seven replacement Bright Spark lessons are live. Meet BASIC → Bright Spark is published. The agreed continuation is Volley → Touchdown. Volley’s approved eight lessons and overview are integrated into the website. See the [Meet BASIC implementation record](platforms/sinclair-zx-spectrum/basic/meet-basic-plan.md) and [Bright Spark verification record](platforms/sinclair-zx-spectrum/games/bright-spark/prototype.md). Native control/audio and independent learner observations remain useful Bright Spark follow-up work.
-
-The [Touchdown brief](platforms/sinclair-zx-spectrum/games/touchdown/brief.md) now specifies a moving lander, sideways control and thrust, limited fuel, and a landing pad within a fixed screen of uneven terrain. Build on Volley’s fixed-step movement and contact checks. The [six-stage prototype](platforms/sinclair-zx-spectrum/games/touchdown/prototype.md) runs through the 48K ROM, including a scripted safe approach, combined steering and thrust, fuel exhaustion and retry. Native play feedback was positive but found the game hard. The eleven-lesson sequence is agreed, and its [teaching checkpoints and drafts](platforms/sinclair-zx-spectrum/games/touchdown/lessons.md) are published.
-
-The [project charter](PROJECT.md) and [game-brief specification](specifications/brief.md) govern the work. Subsequent BASIC choices and the remaining assembly lineup stay under review; BASIC games need not meet commercial standards.
-
-### Evidence to start from
-
-The website presents Meet BASIC → Bright Spark → Volley → Touchdown → Sonar → Crates → Tail Chase → Brick Bash → Drift → Quickstep as the action-game sequence, with Locksmith and Three in a Row following Crates in Boards and deduction. Four earlier games remain separately available for review, and the BASIC reference remains optional. The duplicated standalone Story Builder, Lucky Number and Oracle Stone lessons are retired with redirects into Meet BASIC. Sample sources and [retained game plans](platforms/README.md) remain evidence for the next briefs. Inspect the website’s `src/content/modules/sinclair-zx-spectrum/`, the corresponding unit metadata and authored MDX, and `code-samples/sinclair-zx-spectrum/` together. Availability labels alone are insufficient evidence of what a learner can build.
-
-Existing ideas include introductory BASIC programs, deduction and guessing games, quizzes and stories, grid puzzles, resource decisions and action games. The assembly material includes machine/language introductions, Gloaming and Shadowkeep, with plans extending beyond the implemented opening. Retain these as candidates and evidence, not an instruction to port each BASIC game to assembly.
-
-Foundations now uses pseudocode. Read the actual rewrite rather than assuming the old Sinclair BASIC coverage. Maths for Games and Game Feel already have material under Craft, including planned unit breakdowns; a landing page or breakdown does not establish authored lessons. The broader Craft, AI, data-structure and asset coverage in the charter remains work to develop.
-
-### Review questions
-
-For each existing or proposed game, explain its recurring activity and appeal; its fit to Spectrum and language; what it introduces, reinforces or recalls; and the programming, maths, design, asset and hardware ideas that grow together. Map links to shared explanations, the Vault and useful reusable patterns without making those links essential missing instructions.
-
-Plan meaningful runnable stages and a complete endpoint. Specify target configuration, host tools, source/build outputs and checks. Compare alternative game choices where they teach something different. Do not preserve arbitrary counts, commercial comparisons or genre exclusivity as requirements.
-
-BASIC and assembly each admit independent entry. A brief recall of programming concepts can accompany the first real example; an explanation of syntax and machine behaviour must remain local. Gloaming's compact assembly scope and Shadowkeep's room-based systems deserve assessment for their distinct teaching roles; neither fixes the new sequence in advance.
-
-### Models and wider systems
-
-The existing Spectrum opening uses a stock 48K target; previous plans also discuss 128K facilities and Spectrum Next use. Keep the distinction between running a stock-compatible program on a Next and requiring Next-specific facilities. Before changing a game's target, check its actual source, brief, build recipe and execution evidence. Do not transfer a later model's capabilities into an earlier model's description.
-
-A later expanded-machine project may be valuable if it explains the extension, what the Spectrum still does, the communication interface, changed constraints and new bottlenecks. Cross-development tools are host conveniences, not target expansions.
-
-Keep useful contrasts with C64, Amiga, NES and future systems visible. Reusing a mechanic should illuminate a difference in language, CPU, memory, display, sound or input; it is not a requirement for identical projects or lesson counts.
+The agreed Spectrum BASIC rewrite is complete and published; the catalogue in `website/src/content/modules/sinclair-zx-spectrum/basic.yaml` and [PROJECT.md](PROJECT.md) record its games and grouping. There is no remaining batch of old BASIC games to rewrite, and the [remaining-course review](platforms/sinclair-zx-spectrum/basic/course-review.md)'s old recommendations are not the current backlog.
 
 ### Next output
 
-The current-course groups are agreed and implemented in the website catalogue. The [remaining-course review](platforms/sinclair-zx-spectrum/basic/course-review.md) assesses all six earlier games and eleven proposals, including conflicting Night Patrol descriptions and four possible sequel consolidations. The user selected Locksmith next. Its [bounded brief](platforms/sinclair-zx-spectrum/games/locksmith/brief.md) defines the first native trial: four digits from 1–6, repeats allowed, numeric exact/other clues and ten guesses. The user accepted the native prototype; [execution checks](platforms/sinclair-zx-spectrum/games/locksmith/prototype.md) pass. The [nine-lesson progression](platforms/sinclair-zx-spectrum/games/locksmith/lesson-brief.md) now has seven [executed checkpoints](platforms/sinclair-zx-spectrum/games/locksmith/lessons.md), with 80 checks passed and final-source identity preserved. The approved overview and nine lessons are published in Boards and deduction, with production, browser and live checks passed. Deduction and saving reuse existing sources. The user selected Three in a Row’s opponent review. The [review](platforms/sinclair-zx-spectrum/games/three-in-a-row/review.md) establishes a fork counterexample to the retained policy through exhaustive host traversal. Its [bounded brief](platforms/sinclair-zx-spectrum/games/three-in-a-row/brief.md) recommends one readable, deliberately fallible opponent; the user has authorised that prototype. The [implemented prototype](platforms/sinclair-zx-spectrum/games/three-in-a-row/prototype.md) is accepted after native play. The user authorised lessons with the same difficulty. Its [ten-lesson progression](platforms/sinclair-zx-spectrum/games/three-in-a-row/lesson-brief.md) uses eight runnable checkpoints. The approved overview and ten replacement lessons are published in Boards and deduction, with topic redirects and production/browser/live checks passed. The user selected [The Caverns](platforms/sinclair-zx-spectrum/games/the-caverns/brief.md) next. Its [source review](platforms/sinclair-zx-spectrum/games/the-caverns/review.md) identifies a lethal arrival without a fresh warning. The user accepted the named cave, patrol, escape turn and return objective, then authorised lessons. Its [ten-lesson progression](platforms/sinclair-zx-spectrum/games/the-caverns/lesson-brief.md) uses eight runnable checkpoints; the approved replacement lessons are published in Hidden worlds, with production and live checks passed. The user selected [Yearfall](platforms/sinclair-zx-spectrum/games/yearfall/brief.md) next and authorised a bounded economy and native-play trial. The [executed prototype](platforms/sinclair-zx-spectrum/games/yearfall/prototype.md) now includes user-authorised decade continuation and traveller choices, with 43 native groups and 15 host model groups passed. The user accepted this endpoint at samples commit `03afc02`. The user authorised the [thirteen-lesson progression](platforms/sinclair-zx-spectrum/games/yearfall/lesson-brief.md) with eleven runnable checkpoints. The user approved the [replacement lessons](platforms/sinclair-zx-spectrum/games/yearfall/lessons.md), now published in Hidden worlds with the accepted source preserved; 140 execution groups and production/browser/accessibility/live checks pass. Other recommendations remain proposals; no retirement is approved.
+No further BASIC game is commissioned. Progression work deepens the existing games through the queue above.
 
-Tail Chase’s [playable prototype](platforms/sinclair-zx-spectrum/games/tail-chase/prototype.md) is accepted after native play, with fourteen scripted checks passed. Its [ten-lesson sequence](platforms/sinclair-zx-spectrum/games/tail-chase/lesson-brief.md) now has twelve executed checkpoints and ten published lessons, recorded in the [implementation record](platforms/sinclair-zx-spectrum/games/tail-chase/lessons.md). The overview and lessons are approved, published and live-checked. Brick Bash was agreed as the next bounded prototype. Its [execution record](platforms/sinclair-zx-spectrum/games/brick-bash/prototype.md) records fourteen scripted checks and native feedback: “That works, it's surprisingly tough”. The user agreed to retain the baseline and develop its teaching progression. The [lesson brief](platforms/sinclair-zx-spectrum/games/brick-bash/lesson-brief.md) defines ten lessons, including a wall-coordinate inspector before integrating the full brick lookup. Its [implementation record](platforms/sinclair-zx-spectrum/games/brick-bash/lessons.md) records nine executed checkpoints and 55 passed execution groups; the final source matches the native prototype exactly. The user approved the overview and ten lessons after local review. They are published after Tail Chase as game 7, with source and browser checks recorded in the implementation record. Drift is now agreed for a bounded steering and docking prototype: eight headings, directional thrust, retained velocity and one fixed target. Its [brief](platforms/sinclair-zx-spectrum/games/drift/brief.md) records the trial. The [prototype record](platforms/sinclair-zx-spectrum/games/drift/prototype.md) records executed docking, control and timing checks; the user reported successful native docking but found speed hard to read. The user then confirmed successful docking with the readout and agreed to retain that BASIC baseline. The [eight-lesson brief](platforms/sinclair-zx-spectrum/games/drift/lesson-brief.md) now has [six executed checkpoints](platforms/sinclair-zx-spectrum/games/drift/lessons.md), with 79 passed check groups and a final source identical to the accepted prototype. The user approved the overview and eight lessons after local review. They are published after Brick Bash as game 8, with source and live publication checks recorded in the implementation record. No difficulty change is agreed. The initial BASIC versions remain the priority. The later catalogue proposals are inherited candidates, not an agreed remaining queue.
-
-The user accepted **Quickstep’s six-lane BASIC baseline** after native play. The [game brief](platforms/sinclair-zx-spectrum/games/quickstep/brief.md) fixes the larger board, six predictable vehicle lanes, one halfway resting strip and marked exit. The [execution record](platforms/sinclair-zx-spectrum/games/quickstep/prototype.md) retains the 20 execution check groups, original captures, measured timing and native feedback. The [lesson brief](platforms/sinclair-zx-spectrum/games/quickstep/lesson-brief.md) defines ten lessons supported by eight [executed checkpoints](platforms/sinclair-zx-spectrum/games/quickstep/lessons.md). Exact source transitions, 96 execution check groups and final-source identity pass. The user-approved overview and ten lessons are published after Drift as game 9, with production, browser and live publication checks passed. Route planning and saving reuse existing programs. The performance/assembly comparison remains deferred until the initial BASIC versions are complete.
-
-The basis of revisiting games to explore BASIC’s limits is agreed, but the user has explicitly deferred this work until after the initial BASIC versions. The [performance-revisit proposal](platforms/sinclair-zx-spectrum/basic/performance-revisits.md) maps candidates and a measurement protocol. When resumed, a bounded Volley baseline is the first candidate, followed by Tail Chase and Touchdown investigations if useful. These investigations are not current tasks. This is separate from the accepted BASIC endpoints; no maximum scope, mandatory port or assembly lineup is settled.
-
-Sonar’s nine lessons are published; the [implementation record](platforms/sinclair-zx-spectrum/games/sonar/lessons.md) owns publication evidence. Crates now follows Sonar in the published course. Its [source assessment](platforms/sinclair-zx-spectrum/games/crates/assessment.md) and [replacement brief](platforms/sinclair-zx-spectrum/games/crates/brief.md) reconcile the earlier finale framing with the current route. The [three-room prototype](platforms/sinclair-zx-spectrum/games/crates/prototype.md) passes scripted 48K execution checks for safe movement/pushing, target preservation, restart, replay, exit and fresh tape loading. The three-room scope and visual direction are agreed after native play. The [lesson brief](platforms/sinclair-zx-spectrum/games/crates/lesson-brief.md) defines eleven lessons. The [implementation record](platforms/sinclair-zx-spectrum/games/crates/lessons.md) owns thirteen executed checkpoints, including the map loader and validation. The approved overview and eleven lessons are published with maintained samples, the textual goal cue and topic-based legacy redirects. Live publication checks passed. A larger Sonar board remains an optional extension, not queued work.
-
-Reflex, Hi-Lo and Quiz Master are retired rather than queued for rewrites. Cipher is published in Boards and deduction; Dice Roller is a probability experiment in Maths for Games. No further retirement is agreed.
-
-Produce reviewable game briefs and a sequence mapping before lesson rewrites. Record concrete missing shared explanations, Vault entries, patterns and component needs. Resolve substantive conflicts with the briefing and separate recommendations from decisions. Historical versions remain in Git; the current specifications should not require reading amendment chains to discover the project goals.
-
-Use the [retained game-design material](platforms/README.md) alongside current sources. Existing sample/prototype files and capture manifests are the starting point for execution, not an old prose claim that a tool or game is verified.
-
-### Entry-route findings for joint review
-
-A source review of the current Spectrum entry route found these conflicts to resolve alongside the game specifications. They are findings, not an adopted replacement sequence:
-
-- The BASIC track landing says no previous programming experience is assumed, but `basic/meet-basic/index.mdx` and its first unit direct complete beginners to Foundations. Unit 1 also refers to having written `SHOW` in General Programming. Decide the local explanation needed for independent entry before revising the primer.
-- The track metadata calls BASIC a gateway preparing readers for assembly, while its body correctly says the routes are independent. Align this framing when reviewing the track.
-- Spectrum `getting-started.mdx` covers both assembly and BASIC conversion, but its final action sends everyone to assembly. Align that system-specific guide with the general Setup Guide’s separate BASIC and assembly routes, and check that a BASIC beginner can reach the emulator and keyword editor.
-- Spectrum getting-started and native-setup pages give different macOS Fuse installation commands (`fuse-emulator` and `fuse`). The native page also foregrounds Pasmo while getting-started recommends Asm198x. Verify current installation instructions and choose a clear canonical setup path; do not infer installer success from the existence of the tools locally.
-- The first BASIC unit uses two step files and two captures that exist in the samples and website trees. It explains `P` for `PRINT`, but then says to type `RUN` without explaining how to enter that keyword in the chosen emulator. Include the exact target/editor configuration and a first-run check in the joint review.
-
-The reviewed navigation is Systems → ZX Spectrum → BASIC → Meet BASIC → Unit 1. File and page presence establishes availability only. This review has not verified a fresh installation, replayed the first program or established that a screenshot matches execution. Keep those checks explicit in the subsequent Spectrum work.
+Spectrum assembly is a separate rewrite. The published opening is Meet Assembly → Meteor Storm. The later modules in the catalogue (Gloaming, The Long Night, Shadowkeep and Meet the Machine) are authored material whose place in the revised route is not yet agreed; the assembly session owns that reconciliation.
 
 ## Website components
 
-This is an assessment for the current curriculum direction, not a commitment to build every idea. Component names below refer to implementations in the website's `src/components/`; their props and tests remain authoritative. No new curriculum interface is required before the Spectrum specifications can be agreed.
-
-### Available foundations
+Component names refer to the website's `src/components/`; their props and tests are authoritative. Use existing components before proposing new interfaces.
 
 | Teaching need | Existing components | Use and limits |
 |---|---|---|
-| Explain code and changes | `CodeFromFile`, `CodeDiff`, `Output` | Display real sources and focused changes; pseudocode remains distinct from executable code |
-| Trace values and decisions | `TraceTable`, `FlowDiagram`, `TruthTable`, `LogicCircuit` | Tables and diagrams support conceptual lessons; `TraceTable` is a semantic static table, not an interpreter |
-| Inspect representation | `MemoryMap`, `RegisterBits`, `SpriteGrid`, `SpectrumBitmapLayout` | Explain data layouts with named assumptions; the Spectrum bitmap component is machine-specific |
-| Draw and examine graphics | `SpriteEditor`, `Figure`, `NativeImage`, `ImageComparison` | Existing editing/display primitives support asset experiments; inspect format and export support before promising an asset workflow |
-| Hear or see an outcome | `AudioClip`, `VideoPlayer`, `VideoEmbed`, `FieldVideo` | Pair media with captions and useful alternatives; media playback does not teach composition by itself |
-| Try target code | `AssembleAndRun`, `Emulator`, `Workbench` | Existing execution/display facilities have different contracts; confirm machine and language support rather than treating them as one universal runner |
-| Find a route or setup | `FirstStepCallout`, `CurriculumPosition`, `PathCard`, `UnitSteps`, `SetupCallout` | Review copy for optional preparation and independent entry; do not add completion gates |
+| Explain code and changes | `CodeFromFile`, `CodeDiff`, `Output` | Real sources and focused changes; pseudocode stays distinct from executable code |
+| Trace values and decisions | `TraceTable`, `FlowDiagram`, `TruthTable`, `LogicCircuit` | `TraceTable` is a static table, not an interpreter |
+| Inspect representation | `MemoryMap`, `RegisterBits`, `SpriteGrid`, `SpectrumBitmapLayout` | Name assumptions; the bitmap component is Spectrum-specific |
+| Draw and examine graphics | `SpriteEditor`, `Figure`, `NativeImage`, `ImageComparison` | Check format and export support before promising an asset workflow |
+| Hear or see an outcome | `AudioClip`, `VideoPlayer`, `VideoEmbed`, `FieldVideo` | Pair media with captions and alternatives |
+| Run or edit target code | `AssembleAndRun`, `BasicAndRun`, `NesAssembleAndRun`, `LessonPlayer`, `BrowserPlayer`, `Emulator`, `Workbench` | Each has its own machine and language contract; a browser player does not establish curriculum support |
+| Ask and explain | `Question`, plain details/summary | Visible prompt with a native disclosure; no scoring engine is needed |
+| Find a route or set up | `FirstStepCallout`, `CurriculumPosition`, `PathCard`, `UnitSteps`, `SetupCallout` | Support independent entry; no completion gates |
 
-### Proposed next steps, in order of demonstrated need
+Possible additions, in order of demonstrated need:
 
-1. **Target and build information.** Begin with a consistent brief/lesson table naming runtime machine, model, memory, extensions, input and host tools. If repeated across the first re-specified games, factor it into one accessible `TargetConfiguration` component backed by explicit metadata. Do not infer runtime capabilities from a fleet badge.
-2. **Local concept connections.** Use short prose and existing links first. If repeated presentations need a component, it should state the immediate concept and why the optional deeper explanation helps. No prerequisite checklist or interruption between every step.
-3. **Steppable traces.** A small, bounded enhancement could show state changes for a loop, queue or opponent state machine while retaining a printable `TraceTable`. Specify the state transitions and test trace consistency before implementation. A full pseudocode interpreter remains a separate proposal, not a dependency of Foundations.
-4. **Spatial and behavioural experiments.** Use existing grids and diagrams for distance, collision, pursuit and route finding. Build an interactive grid only when a worked game demonstrates the need to vary obstacles, tie-breaking or perception. Show the rule and its limits; avoid a general simulation framework before there is a lesson to validate it.
-5. **Asset comparisons.** Reuse image/audio primitives to compare palette, animation timing, channel allocation and readability. Extend export/conversion tools only around an agreed target format. A tracker, animation studio or universal asset editor is not implied by asset-creation coverage.
+1. **Target and build information:** a consistent table naming runtime machine, model, memory, extensions, input and host tools, factored into a `TargetConfiguration` component only if it repeats.
+2. **Steppable traces:** a bounded enhancement showing state changes while keeping a printable `TraceTable`. A pseudocode interpreter is a separate proposal.
+3. **Spatial and behavioural experiments:** use existing grids first; build an interactive grid only when a worked game needs to vary obstacles, tie-breaking or perception.
+4. **Asset comparisons:** reuse image and audio primitives; extend conversion tools only around an agreed target format.
 
-### Questions and answer feedback
+A wider editable-BASIC retrofit beyond Meet BASIC and Sonar is separate scope.
 
-A lightweight question-and-explanation presentation is a candidate for the checks described in [Unit guidance](specifications/unit.md#questions-and-feedback). Begin with authored questions and separated answers; standard HTML `details`/`summary` can provide an accessible reveal without a quiz engine. Check the current MDX rendering and print behaviour before adopting it as a repeated pattern.
-
-If several lessons need a shared component, first specify a prompt, optional choices and an explanatory answer. Multiple-choice feedback should explain the misconception; open questions should allow discussion rather than automatic grading. Keep answers readable on paper, controls keyboard-accessible and feedback understandable without colour alone. Do not require accounts, persistent scores, completion tracking or a passing mark. This remains a component proposal, not an implemented facility.
-
-### Acceptance conditions for any addition
-
-Essential explanation remains readable without running an interaction. Provide keyboard operation, visible focus, labelled controls, touch targets of at least 44 CSS pixels and narrow-screen layouts without page overflow. Do not depend solely on colour, sound, hover or animation. Respect reduced motion and user-controlled playback; reserve media dimensions to prevent layout shifts.
-
-A visualisation must name what it models and what it omits. A hand-authored trace is not execution evidence; an emulator result is tied to its version and configuration. Test meaningful state transitions and reset behaviour, inspect keyboard/touch use and screenshots, and use the existing accessibility checks. Avoid adding a new framework or duplicate component when a small extension serves the lesson.
+Any addition must keep the essential explanation readable without the interaction, and provide keyboard operation, visible focus, labelled controls, 44-pixel touch targets, narrow-screen layouts, reduced-motion support and reserved media dimensions. A visualisation names what it models and omits; a hand-authored trace is not execution evidence.
 
 ## Vault editorial work
 
-Check existing entries and their source citations before creating new ones. Two useful investigations survive the earlier task notes:
+The [content audit](audit/2026-09-content-audit/REPORT.md) sets the Vault's agenda (H1, H6, M1–M3, M8, M9, M12, L6, L7):
 
-- Resolve useful entity mentions in Fast Facts and body prose to the correct existing entry. Match the person or organisation in context, not just the display name; namesakes must not acquire each other’s credits. Treat automatic matches as suggestions for review. Derive current candidates from content rather than copying an old count.
-- Identify missing entries from real curriculum and Vault links. Earlier work found candidate clusters around British software publishers and the LightWave/Video Toaster ecosystem. Check which entries now exist, retain precise source evidence for any remaining gap, and prioritise entries that help an actual lesson. An old backlog is not evidence that someone still lacks an entry.
+- **Accuracy (H1):** every entry is unreviewed. Correct the errors the fact-check sample found, then review in priority order. Set `reviewed: true` only when a person has checked the claims.
+- **Private-collection wording (H6, M2, M3):** 207 rendered pages refer to "this library" or "held here", and frontmatter names local paths. Rewrite as statements about public sources; keep uncertainty, drop edit history.
+- **Citations (M1):** the template renders only date citations, so most frontmatter sources are invisible, and 69% of entries cite nothing.
+- **Consistency (M9, M12, L6, L7):** hype superlatives, synonymous platform identifiers, unverified manufacturer dates and stale entries.
 
-For game playtesting, work from the current program and its brief: held as well as tapped inputs, buffered actions, repeated title/retry cycles, readable feedback, audio timing, difficulty and whether the game remains interesting after its rules are understood. Record findings with the game and distinguish scripted correctness from human playtesting.
+Two earlier investigations remain useful:
+
+- Resolve entity mentions in Fast Facts and body prose to the correct existing entry, matching in context so that namesakes do not acquire each other's credits.
+- Identify missing entries from real curriculum and Vault links, prioritising entries that help an actual lesson.
+
+For game playtesting, work from the current program and its brief: held and tapped inputs, buffered actions, repeated title/retry cycles, readable feedback, audio timing and difficulty. Distinguish scripted correctness from human playtesting.
 
 ## Website editorial follow-through
 
-Apply the charter’s plain-language navigation and publishing guidance during the House UI review. Review About, the systems directory and the three editorial hubs together with the homepage. “Systems” replaces “The Fleet”; further renaming remains a proposal until reviewed in context.
+Review About, the systems directory and the three editorial hubs with the homepage during the House UI review; the [preview design](https://github.com/code198x/website/blob/main/docs/superpowers/specs/2026-09-21-house-ui-preview-design.md) is a draft awaiting approval. Prepare a What's New entry when the House UI is ready to release. Try a small explanatory illustration before any site-wide visual treatment.
 
-Prepare a What’s New entry when the House UI is ready to release, linking to the finished site and explaining the reader-facing improvements. Consider From the Metal or Field Notes only where the work yields a useful explanation or an evidenced investigation. No release announcement is implied by the existence of a preview.
+## Shared subjects
 
-Try a small explanatory illustration before adding a site-wide visual treatment. Later candidates include verified game captures on relevant system cards and asset close-ups linked to lessons. Check the actual assets, provenance and target configuration before selecting them.
-
-## Z80 assembly opening review
-
-The user approved replacing the compulsory introduction/game chain after the
-[opening assessment](platforms/sinclair-zx-spectrum/assembly/course-review.md).
-The agreed route is **Meet Assembly → Meteor Storm**. All eight introductory
-lessons are approved and the native Meteor Storm endpoint is accepted. The
-[opening design](platforms/sinclair-zx-spectrum/assembly/opening.md) and
-[implementation record](platforms/sinclair-zx-spectrum/assembly/meet-assembly-opening.md)
-describe the current scope. Meteor Storm now has nineteen executed checkpoints and twenty-four [authored lessons](platforms/sinclair-zx-spectrum/games/meteor-storm/lessons.md), approved, published and live-verified;
-no later game lineup is settled. Existing published material remains available.
-
-## Shared subjects and assembly review
-
-The user considers the revised BASIC curriculum a solid basis, with further concepts possible rather than a requirement to finish every proposal. The [Craft coverage map](specifications/craft-coverage.md) records the shared-subject direction. Game AI is agreed as its own module within The Craft. Game Design, Game Data and Algorithms, Graphics and Animation, and Sound and Music are now agreed module homes, alongside Maths for Games, Game Feel and Game AI.
-
-The [Maths for Games specification](specifications/maths-for-games.md) defines the broader coverage. Six aiming lessons and the compact overview are published alongside the existing probability sequence. The Game Feel overview and movement playground are published; four focused controls-and-response lessons are now authored locally for review. The two approved editable BASIC integrations are also published and live-verified.
-
-Game AI's initial perception, memory and decision-making experience remains to develop. BASIC performance investigations remain deferred. The approved seven-module Craft structure does not claim authored lessons for the planned modules.
-
-## Cipher publication
-
-The user selected [Cipher](platforms/sinclair-zx-spectrum/games/cipher/brief.md). The user authorised the compact lesson sequence. The approved [six lessons and five checkpoints](platforms/sinclair-zx-spectrum/games/cipher/lessons.md) are published in Boards and deduction: 57 execution groups and production/browser/accessibility/live checks pass, preserving the prototype endpoint. The user accepts that some remaining proposals may not be developed; assess each on its value rather than filling the catalogue.
-
-## Remaining BASIC proposals
-
-Dice Roller’s approved [five lessons and checkpoints](platforms/sinclair-zx-spectrum/games/dice-roller/lessons.md) are published as the opening probability experiment in Maths for Games. Old Spectrum lesson URLs redirect to the matching Maths pages; the BASIC program is unchanged. This completes the review of the previously unchanged published BASIC projects. Remaining game proposals are optional candidates, not a completion quota; assess their distinct teaching value before selecting another prototype. The later BASIC/assembly performance investigations remain deferred until the initial BASIC scope is settled.
-
-## Night Patrol lesson authoring
-
-The user approved the corner-scanning game and agreed the [ten-lesson progression](platforms/sinclair-zx-spectrum/games/night-patrol/lesson-brief.md). All [eight teaching checkpoints](platforms/sinclair-zx-spectrum/games/night-patrol/lessons.md) are independently ROM-built and verified: 96 native execution groups, editing-transition and prepared-data audits, source/token/TAP identities and final source preservation. The approved overview and ten lessons are published in Hidden worlds, explaining visibility preparation without requiring Python. They use an original candidate-fan diagram, not the unreliable diagnostic captures. Production, 24 browser, 44 accessibility and 26 live checks pass. The initial BASIC scope and later performance investigations remain separate.
-
-## Editable BASIC browser trial
-
-The user authorised the [bounded BASIC/WASM trial](platforms/sinclair-zx-spectrum/basic/browser-trial.md): one Meet BASIC greeting and Sonar's clue-band lesson. Both now have local, opt-in editable playgrounds with direct RAM loading and real ROM execution in a worker, restore, keyboard/touch input and tape download. The user accepted the trial and requested execution without a tape wait; both BASIC and the assembly lesson runner now support that path. A wider retrofit remains a separate scope. Normal builds keep the trial disabled; the additive emulator package API is not published.
-
-## Meet Assembly release and next game
-
-All eight Meet Assembly lessons are user-approved, including the revised guided
-debugging investigation. The complete module review is finished. The emulator
-package 0.4.0 is published; website publication and live verification are complete. The [implementation record](platforms/sinclair-zx-spectrum/assembly/meet-assembly-opening.md)
-owns the release evidence.
-
-The Meteor Storm checkpoints now execute successfully; see the
-[verification record](platforms/sinclair-zx-spectrum/games/meteor-storm/checkpoints.md).
-Twenty-four [lessons and browser activities](platforms/sinclair-zx-spectrum/games/meteor-storm/lessons.md) now use nineteen runnable programs. The user approved the complete module; publication and live verification pass.
-Keep the first game independently buildable, explain the drawing/input basis at
-use, and preserve the accepted one-hit timed run, unlimited boost, drifting meteors,
-straight-falling stars and separate time/score records. The authored lessons preserve those rules.
-
-## Meet Assembly publication
-
-[Meet Assembly](https://code198x.com/systems/sinclair-zx-spectrum/assembly/meet-assembly/)
-is published as the recommended Spectrum assembly starting point. All eight
-lessons are user-approved. Seven runnable checkpoints and two deliberate fault
-cases support the browser experiments and the independent Asm198x/Pasmo route.
-The published `@emu198x/zx-spectrum` 0.4.0 package supplies direct ROM-backed
-launch, actual memory inspection, bounded recordings and debugger controls.
-
-The [implementation record](platforms/sinclair-zx-spectrum/assembly/meet-assembly-opening.md)
-owns release evidence. All eighteen native tape loads, the production build,
-interactive browser checks and live publication checks pass. Existing lesson URLs
-remain available. Meteor Storm has nineteen executed teaching programs and twenty-four [authored lessons](platforms/sinclair-zx-spectrum/games/meteor-storm/lessons.md). The user-approved module is published and live-verified. The BASIC editor remains a local
-trial, and unrelated Maths for Games and Craft planning continues separately.
+The seven Craft modules are Maths for Games, Game Feel, Game AI, Game Design, Game Data and Algorithms, Graphics and Animation, and Sound and Music; the [coverage map](specifications/craft-coverage.md) owns their responsibilities. Maths for Games has eleven published lessons, and Game Feel four published lessons awaiting review (R5). After that review, Game Design then Game AI are the next shared-subject priorities. Other modules have agreed homes, not authored sequences.
