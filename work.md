@@ -95,7 +95,7 @@ The [content audit](audit/2026-09-content-audit/REPORT.md) sets the Vault's agen
 - **Citations (M1):** the template renders only date citations, so most frontmatter sources are invisible, and 69% of entries cite nothing.
 - **Consistency (M9, M12, L6, L7):** hype superlatives, synonymous platform identifiers, unverified manufacturer dates and stale entries.
 
-Candidates for the next batch, linked from reviewed entries but unreviewed themselves: `people/jack-tramiel`, `people/bob-yannes`, `people/al-charpentier`, `companies/mos-technology`, `hardware/ay-3-8910` (its 1978 introduction date has only Wikipedia behind it; batch 3 left the AY-3-8912's open) and `games/lode-runner`.
+Candidates for the next batch, linked from reviewed entries but unreviewed themselves: `people/jack-tramiel`, `people/bob-yannes`, `people/al-charpentier`, `companies/mos-technology`, `hardware/ay-3-8910` (its 1978 introduction date has only Wikipedia behind it; batch 3 left the AY-3-8912's open) and `games/lode-runner`. Batch 4 also renames `hardware/motorola-6809` to `hardware/6809`, with a redirect, to match the other part-number slugs (`6502`, `68000`, `z80`); hardware slugs are part numbers or chip names, without the manufacturer.
 
 Two earlier investigations remain useful:
 
