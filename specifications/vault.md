@@ -85,4 +85,6 @@ The review also makes the entry worth reading. Much of the machine-written prose
 
 Each batch is one pull request whose description carries the evidence report. The owner's approval of that pull request is the person's sign-off: the pull request sets `reviewed: true` on the entries it covers. An agent's check alone never sets it.
 
+While reviewing, add any subject an entry mentions but the Vault lacks to [the candidates list](../vault-candidates.md), with the entries that should link to it.
+
 Merge entries that duplicate each other, with redirects. Other cuts, including out-of-period entries, are a separate decision.

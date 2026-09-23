@@ -98,7 +98,7 @@ The [content audit](audit/2026-09-content-audit/REPORT.md) sets the Vault's agen
 Two earlier investigations remain useful:
 
 - Resolve entity mentions in Fast Facts and body prose to the correct existing entry, matching in context so that namesakes do not acquire each other's credits.
-- Identify missing entries from real curriculum and Vault links, prioritising entries that help an actual lesson.
+- Identify missing entries from real curriculum and Vault links, prioritising entries that help an actual lesson. [Vault candidates](vault-candidates.md) lists them with the entries that should link to each.
 
 For game playtesting, work from the current program and its brief: held and tapped inputs, buffered actions, repeated title/retry cycles, readable feedback, audio timing and difficulty. Distinguish scripted correctness from human playtesting.
 
