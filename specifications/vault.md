@@ -72,3 +72,15 @@ Corrections belong in the corrected text. Git and the pull request explain the c
 Link selectively to related Vault entries, fuller conceptual explanations and lessons that use the subject. A technique entry gives context; a Pattern Library entry gives an adaptable implementation. Avoid reproducing either inside the other.
 
 Before publication check sources, dates, names, internal links, image rights and alt text, and the actual rendered page. Use the website's existing Vault validation scripts for schema, links, dates, source and imagery checks as applicable. Automated checks support editorial review; they cannot establish historical truth.
+
+## Reviewing existing entries
+
+Every existing entry was machine-written and is unreviewed. An unreviewed entry stays published with its "Not yet fact-checked" footer, but is excluded from search indexing and the sitemap until it is reviewed. Links to it keep working.
+
+Review in batches of about ten entries, in priority order: the Spectrum and UK entries a CRASH! Live visitor meets first, then entries linked from published lessons, then the rest by category.
+
+For each entry, an agent checks the frontmatter dates and every substantive claim. Evidence comes from period magazines, manuals and datasheets first, cited by publication, issue or edition, and page. A public web source is a fallback where no period source exists, and is marked as secondary. The agent corrects wrong claims, removes or qualifies unsupported ones, cites what it verified, and replaces any reference to a private collection with a statement about the public sources. It records each claim's verdict in an evidence report.
+
+Each batch is one pull request whose description carries the evidence report. The owner's approval of that pull request is the person's sign-off: the pull request sets `reviewed: true` on the entries it covers. An agent's check alone never sets it.
+
+Merge entries that duplicate each other, with redirects. Other cuts, including out-of-period entries, are a separate decision.
