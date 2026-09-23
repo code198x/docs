@@ -81,6 +81,8 @@ Review in batches of about ten entries, in priority order: the Spectrum and UK e
 
 For each entry, an agent checks the frontmatter dates and every substantive claim. Evidence comes from period magazines, manuals and datasheets first, cited by publication, issue or edition, and page. A public web source is a fallback where no period source exists, and is marked as secondary. The agent corrects wrong claims, removes or qualifies unsupported ones, cites what it verified, and replaces any reference to a private collection with a statement about the public sources. It records each claim's verdict in an evidence report.
 
+The review also makes the entry worth reading. Much of the machine-written prose is accurate but dry: generic summary, lists of facts and repeated conclusions. Rewrite it where it reads flat. Open with why the subject mattered and what is surprising about it; prefer concrete, sourced detail (figures, names, what a period magazine actually said, what the thing was like to use) to general statements; use active voice and varied sentences; tell the story the evidence supports. Engaging is not the same as hyped: no unsupported superlatives, aphorisms, rhetorical questions or punchline endings, and every added detail is verified and cited like any other claim.
+
 Each batch is one pull request whose description carries the evidence report. The owner's approval of that pull request is the person's sign-off: the pull request sets `reviewed: true` on the entries it covers. An agent's check alone never sets it.
 
 Merge entries that duplicate each other, with redirects. Other cuts, including out-of-period entries, are a separate decision.
