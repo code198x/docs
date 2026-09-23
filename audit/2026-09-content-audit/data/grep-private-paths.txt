@@ -1,0 +1,22 @@
+# Website content lines that name local library paths or collection identifiers (file:line; text omitted)
+./vault/culture/software-crossed-what-machines-could-not.mdx:21
+./vault/culture/software-crossed-what-machines-could-not.mdx:23
+./vault/culture/software-crossed-what-machines-could-not.mdx:77
+./vault/culture/game-preservation.mdx:104
+./vault/systems/nes.mdx:31
+./vault/systems/nes.mdx:34
+./vault/systems/nes.mdx:37
+./vault/systems/commodore-amiga.mdx:18
+./vault/systems/commodore-amiga.mdx:26
+./vault/systems/commodore-64.mdx:21
+./vault/systems/commodore-64.mdx:29
+./vault/systems/zx-spectrum.mdx:33
+./vault/systems/zx-spectrum.mdx:34
+./vault/hardware/kryoflux.mdx:115
+./vault/hardware/rob.mdx:14
+./vault/books/complete-spectrum-rom-disassembly.mdx:21
+./vault/books/basic-computer-games.mdx:26
+./vault/hardware/sid-chip.mdx:13
+./vault/hardware/vic-ii.mdx:14
+./vault/hardware/vic-ii.mdx:17
+./vault/hardware/vic-ii.mdx:20

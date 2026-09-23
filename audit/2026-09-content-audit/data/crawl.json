@@ -1,0 +1,1747 @@
+{
+ "pages": 3471,
+ "content": 2473,
+ "redirects": 998,
+ "broken": {
+  "/experiments": [
+   "/experiments/nes/",
+   "... 1 pages"
+  ],
+  "/pagefind/pagefind-ui.css": [
+   "/",
+   "/404.html",
+   "/about/",
+   "/c64-type-in/",
+   "/colophon/",
+   "... 2468 pages"
+  ],
+  "/systems/sinclair-zx-spectrum/machine": [
+   "/systems/sinclair-zx-spectrum/machine/meet-the-machine/",
+   "/systems/sinclair-zx-spectrum/machine/meet-the-machine/unit-01/",
+   "/systems/sinclair-zx-spectrum/machine/meet-the-machine/unit-02/",
+   "/systems/sinclair-zx-spectrum/machine/meet-the-machine/unit-03/",
+   "/systems/sinclair-zx-spectrum/machine/meet-the-machine/unit-04/",
+   "... 6 pages"
+  ]
+ },
+ "links_to_redirects": {
+  "/vault/hardware/dreamcast/": 7,
+  "/vault/hardware/sega-saturn/": 5,
+  "/vault/hardware/game-and-watch/": 4,
+  "/vault/hardware/naomi/": 4,
+  "/vault/hardware/trs-80-color-computer/": 4,
+  "/vault/hardware/vectrex/": 3,
+  "/sinclair-zx-spectrum/assembly/gloaming/unit-01/": 2,
+  "/vault/hardware/nintendo-ds/": 2,
+  "/systems/sinclair-zx-spectrum/basic/bright-spark/unit-01/": 1,
+  "/sinclair-zx-spectrum/assembly/meet-the-machine/unit-02/": 1,
+  "/commodore-64/assembly/meet-the-machine/unit-02/": 1,
+  "/vault/hardware/galaksija/": 1,
+  "/nintendo-entertainment-system/assembly/meet-the-machine/unit-02/": 1,
+  "/sinclair-zx-spectrum/assembly/meet-the-machine/unit-01/": 1,
+  "/sinclair-zx-spectrum/assembly/meet-the-machine/unit-04/": 1,
+  "/sinclair-zx-spectrum/assembly/meet-the-machine/unit-06/": 1,
+  "/commodore-64/assembly/meet-the-machine/unit-01/": 1,
+  "/commodore-64/assembly/meet-the-machine/unit-04/": 1,
+  "/commodore-64/assembly/meet-the-machine/unit-06/": 1,
+  "/vault/hardware/famiclone/": 1
+ },
+ "bad_redirects": [],
+ "bad_anchors": {},
+ "orphans": [
+  "/c64-type-in/",
+  "/crash-live/",
+  "/emulators/",
+  "/emulators/template.html",
+  "/experiments/aiming/lessons.html",
+  "/experiments/game-feel/",
+  "/experiments/game-feel/lessons.html",
+  "/experiments/nes/",
+  "/systems/commodore-64/assembly/brick-basher/",
+  "/systems/commodore-64/assembly/catacombs/",
+  "/systems/commodore-64/assembly/deephold/",
+  "/systems/commodore-64/assembly/hornet/",
+  "/systems/commodore-64/assembly/knuckle/",
+  "/systems/commodore-64/assembly/maelstrom/",
+  "/systems/commodore-64/assembly/maze-raider/",
+  "/systems/commodore-64/assembly/mega-blaster/",
+  "/systems/commodore-64/assembly/night-raid/",
+  "/systems/commodore-64/assembly/platform-panic/",
+  "/systems/commodore-64/assembly/raster-rider/",
+  "/systems/commodore-64/assembly/sid-symphony/",
+  "/systems/commodore-64/assembly/strata/",
+  "/systems/commodore-64/assembly/tumbledown/",
+  "/systems/commodore-64/assembly/velocity/",
+  "/systems/commodore-amiga/amos/block-drop/",
+  "/systems/commodore-amiga/amos/bounce-back/",
+  "/systems/commodore-amiga/amos/crate-stack/",
+  "/systems/commodore-amiga/amos/dungeon-doors/",
+  "/systems/commodore-amiga/amos/knight-watch/",
+  "/systems/commodore-amiga/amos/nomad/",
+  "/systems/commodore-amiga/amos/scroll-quest/",
+  "/systems/commodore-amiga/amos/space-swarm/",
+  "/systems/commodore-amiga/amos/star-catcher/",
+  "/systems/commodore-amiga/amos/warren/",
+  "/systems/commodore-amiga/assembly/ascension-the-guru-meditation/",
+  "/systems/commodore-amiga/assembly/ascent/",
+  "/systems/commodore-amiga/assembly/brawler/",
+  "/systems/commodore-amiga/assembly/copper-dma/",
+  "/systems/commodore-amiga/assembly/crypt/",
+  "/systems/commodore-amiga/assembly/echoes-of-the-ancients/",
+  "/systems/commodore-amiga/assembly/fortress/",
+  "/systems/commodore-amiga/assembly/gobble/",
+  "/systems/commodore-amiga/assembly/highway/",
+  "/systems/commodore-amiga/assembly/onslaught/",
+  "/systems/commodore-amiga/assembly/parallax/",
+  "/systems/commodore-amiga/assembly/shatter-point/",
+  "/systems/commodore-amiga/assembly/wanderer/",
+  "/systems/commodore-amiga/blitz/ballistic/",
+  "/systems/commodore-amiga/blitz/skyfire/",
+  "/systems/commodore-amiga/blitz/slipstream/",
+  "/systems/commodore-amiga/blitz/star-drift/",
+  "/systems/nintendo-entertainment-system/assembly/crate-escape/",
+  "/systems/nintendo-entertainment-system/assembly/crypt-crawler/",
+  "/systems/nintendo-entertainment-system/assembly/echoes-of-eponium/",
+  "/systems/nintendo-entertainment-system/assembly/fangs-for-the-memory/",
+  "/systems/nintendo-entertainment-system/assembly/fracture-point/",
+  "/systems/nintendo-entertainment-system/assembly/gridlock/",
+  "/systems/nintendo-entertainment-system/assembly/ion-trail/",
+  "/systems/nintendo-entertainment-system/assembly/iron-assault/",
+  "/systems/nintendo-entertainment-system/assembly/pavement-justice/",
+  "/systems/nintendo-entertainment-system/assembly/pellet-panic/",
+  "/systems/nintendo-entertainment-system/assembly/pixel-plains/",
+  "/systems/nintendo-entertainment-system/assembly/requiem-for-a-mapper/",
+  "/systems/nintendo-entertainment-system/assembly/tarmac-terror/",
+  "/systems/nintendo-entertainment-system/assembly/thunder-run/",
+  "/systems/sinclair-zx-spectrum/assembly/deepdelve/",
+  "/systems/sinclair-zx-spectrum/assembly/greypeak/",
+  "/systems/sinclair-zx-spectrum/assembly/hard-rain/",
+  "/systems/sinclair-zx-spectrum/assembly/lamplight/",
+  "/systems/sinclair-zx-spectrum/assembly/nibble-run/",
+  "/systems/sinclair-zx-spectrum/assembly/ricochet/",
+  "/systems/sinclair-zx-spectrum/assembly/skyhawk/",
+  "/systems/sinclair-zx-spectrum/assembly/spectral-legacy/",
+  "/systems/sinclair-zx-spectrum/assembly/starfall/",
+  "/systems/sinclair-zx-spectrum/assembly/wyrmhold/"
+ ],
+ "dup_titles": [
+  [
+   "Sprite Movement with Bounds | Pattern Library | Code Like It's 198x",
+   3
+  ],
+  [
+   "Joystick Reading | Pattern Library | Code Like It's 198x",
+   2
+  ],
+  [
+   "Sega Master System | Code Like It's 198x",
+   2
+  ],
+  [
+   "Atari 2600 | Code Like It's 198x",
+   2
+  ],
+  [
+   "Sinclair QL | Code Like It's 198x",
+   2
+  ],
+  [
+   "BBC Micro | Code Like It's 198x",
+   2
+  ],
+  [
+   "Commodore VIC-20 | Code Like It's 198x",
+   2
+  ],
+  [
+   "Jupiter Ace | Code Like It's 198x",
+   2
+  ],
+  [
+   "Sega Saturn | Code Like It's 198x",
+   2
+  ],
+  [
+   "Amstrad CPC | Code Like It's 198x",
+   2
+  ],
+  [
+   "Sinclair ZX81 | Code Like It's 198x",
+   2
+  ],
+  [
+   "Sega Game Gear | Code Like It's 198x",
+   2
+  ],
+  [
+   "Nintendo Game Boy | Code Like It's 198x",
+   2
+  ],
+  [
+   "Sega Dreamcast | Code Like It's 198x",
+   2
+  ],
+  [
+   "Nintendo 64 | Code Like It's 198x",
+   2
+  ],
+  [
+   "MSX | Code Like It's 198x",
+   2
+  ],
+  [
+   "Atari ST | Code Like It's 198x",
+   2
+  ],
+  [
+   "Acorn Archimedes | Code Like It's 198x",
+   2
+  ],
+  [
+   "Apple II | Code Like It's 198x",
+   2
+  ],
+  [
+   "Atari Lynx | Code Like It's 198x",
+   2
+  ],
+  [
+   "Fairlight | Code Like It's 198x",
+   2
+  ],
+  [
+   "Renegade | Code Like It's 198x",
+   2
+  ]
+ ],
+ "dup_descs": [
+  [
+   "Learn assembly by building games on classic 8-bit and 16-bit systems",
+   629
+  ],
+  [
+   "",
+   5
+  ],
+  [
+   "Browse Code198x systems, find available lessons, and explore planned coverage and reference material.",
+   4
+  ],
+  [
+   "Organise game flow with distinct states (title, playing, game over). Clean separation of game phases.",
+   2
+  ]
+ ],
+ "no_desc": [
+  "/experiments/game-feel/",
+  "/experiments/game-feel/lessons.html",
+  "/experiments/aiming/lessons.html",
+  "/emulators/",
+  "/emulators/template.html"
+ ],
+ "long_titles": [
+  [
+   "/crash-live/",
+   "Code Like It's 198x — Welcome from CRASH! Live 2026 | Code Like It's 198x"
+  ],
+  [
+   "/craft/game-feel/unit-01/",
+   "Unit 1: Respond to input - Controls and response - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/game-feel/unit-02/",
+   "Unit 2: Build up speed - Controls and response - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/game-feel/unit-03/",
+   "Unit 3: Let go and slow down - Controls and response - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/game-feel/unit-04/",
+   "Unit 4: Reverse direction - Controls and response - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/maths-for-games/",
+   "Maths for Games — The Craft | Code Like It's 198x | Code Like It's 198x"
+  ],
+  [
+   "/craft/maths-for-games/unit-01/",
+   "Unit 1: Roll a die - Chance and samples - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/maths-for-games/unit-06/",
+   "Unit 1: Place a point - Aiming and movement - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/maths-for-games/unit-08/",
+   "Unit 3: Turn an angle into movement - Aiming and movement - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/maths-for-games/unit-09/",
+   "Unit 4: Measure angles in radians - Aiming and movement - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/maths-for-games/unit-07/",
+   "Unit 2: Measure the triangle - Aiming and movement - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/maths-for-games/unit-10/",
+   "Unit 5: Find the angle to a target - Aiming and movement - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/maths-for-games/unit-11/",
+   "Unit 6: Keep fractional movement in integers - Aiming and movement - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/maths-for-games/unit-05/",
+   "Unit 5: Compare experiments - Chance and samples - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/maths-for-games/unit-02/",
+   "Unit 2: Keep the tallies - Chance and samples - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/maths-for-games/unit-03/",
+   "Unit 3: Compare shares - Chance and samples - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/craft/maths-for-games/unit-04/",
+   "Unit 4: Watch the distribution - Chance and samples - The Craft | Code Like It's 198x"
+  ],
+  [
+   "/from-the-metal/powers-of-two/",
+   "Why everything is a power of two | From the Metal | Code Like It's 198x"
+  ],
+  [
+   "/from-the-metal/the-blitter/",
+   "Why there's a chip that does nothing but move memory | From the Metal | Code Like It's 198x"
+  ],
+  [
+   "/from-the-metal/endianness/",
+   "Why the bytes come out backwards | From the Metal | Code Like It's 198x"
+  ],
+  [
+   "/from-the-metal/struct-alignment/",
+   "Why your structs have holes in them | From the Metal | Code Like It's 198x"
+  ],
+  [
+   "/from-the-metal/lookup-tables/",
+   "The fastest function is the one you already ran | From the Metal | Code Like It's 198x"
+  ],
+  [
+   "/from-the-metal/the-stack/",
+   "\"Stack overflow\" is a real place | From the Metal | Code Like It's 198x"
+  ],
+  [
+   "/from-the-metal/fixed-point/",
+   "Mario moves in fractions of a pixel | From the Metal | Code Like It's 198x"
+  ],
+  [
+   "/from-the-metal/pointers/",
+   "A pointer is just an address you stored somewhere | From the Metal | Code Like It's 198x"
+  ],
+  [
+   "/from-the-metal/unroll-your-loops/",
+   "Why \"unroll your loops\" is real advice | From the Metal | Code Like It's 198x"
+  ],
+  [
+   "/patterns/cross-platform/framework/three-caps/",
+   "Three Caps: Counter, Index, Digit | Pattern Library | Code Like It's 198x"
+  ],
+  [
+   "/patterns/cross-platform/audio/tune-sequencer/",
+   "Tune Sequencer with Two Terminators | Pattern Library | Code Like It's 198x"
+  ],
+  [
+   "/patterns/cross-platform/rendering/centre-text-on-a-character-screen/",
+   "Centre Text on a Character Screen | Pattern Library | Code Like It's 198x"
+  ],
+  [
+   "/updates/meet-basic-first-story/",
+   "Meet BASIC: from a greeting to your first story | What's New | Code Like It's 198x"
+  ],
+  [
+   "/updates/stakes-pass/",
+   "The shipped games learned to be lost | What's New | Code Like It's 198x"
+  ],
+  [
+   "/updates/four-finishable-games/",
+   "All four launch machines have a game you can finish | What's New | Code Like It's 198x"
+  ],
+  [
+   "/foundations/basics/unit-01/",
+   "Unit 1: A Program Is Instructions - Basics - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/basics/unit-02/",
+   "Unit 2: One Thing After Another - Basics - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/basics/unit-04/",
+   "Unit 4: A Place to Remember - Basics - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/truth-tables/unit-01/",
+   "Unit 1: True and False - Truth Tables - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/truth-tables/unit-02/",
+   "Unit 2: Both, Either, Different - Truth Tables - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/truth-tables/unit-03/",
+   "Unit 3: Two Guards, One Guard - Truth Tables - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/from-source-to-silicon/",
+   "From Source to Silicon — Foundations | Code Like It's 198x | Code Like It's 198x"
+  ],
+  [
+   "/foundations/from-source-to-silicon/unit-01/",
+   "Unit 1: The Program Is Not What Runs - From Source To Silicon - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/from-source-to-silicon/unit-05/",
+   "Unit 5: Put It on the Clock - From Source To Silicon - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/from-source-to-silicon/unit-02/",
+   "Unit 2: Translating As You Go - From Source To Silicon - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/from-source-to-silicon/unit-03/",
+   "Unit 3: Translating Once - From Source To Silicon - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/from-source-to-silicon/unit-04/",
+   "Unit 4: What Speed Costs You - From Source To Silicon - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/repeating/unit-02/",
+   "Unit 2: Until You Get It - Repeating - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/repeating/unit-03/",
+   "Unit 3: Checking Before You Start - Repeating - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/gates-and-the-adder/",
+   "Gates and the Adder — Foundations | Code Like It's 198x | Code Like It's 198x"
+  ],
+  [
+   "/foundations/gates-and-the-adder/unit-01/",
+   "Unit 1: The Same Table, Drawn - Gates & The Adder - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/gates-and-the-adder/unit-02/",
+   "Unit 2: The Half Adder - Gates & The Adder - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/gates-and-the-adder/unit-03/",
+   "Unit 3: The Full Adder and the Ripple - Gates & The Adder - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/decisions/unit-01/",
+   "Unit 1: Making a Choice - Decisions - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/decisions/unit-02/",
+   "Unit 2: One or the Other - Decisions - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/decisions/unit-03/",
+   "Unit 3: A Yes You Can Keep - Decisions - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/decisions/unit-04/",
+   "Unit 4: Asking Two Things at Once - Decisions - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/working-it-out/",
+   "Working It Out — Foundations | Code Like It's 198x | Code Like It's 198x"
+  ],
+  [
+   "/foundations/working-it-out/unit-01/",
+   "Unit 1: Working It Out - Working It Out - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/working-it-out/unit-02/",
+   "Unit 2: A Box That Grows From Itself - Working It Out - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/working-it-out/unit-03/",
+   "Unit 3: When It Doesn't Divide Evenly - Working It Out - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/working-the-bits/",
+   "Working the Bits — Foundations | Code Like It's 198x | Code Like It's 198x"
+  ],
+  [
+   "/foundations/working-the-bits/unit-01/",
+   "Unit 1: Switch by Switch - Working The Bits - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/working-the-bits/unit-05/",
+   "Unit 5: Nailing the Point Down - Working The Bits - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/working-the-bits/unit-02/",
+   "Unit 2: Slide the Whole Row - Working The Bits - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/working-the-bits/unit-03/",
+   "Unit 3: A Letter Is a Number - Working The Bits - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/working-the-bits/unit-04/",
+   "Unit 4: Numbers That Aren't Whole - Working The Bits - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/counting-in-twos/",
+   "Counting in Twos — Foundations | Code Like It's 198x | Code Like It's 198x"
+  ],
+  [
+   "/foundations/counting-in-twos/unit-01/",
+   "Unit 1: Ten Fingers, Two Wires - Counting In Twos - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/counting-in-twos/unit-02/",
+   "Unit 2: Four Bits at a Time - Counting In Twos - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/counting-in-twos/unit-03/",
+   "Unit 3: Two Bytes Together - Counting In Twos - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/counting-in-twos/unit-04/",
+   "Unit 4: A Minus With No Minus Sign - Counting In Twos - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/structure/unit-01/",
+   "Unit 1: A Box That Holds Many - Structure - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/structure/unit-02/",
+   "Unit 2: A Job With a Name - Structure - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/structure/unit-03/",
+   "Unit 3: Telling a Job What to Work On - Structure - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/foundations/structure/unit-04/",
+   "Unit 4: When It's Wrong - Structure - Foundations | Code Like It's 198x"
+  ],
+  [
+   "/field-notes/the-sheep-that-slid-off-the-hay-bale/",
+   "The Sheep That Slid Off the Hay Bale | Field Notes | Code Like It's 198x"
+  ],
+  [
+   "/field-notes/what-attribute-clash-actually-taught/",
+   "What Attribute Clash Actually Taught | Field Notes | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/gloaming/unit-17/",
+   "Unit 17: Lives, and the Fall of Night - Gloaming - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/gloaming/unit-02/",
+   "Unit 2: The Cobbles and the Brick - Gloaming - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-13/",
+   "Unit 13: Working With Bits - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-14/",
+   "Unit 14: Bigger Than a Byte - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-15/",
+   "Unit 15: The Machine Speaks Back - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-12/",
+   "Unit 12: Adding and Taking Away - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-01/",
+   "Unit 1: Assemble and Run - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-06/",
+   "Unit 6: Colour Is a Separate Map - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-08/",
+   "Unit 8: The Machine Can Hear You - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-09/",
+   "Unit 9: A Finger on the Boxes - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-07/",
+   "Unit 7: Test, Then Jump - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-10/",
+   "Unit 10: Counting Toward Zero - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-11/",
+   "Unit 11: Call, Return, and a Stack You Can See - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-16/",
+   "Unit 16: The Machine Trusts You - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-05/",
+   "Unit 5: The Screen Is Memory - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-02/",
+   "Unit 2: LD Is Not LET - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-03/",
+   "Unit 3: Everything Is a Number - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-the-machine/unit-04/",
+   "Unit 4: A Street of Numbered Boxes - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-22/",
+   "Unit 22: Give the game clear phases - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-13/",
+   "Unit 13: Make a storm with an end - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-14/",
+   "Unit 14: Give meteors a gentle drift - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-15/",
+   "Unit 15: Collect something worth the risk - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-12/",
+   "Unit 12: Walk the pool and reuse a slot - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-24/",
+   "Unit 24: Keep and share the game - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-23/",
+   "Unit 23: Make the instructions fit - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-01/",
+   "Unit 1: Carry a pixel into the next byte - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-06/",
+   "Unit 6: Give the interrupt a small job - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-08/",
+   "Unit 8: Put steering on the frame clock - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-09/",
+   "Unit 9: Let a meteor move independently - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-07/",
+   "Unit 7: Count frames, choose updates - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-19/",
+   "Unit 19: Hold Space to boost - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-21/",
+   "Unit 21: Keep the best time and score - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-17/",
+   "Unit 17: Measure time without counting distance - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-10/",
+   "Unit 10: Distinguish a hit from a near miss - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-11/",
+   "Unit 11: Give each object a record - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-16/",
+   "Unit 16: Turn a score into readable digits - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-20/",
+   "Unit 20: Draw once, check twice - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-18/",
+   "Unit 18: Show seconds and hundredths - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-05/",
+   "Unit 5: Erase before moving - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-02/",
+   "Unit 2: Prepare eight horizontal positions - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-03/",
+   "Unit 3: Find a pixel in Spectrum memory - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-04/",
+   "Unit 4: Draw the whole ship - Meteor Storm - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/shadowkeep/unit-13/",
+   "Unit 13: Light and Shadow - Shadowkeep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/shadowkeep/unit-15/",
+   "Unit 15: Mood through Constraint - Shadowkeep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/shadowkeep/unit-12/",
+   "Unit 12: A Warden for Every Room - Shadowkeep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/shadowkeep/unit-06/",
+   "Unit 6: Through the Doorway - Shadowkeep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/shadowkeep/unit-07/",
+   "Unit 7: The Hero Remembers - Shadowkeep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/shadowkeep/unit-17/",
+   "Unit 17: Footsteps and Doors - Shadowkeep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/shadowkeep/unit-10/",
+   "Unit 10: Something in the Dark - Shadowkeep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/shadowkeep/unit-11/",
+   "Unit 11: Join the Sleepers - Shadowkeep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/shadowkeep/unit-16/",
+   "Unit 16: A Keep with Character - Shadowkeep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/shadowkeep/unit-18/",
+   "Unit 18: A Theme in One Voice - Shadowkeep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/the-long-night/unit-01/",
+   "Unit 1: The Dark Seeks the Light - The Long Night - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/the-long-night/unit-06/",
+   "Unit 6: The Night Deepens - The Long Night - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/the-long-night/unit-08/",
+   "Unit 8: The Dusk Bells - The Long Night - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/the-long-night/unit-09/",
+   "Unit 9: Your Longest Night - The Long Night - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/the-long-night/unit-10/",
+   "Unit 10: The Dawn Phrase - The Long Night - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/the-long-night/unit-05/",
+   "Unit 5: The Night Bears Grudges - The Long Night - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/the-long-night/unit-02/",
+   "Unit 2: It Carries Its Prize Home - The Long Night - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/the-long-night/unit-03/",
+   "Unit 3: The Pools of Light - The Long Night - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/",
+   "Unit 1: Change the border - Meet Assembly - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-06/",
+   "Unit 6: Move your character - Meet Assembly - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-08/",
+   "Unit 8: Find the first wrong step - Meet Assembly - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-07/",
+   "Unit 7: Give movement a clock - Meet Assembly - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-05/",
+   "Unit 5: Call a drawing routine - Meet Assembly - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/",
+   "Unit 2: A byte becomes pixels - Meet Assembly - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-03/",
+   "Unit 3: Build an eight-row shape - Meet Assembly - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-04/",
+   "Unit 4: Draw with a counted loop - Meet Assembly - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/",
+   "ZX Spectrum BASIC – Learn Programming Through Games | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-05-choose-an-empty-square/",
+   "Unit 5: Choose an empty square - Three In A Row - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-02-place-a-cross/",
+   "Unit 2: Place a cross - Three In A Row - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-08-make-two-threats/",
+   "Unit 8: Make two threats - Three In A Row - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-06-win-before-blocking/",
+   "Unit 6: Win before blocking - Three In A Row - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-10-keep-the-game/",
+   "Unit 10: Keep the game - Three In A Row - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-01-draw-nine-squares/",
+   "Unit 1: Draw nine squares - Three In A Row - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-04-read-a-winning-line/",
+   "Unit 4: Read a winning line - Three In A Row - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-07-prefer-useful-squares/",
+   "Unit 7: Prefer useful squares - Three In A Row - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/three-in-a-row/unit-09-finish-the-session/",
+   "Unit 9: Finish the session - Three In A Row - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/crates/unit-07-read-the-room-from-a-map/",
+   "Unit 7: Read the room from a map - Crates - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/crates/unit-10-make-space-for-another-crate/",
+   "Unit 10: Make space for another crate - Crates - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/crates/unit-05-keep-the-target-underneath/",
+   "Unit 5: Keep the target underneath - Crates - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/crates/unit-09-choose-another-approach/",
+   "Unit 9: Choose another approach - Crates - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/crates/unit-08-check-a-room-before-playing/",
+   "Unit 8: Check a room before playing - Crates - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/crates/unit-02-give-the-warehouse-a-memory/",
+   "Unit 2: Give the warehouse a memory - Crates - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/",
+   "Sinclair BASIC reference lessons · Spectrum BASIC | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-13/",
+   "Unit 13: Making It Move - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-14/",
+   "Unit 14: Keeping Your Work - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-15/",
+   "Unit 15: When It's Wrong - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-12/",
+   "Unit 12: Drawing With Light - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-01/",
+   "Unit 1: The Keyboard Types Words - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-06/",
+   "Unit 6: IF / THEN, the Spectrum Way - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-08/",
+   "Unit 8: GO TO, GO SUB, and the Game Loop - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-09/",
+   "Unit 9: The Screen Is a Grid - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-07/",
+   "Unit 7: FOR / NEXT Counts For You - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-10/",
+   "Unit 10: Colour, and Text in Many Colours - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-11/",
+   "Unit 11: The Machine Can Sing - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-05/",
+   "Unit 5: INPUT — the Program Listens - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-02/",
+   "Unit 2: The Line Number Is an Address - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-03/",
+   "Unit 3: PRINT, Properly - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/basic-reference/unit-04/",
+   "Unit 4: LET, and What You May Name - BASIC Reference - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/",
+   "Unit 2: Remember a name; keep the program - Meet BASIC - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret/",
+   "Unit 7: Choose a new secret - Meet BASIC - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer/",
+   "Unit 3: Ask, then use the answer - Meet BASIC - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-14-let-the-player-steer/",
+   "Unit 14: Let the player steer - Meet BASIC - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-04-a-story-worth-sharing/",
+   "Unit 4: A story worth sharing - Meet BASIC - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/",
+   "Unit 1: Make the Spectrum answer - Meet BASIC - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-08-feedback-and-another-round/",
+   "Unit 8: Feedback and another round - Meet BASIC - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-12-put-it-somewhere/",
+   "Unit 12: Put it somewhere - Meet BASIC - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-10-give-the-answer-a-rhythm/",
+   "Unit 10: Give the answer a rhythm - Meet BASIC - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-15-one-press-one-step/",
+   "Unit 15: One press, one step - Meet BASIC - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-11-write-the-repeated-job-once/",
+   "Unit 11: Write the repeated job once - Meet BASIC - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-05-give-a-useful-clue/",
+   "Unit 5: Give a useful clue - Meet BASIC - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-05-warn-about-the-pit/",
+   "Unit 5: Warn about the pit - The Caverns - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-06-give-the-creature-a-route/",
+   "Unit 6: Give the creature a route - The Caverns - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-08-bring-the-treasures-home/",
+   "Unit 8: Bring the treasures home - The Caverns - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-10-keep-the-expedition/",
+   "Unit 10: Keep the expedition - The Caverns - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-02-connect-the-rooms/",
+   "Unit 2: Connect the rooms - The Caverns - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-09-invite-the-explorer/",
+   "Unit 9: Invite the explorer - The Caverns - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/the-caverns/unit-07-leave-time-to-escape/",
+   "Unit 7: Leave time to escape - The Caverns - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/bright-spark/unit-07-finish-replay-and-keep-it/",
+   "Unit 7: Finish, replay and keep it - Bright Spark - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/bright-spark/unit-04-play-the-stored-order/",
+   "Unit 4: Play the stored order - Bright Spark - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/bright-spark/unit-02-give-a-choice-a-signal/",
+   "Unit 2: Give a choice a signal - Bright Spark - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/bright-spark/unit-03-remember-an-order/",
+   "Unit 3: Remember an order - Bright Spark - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/bright-spark/unit-01-four-choices-on-the-screen/",
+   "Unit 1: Four choices on the screen - Bright Spark - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/bright-spark/unit-05-let-the-player-repeat-it/",
+   "Unit 5: Let the player repeat it - Bright Spark - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/bright-spark/unit-06-grow-a-new-round/",
+   "Unit 6: Grow a new round - Bright Spark - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/locksmith/unit-01-make-room-for-a-guess/",
+   "Unit 1: Make room for a guess - Locksmith - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/locksmith/unit-06-put-the-clues-together/",
+   "Unit 6: Put the clues together - Locksmith - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/locksmith/unit-04-count-each-digit-once/",
+   "Unit 4: Count each digit once - Locksmith - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/locksmith/unit-05-keep-earlier-clues/",
+   "Unit 5: Keep earlier clues - Locksmith - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/locksmith/unit-08-invite-the-player-in/",
+   "Unit 8: Invite the player in - Locksmith - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/quickstep/unit-06-cross-two-banks-of-traffic/",
+   "Unit 6: Cross two banks of traffic - Quickstep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/quickstep/unit-09-present-the-crossing/",
+   "Unit 9: Present the crossing - Quickstep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/quickstep/unit-07-look-beyond-the-next-gap/",
+   "Unit 7: Look beyond the next gap - Quickstep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/quickstep/unit-01-make-a-place-to-cross/",
+   "Unit 1: Make a place to cross - Quickstep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/quickstep/unit-05-check-the-gap-twice/",
+   "Unit 5: Check the gap twice - Quickstep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/quickstep/unit-08-remember-a-short-press/",
+   "Unit 8: Remember a short press - Quickstep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/quickstep/unit-03-move-a-lane-around/",
+   "Unit 3: Move a lane around - Quickstep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/quickstep/unit-04-let-traffic-keep-moving/",
+   "Unit 4: Let traffic keep moving - Quickstep - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/touchdown/unit-11-finish-test-and-keep-touchdown/",
+   "Unit 11: Finish, test and keep Touchdown - Touchdown - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/touchdown/unit-06-reach-a-landing-pad/",
+   "Unit 6: Reach a landing pad - Touchdown - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/touchdown/unit-08-give-every-column-a-ground-height/",
+   "Unit 8: Give every column a ground height - Touchdown - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/touchdown/unit-01-let-the-craft-fall/",
+   "Unit 1: Let the craft fall - Touchdown - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/touchdown/unit-02-let-gravity-change-the-speed/",
+   "Unit 2: Let gravity change the speed - Touchdown - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/touchdown/unit-09-read-the-shape-of-the-site/",
+   "Unit 9: Read the shape of the site - Touchdown - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/touchdown/unit-04-make-another-attempt/",
+   "Unit 4: Make another attempt - Touchdown - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/touchdown/unit-05-make-each-burn-count/",
+   "Unit 5: Make each burn count - Touchdown - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/touchdown/unit-07-steer-and-thrust-together/",
+   "Unit 7: Steer and thrust together - Touchdown - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/touchdown/unit-03-brake-before-you-arrive/",
+   "Unit 3: Brake before you arrive - Touchdown - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/touchdown/unit-10-draw-the-craft-and-its-flame/",
+   "Unit 10: Draw the craft and its flame - Touchdown - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/yearfall/unit-01-read-the-settlement/",
+   "Unit 1: Read the settlement - Yearfall - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/yearfall/unit-13-keep-the-settlement/",
+   "Unit 13: Keep the settlement - Yearfall - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/yearfall/unit-06-plan-before-committing/",
+   "Unit 6: Plan before committing - Yearfall - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/yearfall/unit-07-carry-the-year-forward/",
+   "Unit 7: Carry the year forward - Yearfall - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/yearfall/unit-10-welcome-travellers/",
+   "Unit 10: Welcome travellers - Yearfall - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/brick-bash/unit-08-aim-with-the-paddle/",
+   "Unit 8: Aim with the paddle - Brick Bash - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/brick-bash/unit-04-catch-the-falling-ball/",
+   "Unit 4: Catch the falling ball - Brick Bash - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/brick-bash/unit-03-put-the-paddle-under-your-control/",
+   "Unit 3: Put the paddle under your control - Brick Bash - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/brick-bash/unit-06-give-the-wall-an-address/",
+   "Unit 6: Give the wall an address - Brick Bash - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/brick-bash/unit-02-send-the-ball-bouncing/",
+   "Unit 2: Send the ball bouncing - Brick Bash - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/brick-bash/unit-01-draw-below-the-character-grid/",
+   "Unit 1: Draw below the character grid - Brick Bash - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/brick-bash/unit-07-break-the-whole-wall/",
+   "Unit 7: Break the whole wall - Brick Bash - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-01/",
+   "Unit 1: Draw the archive - Night Patrol - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-06/",
+   "Unit 6: Mark what can be seen - Night Patrol - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-08/",
+   "Unit 8: Move the field of view - Night Patrol - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-09/",
+   "Unit 9: Finish Night Patrol - Night Patrol - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-07/",
+   "Unit 7: Prepare the sight changes - Night Patrol - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-10/",
+   "Unit 10: Keep Night Patrol - Night Patrol - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-05/",
+   "Unit 5: Look around at corners - Night Patrol - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-02/",
+   "Unit 2: Walk the corridors - Night Patrol - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-03/",
+   "Unit 3: Take the file home - Night Patrol - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/night-patrol/unit-04/",
+   "Unit 4: Keep a patrol moving - Night Patrol - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/volley/unit-08-keep-the-ball-visible/",
+   "Unit 8: Keep the ball visible - Volley - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/volley/unit-06-keep-score-and-play-again/",
+   "Unit 6: Keep score and play again - Volley - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/tail-chase/unit-06-leave-the-tail-behind/",
+   "Unit 6: Leave the tail behind - Tail Chase - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/tail-chase/unit-01-give-the-snake-a-face/",
+   "Unit 1: Give the snake a face - Tail Chase - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/tail-chase/unit-08-find-another-snack/",
+   "Unit 8: Find another snack - Tail Chase - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/tail-chase/unit-05-reuse-the-empty-slot/",
+   "Unit 5: Reuse the empty slot - Tail Chase - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/tail-chase/unit-03-choose-the-next-turn/",
+   "Unit 3: Choose the next turn - Tail Chase - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/basic/tail-chase/unit-04-remember-where-the-head-went/",
+   "Unit 4: Remember where the head went - Tail Chase - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/machine/meet-the-machine/unit-01/",
+   "Unit 1: A Machine From 1982 - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/machine/meet-the-machine/unit-05/",
+   "Unit 5: 48K, and Where It Goes - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/machine/meet-the-machine/unit-02/",
+   "Unit 2: The Z80 Inside It - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/machine/meet-the-machine/unit-03/",
+   "Unit 3: Two Colours Per Square - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/sinclair-zx-spectrum/machine/meet-the-machine/unit-04/",
+   "Unit 4: One Bit of Sound - Meet The Machine - Spectrum | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/amos/",
+   "Amiga AMOS BASIC – Learn Programming Through Games | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/amos/meet-amos/unit-13/",
+   "Unit 13: AMAL: Movement That Runs Itself - Meet AMOS - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/amos/meet-amos/unit-08/",
+   "Unit 8: Colour and the Palette - Meet AMOS - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/",
+   "Commodore Amiga – Learn 68000 Assembly Through Games | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-13/",
+   "Unit 13: Call, Return, and the Stack - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-14/",
+   "Unit 14: Adding and Taking Away - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-15/",
+   "Unit 15: Working With Bits - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-12/",
+   "Unit 12: The Counted Loop - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-01/",
+   "Unit 1: Assemble and Run - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-06/",
+   "Unit 6: The Screen Is a Bitmap - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-08/",
+   "Unit 8: Test, Then Branch - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-09/",
+   "Unit 9: The Vertical Blank - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-07/",
+   "Unit 7: Colour and the Copper - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-19/",
+   "Unit 19: The Machine Trusts You - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-17/",
+   "Unit 17: A Sprite of Your Own - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-10/",
+   "Unit 10: Reading the Player - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-11/",
+   "Unit 11: Pointers and the Address Registers - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-16/",
+   "Unit 16: The Blitter Moves It - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-18/",
+   "Unit 18: Paula Makes a Sound - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-05/",
+   "Unit 5: A Vast Street of Memory - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-02/",
+   "Unit 2: MOVE Is the Verb - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-03/",
+   "Unit 3: Bytes, Words and Longs - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/assembly/meet-the-machine/unit-04/",
+   "Unit 4: A Register for Every Job - Meet The Machine - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/blitz/",
+   "Amiga Blitz BASIC – Learn Programming Through Games | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/blitz/meet-blitz/unit-13/",
+   "Unit 13: Reaching the Hardware - Meet Blitz - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/blitz/meet-blitz/unit-06/",
+   "Unit 6: Slices and the Display - Meet Blitz - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/blitz/meet-blitz/unit-09/",
+   "Unit 9: Reading the Joystick - Meet Blitz - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/blitz/meet-blitz/unit-11/",
+   "Unit 11: Bumping Into Things - Meet Blitz - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/blitz/meet-blitz/unit-02/",
+   "Unit 2: Amiga Mode and Blitz Mode - Meet Blitz - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/blitz/meet-blitz/unit-03/",
+   "Unit 3: Variables and Blitz's Types - Meet Blitz - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-amiga/blitz/meet-blitz/unit-04/",
+   "Unit 4: Decisions, Loops, and the Frame - Meet Blitz - Amiga | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/",
+   "Nintendo Entertainment System – Learn 6502 Assembly Through Games | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-13/",
+   "Unit 13: Call, Return, and a Stack You Can See - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-14/",
+   "Unit 14: Adding and Taking Away - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-15/",
+   "Unit 15: Working With Bits - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-12/",
+   "Unit 12: The Counted Loop - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-01/",
+   "Unit 1: Assemble and Run - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-06/",
+   "Unit 6: Colour Lives in a Palette - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-09/",
+   "Unit 9: The Machine Has a Heartbeat - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-07/",
+   "Unit 7: Where the Shapes Come From - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-17/",
+   "Unit 17: The Machine Speaks Back - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-10/",
+   "Unit 10: The Joypad in Your Hand - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-11/",
+   "Unit 11: A Finger on the Boxes - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-16/",
+   "Unit 16: Bigger Than a Byte - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-18/",
+   "Unit 18: The Machine Trusts You - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-05/",
+   "Unit 5: The Screen Is Behind a Window - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-03/",
+   "Unit 3: Everything Is a Number - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/nintendo-entertainment-system/assembly/meet-the-machine/unit-04/",
+   "Unit 4: A Street of Numbered Boxes - Meet The Machine - NES | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-13/",
+   "Unit 13: Working With Bits - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-14/",
+   "Unit 14: Bigger Than a Byte - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-15/",
+   "Unit 15: The Machine Speaks Back - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-12/",
+   "Unit 12: Adding and Taking Away - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-01/",
+   "Unit 1: Assemble and Run - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-06/",
+   "Unit 6: Colour Is a Separate Map - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-08/",
+   "Unit 8: The Machine Can Hear You - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-09/",
+   "Unit 9: A Finger on the Boxes - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-10/",
+   "Unit 10: The Counted Loop - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-11/",
+   "Unit 11: Call, Return, and a Stack You Can See - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-16/",
+   "Unit 16: The Machine Trusts You - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-05/",
+   "Unit 5: The Screen Is Memory - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-03/",
+   "Unit 3: Everything Is a Number - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/assembly/meet-the-machine/unit-04/",
+   "Unit 4: A Street of Numbered Boxes - Meet The Machine - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/",
+   "Commodore 64 BASIC – Learn Programming Through Games | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-13/",
+   "Unit 13: A Shape That Moves - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-14/",
+   "Unit 14: Keeping Your Work - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-12/",
+   "Unit 12: Reading the Joystick - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-01/",
+   "Unit 1: You Type the Whole Word - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-06/",
+   "Unit 6: IF / THEN, the C64 Way - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-08/",
+   "Unit 8: GOTO, GOSUB, and the Game Loop - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-09/",
+   "Unit 9: The Screen Is Memory - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-07/",
+   "Unit 7: FOR / NEXT Counts For You - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-10/",
+   "Unit 10: Colour Lives Somewhere Else - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-11/",
+   "Unit 11: The Machine Can Sing - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-05/",
+   "Unit 5: INPUT — the Program Listens - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-02/",
+   "Unit 2: The Line Number Is an Address - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-03/",
+   "Unit 3: PRINT, and Its Punctuation - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/meet-c64-basic/unit-04/",
+   "Unit 4: LET, and the First Two Letters - Meet C64 BASIC - C64 | Code Like It's 198x"
+  ],
+  [
+   "/systems/commodore-64/basic/safe-cracker/unit-06/",
+   "Unit 6: A Stake That Runs Out - Safe Cracker - C64 | Code Like It's 198x"
+  ]
+ ],
+ "long_desc_count": 666,
+ "short_desc": [
+  "/experiments/nes/",
+  "/systems/sinclair-zx-spectrum/getting-started/",
+  "/systems/commodore-64/getting-started/"
+ ],
+ "no_og": 5,
+ "h1_not_one": [
+  [
+   "/emulators/template.html",
+   0
+  ],
+  [
+   "/vault/techniques/random-numbers/",
+   2
+  ],
+  [
+   "/vault/techniques/basic-v2/",
+   2
+  ],
+  [
+   "/vault/techniques/variables-memory/",
+   2
+  ]
+ ],
+ "img_no_alt": {},
+ "img_empty_alt_pages": 0,
+ "img_empty_alt_total": 0,
+ "missing_images": [],
+ "top_external": [
+  [
+   "github.com",
+   12398
+  ],
+  [
+   "code198x.substack.com",
+   2475
+  ],
+  [
+   "discord.gg",
+   2474
+  ],
+  [
+   "www.patreon.com",
+   2469
+  ],
+  [
+   "worldofspectrum.org",
+   246
+  ],
+  [
+   "asm198x.github.io",
+   137
+  ],
+  [
+   "emu198x.github.io",
+   130
+  ],
+  [
+   "www.nesdev.org",
+   30
+  ],
+  [
+   "www.zilog.com",
+   22
+  ],
+  [
+   "www.amigaforever.com",
+   10
+  ],
+  [
+   "fs-uae.net",
+   5
+  ],
+  [
+   "amigadev.elowar.com",
+   4
+  ],
+  [
+   "vice-emu.sourceforge.io",
+   4
+  ],
+  [
+   "pasmo.speccy.org",
+   3
+  ],
+  [
+   "fuse-emulator.sourceforge.net",
+   3
+  ],
+  [
+   "fceux.com",
+   3
+  ],
+  [
+   "creativecommons.org",
+   3
+  ],
+  [
+   "www.winuae.net",
+   3
+  ],
+  [
+   "www.devili.iki.fi",
+   3
+  ],
+  [
+   "www.cpcwiki.eu",
+   2
+  ],
+  [
+   "formulae.brew.sh",
+   2
+  ],
+  [
+   "www.c64forever.com",
+   2
+  ],
+  [
+   "cdn.amphenol-cs.com",
+   2
+  ],
+  [
+   "www.commodore.ca",
+   2
+  ],
+  [
+   "astro.build",
+   1
+  ],
+  [
+   "pagefind.app",
+   1
+  ],
+  [
+   "vale.sh",
+   1
+  ],
+  [
+   "build198x.github.io",
+   1
+  ],
+  [
+   "play198x.github.io",
+   1
+  ],
+  [
+   "claude.ai",
+   1
+  ]
+ ]
+}

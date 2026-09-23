@@ -1,0 +1,103 @@
+./vault/techniques/client-side-prediction.mdx:39:      note: "Box \"Completely lag-less!\": \"A major improvement over original internet Quake is the new \"PUSHLATENCY\" command. When playing internet Quake, there is a delay as information is sent from your machine to the game server, and back again. With QuakeWorld, you can set the game to predict bits of information, rather than waiting to be told exactly what's happening by typing \"PUSHLATENCY -xxx\". Simply replace the \"xxx\" with your ping and you'll immediately notice that control of your character has improved to be pretty much exactly the same as playing a one-player game! This prediction means that a few things are slightly out of place in the game, with rockets still firing slightly late, doors opening a bit later than you'd expect, and so on, but it makes the game much, much better to play overall.\" The same feature: \"The major feature of QuakeWorld, other than making everything smoother is to have every player registered and ranked throughout the world.\""
+./vault/techniques/client-side-prediction.mdx:64:- **The player's control:** `PUSHLATENCY -xxx`, with "xxx" replaced by your ping (*C&VG*, March 1997).
+./vault/techniques/client-side-prediction.mdx:87:> With QuakeWorld, you can set the game to predict bits of information, rather than waiting to be told exactly what's happening by typing "PUSHLATENCY -xxx". Simply replace the "xxx" with your ping and you'll immediately notice that control of your character has improved to be pretty much exactly the same as playing a one-player game! This prediction means that a few things are slightly out of place in the game, with rockets still firing slightly late, doors opening a bit later than you'd expect, and so on, but it makes the game much, much better to play overall.
+./vault/techniques/self-modifying-code.mdx:42:      note: "\"This program is really robust, it installs itself nicely to the interrupt routine chain. It even has an entry point for deinstalling itself. But in its robustness it uses self-modifying code to store the original interrupt routine address.\" — listing: \"oldirq = * + 1 ; Placeholder for self-modifying code\" / \"jmp * ; Return to the original interrupt\""
+./vault/techniques/self-modifying-code.mdx:168:| Marko Mäkelä, Codebase64 | Stable raster routine | Stores the original interrupt address as the operand of a `jmp` — "oldirq = * + 1 ; Placeholder for self-modifying code" |
+./vault/culture/homebrew-ports.mdx:21:      note: "⚠ Complicates 'bringing games to platforms they never officially reached'. Some are new games shipping on old hardware alongside current hardware: Senile Team's Intrepid Izzy is 'a puzzle platformer coming soon to the PC, PS4 and Dreamcast', and its coder says 'I started this project with only the PC in mind'. The Dreamcast version is a port outward from a modern project, not a fan reconstruction of an old one"
+./vault/culture/homebrew-ports.mdx:42:is "a puzzle platformer coming soon to the PC, PS4 and Dreamcast", and its coder
+./manufacturers/microkey.yaml:9:founded: 1984 # TODO: verify — 1984 is the Primo launch year; Microkey (R&D/production association linked to MTA SZTAKI) founding year not found in sources
+./vault/culture/liverpool-games-scene.mdx:37:      note: "The megagame campaign ran across every major British title in spring 1984 with the same copy - 'COMING SOON FROM IMAGINE, PSYCLAPSE & BANDERSNATCH', billed elsewhere as 'a treat for your senses' and 'the two most exhilarating experiences ever. Can you wait?' Neither shipped. The advertisements also carry a spoof consumption tally - coffee, soft drinks and sandwiches consumed by the development team - which is the tone the company was selling"
+./vault/culture/liverpool-games-scene.mdx:84:**The megagames were advertised everywhere and shipped nowhere.** "COMING SOON FROM
+./manufacturers/technosys.yaml:9:founded: 1981 # TODO: verify — Aamber Pegasus production began early 1981; one (AI-generated) source claims founding late 1980, but no reliable source confirms the founding year
+./patterns/commodore-amiga/assembly/framework/vblank-game-loop.mdx:72:; Placeholder routines
+./vault/tools/paw.mdx:26:- **Ports:** *[CRASH](/vault/magazines/crash-magazine)* listed [Commodore 64](/vault/systems/commodore-64) and Amstrad as "coming soon" at review time.
+./patterns/sinclair-zx-spectrum/assembly/physics/grid-movement-bounds.mdx:90:; Placeholder routines
+./manufacturers/zpa-novy-bor.yaml:9:founded: 1985 # TODO: verify — 1985 is the IQ 151 production year, not a founding. ZPA concern founded 1952; Nový Bor works active by the 1970s (Digigraf); registered as standalone state enterprise 31 Mar 1989 per Wikidata. Works' own founding year unconfirmed
+./vault/companies/sinclair-research.mdx:17:      note: "incorporated 1973-09-19 as WESTMINSTER MAIL ORDER LIMITED; registered successively as SINCLAIR INSTRUMENTS LIMITED, SCIENCE OF CAMBRIDGE LIMITED, SINCLAIR COMPUTERS LIMITED and SINCLAIR RESEARCH LIMITED; dissolved 2025-10-14. The register dates every name change to 31 December, which is a placeholder in records of this age — the years are reliable, the days are not"
+./vault/companies/sinclair-research.mdx:71:⚠ The register gives **31 December** for every one of those changes. That is a placeholder
+./manufacturers/apollo-7.yaml:5:city: Rennes  # TODO: verify — sources conflict: most retro sites call Apollo 7 a "Breton" (Brittany) firm but name no town; another links it to MTB (Matériels Techniques de Boulogne) in Boulogne-Billancourt near Paris. Exact town unconfirmed (Rennes is a Brittany placeholder)
+./manufacturers/apollo-7.yaml:7:  lat: 48.1173  # TODO: verify (Rennes placeholder; town not confirmed)
+./manufacturers/apollo-7.yaml:8:  lng: -1.6778  # TODO: verify
+./manufacturers/apollo-7.yaml:9:founded: 1984  # TODO: verify — Squale designed ~1984-85, shown at SICOB 1985; Apollo 7's founding year not confirmed in sources
+./manufacturers/bra-lesnoy.yaml:12:  # TODO: verify — пос. Лесной no longer appears in the modern Kimovsky district
+./manufacturers/bra-lesnoy.yaml:14:  # Kimovsky district centre (Kimovsk) coordinates as a best-effort placeholder.
+./manufacturers/bra-lesnoy.yaml:17:founded: 1988 # TODO: verify — this is the Apogey BK-01 production-start year, not a confirmed factory founding date (factory founding undocumented)
+./manufacturers/intercompex.yaml:9:founded: 1990 # TODO: verify — JV InterCompex produced the Hobbit in Leningrad 1989-1990; exact founding year of the joint venture not confirmed in sources
+./manufacturers/interact.yaml:9:founded: 1977 # TODO: verify — incorporation year not found in sources; Model One launched June 1978, firm bankrupt late 1979 (1977 is an estimate)
+./patterns/sinclair-zx-spectrum/assembly/framework/state-machine-loop.mdx:121:; Placeholder routines
+./patterns/sinclair-zx-spectrum/assembly/framework/game-loop-halt.mdx:41:; Placeholder routines (replace with your game code)
+./manufacturers/microart.yaml:9:founded: 1991 # TODO: verify founding year — Moscow confirmed; firm released ATM Turbo autumn 1991, ceased ~1996, but exact founding year unconfirmed
+./curriculum/commodore-64/assembly/tumbledown/index.mdx:9:## Coming Soon
+./curriculum/commodore-64/assembly/deephold/index.mdx:9:## Coming Soon
+./curriculum/commodore-64/assembly/strata/index.mdx:9:## Coming Soon
+./vault/companies/retro-studios.mdx:30:| Metroid Prime 4 | TBD | Switch |
+./curriculum/commodore-64/assembly/velocity/index.mdx:9:## Coming Soon
+./curriculum/commodore-64/assembly/raster-rider/index.mdx:9:## Coming Soon
+./curriculum/commodore-64/assembly/knuckle/index.mdx:9:## Coming Soon
+./curriculum/commodore-64/assembly/mega-blaster/index.mdx:9:## Coming Soon
+./curriculum/commodore-64/assembly/brick-basher/index.mdx:9:## Coming Soon
+./curriculum/commodore-64/assembly/hornet/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/blitz/slipstream/index.mdx:8:## Coming Soon
+./curriculum/commodore-amiga/blitz/skyfire/index.mdx:8:## Coming Soon
+./curriculum/commodore-64/assembly/platform-panic/index.mdx:9:## Coming Soon
+./curriculum/commodore-64/assembly/maze-raider/index.mdx:9:## Coming Soon
+./curriculum/commodore-64/assembly/night-raid/index.mdx:9:## Coming Soon
+./curriculum/commodore-64/assembly/catacombs/index.mdx:8:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/iron-assault/index.mdx:9:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/pellet-panic/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/blitz/star-drift/index.mdx:8:## Coming Soon
+./curriculum/commodore-amiga/blitz/ballistic/index.mdx:8:## Coming Soon
+./curriculum/commodore-amiga/assembly/wanderer/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/assembly/onslaught/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/assembly/copper-dma/index.mdx:8:## Coming Soon
+./curriculum/commodore-64/assembly/sid-symphony/index.mdx:8:## Coming Soon
+./curriculum/commodore-64/assembly/maelstrom/index.mdx:8:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/echoes-of-eponium/index.mdx:9:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/thunder-run/index.mdx:9:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/fangs-for-the-memory/index.mdx:9:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/pixel-plains/index.mdx:9:## Coming Soon
+./vault/companies/acclaim.mdx:56:| BMX XXX | Nudity in sports game |
+./curriculum/commodore-amiga/assembly/fortress/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/assembly/echoes-of-the-ancients/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/assembly/brawler/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/assembly/parallax/index.mdx:9:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/crypt-crawler/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/amos/block-drop/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/assembly/gobble/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/amos/dungeon-doors/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/assembly/crypt/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/amos/star-catcher/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/assembly/highway/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/assembly/ascent/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/assembly/ascension-the-guru-meditation/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/amos/crate-stack/index.mdx:9:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/crate-escape/index.mdx:9:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/tarmac-terror/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/assembly/shatter-point/index.mdx:9:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/pavement-justice/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/amos/space-swarm/index.mdx:9:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/gridlock/index.mdx:9:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/fracture-point/index.mdx:9:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/ion-trail/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/amos/bounce-back/index.mdx:9:## Coming Soon
+./curriculum/nintendo-entertainment-system/assembly/requiem-for-a-mapper/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/amos/knight-watch/index.mdx:8:## Coming Soon
+./curriculum/commodore-amiga/amos/warren/index.mdx:9:## Coming Soon
+./curriculum/commodore-amiga/amos/scroll-quest/index.mdx:9:## Coming Soon
+./curriculum/sinclair-zx-spectrum/assembly/lamplight/index.mdx:8:## Coming Soon
+./curriculum/sinclair-zx-spectrum/assembly/deepdelve/index.mdx:8:## Coming Soon
+./curriculum/commodore-amiga/amos/nomad/index.mdx:8:## Coming Soon
+./curriculum/sinclair-zx-spectrum/assembly/wyrmhold/index.mdx:8:## Coming Soon
+./curriculum/sinclair-zx-spectrum/assembly/starfall/index.mdx:8:## Coming Soon
+./curriculum/sinclair-zx-spectrum/assembly/skyhawk/index.mdx:8:## Coming Soon
+./curriculum/sinclair-zx-spectrum/assembly/hard-rain/index.mdx:8:## Coming Soon
+./curriculum/sinclair-zx-spectrum/assembly/ricochet/index.mdx:8:## Coming Soon
+./curriculum/sinclair-zx-spectrum/assembly/spectral-legacy/index.mdx:8:## Coming Soon
+./curriculum/sinclair-zx-spectrum/assembly/greypeak/index.mdx:8:## Coming Soon
+./curriculum/sinclair-zx-spectrum/assembly/nibble-run/index.mdx:8:## Coming Soon
+./curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-01.mdx:43:            defb    %00111100       ; ..XXXX..   the hood
+./curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-01.mdx:44:            defb    %01111110       ; .XXXXXX.   hood meets shoulders
+./curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-01.mdx:45:            defb    %01111110       ; .XXXXXX.   the cloak
+./curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-01.mdx:46:            defb    %01111110       ; .XXXXXX.   the cloak
+./curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-01.mdx:47:            defb    %01111110       ; .XXXXXX.   the cloak
+./curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-01.mdx:48:            defb    %00111100       ; ..XXXX..   the cloak narrows

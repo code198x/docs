@@ -1,0 +1,261 @@
+
+Running 124 tests using 6 workers
+
+[1/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: system landing (/sinclair-zx-spectrum) [dark]
+[2/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: system landing (/sinclair-zx-spectrum) [light]
+[3/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: system stub (/intellivision) [dark]
+[4/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: home (/) [light]
+[5/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: home (/) [dark]
+[6/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: system stub (/intellivision) [light]
+[7/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: module index (/sinclair-zx-spectrum/basic/touchdown) [light]
+[8/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: module index (/sinclair-zx-spectrum/basic/touchdown) [dark]
+[9/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: unit (/sinclair-zx-spectrum/basic/touchdown/unit-03) [light]
+[10/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: unit (/sinclair-zx-spectrum/basic/touchdown/unit-03) [dark]
+[11/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [light]
+[12/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [dark]
+[desktop] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [light]
+
+[a11y] getting started — 1 violation type(s), 2 not baselined:
+  [serious] color-contrast: Elements must meet minimum color contrast ratio thresholds (2 node(s))
+
+[desktop] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [dark]
+
+[a11y] getting started — 1 violation type(s), 2 not baselined:
+  [serious] color-contrast: Elements must meet minimum color contrast ratio thresholds (2 node(s))
+
+  1) [desktop] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [light] 
+
+    Error: non-baselined serious/critical a11y violations on /sinclair-zx-spectrum/getting-started [light]
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 4
+
+    - Array []
+    + Array [
+    +   "[serious] color-contrast: .next-step > ul > li:nth-child(1)",
+    +   "[serious] color-contrast: .next-step > ul > li:nth-child(2)",
+    + ]
+
+      104 |       newViolations,
+      105 |       `non-baselined serious/critical a11y violations on ${path} [${theme}]`,
+    > 106 |     ).toEqual([]);
+          |       ^
+      107 |     });
+      108 |   }
+      109 | }
+        at tests/a11y.spec.ts:106:7
+
+    Error Context: test-results/a11y-a11y-getting-started--55001-trum-getting-started-light--desktop/error-context.md
+
+
+  2) [desktop] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [dark] 
+
+    Error: non-baselined serious/critical a11y violations on /sinclair-zx-spectrum/getting-started [dark]
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 4
+
+    - Array []
+    + Array [
+    +   "[serious] color-contrast: .next-step > ul > li:nth-child(1)",
+    +   "[serious] color-contrast: .next-step > ul > li:nth-child(2)",
+    + ]
+
+      104 |       newViolations,
+      105 |       `non-baselined serious/critical a11y violations on ${path} [${theme}]`,
+    > 106 |     ).toEqual([]);
+          |       ^
+      107 |     });
+      108 |   }
+      109 | }
+        at tests/a11y.spec.ts:106:7
+
+    Error Context: test-results/a11y-a11y-getting-started--87366-ctrum-getting-started-dark--desktop/error-context.md
+
+
+[13/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: family (/family) [light]
+[14/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: family (/family) [dark]
+[15/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: family emu198x (/family/emu198x) [light]
+[16/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: family emu198x (/family/emu198x) [dark]
+[17/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: vault (/vault) [light]
+[18/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: vault (/vault) [dark]
+[19/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: family asm198x (/family/asm198x) [light]
+[20/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: family asm198x (/family/asm198x) [dark]
+[21/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: family cat198x (/family/cat198x) [light]
+[22/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: family cat198x (/family/cat198x) [dark]
+[23/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: setup (/setup) [light]
+[24/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: setup (/setup) [dark]
+[25/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: setup roms (/setup/roms) [light]
+[26/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: setup roms (/setup/roms) [dark]
+[27/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: setup native (/setup/sinclair-zx-spectrum/native) [light]
+[28/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: setup native (/setup/sinclair-zx-spectrum/native) [dark]
+[29/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: pattern category (/patterns/category/hardware-access) [light]
+[30/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: pattern category (/patterns/category/hardware-access) [dark]
+[31/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: about (/about) [light]
+[32/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: about (/about) [dark]
+[33/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: browse (/browse) [light]
+[34/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: browse (/browse) [dark]
+[35/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: contribute (/contribute) [light]
+[36/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: contribute (/contribute) [dark]
+[37/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: timeline (/timeline) [light]
+[38/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: timeline (/timeline) [dark]
+[39/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: systems (/systems) [light]
+[40/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: systems (/systems) [dark]
+[41/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: patterns (/patterns) [light]
+[42/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: patterns (/patterns) [dark]
+[43/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: patterns platform (/patterns/platform/sinclair-zx-spectrum) [light]
+[44/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: patterns platform (/patterns/platform/sinclair-zx-spectrum) [dark]
+[45/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: commodore-64 landing (/commodore-64) [light]
+[46/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: commodore-64 landing (/commodore-64) [dark]
+[47/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: crash-live (/crash-live) [light]
+[48/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: crash-live (/crash-live) [dark]
+[49/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: notfound (/404) [light]
+[50/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: notfound (/404) [dark]
+[51/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: commodore-amiga landing (/commodore-amiga) [light]
+[52/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: commodore-amiga landing (/commodore-amiga) [dark]
+[53/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: nintendo landing (/nintendo-entertainment-system) [light]
+[54/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: nintendo landing (/nintendo-entertainment-system) [dark]
+[55/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: vault detail (/vault/hardware/sid-chip) [light]
+[56/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: vault detail (/vault/hardware/sid-chip) [dark]
+[57/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: vault detail with code (/vault/techniques/screen-memory) [light]
+[58/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: vault detail with code (/vault/techniques/screen-memory) [dark]
+[59/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: setup native c64 (/setup/commodore-64/native) [light]
+[60/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: setup native c64 (/setup/commodore-64/native) [dark]
+[61/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: setup native amiga (/setup/commodore-amiga/native) [light]
+[62/124] [desktop] › tests/a11y.spec.ts:74:5 › a11y: setup native amiga (/setup/commodore-amiga/native) [dark]
+[63/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: home (/) [light]
+[64/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: home (/) [dark]
+[65/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: system landing (/sinclair-zx-spectrum) [light]
+[66/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: system landing (/sinclair-zx-spectrum) [dark]
+[67/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: system stub (/intellivision) [dark]
+[68/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: system stub (/intellivision) [light]
+[69/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: module index (/sinclair-zx-spectrum/basic/touchdown) [dark]
+[70/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: module index (/sinclair-zx-spectrum/basic/touchdown) [light]
+[71/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: unit (/sinclair-zx-spectrum/basic/touchdown/unit-03) [light]
+[72/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: unit (/sinclair-zx-spectrum/basic/touchdown/unit-03) [dark]
+[73/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [light]
+[74/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [dark]
+[75/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: vault (/vault) [light]
+[76/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: vault (/vault) [dark]
+[77/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: family (/family) [light]
+[78/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: family (/family) [dark]
+[mobile] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [light]
+
+[a11y] getting started — 1 violation type(s), 2 not baselined:
+  [serious] color-contrast: Elements must meet minimum color contrast ratio thresholds (2 node(s))
+
+[mobile] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [dark]
+
+[a11y] getting started — 1 violation type(s), 2 not baselined:
+  [serious] color-contrast: Elements must meet minimum color contrast ratio thresholds (2 node(s))
+
+  3) [mobile] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [light] 
+
+    Error: non-baselined serious/critical a11y violations on /sinclair-zx-spectrum/getting-started [light]
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 4
+
+    - Array []
+    + Array [
+    +   "[serious] color-contrast: .next-step > ul > li:nth-child(1)",
+    +   "[serious] color-contrast: .next-step > ul > li:nth-child(2)",
+    + ]
+
+      104 |       newViolations,
+      105 |       `non-baselined serious/critical a11y violations on ${path} [${theme}]`,
+    > 106 |     ).toEqual([]);
+          |       ^
+      107 |     });
+      108 |   }
+      109 | }
+        at tests/a11y.spec.ts:106:7
+
+    Error Context: test-results/a11y-a11y-getting-started--55001-trum-getting-started-light--mobile/error-context.md
+
+
+  4) [mobile] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [dark] 
+
+    Error: non-baselined serious/critical a11y violations on /sinclair-zx-spectrum/getting-started [dark]
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 4
+
+    - Array []
+    + Array [
+    +   "[serious] color-contrast: .next-step > ul > li:nth-child(1)",
+    +   "[serious] color-contrast: .next-step > ul > li:nth-child(2)",
+    + ]
+
+      104 |       newViolations,
+      105 |       `non-baselined serious/critical a11y violations on ${path} [${theme}]`,
+    > 106 |     ).toEqual([]);
+          |       ^
+      107 |     });
+      108 |   }
+      109 | }
+        at tests/a11y.spec.ts:106:7
+
+    Error Context: test-results/a11y-a11y-getting-started--87366-ctrum-getting-started-dark--mobile/error-context.md
+
+
+[79/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: family emu198x (/family/emu198x) [dark]
+[80/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: family emu198x (/family/emu198x) [light]
+[81/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: family asm198x (/family/asm198x) [light]
+[82/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: family asm198x (/family/asm198x) [dark]
+[83/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: family cat198x (/family/cat198x) [light]
+[84/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: family cat198x (/family/cat198x) [dark]
+[85/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: setup (/setup) [light]
+[86/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: setup (/setup) [dark]
+[87/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: setup roms (/setup/roms) [light]
+[88/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: setup roms (/setup/roms) [dark]
+[89/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: setup native (/setup/sinclair-zx-spectrum/native) [light]
+[90/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: setup native (/setup/sinclair-zx-spectrum/native) [dark]
+[91/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: pattern category (/patterns/category/hardware-access) [light]
+[92/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: pattern category (/patterns/category/hardware-access) [dark]
+[93/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: about (/about) [light]
+[94/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: about (/about) [dark]
+[95/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: browse (/browse) [light]
+[96/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: browse (/browse) [dark]
+[97/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: contribute (/contribute) [light]
+[98/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: contribute (/contribute) [dark]
+[99/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: timeline (/timeline) [light]
+[100/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: timeline (/timeline) [dark]
+[101/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: systems (/systems) [light]
+[102/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: systems (/systems) [dark]
+[103/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: patterns (/patterns) [light]
+[104/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: patterns (/patterns) [dark]
+[105/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: patterns platform (/patterns/platform/sinclair-zx-spectrum) [light]
+[106/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: patterns platform (/patterns/platform/sinclair-zx-spectrum) [dark]
+[107/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: commodore-64 landing (/commodore-64) [light]
+[108/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: commodore-64 landing (/commodore-64) [dark]
+[109/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: crash-live (/crash-live) [light]
+[110/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: crash-live (/crash-live) [dark]
+[111/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: notfound (/404) [light]
+[112/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: notfound (/404) [dark]
+[113/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: commodore-amiga landing (/commodore-amiga) [light]
+[114/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: commodore-amiga landing (/commodore-amiga) [dark]
+[115/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: nintendo landing (/nintendo-entertainment-system) [light]
+[116/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: nintendo landing (/nintendo-entertainment-system) [dark]
+[117/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: vault detail (/vault/hardware/sid-chip) [light]
+[118/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: vault detail (/vault/hardware/sid-chip) [dark]
+[119/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: vault detail with code (/vault/techniques/screen-memory) [light]
+[120/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: vault detail with code (/vault/techniques/screen-memory) [dark]
+[121/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: setup native c64 (/setup/commodore-64/native) [light]
+[122/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: setup native c64 (/setup/commodore-64/native) [dark]
+[123/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: setup native amiga (/setup/commodore-amiga/native) [light]
+[124/124] [mobile] › tests/a11y.spec.ts:74:5 › a11y: setup native amiga (/setup/commodore-amiga/native) [dark]
+  4 failed
+    [desktop] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [light] 
+    [desktop] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [dark] 
+    [mobile] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [light] 
+    [mobile] › tests/a11y.spec.ts:74:5 › a11y: getting started (/sinclair-zx-spectrum/getting-started) [dark] 
+  120 passed (39.0s)

@@ -1,0 +1,780 @@
+=== check-template-whitespace
+Template whitespace: 139 templates, no eaten spaces.
+exit 0
+=== check-curriculum-routes
+
+Curriculum routes: 11 catalogues, 12 declared edges.
+  longest route: 6 steps, to foundations/from-source-to-silicon
+  · commodore-64/assembly — 17 modules, 17 entry points
+  · commodore-64/basic — 34 modules, 34 entry points
+  · commodore-amiga/amos — 11 modules, 11 entry points
+  · commodore-amiga/assembly — 17 modules, 17 entry points
+  · commodore-amiga/blitz — 8 modules, 8 entry points
+  · craft — 7 modules, 7 entry points
+  · foundations — 10 modules, 1 entry points
+  · nintendo-entertainment-system/assembly — 16 modules, 16 entry points
+  · sinclair-zx-spectrum/assembly — 16 modules, 15 entry points
+  · sinclair-zx-spectrum/basic — 27 modules, 27 entry points
+  · sinclair-zx-spectrum/machine — 1 modules, 1 entry points
+exit 0
+=== check-vault-imagery
+Vault imagery: 15 image(s) across 9 manifest(s), all accounted for.
+exit 0
+=== check-vault-platform-balance
+
+Vault platform balance: 76 of 467 multi-format entries discuss only one of their platforms.
+
+  · books/computer-battlegames — 80% sinclair-zx-spectrum, never mentions: bbc-micro
+  · communities/crack-intros — 80% commodore-64, never mentions: atari-st
+  · companies/addictive-games — 86% sinclair-zx-spectrum, never mentions: bbc-micro, amstrad-cpc
+  · companies/anco — 90% commodore-amiga, never mentions: atari-st
+  · companies/bug-byte — 100% sinclair-zx-spectrum, never mentions: commodore-64
+  · companies/design-design — 78% amstrad-cpc, never mentions: commodore-64
+  · companies/dma-design — 100% commodore-amiga, never mentions: sega-mega-drive
+  · companies/electronic-arts — 83% commodore-amiga, never mentions: nintendo-entertainment-system
+  · companies/empire-interactive — 100% commodore-amiga, never mentions: atari-st
+  · companies/gilsoft — 80% sinclair-zx-spectrum, never mentions: commodore-64
+  · companies/grandslam — 100% commodore-amiga, never mentions: commodore-64, sinclair-zx-spectrum, atari-st
+  · companies/impressions — 100% commodore-amiga, never mentions: atari-st
+  · companies/krisalis — 91% commodore-amiga, never mentions: atari-st
+  · companies/magnetic-scrolls — 75% sinclair-zx-spectrum, never mentions: amstrad-cpc, atari-st
+  · companies/mikro-gen — 83% sinclair-zx-spectrum, never mentions: commodore-64
+  · companies/mos-technology — 100% commodore-64, never mentions: commodore-amiga
+  · companies/probe-software — 100% commodore-amiga, never mentions: sinclair-zx-spectrum
+  · companies/silmarils — 100% commodore-amiga, never mentions: atari-st
+  · companies/sunsoft — 100% nintendo-entertainment-system, never mentions: sega-mega-drive
+  · companies/ultimate — 91% sinclair-zx-spectrum, never mentions: commodore-64, amstrad-cpc, bbc-micro
+  · companies/xenia-edizioni — 100% commodore-amiga, never mentions: atari-st
+  · culture/arcade-conversion — 80% sinclair-zx-spectrum, never mentions: commodore-64, amstrad-cpc, atari-st
+  · culture/basic-to-machine-code — 77% sinclair-zx-spectrum, never mentions: amstrad-cpc, bbc-micro
+  · culture/cambridge-games-scene — 100% bbc-micro, never mentions: commodore-amiga
+  · culture/liverpool-games-scene — 100% sinclair-zx-spectrum, never mentions: commodore-64, commodore-amiga
+  · distribution/licenseware — 100% commodore-amiga, never mentions: atari-st
+  · games/alien-breed — 100% commodore-amiga, never mentions: atari-st
+  · games/atic-atac — 100% sinclair-zx-spectrum, never mentions: bbc-micro
+  · games/battletoads — 100% nintendo-entertainment-system, never mentions: sega-mega-drive, commodore-amiga
+  · games/cannon-fodder — 100% commodore-amiga, never mentions: atari-st, sega-mega-drive
+  · games/castlevania — 100% nintendo-entertainment-system, never mentions: commodore-64, commodore-amiga
+  · games/chaos-engine — 100% commodore-amiga, never mentions: atari-st, sega-mega-drive
+  · games/commando — 81% commodore-64, never mentions: amstrad-cpc, atari-st, bbc-micro
+  · games/defender-of-the-crown — 82% commodore-amiga, never mentions: nintendo-entertainment-system
+  · games/football-manager-1982 — 94% sinclair-zx-spectrum, never mentions: bbc-micro
+  · games/golden-axe — 100% sega-mega-drive, never mentions: commodore-amiga
+  · games/gradius — 100% nintendo-entertainment-system, never mentions: commodore-64, sinclair-zx-spectrum, commodore-amiga
+  · games/impossible-mission — 83% commodore-64, never mentions: commodore-amiga
+  · games/jet-set-willy — 100% sinclair-zx-spectrum, never mentions: commodore-64, amstrad-cpc, bbc-micro
+  · games/jetpac — 100% sinclair-zx-spectrum, never mentions: bbc-micro
+  · games/knight-lore — 100% sinclair-zx-spectrum, never mentions: amstrad-cpc, bbc-micro, commodore-64
+  · games/laser-squad — 100% sinclair-zx-spectrum, never mentions: commodore-64, commodore-amiga
+  · games/pirates — 100% commodore-64, never mentions: commodore-amiga, nintendo-entertainment-system
+  · games/populous — 80% commodore-amiga, never mentions: atari-st
+  · games/road-rash — 100% sega-mega-drive, never mentions: commodore-amiga
+  · games/sabre-wulf — 100% sinclair-zx-spectrum, never mentions: commodore-64, bbc-micro, amstrad-cpc
+  · games/xenon-2 — 100% commodore-amiga, never mentions: atari-st, sega-mega-drive
+  · magazines/computer-and-video-games — 86% sinclair-zx-spectrum, never mentions: amstrad-cpc, commodore-amiga
+  · magazines/pixel — 100% sinclair-zx-spectrum, never mentions: commodore-64, bbc-micro
+  · people/anita-sinclair — 75% commodore-amiga, never mentions: amstrad-cpc, atari-st
+  · people/costa-panayi — 100% sinclair-zx-spectrum, never mentions: amstrad-cpc
+  · people/dan-bunten — 100% commodore-64, never mentions: commodore-amiga
+  · people/dan-malone — 100% commodore-amiga, never mentions: sinclair-zx-spectrum, commodore-64, atari-st
+  · people/david-perry — 100% sega-mega-drive, never mentions: commodore-64, commodore-amiga
+  · people/dino-dini — 100% commodore-amiga, never mentions: atari-st
+  · people/ian-andrew — 80% sinclair-zx-spectrum, never mentions: commodore-64
+  · people/ian-bell — 100% bbc-micro, never mentions: commodore-64
+  · people/jim-bagley — 100% sinclair-zx-spectrum, never mentions: commodore-64
+  · people/julian-gollop — 93% sinclair-zx-spectrum, never mentions: commodore-64
+  · people/kevin-toms — 100% sinclair-zx-spectrum, never mentions: commodore-64, amstrad-cpc, bbc-micro
+  · people/lloyd-mangram — 100% sinclair-zx-spectrum, never mentions: commodore-64
+  · people/matthew-smith — 100% sinclair-zx-spectrum, never mentions: commodore-64
+  · people/roy-carter — 100% amstrad-cpc, never mentions: sinclair-zx-spectrum
+  · people/steve-crow — 83% sinclair-zx-spectrum, never mentions: commodore-64
+  · people/steve-turner — 100% sinclair-zx-spectrum, never mentions: atari-st
+  · people/steve-wetherill — 100% sinclair-zx-spectrum, never mentions: commodore-64, amstrad-cpc
+  · people/steve-wilcox — 83% amstrad-cpc, never mentions: commodore-64
+  · people/yuzo-koshiro — 100% sega-mega-drive, never mentions: nintendo-entertainment-system
+  · techniques/battery-backup — 100% nintendo-entertainment-system, never mentions: sega-mega-drive
+  · techniques/collision-detection — 80% commodore-64, never mentions: commodore-amiga, sinclair-zx-spectrum
+  · techniques/filmation-engine — 100% sinclair-zx-spectrum, never mentions: commodore-64, amstrad-cpc, bbc-micro
+  · techniques/freescape — 75% commodore-64, never mentions: amstrad-cpc, atari-st, commodore-amiga
+  · techniques/point-and-click — 80% commodore-amiga, never mentions: atari-st
+  · techniques/raster-tricks — 93% commodore-64, never mentions: nintendo-entertainment-system
+  · techniques/size-coding — 89% commodore-64, never mentions: commodore-amiga
+  · techniques/trainers — 83% commodore-amiga, never mentions: bbc-micro
+
+  Often fine: a game can matter on one machine and be a poor port elsewhere.
+  Worth checking that no unqualified sentence states something true of one port only.
+
+exit 0
+=== check-vault-links
+Vault links: 10473 references across src/, 1478 entries, 78 redirects. All resolve.
+exit 0
+=== check-nes-assembler
+NES WASM assembler matches the native lesson cartridge and reports source-line errors.
+exit 0
+=== check-vault-sources
+
+Entries: 1478
+  making a dated claim   1261
+  every claim cited      92
+Dated claims: 1261
+  cited                  92  (7%)
+  uncited                1169
+
+  category       entries  claims  cited
+  games              405     405     12
+  companies          242     242     30
+  people             155     155      2
+  culture             70      70      0
+  magazines           61      61     43
+  hardware            47      47      1
+  systems             44      44      3
+  genres              39      39      0
+  tools               35      35      0
+  techniques          33      33      0
+  groups              29      29      0
+  demos               26      26      0
+  communities         18      18      1
+  phenomena           15      15      0
+  distribution        12      12      0
+  events              12      12      0
+  emulators           11      11      0
+  books                7       7      0
+
+exit 0
+=== check-vault-frontmatter-vs-prose
+
+Facts stated in both frontmatter and prose: 355
+Disagreements: 0
+
+  No disagreements.
+
+exit 0
+=== check-vault-dates
+
+Dated claims tested: 991  (236 titles too generic, 0 phrases too flat to be titles)
+Onset disagrees with the entry by 2+ years: 504
+
+   gap  entry                                        claims          corpus onset  pages
+  -122  companies/milton-bradley                     founded 1860    1982          508
+  -67   people/hiroshi-yamauchi                      born 1927       1994          192
+  -61   companies/tandy                              founded 1919    1980          2326
+  -61   people/ralph-baer                            born 1922       1983          108
+  -58   people/ed-logg                               born 1948       2006          74
+  -57   people/tomohiro-nishikado                    born 1944       2001          25
+  -56   people/gunpei-yokoi                          born 1941       1997          97
+  -56   people/jack-tramiel                          born 1928       1984          871
+  -54   people/ian-mcnaught-davis                    born 1929       1983          12
+  -54   people/jay-miner                             born 1932       1986          446
+  -54   people/masayuki-uemura                       born 1943       1997          14
+  -54   people/ray-kassar                            born 1928       1982          69
+  -53   people/seymour-papert                        born 1928       1981          240
+  -52   hardware/light-gun                           introduced 1936 1988          1454
+  -49   people/minoru-arakawa                        born 1946       1995          50
+  -49   people/rick-dickinson                        born 1956       2005          41
+  -47   people/oliver-twins                          born 1969       2016          410
+  -46   people/henk-rogers                           born 1953       1999          34
+  -44   people/clive-sinclair                        born 1940       1984          346
+  -44   people/jim-butterfield                       born 1936       1980          1837
+  -44   people/warren-spector                        born 1955       1999          267
+  -44   people/will-crowther                         born 1936       1980          40
+  -43   people/al-lowe                               born 1946       1989          322
+  -43   people/grant-kirkhope                        born 1962       2005          7
+  -43   people/shigeru-miyamoto                      born 1952       1995          801
+  -43   people/yuji-horii                            born 1954       1997          25
+  -42   companies/nintendo-rd1                       founded 1970    2012          6
+  -42   people/howard-scott-warshaw                  born 1957       1999          166
+  -42   people/roger-dean                            born 1944       1986          192
+  -42   people/satoru-iwata                          born 1959       2001          99
+  -41   people/chuck-peddle                          born 1937       1978          64
+  -41   people/eiji-aonuma                           born 1963       2004          36
+  -41   people/katsuhiro-harada                      born 1970       2011          31
+  -41   people/nobuo-uematsu                         born 1959       2000          44
+  +39   games/dead-cells                             released 2018   1979          40
+  -39   people/david-ahl                             born 1939       1978          104
+  -39   people/federico-faggin                       born 1941       1980          18
+  -39   people/mike-dailly                           born 1968       2007          61
+  -39   people/nolan-bushnell                        born 1943       1982          599
+  -37   people/koji-igarashi                         born 1966       2003          23
+  -37   people/sid-meier                             born 1954       1991          2031
+  -36   people/dave-lebling                          born 1950       1986          109
+  -36   people/masaya-matsuura                       born 1961       1997          39
+  -36   people/oliver-frey                           born 1948       1984          333
+  -36   people/yoshiki-okamoto                       born 1961       1997          55
+  -36   people/yu-suzuki                             born 1958       1994          431
+  -35   people/bob-wakelin                           born 1950       1985          46
+  -35   people/geoff-crammond                        born 1954       1989          549
+  -35   people/hideo-kojima                          born 1963       1998          310
+  -35   people/hironobu-sakaguchi                    born 1962       1997          76
+  -35   people/koji-kondo                            born 1961       1996          19
+  -34   culture/couch-co-op                          emerged 1985    2019          15
+  -34   people/al-alcorn                             born 1948       1982          51
+  -34   people/alexey-pajitnov                       born 1956       1990          166
+  -34   people/martin-alper                          born 1950       1984          20
+  -34   people/satoshi-tajiri                        born 1965       1999          20
+  -34   people/todd-howard                           born 1971       2005          30
+  -33   people/jim-sachs                             born 1954       1987          259
+  -33   people/ken-levine                            born 1966       1999          97
+  -33   people/michel-ancel                          born 1972       2005          51
+  -33   people/tim-cain                              born 1965       1998          22
+  -33   people/tim-jenison                           born 1954       1987          119
+  -33   people/toshihiro-nagoshi                     born 1965       1998          132
+  -32   genres/roguelike                             emerged 1980    2012          174
+  -32   people/peter-molyneux                        born 1959       1991          1047
+  -32   people/shinji-mikami                         born 1965       1997          148
+  -32   people/trip-hawkins                          born 1953       1985          591
+  -32   people/warren-robinett                       born 1951       1983          57
+  -31   people/ed-boon                               born 1964       1995          68
+  -31   people/rob-hubbard                           born 1955       1986          610
+  -31   people/steve-turner                          born 1953       1984          317
+  -31   people/tim-schafer                           born 1967       1998          190
+  -30   people/francois-lionet                       born 1960       1990          152
+  -30   people/keita-takahashi                       born 1975       2005          40
+  -30   people/stamper-brothers                      born 1958       1988          39
+  -30   people/tetsuya-mizuguchi                     born 1965       1995          152
+  -29   companies/commodore                          founded 1954    1983          269402
+  -29   culture/game-preservation                    emerged 1990    2019          25
+  -29   people/bob-yannes                            born 1953       1982          9
+  -29   people/david-crane                           born 1954       1983          534
+  -29   people/david-whittaker                       born 1957       1986          183
+  -29   people/john-romero                           born 1967       1996          480
+  -29   people/marc-blank                            born 1954       1983          86
+  -29   people/will-wright                           born 1960       1989          392
+  +28   games/elite-dangerous                        released 2014   1986          21
+  -28   hardware/light-pen                           introduced 1952 1980          5509
+  -28   people/dale-luck                             born 1958       1986          215
+  -28   people/dan-silva                             born 1958       1986          133
+  -28   people/steve-meretzky                        born 1957       1985          230
+  -28   people/steven-vickers                        born 1954       1982          39
+  -28   people/toni-baker                            born 1954       1982          136
+  -28   people/toru-iwatani                          born 1955       1983          19
+  -27   culture/online-multiplayer                   emerged 1970    1997          418
+  -27   genres/metroidvania                          emerged 1986    2013          129
+  -27   people/charles-cecil                         born 1962       1989          134
+  -27   people/chris-sawyer                          born 1967       1994          87
+  -27   people/dona-bailey                           born 1956       1983          21
+  -27   people/eugene-jarvis                         born 1955       1982          242
+  -27   people/jordan-mechner                        born 1964       1991          200
+  -27   people/louis-castle                          born 1966       1993          75
+  -27   people/mark-ferrari                          born 1962       1989          20
+  -27   people/mark-sibly                            born 1966       1993          67
+  +26   genres/survival-games                        emerged 2009    1983          26
+  -26   people/anita-sinclair                        born 1960       1986          120
+  -26   people/david-perry                           born 1967       1993          217
+  -26   people/ian-bell                              born 1962       1988          53
+  -26   people/john-carmack                          born 1970       1996          613
+  -26   people/john-tobias                           born 1969       1995          41
+  -26   people/jon-hare                              born 1966       1992          297
+  -26   people/ron-gilbert                           born 1964       1990          265
+  +25   demos/starstruck                             released 2006   1981          63
+  -25   people/andrew-braybrook                      born 1960       1985          541
+  -25   people/andy-davidson                         born 1970       1995          80
+  -25   people/chris-metzen                          born 1973       1998          14
+  -25   people/dave-jones                            born 1965       1990          172
+  -25   people/manfred-trenz                         born 1965       1990          89
+  -25   people/matt-furniss                          born 1966       1991          29
+  -25   people/scott-miller                          born 1962       1987          89
+  -25   people/yuzo-koshiro                          born 1967       1992          69
+  -24   culture/arcade-culture                       emerged 1978    2002          13
+  +24   games/rock-band                              released 2007   1983          375
+  -24   genres/single-screen-platformer              emerged 1980    2004          10
+  -24   genres/western-rpg                           emerged 1974    1998          20
+  -24   people/brian-fargo                           born 1963       1987          142
+  -24   people/david-braben                          born 1964       1988          651
+  -24   people/eric-chahi                            born 1967       1991          101
+  -24   people/eric-schwartz                         born 1967       1991          558
+  -24   people/richard-bartle                        born 1960       1984          68
+  +23   games/supreme-commander                      released 2007   1984          77
+  -23   people/henk-nieborg                          born 1968       1991          10
+  -23   people/julian-gollop                         born 1965       1988          127
+  -23   people/sandy-white                           born 1961       1984          153
+  -23   people/tobias-richter                        born 1968       1991          320
+  -23   people/yoshio-sakamoto                       born 1982       2005          14
+  +22   companies/red-barrels                        founded 2011    1989          17
+  -22   culture/regional-differences                 emerged 1983    2005          41
+  -22   distribution/digital-distribution            emerged 1983    2005          141
+  +22   events/datastorm                             emerged 2011    1989          481
+  -22   people/chris-huelsbeck                       born 1968       1990          113
+  -22   people/jeff-minter                           born 1962       1984          1581
+  -22   people/jez-san                               born 1966       1988          450
+  -22   people/tim-sweeney                           born 1970       1992          59
+  -22   people/tokuro-fujiwara                       born 1983       2005          21
+  -21   games/pac-man-atari-2600                     released 1982   2003          38
+  -21   genres/portable-gaming                       emerged 1980    2001          168
+  -21   people/chris-roberts                         born 1968       1989          450
+  -21   people/jonathan-dunn                         born 1967       1988          61
+  -21   people/julian-rignall                        born 1964       1985          615
+  -21   people/nicola-salmoria                       born 1970       1991          70
+  -21   people/raffaele-cecco                        born 1967       1988          104
+  -21   techniques/game-loop                         originated 1962 1983          26
+  +20   games/football-manager                       released 2004   1984          3045
+  -20   people/ben-daglish                           born 1966       1986          134
+  -20   people/martin-galway                         born 1966       1986          244
+  +19   games/black-and-white                        released 2001   1982          2665
+  -19   people/david-wise                            born 1967       1986          9
+  -19   people/tim-follin                            born 1968       1987          97
+  -18   companies/marshall-cavendish                 founded 1968    1986          213
+  -18   culture/region-locking                       emerged 1985    2003          8
+  -18   people/darling-brothers                      born 1966       1984          35
+  -18   people/matthew-smith                         born 1966       1984          357
+  -18   techniques/hard-restart                      originated 1985 2003          15
+  -17   companies/hudson-soft                        founded 1973    1990          728
+  -17   companies/interplay                          founded 1983    2000          53
+  -17   people/graeme-devine                         born 1966       1983          39
+  -17   people/jeroen-tel                            born 1972       1989          53
+  -17   people/jesper-kyd                            born 1972       1989          14
+  -17   techniques/tile-maps                         originated 1980 1997          11
+  -16   communities/fan-translations                 emerged 1990    2006          11
+  -16   companies/broderbund                         founded 1980    1996          6
+  +16   demos/deus-ex-machina                        released 2000   1984          250
+  -15   culture/cheat-codes                          emerged 1980    1995          687
+  -15   culture/pc-gaming                            emerged 1981    1996          1122
+  -15   people/david-simons                          born 1967       1982          26
+  -15   people/keiji-inafune                         born 1987       2002          46
+  -15   techniques/double-buffering                  originated 1970 1985          703
+  -14   communities/speedrunning                     emerged 1993    2007          20
+  -14   genres/tactical-rpg                          emerged 1988    2002          53
+  -14   hardware/flight-stick                        introduced 1977 1991          413
+  -14   people/masahiro-sakurai                      born 1989       2003          20
+  -14   techniques/raster-effects                    originated 1977 1991          23
+  -14   tools/id-tech                                released 1993   2007          26
+  -13   companies/sega-am2                           founded 1983    1996          91
+  -13   culture/educational-gaming                   emerged 1971    1984          6
+  -13   games/oregon-trail                           released 1971   1984          50
+  +13   genres/music-games                           emerged 1996    1983          375
+  -13   hardware/arcade-hardware                     introduced 1971 1984          156
+  -13   people/martin-hollis                         born 1971       1984          38
+  -12   companies/naughty-dog                        founded 1984    1996          424
+  -12   culture/educational-software                 emerged 1970    1982          5730
+  -12   culture/import-gaming                        emerged 1985    1997          50
+  +12   demos/state-of-the-art                       released 1992   1980          9645
+  -12   genres/action-rpg                            emerged 1984    1996          878
+  -12   genres/platformer                            emerged 1981    1993          4572
+  -12   genres/racing-game                           emerged 1976    1988          5086
+  -12   genres/rail-shooters                         emerged 1984    1996          8
+  -12   people/mark-cerny                            born 1984       1996          74
+  -12   people/yuji-naka                             born 1984       1996          304
+  -11   companies/data-east                          founded 1976    1987          2307
+  -11   culture/arcade-to-console                    emerged 1978    1989          12
+  -11   culture/game-jams                            emerged 2002    2013          49
+  +11   culture/game-ratings                         emerged 1994    1983          288
+  +11   games/dark-souls                             released 2011   2000          298
+  +11   games/full-throttle                          released 1995   1984          1154
+  -11   genres/tycoon-games                          emerged 1990    2001          19
+  -10   companies/designers-republic                 founded 1986    1996          41
+  -10   companies/eutechnyx                          founded 1987    1997          94
+  +10   companies/intelligent-systems                founded 1986    1976          191
+  -10   companies/lucasarts                          founded 1982    1992          5317
+  -10   culture/magazine-covers                      emerged 1980    1990          155
+  +10   demos/hardwired                              released 1991   1981          478
+  -10   games/bomberman                              released 1983   1993          2538
+  -10   genres/immersive-sim                         emerged 1992    2002          13
+  -10   genres/sports-games                          emerged 1972    1982          2185
+  +10   groups/andromeda                             founded 1991    1981          1840
+  -10   phenomena/golden-age-arcade                  emerged 1978    1988          15
+  -9    communities/bbs-scene                        emerged 1978    1987          20
+  -9    communities/demo-scene                       emerged 1983    1992          245
+  -9    companies/nanaon-sha                         founded 1993    2002          22
+  -9    distribution/magazine-cover-disks            emerged 1985    1994          21
+  -9    genres/console-rpg                           emerged 1986    1995          71
+  +9    genres/simulation-games                      emerged 1989    1980          487
+  -9    magazines/computer-gaming-world              founded 1981    1990          39068
+  -8    communities/cracking-scene                   emerged 1982    1990          7
+  -8    communities/lan-parties                      emerged 1993    2001          73
+  -8    companies/3d-realms                          founded 1987    1995          596
+  -8    companies/camelot-software                   founded 1990    1998          9
+  -8    companies/empire-interactive                 founded 1987    1995          463
+  -8    companies/europress                          founded 1983    1991          1971
+  +8    companies/game-freak                         founded 1989    1981          185
+  -8    companies/looking-glass                      founded 1990    1998          71
+  -8    companies/seibu-kaihatsu                     founded 1982    1990          23
+  -8    companies/williams-electronics               founded 1974    1982          145
+  +8    demos/wonderland                             released 1991   1983          2550
+  +8    events/the-party                             emerged 1991    1983          2845
+  -8    games/colossal-cave-adventure                released 1976   1984          160
+  -8    genres/flight-sim                            emerged 1980    1988          4727
+  -8    genres/text-adventure                        emerged 1975    1983          2886
+  +8    groups/phenomena                             founded 1989    1981          1165
+  -8    hardware/paddle-controller                   introduced 1972 1980          212
+  -8    hardware/steering-wheel                      introduced 1976 1984          27
+  -8    magazines/576-kbyte                          founded 1990    1998          862
+  -8    magazines/australian-personal-computer       founded 1980    1988          5489
+  -8    people/derek-yu                              born 2004       2012          25
+  -8    systems/zx-spectrum-next                     introduced 2017 2025          60
+  -8    techniques/collision-detection               originated 1975 1983          1917
+  -8    techniques/sound-drivers                     originated 1980 1988          73
+  -7    communities/demo-parties                     emerged 1987    1994          13
+  -7    companies/eidos                              founded 1990    1997          990
+  -7    companies/falcom                             founded 1981    1988          17
+  -7    companies/frictional-games                   founded 2006    2013          30
+  -7    companies/mos-technology                     founded 1969    1976          629
+  -7    companies/technos                            founded 1981    1988          62
+  -7    companies/valve                              founded 1996    2003          16
+  -7    companies/westwood-studios                   founded 1985    1992          605
+  -7    distribution/type-in-listings                emerged 1978    1985          181
+  -7    games/excitebike                             released 1984   1991          301
+  -7    games/grannys-garden                         released 1983   1990          73
+  -7    games/thunder-force                          released 1983   1990          407
+  -7    genres/rts-genre                             emerged 1992    1999          119
+  -7    genres/walking-simulator                     emerged 2012    2019          15
+  +7    groups/booze-design                          founded 2000    1993          7
+  -7    hardware/raspberry-pi                        introduced 2012 2019          193
+  -7    techniques/parallax-scrolling                originated 1982 1989          1017
+  -7    tools/rpg-maker                              released 1992   1999          29
+  -6    companies/argonaut                           founded 1982    1988          277
+  -6    companies/clickteam                          founded 1993    1999          18
+  -6    companies/climax-entertainment               founded 1990    1996          8
+  -6    companies/io-interactive                     founded 1998    2004          76
+  -6    companies/melbourne-house                    founded 1977    1983          3719
+  -6    companies/microsoft                          founded 1975    1981          49538
+  -6    companies/millennium-interactive             founded 1987    1993          51
+  -6    companies/sonic-team                         founded 1990    1996          706
+  -6    companies/team-ninja                         founded 1995    2001          170
+  -6    companies/technosoft                         founded 1980    1986          155
+  -6    culture/arcade-conversion                    emerged 1980    1986          794
+  -6    culture/indie-games                          emerged 2004    2010          268
+  -6    culture/lucasarts-adventures                 emerged 1987    1993          68
+  -6    culture/strategy-guides                      emerged 1985    1991          220
+  -6    culture/type-in-programs                     emerged 1977    1983          481
+  -6    culture/user-groups                          emerged 1975    1981          3865
+  -6    games/fire-emblem                            released 1990   1996          182
+  -6    games/madden                                 released 1988   1994          841
+  -6    genres/fps                                   emerged 1992    1998          1311
+  -6    genres/horror-games                          emerged 1982    1988          140
+  -6    genres/management-game                       emerged 1982    1988          1176
+  -6    genres/shoot-em-up                           emerged 1978    1984          16870
+  -6    groups/future-crew                           founded 1988    1994          23
+  -6    groups/razor-1911                            founded 1985    1991          61
+  +6    groups/skid-row                              founded 1990    1984          84
+  -6    people/tetsuya-takahashi                     born 1995       2001          8
+  -6    systems/atari-2600                           introduced 1977 1983          3999
+  -6    techniques/hardware-scroll                   originated 1977 1983          248
+  -6    techniques/raster-interrupts                 originated 1977 1983          157
+  -5    companies/apogee-software                    founded 1987    1992          129
+  -5    companies/beam-software                      founded 1980    1985          152
+  -5    companies/criterion                          founded 1996    2001          63
+  -5    companies/future-publishing                  founded 1985    1990          4851
+  -5    companies/neversoft                          founded 1994    1999          260
+  -5    companies/rainbow-arts                       founded 1984    1989          1602
+  -5    companies/tiger-electronics                  founded 1978    1983          57
+  -5    culture/boing-ball                           emerged 1984    1989          186
+  -5    culture/konami-code                          emerged 1986    1991          26
+  -5    demos/crystal-dream                          released 1992   1997          12
+  -5    distribution/abandonware                     emerged 1997    2002          36
+  -5    games/adventure-island                       released 1986   1991          641
+  -5    games/mario-bros                             released 1983   1988          3569
+  -5    games/shovel-knight                          released 2014   2019          42
+  -5    games/street-fighter                         released 1987   1992          8887
+  -5    genres/beat-em-up                            emerged 1984    1989          6285
+  -5    hardware/ay-3-8912                           introduced 1978 1983          187
+  -5    hardware/nes-zapper                          introduced 1984 1989          29
+  -5    hardware/trackball                           introduced 1978 1983          4780
+  -5    people/richard-garriott                      born 1979       1984          439
+  -5    systems/nes                                  introduced 1983 1988          777
+  -5    systems/sega-master-system                   introduced 1985 1990          1436
+  -5    techniques/sprite-multiplexing               originated 1980 1985          8
+  +5    techniques/tech-tech                         originated 1991 1986          48
+  -4    communities/total-conversions                emerged 1994    1998          47
+  -4    companies/acclaim                            founded 1987    1991          424
+  -4    companies/acorn-computers                    founded 1978    1982          786
+  -4    companies/activision                         founded 1979    1983          18276
+  -4    companies/audiogenic                         founded 1979    1983          1943
+  -4    companies/bethesda-game-studios              founded 2001    2005          17
+  -4    companies/crl-group                          founded 1980    1984          38
+  -4    companies/devolver-digital                   founded 2009    2013          31
+  -4    companies/ea-sports                          founded 1991    1995          2320
+  -4    companies/ensemble-studios                   founded 1995    1999          213
+  -4    companies/epic-games                         founded 1991    1995          290
+  -4    companies/graftgold                          founded 1984    1988          577
+  -4    companies/hewson-consultants                 founded 1980    1984          594
+  -4    companies/infogrames                         founded 1983    1987          5252
+  -4    companies/insomniac                          founded 1994    1998          46
+  -4    companies/microprose                         founded 1982    1986          16319
+  -4    companies/psygnosis                          founded 1984    1988          9242
+  -4    companies/quicksilva                         founded 1979    1983          1835
+  -4    companies/remedy-entertainment               founded 1995    1999          40
+  +4    companies/revolution-software                founded 1990    1986          233
+  -4    companies/sensible-software                  founded 1986    1990          1148
+  -4    companies/sierra                             founded 1979    1983          3872
+  -4    companies/sports-interactive                 founded 1994    1998          220
+  -4    companies/system-3                           founded 1982    1986          3588
+  -4    culture/hint-lines                           emerged 1985    1989          87
+  -4    culture/tracker-music                        emerged 1987    1991          53
+  +4    distribution/episodic-gaming                 emerged 2005    2001          14
+  -4    games/balloon-fight                          released 1984   1988          100
+  -4    games/castlevania                            released 1986   1990          3242
+  -4    games/final-fantasy                          released 1987   1991          5570
+  -4    games/life-is-strange                        released 2015   2019          28
+  -4    games/pillars-of-eternity                    released 2015   2019          6
+  -4    games/pokemon-red-blue                       released 1996   2000          36
+  -4    games/super-mario-bros                       released 1985   1989          2435
+  +4    games/theme-park                             released 1994   1990          3789
+  -4    genres/arcade-game                           emerged 1978    1982          15038
+  -4    genres/console-fps                           emerged 1997    2001          45
+  -4    groups/red-sector-inc                        founded 1987    1991          28
+  -4    magazines/creative-computing                 founded 1974    1978          4226
+  -4    phenomena/console-wars                       emerged 1989    1993          40
+  -4    phenomena/nintendo-seal                      emerged 1985    1989          31
+  -3    companies/acornsoft                          founded 1980    1983          2222
+  -3    companies/anco                               founded 1983    1986          386
+  -3    companies/bitmap-brothers                    founded 1987    1990          609
+  -3    companies/black-isle-studios                 founded 1996    1999          116
+  -3    companies/blizzard                           founded 1991    1994          238
+  -3    companies/bluesky-software                   founded 1988    1991          22
+  -3    companies/cinemaware                         founded 1985    1988          3083
+  -3    companies/codemasters                        founded 1986    1989          4115
+  -3    companies/creatures-inc                      founded 1995    1998          13
+  -3    companies/dma-design                         founded 1987    1990          578
+  -3    companies/electronic-arts                    founded 1982    1985          21122
+  +3    companies/factor-5                           founded 1987    1984          424
+  -3    companies/hello-games                        founded 2008    2011          76
+  -3    companies/id-software                        founded 1991    1994          2094
+  -3    companies/irrational-games                   founded 1997    2000          147
+  -3    companies/krisalis                           founded 1987    1990          107
+  -3    companies/magnetic-scrolls                   founded 1984    1987          1185
+  -3    companies/mikro-gen                          founded 1981    1984          686
+  -3    companies/silmarils                          founded 1987    1990          486
+  -3    companies/sony                               founded 1993    1996          1545
+  -3    companies/starbreeze                         founded 1998    2001          28
+  -3    companies/the-learning-company               founded 1980    1983          378
+  -3    culture/disk-magazines                       emerged 1986    1989          349
+  -3    culture/licensed-games                       emerged 1980    1983          316
+  -3    culture/spectrum-clones                      emerged 1985    1988          15
+  +3    culture/the-juggler                          emerged 1986    1983          238
+  -3    distribution/public-domain                   emerged 1980    1983          3328
+  -3    events/the-gathering                         emerged 1992    1995          1000
+  -3    games/alex-kidd                              released 1986   1989          653
+  -3    games/amnesia                                released 2010   2013          6
+  -3    games/battlezone                             released 1980   1983          1931
+  +3    games/dragon-quest                           released 1986   1983          638
+  -3    games/duck-hunt                              released 1984   1987          339
+  -3    games/fantasy-zone                           released 1986   1989          612
+  -3    games/mega-man-2                             released 1988   1991          214
+  -3    games/ninja-gaiden                           released 1988   1991          1102
+  -3    games/phantasy-star                          released 1987   1990          1359
+  -3    games/rainbow-islands                        released 1987   1990          2601
+  +3    games/salamander                             released 1986   1983          1518
+  -3    games/shin-megami-tensei                     released 1992   1995          79
+  -3    games/space-invaders                         released 1978   1981          6387
+  -3    genres/survival-horror                       emerged 1996    1999          716
+  -3    groups/melon-dezign                          founded 1990    1993          15
+  -3    hardware/action-replay                       introduced 1985 1988          4266
+  -3    hardware/dance-mat                           introduced 1998 2001          45
+  -3    hardware/dualshock                           introduced 1997 2000          216
+  -3    magazines/c-hacking                          founded 1992    1995          22
+  -3    people/raphael-colantonio                    born 1999       2002          17
+  -3    people/tommy-tallarico                       born 1991       1994          40
+  -3    systems/apple-ii                             introduced 1977 1980          21502
+  -3    tools/soundtracker                           released 1987   1990          1655
+  -2    companies/acid-software                      founded 1991    1993          323
+  -2    companies/addictive-games                    founded 1982    1984          750
+  +2    companies/americana                          founded 1985    1983          4002
+  -2    companies/arkane-studios                     founded 1999    2001          40
+  +2    companies/atari-games                        founded 1984    1982          1875
+  -2    companies/cavedog-entertainment              founded 1995    1997          46
+  -2    companies/core-design                        founded 1988    1990          2242
+  -2    companies/design-design                      founded 1983    1985          580
+  -2    companies/futuremark                         founded 1997    1999          70
+  -2    companies/hal-laboratory                     founded 1980    1982          103
+  -2    companies/level-9                            founded 1981    1983          3125
+  -2    companies/mastertronic                       founded 1983    1985          5071
+  -2    companies/mindscape                          founded 1983    1985          9292
+  -2    companies/mirrorsoft                         founded 1983    1985          3878
+  -2    companies/monolith-soft                      founded 1999    2001          22
+  -2    companies/newsfield                          founded 1983    1985          52
+  -2    companies/probe-software                     founded 1984    1986          242
+  -2    companies/q-entertainment                    founded 2003    2005          69
+  -2    companies/realtime-games                     founded 1984    1986          15
+  -2    companies/rockstar-north                     founded 2001    2003          141
+  -2    companies/sinclair-research                  founded 1979    1981          1434
+  -2    companies/supergiant-games                   founded 2009    2011          56
+  -2    companies/team-andromeda                     founded 1994    1996          84
+  +2    companies/the-edge                           founded 1984    1982          11159
+  -2    companies/troika-games                       founded 1998    2000          41
+  -2    companies/ultimate                           founded 1982    1984          377
+  +2    companies/united-game-artists                founded 1998    1996          40
+  -2    companies/vulcan-software                    founded 1993    1995          284
+  -2    companies/zenobi-software                    founded 1987    1989          119
+  -2    culture/magazine-distribution                emerged 1980    1982          76
+  -2    distribution/budget-games                    emerged 1984    1986          1029
+  -2    distribution/licenseware                     emerged 1989    1991          654
+  -2    events/twin-galaxies                         emerged 1981    1983          128
+  -2    games/asteroids                              released 1979   1981          6382
+  -2    games/beatmania                              released 1997   1999          130
+  -2    games/bomb-jack                              released 1984   1986          1156
+  -2    games/bonk                                   released 1989   1991          80
+  -2    games/breath-of-the-wild                     released 2017   2019          7
+  -2    games/bubble-bobble                          released 1986   1988          3632
+  -2    games/chase-hq                               released 1988   1990          496
+  -2    games/donkey-kong                            released 1981   1983          7169
+  -2    games/double-dragon                          released 1987   1989          6031
+  -2    games/final-fight                            released 1989   1991          2915
+  -2    games/football-manager-1982                  released 1982   1984          3045
+  -2    games/garou-mark-of-the-wolves               released 1999   2001          28
+  -2    games/geometry-wars                          released 2003   2005          124
+  -2    games/ghouls-n-ghosts                        released 1988   1990          1566
+  -2    games/golden-axe                             released 1989   1991          3058
+  -2    games/hollow-knight                          released 2017   2019          23
+  -2    games/ice-climber                            released 1985   1987          72
+  -2    games/kid-icarus                             released 1986   1988          319
+  -2    games/kings-quest                            released 1984   1986          4090
+  -2    games/kung-fu-master                         released 1984   1986          1082
+  -2    games/legend-of-zelda                        released 1986   1988          1419
+  -2    games/marble-madness                         released 1984   1986          2708
+  -2    games/mega-man                               released 1987   1989          2241
+  -2    games/micro-machines                         released 1991   1993          1729
+  -2    games/missile-command                        released 1980   1982          2440
+  +2    games/neverwinter-nights                     released 2002   2000          528
+  +2    games/no-mans-sky                            released 2016   2014          52
+  -2    games/out-run                                released 1986   1988          2967
+  -2    games/prince-of-persia                       released 1989   1991          3526
+  -2    games/puyo-puyo                              released 1991   1993          481
+  -2    games/rockys-boots                           released 1982   1984          262
+  -2    games/rolling-thunder                        released 1986   1988          996
+  -2    games/space-harrier                          released 1985   1987          2991
+  -2    games/speedball-2                            released 1990   1992          94
+  -2    games/splatterhouse                          released 1988   1990          268
+  -2    games/spy-hunter                             released 1983   1985          1229
+  -2    games/star-raiders                           released 1979   1981          2332
+  -2    games/sunset-riders                          released 1991   1993          205
+  +2    games/super-c                                released 1988   1986          631
+  -2    games/super-mario-bros-3                     released 1988   1990          607
+  -2    games/time-crisis                            released 1995   1997          680
+  -2    games/virtua-fighter                         released 1993   1995          3444
+  -2    games/wrecking-crew                          released 1985   1987          97
+  -2    genres/god-games                             emerged 1989    1991          243
+  -2    genres/maze-game                             emerged 1980    1982          1916
+  -2    groups/spaceballs                            founded 1991    1993          187
+  -2    groups/the-silents                           founded 1989    1991          59
+  -2    hardware/game-genie                          introduced 1990 1992          395
+  +2    hardware/power-pad                           introduced 1986 1984          191
+  -2    magazines/atari-st-user                      founded 1986    1988          4656
+  -2    magazines/commodore-computer-club            founded 1982    1984          8567
+  -2    magazines/mc-microcomputer                   founded 1981    1983          60973
+  -2    magazines/page-6                             founded 1981    1983          5593
+  -2    magazines/st-magazine                        founded 1985    1987          7963
+  -2    people/chris-crawford                        born 1979       1981          601
+  -2    phenomena/bbc-computer-literacy-project      emerged 1980    1982          17
+  -2    phenomena/pokemon-phenomenon                 emerged 1996    1998          22
+  -2    systems/game-and-watch                       introduced 1980 1982          680
+  -2    systems/super-nintendo                       introduced 1990 1992          183
+  -2    systems/vic-20                               introduced 1980 1982          1830
+  -2    tools/sculpt-3d                              released 1986   1988          845
+
+  + the entry dates it later than the press was covering it.
+  - the entry dates it earlier than the press noticed, which is usually
+    a non-British or post-corpus subject rather than an error.
+  Onset is an estimate from coverage shape. Read before believing.
+
+exit 0
+=== find-vault-duplicates
+
+Vault duplicates: 1478 entries, 99 pairs at cosine ≥ 0.45.
+
+  0.684  companies/edizioni-hobby               magazines/the-games-machine-italy     
+  0.659  companies/apogee-software              people/scott-miller                   
+  0.651  companies/acid-software                people/mark-sibly                     
+  0.643  companies/marshall-cavendish           magazines/input-magazine              
+  0.634  companies/bemani                       games/beatmania                         ⚠ SAME LIFESPAN
+  0.632  companies/newtek                       people/tim-jenison                    
+  0.623  magazines/illegal                      people/jeff-smart                     
+  0.623  games/leisure-suit-larry               people/al-lowe                        
+  0.610  culture/the-juggler                    people/eric-graham                    
+  0.603  companies/acid-software                games/skidmarks                       
+  0.602  groups/rgba                            people/iq                             
+  0.599  people/david-simons                    tools/simons-basic                    
+  0.598  companies/future-publishing            magazines/pc-player                   
+  0.574  games/colossal-cave-adventure          people/will-crowther                  
+  0.573  techniques/agsp                        techniques/vsp                        
+  0.569  companies/enix                         games/dragon-quest                    
+  0.569  hardware/light-gun                     hardware/nes-zapper                   
+  0.568  companies/europress                    companies/idg                         
+  0.567  people/mark-sibly                      tools/blitz-basic-2                   
+  0.562  companies/nanaon-sha                   people/masaya-matsuura                
+  0.561  companies/incentive-software           people/ian-andrew                     
+  0.560  games/spellbound                       people/david-jones-magic-knight       
+  0.558  demos/wonderland                       groups/censor-design                  
+  0.553  companies/sports-interactive           games/football-manager                
+  0.552  companies/zeppelin-games               people/derek-brewster                 
+  0.552  hardware/d-pad                         systems/game-and-watch                
+  0.550  companies/arkane-studios               people/raphael-colantonio               ⚠ SAME LIFESPAN
+  0.549  companies/cyan                         games/myst                            
+  0.548  demos/lyra-ii                          groups/esi                            
+  0.543  companies/q-entertainment              people/tetsuya-mizuguchi              
+  0.543  companies/europress                    magazines/amiga-computing             
+  0.535  demos/shock-megademo                   groups/esi                            
+  0.530  techniques/attribute-aware-design      techniques/colour-clash               
+  0.530  companies/anco                         people/dino-dini                      
+  0.528  genres/mmorpg-history                  genres/mud-history                    
+  0.528  hardware/video-toaster                 people/tim-jenison                    
+  0.527  companies/team-andromeda               games/panzer-dragoon                  
+  0.525  companies/black-isle-studios           companies/interplay                   
+  0.523  companies/irrational-games             people/ken-levine                     
+  0.522  demos/nexus-7                          groups/andromeda                      
+  0.521  companies/3d-realms                    companies/apogee-software               ⚠ SAME LIFESPAN
+  0.520  companies/xenia-edizioni               magazines/the-games-machine-italy     
+  0.518  companies/looking-glass                genres/immersive-sim                  
+  0.515  groups/crionics                        groups/the-silents                      ⚠ SAME LIFESPAN
+  0.514  companies/system-3                     games/international-karate            
+  0.513  companies/dma-design                   companies/rockstar-north              
+  0.512  companies/williams-electronics         people/eugene-jarvis                  
+  0.512  companies/revolution-software          people/charles-cecil                  
+  0.505  companies/fromsoft                     games/demons-souls                    
+  0.505  demos/crystal-dream                    groups/triton                         
+  0.504  culture/amiga-animation-culture        people/eric-schwartz                  
+  0.502  companies/idg                          magazines/amiga-computing             
+  0.502  emulators/vice-emulator                emulators/vice                        
+  0.501  companies/acid-software                tools/blitz-basic-2                   
+  0.498  companies/edizioni-hobby               companies/xenia-edizioni              
+  0.498  companies/cavedog-entertainment        games/total-annihilation              
+  0.496  games/head-over-heels                  people/jon-ritman                     
+  0.495  companies/westwood-studios             people/louis-castle                   
+  0.494  demos/mental-hangover                  groups/scoopex                        
+  0.494  people/greg-follis                     people/roy-carter                     
+  0.493  people/alexey-pajitnov                 phenomena/tetris-legal-battles        
+  0.493  communities/ludum-dare                 culture/game-jams                     
+  0.493  emulators/mame                         people/nicola-salmoria                
+  0.492  people/seymour-papert                  tools/logo-language                   
+  0.491  people/dan-silva                       tools/deluxe-paint                    
+  0.489  games/ghouls-n-ghosts                  games/super-ghouls-n-ghosts           
+  0.488  people/eric-graham                     tools/sculpt-3d                       
+  0.487  people/jonathan-cauldwell              tools/arcade-game-designer            
+  0.487  games/life-force                       games/salamander                        ⚠ SAME LIFESPAN
+  0.486  games/et-the-extra-terrestrial         people/howard-scott-warshaw           
+  0.485  companies/dma-design                   people/dave-jones                     
+  0.483  companies/united-game-artists          people/tetsuya-mizuguchi              
+  0.481  companies/frictional-games             games/amnesia                         
+  0.480  tools/amos                             tools/stos                            
+  0.478  groups/triton                          people/vogue                          
+  0.477  companies/id-software                  people/john-carmack                   
+  0.477  companies/dismac                       magazines/micro-sistemas              
+  0.477  companies/clickteam                    people/francois-lionet                
+  0.473  companies/tectoy                       culture/brazil-gaming                 
+  0.472  companies/gce                          companies/milton-bradley              
+  0.471  events/chaos-constructions             groups/esi                            
+  0.471  companies/monolith-soft                people/tetsuya-takahashi              
+  0.469  games/tetris                           people/alexey-pajitnov                
+  0.465  culture/universal-vs-nintendo          people/john-kirby                     
+  0.465  companies/vortex-software              people/costa-panayi                   
+  0.463  companies/europress                    magazines/micro-user                  
+  0.463  games/laser-squad                      people/julian-gollop                  
+  0.461  games/lords-of-midnight                people/mike-singleton                 
+  0.460  techniques/disk-fastloaders            techniques/fast-loader                
+  0.460  companies/magnetic-scrolls             people/anita-sinclair                 
+  0.460  companies/interplay                    people/brian-fargo                    
+  0.460  games/rayman                           people/michel-ancel                   
+  0.460  companies/newtek                       hardware/video-toaster                
+  0.457  companies/mecc                         games/oregon-trail                    
+  0.456  people/kb                              people/ryg                            
+  0.453  games/kirby                            people/masahiro-sakurai               
+  0.451  companies/sonic-team                   people/yuji-naka                      
+  0.451  companies/hello-games                  games/no-mans-sky                     
+  0.450  people/voja-antonovic                  systems/galaksija                     
+
+  A high score means "about the same things", which a person and their
+  company also are. Pairs marked SAME LIFESPAN agree on identity as well as
+  subject, and are the ones worth opening first.
+
+exit 0
+=== check-frontmatter-quoting
+Frontmatter quoting: clean.
+exit 0
