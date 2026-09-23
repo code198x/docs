@@ -9,12 +9,26 @@ Original prose is licensed under **CC BY 4.0**. See [LICENSE.md](LICENSE.md) for
 | Guide | Responsibility |
 |---|---|
 | [Curriculum design](specifications/curriculum.md) | Shared subjects, progression, independent entry and checks for understanding |
+| [Recurring progressions](specifications/recurring-progressions.md) | Eight connected learning threads, existing-game placements, gaps and implementation priorities |
+| [Data, memory and tools](specifications/experiments/data-memory-tools.md) | Asset representations, small converters, validation, storage and runtime costs |
 | [Game brief](specifications/brief.md) | The experience, target, teaching, runnable stages and verification of one game |
 | [Unit](specifications/unit.md) | Guided construction, local explanations, questions and publishing checks |
 | [Content workflow](specifications/content-creation-workflow.md) | Research, agreement, prototyping, authoring and verification |
 | [Writing voice](specifications/writing-voice.md) | Clear British English, audience and responsible historical treatment |
 | [Pseudocode](specifications/pseudocode.md) | Shared explanatory notation |
 | [Graphics and audio](specifications/graphics-and-audio.md) | Creating, preparing and integrating assets |
+| [Audio progression](specifications/experiments/audio-progression.md) | Listening, arrangement and playback milestones placed in the four core system routes |
+| [Timing and interrupts](specifications/experiments/timing-and-interrupts.md) | Clock distinctions, hardware contracts, lesson repairs and controlled timing experiments |
+| [Scheduling, ownership and headroom](specifications/experiments/scheduling-ownership-headroom.md) | Sequential work, priorities, safe handoffs, bounded work and explicit overload policies |
+| [Synthesis and transfer](specifications/experiments/synthesis-and-transfer.md) | Whole-action traces, graduated hints and independent variations at selected milestones |
+| [Finishing and delivering](specifications/experiments/finishing-and-delivering.md) | Completion criteria, reproducible packages, handover notes and proportionate release evidence |
+| [Working with existing code](specifications/experiments/working-with-existing-code.md) | Rebuild a baseline, trace behaviour, make bounded changes and verify refactors through project revisits |
+| [Randomness and reproducibility](specifications/experiments/randomness-and-reproducibility.md) | Seeds, range bias, constrained choices, deterministic scenarios and bounded replay prerequisites |
+| [State, lifecycle and recovery](specifications/experiments/state-lifecycle-and-recovery.md) | State lifetimes, transition responsibilities, repeated restart and proportionate failure recovery |
+| [Abstraction and portability](specifications/experiments/abstraction-and-portability.md) | Routine contracts, bounded ports and machine-specific trade-offs, including a failed-abstraction exercise |
+| [Timing and player feedback](specifications/experiments/timing-and-player-feedback.md) | Input, simulation, presentation and audio timing connected through controlled feedback comparisons |
+| [Testing and diagnosis](specifications/experiments/testing-and-diagnosis.md) | Predictions, reproducible faults, boundaries, traces and evidence-led repairs through existing projects |
+| [Profiling progression](specifications/experiments/profiling-progression.md) | Game-led measurement practice, verified tool surfaces and separate guest/host investigations |
 | [Vault](specifications/vault.md) | Sourced encyclopaedic context |
 | [Pattern Library](specifications/pattern-library.md) | Adaptable implementations and their contracts |
 

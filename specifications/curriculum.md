@@ -65,16 +65,46 @@ Asset creation is taught, not merely supplied. [Graphics and audio](graphics-and
 
 ## Practices across the games
 
+The [recurring progression map](recurring-progressions.md) develops representation
+and tools; scheduling and ownership; memory and bandwidth; experimental method;
+simulation and responsiveness; perception and feedback; abstraction and portability;
+and headroom and graceful degradation through existing projects. It distinguishes
+existing coverage, explanation gaps, exercise gaps and topic gaps, with prerequisites
+and observable outcomes. These threads do not create new standalone modules. The
+[data, memory and tools progression](experiments/data-memory-tools.md) develops
+asset authoring, stored and runtime representations through small inspectable
+formats, converters and validators; compression follows a demonstrated constraint.
+
 Plan recurring opportunities for:
 
 - Debugging through reproduction, hypotheses, state inspection, tracing and reduced examples.
 - Testing boundaries, unusual input, regressions and game-rule correctness.
+- Profiling through observe → measure → explain → targeted change → measure again. Build from game-visible problems to period techniques, verified emulator tools and optional modern host profiling. Keep guest cycles separate from host cost; preserve correctness and state the trade-offs. The [profiling progression](experiments/profiling-progression.md) maps staged exercises to existing games.
+- Timing and measured budgets: distinguish display, simulation, musical updates and audio generation. Explain the work an update performs before using interrupts to schedule it; include handler overhead, latency and controlled deadline failures. The [focused timing plan](experiments/timing-and-interrupts.md) maps this into the existing system lessons.
 - Decomposition, data representation and managing growing programs.
 - Saving work, version control, source and asset organisation, reproducible builds and conversion.
 - Instructions, controls, readable information, pause behaviour and alternatives to colour-only or sound-only cues.
 - Scope, polish, credits, provenance, permissions, packaging, distribution and feedback.
 - Multiplayer, beginning with shared-screen play where suitable.
 - Narrative, dialogue, environmental storytelling and character expressed through behaviour.
+
+The [synthesis and transfer progression](experiments/synthesis-and-transfer.md) selects occasional project milestones for complete action traces, unfamiliar faults, independent variations and cross-game comparisons. Use the actual architecture, graduated hints and observable explanations; avoid a separate assessment layer on every lesson.
+
+The [finishing and delivering progression](experiments/finishing-and-delivering.md) grows from a saved toy and handover note to reproducible machine-specific packages. Separate required acceptance criteria from optional improvements, preserve matching source and output, and distinguish build, emulator, hardware and playtest evidence.
+
+The [working with existing code progression](experiments/working-with-existing-code.md) revisits earlier projects: establish a build/run baseline, explain the implementation, predict a bounded change and verify it. Distinguish behavioural changes from refactoring, including timing, memory and hardware contracts; use saved checkpoints and proportionate version control.
+
+The [randomness and reproducibility progression](experiments/randomness-and-reproducibility.md) connects random choices to distribution, constraints and game fairness. Repeatable diagnosis requires initial state, inputs, update order and random-call order as well as a seed; replay follows a demonstrated need.
+
+The [state, lifecycle and recovery progression](experiments/state-lifecycle-and-recovery.md) develops explicit initialisation, valid transitions, entry/exit work, pause/restart, interacting states and failure recovery. Name object, level, session and application lifetimes; repeated transition checks must establish which state resets and which survives.
+
+The [abstraction and portability progression](experiments/abstraction-and-portability.md) starts with direct implementations and introduces contracts when repetition, responsibility, another implementation or a testing boundary makes them useful. Compare shared rules with machine-specific capabilities, costs and completion semantics; useful duplication can be clearer than premature generalisation.
+
+The [timing and player feedback progression](experiments/timing-and-player-feedback.md) distinguishes display, input, simulation, animation, musical updates and sound generation through existing games. Compare what a player can understand as well as what the program computes; preserve visual alternatives to sound and colour, and introduce scheduling complexity only for a demonstrated need.
+
+The [testing and diagnosis progression](experiments/testing-and-diagnosis.md) develops expected versus actual behaviour, reliable reproduction, falsifiable hypotheses, predictions, controlled observations, interpretation and regression checks. Use isolated faults and meaningful boundary cases; successful output or agreement with an emulator is evidence, not complete proof.
+
+The [scheduling, ownership and headroom progression](experiments/scheduling-ownership-headroom.md) starts with sequential work, then develops resource ownership, priorities, safe handoffs, bounded work and deliberate overload policies. Preserve essential simulation and feedback; explain any degraded behaviour as a design choice.
 
 These are coverage responsibilities, not a checklist every game or machine must exhaust.
 

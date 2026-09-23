@@ -37,6 +37,19 @@ sequences in these modules. Give one a separate home only when developed
 material and reader navigation warrant it. These boundaries do not impose a
 single course order.
 
+## Sound and Music
+
+Audio is a progressive thread through the games as well as a shared Craft subject.
+The [audio and performance direction](graphics-and-audio.md#agreed-audio-and-performance-direction)
+owns its scope, teaching progression and source audit. Existing system lessons,
+patterns and Vault articles provide substantial starting material; they do not
+establish an authored Sound and Music sequence. Shared lessons develop musical
+understanding and creative judgement, while system lessons teach instruments,
+playback and measured hardware costs. MIDI and PC audio remain future coverage.
+The [system progression](experiments/audio-progression.md) maps the listening,
+arrangement and playback strands into existing games. Shared Sound and Music
+lessons can reuse its short original study without becoming prerequisites.
+
 ## Game AI
 
 The organising question is: **how does an entity perceive its situation and
@@ -63,6 +76,10 @@ mandatory prerequisites or a settled lesson sequence. No new behaviour is
 claimed to exist in those published games by naming it here.
 
 ## Boundaries and connections
+
+The [recurring progressions](recurring-progressions.md) connect these module
+responsibilities through existing games. Scheduling, memory, tooling and
+performance headroom are teaching threads, not additional module commitments.
 
 - Foundations explains general programming concepts and basic representations:
   lists, decomposition, tracing, and further queues, trees or other structures

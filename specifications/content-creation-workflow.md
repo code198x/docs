@@ -40,6 +40,8 @@ Check the whole game through its normal rules: start, representative play, succe
 
 Check instructions, controls, pause behaviour where appropriate, accessible feedback, packaging, credits, asset permissions and a way to report problems. Completeness is relative to agreed scope, not a commercial comparator.
 
+The [learner finishing progression](experiments/finishing-and-delivering.md) scales these responsibilities from small toys to larger games. Its handover exercises are distinct from author publication checks and do not authorise external distribution.
+
 ## 6. Publish and maintain
 
 Run relevant checks from the owning repositories. The website's package scripts and CI define its current build checks; sample Makefiles and capture/proof manifests define program verification. Fix failures or state concrete limitations rather than claiming a blanket pass.

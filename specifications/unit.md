@@ -29,6 +29,8 @@ Give the answer with its reasoning and, where helpful, explain a tempting wrong 
 
 Check worked answers against the stated pseudocode or target program, and verify claimed experimental results. An answer-reveal component does not execute the example or prove it correct. Questions can begin as ordinary prose with a clearly separated explanation; interactive scoring is not required.
 
+The [synthesis milestone plan](experiments/synthesis-and-transfer.md) identifies a small number of places to connect input, state, rules and presentation. Separate essential reasoning from optional extensions, offer hints before explanations, and require only prerequisites the exercise recalls or links. A working copied listing alone is not evidence of independent understanding.
+
 ### Presenting questions
 
 Use `Question.astro` for a visible thinking prompt with an optional explanation:
