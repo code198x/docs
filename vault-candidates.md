@@ -10,8 +10,8 @@ Paths are Vault entries (`category/slug`) in the website repository.
 
 | Candidate | Category | Why | Link from |
 |---|---|---|---|
-| Sinclair ZX80 | systems | The first of Sinclair's three computers; its keyword entry and syntax checking carried into the ZX81 and Spectrum. The systems collection has it; the Vault does not. **Queued for batch 2.** | `companies/sinclair-research`, `people/clive-sinclair`, `people/steven-vickers`, `systems/zx81`, `systems/zx-spectrum` |
-| Sinclair Microdrive | hardware | The Spectrum's and QL's tape-loop storage, central to the QL's troubles | `companies/sinclair-research`, `systems/sinclair-ql`, `systems/zx-spectrum` |
+| Sinclair ZX80 | systems | The first of Sinclair's three computers; its keyword entry and syntax checking carried into the ZX81 and Spectrum. The systems collection has it; the Vault does not. **Queued for batch 2.** | `companies/sinclair-research`, `people/clive-sinclair`, `people/steven-vickers`, `systems/sinclair-zx81`, `systems/sinclair-zx-spectrum` |
+| Sinclair Microdrive | hardware | The Spectrum's and QL's tape-loop storage, central to the QL's troubles | `companies/sinclair-research`, `systems/sinclair-ql`, `systems/sinclair-zx-spectrum` |
 | ZX Interface 2 | hardware | Sinclair's joystick and ROM-cartridge interface; Ultimate's early games came out on cartridge for it | `companies/sinclair-research`, `companies/ultimate` |
 | MK14 | systems | Science of Cambridge's kit micro, Sinclair's first computer product | `companies/sinclair-research`, `people/clive-sinclair` |
 | Grundy NewBrain | systems | Designed at Sinclair Radionics, sold on, and released two years later | `companies/sinclair-research` |
@@ -20,18 +20,18 @@ Paths are Vault entries (`category/slug`) in the website repository.
 
 | Candidate | Category | Why | Link from |
 |---|---|---|---|
-| Richard Altwasser | people | Designed the Spectrum's hardware and its ULA logic | `systems/zx-spectrum`, `hardware/ula`, `companies/sinclair-research`, `people/steven-vickers` |
-| John Grant | people | Co-wrote the Spectrum ROM with Steven Vickers, on contract from Nine Tiles | `people/steven-vickers`, `systems/zx-spectrum`, `systems/zx81` |
+| Richard Altwasser | people | Designed the Spectrum's hardware and its ULA logic | `systems/sinclair-zx-spectrum`, `hardware/ula`, `companies/sinclair-research`, `people/steven-vickers` |
+| John Grant | people | Co-wrote the Spectrum ROM with Steven Vickers, on contract from Nine Tiles | `people/steven-vickers`, `systems/sinclair-zx-spectrum`, `systems/sinclair-zx81` |
 | Chris Curry | people | Co-founded Science of Cambridge with Sinclair, then Acorn | `companies/sinclair-research`, `people/clive-sinclair`, `companies/acorn-computers` |
 
 ## Companies and organisations
 
 | Candidate | Category | Why | Link from |
 |---|---|---|---|
-| Nine Tiles | companies | The contractor that wrote Sinclair's BASIC ROMs | `people/steven-vickers`, `systems/zx81`, `systems/zx-spectrum` |
-| Amstrad | companies | Bought Sinclair's computer business in 1986 and made the +2 and +3; the Vault has the CPC but not the company | `companies/sinclair-research`, `systems/zx-spectrum`, `people/clive-sinclair`, `systems/amstrad-cpc` |
-| Timex | companies | Sinclair's US partner (Timex Sinclair) and one of its 1985 creditors | `companies/sinclair-research`, `systems/zx81`, `systems/zx-spectrum` |
-| Ferranti | companies | Made the uncommitted logic arrays in the ZX81 and Spectrum | `hardware/ula`, `systems/zx81` |
+| Nine Tiles | companies | The contractor that wrote Sinclair's BASIC ROMs | `people/steven-vickers`, `systems/sinclair-zx81`, `systems/sinclair-zx-spectrum` |
+| Amstrad | companies | Bought Sinclair's computer business in 1986 and made the +2 and +3; the Vault has the CPC but not the company | `companies/sinclair-research`, `systems/sinclair-zx-spectrum`, `people/clive-sinclair`, `systems/amstrad-cpc` |
+| Timex | companies | Sinclair's US partner (Timex Sinclair) and one of its 1985 creditors | `companies/sinclair-research`, `systems/sinclair-zx81`, `systems/sinclair-zx-spectrum` |
+| Ferranti | companies | Made the uncommitted logic arrays in the ZX81 and Spectrum | `hardware/ula`, `systems/sinclair-zx81` |
 | Sinclair Radionics | companies | Sinclair's earlier company; its collapse explains how Sinclair Research began | `companies/sinclair-research`, `people/clive-sinclair` |
 | Jupiter Cantab | companies | Founded by ex-Sinclair engineers to make the Jupiter Ace | `companies/sinclair-research`, `systems/jupiter-ace` |
 
@@ -40,7 +40,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Candidate | Category | Why | Link from |
 |---|---|---|---|
 | Personal Computer Games | magazines | A key 1983–85 source for Manic Miner, Matthew Smith and the Liverpool scene | `games/manic-miner`, `people/matthew-smith` |
-| Personal Computer News | magazines | Dated Manic Miner's release (August 1983 review) | `games/manic-miner`, `people/matthew-smith`, `systems/zx81` |
+| Personal Computer News | magazines | Dated Manic Miner's release (August 1983 review) | `games/manic-miner`, `people/matthew-smith`, `systems/sinclair-zx81` |
 
 ## Games
 
