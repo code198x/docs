@@ -22,20 +22,26 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Yamaha YM2149 | hardware | The AY-3-8910's licensed twin, used in the Atari ST and later Spectrums | `hardware/ay-3-8912`, `hardware/ay-3-8910` |
 | Intel 8080 | hardware | The processor the Z80 was built to run the software of | `hardware/z80` |
 | Oric | systems | Another British micro built round the AY chip | `hardware/ay-3-8912` |
-| Commodore 128 | systems | The C64's successor with a C64 mode | `systems/commodore-64` |
-| Commodore Max Machine (Ultimax) | systems | Shown beside the C64 at CES 1982 on the same chips | `systems/commodore-64` |
-| Commodore SX-64 | systems | The portable C64 | `systems/commodore-64` |
-| Famicom Disk System | hardware | Nintendo's Japanese disk add-on | `systems/nintendo-entertainment-system` |
+| Commodore 128 | systems | The C64's successor with a C64 mode | `systems/commodore-64`, `hardware/6510` |
+| Commodore Max Machine (Ultimax) | systems | Shown beside the C64 at CES 1982 on the same chips | `systems/commodore-64`, `hardware/6510` |
+| Commodore SX-64 | systems | The portable C64 | `systems/commodore-64`, `hardware/cia` |
+| Famicom Disk System | hardware | Nintendo's Japanese disk add-on | `systems/nintendo-entertainment-system`, `hardware/apu` |
 | 10NES lockout chip | hardware | How Nintendo controlled NES cartridge publishing | `systems/nintendo-entertainment-system` |
 | MMC5 | hardware | Nintendo's mapper with its own sound channels on the Famicom | `systems/nintendo-entertainment-system`, `hardware/mmc1` |
 | Amiga CD32 | systems | Commodore's last machine | `systems/commodore-amiga` |
-| HAM and Extra Half-Brite | techniques | The Amiga's two special display modes | `systems/commodore-amiga` |
+| HAM and Extra Half-Brite | techniques | The Amiga's two special display modes | `systems/commodore-amiga`, `hardware/denise`, `hardware/amiga-chipset` |
 | Microdigital TK90X and TK95 | systems | Brazilian Spectrum clones; the TK95 is the Next's starting point | `systems/zx-spectrum-next`, `systems/sinclair-zx-spectrum` |
 | Commodore PET | systems | Commodore's first computer, built on the 6502 | `people/jack-tramiel`, `companies/mos-technology` |
 | KIM-1 | systems | MOS Technology's 6502 development board | `companies/mos-technology` |
 | MOS 6560/6561 VIC | hardware | The VIC-20's video and sound chip, the VIC-II's predecessor | `people/al-charpentier`, `people/bob-yannes`, `hardware/vic-ii` |
 | TI-99/4A | systems | Texas Instruments' machine, driven out by the 1983 price war | `people/jack-tramiel` |
 | Tatung Einstein | systems | A British micro with the AY-3-8910 | `hardware/ay-3-8910` |
+| Fujitsu FM-7 | systems | Japanese micro with a 6809 and a Z80 | `hardware/6809` |
+| Motorola 6800 | hardware | The 6809's predecessor, whose code its designers studied | `hardware/6809` |
+| MC6883 SAM | hardware | The Dragon's and CoCo's memory and address chip | `hardware/6809`, `systems/tandy-coco`, `systems/dragon-32` |
+| Konami VRC6 and Famicom expansion audio | hardware | Extra sound channels through the Famicom's cartridge slot | `hardware/apu`, `systems/nintendo-entertainment-system` |
+| Commodore Datassette | hardware | The C64's tape deck, driven through the 6510's port | `hardware/6510` |
+| Commodore serial bus (IEC) | hardware | The disk-drive bus the CIA drives | `hardware/cia` |
 
 ## People
 
@@ -64,7 +70,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | R. J. Mical | people | Wrote Intuition and told the Amiga Corporation story | `systems/commodore-amiga` |
 | Carl Sassenrath | people | Designed the Amiga's multitasking Exec | `systems/commodore-amiga` |
 | Dave Morse and Dave Needle | people | Amiga Corporation's founder and a chipset designer | `systems/commodore-amiga` |
-| Karsten Obarski | people | Wrote Soundtracker | `systems/commodore-amiga`, `hardware/paula` |
+| Karsten Obarski | people | Wrote Soundtracker | `systems/commodore-amiga`, `hardware/paula`, `hardware/paula` |
 | Henrique Olifiers | people | Led the Spectrum Next project and its three Kickstarters | `systems/zx-spectrum-next` |
 | Victor Trucco and Fabio Belavenuto | people | Built the TBBlue board the Next grew from | `systems/zx-spectrum-next` |
 | Garry Lancaster | people | Wrote NextZXOS | `systems/zx-spectrum-next` |
@@ -73,6 +79,9 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Bill Mensch | people | 6502 co-designer | `companies/mos-technology` |
 | Doug Smith | people | Wrote Lode Runner | `games/lode-runner` |
 | Martin Walker | people | C64 programmer whose *ZZAP!64* diary covers multiplexers and SID bugs | `hardware/vic-ii`, `hardware/sid-chip` |
+| Terry Ritter and Joel Boney | people | Designed the 6809 and wrote *BYTE*'s 1979 series on it | `hardware/6809` |
+| Marko Mäkelä | people | Wrote the 1995 *C=Hacking* article on stable rasters | `techniques/stable-raster` |
+| Shaun Southern | people | Magnetic Fields programmer quoted on the AGA blitter | `hardware/agnus`, `hardware/blitter` |
 
 ## Companies and organisations
 
@@ -97,6 +106,8 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Metacomco | companies | Supplied AmigaDOS (from TRIPOS) and QL software | `systems/commodore-amiga`, `systems/sinclair-ql` |
 | Ensoniq | companies | Founded by Charpentier and Yannes after Commodore | `people/al-charpentier`, `people/bob-yannes`, `hardware/sid-chip` |
 | Texas Instruments | companies | Commodore's rival in the 1983 price war | `people/jack-tramiel` |
+| Southwest Technical Products | companies | Advertised one of the first 6809 cards, in 1979 | `hardware/6809` |
+| Maniacs of Noise | groups | Dutch game-music group named in the Paula entry | `hardware/paula` |
 
 ## Magazines
 
@@ -114,6 +125,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Amazing Computing | magazines | Long-running US Amiga magazine | `systems/commodore-amiga` |
 | Next Magazine | magazines | SpecNext's own magazine | `systems/zx-spectrum-next` |
 | Commodore Disk User | magazines | Cited on border sprites | `hardware/vic-ii` |
+| The Transactor | magazines | Canadian Commodore magazine cited on the CIA's clock | `hardware/cia` |
 
 ## Games
 
@@ -137,10 +149,13 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Gyromite | games | R.O.B.'s pack-in game | `systems/nintendo-entertainment-system`, `hardware/rob` |
 | Championship Lode Runner | games | The 1984 sequel | `games/lode-runner` |
 | Space Panic | games | Arcade climbing game named in the Lode Runner entry | `games/lode-runner` |
-| Menace | games | Dave Jones's Amiga shooter; the blitter entry uses his account of it | `hardware/blitter` |
+| Menace | games | Dave Jones's Amiga shooter; the blitter entry uses his account of it | `hardware/blitter`, `hardware/denise` |
 | F/A-18 Interceptor | games | Amiga flight game discussed in the blitter entry | `hardware/blitter` |
 | Mighty Final Fight | games | NES example of sprite flicker | `hardware/ppu` |
 | Morpheus | games | C64 game cited in the VIC-II entry | `hardware/vic-ii` |
+| Sinistar and Stargate | games | Williams arcade games named in the 6809 entry | `hardware/6809` |
+| Guardian (Amiga) | games | Mark Sibly's game with a copper sky | `hardware/copper` |
+| Blood Money, Agony, Wonder Dog, Pioneer Plague | games | Amiga games the Denise and Agnus entries use as examples | `hardware/denise`, `hardware/agnus` |
 
 ## Culture, events and tools
 
@@ -154,11 +169,17 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | AmigaOS, Kickstart and Workbench | tools | The Amiga's operating system | `systems/commodore-amiga` |
 | CSpect | tools | A ZX Spectrum Next emulator | `systems/zx-spectrum-next` |
 | Amiga Hardware Reference Manual | tools | The primary source for Amiga chipset entries | `hardware/blitter`, `systems/commodore-amiga` |
-| Mapping the Commodore 64 | tools | The register reference the VIC-II entry follows | `hardware/vic-ii`, `hardware/sid-chip` |
-| Christian Bauer's VIC-II article | tools | The standard technical description of the VIC-II | `hardware/vic-ii` |
+| Mapping the Commodore 64 | tools | The register reference the VIC-II entry follows | `hardware/vic-ii`, `hardware/sid-chip`, `hardware/6510`, `hardware/cia` |
+| Christian Bauer's VIC-II article | tools | The standard technical description of the VIC-II | `hardware/vic-ii`, `techniques/stable-raster` |
 | Badlines | techniques | The VIC-II's stolen cycles | `hardware/vic-ii`, `systems/commodore-64` |
 | Sample playback through the SID volume register | techniques | How C64 games played speech and drums | `hardware/sid-chip` |
 | Sprite 0 hit and nametable mirroring | techniques | Two NES PPU techniques the PPU entry introduces | `hardware/ppu` |
 | Bitplanes | techniques | The Amiga's planar display, behind every blit | `hardware/blitter`, `systems/commodore-amiga` |
+| OS-9 | tools | Microware's 6809 operating system | `hardware/6809`, `systems/tandy-coco` |
+| CyberSound and AHI | tools | The 14-bit Paula playback method and the Amiga audio system that used it | `hardware/paula` |
+| Amiga disk format (MFM) | techniques | How the Amiga stores tracks, decoded in software | `hardware/paula` |
+| Copper bars | techniques | The copper's best-known effect | `hardware/copper` |
+| Dual playfield | techniques | Denise's two independent playfields | `hardware/denise` |
+| Undocumented 6502 opcodes | techniques | The instructions the 6510 executes but MOS never listed | `hardware/6510`, `hardware/6502` |
 
 The *Your Sinclair* Smash Tapes and *Sinclair User* Megatape fit better as sections of `distribution/cover-tapes` than as entries.
