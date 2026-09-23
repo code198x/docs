@@ -97,6 +97,8 @@ The [content audit](audit/2026-09-content-audit/REPORT.md) sets the Vault's agen
 
 Batch 6 moves to the unreviewed entries that reviewed entries link to most: `systems/sinclair-ql`, `systems/commodore-vic-20`, `techniques/beeper-music`, `techniques/colour-clash`, `companies/commodore`, `systems/atari-st`, `companies/nintendo`, `systems/jupiter-ace`, `systems/amstrad-cpc` and `people/roger-kean`. Re-rank before each batch: `rg` the `/vault/` links in reviewed entries and keep those whose targets still say `reviewed: false`.
 
+Batch 7 starts with entries earlier reviewers found wrong: `people/tim-follin` (describes his beeper engine as OR-ing counter overflows; the 1987 *Your Sinclair* listing, disassembled in the batch 6 beeper-music review, shows fixed-width pulses, and it has unsourced "most advanced" claims) and `people/ian-logan` (calls the Ace and Spectrum cassette formats identical; its source says only "apparently").
+
 Open questions the reviews raised: which Paula channels are left and right (the manual contradicts itself; emu198x#1514 asks for a real-hardware recording), and whether technical claims belong in frontmatter `sources` keys or only in `<Sources>` (entries currently do both).
 
 Two earlier investigations remain useful:
