@@ -110,6 +110,17 @@ For game playtesting, work from the current program and its brief: held and tapp
 
 Review About, the systems directory and the three editorial hubs with the homepage during the House UI review; the [preview design](https://github.com/code198x/website/blob/main/docs/superpowers/specs/2026-09-21-house-ui-preview-design.md) is a draft awaiting approval. Prepare a What's New entry when the House UI is ready to release. Try a small explanatory illustration before any site-wide visual treatment.
 
+## Released source code to mine
+
+Vault reviews keep turning up period games and tools whose original source has since been published. Each is a chance for lessons to read real period code rather than a reconstruction. Check each licence before quoting code on the site; the Vault entry named in brackets gives the details and sources.
+
+- **Level 9:** Mike Austin's archive release of the A-code games and tools, December 2025 (`companies/level-9`).
+- **Infocom:** Microsoft's MIT-licence release of the *Zork I–III* source, 20 November 2025 (`companies/infocom`).
+- **Magnetic Scrolls:** the recovered game sources behind the Strand Games remasters (`companies/magnetic-scrolls`).
+- **Elite:** Ian Bell's publication of sources for several versions in 2024, and Mark Moxon's annotated 6502 source (`games/elite`, `people/ian-bell`).
+- **DAAD:** Aventuras AD's adventure system, released into the public domain and maintained today (`people/tim-gilberts`).
+- **BRender:** Argonaut's 3D library, open-sourced in 2022 (`companies/argonaut`).
+
 ## Shared subjects
 
 The seven Craft modules are Maths for Games, Game Feel, Game AI, Game Design, Game Data and Algorithms, Graphics and Animation, and Sound and Music; the [coverage map](specifications/craft-coverage.md) owns their responsibilities. Maths for Games has eleven published lessons, and Game Feel four published lessons awaiting review (R5). After that review, Game Design then Game AI are the next shared-subject priorities. Other modules have agreed homes, not authored sequences.
