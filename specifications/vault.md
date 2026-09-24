@@ -65,7 +65,7 @@ Cite checkable evidence next to substantive claims: title, author or organisatio
 
 Distinguish documented facts, recollections, allegations, disputed accounts and interpretation. Do not invent motives, dialogue or convenient origin stories. Check claims of priority and credit collaborations. Treat harmful conduct honestly, proportionately and in age-appropriate language; neither technical achievement nor historical context excuses it. See [Writing voice](writing-voice.md).
 
-A dispute, allegation, lawsuit or falling-out between named people or companies needs at least two independent sources. One party's own account, however clearly attributed, is not enough on its own: keep only what a second source confirms.
+A dispute, allegation, lawsuit or falling-out between named people or companies needs at least two independent sources. A single source is enough when it quotes the person making the claim directly. Present it as their words, attributed to them ("Bell wrote that…", "in Sinclair's words"), never as something the Vault itself asserts. One party's account retold in someone else's words is not enough: keep only what a second source confirms.
 
 The period the Vault covers decides which subjects get entries, not where an entry's story stops. An entry about a company, person, machine or series that carried on past the early 2000s follows it to the present, as far as sources support. The covered period gets the most depth, and later history is still told, not cut to a footnote. A subject that begins after the early 2000s gets an entry only when it bears directly on the covered period, such as a new machine built to run period software or a movement that grew out of period practice.
 
