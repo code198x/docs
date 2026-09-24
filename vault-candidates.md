@@ -16,8 +16,6 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Grundy NewBrain | systems | Designed at Sinclair Radionics, sold on, and released two years later | `companies/sinclair-research` |
 | Acorn Atom | systems | Bug-Byte's and Acornsoft's first market | `companies/bug-byte`, `companies/acornsoft` |
 | Currah Microspeech | hardware | The Spectrum speech add-on that *Atic Atac* and *Lunar Jetman* supported | `games/atic-atac` |
-| Intellivision | systems | The 2600's main rival, closed by the crash | `phenomena/1983-crash`, `systems/atari-2600`, `hardware/ay-3-8910`, `games/donkey-kong`, `games/pitfall`, `companies/activision`, `people/david-crane` |
-| ColecoVision | systems | The site has the system ID but the Vault has no entry | `phenomena/1983-crash`, `hardware/z80`, `games/donkey-kong`, `culture/universal-vs-nintendo`, `people/minoru-arakawa`, `games/pitfall`, `companies/activision`, `people/david-crane` |
 | Sinclair ZX Spectrum 128 | systems | The first Spectrum with the AY chip; a separate entry or a redirect to the Spectrum entry | `hardware/ay-3-8912`, `systems/sinclair-zx-spectrum` |
 | Yamaha YM2149 | hardware | The AY-3-8910's licensed twin, used in the Atari ST and later Spectrums | `hardware/ay-3-8912`, `hardware/ay-3-8910` |
 | Intel 8080 | hardware | The processor the Z80 was built to run the software of | `hardware/z80` |
@@ -25,9 +23,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Commodore 128 | systems | The C64's successor with a C64 mode | `systems/commodore-64`, `hardware/6510`, `techniques/disk-fastloaders`, `hardware/1541-disk-drive` |
 | Commodore Max Machine (Ultimax) | systems | Shown beside the C64 at CES 1982 on the same chips | `systems/commodore-64`, `hardware/6510` |
 | Commodore SX-64 | systems | The portable C64 | `systems/commodore-64`, `hardware/cia` |
-| Famicom Disk System | hardware | Nintendo's Japanese disk add-on, where *Zelda*, *Metroid* and *Kid Icarus* first appeared | `systems/nintendo-entertainment-system`, `hardware/apu`, `games/legend-of-zelda`, `games/metroid`, `games/kid-icarus`, `games/super-mario-bros`, `companies/nintendo-rd1`, `people/gunpei-yokoi`, `people/yoshio-sakamoto` |
 | 10NES lockout chip | hardware | How Nintendo controlled NES cartridge publishing | `systems/nintendo-entertainment-system`, `phenomena/nintendo-seal` |
-| MMC5 and MMC6 | hardware | Nintendo's later mappers: the MMC5 with its own sound channels, the MMC6 often mistaken for the MMC3 | `systems/nintendo-entertainment-system`, `hardware/mmc1`, `hardware/mmc3`, `hardware/apu`, `techniques/bank-switching`, `games/castlevania` |
 | Amiga CD32 | systems | Commodore's last machine | `systems/commodore-amiga` |
 | HAM and Extra Half-Brite | techniques | The Amiga's two special display modes | `systems/commodore-amiga`, `hardware/denise`, `hardware/amiga-chipset` |
 | Microdigital TK90X and TK95 | systems | Brazilian Spectrum clones; the TK95 is the Next's starting point | `systems/zx-spectrum-next`, `systems/sinclair-zx-spectrum` |
@@ -134,7 +130,6 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Hiroji Kiyotake and Makoto Kano | people | Samus's designer and *Metroid*'s scenario writer | `games/metroid` |
 | Toru Osawa | people | Designed *Kid Icarus* | `games/kid-icarus`, `people/yoshio-sakamoto` |
 | Takashi Tezuka | people | Miyamoto's co-designer on *Super Mario Bros.* and *Zelda* | `games/super-mario-bros`, `people/shigeru-miyamoto`, `games/legend-of-zelda`, `people/koji-kondo` |
-| Howard Lincoln | people | Nintendo of America's lawyer in the Universal and *Tetris* cases, later its chairman | `culture/universal-vs-nintendo`, `games/donkey-kong`, `people/john-kirby`, `people/minoru-arakawa`, `people/hiroshi-yamauchi`, `phenomena/tetris-legal-battles`, `phenomena/nintendo-seal` |
 | Howard Phillips | people | Nintendo of America's "game master" in court, later the face of *Nintendo Power* | `culture/universal-vs-nintendo`, `systems/nintendo-entertainment-system` |
 | David Aubrey Jones | people | Co-wrote Speedlock and the Spectrum *Mercenary*; not the Magic Knight David Jones | `techniques/fast-loader` |
 | Jim Levy | people | Activision's president and fifth founder, who brought *Little Computer People* to Crane | `companies/activision`, `people/david-crane`, `culture/atari-vs-activision` |
@@ -197,7 +192,6 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Imagine Media | companies | Chris Anderson's American publisher; not the Bournemouth Imagine Publishing | `people/chris-anderson`, `companies/future-publishing` |
 | Datel Electronics | companies | The Stoke-on-Trent maker of the Action Replay and other Commodore utilities | `hardware/action-replay`, `techniques/disk-fastloaders`, `techniques/fast-loader` |
 | Imagic | companies | The second cartridge maker founded by ex-Atari staff | `culture/atari-vs-activision`, `systems/atari-2600` |
-| Telecomsoft | companies | British Telecom's software business behind Firebird, Rainbird and Beyond, which several entries each re-explain | `companies/firebird`, `companies/rainbird`, `companies/beyond-software`, `companies/graftgold`, `companies/microprose`, `companies/hewson-consultants`, `people/andrew-braybrook` |
 | 21st Century Entertainment | companies | Hewson's successor and the publisher of *Pinball Dreams* | `companies/hewson-consultants`, `people/andrew-hewson`, `companies/dice-studio` |
 | Special FX | companies | Ocean's Liverpool spin-off studio, founded by Paul Finnegan | `companies/ocean-software`, `people/jonathan-smith`, `games/batman-ocean`, `companies/imagine-software` |
 | MC Lothlorien | companies | Spectrum strategy publisher the 1985 press quoted on royalties and budget prices | `phenomena/bedroom-coder`, `distribution/budget-games` |
@@ -238,7 +232,6 @@ Paths are Vault entries (`category/slug`) in the website repository.
 
 | Candidate | Category | Why | Link from |
 |---|---|---|---|
-| Personal Computer Games | magazines | A key 1983–85 source for Manic Miner and the Liverpool scene, and where the *ZZAP!64*, *Amstrad Action* and *ACE* teams started | `games/manic-miner`, `people/matthew-smith`, `people/chris-anderson`, `magazines/ace-magazine`, `magazines/amstrad-action`, `magazines/zzap-64`, `companies/future-publishing`, `phenomena/bedroom-coder`, `people/stamper-brothers` |
 | Personal Computer News | magazines | Dated Manic Miner's release (August 1983 review) | `games/manic-miner`, `people/matthew-smith`, `systems/sinclair-zx81` |
 | Big K | magazines | IPC's 1984–85 games monthly; the source of Bug-Byte's company history | `companies/bug-byte`, `companies/imagine-software` |
 | Your Computer | magazines | Carried Bug-Byte's first adverts and much ZX80 coverage | `companies/bug-byte`, `systems/sinclair-zx80`, `systems/commodore-64`, `companies/ocean-software`, `phenomena/bedroom-coder` |
@@ -260,11 +253,9 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | LM | magazines | Newsfield's 1986–87 general-interest magazine, named after Lloyd Mangram | `people/lloyd-mangram`, `companies/newsfield` |
 | Mean Machines Sega | magazines | The Sega half of the 1992 *Mean Machines* split | `magazines/mean-machines`, `magazines/nintendo-magazine-system` |
 | ST/Amiga Format | magazines | The 1988–89 parent of both Formats | `magazines/st-format`, `magazines/amiga-format`, `companies/future-publishing` |
-| Edge | magazines | Future's multi-format magazine from 1993, cited across the Vault | `companies/future-publishing`, `people/chris-anderson`, `hardware/d-pad`, `techniques/bank-switching`, `systems/atari-2600`, `companies/ocean-software`, `phenomena/bedroom-coder`, `people/tim-follin` |
 | PC Gamer | magazines | Future's PC games magazine in Britain and America | `companies/future-publishing`, `magazines/pc-player` |
 | New Computer Express and Sega Power | magazines | Future's weekly news title and its Sega magazine | `companies/future-publishing` |
 | Next Generation | magazines | Chris Anderson's American games magazine | `people/chris-anderson`, `companies/future-publishing` |
-| Electronic Games | magazines | The US games magazine cited most often across the Vault | `hardware/d-pad`, `techniques/bank-switching`, `systems/atari-2600`, `games/pac-man-atari-2600`, `systems/vectrex`, `systems/sega-mega-drive`, `techniques/sprite-flicker`, `games/pitfall`, `people/david-crane` |
 | Electronic Fun with Computers & Games, JoyStik, Video Games and Sega Visions | magazines | US period magazines cited on the 2600, Vectrex and Mega Drive | `games/pac-man-atari-2600`, `systems/vectrex`, `systems/sega-mega-drive`, `techniques/sprite-flicker` |
 | Commodore Computing International | magazines | British Commodore monthly cited on the Action Replay and fast loaders | `hardware/action-replay`, `techniques/fast-loader`, `techniques/disk-fastloaders` |
 
@@ -367,7 +358,6 @@ Paths are Vault entries (`category/slug`) in the website repository.
 
 | Candidate | Category | Why | Link from |
 |---|---|---|---|
-| Golden Joystick Awards | culture | *Computer & Video Games*' readers' awards; Ultimate won three in 1985 | `games/knight-lore`, `companies/ultimate`, `companies/rare`, `magazines/computer-and-video-games`, `games/jetpac`, `games/manic-miner`, `games/the-hobbit` |
 | *Commercial Breaks*: Imagine | culture | The 1984 BBC documentary behind most retellings of Imagine's collapse | `companies/imagine-software`, `culture/liverpool-games-scene` |
 | GEOS | tools | The C64's graphical desktop | `systems/commodore-64` |
 | The Final Cartridge | tools | The Dutch C64 utility and fast-loader cartridge, sold across Europe | `systems/commodore-64`, `techniques/disk-fastloaders`, `techniques/fast-loader`, `hardware/cartridge`, `hardware/action-replay` |
