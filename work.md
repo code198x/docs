@@ -122,6 +122,8 @@ Vault reviews keep turning up period games and tools whose original source has s
 - **BRender:** Argonaut's 3D library, open-sourced in 2022 (`companies/argonaut`).
 - **SimCity:** the original code, released under GPL v3 as *Micropolis* in January 2008 (`games/sim-city`).
 - **Rogue:** BSD-licensed source (`genres/roguelike`, `techniques/procedural-generation`).
+- **Alien Breed 3D II:** Team17 gave away the complete source of *The Killing Grounds* on *Amiga Format*'s cover CD, issue 95, March 1997; no licence stated (`games/alien-breed`, `companies/team17`).
+- **ProTracker:** no original source, but Olav Sørensen's ProTracker 2.3F rebuilt from a disassembly of 2.3D and his C clone are BSD 3-Clause, and Frank Wille's 2.3B play routine is public domain on Aminet (`tools/protracker`).
 
 ## Shared subjects
 
