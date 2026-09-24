@@ -125,6 +125,8 @@ Vault reviews keep turning up period games and tools whose original source has s
 - **Alien Breed 3D II:** Team17 gave away the complete source of *The Killing Grounds* on *Amiga Format*'s cover CD, issue 95, March 1997; no licence stated (`games/alien-breed`, `companies/team17`).
 - **ProTracker:** no original source, but Olav Sørensen's ProTracker 2.3F rebuilt from a disassembly of 2.3D and his C clone are BSD 3-Clause, and Frank Wille's 2.3B play routine is public domain on Aminet (`tools/protracker`).
 - **Second Reality:** Future Crew's 1993 PC demo, full source and data published by Mika Tuomi (Trug) on 1 August 2013 under the Unlicense; mostly x86 assembly and C, some Pascal (`demos/second-reality`).
+- **farbrausch:** the group's tools released on GitHub (farbrausch/fr_public) in April 2012: Werkkzeug3 with the source data for *debris.*, *theta* and *.kkrieger*, Werkkzeug4/Altona, kkrunchy, the V2 synthesiser and more; BSD or public domain per project (`groups/farbrausch`).
+- **Elevated:** RGBA and TBC's 2009 4K intro, full source published on scene.org in 2016 under CC BY-NC-SA 3.0; rgba's Epopeia demo engine on GitHub under MIT since 2019 (`demos/elevated`, `groups/rgba`).
 
 ## Shared subjects
 
