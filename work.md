@@ -120,6 +120,8 @@ Vault reviews keep turning up period games and tools whose original source has s
 - **Elite:** Ian Bell's publication of sources for several versions in 2024, and Mark Moxon's annotated 6502 source (`games/elite`, `people/ian-bell`).
 - **DAAD:** Aventuras AD's adventure system, released into the public domain and maintained today (`people/tim-gilberts`).
 - **BRender:** Argonaut's 3D library, open-sourced in 2022 (`companies/argonaut`).
+- **SimCity:** the original code, released under GPL v3 as *Micropolis* in January 2008 (`games/sim-city`).
+- **Rogue:** BSD-licensed source (`genres/roguelike`, `techniques/procedural-generation`).
 
 ## Shared subjects
 
