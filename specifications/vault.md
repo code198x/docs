@@ -67,6 +67,8 @@ Distinguish documented facts, recollections, allegations, disputed accounts and 
 
 A dispute, allegation, lawsuit or falling-out between named people or companies needs at least two independent sources. One party's own account, however clearly attributed, is not enough on its own: keep only what a second source confirms.
 
+The period the Vault covers decides which subjects get entries, not where an entry's story stops. An entry about a company, person, machine or series that carried on past the early 2000s follows it to the present, as far as sources support. The covered period gets the most depth, and later history is still told, not cut to a footnote. A subject that begins after the early 2000s gets an entry only when it bears directly on the covered period, such as a new machine built to run period software or a movement that grew out of period practice.
+
 An entry is about its subject, not about Code198x. Do not describe how the subject shapes the curriculum, calibrates a game, informs the project's voice or appears in a brief, and do not name a module whose place in the course is undecided. A plain link to a published lesson that uses the subject is fine; see [Connections and review](#connections-and-review).
 
 Corrections belong in the corrected text. Git and the pull request explain the change; the reader does not need an editorial history appended to every entry.
