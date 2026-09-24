@@ -65,6 +65,8 @@ Cite checkable evidence next to substantive claims: title, author or organisatio
 
 Distinguish documented facts, recollections, allegations, disputed accounts and interpretation. Do not invent motives, dialogue or convenient origin stories. Check claims of priority and credit collaborations. Treat harmful conduct honestly, proportionately and in age-appropriate language; neither technical achievement nor historical context excuses it. See [Writing voice](writing-voice.md).
 
+A dispute, allegation, lawsuit or falling-out between named people or companies needs at least two independent sources. One party's own account, however clearly attributed, is not enough on its own: keep only what a second source confirms.
+
 An entry is about its subject, not about Code198x. Do not describe how the subject shapes the curriculum, calibrates a game, informs the project's voice or appears in a brief, and do not name a module whose place in the course is undecided. A plain link to a published lesson that uses the subject is fine; see [Connections and review](#connections-and-review).
 
 Corrections belong in the corrected text. Git and the pull request explain the change; the reader does not need an editorial history appended to every entry.
