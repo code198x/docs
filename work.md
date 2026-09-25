@@ -129,6 +129,7 @@ Vault reviews keep turning up period games and tools whose original source has s
 - **Elevated:** RGBA and TBC's 2009 4K intro, full source published on scene.org in 2016 under CC BY-NC-SA 3.0; rgba's Epopeia demo engine on GitHub under MIT since 2019 (`demos/elevated`, `groups/rgba`).
 - **Crinkler:** the 4K/1K intro linker-compressor by Blueberry and Mentor, open-sourced under zlib in July 2020 (`techniques/size-coding`, `techniques/compression`).
 - **Insert No Coins:** Razor 1911's 2010 Windows 64K intro, source on GitHub (razordemo/Insert-No-Coins); no licence file, so ask before reusing (`groups/razor-1911`).
+- **Doom:** id's engine source released in December 1997 for non-profit use (later relicensed under the GPL), plus the doombsp map builder in May 1994 (`communities/modding`).
 
 ## Shared subjects
 
