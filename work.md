@@ -134,6 +134,7 @@ Vault reviews keep turning up period games and tools whose original source has s
 - **RISC OS 5:** relicensed under Apache 2.0 in October 2018 (per Wikipedia; confirm with RISC OS Open). Later than the Archimedes-era Arthur and RISC OS 2, which were not released (`systems/acorn-archimedes`).
 - **Prince of Persia:** Jordan Mechner's Apple II 6502 source, published on GitHub (jmechner/Prince-of-Persia-Apple-II) in April 2012 after the disks were recovered; no standard licence stated, so check before quoting (`games/prince-of-persia` when reviewed).
 - **Logo:** early Logo sources (BBN's PDP-10 Logo; MIT's CLOGO, LLOGO, 11LOGO and APLOGO) in the PDP-10 ITS archive on GitHub (`tools/logo-language`).
+- **ZZT:** Tim Sweeney's own June 1991 development source (Turbo Pascal, close to ZZT 3.0), released as "The Almost of ZZT" by Adrian Siekierka on 28 January 2023 under MIT with Epic's permission; also "The Reconstruction of ZZT" (March 2020, MIT, with Sweeney's permission), a decompilation that builds an identical 3.2 executable (`tools/zzt`).
 
 ## Shared subjects
 
