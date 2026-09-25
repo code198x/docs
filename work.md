@@ -131,6 +131,7 @@ Vault reviews keep turning up period games and tools whose original source has s
 - **Insert No Coins:** Razor 1911's 2010 Windows 64K intro, source on GitHub (razordemo/Insert-No-Coins); no licence file, so ask before reusing (`groups/razor-1911`).
 - **Doom:** id's engine source released in December 1997 for non-profit use (later relicensed under the GPL), plus the doombsp map builder in May 1994 (`communities/modding`).
 - **Galaksija:** Voja Antonić's commented ROM A listing (version 28, January 1984), the ROM images and the ROM B listing, in the public mejs/galaksija repository on GitHub; no licence stated. A Z80 machine whose CPU draws the video in its interrupt routine (`systems/galaksija`).
+- **RISC OS 5:** relicensed under Apache 2.0 in October 2018 (per Wikipedia; confirm with RISC OS Open). Later than the Archimedes-era Arthur and RISC OS 2, which were not released (`systems/acorn-archimedes`).
 
 ## Shared subjects
 
