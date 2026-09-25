@@ -128,6 +128,7 @@ Vault reviews keep turning up period games and tools whose original source has s
 - **farbrausch:** the group's tools released on GitHub (farbrausch/fr_public) in April 2012: Werkkzeug3 with the source data for *debris.*, *theta* and *.kkrieger*, Werkkzeug4/Altona, kkrunchy, the V2 synthesiser and more; BSD or public domain per project (`groups/farbrausch`).
 - **Elevated:** RGBA and TBC's 2009 4K intro, full source published on scene.org in 2016 under CC BY-NC-SA 3.0; rgba's Epopeia demo engine on GitHub under MIT since 2019 (`demos/elevated`, `groups/rgba`).
 - **Crinkler:** the 4K/1K intro linker-compressor by Blueberry and Mentor, open-sourced under zlib in July 2020 (`techniques/size-coding`, `techniques/compression`).
+- **Insert No Coins:** Razor 1911's 2010 Windows 64K intro, source on GitHub (razordemo/Insert-No-Coins); no licence file, so ask before reusing (`groups/razor-1911`).
 
 ## Shared subjects
 
