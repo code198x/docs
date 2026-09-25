@@ -363,7 +363,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | *Babylon 5* | culture | The TV series whose space scenes Foundation Imaging rendered on networked Amiga 2000s with the Video Toaster and LightWave | `tools/lightwave-3d`, `hardware/video-toaster` |
 | *seaQuest DSV* | culture | Amblin Imaging rendered its effects on a network of more than 60 Amigas, with no miniature models | `tools/lightwave-3d`, `hardware/video-toaster` |
 | *Quantum Leap* | culture | Its "evil leaper" morphs were made with ASDG's MorphPlus on the Amiga, not the Toaster, as is often claimed | `tools/lightwave-3d` |
-| *Star Trek: Voyager* | culture | Amblin Imaging worked on its effects by 1994, carrying Amiga-era pipelines into Trek | `tools/lightwave-3d` |
+| *Star Trek: Voyager* | culture | *Amiga Shopper* reported Amblin Imaging, the *seaQuest* effects house, working on it by September 1994 | `tools/lightwave-3d` |
 | The Final Cartridge | tools | The Dutch C64 utility and fast-loader cartridge, sold across Europe | `systems/commodore-64`, `techniques/disk-fastloaders`, `techniques/fast-loader`, `hardware/cartridge`, `hardware/action-replay` |
 | Family BASIC | tools | Nintendo's BASIC for the Famicom | `systems/nintendo-entertainment-system` |
 | AmigaOS, Kickstart and Workbench | tools | The Amiga's operating system | `systems/commodore-amiga` |
