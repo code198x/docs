@@ -26,7 +26,7 @@ Agreement on a home does not mean its lessons exist or have been approved.
 |---|---|---|
 | Maths for Games | Existing module; broader direction agreed | Explain mathematical relationships and their use in games, including numerical representations and approximations |
 | Game AI | Separate module within The Craft agreed; lessons not authored | Explain how entities perceive, remember, decide, move and coordinate |
-| Game Feel | Broader outline and movement playground published; focused lessons next | Controls, responsiveness, anticipation, feedback, forgiveness and the moment-to-moment experience |
+| Game Feel | Four controls-and-response lessons and the movement playground published; further sequences planned | Controls, responsiveness, anticipation, feedback, forgiveness and the moment-to-moment experience |
 | Game Design | Agreed module; lessons not authored | Rules, goals, choices, resources, challenge, levels and progression; why a functioning game is interesting |
 | Game Data and Algorithms | Agreed module; lessons not authored | Represent game worlds and entities; compare operations, algorithms and their costs |
 | Graphics and Animation | Agreed module; lessons not authored | Create images and animation; connect pixels, sprites, tiles, palettes, fonts and rendering to the intended result |
@@ -114,9 +114,23 @@ published probability lessons. Its overview distinguishes available sequences
 from further planned explorations. The Craft overview uses the agreed seven-module
 map without linking to empty modules.
 
-Game Feel uses play, compare, explain. Its planned sequences are controls and
-response; jumping and forgiveness; impact and feedback; cameras and attention;
-readability and anticipation; and failure and recovery. The movement playground
+Game Feel uses play, compare, explain: let the reader experience a difference,
+identify its cause, inspect the rule and apply it deliberately. Distinguish player
+intent, input sampling, simulation, animation and presentation. Its sequences are
+not a fixed lesson count:
+
+| Sequence | Coverage | Experiment |
+|---|---|---|
+| Controls and response (published) | Immediate response, acceleration, braking, turning, input edges, buffering and latency | Compare responsive, slippery and heavy ships under identical input |
+| Jumping and forgiveness | Jump profiles, air control, variable height, buffered jumps and coyote time | Compare the same gap with one rule changed |
+| Impact and feedback | Animation timing, sound, recoil, hit pauses and visual emphasis | Compare one hit with individual feedback layers enabled |
+| Cameras and attention | Framing, follow, lead, dead zones, tracking and shake | Follow the same path with different camera rules |
+| Readability and anticipation | Silhouette, contrast, warnings, action phases and competing cues | Read an incoming threat before acting |
+| Failure and recovery | Checkpoints, respawns, protection, retries, input gates and ending transitions | Compare the time and actions needed to recover from the same failure |
+
+Accessibility belongs in each comparison: keyboard and touch controls, redundant
+cues, adjustable disruptive effects, and no unnecessary motion. Distinguish
+purposeful game motion from decorative UI animation. The movement playground
 compares three ships under identical input and top speed with different
 acceleration and braking rules. It is a published browser playground, not a completed
 lesson sequence or evidence of target-machine performance. Existing patterns for
@@ -128,16 +142,15 @@ the relevant modules before any case for separate navigation is considered.
 
 The user approved the seven-module Craft structure, refreshed Craft and Game Feel
 overviews, and the movement playground after reviewing the local preview. The
-prototype is accepted as the basis for teaching; the overview and playground are now published and live-verified in website PR #445.
-This does not establish authored Game Feel lessons.
+prototype is accepted as the basis for teaching; the overview and playground are published and live-verified in website PR #445.
 
-Four controls-and-response lessons are now authored locally for review, separating
+Four controls-and-response lessons are published (website PR #449), separating
 immediate response, acceleration, release braking and reversal. The comparisons
 change one setting at a time and expose a single-update trace. The lesson pages
 use plain language, worked arithmetic, pseudocode and the inspector, with no
 JavaScript disclosures. An unobtrusive source link retains access to the actual
-routine. These lessons are not yet approved
-or published. After their review, Game Design then Game AI are the agreed next
+routine. Lesson four compares a zero-first reversal rule, distinguishing it
+from the playground's approach towards the opposite velocity. Game Design then Game AI are the agreed next
 subjects to develop. Game AI's first proposed
 experience remains perception, memory and decisions.
 
@@ -145,4 +158,4 @@ The local four-lesson build passes 72 website tests (nine decoder-dependent
 checks skipped locally) and ten movement-model tests. Browser verification covers
 worked traces, input, setting resets, source links, navigation, both themes,
 390/1280-pixel layouts and iframe sizing, with no page errors or scoped Axe
-violations. These checks establish the local draft behaviour, not publication.
+violations.

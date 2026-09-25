@@ -6,9 +6,34 @@ applications, especially geometry, trigonometry, matrix algebra, coordinate
 spaces and fixed-point calculation. This specification defines coverage; it
 does not set a compulsory order, unit count or claim that topics are authored.
 
-Dice Roller's five probability lessons are published. The broader routes below
-are for development. Readers can enter at a useful problem without first
+Two sequences are published: Dice Roller's five probability lessons and six
+aiming lessons. The broader routes below are for development. Readers can enter at a useful problem without first
 completing probability, Foundations or a system track.
+
+## Published sequences
+
+**Chance and samples** (units 01–05) is Dice Roller, a probability experiment in
+stock 48K Sinclair BASIC. Its source listings and verified tapes stay in the
+Spectrum sample tree.
+
+1. Roll a die — twelve numbered results.
+2. Keep the tallies — count six outcomes.
+3. Compare shares — percentages alongside exact counts.
+4. Watch the distribution — show the sample as it develops.
+5. Compare experiments — fresh and growing samples, then tape recovery.
+
+**Aiming and movement** (units 06–11) uses maintained experiments from
+`code-samples/craft/maths-for-games/aiming/`, with teaching prose in MDX.
+
+1. Place a point — coordinates, signs and displacement.
+2. Measure the triangle — Pythagoras, distance and ratios.
+3. Turn an angle into movement — signed sine/cosine components.
+4. Measure angles in radians — arc length and conversions.
+5. Find the angle to a target — atan2 and a reference shot.
+6. Keep fractional movement in integers — velocity quantisation and scaled position.
+
+Each sequence has independent entry and its own lesson numbering from one; the
+probability URLs are unchanged. Numbers & Bits is not an attendance requirement.
 
 ## Teaching method
 
@@ -126,9 +151,8 @@ fixed-point practice and numerical robustness also need deliberate treatment.
 
 ## First experiment and existing trial
 
-The [aiming prototype](experiments/aiming.md) now implements the first angle,
-triangle, sine/cosine, atan2 and fixed-point investigation locally for review.
-Its six authored website lessons and overview are published and live-verified
+The [aiming prototype](experiments/aiming.md) implements the first angle,
+triangle, sine/cosine, atan2 and fixed-point investigation. Its six authored website lessons and overview are published and live-verified
 in website PR #445.
 
 The initial proposed experiment was a point moving around a circle, with adjustable
