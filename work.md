@@ -116,6 +116,7 @@ Vault reviews keep turning up period games and tools whose original source has s
 
 - **Level 9:** Mike Austin's archive release of the A-code games and tools, December 2025 (`companies/level-9`).
 - **Infocom:** Microsoft's MIT-licence release of the *Zork I–III* source, 20 November 2025 (`companies/infocom`).
+- **Mainframe Zork:** the 1977 and 1978 MDL source from MIT's backup tapes, published by MIT Libraries on GitHub (MITDDC) under MIT No Attribution (`games/zork`).
 - **Magnetic Scrolls:** the recovered game sources behind the Strand Games remasters (`companies/magnetic-scrolls`).
 - **Elite:** Ian Bell's publication of sources for several versions in 2024, and Mark Moxon's annotated 6502 source (`games/elite`, `people/ian-bell`).
 - **DAAD:** Aventuras AD's adventure system, released into the public domain and maintained today (`people/tim-gilberts`).
