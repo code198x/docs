@@ -57,7 +57,7 @@ chords in optional keyboard notes. Avoid repeating familiar chords in the main
 explanation. Link to the canonical setup/save workflow and retain the meaningful
 recovery check locally: reopen the saved program, play, replay and quit.
 
-For Sinclair BASIC, keep readable keyword spacing in source files and website listings, for example `PRINT AT y,x;"o"`. The ROM displays spaces as part of its keyword tokens; that display spacing is not an instruction to press Space after entering a token. Suppress redundant post-keyword spaces only at the ROM-entry/tokenisation boundary, never by compacting the displayed source. Preserve spaces inside strings and compound token names such as `GO TO` and `GO SUB`. Check the displayed listing and the stored program separately.
+A BASIC source file is written exactly as the machine's LIST displays it, line by line; screen wrapping does not matter. The reader should see the same program on the page and in the emulator. For Sinclair BASIC that means the ROM's own keyword spacing (`PRINT AT y,x;"o"`, `CHR$ (147)`, `IF a=1 THEN GO TO 20`), no spaces around operators or separators, and line numbers right-aligned to four columns. The ROM displays spaces as part of its keyword tokens: that display spacing is not an instruction to press Space, so the tokeniser drops a source space next to a keyword instead of storing it. Every other space is stored, costs a byte and appears in the reader's LIST. Spaces inside strings, `REM` text and `DATA` strings are content and are kept, as are compound token names such as `GO TO` and `GO SUB`. `build198x basic` checks the rule: it tokenises the file, lists it by the machine's rules, and fails if the result differs from the source.
 
 ## Continuity
 
