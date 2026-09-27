@@ -12,8 +12,10 @@ The Vault is our encyclopaedia of people, companies, systems, hardware, software
 | Games | `/vault/games/{slug}` | Notable games referenced in curriculum |
 | Demos | `/vault/demos/{slug}` | Demo scene productions and digital art showcases |
 | Genres | `/vault/genres/{slug}` | Game genres, subgenres, and design movements |
-| Techniques | `/vault/techniques/{slug}` | Programming techniques and approaches |
-| Tools | `/vault/tools/{slug}` | Development tools, trackers, databases, archives |
+| Techniques | `/vault/techniques/{slug}` | Programming and design techniques and approaches |
+| Tools | `/vault/tools/{slug}` | Development tools: assemblers, compilers, game-creation kits, engines |
+| Languages | `/vault/languages/{slug}` | Programming languages and dialects (Sinclair BASIC, AMOS, Logo) |
+| Software | `/vault/software/{slug}` | Applications and system software (Deluxe Paint, ProTracker, GEOS) |
 | Emulators | `/vault/emulators/{slug}` | Emulation software preserving vintage platforms |
 | Hardware | `/vault/hardware/{slug}` | Chips and components (SID, VIC-II, PPU) |
 | Systems | `/vault/systems/{slug}` | Platforms (C64, Spectrum, Amiga, NES) |
@@ -26,6 +28,8 @@ The Vault is our encyclopaedia of people, companies, systems, hardware, software
 | Communities | `/vault/communities/{slug}` | Subcultures and communities (demo scene, modding) |
 
 
+File a thing by what it is: a language goes in Languages even when it ships with an editor (AMOS, STOS); a program people made things with goes in Tools if it builds software (an assembler, The Quill, SCUMM) and in Software otherwise (a paint package, a tracker, an operating system); a physical feature goes in Hardware (the Rumble Pak); archives and services go in Communities or Distribution.
+
 Use the existing category and canonical entry when one fits. A new entry should answer a useful question or support a meaningful curriculum connection, not merely increase a count.
 
 ## Entry contract
@@ -37,17 +41,19 @@ Set provenance honestly. `ai_generated` records machine-written prose; `reviewed
 | Category | Start Field | End Field | Display Label | Example |
 |----------|-------------|-----------|---------------|---------|
 | People | `born` | `died` | Lived | `born: 1960` (alive) |
-| Companies | `founded` | `dissolved` | Active | `founded: 1987`, `dissolved: 2001` |
-| Groups | `founded` | `dissolved` | Active | `founded: 1987` (still active) |
+| Companies | `founded` | `ended` | Active | `founded: 1987`, `ended: 2001` |
+| Groups | `founded` | `ended` | Active | `founded: 1987` (still active) |
 | Games | `released` | — | Released | `released: 1993` |
 | Demos | `released` | — | Released | `released: 1993` |
 | Genres | `emerged` | `ended` | Era | `emerged: 1980` (ongoing) |
 | Techniques | `originated` | `deprecated` | Used | `originated: 1980` (still used) |
 | Tools | `released` | — | Released | `released: 1987` |
+| Languages | `released` | — | Released | `released: 1980` |
+| Software | `released` | — | Released | `released: 1985` |
 | Emulators | `released` | — | Released | `released: 1997` |
 | Culture | `emerged` | `ended` | Period | `emerged: 1985`, `ended: 1995` |
 | Events | `emerged` | `ended` | Held | `emerged: 1992` (ongoing) |
-| Magazines | `founded` | `dissolved` | Published | `founded: 1984`, `dissolved: 1992` |
+| Magazines | `founded` | `ended` | Published | `founded: 1984`, `ended: 1992` |
 | Books | `released` | — | Published | `released: 2003` |
 | Phenomena | `emerged` | `ended` | Period | `emerged: 1983`, `ended: 1985` |
 | Distribution | `emerged` | `ended` | Era | `emerged: 1980` (ongoing) |
