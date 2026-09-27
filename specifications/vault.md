@@ -12,7 +12,10 @@ The Vault is our encyclopaedia of people, companies, systems, hardware, software
 | Games | `/vault/games/{slug}` | Notable games referenced in curriculum |
 | Demos | `/vault/demos/{slug}` | Demo scene productions and digital art showcases |
 | Genres | `/vault/genres/{slug}` | Game genres, subgenres, and design movements |
-| Techniques | `/vault/techniques/{slug}` | Programming and design techniques and approaches |
+| Techniques | `/vault/techniques/{slug}` | Programming and graphics techniques (raster interrupts, FLD) |
+| Design | `/vault/design/{slug}` | Game design and mechanics (permadeath, fog of war) |
+| Technologies | `/vault/technologies/{slug}` | Formats, media, processes and copy protection (MOD, FMV, Copylock) |
+| Reference | `/vault/reference/{slug}` | Reference sheets (PETSCII chart, Z80 instruction set) |
 | Tools | `/vault/tools/{slug}` | Development tools: assemblers, compilers, game-creation kits, engines |
 | Languages | `/vault/languages/{slug}` | Programming languages and dialects (Sinclair BASIC, AMOS, Logo) |
 | Software | `/vault/software/{slug}` | Applications and system software (Deluxe Paint, ProTracker, GEOS) |
@@ -28,7 +31,7 @@ The Vault is our encyclopaedia of people, companies, systems, hardware, software
 | Communities | `/vault/communities/{slug}` | Subcultures and communities (demo scene, modding) |
 
 
-File a thing by what it is: a language goes in Languages even when it ships with an editor (AMOS, STOS); a program people made things with goes in Tools if it builds software (an assembler, The Quill, SCUMM) and in Software otherwise (a paint package, a tracker, an operating system); a physical feature goes in Hardware (the Rumble Pak); archives and services go in Communities or Distribution.
+File a thing by what it is: a language goes in Languages even when it ships with an editor (AMOS, STOS); a program people made things with goes in Tools if it builds software (an assembler, The Quill, SCUMM) and in Software otherwise (a paint package, a tracker, an operating system); a physical feature goes in Hardware (the Rumble Pak); a design decision goes in Design (permadeath), a method a programmer applies in Techniques (sprite multiplexing), and a named format, medium or protection scheme in Technologies (the MOD format, Copylock); archives and services go in Communities or Distribution.
 
 Use the existing category and canonical entry when one fits. A new entry should answer a useful question or support a meaningful curriculum connection, not merely increase a count.
 
@@ -47,6 +50,9 @@ Set provenance honestly. `ai_generated` records machine-written prose; `reviewed
 | Demos | `released` | — | Released | `released: 1993` |
 | Genres | `emerged` | `ended` | Era | `emerged: 1980` (ongoing) |
 | Techniques | `originated` | `deprecated` | Used | `originated: 1980` (still used) |
+| Design | `originated` | `deprecated` | Used | `originated: 1981` |
+| Technologies | `originated` | `deprecated` | Used | `originated: 1987` |
+| Reference | — | — | — | no dates |
 | Tools | `released` | — | Released | `released: 1987` |
 | Languages | `released` | — | Released | `released: 1980` |
 | Software | `released` | — | Released | `released: 1985` |
