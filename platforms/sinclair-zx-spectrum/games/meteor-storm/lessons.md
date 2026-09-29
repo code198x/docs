@@ -1,7 +1,7 @@
 # Meteor Storm — lesson implementation
 
 **Status:** The user approved all twenty-four lessons and the overview, using
-nineteen complete runnable programs. The module is published and live-verified.
+twenty complete runnable programs. The module is published and live-verified.
 The accepted native game remains the endpoint; its one-hit loss, unlimited boost,
 vertical stars, gentle meteor drift and separate time/score records are preserved.
 Meet Assembly is already published and leads into this module.
@@ -25,18 +25,18 @@ have separate lessons even where they share a runnable state.
 | 8 | Put steering on the frame clock | `clocked-steering` |
 | 9 | Let a meteor move independently | `one-meteor` |
 | 10 | Distinguish a hit from a near miss | `first-dodge` |
-| 11 | Give each object a record | `object-pool` |
-| 12 | Walk the pool and reuse a slot | `object-pool` |
-| 13 | Make a storm with an end | `fixed-course` |
-| 14 | Give meteors a gentle drift | `drift` |
-| 15 | Collect something worth the risk | `stars` |
-| 16 | Turn a score into readable digits | `stars` |
-| 17 | Measure time without counting distance | `timed-course` |
-| 18 | Show seconds and hundredths | `timed-course` |
-| 19 | Hold Space to boost | `boost` |
-| 20 | Draw once, check twice | `render-budget` |
-| 21 | Keep the best time and score | `records` |
-| 22 | Give the game clear phases | `finished` |
+| 11 | Give the game clear phases | `phases` |
+| 12 | Give each object a record | `object-pool` |
+| 13 | Walk the pool and reuse a slot | `object-pool` |
+| 14 | Make a storm with an end | `fixed-course` |
+| 15 | Give meteors a gentle drift | `drift` |
+| 16 | Collect something worth the risk | `stars` |
+| 17 | Turn a score into readable digits | `stars` |
+| 18 | Measure time without counting distance | `timed-course` |
+| 19 | Show seconds and hundredths | `timed-course` |
+| 20 | Hold Space to boost | `boost` |
+| 21 | Draw once, check twice | `render-budget` |
+| 22 | Keep the best time and score | `records` |
 | 23 | Make the instructions fit | `finished` |
 | 24 | Keep and share the game | `finished` |
 
