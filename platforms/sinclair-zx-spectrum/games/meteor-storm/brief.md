@@ -123,10 +123,11 @@ accept an uninteresting first game.
 
 ## Proposed extension
 
-**Status:** Proposal, not agreed. The charter now asks assembly games to go as
-far as they reasonably can. The published game (units 1 to 24) stays as it is;
-these units follow it, one idea each, and the course ends on a new
-packaging unit.
+**Status:** Agreed on 2026-09-29, including more than one storm and colour
+bands. The charter asks assembly games to go as far as they reasonably can.
+The published game (units 1 to 24) stays as it is, so its URLs stay. These
+units follow it, one idea each. The list is the working plan, not a fixed
+count: split a unit wherever one change needs its own experiment.
 
 What the published game already has: a title, instructions, best time and
 score for the session, phases, retry, a black border, a bright cyan HUD over a
@@ -138,18 +139,23 @@ white-on-black playfield, and one short impact sound (`impact_sound`).
 | 26 | Pay for sound in the frame | A beeper tone needs the CPU; spread an effect across frames from the clock | Sound plays while the storm keeps moving; the cost is measured |
 | 27 | Colour the storm by place | Attributes belong to cells, not objects: colour bands of the playfield | Meteors change colour as they fall through bands, with no clash |
 | 28 | Break the ship apart | A short debris animation between impact and result | Destruction reads as an event, not a cut to the result |
-| 29 | Let the title play itself | An attract screen: reuse the object pool behind the title | Meteors drift behind the title; the prompt flashes |
-| 30 | Draw a loading screen | A SCREEN$ made with `build198x image`, loaded before the code | The tape shows a picture while the game loads |
-| 31 | Keep and share the finished game | Fresh tape, loading screen, full run | The complete release loads and plays from a fresh tape |
+| 29 | Chain storms into a voyage | A table of courses: arriving in clear space leads into the next storm | The run continues through several storms |
+| 30 | Make each storm harder | Per-storm parameters as data: speed, density, drift and band colours | Later storms are faster, denser and look different |
+| 31 | Remember the furthest storm | Records across a voyage, not one passage | The title shows the best storm reached with its score |
+| 32 | Let the title play itself | An attract screen: reuse the object pool behind the title | Meteors drift behind the title; the prompt flashes |
+| 33 | Draw a loading screen | A SCREEN$ made with `build198x image`, loaded before the code | The tape shows a picture while the game loads |
+| 34 | Keep and share the finished game | Fresh tape, loading screen, full voyage | The complete release loads and plays from a fresh tape |
 
-Open questions:
+The goal becomes a voyage: several storms, each ending in clear space, rather
+than one passage. The accepted first storm stays as the voyage's opening, with
+its duration, speeds and density. Later storms must stay survivable by design,
+not by luck; verify a successful route through each.
 
-- **More than one storm.** A sequence of harder passages would give the
-  game a progression, as early-1980s arcade games had. It changes the
-  accepted single-passage goal, so it needs agreement before it is drafted.
-- **Colour bands.** Colouring by place is the period answer to attribute
-  clash. Colour per object belongs to a later rung. Confirm that bands suit the
-  storm's look before drafting unit 27.
+To settle while drafting:
+
+- **Lives.** The accepted rule is one hit ends the run. Across a voyage that
+  may be too harsh; decide after playing a two-storm build, not in advance.
+- **Voyage length.** Choose the number of storms from play, as the first
+  storm's duration was.
 - **Verification.** Each unit needs executed checkpoints, like units 1 to 24,
   and the timing of unit 26 needs measurement, not estimates.
-
