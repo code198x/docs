@@ -1,6 +1,6 @@
 # Meteor Storm — checkpoint execution record
 
-**Status:** Twenty complete teaching programs are implemented and executed in
+**Status:** Twenty-three complete teaching programs are implemented and executed in
 `code-samples/sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/`. The accepted
 prototype is preserved. Twenty-four [authored lessons and browser investigations](lessons.md)
 are user-approved, published and live-verified.
@@ -31,8 +31,8 @@ corresponding state becomes necessary.
 ## Executed evidence
 
 Target: stock 48K PAL Spectrum, original Z80. Asm198x 0.0.58 builds every source;
-Pasmo emits identical raw machine code for all twenty programs; the evidence
-records the Pasmo build used (PasmoNext 0.1.3 since the 2026-09-29 rebuild).
+upstream Pasmo 0.5.5 emits identical raw machine code for all twenty-three
+programs; the evidence records its banner.
 The native emulator executable and each source/data hash are recorded in
 `verification/evidence/` in the sample repository.
 
@@ -97,7 +97,7 @@ or binary identity.
 ## Lesson review
 
 The [lesson implementation record](lessons.md) maps twenty-four authored lessons
-onto the twenty programs. Browser source editing, companion artwork, actual RAM,
+onto the twenty-three programs. Browser source editing, companion artwork, actual RAM,
 collision stepping and downloadable tape now support the progression.
 
 Some earlier batched native result captures show incomplete text despite complete
