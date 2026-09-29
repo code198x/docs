@@ -102,5 +102,6 @@ inside the assembly lesson; unavailable shared lessons cannot be prerequisites.
 
 Only then choose lesson boundaries and prepare a replacement publication plan.
 Existing URLs should continue to reach useful material during the transition.
-The later assembly lineup remains open, and BASIC performance revisits remain a
-separate investigation rather than an entry requirement.
+The later assembly lineup remains open; a [proposed technique ladder](ladder.md)
+sets out candidate rungs for agreement one at a time. BASIC performance revisits
+remain a separate investigation rather than an entry requirement.
