@@ -1,8 +1,8 @@
 # Spectrum assembly — technique ladder
 
 **Status:** Proposal. Nothing here is agreed beyond the route the
-[replacement opening](opening.md) already records: Meet Assembly, then
-Meteor Storm. Rungs are agreed one at a time; an agreed rung may then gain a
+[replacement opening](opening.md) already records (Meet Assembly, then
+Meteor Storm) and Meteor Storm's extension. Rungs are agreed one at a time; an agreed rung may then gain a
 [brief](../../../specifications/brief.md). Genres are suggestions, not
 commissioned games. Each game goes [as far as it reasonably can](../../../PROJECT.md#what-makes-a-finished-game),
 and the ladder covers as many genres as practical. Per the [charter](../../../PROJECT.md#public-presentation-and-publishing),
@@ -30,7 +30,7 @@ sourced into `reference/` before the rung is agreed.
 | Rung | New technique | Genre | Evidence |
 |---|---|---|---|
 | 0 | *Meet Assembly (published):* instructions, screen memory, loops, routines, keys, frame interrupts, debugging | exercises | yes |
-| 1 | *Meteor Storm (published), pushed further:* pre-shifted pixel sprite, frame clock, object pool, collision, scoring, phases; then sound for every event, colour by place, an explosion, an attract screen and a loading screen | dodge and collect | yes; beeper yes |
+| 1 | *Meteor Storm (published), pushed further:* pre-shifted pixel sprite, frame clock, object pool, collision, scoring, phases; then sound for every event, colour by place, an explosion, a voyage of harder storms, an attract screen and a loading screen | dodge and collect | yes; beeper yes |
 | 2 | Grid rules: rotation tables, line clears, a fair random generator | falling-block puzzle | general |
 | 3 | Formations, projectiles, attribute clash handled deliberately | fixed-screen shooter | yes |
 | 4 | Masked sprites over scenery, tile maps, fixed-point jump physics | single-screen platformer | yes |
@@ -39,6 +39,7 @@ sourced into `reference/` before the rung is agreed.
 Meteor Storm is published with one impact sound, a black border, a cyan HUD
 and a white playfield. The [proposed extension](../games/meteor-storm/brief.md#proposed-extension)
 adds the rest in new units after unit 24, so the published units keep their URLs.
+The extension is agreed.
 
 ## Tier 2: commercial craft (1984 to 1986)
 
