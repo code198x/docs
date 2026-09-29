@@ -73,7 +73,7 @@ As programs grow, show the changed routine or a focused excerpt with enough cont
 
 Do not use `CodeDiff` as the required editing instructions in introductory lessons. Reserve diffs for optional comparisons after explaining their notation, or for lessons that teach tools such as version control. The essential building sequence must remain understandable without reading a diff.
 
-Do not hide essential implementation in unexplained starter code. When reusing files from a previous game, name them, explain their contracts and provide a clear route to understanding them. Restructuring should be motivated and taught as a visible change.
+A program contains only what has been taught. When a unit needs code that a later unit teaches, move the teaching earlier; do not supply the code with a promise to explain it later. Do not hide essential implementation in unexplained starter code. When reusing files from a previous game, name them, explain their contracts and provide a clear route to understanding them. Restructuring should be motivated and taught as a visible change.
 
 A unit's size follows its teaching load, not a fixed line count or duration. Explain unfamiliar syntax and hardware at the point of use. The reader should not need to assemble the essential explanation from several linked pages.
 
