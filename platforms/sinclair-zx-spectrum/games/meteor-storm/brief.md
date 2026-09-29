@@ -125,8 +125,9 @@ accept an uninteresting first game.
 
 **Status:** Agreed on 2026-09-29, including more than one storm and colour
 bands. The charter asks assembly games to go as far as they reasonably can.
-The published game (units 1 to 24) stays as it is, so its URLs stay. These
-units follow it, one idea each. The list is the working plan, not a fixed
+Units 1 to 24 may be restated where they are not right, including moving
+new material into them where it fits better than at the end; a changed URL
+gets a redirect. Otherwise these units follow them, one idea each. The list is the working plan, not a fixed
 count: split a unit wherever one change needs its own experiment.
 
 What the published game already has: a title, instructions, best time and
