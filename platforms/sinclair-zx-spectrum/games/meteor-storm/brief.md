@@ -134,18 +134,34 @@ What the published game already has: a title, instructions, best time and
 score for the session, phases, retry, a black border, a bright cyan HUD over a
 white-on-black playfield, and one short impact sound (`impact_sound`).
 
+A review of units 1 to 24 on 2026-09-29 found them basically right: one idea
+each, with correct arithmetic. Units 1 to 23 keep their order, URLs and
+checkpoints. Unit 10 gains a sentence naming the speaker bit. Unit 11 gains a
+map of the code its program brings in early (title, reset, results, retry,
+the frame measurement and the event reader), each linked to the unit that
+teaches it. The old unit 24, a closing unit, moves to the end and merges
+with the new release unit. Weaving sound or colour into earlier units was
+rejected: it would rebuild ten or more checkpoints, and sound as data only
+makes sense once all four events exist.
+
 | Unit | Title (working) | New idea | Observable result |
 |---|---|---|---|
+| 24 | Turn a click into a tone | The speaker bit, a square wave's period from a delay loop, and length as a cycle count; keep the border bits when writing the port | The impact, a click of about 1 ms before, becomes an audible tone |
 | 25 | Give every event a sound | Sound effects as data: pitch and length tables, one routine | Distinct sounds for a star, boost, arrival and impact |
-| 26 | Pay for sound in the frame | A beeper tone needs the CPU; spread an effect across frames from the clock | Sound plays while the storm keeps moving; the cost is measured |
-| 27 | Colour the storm by place | Attributes belong to cells, not objects: colour bands of the playfield | Meteors change colour as they fall through bands, with no clash |
-| 28 | Break the ship apart | A short debris animation between impact and result | Destruction reads as an event, not a cut to the result |
+| 26 | Pay for sound in the frame | A beeper tone needs the CPU; measure the cost with unit 20's counters, then spread an effect across frames | Sound plays while the storm keeps moving |
+| 27 | Break the ship apart | A destroyed phase: debris between impact and result | The player sees the collision instead of a cut to the result |
+| 28 | Colour the storm by place | The existing HUD and playfield colours explained, then attribute bands | Meteors change colour as they fall through bands, with no clash |
 | 29 | Chain storms into a voyage | A table of courses: arriving in clear space leads into the next storm | The run continues through several storms |
 | 30 | Make each storm harder | Per-storm parameters as data: speed, density, drift and band colours | Later storms are faster, denser and look different |
-| 31 | Remember the furthest storm | Records across a voyage, not one passage | The title shows the best storm reached with its score |
-| 32 | Let the title play itself | An attract screen: reuse the object pool behind the title | Meteors drift behind the title; the prompt flashes |
-| 33 | Draw a loading screen | A SCREEN$ made with `build198x image`, loaded before the code | The tape shows a picture while the game loads |
-| 34 | Keep and share the finished game | Fresh tape, loading screen, full voyage | The complete release loads and plays from a fresh tape |
+| 31 | Let the score outgrow a byte | A two-byte score and its decimal display | Scores past 255 display correctly |
+| 32 | Remember the furthest storm | Records across a voyage, not one passage | The title shows the best storm reached with its score |
+| 33 | Let the title play itself | An attract screen: reuse the object pool behind the title | Meteors drift behind the title; the prompt flashes |
+| 34 | Draw a loading screen | A SCREEN$ made with `build198x image`, loaded before the code | The tape shows a picture while the game loads |
+| 35 | Keep and share the game | Fresh tape, loading screen, full voyage (the old unit 24, merged) | The complete release loads and plays from a fresh tape |
+
+The unit 24 URL changes topic, from the closing unit to the tone. It cannot
+redirect while in use, so an old link lands on the tone unit, which links on
+to unit 35.
 
 The goal becomes a voyage: several storms, each ending in clear space, rather
 than one passage. The accepted first storm stays as the voyage's opening, with
@@ -154,6 +170,8 @@ not by luck; verify a successful route through each.
 
 To settle while drafting:
 
+- **Time and bonus.** The time display suits runs under 100 seconds and the
+  finish bonus assumes one storm. Settle both with lives, before unit 29.
 - **Lives.** The accepted rule is one hit ends the run. Across a voyage that
   may be too harsh; decide after playing a two-storm build, not in advance.
 - **Voyage length.** Choose the number of storms from play, as the first
