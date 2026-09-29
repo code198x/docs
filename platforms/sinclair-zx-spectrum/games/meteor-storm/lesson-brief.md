@@ -78,8 +78,9 @@ more capable.
 The clock lesson may need splitting if vector setup and interrupt handling
 crowd out understanding. The same applies to smooth drawing and the measured
 boost optimisation. Split for a coherent explanation, not an instruction quota.
-A small supplied routine is acceptable only with an explained dependency and a
-clear point where its implementation is taught.
+Each checkpoint contains only what its unit and the units before it teach. When
+a unit needs code a later unit teaches, move the teaching earlier; see
+[the unit specification](../../../../specifications/unit.md).
 
 Registers/flags, memory, bit operations, signed arithmetic, indexed data, stack,
 interrupts and timing all earn a place here. Matrix algebra, general physics,

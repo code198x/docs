@@ -134,15 +134,28 @@ What the published game already has: a title, instructions, best time and
 score for the session, phases, retry, a black border, a bright cyan HUD over a
 white-on-black playfield, and one short impact sound (`impact_sound`).
 
-A review of units 1 to 24 on 2026-09-29 found them basically right: one idea
-each, with correct arithmetic. Units 1 to 23 keep their order, URLs and
-checkpoints. Unit 10 gains a sentence naming the speaker bit. Unit 11 gains a
-map of the code its program brings in early (title, reset, results, retry,
-the frame measurement and the event reader), each linked to the unit that
-teaches it. The old unit 24, a closing unit, moves to the end and merges
-with the new release unit. Weaving sound or colour into earlier units was
-rejected: it would rebuild ten or more checkpoints, and sound as data only
-makes sense once all four events exist.
+A review of units 1 to 24 on 2026-09-29 found each unit carries one idea
+with correct arithmetic, but unit 11's program swapped unit 10's simple
+ending for the finished game's machinery: phases and results (taught in unit
+22), the run reset (unit 21), the frame measurement (unit 17), and `hull` and
+`ship_visible`, which no unit taught. A program must contain only what has
+been taught, so the units are reordered, agreed on 2026-09-29:
+
+| Unit | Title (working) | Change |
+|---|---|---|
+| 1 to 10 | unchanged | |
+| 11 | Give the game clear phases (was 22) | Moved to right after the first loss. Title, play and result; R and Q; key release; the run reset as one block of memory; `hull` taught as the alive flag; `ship_visible` hides the ship between phases. A one-meteor game with a title and result. |
+| 12 to 22 | was 11 to 21 | Each one place later. The frame measurement arrives with the time unit (now 18). Records (now 22) keeps session bests outside the run block unit 11 introduced. |
+| 23, 24 | unchanged | Instructions, then keep and share. |
+
+A new checkpoint, `phases`, carries unit 11. Checkpoints from `object-pool`
+to `records` are rebuilt without code taught later; `finished` is unchanged,
+so the extension below builds on it as planned. The URLs for units 11 to 22
+each move one place. Unit 10 gains a sentence naming the speaker bit; the
+old unit 24, a closing unit, moves to the end and merges with the new release
+unit. Weaving sound or colour into earlier units was rejected: it would
+rebuild more checkpoints for little gain, and sound as data only makes sense
+once all four events exist.
 
 | Unit | Title (working) | New idea | Observable result |
 |---|---|---|---|
