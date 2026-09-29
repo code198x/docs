@@ -120,3 +120,36 @@ unreadable, damage feels arbitrary, encounters repeat without developing, or the
 rendering machinery dominates the teaching. Improve the central passage before
 adding further systems. The selected premise is not a reason to
 accept an uninteresting first game.
+
+## Proposed extension
+
+**Status:** Proposal, not agreed. The charter now asks assembly games to go as
+far as they reasonably can. The published game (units 1 to 24) stays as it is;
+these units follow it, one idea each, and the course ends on a new
+packaging unit.
+
+What the published game already has: a title, instructions, best time and
+score for the session, phases, retry, a black border, a bright cyan HUD over a
+white-on-black playfield, and one short impact sound (`impact_sound`).
+
+| Unit | Title (working) | New idea | Observable result |
+|---|---|---|---|
+| 25 | Give every event a sound | Sound effects as data: pitch and length tables, one routine | Distinct sounds for a star, boost, arrival and impact |
+| 26 | Pay for sound in the frame | A beeper tone needs the CPU; spread an effect across frames from the clock | Sound plays while the storm keeps moving; the cost is measured |
+| 27 | Colour the storm by place | Attributes belong to cells, not objects: colour bands of the playfield | Meteors change colour as they fall through bands, with no clash |
+| 28 | Break the ship apart | A short debris animation between impact and result | Destruction reads as an event, not a cut to the result |
+| 29 | Let the title play itself | An attract screen: reuse the object pool behind the title | Meteors drift behind the title; the prompt flashes |
+| 30 | Draw a loading screen | A SCREEN$ made with `build198x image`, loaded before the code | The tape shows a picture while the game loads |
+| 31 | Keep and share the finished game | Fresh tape, loading screen, full run | The complete release loads and plays from a fresh tape |
+
+Open questions:
+
+- **More than one storm.** A sequence of harder passages would give the
+  game a progression, as early-1980s arcade games had. It changes the
+  accepted single-passage goal, so it needs agreement before it is drafted.
+- **Colour bands.** Colouring by place is the period answer to attribute
+  clash. Colour per object belongs to a later rung. Confirm that bands suit the
+  storm's look before drafting unit 27.
+- **Verification.** Each unit needs executed checkpoints, like units 1 to 24,
+  and the timing of unit 26 needs measurement, not estimates.
+

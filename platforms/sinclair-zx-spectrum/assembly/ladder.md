@@ -30,14 +30,15 @@ sourced into `reference/` before the rung is agreed.
 | Rung | New technique | Genre | Evidence |
 |---|---|---|---|
 | 0 | *Meet Assembly (published):* instructions, screen memory, loops, routines, keys, frame interrupts, debugging | exercises | yes |
-| 1 | *Meteor Storm (published), pushed further:* pre-shifted pixel sprite, frame clock, object pool, collision, scoring, phases; then beeper effects, attribute colour, a title screen and a high-score table | dodge and collect | yes; beeper yes |
+| 1 | *Meteor Storm (published), pushed further:* pre-shifted pixel sprite, frame clock, object pool, collision, scoring, phases; then sound for every event, colour by place, an explosion, an attract screen and a loading screen | dodge and collect | yes; beeper yes |
 | 2 | Grid rules: rotation tables, line clears, a fair random generator | falling-block puzzle | general |
 | 3 | Formations, projectiles, attribute clash handled deliberately | fixed-screen shooter | yes |
 | 4 | Masked sprites over scenery, tile maps, fixed-point jump physics | single-screen platformer | yes |
 | 5 | Enemy behaviour: grid pathfinding, state machines, personalities | maze chase | general |
 
-Meteor Storm is published silent and monochrome. It gains the rest in new
-units at the end, so the published units keep their URLs.
+Meteor Storm is published with one impact sound, a black border, a cyan HUD
+and a white playfield. The [proposed extension](../games/meteor-storm/brief.md#proposed-extension)
+adds the rest in new units after unit 24, so the published units keep their URLs.
 
 ## Tier 2: commercial craft (1984 to 1986)
 
