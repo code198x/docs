@@ -46,6 +46,8 @@ Use graphical touches to illuminate the subject: verified game captures, readabl
 
 Keep the About page centred on the promise, audience and learning approach. Distinguish current material from intended coverage, explain independent entry points and describe verification honestly. Personal history supports the mission without replacing it.
 
+**Unagreed plans stay off the site.** A catalogue entry for a game that is not agreed is an internal note. The website shows finished games and agreed next games only; it does not list proposals as coming soon.
+
 Publishing includes the curriculum and its supporting editorial pages. Consider **What’s New**, **From the Metal** and **Field Notes** whenever substantial work produces something useful to share. Choose the format to suit the evidence and reader benefit; not every change needs three articles. [Website and publishing workflow](website.md#editorial-updates) defines their responsibilities.
 
 ## Entry and progression
@@ -56,13 +58,22 @@ Distinguish knowledge an example uses from lessons someone must have attended. E
 
 Within a game, provide a guided development sequence. Readers are not expected to invent independent projects as a condition of learning. Programs grow understandably; necessary files generally come from preceding work. Explain any supplied code and how it fits before readers must depend on it.
 
+**How a track is shaped.** These are defaults, applied with judgement:
+
+- **A track ladders up.** Each game exists to teach the next technique, and the order follows what each game teaches. This is the one that matters most.
+- **Each step is a full game, not a tech demo.** A technique enters the track inside a game that needs it. Sound, loaders, timing tricks and tools arrive as part of a game, not as standalone showpieces.
+- **A track covers as many genres as practical.** Where two games could teach the same technique, prefer the genre the track has not yet covered.
+- **A track aims for a capstone:** one larger game that brings together what the track taught. It is an aim for the track's shape, not a reserved slot or a promised release.
+- **A unit introduces one new idea where it can.** A unit that needs two new ideas is usually two units.
+- **AMOS and Blitz are peers of Amiga assembly.** They are full tracks in their own right, never a stepping stone to assembly.
+
 ## What makes a finished game
 
-A game should be complete, enjoyable, readable, responsive and deliberately finished for its agreed scope. BASIC games in particular need not meet commercial standards. A single room, a small puzzle or a short session can fulfil a worthwhile promise.
+A game should be complete, enjoyable, readable, responsive and deliberately finished for its agreed scope. BASIC games meet commercial standards of polish at the scale of the machine's early releases (1982 to 1983 on the Spectrum and C64), not its late-1980s peak: simpler games, finished just as carefully. A published BASIC game can keep growing when it has more to give. A single room, a small puzzle or a short session can fulfil a worthwhile promise.
 
 Choose failure and retry behaviour to suit each game. A reachable losing state is not compulsory: puzzles, creative games and exploration projects can provide meaningful decisions and satisfying outcomes without one. Where failure serves the experience, explain its purpose, consequences and recovery. This principle does not automatically remove failure mechanics from existing designs.
 
-Selected later projects can be substantially more ambitious. Their scope must serve their experience and teaching, not match a commercial price tier or feature census. Assembly does not automatically require commercial scale.
+Assembly, AMOS and Blitz games go as far as they reasonably can. AMOS and Blitz take the assembly bar, not the BASIC one: both languages produced commercial-quality games. Each gains the sound, colour, presentation and depth its machine allows, as long as a reader can still follow every step. Their scope serves the experience and the teaching, not a commercial price tier or feature census.
 
 Programming, design, graphics, sound and finishing develop together. Appropriate treatment matters more than equal quantities: deliberate silence or a small visual vocabulary can be a design choice. Runnable intermediate stages can be incomplete; a claimed finished game must fulfil its stated scope.
 
