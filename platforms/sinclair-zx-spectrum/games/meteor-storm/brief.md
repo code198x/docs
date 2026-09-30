@@ -172,9 +172,13 @@ once all four events exist.
 | 34 | Draw a loading screen | A SCREEN$ made with `build198x image`, loaded before the code | The tape shows a picture while the game loads |
 | 35 | Keep and share the game | Fresh tape, loading screen, full voyage (the old unit 24, merged) | The complete release loads and plays from a fresh tape |
 
-The unit 24 URL changes topic, from the closing unit to the tone. It cannot
-redirect while in use, so an old link lands on the tone unit, which links on
-to unit 35.
+Published so far (2026-09-30): units 24 to 27, on checkpoints `tone`,
+`sound-table`, `sound-frames` and `debris`. The debris unit was strengthened
+after review into eight shards cut from the ship, a red border flash and
+gravity. Keep and share stays the last unit and moves along as each new unit
+lands; it is unit 28 now and reaches 35 when the list is complete. Numbered
+URLs therefore change topic as it moves: an old link to keep and share lands
+on the unit that replaced it, which links on to the current closing unit.
 
 The goal becomes a voyage: several storms, each ending in clear space, rather
 than one passage. The accepted first storm stays as the voyage's opening, with
