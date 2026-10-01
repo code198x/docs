@@ -84,7 +84,19 @@ Possible teaching components belong in [current work](work.md#website-components
 
 ## Validation
 
-Run checks from the owning repository. Website `package.json` and CI define the supported commands: `npm test`, `npm run build`, `npm run test:e2e`, `npm run test:a11y` and the explicit full-site accessibility sweep. The production build runs unit/content checks, builds pages and indexes them. Decoder-dependent checks need the generated Play198x package. Report skipped or blocked checks accurately.
+Run checks locally from the owning repository. `npm run check` runs unit,
+content and prepared-player/assembler checks. `npm run check:release` adds
+announcement regressions, a production build, browser PNG-decode,
+player/accessibility tests and offline built-site links. Its preparation and
+required tools are in the website README. The wider `npm run test:e2e` and
+full-site accessibility sweep remain separate local checks. Report skipped or
+blocked checks accurately.
+
+`npm run build` generates the site, marks redirects and indexes search; it
+runs no test suite. GitHub CI is a quick content smoke check, without sibling
+Rust builds or browsers. Pages builds the assets and site and publishes it;
+local checks establish release evidence. The owner decides which unresolved
+findings to accept for a release.
 
 For visual or interactive changes, inspect affected pages at narrow and wide widths, in both themes where relevant, and check keyboard use and alternatives to colour or sound cues. Existing accessibility baselines record known findings; do not expand them to conceal a regression. Use targeted checks during work and required checks before publication. Prose linting is advisory; editorial judgement remains necessary.
 
