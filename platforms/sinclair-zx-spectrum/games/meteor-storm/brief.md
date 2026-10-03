@@ -164,19 +164,20 @@ once all four events exist.
 | 26 | Pay for sound in the frame | A beeper tone needs the CPU; measure the cost with unit 20's counters, then spread an effect across frames | Sound plays while the storm keeps moving |
 | 27 | Break the ship apart | A destroyed phase: debris between impact and result | The player sees the collision instead of a cut to the result |
 | 28 | Colour the storm by place | The existing HUD and playfield colours explained, then attribute bands | Meteors change colour as they fall through bands, with no clash |
-| 29 | Chain storms into a voyage | A table of courses: arriving in clear space leads into the next storm | The run continues through several storms |
-| 30 | Make each storm harder | Per-storm parameters as data: speed, density, drift and band colours | Later storms are faster, denser and look different |
-| 31 | Let the score outgrow a byte | A two-byte score and its decimal display | Scores past 255 display correctly |
-| 32 | Remember the furthest storm | Records across a voyage, not one passage | The title shows the best storm reached with its score |
-| 33 | Let the title play itself | An attract screen: reuse the object pool behind the title | Meteors drift behind the title; the prompt flashes |
-| 34 | Draw a loading screen | A SCREEN$ made with `build198x image`, loaded before the code | The tape shows a picture while the game loads |
-| 35 | Keep and share the game | Fresh tape, loading screen, full voyage (the old unit 24, merged) | The complete release loads and plays from a fresh tape |
+| 29 | Chain storms into a voyage | A table of five courses: arriving in clear space leads into the next storm; the time starts fresh each storm | The run continues through five storms, and the one-byte score visibly wraps past 255 |
+| 30 | Let the score outgrow a byte | A two-byte score and its decimal display | Scores past 255 display correctly |
+| 31 | Reward each storm cleared | Storm *n*'s finish bonus is multiplied by *n* | A fast fifth storm is worth five times a fast first one |
+| 32 | Make each storm harder | Per-storm parameters as data: speed, density, drift and band colours | Later storms are faster, denser and look different |
+| 33 | Remember the furthest storm | Records across a voyage, not one passage | The title shows the best storm reached with its score |
+| 34 | Let the title play itself | An attract screen: reuse the object pool behind the title | Meteors drift behind the title; the prompt flashes |
+| 35 | Draw a loading screen | A SCREEN$ made with `build198x image`, loaded before the code | The tape shows a picture while the game loads |
+| 36 | Keep and share the game | Fresh tape, loading screen, full voyage (the old unit 24, merged) | The complete release loads and plays from a fresh tape |
 
-Published so far (2026-09-30): units 24 to 27, on checkpoints `tone`,
-`sound-table`, `sound-frames` and `debris`. The debris unit was strengthened
+Published so far (2026-09-30): units 24 to 28, on checkpoints `tone`,
+`sound-table`, `sound-frames`, `debris` and `colour-bands`. The debris unit was strengthened
 after review into eight shards cut from the ship, a red border flash and
 gravity. Keep and share stays the last unit and moves along as each new unit
-lands; it is unit 28 now and reaches 35 when the list is complete. Numbered
+lands; it is unit 29 now and reaches 36 when the list is complete. Numbered
 URLs therefore change topic as it moves: an old link to keep and share lands
 on the unit that replaced it, which links on to the current closing unit.
 
@@ -185,13 +186,19 @@ than one passage. The accepted first storm stays as the voyage's opening, with
 its duration, speeds and density. Later storms must stay survivable by design,
 not by luck; verify a successful route through each.
 
-To settle while drafting:
+Settled on 2026-10-03:
 
-- **Time and bonus.** The time display suits runs under 100 seconds and the
-  finish bonus assumes one storm. Settle both with lives, before unit 29.
-- **Lives.** The accepted rule is one hit ends the run. Across a voyage that
-  may be too harsh; decide after playing a two-storm build, not in advance.
-- **Voyage length.** Choose the number of storms from play, as the first
-  storm's duration was.
+- **Time.** The time display starts fresh for each storm, so it stays under
+  100 seconds and the existing display still fits.
+- **Finish bonus.** Each storm keeps the existing bonus (one point for each
+  second below 100), multiplied by the storm's number: ×1 for the first, ×5 for
+  the fifth. The multiplied bonus overflows a one-byte score, so the two-byte
+  score moves ahead of it (units 30 and 31) and unit 29 shows the wrap that
+  motivates it.
+- **Lives.** One hit ends the run, across the whole voyage.
+- **Voyage length.** Five storms.
+
+Still to do while drafting:
+
 - **Verification.** Each unit needs executed checkpoints, like units 1 to 24,
   and the timing of unit 26 needs measurement, not estimates.
