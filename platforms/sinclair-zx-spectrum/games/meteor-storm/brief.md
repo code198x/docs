@@ -174,12 +174,29 @@ once all four events exist.
 | 36 | Keep and share the game | Fresh tape, loading screen, full voyage (the old unit 24, merged) | The complete release loads and plays from a fresh tape |
 
 Published so far (2026-09-30): units 24 to 28, on checkpoints `tone`,
-`sound-table`, `sound-frames`, `debris` and `colour-bands`. The debris unit was strengthened
-after review into eight shards cut from the ship, a red border flash and
-gravity. Keep and share stays the last unit and moves along as each new unit
-lands; it is unit 29 now and reaches 36 when the list is complete. Numbered
-URLs therefore change topic as it moves: an old link to keep and share lands
-on the unit that replaced it, which links on to the current closing unit.
+`sound-table`, `sound-frames`, `debris` and `colour-bands`.
+
+Built on 2026-10-04, in stacked pull requests awaiting review (code-samples
+#42 to #48, website #607 to #613): units 29 to 35 on checkpoints `voyage`,
+`two-byte-score`, `storm-bonus`, `harder-storms`, `furthest-storm`, `attract`
+and `loading-screen`, with keep and share as unit 36. Choices made while
+building, for review:
+
+- **Storm rules** (unit 32): extra speed 0/1/1/2/2, gap cut 0/1/2/2/3, drift
+  every 4th/4th/2nd/2nd/every update, hotter colours per storm. The route model
+  proves each storm has a keyboard route; play-testing should tune them.
+- **Record** (unit 33): storms crossed, then score, replaces the best score;
+  the fastest storm stays as BEST STORM.
+- **Attract layout** (unit 34): the prompt flashes through the FLASH attribute
+  and moves to row 1, above the course, so falling meteors do not flash; the
+  record moves to row 20.
+- **Tape** (unit 35): a BASIC loader with `POKE 23739,111` so the ROM cannot
+  print over the loading screen, then the SCREEN$ and the code. The picture
+  is composed from the game's sprites and coloured by row.
+
+Keep and share stays the last unit. Numbered URLs therefore change topic as
+it moves: an old link to keep and share lands on the unit that replaced it,
+which links on to the current closing unit.
 
 The goal becomes a voyage: several storms, each ending in clear space, rather
 than one passage. The accepted first storm stays as the voyage's opening, with
