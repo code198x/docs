@@ -176,11 +176,11 @@ once all four events exist.
 Published so far (2026-09-30): units 24 to 28, on checkpoints `tone`,
 `sound-table`, `sound-frames`, `debris` and `colour-bands`.
 
-Built on 2026-10-04, in stacked pull requests awaiting review (code-samples
-#42 to #48, website #607 to #613): units 29 to 35 on checkpoints `voyage`,
+Merged on 2026-10-04 (code-samples #42 to #48, website #607 to #613): units
+29 to 35 on checkpoints `voyage`,
 `two-byte-score`, `storm-bonus`, `harder-storms`, `furthest-storm`, `attract`
 and `loading-screen`, with keep and share as unit 36. Choices made while
-building, for review:
+building, still to review in play:
 
 - **Storm rules** (unit 32): extra speed 0/1/1/2/2, gap cut 0/1/2/2/3, drift
   every 4th/4th/2nd/2nd/every update, hotter colours per storm. The route model
