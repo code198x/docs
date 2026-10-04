@@ -35,6 +35,28 @@ File a thing by what it is: a language goes in Languages even when it ships with
 
 Use the existing category and canonical entry when one fits. A new entry should answer a useful question or support a meaningful curriculum connection, not merely increase a count.
 
+## Presentation and discovery
+
+The Vault contents page combines a magazine-style featured article, related reading, a complete subject directory and title search. Keep the paper background and dark reading text. Use verified captures and other evidence from the featured article rather than generic decoration. On narrow screens, the subject directory can fold away so the feature remains within easy reach.
+
+Features are explicitly curated. The featured article remains the authoritative entry, with its existing URL and title. Its contents-page headline, short introduction, images and captions may be written for that placement; related reading is deliberately selected. Replacing a feature should be an editorial task rather than a layout change. The website stores ordered selections in `src/data/vault-features.ts`. Each selection references an existing reviewed article and supplies a placement headline, deck, link text, article-owned images with alt text and captions, and ordered related article identifiers. `src/lib/vault-features.ts` resolves those references and rejects missing articles, unreviewed features, duplicate selections, unrelated imagery and incomplete image metadata at build time. The contents page uses the first selection; category pages use the first selection belonging to their category.
+
+### Category colour
+
+Use five shared colour families across the 23 subjects, rather than 23 independent colours. Category names remain the precise identifiers; colour is an additional browsing cue. Carry each subject's colour consistently through directory markers, category labels on article previews and article pages, search results and featured panels. A feature takes its article's category colour, not an independently chosen campaign colour.
+
+| Colour family | Subjects | Label / marker ink | Panel / label background |
+|---|---|---|---|
+| Machine blue | Systems, Hardware, Emulators | `#305c8c` | `#d9e5f1` |
+| Craft yellow | Techniques, Languages, Tools, Reference, Software, Technologies | `#705200` | `#f3d52e` |
+| Play green | Classic Games, Genres, Design, Demos | `#306749` | `#dbe9d6` |
+| People red | People, Companies & Studios, Groups, Distribution | `#a34436` | `#f0dacf` |
+| Culture purple | Culture & Community, Magazines, Books, Events, Phenomena, Communities | `#70517f` | `#e7dded` |
+
+These are Vault presentation colours, not new project or machine brand colours. Maintain one shared category-to-family mapping. New subjects require an explicit assignment. Preserve the Code198x wordmark and page-shell colours, and do not recolour captures. Check actual text/surface combinations at 4.5:1 or better and meaningful non-text markers at 3:1 or better. Names must remain readable and useful without colour.
+
+The [family visual identity](../../../decisions/family-visual-identity.md#3-one-spot-ink-per-page-machine-first) permits this scoped Vault exception to its default one-spot-ink rule. The magazine rollout implements the contents, category and article templates with shared components and tokens. The presentation mapping lives in `src/lib/vault-colours.ts`, and its palette lives in `src/styles/site-tokens.css`. Category indices retain every entry and use native expandable summaries; article pages retain their prose, sources, figures, contents and review state.
+
 ## Entry contract
 
 The website's `src/content.config.ts` is authoritative for accepted fields. Every entry requires `title`, `subtitle`, `summary`, `category`, `ai_generated` and `reviewed`; tags default to an empty array and platforms are optional. Use existing platform identifiers consistently.

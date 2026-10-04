@@ -44,6 +44,8 @@ The website should make its purpose and routes clear to a first-time visitor. Pr
 
 Use graphical touches to illuminate the subject: verified game captures, readable diagrams, asset studies and small visual experiments. Each should show something worth noticing or making. Preserve the House UI’s clear typography, accessible contrast and space for reading; avoid adding generic retro decoration to every page.
 
+The Vault uses a magazine-style contents page with curated featured reading, a complete subject directory and title search. Five shared colour families identify related subjects through labelled markers and featured panels. The [Vault specification](specifications/vault.md#presentation-and-discovery) defines this scoped extension to the family visual identity.
+
 Keep the About page centred on the promise, audience and learning approach. Distinguish current material from intended coverage, explain independent entry points and describe verification honestly. Personal history supports the mission without replacing it.
 
 **Unagreed plans stay off the site.** A catalogue entry for a game that is not agreed is an internal note. The website shows finished games and agreed next games only; it does not list proposals as coming soon.
