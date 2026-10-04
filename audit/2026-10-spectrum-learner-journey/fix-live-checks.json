@@ -1,0 +1,22 @@
+[
+  {
+    "width": 390,
+    "status": "passed",
+    "startBottom": 627,
+    "diagnostic": "Line 6: undefined symbol `not_a_label`",
+    "sourceExport": "first-program.asm",
+    "firmwareNote": "ROM included · no files needed",
+    "sourceDrawerContinuity": true,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "status": "passed",
+    "startBottom": 532.203125,
+    "diagnostic": "Line 6: undefined symbol `not_a_label`",
+    "sourceExport": "first-program.asm",
+    "firmwareNote": "ROM included · no files needed",
+    "sourceDrawerContinuity": true,
+    "errors": []
+  }
+]

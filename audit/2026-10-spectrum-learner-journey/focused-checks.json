@@ -1,0 +1,79 @@
+[
+  {
+    "script": "byte-pixels",
+    "status": "passed",
+    "base": "https://code198x.com",
+    "checks": [
+      "prediction mismatch and match; actual screen crop agrees with alternating RAM bits",
+      "purposeful pattern edit, stale-result label, source continuity, black-on-black and red restoration",
+      "second machine write replaces rather than overlays first pattern",
+      "current-source download and complete original-source restore",
+      "mobile no page overflow, keyboard prediction control and forced-colours selection"
+    ]
+  },
+  {
+    "script": "eight-rows",
+    "status": "passed",
+    "base": "https://code198x.com",
+    "checks": [
+      "64 predicted pixels match eight live RAM rows and the actual screen crop",
+      "custom artwork persists across experiments; misplaced row reaches $4001; repair restores row 2",
+      "loop explanation preserves code; download saves current artwork; Revert restores all eight rows",
+      "mobile no page overflow; all rows keyboard accessible; forced-colours selection visible"
+    ]
+  },
+  {
+    "script": "row-loop",
+    "status": "passed",
+    "base": "https://code198x.com",
+    "checks": [
+      "actual ordered eight-write capture, bounded replay/reset, same-tab artwork transfer, stale trace label",
+      "changing B to 4 captures exactly four writes, ending at $4300",
+      "missing INC D records eight replacement writes at $4000; last data byte survives",
+      "source download, Revert, mobile layout and keyboard replay"
+    ]
+  },
+  {
+    "script": "drawing-routine",
+    "status": "passed",
+    "base": "https://code198x.com",
+    "checks": [
+      "Two actual CALLs, sixteen writes, two RETs; routine inputs, advanced registers and balanced stack",
+      "Second destination moves the drawing to cell three with cell two untouched",
+      "Omitting second HL preparation exposes the advanced pointer at the next call",
+      "Overwrite, saved artwork, stale labels, exact source download, bounded incomplete trace, Revert and mobile keyboard replay"
+    ]
+  },
+  {
+    "script": "movement",
+    "status": "passed",
+    "base": "https://code198x.com",
+    "checks": [
+      "Navigation, initial clean row, O mask, one step while held, real erased and drawn bytes",
+      "Both keys cancel; release rearms; left and right edges reject movement without wrapping",
+      "Blur releases keys, edited erase leaves a visible trail, download/Revert, fresh run and mobile pointer controls"
+    ]
+  },
+  {
+    "script": "clocked-movement",
+    "status": "passed",
+    "base": "https://code198x.com",
+    "checks": [
+      "Navigation, actual frame/countdown/update cadence, idle clock and held movement, both-key cancellation",
+      "Source interval 12 and 3 produce exact update counts; both edges and clean redraw hold under repetition",
+      "Zero interval wraps through 256 frames; DI stops program and ROM clocks; restoring EI repairs execution",
+      "Clocked source download, mobile layout and held pointer input, zero scoped axe violations"
+    ]
+  },
+  {
+    "script": "guided-debugger",
+    "status": "passed",
+    "base": "https://code198x.com",
+    "checks": [
+      "Initial symptom reproduced with real O/P input; hypothesis and observation retained; registers progressively disclosed; source beside instruction; explanations only after stepping",
+      "Learner repair restores ordinary branch and protects zero edge; edited source requires reassembly",
+      "Second case has working branch and faulty erase; HL and actual pointed bytes identify it; independent repair supplies eight zeros; Revert remains supplied case 1",
+      "Mobile layout, keyboard stepping and zero scoped axe violations"
+    ]
+  }
+]

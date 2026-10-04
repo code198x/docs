@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Click journey at 390",
+    "status": "passed",
+    "detail": "https://code198x.com/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/"
+  },
+  {
+    "name": "First lesson run/edit/error/recovery at 390",
+    "status": "passed",
+    "detail": {
+      "diagnostic": "[{\"span\":{\"file\":0,\"line\":6,\"col\":0,\"expansion_frames\":[],\"path\":\"input.asm\"},\"code\":\"AssemblyError\",\"severity\":\"Error\",\"message\":\"undefined symbol `not_a_label`\",\"fix\":null}]",
+      "editorFont": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Consolas, monospace"
+    }
+  },
+  {
+    "name": "Eight next links and course handoff at 390",
+    "status": "passed",
+    "detail": {
+      "originalValues": "$81 $00\n$40 $80",
+      "editedValues": "$FF $00\n$7F $80",
+      "download": "meteor-storm.asm"
+    }
+  },
+  {
+    "name": "JavaScript errors at 390",
+    "status": "passed",
+    "errors": []
+  },
+  {
+    "name": "Click journey at 1440",
+    "status": "passed",
+    "detail": "https://code198x.com/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/"
+  },
+  {
+    "name": "First lesson run/edit/error/recovery at 1440",
+    "status": "passed",
+    "detail": {
+      "diagnostic": "[{\"span\":{\"file\":0,\"line\":6,\"col\":0,\"expansion_frames\":[],\"path\":\"input.asm\"},\"code\":\"AssemblyError\",\"severity\":\"Error\",\"message\":\"undefined symbol `not_a_label`\",\"fix\":null}]",
+      "editorFont": "\"JetBrains Mono\", ui-monospace, SFMono-Regular, Consolas, monospace"
+    }
+  },
+  {
+    "name": "Eight next links and course handoff at 1440",
+    "status": "passed",
+    "detail": {
+      "originalValues": "$81 $00\n$40 $80",
+      "editedValues": "$FF $00\n$7F $80",
+      "download": "meteor-storm.asm"
+    }
+  },
+  {
+    "name": "JavaScript errors at 1440",
+    "status": "passed",
+    "errors": []
+  }
+]

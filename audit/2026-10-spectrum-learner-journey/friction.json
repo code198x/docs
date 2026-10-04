@@ -1,0 +1,17 @@
+{
+  "gatewayROMNote": "Needs your own ROM files · nothing is uploaded",
+  "gatewayPlayer": "",
+  "downloadSourceButtons": 0,
+  "editSurvivesReload": false,
+  "visibleError": "THE ASSEMBLER FOUND A PROBLEM\n\n[{\"span\":{\"file\":0,\"line\":6,\"col\":0,\"expansion_frames\":[],\"path\":\"input.asm\"},\"code\":\"AssemblyError\",\"severity\":\"Error\",\"message\":\"undefined symbol `not_a_label`\",\"fix\":null}]",
+  "staticCopyLabels": [
+    "",
+    "",
+    "",
+    "Copy",
+    "Assemble and run",
+    "Revert",
+    "▶ Run it here",
+    "Close ✕"
+  ]
+}

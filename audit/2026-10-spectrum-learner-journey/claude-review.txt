@@ -1,0 +1,96 @@
+# Code198x beginner journey: expert text review
+
+**Scope:** This review uses only the eight supplied page extracts. It is not a learner trial and not a visual or browser test. Where this review says something is absent, that means absent from the extracted text. A drawer or control the extraction did not capture could change that judgement.
+
+## Prioritised observations
+
+### 1. Several routes lead beginners past Meet Assembly (highest priority)
+**URLs:** https://code198x.com/ · https://code198x.com/systems/sinclair-zx-spectrum/ · https://code198x.com/systems/sinclair-zx-spectrum/assembly/meteor-storm/
+
+**What the text shows:**
+- The homepage hero demonstrates *Meet BASIC, unit 1*.
+- The next homepage section promotes Meteor Storm. Its **Build Meteor Storm** button links straight to the Meteor Storm overview, not to Meet Assembly.
+- The Spectrum page shows the BASIC track (172 pages) and the assembly track (109 pages) side by side. It gives no advice on which to choose.
+- On the Meteor Storm overview, the main button is "Start with Carry a pixel into the next byte". It sits above a complete game demo.
+- The only mention of Meet Assembly on that overview is mid-paragraph in "Build it in small steps", well below that button.
+- Meteor Storm unit 1 says it uses "registers, memory addresses, calls and branches from Meet Assembly".
+
+**Hypothesis:** A newcomer who clicks the most attractive button may start Meteor Storm unit 1 without the eight foundation lessons. They may also be unsure whether to choose BASIC or assembly.
+
+**Remedies:**
+- Next to **Build Meteor Storm** and the overview's Start button, add a line such as: "New to assembly? Start with Meet Assembly (8 lessons), then come back."
+- On the Spectrum page, add one sentence of guidance on choosing a track. For example: "Never programmed? Either works; BASIC gives quicker results, assembly shows the machine directly."
+
+### 2. Meteor Storm unit 1 gives away its own prediction and reassures too late
+**URL:** https://code198x.com/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-01/
+
+**What the text shows:**
+- **The prediction is answered immediately.** "Change one thing" asks the learner to "Predict both rows". The very next sentence gives the answer: "The shifted pair should be $7F,$80". Elsewhere, the course folds answers behind *Show the explanation* and Meet Assembly stresses predicting before each run, so this breaks the course's own pattern.
+- **The reassurance comes after the problem.** The page tells the learner to run the program early on. The note "A black screen is not necessarily a failed run" appears only at the very end, after the shell commands.
+- **A helper routine interrupts the experiment.** The explanation of `clear` and LDIR sits inside "Change one thing", between the experiment and the build commands.
+
+**Hypothesis:** On a first run, a beginner sees a mostly black screen and may think something failed before they reach the note.
+
+**Remedies:**
+- Fold the $7F,$80 answer the same way PREDICT IT! answers are folded.
+- Move the black-screen sentence next to the first "Run the program".
+- Put `clear` under a short heading of its own, such as "Helper code".
+
+### 3. Saving edits is not clearly supported in Meet Assembly
+**URLs:** https://code198x.com/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/ · https://code198x.com/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-01/
+
+**What the text shows:**
+- In Meet Assembly unit 1, the editor controls listed are *Assemble and run / Revert / Sound*.
+- Meteor Storm editors also list *Download source*.
+- Unit 1 tells the learner to "Save your edited source too", but only in the local-build section. The Copy button there belongs to the static listing, not to the learner's edited code.
+- Meteor Storm warns "Save your edits before using Revert". Meet Assembly unit 1 describes Revert with no warning that it discards edits.
+- Unit 8 says edits survive switching stages. None of the pages say whether edits survive a page reload.
+
+**Hypothesis:** A learner may lose an edited experiment by pressing Revert or reloading, with no in-page way to keep it. The extraction may simply have missed a control, so this needs checking against the live page.
+
+**Remedies:**
+- Add *Download source* to Meet Assembly editors, or confirm it is already there.
+- State in one line whether edits persist across reloads.
+- Put the same "save before Revert" note in Meet Assembly that Meteor Storm has.
+
+### 4. The assembly track page gives mixed signals about order and progress
+**URL:** https://code198x.com/systems/sinclair-zx-spectrum/assembly/
+
+**What the text shows:**
+- **Gloaming's tagline contradicts the order.** Gloaming is listed as step 3 and called "the first complete game you finish in assembly". Meteor Storm, at step 2, ends in "a game you can load from tape", and the homepage calls it "the first game on the Spectrum assembly track".
+- **The next step after Meteor Storm is unclear.** Gloaming, The Long Night and Shadowkeep sit under "earlier projects remain available". The page does not say whether they follow Meteor Storm, overlap with it, or repeat the basics.
+- **The unit counts look like progress.** Labels such as "8 / 8 units" and "36 / 36 units" read like completion counters.
+
+**Hypothesis:** A learner may be unsure what to do after Meteor Storm. A first-time visitor may read "36 / 36" as "you've done all 36" or as a progress tracker.
+
+**Remedies:**
+- Rewrite Gloaming's tagline. For example: "an attribute-based game; a good next project after Meteor Storm", if that is accurate.
+- Add one line saying where each older project fits.
+- Relabel the counts as "36 units" or "36 of 36 published".
+
+### 5. Setup and ROM messages could put beginners off before they start
+**URLs:** https://code198x.com/systems/sinclair-zx-spectrum/ · https://code198x.com/systems/sinclair-zx-spectrum/assembly/ · https://code198x.com/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/
+
+**What the text shows:**
+- The Spectrum page puts "Needs your own ROM files" next to the track cards.
+- The assembly page mentions the "required ROM" in its *Before you begin* section.
+- Meet Assembly unit 1 says the browser starts a Spectrum and asks the ROM to run the program, which implies the in-page lessons need no setup.
+- Unit 1's local-build section is not labelled optional. It introduces the stack, interrupt service, tape headers and three commands. Its paragraph about the ROM's starting environment also applies to the browser route.
+
+**Hypothesis:**
+- A beginner may think they need ROM files before trying lesson 1.
+- An unlabelled tooling section in the first lesson adds a lot to take in at once.
+
+**Remedies:**
+- Next to the ROM note, say: "Lesson emulators need no setup; ROM files are only for the standalone player and local builds."
+- Label "Build a tape on your computer" as optional, or fold it away.
+- Move the paragraph about the ROM's starting environment next to "Try it in the page".
+
+## Strengths worth keeping
+
+- **Predict, run, inspect throughout.** Meet Assembly builds this into every lesson, and unit 8 turns debugging into a method the learner can reuse: reproduce, form a hypothesis, find the first disagreement, retest.
+- **Unit 1 explains every part of its code.** Each token and directive is covered. The host/target distinction is explained well. It is honest about limits, for example "This loop keeps the processor busy. It does not measure time".
+- **Precise statements about the tools.** Examples include "Editing source does not change the running machine" and "Revert restores… the faulty case, not a repaired answer". Unit 1 also notes that colour alone does not show whether code is correct.
+- **No assumed experience.** BASIC is repeatedly said to be optional. There are clear "If assembly fails…" troubleshooting lines, and on-screen key buttons as an alternative to the keyboard.
+- **Smooth continuity.** Unit 8 links straight to Meteor Storm unit 1, and every lesson provides a downloadable tape and cites primary sources.
+- **Motivating previews.** The homepage shows unit-by-unit screens, and the Meteor Storm overview opens with the finished game.
