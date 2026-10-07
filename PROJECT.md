@@ -40,6 +40,13 @@ These are responsibilities, not a mandate to create a top-level module for every
 
 ## Public presentation and publishing
 
+Approved page composition, content width, gutters and vertical spacing are part
+of the design contract. Shared layouts own these values. New pages reuse an
+existing layout; deliberate variants are explicit and documented. Changes to
+shared layout styles must compare affected approved page families before and
+after, at narrow and wide widths. Technical checks alone do not approve a visual
+change.
+
 The website should make its purpose and routes clear to a first-time visitor. Prefer familiar, descriptive navigation labels over invented names. Use “Systems” for the machine directory. Editorial series may have distinctive names, but their introductions and links should explain what readers will find. Review names in context rather than renaming every resource at once.
 
 Use graphical touches to illuminate the subject: verified game captures, readable diagrams, asset studies and small visual experiments. Each should show something worth noticing or making. Preserve the House UI’s clear typography, accessible contrast and space for reading; avoid adding generic retro decoration to every page.
