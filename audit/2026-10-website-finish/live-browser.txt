@@ -1,0 +1,29 @@
+
+Running 16 tests using 2 workers
+
+(node:95800) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:95801) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/site-review-search.spec.ts:39:1 › Vault title search handles punctuation, no matches, clearing and navigation (2.0s)
+  ✓   3 [desktop] › tests/timeline.spec.ts:3:1 › stories connect reviewed subjects to their articles and the dated chronology (1.5s)
+  ✓   4 [desktop] › tests/timeline.spec.ts:20:1 › the decade count describes rendered events and filters survive navigation (477ms)
+  ✓   2 [desktop] › tests/site-review-search.spec.ts:3:1 › global search can find Asm198x, follow a result and reopen after navigation (4.5s)
+  ✓   5 [desktop] › tests/timeline.spec.ts:44:1 › stories and chronology remain readable without JavaScript (807ms)
+  ✓   6 [desktop] › tests/track-previews.spec.ts:8:3 › game previews remain useful and complete: /systems/sinclair-zx-spectrum/basic/ (629ms)
+  ✓   7 [desktop] › tests/track-previews.spec.ts:8:3 › game previews remain useful and complete: /systems/commodore-64/assembly/ (429ms)
+(node:95885) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [desktop] › tests/track-previews.spec.ts:8:3 › game previews remain useful and complete: /systems/commodore-amiga/assembly/ (402ms)
+(node:95894) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [mobile] › tests/site-review-search.spec.ts:39:1 › Vault title search handles punctuation, no matches, clearing and navigation (711ms)
+  ✓  11 [mobile] › tests/timeline.spec.ts:3:1 › stories connect reviewed subjects to their articles and the dated chronology (813ms)
+  ✓   9 [mobile] › tests/site-review-search.spec.ts:3:1 › global search can find Asm198x, follow a result and reopen after navigation (2.3s)
+  ✓  12 [mobile] › tests/timeline.spec.ts:20:1 › the decade count describes rendered events and filters survive navigation (497ms)
+  ✓  14 [mobile] › tests/track-previews.spec.ts:8:3 › game previews remain useful and complete: /systems/sinclair-zx-spectrum/basic/ (568ms)
+  ✓  13 [mobile] › tests/timeline.spec.ts:44:1 › stories and chronology remain readable without JavaScript (783ms)
+  ✓  15 [mobile] › tests/track-previews.spec.ts:8:3 › game previews remain useful and complete: /systems/commodore-64/assembly/ (254ms)
+  ✓  16 [mobile] › tests/track-previews.spec.ts:8:3 › game previews remain useful and complete: /systems/commodore-amiga/assembly/ (272ms)
+
+  16 passed (9.5s)

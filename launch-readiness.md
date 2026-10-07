@@ -8,7 +8,7 @@ An unchecked item is outstanding or unverified. Close it with the tested revisio
 
 The visual rollout is no longer waiting for styling. The result-first homepage,
 learning routes, editable BASIC and modal emulator are implemented, followed by
-Vault discovery/reading, Pattern Library and browser-first Setup. The remaining
+Vault discovery/reading, Pattern Library and browser-first Setup. The published
 website pass adds readable game previews, connected Timeline stories and targeted
 utility/editorial layout fixes. Its [implementation and verification record](https://github.com/code198x/website/blob/51cfee47/docs/plans/2026-10-07-website-finish/README.md)
 identifies the candidate and test evidence. [Website PR #645](https://github.com/code198x/website/pull/645) owns publication status.
@@ -29,6 +29,36 @@ The open rows below retain their own scope. A broad item stays unchecked when
 only part has evidence. Native gameplay, listening, content review and a learner
 trial are separate from shipping these website changes; do not silently reopen
 completed design work or claim those human checks passed.
+
+## Published website finish
+
+[Website PR #645](https://github.com/code198x/website/pull/645) is merged and
+[deployment 37614605629](https://github.com/code198x/website/actions/runs/37614605629)
+succeeded on 7 October. The live website is `ae2a4cb700211ca1502e9962485f877497a93f96`.
+All 16 live desktop/mobile browser checks passed: connected-story/article/year
+navigation, persisted chronology filters and empty/reset states, no-JavaScript
+reading, full-frame game previews and global/Vault search. The deployment feed
+comparison found zero newly live items and posted no announcement.
+
+The hosted build used these checkouts:
+
+- code-samples: `38fd09a15868f5d3e45aa0d9bf0fb32583891833`;
+- Play198x: `dd2496a90ad70150f2add46a19c760ec0b2384b6`;
+- Asm198x: `4d50d25980337768169721cc89fd2e97978286bd`;
+- Emu198x: `792faaa55647a857fe5ae0ed612d56186f1805b8`;
+- shared UI: `7eda45e1c2f8b8f919359c971b2e210822e431f2`.
+
+[Retained live results](audit/2026-10-website-finish/live-browser.txt) and
+[hosted revision/feed evidence](audit/2026-10-website-finish/hosted-summary.txt)
+complete this website pass. The previous website revision was `9e80829c0`; revert
+the four commits introduced by PR #645 through a reviewed PR to roll back this
+pass. That restores website source; it does not pin sibling main branches.
+
+One non-blocking hosted maintenance warning remains: `actions/upload-artifact@v5`
+targets Node 20 and GitHub is forcing it onto Node 24. Updating that action is a
+separate maintenance change. The broader acceptance items below retain their
+stated limits; this publication does not certify physical-device behaviour,
+listening quality, every article or uncoached comprehension.
 
 ## 1. Freeze a concrete release candidate
 
