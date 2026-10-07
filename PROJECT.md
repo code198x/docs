@@ -47,6 +47,13 @@ shared layout styles must compare affected approved page families before and
 after, at narrow and wide widths. Technical checks alone do not approve a visual
 change.
 
+Every public page uses the same centred 1264px outer frame and responsive
+gutters. The header, breadcrumbs, page-title bands and footer align to that
+frame. Narrower reading columns, figures and grids sit inside it. Individual
+pages must not choose a different outer width or gutter. This replaces the
+previous permission for per-page bounded or full-width frame variants; shared
+layouts must enforce the same frame in development and production.
+
 The website should make its purpose and routes clear to a first-time visitor. Prefer familiar, descriptive navigation labels over invented names. Use “Systems” for the machine directory. Editorial series may have distinctive names, but their introductions and links should explain what readers will find. Review names in context rather than renaming every resource at once.
 
 Use graphical touches to illuminate the subject: verified game captures, readable diagrams, asset studies and small visual experiments. Each should show something worth noticing or making. Preserve the House UI’s clear typography, accessible contrast and space for reading; avoid adding generic retro decoration to every page.
