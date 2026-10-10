@@ -25,10 +25,10 @@ The progression additions (C01–C04, C06–C09d and R2–R4e) were published wi
 
 ### Open deliveries
 
-- [ ] **C03a follow-up — linked audio examples.** Before promoting them as runnable starting points, repair `sinclair-zx-spectrum/assembly/audio/sound-beep.mdx` (HL changes the repetition count while the delay stays fixed; validate claimed pitch changes and local-label scope), `nintendo-nes/assembly/audio/square-wave.mdx` (DMC/sample wording, sweep muting and length-load semantics), `commodore-64/assembly/audio/sid-note-trigger.mdx` (non-instant rate 0, retrigger and ownership assumptions, unverified cost estimates) and `commodore-amiga/assembly/audio/playing-a-sample.mdx` (period versus waveform pitch, DMA cost, ownership, one-shot interrupt timing). Deliver each with its own executable check.
-- [ ] **Triangle held output in Emu198x.** Before using Emu198x to teach the NES triangle's held output or clicks, fix `emu198x-ricoh-apu-2a03`'s `Triangle::output()`, which returns zero when gated, contrary to the held-output hardware contract. File it as an emu198x issue with a focused regression; do not change the lesson to match the emulator.
+- [ ] **Audio acceptance:** inspect the four maintained audio patterns in the browser and listen to their output on the named configurations. Native execution evidence is recorded in the [audio reconciliation](audit/2026-10-10-audio-evidence.md); it does not replace these checks.
+
 - [ ] **C05 — Meteor Storm: measure, overload and repair one drawing path.** Build the unit 20 profiling companion around its existing counters and `verification/checkpoints.py` (baseline, bounded extra render work, diagnosis, repair), preserving collision, simulation, course events, random-call order and input schedule. Coordinate with the Spectrum assembly rewrite first. Plans: [profiling](specifications/experiments/profiling-progression.md), [headroom](specifications/experiments/scheduling-ownership-headroom.md).
-- [ ] **C09e — Dash: connect collection to feedback.** After the triangle fix, trace the input/state/audio/PPU path; compare muted collection with an isolated, bounded delayed cue. Preserve score and collision events. Plan: [feedback](specifications/experiments/timing-and-player-feedback.md).
+- [ ] **C09e — Dash: connect collection to feedback.** Trace the input/state/audio/PPU path; compare muted collection with an isolated, bounded delayed cue. Preserve score and collision events. Plan: [feedback](specifications/experiments/timing-and-player-feedback.md).
 - [ ] **C10a — Dice Roller: demonstrate mapping bias.** Enumerate remainder mapping, compare a correctly specified rejection mapping, then inspect short samples; state the different source domains for a uniform byte and a non-zero LFSR. No statistics framework. Plan: [randomness](specifications/experiments/randomness-and-reproducibility.md).
 - [ ] **C11a — Port one input rule between Spectrum and NES.** Two isolated newly-pressed-action fixtures sharing one logical input/state table; test hardware readers separately from injected input, including reset while held and release/repress. Keep two understandable implementations. Plan: [abstraction and portability](specifications/experiments/abstraction-and-portability.md).
 
@@ -50,7 +50,7 @@ At review, inspect the rendered exercise and ask for a prediction before reveali
 
 ## Audio and performance
 
-Audio work is part of the queue above: the C03a follow-up, the triangle fix, C05 and C09e. The [audio direction](specifications/graphics-and-audio.md) and [four-system progression](specifications/experiments/audio-progression.md) own scope and teaching detail. Do not keep a separate audio to-do list.
+Audio work is part of the queue above: C05 and C09e. The [audio evidence reconciliation](audit/2026-10-10-audio-evidence.md) records the completed C03a repairs and triangle fix; browser acceptance and listening remain separate checks. The [audio direction](specifications/graphics-and-audio.md) and [four-system progression](specifications/experiments/audio-progression.md) own scope and teaching detail. Do not keep a separate audio to-do list.
 
 ## Spectrum sequences
 
