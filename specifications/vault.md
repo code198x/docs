@@ -117,7 +117,7 @@ Before publication check sources, dates, names, internal links, image rights and
 
 Every existing entry was machine-written and is unreviewed. An unreviewed entry stays published with its "Not yet fact-checked" footer, but is excluded from search indexing and the sitemap until it is reviewed. Links to it keep working.
 
-Review in batches of about ten entries, in priority order: the Spectrum and UK entries a CRASH! Live visitor meets first, then entries linked from published lessons, then the rest by category.
+Review in batches of about fifty entries (the owner raised this from about ten on 8 October 2026, to finish the remaining entries in about ten pull requests), in priority order: the Spectrum and UK entries a CRASH! Live visitor meets first, then entries linked from published lessons, then the rest by category.
 
 For each entry, an agent checks the frontmatter dates and every substantive claim. Evidence comes from period magazines, manuals and datasheets first, cited by publication, issue or edition, and page. A public web source is a fallback where no period source exists, and is marked as secondary. The agent corrects wrong claims, removes or qualifies unsupported ones, cites what it verified, and replaces any reference to a private collection with a statement about the public sources. It records each claim's verdict in an evidence report.
 
