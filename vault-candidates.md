@@ -23,9 +23,9 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Commodore 128 | systems | The C64's successor with a C64 mode | `systems/commodore-64`, `hardware/6510`, `technologies/disk-fastloaders`, `hardware/1541-disk-drive`, `emulators/vice`, `systems/commodore-vic-20`, `techniques/kernal-io` |
 | Commodore Max Machine (Ultimax) | systems | Shown beside the C64 at CES 1982 on the same chips | `systems/commodore-64`, `hardware/6510` |
 | Commodore SX-64 | systems | The portable C64 | `systems/commodore-64`, `hardware/cia` |
-| 10NES lockout chip | hardware | How Nintendo controlled NES cartridge publishing | `systems/nintendo-entertainment-system`, `phenomena/nintendo-seal`, `hardware/cartridge`, `technologies/copy-protection` |
-| Amiga CD32 | systems | Commodore's last machine | `systems/commodore-amiga`, `hardware/cd-rom`, `people/mark-sibly`, `companies/acid-software`, `games/skidmarks`, `people/rob-northen`, `games/beneath-a-steel-sky`, `companies/frontier-developments`, `companies/commodore`, `companies/flair-software`, `companies/millennium-interactive`, `people/david-pleasance`, `people/toby-simpson` |
-| HAM and Extra Half-Brite | techniques | The Amiga's two special display modes | `systems/commodore-amiga`, `hardware/denise`, `hardware/amiga-chipset`, `people/eric-graham`, `culture/the-juggler`, `techniques/dithering`, `software/deluxe-paint` |
+| 10NES lockout chip | hardware | How Nintendo controlled NES cartridge publishing | `systems/nintendo-entertainment-system`, `phenomena/nintendo-seal`, `hardware/cartridge`, `technologies/copy-protection`, `culture/region-locking` |
+| Amiga CD32 | systems | Commodore's last machine | `systems/commodore-amiga`, `hardware/cd-rom`, `people/mark-sibly`, `companies/acid-software`, `games/skidmarks`, `people/rob-northen`, `games/beneath-a-steel-sky`, `companies/frontier-developments`, `companies/commodore`, `companies/flair-software`, `companies/millennium-interactive`, `people/david-pleasance`, `people/toby-simpson`, `people/jim-sachs` |
+| HAM and Extra Half-Brite | techniques | The Amiga's two special display modes | `systems/commodore-amiga`, `hardware/denise`, `hardware/amiga-chipset`, `people/eric-graham`, `culture/the-juggler`, `techniques/dithering`, `software/deluxe-paint`, `culture/amiga-art-style` |
 | Microdigital TK90X and TK95 | systems | Brazilian Spectrum clones; the TK95 is the Next's starting point | `systems/zx-spectrum-next`, `systems/sinclair-zx-spectrum`, `culture/brazilian-market-reserve`, `people/clive-sinclair`, `culture/spectrum-clones`, `magazines/input-magazine` |
 | Commodore PET | systems | Commodore's first computer, built on the 6502 | `people/jack-tramiel`, `companies/mos-technology`, `companies/commodore`, `magazines/club-commodore`, `magazines/commodore-computer-club`, `people/mike-singleton`, `emulators/vice`, `systems/commodore-64`, `systems/commodore-vic-20`, `people/david-simons`, `languages/simons-basic`, `companies/microsoft`, `people/chuck-peddle`, `languages/basic-v2`, `techniques/kernal-io`, `magazines/compute-magazine`, `people/jim-butterfield`, `distribution/type-in-listings`, `games/colossal-cave-adventure`, `companies/audiogenic`, `reference/petscii-chart` |
 | KIM-1 | systems | MOS Technology's 6502 development board | `companies/mos-technology`, `people/jim-butterfield`, `people/chuck-peddle`, `hardware/6502` |
@@ -40,12 +40,12 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Commodore serial bus (IEC) | hardware | The disk-drive bus the CIA drives | `hardware/cia` |
 | TIA | hardware | The 2600's line-at-a-time video and sound chip, the counterpart to ANTIC | `systems/atari-2600`, `people/jay-miner`, `techniques/sprite-flicker`, `games/pac-man-atari-2600`, `techniques/sprites`, `techniques/raster-effects` |
 | Atari 7800 | systems | Atari's 1984 console, held back by the takeover | `companies/atari`, `systems/atari-2600`, `phenomena/1983-crash`, `games/pole-position`, `games/xevious`, `games/centipede`, `games/galaga` |
-| Atari Jaguar | systems | Atari Corporation's last console, home of *Tempest 2000* | `companies/atari`, `people/jack-tramiel`, `people/jeff-minter`, `games/tempest-2000`, `systems/atari-lynx`, `techniques/sprite-scaling`, `games/theme-park`, `games/tempest`, `companies/rebellion`, `games/rayman`, `genres/console-fps` |
+| Atari Jaguar | systems | Atari Corporation's last console, home of *Tempest 2000* | `companies/atari`, `people/jack-tramiel`, `people/jeff-minter`, `games/tempest-2000`, `systems/atari-lynx`, `techniques/sprite-scaling`, `games/theme-park`, `games/tempest`, `companies/rebellion`, `games/rayman`, `genres/console-fps`, `games/raiden`, `culture/pal-vs-ntsc` |
 | Atari Falcon030 | systems | The ST's successor and Atari's last computer | `magazines/st-format`, `systems/atari-st`, `demos/starstruck`, `demos/ocean-machine`, `groups/the-black-lotus` |
 | Virtual Boy | systems | Nintendo's 1995 3D console, whose failure ended Yokoi's time there | `people/gunpei-yokoi`, `companies/nintendo`, `companies/nintendo-rd1`, `systems/game-boy`, `companies/intelligent-systems` |
 | WonderSwan | systems | Bandai's 1999 handheld, designed by Yokoi's company Koto | `people/gunpei-yokoi`, `systems/game-boy`, `systems/neo-geo-pocket`, `genres/portable-gaming` |
 | Game Boy Color | systems | The Game Boy's 1998 colour successor with a double-speed processor | `systems/game-boy`, `systems/game-boy-advance`, `systems/neo-geo-pocket`, `systems/sega-game-gear`, `games/perfect-dark`, `games/crystalis`, `games/pokemon-gold-silver`, `phenomena/pokemon-phenomenon`, `genres/portable-gaming` |
-| Nintendo VS. System | systems | The arcade *Super Mario Bros.* British players met first | `games/super-mario-bros`, `games/duck-hunt`, `hardware/nes-zapper`, `systems/nintendo-entertainment-system`, `games/balloon-fight`, `games/wrecking-crew` |
+| Nintendo VS. System | systems | The arcade *Super Mario Bros.* British players met first | `games/super-mario-bros`, `games/duck-hunt`, `hardware/nes-zapper`, `systems/nintendo-entertainment-system`, `games/balloon-fight`, `games/wrecking-crew`, `games/excitebike`, `games/ice-climber` |
 | SPC700 and S-DSP | hardware | The SNES sound unit | `systems/super-nintendo`, `hardware/apu`, `people/nobuo-uematsu`, `games/chrono-trigger` |
 | SG-1000 | systems | Sega's 1983 console, the start of the Master System's hardware line | `systems/sega-master-system`, `companies/sega`, `hardware/z80`, `systems/colecovision`, `people/yu-suzuki`, `games/galaga`, `games/choplifter` |
 | TMS9918 | hardware | Texas Instruments' video chip behind the TI-99/4A, ColecoVision, MSX and Master System | `techniques/sprite-flicker`, `systems/sega-master-system`, `systems/msx`, `systems/colecovision`, `techniques/sprites`, `techniques/y-depth-sorting` |
@@ -65,8 +65,8 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | CP System | hardware | Capcom's standard arcade board from 1988, behind *Final Fight* and *Street Fighter II* | `companies/capcom`, `games/street-fighter-ii`, `games/strider`, `games/final-fight`, `hardware/arcade-hardware`, `technologies/copy-protection`, `games/ghouls-n-ghosts`, `technologies/fm-synthesis`, `techniques/y-depth-sorting` |
 | Expert cartridge and back-up cartridges | hardware | The freezer cartridges at the centre of the 1988 argument over copy protection | `communities/cracking-scene`, `technologies/copy-protection`, `techniques/trainers`, `hardware/action-replay` |
 | +3DOS and the µPD765A | hardware | The Spectrum +3's disk operating system and floppy-disk controller | `reference/zx-spectrum-hardware-ports` |
-| 64DD | hardware | The Japan-only N64 disk drive and Randnet, Nintendo's second disk add-on | `systems/nintendo-64`, `companies/nintendo`, `games/legend-of-zelda-ocarina-of-time`, `hardware/famicom-disk-system` |
-| Ad Lib Music Synthesizer Card and Sound Blaster | hardware | The PC's sound-card standards, both built on Yamaha FM | `technologies/fm-synthesis` |
+| 64DD | hardware | The Japan-only N64 disk drive and Randnet, Nintendo's second disk add-on | `systems/nintendo-64`, `companies/nintendo`, `games/legend-of-zelda-ocarina-of-time`, `hardware/famicom-disk-system`, `games/f-zero-x` |
+| Ad Lib Music Synthesizer Card and Sound Blaster | hardware | The PC's sound-card standards, both built on Yamaha FM | `technologies/fm-synthesis`, `culture/pc-gaming` |
 | AGA chipset | hardware | The Amiga 1200 and 4000 chipset (Alice and Lisa), now covered inside the chipset entry | `demos/nexus-7` |
 | Agat | systems | The Soviet Apple II copy | `culture/soviet-computing`, `systems/apple-ii` |
 | Ageia PhysX | hardware | The 2006 physics card, later Nvidia's physics engine | `technologies/physics-engines`, `tools/havok`, `tools/unreal-engine` |
@@ -87,14 +87,14 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Camputers Lynx | systems | Chris Sawyer's first computer | `people/chris-sawyer` |
 | Coleco Adam | systems | Coleco's home computer: late, unreliable, with a bundled printer and Digital Data Packs | `systems/colecovision` |
 | Commodore 64 Games System | systems | Commodore's 1990 cartridge-only console built from the C64 | `magazines/commodore-format`, `systems/commodore-64` |
-| Commodore CDTV | systems | Commodore's 1991 system, named in the Bushnell and Commodore entries | `hardware/trackball`, `hardware/cd-rom`, `systems/commodore-amiga`, `people/nolan-bushnell`, `companies/commodore` |
+| Commodore CDTV | systems | Commodore's 1991 system, named in the Bushnell and Commodore entries | `hardware/trackball`, `hardware/cd-rom`, `systems/commodore-amiga`, `people/nolan-bushnell`, `companies/commodore`, `people/jim-sachs` |
 | CP1610 | hardware | General Instrument's 16-bit processor in the Intellivision | `systems/intellivision`, `hardware/ay-3-8910` |
 | DEC PDP-1 | systems | In period since the 1960s extension; its Type 30 display explains what came before vector monitors | `technologies/vector-graphics` |
 | DECO Cassette System | hardware | Data East's tape-based arcade system | `hardware/arcade-hardware`, `companies/data-east` |
 | Diamond Edge 3D and Nvidia NV1 | hardware | The PC card that brought Saturn games such as *Panzer Dragoon* to the PC | `games/panzer-dragoon` |
 | Dick Smith System 80 / Video Genie | systems | The TRS-80 clone that *MICRO-80* followed from 1980 | `magazines/micro-80`, `systems/trs-80` |
 | Didaktik | systems | Slovak Spectrum clones, 1987–94 | `culture/spectrum-clones` |
-| Digi-View | hardware | NewTek's 1986 colour video digitiser for the Amiga, before the Video Toaster | `companies/newtek`, `systems/commodore-amiga`, `people/tim-jenison` |
+| Digi-View | hardware | NewTek's 1986 colour video digitiser for the Amiga, before the Video Toaster | `companies/newtek`, `systems/commodore-amiga`, `people/tim-jenison`, `culture/amiga-art-style`, `techniques/digitized-sprites` |
 | Disk II | hardware | Wozniak's minimal disk controller and the basis of Apple copy protection | `systems/apple-ii`, `technologies/disk-protection` |
 | Dismac D-8000 | systems | The first cheap Brazilian personal computer | `companies/dismac`, `culture/brazilian-market-reserve`, `systems/trs-80` |
 | DSP-1 | hardware | Nintendo's cartridge coprocessor, which brought 3D maths to mode 7 games | `hardware/mode-7`, `hardware/super-fx-chip`, `techniques/cycle-accuracy`, `hardware/cartridge` |
@@ -103,7 +103,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Elwro 800 Junior | systems | Poland's Spectrum-compatible school computer | `culture/spectrum-clones`, `magazines/bajtek` |
 | Enterprise 64/128 | systems | British computer with a large Hungarian following | `magazines/mikroszamitogep-magazin`, `culture/the-c64-across-borders` |
 | Fairchild Channel F | systems | The first cartridge console, and home of *Video Whizball* | `hardware/cartridge`, `hardware/arcade-hardware`, `systems/atari-2600`, `people/warren-robinett` |
-| FM Towns | systems | Fujitsu's 1989 CD-ROM computer, which used the YM2612 | `hardware/ym2612`, `hardware/cd-rom` |
+| FM Towns | systems | Fujitsu's 1989 CD-ROM computer, which used the YM2612 | `hardware/ym2612`, `hardware/cd-rom`, `games/raiden` |
 | Galaksija Plus | systems | The Galaksija's 1985 successor | `systems/galaksija` |
 | Game Boy Camera and Printer | hardware | The Game Boy's camera and printer add-ons | `hardware/link-cable`, `systems/game-boy`, `people/hip-tanaka` |
 | Game Boy Four-Player Adapter | hardware | The link-cable hub for *F-1 Race* and Rare's *Super R.C. Pro-Am* | `hardware/link-cable`, `companies/rare`, `systems/game-boy` |
@@ -119,7 +119,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | HuC6280 | hardware | The PC Engine's 6502-derived CPU with an on-chip MMU and wavetable PSG | `systems/pc-engine`, `software/deflemask` |
 | Hyper Neo Geo 64 | systems | SNK's 1997 system | `companies/snk`, `systems/neo-geo`, `games/samurai-shodown` |
 | IBM PC | systems | The platform hundreds of entries use, with no system entry | `hardware/flight-stick`, `culture/pc-gaming`, `companies/microsoft`, `companies/sierra`, `companies/softdisk`, `companies/id-software`, `distribution/shareware` |
-| IBM PCjr | systems | Why *King's Quest* exists, and a well-known commercial failure | `games/kings-quest`, `companies/sierra`, `hardware/flight-stick`, `tools/agi-engine` |
+| IBM PCjr | systems | Why *King's Quest* exists, and a well-known commercial failure | `games/kings-quest`, `companies/sierra`, `hardware/flight-stick`, `tools/agi-engine`, `culture/pc-gaming` |
 | Intel 4004 | hardware | The first general-purpose microprocessor, with the Busicom story | `people/federico-faggin` |
 | J-Cart | hardware | Codemasters' Mega Drive cartridge with built-in joypad ports | `games/micro-machines`, `people/darling-brothers`, `systems/sega-mega-drive` |
 | JAMMA | hardware | The cabinet wiring standard later arcade boards assumed | `hardware/arcade-hardware`, `systems/neo-geo`, `systems/sega-naomi`, `companies/capcom` |
@@ -176,7 +176,8 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Sega Model 3 | hardware | One of Sega's other polygon boards | `systems/sega-naomi`, `hardware/arcade-hardware`, `hardware/model-2`, `companies/sega-am2` |
 | Sega ST-V | hardware | The Saturn-based arcade board, NAOMI's precedent | `systems/sega-saturn`, `systems/sega-naomi`, `hardware/arcade-hardware` |
 | Sega System 16 | hardware | The arcade board family behind *Golden Axe*, *Altered Beast* and *Shinobi* | `games/golden-axe`, `games/altered-beast` |
-| Sharp X68000 | systems | Japanese home computer with arcade-faithful Capcom ports | `games/ghouls-n-ghosts`, `companies/capcom`, `technologies/fm-synthesis` |
+| Sharp X1 | systems | Sharp's Japanese computer, where *Thunder Force* began in 1983 | `games/thunder-force`, `companies/technosoft` |
+| Sharp X68000 | systems | Japanese home computer with arcade-faithful Capcom ports | `games/ghouls-n-ghosts`, `companies/capcom`, `technologies/fm-synthesis`, `games/thunder-force`, `companies/technosoft` |
 | Steam Deck | systems | Valve's handheld PC, used to play period software | `distribution/steam`, `companies/valve` |
 | Super Multitap | hardware | The SNES adaptor for more than two players | `games/secret-of-mana`, `games/bomberman`, `culture/couch-co-op`, `design/split-screen` |
 | Super Scope and Menacer | hardware | The 16-bit infrared light guns | `hardware/light-gun`, `systems/super-nintendo`, `systems/sega-mega-drive` |
@@ -191,6 +192,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | V9938 and V9958 | hardware | The MSX2 video chips | `systems/msx` |
 | Valiant Turtle and floor turtles | hardware | Classroom Logo robots | `languages/logo-language`, `systems/bbc-micro` |
 | Vector-06C | systems | Soviet home computer still getting new demos in 2025 | `events/chaos-constructions`, `culture/soviet-computing` |
+| VGA | hardware | The 1987 PC graphics standard whose 256-colour mode 13h shaped how 1990s PC games looked | `culture/pc-gaming` |
 | VIDC, MEMC and IOC | hardware | The Archimedes chipset | `systems/acorn-archimedes` |
 | VideoFace | hardware | Data-Skip's Spectrum video digitiser, sold by Romantic Robot | `demos/jesus-on-es-spectrum`, `hardware/multiface` |
 | VideoLogic PowerVR | hardware | The tile-based graphics behind Dreamcast and NAOMI, also sold on PC cards | `systems/sega-dreamcast`, `systems/sega-naomi`, `hardware/arcade-hardware`, `techniques/texture-mapping`, `games/quake` |
@@ -344,7 +346,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Brian Moriarty | people | Wrote *Wishbringer*, *Trinity* and *Beyond Zork* | `companies/infocom` |
 | Bruce Daniels | people | Zork co-author | `games/zork`, `companies/infocom` |
 | Bruce Jordan | people | Novagen's co-founder and managing director, the main source on *Mercenary* | `companies/novagen` |
-| Bruce Shelley | people | Co-designer of *Railroad Tycoon* and *Civilization*, later *Age of Empires* | `games/civilization`, `people/sid-meier`, `genres/tycoon-games`, `games/age-of-empires`, `companies/ensemble-studios` |
+| Bruce Shelley | people | Co-designer of *Railroad Tycoon* and *Civilization*, later *Age of Empires* | `games/civilization`, `people/sid-meier`, `genres/tycoon-games`, `games/age-of-empires`, `companies/ensemble-studios`, `games/age-of-mythology` |
 | Bruno Bonnell | people | Infogrames' co-founder and head for 24 years | `companies/infogrames`, `companies/ocean-software` |
 | Carver Mead | people | VLSI pioneer, Synaptics and Foveon co-founder | `people/federico-faggin` |
 | Chaos (Dierk Ohlerich) | people | Sanity coder and farbrausch's lead tool author | `groups/farbrausch`, `groups/sanity`, `demos/fr-08-the-product`, `demos/debris`, `people/ryg`, `people/kb` |
@@ -366,6 +368,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Chuck Bueche | people | Origin co-founder ("Chuckles") | `companies/origin-systems`, `people/richard-garriott`, `games/ultima` |
 | Clement Chambers | people | CRL's founder, who took games to the BBFC; later ran On-Line Entertainment and ADVFN | `companies/crl-group`, `people/pete-cooke`, `companies/palace-software` |
 | Cliff Bleszinski | people | Designer of Jazz Jackrabbit and Gears of War, co-creator of Fortnite | `companies/epic-games`, `games/unreal`, `people/tim-sweeney` |
+| Clint Hocking | people | *Splinter Cell* level designer whose account of designing with light the entry quotes | `games/splinter-cell` |
 | Colin McComb | people | Designer on Planescape: Torment | `games/planescape-torment` |
 | Colin Porch | people | Ocean programmer who converted *Head Over Heels* and wrote *Return to Blacktooth* | `games/head-over-heels`, `companies/ocean-software`, `games/contra` |
 | Corrado Giustozzi | people | Founder and editor of MC | `magazines/mc-microcomputer` |
@@ -409,6 +412,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Ed Krakauer | people | Ran GCE after Mattel Electronics | `companies/gce`, `systems/intellivision` |
 | Ed Rotberg | people | Designer of *Battlezone* and the Bradley Trainer, later *Blasteroids* and *S.T.U.N. Runner* | `people/dona-bailey`, `games/asteroids`, `people/ed-logg`, `games/battlezone`, `games/tempest` |
 | Eikichi Kawasaki | people | SNK's founder and Playmore's creator | `companies/snk`, `systems/neo-geo`, `companies/nazca`, `games/samurai-shodown` |
+| Erin Hoffman | people | Author of the EA Spouse post, later a game designer and novelist | `culture/ea-spouse`, `companies/electronic-arts` |
 | Eveline Fischer and Robin Beanland | people | David Wise's co-composers on *Donkey Kong Country* | `people/david-wise`, `games/donkey-kong-country` |
 | Feargus Urquhart | people | Ran Black Isle and co-founded Obsidian (not the existing people/christian-urquhart) | `companies/black-isle-studios`, `companies/obsidian-entertainment`, `games/baldurs-gate`, `companies/interplay`, `games/planescape-torment`, `games/fallout` |
 | Fergus McGovern | people | Founder of Probe and HotGen | `companies/probe-software`, `companies/acclaim` |
@@ -432,6 +436,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Gary Winnick | people | Lucasfilm's first games artist and co-designer of *Maniac Mansion* and *Thimbleweed Park* | `games/maniac-mansion`, `tools/scumm`, `companies/lucasarts`, `people/ron-gilbert`, `games/monkey-island`, `techniques/pixel-art` |
 | Geoff Heath | people | Publishing figure at Melbourne House, Telecomsoft and Mastertronic | `companies/melbourne-house`, `companies/telecomsoft`, `companies/mastertronic` |
 | George Broussard | people | Apogee partner and 3D Realms head who led *Duke Nukem Forever* | `companies/apogee-software`, `people/scott-miller`, `companies/3d-realms`, `games/duke-nukem-3d` |
+| George Gomez | people | Designer of *Spy Hunter* and of Midway's *Tron* hardware | `games/spy-hunter`, `companies/midway` |
 | George Plimpton | people | The face of the first comparative console advertising | `systems/intellivision`, `systems/atari-2600` |
 | George Sanger (The Fat Man) | people | Composer of *Wing Commander II* and *The 7th Guest* | `games/wing-commander`, `companies/origin-systems`, `games/7th-guest` |
 | Glenn Corpes | people | *Populous* artist and co-designer, later a Lost Toys founder | `games/populous`, `companies/bullfrog`, `people/peter-molyneux`, `games/syndicate`, `culture/guildford-games-cluster`, `games/dungeon-keeper` |
@@ -462,6 +467,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Hiroyuki Imabayashi / Thinking Rabbit | people | Designer and publisher of *Sokoban* | `design/puzzle-game-design` |
 | Hiroyuki Takahashi | people | Producer at Enix, Sonic and Camelot, and Camelot's president | `companies/camelot-software`, `games/shining-force`, `games/golden-sun` |
 | Hisao Oguchi | people | Head of AM3 and Hitmaker, then Sega's president from 2003 | `companies/hitmaker`, `companies/sega`, `games/crazy-taxi` |
+| Hisayoshi Ogura | people | Taito composer (OGR) and leader of Zuntata | `games/darius`, `companies/taito`, `games/rainbow-islands` |
 | Hitoshi Akamatsu | people | Director of the first three Castlevanias | `games/castlevania`, `companies/konami` |
 | Howard Delman | people | Built Atari's vector hardware, Lunar Lander and the Asteroids sounds; a Videa founder | `games/asteroids`, `technologies/vector-graphics`, `people/dona-bailey`, `people/ed-logg` |
 | Hugh Riley | people | Artist of *The Last Ninja* and co-founder of Vivid Image | `games/the-last-ninja`, `people/john-twiddy`, `companies/system-3` |
@@ -541,6 +547,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Ken Gordon and Hugh Steers | people | Anita Sinclair's co-founders at Magnetic Scrolls; Steers wrote the parser and later founded Strand Games | `people/anita-sinclair`, `companies/magnetic-scrolls` |
 | Ken Rolston | people | *Morrowind*'s lead designer | `games/morrowind` |
 | Ken St. Andre | people | Creator of *Tunnels & Trolls* and a *Wasteland* designer | `games/wasteland` |
+| Ken Uston | people | Blackjack card counter turned author of the 1981 bestseller *Mastering Pac-Man* | `culture/strategy-guides`, `games/pac-man` |
 | Ken Williams | people | Sierra's co-founder and the programmer of *Mystery House* | `companies/sierra`, `people/roberta-williams`, `games/kings-quest`, `games/leisure-suit-larry`, `games/colossal-cave-adventure`, `tools/agi-engine`, `tools/sci-engine`, `people/al-lowe`, `culture/adventure-game-deaths` |
 | Kenji Kanno | people | Director of *Crazy Taxi*, who picked its Offspring and Bad Religion soundtrack | `games/crazy-taxi`, `companies/hitmaker`, `companies/sega` |
 | Kenji Sasaki | people | Directed *Sega Rally*, *Sega Rally 2* and *Sega Rally 2005/2006*, and a long-time Mizuguchi collaborator | `people/tetsuya-mizuguchi`, `games/sega-rally` |
@@ -572,7 +579,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Marc Laidlaw | people | Writer of the *Half-Life* series | `games/half-life`, `games/half-life-2` |
 | Marcus Dyson | people | *Amiga Format* editor turned Team17 development co-ordinator | `games/worms`, `companies/team17`, `magazines/amiga-format` |
 | Mark Cale | people | Founder and still chief executive of System 3 | `companies/system-3`, `games/international-karate`, `games/the-last-ninja`, `people/john-twiddy` |
-| Mark Coleman | people | Bitmap Brothers artist on *Speedball*, *Xenon 2*, *Gods* and *Magic Pockets*, often confused with Dan Malone | `games/xenon-2`, `games/gods`, `companies/bitmap-brothers`, `people/dan-malone` |
+| Mark Coleman | people | Bitmap Brothers artist on *Speedball*, *Xenon 2*, *Gods* and *Magic Pockets*, often confused with Dan Malone | `games/xenon-2`, `games/gods`, `companies/bitmap-brothers`, `people/dan-malone`, `culture/amiga-art-style` |
 | Mark Cooksey | people | Composer of Elite's C64 conversions | `games/ghosts-n-goblins`, `companies/elite-systems` |
 | Mark Crowe | people | Space Quest co-designer and Larry artist | `games/space-quest`, `companies/sierra`, `games/leisure-suit-larry` |
 | Mark Eyles | people | Quicksilva designer, then of *Back to the Future* and *Aliens* at Electric Dreams | `companies/quicksilva`, `games/aliens`, `companies/electric-dreams` |
@@ -681,7 +688,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Rico Holmes | people | The artist on Andreas Tadic's games (*Alien Breed*, *Project-X*, *Superfrog*) | `companies/team17`, `games/alien-breed`, `people/andreas-tadic` |
 | Rieko Kodama | people | One of the first widely known women in Japanese game development, artist on *Phantasy Star* and director of *Phantasy Star IV* | `games/phantasy-star`, `people/yuji-naka`, `companies/sega` |
 | Rob Fulop | people | Programmed the 2600 *Missile Command* and *Night Driver*, then *Demon Attack* at Imagic | `technologies/fmv`, `games/missile-command`, `games/asteroids` |
-| Rob Landeros | people | Co-creator of *The 7th Guest*, later of Aftermath Media | `games/7th-guest`, `people/graeme-devine` |
+| Rob Landeros | people | Co-creator of *The 7th Guest*, later of Aftermath Media | `games/7th-guest`, `people/graeme-devine`, `people/jim-sachs`, `companies/cinemaware` |
 | Robert Cook | people | Ported Karateka to the C64 and Atari, later worked on The Last Express | `games/karateka`, `people/jordan-mechner` |
 | Robert Maxwell | people | Mirrorsoft's owner, would-be buyer of Sinclair and a figure in the *Tetris* dispute | `companies/mirrorsoft`, `phenomena/tetris-legal-battles`, `companies/sinclair-research` |
 | Robert Woodhead | people | Co-designer of Wizardry, who later worked in Japan | `games/wizardry`, `genres/western-rpg` |
@@ -760,7 +767,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Terri Brosius | people | Voice of SHODAN, and designer and writer on Thief | `games/system-shock`, `games/system-shock-2`, `games/thief` |
 | Tim Anderson | people | Zork co-author and Infocom founder | `games/zork`, `companies/infocom` |
 | Tim Chaney | people | Ran Virgin Games/VIE from 1991 to 1998 after U.S. Gold | `companies/virgin-games`, `companies/us-gold`, `games/cannon-fodder`, `companies/centresoft`, `companies/gremlin-graphics`, `companies/americana` |
-| Tim Hartnell | people | Prolific type-in book author and editor who published many young programmers | `people/david-perry`, `distribution/type-in-listings` |
+| Tim Hartnell | people | Prolific type-in book author and editor who published many young programmers | `people/david-perry`, `distribution/type-in-listings`, `magazines/zx-computing` |
 | Tim Kemp | people | Mike Gerrard's successor as *Your Sinclair*'s adventure columnist and editor of the fanzine *From Beyond* | `people/mike-gerrard`, `magazines/your-sinclair` |
 | Tim Langdell | people | Owner of Softek and The Edge, central to *Fairlight*'s story | `people/bo-jangeborg`, `companies/the-edge`, `games/fairlight` |
 | Tim Tyler | people | Repton's 16-year-old author, whose royalties Superior used to recruit programmers | `companies/superior-software`, `games/repton` |
@@ -777,7 +784,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Tony Rainbird | people | Founder figure of two BT labels and the Silver range strategist | `companies/rainbird`, `companies/firebird`, `companies/telecomsoft` |
 | Tony Warriner | people | Revolution co-founder and Virtual Theatre programmer | `companies/revolution-software`, `games/lure-of-the-temptress` |
 | Toru Hagihara | people | Director of *Rondo of Blood* and *Symphony of the Night*, usually left out of the story | `games/symphony-of-the-night`, `games/castlevania`, `people/koji-igarashi` |
-| Toshihiko Nakago | people | The programmer behind *Super Mario Bros.*, and the source of the arcade *Balloon Fight* | `games/super-mario-bros`, `games/super-mario-bros-3`, `games/balloon-fight`, `people/satoru-iwata` |
+| Toshihiko Nakago | people | The programmer behind *Super Mario Bros.*, and the source of the arcade *Balloon Fight* | `games/super-mario-bros`, `games/super-mario-bros-3`, `games/balloon-fight`, `people/satoru-iwata`, `games/excitebike` |
 | Tsunekazu Ishihara | people | Producer, head of Creatures and The Pokémon Company | `games/pokemon-red-blue`, `companies/creatures-inc`, `people/satoru-iwata`, `companies/game-freak`, `games/pokemon`, `people/hip-tanaka`, `companies/ape-inc` |
 | Two Guys from Andromeda | people | The *Space Quest* designers, from Sierra and Dynamix to *SQ7* and *SpaceVenture* | `companies/sierra`, `games/space-quest`, `games/leisure-suit-larry` |
 | Vadim Gerasimov | people | Wrote the PC version of *Tetris* | `games/tetris`, `people/alexey-pajitnov` |
@@ -855,7 +862,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Federation Against Software Theft (FAST) | companies | Britain's software anti-piracy body from 1984 | `communities/cracking-scene`, `distribution/piracy`, `technologies/copy-protection`, `phenomena/guild-of-software-houses`, `communities/bbs-scene`, `hardware/multiface` |
 | ELSPA | companies | The trade body whose Crime Unit ran the 1990s piracy raids | `communities/cracking-scene`, `distribution/piracy`, `distribution/cover-tapes`, `technologies/copy-protection`, `distribution/magazine-cover-disks`, `culture/game-ratings`, `distribution/budget-games`, `people/andrew-hewson`, `distribution/abandonware` |
 | GameTek | companies | Published both *Frontier* games; Braben took it to court over *First Encounters* | `people/david-braben`, `companies/frontier-developments`, `games/elite` |
-| Camerica | companies | Published Codemasters' unlicensed NES games and made the Game Genie in Canada | `companies/codemasters`, `people/oliver-twins`, `hardware/game-genie`, `games/micro-machines`, `games/dizzy`, `people/darling-brothers`, `companies/galoob` |
+| Camerica | companies | Published Codemasters' unlicensed NES games and made the Game Genie in Canada | `companies/codemasters`, `people/oliver-twins`, `hardware/game-genie`, `games/micro-machines`, `games/dizzy`, `people/darling-brothers`, `companies/galoob`, `games/super-robin-hood` |
 | Big Red Software | companies | Wrote the *Dizzy* adventures after *Fantasy World Dizzy* | `people/oliver-twins`, `games/dizzy`, `companies/codemasters`, `companies/eidos`, `companies/domark` |
 | Interactive Studios (Blitz Games) | companies | The Oliver twins' own development studio | `people/oliver-twins`, `games/dizzy` |
 | Nanao | companies | Irem's parent and designer of the *R-Type* hardware; not NanaOn-Sha | `companies/irem` |
@@ -865,7 +872,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Delta 4 | companies | Fergus McNeill's group, the best-known writers of Quilled comedy adventures | `tools/the-quill`, `tools/paw`, `companies/gilsoft`, `genres/text-adventure`, `people/tim-gilberts`, `companies/piranha` |
 | Reflections | companies | Martin Edmondson's studio, which made *Shadow of the Beast* | `techniques/parallax-scrolling`, `games/shadow-of-the-beast`, `companies/psygnosis` |
 | General Computer Corporation | companies | Wrote *Ms. Pac-Man*, then Atari 7800 hardware and games | `games/pac-man`, `companies/atari` |
-| Tengen | companies | Atari Games' home label, which fought Nintendo's lockout | `companies/atari-games`, `companies/atari`, `companies/namco`, `games/pac-man`, `people/howard-lincoln`, `phenomena/tetris-legal-battles`, `systems/atari-lynx`, `companies/nintendo`, `phenomena/nintendo-seal`, `games/gauntlet`, `companies/domark`, `people/ed-logg`, `games/hard-drivin`, `games/paperboy`, `games/fantasy-zone`, `games/tetris`, `games/rolling-thunder` |
+| Tengen | companies | Atari Games' home label, which fought Nintendo's lockout | `companies/atari-games`, `companies/atari`, `companies/namco`, `games/pac-man`, `people/howard-lincoln`, `phenomena/tetris-legal-battles`, `systems/atari-lynx`, `companies/nintendo`, `phenomena/nintendo-seal`, `games/gauntlet`, `companies/domark`, `people/ed-logg`, `games/hard-drivin`, `games/paperboy`, `games/fantasy-zone`, `games/tetris`, `games/rolling-thunder`, `games/shinobi`, `culture/region-locking` |
 | Atarisoft | companies | Atari's label for other machines, the route most British players took to Namco games | `companies/namco`, `games/pac-man`, `companies/atari`, `games/defender`, `games/space-invaders`, `games/galaxian`, `games/centipede`, `games/pole-position`, `games/battlezone`, `games/asteroids`, `games/moon-patrol`, `companies/irem`, `games/dig-dug` |
 | Pulsonic | companies | The first cut-price range, at £2.95 in March 1984 | `distribution/budget-games`, `companies/mastertronic` |
 | The Hit Squad, Encore and Rack-It | companies | The re-release labels of Ocean, Elite and Hewson | `distribution/budget-games`, `companies/ocean-software`, `companies/elite-systems`, `companies/hewson-consultants`, `games/head-over-heels`, `games/driller`, `games/uridium`, `games/paradroid`, `games/bomb-jack`, `systems/commodore-16`, `companies/centresoft` |
@@ -886,7 +893,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Abertay University and Dare to be Digital | companies | Dundee's games degree and student contest | `culture/dundee-games-scene`, `companies/dma-design` |
 | Addison-Wesley | companies | Acorn User's first publisher | `magazines/acorn-user`, `magazines/micro-user` |
 | Adeline Software | companies | The studio behind Little Big Adventure | `companies/delphine-software`, `companies/infogrames` |
-| Aegis Development | companies | Publisher of Videoscape 3D, Sonix and Aegis Draw | `software/lightwave-3d`, `software/sculpt-3d` |
+| Aegis Development | companies | Publisher of Videoscape 3D, Sonix and Aegis Draw | `software/lightwave-3d`, `software/sculpt-3d`, `people/jim-sachs` |
 | Alphabatim | companies | The 1985 label behind *Robot Messiah* | `people/christian-urquhart` |
 | Alphavite Publications and Commodore Power | companies | Your Commodore's last publisher and its successor title | `magazines/your-commodore` |
 | Amblin Imaging | companies | The *seaQuest DSV* Toaster facility | `software/lightwave-3d`, `hardware/video-toaster` |
@@ -899,7 +906,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Apex Computer Productions | companies | John and Steve Rowlands' company, the best-known commercial VSP users (*Creatures*, *Mayhem in Monsterland*) | `companies/thalamus`, `techniques/vsp`, `techniques/agsp`, `magazines/commodore-format`, `techniques/parallax-scrolling`, `techniques/character-shift-parallax` |
 | Apple Computer | companies | The Apple II's maker | `systems/apple-ii`, `games/lode-runner`, `people/trip-hawkins` |
 | Arc System Works | companies | Owner of the Technos games since 2015 | `companies/technos`, `games/double-dragon`, `games/river-city-ransom` |
-| Argus Specialist Publications | companies | Publisher of Your Commodore, Commodore Disk User and 64 Tape Computing | `magazines/your-commodore`, `culture/disk-magazines` |
+| Argus Specialist Publications | companies | Publisher of Your Commodore, Commodore Disk User and 64 Tape Computing | `magazines/your-commodore`, `culture/disk-magazines`, `magazines/zx-computing` |
 | Armor Project | companies | Yuji Horii's company | `people/yuji-horii`, `games/dragon-quest` |
 | Artoon | companies | Ohshima's studio (*Blinx*, *Yoshi's Universal Gravitation*) | `companies/sonic-team` |
 | ArtPlay | companies | Koji Igarashi's studio, maker of *Bloodstained* | `games/bloodstained`, `people/koji-igarashi` |
@@ -914,7 +921,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | BBN and ARPANET | companies | The network Adventure spread across | `people/will-crowther`, `games/colossal-cave-adventure`, `games/zork` |
 | Beamdog | companies | Trent Oster's studio, maker of the Enhanced Editions of the Infinity Engine games | `companies/bioware`, `games/baldurs-gate`, `games/planescape-torment`, `games/icewind-dale` |
 | Big Blue Box | companies | Lionhead satellite that made *Fable* | `companies/lionhead`, `games/fable` |
-| Binary Design | companies | Manchester developer of *Glider Rider*, *Amaurote* and the *Double Dragon* conversions | `people/david-whittaker`, `companies/quicksilva`, `games/double-dragon`, `companies/melbourne-house` |
+| Binary Design | companies | Manchester developer of *Glider Rider*, *Amaurote* and the *Double Dragon* conversions | `people/david-whittaker`, `companies/quicksilva`, `games/double-dragon`, `companies/melbourne-house`, `games/elevator-action`, `games/shinobi` |
 | Bitboys | companies | Finnish graphics-chip company started by Future Crew's Trug | `groups/future-crew`, `people/psi`, `people/wildfire`, `companies/futuremark` |
 | Bizarre Creations | companies | Liverpool studio behind Formula 1, MSR, Project Gotham Racing and Geometry Wars | `companies/psygnosis`, `culture/liverpool-games-scene`, `games/geometry-wars`, `people/ian-hetherington` |
 | Blade Software | companies | The 1989 publisher of Laser Squad and Lords of Chaos, tied to Krisalis | `games/laser-squad`, `people/julian-gollop`, `companies/krisalis` |
@@ -935,6 +942,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | CBS Software (UK) | companies | Epyx's first British channel | `games/impossible-mission`, `games/summer-games`, `companies/epyx` |
 | CBS Software and K-tel software | companies | The other record-company software labels | `phenomena/record-companies-in-software` |
 | Central Point Software | companies | Sold the Copy II copiers for the Apple II, PC, Mac and C64, and later PC Tools | `technologies/disk-protection` |
+| Centuri | companies | The American company that licensed Konami's coin-ops (*Track & Field*, *Time Pilot*, *Gyruss*) | `games/track-and-field`, `companies/konami`, `games/hypersports` |
 | CH Products and Thrustmaster | companies | The two PC flight-stick makers; CH also made the Force FX | `hardware/flight-stick`, `hardware/steering-wheel`, `hardware/force-feedback` |
 | Choice Software | companies | Programmed Ocean's Spectrum *Mario Bros.* | `games/mario-bros`, `companies/ocean-software` |
 | Chuck E. Cheese's Pizza Time Theatre | companies | Bushnell's arcade-restaurant chain, where Nintendo's Peter Main came from | `people/nolan-bushnell`, `companies/nintendo` |
@@ -983,7 +991,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Evesham Micros | companies | Maker of the Interface III Spectrum copier that GOSH and FAST campaigned against | `phenomena/guild-of-software-houses`, `distribution/piracy` |
 | Evolution Studios | companies | The Runcorn studio behind WRC and MotorStorm | `culture/liverpool-games-scene`, `people/ian-hetherington`, `companies/psygnosis` |
 | Exidy | companies | Arcade maker, with its Max-A-Flex cabinet | `games/boulder-dash` |
-| Extended Play Productions / EA Canada | companies | The Canadian developer of the first *FIFA*, which became EA Canada (*FIFA*, *NHL*, *Need for Speed*) | `companies/ea-sports`, `games/fifa`, `companies/electronic-arts` |
+| Extended Play Productions / EA Canada | companies | The Canadian developer of the first *FIFA*, which became EA Canada (*FIFA*, *NHL*, *Need for Speed*) | `companies/ea-sports`, `games/fifa`, `companies/electronic-arts`, `games/ssx` |
 | F1 Licenceware | companies | The largest licenceware label | `distribution/licenseware` |
 | Firaxis Games | companies | Meier's studio from 1996, maker of *Civilization III* onwards and *XCOM* | `companies/microprose`, `people/sid-meier`, `games/civilization`, `games/xcom-enemy-unknown`, `games/x-com-ufo-defense`, `games/pirates` |
 | Firefly Studios and Stronghold | companies | Simon Bradbury's studio after Impressions, and its castle game | `companies/impressions` |
@@ -1017,7 +1025,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | ICOM Simulations and Deja Vu | companies | The MacVenture games (Deja Vu, Uninvited, Shadowgate), the first established point-and-click adventures | `companies/mindscape`, `design/point-and-click`, `genres/graphic-adventure` |
 | Iguana Entertainment | companies | The Austin studio behind Turok, bought by Acclaim in 1995 | `companies/acclaim`, `companies/probe-software`, `games/mortal-kombat`, `games/nba-jam`, `companies/retro-studios` |
 | Image Works | companies | Mirrorsoft's 1988–91 label for the Bitmap Brothers, Tony Crowther and others | `companies/mirrorsoft`, `games/xenon-2`, `games/speedball-2`, `companies/bitmap-brothers`, `people/tony-crowther`, `people/gary-mays` |
-| Imagitec Design | companies | Composed *Tempest 2000*'s music and converted early Jaguar games | `games/tempest-2000`, `people/jeff-minter` |
+| Imagitec Design | companies | Composed *Tempest 2000*'s music and converted early Jaguar games | `games/tempest-2000`, `people/jeff-minter`, `games/raiden` |
 | Immersion Corporation | companies | Force-feedback licensor, and the Sony and Microsoft suits | `hardware/dualshock`, `hardware/force-feedback`, `hardware/flight-stick`, `hardware/rumble-pak`, `hardware/steering-wheel` |
 | Impulse, Inc. | companies | Maker of Silver, Turbo Silver, Imagine and Firecracker 24 | `software/imagine`, `software/sculpt-3d` |
 | Indianapolis 500: The Simulation / Papyrus Design Group | companies | The American racing-simulation line, from *Indy 500* to *NASCAR Racing 2003* | `genres/racing-game`, `genres/racing-simulation` |
@@ -1042,7 +1050,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Koei | companies | The MMC5's most regular customer and the publisher of historical strategy games | `hardware/mmc5`, `companies/tecmo`, `companies/team-ninja`, `games/dead-or-alive` |
 | Krome Studios | companies | The last owner of the Beam studio | `companies/beam-software`, `companies/melbourne-house` |
 | Larian Studios / Divinity: Original Sin | companies | The CRPG revival's biggest success, profiled in *Wireframe* 23 | `phenomena/crpg-renaissance`, `genres/western-rpg`, `games/baldurs-gate` |
-| Left Field Productions | companies | Studio linked to Mike Lamb | `people/mike-lamb` |
+| Left Field Productions | companies | Studio linked to Mike Lamb | `people/mike-lamb`, `games/excitebike` |
 | Legend Entertainment | companies | Made *Return to Na Pali*, *Unreal II* and *The Wheel of Time* | `games/unreal`, `people/steve-meretzky` |
 | Leisure Genius | companies | Virgin label named in the Virgin Games entry | `companies/virgin-games` |
 | Level-5 | companies | Developer of *Dragon Quest VIII* | `people/yuji-horii`, `games/dragon-quest` |
@@ -1055,6 +1063,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Maelstrom Games | companies | Mike Singleton's company behind *Dark Sceptre*, *Midwinter* and *Ashes of Empire* | `people/mike-singleton`, `companies/rainbird` |
 | Magnetic Fields | companies | Shaun Southern's studio behind *Lotus* | `companies/gremlin-graphics`, `companies/krisalis` |
 | Memory and Storage Technology | companies | Sydney publisher of the first Blitz BASIC | `people/mark-sibly`, `languages/blitz-basic-2` |
+| MercurySteam | companies | The Madrid studio behind *Castlevania: Lords of Shadow*, *Metroid: Samus Returns* and *Metroid Dread* | `games/metroid-ii` |
 | Mettoy | companies | The Corgi toy maker behind the Dragon's launch | `systems/dragon-32`, `companies/dragon-data` |
 | Micro Application | companies | French publisher of ST books and software, linked to *ST Magazine*'s early subscriptions | `magazines/st-magazine` |
 | Micro Genius and TXC | companies | Taiwanese famiclone maker | `systems/famiclone` |
@@ -1067,6 +1076,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | MileStone | companies | The shooter studio founded by former Compile staff in 2003 | `companies/compile` |
 | Mistwalker | companies | Sakaguchi's studio (*Blue Dragon*, *Lost Odyssey*, *Fantasian*) | `people/hironobu-sakaguchi`, `people/nobuo-uematsu`, `companies/square` |
 | Mosaic Publishing | companies | Book-licence publisher of *Erik the Viking* and *Adrian Mole* | `companies/level-9` |
+| MOSS | companies | Founded by former Seibu Kaihatsu staff; has made *Raiden* games since 2005 | `games/raiden`, `companies/seibu-kaihatsu` |
 | Mossmouth | companies | Derek Yu's company | `games/spelunky`, `people/derek-yu` |
 | Mostek | companies | The Z80's second source, which made the chip safe to design in | `companies/zilog`, `hardware/z80` |
 | Motivetime | companies | Developer of Elite's *Dragon's Lair* and *Virtuoso* | `companies/elite-systems` |
@@ -1080,6 +1090,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Nicalis | companies | American publisher of the *Cave Story* rereleases | `games/cave-story` |
 | Nightdive Studios | companies | System Shock rights holder: re-releases, the source release, the 2023 remake and period-game restorations | `genres/immersive-sim`, `games/system-shock`, `games/system-shock-2` |
 | Ninja Theory | companies | The studio that came out of Argonaut's collapse | `companies/argonaut`, `people/jez-san`, `culture/cambridge-games-scene` |
+| Nintendo EAD / R&D4 | companies | Shigeru Miyamoto's department, home of *Super Mario Bros.*, *Excitebike*, *F-Zero X* and *Star Fox 64* | `games/excitebike`, `games/f-zero-x`, `games/star-fox-64`, `people/shigeru-miyamoto` |
 | Nintendo Software Technology | companies | Nintendo's Redmond studio, which made the Game Boy Color *Crystalis* and *Bionic Commando* | `games/crystalis`, `games/bionic-commando` |
 | Nvidia | companies | The GeForce maker, party to the 3DMark03 dispute | `companies/futuremark` |
 | Olivetti | companies | Owned Acorn from 1985 | `companies/acorn-computers` |
@@ -1139,7 +1150,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Smoking Car Productions | companies | Mechner's studio | `people/jordan-mechner` |
 | Snapshot Games | companies | Gollop's studio since 2013 | `people/julian-gollop`, `games/x-com-ufo-defense`, `games/xcom-enemy-unknown` |
 | Soft Pro | companies | Karateka's Famicom converter | `games/karateka` |
-| Softek | companies | Tim Langdell's label before The Edge, and a founder member of the Guild of Software Houses | `phenomena/guild-of-software-houses` |
+| Softek | companies | Tim Langdell's label before The Edge, and a founder member of the Guild of Software Houses | `phenomena/guild-of-software-houses`, `games/darius` |
 | Softgold | companies | The German group behind Rainbow Arts and its labels | `companies/rainbow-arts` |
 | SoftKey | companies | Took over The Learning Company and MECC in 1995 and took the Learning Company name | `companies/the-learning-company`, `companies/mecc`, `companies/broderbund`, `companies/mindscape` |
 | Software 2000 | companies | German publisher of *Pizza Tycoon* and *Bundesliga Manager* | `genres/tycoon-games`, `genres/management-game` |
@@ -1149,7 +1160,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Starpath | companies | The 2600 maker Epyx took over in 1983, bringing in the *Summer Games* team | `games/summer-games`, `games/impossible-mission`, `companies/epyx`, `systems/atari-2600` |
 | Strategic Studies Group | companies | Roger Keating and Ian Trout's Australian wargame house (Reach for the Stars, Carriers at War, Warlords) | `genres/wargame`, `genres/4x-strategy` |
 | subLOGIC and Bruce Artwick | companies | The makers of Flight Simulator | `genres/simulation-games`, `genres/flight-sim`, `games/microsoft-flight-simulator` |
-| Sumo Digital | companies | Sheffield studio that produced *Broken Sword: The Angel of Death* | `culture/british-game-development`, `companies/gremlin-graphics`, `companies/revolution-software`, `people/charles-cecil`, `games/broken-sword`, `games/littlebigplanet` |
+| Sumo Digital | companies | Sheffield studio that produced *Broken Sword: The Angel of Death* | `culture/british-game-development`, `companies/gremlin-graphics`, `companies/revolution-software`, `people/charles-cecil`, `games/broken-sword`, `games/littlebigplanet`, `games/alex-kidd` |
 | Supermassive Games | companies | Guildford-cluster studio | `culture/guildford-games-cluster` |
 | Superscape | companies | The VR and business 3D system and company that grew from Incentive | `companies/incentive-software`, `people/ian-andrew`, `tools/freescape` |
 | Supersoft | companies | Early British PET software house (the *Mikro* assembler) that rescued Audiogenic | `companies/audiogenic` |
@@ -1165,7 +1176,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Teque Software | companies | The conversion house for *Chase H.Q.* and *Continental Circus* | `techniques/pseudo-3d-road`, `games/chase-hq`, `companies/krisalis`, `companies/millennium-interactive`, `companies/grandslam` |
 | Terrible Toybox | companies | Gilbert and Winnick's studio, which made Thimbleweed Park and Return to Monkey Island | `games/monkey-island`, `people/ron-gilbert`, `tools/scumm` |
 | The 3DO Company | companies | The console company named in the Warshaw entry | `people/howard-scott-warshaw` |
-| The Chinese Room | companies | The studio that finished *Bloodlines 2* for Paradox | `games/vampire-the-masquerade-bloodlines`, `companies/troika-games`, `genres/walking-simulator`, `companies/frictional-games`, `games/amnesia` |
+| The Chinese Room | companies | The studio that finished *Bloodlines 2* for Paradox | `games/vampire-the-masquerade-bloodlines`, `companies/troika-games`, `genres/walking-simulator`, `companies/frictional-games`, `games/amnesia`, `culture/modding-to-industry` |
 | The Fullbright Company | companies | Makers of *Gone Home* and *Tacoma* | `genres/walking-simulator`, `games/gone-home` |
 | The Pokémon Company | companies | The jointly owned rights holder | `companies/game-freak`, `companies/creatures-inc`, `companies/nintendo`, `games/pokemon` |
 | The Software Toolworks | companies | Maker of Chessmaster and Mavis Beacon, and Mindscape's parent from 1990 | `companies/mindscape`, `companies/the-learning-company` |
@@ -1179,13 +1190,17 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Toys for Bob | companies | *Skylanders* and the *Spyro Reignited Trilogy* | `games/spyro` |
 | Trace | companies | The disk duplicators that made most protected Amiga and ST disks | `technologies/copylock`, `technologies/disk-protection` |
 | Tradewest | companies | Texas publisher of the NES *Double Dragon* games and *Battletoads* | `games/double-dragon`, `companies/technos`, `games/battletoads`, `companies/rare` |
+| Trauma Studios / Desert Combat | companies | Makers of the *Battlefield 1942* mod *Desert Combat*, bought by DICE and closed about a year later | `culture/modding-to-industry`, `communities/modding` |
 | Traveller's Tales | companies | Developer David Whittaker worked with | `people/david-whittaker` |
 | tri-Ace | companies | Made *Star Ocean* for Enix | `companies/enix` |
-| Trilobyte | companies | The studio behind *The 7th Guest*, with a studio history in *Wireframe* 44 | `technologies/fmv`, `games/7th-guest`, `people/graeme-devine` |
+| Trilobyte | companies | The studio behind *The 7th Guest*, with a studio history in *Wireframe* 44 | `technologies/fmv`, `games/7th-guest`, `people/graeme-devine`, `companies/virgin-games` |
+| Tripwire Interactive / Red Orchestra | companies | Mod-contest winner turned studio, and an early third-party Steam game | `culture/modding-to-industry`, `distribution/steam` |
 | TSR and Dungeons & Dragons | companies | The rules and licence behind the Gold Box games, Baldur's Gate and Planescape, and a tabletop start for several designers | `genres/western-rpg`, `genres/jrpg`, `companies/epyx`, `genres/roguelike`, `games/ultima`, `games/baldurs-gate`, `people/warren-spector`, `games/planescape-torment`, `games/neverwinter-nights`, `companies/black-isle-studios`, `companies/origin-systems` |
 | Two Point Studios | companies | Mark Webley and Gary Carr's studio | `companies/bullfrog`, `companies/lionhead`, `games/theme-park`, `culture/guildford-games-cluster` |
 | Tynesoft | companies | The Newcastle publisher where Zeppelin's founders met | `people/derek-brewster`, `companies/zeppelin-games`, `companies/flair-software` |
+| Ubisoft Montreal | companies | The studio behind *Splinter Cell*, *Prince of Persia: The Sands of Time* and *Assassin's Creed* | `games/splinter-cell`, `companies/ubisoft`, `games/assassins-creed` |
 | Universal Interactive Studios | companies | Publisher of Crash Bandicoot and Spyro | `people/mark-cerny`, `companies/naughty-dog`, `games/crash-bandicoot`, `games/spyro`, `companies/insomniac` |
+| Unknown Worlds / Natural Selection | companies | Charlie Cleveland's *Half-Life* mod that became a company and wrote its own engine for *Natural Selection II* | `culture/modding-to-industry` |
 | Valhalla Game Studios | companies | Itagaki's studio after Tecmo, which made *Devil's Third* | `people/tomonobu-itagaki`, `companies/team-ninja` |
 | Valiant Comics | companies | The source of Turok and Shadow Man | `companies/acclaim` |
 | Vectordean | companies | Steve Bak's studio, which made the James Pond games | `companies/millennium-interactive` |
@@ -1261,8 +1276,10 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | c't | magazines | West Germany's leading technical computer magazine, which shared articles with *Mikroprozessortechnik* in 1990 | `magazines/mikroprozessortechnik` |
 | Commander | magazines | Tacoma-based Commodore monthly from 1983 | `books/c64-programmers-reference-guide` |
 | Commodore Power Play | magazines | Source for many Commodore interviews | `people/david-simons` |
-| Computer Gamer | magazines | British games magazine of the mid-1980s, cited in the Repton and Wargame entries | `games/repton`, `genres/wargame` |
+| Commodore World (US) | magazines | American Commodore magazine that warned in 1996 that PAL demos could flicker on NTSC machines | `culture/pal-vs-ntsc` |
+| Computer Gamer | magazines | British games magazine of the mid-1980s, cited in the Repton and Wargame entries | `games/repton`, `genres/wargame`, `magazines/zx-computing` |
 | Computer για Όλους and PC Master | magazines | *Pixel*'s parent and successor titles at Compupress | `magazines/pixel`, `companies/compupress` |
+| Computing Today | magazines | Argus's general computing title, whose editor co-wrote in *ZX Computing*'s first issue | `magazines/zx-computing` |
 | Disc Station | magazines | Compile's MSX disk magazine, 1988–2000 | `companies/compile`, `systems/msx`, `distribution/magazine-cover-disks` |
 | Dragon User | magazines | The Dragon's own magazine, 1983–1989 | `systems/dragon-32`, `systems/dragon-64`, `companies/dragon-data`, `people/mike-gerrard` |
 | Elbug | magazines | The BBC Micro user magazine, cited in the BASIC-to-machine-code entry | `culture/basic-to-machine-code`, `books/usborne-computing-books` |
@@ -1287,7 +1304,10 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | MikroBitti | magazines | Finnish computer magazine, and its *Illuminatus* April fool | `people/psi`, `people/skaven` |
 | Mikrobáze | magazines | The Czechoslovak 8-bit magazine that printed POKEs in 1986 | `culture/poke-culture`, `culture/institutional-computer-press`, `culture/magazine-distribution`, `culture/spectrum-clones` |
 | Mikroklan | magazines | Poland's engineers' computer magazine, begun as an insert in *Informatyka*, printed in Vienna, and turned to the PC in 1987 | `culture/institutional-computer-press`, `culture/magazine-distribution` |
+| N64 Magazine | magazines | Britain's Nintendo 64 magazine, cited in the PAL vs NTSC entry and across the N64 entries | `culture/pal-vs-ntsc` |
 | Nintendo Fun Club | magazines | Nintendo Power's free predecessor | `magazines/nintendo-power`, `culture/hint-lines` |
+| Official Dreamcast Magazine (UK) | magazines | The British Dreamcast magazine that explained the console's 50 Hz and 60 Hz output in 1999 | `culture/pal-vs-ntsc` |
+| PC Review | magazines | British PC magazine of the early 1990s, cited in the PC Gaming entry and many others | `culture/pc-gaming` |
 | PC Zone | magazines | British PC magazine of the 1990s, cited in several PC game entries | `games/civilization`, `emulators/emulation`, `genres/simulation-games`, `games/red-alert`, `games/command-and-conquer`, `games/dune-ii`, `games/warcraft`, `games/deus-ex`, `games/x-com-ufo-defense`, `games/syndicate`, `games/diablo`, `games/arcanum` |
 | Personal Computer World | magazines | The British monthly behind *APC*'s licence and London office | `magazines/australian-personal-computer`, `culture/magazines-across-borders` |
 | Play Meter | magazines | The American arcade trade magazine whose earnings polls the period press reprinted | `games/pole-position`, `games/xevious`, `phenomena/golden-age-arcade` |
@@ -1300,11 +1320,11 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Recollection | magazines | C64 scene history magazine, the main public source for many C64 group entries | `groups/eagle-soft-incorporated`, `groups/1001-crew` |
 | RUN | magazines | US Commodore magazine whose Magic column carried type-ins such as Sprite Stretch 64 | `techniques/sprite-stretching`, `companies/idg`, `systems/commodore-64` |
 | RUN (Scandinavian edition) | magazines | The Danish/Norwegian Commodore magazine, with period sales data | `culture/the-c64-across-borders` |
-| Sega Saturn Magazine | magazines | Sega's official British Saturn magazine, cited in the Red Alert and Command & Conquer entries | `systems/sega-saturn`, `games/red-alert`, `games/command-and-conquer` |
+| Sega Saturn Magazine | magazines | Sega's official British Saturn magazine, cited in the Red Alert and Command & Conquer entries | `systems/sega-saturn`, `games/red-alert`, `games/command-and-conquer`, `culture/pal-vs-ntsc`, `culture/region-locking` |
 | Sex'n'Crime | magazines | Genesis Project's diskmag, described as the first real C64 scene diskmag | `groups/genesis-project`, `magazines/scene-diskmags` |
 | Sinclair Projects | magazines | ECC's third Sinclair title, published in alternate months to *Sinclair Programs* | `magazines/sinclair-programs`, `magazines/sinclair-user` |
 | Super Commodore 64/128 | magazines | Gruppo Editoriale Jackson's Italian C64 magazine, a source of Commodore sales figures | `culture/the-c64-across-borders` |
-| Super Play | magazines | Future's British Super NES magazine, much cited in SNES entries | `games/super-metroid`, `companies/nintendo-rd1`, `games/mortal-kombat`, `hardware/super-fx-chip`, `hardware/mode-7`, `systems/super-nintendo`, `design/turn-based-combat`, `companies/fromsoft`, `games/dark-souls`, `genres/action-rpg`, `games/secret-of-mana`, `companies/square`, `design/fatalities`, `culture/mortal-kombat-controversy`, `culture/couch-co-op`, `culture/import-gaming` |
+| Super Play | magazines | Future's British Super NES magazine, much cited in SNES entries | `games/super-metroid`, `companies/nintendo-rd1`, `games/mortal-kombat`, `hardware/super-fx-chip`, `hardware/mode-7`, `systems/super-nintendo`, `design/turn-based-combat`, `companies/fromsoft`, `games/dark-souls`, `genres/action-rpg`, `games/secret-of-mana`, `companies/square`, `design/fatalities`, `culture/mortal-kombat-controversy`, `culture/couch-co-op`, `culture/import-gaming`, `culture/pal-vs-ntsc`, `culture/region-locking` |
 | Svet kompjutera | magazines | The other major Yugoslav computer magazine, from 1984, which reported the 1984 import decision | `systems/galaksija`, `magazines/racunari`, `people/voja-antonic`, `culture/the-c64-across-borders`, `culture/institutional-computer-press` |
 | Tau Press and Qercus | magazines | Acorn User's last publisher and its successor title | `magazines/acorn-user` |
 | The Home Computer Course | magazines | Orbis's 1983 part-work, the forerunner of *INPUT* | `magazines/input-magazine`, `companies/marshall-cavendish` |
@@ -1378,7 +1398,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Iridis Alpha | games | Minter's C64 shoot-'em-up | `people/jeff-minter`, `companies/llamasoft`, `systems/commodore-64`, `techniques/frame-animation`, `techniques/state-machine` |
 | Llamatron | games | A full-price game Llamasoft released as shareware | `companies/llamasoft`, `distribution/shareware`, `games/robotron-2084`, `people/jeff-minter` |
 | Quazatron and Technician Ted | games | Hewson's two highest-scoring Spectrum games | `companies/hewson-consultants`, `people/steve-turner`, `games/paradroid`, `companies/graftgold`, `people/andrew-hewson` |
-| Daley Thompson's Decathlon | games | The licence that made Ocean's name, with its joystick-waggling controls | `companies/ocean-software`, `people/christian-urquhart`, `phenomena/bedroom-coder`, `people/martin-galway`, `genres/sports-games`, `games/hypersports`, `people/bob-wakelin` |
+| Daley Thompson's Decathlon | games | The licence that made Ocean's name, with its joystick-waggling controls | `companies/ocean-software`, `people/christian-urquhart`, `phenomena/bedroom-coder`, `people/martin-galway`, `genres/sports-games`, `games/hypersports`, `people/bob-wakelin`, `games/track-and-field` |
 | Hunchback | games | Ocean's first licence, programmed by Christian Urquhart | `companies/ocean-software`, `people/christian-urquhart`, `culture/licensed-games` |
 | RoboCop (Ocean) | games | Ocean's 1988 film licence, which Data East took into the arcades | `companies/ocean-software`, `companies/data-east`, `people/jonathan-dunn`, `culture/arcade-conversion`, `culture/licensed-games`, `people/mike-lamb` |
 | Ghostbusters | games | Crane's best-selling 1984 licence, with a well-documented development story | `people/david-crane`, `companies/activision`, `games/knight-lore`, `games/sabre-wulf` |
@@ -1390,7 +1410,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Booty | games | Firebird's first hit | `companies/firebird` |
 | The Sentinel | games | Geoff Crammond's game and Firebird's highest *CRASH* score | `companies/firebird`, `people/tim-follin`, `people/geoff-crammond`, `techniques/procedural-generation`, `people/ian-andrew`, `games/driller`, `techniques/self-modifying-code` |
 | Forgotten Worlds | games | The first CP System game, converted under U.S. Gold's GO! label | `companies/capcom`, `games/ghouls-n-ghosts`, `games/strider` |
-| Gradius II | games | *Gradius*'s arcade sequel, *Vulcan Venture* in the West | `games/gradius`, `games/salamander` |
+| Gradius II | games | *Gradius*'s arcade sequel, *Vulcan Venture* in the West | `games/gradius`, `games/salamander`, `games/life-force` |
 | Devil May Cry | games | Capcom's 2001 action game, begun as a *Resident Evil* offshoot | `companies/capcom`, `people/shinji-mikami`, `genres/survival-horror` |
 | Frontier: Elite II and Frontier: First Encounters | games | *Elite*'s sequels, the second troubled at release | `games/elite`, `people/david-braben`, `people/ian-bell`, `companies/frontier-developments`, `people/chris-sawyer`, `techniques/procedural-generation`, `games/elite-dangerous` |
 | Obliterator | games | Psygnosis's game, the period's example of a crack within hours | `communities/cracking-scene`, `companies/psygnosis` |
@@ -1465,7 +1485,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Beneath Apple Manor | games | Don Worth's 1978 random-dungeon game, which predates *Rogue* | `genres/roguelike`, `games/rogue`, `techniques/procedural-generation`, `design/permadeath` |
 | Beyond a Steel Sky | games | Revolution's 2020 sequel | `companies/revolution-software`, `games/beneath-a-steel-sky`, `people/charles-cecil` |
 | BioShock Infinite | games | Irrational's last game (2013) | `people/ken-levine`, `games/bioshock`, `companies/irrational-games` |
-| Blade Runner (1997 game) | games | Westwood's voxel-character adventure and Castle's favourite | `companies/westwood-studios`, `people/louis-castle`, `companies/virgin-games` |
+| Blade Runner (1997 game) | games | Westwood's voxel-character adventure and Castle's favourite | `companies/westwood-studios`, `people/louis-castle`, `companies/virgin-games`, `design/branching-narrative` |
 | Blast Corps | games | Rare's 1997 Nintendo 64 game, mentioned in the Rumble Pak entry | `hardware/rumble-pak`, `systems/nintendo-64` |
 | Blue Stinger | games | Early Dreamcast survival-horror game from the Climax offshoot Climax Graphics | `companies/climax-entertainment` |
 | Bobby Bearing | games | The Edge's second isometric hit, 94% in *CRASH* | `companies/the-edge`, `techniques/isometric-projection` |
@@ -1478,9 +1498,10 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Bruce Lee | games | Datasoft's 1984 platform fighter, sold by U.S. Gold and reissued on Americana | `companies/americana`, `companies/us-gold` |
 | Buck Rogers: Planet of Zoom | games | Sega's 1982 sprite-scaling into-the-screen shooter | `genres/rail-shooters`, `games/space-harrier`, `techniques/sprite-scaling` |
 | Buggy Boy | games | Elite's big-selling racer, which *Zzap!64* preferred to *Out Run* on the C64 | `games/out-run`, `companies/elite-systems` |
+| Bump 'n' Jump | games | The Data East/Bally overhead car game *Spy Hunter* was compared with in 1984 | `games/spy-hunter` |
 | BurgerTime | games | Data East's first remembered hit | `companies/data-east` |
-| Burning Rangers and Samba de Amigo | games | Lower-priority Sonic Team games | `companies/sonic-team` |
-| Bust a Groove | games | Enix's 1998 dance game, the first *PaRappa* follower | `games/parappa-the-rapper`, `genres/music-games` |
+| Burning Rangers and Samba de Amigo | games | Lower-priority Sonic Team games | `companies/sonic-team`, `design/rhythm-matching`, `genres/music-games` |
+| Bust a Groove | games | Enix's 1998 dance game, the first *PaRappa* follower | `games/parappa-the-rapper`, `genres/music-games`, `design/rhythm-matching` |
 | Cabal and Midnight Resistance | games | Two of the best-reviewed Spectrum coin-op conversions | `people/jim-bagley`, `culture/arcade-conversion` |
 | Cadaver | games | The Bitmap Brothers' 1990 isometric adventure | `companies/bitmap-brothers`, `people/dan-malone`, `techniques/trainers`, `technologies/copy-protection` |
 | Caesar | games | Impressions' city-building series, 1992 to 2002 | `companies/impressions`, `companies/sierra`, `genres/management-game` |
@@ -1516,7 +1537,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Colossal Adventure (Level 9) | games | Level 9's home-computer version of *Adventure* | `genres/text-adventure`, `companies/level-9` |
 | Combat School | games | Konami's 1987 arcade game, converted for home computers by Ocean | `people/mike-lamb`, `people/andrew-deakin` |
 | Command & Conquer: Tiberian Sun | games | The 1999 sequel to Command & Conquer | `games/command-and-conquer`, `games/red-alert` |
-| Commander Keen | games | id's first hit and Apogee's breakthrough, built on adaptive tile refresh | `companies/id-software`, `companies/apogee-software`, `companies/softdisk`, `people/john-carmack`, `people/john-romero`, `distribution/shareware`, `people/scott-miller`, `companies/3d-realms`, `techniques/hitboxes` |
+| Commander Keen | games | id's first hit and Apogee's breakthrough, built on adaptive tile refresh | `companies/id-software`, `companies/apogee-software`, `companies/softdisk`, `people/john-carmack`, `people/john-romero`, `distribution/shareware`, `people/scott-miller`, `companies/3d-realms`, `techniques/hitboxes`, `culture/pc-gaming` |
 | Cool Spot | games | Virgin game linked to David Perry | `companies/virgin-games`, `people/david-perry` |
 | Corruption | games | Magnetic Scrolls' City insider-dealing adventure, a Golden Joystick winner | `people/anita-sinclair`, `companies/magnetic-scrolls` |
 | Crackdown | games | Realtime Worlds' game | `people/dave-jones`, `culture/dundee-games-scene` |
@@ -1540,9 +1561,10 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Dark Star | games | Design Design's 1984 CRASH Smash in 3D vector graphics | `companies/design-design`, `technologies/vector-graphics` |
 | Darklands | games | MicroProse's 1992 RPG set in historical Germany, with alchemy and saints in place of spells | `design/crafting-systems` |
 | David's Midnight Magic | games | A 1983 Arkie winner | `magazines/electronic-games` |
+| DayZ | games | Dean Hall's 2012 *ARMA II* zombie-survival mod, behind online survival games and the battle royale | `genres/survival-games`, `genres/fps` |
 | Dead Rising | games | Capcom's Xbox 360 million-seller | `people/keiji-inafune`, `companies/capcom` |
-| Deadline | games | Infocom's first mystery, and its first box of evidence | `people/marc-blank`, `companies/infocom` |
-| Dear Esther | games | The defining walking simulator, by The Chinese Room | `genres/walking-simulator`, `companies/frictional-games` |
+| Deadline | games | Infocom's first mystery, and its first box of evidence | `people/marc-blank`, `companies/infocom`, `design/branching-narrative` |
+| Dear Esther | games | The defining walking simulator, by The Chinese Room | `genres/walking-simulator`, `companies/frictional-games`, `games/gone-home`, `culture/modding-to-industry` |
 | Death Rally | games | Remedy's first game (1996), with music by Purple Motion | `people/purple-motion`, `companies/remedy-entertainment` |
 | Death Star Interceptor | games | System 3's first game and an unlicensed *Star Wars* game | `companies/system-3` |
 | Deathtrap Dungeon | games | Eidos game named in its entry | `companies/eidos` |
@@ -1564,7 +1586,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Donkey Kong 64 | games | Rare's game sold with the Expansion Pak | `systems/nintendo-64`, `companies/rare`, `people/grant-kirkhope` |
 | Donkey Kong Country 2: Diddy's Kong Quest | games | The sequel | `games/donkey-kong-country`, `companies/rare`, `people/david-wise` |
 | Doom II: Hell on Earth | games | The retail sequel and 1994 bestseller | `games/doom`, `companies/id-software` |
-| Dota 2 | games | Valve game with modding roots | `companies/valve`, `communities/modding` |
+| Dota 2 | games | Valve game with modding roots | `companies/valve`, `communities/modding`, `culture/modding-to-industry` |
 | Double Dragon II: The Revenge | games | The arcade sequel, with its own NES and home versions | `games/double-dragon`, `companies/technos` |
 | Dracula (CRL) | games | The first game given a BBFC certificate | `genres/horror-games`, `companies/crl-group`, `culture/game-ratings` |
 | Dragon Slayer | games | Falcom's foundational action RPG | `genres/action-rpg`, `companies/falcom` |
@@ -1597,8 +1619,8 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Exile | games | Irvin and Smith's 1988 arcade adventure, often paired with Elite as the peak of Acorn 8-bit games | `companies/superior-software`, `companies/acornsoft`, `companies/audiogenic`, `games/thrust` |
 | Eye of the Beholder | games | Westwood's real-time dungeon crawler for SSI, its breakthrough | `companies/westwood-studios`, `games/dungeon-master`, `people/louis-castle`, `genres/western-rpg` |
 | F-15 Strike Eagle, Silent Service and Gunship | games | The simulations that made MicroProse | `companies/microprose`, `people/sid-meier`, `genres/flight-sim` |
-| F-Zero | games | The SNES launch game that showed off mode 7 | `hardware/mode-7`, `systems/super-nintendo`, `people/takaya-imamura` |
-| F-Zero GX | games | Sega's 2003 *F-Zero* for Nintendo's GameCube, made under Nagoshi | `people/toshihiro-nagoshi`, `games/f-zero-x` |
+| F-Zero | games | The SNES launch game that showed off mode 7 | `hardware/mode-7`, `systems/super-nintendo`, `people/takaya-imamura`, `games/f-zero-x` |
+| F-Zero GX | games | Sega's 2003 *F-Zero* for Nintendo's GameCube, made under Nagoshi | `people/toshihiro-nagoshi`, `games/f-zero-x`, `people/takaya-imamura` |
 | Faceball 2000 | games | Early first-person shooting on the Game Boy, with four-player link play | `genres/console-fps`, `hardware/link-cable`, `systems/game-boy` |
 | Fade to Black | games | Delphine's 1995 3D sequel to Flashback | `games/flashback`, `companies/delphine-software` |
 | Falcon and Falcon 3.0 | games | The combat simulator *ACE* used as a benchmark; 3.0 is the sim period guides name for Thrustmaster set-ups | `hardware/flight-stick`, `genres/flight-sim`, `companies/microprose` |
@@ -1612,13 +1634,14 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Fez | games | A clear case of pixel art as a chosen style | `techniques/pixel-art` |
 | Fighter Pilot | games | Digital Integration's Spectrum flight sim, the defining one of 1983–84 | `genres/flight-sim`, `genres/simulation-games` |
 | Fighting Force | games | Core Design's 1997 game, the beat 'em up's move to 3D | `genres/beat-em-up` |
+| Final Doom | games | The first commercial game built by mod teams, with two campaigns from them | `culture/modding-to-industry`, `communities/modding`, `games/doom` |
 | Final Fantasy Adventure (Seiken Densetsu) | games | The first Mana game (Game Boy, 1991) | `games/secret-of-mana`, `companies/square` |
 | Final Fantasy IV | games | The game that introduced Active Time Battle | `genres/jrpg`, `companies/square`, `games/final-fantasy`, `design/active-time-battle` |
 | Final Fantasy VI and Final Fantasy X | games | The SNES and PS2 peaks of Uematsu's scores | `games/final-fantasy`, `people/nobuo-uematsu`, `companies/square`, `phenomena/rpg-golden-age` |
 | First Samurai | games | Cecco's best-known Amiga game | `people/raffaele-cecco` |
 | FlatOut | games | Bugbear's 2004 racer, with the ragdoll as entertainment | `techniques/ragdoll-physics` |
 | Flight Unlimited | games | Looking Glass's self-published flight simulator | `companies/looking-glass`, `genres/flight-sim` |
-| Flying Shark | games | Dominic Robinson's next Spectrum job after Zynaps | `games/zynaps`, `people/steve-turner` |
+| Flying Shark | games | Dominic Robinson's next Spectrum job after Zynaps | `games/zynaps`, `people/steve-turner`, `games/raiden` |
 | Football Manager 2 | games | Addictive's 1988 sequel | `games/football-manager-1982`, `people/kevin-toms`, `companies/addictive-games` |
 | Formula One Grand Prix | games | Crammond's series (*World Circuit* in the US) | `people/geoff-crammond`, `companies/microprose`, `genres/racing-simulation`, `genres/racing-game` |
 | Fort Apocalypse | games | Synapse's helicopter game, accused of being a *Choplifter* clone | `games/choplifter` |
@@ -1662,16 +1685,17 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | H.A.T.E. | games | Vortex/Gremlin, 1989 | `techniques/software-scroll`, `people/costa-panayi`, `companies/vortex-software` |
 | Habitat | games | Chip Morningstar's Lucasfilm online world, where SCUMM's walking code came from | `tools/scumm`, `companies/lucasarts`, `genres/mmorpg-history`, `systems/commodore-64` |
 | Hack, Moria and Angband | games | The main branches of the traditional roguelike family; *Hack* links *Rogue* to *NetHack* | `genres/roguelike`, `games/nethack`, `games/rogue`, `games/diablo` |
-| Halls of the Things | games | A well-known 1983 Spectrum game from Design Design | `companies/design-design` |
+| Halls of the Things | games | A well-known 1983 Spectrum game from Design Design | `companies/design-design`, `genres/maze-game` |
 | Halo 2 | games | The 2004 game that took Xbox Live mainstream | `games/halo`, `culture/xbox-live`, `companies/bungie` |
 | Hamurabi and The Sumerian Game | games | The earliest management games | `genres/simulation-games`, `books/basic-computer-games`, `people/david-ahl`, `genres/management-game`, `distribution/type-in-listings`, `culture/educational-gaming` |
 | HardBall! | games | Accolade's first in-house game, 93% in *ZZAP!64* | `companies/accolade` |
 | Haunted House (Atari VCS) | games | The 1982 game about fear of the dark, the earliest console game in the horror line | `genres/survival-horror`, `genres/horror-games`, `systems/atari-2600` |
+| Head On | games | Sega's 1979 dot-collecting maze, a year before *Pac-Man* | `genres/maze-game`, `games/pac-man` |
 | Heart of Darkness and Amazing Studio | games | Chahi's six-year cinematic platformer, made with Flashback staff | `games/another-world`, `people/eric-chahi`, `techniques/pre-rendered-backgrounds`, `games/flashback`, `companies/delphine-software` |
 | Henry's Hoard | games | Martyn Brown's first published game, a root of both Alternative Software and Team17 | `companies/alternative-software`, `companies/team17` |
 | Her Story | games | The 2015 FMV revival | `technologies/fmv` |
 | Heretic | games | Raven's *Doom*-engine game, where *Doom*'s cheat codes became traps | `culture/cheat-codes`, `games/doom` |
-| Herzog Zwei | games | Technosoft's 1989 game, the most-cited first RTS | `genres/rts-genre`, `companies/technosoft`, `systems/sega-mega-drive`, `games/dune-ii` |
+| Herzog Zwei | games | Technosoft's 1989 game, the most-cited first RTS | `genres/rts-genre`, `companies/technosoft`, `systems/sega-mega-drive`, `games/dune-ii`, `design/base-building` |
 | Hogan's Alley and Wild Gunman | games | NES launch light-gun games; Wild Gunman is a known Zapper test case | `hardware/nes-zapper`, `games/duck-hunt`, `hardware/light-gun` |
 | Hydlide / T&E Soft | games | One of the 1984 action RPGs, which sold widely in Japan | `genres/action-rpg` |
 | I, of the Mask | games | Sandy White's 1985 follow-up to *Ant Attack* and *Zombie Zombie*, for Electric Dreams | `people/sandy-white`, `games/ant-attack`, `companies/electric-dreams` |
@@ -1689,7 +1713,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Ishar | games | Silmarils' role-playing trilogy, in which the party voted on who joined it | `companies/daze`, `companies/silmarils`, `genres/western-rpg` |
 | Island of Kesmai / Kesmai | games | CompuServe's 1985 multiplayer RPG | `genres/mmorpg-history`, `genres/mud-history` |
 | It Came from the Desert | games | Cinemaware's 1989 giant-ant B-movie game | `companies/cinemaware` |
-| Jack the Ripper (St Brides) | games | CRL's 1987 adventure, described as the first commercial PAW adventure | `tools/paw`, `companies/crl-group` |
+| Jack the Ripper (St Brides) | games | CRL's 1987 adventure, described as the first commercial PAW adventure | `tools/paw`, `companies/crl-group`, `culture/game-ratings` |
 | Jade Empire | games | BioWare game named in its entry | `companies/bioware` |
 | Jagged Alliance | games | The Western tactical RPG between *X-COM* and later squad games | `genres/tactical-rpg` |
 | Jak and Daxter, Uncharted and The Last of Us | games | Naughty Dog's later series | `companies/naughty-dog`, `companies/sony`, `companies/red-barrels` |
@@ -1710,6 +1734,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Kane & Lynch | games | IO Interactive's second series (2007, 2010) | `companies/io-interactive` |
 | Karaoke Revolution | games | Harmonix's singing game for Konami, the source of *Rock Band*'s vocals | `companies/harmonix`, `games/rock-band`, `genres/music-games` |
 | Karate Champ | games | Data East's arcade game, at the centre of the Epyx case and the model for *Exploding Fist* | `companies/data-east`, `games/international-karate`, `games/way-of-the-exploding-fist`, `companies/epyx`, `companies/technos`, `genres/beat-em-up`, `games/street-fighter`, `games/street-fighter-ii` |
+| Karnov | games | Data East's arcade game, whose fire-breathing hero became the first boss of *Bad Dudes* | `games/bad-dudes`, `companies/data-east` |
 | Kentilla | games | One of Brewster's best-known games | `people/derek-brewster` |
 | King's Field | games | FromSoftware's first game, a PlayStation launch RPG and the ancestor of the *Souls* games | `games/dark-souls`, `games/demons-souls`, `companies/fromsoft` |
 | Kingdom Hearts | games | Square and Disney's 2002 series | `companies/square` |
@@ -1753,12 +1778,12 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Mario Party | games | Hudson's Nintendo 64 series | `companies/hudson-soft`, `companies/nintendo` |
 | Mario's Picross | games | Ape's co-developed Game Boy puzzle game, the start of Nintendo's Picross line | `companies/ape-inc` |
 | Marsport | games | The third Cuchulainn game (1985), 95% in *CRASH* | `companies/gargoyle-games`, `games/dun-darach`, `genres/arcade-adventure`, `people/roy-carter`, `people/greg-follis` |
-| Marvel vs. Capcom 2 | games | The first game other than Street Fighter at Battle by the Bay events | `events/evo`, `communities/fighting-game-community`, `systems/sega-naomi`, `systems/sega-dreamcast` |
+| Marvel vs. Capcom and Marvel vs. Capcom 2 | games | Capcom's crossover fighters: the 1998 game that brought Captain Commando back as a fighter, and the first game other than Street Fighter at Battle by the Bay events | `events/evo`, `communities/fighting-game-community`, `systems/sega-naomi`, `systems/sega-dreamcast`, `games/captain-commando`, `companies/capcom` |
 | Marvelous: Another Treasure Island | games | Eiji Aonuma's Zelda-like Super Famicom game, which led him to Zelda | `people/eiji-aonuma` |
 | Master of Orion | games | The 1993 game the term "4X" was coined for | `games/civilization`, `genres/4x-strategy`, `companies/microprose` |
 | Match Day II | games | Ritman and Drummond's sequel, *CRASH* readers' number one in 1988 | `people/jon-ritman`, `people/bernie-drummond` |
 | Max Payne | games | Remedy's defining game (2001), with bullet time and the Max-FX engine | `people/skaven`, `companies/remedy-entertainment`, `companies/futuremark`, `companies/rockstar`, `companies/3d-realms`, `techniques/ragdoll-physics`, `tools/havok` |
-| Maze War | games | The early networked first-person maze game at MIT and on the ARPANET | `people/dave-lebling`, `games/zork` |
+| Maze War | games | The early networked first-person maze game at MIT and on the ARPANET | `people/dave-lebling`, `games/zork`, `genres/fps`, `genres/maze-game` |
 | MDK2 | games | BioWare game named in its entry | `companies/bioware` |
 | MediEvil | games | Sony Cambridge's first game, begun at Millennium | `companies/millennium-interactive`, `companies/sony`, `culture/cambridge-games-scene` |
 | Mega Man 3 | games | The next game, which kept the eight-master structure | `games/mega-man-2`, `games/mega-man` |
@@ -1771,7 +1796,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Metal Slug 2, Metal Slug X and Metal Slug 3 | games | The sequels | `games/metal-slug`, `companies/nazca`, `companies/snk` |
 | Metal Warrior | games | Lasse Öörni's C64 game series, the main example in the scrolling and tile-map entries | `techniques/multidirectional-scrolling`, `techniques/tile-maps`, `techniques/tile-collision`, `techniques/state-machine`, `techniques/sprite-multiplexing`, `techniques/frameskipping-and-interpolation` |
 | Meteos | games | Sakurai's 2005 DS puzzle game for Q Entertainment | `people/tetsuya-mizuguchi`, `companies/q-entertainment`, `people/masahiro-sakurai`, `games/lumines` |
-| Metroid Dread | games | The 2D Metroid line after Super Metroid | `genres/metroidvania`, `games/metroid`, `people/yoshio-sakamoto` |
+| Metroid Dread | games | The 2D Metroid line after Super Metroid | `genres/metroidvania`, `games/metroid`, `people/yoshio-sakamoto`, `games/metroid-ii` |
 | Micropolis | games | The open-source *SimCity* | `games/sim-city` |
 | MicroProse Soccer | games | Sensible's 1988 C64 football game | `companies/sensible-software`, `people/jon-hare`, `games/sensible-soccer`, `companies/microprose` |
 | Midwinter | games | Mike Singleton's 1990 Rainbird game and a landmark 3D strategy game | `companies/rainbird`, `people/mike-singleton`, `companies/telecomsoft`, `people/pete-cooke` |
@@ -1799,12 +1824,13 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Namco Museum | games | How Namco's early arcade games reached the PlayStation | `games/galaga`, `companies/namco`, `games/pac-man` |
 | Naughty Ones | games | Kompart platform game by Melon Dezign and Interactivision | `groups/melon-dezign` |
 | Navy Seals | games | Öörni's example of char-step C64 scrolling | `techniques/scrolling`, `techniques/multidirectional-scrolling` |
+| NBA Street | games | EA Sports Big's other major series besides *SSX* | `games/ssx`, `companies/ea-sports` |
 | Need for Speed | games | Series named in the Criterion, Guildford and EA entries | `companies/criterion`, `culture/guildford-games-cluster`, `companies/electronic-arts`, `games/burnout` |
 | Nether Earth | games | 1987 Spectrum game with robot production | `genres/rts-genre` |
 | Netherworld | games | Hewson's 1988 game with Rogers's music-fader design | `people/dave-rogers`, `companies/hewson-consultants` |
 | Neverwinter Nights (AOL, 1991) | games | AOL's 1991 online RPG, distinct from BioWare's 2002 game | `genres/mmorpg-history`, `games/neverwinter-nights` |
 | Night Driver | games | Atari's 1976 first-person driving game | `techniques/pseudo-3d-road`, `genres/racing-game`, `hardware/steering-wheel` |
-| Night Trap | games | Digital Pictures' Mega-CD game, the most discussed exhibit at the 1993 hearings | `people/howard-lincoln`, `culture/congressional-hearings-1993`, `companies/midway`, `culture/mortal-kombat-controversy`, `games/mortal-kombat`, `culture/esrb`, `companies/sega`, `technologies/fmv`, `genres/horror-games`, `techniques/digitized-sprites`, `design/fatalities` |
+| Night Trap | games | Digital Pictures' Mega-CD game, the most discussed exhibit at the 1993 hearings | `people/howard-lincoln`, `culture/congressional-hearings-1993`, `companies/midway`, `culture/mortal-kombat-controversy`, `games/mortal-kombat`, `culture/esrb`, `companies/sega`, `technologies/fmv`, `genres/horror-games`, `techniques/digitized-sprites`, `design/fatalities`, `culture/game-ratings` |
 | NiGHTS into Dreams, Guardian Heroes, F355 Challenge, Virtua Tennis and Phantasy Star Online | games | Sonic Team's first Saturn game, sold with its own analogue pad | `systems/sega-saturn`, `systems/sega-dreamcast`, `systems/sega-naomi`, `companies/sonic-team`, `hardware/analog-control`, `people/yuji-naka`, `companies/hitmaker`, `companies/treasure`, `genres/beat-em-up` |
 | Nintendogs and Brain Training | games | The DS's audience-widening hits | `systems/nintendo-ds` |
 | Nioh | games | Team Ninja's 2017 Souls-like action game | `companies/team-ninja`, `companies/tecmo`, `companies/fromsoft` |
@@ -1854,7 +1880,8 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Pooyan | games | Konami's 1982 balloon game, which *C&VG* saw in *Balloon Fight* | `games/balloon-fight` |
 | Pop'n Music | games | Konami's big-button music game for younger players | `games/beatmania`, `companies/bemani` |
 | Populous II | games | Bullfrog's 1991 sequel | `games/populous`, `companies/bullfrog`, `genres/god-games` |
-| Portal and The Orange Box | games | Valve's compilation and *Portal* | `companies/valve`, `games/half-life-2` |
+| Portal and The Orange Box | games | Valve's compilation and *Portal* | `companies/valve`, `games/half-life-2`, `culture/modding-to-industry` |
+| Ports of Call | games | The shipping-trade game Aegis published, whose graphics Jim Sachs redrew | `people/jim-sachs` |
 | Power Drift, G-LOC and the R360 | games | Sega's 1988 Y Board scaling-and-rotation racer, and the fully rotating cockpit often confused with *After Burner*'s | `people/yu-suzuki`, `companies/sega-am2`, `techniques/sprite-scaling`, `games/after-burner` |
 | Powerdrome | games | The Amiga racer that inspired WipEout | `games/wipeout` |
 | Powermonger | games | Bullfrog's 1990 follow-up to *Populous* | `games/populous`, `companies/bullfrog`, `genres/god-games`, `people/peter-molyneux`, `games/syndicate` |
@@ -1870,7 +1897,8 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Pulseman | games | Game Freak's best-regarded game before *Pokémon* (1994) | `companies/game-freak`, `people/satoshi-tajiri`, `people/ken-sugimori`, `people/junichi-masuda` |
 | Pump It Up | games | Korean rival to DDR with a different pad layout | `hardware/dance-mat`, `games/dance-dance-revolution` |
 | Putty Squad | games | System 3's game, finished in 1995 and released in 2013 | `people/john-twiddy`, `companies/system-3` |
-| Quake II and Quake III Arena | games | The series' later direction and esports role | `games/quake`, `companies/id-software`, `communities/esports-origins`, `events/quakecon` |
+| Quake II and Quake III Arena | games | The series' later direction and esports role | `games/quake`, `companies/id-software`, `communities/esports-origins`, `events/quakecon`, `people/graeme-devine` |
+| Quattro compilations (Code Masters/Camerica) | games | Four-game budget tapes and NES cartridges that carried *Super Robin Hood* and early Dizzy games | `games/super-robin-hood`, `games/dizzy`, `companies/codemasters` |
 | Quest for Glory and Lori and Corey Cole | games | Lori Cole's Sierra series, the Sierra side of the 1991 death debate | `companies/sierra`, `games/monkey-island`, `culture/adventure-game-deaths`, `tools/sci-engine`, `design/dialogue-trees` |
 | Quinty / Mendel Palace | games | Game Freak's first game (1989) | `people/satoshi-tajiri`, `companies/game-freak`, `people/ken-sugimori`, `people/junichi-masuda` |
 | Qwak | games | Jamie Woodhouse's BBC Micro single-screen game, remade by Team17 | `genres/single-screen-platformer`, `companies/team17` |
@@ -1889,13 +1917,13 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Red Dead Redemption | games | Rockstar's western series | `companies/rockstar`, `companies/rockstar-north` |
 | Red Faction | games | Volition's 2001 game, Poole's example of incoherent AI | `design/enemy-design` |
 | Renegade III: The Final Chapter | games | Deakin and Horn's time-travel beat-'em-up, 91% in *CRASH* | `people/andrew-deakin`, `people/ivan-horn`, `games/renegade` |
-| Rescue on Fractalus! and Ballblazer | games | Lucasfilm's first games | `companies/lucasarts`, `systems/atari-8-bit` |
+| Rescue on Fractalus! and Ballblazer | games | Lucasfilm's first games | `companies/lucasarts`, `systems/atari-8-bit`, `people/graeme-devine`, `companies/activision` |
 | Resident Evil 4 | games | The 2005 turn to action, and a big influence on third-person shooters | `games/resident-evil`, `genres/survival-horror`, `design/tank-controls`, `companies/capcom`, `people/shinji-mikami` |
 | Return to Blacktooth | games | The 2026 sequel to *Head Over Heels* | `games/head-over-heels` |
 | Rick Dangerous | games | Core Design's 1989 platformer, the "spiritual father" of Lara Croft and the game *Spelunky* is most often compared with | `games/spelunky`, `companies/core-design`, `games/tomb-raider`, `companies/firebird` |
 | Riven | games | Myst's 1997 sequel, Red Orb's biggest release | `games/myst`, `companies/cyan`, `companies/broderbund`, `techniques/pre-rendered-backgrounds` |
 | River Raid | games | Activision's 1982 game, the clearest period example of a generated level in a 4K ROM | `techniques/procedural-generation`, `techniques/random-numbers`, `systems/atari-2600` |
-| Robinson's Requiem | games | Silmarils' survival game, in which the hero treats his own wounds | `companies/silmarils` |
+| Robinson's Requiem | games | Silmarils' survival game, in which the hero treats his own wounds | `companies/silmarils`, `genres/survival-games` |
 | Roc'n Rope | games | Konami's 1983 coin-op, where Fujiwara first tried the grappling hook | `people/tokuro-fujiwara`, `games/bionic-commando` |
 | Rocket Ranger | games | Cinemaware's 1988 adventure, protected by a code wheel | `companies/cinemaware`, `technologies/code-wheels` |
 | RollerCoaster Tycoon 2 | games | *RollerCoaster Tycoon*'s sequel | `people/chris-sawyer`, `games/roller-coaster-tycoon` |
@@ -1982,8 +2010,8 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Super Mario World 2: Yoshi's Island | games | Used the Super FX for sprites | `hardware/super-fx-chip`, `systems/super-nintendo` |
 | Super Meat Boy and Limbo | games | The Xbox Live Arcade hits of 2010 | `phenomena/indie-renaissance`, `culture/indie-games` |
 | Super Monkey Ball | games | Amusement Vision's best-known original game, an *Edge* 9/10 | `people/toshihiro-nagoshi` |
-| Super Smash Bros. | games | Sakurai's series, with a long competitive history, and where the *Duck Hunt* dog lives on | `people/satoru-iwata`, `people/masahiro-sakurai`, `companies/hal-laboratory`, `games/duck-hunt`, `events/evo`, `communities/fighting-game-community`, `games/kirby` |
-| Super Smash Bros. Melee | games | A major Evo game from 2013, and the source of Evo's tension with Nintendo | `events/evo`, `communities/fighting-game-community`, `games/fire-emblem` |
+| Super Smash Bros. | games | Sakurai's series, with a long competitive history, and where the *Duck Hunt* dog lives on | `people/satoru-iwata`, `people/masahiro-sakurai`, `companies/hal-laboratory`, `games/duck-hunt`, `events/evo`, `communities/fighting-game-community`, `games/kirby`, `games/ice-climber` |
+| Super Smash Bros. Melee | games | A major Evo game from 2013, and the source of Evo's tension with Nintendo | `events/evo`, `communities/fighting-game-community`, `games/fire-emblem`, `games/ice-climber` |
 | Superfrog | games | Team17's platform game | `companies/team17`, `people/andreas-tadic`, `culture/amiga-power-versus-team17` |
 | Superman (Atari 2600) | games | John Dunn's 1979 game, built from Robinett's prototype code | `games/adventure`, `people/warren-robinett` |
 | SWAT 4 / Tribes: Vengeance | games | Irrational's mid-2000s games and their shared engine | `companies/irrational-games` |
@@ -2009,7 +2037,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Test Drive | games | Accolade's driving series, later Infogrames' and Atari's | `companies/accolade`, `companies/elite-systems` |
 | Tetris Effect | games | Enhance's *Tetris* game | `people/tetsuya-mizuguchi`, `games/tetris` |
 | Thanatos | games | Durell's 1986 game, which hides a Roger Dean tribute | `people/roger-dean`, `companies/durell` |
-| The 11th Hour | games | *The 7th Guest*'s sequel, with a well-documented troubled production | `games/7th-guest`, `technologies/fmv` |
+| The 11th Hour | games | *The 7th Guest*'s sequel, with a well-documented troubled production | `games/7th-guest`, `technologies/fmv`, `people/graeme-devine` |
 | The Bard's Tale | games | Interplay's 1985 hit, sold by EA | `genres/western-rpg`, `companies/interplay`, `people/brian-fargo`, `companies/electronic-arts`, `games/wasteland` |
 | The Beatles: Rock Band | games | Harmonix's Beatles band game | `games/rock-band`, `companies/harmonix` |
 | The Black Cauldron | games | Sierra's first keyboard-free AGI game | `tools/agi-engine` |
@@ -2080,7 +2108,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | TV Sports: Football | games | Cinemaware's 1988 American football game | `companies/cinemaware` |
 | UFO 50 | games | A 2024 collection built as an imaginary 1980s console library | `people/derek-yu`, `games/spelunky` |
 | Ultima Online | games | Origin's 1997 online game, still running, now covered only inside other entries | `games/ultima`, `companies/origin-systems`, `genres/mmorpg-history`, `people/richard-garriott`, `companies/electronic-arts`, `genres/mud-history`, `design/crafting-systems`, `culture/online-multiplayer` |
-| Ultima Underworld: The Stygian Abyss | games | Blue Sky/Looking Glass's 1992 first-person dungeon, named as the first immersive sim | `games/ultima`, `companies/origin-systems`, `companies/looking-glass`, `genres/western-rpg`, `genres/immersive-sim`, `games/deus-ex`, `people/warren-spector`, `games/system-shock`, `techniques/texture-mapping`, `techniques/bsp-trees`, `games/doom` |
+| Ultima Underworld: The Stygian Abyss | games | Blue Sky/Looking Glass's 1992 first-person dungeon, named as the first immersive sim | `games/ultima`, `companies/origin-systems`, `companies/looking-glass`, `genres/western-rpg`, `genres/immersive-sim`, `games/deus-ex`, `people/warren-spector`, `games/system-shock`, `techniques/texture-mapping`, `techniques/bsp-trees`, `games/doom`, `genres/fps` |
 | Um Jammer Lammy | games | NanaOn-Sha's 1999 guitar follow-up to *PaRappa* | `games/parappa-the-rapper`, `companies/nanaon-sha`, `genres/music-games`, `people/masaya-matsuura` |
 | Undertale and Hyper Light Drifter | games | GameMaker's best-known games | `tools/game-maker`, `culture/indie-games` |
 | Uniracers | games | DMA Design's Nintendo game, and its other ACM-rendered title | `companies/dma-design`, `systems/super-nintendo`, `people/dave-jones`, `games/donkey-kong-country`, `techniques/pre-rendered-backgrounds` |
@@ -2118,11 +2146,11 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Wizard's Crown | games | SSI's 1985 Western RPG built around tactical combat | `genres/tactical-rpg`, `design/turn-based-combat` |
 | Wizard's Lair, Starquake and Firelord | games | Steve Crow's Spectrum games, each a *CRASH* Smash | `people/steve-crow`, `companies/bubble-bus`, `companies/hewson-consultants`, `events/golden-joystick-awards` |
 | Wizkid | games | The 1992 sequel to *Wizball* | `games/wizball`, `companies/sensible-software` |
-| Wolfenstein 3D | games | The game that set id's shooter formula and its shareware success | `companies/id-software`, `games/doom`, `companies/apogee-software`, `genres/fps`, `tools/id-tech`, `people/john-carmack`, `people/john-romero`, `distribution/shareware`, `people/scott-miller`, `companies/3d-realms`, `companies/softdisk`, `techniques/bsp-trees`, `techniques/texture-mapping` |
+| Wolfenstein 3D | games | The game that set id's shooter formula and its shareware success | `companies/id-software`, `games/doom`, `companies/apogee-software`, `genres/fps`, `tools/id-tech`, `people/john-carmack`, `people/john-romero`, `distribution/shareware`, `people/scott-miller`, `companies/3d-realms`, `companies/softdisk`, `techniques/bsp-trees`, `techniques/texture-mapping`, `culture/pc-gaming` |
 | World Class Track Meet (Stadium Events) | games | The Power Pad's pack-in, and Bandai's original | `hardware/power-pad` |
 | World Club Champion Football | games | Hitmaker's card-driven arcade game, whose card system *Sangokushi Taisen* later used | `companies/hitmaker`, `companies/sega` |
 | World Games | games | Epyx's 1986 Games-series title | `games/summer-games`, `games/winter-games`, `games/california-games`, `companies/epyx` |
-| World of Warcraft | games | Blizzard's online game, whose links currently go to the Warcraft entry | `companies/blizzard`, `companies/activision`, `genres/mmorpg-history`, `games/warcraft` |
+| World of Warcraft | games | Blizzard's online game, whose links currently go to the Warcraft entry | `companies/blizzard`, `companies/activision`, `genres/mmorpg-history`, `games/warcraft`, `people/chris-metzen` |
 | Worm in Paradise | games | Level 9's game that ended *Heavy on the Magick*'s run at the top of the adventure chart | `games/heavy-on-the-magick` |
 | Worms Armageddon and Worms: The Director's Cut | games | The Amiga finale and the PC version still played | `games/worms`, `people/andy-davidson`, `companies/team17` |
 | Wurm Online | games | Markus Persson's pre-*Minecraft* game | `people/markus-persson`, `companies/mojang` |
@@ -2131,10 +2159,11 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Xenoblade Chronicles | games | Takahashi's Wii RPG, which *Edge* read as his answer to the *Xenogears* overrun | `games/xenogears`, `people/tetsuya-takahashi`, `companies/monolith-soft` |
 | Xenon | games | The Bitmap Brothers' first game (1988), also an Arcadia coin-op | `companies/bitmap-brothers`, `games/speedball-2`, `games/xenon-2`, `companies/mirrorsoft` |
 | Xenosaga | games | Monolith Soft's PS2 trilogy, three of six planned episodes | `games/xenogears`, `companies/monolith-soft`, `people/tetsuya-takahashi` |
+| XIII | games | Ubisoft's cel-shaded shooter, lost in the same Christmas 2003 rush as *Beyond Good & Evil* | `games/beyond-good-and-evil`, `companies/ubisoft` |
 | Xybots | games | The Gauntlet III that became a first-person maze game | `people/ed-logg`, `games/gauntlet` |
 | Yie Ar Kung-Fu | games | Konami's 1985 one-on-one fighter, one of the games *Street Fighter* was measured against | `genres/beat-em-up`, `companies/imagine-software`, `companies/konami`, `games/street-fighter`, `games/street-fighter-ii`, `games/international-karate`, `games/kung-fu-master` |
 | Ys | games | Falcom's 1987 action RPG, with Yuzo Koshiro's score | `genres/action-rpg`, `companies/falcom`, `people/yuzo-koshiro` |
-| Z and Z: Steel Soldiers | games | The Bitmap Brothers' PC strategy games (1996, 2001) | `companies/bitmap-brothers` |
+| Z and Z: Steel Soldiers | games | The Bitmap Brothers' PC strategy games (1996, 2001) | `companies/bitmap-brothers`, `design/base-building` |
 | Zak McKracken and the Alien Mindbenders | games | The second SCUMM game, designed by David Fox | `tools/scumm`, `companies/lucasarts`, `games/maniac-mansion`, `culture/lucasarts-adventures` |
 | Zanac and Aleste | games | Compile's signature shooters; *Zanac* had early self-adjusting difficulty | `design/difficulty-design`, `companies/compile`, `systems/pc-engine`, `systems/sega-master-system` |
 | Zero Wing | games | Toaplan's shooter, the "All your base" game | `companies/toaplan` |
@@ -2153,7 +2182,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | *Quantum Leap* | culture | Its "evil leaper" morphs were made with ASDG's MorphPlus on the Amiga, not the Toaster, as is often claimed | `software/lightwave-3d` |
 | *Star Trek: Voyager* | culture | *Amiga Shopper* reported Amblin Imaging, the *seaQuest* effects house, working on it by September 1994 | `software/lightwave-3d` |
 | The Final Cartridge | tools | The Dutch C64 utility and fast-loader cartridge, sold across Europe | `systems/commodore-64`, `technologies/disk-fastloaders`, `technologies/fast-loader`, `hardware/cartridge`, `hardware/action-replay` |
-| Family BASIC and the Famicom Data Recorder | languages | Nintendo's BASIC for the Famicom | `systems/nintendo-entertainment-system`, `companies/hudson-soft`, `games/wrecking-crew`, `hardware/famicom-disk-system`, `hardware/battery-backup` |
+| Family BASIC and the Famicom Data Recorder | languages | Nintendo's BASIC for the Famicom | `systems/nintendo-entertainment-system`, `companies/hudson-soft`, `games/wrecking-crew`, `hardware/famicom-disk-system`, `hardware/battery-backup`, `games/excitebike` |
 | AmigaOS, Kickstart and Workbench | software | The Amiga's operating system | `systems/commodore-amiga`, `people/dale-luck` |
 | CSpect | emulators | A ZX Spectrum Next emulator | `systems/zx-spectrum-next`, `people/mike-dailly` |
 | Amiga Hardware Reference Manual | books | The primary source for Amiga chipset entries | `hardware/blitter`, `systems/commodore-amiga` |
@@ -2192,7 +2221,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Copy parties | events | The swap meets where crackers traded games, from Venlo in 1988 to Gothenburg's TCC in 1993 | `communities/cracking-scene`, `magazines/illegal`, `groups/triad`, `communities/crack-intros`, `communities/demo-parties`, `groups/ikari` |
 | Copyright (Computer Software) Amendment Act 1985 | phenomena | The British law FAST lobbied for | `communities/cracking-scene`, `distribution/piracy` |
 | *The Dark Wheel* | books | Robert Holdstock's novella that came with *Elite* | `games/elite`, `companies/acornsoft` |
-| Photon Paint and Digi-Paint | software | The HAM paint programs *Deluxe Paint IV* replaced | `software/deluxe-paint` |
+| Photon Paint and Digi-Paint | software | The HAM paint programs *Deluxe Paint IV* replaced | `software/deluxe-paint`, `culture/amiga-art-style` |
 | *Game Over* | books | David Sheff's 1993 history of Nintendo, cited across the Vault | `people/toru-iwatani`, `games/pac-man`, `companies/nintendo`, `people/minoru-arakawa`, `people/hiroshi-yamauchi`, `culture/universal-vs-nintendo`, `systems/nintendo-entertainment-system`, `phenomena/tetris-legal-battles`, `people/henk-rogers`, `people/alexey-pajitnov`, `people/howard-lincoln` |
 | 3DMark | software | The benchmark series, 1998 to the present | `companies/futuremark`, `companies/remedy-entertainment` |
 | 40 Best Machine Code Routines for the ZX Spectrum | books | Hardman and Hewson's 1982 book, the source of the standard Spectrum scroll routines | `techniques/scrolling`, `techniques/software-scroll`, `people/andrew-hewson`, `companies/hewson-consultants`, `culture/basic-to-machine-code` |
@@ -2212,6 +2241,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Atari: Game Over (2014 documentary) | culture | The documentary of the Alamogordo dig | `games/et-the-extra-terrestrial`, `phenomena/1983-crash`, `people/howard-scott-warshaw` |
 | Back in Time Live and Chris Abbott | events | Abbott's C64 remix CDs and concerts, where Daglish performed; Abbott is also the HVSC's contact for commercial use | `people/ben-daglish`, `people/rob-hubbard`, `communities/chiptune-scene`, `communities/hvsc` |
 | BASIC compilers for the Spectrum (Mcoder, Softek FP/IS) | tools | The route from Sinclair BASIC to compiled code | `culture/basic-to-machine-code`, `languages/sinclair-basic` |
+| Battle royale | genres | Last-player-standing shooters that grew out of *Minecraft* and *DayZ* mods | `genres/fps`, `genres/survival-games` |
 | Battle.net | distribution | Blizzard's free built-in online service | `companies/blizzard`, `games/diablo`, `games/starcraft`, `games/warcraft`, `communities/esports-origins`, `culture/online-multiplayer` |
 | Behaviour trees | techniques | The later form of hierarchical state machines in game AI | `techniques/state-machine` |
 | BizHawk | emulators | The multi-system emulator TASVideos calls more accurate than FCEUX | `culture/tool-assisted-speedrun`, `emulators/fceux` |
@@ -2226,13 +2256,14 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | bsnes and higan | emulators | byuu's accuracy-first SNES emulator, the main example in Cycle Accuracy | `techniques/cycle-accuracy`, `people/byuu`, `emulators/emulation`, `emulators/retroarch`, `systems/super-nintendo` |
 | Bubble shooter | design | The family of games that grew out of *Puzzle Bobble* | `games/puzzle-bobble`, `design/puzzle-game-design` |
 | Build engine and Ken Silverman | tools | Ken Silverman's engine behind *Duke Nukem 3D*, *Shadow Warrior* and *Blood* | `companies/apogee-software`, `companies/3d-realms`, `games/duke-nukem-3d` |
-| Bundesprüfstelle indexing of games | phenomena | West Germany's list that held *Barbarian*, *Silent Service* and *F-15 Strike Eagle* | `companies/palace-software`, `companies/microprose` |
+| Bundesprüfstelle indexing of games | phenomena | West Germany's list that held *Barbarian*, *Silent Service* and *F-15 Strike Eagle* | `companies/palace-software`, `companies/microprose`, `culture/game-ratings` |
 | ByteBoozer | tools | HCL's widely used C64 cruncher | `groups/booze-design`, `techniques/compression`, `techniques/run-length-encoding`, `techniques/size-coding` |
 | Bytecode interpreters in games | techniques | The shared approach of Another World, SCUMM and Infocom's Z-machine | `games/another-world`, `tools/scumm` |
 | Byterapers | groups | Long-running Finnish group, co-makers of *Superselection* with Future Crew | `events/assembly-party`, `groups/future-crew` |
 | C64 packers and crunchers (Card Cruncher) | tools | A staple of the cracking scene | `groups/1001-crew`, `techniques/compression`, `communities/cracking-scene` |
 | Camelot | groups | Danish C64 group, winner at The Party 1993 with *Tower Power* | `events/the-party`, `groups/oxyron` |
 | Candytron | demos | farbrausch's fr-030, the first kkrunchy intro, Breakpoint 2003 | `groups/farbrausch`, `people/ryg` |
+| CERO | culture | Japan's games ratings body and its Z category | `culture/game-ratings` |
 | CHRGET and the BASIC wedge | techniques | The best-known self-modifying routine, and how BASIC extensions hooked in | `techniques/self-modifying-code`, `people/jim-butterfield` |
 | Chunky-to-planar conversion | techniques | The method behind AGA 3D demos such as *Mindprobe* | `groups/the-black-lotus`, `systems/commodore-amiga`, `demos/ocean-machine`, `people/kalms` |
 | Classic Gaming Expo UK | events | Where *Retro Gamer* met its readers in 2004 and 2005 | `magazines/retro-gamer` |
@@ -2290,7 +2321,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | FastTracker 2 | software | One of the main PC trackers and the origin of the XM format | `groups/triton`, `culture/tracker-music`, `software/protracker`, `software/famitracker`, `people/vogue`, `demos/crystal-dream`, `technologies/mod-format` |
 | FidoNet | communities | The network that linked tens of thousands of boards | `communities/bbs-scene`, `techniques/ascii-art` |
 | Field-programmable gate array | technologies | The hardware shared by the MiSTer and ZX Spectrum Next | `hardware/mister-fpga`, `systems/zx-spectrum-next` |
-| Fighting Fantasy | books | The British gamebook series whose name *Final Fantasy* had to avoid | `games/final-fantasy` |
+| Fighting Fantasy | books | The British gamebook series whose name *Final Fantasy* had to avoid | `games/final-fantasy`, `design/branching-narrative` |
 | Fighting games | genres | One-on-one fighters, separate from scrolling beat 'em ups | `companies/data-east`, `games/international-karate`, `games/way-of-the-exploding-fist`, `games/street-fighter`, `games/street-fighter-ii`, `genres/beat-em-up`, `games/mortal-kombat` |
 | Filled-polygon graphics | techniques | The technique behind Another World, Cruise for a Corpse and Alone in the Dark's characters | `games/another-world`, `technologies/vector-graphics` |
 | Final Fantasy: The Spirits Within | culture | The 2001 film that hurt Square's finances | `companies/square`, `people/hironobu-sakaguchi` |
@@ -2330,7 +2361,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | ICPUG | communities | Britain's national Commodore user group, with regional branches | `culture/user-groups`, `systems/commodore-64`, `systems/commodore-amiga` |
 | Impulse Tracker | software | The IT format, used in the Unreal engine, source released in 2014 | `software/protracker`, `culture/tracker-music`, `technologies/mod-format`, `games/unreal`, `games/deus-ex` |
 | iMUSE | tools | LucasArts' interactive music system by Michael Land and Peter McConnell | `games/monkey-island`, `tools/scumm`, `companies/lucasarts` |
-| Independent Games Festival | events | GDC's indie awards since the late 1990s | `culture/gdc`, `culture/indie-games`, `people/derek-yu` |
+| Independent Games Festival | events | GDC's indie awards since the late 1990s | `culture/gdc`, `culture/indie-games`, `people/derek-yu`, `games/inscryption` |
 | Indie Game Jam and Global Game Jam | events | The jams before and alongside Ludum Dare; Global Game Jam is the largest | `communities/ludum-dare`, `culture/game-jams` |
 | Indie Game: The Movie | culture | James Swirsky and Lisanne Pajot's Kickstarter-funded documentary, which made the makers of *Super Meat Boy* and *Fez* famous | `phenomena/indie-renaissance`, `culture/indie-games` |
 | iNES format and Marat Fayzullin | tools | The `.nes` format and mapper numbering used across NES emulation | `communities/nesdev`, `systems/nintendo-entertainment-system`, `emulators/mesen` |
@@ -2351,7 +2382,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Krestage | demos | Crest's 1997 demo that named sprite crunching and set the sprite record | `techniques/sprite-crunching`, `groups/crest` |
 | Lakka | software | RetroArch-based emulation operating system | `emulators/retroarch`, `hardware/raspberry-pi` |
 | LambdaMOO | communities | The best-known social MUD | `genres/mud-history`, `culture/online-multiplayer` |
-| Let's Play videos | culture | How horror games such as *Amnesia* and *Slender* spread on YouTube | `games/amnesia`, `genres/horror-games` |
+| Let's Play videos | culture | How horror games such as *Amnesia* and *Slender* spread on YouTube | `games/amnesia`, `genres/horror-games`, `games/outlast` |
 | Lewis Galoob Toys v. Nintendo | culture | The fair-use case over the Game Genie | `hardware/game-genie`, `companies/galoob`, `companies/nintendo` |
 | Linux for PlayStation 2 and Yabasic | tools | Sony's two official hobbyist programming routes on the PS2 | `systems/sony-playstation-2` |
 | Little Sound DJ and Nanoloop | software | The Game Boy music programs behind the 2000s chip scene | `communities/chiptune-scene`, `systems/game-boy` |
@@ -2377,6 +2408,8 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Mip-mapping and perspective correction | techniques | Texture-mapping refinements; perspective correction stops textures bending and warping | `techniques/texture-mapping`, `systems/nintendo-64`, `systems/sony-playstation` |
 | MOBA genre | genres | What grew out of RTS: DotA, League of Legends and Dota 2 | `genres/rts-genre`, `communities/esports-origins`, `games/warcraft` |
 | MobyGames | communities | The game database the VGHF availability study sampled from | `culture/game-preservation` |
+| Mod chips | technologies | The chips and switches owners fitted to PlayStations and Saturns to get past region lockout and run imports | `culture/region-locking`, `culture/import-gaming`, `systems/sony-playstation`, `systems/sega-saturn` |
+| MovieSetter | software | Gold Disk's animation package, the main tool of Amiga cartoon makers | `people/eric-schwartz`, `culture/amiga-animation-culture` |
 | MS-DOS | software | Microsoft's PC operating system | `companies/microsoft` |
 | MUD2 and MUSE Ltd | software | *MUD*'s successor and the company Bartle and Trubshaw set up to sell it | `people/richard-bartle`, `genres/mud-history` |
 | Multiplay and Insomnia | events | The British LAN party organiser and series | `communities/lan-parties` |
@@ -2389,7 +2422,7 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | NetImmerse and Gamebryo | tools | RenderWare's main rival | `tools/renderware` |
 | NewIcons | software | Salmoria's Amiga icon system | `people/nicola-salmoria`, `systems/commodore-amiga` |
 | Nintendo Game Play Counselors | culture | Nintendo's telephone help, from 1988 to the 900 line of 1995 | `culture/hint-lines`, `magazines/nintendo-power` |
-| Nintendo Space World | events | Nintendo's Tokyo-area trade show, where *Gold & Silver* filled a quarter of the floor in 1999 | `games/pokemon-gold-silver`, `companies/nintendo`, `games/wind-waker`, `techniques/cel-shading`, `games/legend-of-zelda-ocarina-of-time` |
+| Nintendo Space World | events | Nintendo's Tokyo-area trade show, where *Gold & Silver* filled a quarter of the floor in 1999 | `games/pokemon-gold-silver`, `companies/nintendo`, `games/wind-waker`, `techniques/cel-shading`, `games/legend-of-zelda-ocarina-of-time`, `games/golden-sun`, `systems/game-boy-advance` |
 | Nintendo World Championships | events | Nintendo's 1990 touring competition | `communities/esports-origins`, `companies/nintendo`, `games/tetris`, `games/super-mario-bros` |
 | No-Intro | communities | The standard verified catalogue of cartridge dumps | `culture/game-preservation`, `emulators/emulation`, `emulators/mame` |
 | NoisePacker and module packers | tools | How demo musicians shrank tracker modules | `groups/phenomena`, `communities/chiptune-scene` |
@@ -2466,8 +2499,10 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | SpeedScript | software | The best-known type-in word processor | `magazines/compute-magazine`, `magazines/computes-gazette`, `distribution/type-in-listings` |
 | Starcade | culture | The 1982–84 TV game show | `communities/esports-origins`, `culture/arcade-culture` |
 | Stealth games (genre) | genres | The genre, as opposed to the existing technique entry | `games/metal-gear-solid`, `games/thief`, `games/splinter-cell` |
+| Stella Programmer's Guide | books | Atari's 1979 programming manual for the 2600, which documented the PAL problem | `culture/pal-vs-ntsc`, `techniques/raster-effects` |
 | StepMania | tools | Free PC dance-game engine | `hardware/dance-mat`, `games/dance-dance-revolution` |
 | Stern Electronics v. Kaufman | phenomena | The 1982 ruling on copyright in screen displays | `games/scramble`, `companies/konami`, `distribution/piracy` |
+| Story Tree | software | Scholastic's 1986 branching-story tool for children | `design/branching-narrative` |
 | Success + The Ruling Company (SCS*TRC) | groups | Dutch cracking group that has organised X since 1995 | `events/x-party` |
 | Super Expander 64 | languages | Commodore's own BASIC extension, often confused with Simons' BASIC | `languages/simons-basic`, `systems/commodore-64`, `people/david-simons` |
 | Super Scaler and taikan cabinets | hardware | Sega's sprite-scaling hardware and moving cabinets | `games/hang-on`, `games/space-harrier`, `games/out-run`, `games/after-burner`, `techniques/sprite-scaling` |
@@ -2517,10 +2552,11 @@ Paths are Vault entries (`category/slug`) in the website repository.
 | Untouchable Cracking Force | groups | ESI's rival in the North American scene | `groups/eagle-soft-incorporated`, `communities/cracking-scene` |
 | Up Rough | groups | Swedish group that ran Datastorm with Genesis Project | `events/datastorm` |
 | Usenet | communities | How *Hack* and *NetHack* were distributed and discussed | `games/nethack`, `genres/roguelike` |
+| USK | culture | Germany's games ratings body, rating games since 1994 | `culture/game-ratings` |
 | V2 synthesiser | tools | farbrausch's softsynth, with its public release | `people/kb`, `groups/farbrausch`, `demos/fr-08-the-product`, `demos/debris` |
 | Verlet integration | techniques | The technique behind *Hitman*'s corpses and cloth | `techniques/ragdoll-physics`, `technologies/physics-engines` |
 | VGM file format | technologies | The logging format behind most modern Sega, PC Engine and arcade chip-music collections | `software/deflemask`, `hardware/ym2612` |
-| Video Recordings Act 1984 and the BBFC | phenomena | The "video nasties" law under which CRL took games to the BBFC for the first certificates | `companies/crl-group`, `culture/game-ratings`, `companies/palace-software` |
+| Video Recordings Act 1984 and the BBFC | phenomena | The "video nasties" law under which CRL took games to the BBFC for the first certificates | `companies/crl-group`, `culture/game-ratings`, `companies/palace-software`, `culture/esrb` |
 | Videogames: In the Beginning | books | Baer's own documented account | `people/ralph-baer`, `games/pong` |
 | Virtual Dreams | groups | Finnish demo group, second at The Party 1994 with *Psychedelic* | `groups/andromeda`, `events/the-party`, `demos/nexus-7`, `demos/arte` |
 | Virtual Theatre | tools | Revolution's character-simulation engine, with NPC routines and autorouting, across three games | `companies/revolution-software`, `games/lure-of-the-temptress`, `games/beneath-a-steel-sky`, `design/point-and-click`, `games/broken-sword` |
