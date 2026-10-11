@@ -1,6 +1,6 @@
 # The Vault
 
-The Vault is our encyclopaedia of people, companies, systems, hardware, software, games, culture and related subjects in the project's period, and beyond where needed to explain them. It gives fuller context room to breathe while lessons retain enough explanation for the immediate task.
+The Vault is our encyclopaedia of people, companies, systems, hardware, software, games, culture and related subjects, centred on the project's period and including later ones. It gives fuller context room to breathe while lessons retain enough explanation for the immediate task.
 
 ## Organisation
 
@@ -101,7 +101,7 @@ Distinguish documented facts, recollections, allegations, disputed accounts and 
 
 A dispute, allegation, lawsuit or falling-out between named people or companies needs at least two independent sources. A single source is enough when it quotes the person making the claim directly. Present it as their words, attributed to them ("Bell wrote that…", "in Sinclair's words"), never as something the Vault itself asserts. One party's account retold in someone else's words is not enough: keep only what a second source confirms.
 
-The period the Vault covers decides which subjects get entries, not where an entry's story stops. An entry about a company, person, machine or series that carried on past the early 2000s follows it to the present, as far as sources support. The covered period gets the most depth, and later history is still told, not cut to a footnote. A subject that begins after the early 2000s gets an entry only when it bears directly on the covered period, such as a new machine built to run period software or a movement that grew out of period practice.
+The covered period sets where the Vault's depth goes, not where an entry's story stops. An entry about a company, person, machine or series that carried on past the early 2000s follows it to the present, as far as sources support. The covered period gets the most depth, and later history is still told, not cut to a footnote. A subject that begins after the early 2000s may have its own entry too (owner's decision, 11 October 2026); it is reviewed to the same standard as any other.
 
 An entry is about its subject, not about Code198x. Do not describe how the subject shapes the curriculum, calibrates a game, informs the project's voice or appears in a brief, and do not name a module whose place in the course is undecided. A plain link to a published lesson that uses the subject is fine; see [Connections and review](#connections-and-review).
 
@@ -127,4 +127,4 @@ Each batch is one pull request whose description carries the evidence report. Th
 
 While reviewing, add any subject an entry mentions but the Vault lacks to [the candidates list](../vault-candidates.md), with the entries that should link to it.
 
-Merge entries that duplicate each other, with redirects. Other cuts, including out-of-period entries, are a separate decision.
+Merge entries that duplicate each other, with redirects. Other cuts are a separate decision. Beginning after the early 2000s is not a reason to cut an entry.
