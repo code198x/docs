@@ -107,6 +107,41 @@ An entry is about its subject, not about Code198x. Do not describe how the subje
 
 Corrections belong in the corrected text. Git and the pull request explain the change; the reader does not need an editorial history appended to every entry.
 
+### Participant accounts and source kinds
+
+Choose `sources.kind` for the evidence being cited, not the website hosting it.
+The website schema already provides these kinds:
+
+- `interview`: a named participant answering an interviewer, including oral
+  histories, email interviews and later interviews on community sites. Name the
+  speaker and interviewer where known, and give the interview date when known.
+- `recollection`: a participant's own account outside an interview, such as a
+  memoir, personal retrospective or signed comment about events they took part
+  in. Identify the speaker and when the account was recorded.
+- `database`: a compiled catalogue, release record, credits list or chronology.
+  A site called *Recollection* can contain a database; an interview hosted by a
+  database site is still an interview.
+
+For a retrospective interview, use `interview` and explain in the citation that
+the speaker is recalling earlier events. The kind describes the source's form;
+it does not establish that the account is accurate or contemporary. Do not use
+the date of the remembered event as the date of the interview or recollection.
+Leave unknown dates unstated.
+
+Separate evidence with different authors or forms even when it shares a URL.
+For example, a release record and a participant's later comment need separate
+source items if both support the entry. A reporter's paraphrase or a catalogue
+editor's summary is not the participant's direct testimony. A mirror retains
+the original source kind; identify the original publication and the copy read,
+including any translation or transcription limits.
+
+Keep recollections attributed in the prose and in the visible Sources section.
+Preserve uncertainty and disagreement, and seek independent evidence for claims
+of priority, dates and credit. A community-hosted interview is not a database,
+but neither is it independent confirmation of the speaker's claims. A kind
+change does not constitute a factual review or change `reviewed` status. The
+existing web-source fallback and attribution requirements still apply.
+
 ## Connections and review
 
 Link selectively to related Vault entries, fuller conceptual explanations and lessons that use the subject. A technique entry gives context; a Pattern Library entry gives an adaptable implementation. Avoid reproducing either inside the other.
