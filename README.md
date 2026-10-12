@@ -30,6 +30,7 @@ Original prose is licensed under **CC BY 4.0**. See [LICENSE.md](LICENSE.md) for
 | [Testing and diagnosis](specifications/experiments/testing-and-diagnosis.md) | Predictions, reproducible faults, boundaries, traces and evidence-led repairs through existing projects |
 | [Profiling progression](specifications/experiments/profiling-progression.md) | Game-led measurement practice, verified tool surfaces and separate guest/host investigations |
 | [Vault](specifications/vault.md) | Sourced encyclopaedic context |
+| [Vault candidate backlog](vault-candidates.md) | Proposed subjects, triage and the handoff to writing issues; [structured records](vault-candidates.csv) |
 | [Pattern Library](specifications/pattern-library.md) | Adaptable implementations and their contracts |
 
 [Website and publishing](website.md) connects these specifications to the current schemas, source organisation, capture, testing and deployment. [Game-design material](platforms/README.md) lists the concrete existing designs worth consulting during re-specification.

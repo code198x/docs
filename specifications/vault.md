@@ -125,6 +125,6 @@ The review also makes the entry worth reading. Much of the machine-written prose
 
 Each batch is one pull request whose description carries the evidence report. The owner's approval of that pull request is the person's sign-off: the pull request sets `reviewed: true` on the entries it covers. An agent's check alone never sets it.
 
-While reviewing, add any subject an entry mentions but the Vault lacks to [the candidates list](../vault-candidates.md), with the entries that should link to it.
+While reviewing, add any subject an entry mentions but the Vault lacks to [the structured candidate backlog](../vault-candidates.csv), with a stable ID, proposed category, reason and referring entries. Follow [the triage workflow](../vault-candidates.md): candidates start as `needs-triage` and do not create public stubs. Check existing coverage, scope and source leads before marking a subject `ready` and opening a website issue. Retain completed or covered records with their entry paths rather than deleting them. Issues track writing work; a candidate is not a commitment to publish an article.
 
 Merge entries that duplicate each other, with redirects. Other cuts are a separate decision. Beginning after the early 2000s is not a reason to cut an entry.
