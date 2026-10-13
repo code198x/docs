@@ -100,6 +100,29 @@ findings to accept for a release.
 
 For visual or interactive changes, inspect affected pages at narrow and wide widths, in both themes where relevant, and check keyboard use and alternatives to colour or sound cues. Existing accessibility baselines record known findings; do not expand them to conceal a regression. Use targeted checks during work and required checks before publication. Prose linting is advisory; editorial judgement remains necessary.
 
+## Hosting and analytics
+
+GitHub Pages hosts the site and the existing GitHub Actions workflow deploys it.
+Cloudflare proxies the four apex A records, four apex AAAA records and the `www`
+CNAME. TLS uses Full (strict); the GitHub origin must retain a valid certificate.
+The `www` hostname redirects to `https://code198x.com/`. Mail records remain
+DNS-only.
+
+Cloudflare Web Analytics automatically injects its beacon into proxied pages.
+Collection includes UK/EU visitors (`lite: false`). Do not add a second beacon
+to the Astro layouts. View visitor metrics in Cloudflare Web Analytics; HTTP
+traffic analytics also include requests that do not execute JavaScript.
+
+On 13 October 2026, live checks verified HTTPS through Cloudflare, the `www`
+redirect, stylesheet, JavaScript and image delivery. A Chromium visit received
+one beacon and its collection request to `/cdn-cgi/rum` returned HTTP 204.
+This verifies collection delivery, not the dashboard's reporting delay.
+
+If proxying causes delivery failures, return those nine website records to
+DNS-only without changing their targets. Automatic beacon injection then stops.
+Keep the GitHub Pages deployment workflow in place; moving hosting requires a
+separate decision.
+
 ## Discord announcements
 
 The Pages workflow compares the deployed and newly built RSS feeds using `scripts/discord-new-items.py`, then prepares messages with `scripts/discord-payloads.py`. Posting happens only after successful deployment. Release and optional aggregate webhooks are secrets; identical targets are deduplicated, and missing secrets cause a notice without posting.
