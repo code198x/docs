@@ -1,0 +1,9 @@
+10 LET l=0
+20 LET o=0
+30 IF l=0 THEN LET o=1
+40 LET l=3
+50 PRINT o;",";l=0
+60 IF o THEN PRINT "Game over"
+70 LET o=0
+80 PRINT o
+90 PRINT "Done"

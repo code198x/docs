@@ -1,0 +1,7 @@
+10 FOR s=0 TO 100
+20 LET b=0
+30 IF s>49 THEN LET b=b+1
+40 IF s>79 THEN LET b=b+2
+70 POKE 40000+s,b
+80 NEXT s
+90 PRINT "Done"

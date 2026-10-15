@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "scope": "One axe-incomplete source line at 390, rendered text colour against inherited listing background, both horizontal scroll endpoints. Not a general accessibility assessment.",
+  "rows": [
+    {
+      "text": "IF lives = 0 THEN LET gameOver = TRUE\n",
+      "foreground": "rgb(27, 26, 23)",
+      "background": "rgb(252, 251, 248)",
+      "scrollLeft": 0,
+      "ratio": 16.8168
+    },
+    {
+      "text": "IF lives = 0 THEN LET gameOver = TRUE\n",
+      "foreground": "rgb(27, 26, 23)",
+      "background": "rgb(252, 251, 248)",
+      "scrollLeft": 47,
+      "ratio": 16.8168
+    }
+  ]
+}

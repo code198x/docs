@@ -1,0 +1,17 @@
+[
+  {
+    "file": "src/content/curriculum/foundations/decisions/index.mdx",
+    "baseline_source_sha256": "f19f026b37fd732f6276fd6fc525b6136bf1b6583a2f6952f39037f70e91d2c3",
+    "preexisting_built_html_sha256": "617456119a163e6069a08db018b12699e4f80d1eea960cbecb92aac306b6e26a"
+  },
+  {
+    "file": "src/content/curriculum/foundations/decisions/unit-02.mdx",
+    "baseline_source_sha256": "234140e64aba34a1956db6bf18971c85f0d6bcfd1fd049d6be309d8cfc499408",
+    "preexisting_built_html_sha256": "46f4aefbd07bc697a995f1e04f6fe48d23a0bc1c1b2fb795c750318876bbb5f8"
+  },
+  {
+    "file": "src/content/curriculum/foundations/decisions/unit-03.mdx",
+    "baseline_source_sha256": "11649eaf48754ad34518d8b73e6f866cb427e30bce22ac3ad7fe01a7f9454b66",
+    "preexisting_built_html_sha256": "0abfb95fcee1a0e23ca62e46873423f005d9082e07df06920888b502e3145049"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-15T15:12:04.241Z",
+  "base": "http://127.0.0.1:2013",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/decisions/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [],
+      "tables": [],
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "status": "failed",
+  "failure": "Error: Original fixed-output/attendance claim remains"
+}

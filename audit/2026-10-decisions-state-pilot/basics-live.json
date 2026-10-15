@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-15T15:14:16.947Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/basics/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "Hello"
+      ],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "Put your socks on\nPut your shoes on\nGo outside",
+        "Put your shoes on\nPut your socks on\nGo outside"
+      ],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-05/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "What is your name? Sam\nHello, Sam",
+        "What is your name? Ada\nHello, Ada"
+      ],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/basics/",
+      "width": 390,
+      "status": 200,
+      "outputs": [],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-01/",
+      "width": 390,
+      "status": 200,
+      "outputs": [
+        "Hello"
+      ],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-02/",
+      "width": 390,
+      "status": 200,
+      "outputs": [
+        "Put your socks on\nPut your shoes on\nGo outside",
+        "Put your shoes on\nPut your socks on\nGo outside"
+      ],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-05/",
+      "width": 390,
+      "status": 200,
+      "outputs": [
+        "What is your name? Sam\nHello, Sam",
+        "What is your name? Ada\nHello, Ada"
+      ],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".ll-line:nth-child(1) > .ll-text"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ]
+        }
+      ],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check": "visible prediction and keyboard explanation",
+      "route": "/foundations/basics/unit-01/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional machine link and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "visible prediction and keyboard explanation",
+      "route": "/foundations/basics/unit-02/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "visible prediction and keyboard explanation",
+      "route": "/foundations/basics/unit-05/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional machine link and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "visible prediction and keyboard explanation",
+      "route": "/foundations/basics/unit-01/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional machine link and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "visible prediction and keyboard explanation",
+      "route": "/foundations/basics/unit-02/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "visible prediction and keyboard explanation",
+      "route": "/foundations/basics/unit-05/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional machine link and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer/",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}
