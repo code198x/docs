@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "authored_units": 11,
+  "probability_units": 5,
+  "aiming_units": 6,
+  "unique_sample_files": 15,
+  "native_cases": 7,
+  "ordinary_runs": 3,
+  "diagnostic_fixtures": 4,
+  "known_red_controls_rejected": 2,
+  "empty_observation_rejected": true,
+  "objective_rows": 11,
+  "learner_tasks": 6,
+  "assessor_entries": 6,
+  "local_links_checked": 86,
+  "fresh_browser_runs": 0,
+  "learner_observations": 0
+}

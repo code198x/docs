@@ -1,0 +1,279 @@
+{
+  "website_revision": "1cb4ec62e675751a0c13006b2bff877cd0ec3f6c",
+  "samples_revision": "163e74e18e9536fb555ef7319fa08bbc1836542b",
+  "units": [
+    {
+      "unit": 1,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-01.mdx",
+      "title": "Roll a die",
+      "sha256": "28b819662d8ffdd6b9233e12a75fd1a2c93c069ca55f57140ff63c32fce534c0",
+      "sample_sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/dice-roller/teaching/roll/dice-roller.bas",
+          "sha256": "a40d1a10e04de8e29f9838fcf7f7d4f9ac44499f67050eb562623cbc9b20eccd"
+        }
+      ]
+    },
+    {
+      "unit": 2,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-02.mdx",
+      "title": "Keep the tallies",
+      "sha256": "9dc87e1eb1761deb0e40e233b5d8ac2adb122db679b91f2d61bb4f397e65341a",
+      "sample_sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/dice-roller/teaching/tally/changes.bas",
+          "sha256": "7fc2c39e99d08b48c89ba61572557ce20ea8f8ad1f51b873e8cc74a07e4f665a"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/dice-roller/teaching/tally/dice-roller.bas",
+          "sha256": "df297431171ad072b777210ebeed1843c0dac66f88b21ab615c60d81657d8fec"
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-03.mdx",
+      "title": "Compare shares",
+      "sha256": "b6029c6297164675ce3f173a56483851d3aa505b6566e789561242805b77b7a8",
+      "sample_sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/dice-roller/teaching/shares/changes.bas",
+          "sha256": "cbc7c3b1fa0ef6d811ce1cfc277d3d6d7f117e9d5251d9967beda72b57c9c7da"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/dice-roller/teaching/shares/dice-roller.bas",
+          "sha256": "9c876cc5e075936d773dbfe77d0d5c76a60c8004361c7f06b6b1d84c69c4c944"
+        }
+      ]
+    },
+    {
+      "unit": 4,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-04.mdx",
+      "title": "Watch the distribution",
+      "sha256": "67909c41a20323e075498647bef87e493c0dbd44bffae407d44466b983c6aeea",
+      "sample_sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/dice-roller/teaching/live/changes.bas",
+          "sha256": "a8e64f4373e56d3985536a6d0788ae03295e63e5ae77556868f933dd4de48654"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/dice-roller/teaching/live/dice-roller.bas",
+          "sha256": "ce2e175459f938f03eb362782c47e3539cdb28086f0c83f7c1b22904b6d5d7b2"
+        }
+      ]
+    },
+    {
+      "unit": 5,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-05.mdx",
+      "title": "Compare experiments",
+      "sha256": "e0ee0d0e75ee2188d5653e33ca91f117b3631c65f1ca52f0e9414c37326d6fcd",
+      "sample_sources": [
+        {
+          "path": "sinclair-zx-spectrum/basic/dice-roller/teaching/finished/changes.bas",
+          "sha256": "a2ef90fe52dd713eb80aac59d7ff7c1fb91c5bf308131b2b6900ba41b9fec0ba"
+        },
+        {
+          "path": "sinclair-zx-spectrum/basic/dice-roller/teaching/finished/dice-roller.bas",
+          "sha256": "5ab6dca7e97ce8a94b9b8edbd0b5259ec9432eca2e000fdacf57450ea89175ce"
+        }
+      ]
+    },
+    {
+      "unit": 6,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-06.mdx",
+      "title": "Place a point",
+      "sha256": "8b28243a0613eb73cf44218e6a3743d920ad8ee42732752996b11f864cfc830a",
+      "sample_sources": [
+        {
+          "path": "craft/maths-for-games/aiming/lessons.html",
+          "sha256": "6ac26bc87a9fd6ad21f3f564791fe5444bea6d4b1a6b1bbec37b17922cad4fe3"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lessons.mjs",
+          "sha256": "ecc022ecb48e9c37f8a890bb26453e2d0c387aaba4114add3f83f1d7cdf09251"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/model.mjs",
+          "sha256": "c90793f4218235aeef591bc2a816bbc61ef10b1651f6b259b046ffa1189c6a8e"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lesson-content.mjs",
+          "sha256": "8dca706a8d44d33b1062db93f810877d81fc359f0825565831a6ac4bd2734c53"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/style.css",
+          "sha256": "5fc950a62e11c7cdb0a4deb1c384d684ed161f844e209810b8c1238981d7219d"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lessons.css",
+          "sha256": "c93035b86ae30926d917372bf702c1097198f76742e8e0e55800f98ebb55ceea"
+        }
+      ]
+    },
+    {
+      "unit": 7,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-07.mdx",
+      "title": "Measure the triangle",
+      "sha256": "f50781cebe145f8d82a7ad897287f306cffd7489eea3cdc60c3df0206fd37ad7",
+      "sample_sources": [
+        {
+          "path": "craft/maths-for-games/aiming/lessons.html",
+          "sha256": "6ac26bc87a9fd6ad21f3f564791fe5444bea6d4b1a6b1bbec37b17922cad4fe3"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lessons.mjs",
+          "sha256": "ecc022ecb48e9c37f8a890bb26453e2d0c387aaba4114add3f83f1d7cdf09251"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/model.mjs",
+          "sha256": "c90793f4218235aeef591bc2a816bbc61ef10b1651f6b259b046ffa1189c6a8e"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lesson-content.mjs",
+          "sha256": "8dca706a8d44d33b1062db93f810877d81fc359f0825565831a6ac4bd2734c53"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/style.css",
+          "sha256": "5fc950a62e11c7cdb0a4deb1c384d684ed161f844e209810b8c1238981d7219d"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lessons.css",
+          "sha256": "c93035b86ae30926d917372bf702c1097198f76742e8e0e55800f98ebb55ceea"
+        }
+      ]
+    },
+    {
+      "unit": 8,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-08.mdx",
+      "title": "Turn an angle into movement",
+      "sha256": "44f8be70259595374d595f8728828b663a439da56dcbb0b3b39d4f2428d9db3e",
+      "sample_sources": [
+        {
+          "path": "craft/maths-for-games/aiming/lessons.html",
+          "sha256": "6ac26bc87a9fd6ad21f3f564791fe5444bea6d4b1a6b1bbec37b17922cad4fe3"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lessons.mjs",
+          "sha256": "ecc022ecb48e9c37f8a890bb26453e2d0c387aaba4114add3f83f1d7cdf09251"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/model.mjs",
+          "sha256": "c90793f4218235aeef591bc2a816bbc61ef10b1651f6b259b046ffa1189c6a8e"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lesson-content.mjs",
+          "sha256": "8dca706a8d44d33b1062db93f810877d81fc359f0825565831a6ac4bd2734c53"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/style.css",
+          "sha256": "5fc950a62e11c7cdb0a4deb1c384d684ed161f844e209810b8c1238981d7219d"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lessons.css",
+          "sha256": "c93035b86ae30926d917372bf702c1097198f76742e8e0e55800f98ebb55ceea"
+        }
+      ]
+    },
+    {
+      "unit": 9,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-09.mdx",
+      "title": "Measure angles in radians",
+      "sha256": "176197364d3d0278d57a1626e5191931cb3acbd649d69cd5d5308c7ff5fa5a5a",
+      "sample_sources": [
+        {
+          "path": "craft/maths-for-games/aiming/lessons.html",
+          "sha256": "6ac26bc87a9fd6ad21f3f564791fe5444bea6d4b1a6b1bbec37b17922cad4fe3"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lessons.mjs",
+          "sha256": "ecc022ecb48e9c37f8a890bb26453e2d0c387aaba4114add3f83f1d7cdf09251"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/model.mjs",
+          "sha256": "c90793f4218235aeef591bc2a816bbc61ef10b1651f6b259b046ffa1189c6a8e"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lesson-content.mjs",
+          "sha256": "8dca706a8d44d33b1062db93f810877d81fc359f0825565831a6ac4bd2734c53"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/style.css",
+          "sha256": "5fc950a62e11c7cdb0a4deb1c384d684ed161f844e209810b8c1238981d7219d"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lessons.css",
+          "sha256": "c93035b86ae30926d917372bf702c1097198f76742e8e0e55800f98ebb55ceea"
+        }
+      ]
+    },
+    {
+      "unit": 10,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-10.mdx",
+      "title": "Find the angle to a target",
+      "sha256": "98ce4431426a2e934de33a978a3e30ec36206dd93d4ef958ec0cc8546ccb67c7",
+      "sample_sources": [
+        {
+          "path": "craft/maths-for-games/aiming/lessons.html",
+          "sha256": "6ac26bc87a9fd6ad21f3f564791fe5444bea6d4b1a6b1bbec37b17922cad4fe3"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lessons.mjs",
+          "sha256": "ecc022ecb48e9c37f8a890bb26453e2d0c387aaba4114add3f83f1d7cdf09251"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/model.mjs",
+          "sha256": "c90793f4218235aeef591bc2a816bbc61ef10b1651f6b259b046ffa1189c6a8e"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lesson-content.mjs",
+          "sha256": "8dca706a8d44d33b1062db93f810877d81fc359f0825565831a6ac4bd2734c53"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/style.css",
+          "sha256": "5fc950a62e11c7cdb0a4deb1c384d684ed161f844e209810b8c1238981d7219d"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lessons.css",
+          "sha256": "c93035b86ae30926d917372bf702c1097198f76742e8e0e55800f98ebb55ceea"
+        }
+      ]
+    },
+    {
+      "unit": 11,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-11.mdx",
+      "title": "Keep fractional movement in integers",
+      "sha256": "44e180cf49b73bf6ac02b8b949dbb9e92b7f008f3f3715b2791489dba343c603",
+      "sample_sources": [
+        {
+          "path": "craft/maths-for-games/aiming/lessons.html",
+          "sha256": "6ac26bc87a9fd6ad21f3f564791fe5444bea6d4b1a6b1bbec37b17922cad4fe3"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lessons.mjs",
+          "sha256": "ecc022ecb48e9c37f8a890bb26453e2d0c387aaba4114add3f83f1d7cdf09251"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/model.mjs",
+          "sha256": "c90793f4218235aeef591bc2a816bbc61ef10b1651f6b259b046ffa1189c6a8e"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lesson-content.mjs",
+          "sha256": "8dca706a8d44d33b1062db93f810877d81fc359f0825565831a6ac4bd2734c53"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/style.css",
+          "sha256": "5fc950a62e11c7cdb0a4deb1c384d684ed161f844e209810b8c1238981d7219d"
+        },
+        {
+          "path": "craft/maths-for-games/aiming/lessons.css",
+          "sha256": "c93035b86ae30926d917372bf702c1097198f76742e8e0e55800f98ebb55ceea"
+        }
+      ]
+    }
+  ],
+  "integration_sources": {
+    "src/components/CodeFromFile.astro": "af3129cc453278e2d9afb7fd3dc7c120853c91a7a3a695aebd152f2800d81515",
+    "src/components/AimingExperiment.astro": "b1eedb115f847218071203a11ee99e40ea15ae74ccef71bf726f61a49c7f30a2",
+    "src/pages/experiments/aiming/[file].ts": "22aac2b13d02e1361acabc40e8b17a8cb54599539a18cb26f3ef89f3d1dbe618"
+  }
+}
