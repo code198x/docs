@@ -51,6 +51,8 @@ The [Spectrum assembly review](platforms/sinclair-zx-spectrum/assembly/course-re
 
 The [Craft coverage map](specifications/craft-coverage.md) defines seven agreed module homes and distinguishes available material from planned lessons. The [Maths for Games specification](specifications/maths-for-games.md) develops geometry, trigonometry, matrix algebra, 3D, curves, probability and fixed-point applications.
 
+The [Foundations audit coverage map](audit/2026-10-foundations-coverage.md) links sampled evidence to the ten modules and records the remaining audit gaps.
+
 ## Ownership and maintenance
 
 The [website](https://github.com/code198x/website) owns public lessons, catalogues and components. [Code samples](https://github.com/code198x/code-samples) owns runnable sources, assets and verification recipes. Those files establish implementation state; plans and prose counts do not.
