@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-15T10:43:55.633Z",
+  "base": "https://code198x.com",
+  "phase": "baseline",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/working-the-bits/unit-04/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-the-bits/unit-04/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/working-the-bits/unit-05/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-the-bits/unit-05/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [],
+  "errors": []
+}
