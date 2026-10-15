@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-15T14:41:15.802Z",
+  "base": "http://127.0.0.1:2009",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/from-source-to-silicon/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [],
+      "tables": [],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "status": "failed",
+  "failure": "Error: Original attendance prerequisite remains"
+}

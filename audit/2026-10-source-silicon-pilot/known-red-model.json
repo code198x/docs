@@ -1,0 +1,2314 @@
+{
+  "status": "failed",
+  "control": true,
+  "toy_cases": [
+    {
+      "source": [],
+      "emitted": [],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC"
+      ],
+      "emitted": [
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE"
+      ],
+      "emitted": [
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": []
+    },
+    {
+      "source": [
+        "SHOW"
+      ],
+      "emitted": [
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        1
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 3,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        2
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 3,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        2
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        1
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        1
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        1,
+        1
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        1
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0,
+        1
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "INC",
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "INC",
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 6,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "INC",
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 3,
+      "shown": [
+        3
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "INC",
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 5,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "INC",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 8,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "INC",
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        1,
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": [
+        4
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "INC",
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        1,
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 3,
+      "shown": [
+        2
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "INC",
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        1,
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": [
+        2
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "INC",
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        2,
+        2
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE",
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE",
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 6,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE",
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        2,
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 3,
+      "shown": [
+        3
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE",
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 5,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 8,
+      "shown": []
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE",
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": [
+        4
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE",
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        2,
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 3,
+      "shown": [
+        2
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE",
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        2,
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": [
+        2
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "DOUBLE",
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        2,
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        2,
+        2
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW",
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        3,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 3,
+      "shown": [
+        1
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW",
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        3,
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": [
+        1
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW",
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        1,
+        2
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW",
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        3,
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 3,
+      "shown": [
+        1
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        3,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": [
+        1
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW",
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        3,
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        1,
+        2
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW",
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        1,
+        1
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW",
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        1,
+        3,
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        1,
+        1
+      ]
+    },
+    {
+      "source": [
+        "INC",
+        "SHOW",
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        1,
+        3,
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC",
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 3,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC",
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC",
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        1,
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        2
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC",
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 3,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC",
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        1,
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        2
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC",
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        1,
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        1
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC",
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        1,
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        1
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "INC",
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        1,
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        1,
+        1
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        2,
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        1
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": []
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        2,
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        2,
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        2,
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        2,
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW",
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        3,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW",
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        3,
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW",
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        3,
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0,
+        1
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW",
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        3,
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        3,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW",
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW",
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        2,
+        3,
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW",
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        2,
+        3,
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "SHOW",
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        2,
+        3,
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC",
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 3,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC",
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        1,
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC",
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        0,
+        2
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC",
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        1,
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 3,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        1,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 4,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC",
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        1,
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        0,
+        2
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC",
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        0,
+        1
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC",
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        1,
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        0,
+        1
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "INC",
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        1,
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE",
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE",
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        2,
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE",
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        2,
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0,
+        1
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE",
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        2,
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        2,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE",
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        2,
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE",
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        2,
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE",
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        2,
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "DOUBLE",
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        2,
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW",
+        "INC",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        3,
+        1,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW",
+        "INC",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        3,
+        1,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 2,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW",
+        "INC",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        3,
+        1,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW",
+        "DOUBLE",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        3,
+        2,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW",
+        "DOUBLE",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW",
+        "DOUBLE",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        3,
+        2,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW",
+        "SHOW",
+        "INC"
+      ],
+      "emitted": [
+        3,
+        3,
+        3,
+        1
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 1,
+      "shown": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW",
+        "SHOW",
+        "DOUBLE"
+      ],
+      "emitted": [
+        3,
+        3,
+        3,
+        2
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "SHOW",
+        "SHOW",
+        "SHOW",
+        "SHOW"
+      ],
+      "emitted": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "diagnostics": [],
+      "valid": true,
+      "final": 0,
+      "shown": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "DOUBLE",
+        "DOUBLE",
+        "DOUBLE",
+        "MYSTERY"
+      ],
+      "emitted": [
+        2,
+        2,
+        2
+      ],
+      "diagnostics": [],
+      "valid": false
+    }
+  ],
+  "failure": "AssertionError(\"Unknown name silently omitted or valid encoding differs: {'source': ('DOUBLE', 'DOUBLE', 'DOUBLE', 'MYSTERY'), 'emitted': [2, 2, 2], 'diagnostics': [], 'valid': False}\")"
+}

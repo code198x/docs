@@ -1,0 +1,32 @@
+[
+  {
+    "file": "src/content/curriculum/foundations/from-source-to-silicon/unit-05.mdx",
+    "baseline_source_sha256": "5bcdea8862584e399922b7ab4d06b706a3e404c052e1dfd81f51db5145d62336",
+    "preexisting_built_html_sha256": "62160f29b9b7c28a8b84deb88574bb1a6a7d255a5b2dc520f942857c21fdf781"
+  },
+  {
+    "file": "src/content/curriculum/foundations/from-source-to-silicon/unit-04.mdx",
+    "baseline_source_sha256": "9cc1e26f436f306b0f8df1e71f65ad6718299b5f73cdc6087d3ca24e4bbf4a90",
+    "preexisting_built_html_sha256": "4da352bbda3db94436ad02ea157c241213c773b5183d6e173fb3a72550583c07"
+  },
+  {
+    "file": "src/content/curriculum/foundations/from-source-to-silicon/unit-01.mdx",
+    "baseline_source_sha256": "e2427ae2a6369c1d2d3d3dfcaeaded2163a5af6932d878c58493b115aa3be206",
+    "preexisting_built_html_sha256": "060339ed289a937f0492edca5e36f1b5316140e6dd6372a938cf9984233a4ca9"
+  },
+  {
+    "file": "src/content/curriculum/foundations/from-source-to-silicon/unit-03.mdx",
+    "baseline_source_sha256": "1580dfb83b10abefd0a731d99867b81e0ebfde3086acca397811dfba5d54e229",
+    "preexisting_built_html_sha256": "1078784b349585cfef4d047ac615ee1ee810b0420e0bd7deac01a34a7a949015"
+  },
+  {
+    "file": "src/content/curriculum/foundations/from-source-to-silicon/unit-02.mdx",
+    "baseline_source_sha256": "a2965613106820a5697b6d9bb887a5987fcc34b5cd8ae26e743ff884a1ea540b",
+    "preexisting_built_html_sha256": "585a7a68cda4525c272b30e4523188b9bb04c5e9b5f934f2ae83f15073c53797"
+  },
+  {
+    "file": "src/content/curriculum/foundations/from-source-to-silicon/index.mdx",
+    "baseline_source_sha256": "ab97b857f6ef142b9c56bc29c1c10128f29902f6221c018c23c9d93ab74d2a71",
+    "preexisting_built_html_sha256": "586cf45ad59d9f37441fe8d1f9dd7f14a34b77080c84ede68c65ba82e0db2800"
+  }
+]

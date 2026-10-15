@@ -1,0 +1,708 @@
+{
+  "date": "2026-10-15T14:51:43.540Z",
+  "base": "http://127.0.0.1:2008",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/from-source-to-silicon/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [],
+      "tables": [],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [],
+      "tables": [
+        [
+          [
+            "Assembly source → assembler → machine code",
+            "Encodes the instructions we selected.",
+            "The resulting machine instructions."
+          ],
+          [
+            "Higher-level source → native-code compiler → machine code",
+            "Chooses instructions to implement the operations we described.",
+            "The resulting machine instructions."
+          ],
+          [
+            "Stored program → interpreter",
+            "Reads the program and carries out its operations while it runs.",
+            "The interpreter’s machine instructions, including routines it calls."
+          ]
+        ],
+        [
+          [
+            "INC",
+            "1",
+            "add one to the box"
+          ],
+          [
+            "DOUBLE",
+            "2",
+            "double the box"
+          ],
+          [
+            "SHOW",
+            "3",
+            "show what is in the box"
+          ]
+        ]
+      ],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "1000"
+      ],
+      "tables": [
+        [
+          [
+            "1",
+            "LET total = total + 1",
+            "put total plus one in total",
+            "0 + 1",
+            "1"
+          ],
+          [
+            "2",
+            "LET total = total + 1",
+            "put total plus one in total",
+            "1 + 1",
+            "2"
+          ],
+          [
+            "3",
+            "LET total = total + 1",
+            "put total plus one in total",
+            "2 + 1",
+            "3"
+          ],
+          [
+            "…",
+            "…",
+            "…",
+            "…",
+            "…"
+          ],
+          [
+            "1000",
+            "LET total = total + 1",
+            "put total plus one in total",
+            "999 + 1",
+            "1000"
+          ]
+        ]
+      ],
+      "trace": [
+        [
+          "1",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "0 + 1",
+          "1"
+        ],
+        [
+          "2",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "1 + 1",
+          "2"
+        ],
+        [
+          "3",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "2 + 1",
+          "3"
+        ],
+        [
+          "…",
+          "…",
+          "…",
+          "…",
+          "…"
+        ],
+        [
+          "1000",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "999 + 1",
+          "1000"
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "1\n1\n2\n3",
+        "Unknown instruction: MYSTERY\nTranslation failed; no code emitted"
+      ],
+      "tables": [
+        [
+          [
+            "before running",
+            "LET total = total + 1",
+            "put total plus one in total",
+            "—",
+            "—"
+          ],
+          [
+            "pass 1",
+            "—",
+            "—",
+            "0 + 1",
+            "1"
+          ],
+          [
+            "pass 2",
+            "—",
+            "—",
+            "1 + 1",
+            "2"
+          ],
+          [
+            "…",
+            "…",
+            "…",
+            "…",
+            "…"
+          ],
+          [
+            "pass 1000",
+            "—",
+            "—",
+            "999 + 1",
+            "1000"
+          ]
+        ],
+        [
+          [
+            "INC",
+            "1"
+          ],
+          [
+            "DOUBLE",
+            "2"
+          ],
+          [
+            "SHOW",
+            "3"
+          ]
+        ]
+      ],
+      "trace": [
+        [
+          "before running",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "—",
+          "—"
+        ],
+        [
+          "pass 1",
+          "—",
+          "—",
+          "0 + 1",
+          "1"
+        ],
+        [
+          "pass 2",
+          "—",
+          "—",
+          "1 + 1",
+          "2"
+        ],
+        [
+          "…",
+          "…",
+          "…",
+          "…",
+          "…"
+        ],
+        [
+          "pass 1000",
+          "—",
+          "—",
+          "999 + 1",
+          "1000"
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/unit-04/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [],
+      "tables": [],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/unit-05/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [],
+      "tables": [
+        [
+          [
+            "1",
+            "8 ms",
+            "10 ms"
+          ],
+          [
+            "2",
+            "8 ms",
+            "10 ms"
+          ],
+          [
+            "3",
+            "8 ms",
+            "10 ms"
+          ],
+          [
+            "4",
+            "16 ms",
+            "10 ms"
+          ]
+        ]
+      ],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/",
+      "width": 390,
+      "status": 200,
+      "outputs": [],
+      "tables": [],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/unit-01/",
+      "width": 390,
+      "status": 200,
+      "outputs": [],
+      "tables": [
+        [
+          [
+            "Assembly source → assembler → machine code",
+            "Encodes the instructions we selected.",
+            "The resulting machine instructions."
+          ],
+          [
+            "Higher-level source → native-code compiler → machine code",
+            "Chooses instructions to implement the operations we described.",
+            "The resulting machine instructions."
+          ],
+          [
+            "Stored program → interpreter",
+            "Reads the program and carries out its operations while it runs.",
+            "The interpreter’s machine instructions, including routines it calls."
+          ]
+        ],
+        [
+          [
+            "INC",
+            "1",
+            "add one to the box"
+          ],
+          [
+            "DOUBLE",
+            "2",
+            "double the box"
+          ],
+          [
+            "SHOW",
+            "3",
+            "show what is in the box"
+          ]
+        ]
+      ],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/unit-02/",
+      "width": 390,
+      "status": 200,
+      "outputs": [
+        "1000"
+      ],
+      "tables": [
+        [
+          [
+            "1",
+            "LET total = total + 1",
+            "put total plus one in total",
+            "0 + 1",
+            "1"
+          ],
+          [
+            "2",
+            "LET total = total + 1",
+            "put total plus one in total",
+            "1 + 1",
+            "2"
+          ],
+          [
+            "3",
+            "LET total = total + 1",
+            "put total plus one in total",
+            "2 + 1",
+            "3"
+          ],
+          [
+            "…",
+            "…",
+            "…",
+            "…",
+            "…"
+          ],
+          [
+            "1000",
+            "LET total = total + 1",
+            "put total plus one in total",
+            "999 + 1",
+            "1000"
+          ]
+        ]
+      ],
+      "trace": [
+        [
+          "1",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "0 + 1",
+          "1"
+        ],
+        [
+          "2",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "1 + 1",
+          "2"
+        ],
+        [
+          "3",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "2 + 1",
+          "3"
+        ],
+        [
+          "…",
+          "…",
+          "…",
+          "…",
+          "…"
+        ],
+        [
+          "1000",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "999 + 1",
+          "1000"
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/unit-03/",
+      "width": 390,
+      "status": 200,
+      "outputs": [
+        "1\n1\n2\n3",
+        "Unknown instruction: MYSTERY\nTranslation failed; no code emitted"
+      ],
+      "tables": [
+        [
+          [
+            "before running",
+            "LET total = total + 1",
+            "put total plus one in total",
+            "—",
+            "—"
+          ],
+          [
+            "pass 1",
+            "—",
+            "—",
+            "0 + 1",
+            "1"
+          ],
+          [
+            "pass 2",
+            "—",
+            "—",
+            "1 + 1",
+            "2"
+          ],
+          [
+            "…",
+            "…",
+            "…",
+            "…",
+            "…"
+          ],
+          [
+            "pass 1000",
+            "—",
+            "—",
+            "999 + 1",
+            "1000"
+          ]
+        ],
+        [
+          [
+            "INC",
+            "1"
+          ],
+          [
+            "DOUBLE",
+            "2"
+          ],
+          [
+            "SHOW",
+            "3"
+          ]
+        ]
+      ],
+      "trace": [
+        [
+          "before running",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "—",
+          "—"
+        ],
+        [
+          "pass 1",
+          "—",
+          "—",
+          "0 + 1",
+          "1"
+        ],
+        [
+          "pass 2",
+          "—",
+          "—",
+          "1 + 1",
+          "2"
+        ],
+        [
+          "…",
+          "…",
+          "…",
+          "…",
+          "…"
+        ],
+        [
+          "pass 1000",
+          "—",
+          "—",
+          "999 + 1",
+          "1000"
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".ll-line:nth-child(1) > .ll-text"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "target": [
+                ".ll-line:nth-child(3) > .ll-text"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "target": [
+                ".ll-line:nth-child(17) > .ll-text"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "target": [
+                ".ll-line:nth-child(27) > .ll-text"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ]
+        }
+      ],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/unit-04/",
+      "width": 390,
+      "status": 200,
+      "outputs": [],
+      "tables": [],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/unit-05/",
+      "width": 390,
+      "status": 200,
+      "outputs": [],
+      "tables": [
+        [
+          [
+            "1",
+            "8 ms",
+            "10 ms"
+          ],
+          [
+            "2",
+            "8 ms",
+            "10 ms"
+          ],
+          [
+            "3",
+            "8 ms",
+            "10 ms"
+          ],
+          [
+            "4",
+            "16 ms",
+            "10 ms"
+          ]
+        ]
+      ],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    }
+  ],
+  "checks": [
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "Are character codes instructions?",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "Does a recognised last word",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "Follow the compiler",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "Compare rules and drawing",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "diagnosis link and Back by keyboard",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "Compare the average",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "Are character codes instructions?",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "Does a recognised last word",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "Follow the compiler",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "Compare rules and drawing",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "diagnosis link and Back by keyboard",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "Compare the average",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

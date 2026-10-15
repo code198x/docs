@@ -1,0 +1,3056 @@
+{
+  "date": "2026-10-15T14:50:16.759Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/gates-and-the-adder/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "tables": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/gates-and-the-adder/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "tables": [
+        {
+          "inputs": 2,
+          "columns": 1,
+          "sync": "and-gate",
+          "highlighted": [
+            0
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 2,
+          "columns": 1,
+          "sync": "or-gate",
+          "highlighted": [
+            0
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 2,
+          "columns": 1,
+          "sync": "xor-gate",
+          "highlighted": [
+            0
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-name[x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-value[data-value=\"A\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"B\"][aria-label=\"Input B\"] > text[y=\"111\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"B\"][aria-label=\"Input B\"] > text[data-value=\"B\"][y=\"111\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-gate > .lc-gate-name[x=\"150.68\"][text-anchor=\"middle\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-out.lc-pin[data-output=\"out\"] > .lc-pin-name[x=\"260\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-out.lc-pin[data-output=\"out\"] > text[data-value=\"out\"][x=\"247\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-name[x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-value[data-value=\"A\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"B\"][aria-label=\"Input B\"] > text[y=\"111\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"B\"][aria-label=\"Input B\"] > text[data-value=\"B\"][y=\"111\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-gate > .lc-gate-name[x=\"150.68\"][text-anchor=\"middle\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-out.lc-pin[data-output=\"out\"] > .lc-pin-name[x=\"260\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-out.lc-pin[data-output=\"out\"] > text[data-value=\"out\"][x=\"247\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-name[x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-value[data-value=\"A\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"B\"][aria-label=\"Input B\"] > text[y=\"111\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"B\"][aria-label=\"Input B\"] > text[data-value=\"B\"][y=\"111\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-gate > .lc-gate-name[x=\"150.68\"][text-anchor=\"middle\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-out.lc-pin[data-output=\"out\"] > .lc-pin-name[x=\"260\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-out.lc-pin[data-output=\"out\"] > text[data-value=\"out\"][x=\"247\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "svg[viewBox=\"0 0 310 98\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-name[x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "svg[viewBox=\"0 0 310 98\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-value[data-value=\"A\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "svg[viewBox=\"0 0 310 98\"] > .lc-gate > .lc-gate-name[x=\"150.68\"][text-anchor=\"middle\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-pin-name[x=\"260\"][y=\"49\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "svg[viewBox=\"0 0 310 98\"] > .lc-out.lc-pin[data-output=\"out\"] > .lc-pin-value[data-value=\"out\"][x=\"247\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            }
+          ]
+        }
+      ],
+      "revealedViolations": [],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/gates-and-the-adder/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "tables": [
+        {
+          "inputs": 2,
+          "columns": 2,
+          "sync": null,
+          "highlighted": [],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 2,
+          "columns": 2,
+          "sync": "half-adder",
+          "highlighted": [
+            0
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              1
+            ]
+          ]
+        }
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "g[data-input=\"A\"] > .lc-pin-name[x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[data-value=\"A\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "g[data-input=\"B\"] > .lc-pin-name[x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[data-value=\"B\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-gate:nth-child(9) > .lc-gate-name[x=\"150.68\"][text-anchor=\"middle\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-gate:nth-child(10) > .lc-gate-name[x=\"150.68\"][text-anchor=\"middle\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-pin-name[x=\"260\"][y=\"49\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"sum\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-pin-name[x=\"260\"][y=\"111\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"carry\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            }
+          ]
+        }
+      ],
+      "revealedViolations": [],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/gates-and-the-adder/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "tables": [
+        {
+          "inputs": 3,
+          "columns": 2,
+          "sync": null,
+          "highlighted": [],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 3,
+          "columns": 2,
+          "sync": "full-adder",
+          "highlighted": [
+            0
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "g[data-input=\"A\"] > text[y=\"49\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[data-value=\"A\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "g[data-input=\"B\"] > text[y=\"111\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[data-value=\"B\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "g[data-input=\"Cin\"] > text[y=\"173\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"Cin\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-gate-name[x=\"150.68\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "text[y=\"142\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-gate-name[x=\"262.68\"][y=\"111\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-gate-name[x=\"262.68\"][y=\"173\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "text[x=\"374.68\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-pin-name[x=\"484\"][y=\"111\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"sum\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-pin-name[x=\"484\"][y=\"173\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"cout\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "g[data-input=\"A0\"] > text[y=\"49\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"A0\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "g[data-input=\"B0\"] > text[y=\"111\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"B0\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "g[data-input=\"A1\"] > text[y=\"173\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"A1\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[y=\"235\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"B1\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[y=\"297\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"A2\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[y=\"359\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"B2\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[x=\"170\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "text[x=\"312\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "text[x=\"454\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-pin-name[x=\"574\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"fa0:sum\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-pin-name[y=\"162.66666666666666\"][x=\"574\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"fa1:sum\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-pin-name[y=\"272.88888888888886\"][x=\"574\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"fa2:sum\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-pin-name[y=\"334.88888888888886\"][x=\"574\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[data-value=\"fa2:carry\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            }
+          ]
+        }
+      ],
+      "rippleTrace": [
+        [
+          "0 (ones)",
+          "1",
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1 (twos)",
+          "1",
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "2 (fours)",
+          "1",
+          "0",
+          "1",
+          "0",
+          "1"
+        ]
+      ],
+      "revealedViolations": [],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/gates-and-the-adder/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "tables": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/gates-and-the-adder/unit-01/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "tables": [
+        {
+          "inputs": 2,
+          "columns": 1,
+          "sync": "and-gate",
+          "highlighted": [
+            0
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 2,
+          "columns": 1,
+          "sync": "or-gate",
+          "highlighted": [
+            0
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 2,
+          "columns": 1,
+          "sync": "xor-gate",
+          "highlighted": [
+            0
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-name[x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-value[data-value=\"A\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"B\"][aria-label=\"Input B\"] > text[y=\"111\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"B\"][aria-label=\"Input B\"] > text[data-value=\"B\"][y=\"111\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-gate > .lc-gate-name[x=\"150.68\"][text-anchor=\"middle\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-out.lc-pin[data-output=\"out\"] > .lc-pin-name[x=\"260\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"and-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-out.lc-pin[data-output=\"out\"] > text[data-value=\"out\"][x=\"247\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-name[x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-value[data-value=\"A\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"B\"][aria-label=\"Input B\"] > text[y=\"111\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"B\"][aria-label=\"Input B\"] > text[data-value=\"B\"][y=\"111\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-gate > .lc-gate-name[x=\"150.68\"][text-anchor=\"middle\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-out.lc-pin[data-output=\"out\"] > .lc-pin-name[x=\"260\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"or-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-out.lc-pin[data-output=\"out\"] > text[data-value=\"out\"][x=\"247\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-name[x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-value[data-value=\"A\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"B\"][aria-label=\"Input B\"] > text[y=\"111\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-live[data-input=\"B\"][aria-label=\"Input B\"] > text[data-value=\"B\"][y=\"111\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-gate > .lc-gate-name[x=\"150.68\"][text-anchor=\"middle\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-out.lc-pin[data-output=\"out\"] > .lc-pin-name[x=\"260\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "figure[data-circuit=\"xor-gate\"] > .logic-circuit-svg[viewBox=\"0 0 310 160\"][role=\"group\"] > .lc-out.lc-pin[data-output=\"out\"] > text[data-value=\"out\"][x=\"247\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "svg[viewBox=\"0 0 310 98\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-name[x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "svg[viewBox=\"0 0 310 98\"] > .lc-live[data-input=\"A\"][aria-label=\"Input A\"] > .lc-pin-value[data-value=\"A\"][x=\"63\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "svg[viewBox=\"0 0 310 98\"] > .lc-gate > .lc-gate-name[x=\"150.68\"][text-anchor=\"middle\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-pin-name[x=\"260\"][y=\"49\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "svg[viewBox=\"0 0 310 98\"] > .lc-out.lc-pin[data-output=\"out\"] > .lc-pin-value[data-value=\"out\"][x=\"247\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            }
+          ]
+        }
+      ],
+      "revealedViolations": [],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/gates-and-the-adder/unit-02/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "tables": [
+        {
+          "inputs": 2,
+          "columns": 2,
+          "sync": null,
+          "highlighted": [],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 2,
+          "columns": 2,
+          "sync": "half-adder",
+          "highlighted": [
+            0
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              1
+            ]
+          ]
+        }
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "g[data-input=\"A\"] > .lc-pin-name[x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[data-value=\"A\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "g[data-input=\"B\"] > .lc-pin-name[x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[data-value=\"B\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-gate:nth-child(9) > .lc-gate-name[x=\"150.68\"][text-anchor=\"middle\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-gate:nth-child(10) > .lc-gate-name[x=\"150.68\"][text-anchor=\"middle\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-pin-name[x=\"260\"][y=\"49\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"sum\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-pin-name[x=\"260\"][y=\"111\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"carry\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            }
+          ]
+        }
+      ],
+      "revealedViolations": [],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/gates-and-the-adder/unit-03/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "tables": [
+        {
+          "inputs": 3,
+          "columns": 2,
+          "sync": null,
+          "highlighted": [],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 3,
+          "columns": 2,
+          "sync": "full-adder",
+          "highlighted": [
+            0
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "g[data-input=\"A\"] > text[y=\"49\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[data-value=\"A\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "g[data-input=\"B\"] > text[y=\"111\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[data-value=\"B\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "g[data-input=\"Cin\"] > text[y=\"173\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"Cin\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-gate-name[x=\"150.68\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "text[y=\"142\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-gate-name[x=\"262.68\"][y=\"111\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-gate-name[x=\"262.68\"][y=\"173\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "text[x=\"374.68\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-pin-name[x=\"484\"][y=\"111\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"sum\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-pin-name[x=\"484\"][y=\"173\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"cout\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "g[data-input=\"A0\"] > text[y=\"49\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"A0\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "g[data-input=\"B0\"] > text[y=\"111\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"B0\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "g[data-input=\"A1\"] > text[y=\"173\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"A1\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[y=\"235\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"B1\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[y=\"297\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"A2\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[y=\"359\"][x=\"50\"][text-anchor=\"end\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"B2\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[x=\"170\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "text[x=\"312\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                "text[x=\"454\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".lc-pin-name[x=\"574\"][y=\"80\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"fa0:sum\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-pin-name[y=\"162.66666666666666\"][x=\"574\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"fa1:sum\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-pin-name[y=\"272.88888888888886\"][x=\"574\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "target": [
+                "text[data-value=\"fa2:sum\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                ".lc-pin-name[y=\"334.88888888888886\"][x=\"574\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "target": [
+                "text[data-value=\"fa2:carry\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            }
+          ]
+        }
+      ],
+      "rippleTrace": [
+        [
+          "0 (ones)",
+          "1",
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1 (twos)",
+          "1",
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "2 (fours)",
+          "1",
+          "0",
+          "1",
+          "0",
+          "1"
+        ]
+      ],
+      "revealedViolations": [],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "circuitStates": [
+    {
+      "id": "and-gate",
+      "width": 1440,
+      "row": 0,
+      "inputs": [
+        0,
+        0
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        0
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "and-gate",
+      "width": 1440,
+      "row": 1,
+      "inputs": [
+        0,
+        1
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        1
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "and-gate",
+      "width": 1440,
+      "row": 2,
+      "inputs": [
+        1,
+        0
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        2
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "and-gate",
+      "width": 1440,
+      "row": 3,
+      "inputs": [
+        1,
+        1
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        3
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "or-gate",
+      "width": 1440,
+      "row": 0,
+      "inputs": [
+        0,
+        0
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        0
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "or-gate",
+      "width": 1440,
+      "row": 1,
+      "inputs": [
+        0,
+        1
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        1
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "or-gate",
+      "width": 1440,
+      "row": 2,
+      "inputs": [
+        1,
+        0
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        2
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "or-gate",
+      "width": 1440,
+      "row": 3,
+      "inputs": [
+        1,
+        1
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        3
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "xor-gate",
+      "width": 1440,
+      "row": 0,
+      "inputs": [
+        0,
+        0
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        0
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "xor-gate",
+      "width": 1440,
+      "row": 1,
+      "inputs": [
+        0,
+        1
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        1
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "xor-gate",
+      "width": 1440,
+      "row": 2,
+      "inputs": [
+        1,
+        0
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        2
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "xor-gate",
+      "width": 1440,
+      "row": 3,
+      "inputs": [
+        1,
+        1
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        3
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "not-gate",
+      "width": 1440,
+      "row": 0,
+      "inputs": [
+        0
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "not-gate",
+      "width": 1440,
+      "row": 1,
+      "inputs": [
+        1
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "half-adder",
+      "width": 1440,
+      "row": 0,
+      "inputs": [
+        0,
+        0
+      ],
+      "expected": {
+        "sum": 0,
+        "carry": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 0,
+          "lit": false
+        },
+        "carry": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        0
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "half-adder",
+      "width": 1440,
+      "row": 1,
+      "inputs": [
+        0,
+        1
+      ],
+      "expected": {
+        "sum": 1,
+        "carry": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 1,
+          "lit": true
+        },
+        "carry": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        1
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "half-adder",
+      "width": 1440,
+      "row": 2,
+      "inputs": [
+        1,
+        0
+      ],
+      "expected": {
+        "sum": 1,
+        "carry": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 1,
+          "lit": true
+        },
+        "carry": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        2
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "half-adder",
+      "width": 1440,
+      "row": 3,
+      "inputs": [
+        1,
+        1
+      ],
+      "expected": {
+        "sum": 0,
+        "carry": 1
+      },
+      "actual": {
+        "sum": {
+          "value": 0,
+          "lit": false
+        },
+        "carry": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        3
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 1440,
+      "row": 0,
+      "inputs": [
+        0,
+        0,
+        0
+      ],
+      "expected": {
+        "sum": 0,
+        "cout": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 0,
+          "lit": false
+        },
+        "cout": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        0
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 1440,
+      "row": 1,
+      "inputs": [
+        0,
+        0,
+        1
+      ],
+      "expected": {
+        "sum": 1,
+        "cout": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 1,
+          "lit": true
+        },
+        "cout": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        1
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 1440,
+      "row": 2,
+      "inputs": [
+        0,
+        1,
+        0
+      ],
+      "expected": {
+        "sum": 1,
+        "cout": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 1,
+          "lit": true
+        },
+        "cout": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        2
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 1440,
+      "row": 3,
+      "inputs": [
+        0,
+        1,
+        1
+      ],
+      "expected": {
+        "sum": 0,
+        "cout": 1
+      },
+      "actual": {
+        "sum": {
+          "value": 0,
+          "lit": false
+        },
+        "cout": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        3
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 1440,
+      "row": 4,
+      "inputs": [
+        1,
+        0,
+        0
+      ],
+      "expected": {
+        "sum": 1,
+        "cout": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 1,
+          "lit": true
+        },
+        "cout": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        4
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 1440,
+      "row": 5,
+      "inputs": [
+        1,
+        0,
+        1
+      ],
+      "expected": {
+        "sum": 0,
+        "cout": 1
+      },
+      "actual": {
+        "sum": {
+          "value": 0,
+          "lit": false
+        },
+        "cout": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        5
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 1440,
+      "row": 6,
+      "inputs": [
+        1,
+        1,
+        0
+      ],
+      "expected": {
+        "sum": 0,
+        "cout": 1
+      },
+      "actual": {
+        "sum": {
+          "value": 0,
+          "lit": false
+        },
+        "cout": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        6
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 1440,
+      "row": 7,
+      "inputs": [
+        1,
+        1,
+        1
+      ],
+      "expected": {
+        "sum": 1,
+        "cout": 1
+      },
+      "actual": {
+        "sum": {
+          "value": 1,
+          "lit": true
+        },
+        "cout": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        7
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "and-gate",
+      "width": 390,
+      "row": 0,
+      "inputs": [
+        0,
+        0
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        0
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "and-gate",
+      "width": 390,
+      "row": 1,
+      "inputs": [
+        0,
+        1
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        1
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "and-gate",
+      "width": 390,
+      "row": 2,
+      "inputs": [
+        1,
+        0
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        2
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "and-gate",
+      "width": 390,
+      "row": 3,
+      "inputs": [
+        1,
+        1
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        3
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "or-gate",
+      "width": 390,
+      "row": 0,
+      "inputs": [
+        0,
+        0
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        0
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "or-gate",
+      "width": 390,
+      "row": 1,
+      "inputs": [
+        0,
+        1
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        1
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "or-gate",
+      "width": 390,
+      "row": 2,
+      "inputs": [
+        1,
+        0
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        2
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "or-gate",
+      "width": 390,
+      "row": 3,
+      "inputs": [
+        1,
+        1
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        3
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "xor-gate",
+      "width": 390,
+      "row": 0,
+      "inputs": [
+        0,
+        0
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        0
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "xor-gate",
+      "width": 390,
+      "row": 1,
+      "inputs": [
+        0,
+        1
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        1
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "xor-gate",
+      "width": 390,
+      "row": 2,
+      "inputs": [
+        1,
+        0
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        2
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "xor-gate",
+      "width": 390,
+      "row": 3,
+      "inputs": [
+        1,
+        1
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        3
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "not-gate",
+      "width": 390,
+      "row": 0,
+      "inputs": [
+        0
+      ],
+      "expected": {
+        "out": 1
+      },
+      "actual": {
+        "out": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "not-gate",
+      "width": 390,
+      "row": 1,
+      "inputs": [
+        1
+      ],
+      "expected": {
+        "out": 0
+      },
+      "actual": {
+        "out": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "half-adder",
+      "width": 390,
+      "row": 0,
+      "inputs": [
+        0,
+        0
+      ],
+      "expected": {
+        "sum": 0,
+        "carry": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 0,
+          "lit": false
+        },
+        "carry": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        0
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "half-adder",
+      "width": 390,
+      "row": 1,
+      "inputs": [
+        0,
+        1
+      ],
+      "expected": {
+        "sum": 1,
+        "carry": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 1,
+          "lit": true
+        },
+        "carry": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        1
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "half-adder",
+      "width": 390,
+      "row": 2,
+      "inputs": [
+        1,
+        0
+      ],
+      "expected": {
+        "sum": 1,
+        "carry": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 1,
+          "lit": true
+        },
+        "carry": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        2
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "half-adder",
+      "width": 390,
+      "row": 3,
+      "inputs": [
+        1,
+        1
+      ],
+      "expected": {
+        "sum": 0,
+        "carry": 1
+      },
+      "actual": {
+        "sum": {
+          "value": 0,
+          "lit": false
+        },
+        "carry": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        3
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 390,
+      "row": 0,
+      "inputs": [
+        0,
+        0,
+        0
+      ],
+      "expected": {
+        "sum": 0,
+        "cout": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 0,
+          "lit": false
+        },
+        "cout": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        0
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 390,
+      "row": 1,
+      "inputs": [
+        0,
+        0,
+        1
+      ],
+      "expected": {
+        "sum": 1,
+        "cout": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 1,
+          "lit": true
+        },
+        "cout": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        1
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 390,
+      "row": 2,
+      "inputs": [
+        0,
+        1,
+        0
+      ],
+      "expected": {
+        "sum": 1,
+        "cout": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 1,
+          "lit": true
+        },
+        "cout": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        2
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 390,
+      "row": 3,
+      "inputs": [
+        0,
+        1,
+        1
+      ],
+      "expected": {
+        "sum": 0,
+        "cout": 1
+      },
+      "actual": {
+        "sum": {
+          "value": 0,
+          "lit": false
+        },
+        "cout": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        3
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 390,
+      "row": 4,
+      "inputs": [
+        1,
+        0,
+        0
+      ],
+      "expected": {
+        "sum": 1,
+        "cout": 0
+      },
+      "actual": {
+        "sum": {
+          "value": 1,
+          "lit": true
+        },
+        "cout": {
+          "value": 0,
+          "lit": false
+        }
+      },
+      "highlighted": [
+        4
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 390,
+      "row": 5,
+      "inputs": [
+        1,
+        0,
+        1
+      ],
+      "expected": {
+        "sum": 0,
+        "cout": 1
+      },
+      "actual": {
+        "sum": {
+          "value": 0,
+          "lit": false
+        },
+        "cout": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        5
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 390,
+      "row": 6,
+      "inputs": [
+        1,
+        1,
+        0
+      ],
+      "expected": {
+        "sum": 0,
+        "cout": 1
+      },
+      "actual": {
+        "sum": {
+          "value": 0,
+          "lit": false
+        },
+        "cout": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        6
+      ],
+      "syncCorrect": true,
+      "passed": true
+    },
+    {
+      "id": "full-adder",
+      "width": 390,
+      "row": 7,
+      "inputs": [
+        1,
+        1,
+        1
+      ],
+      "expected": {
+        "sum": 1,
+        "cout": 1
+      },
+      "actual": {
+        "sum": {
+          "value": 1,
+          "lit": true
+        },
+        "cout": {
+          "value": 1,
+          "lit": true
+        }
+      },
+      "highlighted": [
+        7
+      ],
+      "syncCorrect": true,
+      "passed": true
+    }
+  ],
+  "checks": [
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/gates-and-the-adder/unit-01/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/gates-and-the-adder/unit-02/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/gates-and-the-adder/unit-03/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/foundations/counting-in-twos/unit-04/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/gates-and-the-adder/unit-01/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/gates-and-the-adder/unit-02/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/gates-and-the-adder/unit-03/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/foundations/counting-in-twos/unit-04/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}
