@@ -1,0 +1,1 @@
+f4802d0cd936e83730b41339276c40b72c8b0c305637c47fadc6f2de3febdfca  scripts/verification/basics-input-pilot.mjs

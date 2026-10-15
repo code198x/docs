@@ -60,6 +60,7 @@ The right-hand annotations above explain the notation; they are not program text
 
 - `LET` assigns; `=` in a condition compares. Explain the distinction when it first matters.
 - `SHOW` joins its comma-separated values without inserting spaces. `+` is arithmetic. Put a wanted space inside the quoted text.
+- State an ASK example’s input contract where it matters: submission, text or numeric values, spaces, empty input and validation. Basics’ name example submits a line of text with Enter, keeps spaces and accepts empty text; this local convention is not a promise of identical target-language input or numeric conversion.
 - `FOR` ranges and `RANDOM` ranges include both ends. `/` keeps a fractional quotient in this notation; target division and precision rules need their own explanation. Multiplication and division precede addition and subtraction; equal-priority operations in these two groups work left to right. Brackets choose the grouping.
 - `ROUND DOWN` is floor: the greatest whole number no larger than the input, including for negatives. Introductory `REMAINDER` examples use non-negative whole inputs and a positive whole divisor: original = quotient × divisor + remainder, with quotient = floor(original / divisor) and 0 ≤ remainder < divisor. State a convention before extending to negative inputs.
 - `ROUND` means nearest whole number. Working It Out chooses the higher number for non-negative halfway values. State the input range and halfway policy where they matter; do not assume a target language shares that policy.

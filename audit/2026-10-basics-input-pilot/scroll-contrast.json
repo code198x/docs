@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "scope": "One axe-incomplete source line at 390, rendered text colour against inherited listing background, both horizontal scroll endpoints. Not a general accessibility assessment.",
+  "rows": [
+    {
+      "text": "ASK \"What is your name? \" INTO name\n",
+      "foreground": "rgb(27, 26, 23)",
+      "background": "rgb(252, 251, 248)",
+      "scrollLeft": 0,
+      "ratio": 16.8168
+    },
+    {
+      "text": "ASK \"What is your name? \" INTO name\n",
+      "foreground": "rgb(27, 26, 23)",
+      "background": "rgb(252, 251, 248)",
+      "scrollLeft": 28,
+      "ratio": 16.8168
+    }
+  ]
+}

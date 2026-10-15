@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-15T15:00:03.620Z",
+  "base": "http://127.0.0.1:2011",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/basics/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "Hello"
+      ],
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "status": "failed",
+  "failure": "Error: Original sequence/input claim remains"
+}
