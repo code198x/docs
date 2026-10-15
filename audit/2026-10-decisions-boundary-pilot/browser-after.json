@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-15T09:06:37.395Z",
+  "base": "http://127.0.0.1:1996",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/decisions/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ],
+      "claims": {
+        "cannotReact": false,
+        "negativeGuessAssumption": false
+      }
+    },
+    {
+      "route": "/foundations/decisions/unit-01/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ],
+      "claims": {
+        "cannotReact": false,
+        "negativeGuessAssumption": false
+      }
+    }
+  ],
+  "checks": [
+    {
+      "check": "keyboard reveal of negative/zero/positive boundary predictions",
+      "width": 1440,
+      "passed": true,
+      "rows": [
+        "\n-1\nFALSE\n",
+        "\n0\nFALSE\n",
+        "\n1\nTRUE\n"
+      ]
+    },
+    {
+      "check": "keyboard reveal of negative/zero/positive boundary predictions",
+      "width": 390,
+      "passed": true,
+      "rows": [
+        "\n-1\nFALSE\n",
+        "\n0\nFALSE\n",
+        "\n1\nTRUE\n"
+      ]
+    }
+  ],
+  "errors": []
+}

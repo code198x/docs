@@ -1,0 +1,307 @@
+{
+  "status": "passed",
+  "target": "48K Spectrum; ROM keyboard entry through MCP",
+  "emulator": {
+    "name": "emu198x-spectrum",
+    "version": "0.32.5"
+  },
+  "binary_sha256": "51fe786fb9cec0b552b67125abc11e28f062f6105cb75fb01b923cffbcd81f89",
+  "driver_sha256": "df6a38a3116b58425e5f4a08bb9fc2c843bb0515ae6d1711443f73e1dbf07758",
+  "rom_sha256": "d55daa439b673b0e3f5897f99ac37ecb45f974d1862b4dadb85dec34af99cb42",
+  "conditional_source": "10 INPUT \"Value \";g\n20 IF g>0 THEN PRINT \"positive\"\n30 PRINT g\n",
+  "straight_line_source": "10 INPUT \"Value \";g\n20 PRINT g+1\n",
+  "published_sample_sha256": "885304d1d9400183a7e4f6371b3c9556969f8e058ca1110026e56d8827d0854a",
+  "checks": [
+    {
+      "check": "strict-positive--1",
+      "expected": [
+        "-1"
+      ],
+      "screen": [
+        "-1",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 30:1"
+      ]
+    },
+    {
+      "check": "strict-positive-0",
+      "expected": [
+        "0"
+      ],
+      "screen": [
+        "0",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 30:1"
+      ]
+    },
+    {
+      "check": "strict-positive-1",
+      "expected": [
+        "positive",
+        "1"
+      ],
+      "screen": [
+        "positive",
+        "1",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 30:1"
+      ]
+    },
+    {
+      "check": "straight-line-0",
+      "expected": [
+        "1"
+      ],
+      "screen": [
+        "1",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 20:1"
+      ]
+    },
+    {
+      "check": "straight-line-1",
+      "expected": [
+        "2"
+      ],
+      "screen": [
+        "2",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 20:1"
+      ]
+    },
+    {
+      "check": "published-comparisons-4",
+      "expected": [
+        "Too low"
+      ],
+      "screen": [
+        "Guess a whole number 1 to 10",
+        "Too low",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 60:1"
+      ]
+    },
+    {
+      "check": "published-comparisons-7",
+      "expected": [
+        "Correct!"
+      ],
+      "screen": [
+        "Guess a whole number 1 to 10",
+        "Correct!",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 60:1"
+      ]
+    },
+    {
+      "check": "published-comparisons-9",
+      "expected": [
+        "Too high"
+      ],
+      "screen": [
+        "Guess a whole number 1 to 10",
+        "Too high",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 60:2"
+      ]
+    },
+    {
+      "check": "deliberately-overlapping-tests",
+      "expected": [
+        "Too low",
+        "Too high"
+      ],
+      "screen": [
+        "Guess a whole number 1 to 10",
+        "Too low",
+        "Too high",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 60:2"
+      ]
+    }
+  ],
+  "limits": "Emulated ROM observations, not original hardware or learner evidence."
+}
