@@ -1,0 +1,310 @@
+{
+  "date": "2026-10-15T14:31:03.543Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/counting-in-twos/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [],
+      "table": [],
+      "figure": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "5",
+        "13",
+        "255"
+      ],
+      "table": [],
+      "figure": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "15",
+        "255\n255",
+        "240\n240",
+        "16\n256"
+      ],
+      "table": [
+        [
+          "0000",
+          "0",
+          "0"
+        ],
+        [
+          "0101",
+          "5",
+          "5"
+        ],
+        [
+          "1001",
+          "9",
+          "9"
+        ],
+        [
+          "1010",
+          "10",
+          "A"
+        ],
+        [
+          "1100",
+          "12",
+          "C"
+        ],
+        [
+          "1111",
+          "15",
+          "F"
+        ]
+      ],
+      "figure": [
+        {
+          "positions": [
+            7,
+            6,
+            5,
+            4
+          ],
+          "bits": "1111",
+          "digit": "F",
+          "value": "15 × 16 = 240"
+        },
+        {
+          "positions": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "bits": "0000",
+          "digit": "0",
+          "value": "0 × 1 = 0"
+        }
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".nibble[data-astro-cid-airzcvjn=\"\"]:nth-child(1) > .connector[data-astro-cid-airzcvjn=\"\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                ".nibble[data-astro-cid-airzcvjn=\"\"]:nth-child(2) > .connector[data-astro-cid-airzcvjn=\"\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "revealedViolations": [],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/counting-in-twos/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [],
+      "table": [],
+      "figure": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-01/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "5",
+        "13",
+        "255"
+      ],
+      "table": [],
+      "figure": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-02/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "15",
+        "255\n255",
+        "240\n240",
+        "16\n256"
+      ],
+      "table": [
+        [
+          "0000",
+          "0",
+          "0"
+        ],
+        [
+          "0101",
+          "5",
+          "5"
+        ],
+        [
+          "1001",
+          "9",
+          "9"
+        ],
+        [
+          "1010",
+          "10",
+          "A"
+        ],
+        [
+          "1100",
+          "12",
+          "C"
+        ],
+        [
+          "1111",
+          "15",
+          "F"
+        ]
+      ],
+      "figure": [
+        {
+          "positions": [
+            7,
+            6,
+            5,
+            4
+          ],
+          "bits": "1111",
+          "digit": "F",
+          "value": "15 × 16 = 240"
+        },
+        {
+          "positions": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "bits": "0000",
+          "digit": "0",
+          "value": "0 × 1 = 0"
+        }
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".nibble[data-astro-cid-airzcvjn=\"\"]:nth-child(1) > .connector[data-astro-cid-airzcvjn=\"\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                ".nibble[data-astro-cid-airzcvjn=\"\"]:nth-child(2) > .connector[data-astro-cid-airzcvjn=\"\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "revealedViolations": [],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/counting-in-twos/unit-01/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/counting-in-twos/unit-02/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/foundations/counting-in-twos/unit-03/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/counting-in-twos/unit-01/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/counting-in-twos/unit-02/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/foundations/counting-in-twos/unit-03/",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}
