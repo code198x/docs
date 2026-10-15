@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-15T13:36:58.174Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/structure/",
+      "width": 1440,
+      "status": 200,
+      "oldAttendance": true,
+      "outputs": [],
+      "tables": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "status": "failed",
+  "failure": "Error: Original attendance requirement remains"
+}
