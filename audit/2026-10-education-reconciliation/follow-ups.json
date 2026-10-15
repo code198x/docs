@@ -1,0 +1,26 @@
+[
+  {
+    "repository": "Code198x/docs",
+    "title": "Map shared game-maths objectives and audit one probability boundary",
+    "url": "https://github.com/code198x/docs/issues/78",
+    "body_file": "follow-ups/maths.md"
+  },
+  {
+    "repository": "Code198x/website",
+    "title": "Qualify the embedded BASIC stored-value and error-recovery task",
+    "url": "https://github.com/code198x/website/issues/747",
+    "body_file": "follow-ups/basic.md"
+  },
+  {
+    "repository": "Code198x/website",
+    "title": "Measure embedded machine startup and edit-to-result latency",
+    "url": "https://github.com/code198x/website/issues/748",
+    "body_file": "follow-ups/latency.md"
+  },
+  {
+    "repository": "Code198x/website",
+    "title": "Qualify one first-session machine journey beyond Chromium viewport checks",
+    "url": "https://github.com/code198x/website/issues/749",
+    "body_file": "follow-ups/accessibility.md"
+  }
+]

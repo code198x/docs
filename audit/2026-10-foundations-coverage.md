@@ -58,9 +58,10 @@ Silicon units and links a bounded toy-model/native contrast. Each of the ten
 Foundations modules has selected evidence; this is not complete objective or
 learner validation. The Basics follow-up adds sequence and submitted-text boundaries. The Decisions follow-up adds ordered-chain and saved/reset state evidence. The
 Repetition follow-up adds progress, pre/post-test and audit-intervention evidence.
-Next consolidate the umbrella acceptance criteria against retained results: identify
-which gaps need fresh technical work, a specification decision or real learner
-observations before choosing another slice.
+The [umbrella reconciliation](2026-10-education-reconciliation/REPORT.md) now maps
+retained evidence to each parent criterion and identifies five next priorities.
+Next map the eleven published Maths for Games units and select one probability
+boundary under [docs #78](https://github.com/code198x/docs/issues/78).
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to

@@ -1,0 +1,131 @@
+{
+  "docs_revision": "e2dc71b59be99a1bf0eabb932306a2fe91467e27",
+  "records": [
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md",
+      "title": "Stored-value pilot: first evidence pass",
+      "sha256": "c276dfa0a3cf3c8b119c7811acf459790385c6d28e30cbc70436fdcfae955838"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-decisions-boundary-pilot/REPORT.md",
+      "title": "Decisions and boundaries: second pilot evidence pass",
+      "sha256": "f05434f75aba8385e98868e301067878706a7341964ca1798f136724a863a788"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-repetition-pilot/REPORT.md",
+      "title": "Loops and repetition: third pilot evidence pass",
+      "sha256": "99b2dabfe8f4df47cc35bb5658a38e77742a8f6d6f891954be430182e28a7866"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-numbers-pilot/REPORT.md",
+      "title": "Numbers and representation: fourth bounded pilot",
+      "sha256": "83f686fe4d14718a220dad20be310b35488c43cf154576ecf11e2e55309d9feb"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-bits-shifts-pilot/REPORT.md",
+      "title": "Bits and shifts: fifth bounded pilot",
+      "sha256": "536ca8818d8f910d02d59e3f9f35b981f6fb0e1e00ae655084e7129e607c3224"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-fractions-pilot/REPORT.md",
+      "title": "Fractional representation: sixth bounded pilot",
+      "sha256": "ec32abdfabb9c00e3581dc99a6ba4f3b23b1e4fd235a52ec9ce56b8385119daa"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-character-codes-pilot/REPORT.md",
+      "title": "Character codes pilot: technical checks passed; learner trial pending",
+      "sha256": "596eea19a77ded7b1c8cca484e0b315b515de0a7dd1fb374300d5869e46013bf"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-boolean-logic-pilot/REPORT.md",
+      "title": "Boolean logic pilot: evidence and limits",
+      "sha256": "2298baf73bd43e0ac9a8359fdfbb0e0ea0ec338c6946c743af3feba808de9ce3"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-arithmetic-pilot/REPORT.md",
+      "title": "Working It Out pilot: evidence and limits",
+      "sha256": "91f37d85b288a710d0a1291308676d51d62a73f1c31dc0cbfb3eb6eee78cb410"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-structure-pilot/REPORT.md",
+      "title": "Structure pilot: evidence and limits",
+      "sha256": "6ba6cd2b526719e671dc68f2481168912c78e25569bb70de46f4709fce8619d5"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-binary-hex-pilot/REPORT.md",
+      "title": "Binary and hex pilot: evidence and limits",
+      "sha256": "a9fd5b97acad367b8dca22b165295dff091d8cea4ea053deb961c49d0f6f3298"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-gates-adder-pilot/REPORT.md",
+      "title": "Gates and the Adder pilot: evidence and limits",
+      "sha256": "c1d019286c9fcc44ef29c2d1cf919b47d0de913928a9d7bb761baccfb79bd899"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-source-silicon-pilot/REPORT.md",
+      "title": "From Source to Silicon pilot: evidence and limits",
+      "sha256": "0ed80c87eab5481442b07e722fccb0b2215c9d031e44789772199b619e165d21"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-basics-input-pilot/REPORT.md",
+      "title": "Basics sequence and input pilot: evidence and limits",
+      "sha256": "a72f3323bea09bde2e832ebe31e543ff18fa111f32da2f70851f26a1cbf164a2"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-decisions-state-pilot/REPORT.md",
+      "title": "Decisions chains and saved-state pilot: evidence and limits",
+      "sha256": "13b2b8f3bacd70df9ece8852c7519bf544a4bb6de01fbcfe5072fed6fa732ca5"
+    },
+    {
+      "kind": "bounded-pilot",
+      "path": "audit/2026-10-repetition-progress-pilot/REPORT.md",
+      "title": "Repetition progress and exit pilot: evidence and limits",
+      "sha256": "66a1d59dc0baa5895e455690b3c1dcbb024de8014d5b45054e961a09eeafd504"
+    },
+    {
+      "kind": "supporting",
+      "path": "audit/2026-10-spectrum-learner-journey/REPORT.md",
+      "title": "Spectrum learner journey review",
+      "sha256": "766864fde57b120089290c4983ba4d84648e3519ee28da8c85128273fb6af2cf"
+    },
+    {
+      "kind": "supporting",
+      "path": "audit/2026-10-spectrum-learner-journey/FIXES.md",
+      "title": "Learner journey fixes",
+      "sha256": "1f43b9ed7768ea92413187d826e3909f70c0f46ac035331be942c40bf3b982a9"
+    },
+    {
+      "kind": "supporting",
+      "path": "audit/2026-10-decimal-investigation/REPORT.md",
+      "title": "Spectrum decimal conversion: resolved stock-ROM behaviour",
+      "sha256": "0433b3f00905d9a1661c270296ba11684516452433799923309d168e9b6db644"
+    },
+    {
+      "kind": "supporting",
+      "path": "audit/2026-10-structure-pilot/contrast-follow-up/REPORT.md",
+      "title": "Contrast follow-up",
+      "sha256": "80668717d064cb46113630dd8f773bfe61e58f9c0d5120f169f74d6957a3505d"
+    },
+    {
+      "kind": "supporting",
+      "path": "guides/first-session/PUBLICATION.md",
+      "title": "First session pack publication",
+      "sha256": "980cbfdd21453c766e4066eb135219b43a9983454db5fab929527a2eb8f13c99"
+    }
+  ]
+}

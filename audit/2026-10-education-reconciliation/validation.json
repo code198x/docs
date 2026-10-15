@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "website_revision": "4c9f3bbcb27d1386c3930c17b9745cdcc702ac48",
+  "docs_evidence_revision": "e2dc71b59be99a1bf0eabb932306a2fe91467e27",
+  "reports": 21,
+  "bounded_pilots": 16,
+  "source_files": 61,
+  "foundations_units": 39,
+  "foundations_modules": 10,
+  "maths_units": 11,
+  "parent_snapshots_verified": 3,
+  "followups_verified": 4,
+  "local_links_checked": 81,
+  "negative_controls_rejected": [
+    "empty registry",
+    "wrong hash"
+  ],
+  "runtime_checks_rerun": false,
+  "learner_observations": 0
+}
