@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-15T15:28:24.465Z",
+  "base": "http://127.0.0.1:2015",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/repeating/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [],
+      "tables": [],
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "status": "failed",
+  "failure": "Error: Original universal-loop/attendance claim remains"
+}

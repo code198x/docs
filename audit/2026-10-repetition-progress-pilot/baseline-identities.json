@@ -1,0 +1,17 @@
+[
+  {
+    "file": "src/content/curriculum/foundations/repeating/index.mdx",
+    "baseline_source_sha256": "51eee32088fe6b91912e75dc01925e8f71f52fd58eefef5ce603e4dd174e098d",
+    "preexisting_built_html_sha256": "cf3a664c14ca5a03599f20a50deb89d107ea015e4d73b8a4f25e54f8a701bb52"
+  },
+  {
+    "file": "src/content/curriculum/foundations/repeating/unit-02.mdx",
+    "baseline_source_sha256": "a9dafb7e547a64395692e76a9b39673d7555952ff19c4fe9a65f408758372809",
+    "preexisting_built_html_sha256": "88874055b176baf00b4da9fe79cbf7e5edad49c3673de04970313c5c61e260fe"
+  },
+  {
+    "file": "src/content/curriculum/foundations/repeating/unit-03.mdx",
+    "baseline_source_sha256": "eee01342ba64f37edcb671f7ad9b418222615647c4ee52d89cdd49416b25614c",
+    "preexisting_built_html_sha256": "d8606513cfb95f5a45afe1b26dfae0faa6ad80aade5e8ef524310bf2d2d5bfd7"
+  }
+]

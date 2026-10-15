@@ -70,5 +70,6 @@ The right-hand annotations above explain the notation; they are not program text
 - `BIN` and `HEX` mark the base of a numeric literal; they do not allocate storage or choose its width. Leading zeros preserve the value. State unsigned/signed interpretation and a chosen field width before making storage-range claims.
 - `CODE` and `CHARACTER` examples must name the character encoding where it matters. Character codes are not universal across machines.
 - Block `IF`, `FOR`, `WHILE` and `DEFINE` close with `END`; `REPEAT` closes with `UNTIL`. Indent bodies. Do not infer BASIC line numbers or syntax from familiar keywords.
+- For loops intended to finish, distinguish a reachable exit from guaranteed completion. State the starting domain, progress or external event, and relevant update/reset order. A guard used to bound an audit run is intervention, not evidence that the original loop terminates naturally.
 
 The grammar being available does not establish which constructs have been taught. Read the actual lesson before relying on its coverage. See [Curriculum design](curriculum.md) and [Unit guidance](unit.md).

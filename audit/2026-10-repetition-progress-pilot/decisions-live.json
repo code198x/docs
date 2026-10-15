@@ -1,0 +1,280 @@
+{
+  "date": "2026-10-15T15:30:54.617Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/decisions/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [],
+      "tables": [],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/decisions/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "Guess my number? 4\nNot this time",
+        "Guess my number? 4\nToo low"
+      ],
+      "tables": [
+        [
+          [
+            "49",
+            "Keep trying",
+            "Done"
+          ],
+          [
+            "50",
+            "Pass",
+            "Done"
+          ],
+          [
+            "79",
+            "Pass",
+            "Done"
+          ],
+          [
+            "80",
+            "High score",
+            "Done"
+          ],
+          [
+            "81",
+            "High score",
+            "Done"
+          ]
+        ]
+      ],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/decisions/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "Still going",
+        "Guess my number? 4\nToo low",
+        "Game over"
+      ],
+      "tables": [
+        [
+          [
+            "Set guess to 4",
+            "4",
+            "not assigned"
+          ],
+          [
+            "Save guess < 7",
+            "4",
+            "TRUE"
+          ],
+          [
+            "Set guess to 9",
+            "9",
+            "TRUE"
+          ],
+          [
+            "Assign tooLow = guess < 7 again",
+            "9",
+            "FALSE"
+          ]
+        ]
+      ],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/decisions/",
+      "width": 390,
+      "status": 200,
+      "outputs": [],
+      "tables": [],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/decisions/unit-02/",
+      "width": 390,
+      "status": 200,
+      "outputs": [
+        "Guess my number? 4\nNot this time",
+        "Guess my number? 4\nToo low"
+      ],
+      "tables": [
+        [
+          [
+            "49",
+            "Keep trying",
+            "Done"
+          ],
+          [
+            "50",
+            "Pass",
+            "Done"
+          ],
+          [
+            "79",
+            "Pass",
+            "Done"
+          ],
+          [
+            "80",
+            "High score",
+            "Done"
+          ],
+          [
+            "81",
+            "High score",
+            "Done"
+          ]
+        ]
+      ],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/decisions/unit-03/",
+      "width": 390,
+      "status": 200,
+      "outputs": [
+        "Still going",
+        "Guess my number? 4\nToo low",
+        "Game over"
+      ],
+      "tables": [
+        [
+          [
+            "Set guess to 4",
+            "4",
+            "not assigned"
+          ],
+          [
+            "Save guess < 7",
+            "4",
+            "TRUE"
+          ],
+          [
+            "Set guess to 9",
+            "9",
+            "TRUE"
+          ],
+          [
+            "Assign tooLow = guess < 7 again",
+            "9",
+            "FALSE"
+          ]
+        ]
+      ],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "div[data-label=\"Code, listing 4 of 5\"] > pre > code > .ll-line:nth-child(3) > .ll-text"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ]
+        }
+      ],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check": "optional support link and Back by keyboard",
+      "target": "/foundations/basics/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional support link and Back by keyboard",
+      "target": "/foundations/working-it-out/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "visible prediction and keyboard explanation",
+      "route": "/foundations/decisions/unit-02/",
+      "index": 0,
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "visible prediction and keyboard explanation",
+      "route": "/foundations/decisions/unit-03/",
+      "index": 0,
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "visible prediction and keyboard explanation",
+      "route": "/foundations/decisions/unit-03/",
+      "index": 1,
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional support link and Back by keyboard",
+      "target": "/foundations/basics/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional support link and Back by keyboard",
+      "target": "/foundations/working-it-out/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "visible prediction and keyboard explanation",
+      "route": "/foundations/decisions/unit-02/",
+      "index": 0,
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "visible prediction and keyboard explanation",
+      "route": "/foundations/decisions/unit-03/",
+      "index": 0,
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "visible prediction and keyboard explanation",
+      "route": "/foundations/decisions/unit-03/",
+      "index": 1,
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

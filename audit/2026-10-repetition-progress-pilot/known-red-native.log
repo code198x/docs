@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/private/tmp/198x-repeat-docs/audit/2026-10-repetition-progress-pilot/verify-progress.py", line 102, in <module>
+    main()
+    ~~~~^^
+  File "/private/tmp/198x-repeat-docs/audit/2026-10-repetition-progress-pilot/verify-progress.py", line 87, in main
+    raise AssertionError('Expected natural progress differs: ' + repr(row))
+AssertionError: Expected natural progress differs: {'kind': 'missing', 'initial': 3, 'completion': 'Guard', 'passes': 4, 'final_lives': 3, 'actual_trace': [3, 3, 3, 3], 'rows': ['Guard 4,3', 'End', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0 OK, 120:1']}
