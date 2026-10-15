@@ -1,0 +1,5 @@
+10 LET n$="ONE"
+20 PRINT n$
+30 PRINT n$
+40 LET n$="TWO"
+50 PRINT n$
