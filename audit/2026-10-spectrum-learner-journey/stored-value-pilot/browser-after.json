@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-15T08:39:18.998Z",
+  "base": "http://127.0.0.1:1994",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "os": "darwin",
+  "pages": [
+    {
+      "route": "/foundations/basics/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:1994/foundations/basics/unit-03/",
+      "title": "Showing Your Work",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Text, or a value",
+          "href": "#text-or-a-value"
+        },
+        {
+          "text": "Joining text to a value",
+          "href": "#joining-text-to-a-value"
+        },
+        {
+          "text": "When it’s wrong, see why",
+          "href": "#when-its-wrong-see-why"
+        },
+        {
+          "text": "What you’ve learnt",
+          "href": "#what-youve-learnt"
+        },
+        {
+          "text": "What’s next",
+          "href": "#whats-next"
+        },
+        {
+          "text": "Previous unitOne Thing After Another",
+          "href": "/foundations/basics/unit-02/"
+        },
+        {
+          "text": "Primer overviewBasics",
+          "href": "/foundations/basics"
+        },
+        {
+          "text": "Next unitA Place to Remember",
+          "href": "/foundations/basics/unit-04/"
+        }
+      ]
+    },
+    {
+      "route": "/foundations/basics/unit-04/",
+      "width": 1440,
+      "status": 200,
+      "url": "http://127.0.0.1:1994/foundations/basics/unit-04/",
+      "title": "A Place to Remember",
+      "overflow": false,
+      "links": [
+        {
+          "text": "storing and changing a greeting in Sinclair BASIC",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/"
+        },
+        {
+          "text": "A named box",
+          "href": "#a-named-box"
+        },
+        {
+          "text": "Change the box, keep the name",
+          "href": "#change-the-box-keep-the-name"
+        },
+        {
+          "text": "When it’s wrong, see why",
+          "href": "#when-its-wrong-see-why"
+        },
+        {
+          "text": "What you’ve learnt",
+          "href": "#what-youve-learnt"
+        },
+        {
+          "text": "What’s next",
+          "href": "#whats-next"
+        },
+        {
+          "text": "Previous unitShowing Your Work",
+          "href": "/foundations/basics/unit-03/"
+        },
+        {
+          "text": "Primer overviewBasics",
+          "href": "/foundations/basics"
+        },
+        {
+          "text": "Next unitAsking the Player",
+          "href": "/foundations/basics/unit-05/"
+        }
+      ]
+    },
+    {
+      "route": "/foundations/basics/unit-03/",
+      "width": 390,
+      "status": 200,
+      "url": "http://127.0.0.1:1994/foundations/basics/unit-03/",
+      "title": "Showing Your Work",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Text, or a value",
+          "href": "#text-or-a-value"
+        },
+        {
+          "text": "Joining text to a value",
+          "href": "#joining-text-to-a-value"
+        },
+        {
+          "text": "When it’s wrong, see why",
+          "href": "#when-its-wrong-see-why"
+        },
+        {
+          "text": "What you’ve learnt",
+          "href": "#what-youve-learnt"
+        },
+        {
+          "text": "What’s next",
+          "href": "#whats-next"
+        },
+        {
+          "text": "Previous unitOne Thing After Another",
+          "href": "/foundations/basics/unit-02/"
+        },
+        {
+          "text": "Primer overviewBasics",
+          "href": "/foundations/basics"
+        },
+        {
+          "text": "Next unitA Place to Remember",
+          "href": "/foundations/basics/unit-04/"
+        }
+      ]
+    },
+    {
+      "route": "/foundations/basics/unit-04/",
+      "width": 390,
+      "status": 200,
+      "url": "http://127.0.0.1:1994/foundations/basics/unit-04/",
+      "title": "A Place to Remember",
+      "overflow": false,
+      "links": [
+        {
+          "text": "storing and changing a greeting in Sinclair BASIC",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/"
+        },
+        {
+          "text": "A named box",
+          "href": "#a-named-box"
+        },
+        {
+          "text": "Change the box, keep the name",
+          "href": "#change-the-box-keep-the-name"
+        },
+        {
+          "text": "When it’s wrong, see why",
+          "href": "#when-its-wrong-see-why"
+        },
+        {
+          "text": "What you’ve learnt",
+          "href": "#what-youve-learnt"
+        },
+        {
+          "text": "What’s next",
+          "href": "#whats-next"
+        },
+        {
+          "text": "Previous unitShowing Your Work",
+          "href": "/foundations/basics/unit-03/"
+        },
+        {
+          "text": "Primer overviewBasics",
+          "href": "/foundations/basics"
+        },
+        {
+          "text": "Next unitAsking the Player",
+          "href": "/foundations/basics/unit-05/"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check": "automated accessibility of main content",
+      "route": "/foundations/basics/unit-04/",
+      "width": 1440,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "check": "output does not consume stored value wording",
+      "width": 1440,
+      "oldClaimPresent": false
+    },
+    {
+      "check": "automated accessibility of main content",
+      "route": "/foundations/basics/unit-04/",
+      "width": 390,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "check": "output does not consume stored value wording",
+      "width": 390,
+      "oldClaimPresent": false
+    },
+    {
+      "check": "prediction answer starts closed; keyboard opens three output lines and five trace rows",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

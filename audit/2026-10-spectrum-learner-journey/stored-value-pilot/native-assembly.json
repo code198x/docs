@@ -1,0 +1,17 @@
+{
+  "target": "stock 48K PAL",
+  "asm198x_version": "asm198x v0.0.64",
+  "pasmo_banner": "PasmoNext v0.1.3 (PC) (C) 2004-2005 Julian Albo",
+  "pasmo_sha256": "e9628f5c32f3c74a963c649781e6cb87e9eaeb4bbfe7b52d3de27f4986bbf136",
+  "emulator_sha256": "51fe786fb9cec0b552b67125abc11e28f062f6105cb75fb01b923cffbcd81f89",
+  "checks": [
+    {
+      "source": "one-byte.asm",
+      "source_sha256": "454323ccc71b89ef174160c9c257008b8a36ff2dfc87a52c97bb736000a2ab77",
+      "code_sha256": "c5e6f0488ce6bf502e30bf855115ea7c714371d115e813a2aca25182f3ac7f58",
+      "code_bytes": 18,
+      "native_and_pasmo_equal": true,
+      "both_fresh_tapes_executed": true
+    }
+  ]
+}

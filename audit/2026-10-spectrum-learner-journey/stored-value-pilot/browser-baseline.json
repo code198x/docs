@@ -1,0 +1,3813 @@
+{
+  "date": "2026-10-15T08:35:19.350Z",
+  "base": "https://code198x.com",
+  "phase": "baseline",
+  "browser": "155.0.8059.40",
+  "os": "darwin",
+  "pages": [
+    {
+      "route": "/start-here/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/start-here/",
+      "title": "Start Here.",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Make a game",
+          "href": "#make-game"
+        },
+        {
+          "text": "Explore programming ideas",
+          "href": "#programming"
+        },
+        {
+          "text": "Understand how programs run",
+          "href": "#programs-run"
+        },
+        {
+          "text": "Explore game-making ideas",
+          "href": "#craft"
+        },
+        {
+          "text": "Explore computing history",
+          "href": "#history"
+        },
+        {
+          "text": "Parents and teachers",
+          "href": "#teaching"
+        },
+        {
+          "text": "Foundations",
+          "href": "/foundations/"
+        },
+        {
+          "text": "Find a system with lessons",
+          "href": "/systems/"
+        },
+        {
+          "text": "Foundations",
+          "href": "/foundations/"
+        },
+        {
+          "text": "Explore The Basics",
+          "href": "/foundations/basics"
+        },
+        {
+          "text": "From the Metal",
+          "href": "/from-the-metal"
+        },
+        {
+          "text": "Read the programming essays",
+          "href": "/from-the-metal"
+        },
+        {
+          "text": "The Craft",
+          "href": "/craft"
+        },
+        {
+          "text": "Maths for Games",
+          "href": "/craft/maths-for-games"
+        },
+        {
+          "text": "Game Feel",
+          "href": "/craft/game-feel"
+        },
+        {
+          "text": "Explore The Craft",
+          "href": "/craft"
+        },
+        {
+          "text": "The Vault",
+          "href": "/vault"
+        },
+        {
+          "text": "Browse the encyclopaedia",
+          "href": "/vault"
+        },
+        {
+          "text": "Read the teaching guide",
+          "href": "/teaching"
+        },
+        {
+          "text": "Explore the curriculum map",
+          "href": "/curriculum"
+        },
+        {
+          "text": "read the longer story",
+          "href": "/about"
+        },
+        {
+          "text": "help build what is missing",
+          "href": "/contribute"
+        }
+      ]
+    },
+    {
+      "route": "/foundations/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/foundations/",
+      "title": "The Ideas EveryMachine Shares.",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Start with The Basics →",
+          "href": "/foundations/basics/"
+        },
+        {
+          "text": "Programming",
+          "href": "#group-programming"
+        },
+        {
+          "text": "Numbers",
+          "href": "#group-numbers"
+        },
+        {
+          "text": "The machine underneath",
+          "href": "#group-machine"
+        },
+        {
+          "text": "Read A Program Is Instructions",
+          "href": "/foundations/basics/unit-01/"
+        },
+        {
+          "text": "The BasicsWhat a program is, before any machine or language: instructions in order, a way to show th",
+          "href": "/foundations/basics"
+        },
+        {
+          "text": "Working It OutThe computer does arithmetic on values it did not have when you wrote the program, gro",
+          "href": "/foundations/working-it-out"
+        },
+        {
+          "text": "DecisionsA program that reacts: test a value, choose between paths, keep a yes or no in a box, and j",
+          "href": "/foundations/decisions"
+        },
+        {
+          "text": "RepeatingThree kinds of loop: a set number of times, until something happens, and only while somethi",
+          "href": "/foundations/repeating"
+        },
+        {
+          "text": "StructureLists, jobs with names, jobs that take a value and hand one back, and the one skill that se",
+          "href": "/foundations/structure"
+        },
+        {
+          "text": "Counting in TwosHow a machine counts: binary, hex, two bytes together, and a minus sign made of noth",
+          "href": "/foundations/counting-in-twos"
+        },
+        {
+          "text": "Working the BitsThe tools that change a byte one switch at a time, slide the whole row, turn a lette",
+          "href": "/foundations/working-the-bits"
+        },
+        {
+          "text": "Truth TablesA way to write down every case a question can have, so you can see that two different-lo",
+          "href": "/foundations/truth-tables"
+        },
+        {
+          "text": "Gates and the AdderThe same truth tables, built out of wire, and then wired into something that adds",
+          "href": "/foundations/gates-and-the-adder"
+        },
+        {
+          "text": "From Source to SiliconHow source becomes instructions, what translation costs, and how to investigat",
+          "href": "/foundations/from-source-to-silicon"
+        },
+        {
+          "text": "Pick a machineEvery computer we teach, and how to choose one →",
+          "href": "/systems"
+        },
+        {
+          "text": "The CraftThe techniques every game needs, whichever machine you pick →",
+          "href": "/craft"
+        }
+      ]
+    },
+    {
+      "route": "/foundations/basics/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/foundations/basics/",
+      "title": "The Basics.",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Begin A Program Is Instructions",
+          "href": "/foundations/basics/unit-01"
+        },
+        {
+          "text": "Explore the five lessons",
+          "href": "#module-lessons"
+        },
+        {
+          "text": "01A Program Is InstructionsStart →",
+          "href": "/foundations/basics/unit-01"
+        },
+        {
+          "text": "02One Thing After AnotherStart →",
+          "href": "/foundations/basics/unit-02"
+        },
+        {
+          "text": "03Showing Your WorkStart →",
+          "href": "/foundations/basics/unit-03"
+        },
+        {
+          "text": "04A Place to RememberStart →",
+          "href": "/foundations/basics/unit-04"
+        },
+        {
+          "text": "05Asking the PlayerStart →",
+          "href": "/foundations/basics/unit-05"
+        }
+      ]
+    },
+    {
+      "route": "/foundations/basics/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/foundations/basics/unit-03/",
+      "title": "Showing Your Work",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Text, or a value",
+          "href": "#text-or-a-value"
+        },
+        {
+          "text": "Joining text to a value",
+          "href": "#joining-text-to-a-value"
+        },
+        {
+          "text": "When it’s wrong, see why",
+          "href": "#when-its-wrong-see-why"
+        },
+        {
+          "text": "What you’ve learnt",
+          "href": "#what-youve-learnt"
+        },
+        {
+          "text": "What’s next",
+          "href": "#whats-next"
+        },
+        {
+          "text": "Previous unitOne Thing After Another",
+          "href": "/foundations/basics/unit-02/"
+        },
+        {
+          "text": "Primer overviewBasics",
+          "href": "/foundations/basics"
+        },
+        {
+          "text": "Next unitA Place to Remember",
+          "href": "/foundations/basics/unit-04/"
+        }
+      ]
+    },
+    {
+      "route": "/foundations/basics/unit-04/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/foundations/basics/unit-04/",
+      "title": "A Place to Remember",
+      "overflow": false,
+      "links": [
+        {
+          "text": "storing and changing a greeting in Sinclair BASIC",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/"
+        },
+        {
+          "text": "A named box",
+          "href": "#a-named-box"
+        },
+        {
+          "text": "Change the box, keep the name",
+          "href": "#change-the-box-keep-the-name"
+        },
+        {
+          "text": "When it’s wrong, see why",
+          "href": "#when-its-wrong-see-why"
+        },
+        {
+          "text": "What you’ve learnt",
+          "href": "#what-youve-learnt"
+        },
+        {
+          "text": "What’s next",
+          "href": "#whats-next"
+        },
+        {
+          "text": "Previous unitShowing Your Work",
+          "href": "/foundations/basics/unit-03/"
+        },
+        {
+          "text": "Primer overviewBasics",
+          "href": "/foundations/basics"
+        },
+        {
+          "text": "Next unitAsking the Player",
+          "href": "/foundations/basics/unit-05/"
+        }
+      ]
+    },
+    {
+      "route": "/systems/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/systems/",
+      "title": "Choose Your Machine.",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Browse all 159 machines",
+          "href": "#catalogue"
+        },
+        {
+          "text": "Sinclair ZX Spectrum",
+          "href": "/systems/sinclair-zx-spectrum"
+        },
+        {
+          "text": "Sinclair BASIC",
+          "href": "/systems/sinclair-zx-spectrum/basic/"
+        },
+        {
+          "text": "Z80 assembly",
+          "href": "/systems/sinclair-zx-spectrum/assembly/"
+        },
+        {
+          "text": "Choose a Spectrum route →",
+          "href": "/systems/sinclair-zx-spectrum"
+        },
+        {
+          "text": "Evan-Amos",
+          "href": "https://commons.wikimedia.org/wiki/File:Commodore-64-Computer-FR.jpg"
+        },
+        {
+          "text": "Commodore 64",
+          "href": "/systems/commodore-64"
+        },
+        {
+          "text": "Commodore BASIC",
+          "href": "/systems/commodore-64/basic/"
+        },
+        {
+          "text": "6510 assembly",
+          "href": "/systems/commodore-64/assembly/"
+        },
+        {
+          "text": "Choose a C64 route →",
+          "href": "/systems/commodore-64"
+        },
+        {
+          "text": "Sernot / Ubcule",
+          "href": "https://commons.wikimedia.org/wiki/File:Amiga_500_Plus_(white_background).jpg"
+        },
+        {
+          "text": "Commodore Amiga",
+          "href": "/systems/commodore-amiga"
+        },
+        {
+          "text": "AMOS",
+          "href": "/systems/commodore-amiga/amos/"
+        },
+        {
+          "text": "Blitz BASIC",
+          "href": "/systems/commodore-amiga/blitz/"
+        },
+        {
+          "text": "68000 assembly",
+          "href": "/systems/commodore-amiga/assembly/"
+        },
+        {
+          "text": "Choose a Amiga route →",
+          "href": "/systems/commodore-amiga"
+        },
+        {
+          "text": "Evan-Amos",
+          "href": "https://commons.wikimedia.org/wiki/File:NES-Console-Set.jpg"
+        },
+        {
+          "text": "Nintendo Entertainment System",
+          "href": "/systems/nintendo-entertainment-system"
+        },
+        {
+          "text": "6502 assembly",
+          "href": "/systems/nintendo-entertainment-system/assembly/"
+        },
+        {
+          "text": "Choose a NES route →",
+          "href": "/systems/nintendo-entertainment-system"
+        },
+        {
+          "text": "No capture yetAtari STAtari, 1985",
+          "href": "/systems/atari-st"
+        },
+        {
+          "text": "BBC MicroAcorn, 1981",
+          "href": "/systems/bbc-micro"
+        },
+        {
+          "text": "MSXMicrosoft, 1983",
+          "href": "/systems/msx"
+        },
+        {
+          "text": "Amstrad CPCAmstrad, 1984",
+          "href": "/systems/amstrad-cpc"
+        },
+        {
+          "text": "Commodore VIC-20Commodore, 1980",
+          "href": "/systems/commodore-vic-20"
+        },
+        {
+          "text": "Sega Master SystemSega, 1985",
+          "href": "/systems/sega-master-system"
+        },
+        {
+          "text": "By era",
+          "href": "/systems/"
+        },
+        {
+          "text": "By region",
+          "href": "/systems/by-region/"
+        },
+        {
+          "text": "By maker",
+          "href": "/systems/by-maker/"
+        },
+        {
+          "text": "By availability",
+          "href": "/systems/by-tier/"
+        },
+        {
+          "text": "by availability",
+          "href": "/systems/by-tier/"
+        },
+        {
+          "text": "PDP-11959 · Reference / planned",
+          "href": "/systems/dec-pdp-1"
+        },
+        {
+          "text": "PDP-81965 · Reference / planned",
+          "href": "/systems/dec-pdp-8"
+        },
+        {
+          "text": "PDP-101967 · Reference / planned",
+          "href": "/systems/dec-pdp-10"
+        },
+        {
+          "text": "Altair 88001975 · Reference / planned",
+          "href": "/systems/altair-8800"
+        },
+        {
+          "text": "IMSAI 80801975 · Reference / planned",
+          "href": "/systems/imsai-8080"
+        },
+        {
+          "text": "COSMAC ELF1976 · Reference / planned",
+          "href": "/systems/cosmac-elf"
+        },
+        {
+          "text": "Channel F1976 · Reference / planned",
+          "href": "/systems/fairchild-channel-f"
+        },
+        {
+          "text": "KIM-11976 · Reference / planned",
+          "href": "/systems/kim-1"
+        },
+        {
+          "text": "Sol-201976 · Reference / planned",
+          "href": "/systems/processor-tech-sol-20"
+        },
+        {
+          "text": "Apple II1977 · Reference / planned",
+          "href": "/systems/apple-ii"
+        },
+        {
+          "text": "Atari 26001977 · Reference / planned",
+          "href": "/systems/atari-2600"
+        },
+        {
+          "text": "PET1977 · Reference / planned",
+          "href": "/systems/commodore-pet"
+        },
+        {
+          "text": "Compucolor II1977 · Reference / planned",
+          "href": "/systems/compucolor-ii"
+        },
+        {
+          "text": "Heathkit H81977 · Reference / planned",
+          "href": "/systems/heathkit-h8"
+        },
+        {
+          "text": "Nascom1977 · Reference / planned",
+          "href": "/systems/nascom"
+        },
+        {
+          "text": "ELF II1977 · Reference / planned",
+          "href": "/systems/netronics-elf-ii"
+        },
+        {
+          "text": "Ohio Scientific1977 · Reference / planned",
+          "href": "/systems/ohio-scientific"
+        },
+        {
+          "text": "Studio II1977 · Reference / planned",
+          "href": "/systems/rca-studio-ii"
+        },
+        {
+          "text": "TRS-801977 · Reference / planned",
+          "href": "/systems/trs-80"
+        },
+        {
+          "text": "AIM-651978 · Reference / planned",
+          "href": "/systems/aim-65"
+        },
+        {
+          "text": "Astrocade1978 · Reference / planned",
+          "href": "/systems/bally-astrocade"
+        },
+        {
+          "text": "Sorcerer1978 · Reference / planned",
+          "href": "/systems/exidy-sorcerer"
+        },
+        {
+          "text": "Interact1978 · Reference / planned",
+          "href": "/systems/interact"
+        },
+        {
+          "text": "Odyssey²1978 · Reference / planned",
+          "href": "/systems/magnavox-odyssey2"
+        },
+        {
+          "text": "MZ1978 · Reference / planned",
+          "href": "/systems/sharp-mz"
+        },
+        {
+          "text": "SYM-11978 · Reference / planned",
+          "href": "/systems/sym-1"
+        },
+        {
+          "text": "Acorn System1979 · Reference / planned",
+          "href": "/systems/acorn-system"
+        },
+        {
+          "text": "Atari 8001979 · Reference / planned",
+          "href": "/systems/atari-800"
+        },
+        {
+          "text": "Intellivision1979 · Reference / planned",
+          "href": "/systems/intellivision"
+        },
+        {
+          "text": "Microtan 651979 · Reference / planned",
+          "href": "/systems/tangerine-microtan-65"
+        },
+        {
+          "text": "Atom1980 · Reference / planned",
+          "href": "/systems/acorn-atom"
+        },
+        {
+          "text": "VIC-201980 · Next",
+          "href": "/systems/commodore-vic-20"
+        },
+        {
+          "text": "DAI1980 · Reference / planned",
+          "href": "/systems/dai"
+        },
+        {
+          "text": "P20001980 · Reference / planned",
+          "href": "/systems/philips-p2000"
+        },
+        {
+          "text": "ZX801980 · Reference / planned",
+          "href": "/systems/sinclair-zx80"
+        },
+        {
+          "text": "CoCo1980 · Reference / planned",
+          "href": "/systems/tandy-coco"
+        },
+        {
+          "text": "Pegasus1981 · Reference / planned",
+          "href": "/systems/aamber-pegasus"
+        },
+        {
+          "text": "BBC Micro1981 · Next",
+          "href": "/systems/bbc-micro"
+        },
+        {
+          "text": "IBM PC1981 · Reference / planned",
+          "href": "/systems/ibm-pc"
+        },
+        {
+          "text": "MPF-I1981 · Reference / planned",
+          "href": "/systems/multitech-mpf-1"
+        },
+        {
+          "text": "PC-60011981 · Reference / planned",
+          "href": "/systems/nec-pc-6001"
+        },
+        {
+          "text": "PC-881981 · Reference / planned",
+          "href": "/systems/nec-pc-88"
+        },
+        {
+          "text": "ZX811981 · Reference / planned",
+          "href": "/systems/sinclair-zx81"
+        },
+        {
+          "text": "TI-99/4A1981 · Reference / planned",
+          "href": "/systems/ti-99-4a"
+        },
+        {
+          "text": "Atari 52001982 · Reference / planned",
+          "href": "/systems/atari-5200"
+        },
+        {
+          "text": "ColecoVision1982 · Reference / planned",
+          "href": "/systems/colecovision"
+        },
+        {
+          "text": "Colour Genie1982 · Reference / planned",
+          "href": "/systems/colour-genie-eg2000"
+        },
+        {
+          "text": "C641982 · Lessons",
+          "href": "/systems/commodore-64"
+        },
+        {
+          "text": "Dragon1982 · Reference / planned",
+          "href": "/systems/dragon-32"
+        },
+        {
+          "text": "FM-71982 · Reference / planned",
+          "href": "/systems/fujitsu-fm-7"
+        },
+        {
+          "text": "NewBrain1982 · Reference / planned",
+          "href": "/systems/grundy-newbrain"
+        },
+        {
+          "text": "HT-1080Z1982 · Reference / planned",
+          "href": "/systems/ht-1080z"
+        },
+        {
+          "text": "Jupiter Ace1982 · Reference / planned",
+          "href": "/systems/jupiter-ace"
+        },
+        {
+          "text": "MicroBee1982 · Reference / planned",
+          "href": "/systems/microbee"
+        },
+        {
+          "text": "NABU1982 · Reference / planned",
+          "href": "/systems/nabu-pc"
+        },
+        {
+          "text": "PC-981982 · Reference / planned",
+          "href": "/systems/nec-pc-98"
+        },
+        {
+          "text": "Pravetz 81982 · Reference / planned",
+          "href": "/systems/pravetz-8"
+        },
+        {
+          "text": "SPC1982 · Reference / planned",
+          "href": "/systems/samsung-spc"
+        },
+        {
+          "text": "X11982 · Reference / planned",
+          "href": "/systems/sharp-x1"
+        },
+        {
+          "text": "Spectrum1982 · Lessons",
+          "href": "/systems/sinclair-zx-spectrum"
+        },
+        {
+          "text": "M51982 · Reference / planned",
+          "href": "/systems/sord-m5"
+        },
+        {
+          "text": "Tutor1982 · Reference / planned",
+          "href": "/systems/tomy-tutor"
+        },
+        {
+          "text": "Vectrex1982 · Reference / planned",
+          "href": "/systems/vectrex"
+        },
+        {
+          "text": "Electron1983 · Reference / planned",
+          "href": "/systems/acorn-electron"
+        },
+        {
+          "text": "RX-781983 · Reference / planned",
+          "href": "/systems/bandai-rx-78"
+        },
+        {
+          "text": "Lynx1983 · Reference / planned",
+          "href": "/systems/camputers-lynx"
+        },
+        {
+          "text": "PV-20001983 · Reference / planned",
+          "href": "/systems/casio-pv-2000"
+        },
+        {
+          "text": "Adam1983 · Reference / planned",
+          "href": "/systems/coleco-adam"
+        },
+        {
+          "text": "Alice1983 · Reference / planned",
+          "href": "/systems/matra-alice"
+        },
+        {
+          "text": "Aquarius1983 · Reference / planned",
+          "href": "/systems/mattel-aquarius"
+        },
+        {
+          "text": "MTX1983 · Reference / planned",
+          "href": "/systems/memotech-mtx"
+        },
+        {
+          "text": "Meritum1983 · Reference / planned",
+          "href": "/systems/meritum"
+        },
+        {
+          "text": "Hector1983 · Reference / planned",
+          "href": "/systems/micronique-hector"
+        },
+        {
+          "text": "MSX1983 · Next",
+          "href": "/systems/msx"
+        },
+        {
+          "text": "NES1983 · Lessons",
+          "href": "/systems/nintendo-entertainment-system"
+        },
+        {
+          "text": "SC-30001983 · Reference / planned",
+          "href": "/systems/sega-sc-3000"
+        },
+        {
+          "text": "SG-10001983 · Reference / planned",
+          "href": "/systems/sega-sg-1000"
+        },
+        {
+          "text": "SVI-3281983 · Reference / planned",
+          "href": "/systems/spectravideo-svi-328"
+        },
+        {
+          "text": "TS20681983 · Reference / planned",
+          "href": "/systems/timex-ts2068"
+        },
+        {
+          "text": "MC-101983 · Reference / planned",
+          "href": "/systems/trs-80-mc-10"
+        },
+        {
+          "text": "Model 1001983 · Reference / planned",
+          "href": "/systems/trs-80-model-100"
+        },
+        {
+          "text": "Laser1983 · Reference / planned",
+          "href": "/systems/vtech-laser"
+        },
+        {
+          "text": "Amstrad CPC1984 · Next",
+          "href": "/systems/amstrad-cpc"
+        },
+        {
+          "text": "Plus/41984 · Reference / planned",
+          "href": "/systems/commodore-plus4"
+        },
+        {
+          "text": "Mac1984 · Reference / planned",
+          "href": "/systems/macintosh"
+        },
+        {
+          "text": "NDR-Klein1984 · Reference / planned",
+          "href": "/systems/ndr-klein-computer"
+        },
+        {
+          "text": "Oric1984 · Reference / planned",
+          "href": "/systems/oric-atmos"
+        },
+        {
+          "text": "VG-50001984 · Reference / planned",
+          "href": "/systems/philips-vg-5000"
+        },
+        {
+          "text": "Primo1984 · Reference / planned",
+          "href": "/systems/primo"
+        },
+        {
+          "text": "KC851984 · Reference / planned",
+          "href": "/systems/robotron-kc85"
+        },
+        {
+          "text": "QL1984 · Reference / planned",
+          "href": "/systems/sinclair-ql"
+        },
+        {
+          "text": "Squale1984 · Reference / planned",
+          "href": "/systems/squale"
+        },
+        {
+          "text": "Tandy 10001984 · Reference / planned",
+          "href": "/systems/tandy-1000"
+        },
+        {
+          "text": "Einstein1984 · Reference / planned",
+          "href": "/systems/tatung-einstein"
+        },
+        {
+          "text": "Thomson MO51984 · Reference / planned",
+          "href": "/systems/thomson-mo5"
+        },
+        {
+          "text": "TC20481984 · Reference / planned",
+          "href": "/systems/timex-tc2048"
+        },
+        {
+          "text": "PCW1985 · Reference / planned",
+          "href": "/systems/amstrad-pcw"
+        },
+        {
+          "text": "Atari ST1985 · Next",
+          "href": "/systems/atari-st"
+        },
+        {
+          "text": "C1281985 · Reference / planned",
+          "href": "/systems/commodore-128"
+        },
+        {
+          "text": "Amiga1985 · Lessons",
+          "href": "/systems/commodore-amiga"
+        },
+        {
+          "text": "Zemmix1985 · Reference / planned",
+          "href": "/systems/daewoo-zemmix"
+        },
+        {
+          "text": "Enterprise1985 · Reference / planned",
+          "href": "/systems/enterprise"
+        },
+        {
+          "text": "IQ 1511985 · Reference / planned",
+          "href": "/systems/iq-151"
+        },
+        {
+          "text": "Ondra1985 · Reference / planned",
+          "href": "/systems/ondra"
+        },
+        {
+          "text": "PMD 851985 · Reference / planned",
+          "href": "/systems/pmd-85"
+        },
+        {
+          "text": "Pravetz 8D1985 · Reference / planned",
+          "href": "/systems/pravetz-8d"
+        },
+        {
+          "text": "Master System1985 · Next",
+          "href": "/systems/sega-master-system"
+        },
+        {
+          "text": "Z10131985 · Reference / planned",
+          "href": "/systems/z1013"
+        },
+        {
+          "text": "IIGS1986 · Reference / planned",
+          "href": "/systems/apple-iigs"
+        },
+        {
+          "text": "Atari 78001986 · Reference / planned",
+          "href": "/systems/atari-7800"
+        },
+        {
+          "text": "Elwro 8001986 · Reference / planned",
+          "href": "/systems/elwro-800-junior"
+        },
+        {
+          "text": "Prodest PC1281986 · Reference / planned",
+          "href": "/systems/olivetti-prodest-pc128"
+        },
+        {
+          "text": "Radio-86RK1986 · Reference / planned",
+          "href": "/systems/radio-86rk"
+        },
+        {
+          "text": "TVC1986 · Reference / planned",
+          "href": "/systems/videoton-tvc"
+        },
+        {
+          "text": "Archimedes1987 · Reference / planned",
+          "href": "/systems/acorn-archimedes"
+        },
+        {
+          "text": "Didaktik1987 · Reference / planned",
+          "href": "/systems/didaktik"
+        },
+        {
+          "text": "Mikrosha1987 · Reference / planned",
+          "href": "/systems/mikrosha"
+        },
+        {
+          "text": "PC Engine1987 · Reference / planned",
+          "href": "/systems/pc-engine"
+        },
+        {
+          "text": "X680001987 · Reference / planned",
+          "href": "/systems/sharp-x68000"
+        },
+        {
+          "text": "Specialist1987 · Reference / planned",
+          "href": "/systems/specialist"
+        },
+        {
+          "text": "Vector-06C1987 · Reference / planned",
+          "href": "/systems/vector-06c"
+        },
+        {
+          "text": "Apogey1988 · Reference / planned",
+          "href": "/systems/apogey-bk-01"
+        },
+        {
+          "text": "Korvet1988 · Reference / planned",
+          "href": "/systems/korvet-pk8020"
+        },
+        {
+          "text": "Mega Drive1988 · Reference / planned",
+          "href": "/systems/sega-mega-drive"
+        },
+        {
+          "text": "Lynx1989 · Reference / planned",
+          "href": "/systems/atari-lynx"
+        },
+        {
+          "text": "FM Towns1989 · Reference / planned",
+          "href": "/systems/fm-towns"
+        },
+        {
+          "text": "Game Boy1989 · Reference / planned",
+          "href": "/systems/game-boy"
+        },
+        {
+          "text": "Pentagon1989 · Reference / planned",
+          "href": "/systems/pentagon-128"
+        },
+        {
+          "text": "SAM Coupé1989 · Reference / planned",
+          "href": "/systems/sam-coupe"
+        },
+        {
+          "text": "CPC Plus1990 · Reference / planned",
+          "href": "/systems/amstrad-cpc-plus"
+        },
+        {
+          "text": "GX40001990 · Reference / planned",
+          "href": "/systems/gx4000"
+        },
+        {
+          "text": "Hobbit1990 · Reference / planned",
+          "href": "/systems/hobbit"
+        },
+        {
+          "text": "turbo R1990 · Reference / planned",
+          "href": "/systems/msx-turbo-r"
+        },
+        {
+          "text": "Neo Geo1990 · Reference / planned",
+          "href": "/systems/neo-geo"
+        },
+        {
+          "text": "Orion-1281990 · Reference / planned",
+          "href": "/systems/orion-128"
+        },
+        {
+          "text": "Game Gear1990 · Reference / planned",
+          "href": "/systems/sega-game-gear"
+        },
+        {
+          "text": "SNES1990 · Reference / planned",
+          "href": "/systems/super-nintendo"
+        },
+        {
+          "text": "ATM Turbo1991 · Reference / planned",
+          "href": "/systems/atm-turbo"
+        },
+        {
+          "text": "CDTV1991 · Reference / planned",
+          "href": "/systems/commodore-cdtv"
+        },
+        {
+          "text": "CD-i1991 · Reference / planned",
+          "href": "/systems/philips-cd-i"
+        },
+        {
+          "text": "Scorpion1991 · Reference / planned",
+          "href": "/systems/scorpion-zs256"
+        },
+        {
+          "text": "Mega CD1991 · Reference / planned",
+          "href": "/systems/sega-mega-cd"
+        },
+        {
+          "text": "3DO1993 · Reference / planned",
+          "href": "/systems/3do"
+        },
+        {
+          "text": "Aleste1993 · Reference / planned",
+          "href": "/systems/aleste-520ex"
+        },
+        {
+          "text": "Jaguar1993 · Reference / planned",
+          "href": "/systems/atari-jaguar"
+        },
+        {
+          "text": "PC-FX1994 · Reference / planned",
+          "href": "/systems/nec-pc-fx"
+        },
+        {
+          "text": "32X1994 · Reference / planned",
+          "href": "/systems/sega-32x"
+        },
+        {
+          "text": "Saturn1994 · Reference / planned",
+          "href": "/systems/sega-saturn"
+        },
+        {
+          "text": "PlayStation1994 · Reference / planned",
+          "href": "/systems/sony-playstation"
+        },
+        {
+          "text": "Virtual Boy1995 · Reference / planned",
+          "href": "/systems/nintendo-virtual-boy"
+        },
+        {
+          "text": "N641996 · Reference / planned",
+          "href": "/systems/nintendo-64"
+        },
+        {
+          "text": "Game Boy Color1998 · Reference / planned",
+          "href": "/systems/game-boy-color"
+        },
+        {
+          "text": "Neo Geo Pocket1998 · Reference / planned",
+          "href": "/systems/neo-geo-pocket"
+        },
+        {
+          "text": "Dreamcast1998 · Reference / planned",
+          "href": "/systems/sega-dreamcast"
+        },
+        {
+          "text": "WonderSwan1999 · Reference / planned",
+          "href": "/systems/bandai-wonderswan"
+        },
+        {
+          "text": "NGPC1999 · Reference / planned",
+          "href": "/systems/neo-geo-pocket-color"
+        },
+        {
+          "text": "WonderSwan Color2000 · Reference / planned",
+          "href": "/systems/bandai-wonderswan-color"
+        },
+        {
+          "text": "PS22000 · Reference / planned",
+          "href": "/systems/sony-playstation-2"
+        },
+        {
+          "text": "GBA2001 · Reference / planned",
+          "href": "/systems/game-boy-advance"
+        },
+        {
+          "text": "Explore the curriculum map",
+          "href": "/curriculum/"
+        },
+        {
+          "text": "Help develop the curriculum",
+          "href": "/contribute/"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/",
+      "title": "Sinclair ZX Spectrum",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Choose a language route",
+          "href": "#language-routes"
+        },
+        {
+          "text": "Explore Meteor Storm",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meteor-storm/"
+        },
+        {
+          "text": "Explore Sinclair BASIC",
+          "href": "/systems/sinclair-zx-spectrum/basic"
+        },
+        {
+          "text": "Explore Z80 assembly",
+          "href": "/systems/sinclair-zx-spectrum/assembly"
+        },
+        {
+          "text": "Open the setup guide",
+          "href": "/systems/sinclair-zx-spectrum/getting-started"
+        },
+        {
+          "text": "ZX Spectrum",
+          "href": "/vault/systems/sinclair-zx-spectrum"
+        },
+        {
+          "text": "Designing with attributes",
+          "href": "/vault/techniques/attribute-aware-design"
+        },
+        {
+          "text": "Manic Miner",
+          "href": "/vault/games/manic-miner"
+        },
+        {
+          "text": "CRASH",
+          "href": "/vault/magazines/crash-magazine"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/basic/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/",
+      "title": "Sinclair BASIC",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Foundations",
+          "href": "/foundations"
+        },
+        {
+          "text": "assembly",
+          "href": "/systems/sinclair-zx-spectrum/assembly"
+        },
+        {
+          "text": "Start Meet BASIC →",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic"
+        },
+        {
+          "text": "Meet BASIC lessons",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic"
+        },
+        {
+          "text": "1Meet BASIC · sinclair zx spectrum · basicMeet BASICStories, guessing, a playful oracle and a marker",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic"
+        },
+        {
+          "text": "2Bright Spark · sinclair zx spectrum · basicBright SparkRemember the signals, repeat the order, comp",
+          "href": "/systems/sinclair-zx-spectrum/basic/bright-spark"
+        },
+        {
+          "text": "3Volley · sinclair zx spectrum · basicVolleyKeep the ball in play, then improve how the court is dra",
+          "href": "/systems/sinclair-zx-spectrum/basic/volley"
+        },
+        {
+          "text": "4Touchdown · sinclair zx spectrum · basicTouchdownBrake a fall, steer over a ridge and land gently o",
+          "href": "/systems/sinclair-zx-spectrum/basic/touchdown"
+        },
+        {
+          "text": "5Sonar · sinclair zx spectrum · basicSonarChoose probes, combine clues and discover a hidden objectT",
+          "href": "/systems/sinclair-zx-spectrum/basic/sonar"
+        },
+        {
+          "text": "6Crates · sinclair zx spectrum · basicCratesMake space, plan a push and deliver every crateFour-char",
+          "href": "/systems/sinclair-zx-spectrum/basic/crates"
+        },
+        {
+          "text": "7Locksmith · sinclair zx spectrum · basicLocksmithCombine clues to crack a hidden four-digit codeEdi",
+          "href": "/systems/sinclair-zx-spectrum/basic/locksmith"
+        },
+        {
+          "text": "8Three in a Row · sinclair zx spectrum · basicThree in a RowBuild an opponent and discover what its ",
+          "href": "/systems/sinclair-zx-spectrum/basic/three-in-a-row"
+        },
+        {
+          "text": "9Cipher · sinclair zx spectrum · basicCipherReveal a hidden word and remember what each guess tells ",
+          "href": "/systems/sinclair-zx-spectrum/basic/cipher"
+        },
+        {
+          "text": "10Tail Chase · sinclair zx spectrum · basicTail ChaseSteer a growing snake and leave room for the ne",
+          "href": "/systems/sinclair-zx-spectrum/basic/tail-chase"
+        },
+        {
+          "text": "11Brick Bash · sinclair zx spectrum · basicBrick BashCatch the ball, choose its return and clear the",
+          "href": "/systems/sinclair-zx-spectrum/basic/brick-bash"
+        },
+        {
+          "text": "12Drift · sinclair zx spectrum · basicDriftTurn, thrust and bring a drifting ship gently into dockDi",
+          "href": "/systems/sinclair-zx-spectrum/basic/drift"
+        },
+        {
+          "text": "13Quickstep · sinclair zx spectrum · basicQuickstepRead six lanes of traffic and plan the next gapCy",
+          "href": "/systems/sinclair-zx-spectrum/basic/quickstep"
+        },
+        {
+          "text": "14The Caverns · sinclair zx spectrum · basicThe CavernsRead the clues and bring three treasures home",
+          "href": "/systems/sinclair-zx-spectrum/basic/the-caverns"
+        },
+        {
+          "text": "15Yearfall · sinclair zx spectrum · basicYearfallFeed a settlement and live with the next year's con",
+          "href": "/systems/sinclair-zx-spectrum/basic/yearfall"
+        },
+        {
+          "text": "16Night Patrol · sinclair zx spectrum · basicNight PatrolRead the patrol, use cover and escape with ",
+          "href": "/systems/sinclair-zx-spectrum/basic/night-patrol"
+        },
+        {
+          "text": "Sinclair BASIC reference lessons",
+          "href": "/systems/sinclair-zx-spectrum/basic/basic-reference/"
+        },
+        {
+          "text": "Maths for Games",
+          "href": "/craft/maths-for-games"
+        },
+        {
+          "text": "The Craft",
+          "href": "/craft"
+        },
+        {
+          "text": "Foundations",
+          "href": "/foundations"
+        },
+        {
+          "text": "Z80 assembly",
+          "href": "/systems/sinclair-zx-spectrum/assembly"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/basic/meet-basic/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/",
+      "title": "Meet BASIC",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Start with Make the Spectrum answer →",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer"
+        },
+        {
+          "text": "Browse lessons",
+          "href": "#lessons-title"
+        },
+        {
+          "text": "Foundations",
+          "href": "/foundations/"
+        },
+        {
+          "text": "Remember a name; keep the program",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/"
+        },
+        {
+          "text": "latest release",
+          "href": "https://github.com/emu198x/emu198x/releases/latest"
+        },
+        {
+          "text": "ROM guide",
+          "href": "/setup/roms/"
+        },
+        {
+          "text": "Remember a name; keep the program",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/"
+        },
+        {
+          "text": "Give a useful clue",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-05-give-a-useful-clue/"
+        },
+        {
+          "text": "Keep guessing",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing/"
+        },
+        {
+          "text": "Choose a new secret",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret/"
+        },
+        {
+          "text": "Feedback and another round",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-08-feedback-and-another-round/"
+        },
+        {
+          "text": "Choose an answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-09-choose-an-answer/"
+        },
+        {
+          "text": "Give the answer a rhythm",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-10-give-the-answer-a-rhythm/"
+        },
+        {
+          "text": "Write the repeated job once",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-11-write-the-repeated-job-once/"
+        },
+        {
+          "text": "Put it somewhere",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-12-put-it-somewhere/"
+        },
+        {
+          "text": "Make it move",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-13-make-it-move/"
+        },
+        {
+          "text": "Let the player steer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-14-let-the-player-steer/"
+        },
+        {
+          "text": "One press, one step",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-15-one-press-one-step/"
+        },
+        {
+          "text": "Bright Spark",
+          "href": "/systems/sinclair-zx-spectrum/basic/bright-spark/"
+        },
+        {
+          "text": "Touchdown",
+          "href": "/systems/sinclair-zx-spectrum/basic/touchdown/"
+        },
+        {
+          "text": "BASIC reference lessons",
+          "href": "/systems/sinclair-zx-spectrum/basic/basic-reference/"
+        },
+        {
+          "text": "1Make the Spectrum answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer"
+        },
+        {
+          "text": "2Remember a name; keep the program",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save"
+        },
+        {
+          "text": "3Ask, then use the answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer"
+        },
+        {
+          "text": "4A story worth sharing",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-04-a-story-worth-sharing"
+        },
+        {
+          "text": "5Give a useful clue",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-05-give-a-useful-clue"
+        },
+        {
+          "text": "6Keep guessing",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing"
+        },
+        {
+          "text": "7Choose a new secret",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret"
+        },
+        {
+          "text": "8Feedback and another round",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-08-feedback-and-another-round"
+        },
+        {
+          "text": "9Choose an answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-09-choose-an-answer"
+        },
+        {
+          "text": "10Give the answer a rhythm",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-10-give-the-answer-a-rhythm"
+        },
+        {
+          "text": "11Write the repeated job once",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-11-write-the-repeated-job-once"
+        },
+        {
+          "text": "12Put it somewhere",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-12-put-it-somewhere"
+        },
+        {
+          "text": "13Make it move",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-13-make-it-move"
+        },
+        {
+          "text": "14Let the player steer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-14-let-the-player-steer"
+        },
+        {
+          "text": "15One press, one step",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-15-one-press-one-step"
+        },
+        {
+          "text": "Explore the BASIC track →",
+          "href": "/systems/sinclair-zx-spectrum/basic"
+        },
+        {
+          "text": "Setup guide →",
+          "href": "/systems/sinclair-zx-spectrum/getting-started"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/",
+      "title": "Remember a name; keep the program",
+      "overflow": false,
+      "links": [
+        {
+          "text": "the opening lesson",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/"
+        },
+        {
+          "text": "Meet BASIC overview",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/#use-the-spectrum-in-the-page"
+        },
+        {
+          "text": "Foundations: A Place to Remember",
+          "href": "/foundations/basics/unit-04/"
+        },
+        {
+          "text": "Showing Your Work",
+          "href": "/foundations/basics/unit-03/"
+        },
+        {
+          "text": "Download Emu198x for desktop",
+          "href": "https://emu198x.github.io/downloads/"
+        },
+        {
+          "text": "Download step-03.tap",
+          "href": "/code-samples/sinclair-zx-spectrum/basic/meet-basic/unit-02/step-03.tap"
+        },
+        {
+          "text": "1Make the Spectrum answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/"
+        },
+        {
+          "text": "2Remember a name; keep the program",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/"
+        },
+        {
+          "text": "3Ask, then use the answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer/"
+        },
+        {
+          "text": "4A story worth sharing",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-04-a-story-worth-sharing/"
+        },
+        {
+          "text": "5Give a useful clue",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-05-give-a-useful-clue/"
+        },
+        {
+          "text": "6Keep guessing",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing/"
+        },
+        {
+          "text": "7Choose a new secret",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret/"
+        },
+        {
+          "text": "8Feedback and another round",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-08-feedback-and-another-round/"
+        },
+        {
+          "text": "9Choose an answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-09-choose-an-answer/"
+        },
+        {
+          "text": "10Give the answer a rhythm",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-10-give-the-answer-a-rhythm/"
+        },
+        {
+          "text": "11Write the repeated job once",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-11-write-the-repeated-job-once/"
+        },
+        {
+          "text": "12Put it somewhere",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-12-put-it-somewhere/"
+        },
+        {
+          "text": "13Make it move",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-13-make-it-move/"
+        },
+        {
+          "text": "14Let the player steer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-14-let-the-player-steer/"
+        },
+        {
+          "text": "15One press, one step",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-15-one-press-one-step/"
+        },
+        {
+          "text": "Start with the greeting",
+          "href": "#start-with-the-greeting"
+        },
+        {
+          "text": "Give the name a place",
+          "href": "#give-the-name-a-place"
+        },
+        {
+          "text": "Change the value",
+          "href": "#change-the-value"
+        },
+        {
+          "text": "Keep a copy outside the Spectrum",
+          "href": "#keep-a-copy-outside-the-spectrum"
+        },
+        {
+          "text": "Reopen your saved greeting",
+          "href": "#reopen-your-saved-greeting"
+        },
+        {
+          "text": "Change the recovered program",
+          "href": "#change-the-recovered-program"
+        },
+        {
+          "text": "Previous unitMake the Spectrum answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/"
+        },
+        {
+          "text": "Module overviewMeet BASIC",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic"
+        },
+        {
+          "text": "Next unitAsk, then use the answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer/"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/assembly/",
+      "title": "ZX Spectrum assembly",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Start: Meet Assembly →",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01"
+        },
+        {
+          "text": "Curriculum MapWhere this track sits",
+          "href": "/curriculum"
+        },
+        {
+          "text": "FoundationsProgramming concepts",
+          "href": "/foundations"
+        },
+        {
+          "text": "The CraftGame design",
+          "href": "/craft"
+        },
+        {
+          "text": "Set up local tools →",
+          "href": "/systems/sinclair-zx-spectrum/getting-started"
+        },
+        {
+          "text": "1Meet Assembly · sinclair zx spectrum · assemblyMeet AssemblyMake a prediction, run real Z80 code, a",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly"
+        },
+        {
+          "text": "2Meteor Storm · sinclair zx spectrum · assemblyMeteor StormDodge a drifting storm, collect stars and",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meteor-storm"
+        },
+        {
+          "text": "Meet the Machine experiments",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-the-machine"
+        },
+        {
+          "text": "3Gloaming · sinclair zx spectrum · assemblyGloamingLight every lamp before the dark wins in this att",
+          "href": "/systems/sinclair-zx-spectrum/assembly/gloaming"
+        },
+        {
+          "text": "4The Long Night · sinclair zx spectrum · assemblyThe Long NightThe night fights back — pools of dark",
+          "href": "/systems/sinclair-zx-spectrum/assembly/the-long-night"
+        },
+        {
+          "text": "5Shadowkeep · sinclair zx spectrum · assemblyShadowkeepSteal the gold from a darkened keep, room by ",
+          "href": "/systems/sinclair-zx-spectrum/assembly/shadowkeep"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/assembly/meet-assembly/",
+      "title": "Meet Assembly",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Start with Change the border →",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01"
+        },
+        {
+          "text": "Browse lessons",
+          "href": "#lessons-title"
+        },
+        {
+          "text": "Getting started",
+          "href": "/systems/sinclair-zx-spectrum/getting-started/"
+        },
+        {
+          "text": "Change the border",
+          "href": "./unit-01/"
+        },
+        {
+          "text": "A byte becomes pixels",
+          "href": "./unit-02/"
+        },
+        {
+          "text": "Build an eight-row shape",
+          "href": "./unit-03/"
+        },
+        {
+          "text": "Draw with a counted loop",
+          "href": "./unit-04/"
+        },
+        {
+          "text": "Call a drawing routine",
+          "href": "./unit-05/"
+        },
+        {
+          "text": "Move your character",
+          "href": "./unit-06/"
+        },
+        {
+          "text": "Give movement a clock",
+          "href": "./unit-07/"
+        },
+        {
+          "text": "Find the first wrong step",
+          "href": "./unit-08/"
+        },
+        {
+          "text": "Meteor Storm",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meteor-storm/"
+        },
+        {
+          "text": "1Change the border",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01"
+        },
+        {
+          "text": "2A byte becomes pixels",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02"
+        },
+        {
+          "text": "3Build an eight-row shape",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-03"
+        },
+        {
+          "text": "4Draw with a counted loop",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-04"
+        },
+        {
+          "text": "5Call a drawing routine",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-05"
+        },
+        {
+          "text": "6Move your character",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-06"
+        },
+        {
+          "text": "7Give movement a clock",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-07"
+        },
+        {
+          "text": "8Find the first wrong step",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-08"
+        },
+        {
+          "text": "Explore the Assembly track →",
+          "href": "/systems/sinclair-zx-spectrum/assembly"
+        },
+        {
+          "text": "Setup guide →",
+          "href": "/systems/sinclair-zx-spectrum/getting-started"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/",
+      "title": "A byte becomes pixels",
+      "overflow": false,
+      "links": [
+        {
+          "text": "ZX Spectrum BASIC Programming, chapter 24",
+          "href": "https://worldofspectrum.org/ZXBasicManual/zxmanchap24.html"
+        },
+        {
+          "text": "Z80 CPU User Manual, UM008011-0816",
+          "href": "https://www.zilog.com/docs/z80/um0080.pdf"
+        },
+        {
+          "text": "Pasmo documentation, “Directives”",
+          "href": "https://pasmo.speccy.org/pasmodoc.html"
+        },
+        {
+          "text": "Download one-byte.tap",
+          "href": "/code-samples/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/one-byte.tap"
+        },
+        {
+          "text": "1Change the border",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/"
+        },
+        {
+          "text": "2A byte becomes pixels",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/"
+        },
+        {
+          "text": "3Build an eight-row shape",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-03/"
+        },
+        {
+          "text": "4Draw with a counted loop",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-04/"
+        },
+        {
+          "text": "5Call a drawing routine",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-05/"
+        },
+        {
+          "text": "6Move your character",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-06/"
+        },
+        {
+          "text": "7Give movement a clock",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-07/"
+        },
+        {
+          "text": "8Find the first wrong step",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-08/"
+        },
+        {
+          "text": "Predict before you run",
+          "href": "#predict-before-you-run"
+        },
+        {
+          "text": "Follow the byte",
+          "href": "#follow-the-byte"
+        },
+        {
+          "text": "Why the invisible pattern is still there",
+          "href": "#why-the-invisible-pattern-is-still-there"
+        },
+        {
+          "text": "Keep your experiment",
+          "href": "#keep-your-experiment"
+        },
+        {
+          "text": "Previous unitChange the border",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/"
+        },
+        {
+          "text": "Module overviewMeet Assembly",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly"
+        },
+        {
+          "text": "Next unitBuild an eight-row shape",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-03/"
+        }
+      ]
+    },
+    {
+      "route": "/vault/techniques/variables-memory/",
+      "width": 1440,
+      "status": 200,
+      "url": "https://code198x.com/vault/techniques/variables-memory/",
+      "title": "Variables and Memory",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Techniques",
+          "href": "/vault/category/techniques/"
+        },
+        {
+          "text": "Source-checked",
+          "href": "#article-status"
+        },
+        {
+          "text": "The Commodore 64’s map",
+          "href": "#the-commodore-64s-map"
+        },
+        {
+          "text": "Seven bytes a variable",
+          "href": "#seven-bytes-a-variable"
+        },
+        {
+          "text": "Strings and the garbage problem",
+          "href": "#strings-and-the-garbage-problem"
+        },
+        {
+          "text": "Arrays",
+          "href": "#arrays"
+        },
+        {
+          "text": "Fencing off memory",
+          "href": "#fencing-off-memory"
+        },
+        {
+          "text": "Talking to machine code",
+          "href": "#talking-to-machine-code"
+        },
+        {
+          "text": "The Spectrum’s way",
+          "href": "#the-spectrums-way"
+        },
+        {
+          "text": "Saving bytes",
+          "href": "#saving-bytes"
+        },
+        {
+          "text": "Sources",
+          "href": "#sources"
+        },
+        {
+          "text": "Released source code",
+          "href": "#released-source-code"
+        },
+        {
+          "text": "See also",
+          "href": "#see-also"
+        },
+        {
+          "text": "ZX Spectrum",
+          "href": "/vault/systems/sinclair-zx-spectrum"
+        },
+        {
+          "text": "BASIC V2",
+          "href": "/vault/languages/basic-v2"
+        },
+        {
+          "text": "https://github.com/microsoft/BASIC-M6502",
+          "href": "https://github.com/microsoft/BASIC-M6502"
+        },
+        {
+          "text": "BASIC V2",
+          "href": "/vault/languages/basic-v2"
+        },
+        {
+          "text": "Sinclair BASIC",
+          "href": "/vault/languages/sinclair-basic"
+        },
+        {
+          "text": "Memory mapping",
+          "href": "/vault/techniques/memory-mapping"
+        },
+        {
+          "text": "Screen memory",
+          "href": "/vault/techniques/screen-memory"
+        },
+        {
+          "text": "Random numbers",
+          "href": "/vault/techniques/random-numbers"
+        },
+        {
+          "text": "All techniques articles ↗",
+          "href": "/vault/category/techniques"
+        },
+        {
+          "text": "Browse the Vault ↗",
+          "href": "/vault/"
+        }
+      ]
+    },
+    {
+      "route": "/start-here/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/start-here/",
+      "title": "Start Here.",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Make a game",
+          "href": "#make-game"
+        },
+        {
+          "text": "Explore programming ideas",
+          "href": "#programming"
+        },
+        {
+          "text": "Understand how programs run",
+          "href": "#programs-run"
+        },
+        {
+          "text": "Explore game-making ideas",
+          "href": "#craft"
+        },
+        {
+          "text": "Explore computing history",
+          "href": "#history"
+        },
+        {
+          "text": "Parents and teachers",
+          "href": "#teaching"
+        },
+        {
+          "text": "Foundations",
+          "href": "/foundations/"
+        },
+        {
+          "text": "Find a system with lessons",
+          "href": "/systems/"
+        },
+        {
+          "text": "Foundations",
+          "href": "/foundations/"
+        },
+        {
+          "text": "Explore The Basics",
+          "href": "/foundations/basics"
+        },
+        {
+          "text": "From the Metal",
+          "href": "/from-the-metal"
+        },
+        {
+          "text": "Read the programming essays",
+          "href": "/from-the-metal"
+        },
+        {
+          "text": "The Craft",
+          "href": "/craft"
+        },
+        {
+          "text": "Maths for Games",
+          "href": "/craft/maths-for-games"
+        },
+        {
+          "text": "Game Feel",
+          "href": "/craft/game-feel"
+        },
+        {
+          "text": "Explore The Craft",
+          "href": "/craft"
+        },
+        {
+          "text": "The Vault",
+          "href": "/vault"
+        },
+        {
+          "text": "Browse the encyclopaedia",
+          "href": "/vault"
+        },
+        {
+          "text": "Read the teaching guide",
+          "href": "/teaching"
+        },
+        {
+          "text": "Explore the curriculum map",
+          "href": "/curriculum"
+        },
+        {
+          "text": "read the longer story",
+          "href": "/about"
+        },
+        {
+          "text": "help build what is missing",
+          "href": "/contribute"
+        }
+      ]
+    },
+    {
+      "route": "/foundations/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/foundations/",
+      "title": "The Ideas EveryMachine Shares.",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Start with The Basics →",
+          "href": "/foundations/basics/"
+        },
+        {
+          "text": "Programming",
+          "href": "#group-programming"
+        },
+        {
+          "text": "Numbers",
+          "href": "#group-numbers"
+        },
+        {
+          "text": "The machine underneath",
+          "href": "#group-machine"
+        },
+        {
+          "text": "Read A Program Is Instructions",
+          "href": "/foundations/basics/unit-01/"
+        },
+        {
+          "text": "The BasicsWhat a program is, before any machine or language: instructions in order, a way to show th",
+          "href": "/foundations/basics"
+        },
+        {
+          "text": "Working It OutThe computer does arithmetic on values it did not have when you wrote the program, gro",
+          "href": "/foundations/working-it-out"
+        },
+        {
+          "text": "DecisionsA program that reacts: test a value, choose between paths, keep a yes or no in a box, and j",
+          "href": "/foundations/decisions"
+        },
+        {
+          "text": "RepeatingThree kinds of loop: a set number of times, until something happens, and only while somethi",
+          "href": "/foundations/repeating"
+        },
+        {
+          "text": "StructureLists, jobs with names, jobs that take a value and hand one back, and the one skill that se",
+          "href": "/foundations/structure"
+        },
+        {
+          "text": "Counting in TwosHow a machine counts: binary, hex, two bytes together, and a minus sign made of noth",
+          "href": "/foundations/counting-in-twos"
+        },
+        {
+          "text": "Working the BitsThe tools that change a byte one switch at a time, slide the whole row, turn a lette",
+          "href": "/foundations/working-the-bits"
+        },
+        {
+          "text": "Truth TablesA way to write down every case a question can have, so you can see that two different-lo",
+          "href": "/foundations/truth-tables"
+        },
+        {
+          "text": "Gates and the AdderThe same truth tables, built out of wire, and then wired into something that adds",
+          "href": "/foundations/gates-and-the-adder"
+        },
+        {
+          "text": "From Source to SiliconHow source becomes instructions, what translation costs, and how to investigat",
+          "href": "/foundations/from-source-to-silicon"
+        },
+        {
+          "text": "Pick a machineEvery computer we teach, and how to choose one →",
+          "href": "/systems"
+        },
+        {
+          "text": "The CraftThe techniques every game needs, whichever machine you pick →",
+          "href": "/craft"
+        }
+      ]
+    },
+    {
+      "route": "/foundations/basics/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/foundations/basics/",
+      "title": "The Basics.",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Begin A Program Is Instructions",
+          "href": "/foundations/basics/unit-01"
+        },
+        {
+          "text": "Explore the five lessons",
+          "href": "#module-lessons"
+        },
+        {
+          "text": "01A Program Is InstructionsStart →",
+          "href": "/foundations/basics/unit-01"
+        },
+        {
+          "text": "02One Thing After AnotherStart →",
+          "href": "/foundations/basics/unit-02"
+        },
+        {
+          "text": "03Showing Your WorkStart →",
+          "href": "/foundations/basics/unit-03"
+        },
+        {
+          "text": "04A Place to RememberStart →",
+          "href": "/foundations/basics/unit-04"
+        },
+        {
+          "text": "05Asking the PlayerStart →",
+          "href": "/foundations/basics/unit-05"
+        }
+      ]
+    },
+    {
+      "route": "/foundations/basics/unit-03/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/foundations/basics/unit-03/",
+      "title": "Showing Your Work",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Text, or a value",
+          "href": "#text-or-a-value"
+        },
+        {
+          "text": "Joining text to a value",
+          "href": "#joining-text-to-a-value"
+        },
+        {
+          "text": "When it’s wrong, see why",
+          "href": "#when-its-wrong-see-why"
+        },
+        {
+          "text": "What you’ve learnt",
+          "href": "#what-youve-learnt"
+        },
+        {
+          "text": "What’s next",
+          "href": "#whats-next"
+        },
+        {
+          "text": "Previous unitOne Thing After Another",
+          "href": "/foundations/basics/unit-02/"
+        },
+        {
+          "text": "Primer overviewBasics",
+          "href": "/foundations/basics"
+        },
+        {
+          "text": "Next unitA Place to Remember",
+          "href": "/foundations/basics/unit-04/"
+        }
+      ]
+    },
+    {
+      "route": "/foundations/basics/unit-04/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/foundations/basics/unit-04/",
+      "title": "A Place to Remember",
+      "overflow": false,
+      "links": [
+        {
+          "text": "storing and changing a greeting in Sinclair BASIC",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/"
+        },
+        {
+          "text": "A named box",
+          "href": "#a-named-box"
+        },
+        {
+          "text": "Change the box, keep the name",
+          "href": "#change-the-box-keep-the-name"
+        },
+        {
+          "text": "When it’s wrong, see why",
+          "href": "#when-its-wrong-see-why"
+        },
+        {
+          "text": "What you’ve learnt",
+          "href": "#what-youve-learnt"
+        },
+        {
+          "text": "What’s next",
+          "href": "#whats-next"
+        },
+        {
+          "text": "Previous unitShowing Your Work",
+          "href": "/foundations/basics/unit-03/"
+        },
+        {
+          "text": "Primer overviewBasics",
+          "href": "/foundations/basics"
+        },
+        {
+          "text": "Next unitAsking the Player",
+          "href": "/foundations/basics/unit-05/"
+        }
+      ]
+    },
+    {
+      "route": "/systems/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/systems/",
+      "title": "Choose Your Machine.",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Browse all 159 machines",
+          "href": "#catalogue"
+        },
+        {
+          "text": "Sinclair ZX Spectrum",
+          "href": "/systems/sinclair-zx-spectrum"
+        },
+        {
+          "text": "Sinclair BASIC",
+          "href": "/systems/sinclair-zx-spectrum/basic/"
+        },
+        {
+          "text": "Z80 assembly",
+          "href": "/systems/sinclair-zx-spectrum/assembly/"
+        },
+        {
+          "text": "Choose a Spectrum route →",
+          "href": "/systems/sinclair-zx-spectrum"
+        },
+        {
+          "text": "Evan-Amos",
+          "href": "https://commons.wikimedia.org/wiki/File:Commodore-64-Computer-FR.jpg"
+        },
+        {
+          "text": "Commodore 64",
+          "href": "/systems/commodore-64"
+        },
+        {
+          "text": "Commodore BASIC",
+          "href": "/systems/commodore-64/basic/"
+        },
+        {
+          "text": "6510 assembly",
+          "href": "/systems/commodore-64/assembly/"
+        },
+        {
+          "text": "Choose a C64 route →",
+          "href": "/systems/commodore-64"
+        },
+        {
+          "text": "Sernot / Ubcule",
+          "href": "https://commons.wikimedia.org/wiki/File:Amiga_500_Plus_(white_background).jpg"
+        },
+        {
+          "text": "Commodore Amiga",
+          "href": "/systems/commodore-amiga"
+        },
+        {
+          "text": "AMOS",
+          "href": "/systems/commodore-amiga/amos/"
+        },
+        {
+          "text": "Blitz BASIC",
+          "href": "/systems/commodore-amiga/blitz/"
+        },
+        {
+          "text": "68000 assembly",
+          "href": "/systems/commodore-amiga/assembly/"
+        },
+        {
+          "text": "Choose a Amiga route →",
+          "href": "/systems/commodore-amiga"
+        },
+        {
+          "text": "Evan-Amos",
+          "href": "https://commons.wikimedia.org/wiki/File:NES-Console-Set.jpg"
+        },
+        {
+          "text": "Nintendo Entertainment System",
+          "href": "/systems/nintendo-entertainment-system"
+        },
+        {
+          "text": "6502 assembly",
+          "href": "/systems/nintendo-entertainment-system/assembly/"
+        },
+        {
+          "text": "Choose a NES route →",
+          "href": "/systems/nintendo-entertainment-system"
+        },
+        {
+          "text": "No capture yetAtari STAtari, 1985",
+          "href": "/systems/atari-st"
+        },
+        {
+          "text": "BBC MicroAcorn, 1981",
+          "href": "/systems/bbc-micro"
+        },
+        {
+          "text": "MSXMicrosoft, 1983",
+          "href": "/systems/msx"
+        },
+        {
+          "text": "Amstrad CPCAmstrad, 1984",
+          "href": "/systems/amstrad-cpc"
+        },
+        {
+          "text": "Commodore VIC-20Commodore, 1980",
+          "href": "/systems/commodore-vic-20"
+        },
+        {
+          "text": "Sega Master SystemSega, 1985",
+          "href": "/systems/sega-master-system"
+        },
+        {
+          "text": "By era",
+          "href": "/systems/"
+        },
+        {
+          "text": "By region",
+          "href": "/systems/by-region/"
+        },
+        {
+          "text": "By maker",
+          "href": "/systems/by-maker/"
+        },
+        {
+          "text": "By availability",
+          "href": "/systems/by-tier/"
+        },
+        {
+          "text": "by availability",
+          "href": "/systems/by-tier/"
+        },
+        {
+          "text": "PDP-11959 · Reference / planned",
+          "href": "/systems/dec-pdp-1"
+        },
+        {
+          "text": "PDP-81965 · Reference / planned",
+          "href": "/systems/dec-pdp-8"
+        },
+        {
+          "text": "PDP-101967 · Reference / planned",
+          "href": "/systems/dec-pdp-10"
+        },
+        {
+          "text": "Altair 88001975 · Reference / planned",
+          "href": "/systems/altair-8800"
+        },
+        {
+          "text": "IMSAI 80801975 · Reference / planned",
+          "href": "/systems/imsai-8080"
+        },
+        {
+          "text": "COSMAC ELF1976 · Reference / planned",
+          "href": "/systems/cosmac-elf"
+        },
+        {
+          "text": "Channel F1976 · Reference / planned",
+          "href": "/systems/fairchild-channel-f"
+        },
+        {
+          "text": "KIM-11976 · Reference / planned",
+          "href": "/systems/kim-1"
+        },
+        {
+          "text": "Sol-201976 · Reference / planned",
+          "href": "/systems/processor-tech-sol-20"
+        },
+        {
+          "text": "Apple II1977 · Reference / planned",
+          "href": "/systems/apple-ii"
+        },
+        {
+          "text": "Atari 26001977 · Reference / planned",
+          "href": "/systems/atari-2600"
+        },
+        {
+          "text": "PET1977 · Reference / planned",
+          "href": "/systems/commodore-pet"
+        },
+        {
+          "text": "Compucolor II1977 · Reference / planned",
+          "href": "/systems/compucolor-ii"
+        },
+        {
+          "text": "Heathkit H81977 · Reference / planned",
+          "href": "/systems/heathkit-h8"
+        },
+        {
+          "text": "Nascom1977 · Reference / planned",
+          "href": "/systems/nascom"
+        },
+        {
+          "text": "ELF II1977 · Reference / planned",
+          "href": "/systems/netronics-elf-ii"
+        },
+        {
+          "text": "Ohio Scientific1977 · Reference / planned",
+          "href": "/systems/ohio-scientific"
+        },
+        {
+          "text": "Studio II1977 · Reference / planned",
+          "href": "/systems/rca-studio-ii"
+        },
+        {
+          "text": "TRS-801977 · Reference / planned",
+          "href": "/systems/trs-80"
+        },
+        {
+          "text": "AIM-651978 · Reference / planned",
+          "href": "/systems/aim-65"
+        },
+        {
+          "text": "Astrocade1978 · Reference / planned",
+          "href": "/systems/bally-astrocade"
+        },
+        {
+          "text": "Sorcerer1978 · Reference / planned",
+          "href": "/systems/exidy-sorcerer"
+        },
+        {
+          "text": "Interact1978 · Reference / planned",
+          "href": "/systems/interact"
+        },
+        {
+          "text": "Odyssey²1978 · Reference / planned",
+          "href": "/systems/magnavox-odyssey2"
+        },
+        {
+          "text": "MZ1978 · Reference / planned",
+          "href": "/systems/sharp-mz"
+        },
+        {
+          "text": "SYM-11978 · Reference / planned",
+          "href": "/systems/sym-1"
+        },
+        {
+          "text": "Acorn System1979 · Reference / planned",
+          "href": "/systems/acorn-system"
+        },
+        {
+          "text": "Atari 8001979 · Reference / planned",
+          "href": "/systems/atari-800"
+        },
+        {
+          "text": "Intellivision1979 · Reference / planned",
+          "href": "/systems/intellivision"
+        },
+        {
+          "text": "Microtan 651979 · Reference / planned",
+          "href": "/systems/tangerine-microtan-65"
+        },
+        {
+          "text": "Atom1980 · Reference / planned",
+          "href": "/systems/acorn-atom"
+        },
+        {
+          "text": "VIC-201980 · Next",
+          "href": "/systems/commodore-vic-20"
+        },
+        {
+          "text": "DAI1980 · Reference / planned",
+          "href": "/systems/dai"
+        },
+        {
+          "text": "P20001980 · Reference / planned",
+          "href": "/systems/philips-p2000"
+        },
+        {
+          "text": "ZX801980 · Reference / planned",
+          "href": "/systems/sinclair-zx80"
+        },
+        {
+          "text": "CoCo1980 · Reference / planned",
+          "href": "/systems/tandy-coco"
+        },
+        {
+          "text": "Pegasus1981 · Reference / planned",
+          "href": "/systems/aamber-pegasus"
+        },
+        {
+          "text": "BBC Micro1981 · Next",
+          "href": "/systems/bbc-micro"
+        },
+        {
+          "text": "IBM PC1981 · Reference / planned",
+          "href": "/systems/ibm-pc"
+        },
+        {
+          "text": "MPF-I1981 · Reference / planned",
+          "href": "/systems/multitech-mpf-1"
+        },
+        {
+          "text": "PC-60011981 · Reference / planned",
+          "href": "/systems/nec-pc-6001"
+        },
+        {
+          "text": "PC-881981 · Reference / planned",
+          "href": "/systems/nec-pc-88"
+        },
+        {
+          "text": "ZX811981 · Reference / planned",
+          "href": "/systems/sinclair-zx81"
+        },
+        {
+          "text": "TI-99/4A1981 · Reference / planned",
+          "href": "/systems/ti-99-4a"
+        },
+        {
+          "text": "Atari 52001982 · Reference / planned",
+          "href": "/systems/atari-5200"
+        },
+        {
+          "text": "ColecoVision1982 · Reference / planned",
+          "href": "/systems/colecovision"
+        },
+        {
+          "text": "Colour Genie1982 · Reference / planned",
+          "href": "/systems/colour-genie-eg2000"
+        },
+        {
+          "text": "C641982 · Lessons",
+          "href": "/systems/commodore-64"
+        },
+        {
+          "text": "Dragon1982 · Reference / planned",
+          "href": "/systems/dragon-32"
+        },
+        {
+          "text": "FM-71982 · Reference / planned",
+          "href": "/systems/fujitsu-fm-7"
+        },
+        {
+          "text": "NewBrain1982 · Reference / planned",
+          "href": "/systems/grundy-newbrain"
+        },
+        {
+          "text": "HT-1080Z1982 · Reference / planned",
+          "href": "/systems/ht-1080z"
+        },
+        {
+          "text": "Jupiter Ace1982 · Reference / planned",
+          "href": "/systems/jupiter-ace"
+        },
+        {
+          "text": "MicroBee1982 · Reference / planned",
+          "href": "/systems/microbee"
+        },
+        {
+          "text": "NABU1982 · Reference / planned",
+          "href": "/systems/nabu-pc"
+        },
+        {
+          "text": "PC-981982 · Reference / planned",
+          "href": "/systems/nec-pc-98"
+        },
+        {
+          "text": "Pravetz 81982 · Reference / planned",
+          "href": "/systems/pravetz-8"
+        },
+        {
+          "text": "SPC1982 · Reference / planned",
+          "href": "/systems/samsung-spc"
+        },
+        {
+          "text": "X11982 · Reference / planned",
+          "href": "/systems/sharp-x1"
+        },
+        {
+          "text": "Spectrum1982 · Lessons",
+          "href": "/systems/sinclair-zx-spectrum"
+        },
+        {
+          "text": "M51982 · Reference / planned",
+          "href": "/systems/sord-m5"
+        },
+        {
+          "text": "Tutor1982 · Reference / planned",
+          "href": "/systems/tomy-tutor"
+        },
+        {
+          "text": "Vectrex1982 · Reference / planned",
+          "href": "/systems/vectrex"
+        },
+        {
+          "text": "Electron1983 · Reference / planned",
+          "href": "/systems/acorn-electron"
+        },
+        {
+          "text": "RX-781983 · Reference / planned",
+          "href": "/systems/bandai-rx-78"
+        },
+        {
+          "text": "Lynx1983 · Reference / planned",
+          "href": "/systems/camputers-lynx"
+        },
+        {
+          "text": "PV-20001983 · Reference / planned",
+          "href": "/systems/casio-pv-2000"
+        },
+        {
+          "text": "Adam1983 · Reference / planned",
+          "href": "/systems/coleco-adam"
+        },
+        {
+          "text": "Alice1983 · Reference / planned",
+          "href": "/systems/matra-alice"
+        },
+        {
+          "text": "Aquarius1983 · Reference / planned",
+          "href": "/systems/mattel-aquarius"
+        },
+        {
+          "text": "MTX1983 · Reference / planned",
+          "href": "/systems/memotech-mtx"
+        },
+        {
+          "text": "Meritum1983 · Reference / planned",
+          "href": "/systems/meritum"
+        },
+        {
+          "text": "Hector1983 · Reference / planned",
+          "href": "/systems/micronique-hector"
+        },
+        {
+          "text": "MSX1983 · Next",
+          "href": "/systems/msx"
+        },
+        {
+          "text": "NES1983 · Lessons",
+          "href": "/systems/nintendo-entertainment-system"
+        },
+        {
+          "text": "SC-30001983 · Reference / planned",
+          "href": "/systems/sega-sc-3000"
+        },
+        {
+          "text": "SG-10001983 · Reference / planned",
+          "href": "/systems/sega-sg-1000"
+        },
+        {
+          "text": "SVI-3281983 · Reference / planned",
+          "href": "/systems/spectravideo-svi-328"
+        },
+        {
+          "text": "TS20681983 · Reference / planned",
+          "href": "/systems/timex-ts2068"
+        },
+        {
+          "text": "MC-101983 · Reference / planned",
+          "href": "/systems/trs-80-mc-10"
+        },
+        {
+          "text": "Model 1001983 · Reference / planned",
+          "href": "/systems/trs-80-model-100"
+        },
+        {
+          "text": "Laser1983 · Reference / planned",
+          "href": "/systems/vtech-laser"
+        },
+        {
+          "text": "Amstrad CPC1984 · Next",
+          "href": "/systems/amstrad-cpc"
+        },
+        {
+          "text": "Plus/41984 · Reference / planned",
+          "href": "/systems/commodore-plus4"
+        },
+        {
+          "text": "Mac1984 · Reference / planned",
+          "href": "/systems/macintosh"
+        },
+        {
+          "text": "NDR-Klein1984 · Reference / planned",
+          "href": "/systems/ndr-klein-computer"
+        },
+        {
+          "text": "Oric1984 · Reference / planned",
+          "href": "/systems/oric-atmos"
+        },
+        {
+          "text": "VG-50001984 · Reference / planned",
+          "href": "/systems/philips-vg-5000"
+        },
+        {
+          "text": "Primo1984 · Reference / planned",
+          "href": "/systems/primo"
+        },
+        {
+          "text": "KC851984 · Reference / planned",
+          "href": "/systems/robotron-kc85"
+        },
+        {
+          "text": "QL1984 · Reference / planned",
+          "href": "/systems/sinclair-ql"
+        },
+        {
+          "text": "Squale1984 · Reference / planned",
+          "href": "/systems/squale"
+        },
+        {
+          "text": "Tandy 10001984 · Reference / planned",
+          "href": "/systems/tandy-1000"
+        },
+        {
+          "text": "Einstein1984 · Reference / planned",
+          "href": "/systems/tatung-einstein"
+        },
+        {
+          "text": "Thomson MO51984 · Reference / planned",
+          "href": "/systems/thomson-mo5"
+        },
+        {
+          "text": "TC20481984 · Reference / planned",
+          "href": "/systems/timex-tc2048"
+        },
+        {
+          "text": "PCW1985 · Reference / planned",
+          "href": "/systems/amstrad-pcw"
+        },
+        {
+          "text": "Atari ST1985 · Next",
+          "href": "/systems/atari-st"
+        },
+        {
+          "text": "C1281985 · Reference / planned",
+          "href": "/systems/commodore-128"
+        },
+        {
+          "text": "Amiga1985 · Lessons",
+          "href": "/systems/commodore-amiga"
+        },
+        {
+          "text": "Zemmix1985 · Reference / planned",
+          "href": "/systems/daewoo-zemmix"
+        },
+        {
+          "text": "Enterprise1985 · Reference / planned",
+          "href": "/systems/enterprise"
+        },
+        {
+          "text": "IQ 1511985 · Reference / planned",
+          "href": "/systems/iq-151"
+        },
+        {
+          "text": "Ondra1985 · Reference / planned",
+          "href": "/systems/ondra"
+        },
+        {
+          "text": "PMD 851985 · Reference / planned",
+          "href": "/systems/pmd-85"
+        },
+        {
+          "text": "Pravetz 8D1985 · Reference / planned",
+          "href": "/systems/pravetz-8d"
+        },
+        {
+          "text": "Master System1985 · Next",
+          "href": "/systems/sega-master-system"
+        },
+        {
+          "text": "Z10131985 · Reference / planned",
+          "href": "/systems/z1013"
+        },
+        {
+          "text": "IIGS1986 · Reference / planned",
+          "href": "/systems/apple-iigs"
+        },
+        {
+          "text": "Atari 78001986 · Reference / planned",
+          "href": "/systems/atari-7800"
+        },
+        {
+          "text": "Elwro 8001986 · Reference / planned",
+          "href": "/systems/elwro-800-junior"
+        },
+        {
+          "text": "Prodest PC1281986 · Reference / planned",
+          "href": "/systems/olivetti-prodest-pc128"
+        },
+        {
+          "text": "Radio-86RK1986 · Reference / planned",
+          "href": "/systems/radio-86rk"
+        },
+        {
+          "text": "TVC1986 · Reference / planned",
+          "href": "/systems/videoton-tvc"
+        },
+        {
+          "text": "Archimedes1987 · Reference / planned",
+          "href": "/systems/acorn-archimedes"
+        },
+        {
+          "text": "Didaktik1987 · Reference / planned",
+          "href": "/systems/didaktik"
+        },
+        {
+          "text": "Mikrosha1987 · Reference / planned",
+          "href": "/systems/mikrosha"
+        },
+        {
+          "text": "PC Engine1987 · Reference / planned",
+          "href": "/systems/pc-engine"
+        },
+        {
+          "text": "X680001987 · Reference / planned",
+          "href": "/systems/sharp-x68000"
+        },
+        {
+          "text": "Specialist1987 · Reference / planned",
+          "href": "/systems/specialist"
+        },
+        {
+          "text": "Vector-06C1987 · Reference / planned",
+          "href": "/systems/vector-06c"
+        },
+        {
+          "text": "Apogey1988 · Reference / planned",
+          "href": "/systems/apogey-bk-01"
+        },
+        {
+          "text": "Korvet1988 · Reference / planned",
+          "href": "/systems/korvet-pk8020"
+        },
+        {
+          "text": "Mega Drive1988 · Reference / planned",
+          "href": "/systems/sega-mega-drive"
+        },
+        {
+          "text": "Lynx1989 · Reference / planned",
+          "href": "/systems/atari-lynx"
+        },
+        {
+          "text": "FM Towns1989 · Reference / planned",
+          "href": "/systems/fm-towns"
+        },
+        {
+          "text": "Game Boy1989 · Reference / planned",
+          "href": "/systems/game-boy"
+        },
+        {
+          "text": "Pentagon1989 · Reference / planned",
+          "href": "/systems/pentagon-128"
+        },
+        {
+          "text": "SAM Coupé1989 · Reference / planned",
+          "href": "/systems/sam-coupe"
+        },
+        {
+          "text": "CPC Plus1990 · Reference / planned",
+          "href": "/systems/amstrad-cpc-plus"
+        },
+        {
+          "text": "GX40001990 · Reference / planned",
+          "href": "/systems/gx4000"
+        },
+        {
+          "text": "Hobbit1990 · Reference / planned",
+          "href": "/systems/hobbit"
+        },
+        {
+          "text": "turbo R1990 · Reference / planned",
+          "href": "/systems/msx-turbo-r"
+        },
+        {
+          "text": "Neo Geo1990 · Reference / planned",
+          "href": "/systems/neo-geo"
+        },
+        {
+          "text": "Orion-1281990 · Reference / planned",
+          "href": "/systems/orion-128"
+        },
+        {
+          "text": "Game Gear1990 · Reference / planned",
+          "href": "/systems/sega-game-gear"
+        },
+        {
+          "text": "SNES1990 · Reference / planned",
+          "href": "/systems/super-nintendo"
+        },
+        {
+          "text": "ATM Turbo1991 · Reference / planned",
+          "href": "/systems/atm-turbo"
+        },
+        {
+          "text": "CDTV1991 · Reference / planned",
+          "href": "/systems/commodore-cdtv"
+        },
+        {
+          "text": "CD-i1991 · Reference / planned",
+          "href": "/systems/philips-cd-i"
+        },
+        {
+          "text": "Scorpion1991 · Reference / planned",
+          "href": "/systems/scorpion-zs256"
+        },
+        {
+          "text": "Mega CD1991 · Reference / planned",
+          "href": "/systems/sega-mega-cd"
+        },
+        {
+          "text": "3DO1993 · Reference / planned",
+          "href": "/systems/3do"
+        },
+        {
+          "text": "Aleste1993 · Reference / planned",
+          "href": "/systems/aleste-520ex"
+        },
+        {
+          "text": "Jaguar1993 · Reference / planned",
+          "href": "/systems/atari-jaguar"
+        },
+        {
+          "text": "PC-FX1994 · Reference / planned",
+          "href": "/systems/nec-pc-fx"
+        },
+        {
+          "text": "32X1994 · Reference / planned",
+          "href": "/systems/sega-32x"
+        },
+        {
+          "text": "Saturn1994 · Reference / planned",
+          "href": "/systems/sega-saturn"
+        },
+        {
+          "text": "PlayStation1994 · Reference / planned",
+          "href": "/systems/sony-playstation"
+        },
+        {
+          "text": "Virtual Boy1995 · Reference / planned",
+          "href": "/systems/nintendo-virtual-boy"
+        },
+        {
+          "text": "N641996 · Reference / planned",
+          "href": "/systems/nintendo-64"
+        },
+        {
+          "text": "Game Boy Color1998 · Reference / planned",
+          "href": "/systems/game-boy-color"
+        },
+        {
+          "text": "Neo Geo Pocket1998 · Reference / planned",
+          "href": "/systems/neo-geo-pocket"
+        },
+        {
+          "text": "Dreamcast1998 · Reference / planned",
+          "href": "/systems/sega-dreamcast"
+        },
+        {
+          "text": "WonderSwan1999 · Reference / planned",
+          "href": "/systems/bandai-wonderswan"
+        },
+        {
+          "text": "NGPC1999 · Reference / planned",
+          "href": "/systems/neo-geo-pocket-color"
+        },
+        {
+          "text": "WonderSwan Color2000 · Reference / planned",
+          "href": "/systems/bandai-wonderswan-color"
+        },
+        {
+          "text": "PS22000 · Reference / planned",
+          "href": "/systems/sony-playstation-2"
+        },
+        {
+          "text": "GBA2001 · Reference / planned",
+          "href": "/systems/game-boy-advance"
+        },
+        {
+          "text": "Explore the curriculum map",
+          "href": "/curriculum/"
+        },
+        {
+          "text": "Help develop the curriculum",
+          "href": "/contribute/"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/",
+      "title": "Sinclair ZX Spectrum",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Choose a language route",
+          "href": "#language-routes"
+        },
+        {
+          "text": "Explore Meteor Storm",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meteor-storm/"
+        },
+        {
+          "text": "Explore Sinclair BASIC",
+          "href": "/systems/sinclair-zx-spectrum/basic"
+        },
+        {
+          "text": "Explore Z80 assembly",
+          "href": "/systems/sinclair-zx-spectrum/assembly"
+        },
+        {
+          "text": "Open the setup guide",
+          "href": "/systems/sinclair-zx-spectrum/getting-started"
+        },
+        {
+          "text": "ZX Spectrum",
+          "href": "/vault/systems/sinclair-zx-spectrum"
+        },
+        {
+          "text": "Designing with attributes",
+          "href": "/vault/techniques/attribute-aware-design"
+        },
+        {
+          "text": "Manic Miner",
+          "href": "/vault/games/manic-miner"
+        },
+        {
+          "text": "CRASH",
+          "href": "/vault/magazines/crash-magazine"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/basic/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/",
+      "title": "Sinclair BASIC",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Foundations",
+          "href": "/foundations"
+        },
+        {
+          "text": "assembly",
+          "href": "/systems/sinclair-zx-spectrum/assembly"
+        },
+        {
+          "text": "Start Meet BASIC →",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic"
+        },
+        {
+          "text": "Meet BASIC lessons",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic"
+        },
+        {
+          "text": "1Meet BASIC · sinclair zx spectrum · basicMeet BASICStories, guessing, a playful oracle and a marker",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic"
+        },
+        {
+          "text": "2Bright Spark · sinclair zx spectrum · basicBright SparkRemember the signals, repeat the order, comp",
+          "href": "/systems/sinclair-zx-spectrum/basic/bright-spark"
+        },
+        {
+          "text": "3Volley · sinclair zx spectrum · basicVolleyKeep the ball in play, then improve how the court is dra",
+          "href": "/systems/sinclair-zx-spectrum/basic/volley"
+        },
+        {
+          "text": "4Touchdown · sinclair zx spectrum · basicTouchdownBrake a fall, steer over a ridge and land gently o",
+          "href": "/systems/sinclair-zx-spectrum/basic/touchdown"
+        },
+        {
+          "text": "5Sonar · sinclair zx spectrum · basicSonarChoose probes, combine clues and discover a hidden objectT",
+          "href": "/systems/sinclair-zx-spectrum/basic/sonar"
+        },
+        {
+          "text": "6Crates · sinclair zx spectrum · basicCratesMake space, plan a push and deliver every crateFour-char",
+          "href": "/systems/sinclair-zx-spectrum/basic/crates"
+        },
+        {
+          "text": "7Locksmith · sinclair zx spectrum · basicLocksmithCombine clues to crack a hidden four-digit codeEdi",
+          "href": "/systems/sinclair-zx-spectrum/basic/locksmith"
+        },
+        {
+          "text": "8Three in a Row · sinclair zx spectrum · basicThree in a RowBuild an opponent and discover what its ",
+          "href": "/systems/sinclair-zx-spectrum/basic/three-in-a-row"
+        },
+        {
+          "text": "9Cipher · sinclair zx spectrum · basicCipherReveal a hidden word and remember what each guess tells ",
+          "href": "/systems/sinclair-zx-spectrum/basic/cipher"
+        },
+        {
+          "text": "10Tail Chase · sinclair zx spectrum · basicTail ChaseSteer a growing snake and leave room for the ne",
+          "href": "/systems/sinclair-zx-spectrum/basic/tail-chase"
+        },
+        {
+          "text": "11Brick Bash · sinclair zx spectrum · basicBrick BashCatch the ball, choose its return and clear the",
+          "href": "/systems/sinclair-zx-spectrum/basic/brick-bash"
+        },
+        {
+          "text": "12Drift · sinclair zx spectrum · basicDriftTurn, thrust and bring a drifting ship gently into dockDi",
+          "href": "/systems/sinclair-zx-spectrum/basic/drift"
+        },
+        {
+          "text": "13Quickstep · sinclair zx spectrum · basicQuickstepRead six lanes of traffic and plan the next gapCy",
+          "href": "/systems/sinclair-zx-spectrum/basic/quickstep"
+        },
+        {
+          "text": "14The Caverns · sinclair zx spectrum · basicThe CavernsRead the clues and bring three treasures home",
+          "href": "/systems/sinclair-zx-spectrum/basic/the-caverns"
+        },
+        {
+          "text": "15Yearfall · sinclair zx spectrum · basicYearfallFeed a settlement and live with the next year's con",
+          "href": "/systems/sinclair-zx-spectrum/basic/yearfall"
+        },
+        {
+          "text": "16Night Patrol · sinclair zx spectrum · basicNight PatrolRead the patrol, use cover and escape with ",
+          "href": "/systems/sinclair-zx-spectrum/basic/night-patrol"
+        },
+        {
+          "text": "Sinclair BASIC reference lessons",
+          "href": "/systems/sinclair-zx-spectrum/basic/basic-reference/"
+        },
+        {
+          "text": "Maths for Games",
+          "href": "/craft/maths-for-games"
+        },
+        {
+          "text": "The Craft",
+          "href": "/craft"
+        },
+        {
+          "text": "Foundations",
+          "href": "/foundations"
+        },
+        {
+          "text": "Z80 assembly",
+          "href": "/systems/sinclair-zx-spectrum/assembly"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/basic/meet-basic/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/",
+      "title": "Meet BASIC",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Start with Make the Spectrum answer →",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer"
+        },
+        {
+          "text": "Browse lessons",
+          "href": "#lessons-title"
+        },
+        {
+          "text": "Foundations",
+          "href": "/foundations/"
+        },
+        {
+          "text": "Remember a name; keep the program",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/"
+        },
+        {
+          "text": "latest release",
+          "href": "https://github.com/emu198x/emu198x/releases/latest"
+        },
+        {
+          "text": "ROM guide",
+          "href": "/setup/roms/"
+        },
+        {
+          "text": "Remember a name; keep the program",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/"
+        },
+        {
+          "text": "Give a useful clue",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-05-give-a-useful-clue/"
+        },
+        {
+          "text": "Keep guessing",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing/"
+        },
+        {
+          "text": "Choose a new secret",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret/"
+        },
+        {
+          "text": "Feedback and another round",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-08-feedback-and-another-round/"
+        },
+        {
+          "text": "Choose an answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-09-choose-an-answer/"
+        },
+        {
+          "text": "Give the answer a rhythm",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-10-give-the-answer-a-rhythm/"
+        },
+        {
+          "text": "Write the repeated job once",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-11-write-the-repeated-job-once/"
+        },
+        {
+          "text": "Put it somewhere",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-12-put-it-somewhere/"
+        },
+        {
+          "text": "Make it move",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-13-make-it-move/"
+        },
+        {
+          "text": "Let the player steer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-14-let-the-player-steer/"
+        },
+        {
+          "text": "One press, one step",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-15-one-press-one-step/"
+        },
+        {
+          "text": "Bright Spark",
+          "href": "/systems/sinclair-zx-spectrum/basic/bright-spark/"
+        },
+        {
+          "text": "Touchdown",
+          "href": "/systems/sinclair-zx-spectrum/basic/touchdown/"
+        },
+        {
+          "text": "BASIC reference lessons",
+          "href": "/systems/sinclair-zx-spectrum/basic/basic-reference/"
+        },
+        {
+          "text": "1Make the Spectrum answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer"
+        },
+        {
+          "text": "2Remember a name; keep the program",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save"
+        },
+        {
+          "text": "3Ask, then use the answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer"
+        },
+        {
+          "text": "4A story worth sharing",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-04-a-story-worth-sharing"
+        },
+        {
+          "text": "5Give a useful clue",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-05-give-a-useful-clue"
+        },
+        {
+          "text": "6Keep guessing",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing"
+        },
+        {
+          "text": "7Choose a new secret",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret"
+        },
+        {
+          "text": "8Feedback and another round",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-08-feedback-and-another-round"
+        },
+        {
+          "text": "9Choose an answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-09-choose-an-answer"
+        },
+        {
+          "text": "10Give the answer a rhythm",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-10-give-the-answer-a-rhythm"
+        },
+        {
+          "text": "11Write the repeated job once",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-11-write-the-repeated-job-once"
+        },
+        {
+          "text": "12Put it somewhere",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-12-put-it-somewhere"
+        },
+        {
+          "text": "13Make it move",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-13-make-it-move"
+        },
+        {
+          "text": "14Let the player steer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-14-let-the-player-steer"
+        },
+        {
+          "text": "15One press, one step",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-15-one-press-one-step"
+        },
+        {
+          "text": "Explore the BASIC track →",
+          "href": "/systems/sinclair-zx-spectrum/basic"
+        },
+        {
+          "text": "Setup guide →",
+          "href": "/systems/sinclair-zx-spectrum/getting-started"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/",
+      "title": "Remember a name; keep the program",
+      "overflow": false,
+      "links": [
+        {
+          "text": "the opening lesson",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/"
+        },
+        {
+          "text": "Meet BASIC overview",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/#use-the-spectrum-in-the-page"
+        },
+        {
+          "text": "Foundations: A Place to Remember",
+          "href": "/foundations/basics/unit-04/"
+        },
+        {
+          "text": "Showing Your Work",
+          "href": "/foundations/basics/unit-03/"
+        },
+        {
+          "text": "Download Emu198x for desktop",
+          "href": "https://emu198x.github.io/downloads/"
+        },
+        {
+          "text": "Download step-03.tap",
+          "href": "/code-samples/sinclair-zx-spectrum/basic/meet-basic/unit-02/step-03.tap"
+        },
+        {
+          "text": "1Make the Spectrum answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/"
+        },
+        {
+          "text": "2Remember a name; keep the program",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/"
+        },
+        {
+          "text": "3Ask, then use the answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer/"
+        },
+        {
+          "text": "4A story worth sharing",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-04-a-story-worth-sharing/"
+        },
+        {
+          "text": "5Give a useful clue",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-05-give-a-useful-clue/"
+        },
+        {
+          "text": "6Keep guessing",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing/"
+        },
+        {
+          "text": "7Choose a new secret",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret/"
+        },
+        {
+          "text": "8Feedback and another round",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-08-feedback-and-another-round/"
+        },
+        {
+          "text": "9Choose an answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-09-choose-an-answer/"
+        },
+        {
+          "text": "10Give the answer a rhythm",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-10-give-the-answer-a-rhythm/"
+        },
+        {
+          "text": "11Write the repeated job once",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-11-write-the-repeated-job-once/"
+        },
+        {
+          "text": "12Put it somewhere",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-12-put-it-somewhere/"
+        },
+        {
+          "text": "13Make it move",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-13-make-it-move/"
+        },
+        {
+          "text": "14Let the player steer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-14-let-the-player-steer/"
+        },
+        {
+          "text": "15One press, one step",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-15-one-press-one-step/"
+        },
+        {
+          "text": "Start with the greeting",
+          "href": "#start-with-the-greeting"
+        },
+        {
+          "text": "Give the name a place",
+          "href": "#give-the-name-a-place"
+        },
+        {
+          "text": "Change the value",
+          "href": "#change-the-value"
+        },
+        {
+          "text": "Keep a copy outside the Spectrum",
+          "href": "#keep-a-copy-outside-the-spectrum"
+        },
+        {
+          "text": "Reopen your saved greeting",
+          "href": "#reopen-your-saved-greeting"
+        },
+        {
+          "text": "Change the recovered program",
+          "href": "#change-the-recovered-program"
+        },
+        {
+          "text": "Previous unitMake the Spectrum answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/"
+        },
+        {
+          "text": "Module overviewMeet BASIC",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic"
+        },
+        {
+          "text": "Next unitAsk, then use the answer",
+          "href": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer/"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/assembly/",
+      "title": "ZX Spectrum assembly",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Start: Meet Assembly →",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01"
+        },
+        {
+          "text": "Curriculum MapWhere this track sits",
+          "href": "/curriculum"
+        },
+        {
+          "text": "FoundationsProgramming concepts",
+          "href": "/foundations"
+        },
+        {
+          "text": "The CraftGame design",
+          "href": "/craft"
+        },
+        {
+          "text": "Set up local tools →",
+          "href": "/systems/sinclair-zx-spectrum/getting-started"
+        },
+        {
+          "text": "1Meet Assembly · sinclair zx spectrum · assemblyMeet AssemblyMake a prediction, run real Z80 code, a",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly"
+        },
+        {
+          "text": "2Meteor Storm · sinclair zx spectrum · assemblyMeteor StormDodge a drifting storm, collect stars and",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meteor-storm"
+        },
+        {
+          "text": "Meet the Machine experiments",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-the-machine"
+        },
+        {
+          "text": "3Gloaming · sinclair zx spectrum · assemblyGloamingLight every lamp before the dark wins in this att",
+          "href": "/systems/sinclair-zx-spectrum/assembly/gloaming"
+        },
+        {
+          "text": "4The Long Night · sinclair zx spectrum · assemblyThe Long NightThe night fights back — pools of dark",
+          "href": "/systems/sinclair-zx-spectrum/assembly/the-long-night"
+        },
+        {
+          "text": "5Shadowkeep · sinclair zx spectrum · assemblyShadowkeepSteal the gold from a darkened keep, room by ",
+          "href": "/systems/sinclair-zx-spectrum/assembly/shadowkeep"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/assembly/meet-assembly/",
+      "title": "Meet Assembly",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Start with Change the border →",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01"
+        },
+        {
+          "text": "Browse lessons",
+          "href": "#lessons-title"
+        },
+        {
+          "text": "Getting started",
+          "href": "/systems/sinclair-zx-spectrum/getting-started/"
+        },
+        {
+          "text": "Change the border",
+          "href": "./unit-01/"
+        },
+        {
+          "text": "A byte becomes pixels",
+          "href": "./unit-02/"
+        },
+        {
+          "text": "Build an eight-row shape",
+          "href": "./unit-03/"
+        },
+        {
+          "text": "Draw with a counted loop",
+          "href": "./unit-04/"
+        },
+        {
+          "text": "Call a drawing routine",
+          "href": "./unit-05/"
+        },
+        {
+          "text": "Move your character",
+          "href": "./unit-06/"
+        },
+        {
+          "text": "Give movement a clock",
+          "href": "./unit-07/"
+        },
+        {
+          "text": "Find the first wrong step",
+          "href": "./unit-08/"
+        },
+        {
+          "text": "Meteor Storm",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meteor-storm/"
+        },
+        {
+          "text": "1Change the border",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01"
+        },
+        {
+          "text": "2A byte becomes pixels",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02"
+        },
+        {
+          "text": "3Build an eight-row shape",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-03"
+        },
+        {
+          "text": "4Draw with a counted loop",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-04"
+        },
+        {
+          "text": "5Call a drawing routine",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-05"
+        },
+        {
+          "text": "6Move your character",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-06"
+        },
+        {
+          "text": "7Give movement a clock",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-07"
+        },
+        {
+          "text": "8Find the first wrong step",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-08"
+        },
+        {
+          "text": "Explore the Assembly track →",
+          "href": "/systems/sinclair-zx-spectrum/assembly"
+        },
+        {
+          "text": "Setup guide →",
+          "href": "/systems/sinclair-zx-spectrum/getting-started"
+        }
+      ]
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/",
+      "title": "A byte becomes pixels",
+      "overflow": false,
+      "links": [
+        {
+          "text": "ZX Spectrum BASIC Programming, chapter 24",
+          "href": "https://worldofspectrum.org/ZXBasicManual/zxmanchap24.html"
+        },
+        {
+          "text": "Z80 CPU User Manual, UM008011-0816",
+          "href": "https://www.zilog.com/docs/z80/um0080.pdf"
+        },
+        {
+          "text": "Pasmo documentation, “Directives”",
+          "href": "https://pasmo.speccy.org/pasmodoc.html"
+        },
+        {
+          "text": "Download one-byte.tap",
+          "href": "/code-samples/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/one-byte.tap"
+        },
+        {
+          "text": "1Change the border",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/"
+        },
+        {
+          "text": "2A byte becomes pixels",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/"
+        },
+        {
+          "text": "3Build an eight-row shape",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-03/"
+        },
+        {
+          "text": "4Draw with a counted loop",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-04/"
+        },
+        {
+          "text": "5Call a drawing routine",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-05/"
+        },
+        {
+          "text": "6Move your character",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-06/"
+        },
+        {
+          "text": "7Give movement a clock",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-07/"
+        },
+        {
+          "text": "8Find the first wrong step",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-08/"
+        },
+        {
+          "text": "Predict before you run",
+          "href": "#predict-before-you-run"
+        },
+        {
+          "text": "Follow the byte",
+          "href": "#follow-the-byte"
+        },
+        {
+          "text": "Why the invisible pattern is still there",
+          "href": "#why-the-invisible-pattern-is-still-there"
+        },
+        {
+          "text": "Keep your experiment",
+          "href": "#keep-your-experiment"
+        },
+        {
+          "text": "Previous unitChange the border",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/"
+        },
+        {
+          "text": "Module overviewMeet Assembly",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly"
+        },
+        {
+          "text": "Next unitBuild an eight-row shape",
+          "href": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-03/"
+        }
+      ]
+    },
+    {
+      "route": "/vault/techniques/variables-memory/",
+      "width": 390,
+      "status": 200,
+      "url": "https://code198x.com/vault/techniques/variables-memory/",
+      "title": "Variables and Memory",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Techniques",
+          "href": "/vault/category/techniques/"
+        },
+        {
+          "text": "Source-checked",
+          "href": "#article-status"
+        },
+        {
+          "text": "The Commodore 64’s map",
+          "href": "#the-commodore-64s-map"
+        },
+        {
+          "text": "Seven bytes a variable",
+          "href": "#seven-bytes-a-variable"
+        },
+        {
+          "text": "Strings and the garbage problem",
+          "href": "#strings-and-the-garbage-problem"
+        },
+        {
+          "text": "Arrays",
+          "href": "#arrays"
+        },
+        {
+          "text": "Fencing off memory",
+          "href": "#fencing-off-memory"
+        },
+        {
+          "text": "Talking to machine code",
+          "href": "#talking-to-machine-code"
+        },
+        {
+          "text": "The Spectrum’s way",
+          "href": "#the-spectrums-way"
+        },
+        {
+          "text": "Saving bytes",
+          "href": "#saving-bytes"
+        },
+        {
+          "text": "Sources",
+          "href": "#sources"
+        },
+        {
+          "text": "Released source code",
+          "href": "#released-source-code"
+        },
+        {
+          "text": "See also",
+          "href": "#see-also"
+        },
+        {
+          "text": "ZX Spectrum",
+          "href": "/vault/systems/sinclair-zx-spectrum"
+        },
+        {
+          "text": "BASIC V2",
+          "href": "/vault/languages/basic-v2"
+        },
+        {
+          "text": "https://github.com/microsoft/BASIC-M6502",
+          "href": "https://github.com/microsoft/BASIC-M6502"
+        },
+        {
+          "text": "BASIC V2",
+          "href": "/vault/languages/basic-v2"
+        },
+        {
+          "text": "Sinclair BASIC",
+          "href": "/vault/languages/sinclair-basic"
+        },
+        {
+          "text": "Memory mapping",
+          "href": "/vault/techniques/memory-mapping"
+        },
+        {
+          "text": "Screen memory",
+          "href": "/vault/techniques/screen-memory"
+        },
+        {
+          "text": "Random numbers",
+          "href": "/vault/techniques/random-numbers"
+        },
+        {
+          "text": "All techniques articles ↗",
+          "href": "/vault/category/techniques"
+        },
+        {
+          "text": "Browse the Vault ↗",
+          "href": "/vault/"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check": "automated accessibility of main content",
+      "route": "/foundations/basics/unit-04/",
+      "width": 1440,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "check": "output does not consume stored value wording",
+      "width": 1440,
+      "oldClaimPresent": true
+    },
+    {
+      "check": "automated accessibility of main content",
+      "route": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "check": "automated accessibility of main content",
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        "aria-prohibited-attr"
+      ]
+    },
+    {
+      "check": "automated accessibility of main content",
+      "route": "/foundations/basics/unit-04/",
+      "width": 390,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "check": "output does not consume stored value wording",
+      "width": 390,
+      "oldClaimPresent": true
+    },
+    {
+      "check": "automated accessibility of main content",
+      "route": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "check": "automated accessibility of main content",
+      "route": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "check": "keyboard activation of Foundations to BASIC link",
+      "passed": true
+    }
+  ],
+  "errors": []
+}
