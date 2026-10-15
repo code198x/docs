@@ -36,11 +36,13 @@ linked in this run” does not assert that no earlier work exists.
 ## Game maths and other boundaries
 
 Game maths is a separate responsibility under The Craft, not another Foundations
-module. The main `craft/maths-for-games` directory has eleven unit files at this
-baseline; the separate dice experiment also belongs to Maths for Games. A
-probability experiment or the representation pilots do not establish full maths
-coverage. Inspect the authored paths and objectives before selecting a later
-maths slice. No claim of mathematical prerequisites for every game is made here.
+module. The [probability pilot](2026-10-probability-pilot/REPORT.md) now maps the
+eleven published Maths for Games units: five Dice Roller probability lessons and
+six aiming lessons. Their Spectrum samples and browser experiments are source
+owners, not extra curriculum unit sets. Fresh native evidence covers the unit 3
+shares boundary; other objectives and actual learner understanding are not
+validated by that sample. No claim of mathematical prerequisites for every game
+is made here.
 
 The Boolean and gate pilots do not qualify a physical specimen's electrical/timing
 behaviour, all target-language truth representations or short-circuit rules. Native results
@@ -60,8 +62,9 @@ learner validation. The Basics follow-up adds sequence and submitted-text bounda
 Repetition follow-up adds progress, pre/post-test and audit-intervention evidence.
 The [umbrella reconciliation](2026-10-education-reconciliation/REPORT.md) now maps
 retained evidence to each parent criterion and identifies five next priorities.
-Next map the eleven published Maths for Games units and select one probability
-boundary under [docs #78](https://github.com/code198x/docs/issues/78).
+The bounded map and probability evidence for [docs #78](https://github.com/code198x/docs/issues/78)
+are prepared for review. Next qualify the exact embedded BASIC observation gap
+under [website #747](https://github.com/code198x/website/issues/747).
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to

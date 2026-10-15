@@ -133,6 +133,13 @@ curve calculation to expose range–precision trade-offs. Show wobble, drift or
 changed contact decisions when they occur. Fixed point is not universally faster
 or more accurate; choose it for a stated implementation reason.
 
+## Bounded audit evidence
+
+The [probability pilot](../audit/2026-10-probability-pilot/REPORT.md) maps objectives,
+local prerequisites and maintained source ownership for the eleven published
+units. Fresh native checks cover the unit 3 count/share rounding boundary only;
+they do not qualify every maths objective or establish learner effectiveness.
+
 ## Reference and coverage provenance
 
 The user supplied the contents of *Computer Graphics: Mathematical First Steps*,

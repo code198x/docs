@@ -51,7 +51,7 @@ The [Spectrum assembly review](platforms/sinclair-zx-spectrum/assembly/course-re
 
 The [Craft coverage map](specifications/craft-coverage.md) defines seven agreed module homes and distinguishes available material from planned lessons. The [Maths for Games specification](specifications/maths-for-games.md) develops geometry, trigonometry, matrix algebra, 3D, curves, probability and fixed-point applications.
 
-The [Foundations audit coverage map](audit/2026-10-foundations-coverage.md) links sampled evidence to the ten modules and records the remaining audit gaps. The [education umbrella reconciliation](audit/2026-10-education-reconciliation/REPORT.md) separates accepted technical evidence, unknown learner outcomes and the next five priorities.
+The [Foundations audit coverage map](audit/2026-10-foundations-coverage.md) links sampled evidence to the ten modules and records the remaining audit gaps. The [education umbrella reconciliation](audit/2026-10-education-reconciliation/REPORT.md) separates accepted technical evidence, unknown learner outcomes and the next five priorities. The [probability pilot](audit/2026-10-probability-pilot/REPORT.md) maps the eleven published maths units and checks exact counts against rounded shares.
 
 ## Ownership and maintenance
 
