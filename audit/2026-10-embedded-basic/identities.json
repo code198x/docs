@@ -1,0 +1,31 @@
+{
+  "website_baseline": "1cb4ec62e675751a0c13006b2bff877cd0ec3f6c",
+  "docs_baseline": "ddb7b803d5faed6ac2518816458c1e16f468dc0b",
+  "samples_revision": "163e74e18e9536fb555ef7319fa08bbc1836542b",
+  "website_files": {
+    "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save.mdx": "ee93901795d31a8fa456cde96f783601da647ecd90f6721efad79f589ece8db4",
+    "src/components/BasicAndRun.astro": "cbacc2e9c872064037a8a018dcac54a075460fb47b81c4958f147d0992354e76",
+    "src/components/BasicListing.astro": "c6b1d9267cd14bfed6dba7b2b6eee21545713fe9d5ea83e7a9fdca9493b18699",
+    "src/lib/basic-machine.ts": "d6e15132adb98eed1baeb07505ecad813c58c07ddded6c6fafcbc3488b2aa8d8",
+    "src/lib/basic-listing.ts": "b5153079496bc64f27f24d23528921f4f9b609627f1945b82edb1c43b4f4a0cd",
+    "src/lib/spectrum-runner.ts": "f6bda08517a957f3d523d01bd1f9bda7972eb0e3442b808675db5c37ddd6d45e",
+    "src/lib/spectrum-keyboard.ts": "8800be8c4519952c03044470cff7e88d192f90d795511bff1f76d4a8f7d31ba0",
+    "package.json": "f3faa82569755a565a9536c8cdb3cabd15c2ab91a5850c60a39c26c9e181516a",
+    "package-lock.json": "bc2e4820866c5590d6273220ec40dadd76e006cb05a0ba87a90998eb0c4d780d"
+  },
+  "verifier": {
+    "path": "scripts/verification/embedded-basic-values.mjs",
+    "sha256": "be0306ecf2a4db892156ff1ee44fa505bff2a2320cf5f093079c341d68e5a458"
+  },
+  "sample": {
+    "path": "sinclair-zx-spectrum/basic/meet-basic/opening/unit-02/steps/step-02.bas",
+    "sha256": "8c0931523d4fd7f6d12f87484a87dd320f93a2dbb237cc265f89847673202f6f"
+  },
+  "tools": {
+    "node": "v24.9.0",
+    "playwright": "1.62.1",
+    "installed_browser_package": "0.4.3"
+  },
+  "browser_rom_fingerprint": "not captured; live WASM response hash is retained separately",
+  "historical_harness": "Full discarded supplemental source is absent from retained audit and the tracked stored-value verifier. Exact historical replay/cause unknown."
+}

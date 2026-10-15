@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "browser_stages": 8,
+  "served_assets": 14,
+  "retained_artefacts": 23,
+  "local_links_checked": 85,
+  "negative_controls_rejected": [
+    "empty stages",
+    "lost repeated read",
+    "missing wrong-name report"
+  ],
+  "browser_known_red_rejected": true,
+  "historical_cause": "unknown",
+  "learner_observations": 0
+}

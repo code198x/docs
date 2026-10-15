@@ -63,8 +63,11 @@ Repetition follow-up adds progress, pre/post-test and audit-intervention evidenc
 The [umbrella reconciliation](2026-10-education-reconciliation/REPORT.md) now maps
 retained evidence to each parent criterion and identifies five next priorities.
 The bounded map and probability evidence for [docs #78](https://github.com/code198x/docs/issues/78)
-are prepared for review. Next qualify the exact embedded BASIC observation gap
-under [website #747](https://github.com/code198x/website/issues/747).
+are accepted in docs #80. The [embedded BASIC follow-up](2026-10-embedded-basic/REPORT.md)
+now supplies the exact browser task and recovery evidence for
+[website #747](https://github.com/code198x/website/issues/747), ready for review.
+Next measure embedded startup/edit-to-result latency under
+[website #748](https://github.com/code198x/website/issues/748).
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to

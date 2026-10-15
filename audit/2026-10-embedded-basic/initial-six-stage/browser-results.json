@@ -1,0 +1,307 @@
+{
+  "date": "2026-10-15T16:13:06.263Z",
+  "base": "https://code198x.com",
+  "browser": "155.0.8059.40",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "os": "darwin",
+  "checks": [
+    {
+      "name": "repeated reads and replacement",
+      "rows": [
+        "",
+        "Program: greeting",
+        "ONE",
+        "ONE",
+        "TWO",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 50:1"
+      ]
+    },
+    {
+      "name": "wrong immediate variable name",
+      "rows": [
+        "",
+        "Program: greeting",
+        "ONE",
+        "ONE",
+        "TWO",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "2 Variable not found, 0:1"
+      ]
+    },
+    {
+      "name": "repair immediate command",
+      "rows": [
+        "",
+        "Program: greeting",
+        "ONE",
+        "ONE",
+        "TWO",
+        "TWO",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 0:1"
+      ]
+    },
+    {
+      "name": "RUN after error and repair retains program",
+      "rows": [
+        "ONE",
+        "ONE",
+        "TWO",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 50:1"
+      ]
+    },
+    {
+      "name": "Restart reloads selected edited program",
+      "rows": [
+        "",
+        "Program: greeting",
+        "ONE",
+        "ONE",
+        "TWO",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 50:1"
+      ]
+    },
+    {
+      "name": "source reset and original greeting execution",
+      "rows": [
+        "",
+        "Program: greeting",
+        "Hello, Jo",
+        "from the Spectrum",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 20:1"
+      ]
+    }
+  ],
+  "errors": [],
+  "assets": [
+    {
+      "url": "https://code198x.com/_astro/CodeFromFile.astro_astro_type_script_index_0_lang.jDU9rnHI.js",
+      "status": 200,
+      "bytes": 106,
+      "sha256": "bdc7d74ec20bb49149757d911ea69069abc0a358b8be72431443ece11e7fd9e0"
+    },
+    {
+      "url": "https://code198x.com/_astro/ClientRouter.astro_astro_type_script_index_0_lang.C1dAp4S4.js",
+      "status": 200,
+      "bytes": 16354,
+      "sha256": "fae65db7d0bf84ede963b9c59e2922bc74ff4753ba07a8abddc73ac9b728fddd"
+    },
+    {
+      "url": "https://code198x.com/_astro/BasicAndRun.astro_astro_type_script_index_0_lang.BSjYgXQS.js",
+      "status": 200,
+      "bytes": 5988,
+      "sha256": "b8e2b39f734c6129fc67f72c9e4ff1f7cf4f58aac0722dd5f570670cadaeab61"
+    },
+    {
+      "url": "https://code198x.com/_astro/BasicListing.astro_astro_type_script_index_0_lang.DF1r3Ebu.js",
+      "status": 200,
+      "bytes": 3066,
+      "sha256": "eb1c82b445edbf4dd31d5b354c14892f527b1ab2964edee20f76cf33f0b8a4fb"
+    },
+    {
+      "url": "https://code198x.com/_astro/RunPanel.astro_astro_type_script_index_0_lang.nZJwSgtc.js",
+      "status": 200,
+      "bytes": 2680,
+      "sha256": "445fdce81634bbbd61f86d06f35bc98a51baa2ae3f5a4b721980da00d9079814"
+    },
+    {
+      "url": "https://code198x.com/_astro/UnitLayout.astro_astro_type_script_index_0_lang.BQ0OlrW4.js",
+      "status": 200,
+      "bytes": 1969,
+      "sha256": "978458dc0cf8f12e5850f63cc26a0f6255e746ad40626347482783bfe66c168e"
+    },
+    {
+      "url": "https://code198x.com/_astro/lesson-listing.DFJVwx_j.js",
+      "status": 200,
+      "bytes": 1546,
+      "sha256": "5a1bb50e70834dc1038c7566939237ed0884c7450bb6992609ef7e5dad7bdbae"
+    },
+    {
+      "url": "https://code198x.com/_astro/lesson-audio.AO47l0la.js",
+      "status": 200,
+      "bytes": 2460,
+      "sha256": "58803ad5fda001b0374acc466ef6618d60ceb804bb323b26a166e16dd8c43a17"
+    },
+    {
+      "url": "https://code198x.com/_astro/load-player.Bd90k-et.js",
+      "status": 200,
+      "bytes": 671,
+      "sha256": "5e44145cffe99bf077599e8361df7af8cc235e4ad1434dc288615f4a22e5f2d4"
+    },
+    {
+      "url": "https://code198x.com/_astro/preload-helper.L5lOfJxi.js",
+      "status": 200,
+      "bytes": 1402,
+      "sha256": "8bf772fcf734da4b451168642b9e1e058d1b50662c2a7d3898e381a93821e927"
+    },
+    {
+      "url": "https://code198x.com/_astro/spectrum-runner.7LNr02yI.js",
+      "status": 200,
+      "bytes": 16938,
+      "sha256": "1baa9116f482d45b3208091f46342ba1717dc509c205e430c2f95b36c607aed4"
+    },
+    {
+      "url": "https://code198x.com/_astro/sinclair-basic.tmLanguage.d9bYu-eS.js",
+      "status": 200,
+      "bytes": 112655,
+      "sha256": "291d2941fd8243e4de82c16fc2b32e203b52b9126ba4f674d5b17ee29b80a03c"
+    },
+    {
+      "url": "https://code198x.com/_astro/wasm.BnjxR4X6.js",
+      "status": 200,
+      "bytes": 622325,
+      "sha256": "8bb2d9ebc3e2fed826123c31bd8420ef95c76bf252a9bf9b41c8f5e83f67ee76"
+    },
+    {
+      "url": "https://code198x.com/_astro/emu198x_spectrum_web_bg.BAP6L5PN.wasm",
+      "status": 200,
+      "bytes": 631400,
+      "sha256": "9a5eb3c3b1644604f5b31a4ee0c35978c1b0dfffe580845d025147c596e32981"
+    }
+  ],
+  "page": {
+    "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/",
+    "status": 200,
+    "sha256": "bf8f7cbbe1ff06bc203d829adc8c0229279c8bf8f167243d9e5db3111e1cff26"
+  },
+  "originalSource": "  10 LET n$=\"Jo\"\n  15 PRINT \"Hello, \";n$\n  20 PRINT \"from the Spectrum\"",
+  "originalSourceSha256": "60cb6a6195857c03a3d5fecd1b0344d923592b781dcc0d85e2f7baa8b1086220",
+  "earlyObservation": {
+    "text": "The Spectrum has not started yet.",
+    "obsoleteSelectorCount": 0,
+    "obsoleteSelectorText": ""
+  },
+  "reconstructedPrematureAssertion": {
+    "status": "rejected",
+    "failure": "Error: Repeated-read result: The Spectrum has not started yet.",
+    "historicalCause": "unknown; discarded harness source was not retained"
+  },
+  "startupObservations": [
+    {
+      "text": "The Spectrum has not started yet."
+    },
+    {
+      "text": "                                \nProgram: greeting               \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                "
+    },
+    {
+      "text": "                                \nProgram: greeting               \nONE                             \nONE                             \nTWO                             \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n0 OK, 50:1                      "
+    }
+  ],
+  "knownRed": {
+    "rejected": true,
+    "failure": "Error: One read was lost"
+  },
+  "renderedTextRegionSha256": "911fd7b7d33a73527f72dc12d8412e682b05c8b6a6196e10ab8a67c34e1a7340",
+  "status": "passed"
+}
