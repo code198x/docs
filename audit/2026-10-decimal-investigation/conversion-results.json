@@ -1,0 +1,434 @@
+{
+  "status": "passed",
+  "native_engine": {
+    "name": "emu198x-spectrum",
+    "version": "0.32.5"
+  },
+  "native_binary_sha256": "51fe786fb9cec0b552b67125abc11e28f062f6105cb75fb01b923cffbcd81f89",
+  "reference_version": "The Free Unix Spectrum Emulator (Fuse) version 1.7.0.",
+  "reference_binary_sha256": "d230311da3c0ef6dba160c405fde20802086508227b7ff01870d643e01b20627",
+  "driver_sha256": "13370876ee8a162981247f54df89f5a9f54a143cb9dfead7c189e3da1896a46a",
+  "decoder_sha256": "997e93d03ff747a393d93d4d6823e6da9997a5540d107b0c1065e0c492143996",
+  "fixture_sha256": "1f43dc3eee4ec2f5e827303f80f90e6601716124873750b8017751d6368fcd84",
+  "code_sha256": "28e4c01d2922c08b79401a73cc8fe2048908bd0142916e0e989cb3c48b0bd181",
+  "tape_sha256": "d7f84647d7b1f998aab37e2158c285b743e1e25f4eb5f4f7f430ca676675af87",
+  "stock_rom_sha256": "d55daa439b673b0e3f5897f99ac37ecb45f974d1862b4dadb85dec34af99cb42",
+  "counterfactual_rom_sha256": "e3f7353fd576708ed4535a154c2f2485263e75ece3e1a6bffdd143ed85c4b001",
+  "both_mapped_roms_verified": true,
+  "native_loaded_code_verified": true,
+  "completion_marker": 165,
+  "independent_stock_bytes_equal": true,
+  "counterfactual_patch": {
+    "address": 12800,
+    "before": 225,
+    "after": 218,
+    "stock_target": 12770,
+    "corrected_target": 12763
+  },
+  "interactive": [
+    {
+      "expression": "0.5",
+      "bytes": [
+        127,
+        127,
+        255,
+        255,
+        255
+      ],
+      "rational": "4294967295/8589934592",
+      "display": "0.5",
+      "completion": "0 OK, 0:1"
+    },
+    {
+      "expression": "1/2",
+      "bytes": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rational": "1/2",
+      "display": "0.5",
+      "completion": "0 OK, 0:1"
+    },
+    {
+      "expression": "0.1",
+      "bytes": [
+        125,
+        76,
+        204,
+        204,
+        204
+      ],
+      "rational": "858993459/8589934592",
+      "display": "0.1",
+      "completion": "0 OK, 0:1"
+    },
+    {
+      "expression": "1/10",
+      "bytes": [
+        125,
+        76,
+        204,
+        204,
+        204
+      ],
+      "rational": "858993459/8589934592",
+      "display": "0.1",
+      "completion": "0 OK, 0:1"
+    },
+    {
+      "expression": "5e-1",
+      "bytes": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rational": "1/2",
+      "display": "0.5",
+      "completion": "0 OK, 0:1"
+    },
+    {
+      "expression": "5/10",
+      "bytes": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rational": "1/2",
+      "display": "0.5",
+      "completion": "0 OK, 0:1"
+    }
+  ],
+  "results": [
+    {
+      "input": "0.5",
+      "stock_bytes": [
+        127,
+        127,
+        255,
+        255,
+        255
+      ],
+      "stock_rational": "4294967295/8589934592",
+      "corrected_bytes": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "corrected_rational": "1/2"
+    },
+    {
+      "input": ".5",
+      "stock_bytes": [
+        127,
+        127,
+        255,
+        255,
+        255
+      ],
+      "stock_rational": "4294967295/8589934592",
+      "corrected_bytes": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "corrected_rational": "1/2"
+    },
+    {
+      "input": "0.1",
+      "stock_bytes": [
+        125,
+        76,
+        204,
+        204,
+        204
+      ],
+      "stock_rational": "858993459/8589934592",
+      "corrected_bytes": [
+        125,
+        76,
+        204,
+        204,
+        205
+      ],
+      "corrected_rational": "3435973837/34359738368"
+    },
+    {
+      "input": "0.75",
+      "stock_bytes": [
+        128,
+        64,
+        0,
+        0,
+        0
+      ],
+      "stock_rational": "3/4",
+      "corrected_bytes": [
+        128,
+        64,
+        0,
+        0,
+        0
+      ],
+      "corrected_rational": "3/4"
+    },
+    {
+      "input": "0.25",
+      "stock_bytes": [
+        126,
+        127,
+        255,
+        255,
+        255
+      ],
+      "stock_rational": "4294967295/17179869184",
+      "corrected_bytes": [
+        127,
+        0,
+        0,
+        0,
+        1
+      ],
+      "corrected_rational": "2147483649/8589934592"
+    },
+    {
+      "input": "0.2",
+      "stock_bytes": [
+        126,
+        76,
+        204,
+        204,
+        204
+      ],
+      "stock_rational": "858993459/4294967296",
+      "corrected_bytes": [
+        126,
+        76,
+        204,
+        204,
+        205
+      ],
+      "corrected_rational": "3435973837/17179869184"
+    },
+    {
+      "input": "0.125",
+      "stock_bytes": [
+        125,
+        127,
+        255,
+        255,
+        255
+      ],
+      "stock_rational": "4294967295/34359738368",
+      "corrected_bytes": [
+        126,
+        0,
+        0,
+        0,
+        1
+      ],
+      "corrected_rational": "2147483649/17179869184"
+    },
+    {
+      "input": "0.0625",
+      "stock_bytes": [
+        124,
+        127,
+        255,
+        255,
+        255
+      ],
+      "stock_rational": "4294967295/68719476736",
+      "corrected_bytes": [
+        125,
+        0,
+        0,
+        0,
+        1
+      ],
+      "corrected_rational": "2147483649/34359738368"
+    },
+    {
+      "input": "0.3",
+      "stock_bytes": [
+        127,
+        25,
+        153,
+        153,
+        153
+      ],
+      "stock_rational": "2576980377/8589934592",
+      "corrected_bytes": [
+        127,
+        25,
+        153,
+        153,
+        154
+      ],
+      "corrected_rational": "1288490189/4294967296"
+    },
+    {
+      "input": "0.9",
+      "stock_bytes": [
+        128,
+        102,
+        102,
+        102,
+        102
+      ],
+      "stock_rational": "1932735283/2147483648",
+      "corrected_bytes": [
+        128,
+        102,
+        102,
+        102,
+        103
+      ],
+      "corrected_rational": "3865470567/4294967296"
+    },
+    {
+      "input": "1.5",
+      "stock_bytes": [
+        129,
+        64,
+        0,
+        0,
+        0
+      ],
+      "stock_rational": "3/2",
+      "corrected_bytes": [
+        129,
+        64,
+        0,
+        0,
+        0
+      ],
+      "corrected_rational": "3/2"
+    },
+    {
+      "input": "5e-1",
+      "stock_bytes": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stock_rational": "1/2",
+      "corrected_bytes": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "corrected_rational": "1/2"
+    },
+    {
+      "input": "1/2",
+      "stock_bytes": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stock_rational": "1/2",
+      "corrected_bytes": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "corrected_rational": "1/2"
+    },
+    {
+      "input": "3/4",
+      "stock_bytes": [
+        128,
+        64,
+        0,
+        0,
+        0
+      ],
+      "stock_rational": "3/4",
+      "corrected_bytes": [
+        128,
+        64,
+        0,
+        0,
+        0
+      ],
+      "corrected_rational": "3/4"
+    },
+    {
+      "input": "1/10",
+      "stock_bytes": [
+        125,
+        76,
+        204,
+        204,
+        204
+      ],
+      "stock_rational": "858993459/8589934592",
+      "corrected_bytes": [
+        125,
+        76,
+        204,
+        204,
+        205
+      ],
+      "corrected_rational": "3435973837/34359738368"
+    },
+    {
+      "input": "5/10",
+      "stock_bytes": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stock_rational": "1/2",
+      "corrected_bytes": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "corrected_rational": "1/2"
+    },
+    {
+      "input": "(1/10)*5",
+      "stock_bytes": [
+        127,
+        127,
+        255,
+        255,
+        255
+      ],
+      "stock_rational": "4294967295/8589934592",
+      "corrected_bytes": [
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "corrected_rational": "1/2"
+    }
+  ],
+  "limits": "Configured stock ROM and named engines only; correction is a disposable counterfactual, not shipped firmware. No original hardware, other ROM or learner qualification."
+}

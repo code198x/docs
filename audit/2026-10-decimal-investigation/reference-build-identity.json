@@ -1,0 +1,37 @@
+{
+  "fuse": {
+    "configure": "446bded607124fe6cad9c6c9a24b147069f2a438e44c10d0c58c7cf1447ab8cf",
+    "configure.ac": "2d0aa59fa220de47b9125570fe87ccb0a90db41bd2b911d506003dfb179079d3",
+    "z80/z80.c": "2416dec72d33d92361181a594cb1590c4cc41a4e135339b58c296b5f51260843",
+    "z80/z80_ops.c": "22f499ee3ed3cf5ec2f57104033c488e2e13a243f0f8239e846b2ffd03d69839",
+    "machine.c": "5857087881db4f2629b697b5a99e95cf26d2534f931d2f2ec5d6b7740cbe80ab",
+    "tape.c": "fa323a8bb39f91275711fcda470829f2d0f8da4060e0b2a17a0dd52bdd464b46",
+    "compat/unix/paths.c": "84900820a264f3e8d4452a7b73e802891b4d297897cfd24e3524cfff6c835876",
+    "debugger/commandy.y": "abd0c7037bda7cf9c907337bd242d7b6a3293cd0a07891436beaa7f9ca7128a2",
+    "debugger/commandl.l": "78ecf4d1c058a85f9ed569e7353eb3b6d34d6ac9fa1eb1c253e8b7534b6785e2",
+    "z80/coretest.c": "8bfc48166476dce63407195c9d22fd57037f5edc1b84d207c7c0d4e68cb4c055",
+    "z80/opcodes_base.c": "b34ad5ff470fc31885e733977ca2bf0700fa2a50d93c12ded4a4cc4b9511e442",
+    "z80/opcodes_base.dat": "58f6b1f4f0c1a98168255106b8dae729a17f4538ecbf710a4670252861a9c80a",
+    "z80/opcodes_cb.dat": "75f812a7eb14c97e5d53f66322425e63874451a744e8ffce9dbeddba4c07d7ab",
+    "z80/opcodes_ddfd.dat": "ecd6e954d2f9d24fe946e35929ffe5cf681640b0bbf9f1fb7b5f613cdc668b58",
+    "z80/opcodes_ddfdcb.dat": "0ed98daf33e3f86ec4f119062c833c6bc0ec1667f0dcdae063d8d7a4a379b7bb",
+    "z80/opcodes_ed.dat": "735e060e0105df8d45fc1ee92f58b9fc2dbdbfb70150b2af04bcb30981de0312",
+    "z80/z80.h": "6702cbb1629bdcd9eae9af26434ff877fe24f2aa6ca67b5469efd0832afff439",
+    "z80/z80.pl": "12c15fd63865fecfd9b8345347601467ba21e7afa1c2e49c246888f2482d4137",
+    "z80/z80_cb.c": "c1bcfa09cf87977aef927780ffe070bd1f827e169a533b522f79b1d530e4187e",
+    "z80/z80_checks.h": "d0492fcbaae84a9b59d403874d500e77058fd649dceeeb49fddf753700347982",
+    "z80/z80_ddfd.c": "3e831c50aedfef1a9bb8ef26edf5003439c22937cf110aeff0d73fd2c4a879a2",
+    "z80/z80_ddfdcb.c": "3d7e44a00cfbff0f81d08f8b4cec09c2d6482c8b23bdc65ab8191eaed095b98d",
+    "z80/z80_debugger_variables.c": "0188f4920b021aecda8d955353060429f70296aa0f8e3716df04fc794d0e72f6",
+    "z80/z80_ed.c": "a3187bd5d0dd5a45c599629be297a4ed256fc2fdb5363ec860d32db045da114f",
+    "z80/z80_internals.h": "6748b9e47f2374a32f7fed5a4f491b152d95b868dc294198ba3c668e89353c15",
+    "z80/z80_macros.h": "ee93e46c82ae0021b0a0739cad19df2530097786ec67b5c5d77be5d641d55987"
+  },
+  "libspectrum": {
+    "configure": "645b7629c04ecd8797ba7d3ef3c85218f83d3cef80a0117727b9145b7557f9f6",
+    "configure.ac": "7039043a21ecc08fb92e16c23abb338422873c9e21b2b62a4f4eddafd808e999",
+    "tap.c": "78212af87a72e6c16fd8e5653349102b5394a91fa9c61563717b02ce1b4328e1",
+    "tape.c": "2a48fd9be60b15b81e06a7d7c9b3e5d8b8713134ebf2fb92225392c23743db9e"
+  },
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)"
+}
