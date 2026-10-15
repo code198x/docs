@@ -1,0 +1,1 @@
+ba47fcdf3849fdcec018cc7de9ac3f45be38a8134c85a8396bffc8497f6f16d9  audit/2026-10-structure-pilot/verify-structure.py
