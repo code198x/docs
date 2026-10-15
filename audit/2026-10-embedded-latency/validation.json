@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "trials": 5,
+  "successful_timed_stages": 15,
+  "statistics_independently_recomputed": true,
+  "live_wasm_responses": 5,
+  "asset_identity_records": 60,
+  "local_links_checked": 81,
+  "artefacts_hashed": 6,
+  "negative_controls_rejected": [
+    "empty trials",
+    "missing completion",
+    "stale observations",
+    "false median",
+    "fast missing result"
+  ],
+  "live_missing_result_control": "failed without latency",
+  "learner_observations": 0
+}
