@@ -1,0 +1,175 @@
+{
+  "date": "2026-10-15T13:19:10.371Z",
+  "base": "https://code198x.com",
+  "phase": "baseline",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/working-it-out/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": true,
+      "outputs": [],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": true,
+      "outputs": [
+        "First number? 7\nSecond number? 5\nThe total is 12",
+        "14",
+        "20"
+      ],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "Score: 0\nScore: 10",
+        "Lives: 2"
+      ],
+      "trace": [
+        [
+          "1",
+          "—",
+          "0",
+          "—"
+        ],
+        [
+          "2",
+          "0",
+          "0",
+          "Score: 0"
+        ],
+        [
+          "3",
+          "0",
+          "10",
+          "—"
+        ],
+        [
+          "4",
+          "10",
+          "10",
+          "Score: 10"
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": true,
+      "outputs": [
+        "3.5",
+        "3",
+        "1",
+        "0\n1",
+        "3\n4"
+      ],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": true,
+      "outputs": [],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/unit-01/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": true,
+      "outputs": [
+        "First number? 7\nSecond number? 5\nThe total is 12",
+        "14",
+        "20"
+      ],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/unit-02/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "Score: 0\nScore: 10",
+        "Lives: 2"
+      ],
+      "trace": [
+        [
+          "1",
+          "—",
+          "0",
+          "—"
+        ],
+        [
+          "2",
+          "0",
+          "0",
+          "Score: 0"
+        ],
+        [
+          "3",
+          "0",
+          "10",
+          "—"
+        ],
+        [
+          "4",
+          "10",
+          "10",
+          "Score: 10"
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/unit-03/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": true,
+      "outputs": [
+        "3.5",
+        "3",
+        "1",
+        "0\n1",
+        "3\n4"
+      ],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "status": "passed"
+}
