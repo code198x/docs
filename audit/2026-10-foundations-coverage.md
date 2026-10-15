@@ -22,7 +22,7 @@ BASIC and assembly entry remain independent; shared subjects offer support.
 | Decisions | 4 | IF/ELSE, chains, stored flags, compound conditions; values and comparisons | [Decisions/boundary pilot](2026-10-decisions-boundary-pilot/REPORT.md) samples unit 1; current Boolean slice reads units 3–4 as context | Chains, flag lifetime and fractional/range boundaries remain incompletely covered |
 | Truth Tables | 3 | Boolean combinations, NOT/AND/OR/XOR, De Morgan equivalence; conditions and stable input values | [Current Boolean pilot](2026-10-boolean-logic-pilot/REPORT.md) | Learner understanding and unaided transfer remain unobserved |
 | Repeating | 3 | Counted, pre/post-test loops and repeated work; conditions and updates | [Repetition pilot](2026-10-repetition-pilot/REPORT.md) | Broader termination/state-invariant coverage; current checks do not exhaust every loop example |
-| Structure | 4 | Lists, named jobs, parameters/results, diagnosis; loops and changing values | No module-level audit linked in this run | List bounds/alias assumptions, local names and parameter/result contracts, debugging transfer |
+| Structure | 4 | Lists, named jobs, parameters/results, diagnosis; loops and changing values | [Structure pilot](2026-10-structure-pilot/REPORT.md): all four units read, selected outputs/traces and target contrasts checked | Actual learner outcomes, real-language list aliasing and further target contracts remain unverified |
 | Counting in Twos | 4 | Bases, bytes/words, signed representation; place value and arithmetic | [Numbers pilot](2026-10-numbers-pilot/REPORT.md), principally units 3–4 | Binary/hex conversion coverage in units 1–2; further signed-boundary examples |
 | Working the Bits | 5 | Masks/shifts, codes, floating/fixed point; representation and conditions | [Bits/shifts](2026-10-bits-shifts-pilot/REPORT.md), [characters](2026-10-character-codes-pilot/REPORT.md), [fractions](2026-10-fractions-pilot/REPORT.md); [decimal investigation](2026-10-decimal-investigation/REPORT.md) | Broadest sampled module; not a learner validation or every-target proof |
 | Gates and the Adder | 3 | Gate models, half/full adders, carry; Boolean tables and binary place value | Current slice may follow an existing optional connection; not a full hardware-model audit | Model versus physical gate behaviour, carry combinations and multi-bit propagation |
@@ -49,11 +49,12 @@ Actual learner outcomes remain pending across these pilots.
 
 ## Next work and stopping points
 
-The Boolean slice is merged. The Working It Out slice follows it with source,
-native and browser evidence; learner outcomes remain pending. Next, inspect
-Structure: list bounds, local names, parameter/result contracts and the debugging
-traces. Read all four units before selecting corrections, and reproduce confirmed
-findings before editing. This work can progress while we wait for learner observations.
+The Boolean, Working It Out and Structure slices now have linked source, native
+and browser evidence. Real learner outcomes remain pending.
+
+Next, inspect Counting in Twos units 1–2 for binary/hex conversion objectives and
+boundary cases. Those units remain outside the earlier numbers pilot's principal
+unit 3–4 scope. Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to
 share. New learner observations may reorder the audit queue or require a repair;
