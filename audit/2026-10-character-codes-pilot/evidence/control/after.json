@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-15T11:37:34.806Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/working-the-bits/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "failure": "Error: Original character-mask claim remains"
+}

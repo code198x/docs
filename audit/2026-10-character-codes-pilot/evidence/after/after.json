@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-15T11:38:55.155Z",
+  "base": "http://127.0.0.1:2003",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/working-the-bits/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-the-bits/unit-03/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "Does CODE",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "What does BITOR 32",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional source link and return by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional source link and return by keyboard",
+      "target": "/vault/reference/petscii-chart/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "Does CODE",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "question": "What does BITOR 32",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional source link and return by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional source link and return by keyboard",
+      "target": "/vault/reference/petscii-chart/",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": []
+}
