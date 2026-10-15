@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-15T09:50:58.092Z",
+  "base": "http://127.0.0.1:2000",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/counting-in-twos/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-03/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-04/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-04/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [
+    {
+      "check": "prediction opens by keyboard with distinction",
+      "route": "/foundations/counting-in-twos/unit-03/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "prediction opens by keyboard with distinction",
+      "route": "/foundations/counting-in-twos/unit-03/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "prediction opens by keyboard with distinction",
+      "route": "/foundations/counting-in-twos/unit-04/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional assembly link and return by keyboard",
+      "route": "/foundations/counting-in-twos/unit-04/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "prediction opens by keyboard with distinction",
+      "route": "/foundations/counting-in-twos/unit-04/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional assembly link and return by keyboard",
+      "route": "/foundations/counting-in-twos/unit-04/",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

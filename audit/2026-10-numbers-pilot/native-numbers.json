@@ -1,0 +1,140 @@
+{
+  "status": "passed",
+  "target": "configured Spectrum 48K, ROM keyboard entry and tape load",
+  "emulator": {
+    "name": "emu198x-spectrum",
+    "version": "0.32.5"
+  },
+  "emulator_sha256": "51fe786fb9cec0b552b67125abc11e28f062f6105cb75fb01b923cffbcd81f89",
+  "assembler_sha256": "2286f8ba5ac3648a15cad0940acf62c6aa578c81808ed0ced7ee7bbb7aba65ee",
+  "driver_sha256": "13370876ee8a162981247f54df89f5a9f54a143cb9dfead7c189e3da1896a46a",
+  "fixture_sha256": "4c439669753a3e01f68f3c768fa7489a848b9f98f95d1c16929f6d3d5109d12d",
+  "code_sha256": "e2b1e4531306c2265a204988b5e2e839c899ea33360f8a2f844ad364805e2796",
+  "tape_sha256": "59dd0fb9a10bef02111b353fc32b5ac91952263a2f3de31b099533ef3d095910",
+  "rom_sha256": "d55daa439b673b0e3f5897f99ac37ecb45f974d1862b4dadb85dec34af99cb42",
+  "checks": [
+    {
+      "check": "BASIC numeric variable",
+      "commands": [
+        "LET n=255",
+        "LET n=n+1",
+        "PRINT n"
+      ],
+      "rows": [
+        "256",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 0:1"
+      ]
+    },
+    {
+      "check": "BASIC numeric variable",
+      "commands": [
+        "LET n=65535",
+        "LET n=n+1",
+        "PRINT n"
+      ],
+      "rows": [
+        "65536",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 0:1"
+      ]
+    },
+    {
+      "check": "Z80 ADD A,n",
+      "operands": [
+        255,
+        1
+      ],
+      "flags_byte": 81,
+      "expected": {
+        "result": 0,
+        "carry": true,
+        "signed_overflow": false
+      },
+      "observed": {
+        "result": 0,
+        "carry": true,
+        "signed_overflow": false
+      }
+    },
+    {
+      "check": "Z80 ADD A,n",
+      "operands": [
+        127,
+        1
+      ],
+      "flags_byte": 148,
+      "expected": {
+        "result": 128,
+        "carry": false,
+        "signed_overflow": true
+      },
+      "observed": {
+        "result": 128,
+        "carry": false,
+        "signed_overflow": true
+      }
+    },
+    {
+      "check": "Z80 ADD A,n",
+      "operands": [
+        5,
+        251
+      ],
+      "flags_byte": 81,
+      "expected": {
+        "result": 0,
+        "carry": true,
+        "signed_overflow": false
+      },
+      "observed": {
+        "result": 0,
+        "carry": true,
+        "signed_overflow": false
+      }
+    }
+  ],
+  "limits": "No original hardware, pseudocode execution, all-dialect or learner claim."
+}
