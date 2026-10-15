@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-15T09:30:24.018Z",
+  "base": "http://127.0.0.1:1998",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/repeating/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/repeating/unit-02/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check": "closed prediction answer opens by keyboard and distinguishes repeat from moving target",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional BASIC link and browser return by keyboard",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction answer opens by keyboard and distinguishes repeat from moving target",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional BASIC link and browser return by keyboard",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": [
+    "InvalidStateError: Transition was aborted because of invalid state. Viewport size changed"
+  ],
+  "failure": "Error: InvalidStateError: Transition was aborted because of invalid state. Viewport size changed"
+}
