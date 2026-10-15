@@ -1,0 +1,1 @@
+PASS 37 verification modules parse with zero automatic semicolon insertions.

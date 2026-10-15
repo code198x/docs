@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/private/tmp/198x-source-docs/audit/2026-10-source-silicon-pilot/verify-translation.py", line 167, in <module>
+    main()
+    ~~~~^^
+  File "/private/tmp/198x-source-docs/audit/2026-10-source-silicon-pilot/verify-translation.py", line 110, in main
+    before = program()
+  File "/private/tmp/198x-source-docs/audit/2026-10-source-silicon-pilot/verify-translation.py", line 105, in program
+    raise AssertionError('Expected LET/LET/PRINT tokenised lines')
+AssertionError: Expected LET/LET/PRINT tokenised lines

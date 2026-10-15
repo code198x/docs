@@ -26,7 +26,7 @@ BASIC and assembly entry remain independent; shared subjects offer support.
 | Counting in Twos | 4 | Bases, bytes/words, signed representation; place value and arithmetic | [Numbers pilot](2026-10-numbers-pilot/REPORT.md), principally units 3–4; [binary/hex pilot](2026-10-binary-hex-pilot/REPORT.md) samples units 1–2 | Actual learner outcomes, further target representations and signed-boundary cases |
 | Working the Bits | 5 | Masks/shifts, codes, floating/fixed point; representation and conditions | [Bits/shifts](2026-10-bits-shifts-pilot/REPORT.md), [characters](2026-10-character-codes-pilot/REPORT.md), [fractions](2026-10-fractions-pilot/REPORT.md); [decimal investigation](2026-10-decimal-investigation/REPORT.md) | Broadest sampled module; not a learner validation or every-target proof |
 | Gates and the Adder | 3 | Gate models, half/full adders, carry; Boolean tables and binary place value | [Gates/adder pilot](2026-10-gates-adder-pilot/REPORT.md): all three units, selected circuit/table cases and native arithmetic contrasts | Physical specimen/timing measurements and actual learner outcomes remain unobserved |
-| From Source to Silicon | 5 | Source/bytes, interpretation/translation, interfaces and measurement; code/data and execution | Existing publication is source context, not a full audit in this run | Complete objective/assumption map and reproducible execution/performance comparisons |
+| From Source to Silicon | 5 | Source/bytes, interpretation/translation, interfaces and measurement; code/data and execution | [Source/translation pilot](2026-10-source-silicon-pilot/REPORT.md): all five units read; finite toy model, native source/byte contrast and selected browser checks | Broader interpreter/compiler execution, controlled performance comparisons and learner outcomes remain unverified |
 
 The catalogue, module openings and unit headings supply this inventory. The
 [retained heading list](2026-10-boolean-logic-pilot/foundations-inventory.json)
@@ -52,10 +52,12 @@ Actual learner outcomes remain pending across these pilots.
 The Boolean, Working It Out and Structure slices now have linked source, native
 and browser evidence. Real learner outcomes remain pending.
 
-The binary/hex pilot adds selected evidence for Counting in Twos units 1–2.
-The gate/adder pilot adds settled Boolean model and carry evidence. Next inspect
-all five From Source to Silicon units: map their source/bytes, interpretation,
-translation and performance claims before selecting a bounded execution example.
+The binary/hex and gate/adder pilots add representation and settled Boolean
+model evidence. The source/translation pilot now maps all five From Source to
+Silicon units and links a bounded toy-model/native contrast. Each of the ten
+Foundations modules has selected evidence; this is not complete objective or
+learner validation. Next revisit Basics units 1–2/5: inspect ordering, output and
+input contracts, then select a concrete input-boundary task and target contrast.
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to
