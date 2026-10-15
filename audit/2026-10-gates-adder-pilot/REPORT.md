@@ -75,7 +75,7 @@ node verify-svg-contrast.mjs http://127.0.0.1:2007 /path/to/svg-text-contrast.js
 
 ## Approved binary/hex publication
 
-The approved binary/hex website #730 and docs #72 are merged. [CI/deployment run 38748737834](https://github.com/code198x/website/actions/runs/38748737834) completed successfully at website revision `95695874b13428e7e8da1c1e1b037a4bed8f1161`. The [actual public-site verification](binary-hex-live.json) passes all six page/viewport cases and eight keyboard behaviours. This verifies the published lesson content and interactions; the earlier report retains the contrast scope and learner limits.
+The approved binary/hex website #730 and docs #72 are merged. [CI run 38748737834](https://github.com/code198x/website/actions/runs/38748737834) completed successfully at website revision `95695874b13428e7e8da1c1e1b037a4bed8f1161`. The [actual public-site verification](binary-hex-live.json) passes all six page/viewport cases and eight keyboard behaviours. This verifies the published lesson content and interactions; the earlier report retains the contrast scope and learner limits.
 
 ## Next bounded work
 
