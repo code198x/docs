@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-15T12:17:35.121Z",
+  "base": "http://127.0.0.1:2003",
+  "browser": "155.0.8059.40",
+  "mode": "all",
+  "pages": [
+    {
+      "route": "/try/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/spectrum-basic/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/spectrum-assembly/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/parents-and-teachers/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/session-sheet/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/feedback/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "status": "failed",
+  "failure": "TimeoutError: locator.focus: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('main a[href=\"/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/\"]').first()\u001b[22m\n"
+}

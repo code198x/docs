@@ -1,0 +1,27 @@
+{
+  "reopenBase": "https://code198x.com",
+  "date": "2026-10-15T12:24:54.851Z",
+  "base": "http://127.0.0.1:2003",
+  "browser": "155.0.8059.40",
+  "mode": "sessions",
+  "pages": [],
+  "checks": [
+    {
+      "check": "real ROM output changes from Welcome to Hello again",
+      "text": "                                \nProgram: greeting               \nHello again                     \nto you                          \nfrom the Spectrum               \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n0 OK, 20:1                      ",
+      "passed": true
+    },
+    {
+      "check": "download contains edited greeting and reset restores original source",
+      "bytes": 83,
+      "passed": true
+    },
+    {
+      "check": "downloaded tape selected in lesson player; screenshot requires visual greeting confirmation",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "failed",
+  "failure": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.sandbox-source')\u001b[22m\n\u001b[2m    - locator resolved to <textarea rows=\"12\" wrap=\"off\" spellcheck=\"false\" autocomplete=\"off\" autocapitalize=\"off\" class=\"sandbox-source\" id=\"src-first-program.tap\" data-astro-cid-jcarp64j=\"\">; A visible instruction. Stock 48K Spectrum, load…</textarea>\u001b[22m\n\u001b[2m    - fill(\"; A visible instruction. Stock 48K Spectrum, loaded from tape.\u001b[22m\n\u001b[2m; The ROM loader supplies the initial machine environment.\u001b[22m\n\u001b[2m; This hold loop is deliberately not a clock.\u001b[22m\n\u001b[2m org 32768\u001b[22m\n\u001b[2mstart:\u001b[22m\n\u001b[2m ld a,4\u001b[22m\n\u001b[2m out ($FE),a\u001b[22m\n\u001b[2mhold:\u001b[22m\n\u001b[2m jr hold\u001b[22m\n\u001b[2m end start\u001b[22m\n\u001b[2m\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    60 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-15T12:19:33.770Z",
+  "base": "http://127.0.0.1:2003",
+  "browser": "155.0.8059.40",
+  "mode": "all",
+  "pages": [
+    {
+      "route": "/try/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/spectrum-basic/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/spectrum-assembly/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/parents-and-teachers/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/session-sheet/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/feedback/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/",
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/spectrum-basic/",
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/spectrum-assembly/",
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/parents-and-teachers/",
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/session-sheet/",
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/feedback/",
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [
+    {
+      "check": "discovery, both activity routes, companion, sheet and print by keyboard",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "discovery, both activity routes, companion, sheet and print by keyboard",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "real ROM output changes from Welcome to Hello again",
+      "text": "                                \nProgram: greeting               \nHello again                     \nto you                          \nfrom the Spectrum               \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n0 OK, 20:1                      ",
+      "passed": true
+    },
+    {
+      "check": "download contains edited greeting and reset restores original source",
+      "bytes": 83,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "failed",
+  "failure": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Run it here' })\u001b[22m\n"
+}

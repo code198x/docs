@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-15T12:22:45.919Z",
+  "base": "http://127.0.0.1:2003",
+  "browser": "155.0.8059.40",
+  "mode": "sessions",
+  "pages": [],
+  "checks": [
+    {
+      "check": "real ROM output changes from Welcome to Hello again",
+      "text": "                                \nProgram: greeting               \nHello again                     \nto you                          \nfrom the Spectrum               \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n                                \n0 OK, 20:1                      ",
+      "passed": true
+    },
+    {
+      "check": "download contains edited greeting and reset restores original source",
+      "bytes": 83,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "failed",
+  "failure": "TimeoutError: page.waitForFunction: Timeout 60000ms exceeded."
+}
