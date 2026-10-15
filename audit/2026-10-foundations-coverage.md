@@ -65,9 +65,11 @@ retained evidence to each parent criterion and identifies five next priorities.
 The bounded map and probability evidence for [docs #78](https://github.com/code198x/docs/issues/78)
 are accepted in docs #80. The [embedded BASIC follow-up](2026-10-embedded-basic/REPORT.md)
 now supplies the exact browser task and recovery evidence for
-[website #747](https://github.com/code198x/website/issues/747), ready for review.
-Next measure embedded startup/edit-to-result latency under
-[website #748](https://github.com/code198x/website/issues/748).
+[website #747](https://github.com/code198x/website/issues/747), accepted in website #750/docs #81.
+The [latency baseline](2026-10-embedded-latency/REPORT.md) now retains fifteen timed
+stages for [website #748](https://github.com/code198x/website/issues/748), ready for review.
+Next qualify broader first-session operability under
+[website #749](https://github.com/code198x/website/issues/749).
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to

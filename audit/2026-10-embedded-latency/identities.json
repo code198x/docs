@@ -1,0 +1,21 @@
+{
+  "website_baseline": "97f306dc7bbd3b8190c06498eb5eccfca7e0cb43",
+  "docs_baseline": "dc585af6160ea6e1ec9c2043c9a1a86d62f7c40b",
+  "samples_revision": "163e74e18e9536fb555ef7319fa08bbc1836542b",
+  "files": {
+    "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer.mdx": "56502febcd9b1c6a070a65b448c7b7ee251a1b6f812091dd56f118bbd5c6c892",
+    "src/components/BasicAndRun.astro": "cbacc2e9c872064037a8a018dcac54a075460fb47b81c4958f147d0992354e76",
+    "src/components/BasicListing.astro": "c6b1d9267cd14bfed6dba7b2b6eee21545713fe9d5ea83e7a9fdca9493b18699",
+    "src/lib/basic-machine.ts": "d6e15132adb98eed1baeb07505ecad813c58c07ddded6c6fafcbc3488b2aa8d8",
+    "src/lib/spectrum-runner.ts": "f6bda08517a957f3d523d01bd1f9bda7972eb0e3442b808675db5c37ddd6d45e",
+    "package.json": "f3faa82569755a565a9536c8cdb3cabd15c2ab91a5850c60a39c26c9e181516a",
+    "package-lock.json": "bc2e4820866c5590d6273220ec40dadd76e006cb05a0ba87a90998eb0c4d780d"
+  },
+  "sample": {
+    "path": "sinclair-zx-spectrum/basic/meet-basic/opening/unit-01/steps/step-04.bas",
+    "sha256": "bac6ffde17b303bc5ed82c5c9fe1a6008cc655ed9a801b01cc2b515d8f663e22"
+  },
+  "playwright_version": "1.62.1",
+  "installed_browser_package_version": "0.4.3",
+  "browser_rom_fingerprint": "not captured"
+}
