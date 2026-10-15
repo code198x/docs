@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-15T10:28:19.495Z",
+  "base": "http://127.0.0.1:2001",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check": "closed prediction opens by keyboard with accurate answer",
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional link, edit/assemble/run mask, actual bitmap and pixel crop",
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 1440,
+      "input": 202,
+      "mask": 15,
+      "result": 10,
+      "passed": true
+    },
+    {
+      "check": "browser return to source lesson",
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard with accurate answer",
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failure": "TimeoutError: locator.fill: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.byte-lesson').locator('textarea')\u001b[22m\n\u001b[2m    - locator resolved to <textarea readonly rows=\"18\" wrap=\"off\" spellcheck=\"false\" autocomplete=\"off\" autocapitalize=\"off\" id=\"src-one-byte.tap\" class=\"sandbox-source\" data-astro-cid-jcarp64j=\"\">; A byte in our program becomes eight pixels at t…</textarea>\u001b[22m\n\u001b[2m    - fill(\"; A byte in our program becomes eight pixels at the top left.\u001b[22m\n\u001b[2m; The remaining screen still belongs to the ROM loader.\u001b[22m\n\u001b[2m org 32768\u001b[22m\n\u001b[2mstart:\u001b[22m\n\u001b[2m ld a,0\u001b[22m\n\u001b[2m out ($FE),a\u001b[22m\n\u001b[2m ld a,71\u001b[22m\n\u001b[2m ld ($5800),a\u001b[22m\n\u001b[2m ld a,(pattern)\u001b[22m\n\u001b[2m and %00001111\u001b[22m\n\u001b[2m ld ($4000),a\u001b[22m\n\u001b[2mhold:\u001b[22m\n\u001b[2m jr hold\u001b[22m\n\u001b[2mpattern:\u001b[22m\n\u001b[2m defb %11001010\u001b[22m\n\u001b[2m end start\u001b[22m\n\u001b[2m\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not editable\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not editable\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    40 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not editable\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+}

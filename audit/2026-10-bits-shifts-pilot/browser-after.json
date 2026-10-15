@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-15T10:29:50.770Z",
+  "base": "http://127.0.0.1:2001",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/working-the-bits/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-the-bits/unit-02/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [
+    {
+      "check": "closed prediction opens by keyboard with accurate answer",
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional link, edit/assemble/run mask, actual bitmap and pixel crop",
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 1440,
+      "input": 202,
+      "mask": 15,
+      "result": 10,
+      "passed": true
+    },
+    {
+      "check": "browser return to source lesson",
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard with accurate answer",
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "saved mask draft restored and reverted through controls",
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional link, edit/assemble/run mask, actual bitmap and pixel crop",
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 390,
+      "input": 202,
+      "mask": 15,
+      "result": 10,
+      "passed": true
+    },
+    {
+      "check": "browser return to source lesson",
+      "route": "/foundations/working-the-bits/unit-01/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard with accurate answer",
+      "route": "/foundations/working-the-bits/unit-02/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard with accurate answer",
+      "route": "/foundations/working-the-bits/unit-02/",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": []
+}
