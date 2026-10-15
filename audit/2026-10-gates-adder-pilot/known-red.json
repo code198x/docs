@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-15T14:18:57.943Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/gates-and-the-adder/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": true,
+      "tables": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "circuitStates": [],
+  "checks": [],
+  "errors": [],
+  "status": "failed",
+  "failure": "Error: Original gate-model claim remains"
+}

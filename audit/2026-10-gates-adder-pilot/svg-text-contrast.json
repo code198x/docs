@@ -1,0 +1,2163 @@
+{
+  "status": "passed",
+  "scope": "Rendered SVG text fills against authored opaque circle, gate shape or inherited page background; initial and all-inputs-on states only. Does not establish all graphical-object boundaries, focus, hit areas or all combinations.",
+  "browser": "155.0.8059.40",
+  "rows": [
+    {
+      "width": 1440,
+      "unit": "unit-01",
+      "state": "initial",
+      "samples": [
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "OR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "NOT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "unit": "unit-01",
+      "state": "all-inputs-on",
+      "samples": [
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "OR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "NOT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "unit": "unit-02",
+      "state": "initial",
+      "samples": [
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "SUM",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "CARRY",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "unit": "unit-02",
+      "state": "all-inputs-on",
+      "samples": [
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "SUM",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "CARRY",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "unit": "unit-03",
+      "state": "initial",
+      "samples": [
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "Cin",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "SUM",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "COUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "ADDER 0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "ADDER 1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "ADDER 2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "S0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "S1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "S2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "C",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "unit": "unit-03",
+      "state": "all-inputs-on",
+      "samples": [
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "Cin",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "SUM",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "COUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "A0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "ADDER 0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "ADDER 1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "ADDER 2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "S0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "S1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "S2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "C",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "unit": "unit-01",
+      "state": "initial",
+      "samples": [
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "OR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "NOT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "unit": "unit-01",
+      "state": "all-inputs-on",
+      "samples": [
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "OR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "NOT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "unit": "unit-02",
+      "state": "initial",
+      "samples": [
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "SUM",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "CARRY",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "unit": "unit-02",
+      "state": "all-inputs-on",
+      "samples": [
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "SUM",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "CARRY",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "unit": "unit-03",
+      "state": "initial",
+      "samples": [
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "Cin",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "SUM",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "COUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "ADDER 0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "ADDER 1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "ADDER 2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "S0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "S1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "S2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "C",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "unit": "unit-03",
+      "state": "all-inputs-on",
+      "samples": [
+        {
+          "text": "A",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "B",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "Cin",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "XOR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "AND",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "OR",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "SUM",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "COUT",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "1",
+          "foreground": "rgb(246, 244, 238)",
+          "background": "rgb(26, 107, 60)",
+          "kind": "pin value on circle",
+          "ratio": 5.9439
+        },
+        {
+          "text": "A0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "A2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "B2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "ADDER 0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "ADDER 1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "ADDER 2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "gate name on shape",
+          "ratio": 8.5361
+        },
+        {
+          "text": "S0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "S1",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "S2",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        },
+        {
+          "text": "C",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(246, 244, 238)",
+          "kind": "pin name on page",
+          "ratio": 8.5361
+        },
+        {
+          "text": "0",
+          "foreground": "rgb(74, 70, 62)",
+          "background": "rgb(244, 241, 234)",
+          "kind": "pin value on circle",
+          "ratio": 8.323
+        }
+      ]
+    }
+  ]
+}
