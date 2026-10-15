@@ -1,0 +1,766 @@
+{
+  "website_revision": "4c9f3bbcb27d1386c3930c17b9745cdcc702ac48",
+  "files": [
+    {
+      "path": "src/content/curriculum/craft/maths-for-games/index.mdx",
+      "title": "Maths for Games",
+      "sha256": "6de69e5eb466fcf684aa8c27646d58607b7ee9ebe3ab1e45a4854da4143364e0",
+      "headings": []
+    },
+    {
+      "path": "src/content/curriculum/craft/maths-for-games/unit-01.mdx",
+      "title": "Roll a die",
+      "sha256": "28b819662d8ffdd6b9233e12a75fd1a2c93c069ca55f57140ff63c32fce534c0",
+      "headings": [
+        "Turn a fraction into a face",
+        "Repeat a small experiment"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/craft/maths-for-games/unit-02.mdx",
+      "title": "Keep the tallies",
+      "sha256": "9dc87e1eb1761deb0e40e233b5d8ac2adb122db679b91f2d61bb4f397e65341a",
+      "headings": [
+        "One array, six entries",
+        "Give the display two jobs"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/craft/maths-for-games/unit-03.mdx",
+      "title": "Compare shares",
+      "sha256": "b6029c6297164675ce3f173a56483851d3aa505b6566e789561242805b77b7a8",
+      "headings": [
+        "Divide before comparing",
+        "A reference, not a promise"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/craft/maths-for-games/unit-04.mdx",
+      "title": "Watch the distribution",
+      "sha256": "67909c41a20323e075498647bef87e493c0dbd44bffae407d44466b983c6aeea",
+      "headings": [
+        "Move the display into the loop",
+        "Share a fixed scale"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/craft/maths-for-games/unit-05.mdx",
+      "title": "Compare experiments",
+      "sha256": "e0ee0d0e75ee2188d5653e33ca91f117b3631c65f1ca52f0e9414c37326d6fcd",
+      "headings": [
+        "Keep the old result before changing it",
+        "Make each press one choice",
+        "Count every roll, print less often",
+        "Keep a copy"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/craft/maths-for-games/unit-06.mdx",
+      "title": "Place a point",
+      "sha256": "8b28243a0613eb73cf44218e6a3743d920ad8ee42732752996b11f864cfc830a",
+      "headings": [
+        "Choose an origin",
+        "Position and movement"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/craft/maths-for-games/unit-07.mdx",
+      "title": "Measure the triangle",
+      "sha256": "f50781cebe145f8d82a7ad897287f306cffd7489eea3cdc60c3df0206fd37ad7",
+      "headings": [
+        "Three sides, one relationship",
+        "Separate direction from size"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/craft/maths-for-games/unit-08.mdx",
+      "title": "Turn an angle into movement",
+      "sha256": "44f8be70259595374d595f8728828b663a439da56dcbb0b3b39d4f2428d9db3e",
+      "headings": [
+        "Name the two shares",
+        "Use speed instead of radius"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/craft/maths-for-games/unit-09.mdx",
+      "title": "Measure angles in radians",
+      "sha256": "176197364d3d0278d57a1626e5191931cb3acbd649d69cd5d5308c7ff5fa5a5a",
+      "headings": [
+        "Measure the turn using its circle",
+        "Know the function\u2019s convention"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/craft/maths-for-games/unit-10.mdx",
+      "title": "Find the angle to a target",
+      "sha256": "98ce4431426a2e934de33a978a3e30ec36206dd93d4ef958ec0cc8546ccb67c7",
+      "headings": [
+        "Subtract before finding the angle",
+        "Predict, calculate, fire"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/craft/maths-for-games/unit-11.mdx",
+      "title": "Keep fractional movement in integers",
+      "sha256": "44e180cf49b73bf6ac02b8b949dbb9e92b7f008f3f3715b2791489dba343c603",
+      "headings": [
+        "Store a scaled value",
+        "Position needs the same scale",
+        "State the limits"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/index.mdx",
+      "title": "The Basics",
+      "sha256": "f5e5ed6fcc96365834270dfb4158de378acac432c2e6b6a67e37bd9e41eff0a0",
+      "headings": [
+        "What this is",
+        "Who it's for",
+        "The shape"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-01.mdx",
+      "title": "A Program Is Instructions",
+      "sha256": "6bf2f74bb0496df0a830dbb32991098d5b059c7f1101d2c27b27ce6e384ffa51",
+      "headings": [
+        "A program is a list of instructions",
+        "The computer does what you say",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-02.mdx",
+      "title": "One Thing After Another",
+      "sha256": "95cc1ee7335539494ddd3c62f33e311948a1a975b4ee845986d3f4b48337a835",
+      "headings": [
+        "In order, from the top",
+        "The order is the program",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-03.mdx",
+      "title": "Showing Your Work",
+      "sha256": "8a4466da4292a495cedc5045628067c70a19a2416a04d3a2a0ee589feb9bbeb7",
+      "headings": [
+        "Text, or a value",
+        "Joining text to a value",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-04.mdx",
+      "title": "A Place to Remember",
+      "sha256": "b70d5015f5ea4c531a836f69d1ac2c5c2f52cf3bede3cdd9d339773a83063dfa",
+      "headings": [
+        "A named box",
+        "Change the box, keep the name",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-05.mdx",
+      "title": "Asking the Player",
+      "sha256": "17551aecd268be4663ef853b62bc2f10e64096e8657aa33fbbe908808f5855d2",
+      "headings": [
+        "Read an answer into a box",
+        "Empty is still an answer",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/index.mdx",
+      "title": "Counting in Twos",
+      "sha256": "dfaff3bea318cc76de92914521b09adeacb9bb75579a82701486c2f7e4bc62f8",
+      "headings": [
+        "What this is",
+        "Who it's for",
+        "The shape"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-01.mdx",
+      "title": "Ten Fingers, Two Wires",
+      "sha256": "768151d2ab970e3e7ebb9e78b1a3ad94f44cad12839294dd25dd4adca736197d",
+      "headings": [
+        "Ten is a habit",
+        "The machine has two",
+        "Counting past one",
+        "Turn another switch on",
+        "Work back from a number",
+        "Eight of them make a byte",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-02.mdx",
+      "title": "Four Bits at a Time",
+      "sha256": "6f686111d9083edea9232c0d092d80cdf813d0419feeb5867320360d3f2f7d79",
+      "headings": [
+        "Decimal hides the bits",
+        "Group the bits in fours",
+        "Sixteen needs sixteen symbols",
+        "Group a shorter pattern",
+        "A byte is two hex digits",
+        "When a digit runs out",
+        "Why programmers reach for it",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "See the pattern do a job",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-03.mdx",
+      "title": "Two Bytes Together",
+      "sha256": "a33401ca1d8d5c024682563366cf265c176e0522d364bd950fd761b57cd299b6",
+      "headings": [
+        "Sixteen switches",
+        "Hex was ready for this",
+        "The high byte and the low byte",
+        "Why 64K",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next",
+        "Sources"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-04.mdx",
+      "title": "A Minus With No Minus Sign",
+      "sha256": "5ae50facc1f7bcf8351e194335a52df64469d974e02af2674aca5415e52c2925",
+      "headings": [
+        "Borrow a switch for the sign",
+        "Count backwards off the end",
+        "The switches for minus five",
+        "Why bother? Addition just works",
+        "The seam",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next",
+        "Sources"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/index.mdx",
+      "title": "Decisions",
+      "sha256": "368ab306e606ea146977c1d886124ed11e866c8d597da0534253ec7bde8493e3",
+      "headings": [
+        "What this is",
+        "Who it's for",
+        "The shape"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-01.mdx",
+      "title": "Making a Choice",
+      "sha256": "185c6e6e7de61f531920e9d561b71efba4fdcd3e699d41e7533b2011b8012269",
+      "headings": [
+        "Do it only if",
+        "Asking other questions",
+        "When it's wrong, see why",
+        "Check the boundary",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-02.mdx",
+      "title": "One or the Other",
+      "sha256": "9f7d280ab5be41dfdfff24abb4a316de73dd6baa41b4aba8662a009a056622a9",
+      "headings": [
+        "Do this, or else do that",
+        "More than two answers",
+        "When two questions can both be true",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-03.mdx",
+      "title": "A Yes You Can Keep",
+      "sha256": "60a1825e405e8bd40546a9a7b84218efe37743fefdb988c0231d9cf3c9d4b3a9",
+      "headings": [
+        "TRUE and FALSE",
+        "Keeping the answer to a question",
+        "A saved answer does not ask again",
+        "Raising a flag",
+        "Starting a new game",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-04.mdx",
+      "title": "Asking Two Things at Once",
+      "sha256": "8ac6743785e0a5591177114de925b71c7f0d3d54135353f2124968a3e4d1e24a",
+      "headings": [
+        "Both, or either",
+        "The opposite",
+        "Two questions, not one twice",
+        "Mixing them",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/index.mdx",
+      "title": "From Source to Silicon",
+      "sha256": "98fae7556f8b62937df16ef9123149426aa3a667b599eb4907731e25c952f121",
+      "headings": [
+        "What this is",
+        "Who it's for",
+        "What it is not",
+        "The shape"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-01.mdx",
+      "title": "The Program Is Not What Runs",
+      "sha256": "0477fd4589f0de8db9d57c6c7a0bf76e372fc8bc65a6eab19fbf5d5741cfff2e",
+      "headings": [
+        "Source, machine code and the tools between them",
+        "A machine small enough to see",
+        "The names are made up",
+        "Check what the bytes mean",
+        "What changes between the routes?",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-02.mdx",
+      "title": "Translating As You Go",
+      "sha256": "a2965613106820a5697b6d9bb887a5987fcc34b5cd8ae26e743ff884a1ea540b",
+      "headings": [
+        "What Spectrum BASIC stores",
+        "Inside a loop",
+        "Why a game notices",
+        "Why anyone would build it this way",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-03.mdx",
+      "title": "Translating Once",
+      "sha256": "9a8861b0520a7cec2af9bb8ba1cfb5c1ed7c970fcb544012d26b878330b6e680",
+      "headings": [
+        "Where an assembler differs",
+        "Build it",
+        "Reject a program we cannot translate",
+        "What runs afterwards",
+        "Check the distinction",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-04.mdx",
+      "title": "What Speed Costs You",
+      "sha256": "9cc1e26f436f306b0f8df1e71f65ad6718299b5f73cdc6087d3ca24e4bbf4a90",
+      "headings": [
+        "Keep a route back to the source",
+        "Make more details explicit",
+        "Separate the idea from its machine interface",
+        "Try the distinction",
+        "What we've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-05.mdx",
+      "title": "Put It on the Clock",
+      "sha256": "5bcdea8862584e399922b7ab4d06b706a3e404c052e1dfd81f51db5145d62336",
+      "headings": [
+        "Count work, then measure time",
+        "Ask a question we can answer",
+        "Averages can hide the problem",
+        "An optional route into a real game",
+        "Know what the clock measures",
+        "What we've learnt",
+        "Where this leaves us"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/index.mdx",
+      "title": "Gates and the Adder",
+      "sha256": "e58d633ee166c5616f0caadc9951e13313e0a625e6626a0a33badd893cbc598d",
+      "headings": [
+        "What this is",
+        "Who it's for",
+        "What you need first",
+        "The shape",
+        "The model we use"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-01.mdx",
+      "title": "The Same Table, Drawn",
+      "sha256": "11088d3dd1fe775f60a0603dbae143fceeb6b07aacec2885b3e2bcb123e42edc",
+      "headings": [
+        "AND, in wire",
+        "OR and XOR",
+        "NOT takes one wire",
+        "Why these shapes",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-02.mdx",
+      "title": "The Half Adder",
+      "sha256": "0f34faa265e33382e09a1dd077a00139db93da181088e1b26f5e486228ddca9a",
+      "headings": [
+        "Two answers, two columns",
+        "So the circuit is already built",
+        "Why only half",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-03.mdx",
+      "title": "The Full Adder and the Ripple",
+      "sha256": "2d175e6377ffb83892a11e741db803b6d9914497263f843756a5849af23b9258",
+      "headings": [
+        "Three inputs, eight rows",
+        "Building it",
+        "Chaining them",
+        "Follow a carry through three columns",
+        "What this cost",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "Where this leaves you"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/index.mdx",
+      "title": "Repeating",
+      "sha256": "831ba31267ae0dfce2c70285c9e7d31154e9e491d880b8ec5be9efe94dbbe59c",
+      "headings": [
+        "What this is",
+        "Who it's for",
+        "The shape"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/unit-01.mdx",
+      "title": "Doing It Again",
+      "sha256": "1fc427c8eda435a8f8ee59a5270c271c04597f289e02a0799a44cb930942008e",
+      "headings": [
+        "Count, without writing it out",
+        "The counter is a value you can use",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/unit-02.mdx",
+      "title": "Until You Get It",
+      "sha256": "dea5bed5aacf181b49989337ecf195b243fdd6b774baeb31c34a774d1f737039",
+      "headings": [
+        "One guess, then stop",
+        "Repeat until you get it",
+        "An exit we can reach is not a promise",
+        "A secret worth keeping",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/unit-03.mdx",
+      "title": "Checking Before You Start",
+      "sha256": "b9fbdc89e94277b949749805b3ccd34d171c8cccb3ca595f663081c455dcdf68",
+      "headings": [
+        "Ask, then work",
+        "What makes this loop finish?",
+        "A reset in the wrong place",
+        "None is a real number of times",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/index.mdx",
+      "title": "Structure",
+      "sha256": "9bfbc1ca97dba42cbcfeae0761a5b8463a95258d6a4b42007385dd1a3856f05d",
+      "headings": [
+        "What this is",
+        "Who it's for",
+        "The shape"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-01.mdx",
+      "title": "A Box That Holds Many",
+      "sha256": "ca128a5139dd8b5e3ffe57a5c633edf75c169e7dbb405073fd981c3eb49844f6",
+      "headings": [
+        "Making a list",
+        "Changing and growing",
+        "Walking the list",
+        "An empty list",
+        "A loop inside a loop",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-02.mdx",
+      "title": "A Job With a Name",
+      "sha256": "615603a9090b7d8b9bf6ee9cda17e56e04d94a519deeab9a3a52e1dd8869f8fc",
+      "headings": [
+        "Write it once, call it",
+        "The point is reuse",
+        "When two jobs should stay separate",
+        "Leaving a note",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-03.mdx",
+      "title": "Telling a Job What to Work On",
+      "sha256": "c7dccf4e80e4e336ab33ff29058ea54dbe466dbfba12bbc6bcb8e25c62df5713",
+      "headings": [
+        "Handing a value in",
+        "Handing a value back",
+        "The caller keeps its own value",
+        "Say what the caller can rely on",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-04.mdx",
+      "title": "When It's Wrong",
+      "sha256": "0dae1f6051a46f9040e27358b0b8d6665af827e37f116a2de11dcdbe1e96f243",
+      "headings": [
+        "A bug you can see",
+        "Predict before changing it",
+        "When you cannot see it",
+        "Read what the machine tells you",
+        "When the evidence disagrees",
+        "What you've learnt",
+        "Where to go from here"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/index.mdx",
+      "title": "Truth Tables",
+      "sha256": "84e997ed409903b30c6bedb0d9682849470b5ae7f21c3a6e8918fd48b4920892",
+      "headings": [
+        "What this is",
+        "Who it's for",
+        "What it is not",
+        "The shape"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/unit-01.mdx",
+      "title": "True and False",
+      "sha256": "dceaa799f42ceb22bd408094629beda5bca1af90d9bc240c79fe1ddf4f49a01d",
+      "headings": [
+        "The complete map",
+        "NOT turns it round",
+        "Why bother writing it down",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/unit-02.mdx",
+      "title": "Both, Either, Different",
+      "sha256": "dcf8e37b6c5c1982e96a62689603cd9592585a3b475f732d2bbe9188a0546933",
+      "headings": [
+        "AND wants both",
+        "OR wants either",
+        "XOR wants exactly one",
+        "Reading a column instead of a row",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/unit-03.mdx",
+      "title": "Two Guards, One Guard",
+      "sha256": "7af4a2a687c2940a96e8bdd4ab34e35ef107388936bd818988602e7387f117ff",
+      "headings": [
+        "Proving it",
+        "The rule behind it",
+        "What it is for",
+        "When the tables disagree",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "Where this leaves you",
+        "Sources"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/index.mdx",
+      "title": "Working It Out",
+      "sha256": "9287217915296887cbd6cd727994242ac5b29d0556404a529381ec4dec87e961",
+      "headings": [
+        "What this is",
+        "Who it's for",
+        "The shape"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/unit-01.mdx",
+      "title": "Working It Out",
+      "sha256": "80edc34253f5fe086be5ea4a9196e560213f78f6fb2975e6692f4a27f7fc4365",
+      "headings": [
+        "A sum from numbers you type",
+        "Why multiply is a star",
+        "Some sums happen before others",
+        "When the operators have equal priority",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/unit-02.mdx",
+      "title": "A Box That Grows From Itself",
+      "sha256": "8ba6b8505d7f66ca91224696ee11f2928ad51e0b6d1f05d9874dcb2b6d7bfd17",
+      "headings": [
+        "Read it as an instruction",
+        "It works in every direction",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/unit-03.mdx",
+      "title": "When It Doesn't Divide Evenly",
+      "sha256": "d066fd3eaf1df19216d44a2bb4a0aba69cbb3332c0e8ce907cadef77f351705a",
+      "headings": [
+        "Division can keep the fraction",
+        "How many whole ones fit",
+        "What is left over",
+        "A remainder of nothing",
+        "Rounding to the nearest",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "Try it in a game",
+        "What's next"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/index.mdx",
+      "title": "Working the Bits",
+      "sha256": "515eabf0d847aa56f3724f33379a7afb88974527bf6d859cababdb83d115cfb8",
+      "headings": [
+        "What this is",
+        "Who it's for",
+        "The shape"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-01.mdx",
+      "title": "Switch by Switch",
+      "sha256": "68b03d266d72fa45351e7e41718d824991b9d2ec607ecef18b1c7965cb783aab",
+      "headings": [
+        "Two jobs, one set of names",
+        "AND keeps only where both are on",
+        "OR turns switches on",
+        "XOR flips the ones you choose",
+        "NOT flips the lot",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next",
+        "Sources"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-02.mdx",
+      "title": "Slide the Whole Row",
+      "sha256": "f5c451b5f000005790b820051250317019a2d1affc96c9a62b3d959b5c30cb50",
+      "headings": [
+        "Slide left, and the number doubles",
+        "Each slide is another doubling",
+        "Slide right, and it halves",
+        "Why the machine uses it",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next",
+        "Sources"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-03.mdx",
+      "title": "A Letter Is a Number",
+      "sha256": "5dcbe13c8514e406e3aad4880efd8c5594945399dc87bba56d0c991294ed1408",
+      "headings": [
+        "The agreement",
+        "The codes run in order",
+        "The trap: a digit is not its value",
+        "ASCII upper and lower are one bit apart",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next",
+        "Sources"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-04.mdx",
+      "title": "Numbers That Aren't Whole",
+      "sha256": "9dfad3db5bb13e1ef0c97008214ccf4de7065b697b38b08207e1fe6303440189",
+      "headings": [
+        "Let the point float",
+        "Which fractions fit?",
+        "What the machine has to do",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "What's next",
+        "Sources"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-05.mdx",
+      "title": "Nailing the Point Down",
+      "sha256": "6548c71d56595f28af4e31081d1f806d56a966a90768f487ecdfe10531480aee",
+      "headings": [
+        "Agree on a scale",
+        "Adding at one scale",
+        "Reading the value is not dropping the fraction",
+        "What it costs you",
+        "Choosing the scale",
+        "When it's wrong, see why",
+        "What you've learnt",
+        "Where this leaves you"
+      ]
+    }
+  ]
+}
