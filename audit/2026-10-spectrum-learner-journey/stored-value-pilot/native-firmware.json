@@ -1,0 +1,9 @@
+{
+  "target": "configured 48K Spectrum; ROM read from a fresh emulated machine",
+  "rom_bytes": 16384,
+  "rom_sha256": "d55daa439b673b0e3f5897f99ac37ecb45f974d1862b4dadb85dec34af99cb42",
+  "emulator": {
+    "name": "emu198x-spectrum",
+    "version": "0.32.5"
+  }
+}

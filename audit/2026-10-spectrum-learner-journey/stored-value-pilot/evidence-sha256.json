@@ -1,0 +1,13 @@
+{
+  "after-foundations-390.png": "fde98a9aa31cea4a2b7a1f6b4fd7251db1da0a351360da483e2f37a126a8a0bc",
+  "after-revealed-trace.png": "53698ab8afbae850d94b24d796f814a24a38f5af67af2d315228b5a12cdc2803",
+  "before-foundations-390.png": "1b200a0d88288a364a170efc53470b8d1b663a6cd0bf5687fb90a8a3b87de833",
+  "browser-after.json": "63dc8c3013a9975ddba9aaeb151316f28e58bd66e44c9555b29d3873b2e29511",
+  "browser-baseline.json": "a4d99705e37e28aca06d4e45cb5c9593752338fb9073c3f39e622539eb5715ee",
+  "live-byte-checks.json": "4daa9a9c26071fa52c318426da4ea5441c618096e70f2a7525b6bc6143416ed5",
+  "native-assembly.json": "737c8786aadcd0cebbb212dba3a65821b290a4b3739b9227404179fd95412b3f",
+  "native-basic.json": "0f2789408e0b19d33d250cbce3646aa77d9559add4803c4ab59164ff4642611e",
+  "native-firmware.json": "cd3a3160ec737bc09ffb02b559831b20fb70a6dcee12833968cbfffa38ec93fd",
+  "native-repeated-read.json": "cf2669e7549c8c9d5c154fb01ee88c0aed1e0366c70faa389cbeeeb9f3d9ad8d",
+  "supplemental-browser-failure.json": "2724c20363e8c44cd372f20c794ffbdbc01cb0eb9a3172edce2e12d24d13f2a1"
+}

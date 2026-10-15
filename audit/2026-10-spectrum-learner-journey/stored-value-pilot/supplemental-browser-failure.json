@@ -1,0 +1,11 @@
+{
+  "status": "failed harness; runtime outcome unknown",
+  "browser": "155.0.8059.40",
+  "failure": "Error: Repeated-read result: ",
+  "scope": "Custom supplemental BASIC read/replace browser assertion; not a finding that BASIC execution is broken. Native results and the maintained byte verifier are separate evidence.",
+  "earlier_harness_failures": [
+    "Axe builder required an explicit browser context",
+    "Obsolete BASIC data-action selector timed out"
+  ],
+  "disposition": "Removed supplemental runtime path from the new audit script; retained bounded navigation and Foundations before/after checks."
+}

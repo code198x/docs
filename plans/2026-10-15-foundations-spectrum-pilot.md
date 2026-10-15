@@ -107,13 +107,14 @@ effect or current emulator behaviour has been measured in this planning pass.
 
 ## Current evidence
 
-- **Passed:** source inspection identifies shared stored-value material in all
-  three selected lessons and an existing BASIC-to-Foundations link.
-- **Failed:** Foundations unit 4's opening claim is inconsistent with its own
-  retained-variable example.
-- **Pending:** full prerequisite map, new technical execution, current browser
-  baseline, assessment prompts, improvement comparison and actual learner trial.
-- **Unknown:** whether the wording has caused learner misunderstanding.
+The [first evidence pass](../audit/2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md)
+records the prerequisite map, native execution, selected live browser checks,
+proposed correction with built before/after evidence, and trial prompts with
+separate assessor notes. It preserves a failed supplemental browser harness
+check rather than treating it as a passing product test.
 
-Next bounded step: complete the selected pages' prerequisite map and prepare
-the repeated-read/replacement tasks before changing the learning experience.
+The owner confirms that no learner is currently available. Actual learner
+testing remains pending; the effect on comprehension is unknown. The next
+bounded step is editorial review of the correction and trial pack, followed by
+an independent learner trial when one is available. The three parent issues
+remain open and the wider Foundations audit remains incomplete.
