@@ -1,0 +1,1 @@
+The first source-line probe failed with Expected two source lines and actual horizontal scroll. It ran while the final build was still completing, and no measured pass is claimed from it. The positive count/scroll guard rejected the incomplete observation. A subsequent run after build completion is retained separately.

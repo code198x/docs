@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "scope": "Two axe-incomplete source lines at 390, rendered colours against inherited listing background, left/right horizontal scroll. Not a general accessibility pass.",
+  "rows": [
+    {
+      "line": 2,
+      "position": "left",
+      "text": "  ASK \"Guess my number? \" INTO guess\n",
+      "foreground": "rgb(27, 26, 23)",
+      "background": "rgb(252, 251, 248)",
+      "scrollLeft": 0,
+      "ratio": 16.8168
+    },
+    {
+      "line": 2,
+      "position": "right",
+      "text": "  ASK \"Guess my number? \" INTO guess\n",
+      "foreground": "rgb(27, 26, 23)",
+      "background": "rgb(252, 251, 248)",
+      "scrollLeft": 38,
+      "ratio": 16.8168
+    },
+    {
+      "line": 3,
+      "position": "left",
+      "text": "  ASK \"Guess my number? \" INTO guess\n",
+      "foreground": "rgb(27, 26, 23)",
+      "background": "rgb(252, 251, 248)",
+      "scrollLeft": 0,
+      "ratio": 16.8168
+    },
+    {
+      "line": 3,
+      "position": "right",
+      "text": "  ASK \"Guess my number? \" INTO guess\n",
+      "foreground": "rgb(27, 26, 23)",
+      "background": "rgb(252, 251, 248)",
+      "scrollLeft": 38,
+      "ratio": 16.8168
+    }
+  ]
+}

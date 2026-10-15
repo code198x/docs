@@ -1,0 +1,10 @@
+10 LET l=3: LET p=0
+20 LET z=0
+30 LET p=p+1
+40 POKE 40000+p,l
+50 LET l=l-1
+60 IF p=4 THEN GO TO 100
+70 IF l>0 THEN GO TO 30
+90 PRINT "Done ";p;",";l: GO TO 120
+100 PRINT "Guard ";p;",";l
+120 PRINT "End"

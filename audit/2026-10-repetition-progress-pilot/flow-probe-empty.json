@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "scope": "All flow diagram text at 1440/390 against authored step fills or SVG background. Not graphical strokes or a general accessibility assessment.",
+  "rows": [
+    {
+      "width": 1440,
+      "unit": "unit-02",
+      "samples": []
+    },
+    {
+      "width": 1440,
+      "unit": "unit-03",
+      "samples": []
+    },
+    {
+      "width": 390,
+      "unit": "unit-02",
+      "samples": []
+    },
+    {
+      "width": 390,
+      "unit": "unit-03",
+      "samples": []
+    }
+  ]
+}

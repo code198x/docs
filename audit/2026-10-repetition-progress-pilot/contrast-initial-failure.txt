@@ -1,0 +1,1 @@
+Initial flow-text probe failed before reporting ratios: Expected opaque RGB: rgba(0, 0, 0, 0). The SVG background rectangle is transparent; the corrected probe resolves its inherited opaque page background instead of treating transparent black as a measured background. No low-contrast result follows from this verifier error.
