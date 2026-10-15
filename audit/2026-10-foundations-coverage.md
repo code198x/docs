@@ -25,7 +25,7 @@ BASIC and assembly entry remain independent; shared subjects offer support.
 | Structure | 4 | Lists, named jobs, parameters/results, diagnosis; loops and changing values | [Structure pilot](2026-10-structure-pilot/REPORT.md): all four units read, selected outputs/traces and target contrasts checked | Actual learner outcomes, real-language list aliasing and further target contracts remain unverified |
 | Counting in Twos | 4 | Bases, bytes/words, signed representation; place value and arithmetic | [Numbers pilot](2026-10-numbers-pilot/REPORT.md), principally units 3–4; [binary/hex pilot](2026-10-binary-hex-pilot/REPORT.md) samples units 1–2 | Actual learner outcomes, further target representations and signed-boundary cases |
 | Working the Bits | 5 | Masks/shifts, codes, floating/fixed point; representation and conditions | [Bits/shifts](2026-10-bits-shifts-pilot/REPORT.md), [characters](2026-10-character-codes-pilot/REPORT.md), [fractions](2026-10-fractions-pilot/REPORT.md); [decimal investigation](2026-10-decimal-investigation/REPORT.md) | Broadest sampled module; not a learner validation or every-target proof |
-| Gates and the Adder | 3 | Gate models, half/full adders, carry; Boolean tables and binary place value | Current slice may follow an existing optional connection; not a full hardware-model audit | Model versus physical gate behaviour, carry combinations and multi-bit propagation |
+| Gates and the Adder | 3 | Gate models, half/full adders, carry; Boolean tables and binary place value | [Gates/adder pilot](2026-10-gates-adder-pilot/REPORT.md): all three units, selected circuit/table cases and native arithmetic contrasts | Physical specimen/timing measurements and actual learner outcomes remain unobserved |
 | From Source to Silicon | 5 | Source/bytes, interpretation/translation, interfaces and measurement; code/data and execution | Existing publication is source context, not a full audit in this run | Complete objective/assumption map and reproducible execution/performance comparisons |
 
 The catalogue, module openings and unit headings supply this inventory. The
@@ -42,8 +42,8 @@ probability experiment or the representation pilots do not establish full maths
 coverage. Inspect the authored paths and objectives before selecting a later
 maths slice. No claim of mathematical prerequisites for every game is made here.
 
-The current Boolean audit does not qualify the physical behaviour of logic gates,
-all target-language truth representations or short-circuit rules. Native results
+The Boolean and gate pilots do not qualify a physical specimen's electrical/timing
+behaviour, all target-language truth representations or short-circuit rules. Native results
 name their machine and inputs. Browser checks name their page set and viewports.
 Actual learner outcomes remain pending across these pilots.
 
@@ -52,10 +52,10 @@ Actual learner outcomes remain pending across these pilots.
 The Boolean, Working It Out and Structure slices now have linked source, native
 and browser evidence. Real learner outcomes remain pending.
 
-The binary/hex pilot adds selected conversion and interpretation evidence for
-Counting in Twos units 1–2. Next, inspect Gates and the Adder: distinguish the
-Boolean model from a physical gate, check half/full-adder cases and trace carry
-through more than one bit. Read all three units before selecting corrections.
+The binary/hex pilot adds selected evidence for Counting in Twos units 1–2.
+The gate/adder pilot adds settled Boolean model and carry evidence. Next inspect
+all five From Source to Silicon units: map their source/bytes, interpretation,
+translation and performance claims before selecting a bounded execution example.
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to

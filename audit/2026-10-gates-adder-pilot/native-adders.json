@@ -1,0 +1,2486 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "group": "half",
+      "a": 0,
+      "b": 0,
+      "cin": 0,
+      "width": 1,
+      "actual_low": 0,
+      "actual_carry": 0,
+      "full_result": 0
+    },
+    {
+      "group": "full",
+      "a": 0,
+      "b": 0,
+      "cin": 0,
+      "width": 1,
+      "actual_low": 0,
+      "actual_carry": 0,
+      "full_result": 0
+    },
+    {
+      "group": "full",
+      "a": 0,
+      "b": 0,
+      "cin": 1,
+      "width": 1,
+      "actual_low": 1,
+      "actual_carry": 0,
+      "full_result": 1
+    },
+    {
+      "group": "half",
+      "a": 0,
+      "b": 1,
+      "cin": 0,
+      "width": 1,
+      "actual_low": 1,
+      "actual_carry": 0,
+      "full_result": 1
+    },
+    {
+      "group": "full",
+      "a": 0,
+      "b": 1,
+      "cin": 0,
+      "width": 1,
+      "actual_low": 1,
+      "actual_carry": 0,
+      "full_result": 1
+    },
+    {
+      "group": "full",
+      "a": 0,
+      "b": 1,
+      "cin": 1,
+      "width": 1,
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 2
+    },
+    {
+      "group": "half",
+      "a": 1,
+      "b": 0,
+      "cin": 0,
+      "width": 1,
+      "actual_low": 1,
+      "actual_carry": 0,
+      "full_result": 1
+    },
+    {
+      "group": "full",
+      "a": 1,
+      "b": 0,
+      "cin": 0,
+      "width": 1,
+      "actual_low": 1,
+      "actual_carry": 0,
+      "full_result": 1
+    },
+    {
+      "group": "full",
+      "a": 1,
+      "b": 0,
+      "cin": 1,
+      "width": 1,
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 2
+    },
+    {
+      "group": "half",
+      "a": 1,
+      "b": 1,
+      "cin": 0,
+      "width": 1,
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 2
+    },
+    {
+      "group": "full",
+      "a": 1,
+      "b": 1,
+      "cin": 0,
+      "width": 1,
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 2
+    },
+    {
+      "group": "full",
+      "a": 1,
+      "b": 1,
+      "cin": 1,
+      "width": 1,
+      "actual_low": 1,
+      "actual_carry": 1,
+      "full_result": 3
+    },
+    {
+      "group": "ripple",
+      "a": 0,
+      "b": 0,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        }
+      ],
+      "actual_low": 0,
+      "actual_carry": 0,
+      "full_result": 0
+    },
+    {
+      "group": "ripple",
+      "a": 0,
+      "b": 1,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        }
+      ],
+      "actual_low": 1,
+      "actual_carry": 0,
+      "full_result": 1
+    },
+    {
+      "group": "ripple",
+      "a": 0,
+      "b": 2,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        }
+      ],
+      "actual_low": 2,
+      "actual_carry": 0,
+      "full_result": 2
+    },
+    {
+      "group": "ripple",
+      "a": 0,
+      "b": 3,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        }
+      ],
+      "actual_low": 3,
+      "actual_carry": 0,
+      "full_result": 3
+    },
+    {
+      "group": "ripple",
+      "a": 0,
+      "b": 4,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 4,
+      "actual_carry": 0,
+      "full_result": 4
+    },
+    {
+      "group": "ripple",
+      "a": 0,
+      "b": 5,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 5,
+      "actual_carry": 0,
+      "full_result": 5
+    },
+    {
+      "group": "ripple",
+      "a": 0,
+      "b": 6,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 6,
+      "actual_carry": 0,
+      "full_result": 6
+    },
+    {
+      "group": "ripple",
+      "a": 0,
+      "b": 7,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 7,
+      "actual_carry": 0,
+      "full_result": 7
+    },
+    {
+      "group": "ripple",
+      "a": 1,
+      "b": 0,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        }
+      ],
+      "actual_low": 1,
+      "actual_carry": 0,
+      "full_result": 1
+    },
+    {
+      "group": "ripple",
+      "a": 1,
+      "b": 1,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 1,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        }
+      ],
+      "actual_low": 2,
+      "actual_carry": 0,
+      "full_result": 2
+    },
+    {
+      "group": "ripple",
+      "a": 1,
+      "b": 2,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        }
+      ],
+      "actual_low": 3,
+      "actual_carry": 0,
+      "full_result": 3
+    },
+    {
+      "group": "ripple",
+      "a": 1,
+      "b": 3,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 1,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 4,
+      "actual_carry": 0,
+      "full_result": 4
+    },
+    {
+      "group": "ripple",
+      "a": 1,
+      "b": 4,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 5,
+      "actual_carry": 0,
+      "full_result": 5
+    },
+    {
+      "group": "ripple",
+      "a": 1,
+      "b": 5,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 1,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 6,
+      "actual_carry": 0,
+      "full_result": 6
+    },
+    {
+      "group": "ripple",
+      "a": 1,
+      "b": 6,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 7,
+      "actual_carry": 0,
+      "full_result": 7
+    },
+    {
+      "group": "ripple",
+      "a": 1,
+      "b": 7,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 8
+    },
+    {
+      "group": "ripple",
+      "a": 2,
+      "b": 0,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        }
+      ],
+      "actual_low": 2,
+      "actual_carry": 0,
+      "full_result": 2
+    },
+    {
+      "group": "ripple",
+      "a": 2,
+      "b": 1,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        }
+      ],
+      "actual_low": 3,
+      "actual_carry": 0,
+      "full_result": 3
+    },
+    {
+      "group": "ripple",
+      "a": 2,
+      "b": 2,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 1,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 4,
+      "actual_carry": 0,
+      "full_result": 4
+    },
+    {
+      "group": "ripple",
+      "a": 2,
+      "b": 3,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 1,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 5,
+      "actual_carry": 0,
+      "full_result": 5
+    },
+    {
+      "group": "ripple",
+      "a": 2,
+      "b": 4,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 6,
+      "actual_carry": 0,
+      "full_result": 6
+    },
+    {
+      "group": "ripple",
+      "a": 2,
+      "b": 5,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 7,
+      "actual_carry": 0,
+      "full_result": 7
+    },
+    {
+      "group": "ripple",
+      "a": 2,
+      "b": 6,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 8
+    },
+    {
+      "group": "ripple",
+      "a": 2,
+      "b": 7,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 1,
+      "actual_carry": 1,
+      "full_result": 9
+    },
+    {
+      "group": "ripple",
+      "a": 3,
+      "b": 0,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        }
+      ],
+      "actual_low": 3,
+      "actual_carry": 0,
+      "full_result": 3
+    },
+    {
+      "group": "ripple",
+      "a": 3,
+      "b": 1,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 1,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 4,
+      "actual_carry": 0,
+      "full_result": 4
+    },
+    {
+      "group": "ripple",
+      "a": 3,
+      "b": 2,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 1,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 5,
+      "actual_carry": 0,
+      "full_result": 5
+    },
+    {
+      "group": "ripple",
+      "a": 3,
+      "b": 3,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 1,
+          "sum": 1,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 0,
+          "cin": 1,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 6,
+      "actual_carry": 0,
+      "full_result": 6
+    },
+    {
+      "group": "ripple",
+      "a": 3,
+      "b": 4,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 7,
+      "actual_carry": 0,
+      "full_result": 7
+    },
+    {
+      "group": "ripple",
+      "a": 3,
+      "b": 5,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 8
+    },
+    {
+      "group": "ripple",
+      "a": 3,
+      "b": 6,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 1,
+      "actual_carry": 1,
+      "full_result": 9
+    },
+    {
+      "group": "ripple",
+      "a": 3,
+      "b": 7,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 1,
+          "sum": 1,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 0,
+          "b": 1,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 2,
+      "actual_carry": 1,
+      "full_result": 10
+    },
+    {
+      "group": "ripple",
+      "a": 4,
+      "b": 0,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 4,
+      "actual_carry": 0,
+      "full_result": 4
+    },
+    {
+      "group": "ripple",
+      "a": 4,
+      "b": 1,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 5,
+      "actual_carry": 0,
+      "full_result": 5
+    },
+    {
+      "group": "ripple",
+      "a": 4,
+      "b": 2,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 6,
+      "actual_carry": 0,
+      "full_result": 6
+    },
+    {
+      "group": "ripple",
+      "a": 4,
+      "b": 3,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 7,
+      "actual_carry": 0,
+      "full_result": 7
+    },
+    {
+      "group": "ripple",
+      "a": 4,
+      "b": 4,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 8
+    },
+    {
+      "group": "ripple",
+      "a": 4,
+      "b": 5,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 1,
+      "actual_carry": 1,
+      "full_result": 9
+    },
+    {
+      "group": "ripple",
+      "a": 4,
+      "b": 6,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 2,
+      "actual_carry": 1,
+      "full_result": 10
+    },
+    {
+      "group": "ripple",
+      "a": 4,
+      "b": 7,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 3,
+      "actual_carry": 1,
+      "full_result": 11
+    },
+    {
+      "group": "ripple",
+      "a": 5,
+      "b": 0,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 5,
+      "actual_carry": 0,
+      "full_result": 5
+    },
+    {
+      "group": "ripple",
+      "a": 5,
+      "b": 1,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 1,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 6,
+      "actual_carry": 0,
+      "full_result": 6
+    },
+    {
+      "group": "ripple",
+      "a": 5,
+      "b": 2,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 7,
+      "actual_carry": 0,
+      "full_result": 7
+    },
+    {
+      "group": "ripple",
+      "a": 5,
+      "b": 3,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 8
+    },
+    {
+      "group": "ripple",
+      "a": 5,
+      "b": 4,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 1,
+      "actual_carry": 1,
+      "full_result": 9
+    },
+    {
+      "group": "ripple",
+      "a": 5,
+      "b": 5,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 0,
+          "cin": 1,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 2,
+      "actual_carry": 1,
+      "full_result": 10
+    },
+    {
+      "group": "ripple",
+      "a": 5,
+      "b": 6,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 3,
+      "actual_carry": 1,
+      "full_result": 11
+    },
+    {
+      "group": "ripple",
+      "a": 5,
+      "b": 7,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 0,
+          "b": 1,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 1,
+          "sum": 1,
+          "cout": 1
+        }
+      ],
+      "actual_low": 4,
+      "actual_carry": 1,
+      "full_result": 12
+    },
+    {
+      "group": "ripple",
+      "a": 6,
+      "b": 0,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 6,
+      "actual_carry": 0,
+      "full_result": 6
+    },
+    {
+      "group": "ripple",
+      "a": 6,
+      "b": 1,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 7,
+      "actual_carry": 0,
+      "full_result": 7
+    },
+    {
+      "group": "ripple",
+      "a": 6,
+      "b": 2,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 8
+    },
+    {
+      "group": "ripple",
+      "a": 6,
+      "b": 3,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 1,
+      "actual_carry": 1,
+      "full_result": 9
+    },
+    {
+      "group": "ripple",
+      "a": 6,
+      "b": 4,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 2,
+      "actual_carry": 1,
+      "full_result": 10
+    },
+    {
+      "group": "ripple",
+      "a": 6,
+      "b": 5,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 3,
+      "actual_carry": 1,
+      "full_result": 11
+    },
+    {
+      "group": "ripple",
+      "a": 6,
+      "b": 6,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 0,
+          "cin": 0,
+          "sum": 0,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 1,
+          "sum": 1,
+          "cout": 1
+        }
+      ],
+      "actual_low": 4,
+      "actual_carry": 1,
+      "full_result": 12
+    },
+    {
+      "group": "ripple",
+      "a": 6,
+      "b": 7,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 0,
+          "b": 1,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 1,
+          "sum": 1,
+          "cout": 1
+        }
+      ],
+      "actual_low": 5,
+      "actual_carry": 1,
+      "full_result": 13
+    },
+    {
+      "group": "ripple",
+      "a": 7,
+      "b": 0,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        }
+      ],
+      "actual_low": 7,
+      "actual_carry": 0,
+      "full_result": 7
+    },
+    {
+      "group": "ripple",
+      "a": 7,
+      "b": 1,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 8
+    },
+    {
+      "group": "ripple",
+      "a": 7,
+      "b": 2,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 1,
+      "actual_carry": 1,
+      "full_result": 9
+    },
+    {
+      "group": "ripple",
+      "a": 7,
+      "b": 3,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 1,
+          "sum": 1,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 0,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 2,
+      "actual_carry": 1,
+      "full_result": 10
+    },
+    {
+      "group": "ripple",
+      "a": 7,
+      "b": 4,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        }
+      ],
+      "actual_low": 3,
+      "actual_carry": 1,
+      "full_result": 11
+    },
+    {
+      "group": "ripple",
+      "a": 7,
+      "b": 5,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 0,
+          "cin": 1,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 1,
+          "sum": 1,
+          "cout": 1
+        }
+      ],
+      "actual_low": 4,
+      "actual_carry": 1,
+      "full_result": 12
+    },
+    {
+      "group": "ripple",
+      "a": 7,
+      "b": 6,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 0,
+          "cin": 0,
+          "sum": 1,
+          "cout": 0
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 1,
+          "sum": 1,
+          "cout": 1
+        }
+      ],
+      "actual_low": 5,
+      "actual_carry": 1,
+      "full_result": 13
+    },
+    {
+      "group": "ripple",
+      "a": 7,
+      "b": 7,
+      "cin": 0,
+      "width": 3,
+      "trace": [
+        {
+          "bit": 0,
+          "a": 1,
+          "b": 1,
+          "cin": 0,
+          "sum": 0,
+          "cout": 1
+        },
+        {
+          "bit": 1,
+          "a": 1,
+          "b": 1,
+          "cin": 1,
+          "sum": 1,
+          "cout": 1
+        },
+        {
+          "bit": 2,
+          "a": 1,
+          "b": 1,
+          "cin": 1,
+          "sum": 1,
+          "cout": 1
+        }
+      ],
+      "actual_low": 6,
+      "actual_carry": 1,
+      "full_result": 14
+    },
+    {
+      "group": "byte",
+      "a": 5,
+      "b": 251,
+      "cin": 0,
+      "width": 8,
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 256
+    },
+    {
+      "group": "byte",
+      "a": 255,
+      "b": 0,
+      "cin": 1,
+      "width": 8,
+      "actual_low": 0,
+      "actual_carry": 1,
+      "full_result": 256
+    },
+    {
+      "group": "byte",
+      "a": 127,
+      "b": 1,
+      "cin": 0,
+      "width": 8,
+      "actual_low": 128,
+      "actual_carry": 0,
+      "full_result": 128
+    },
+    {
+      "group": "byte",
+      "a": 255,
+      "b": 255,
+      "cin": 1,
+      "width": 8,
+      "actual_low": 255,
+      "actual_carry": 1,
+      "full_result": 511
+    }
+  ],
+  "emulator": {
+    "name": "emu198x-spectrum",
+    "version": "0.32.5"
+  },
+  "emulator_sha256": "51fe786fb9cec0b552b67125abc11e28f062f6105cb75fb01b923cffbcd81f89",
+  "assembler_sha256": "2286f8ba5ac3648a15cad0940acf62c6aa578c81808ed0ced7ee7bbb7aba65ee",
+  "driver_sha256": "13370876ee8a162981247f54df89f5a9f54a143cb9dfead7c189e3da1896a46a",
+  "verifier_sha256": "b4914124202a57ef7922a94facc114018950012e98d923bd49a4c83ee367d00a",
+  "rom_sha256": "d55daa439b673b0e3f5897f99ac37ecb45f974d1862b4dadb85dec34af99cb42",
+  "fixture_sha256": "1f59afca27b43b3b01c6a2db70db25bf1f1b5a339fc5c06a17a23583ec37f6ef",
+  "code_sha256": "1586fd3ce7830276d5123ad4e5e092a5a577c63fab77d2acf0b6d3279c8120ef",
+  "tape_sha256": "e5d636eac952802c97e43ec7043373eba1688a9be3a060272b6acb4e74422f43",
+  "code_bytes": 1548,
+  "tape_bytes": 1669,
+  "result_bytes": 160,
+  "completion_marker": 165,
+  "limits": "Configured Z80 arithmetic observations and an independent Boolean ripple model. This does not establish the processor gate layout, transistor count, electrical behaviour, propagation time or learner understanding."
+}
