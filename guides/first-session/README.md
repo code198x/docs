@@ -81,7 +81,7 @@ from an earlier technical check.
 
 Draft validation on 15 October 2026:
 
-- All 24 relative links in the seven pack documents resolve to files. The
+- All 26 relative links in the seven pack documents resolve to files. The
   shared docs index links to this pack.
 - All eight linked public URLs returned HTTP 200 in Chrome 155.0.8059.40.
   Both fragment targets exist. The opening BASIC menu was expanded to check
