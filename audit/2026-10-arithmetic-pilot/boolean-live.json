@@ -1,0 +1,548 @@
+{
+  "date": "2026-10-15T13:22:47.309Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/truth-tables/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "tables": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/truth-tables/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "tables": [
+        {
+          "inputs": 1,
+          "labels": [
+            "alive"
+          ],
+          "rows": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 1,
+          "labels": [
+            "alive",
+            "NOT alive"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/truth-tables/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "tables": [
+        {
+          "inputs": 2,
+          "labels": [
+            "A AND B"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 2,
+          "labels": [
+            "A OR B"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 2,
+          "labels": [
+            "A OR B",
+            "A XOR B"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/truth-tables/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "tables": [
+        {
+          "inputs": 2,
+          "labels": [
+            "NOT (dead OR finished)",
+            "NOT dead AND NOT finished"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "inputs": 2,
+          "labels": [
+            "NOT (A AND B)",
+            "NOT A OR NOT B"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/truth-tables/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "tables": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/truth-tables/unit-01/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "tables": [
+        {
+          "inputs": 1,
+          "labels": [
+            "alive"
+          ],
+          "rows": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 1,
+          "labels": [
+            "alive",
+            "NOT alive"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/truth-tables/unit-02/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "tables": [
+        {
+          "inputs": 2,
+          "labels": [
+            "A AND B"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 2,
+          "labels": [
+            "A OR B"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 2,
+          "labels": [
+            "A OR B",
+            "A XOR B"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/truth-tables/unit-03/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "tables": [
+        {
+          "inputs": 2,
+          "labels": [
+            "NOT (dead OR finished)",
+            "NOT dead AND NOT finished"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "inputs": 2,
+          "labels": [
+            "NOT (A AND B)",
+            "NOT A OR NOT B"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/truth-tables/unit-01/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/truth-tables/unit-02/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/truth-tables/unit-03/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/patterns/cross-platform/framework/state-machine/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/truth-tables/unit-01/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/truth-tables/unit-02/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "overflowing truth table scrolls by keyboard",
+      "route": "/foundations/truth-tables/unit-03/",
+      "width": 390,
+      "outline": "solid",
+      "scrollLeft": 2,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/truth-tables/unit-03/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/patterns/cross-platform/framework/state-machine/",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}
