@@ -1,0 +1,240 @@
+{
+  "date": "2026-10-15T14:03:37.796Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/working-it-out/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "First number? 7\nSecond number? 5\nThe total is 12",
+        "14",
+        "20",
+        "8\n2"
+      ],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "Score: 0\nScore: 10",
+        "Lives: 2"
+      ],
+      "trace": [
+        [
+          "1",
+          "—",
+          "0",
+          "—"
+        ],
+        [
+          "2",
+          "0",
+          "0",
+          "Score: 0"
+        ],
+        [
+          "3",
+          "0",
+          "10",
+          "—"
+        ],
+        [
+          "4",
+          "10",
+          "10",
+          "Score: 10"
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "3.5",
+        "3",
+        "1",
+        "0\n1",
+        "3\n4"
+      ],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/unit-01/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "First number? 7\nSecond number? 5\nThe total is 12",
+        "14",
+        "20",
+        "8\n2"
+      ],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/unit-02/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "Score: 0\nScore: 10",
+        "Lives: 2"
+      ],
+      "trace": [
+        [
+          "1",
+          "—",
+          "0",
+          "—"
+        ],
+        [
+          "2",
+          "0",
+          "0",
+          "Score: 0"
+        ],
+        [
+          "3",
+          "0",
+          "10",
+          "—"
+        ],
+        [
+          "4",
+          "10",
+          "10",
+          "Score: 10"
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-it-out/unit-03/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "3.5",
+        "3",
+        "1",
+        "0\n1",
+        "3\n4"
+      ],
+      "trace": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check": "prediction opens by keyboard with explanation",
+      "route": "/foundations/working-it-out/unit-01/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "prediction opens by keyboard with explanation",
+      "route": "/foundations/working-it-out/unit-02/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "prediction opens by keyboard with explanation",
+      "route": "/foundations/working-it-out/unit-03/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/patterns/cross-platform/rendering/centre-text-on-a-character-screen/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "prediction opens by keyboard with explanation",
+      "route": "/foundations/working-it-out/unit-01/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "prediction opens by keyboard with explanation",
+      "route": "/foundations/working-it-out/unit-02/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "prediction opens by keyboard with explanation",
+      "route": "/foundations/working-it-out/unit-03/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/patterns/cross-platform/rendering/centre-text-on-a-character-screen/",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

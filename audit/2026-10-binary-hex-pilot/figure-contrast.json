@@ -1,0 +1,228 @@
+[
+  {
+    "width": 1440,
+    "nodes": [
+      {
+        "text": "↓",
+        "colour": "rgb(27, 26, 23)",
+        "background": "rgb(252, 251, 248)",
+        "layers": [
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          }
+        ],
+        "diagramHidden": "true",
+        "caption": "Read the eight bits from left to right, from position 7 to position 0. The high nibble, 1111, becomes F (fifteen); the low nibble, 0000, becomes 0. The left hex digit counts in sixteens, so F0 is 15 × 16 + 0 = 240.",
+        "ratio": 16.816837173024243
+      },
+      {
+        "text": "↓",
+        "colour": "rgb(27, 26, 23)",
+        "background": "rgb(252, 251, 248)",
+        "layers": [
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          }
+        ],
+        "diagramHidden": "true",
+        "caption": "Read the eight bits from left to right, from position 7 to position 0. The high nibble, 1111, becomes F (fifteen); the low nibble, 0000, becomes 0. The left hex digit counts in sixteens, so F0 is 15 × 16 + 0 = 240.",
+        "ratio": 16.816837173024243
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "nodes": [
+      {
+        "text": "↓",
+        "colour": "rgb(27, 26, 23)",
+        "background": "rgb(252, 251, 248)",
+        "layers": [
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          }
+        ],
+        "diagramHidden": "true",
+        "caption": "Read the eight bits from left to right, from position 7 to position 0. The high nibble, 1111, becomes F (fifteen); the low nibble, 0000, becomes 0. The left hex digit counts in sixteens, so F0 is 15 × 16 + 0 = 240.",
+        "ratio": 16.816837173024243
+      },
+      {
+        "text": "↓",
+        "colour": "rgb(27, 26, 23)",
+        "background": "rgb(252, 251, 248)",
+        "layers": [
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          },
+          {
+            "opacity": "1",
+            "image": "none"
+          }
+        ],
+        "diagramHidden": "true",
+        "caption": "Read the eight bits from left to right, from position 7 to position 0. The high nibble, 1111, becomes F (fifteen); the low nibble, 0000, becomes 0. The left hex digit counts in sixteens, so F0 is 15 × 16 + 0 = 240.",
+        "ratio": 16.816837173024243
+      }
+    ]
+  }
+]

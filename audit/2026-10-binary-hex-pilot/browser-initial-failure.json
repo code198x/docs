@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-15T13:58:48.325Z",
+  "base": "http://127.0.0.1:2006",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/counting-in-twos/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [],
+      "table": [],
+      "figure": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "outputs": [
+        "5",
+        "13",
+        "255"
+      ],
+      "table": [],
+      "figure": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "status": "failed",
+  "failure": "TypeError: Cannot read properties of null (reading 'map')"
+}
