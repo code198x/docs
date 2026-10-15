@@ -1,0 +1,423 @@
+{
+  "status": "passed",
+  "server": {
+    "capabilities": {
+      "tools": {}
+    },
+    "protocolVersion": "2025-06-18",
+    "serverInfo": {
+      "name": "emu198x-spectrum",
+      "version": "0.32.5"
+    }
+  },
+  "configuration": "Spectrum 48K; ROM keyboard entry through MCP",
+  "limits": "No native GUI or original hardware verified.",
+  "binary_sha256": "51fe786fb9cec0b552b67125abc11e28f062f6105cb75fb01b923cffbcd81f89",
+  "source_sha256": {
+    "unit-05/steps/step-01.bas": "eaf8fb2c61d276cf093de808b8125b016cf76ad29c87f32b4436ba794d95a3ad",
+    "unit-05/steps/step-02.bas": "c597ba7dc2711a0e5194d12dfa76fe771f79301e61c07e723df757d12bcb8c8c",
+    "unit-05/steps/step-03.bas": "885304d1d9400183a7e4f6371b3c9556969f8e058ca1110026e56d8827d0854a",
+    "unit-06/steps/step-01.bas": "2bfb62db1706ae5cf6b38f2b55e3edb967e0b5014c451eb7d7c2921afa58c7cc",
+    "unit-06/steps/step-02.bas": "f5d7c8b2b153b30f0b748bfda110bfe097ea4a84b18cb9cf79d51019b9bb30c1",
+    "unit-06/steps/step-03.bas": "f4cef8b1a9ec6592fa40d30b9c3f6aaf808ee8cb0a2cd70979bb98e635c275f7",
+    "unit-07/steps/step-01.bas": "acf809f42451ffcf80024ea7a3a70ff8a7064f5e2699728b674b9ff9cf10227e",
+    "unit-07/steps/step-02.bas": "be4bd4534b80dc749fe0272427f76ab46f3545cc8bafc79efaf425d35e74f3fa",
+    "unit-08/steps/step-01.bas": "8eb991818c7811aa9954f2ae5958ab3f527510aa0bbf6dc35ad91a9d135e8e70",
+    "unit-08/steps/step-02.bas": "99057ed31e4200e9deef363f5a6fc45d9cbcd62793ce59082a4bd6d30104cc55",
+    "unit-08/steps/step-03.bas": "e6b865399086ee5bd3b1697111f397d40829589b1acc29a78b0b655317a46a16"
+  },
+  "checks": [
+    {
+      "check": "numeric-11",
+      "expected": [
+        "Guess a whole number 1 to 10",
+        "Too high"
+      ],
+      "screen": [
+        "Guess a whole number 1 to 10",
+        "Too high",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 60:2"
+      ]
+    },
+    {
+      "check": "numeric-6.5",
+      "expected": [
+        "Guess a whole number 1 to 10",
+        "Too low"
+      ],
+      "screen": [
+        "Guess a whole number 1 to 10",
+        "Too low",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 60:1"
+      ]
+    },
+    {
+      "check": "numeric-3+4",
+      "expected": [
+        "Guess a whole number 1 to 10",
+        "Correct!"
+      ],
+      "screen": [
+        "Guess a whole number 1 to 10",
+        "Correct!",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 60:1"
+      ]
+    },
+    {
+      "check": "secret-2-1",
+      "expected": [
+        "Guess a whole number 1 to 10",
+        "Too low"
+      ],
+      "screen": [
+        "Guess a whole number 1 to 10",
+        "Too low",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 60:1"
+      ]
+    },
+    {
+      "check": "secret-2-2",
+      "expected": [
+        "Guess a whole number 1 to 10",
+        "Correct!"
+      ],
+      "screen": [
+        "Guess a whole number 1 to 10",
+        "Correct!",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 60:1"
+      ]
+    },
+    {
+      "check": "secret-2-3",
+      "expected": [
+        "Guess a whole number 1 to 10",
+        "Too high"
+      ],
+      "screen": [
+        "Guess a whole number 1 to 10",
+        "Too high",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 60:2"
+      ]
+    },
+    {
+      "check": "undefined-word-input",
+      "expected": [
+        "2 Variable not found"
+      ],
+      "screen": [
+        "Guess a whole number 1 to 10",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "2 Variable not found, 30:1"
+      ]
+    },
+    {
+      "check": "corrected-input-expression",
+      "expected": [
+        "Guess a whole number 1 to 10",
+        "Too high"
+      ],
+      "screen": [
+        "Guess a whole number 1 to 10",
+        "Too high",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 60:2"
+      ]
+    },
+    {
+      "check": "rejected--1",
+      "expected": [
+        "Whole number from 1 to 10"
+      ],
+      "screen": [
+        "Whole number from 1 to 10",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Your guess L"
+      ]
+    },
+    {
+      "check": "rejected-0.9",
+      "expected": [
+        "Whole number from 1 to 10"
+      ],
+      "screen": [
+        "Whole number from 1 to 10",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Your guess L"
+      ]
+    },
+    {
+      "check": "rejected-10.1",
+      "expected": [
+        "Whole number from 1 to 10"
+      ],
+      "screen": [
+        "Whole number from 1 to 10",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Your guess L"
+      ]
+    },
+    {
+      "check": "expression-is-one-guess",
+      "expected": [
+        "Correct!",
+        "Guesses: 1"
+      ],
+      "screen": [
+        "Correct!",
+        "Guesses: 1",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "9 STOP statement, 90:1"
+      ]
+    }
+  ]
+}

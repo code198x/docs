@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-15T09:07:17.410Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/decisions/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ],
+      "claims": {
+        "cannotReact": true,
+        "negativeGuessAssumption": true
+      }
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "failure": "Error: Original misconception remains"
+}
