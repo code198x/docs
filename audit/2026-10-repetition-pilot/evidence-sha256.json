@@ -1,0 +1,11 @@
+{
+  "after-1440.png": "88845dd923b1db8d9a019aeca5dd61320be5d628dc3396fe6457ce1a3760c462",
+  "after-390.png": "97449f52afe22fa61d7232f8f262d3db418496ca8c22a7fa802b222349895449",
+  "before-390.png": "26c0f51410e9f5ba76426f50d10566ef3dba26abdb7002b877e65d6237882848",
+  "browser-after.json": "3630cf3ce9e94b5ee075d81c58a495055fc8b30248af12afb0360b1b6fac9bf9",
+  "browser-baseline.json": "f840bb79c468b860c43bf25d59b75816a74a41a3680cbd5fbc0b5d3d709139d2",
+  "browser-transition-failure.json": "e26006ada19bb07a6f992ace8fbfac592d2b479467c05b64adf099047db95786",
+  "known-red-control.json": "4d67ba8d06c90993079172fc43a1ab911a53a5cc61c4f791e6f98b1b7f36c720",
+  "live-row-loop.json": "a801a7dec745ef07a2be3c33e88e6f96a1e592f616c0d46a748be0fa5ea2fccb",
+  "native-repetition.json": "5e28c015df5bf82fe4504dd335dda6b78c54d5ad923b8d77666674921ad2b5c3"
+}

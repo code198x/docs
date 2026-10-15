@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-15T09:31:39.738Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/repeating/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "failure": "Error: Original uniqueness promise remains"
+}
