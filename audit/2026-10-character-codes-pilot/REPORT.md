@@ -32,13 +32,12 @@ a bit and points to existing language/machine explanations.
 
 ## Source checks
 
-The local primary-source library supplies the facts:
+The original manuals supply the facts:
 
 - Sinclair Research, *ZX Spectrum BASIC Programming*, chapter 14, printed p. 91:
   CODE takes the first character (0 for an empty string); CHR$ goes from code to
   one-character string. Appendix A supplies the character table. Ordinary ASCII
   letters and digits do not make the entire Spectrum set ASCII.
-  Local source: `reference/by-system/sinclair-zx-spectrum/zxspectrumbasicprogramming.txt`.
 - The same manual, chapter 9, p. 58: VAL evaluates a numeric expression.
   VAL "2*3" is 6. It is not a general digit-only parser.
 - Commodore Business Machines, *Commodore 64 Programmer's Reference Guide*,
@@ -47,7 +46,6 @@ The local primary-source library supplies the facts:
   and screen code 1 for direct screen memory. The selected character set also
   matters. This is a source-checked reading connection; no C64 execution was
   attempted in this Spectrum slice.
-  Local source: `reference/by-system/commodore-c64/1983-commodore-64-programmers-reference-guide.txt`.
 
 Teaching notation's CODE/CHARACTER contract remains that of
 `specifications/pseudocode.md`: name the encoding. A character, its encoded
