@@ -1,0 +1,1 @@
+341e0f9338f28b18bdfa2720c02c2e82bb0a37e4551479a62e304fb986492d9b  scripts/verification/binary-hex-pilot.mjs

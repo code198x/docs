@@ -1,0 +1,1 @@
+PASS: 35 modules parse with zero automatic semicolon insertions

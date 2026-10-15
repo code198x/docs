@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-15T13:58:45.585Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/counting-in-twos/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": true,
+      "outputs": [],
+      "table": [],
+      "figure": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "status": "failed",
+  "failure": "Error: Original notation/physical-state claim remains"
+}

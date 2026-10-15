@@ -1,0 +1,95 @@
+mise WARN  tracking config: failed to ln -sf /private/tmp/198x-binary-website/package.json /Users/stevehill/.local/state/mise/tracked-configs/2d1748e47638904e: Operation not permitted (os error 1)
+mise WARN  tracking config: failed to ln -sf /private/tmp/198x-binary-website/.nvmrc /Users/stevehill/.local/state/mise/tracked-configs/474015edf1918936: Operation not permitted (os error 1)
+
+> website@0.0.1 check
+> vitest run && npm run check:content && node scripts/check-nes-assembler.mjs && node scripts/check-browser-player.mjs
+
+
+ RUN  v4.1.11 /private/tmp/198x-binary-website
+
+
+ Test Files  31 passed (31)
+      Tests  218 passed | 9 skipped (227)
+   Start at  14:55:33
+   Duration  2.30s (transform 1.87s, setup 0ms, import 3.41s, tests 2.81s, environment 2ms)
+
+
+> website@0.0.1 check:content
+> node scripts/check-template-whitespace.mjs && node scripts/check-curriculum-routes.mjs && node scripts/check-vault-imagery.mjs && node scripts/check-vault-platform-balance.mjs && node scripts/check-vault-links.mjs
+
+Template whitespace: 182 templates, no eaten spaces.
+
+Curriculum routes: 11 catalogues, 12 declared edges.
+  longest route: 6 steps, to foundations/from-source-to-silicon
+  · commodore-64/assembly — 17 modules, 17 entry points
+  · commodore-64/basic — 34 modules, 34 entry points
+  · commodore-amiga/amos — 11 modules, 11 entry points
+  · commodore-amiga/assembly — 17 modules, 17 entry points
+  · commodore-amiga/blitz — 8 modules, 8 entry points
+  · craft — 7 modules, 7 entry points
+  · foundations — 10 modules, 1 entry points
+  · nintendo-entertainment-system/assembly — 16 modules, 16 entry points
+  · sinclair-zx-spectrum/assembly — 16 modules, 15 entry points
+  · sinclair-zx-spectrum/basic — 27 modules, 27 entry points
+  · sinclair-zx-spectrum/machine — 1 modules, 1 entry points
+Vault imagery: 15 image(s) across 9 manifest(s), all accounted for.
+
+Vault platform balance: 51 of 572 multi-format entries discuss only one of their platforms.
+
+  · communities/crack-intros — 75% commodore-amiga, never mentions: atari-st
+  · communities/demo-parties — 100% commodore-amiga, never mentions: commodore-64
+  · companies/accolade — 90% sega-mega-drive, never mentions: commodore-amiga
+  · companies/bug-byte — 95% sinclair-zx-spectrum, never mentions: commodore-64
+  · companies/bullfrog — 100% commodore-amiga, never mentions: atari-st, sega-mega-drive
+  · companies/data-east — 75% commodore-64, never mentions: sega-mega-drive
+  · companies/edizioni-hobby — 80% commodore-64, never mentions: commodore-amiga
+  · companies/grandslam — 76% commodore-amiga, never mentions: commodore-64, amstrad-cpc
+  · companies/interplay — 100% commodore-amiga, never mentions: commodore-64
+  · companies/ljn — 100% nintendo-entertainment-system, never mentions: sega-mega-drive
+  · companies/mastertronic — 78% sinclair-zx-spectrum, never mentions: amstrad-cpc
+  · companies/mikro-gen — 100% sinclair-zx-spectrum, never mentions: commodore-64, amstrad-cpc
+  · companies/millennium-interactive — 75% commodore-amiga, never mentions: atari-st
+  · companies/mindscape — 83% commodore-amiga, never mentions: commodore-64
+  · companies/namco — 75% nintendo-entertainment-system, never mentions: commodore-amiga
+  · companies/renegade — 100% commodore-amiga, never mentions: atari-st
+  · companies/technos — 100% nintendo-entertainment-system, never mentions: sega-mega-drive
+  · companies/ultimate — 100% sinclair-zx-spectrum, never mentions: commodore-64, amstrad-cpc, bbc-micro, nintendo-entertainment-system
+  · culture/adventure-game-deaths — 100% commodore-amiga, never mentions: atari-st
+  · culture/basic-to-machine-code — 84% sinclair-zx-spectrum, never mentions: bbc-micro
+  · culture/uk-gaming-boom — 100% sinclair-zx-spectrum, never mentions: commodore-64, bbc-micro
+  · design/point-and-click — 78% commodore-amiga, never mentions: atari-st
+  · distribution/abandonware — 100% commodore-amiga, never mentions: commodore-64, sinclair-zx-spectrum
+  · games/aliens — 100% sinclair-zx-spectrum, never mentions: commodore-64, amstrad-cpc
+  · games/road-rash — 100% sega-mega-drive, never mentions: commodore-amiga
+  · genres/4x-strategy — 78% commodore-64, never mentions: atari-st
+  · genres/god-games — 78% commodore-amiga, never mentions: atari-st
+  · genres/graphic-adventure — 75% commodore-64, never mentions: sinclair-zx-spectrum, atari-st, amstrad-cpc
+  · genres/single-screen-platformer — 83% sinclair-zx-spectrum, never mentions: commodore-64, nintendo-entertainment-system
+  · genres/wargame — 100% sinclair-zx-spectrum, never mentions: commodore-64, bbc-micro, amstrad-cpc, atari-st, commodore-amiga
+  · magazines/computer-and-video-games — 80% sinclair-zx-spectrum, never mentions: amstrad-cpc, commodore-amiga
+  · magazines/pixel — 100% sinclair-zx-spectrum, never mentions: commodore-64, bbc-micro
+  · people/anita-sinclair — 80% atari-st, never mentions: commodore-64, sinclair-zx-spectrum, amstrad-cpc
+  · people/charles-cecil — 75% sinclair-zx-spectrum, never mentions: atari-st
+  · people/david-crane — 100% commodore-64, never mentions: nintendo-entertainment-system
+  · people/greg-follis — 100% amstrad-cpc, never mentions: sinclair-zx-spectrum
+  · people/ian-andrew — 78% sinclair-zx-spectrum, never mentions: commodore-64
+  · people/jon-hare — 80% commodore-amiga, never mentions: atari-st, sega-mega-drive
+  · people/kevin-toms — 100% sinclair-zx-spectrum, never mentions: commodore-64, amstrad-cpc, bbc-micro
+  · people/louis-castle — 100% sega-mega-drive, never mentions: commodore-amiga
+  · people/peter-molyneux — 100% commodore-amiga, never mentions: atari-st
+  · people/roger-dean — 100% commodore-amiga, never mentions: atari-st
+  · people/ron-gilbert — 100% commodore-64, never mentions: commodore-amiga
+  · people/roy-carter — 100% amstrad-cpc, never mentions: sinclair-zx-spectrum
+  · people/sid-meier — 100% commodore-64, never mentions: commodore-amiga
+  · people/steve-screech — 100% commodore-amiga, never mentions: atari-st
+  · people/steve-turner — 89% sinclair-zx-spectrum, never mentions: commodore-amiga, atari-st
+  · people/trip-hawkins — 100% commodore-amiga, never mentions: commodore-64
+  · techniques/state-machine — 100% commodore-64, never mentions: sinclair-zx-spectrum, commodore-amiga, nintendo-entertainment-system
+  · techniques/trainers — 79% commodore-amiga, never mentions: bbc-micro
+  · technologies/manual-protection — 86% commodore-amiga, never mentions: commodore-64, atari-st
+
+  Often fine: a game can matter on one machine and be a poor port elsewhere.
+  Worth checking that no unqualified sentence states something true of one port only.
+
+Vault links: 25957 references across src/, 1485 entries, 187 redirects. All resolve.
+NES WASM assembler matches the native lesson cartridge and reports source-line errors.

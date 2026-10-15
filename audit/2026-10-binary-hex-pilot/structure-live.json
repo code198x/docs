@@ -1,0 +1,420 @@
+{
+  "date": "2026-10-15T14:03:37.796Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/structure/",
+      "width": 1440,
+      "status": 200,
+      "oldAttendance": false,
+      "outputs": [],
+      "tables": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/structure/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "oldAttendance": false,
+      "outputs": [
+        "10",
+        "99 and 40",
+        "10\n99\n30\n40",
+        "0",
+        "row 1 column 1\nrow 1 column 2\nrow 1 column 3\nrow 2 column 1\nrow 2 column 2\nrow 2 column 3\nrow 3 column 1\nrow 3 column 2\nrow 3 column 3"
+      ],
+      "tables": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/structure/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "oldAttendance": false,
+      "outputs": [
+        "----------\nTop news",
+        "----------\nTop news\n----------\nMore news\n----------"
+      ],
+      "tables": [
+        [
+          [
+            "1",
+            "CALL divider",
+            "—"
+          ],
+          [
+            "2",
+            "the SHOW inside the job",
+            "----------"
+          ],
+          [
+            "3",
+            "the job ends, back to the CALL",
+            "—"
+          ],
+          [
+            "4",
+            "SHOW \"Top news\"",
+            "Top news"
+          ]
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/structure/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "oldAttendance": false,
+      "outputs": [
+        "Hello, Sam\nHello, Ada",
+        "10",
+        "5 and 10"
+      ],
+      "tables": [
+        [
+          [
+            "greet",
+            "A name",
+            "No returned value",
+            "Displays a greeting"
+          ],
+          [
+            "double",
+            "A number",
+            "Twice that number",
+            "Does not print anything"
+          ]
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/structure/unit-04/",
+      "width": 1440,
+      "status": 200,
+      "oldAttendance": false,
+      "outputs": [
+        "A number? 5\nDouble it: 7"
+      ],
+      "tables": [
+        [
+          [
+            "2",
+            "4",
+            "4"
+          ],
+          [
+            "0",
+            "0",
+            "2"
+          ],
+          [
+            "-3",
+            "-6",
+            "-1"
+          ]
+        ],
+        [
+          [
+            "1",
+            "10",
+            "0",
+            "10"
+          ],
+          [
+            "2",
+            "25",
+            "10",
+            "35"
+          ],
+          [
+            "3",
+            "5",
+            "35",
+            "40"
+          ]
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/structure/",
+      "width": 390,
+      "status": 200,
+      "oldAttendance": false,
+      "outputs": [],
+      "tables": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/structure/unit-01/",
+      "width": 390,
+      "status": 200,
+      "oldAttendance": false,
+      "outputs": [
+        "10",
+        "99 and 40",
+        "10\n99\n30\n40",
+        "0",
+        "row 1 column 1\nrow 1 column 2\nrow 1 column 3\nrow 2 column 1\nrow 2 column 2\nrow 2 column 3\nrow 3 column 1\nrow 3 column 2\nrow 3 column 3"
+      ],
+      "tables": [],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ],
+      "revealedViolations": [],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/structure/unit-02/",
+      "width": 390,
+      "status": 200,
+      "oldAttendance": false,
+      "outputs": [
+        "----------\nTop news",
+        "----------\nTop news\n----------\nMore news\n----------"
+      ],
+      "tables": [
+        [
+          [
+            "1",
+            "CALL divider",
+            "—"
+          ],
+          [
+            "2",
+            "the SHOW inside the job",
+            "----------"
+          ],
+          [
+            "3",
+            "the job ends, back to the CALL",
+            "—"
+          ],
+          [
+            "4",
+            "SHOW \"Top news\"",
+            "Top news"
+          ]
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ],
+      "revealedViolations": [],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/structure/unit-03/",
+      "width": 390,
+      "status": 200,
+      "oldAttendance": false,
+      "outputs": [
+        "Hello, Sam\nHello, Ada",
+        "10",
+        "5 and 10"
+      ],
+      "tables": [
+        [
+          [
+            "greet",
+            "A name",
+            "No returned value",
+            "Displays a greeting"
+          ],
+          [
+            "double",
+            "A number",
+            "Twice that number",
+            "Does not print anything"
+          ]
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [],
+      "revealedViolations": [],
+      "revealedIncomplete": []
+    },
+    {
+      "route": "/foundations/structure/unit-04/",
+      "width": 390,
+      "status": 200,
+      "oldAttendance": false,
+      "outputs": [
+        "A number? 5\nDouble it: 7"
+      ],
+      "tables": [
+        [
+          [
+            "2",
+            "4",
+            "4"
+          ],
+          [
+            "0",
+            "0",
+            "2"
+          ],
+          [
+            "-3",
+            "-6",
+            "-1"
+          ]
+        ],
+        [
+          [
+            "1",
+            "10",
+            "0",
+            "10"
+          ],
+          [
+            "2",
+            "25",
+            "10",
+            "35"
+          ],
+          [
+            "3",
+            "5",
+            "35",
+            "40"
+          ]
+        ]
+      ],
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ],
+      "revealedViolations": [],
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/structure/unit-01/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/structure/unit-02/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/structure/unit-03/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/structure/unit-03/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-11-write-the-repeated-job-once/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/structure/unit-04/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-08/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/structure/unit-01/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/structure/unit-02/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/structure/unit-03/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/structure/unit-03/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-11-write-the-repeated-job-once/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard",
+      "route": "/foundations/structure/unit-04/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional connection and Back by keyboard",
+      "target": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-08/",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}
