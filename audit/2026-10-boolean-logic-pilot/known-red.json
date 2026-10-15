@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-15T12:59:46.974Z",
+  "base": "https://code198x.com",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/truth-tables/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "tables": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/truth-tables/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": true,
+      "overflow": false,
+      "tables": [
+        {
+          "inputs": 1,
+          "labels": [
+            "alive"
+          ],
+          "rows": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "inputs": 1,
+          "labels": [
+            "alive",
+            "NOT alive"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "status": "failed",
+  "failure": "Error: Original Boolean-scope claim remains"
+}

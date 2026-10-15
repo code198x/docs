@@ -52,7 +52,7 @@ LET scores[2] = 99                   change one item
 APPEND 40 TO scores                  grow it
 LENGTH(scores)                       how many
 
-+ - * /        = <> < > <= >=        AND OR NOT
++ - * /        = <> < > <= >=        AND OR XOR NOT
 (2 + 3) * 4                          brackets: work this out first
 ```
 
@@ -63,7 +63,7 @@ The right-hand annotations above explain the notation; they are not program text
 - `FOR` ranges and `RANDOM` ranges include both ends. `/` gives the fractional result; integer quotient and remainder are explicit. Explain rounding conventions where a boundary case matters.
 - A named job has its own names. Parameters receive copies of values; do not imply a particular machine's reference or allocation behaviour. `RETURN` supplies a result, unlike Sinclair BASIC's return from `GO SUB`.
 - Lists start at 1. A target language's indexing, storage limits and allocation need their own explanation.
-- `AND`, `OR` and `NOT` combine truth values. The `BIT` operations work on number representations. State the bit width, signedness, overflow and shift conventions when used; an unbounded `BITNOT` is not a useful machine model.
+- `AND`, `OR`, `XOR` and `NOT` combine truth values. `XOR` is true when exactly one Boolean operand is true. Comparisons bind before `NOT`, then `AND`, then `OR`; use explicit brackets when mixing `XOR` with other operators. Truth-table equivalence assumes the same current Boolean input values; it does not establish target-language numeric representation, operand evaluation effects or execution cost. The `BIT` operations work on number representations. State the bit width, signedness, overflow and shift conventions when used; an unbounded `BITNOT` is not a useful machine model.
 - `CODE` and `CHARACTER` examples must name the character encoding where it matters. Character codes are not universal across machines.
 - Block `IF`, `FOR`, `WHILE` and `DEFINE` close with `END`; `REPEAT` closes with `UNTIL`. Indent bodies. Do not infer BASIC line numbers or syntax from familiar keywords.
 

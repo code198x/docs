@@ -1,0 +1,14 @@
+[
+  {
+    "route": "/foundations/gates-and-the-adder/unit-01/",
+    "width": 390,
+    "tables": 3,
+    "focusableWithIndicator": true
+  },
+  {
+    "route": "/foundations/gates-and-the-adder/unit-03/",
+    "width": 390,
+    "tables": 2,
+    "focusableWithIndicator": true
+  }
+]

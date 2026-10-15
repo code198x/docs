@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/private/tmp/198x-logic-docs/audit/2026-10-boolean-logic-pilot/verify-logic.py", line 129, in <module>
+    main()
+    ~~~~^^
+  File "/private/tmp/198x-logic-docs/audit/2026-10-boolean-logic-pilot/verify-logic.py", line 65, in main
+    printed(expression, expected)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/198x-logic-docs/audit/2026-10-boolean-logic-pilot/verify-logic.py", line 52, in printed
+    raise AssertionError((expression, expected, rows))
+AssertionError: ('0<>0', 0, ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'PRINT 0<?>0L'])

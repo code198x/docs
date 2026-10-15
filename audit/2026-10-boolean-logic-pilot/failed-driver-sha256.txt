@@ -1,0 +1,1 @@
+27d1764407f77db8b72e4649f76ff73a6baaba322fe9963f53c7ad30c9e1e3b8  audit/2026-10-boolean-logic-pilot/verify-logic.py
