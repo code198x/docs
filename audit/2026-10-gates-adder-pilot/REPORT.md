@@ -73,6 +73,10 @@ node scripts/verification/gates-adder-pilot.mjs http://127.0.0.1:2007 /path/to/o
 node verify-svg-contrast.mjs http://127.0.0.1:2007 /path/to/svg-text-contrast.json
 ```
 
+## Approved binary/hex publication
+
+The approved binary/hex website #730 and docs #72 are merged. [CI/deployment run 38748737834](https://github.com/code198x/website/actions/runs/38748737834) completed successfully at website revision `95695874b13428e7e8da1c1e1b037a4bed8f1161`. The [actual public-site verification](binary-hex-live.json) passes all six page/viewport cases and eight keyboard behaviours. This verifies the published lesson content and interactions; the earlier report retains the contrast scope and learner limits.
+
 ## Next bounded work
 
 The [coverage map](../2026-10-foundations-coverage.md) now links selected evidence for all three Gates and the Adder units, while physical measurement and learner trials remain unobserved. Next inspect all five From Source to Silicon units, identify one concrete source-to-bytes or execution claim, and choose the smallest native example that can test it. The umbrella issues remain open; learner availability does not pause source and technical work.
