@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/private/tmp/198x-arithmetic-docs/audit/2026-10-arithmetic-pilot/verify-arithmetic.py", line 98, in <module>
+    main()
+    ~~~~^^
+  File "/private/tmp/198x-arithmetic-docs/audit/2026-10-arithmetic-pilot/verify-arithmetic.py", line 86, in main
+    raise AssertionError('Incomplete ROM read or invalid floor oracle')
+AssertionError: Incomplete ROM read or invalid floor oracle

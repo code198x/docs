@@ -18,7 +18,7 @@ BASIC and assembly entry remain independent; shared subjects offer support.
 | Module | Units | Objectives and knowledge used | Evidence in this umbrella run | Remaining bounded work |
 | --- | --- | --- | --- | --- |
 | Basics | 5 | Instructions/order, output, variables, input; ordinary text and numbers | [Stored-value pilot](2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md), principally units 3–4 | Complete objective coverage of units 1–2/5; input contracts and ordering transfer |
-| Working It Out | 3 | Arithmetic/precedence, updating a value, division/remainder/rounding; variables and number order | No module-level audit linked in this run | Next arithmetic slice: grouping, quotient versus rounding, zero/negative boundaries |
+| Working It Out | 3 | Arithmetic/precedence, updating a value, division/remainder/rounding; variables and number order | [Arithmetic pilot](2026-10-arithmetic-pilot/REPORT.md) covers the overview and three units | Real learner outcomes and further target-language mappings remain unobserved |
 | Decisions | 4 | IF/ELSE, chains, stored flags, compound conditions; values and comparisons | [Decisions/boundary pilot](2026-10-decisions-boundary-pilot/REPORT.md) samples unit 1; current Boolean slice reads units 3–4 as context | Chains, flag lifetime and fractional/range boundaries remain incompletely covered |
 | Truth Tables | 3 | Boolean combinations, NOT/AND/OR/XOR, De Morgan equivalence; conditions and stable input values | [Current Boolean pilot](2026-10-boolean-logic-pilot/REPORT.md) | Learner understanding and unaided transfer remain unobserved |
 | Repeating | 3 | Counted, pre/post-test loops and repeated work; conditions and updates | [Repetition pilot](2026-10-repetition-pilot/REPORT.md) | Broader termination/state-invariant coverage; current checks do not exhaust every loop example |
@@ -49,11 +49,8 @@ Actual learner outcomes remain pending across these pilots.
 
 ## Next work and stopping points
 
-The Boolean slice and semicolon follow-up are merged. The arithmetic pair
-[website #725](https://github.com/code198x/website/pull/725) /
-[docs #69](https://github.com/code198x/docs/pull/69) remains a separate draft; this
-Structure slice does not imply its approval. Structure adds selected evidence for
-all four units while proposing bounded list/parameter corrections.
+The Boolean, Working It Out and Structure slices now have linked source, native
+and browser evidence. Real learner outcomes remain pending.
 
 Next, inspect Counting in Twos units 1–2 for binary/hex conversion objectives and
 boundary cases. Those units remain outside the earlier numbers pilot's principal
