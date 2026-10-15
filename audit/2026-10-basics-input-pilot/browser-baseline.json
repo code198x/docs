@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-15T15:00:03.494Z",
+  "base": "http://127.0.0.1:2011",
+  "phase": "baseline",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/basics/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-01/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "Hello"
+      ],
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "Put your socks on\nPut your shoes on\nGo outside",
+        "Put your shoes on\nPut your socks on\nGo outside"
+      ],
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-05/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "What is your name? Sam\nHello, Sam",
+        "What is your name? Ada\nHello, Ada"
+      ],
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/basics/",
+      "width": 390,
+      "status": 200,
+      "outputs": [],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-01/",
+      "width": 390,
+      "status": 200,
+      "outputs": [
+        "Hello"
+      ],
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-02/",
+      "width": 390,
+      "status": 200,
+      "outputs": [
+        "Put your socks on\nPut your shoes on\nGo outside",
+        "Put your shoes on\nPut your socks on\nGo outside"
+      ],
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/basics/unit-05/",
+      "width": 390,
+      "status": 200,
+      "outputs": [
+        "What is your name? Sam\nHello, Sam",
+        "What is your name? Ada\nHello, Ada"
+      ],
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".ll-line:nth-child(1) > .ll-text"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "status": "passed"
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "file": "src/content/curriculum/foundations/basics/index.mdx",
+    "baseline_source_sha256": "61b097e5dfa26138b1906b299ba5e1eb8df953f5807d84e82efaa70d7f0ff8c7",
+    "preexisting_built_html_sha256": "4a6f5fb5dfbff34e4629b2bbec90713ef6469978de2cfc74946fda9f5c569902"
+  },
+  {
+    "file": "src/content/curriculum/foundations/basics/unit-01.mdx",
+    "baseline_source_sha256": "99cbaa3360470495e6d4dcb643d1b65b6d2bf1e8072042a9825aacfea34e8214",
+    "preexisting_built_html_sha256": "543a28024599251a3c8e14d23f6577c3dceed0d46a865641313642062046742e"
+  },
+  {
+    "file": "src/content/curriculum/foundations/basics/unit-02.mdx",
+    "baseline_source_sha256": "8d145dd4c26d85ff5bc9a0cc5f61afc4f48632b68b02507e22f5f297f2a115a1",
+    "preexisting_built_html_sha256": "908243103f5eeb1439a3970fd0e707bc5b0bf69f9edd0aa5dac779854700a254"
+  },
+  {
+    "file": "src/content/curriculum/foundations/basics/unit-05.mdx",
+    "baseline_source_sha256": "0cd4b7951bac610c3deb721a6bb19ba0b7f1ba141187c0d13f5104dc00df9788",
+    "preexisting_built_html_sha256": "20e0e622e0da9b6e319c030678e121879af0c1c8e7e6e8d9b3c7fb4c6553757c"
+  }
+]
