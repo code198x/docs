@@ -13,7 +13,7 @@ from conceptual mistakes.
 | 4 | Stored 384 + 128 = 512; decoded value 2. Same-scale addition works while the result fits. |
 | 5 | Nearest integer 26; 26/256 = 0.1015625. At scale 10 the stored integer 1 means exactly 1/10. |
 | 6 | INT takes the whole part for this nonnegative range; it does not preserve the fraction. Record finding the optional link, table explanation and return separately. |
-| 7 | Both print 0.5 on the recorded configuration. Display alone cannot settle storage equality. Native raw bytes differed; investigation is open in docs #63, so do not invent a cause or treat this as a learner error. |
+| 7 | Both print 0.5 on the recorded configuration. Display alone cannot settle storage equality. Native raw bytes differed. The [independent investigation](../2026-10-decimal-investigation/REPORT.md) resolves docs #63 as a documented stock-ROM division-rounding bug. Do not require the learner to know that bug or treat the difference as a learner error. |
 | 8 | Whole-part extraction was confused with full decoding. Different scales must be converted to a common scale before direct integer addition. |
 | 9 | Accept any consistent design. Unsigned 8-bit scale 2 reaches 127.5 and represents halves; position 100 means stored 200, plus a half-step 1 gives 201, decoded 100.5. Unsigned 16-bit scale 256 also works. Check chosen maximum, step, sum and allowed rounding. Timing needs a named target and actual workload evidence. |
 

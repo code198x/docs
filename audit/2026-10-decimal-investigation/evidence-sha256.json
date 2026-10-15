@@ -1,0 +1,7 @@
+{
+  "verify-conversion.py": "aa556799da0c0f9e9b4300cc5615af072c3262fae13bc0a7608cfabc5f5b2794",
+  "conversion.asm": "1f43dc3eee4ec2f5e827303f80f90e6601716124873750b8017751d6368fcd84",
+  "conversion-results.json": "3d5b35b67bd9a50aea300c5042da0d67c3b125c167398ffb39f69fe9ddcde71a",
+  "setup-observations.json": "7ef1af07f6bd1386a4f3f2f92980aee0dfc3a9140f2e1056e036577d3dc7e64b",
+  "reference-build-identity.json": "9e5a89e29ab5574f556d8d72c68b0a12f6530de6658bae53839e94917294c083"
+}

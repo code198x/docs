@@ -1,0 +1,32 @@
+[
+  {
+    "step": "GUI CLI probe",
+    "outcome": "stopped",
+    "detail": "Installed macOS Fuse app opened instead of providing command-line help; stopped the task-owned invocation."
+  },
+  {
+    "step": "initial headless debugger command",
+    "outcome": "timed out",
+    "timeout_seconds": 40,
+    "error": "error: Invalid debugger command: syntax error",
+    "cause": "Trailing top-level newline required another debugger command; removed after checking grammar."
+  },
+  {
+    "step": "custom-ROM autoload",
+    "outcome": "timed out",
+    "timeout_seconds": 40,
+    "detail": "No numeric comparison ran. A bounded diagnostic at frame 501 showed RAM code was not loaded.",
+    "cause": "tape_can_autoload requires !memory_custom_rom(); ROM filename override marks it custom even for identical bytes. The same ROM under default basename in a disposable working directory permits autoload."
+  },
+  {
+    "step": "snapshot export probe",
+    "outcome": "refused by guard",
+    "detail": "save_snapshot refused .sna because it writes Emu198x state, not SNA. No misleading snapshot was produced or used."
+  },
+  {
+    "step": "overbroad counterfactual assertion",
+    "outcome": "failed audit expectation",
+    "error": "AssertionError: Documented correction did not restore exact binary fraction",
+    "detail": "An initial check required all selected representable decimal fractions to become exact after one division-branch correction. This overstates the documented change: multistep decimal conversion can still round. The final check asserts the confirmed half/tenth discriminator and retains every other result without claiming universal correct conversion."
+  }
+]
