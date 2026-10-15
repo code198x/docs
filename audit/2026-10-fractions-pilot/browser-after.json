@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-15T10:47:56.613Z",
+  "base": "http://127.0.0.1:2002",
+  "phase": "after",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/working-the-bits/unit-04/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-the-bits/unit-04/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "route": "/foundations/working-the-bits/unit-05/",
+      "width": 1440,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/working-the-bits/unit-05/",
+      "width": 390,
+      "status": 200,
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [
+    {
+      "check": "closed prediction opens by keyboard with distinction",
+      "route": "/foundations/working-the-bits/unit-04/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard with distinction",
+      "route": "/foundations/working-the-bits/unit-04/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard with distinction",
+      "route": "/foundations/working-the-bits/unit-05/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "optional BASIC fraction conversion link and return by keyboard",
+      "route": "/foundations/working-the-bits/unit-05/",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "closed prediction opens by keyboard with distinction",
+      "route": "/foundations/working-the-bits/unit-05/",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "check": "optional BASIC fraction conversion link and return by keyboard",
+      "route": "/foundations/working-the-bits/unit-05/",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,62 @@
+{
+  "outcome": "failed audit expectation",
+  "error": "AssertionError: Expected exactly representable binary fraction",
+  "expected_input": "LET x=0.5",
+  "observed_record": [
+    120,
+    127,
+    127,
+    255,
+    255,
+    255,
+    128
+  ],
+  "comparison_records": {
+    "0.75": [
+      120,
+      128,
+      64,
+      0,
+      0,
+      0,
+      128
+    ],
+    "0.1": [
+      120,
+      125,
+      76,
+      204,
+      204,
+      204,
+      128
+    ],
+    "1/2": [
+      120,
+      128,
+      0,
+      0,
+      0,
+      0,
+      128
+    ],
+    "3/4": [
+      120,
+      128,
+      64,
+      0,
+      0,
+      0,
+      128
+    ],
+    "1/10": [
+      120,
+      125,
+      76,
+      204,
+      204,
+      204,
+      128
+    ]
+  },
+  "limit": "Cause of decimal-literal conversion observation not established; not classified as emulator or ROM defect."
+}
