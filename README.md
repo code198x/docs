@@ -4,6 +4,12 @@ Start with **[PROJECT.md](PROJECT.md)** for the goals, audience, scope and teach
 
 Original prose is licensed under **CC BY 4.0**. See [LICENSE.md](LICENSE.md) for scope, attribution and exclusions; software and third-party material retain their own terms.
 
+## Learner guide drafts
+
+The [first session guide pack](guides/first-session/README.md) brings together two
+independent Spectrum activities, a learner sheet and parent/teacher notes. It is
+a content draft for review before public page and print implementation.
+
 ## Teaching and authoring
 
 | Guide | Responsibility |

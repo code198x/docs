@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-15T12:06:35.599Z",
+  "browser": "155.0.8059.40",
+  "checks": [
+    {
+      "url": "https://code198x.com/standards#corrections",
+      "status": 200,
+      "title": "Make the evidence\npossible to check.",
+      "anchor": "corrections"
+    },
+    {
+      "url": "https://code198x.com/start-here/",
+      "status": 200,
+      "title": "Start Here.",
+      "anchor": null
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/",
+      "status": 200,
+      "title": "Change the border",
+      "anchor": null
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/",
+      "status": 200,
+      "title": "A byte becomes pixels",
+      "anchor": null
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/",
+      "status": 200,
+      "title": "Make the Spectrum answer",
+      "anchor": null
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/",
+      "status": 200,
+      "title": "Remember a name; keep the program",
+      "anchor": null
+    },
+    {
+      "url": "https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/#reopen-your-saved-greeting",
+      "status": 200,
+      "title": "Remember a name; keep the program",
+      "anchor": "reopen-your-saved-greeting"
+    },
+    {
+      "url": "https://code198x.com/teaching/",
+      "status": 200,
+      "title": "Explore it together.",
+      "anchor": null
+    }
+  ],
+  "status": "passed"
+}
