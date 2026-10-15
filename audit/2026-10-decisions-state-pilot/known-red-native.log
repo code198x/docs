@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/private/tmp/198x-decisions-docs/audit/2026-10-decisions-state-pilot/verify-state.py", line 102, in <module>
+    main()
+    ~~~~^^
+  File "/private/tmp/198x-decisions-docs/audit/2026-10-decisions-state-pilot/verify-state.py", line 74, in main
+    raise AssertionError('Branch policy differs at scores: ' + str([i for i in range(101) if observed[i] != expected[i]]))
+AssertionError: Branch policy differs at scores: [80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]

@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-15T15:12:03.143Z",
+  "base": "http://127.0.0.1:2013",
+  "phase": "baseline",
+  "browser": "155.0.8059.40",
+  "pages": [
+    {
+      "route": "/foundations/decisions/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [],
+      "tables": [],
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/decisions/unit-02/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "Guess my number? 4\nNot this time",
+        "Guess my number? 4\nToo low"
+      ],
+      "tables": [],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/decisions/unit-03/",
+      "width": 1440,
+      "status": 200,
+      "outputs": [
+        "Still going",
+        "Guess my number? 4\nToo low",
+        "Game over"
+      ],
+      "tables": [],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/decisions/",
+      "width": 390,
+      "status": 200,
+      "outputs": [],
+      "tables": [],
+      "oldClaim": true,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/decisions/unit-02/",
+      "width": 390,
+      "status": 200,
+      "outputs": [
+        "Guess my number? 4\nNot this time",
+        "Guess my number? 4\nToo low"
+      ],
+      "tables": [],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/foundations/decisions/unit-03/",
+      "width": 390,
+      "status": 200,
+      "outputs": [
+        "Still going",
+        "Guess my number? 4\nToo low",
+        "Game over"
+      ],
+      "tables": [],
+      "oldClaim": false,
+      "overflow": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "div[data-label=\"Code, listing 3 of 3\"] > pre > code > .ll-line:nth-child(3) > .ll-text"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "status": "passed"
+}

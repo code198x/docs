@@ -58,7 +58,7 @@ LENGTH(scores)                       how many
 
 The right-hand annotations above explain the notation; they are not program text. Use `#` for comments in examples.
 
-- `LET` assigns; `=` in a condition compares. Explain the distinction when it first matters.
+- `LET` assigns; `=` in a condition compares. Explain the distinction when it first matters. Assigning a comparison stores its current Boolean answer, not a live expression; later operand changes do not update the saved value. Reassign when a fresh answer is required, and state when a deliberately latched flag resets.
 - `SHOW` joins its comma-separated values without inserting spaces. `+` is arithmetic. Put a wanted space inside the quoted text.
 - State an ASK example’s input contract where it matters: submission, text or numeric values, spaces, empty input and validation. Basics’ name example submits a line of text with Enter, keeps spaces and accepts empty text; this local convention is not a promise of identical target-language input or numeric conversion.
 - `FOR` ranges and `RANDOM` ranges include both ends. `/` keeps a fractional quotient in this notation; target division and precision rules need their own explanation. Multiplication and division precede addition and subtraction; equal-priority operations in these two groups work left to right. Brackets choose the grouping.
