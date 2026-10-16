@@ -1,0 +1,29 @@
+{
+  "website_baseline": "6360218ff5095dd352679fdffa265e8b09297bb5",
+  "docs_baseline": "e68cf6d9b03c98ae2bb20936a947d810d73246dc",
+  "samples_revision": "163e74e18e9536fb555ef7319fa08bbc1836542b",
+  "baseline_website_sha256": {
+    "src/content/curriculum/foundations/repeating/unit-01.mdx": "1fc427c8eda435a8f8ee59a5270c271c04597f289e02a0799a44cb930942008e",
+    "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-10-give-the-answer-a-rhythm.mdx": "d218203057b5d93db91a6b037840f03cba7b38b8c2ed55a63cd8ec7bc0ba7ad2"
+  },
+  "proposed_website_sha256": {
+    "src/content/curriculum/foundations/repeating/unit-01.mdx": "8293f9a6eca8c8ee54bb0d99ec3e651175fda68975202a26ff78b6ecbd12fbda",
+    "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-10-give-the-answer-a-rhythm.mdx": "d218203057b5d93db91a6b037840f03cba7b38b8c2ed55a63cd8ec7bc0ba7ad2"
+  },
+  "baseline_pseudocode_sha256": "c4be92a6c9c87afea628b2234e145c43266ec51dfe2f8c5ef233e39573f1cb8b",
+  "proposed_pseudocode_sha256": "1899c8cb115bbf8547dbd8e45acd7b75b30aaa6a61263d08d5a438647346b71a",
+  "earlier_native_evidence_sha256": "5e28c015df5bf82fe4504dd335dda6b78c54d5ad923b8d77666674921ad2b5c3",
+  "native_verifier_sha256": "ff16d34b9b5322f2ffe6ccfe6419988224edab21943e4930e05b3a564aeac259",
+  "browser_verifier_sha256": "4b7b151488120cad5638599a47e523ca53bfd387652af941b0f0fb713feebbb0",
+  "package_lock_sha256": "bc2e4820866c5590d6273220ec40dadd76e006cb05a0ba87a90998eb0c4d780d",
+  "ui_revision": "7eda45e1c2f8b8f919359c971b2e210822e431f2",
+  "node": "v24.22.0",
+  "python": "3.14.3",
+  "matrix": {
+    "native": "Configured Spectrum 48K ROM via installed Emu198x executable",
+    "other_BASIC_dialects": "Skipped; no other native target was configured for this slice",
+    "model": "Fixed whole-number ascending-by-one endpoints; no mutation",
+    "browser": "Local production build, desktop/narrow Chrome; no physical device or AT trial"
+  },
+  "limits": "Source, fixture and tool identities; no live deployment or browser-ROM fingerprint."
+}

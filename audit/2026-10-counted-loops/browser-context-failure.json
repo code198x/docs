@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "date": "2026-10-16T08:21:44.845Z",
+  "base": "http://127.0.0.1:48923",
+  "browser": "155.0.8059.80",
+  "viewports": [],
+  "checks": [],
+  "errors": [],
+  "failure": "Error: Please use browser.newContext()\n Please check out https://github.com/dequelabs/axe-core-npm/blob/develop/packages/playwright/error-handling.md"
+}

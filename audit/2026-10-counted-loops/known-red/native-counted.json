@@ -1,0 +1,46 @@
+{
+  "status": "failed",
+  "checks": [
+    {
+      "label": "outside-1-3",
+      "source": "outside-1-3.bas",
+      "source_sha256": "0883a7ef37250c4f63156e53e35e1f4daa37f2409cdf7a227722e5d73b72976b",
+      "expected_output": [
+        "BEFORE",
+        "1",
+        "2",
+        "3",
+        "TOTAL 6",
+        "AFTER"
+      ],
+      "rows": [
+        "BEFORE",
+        "1",
+        "2",
+        "TOTAL 3",
+        "AFTER",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 80:1"
+      ]
+    }
+  ],
+  "control": true,
+  "failure": "AssertionError('Complete ROM output differs: outside-1-3')"
+}

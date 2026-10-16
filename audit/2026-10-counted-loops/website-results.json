@@ -1,0 +1,26 @@
+{
+  "status": "passed selected checks",
+  "production_build": "2459 public pages built and shared-frame checked; search indexed",
+  "repository_tests": "32 test files, 237 tests passed; content and prepared player/assembler checks pass",
+  "browser": "155.0.8059.80",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 900
+    }
+  ],
+  "keyboard_behaviour_groups": 6,
+  "scoped_axe_violations": 0,
+  "axe_incomplete": [],
+  "visual_inspection": "Native zero-pass/inside-body captures and readable wide/narrow prediction captures inspected. No layout correction needed.",
+  "prose": "Vale zero errors/warnings/suggestions in changed lesson, specification and six docs files; Ruff passes",
+  "limits": "Local production page, desktop Chrome viewport checks; no physical device, screen-reader, audio, live publication or learner claim.",
+  "advisories": [
+    "Existing Pagefind Default UI advisory",
+    "Existing Vault balance report: 51 of 572 multi-format entries discuss one platform"
+  ]
+}

@@ -69,3 +69,7 @@ from sampled execution and unknown learner outcomes.
 The [compound-condition pilot](audit/2026-10-compound-conditions/REPORT.md) checks
 Decisions unit 4’s numeric interval and grouping boundaries, with exact-rational
 models, actual ROM outputs and independent learner prompts.
+
+The [counted-loop pilot](audit/2026-10-counted-loops/REPORT.md) checks inclusive
+ranges, empty bodies and output placement with exact models, fresh ROM programs
+and independent learner prompts.
