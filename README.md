@@ -65,3 +65,7 @@ The [Foundations per-unit map](audit/2026-10-foundations-objectives/MAP.md) inve
 all 39 authored units, their objectives and knowledge used. Its
 [source review](audit/2026-10-foundations-objectives/REPORT.md) separates that inventory
 from sampled execution and unknown learner outcomes.
+
+The [compound-condition pilot](audit/2026-10-compound-conditions/REPORT.md) checks
+Decisions unit 4’s numeric interval and grouping boundaries, with exact-rational
+models, actual ROM outputs and independent learner prompts.

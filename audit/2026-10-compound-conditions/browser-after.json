@@ -1,0 +1,181 @@
+{
+  "status": "passed",
+  "date": "2026-10-16T08:03:32.883Z",
+  "base": "http://127.0.0.1:48921",
+  "phase": "after",
+  "browser": "155.0.8059.80",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440
+      },
+      "responseSha256": "fdf18a419e7465e95525ff6799638f98f5a67068bdf848d0516f1118b6696e18",
+      "violations": [],
+      "incomplete": [],
+      "text": "Asking Two Things at Once\n\nJoin questions together with AND, OR and NOT, so one test can ask about more than one thing.\n\nFoundations\n\nReal questions are rarely about one thing. Can the player shoot? Only if they are alive and they have ammo. Is a number in our chosen interval? Only if it is at least 1 and at most 10.\n\nYou can join questions together. Here we assume ASK has supplied an ordinary numeric value. Checking typed text or rejecting a malformed answer is a separate job. A variable holds a value; a comparison reads it and gives TRUE or FALSE.\n\nBoth, or either\n\nAND is true when both halves are true. OR is true when either half is, or both.\n\nCode\nASK \"Guess a number from 1 to 10? \" INTO guess\n\nIF guess < 1 OR guess > 10 THEN\n\n  SHOW \"That is not between 1 and 10\"\n\nELSE\n\n  SHOW \"Good guess\"\n\nEND\nOutput\nGuess a number from 1 to 10? 42\nThat is not between 1 and 10\n\nThat OR catches a guess that is too small and a guess that is too big, in one question. Written with AND it says the same thing from the other side:\n\nCode\nIF guess >= 1 AND guess <= 10 THEN\n\n  SHOW \"Good guess\"\n\nELSE\n\n  SHOW \"That is not between 1 and 10\"\n\nEND\n\n>= means at least, and <= means at most. Both endpoints are included. The two versions choose the same message: one asks whether the number is outside, the other whether it is inside, and we swapped the messages too.\n\nA number greater than zero is not necessarily at least one: 0.5 passes guess > 0 but fails guess >= 1. Those tests agree when a separate rule guarantees whole-number input; without it, write the boundary you mean.\n\nPREDICT IT!\n\nWhich values get Good guess: 0, 1, 1.5, 10 and 10.5? Does passing both bounds make a value a whole number?\n\nShow the explanation\n\nFor an optional machine example, Keep guessing explains separate range and whole-number checks in Sinclair BASIC. Read its “Enforce the promised range” section without playing the preceding game; its input rules belong to BASIC, rather than to this teaching notation.\n\nThe opposite\n\nNOT turns an answer round. NOT yes is no, and NOT no is yes.\n\nCode\nIF NOT (guess = 7) THEN\n\n  SHOW \"Keep going\"\n\nEND\n\nThe brackets are doing the job they did in Working It Out: work this out first. NOT turns round whatever sits inside them, so the whole question guess = 7 gets answered, and then turned round.\n\nThat asks whether the guess is anything other than seven. You could write the same thing as guess <> 7, which means is not equal to. Use whichever reads better where you are standing: NOT in front of a whole question, <> inside a small one.\n\nTwo questions, not one twice\n\nA trap worth meeting now. This does not do what it looks like:\n\nCode\nIF guess = 3 OR 7 THEN\n\nRead it as the computer does. It joins two questions: is guess equal to 3, and is 7. The second one is a number where our Boolean notation needs a TRUE/FALSE answer. Say both comparisons in full:\n\nCode\nIF guess = 3 OR guess = 7 THEN\n\nBoth halves of an AND or an OR stand on their own as Boolean answers here. A real language may accept numbers as conditions. In Sinclair BASIC, guess=3 OR 7 is accepted and gives a true result even when guess is 4: the non-zero 7 makes its OR true. Repeating the comparison expresses the intended rule instead of relying on that language-specific conversion.\n\nMixing them\n\nAND and OR have an order too, the way * and + do: AND goes first. So alive AND ammo > 0 OR grenades > 0 may not ask what you think it asks.\n\nRather than lean on the rule, say it with brackets:\n\nCode\nIF alive AND (ammo > 0 OR grenades > 0) THEN\n\n  SHOW \"You can shoot\"\n\nEND\n\nNow the player must be alive whichever resource is available. To check whether the brackets matter, choose a case that could make the two versions disagree.\n\nPREDICT IT!\n\nWith alive FALSE, ammo 0 and grenades 1, does each version allow shooting? How would you repair the wrong guard?\n\nShow the explanation\nWhen it’s wrong, see why\nThe test is always true. Check an OR that cannot come back no. guess < 1 OR guess > 0 covers every ordinary numeric value in these examples.\nThe test is never true. Check an AND asking for two things that cannot both hold. guess < 1 AND guess > 10 has no answer.\nYou wrote the value once and the question once. guess = 3 OR 7 names a value where a question belongs. Write both questions out.\nWhat you’ve learnt\nAND is true when both halves are true. OR is true when either is.\nNOT turns an answer round, and <> asks whether two things differ.\n>= and <= ask at least and at most.\nEach half of a joined question has to be a question in its own right.\nWhat’s next\n\nYour programs can decide, and now they can decide about more than one thing at a time. In the next module, Repeating, you stop writing the same line ten times over.\n\nIN THIS LESSON\nBoth, or either\nThe opposite\nTwo questions, not one twice\nMixing them\nWhen it’s wrong, see why\nWhat you’ve learnt\nWhat’s next\nPREVIOUS UNIT\nA Yes You Can Keep\nPRIMER OVERVIEW\nDecisions",
+      "revealedIncomplete": []
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "http": 200,
+      "dimensions": {
+        "viewport": 390,
+        "document": 390
+      },
+      "responseSha256": "fdf18a419e7465e95525ff6799638f98f5a67068bdf848d0516f1118b6696e18",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "div[data-label=\"Code, listing 1 of 6\"] > pre > code > .ll-line:nth-child(1) > .ll-text"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "target": [
+                "div[data-label=\"Code, listing 1 of 6\"] > pre > code > .ll-line:nth-child(3) > .ll-text"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "target": [
+                "div[data-label=\"Code, listing 2 of 6\"] > pre > code > .ll-line:nth-child(4) > .ll-text"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "target": [
+                "div[data-label=\"Code, listing 6 of 6\"] > pre > code > .ll-line:nth-child(1) > .ll-text"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ]
+        }
+      ],
+      "text": "Asking Two Things at Once\n\nJoin questions together with AND, OR and NOT, so one test can ask about more than one thing.\n\nFoundations\n\nReal questions are rarely about one thing. Can the player shoot? Only if they are alive and they have ammo. Is a number in our chosen interval? Only if it is at least 1 and at most 10.\n\nYou can join questions together. Here we assume ASK has supplied an ordinary numeric value. Checking typed text or rejecting a malformed answer is a separate job. A variable holds a value; a comparison reads it and gives TRUE or FALSE.\n\nBoth, or either\n\nAND is true when both halves are true. OR is true when either half is, or both.\n\nCode\nASK \"Guess a number from 1 to 10? \" INTO guess\n\nIF guess < 1 OR guess > 10 THEN\n\n  SHOW \"That is not between 1 and 10\"\n\nELSE\n\n  SHOW \"Good guess\"\n\nEND\nOutput\nGuess a number from 1 to 10? 42\nThat is not between 1 and 10\n\nThat OR catches a guess that is too small and a guess that is too big, in one question. Written with AND it says the same thing from the other side:\n\nCode\nIF guess >= 1 AND guess <= 10 THEN\n\n  SHOW \"Good guess\"\n\nELSE\n\n  SHOW \"That is not between 1 and 10\"\n\nEND\n\n>= means at least, and <= means at most. Both endpoints are included. The two versions choose the same message: one asks whether the number is outside, the other whether it is inside, and we swapped the messages too.\n\nA number greater than zero is not necessarily at least one: 0.5 passes guess > 0 but fails guess >= 1. Those tests agree when a separate rule guarantees whole-number input; without it, write the boundary you mean.\n\nPREDICT IT!\n\nWhich values get Good guess: 0, 1, 1.5, 10 and 10.5? Does passing both bounds make a value a whole number?\n\nShow the explanation\n\nFor an optional machine example, Keep guessing explains separate range and whole-number checks in Sinclair BASIC. Read its “Enforce the promised range” section without playing the preceding game; its input rules belong to BASIC, rather than to this teaching notation.\n\nThe opposite\n\nNOT turns an answer round. NOT yes is no, and NOT no is yes.\n\nCode\nIF NOT (guess = 7) THEN\n\n  SHOW \"Keep going\"\n\nEND\n\nThe brackets are doing the job they did in Working It Out: work this out first. NOT turns round whatever sits inside them, so the whole question guess = 7 gets answered, and then turned round.\n\nThat asks whether the guess is anything other than seven. You could write the same thing as guess <> 7, which means is not equal to. Use whichever reads better where you are standing: NOT in front of a whole question, <> inside a small one.\n\nTwo questions, not one twice\n\nA trap worth meeting now. This does not do what it looks like:\n\nCode\nIF guess = 3 OR 7 THEN\n\nRead it as the computer does. It joins two questions: is guess equal to 3, and is 7. The second one is a number where our Boolean notation needs a TRUE/FALSE answer. Say both comparisons in full:\n\nCode\nIF guess = 3 OR guess = 7 THEN\n\nBoth halves of an AND or an OR stand on their own as Boolean answers here. A real language may accept numbers as conditions. In Sinclair BASIC, guess=3 OR 7 is accepted and gives a true result even when guess is 4: the non-zero 7 makes its OR true. Repeating the comparison expresses the intended rule instead of relying on that language-specific conversion.\n\nMixing them\n\nAND and OR have an order too, the way * and + do: AND goes first. So alive AND ammo > 0 OR grenades > 0 may not ask what you think it asks.\n\nRather than lean on the rule, say it with brackets:\n\nCode\nIF alive AND (ammo > 0 OR grenades > 0) THEN\n\n  SHOW \"You can shoot\"\n\nEND\n\nNow the player must be alive whichever resource is available. To check whether the brackets matter, choose a case that could make the two versions disagree.\n\nPREDICT IT!\n\nWith alive FALSE, ammo 0 and grenades 1, does each version allow shooting? How would you repair the wrong guard?\n\nShow the explanation\nWhen it’s wrong, see why\nThe test is always true. Check an OR that cannot come back no. guess < 1 OR guess > 0 covers every ordinary numeric value in these examples.\nThe test is never true. Check an AND asking for two things that cannot both hold. guess < 1 AND guess > 10 has no answer.\nYou wrote the value once and the question once. guess = 3 OR 7 names a value where a question belongs. Write both questions out.\nWhat you’ve learnt\nAND is true when both halves are true. OR is true when either is.\nNOT turns an answer round, and <> asks whether two things differ.\n>= and <= ask at least and at most.\nEach half of a joined question has to be a question in its own right.\nWhat’s next\n\nYour programs can decide, and now they can decide about more than one thing at a time. In the next module, Repeating, you stop writing the same line ten times over.\n\nIN THIS LESSON\nBoth, or either\nThe opposite\nTwo questions, not one twice\nMixing them\nWhen it’s wrong, see why\nWhat you’ve learnt\nWhat’s next\nPREVIOUS UNIT\nA Yes You Can Keep\nPRIMER OVERVIEW\nDecisions",
+      "revealedIncomplete": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "width": 1440,
+      "check": "keyboard prediction/answer",
+      "index": 0,
+      "answer": "1, 1.5 and 10 are inside; 0 and 10.5 are outside. The number 1.5 is not whole, but it passes both comparisons. That is correct for this interval. A game that promises whole-number guesses needs an extra whole-number check. Neither AND nor OR performs that check for us."
+    },
+    {
+      "width": 1440,
+      "check": "keyboard prediction/answer",
+      "index": 1,
+      "answer": "The ungrouped version is (alive AND ammo > 0) OR grenades > 0. Its first part is FALSE, but the grenade comparison is TRUE, so the whole test is TRUE. The grouped version is FALSE: alive must be TRUE as well as one resource being available. Keep the brackets around the two resource comparisons to express that rule. Testing only a living player with ammo would miss this difference."
+    },
+    {
+      "width": 1440,
+      "check": "optional whole-number target and Back by keyboard"
+    },
+    {
+      "width": 390,
+      "check": "keyboard prediction/answer",
+      "index": 0,
+      "answer": "1, 1.5 and 10 are inside; 0 and 10.5 are outside. The number 1.5 is not whole, but it passes both comparisons. That is correct for this interval. A game that promises whole-number guesses needs an extra whole-number check. Neither AND nor OR performs that check for us."
+    },
+    {
+      "width": 390,
+      "check": "keyboard prediction/answer",
+      "index": 1,
+      "answer": "The ungrouped version is (alive AND ammo > 0) OR grenades > 0. Its first part is FALSE, but the grenade comparison is TRUE, so the whole test is TRUE. The grouped version is FALSE: alive must be TRUE as well as one resource being available. Keep the brackets around the two resource comparisons to express that rule. Testing only a living player with ammo would miss this difference."
+    },
+    {
+      "width": 390,
+      "check": "optional whole-number target and Back by keyboard"
+    }
+  ],
+  "errors": [],
+  "contrastProbe": {
+    "scope": "Four axe-incomplete listing lines at both horizontal scroll endpoints; not a general accessibility assessment.",
+    "samples": [
+      {
+        "selector": "div[data-label=\"Code, listing 1 of 6\"] > pre > code > .ll-line:nth-child(1) > .ll-text",
+        "endpoint": "left",
+        "text": "ASK \"Guess a number from 1 to 10? \" INTO guess\n",
+        "foreground": "rgb(27, 26, 23)",
+        "background": "rgb(252, 251, 248)",
+        "scrollLeft": 0,
+        "ratio": 16.816837173024243
+      },
+      {
+        "selector": "div[data-label=\"Code, listing 1 of 6\"] > pre > code > .ll-line:nth-child(1) > .ll-text",
+        "endpoint": "right",
+        "text": "ASK \"Guess a number from 1 to 10? \" INTO guess\n",
+        "foreground": "rgb(27, 26, 23)",
+        "background": "rgb(252, 251, 248)",
+        "scrollLeft": 134,
+        "ratio": 16.816837173024243
+      },
+      {
+        "selector": "div[data-label=\"Code, listing 1 of 6\"] > pre > code > .ll-line:nth-child(3) > .ll-text",
+        "endpoint": "left",
+        "text": "  SHOW \"That is not between 1 and 10\"\n",
+        "foreground": "rgb(27, 26, 23)",
+        "background": "rgb(252, 251, 248)",
+        "scrollLeft": 0,
+        "ratio": 16.816837173024243
+      },
+      {
+        "selector": "div[data-label=\"Code, listing 1 of 6\"] > pre > code > .ll-line:nth-child(3) > .ll-text",
+        "endpoint": "right",
+        "text": "  SHOW \"That is not between 1 and 10\"\n",
+        "foreground": "rgb(27, 26, 23)",
+        "background": "rgb(252, 251, 248)",
+        "scrollLeft": 134,
+        "ratio": 16.816837173024243
+      },
+      {
+        "selector": "div[data-label=\"Code, listing 2 of 6\"] > pre > code > .ll-line:nth-child(4) > .ll-text",
+        "endpoint": "left",
+        "text": "  SHOW \"That is not between 1 and 10\"\n",
+        "foreground": "rgb(27, 26, 23)",
+        "background": "rgb(252, 251, 248)",
+        "scrollLeft": 0,
+        "ratio": 16.816837173024243
+      },
+      {
+        "selector": "div[data-label=\"Code, listing 2 of 6\"] > pre > code > .ll-line:nth-child(4) > .ll-text",
+        "endpoint": "right",
+        "text": "  SHOW \"That is not between 1 and 10\"\n",
+        "foreground": "rgb(27, 26, 23)",
+        "background": "rgb(252, 251, 248)",
+        "scrollLeft": 47,
+        "ratio": 16.816837173024243
+      },
+      {
+        "selector": "div[data-label=\"Code, listing 6 of 6\"] > pre > code > .ll-line:nth-child(1) > .ll-text",
+        "endpoint": "left",
+        "text": "IF alive AND (ammo > 0 OR grenades > 0) THEN\n",
+        "foreground": "rgb(27, 26, 23)",
+        "background": "rgb(252, 251, 248)",
+        "scrollLeft": 0,
+        "ratio": 16.816837173024243
+      },
+      {
+        "selector": "div[data-label=\"Code, listing 6 of 6\"] > pre > code > .ll-line:nth-child(1) > .ll-text",
+        "endpoint": "right",
+        "text": "IF alive AND (ammo > 0 OR grenades > 0) THEN\n",
+        "foreground": "rgb(27, 26, 23)",
+        "background": "rgb(252, 251, 248)",
+        "scrollLeft": 114,
+        "ratio": 16.816837173024243
+      }
+    ]
+  }
+}

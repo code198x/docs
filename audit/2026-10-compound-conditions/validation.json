@@ -1,0 +1,18 @@
+{
+  "status": "passed evidence checks",
+  "source_files": 2,
+  "specifications": 3,
+  "native_printed_numbers": 115,
+  "numeric_cases": 11,
+  "shooting_rows": 8,
+  "browser_viewports": 2,
+  "keyboard_behaviour_groups": 6,
+  "contrast_samples": 8,
+  "local_links": 105,
+  "negative_evidence_controls": {
+    "wrong_source_hash": "Source hash mismatch",
+    "missing_native_transcript": "Native transcript missing or different"
+  },
+  "native_wrong_guard_exit": 1,
+  "limits": "Retained evidence/source structure and agreement checks; not an independent runtime, screen-reader or learner trial."
+}

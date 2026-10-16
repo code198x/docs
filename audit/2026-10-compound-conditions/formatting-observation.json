@@ -1,0 +1,7 @@
+{
+  "status": "source/rendering mismatch observed",
+  "symptom": "Troubleshooting condition displayed a literal backtick and an incomplete inline code span.",
+  "cause": "The source line break placed > 0 at the start of the continuation; generated Markdown did not retain the intended complete inline code condition.",
+  "fix": "Keep guess < 1 OR guess > 0 together inside its code span.",
+  "evidence": "inline-formatting-observation.png"
+}

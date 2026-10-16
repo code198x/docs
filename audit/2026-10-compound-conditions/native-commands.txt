@@ -1,0 +1,65 @@
+LET g=-1
+PRINT (g>=1 AND g<=10);",";(g<1 OR g>10);",";(g>=1 OR g<=10);",";(g<1 AND g>10)
+PRINT (g=INT g AND g>=1 AND g<=10);",";(g>0);",";(g>=1);",";(g=3 OR g=7);",";(g=3 OR 7)
+LET g=0
+PRINT (g>=1 AND g<=10);",";(g<1 OR g>10);",";(g>=1 OR g<=10);",";(g<1 AND g>10)
+PRINT (g=INT g AND g>=1 AND g<=10);",";(g>0);",";(g>=1);",";(g=3 OR g=7);",";(g=3 OR 7)
+LET g=1/2
+PRINT (g>=1 AND g<=10);",";(g<1 OR g>10);",";(g>=1 OR g<=10);",";(g<1 AND g>10)
+PRINT (g=INT g AND g>=1 AND g<=10);",";(g>0);",";(g>=1);",";(g=3 OR g=7);",";(g=3 OR 7)
+LET g=1
+PRINT (g>=1 AND g<=10);",";(g<1 OR g>10);",";(g>=1 OR g<=10);",";(g<1 AND g>10)
+PRINT (g=INT g AND g>=1 AND g<=10);",";(g>0);",";(g>=1);",";(g=3 OR g=7);",";(g=3 OR 7)
+LET g=3/2
+PRINT (g>=1 AND g<=10);",";(g<1 OR g>10);",";(g>=1 OR g<=10);",";(g<1 AND g>10)
+PRINT (g=INT g AND g>=1 AND g<=10);",";(g>0);",";(g>=1);",";(g=3 OR g=7);",";(g=3 OR 7)
+LET g=3
+PRINT (g>=1 AND g<=10);",";(g<1 OR g>10);",";(g>=1 OR g<=10);",";(g<1 AND g>10)
+PRINT (g=INT g AND g>=1 AND g<=10);",";(g>0);",";(g>=1);",";(g=3 OR g=7);",";(g=3 OR 7)
+LET g=4
+PRINT (g>=1 AND g<=10);",";(g<1 OR g>10);",";(g>=1 OR g<=10);",";(g<1 AND g>10)
+PRINT (g=INT g AND g>=1 AND g<=10);",";(g>0);",";(g>=1);",";(g=3 OR g=7);",";(g=3 OR 7)
+LET g=7
+PRINT (g>=1 AND g<=10);",";(g<1 OR g>10);",";(g>=1 OR g<=10);",";(g<1 AND g>10)
+PRINT (g=INT g AND g>=1 AND g<=10);",";(g>0);",";(g>=1);",";(g=3 OR g=7);",";(g=3 OR 7)
+LET g=10
+PRINT (g>=1 AND g<=10);",";(g<1 OR g>10);",";(g>=1 OR g<=10);",";(g<1 AND g>10)
+PRINT (g=INT g AND g>=1 AND g<=10);",";(g>0);",";(g>=1);",";(g=3 OR g=7);",";(g=3 OR 7)
+LET g=21/2
+PRINT (g>=1 AND g<=10);",";(g<1 OR g>10);",";(g>=1 OR g<=10);",";(g<1 AND g>10)
+PRINT (g=INT g AND g>=1 AND g<=10);",";(g>0);",";(g>=1);",";(g=3 OR g=7);",";(g=3 OR 7)
+LET g=11
+PRINT (g>=1 AND g<=10);",";(g<1 OR g>10);",";(g>=1 OR g<=10);",";(g<1 AND g>10)
+PRINT (g=INT g AND g>=1 AND g<=10);",";(g>0);",";(g>=1);",";(g=3 OR g=7);",";(g=3 OR 7)
+LET a=0
+LET m=0
+LET n=0
+PRINT (a AND (m>0 OR n>0));",";(a AND m>0 OR n>0)
+LET a=0
+LET m=0
+LET n=1
+PRINT (a AND (m>0 OR n>0));",";(a AND m>0 OR n>0)
+LET a=0
+LET m=1
+LET n=0
+PRINT (a AND (m>0 OR n>0));",";(a AND m>0 OR n>0)
+LET a=0
+LET m=1
+LET n=1
+PRINT (a AND (m>0 OR n>0));",";(a AND m>0 OR n>0)
+LET a=1
+LET m=0
+LET n=0
+PRINT (a AND (m>0 OR n>0));",";(a AND m>0 OR n>0)
+LET a=1
+LET m=0
+LET n=1
+PRINT (a AND (m>0 OR n>0));",";(a AND m>0 OR n>0)
+LET a=1
+LET m=1
+LET n=0
+PRINT (a AND (m>0 OR n>0));",";(a AND m>0 OR n>0)
+LET a=1
+LET m=1
+LET n=1
+PRINT (a AND (m>0 OR n>0));",";(a AND m>0 OR n>0)

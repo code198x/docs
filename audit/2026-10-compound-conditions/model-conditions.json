@@ -1,0 +1,201 @@
+{
+  "status": "passed",
+  "numeric": [
+    {
+      "input": "-1",
+      "inside": 0,
+      "outside": 1,
+      "wrong_or": 1,
+      "wrong_outside_and": 0,
+      "whole_and_inside": 0,
+      "positive": 0,
+      "at_least_one": 0,
+      "three_or_seven": 0
+    },
+    {
+      "input": "0",
+      "inside": 0,
+      "outside": 1,
+      "wrong_or": 1,
+      "wrong_outside_and": 0,
+      "whole_and_inside": 0,
+      "positive": 0,
+      "at_least_one": 0,
+      "three_or_seven": 0
+    },
+    {
+      "input": "1/2",
+      "inside": 0,
+      "outside": 1,
+      "wrong_or": 1,
+      "wrong_outside_and": 0,
+      "whole_and_inside": 0,
+      "positive": 1,
+      "at_least_one": 0,
+      "three_or_seven": 0
+    },
+    {
+      "input": "1",
+      "inside": 1,
+      "outside": 0,
+      "wrong_or": 1,
+      "wrong_outside_and": 0,
+      "whole_and_inside": 1,
+      "positive": 1,
+      "at_least_one": 1,
+      "three_or_seven": 0
+    },
+    {
+      "input": "3/2",
+      "inside": 1,
+      "outside": 0,
+      "wrong_or": 1,
+      "wrong_outside_and": 0,
+      "whole_and_inside": 0,
+      "positive": 1,
+      "at_least_one": 1,
+      "three_or_seven": 0
+    },
+    {
+      "input": "3",
+      "inside": 1,
+      "outside": 0,
+      "wrong_or": 1,
+      "wrong_outside_and": 0,
+      "whole_and_inside": 1,
+      "positive": 1,
+      "at_least_one": 1,
+      "three_or_seven": 1
+    },
+    {
+      "input": "4",
+      "inside": 1,
+      "outside": 0,
+      "wrong_or": 1,
+      "wrong_outside_and": 0,
+      "whole_and_inside": 1,
+      "positive": 1,
+      "at_least_one": 1,
+      "three_or_seven": 0
+    },
+    {
+      "input": "7",
+      "inside": 1,
+      "outside": 0,
+      "wrong_or": 1,
+      "wrong_outside_and": 0,
+      "whole_and_inside": 1,
+      "positive": 1,
+      "at_least_one": 1,
+      "three_or_seven": 1
+    },
+    {
+      "input": "10",
+      "inside": 1,
+      "outside": 0,
+      "wrong_or": 1,
+      "wrong_outside_and": 0,
+      "whole_and_inside": 1,
+      "positive": 1,
+      "at_least_one": 1,
+      "three_or_seven": 0
+    },
+    {
+      "input": "21/2",
+      "inside": 0,
+      "outside": 1,
+      "wrong_or": 1,
+      "wrong_outside_and": 0,
+      "whole_and_inside": 0,
+      "positive": 1,
+      "at_least_one": 1,
+      "three_or_seven": 0
+    },
+    {
+      "input": "11",
+      "inside": 0,
+      "outside": 1,
+      "wrong_or": 1,
+      "wrong_outside_and": 0,
+      "whole_and_inside": 0,
+      "positive": 1,
+      "at_least_one": 1,
+      "three_or_seven": 0
+    }
+  ],
+  "shooting": [
+    {
+      "alive": 0,
+      "ammo": 0,
+      "grenades": 0,
+      "grouped": 0,
+      "ungrouped": 0
+    },
+    {
+      "alive": 0,
+      "ammo": 0,
+      "grenades": 1,
+      "grouped": 0,
+      "ungrouped": 1
+    },
+    {
+      "alive": 0,
+      "ammo": 1,
+      "grenades": 0,
+      "grouped": 0,
+      "ungrouped": 0
+    },
+    {
+      "alive": 0,
+      "ammo": 1,
+      "grenades": 1,
+      "grouped": 0,
+      "ungrouped": 1
+    },
+    {
+      "alive": 1,
+      "ammo": 0,
+      "grenades": 0,
+      "grouped": 0,
+      "ungrouped": 0
+    },
+    {
+      "alive": 1,
+      "ammo": 0,
+      "grenades": 1,
+      "grouped": 1,
+      "ungrouped": 1
+    },
+    {
+      "alive": 1,
+      "ammo": 1,
+      "grenades": 0,
+      "grouped": 1,
+      "ungrouped": 1
+    },
+    {
+      "alive": 1,
+      "ammo": 1,
+      "grenades": 1,
+      "grouped": 1,
+      "ungrouped": 1
+    }
+  ],
+  "grouping_counterexamples": [
+    {
+      "alive": 0,
+      "ammo": 0,
+      "grenades": 1,
+      "grouped": 0,
+      "ungrouped": 1
+    },
+    {
+      "alive": 0,
+      "ammo": 1,
+      "grenades": 1,
+      "grouped": 0,
+      "ungrouped": 1
+    }
+  ],
+  "limits": "Exact-rational host models and finite Boolean enumeration; not an implemented pseudocode runtime, parser, timing or learner evidence."
+}
