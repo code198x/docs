@@ -80,3 +80,23 @@ game small; do not add a dealer, card rules or a multi-round economy.
    design change to PR #103, update its description and clean the worktree after
    verifying remote retention. Live lessons, runtime implementations and learner
    effectiveness are outside this design pass.
+
+## Tune before the native trial
+
+Compare settings before fixing the first prototype's balance. Keep one die,
+bank-or-roll, a visible limit and a short target challenge; do not add features.
+
+1. Parameterise the existing rules model by limit, rounds and target. Preserve
+   the 21/5/90 result as a regression case. Compare the safe stopping policy,
+   fixed riskier policies, the optimal target policy and recovery after a bust.
+2. Compare a bounded set of settings, including retaining 21 and lowering the
+   limit. Check that safe play does not guarantee success, a bust can leave a
+   credible recovery, and choices can change with the session state. Separate
+   a mathematically possible recovery from its calculated chance.
+3. Cross-check policy probabilities with an independent round-score distribution
+   and convolution. Retain negative controls and exact boundary checks. Treat
+   all probabilities as ideal-die analysis, not player or AMOS measurements.
+4. Replace the numerical recommendation in the game brief and linked course
+   proposals. Record comparison results, trade-offs and what remains for native
+   play. Run the model, Ruff, prose, links and diff checks, push to PR #103 and
+   remove the temporary worktree after verifying the remote commit.

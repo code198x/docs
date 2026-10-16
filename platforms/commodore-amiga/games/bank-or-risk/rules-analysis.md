@@ -1,11 +1,11 @@
-# Bank or risk rules analysis
+# Bank or risk tuning analysis
 
-The proposed five-round, 90-point challenge makes the choice between banking and
-rolling matter under an ideal die. The same current total can call for different
-choices depending on the points still needed. Native play must establish whether
-this is enjoyable and whether losing the challenge after one bust is too severe.
+Recommend a **limit of 10, five rounds and a target of 30** for the first native
+trial. It preserves the bank-or-roll game, lets a player recover from an opening
+bust, and rewards some risk without making more aggressive play automatically
+better. The parameters remain provisional until played in AMOS.
 
-## Method
+## Method and scope
 
 Run from the documentation repository:
 
@@ -13,55 +13,100 @@ Run from the documentation repository:
 python3 platforms/commodore-amiga/games/bank-or-risk/rules_check.py
 ```
 
-Executed with Python 3.14.3. The checker uses only the standard library. Exact
-rational arithmetic enumerates the six outcomes of each possible roll, with
-cached state values rather than random sampling. The state is rounds remaining,
-points still needed and current total. Positive die values bound the recursion;
-banking, reaching 21 or busting consumes a round.
+Executed with Python 3.14.3 using only the standard library. Exact rational
+arithmetic enumerates six equally likely independent outcomes for each roll.
+Cached states hold rounds remaining, points still needed and current total.
+Positive die values bound the recursion; banking, reaching the limit or busting
+consumes a round. A target-aware policy chooses the action with the greater
+probability of eventually reaching the target.
 
-At each decision, the target policy compares the chance of eventual success
-after banking with the mean of the chances following the six roll outcomes. It
-chooses the larger probability. The comparison policy always banks at 16 or
-above. Displayed percentages are rounded to six decimal places.
+Three fixed policies bank when the total first reaches a threshold. The safe
+threshold is five below the limit: 16 at limit 21, 7 at limit 12 and 5 at limit
+10. Before reaching that threshold, a roll cannot bust. The moderate comparison
+banks one point higher; the aggressive comparison banks two points higher.
+These labels describe the tested policies, not player skill.
 
-This assumes independent equally likely outcomes. It checks proposed game rules,
-not AMOS execution, random-number quality, keyboard behaviour, saving or learner
-understanding. No language runtime is implemented by this checker.
+Each fixed policy is independently checked by propagating probability forward
+through a single round's possible totals, then combining complete round-score
+distributions. This path neither calls the outcome classifier nor uses the
+target solver's early success/failure pruning. All 21 setting/policy comparisons
+agree exactly; all round and session distributions retain probability one.
 
-## Results
+The target-aware maximum is a mathematical benchmark. The table is not a set of
+observed player win rates, a fairness test of AMOS's generator, or evidence that
+the game is fun. Percentages are rounded to six decimal places. No Monte Carlo
+sampling or native language execution is used.
 
-| Check | Result |
-| --- | --- |
-| Every active total 0–20 against die values 1–6 | All 126 combinations match the expected next-roll bust count. |
-| Current total 15 | No outcome busts. |
-| Current totals 16, 17, 18, 19, 20 | Respectively 1, 2, 3, 4, 5 outcomes out of 6 bust. |
-| Five rounds, bank at 16 or above, target 80 | Success probability exactly 1; this target would not require risking a bust. |
-| Five rounds, bank at 16 or above, target 90 | Success probability 34.893448%. |
-| Five rounds, maximise target success, target 90 | Success probability 76.795746%. |
-| Two rounds remaining, current total 16, need 30 | Banking gives 100%; rolling gives 83.333333%. |
-| Two rounds remaining, current total 16, need 39 | Banking gives 0%; rolling gives 47.511105%. |
-| Four rounds remaining, need 90 | Impossible: their maximum is 84. A bust in the proposed challenge therefore ends contention. |
-| No rounds remaining, need zero or one | Equality succeeds; a remaining shortfall fails without an extra round. |
+## Parameter comparison
 
-These probabilities compare mathematical policies, not observed player win
-rates. The optimal target policy is not an introductory prerequisite. Learners
-can reason about possible next results without deriving the solver.
+The recovery column starts from an opening round that has scored zero: secured
+score zero and one fewer round available. It reports the best achievable chance
+from that state, not the chance that a bust happens or a guarantee of recovery.
 
-## Negative controls and remaining checks
+| Limit / rounds / target | Safe policy | Moderate policy | Target-aware maximum | Recovery after opening bust |
+| --- | --- | --- | --- | --- |
+| 21 / 5 / 90 | 34.893448% | 65.713872% | 76.795746% | 0% |
+| 21 / 5 / 82 | 98.993951% | 78.316024% | 99.794458% | 5.425918% |
+| 21 / 10 / 175 | 66.182465% | 61.832934% | 88.354810% | 12.194311% |
+| 12 / 5 / 42 | 76.873255% | 81.939145% | 93.006857% | 32.886704% |
+| **10 / 5 / 30** | **80.630706%** | **86.836201%** | **95.320953%** | **60.126571%** |
+| 10 / 5 / 32 | 58.463120% | 79.426441% | 89.684813% | 44.604766% |
+| 10 / 5 / 35 | 25.369481% | 60.034647% | 74.287406% | 21.941439% |
 
-Boundary fixtures distinguish a live total of 20, a perfect total of 21 and a
-bust total of 22. A second high-end case reaches 26 and awards zero. The checker
-rejects two deliberately incorrect classifiers: one treats equality with 21 as
-a bust; the other awards the displayed bust total as points. Thus a green check
-cannot come solely from accepting whichever result the classifier returns.
+Reducing the 21-limit target to 82 leaves a nearly automatic win for safe
+play, while recovery after a bust is possible but unlikely. Keeping 21 and
+doubling the rounds produces a longer challenge with only a modest recovery
+chance. Limit 12 is a reasonable alternative, but limit 10 offers more recovery
+within the same five rounds and brings the risky decision earlier.
 
-The checker passed, and Ruff check and format verification passed. The native
-prototype still needs the full [brief's acceptance run](brief.md), including
-score/round updates, input release, result stability, replay, quit and fresh
-save/reopen. Neither the model nor the two mutations establish those outcomes.
+The recommendation is deliberately forgiving. A basic safe policy succeeds
+often but not always; banking at 6 instead of 5 improves the outcome without
+requiring a full solution of the game. Pushing to 7 reduces success to
+77.922639%, so increased risk is not a universal improvement. A beginner can
+discover and discuss those consequences without calculating an optimal policy.
 
-Use play observations to adjust the target and round count together. Raising
-the number of rounds without reconsidering the target could remove the need to
-risk anything. If the one-bust consequence dominates play, compare a setting
-that permits recovery while retaining meaningful banking decisions before
-committing to lessons.
+Target 32 retains the same rules and a credible recovery chance while making
+session decisions more consequential. Keep it as a comparison if native play
+finds target 30 too forgiving. It does not require an extra mode or menu now.
+
+## Decisions and round length
+
+With limit 10, two rounds remaining and current total 6:
+
+| Points still needed | Bank now, then choose optimally | Roll now, then choose optimally | Better choice |
+| --- | --- | --- | --- |
+| 10 | 100% | 76.309615% | Bank |
+| 19 | 0% | 18.425309% | Roll |
+
+Both are possible session states under the recommended challenge. The total
+alone does not determine the best choice; earlier secured points matter.
+
+At limit 10, totals up to 4 cannot bust next roll. At 5, 6, 7, 8 and 9, the
+counts are respectively one through five bust outcomes out of six. Exactly 10
+ends the round automatically. This is the same increasing-risk mechanism as the
+21-limit version, with smaller totals.
+
+The moderate bank-at-6 policy averages 2.161394 rolls per completed round. The
+original safe bank-at-16 policy averages 5.046122. These are counts under named
+policies, not elapsed time or measurements of a player's session. Native input,
+reading and feedback will determine the actual pace.
+
+## Checks and next review
+
+The checker covers all 258 active-total/die combinations across limits 10, 12
+and 21 for next-roll bust risk. It retains the original 21/5/90 maximum as a
+regression case and checks target equality, no extra round after exhaustion and
+unreachable targets. A safe policy guarantees only 25 at the recommended limit;
+it does not guarantee the target of 30.
+
+Boundary fixtures distinguish 9, 10 and 11 at limit 10, including a high bust
+of 15 scoring zero. Negative controls reject treating equality as a bust and
+awarding the bust total as points. All checks pass, along with Ruff lint and
+format checks. These controls and the independent fixed-policy path check model
+consistency; they do not establish native input, scoring or reset behaviour.
+
+Use the [game brief](brief.md) for the native acceptance run. Try cautious,
+deliberately risky and context-dependent choices, including recovery from a
+bust and failure after earlier low banks. Judge whether choices are readable,
+whether the recovery feels plausible and whether another attempt is appealing.
+Do not treat the mathematical maximum as an expected learner success rate.
