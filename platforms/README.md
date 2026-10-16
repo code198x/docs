@@ -35,9 +35,10 @@ The [Spectrum assembly opening review](sinclair-zx-spectrum/assembly/course-revi
 
 The [AMOS course brief](commodore-amiga/amos/course-brief.md) and
 [Blitz course brief](commodore-amiga/blitz/course-brief.md) propose independent
-beginner routes with later entry for experienced programmers. A small take-away
-game and a switch puzzle are candidates for review, not agreed replacement
-sequences. The [opening comparison](commodore-amiga/amos/opening-candidates.md)
+beginner routes with later entry for experienced programmers. The AMOS
+[bank-or-risk game direction](commodore-amiga/games/bank-or-risk/brief.md) is
+agreed, with numerical tuning prepared for a native trial; the Blitz switch
+puzzle remains a candidate. Replacement lesson sequences are not yet agreed. The [opening comparison](commodore-amiga/amos/opening-candidates.md)
 checks playing experience and beginner teaching load against existing games and
 retained proposals across the four current systems.
 The [tooling feasibility brief](commodore-amiga/tooling-feasibility.md) compares
