@@ -4,7 +4,8 @@
   "routes": [
     "https://code198x.com/try/",
     "https://code198x.com/try/spectrum-basic/",
-    "https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/"
+    "https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/",
+    "https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/#reopen-your-saved-greeting"
   ],
   "source": "10 PRINT \"Safari greeting\"\n15 PRINT \"to you\"\n20 PRINT \"from the Spectrum\"",
   "checks": [
@@ -70,8 +71,12 @@
     }
   ],
   "save_reopen": {
-    "status": "pending permission",
-    "evidence": "Listing options \u2192 Option-Tab reached Reset to original, next Option-Tab reached Download tape. Return opened Safari\u2019s Allow downloads from code198x.com prompt. Automatic approval review rejected Allow because per-site permission was not specifically authorised. Prompt was cancelled; no successful tape download/reopen is claimed. Approval question remains pending."
+    "status": "observed pass",
+    "evidence": "After the initial approval rejection and cancelled prompt, the user explicitly approved code198x.com downloads. Download tape saved greeting.tap (87 bytes). Unit 2 Run it here \u2192 Choose program or disk selected that actual downloaded file; Start ran it. Canvas showed Program: greeting / Safari greeting / to you / from the Spectrum and 0 OK, 20:1. The general player still displayed its original step-03.tap label; no recovered screen transcript was exposed in its inspected AX tree. This is a visual recovery result, not a screen-reader pass.",
+    "picker_limit": "Native paste retained an old Go to Folder path. Setting the path field explicitly selected greeting.tap in Downloads before loading; no unrelated file was loaded.",
+    "retained_file": "greeting.tap",
+    "bytes": 87,
+    "sha256": "25acedb7667de9054aa663caad64ae430249c7219e64e5c8a02996a9ae3c0b74"
   },
   "matrix_limits": {
     "VoiceOver": "skipped at explicit user request; remained off",

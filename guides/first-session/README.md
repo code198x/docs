@@ -58,8 +58,8 @@ offer a working route while it is repaired.
 
 The [publication record](PUBLICATION.md) retains the production, browser and print
 checks and their limits. The [native Safari follow-up](../../audit/2026-10-first-session-operability/REPORT.md)
-adds a bounded desktop observation, with VoiceOver, physical touch and save/reopen
-still unqualified. The earlier `review/live-links.json` and
+adds desktop run/error/recovery and edited-tape save/reopen observations. VoiceOver
+and physical touch remain unqualified. The earlier `review/live-links.json` and
 `review/anchor-navigation-harness-failure.json` record the content draft's link
 review; they do not qualify the later public pack or a learner session.
 
