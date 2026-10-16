@@ -1,0 +1,11 @@
+# Women's computing history: issue and backlog plan
+
+Create sourced, bounded writing tasks in `code198x/website`, with one parent tracker and one theme article. Publish a small first tranche without waiting for earlier-era lessons. This task commissions articles; it does not write or publish them.
+
+1. Inspect current Vault entries, aliases, referring sections, open/closed website and docs issues, and `vault-candidates.csv`. Reuse candidate IDs and existing coverage. Verify against the remote main tree rather than relying on a stale checkout.
+2. Triage the requested biographies and five further subjects with distinct reader benefits. Record scope, source leads, uncertainty and useful backlinks in each issue and the CSV. Preserve every unrelated candidate record.
+3. Create the parent and thirteen child issues, with native GitHub parent relationships and reciprocal body links. Prioritise Hamilton, Johnson, Vaughan and the theme's first release; other children remain independently publishable follow-ups.
+4. Update only `vault-candidates.csv` and this plan in the docs repository. Validate the full CSV, run the existing checker regression suite, and compare unchanged records with the starting version. Verify every created issue, body, label and parent relationship by reading it back.
+5. Commit and push the tracking changes, open a pull request, and remove the temporary docs worktree after verifying its commit exists on the remote. Preserve the user's unrelated docs and website changes.
+
+Historical controls: distinguish NACA from NASA and each person's job; treat film scenes as dramatisation; explain human computers without an all-women/before-men origin claim; qualify priority claims and credit teams; cite discrimination specifically and attribute recollections. Follow the current Vault evidence and human review requirements. Earlier work supplies context under the Vault's existing scope provision, without promising earlier-era curriculum.
