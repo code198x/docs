@@ -100,3 +100,7 @@ movement, signed rounding and retained state against the maintained game-maths m
 The [full Foundations publication sweep](audit/2026-10-foundations-publication/REPORT.md)
 checks all 39 units and ten overviews at wide/narrow widths, every authored answer
 reveal and the collected internal links. It does not establish learner understanding.
+
+The [Amiga opening audit](audit/2026-10-amiga-opening/REPORT.md) reviews the AMOS
+and Blitz setups and first three lessons, separating maintained source/capture
+consistency from unqualified runtime and learner outcomes.

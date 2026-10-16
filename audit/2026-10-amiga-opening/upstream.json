@@ -1,0 +1,32 @@
+{
+  "sources": [
+    {
+      "repository": "AmiBlitz/AmiBlitz3",
+      "revision": "5dd815f880d72c5285b380ef3ddebfa5766d0626",
+      "url": "https://github.com/AmiBlitz/AmiBlitz3/blob/5dd815f880d72c5285b380ef3ddebfa5766d0626/README.md",
+      "sha256": "0ecd6b788cdfe0409fe376e7625617bd2e4bbdb82e39afbf1382a4d24b665b1a",
+      "accessed": "2026-10-16",
+      "requirementsSummary": {
+        "scope": "IDE, not compiled output",
+        "cpu": "68020",
+        "minimumRamMB": 8,
+        "developmentRamMB": 12,
+        "diskMB": 35,
+        "workbench": "2.1, or 2.04 with locale.library",
+        "library": "wizard.library included"
+      }
+    },
+    {
+      "repository": "AOZ-Studio/AMOS-Professional-Official",
+      "revision": "533b4b1f5acd604814513f78e02c7b4796cb0531",
+      "url": "https://github.com/AOZ-Studio/AMOS-Professional-Official/blob/533b4b1f5acd604814513f78e02c7b4796cb0531/README.md",
+      "sha256": "effd3b053f233446e3eb1274c996604093ed767404250be7a24c322d8cc54c12",
+      "accessed": "2026-10-16",
+      "licenceScope": "Official source repository says MIT; this does not establish the permissions of every downloadable disk distribution."
+    }
+  ],
+  "aminet": {
+    "url": "https://aminet.net/package/dev/amos/AMOSProfessional",
+    "outcome": "Web fetch returned HTTP 403; package contents and availability unqualified."
+  }
+}
