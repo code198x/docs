@@ -1,0 +1,54 @@
+[
+  {
+    "route": "/systems/commodore-amiga/amos/meet-amos/unit-05/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "questions": "keyboard open/close pass",
+    "horizontalOverflow": false,
+    "media": null
+  },
+  {
+    "route": "/systems/commodore-amiga/blitz/meet-blitz/unit-05/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "questions": "keyboard open/close pass",
+    "horizontalOverflow": false,
+    "media": {
+      "start": 0.000169,
+      "end": 0.960048,
+      "width": 768,
+      "height": 576,
+      "error": null
+    }
+  },
+  {
+    "route": "/systems/commodore-amiga/amos/meet-amos/unit-05/",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "questions": "keyboard open/close pass",
+    "horizontalOverflow": false,
+    "media": null
+  },
+  {
+    "route": "/systems/commodore-amiga/blitz/meet-blitz/unit-05/",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "questions": "keyboard open/close pass",
+    "horizontalOverflow": false,
+    "media": {
+      "start": 0.000211,
+      "end": 0.960471,
+      "width": 768,
+      "height": 576,
+      "error": null
+    }
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-16",
+  "configuration": {
+    "emulator": "FS-UAE 3.2.35",
+    "machine": "A1200",
+    "cpu": "68020",
+    "video": "PAL",
+    "chipMiB": 2,
+    "fastMiB": 8,
+    "workbench": "3.1 rev 40.42",
+    "kickstart": "3.1 rev 40.68",
+    "amos": "AMOS Professional 2.00",
+    "amiblitz": "3.13.0b"
+  },
+  "amos": [
+    {
+      "fixture": "p.asc",
+      "observed": "Five intact numbered lines, top to bottom 1,2,3,4,5; Done! below."
+    },
+    {
+      "fixture": "bug.asc",
+      "observed": "Ten iterations. Row 12 reads Done!number 8; the beginning of line 8 is overwritten."
+    },
+    {
+      "fixture": "ten.asc",
+      "observed": "Ten intact numbered lines, 1 through 10; Done! below on row 16."
+    },
+    {
+      "fixture": "down.asc",
+      "observed": "Final screen still top to bottom 1,2,3,4,5; Done! below."
+    },
+    {
+      "fixture": "rows.asc",
+      "observed": "Final screen top to bottom 5,4,3,2,1; Done! below."
+    }
+  ],
+  "amosMethod": "Loaded baseline p.asc through Merge ASCII in AMOS Professional. Applied the corresponding exact edits in the editor, inspected each listing before F1. Space then Return ended each run. Host .asc files retain the equivalent listings; they were not all imported separately.",
+  "blitz": [
+    {
+      "fixture": "old.ab3",
+      "observed": "Original listing compiled, circle positions changed between observations, left mouse click returned Workbench."
+    },
+    {
+      "fixture": "many.ab3",
+      "observed": "Changed maintained listing compiled; coloured circle positions changed between observations; mouse input returned Workbench."
+    },
+    {
+      "fixture": "plain.ab3",
+      "observed": "Eighty-call fixed-colour variant compiled; pink circle pattern changed position; repeated explicit left clicks returned Workbench."
+    },
+    {
+      "fixture": "crowd.ab3",
+      "observed": "Two-hundred-call fixed-colour variant compiled; denser pink pattern changed position; repeated explicit left clicks returned Workbench."
+    },
+    {
+      "fixture": "frozen.ab3",
+      "observed": "Coloured circle pattern unchanged across separate observations about 20 seconds apart; repeated explicit left clicks returned Workbench."
+    },
+    {
+      "fixture": "slow.ab3",
+      "observed": "Coloured circle pattern changed position across separate observations with increment 0.01; repeated explicit left clicks returned Workbench. No wall-clock speed ratio measured."
+    }
+  ],
+  "blitzMethod": "CLI compiled each retained .ab3 with -s and -e, then executed the result from a Workbench Execute alias. RuntimeDebug=0 header retained. PED import/menus not newly exercised in this run; qualified controls come from the earlier opening work.",
+  "inputCaveat": "Several very brief injected clicks did not terminate a run. A sequence of explicit left clicks did. Joyb is a current-button-state check between drawing updates; the lesson advises keeping the button down until it responds. A timed held-button injection was not available. Restarted once with initial_input_grab and automatic_input_grab enabled; machine/CPU/memory/media unchanged.",
+  "excluded": [
+    "Measured update/frame rate",
+    "AMOS-versus-Blitz benchmark",
+    "Original capture driver replay",
+    "Beginner learner trial",
+    "VoiceOver",
+    "Other Amiga models or runtime versions"
+  ]
+}

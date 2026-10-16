@@ -1,0 +1,33 @@
+=== Compiling "Tools:frozen.ab3"...
+Pass 1...
+Linking syslib  : 65520, intlib (742 bytes)
+Linking syslib  : 65530, memlib (2542 bytes)
+Linking syslib  : 65534, varslib (222 bytes)
+Linking blitzlib:   254, graphics.library1 (60 bytes)
+Linking syslib  : 65510, switchlib (930 bytes)
+Linking blitzlib:   160, Bitmaplib (1036 bytes)
+Linking syslib  : 64335, maxslib (118 bytes)
+Linking blitzlib:   161, Ilbmifflib (774 bytes)
+Linking blitzlib:   162, iffiolib (478 bytes)
+Linking blitzlib:   252, dos.library1 (52 bytes)
+Linking blitzlib:   156, Palettelib (3266 bytes)
+Linking blitzlib:   188, environlib (1016 bytes)
+Linking blitzlib:   255, intuition.library1 (58 bytes)
+Linking blitzlib:   144, blitzcoplib (3034 bytes)
+Linking blitzlib:    39, gameiolib (460 bytes)
+Linking blitzlib:   100, scrolllib (1924 bytes)
+Linking syslib  : 64100, chipbaselib (18 bytes)
+Linking blitzlib:    44, mathtranslib (184 bytes)
+Linking syslib  : 64080, floatquicklib (134 bytes)
+Linking syslib  : 64935, ffplib1 (46 bytes)
+Linking blitzlib:   119, sis2dlib (7702 bytes)
+Linking syslib  : 64735, ldivlib (162 bytes)
+Compiling done
+Pass 2...
+Compiling done
+----------------------------------------------------------------
+Used size for linked blitzlibs: 24958 bytes.
+21 line(s) compiled, 0 errors.
+Saving executable as "Tools:frozen.exe".
+Writing to file Tools:frozen.exe
+=== Compiling finished.
