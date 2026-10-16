@@ -1,0 +1,8 @@
+{
+  "phase": "baseline",
+  "status": "failed before browser observations",
+  "failure": "browserType.launch: Target page, context or browser has been closed",
+  "process_signal": "SIGABRT",
+  "cleanup": "Playwright reported process exit and temporary profile cleanup",
+  "limits": "Sandboxed Chrome launch failed. No baseline browser pass or screenshot claimed."
+}

@@ -1,0 +1,5 @@
+{
+  "exit_code": 1,
+  "expected_failure": "Known-red wrong OR accepts outside input",
+  "actual_failure": "AssertionError('Known-red wrong OR accepts outside input')"
+}

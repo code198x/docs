@@ -20,7 +20,7 @@ BASIC and assembly entry remain independent; shared subjects offer support.
 | --- | --- | --- | --- | --- |
 | Basics | 5 | Instructions/order, output, variables, input; ordinary text and numbers | [Stored-value pilot](2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md), principally units 3–4; [sequence/input pilot](2026-10-basics-input-pilot/REPORT.md) samples units 1–2/5 | Learner transfer, numeric input and broader target-specific input/error contracts remain unverified |
 | Working It Out | 3 | Arithmetic/precedence, updating a value, division/remainder/rounding; variables and number order | [Arithmetic pilot](2026-10-arithmetic-pilot/REPORT.md) covers the overview and three units | Real learner outcomes and further target-language mappings remain unobserved |
-| Decisions | 4 | IF/ELSE, chains, stored flags, compound conditions; values and comparisons | [Decisions/boundary pilot](2026-10-decisions-boundary-pilot/REPORT.md) samples unit 1; [chains/state pilot](2026-10-decisions-state-pilot/REPORT.md) samples units 2–3; Boolean work retains compound-condition context | Learner outcomes, broader numeric/input domains and further target truth/scope rules remain unverified |
+| Decisions | 4 | IF/ELSE, chains, stored flags, compound conditions; values and comparisons | [Decisions/boundary pilot](2026-10-decisions-boundary-pilot/REPORT.md) samples unit 1; [chains/state pilot](2026-10-decisions-state-pilot/REPORT.md) samples units 2–3; [compound-condition pilot](2026-10-compound-conditions/REPORT.md) checks unit 4’s numeric domains and grouping | Learner outcomes, broader numeric/input domains and further target truth/scope rules remain unverified |
 | Truth Tables | 3 | Boolean combinations, NOT/AND/OR/XOR, De Morgan equivalence; conditions and stable input values | [Current Boolean pilot](2026-10-boolean-logic-pilot/REPORT.md) | Learner understanding and unaided transfer remain unobserved |
 | Repeating | 3 | Counted, pre/post-test loops and repeated work; conditions and updates | [Repetition pilot](2026-10-repetition-pilot/REPORT.md); [progress/exit follow-up](2026-10-repetition-progress-pilot/REPORT.md) samples units 2–3 | Learner outcomes, wider domains, external events and target counter/overflow contracts remain unverified |
 | Structure | 4 | Lists, named jobs, parameters/results, diagnosis; loops and changing values | [Structure pilot](2026-10-structure-pilot/REPORT.md): all four units read, selected outputs/traces and target contrasts checked | Actual learner outcomes, real-language list aliasing and further target contracts remain unverified |
@@ -76,8 +76,10 @@ touch is untested. Safari edited-tape save/reopen was observed working after
 explicit download permission approval.
 The [complete per-unit review](2026-10-foundations-objectives/REPORT.md) now fills
 the objective/prerequisite inventory gap at its named revision. It identifies
-stale summary wording in website #752 and proposes a direct compound-condition
-domain audit next under #114.
+stale summary wording in website #752, now corrected in accepted website #753.
+The [compound-condition follow-up](2026-10-compound-conditions/REPORT.md) directly
+checks unit 4’s interval and grouping boundaries under #114; learner outcomes
+remain unknown. The next proposed slice is counted-loop range/body semantics.
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to

@@ -1,0 +1,33 @@
+{
+  "status": "passed selected checks",
+  "production_build": "2459 pages built and shared-frame checked; search indexed",
+  "repository_checks": "32 test files, 237 tests passed; content, NES assembler and prepared player checks pass",
+  "browser": "155.0.8059.80",
+  "browser_viewports": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 900
+    }
+  ],
+  "browser_behaviour_groups": 6,
+  "document_overflow": false,
+  "scoped_axe_violations": 0,
+  "narrow_axe_contrast": "incomplete on four listing lines; raw incomplete retained",
+  "contrast_probe": {
+    "samples": 8,
+    "minimum_ratio": 16.816837173024243,
+    "scope": "Rendered text vs inherited background for the four incomplete code lines at left/right scroll endpoints"
+  },
+  "visual_inspection": "Actual ROM fraction/grouping and readable wide/narrow question captures inspected. No layout repair needed. Initial full-page images are too tall for comfortable chat inspection; viewport captures retain the inspected detail.",
+  "prose": "Vale zero errors/warnings/suggestions in affected lesson and six docs files; Ruff passes",
+  "website_verifier_sha256": "de7712a2f8787de3ba1ddd3dd5d61f7433cb9ac01c7b12c0c7d488cba2513571",
+  "limits": "Local built production page in headless Chrome; not live publication, real mobile, screen-reader or learner evidence. Initial sandbox launch and inline-formatting observation are retained separately.",
+  "advisories": [
+    "Pagefind Default UI advisory",
+    "Existing Vault platform balance report: 51 of 572 multi-format entries discuss one platform"
+  ]
+}

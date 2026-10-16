@@ -1,0 +1,25 @@
+{
+  "website_baseline": "e59270e838c288a014cd191ed5404dba769d69f4",
+  "docs_baseline": "aa06e4f58267349801d6c4c2923f4a5b1b19c822",
+  "samples_revision": "163e74e18e9536fb555ef7319fa08bbc1836542b",
+  "source_sha256": {
+    "src/content/curriculum/foundations/decisions/unit-04.mdx": "8ac6743785e0a5591177114de925b71c7f0d3d54135353f2124968a3e4d1e24a",
+    "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing.mdx": "041bcae33248bb83b6f6c70e6358c2c65d2ff3047239f5d4534364c26d81fb6a"
+  },
+  "proposed_source_sha256": {
+    "src/content/curriculum/foundations/decisions/unit-04.mdx": "b7cd667e6304aa45da909e7875836adb5ed450192afe6b29af9e0e6f28ba3bdd",
+    "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing.mdx": "041bcae33248bb83b6f6c70e6358c2c65d2ff3047239f5d4534364c26d81fb6a"
+  },
+  "specification_sha256": {
+    "specifications/pseudocode.md": "c4be92a6c9c87afea628b2234e145c43266ec51dfe2f8c5ef233e39573f1cb8b",
+    "specifications/unit.md": "3bc2ed89222f5b96abe85fe1b3c15a410af2f69e2cbea310d06ea6b210c0461e",
+    "specifications/curriculum.md": "7f1985bb3a4a5651c4eb707533da7649bc3b4dc8ce66c882b73b2d99069657f6"
+  },
+  "python": "3.14.3",
+  "ui_revision": "7eda45e1c2f8b8f919359c971b2e210822e431f2",
+  "node": "v24.22.0",
+  "pinned_package_sha256": "bc2e4820866c5590d6273220ec40dadd76e006cb05a0ba87a90998eb0c4d780d",
+  "browser_verifier_sha256": "de7712a2f8787de3ba1ddd3dd5d61f7433cb9ac01c7b12c0c7d488cba2513571",
+  "native_verifier_sha256": "384f583191773885efcfabcf5a32246a2aa624b7fa24f25b68529ca500c94847",
+  "limits": "Source/dependency identities and declared environment; no current deployment fingerprint or browser-ROM identity."
+}
