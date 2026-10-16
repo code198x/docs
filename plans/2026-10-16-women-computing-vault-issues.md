@@ -21,3 +21,7 @@ Record the user's WarGames, Sneakers, Micro Men, Pirates of Silicon Valley, Halt
 ## Follow-up: accepted suggestions and Ready Player One
 
 Record the accepted documentary, BBC television and fiction suggestions as needs-triage candidates, plus Ready Player One as a film with a specific Adventure/Warren Robinett/Atari connection. Check candidate names and retain existing coverage. Keep the novel and film distinct and check the film's Easter-egg priority claim against earlier examples. Validate the CSV and regression tests, preserve prior records, push the change and remove the temporary checkout after remote verification.
+
+## Follow-up: music connections
+
+Compare all proposed music connections with current main Vault paths/prose, candidate identities and open/closed issue coverage. Extend the existing Electric Dreams film candidate for Oakey/Moroder. Record the Warhol/Harry launch event as covered by the Amiga entry, with no duplicate commission. Add missing album/program, game, music-computer, CD-ROM and computer-performance subjects at needs-triage; keep Gabriel's two works distinct and collaborators visible. Preserve every other record, validate the full CSV and the existing regression suite, inspect the diff, update this pull request and push. Remove the temporary music checkout after checking tracked/untracked/ignored files and verifying its commit on the remote.
