@@ -1,0 +1,111 @@
+{
+  "startedUTC": "2026-10-16T11:54:44.203759+00:00",
+  "userRequestedRetry": true,
+  "inputs": {
+    "archive": {
+      "bytes": 13835564,
+      "sha256": "e728b213f9e45cb2a2098dd41c9d3ea7d4810ff363725f9a75810bd09e788b3e"
+    },
+    "rom": {
+      "bytes": 524288,
+      "sha256": "6d43840d4099a74170ea0f0425b6257c3891ebcaa39c4d1840075a9ab22b5707"
+    },
+    "workbench": {
+      "bytes": 901120,
+      "sha256": "a8f167bad2897e8c7f2cfe73de7a9f8dad10c7a5b1f78ca17f818ab17278b985"
+    },
+    "fonts": {
+      "bytes": 901120,
+      "sha256": "fb16055e4ab41ad044c51ce97cf808957ae5a0531b027e890f7f64912fbc1827"
+    },
+    "runtime": {
+      "bytes": 388344,
+      "sha256": "b85caf464f00f6a6f7e4783ea4f9dadf5f61299772a2e78607c9df643fc749e6"
+    },
+    "nativeEmulator": {
+      "bytes": 10688800,
+      "sha256": "86e3f01623cb13bff537903a07a6c4fcfdc4b7fc4baee723cfb6eb4f28f6de8d"
+    },
+    "source": {
+      "bytes": 77,
+      "sha256": "55514fdc4b738c8dec7852cf32a453f34a12afb145d49eaa6b81fbacb5fc9dd0"
+    }
+  },
+  "configuration": "Same A1200/PAL/68020/no-FPU, 2 MB chip + 8 MB fast as first trial; Workbench and Fonts mounted from task copies.",
+  "observations": [
+    {
+      "action": "Start identical isolated configuration, then Execute Tools:start-blitz",
+      "result": "Workbench desktop; AmiBlitz3 V3.13.0 (24.06.2026) Build 3654 splash, Building libmapping..."
+    },
+    {
+      "action": "Right-Amiga+O; enter Tools:hello.bb2 in empty File field; Return twice",
+      "result": "All four retained greeting lines loaded and visually checked."
+    },
+    {
+      "action": "Right-Amiga+#",
+      "result": "PED displays Compiling...; busy pointer."
+    },
+    {
+      "action": "Inspect first compiler result",
+      "result": "Compile Error: Garbage at the end of line; Hint: Maybe some unwanted characters pending? Line 1: NPrint \"Hello from Blitz!\"."
+    },
+    {
+      "action": "Read bundled guide FILEFORMAT and SMARTTOKENIZATION sections",
+      "result": "BB2 is tokenized binary; AB3 is plain text, tokenized on load."
+    },
+    {
+      "action": "Copy identical maintained bytes to hello.ab3; load in PED",
+      "result": "Keywords displayed with token highlighting. A second Return after the requester inserted a harmless blank first line."
+    },
+    {
+      "action": "Right-Amiga+# on hello.ab3",
+      "result": "Pass 1: Building Executable... 4% observed."
+    },
+    {
+      "action": "Inspect after executable build",
+      "result": "Blank Sourcecode View window appeared. R alone did not visibly change it."
+    },
+    {
+      "action": "Amiga keyboard mouse moved pointer inside window; host click; R",
+      "result": "Output window showed Hello from Blitz! and Compiled, not interpreted.; Program terminated.; Press <ENTER> to return to the IDE ...; r echoed after termination. Click occurred before output was visible, so waiting-state display is not established by this first run."
+    },
+    {
+      "action": "Return",
+      "result": "PED listing restored."
+    },
+    {
+      "action": "Move cursor to column 9 of first NPrint; type Edited inside quotes",
+      "result": "Source line visually checked: NPrint \"Edited Hello from Blitz!\""
+    },
+    {
+      "action": "Right-Amiga+#",
+      "result": "Building executable observed for edited source."
+    },
+    {
+      "action": "Left click after edited build",
+      "result": "Output visibly showed Edited Hello from Blitz! and Compiled, not interpreted.; Program terminated.; Press <ENTER> to return to the IDE ... ."
+    },
+    {
+      "action": "Return; move to column 34 on line 2; append +; Right-Amiga+#",
+      "result": "Compile Error requester: Syntax error! Line 2: --> NPrint \"Edited Hello from Blitz!\"+. Problem before: t \"Hello from Blitz!\"."
+    },
+    {
+      "action": "Attempt Return then BackSpace; Escape; Space",
+      "result": "Compile Error requester remained visible. BackSpace did not establish a source repair. Stop at this boundary; no repaired rerun claimed."
+    }
+  ],
+  "plainTextImport": {
+    "name": "hello.ab3",
+    "sha256": "55514fdc4b738c8dec7852cf32a453f34a12afb145d49eaa6b81fbacb5fc9dd0",
+    "sourceChanged": false
+  },
+  "outcome": {
+    "baseline": "observed after click",
+    "editedGreeting": "observed after click",
+    "deliberateSyntaxError": "observed",
+    "recovery": "not completed",
+    "waitingStateOutput": "not observed",
+    "captureLoss": "did not recur during this retry",
+    "lunchHypothesis": "not established"
+  }
+}
