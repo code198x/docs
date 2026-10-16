@@ -97,6 +97,12 @@ fractions across updates while drawing whole-pixel coordinates. The prepared pap
 trial adds a later-update distinction beyond the earlier one-move exercise. The
 [lesson follow-up](2026-10-fixed-point-state/REPORT.md) now qualifies that optional
 experiment with exact rendered values and keyboard checks.
+The [full publication sweep](2026-10-foundations-publication/REPORT.md) now checks
+all 39 units and ten overviews at wide/narrow widths, their 52 authored answer
+reveals and collected root-relative/fragment links. The
+[aiming boundary audit](2026-10-aiming-boundaries/REPORT.md) adds selected
+game-maths geometry and signed-rounding evidence. These reports do not turn the
+sampled execution coverage into a full objective or learner validation.
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to

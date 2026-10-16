@@ -1,0 +1,389 @@
+{
+  "status": "failed",
+  "date": "2026-10-16T10:09:34.867Z",
+  "base": "https://code198x.com",
+  "mode": "actual",
+  "browser": "155.0.8059.80",
+  "sourceSha256": "21deb998429d369d09f85da3f7f3bd3f56f6b3c093b9b1194ef34da2f13d1a99",
+  "cases": [
+    {
+      "route": "/foundations/basics/",
+      "kind": "overview",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/basics/",
+      "responseSha256": "2ccf18a1fe5b04ef3807eaa57569455ec6b97ade0f95f53b62f8b51842197654",
+      "questionCount": 0,
+      "opened": [],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/basics/unit-01/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/basics/unit-01/",
+      "responseSha256": "3f2fe19ef4abc8ecdb3d1536f8ddcde47fb90b7d85c662c3d633823ff7ef3f7b",
+      "questionCount": 1,
+      "opened": [
+        {
+          "kind": "Question",
+          "index": 0
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/basics/unit-02/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/basics/unit-02/",
+      "responseSha256": "f4a37a8f0e77fb9cf02cf88d33f208f0b6c3361a2af7ba475902875487b6faf5",
+      "questionCount": 1,
+      "opened": [
+        {
+          "kind": "Question",
+          "index": 0
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/basics/unit-03/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/basics/unit-03/",
+      "responseSha256": "d989b388c78738bcc7d7d8b039a05dd6b6749a780313c4a470c1bbdba0528b85",
+      "questionCount": 2,
+      "opened": [
+        {
+          "kind": "Question",
+          "index": 0
+        },
+        {
+          "kind": "Question",
+          "index": 1
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/basics/unit-04/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/basics/unit-04/",
+      "responseSha256": "acdc1460064e04dcb33fcb2c0b5605020b1b810acbaaf5434c5e5cf2d8bc3764",
+      "questionCount": 0,
+      "opened": [
+        {
+          "kind": "details",
+          "summary": "Check your prediction"
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/basics/unit-05/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/basics/unit-05/",
+      "responseSha256": "f18078581b2b6cf21c47963188debd8a60d21625beddf05953e04ea5cff95985",
+      "questionCount": 1,
+      "opened": [
+        {
+          "kind": "Question",
+          "index": 0
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/counting-in-twos/",
+      "kind": "overview",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/counting-in-twos/",
+      "responseSha256": "3ae6d5bda183b43036d0a4841464b9ea1995cb5198b38a84040be6a89759fe75",
+      "questionCount": 0,
+      "opened": [],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-01/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/counting-in-twos/unit-01/",
+      "responseSha256": "9aec0ebfce793b517fdcd2c8d6c4a5ce937461ab416b231b73710c5014db8dc7",
+      "questionCount": 0,
+      "opened": [
+        {
+          "kind": "details",
+          "summary": "Does BIN 00000101 hold a bigger number than BIN 101? Can BIN 100000000 fit in one unsigned byte?"
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-02/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/counting-in-twos/unit-02/",
+      "responseSha256": "bf441006422b4e78822511684ae0af3bd1337a7077acdb9a5622edac1a6140ea",
+      "questionCount": 0,
+      "opened": [
+        {
+          "kind": "details",
+          "summary": "Do HEX 10 and decimal 10 mean the same value? Which fits in an unsigned byte: HEX FF or HEX 100?"
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-03/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/counting-in-twos/unit-03/",
+      "responseSha256": "3aaad382aa4f482c1cbbd1d7e8c95555cf567e11daf2c090e144237189d198dd",
+      "questionCount": 0,
+      "opened": [
+        {
+          "kind": "details",
+          "summary": "A machine has addresses 0 to 65535. Does that prove it has 64K of RAM?"
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-04/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/counting-in-twos/unit-04/",
+      "responseSha256": "c2db112d570aa22e5348245016bfaaa60ee75efb77a668a5216862e314cbf8a9",
+      "questionCount": 0,
+      "opened": [
+        {
+          "kind": "details",
+          "summary": "For a one-byte result, does 127 + 1 carry out of the byte? Does it overflow signed?"
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/decisions/",
+      "kind": "overview",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/decisions/",
+      "responseSha256": "7f63197520e1308dc276fc460f4b680fb1607b5fbf830807b73db8b8f8e414f8",
+      "questionCount": 0,
+      "opened": [],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/decisions/unit-01/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/decisions/unit-01/",
+      "responseSha256": "def8d82c0ab533b8d6dd2d7721951abbbc31cffcc24e8adb0e5b9a1a73f474e2",
+      "questionCount": 0,
+      "opened": [
+        {
+          "kind": "details",
+          "summary": "Check the three cases"
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/decisions/unit-02/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/decisions/unit-02/",
+      "responseSha256": "8732eef9fcad5de0092b70352ed128d17f70f4487b1643cb9ba599384cc6e2e7",
+      "questionCount": 1,
+      "opened": [
+        {
+          "kind": "Question",
+          "index": 0
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/decisions/unit-03/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/decisions/unit-03/",
+      "responseSha256": "8328e91874026a840e7640df850a77643044b4466be1ad3d0ef747c4e51036e3",
+      "questionCount": 2,
+      "opened": [
+        {
+          "kind": "Question",
+          "index": 0
+        },
+        {
+          "kind": "Question",
+          "index": 1
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/decisions/unit-04/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/decisions/unit-04/",
+      "responseSha256": "1d9fedc3ed33f386262fa25959f6c9060a63996d12068b9345104f433f5211ef",
+      "questionCount": 2,
+      "opened": [
+        {
+          "kind": "Question",
+          "index": 0
+        },
+        {
+          "kind": "Question",
+          "index": 1
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/",
+      "kind": "overview",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/from-source-to-silicon/",
+      "responseSha256": "e9d66eb213397d3efa6f5735a0eaa4afa3d1df134553ef20889c7bf7e76f10ed",
+      "questionCount": 0,
+      "opened": [],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/unit-01/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/from-source-to-silicon/unit-01/",
+      "responseSha256": "3ef3fe9f6f9b30c6e921725694a46bd8ce9343d3ab6112c0ccedc78223c60b7f",
+      "questionCount": 0,
+      "opened": [
+        {
+          "kind": "details",
+          "summary": "Are character codes instructions?"
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "route": "/foundations/from-source-to-silicon/unit-02/",
+      "kind": "unit",
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "finalUrl": "https://code198x.com/foundations/from-source-to-silicon/unit-02/",
+      "responseSha256": "c635a88d5f02ad73273e20d7c4801136d486de73fa99477624af5bc61a3e9f6b",
+      "questionCount": 2,
+      "opened": [
+        {
+          "kind": "Question",
+          "index": 0
+        },
+        {
+          "kind": "Question",
+          "index": 1
+        }
+      ],
+      "dimensions": {
+        "width": 1440,
+        "document": 1440
+      }
+    }
+  ],
+  "links": [],
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: Missing/ambiguous authored disclosure: Follow the compiler's output\n\n0 !== 1\n"
+}

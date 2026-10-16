@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node",
+    "audit/2026-10-foundations-publication/verify-live.mjs",
+    "/Users/stevehill/Projects/198x/Code198x/website",
+    "audit/2026-10-foundations-publication/source.json",
+    "audit/2026-10-foundations-publication/live"
+  ],
+  "exit": 1,
+  "stdout": "1/98 1440 /foundations/basics/ 0 answers\n2/98 1440 /foundations/basics/unit-01/ 1 answers\n3/98 1440 /foundations/basics/unit-02/ 1 answers\n4/98 1440 /foundations/basics/unit-03/ 2 answers\n5/98 1440 /foundations/basics/unit-04/ 1 answers\n6/98 1440 /foundations/basics/unit-05/ 1 answers\n7/98 1440 /foundations/counting-in-twos/ 0 answers\n8/98 1440 /foundations/counting-in-twos/unit-01/ 1 answers\n9/98 1440 /foundations/counting-in-twos/unit-02/ 1 answers\n10/98 1440 /foundations/counting-in-twos/unit-03/ 1 answers\n11/98 1440 /foundations/counting-in-twos/unit-04/ 1 answers\n12/98 1440 /foundations/decisions/ 0 answers\n13/98 1440 /foundations/decisions/unit-01/ 1 answers\n14/98 1440 /foundations/decisions/unit-02/ 1 answers\n15/98 1440 /foundations/decisions/unit-03/ 2 answers\n16/98 1440 /foundations/decisions/unit-04/ 2 answers\n17/98 1440 /foundations/from-source-to-silicon/ 0 answers\n18/98 1440 /foundations/from-source-to-silicon/unit-01/ 1 answers\n19/98 1440 /foundations/from-source-to-silicon/unit-02/ 2 answers\n",
+  "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Missing/ambiguous authored disclosure: Follow the compiler's output\n\n0 !== 1\n\n    at file:///private/tmp/198x-acceptance-docs/audit/2026-10-foundations-publication/verify-live.mjs:58:16 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 0,\n  expected: 1,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.22.0\n"
+}
