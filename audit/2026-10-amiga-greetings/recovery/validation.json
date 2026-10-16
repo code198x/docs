@@ -1,0 +1,43 @@
+{
+  "build": {
+    "exitCode": 0,
+    "pages": 2459,
+    "input": "local copies of existing pinned UI/dependencies; no new packages",
+    "failedAttempts": [
+      "Expected a closing tag for `<ENTER>` (61:61) before the end of `paragraph` (mdx-jsx:unexpected-character); fixed by inline code formatting.",
+      "First successful build omitted Layout stylesheet reference in setup HTML; clean task .astro, node_modules/.astro, node_modules/.vite and dist rebuild restored it."
+    ]
+  },
+  "builtArtifacts": [
+    {
+      "route": "/systems/commodore-amiga/amos/getting-started",
+      "linkedHeaderStyles": true,
+      "amigaInternalLinksExist": true
+    },
+    {
+      "route": "/systems/commodore-amiga/amos/meet-amos/unit-01",
+      "linkedHeaderStyles": true,
+      "amigaInternalLinksExist": true
+    },
+    {
+      "route": "/systems/commodore-amiga/blitz/getting-started",
+      "linkedHeaderStyles": true,
+      "amigaInternalLinksExist": true
+    },
+    {
+      "route": "/systems/commodore-amiga/blitz/meet-blitz/unit-01",
+      "linkedHeaderStyles": true,
+      "amigaInternalLinksExist": true
+    }
+  ],
+  "negativeControl": "Header-style assertion rejects a nonexistent scope attribute.",
+  "browser": {
+    "desktopSetupDOM": {
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    "limits": "Chrome CUA screenshot and later CDP operations timed out. Final wide/narrow visual and click-through checks incomplete. No screenshot files retained. Temporary viewport reset and task-tab close attempted but completion unconfirmed; do not treat as passed.",
+    "error": "Timed out after 2938ms waiting for CDP command Page.getFrameTree."
+  },
+  "runtime": "Baseline and edited waiting output, real syntax error, dismissal, repaired two-line output and return observed with RuntimeDebug=0. See observations.json."
+}

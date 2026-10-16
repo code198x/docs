@@ -31,11 +31,12 @@
   },
   "runtime": {
     "amos": "manual baseline/edit/syntax-error/repair observed",
-    "amiblitz": "fresh retry: baseline and edited output observed after click; deliberate syntax error observed; recovery incomplete; see retry/observations.json"
+    "amiblitz": "baseline/edit/error/dismissal/repair/return observed with RuntimeDebug=0; see recovery/observations.json"
   },
   "integrity": "SHA256SUMS checks retained evidence only, not runtime correctness",
   "retryChecks": {
     "identicalPlainTextImportBytes": true,
     "websiteChanges": "none during retry; existing website checks above concern AMOS pages"
-  }
+  },
+  "recoveryValidation": "recovery/validation.json records the later build and incomplete browser review separately from the earlier AMOS checks"
 }

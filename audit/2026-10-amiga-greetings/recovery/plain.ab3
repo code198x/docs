@@ -1,0 +1,7 @@
+; XTRA
+; RuntimeDebug    = 0
+; /XTRA
+NPrint "Hello from Blitz!"
+NPrint "Compiled, not interpreted."
+MouseWait
+End
