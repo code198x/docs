@@ -1,0 +1,18 @@
+{
+  "status": "passed source/model/evidence checks",
+  "units": 39,
+  "overviews": 10,
+  "current_units_with_prompt_markers": 39,
+  "changed_units": 4,
+  "changed_overviews": 1,
+  "finite_traces": 6,
+  "overflow_rejections": 3,
+  "wrong_policy_exit": 1,
+  "local_links": 120,
+  "negative_controls_rejected": {
+    "missing_inventory_row": "Inventory rows missing or duplicated",
+    "wrong_source_hash": "Current source hash mismatch",
+    "discarded_fractional_state": "Fractional retained state mismatch"
+  },
+  "limits": "Source/markup reconciliation and selected model arithmetic, not a fresh full-course review, target execution, browser run or learner trial."
+}

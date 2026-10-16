@@ -81,3 +81,7 @@ finite models, fresh ROM commands and independent learner prompts.
 The [interpreter-trace pilot](audit/2026-10-interpreter-trace/REPORT.md) checks
 changed starts, bounds and increments, stored BASIC records and the distinction
 between source updates, machine instructions and measured time.
+
+The [Foundations evidence queue](audit/2026-10-foundations-evidence-queue/REPORT.md)
+reconciles the four earlier prompt gaps and prepares a repeated fixed-point
+trial on retained state and drawing coordinates, reusing accepted evidence.
