@@ -1,0 +1,21 @@
+{
+  "websiteMain": "405c0594d30af56ecdfdc1ee4b6c119dead20ab7",
+  "docsBaseline": "eea9f55ae490653a8d3e5baa88a75f2c7c7649a3",
+  "base": "https://code198x.com",
+  "files": {
+    "scripts/verification/fixed-point-state-pilot.mjs": "bed20e28df9fc78a028a82f0cea315f8cff695a2ed14396b8e64bc701b8c4491",
+    "scripts/verification/fixed-point-contrast.mjs": "ed63fb25bd4472781d5389b4966a856e376d16f8ee0dea8ec4386771dfc99865",
+    "scripts/verification/compound-conditions-pilot.mjs": "de7712a2f8787de3ba1ddd3dd5d61f7433cb9ac01c7b12c0c7d488cba2513571",
+    "scripts/verification/counted-loop-pilot.mjs": "4b7b151488120cad5638599a47e523ca53bfd387652af941b0f0fb713feebbb0",
+    "scripts/verification/output-joining-pilot.mjs": "17fbf4f68fa1163add29d6752b46bc5d26660cd9b60bfcfe15605e1c814d3d97",
+    "scripts/verification/interpreter-trace-pilot.mjs": "718b2160678671047ed40db8fc4bc845879bbfaed5a2548050f61441c619e3c6",
+    "scripts/verification/first-session-guide.mjs": "ce7306ef09bea52ba9b92d66b7aa3884e330123fd61d104b72fd1a514c52c930",
+    "package-lock.json": "bc2e4820866c5590d6273220ec40dadd76e006cb05a0ba87a90998eb0c4d780d",
+    "src/content/curriculum/foundations/working-the-bits/unit-05.mdx": "8d355d2955df7c74de78fc044a89462ba77f78d78e124b3ecbb173a0987f58f6",
+    "src/content/curriculum/foundations/basics/unit-03.mdx": "e1d108e5564892cc69136872add5089e235efd47543fc541b7baab0eba522ff1",
+    "src/content/curriculum/foundations/decisions/unit-04.mdx": "b7cd667e6304aa45da909e7875836adb5ed450192afe6b29af9e0e6f28ba3bdd",
+    "src/content/curriculum/foundations/repeating/unit-01.mdx": "8293f9a6eca8c8ee54bb0d99ec3e651175fda68975202a26ff78b6ecbd12fbda",
+    "src/content/curriculum/foundations/from-source-to-silicon/unit-02.mdx": "6b3b7f64604897343c6a168c1019ee2c40cd91923b6338293b1280d8b3fa3eb5"
+  },
+  "acceptedModelsSha256": "fa46aa5ce7d133572fe6ddafe404982c32c8debf9a1cbd7edff265c846f6bf48"
+}

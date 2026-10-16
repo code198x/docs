@@ -1,0 +1,107 @@
+{
+  "reopenBase": "https://code198x.com",
+  "date": "2026-10-16T09:49:44.436Z",
+  "base": "https://code198x.com",
+  "browser": "155.0.8059.80",
+  "mode": "pages",
+  "pages": [
+    {
+      "route": "/try/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/spectrum-basic/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/spectrum-assembly/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/parents-and-teachers/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/session-sheet/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/feedback/",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/",
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/spectrum-basic/",
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/spectrum-assembly/",
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/parents-and-teachers/",
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/session-sheet/",
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "route": "/try/feedback/",
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [
+    {
+      "check": "discovery, both activity routes, companion, sheet and print by keyboard",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "check": "discovery, both activity routes, companion, sheet and print by keyboard",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

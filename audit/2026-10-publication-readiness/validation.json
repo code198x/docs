@@ -1,0 +1,1 @@
+{"status": "passed", "lessonViewportCases": 10, "guideViewportCases": 12, "behaviourGroups": 36, "manifestEntries": 63, "negativeControls": ["wrong live table expectation rejected", "missing viewport rejected"]}

@@ -89,3 +89,7 @@ trial on retained state and drawing coordinates, reusing accepted evidence.
 The [fixed-point state follow-up](audit/2026-10-fixed-point-state/REPORT.md) brings
 the prepared retained-fraction experiment into the existing lesson, with model,
 wide/narrow rendering and keyboard evidence.
+
+The [publication readiness snapshot](audit/2026-10-publication-readiness/REPORT.md)
+checks the latest five Foundations changes and first-session guide on the public
+site, with remaining learner and accessibility limits stated separately.
