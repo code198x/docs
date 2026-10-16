@@ -13,3 +13,7 @@ Historical controls: distinguish NACA from NASA and each person's job; treat fil
 ## Follow-up: Hidden Figures as a cultural work
 
 Check current film/television entries and candidates, then commission one film entry under the existing Culture category. Preserve the existing Tron and The Wizard candidates. Add a ready candidate and sourced writing issue for Hidden Figures, link it to the parent and theme without making it a first-tranche prerequisite, validate the CSV and issue relationships, and update the existing tracking pull request. No new medium category or bulk film/television commissions are part of this task.
+
+## Follow-up: seven film and television candidates
+
+Record the user's WarGames, Sneakers, Micro Men, Pirates of Silicon Valley, Halt and Catch Fire, The Terminator and D.A.R.R.Y.L. suggestions as needs-triage Culture candidates, after checking existing names, aliases and issues. Record distinct reader questions and tentative referring entries; do not commission articles or add a category. Check the Terminator assembly-code lead and retain the need for frame/listing comparison before publication. Validate the full CSV and existing regression tests, prove every prior record unchanged, push the small follow-up commit to this pull request, and remove the temporary checkout after verifying remote retention.
