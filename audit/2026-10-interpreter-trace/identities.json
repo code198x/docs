@@ -1,0 +1,44 @@
+{
+  "website_baseline": "0814f1e482ebdaa0aeae8dc6799e2d5f2aeca3b0",
+  "docs_baseline": "f18a83c39183481cb5abdbefe79b4708f5c0f911",
+  "samples_revision": "163e74e18e9536fb555ef7319fa08bbc1836542b",
+  "ui_revision": "7eda45e1c2f8b8f919359c971b2e210822e431f2",
+  "baseline_website_sha256": {
+    "src/components/diagrams/TraceTable.astro": "7a57343fd74a0cab9aa931b4cc98f3dc97446367c7d8d7a4099e5ed67906667d",
+    "src/content/curriculum/foundations/basics/unit-04.mdx": "b70d5015f5ea4c531a836f69d1ac2c5c2f52cf3bede3cdd9d339773a83063dfa",
+    "src/content/curriculum/foundations/from-source-to-silicon/unit-02.mdx": "a2965613106820a5697b6d9bb887a5987fcc34b5cd8ae26e743ff884a1ea540b",
+    "src/content/curriculum/foundations/from-source-to-silicon/unit-03.mdx": "9a8861b0520a7cec2af9bb8ba1cfb5c1ed7c970fcb544012d26b878330b6e680",
+    "src/content/curriculum/foundations/repeating/unit-01.mdx": "8293f9a6eca8c8ee54bb0d99ec3e651175fda68975202a26ff78b6ecbd12fbda",
+    "src/content/curriculum/foundations/structure/unit-02.mdx": "615603a9090b7d8b9bf6ee9cda17e56e04d94a519deeab9a3a52e1dd8869f8fc",
+    "src/content/curriculum/foundations/structure/unit-04.mdx": "0dae1f6051a46f9040e27358b0b8d6665af827e37f116a2de11dcdbe1e96f243",
+    "src/content/curriculum/foundations/working-it-out/unit-02.mdx": "8ba6b8505d7f66ca91224696ee11f2928ad51e0b6d1f05d9874dcb2b6d7bfd17"
+  },
+  "proposed_website_sha256": {
+    "src/components/diagrams/TraceTable.astro": "410041031094ba2c5f7ed113869c94cef3ec2db501d21a6eec86098a97c0fe00",
+    "src/content/curriculum/foundations/basics/unit-04.mdx": "b70d5015f5ea4c531a836f69d1ac2c5c2f52cf3bede3cdd9d339773a83063dfa",
+    "src/content/curriculum/foundations/from-source-to-silicon/unit-02.mdx": "6b3b7f64604897343c6a168c1019ee2c40cd91923b6338293b1280d8b3fa3eb5",
+    "src/content/curriculum/foundations/from-source-to-silicon/unit-03.mdx": "9a8861b0520a7cec2af9bb8ba1cfb5c1ed7c970fcb544012d26b878330b6e680",
+    "src/content/curriculum/foundations/repeating/unit-01.mdx": "8293f9a6eca8c8ee54bb0d99ec3e651175fda68975202a26ff78b6ecbd12fbda",
+    "src/content/curriculum/foundations/structure/unit-02.mdx": "615603a9090b7d8b9bf6ee9cda17e56e04d94a519deeab9a3a52e1dd8869f8fc",
+    "src/content/curriculum/foundations/structure/unit-04.mdx": "0dae1f6051a46f9040e27358b0b8d6665af827e37f116a2de11dcdbe1e96f243",
+    "src/content/curriculum/foundations/working-it-out/unit-02.mdx": "8ba6b8505d7f66ca91224696ee11f2928ad51e0b6d1f05d9874dcb2b6d7bfd17",
+    "scripts/verification/interpreter-trace-pilot.mjs": "718b2160678671047ed40db8fc4bc845879bbfaed5a2548050f61441c619e3c6",
+    "scripts/verification/trace-table-pilot.mjs": "97593479869e18a549083b499df3d7af1c261429ef085ab4d67ae038e7acdb57",
+    "package.json": "f3faa82569755a565a9536c8cdb3cabd15c2ab91a5850c60a39c26c9e181516a",
+    "package-lock.json": "bc2e4820866c5590d6273220ec40dadd76e006cb05a0ba87a90998eb0c4d780d"
+  },
+  "docs_source_sha256": {
+    "PROJECT.md": "e51af4b5b35540c7a3fb6e020c2a97682b10c743a6f1fe213320ba8037933b38",
+    "specifications/curriculum.md": "7f1985bb3a4a5651c4eb707533da7649bc3b4dc8ce66c882b73b2d99069657f6",
+    "specifications/unit.md": "3bc2ed89222f5b96abe85fe1b3c15a410af2f69e2cbea310d06ea6b210c0461e",
+    "specifications/pseudocode.md": "1899c8cb115bbf8547dbd8e45acd7b75b30aaa6a61263d08d5a438647346b71a",
+    "audit/2026-10-source-silicon-pilot/REPORT.md": "0ed80c87eab5481442b07e722fccb0b2215c9d031e44789772199b619e165d21",
+    "audit/2026-10-source-silicon-pilot/native-translation.json": "4ad910b6b83c78b24ee63b55527841231ff52d2957aa7f910ae511144ee690a1"
+  },
+  "emulator_sha256": "51fe786fb9cec0b552b67125abc11e28f062f6105cb75fb01b923cffbcd81f89",
+  "driver_sha256": "13370876ee8a162981247f54df89f5a9f54a143cb9dfead7c189e3da1896a46a",
+  "opening_driver_sha256": "357530a58ed8bd48ba505ba4b999d1d92651c075fd552cd3be09afaf3bc277e6",
+  "rom_sha256": "d55daa439b673b0e3f5897f99ac37ecb45f974d1862b4dadb85dec34af99cb42",
+  "built_lesson_sha256": "28cc8e8345ca6a8f4a4306001d3b5d1c984322c088bb8db558510f0a5ef84f7a",
+  "limits": "Final local sources/build/tools; before-table captures use the original component with the interim teaching edit. Earlier translation evidence is not fresh execution."
+}

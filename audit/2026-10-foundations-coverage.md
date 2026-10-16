@@ -82,8 +82,10 @@ checks unit 4’s interval and grouping boundaries under #114; learner outcomes
 remain unknown. The [counted-loop follow-up](2026-10-counted-loops/REPORT.md) now adds
 unit 1 range/body evidence. The [output-joining follow-up](2026-10-output-joining/REPORT.md)
 adds Basics unit 3 literal/arithmetic, explicit-space and target-separator evidence.
-The next proposed slice is an independent interpreter-trace prediction in From
-Source to Silicon unit 2.
+The [interpreter-trace follow-up](2026-10-interpreter-trace/REPORT.md) now adds
+unit 2 changed-state predictions and selected ROM record/output evidence, keeping
+source updates distinct from instruction counts and timing. The next slice should
+come from a remaining observable reasoning gap in the per-unit map.
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to

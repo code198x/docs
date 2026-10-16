@@ -77,3 +77,7 @@ and independent learner prompts.
 The [output-joining pilot](audit/2026-10-output-joining/REPORT.md) checks literal
 versus calculated output, explicit spaces and Spectrum separator transfer, with
 finite models, fresh ROM commands and independent learner prompts.
+
+The [interpreter-trace pilot](audit/2026-10-interpreter-trace/REPORT.md) checks
+changed starts, bounds and increments, stored BASIC records and the distinction
+between source updates, machine instructions and measured time.

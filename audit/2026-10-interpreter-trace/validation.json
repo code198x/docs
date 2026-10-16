@@ -1,0 +1,16 @@
+{
+  "status": "passed evidence checks",
+  "finite_traces": 6,
+  "fresh_rom_runs": 8,
+  "browser_viewports": 2,
+  "keyboard_behaviour_groups": 6,
+  "table_consumer_viewports": 14,
+  "local_links": 123,
+  "negative_controls_rejected": {
+    "wrong_source_hash": "Baseline source hash mismatch",
+    "missing_native_rows": "Native complete transcript mismatch",
+    "original_cell_wrapping": "Original cell-wrapping policy rejected"
+  },
+  "wrong_reset_exit": 1,
+  "limits": "Retained source/evidence agreement, not independent execution, instruction counting, timing or learner validation."
+}
