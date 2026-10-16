@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "source_baseline": "2b9905262dcb7261314b6ef6490db7b8a5c803ed",
+  "changed_source_sha256": {
+    "src/content/curriculum/foundations/working-the-bits/index.mdx": "a94f9ff103ab14c27cdba915122d914b39ee60bcde22106bbb93efaa29bb378e",
+    "src/content/modules/foundations.yaml": "09830148d063e8228c0ec9e5a74faddfdb42046b900eca34bd3aea8854c7d6e1"
+  },
+  "built_page_sha256": {
+    "dist/foundations/working-the-bits/index.html": "a20a4f0d914d85cc1914a40475dda042db473bc6620016d1e95507fac6712855",
+    "dist/foundations/index.html": "edfab3d8600a1872ba5f9056b25dfd7bcbf8f618c6401509fadf5ff336bae349"
+  },
+  "built_overview_contract": "qualified shifts and representability; optional support and independent entry",
+  "built_summary_links_verified": [
+    "/foundations/counting-in-twos/",
+    "/foundations/decisions/",
+    "/foundations/gates-and-the-adder/"
+  ],
+  "catalogue_tagline_present_in_built_foundations_index": false,
+  "catalogue_render_boundary": "Built Foundations cards use overview descriptions; catalogue tagline/skills are metadata corrections. Initial assertion expecting the tagline on this page failed and was corrected after inspecting its actual output.",
+  "catalogue_scope": "Structural YAML comparison passes: only From Source to Silicon tagline/skills differ. All requires/order data identical.",
+  "old_overview_rejected": "Anyone who has finished",
+  "production_build": "passed; shared frame verified on 2459 public pages (39 rendering families)",
+  "repository_check": "32 test files, 237 tests passed; content, NES assembler and prepared player checks passed",
+  "prose": "Vale: zero errors/warnings/suggestions in changed overview and five docs files",
+  "warnings": [
+    "Pagefind retains Default UI advisory",
+    "Existing Vault balance report: 51 of 572 multi-format entries discuss only one platform"
+  ],
+  "preparation_failures": [
+    "Missing prepared public/emulators/catalog.json",
+    "Missing sibling code-samples endpoint source path",
+    "Missing prepared NES WASM assembler module"
+  ],
+  "limits": [
+    "Static built-artifact inspection, no new browser/native/learner execution",
+    "No layout change or whole-site accessibility claim"
+  ],
+  "environment": {
+    "node": "v24.22.0",
+    "npm": "11.19.1",
+    "ui_revision": "7eda45e1c2f8b8f919359c971b2e210822e431f2",
+    "prepared_assets": "Existing installed packages, browser players, sample outputs and NES assembler copied into isolated checkout; sample/decoder paths point to existing family sources. No dependency install.",
+    "commands": [
+      "npm run build (with CODE_SAMPLES_PATH and PLAY198X_WASM_PATH)",
+      "npm run check (with CODE_SAMPLES_PATH and PLAY198X_WASM_PATH)",
+      "vale changed-overview.mdx",
+      "structural YAML comparison with Git baseline",
+      "static generated-page text/link inspection"
+    ]
+  }
+}

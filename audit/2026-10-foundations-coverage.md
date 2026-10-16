@@ -3,8 +3,9 @@
 Continue the original audit while learner trials remain pending. The pause on
 expanding the public first-session pack does not pause #114/#115/#124.
 
-This is an inventory and evidence map, not a claim that every authored lesson
-has been audited. At website baseline
+This is a sampled evidence map, not a claim that every objective has been
+validated. The [complete per-unit source map](2026-10-foundations-objectives/MAP.md)
+now inventories goals, knowledge used and local support for all 39 units. At website baseline
 `b1ddbdfc5f72e79e2a97bd6ed42ae8402e25c883`, Foundations has ten modules and 39
 unit files. Module catalogue `complete` status describes authored content; it
 does not certify conceptual accuracy or educational effectiveness.
@@ -73,8 +74,10 @@ selected desktop operation under [website #749](https://github.com/code198x/webs
 That issue remains open: VoiceOver is skipped at the user's request, physical
 touch is untested. Safari edited-tape save/reopen was observed working after
 explicit download permission approval.
-The complete per-unit Foundations objective/prerequisite map remains available
-source work under #114 while these configurations wait.
+The [complete per-unit review](2026-10-foundations-objectives/REPORT.md) now fills
+the objective/prerequisite inventory gap at its named revision. It identifies
+stale summary wording in website #752 and proposes a direct compound-condition
+domain audit next under #114.
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to

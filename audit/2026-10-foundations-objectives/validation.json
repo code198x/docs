@@ -1,0 +1,19 @@
+{
+  "status": "passed source-record checks",
+  "units": 39,
+  "overviews": 10,
+  "units_with_explicit_prompt_markup": 35,
+  "source_files_hashed": 50,
+  "local_file_links": 92,
+  "negative_controls_rejected": {
+    "missing_unit": "Unit count mismatch",
+    "wrong_hash": "Source hash mismatch: src/content/curriculum/foundations/basics/unit-01.mdx",
+    "wrong_excerpt": "Source excerpt mismatch",
+    "unknown_support": "Unknown support unit"
+  },
+  "python": "3.14.3",
+  "website_revision": "2b9905262dcb7261314b6ef6490db7b8a5c803ed",
+  "runtime_examples_rerun": 0,
+  "learner_trials": 0,
+  "limits": "Coverage, provenance and reference checks only. Reviewer goals, knowledge and support judgements are not mechanically certified."
+}
