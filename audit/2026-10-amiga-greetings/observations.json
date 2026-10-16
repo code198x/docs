@@ -1,0 +1,93 @@
+{
+  "method": "Manual CUA keyboard entry and visual inspection of native FS-UAE guest screens. Screenshots were inspected in the session; no screenshot files retained. No automated source-to-runtime assertion.",
+  "amos": {
+    "version": "AMOS Professional 2.00, as displayed on splash",
+    "baselineSource": "Hide\nPrint \"Hello from AMOS!\"\nWait Key\n",
+    "editedSource": "Hide\nPrint \"Edited Hello from AMOS!\"\nWait Key\n",
+    "observations": [
+      {
+        "action": "F1 on visually checked maintained greeting",
+        "result": "Orange output screen: Hello from AMOS!"
+      },
+      {
+        "action": "Space at Wait Key",
+        "result": "End of program at line 3.; Direct mode [ESC], Editor [RETURN]"
+      },
+      {
+        "action": "Return",
+        "result": "Editor restored"
+      },
+      {
+        "action": "Insert Edited inside the string; F1",
+        "result": "Edited Hello from AMOS!"
+      },
+      {
+        "action": "Remove closing quote from line 2; F1",
+        "result": "Same edited greeting runs. On returning, AMOS has restored the closing quote. This is not a syntax-error case."
+      },
+      {
+        "action": "Append + after the closing quote; F1",
+        "sourceLine": "Print \"Edited Hello from AMOS!\"+",
+        "result": "Red editor status: Syntax error."
+      },
+      {
+        "action": "Remove trailing +; F1",
+        "result": "Edited Hello from AMOS!"
+      }
+    ]
+  },
+  "harnessNotes": [
+    "Long host typeText calls dropped suffixes: source was re-entered in chunks of at most seven characters and visually inspected.",
+    "Default joystick port 1 Keyboard consumed arrow keys. Selecting No host device restored editor navigation; later boot config uses joystick_port_1 = none.",
+    "Host End opens Amiga Help; use observed arrow navigation instead.",
+    "An initial attempted fault removed S rather than closing quote. The source was repaired and visually checked before the actual fault test.",
+    "AmiBlitz editor navigation and requester attempts were unreliable. Switched to loading the maintained host file; did not count mistyped buffers or failed requests as runtime passes."
+  ],
+  "amiblitz": {
+    "release": "v3.13.0b, official archive SHA-256 in acquisition.json",
+    "status": "incomplete; no greeting output observed",
+    "observations": [
+      {
+        "action": "Shell launch without -PED",
+        "result": "Command-line help, explicitly directing -PED for the IDE."
+      },
+      {
+        "action": "Launch with -PED and package Libs added to LIBS:",
+        "result": "Please insert volume FONTS in any drive."
+      },
+      {
+        "action": "Fresh boot with local Workbench Fonts disk in DF1; repeat launcher",
+        "result": "PED source editor and Source Browser opened."
+      },
+      {
+        "action": "Type four maintained greeting lines in chunks",
+        "result": "Exact four-line listing visually inspected."
+      },
+      {
+        "action": "Use the lesson shortcut right-Amiga+X",
+        "result": "Current End line was cut, not compiled. Later editing attempts did not reliably restore the buffer; discarded it."
+      },
+      {
+        "action": "Open Tools:hello.bb2 using right-Amiga+O; enter full path in empty File field; Return twice",
+        "result": "All four maintained lines loaded and visually inspected. An earlier request using stale field content produced No file handle set!!; no source-read success is inferred from that failed attempt."
+      },
+      {
+        "action": "right-Amiga+# (Super_R+numbersign)",
+        "result": "PED status changed to Compiling..."
+      },
+      {
+        "action": "Inspect result after compilation",
+        "result": "Computer Use server error -10005: cgWindowNotFound. App rebinding also returned cgWindowNotFound; process still present. No output, successful compile, edit/rerun or error/repair result established."
+      }
+    ],
+    "sourceInspection": {
+      "revision": "5dd815f880d72c5285b380ef3ddebfa5766d0626",
+      "path": "Sourcecodes/Amiblitz3/PED/PED.ab3",
+      "lines": [
+        14116,
+        14152
+      ],
+      "finding": "Edit Cut maps to X; Compiler Compile & Run maps to #. Source corroborates the observed control mismatch; it does not prove compilation completed."
+    }
+  }
+}

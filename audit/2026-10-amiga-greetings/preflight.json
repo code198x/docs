@@ -1,0 +1,50 @@
+{
+  "emulator": {
+    "version": "3.2.35",
+    "preflightCLIsha256": "2df5f96f9d7346176e743e1d473570f8b88df21f81561a3b9f7aff44ec91e87a",
+    "nativeBundleSha256": "86e3f01623cb13bff537903a07a6c4fcfdc4b7fc4baee723cfb6eb4f28f6de8d"
+  },
+  "rom": {
+    "distribution": "Kickstart 3.1 rev 40.68 A1200",
+    "sha256": "6d43840d4099a74170ea0f0425b6257c3891ebcaa39c4d1840075a9ab22b5707",
+    "bytes": 524288
+  },
+  "acquisition": "Both official runtime archives downloaded and unpacked after explicit user approval; see acquisition.json.",
+  "workbench": {
+    "distribution": "Workbench 3.1 rev 40.42, Workbench disk",
+    "bytes": 901120,
+    "sha256": "a8f167bad2897e8c7f2cfe73de7a9f8dad10c7a5b1f78ca17f818ab17278b985"
+  },
+  "configuration": {
+    "model": "A1200",
+    "chipMiB": 2,
+    "fastMiB": 8,
+    "PAL": true,
+    "hostDirectory": "task-owned Tools drive"
+  },
+  "observations": [
+    {
+      "step": "boot",
+      "outcome": "Observed Workbench 3.1 desktop, Tools and Workbench3.1 volumes in native FS-UAE Amiga 1200 window."
+    },
+    {
+      "step": "first AMOS launch",
+      "command": "Tools:AMOS/AMOSPro via Workbench Execute",
+      "outcome": "Cannot find AMOS.library."
+    },
+    {
+      "step": "source inspection",
+      "outcome": "Pinned +B.s searches APSystem/amos.library relative to current directory; task retry script changes directory first."
+    }
+  ],
+  "runtimeInputs": {
+    "AMOS/AMOSPro": "f790809e72951da619119c0e43149fd1203310e88f65365741b5a73a41bdb5da",
+    "AMOS/APSystem/AMOS.library": "bdb467799360957d765a75143084c37b78f15ec1c299f876b6bd9487ecdbd8dd",
+    "AB/AmiBlitz3.13/AmiBlitz3": "b85caf464f00f6a6f7e4783ea4f9dadf5f61299772a2e78607c9df643fc749e6"
+  },
+  "fonts": {
+    "distribution": "Workbench 3.1 rev 40.42, Fonts disk",
+    "bytes": 901120,
+    "sha256": "fb16055e4ab41ad044c51ce97cf808957ae5a0531b027e890f7f64912fbc1827"
+  }
+}

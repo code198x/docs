@@ -1,0 +1,12 @@
+FS-UAE 3.2.35 (Built for macOS ?)
+joystick_port_1 = none
+CPU=68020, FPU=0, MMU=0, JIT=0. ~cycle-exact 24-bit
+00000000    2048K/1 =    2048K Chip memory
+=KS ROM v3.1 (A1200) rev 40.68 (512k)
+=KS ROM v3.1 (A1200) rev 40.68 (512k)
+=KS ROM v3.1 (A1200) rev 40.68 (512k)
+00000000    2048K/1 =    2048K Chip memory
+00200000    8192K/1 =    8192K Fast memory
+=KS ROM v3.1 (A1200) rev 40.68 (512k)
+=KS ROM v3.1 (A1200) rev 40.68 (512k)
+=KS ROM v3.1 (A1200) rev 40.68 (512k)
