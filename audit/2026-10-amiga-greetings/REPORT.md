@@ -1,10 +1,10 @@
 # First Amiga language greetings: bounded runtime trial
 
 AMOS Professional 2.00 ran the maintained greeting, an edited greeting and a
-repaired program after a real syntax error. AmiBlitz v3.13.0b reached its PED
-editor and displayed “Compiling…”, but no greeting output was observed: the
-emulator window became unavailable to computer use. **The paired qualification
-is incomplete.** [Docs #94](https://github.com/code198x/docs/issues/94),
+repaired program after a real syntax error. A fresh AmiBlitz retry ran both the
+baseline and edited greetings after importing the plain-text sample as `.ab3`.
+It also produced a deliberate syntax error, but recovery was not completed.
+**The paired qualification is incomplete.** [Docs #94](https://github.com/code198x/docs/issues/94),
 [website #766](https://github.com/code198x/website/issues/766) and
 [umbrella #116](https://github.com/stevehill1981/198x/issues/116) stay open.
 
@@ -29,8 +29,9 @@ The AMOS repository is pinned at
 [533b4b1](https://github.com/AOZ-Studio/AMOS-Professional-Official/tree/533b4b1f5acd604814513f78e02c7b4796cb0531).
 The splash identified AMOS Professional Version 2.00. AmiBlitz came from its
 [official v3.13.0b release](https://github.com/AmiBlitz/AmiBlitz3/releases/tag/v3.13.0b).
-The archive name/release identify the input; no separate IDE About-version
-inspection was completed. No redistribution right for unrelated disk images
+The fresh retry splash identified **AmiBlitz3 V3.13.0 (24.06.2026) Build 3654**;
+the runtime debugger identified **RED Debugger 3.11.4**. Keep the archive release
+and displayed IDE version distinct. No redistribution right for unrelated disk images
 is inferred from a source licence.
 
 [Source identities](source.json) bind the retained [AMOS](inputs/hello.amos) and
@@ -61,7 +62,7 @@ that `+` and pressing F1 restored **Edited Hello from AMOS!**. This is a useful
 negative and recovery check; an unclosed-quote exercise would not test that
 behaviour on this version.
 
-## AmiBlitz: observed boundary
+## AmiBlitz: first attempt boundary
 
 The retained [launcher](inputs/start-blitz) uses `-PED` and adds the package's
 Libs drawer to LIBS:. Without `-PED`, shell launch printed CLI help. With it,
@@ -80,8 +81,41 @@ to **Compiling…**. The next screenshot failed with
 `Computer Use server error -10005: cgWindowNotFound`. App rebinding failed with
 the same error while the emulator process remained present. That does not
 establish whether the guest, emulator or capture connection caused the loss.
-No successful compile, greeting, edited output or fault/repair pass is claimed.
+That first attempt established no successful compile, greeting, edited output or
+fault/repair pass.
 Further blind UI retries stopped at this boundary.
+
+## AmiBlitz: fresh retry on 16 October
+
+The [retry observations](retry/observations.json) retain identical archive,
+emulator, media and runtime hashes. Window capture remained available throughout;
+the suggestion that lunch caused the earlier loss remains a hypothesis.
+
+Loading the maintained ASCII `hello.bb2` displayed all four lines, but compiling
+reported **Garbage at the end of line** and **Hint: Maybe some unwanted
+characters pending?** on the first `NPrint`. The release's bundled
+`Docs/AmiBlitz3.guide`, FILEFORMAT and SMARTTOKENIZATION sections, distinguish
+tokenized binary `.bb2` from plain-text `.ab2`/`.ab3` input. Copying the exact
+same bytes to [hello.ab3](retry/inputs/hello.ab3) and loading that file gave
+highlighted keywords and a successful compile. This diagnoses the import error;
+it does not justify renaming genuine binary BB2 files. An extra Return after
+loading inserted a blank first line, placing the first statement on line 2.
+
+Right-Amiga+# built the executable, then a blank Sourcecode View appeared.
+After a left click, output showed **Hello from Blitz!**, **Compiled, not
+interpreted.**, **Program terminated.** and **Press <ENTER> to return to the
+IDE ...**. Return restored the source listing. Editing the first string in PED
+to **Edited Hello from Blitz!**, compiling again and clicking showed the edited
+output and the same termination prompt. The output while waiting at `MouseWait`
+was not observed, so this does not establish the intended waiting-state display.
+The cause of the blank view/output handoff remains unresolved.
+
+Appending `+` after the first string's closing quote and compiling produced
+**Syntax error!** with the actual failing line in the Compile Error requester.
+Return then BackSpace, Escape and Space did not visibly dismiss it or establish
+a repair. The bounded trial stopped there. **No recovered rerun or complete
+Blitz edit/error/repair loop is claimed.** Host-prepared edited/fault files were
+not used as substitutes for that missing observation.
 
 ## Harness limits and next action
 
@@ -96,9 +130,9 @@ extraction using the already-installed 7z completed with “Everything is Ok”.
 
 The paired website change can now correct AMOS's distribution, named setup,
 launch, return-to-editor loop and actual error example. **Blitz's public setup
-remains unresolved.** Its next trial should start from a fresh test session,
-retain compiler output to the shared drive and resolve host/window capture
-before qualifying PED edit/run and MouseWait. Original Blitz BASIC 2/Ted and
+remains unresolved.** Its next trial should use the established plain-text `.ab3` import, resolve
+output visibility and dismiss the compiler requester before verifying an actual
+repair and rerun. Original Blitz BASIC 2/Ted and
 whole-course AmiBlitz compatibility remain untested.
 
 Only the baseline, string edit and stated fault/recovery are qualified for

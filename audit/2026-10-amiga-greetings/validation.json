@@ -31,7 +31,11 @@
   },
   "runtime": {
     "amos": "manual baseline/edit/syntax-error/repair observed",
-    "amiblitz": "incomplete after Compiling...; no output observed"
+    "amiblitz": "fresh retry: baseline and edited output observed after click; deliberate syntax error observed; recovery incomplete; see retry/observations.json"
   },
-  "integrity": "SHA256SUMS checks retained evidence only, not runtime correctness"
+  "integrity": "SHA256SUMS checks retained evidence only, not runtime correctness",
+  "retryChecks": {
+    "identicalPlainTextImportBytes": true,
+    "websiteChanges": "none during retry; existing website checks above concern AMOS pages"
+  }
 }
