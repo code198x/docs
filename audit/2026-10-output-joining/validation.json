@@ -1,0 +1,14 @@
+{
+  "status": "passed evidence checks",
+  "model_cases": 11,
+  "fresh_native_commands": 15,
+  "browser_viewports": 2,
+  "keyboard_behaviour_groups": 6,
+  "local_links": 111,
+  "negative_controls_rejected": {
+    "wrong_source_hash": "Baseline source hash mismatch",
+    "missing_native_rows": "Native complete transcript mismatch"
+  },
+  "native_wrong_separator_exit": 1,
+  "limits": "Source and retained evidence agreement; not independent execution or learner validation."
+}

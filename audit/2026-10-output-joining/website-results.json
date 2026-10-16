@@ -1,0 +1,41 @@
+{
+  "build_exit": 0,
+  "check_exit": 0,
+  "tests_passed": 237,
+  "test_files_passed": 32,
+  "build_log_sha256": "e80c00a505ab9dfd9fe7f59c4222de953f46c8f9d2f2f323f103b8bbe120aae1",
+  "check_log_sha256": "bc3a06dd009076935150b0cfc4ff5e2e590034d0df63a2b6dfe0653a64eece0f",
+  "build_output_tail": [
+    "",
+    "[Building search indexes]",
+    "Total: ",
+    "  Indexed 2 languages",
+    "  Indexed 2461 pages",
+    "  Indexed 90585 words",
+    "  Indexed 0 filters",
+    "  Indexed 0 sorts",
+    "",
+    "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510",
+    "\u2502  Pagefind found references to the Default UI (pagefind-ui.js)           \u2502",
+    "\u2502  on your site. The Default UI is supported and will continue            \u2502",
+    "\u2502  to work.                                                               \u2502",
+    "\u2502                                                                         \u2502",
+    "\u2502  As of 1.5.0, if you are setting up a new integration, use the          \u2502",
+    "\u2502  Component UI instead. It includes a search modal, better               \u2502",
+    "\u2502  accessibility and customization: https://pagefind.app/docs/search-ui/  \u2502",
+    "\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518",
+    "",
+    "Finished in 4.525 seconds"
+  ],
+  "test_output": [
+    "",
+    " Test Files  32 passed (32)",
+    "      Tests  237 passed (237)",
+    "   Start at  09:40:36",
+    "   Duration  7.00s (transform 6.76s, setup 0ms, import 12.20s, tests 8.86s, environment 17ms)",
+    "",
+    "",
+    "> website@0.0.1 check:content"
+  ],
+  "limits": "Successful final local production build and repository checks, not live deployment or learner evidence."
+}

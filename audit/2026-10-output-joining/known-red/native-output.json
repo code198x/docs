@@ -1,0 +1,40 @@
+{
+  "status": "failed",
+  "checks": [
+    {
+      "label": "comma-is-not-immediate-join",
+      "source": "PRINT \"Score: \",2+3",
+      "expected_output": [
+        "Score: 5"
+      ],
+      "rows": [
+        "Score:          5",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 0:1"
+      ]
+    }
+  ],
+  "control": true,
+  "failure": "AssertionError('Complete ROM output differs: comma-is-not-immediate-join')"
+}

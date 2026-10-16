@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "label": "literal",
+      "parts": [
+        "2 + 2"
+      ],
+      "output": "2 + 2",
+      "basic": "PRINT \"2 + 2\""
+    },
+    {
+      "label": "sum",
+      "parts": [
+        4
+      ],
+      "output": "4",
+      "basic": "PRINT 2+2"
+    },
+    {
+      "label": "labelled",
+      "parts": [
+        "Two plus two is ",
+        4
+      ],
+      "output": "Two plus two is 4",
+      "basic": "PRINT \"Two plus two is \";2+2"
+    },
+    {
+      "label": "missing-space",
+      "parts": [
+        "Score:",
+        5
+      ],
+      "output": "Score:5",
+      "basic": "PRINT \"Score:\";2+3"
+    },
+    {
+      "label": "repaired-space",
+      "parts": [
+        "Score: ",
+        5
+      ],
+      "output": "Score: 5",
+      "basic": "PRINT \"Score: \";2+3"
+    },
+    {
+      "label": "visible-boundary",
+      "parts": [
+        " A ",
+        "Z"
+      ],
+      "output": " A Z",
+      "basic": "PRINT \" A \";\"Z\""
+    },
+    {
+      "label": "multiple-items",
+      "parts": [
+        "You have ",
+        3,
+        " lives left"
+      ],
+      "output": "You have 3 lives left",
+      "basic": "PRINT \"You have \";2+1;\" lives left\""
+    },
+    {
+      "label": "digit-text",
+      "parts": [
+        "2",
+        "3"
+      ],
+      "output": "23",
+      "basic": "PRINT \"2\";\"3\""
+    },
+    {
+      "label": "empty-text",
+      "parts": [
+        "",
+        5
+      ],
+      "output": "5",
+      "basic": "PRINT \"\";2+3"
+    },
+    {
+      "label": "question-literal",
+      "parts": [
+        "3 + 4"
+      ],
+      "output": "3 + 4",
+      "basic": "PRINT \"3 + 4\""
+    },
+    {
+      "label": "question-sum",
+      "parts": [
+        7
+      ],
+      "output": "7",
+      "basic": "PRINT 3+4"
+    }
+  ],
+  "limits": "Finite literal/integer output models, not a pseudocode parser or arbitrary number formatter."
+}
