@@ -67,9 +67,13 @@ are accepted in docs #80. The [embedded BASIC follow-up](2026-10-embedded-basic/
 now supplies the exact browser task and recovery evidence for
 [website #747](https://github.com/code198x/website/issues/747), accepted in website #750/docs #81.
 The [latency baseline](2026-10-embedded-latency/REPORT.md) now retains fifteen timed
-stages for [website #748](https://github.com/code198x/website/issues/748), ready for review.
-Next qualify broader first-session operability under
-[website #749](https://github.com/code198x/website/issues/749).
+stages for [website #748](https://github.com/code198x/website/issues/748), accepted in website #751/docs #82.
+The [native Safari follow-up](2026-10-first-session-operability/REPORT.md) adds
+selected desktop operation under [website #749](https://github.com/code198x/website/issues/749).
+That issue remains open: VoiceOver is skipped at the user's request, physical
+touch is untested, and Safari save/reopen awaits download permission.
+The complete per-unit Foundations objective/prerequisite map remains available
+source work under #114 while these configurations wait.
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to
