@@ -80,8 +80,10 @@ stale summary wording in website #752, now corrected in accepted website #753.
 The [compound-condition follow-up](2026-10-compound-conditions/REPORT.md) directly
 checks unit 4’s interval and grouping boundaries under #114; learner outcomes
 remain unknown. The [counted-loop follow-up](2026-10-counted-loops/REPORT.md) now adds
-unit 1 range/body evidence. The next proposed slice is Basics output joining
-and its target-language separator boundary.
+unit 1 range/body evidence. The [output-joining follow-up](2026-10-output-joining/REPORT.md)
+adds Basics unit 3 literal/arithmetic, explicit-space and target-separator evidence.
+The next proposed slice is an independent interpreter-trace prediction in From
+Source to Silicon unit 2.
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to

@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "date": "2026-10-16T08:40:36.435Z",
+  "base": "http://127.0.0.1:48925",
+  "browser": "155.0.8059.80",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440
+      },
+      "outputs": [
+        "2 + 2\n4",
+        "Two plus two is 4"
+      ],
+      "responseSha256": "76b396a6d036fdaa3cc552f148deb5d2e0621467a49c8b926f3b41995d5d3628",
+      "closed": {
+        "violations": [],
+        "incomplete": []
+      },
+      "revealed": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "http": 200,
+      "dimensions": {
+        "viewport": 390,
+        "document": 390
+      },
+      "outputs": [
+        "2 + 2\n4",
+        "Two plus two is 4"
+      ],
+      "responseSha256": "76b396a6d036fdaa3cc552f148deb5d2e0621467a49c8b926f3b41995d5d3628",
+      "closed": {
+        "violations": [],
+        "incomplete": []
+      },
+      "revealed": {
+        "violations": [],
+        "incomplete": []
+      }
+    }
+  ],
+  "checks": [
+    {
+      "width": 1440,
+      "check": "keyboard prediction and explanation",
+      "index": 0,
+      "answer": "With quotes, the output is the text 3 + 4, including its spaces and plus sign. The quotes themselves do not appear. Without quotes, SHOW 3 + 4 calculates the sum and displays 7. Both instructions are valid; which one is useful depends on whether we wanted the written question or its answer."
+    },
+    {
+      "width": 1440,
+      "check": "keyboard prediction and explanation",
+      "index": 1,
+      "answer": "It displays Score:5. The comma adds no space, and the quoted text has none after the colon. Put one space inside the quotes, after the colon:\n\nCode\nSHOW \"Score: \", 2 + 3\n\nMoving spaces around the comma outside the quotes does not add them to the displayed text. The sum still produces 5; we repaired the presentation, not the calculation."
+    },
+    {
+      "width": 1440,
+      "check": "optional story explanation and Back",
+      "targetRoute": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer/"
+    },
+    {
+      "width": 390,
+      "check": "keyboard prediction and explanation",
+      "index": 0,
+      "answer": "With quotes, the output is the text 3 + 4, including its spaces and plus sign. The quotes themselves do not appear. Without quotes, SHOW 3 + 4 calculates the sum and displays 7. Both instructions are valid; which one is useful depends on whether we wanted the written question or its answer."
+    },
+    {
+      "width": 390,
+      "check": "keyboard prediction and explanation",
+      "index": 1,
+      "answer": "It displays Score:5. The comma adds no space, and the quoted text has none after the colon. Put one space inside the quotes, after the colon:\n\nCode\nSHOW \"Score: \", 2 + 3\n\nMoving spaces around the comma outside the quotes does not add them to the displayed text. The sum still produces 5; we repaired the presentation, not the calculation."
+    },
+    {
+      "width": 390,
+      "check": "optional story explanation and Back",
+      "targetRoute": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer/"
+    }
+  ],
+  "errors": []
+}

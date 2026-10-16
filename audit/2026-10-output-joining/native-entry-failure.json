@@ -1,0 +1,172 @@
+{
+  "status": "failed",
+  "checks": [
+    {
+      "label": "literal",
+      "source": "PRINT \"2 + 2\"",
+      "expected_output": [
+        "2 + 2"
+      ],
+      "rows": [
+        "2 + 2",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 0:1"
+      ]
+    },
+    {
+      "label": "sum",
+      "source": "PRINT 2+2",
+      "expected_output": [
+        "4"
+      ],
+      "rows": [
+        "4",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 0:1"
+      ]
+    },
+    {
+      "label": "labelled",
+      "source": "PRINT \"Two plus two is \";2+2",
+      "expected_output": [
+        "Two plus two is 4"
+      ],
+      "rows": [
+        "Two plus two is 4",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 0:1"
+      ]
+    },
+    {
+      "label": "missing-space",
+      "source": "PRINT \"Score:\";2+3",
+      "expected_output": [
+        "Score:5"
+      ],
+      "rows": [
+        "Score:5",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 0:1"
+      ]
+    },
+    {
+      "label": "repaired-space",
+      "source": "PRINT \"Score: \";2+3",
+      "expected_output": [
+        "Score: 5"
+      ],
+      "rows": [
+        "Score: 5",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "0 OK, 0:1"
+      ]
+    }
+  ],
+  "control": false,
+  "failure": "ValueError(\"Unmapped character: '|'\")"
+}

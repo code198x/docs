@@ -1,0 +1,5 @@
+{
+  "exit_code": 1,
+  "actual_failure": "Traceback (most recent call last):\n  File \"/private/tmp/198x-output-docs/audit/2026-10-output-joining/verify-output.py\", line 184, in <module>\n    main()\n    ~~~~^^\n  File \"/private/tmp/198x-output-docs/audit/2026-10-output-joining/verify-output.py\", line 139, in main\n    printed(\"comma-is-not-immediate-join\", 'PRINT \"Score: \",2+3', [\"Score: 5\"])\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/198x-output-docs/audit/2026-10-output-joining/verify-output.py\", line 130, in printed\n    need(\n    ~~~~^\n        rows[: len(expected)] == expected and not any(rows[len(expected) : 23]),\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        \"Complete ROM output differs: \" + label,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/private/tmp/198x-output-docs/audit/2026-10-output-joining/verify-output.py\", line 15, in need\n    raise AssertionError(message)\nAssertionError: Complete ROM output differs: comma-is-not-immediate-join\n",
+  "stdout": ""
+}

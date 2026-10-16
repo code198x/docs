@@ -73,3 +73,7 @@ models, actual ROM outputs and independent learner prompts.
 The [counted-loop pilot](audit/2026-10-counted-loops/REPORT.md) checks inclusive
 ranges, empty bodies and output placement with exact models, fresh ROM programs
 and independent learner prompts.
+
+The [output-joining pilot](audit/2026-10-output-joining/REPORT.md) checks literal
+versus calculated output, explicit spaces and Spectrum separator transfer, with
+finite models, fresh ROM commands and independent learner prompts.
