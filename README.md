@@ -51,7 +51,7 @@ The [Spectrum assembly review](platforms/sinclair-zx-spectrum/assembly/course-re
 
 The [Craft coverage map](specifications/craft-coverage.md) defines seven agreed module homes and distinguishes available material from planned lessons. The [Maths for Games specification](specifications/maths-for-games.md) develops geometry, trigonometry, matrix algebra, 3D, curves, probability and fixed-point applications.
 
-The [Foundations audit coverage map](audit/2026-10-foundations-coverage.md) links sampled evidence to the ten modules and records the remaining audit gaps. The [education umbrella reconciliation](audit/2026-10-education-reconciliation/REPORT.md) separates accepted technical evidence, unknown learner outcomes and the next five priorities. The [probability pilot](audit/2026-10-probability-pilot/REPORT.md) maps the eleven published maths units and checks exact counts against rounded shares. The [embedded BASIC follow-up](audit/2026-10-embedded-basic/REPORT.md) qualifies repeated reads, replacement, errors and recovery in the live browser machine. The [latency baseline](audit/2026-10-embedded-latency/REPORT.md) retains five cold/warm trials with complete-result timing boundaries. The [native Safari follow-up](audit/2026-10-first-session-operability/REPORT.md) records selected first-session operation and the remaining screen-reader, touch and save/reopen gaps.
+The [Foundations audit coverage map](audit/2026-10-foundations-coverage.md) links sampled evidence to the ten modules and records the remaining audit gaps. The [education umbrella reconciliation](audit/2026-10-education-reconciliation/REPORT.md) separates accepted technical evidence, unknown learner outcomes and the next five priorities. The [probability pilot](audit/2026-10-probability-pilot/REPORT.md) maps the eleven published maths units and checks exact counts against rounded shares. The [embedded BASIC follow-up](audit/2026-10-embedded-basic/REPORT.md) qualifies repeated reads, replacement, errors and recovery in the live browser machine. The [latency baseline](audit/2026-10-embedded-latency/REPORT.md) retains five cold/warm trials with complete-result timing boundaries. The [native Safari follow-up](audit/2026-10-first-session-operability/REPORT.md) records selected first-session operation, successful edited-tape save/reopen and the remaining screen-reader/touch gaps.
 
 ## Ownership and maintenance
 
@@ -60,3 +60,8 @@ The [website](https://github.com/code198x/website) owns public lessons, catalogu
 Keep one explanation for each responsibility. Update current guidance when a decision changes, remove completed working notes, and preserve superseded material in Git history. Do not keep old site mock-ups, parallel hardware summaries, sibling roadmaps or past implementation handoffs in the active documentation tree.
 
 [PRINCIPLES.md](PRINCIPLES.md) and [MANIFESTO.md](MANIFESTO.md) are inherited family documents, maintained at family level. [AGENTS.md](AGENTS.md) contains repository working instructions; `CLAUDE.md` points to it. These have distinct roles and are not competing project charters.
+
+The [Foundations per-unit map](audit/2026-10-foundations-objectives/MAP.md) inventories
+all 39 authored units, their objectives and knowledge used. Its
+[source review](audit/2026-10-foundations-objectives/REPORT.md) separates that inventory
+from sampled execution and unknown learner outcomes.

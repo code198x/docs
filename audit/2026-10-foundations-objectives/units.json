@@ -1,0 +1,1348 @@
+{
+  "website_revision": "2b9905262dcb7261314b6ef6490db7b8a5c803ed",
+  "docs_baseline": "8e5c619167ffbb745b9da926d8d45823356f5b83",
+  "review_date": "2026-10-16",
+  "method": "Full authored unit/overview source read. Goals, knowledge and support relationships are reviewer synthesis; verbatim objective/prompt evidence is separate. Suggested support is not required attendance or a new course order.",
+  "modules": [
+    {
+      "path": "src/content/curriculum/foundations/basics/index.mdx",
+      "sha256": "f5e5ed6fcc96365834270dfb4158de378acac432c2e6b6a67e37bd9e41eff0a0",
+      "title": "The Basics",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/basics/index.mdx",
+      "body": "## What this is\n\nOne place to start, without choosing a machine or language. Our first programs\nare short sequences: the computer follows their instructions from top to bottom. It can show you things, it can remember things,\nand it can ask you things. That is the whole of this module, and it is enough to write a\nprogram that greets you by name.\n\nWe write every idea in plain **pseudocode**: instructions in ordinary words, for a person to\nread. No language, no machine, nothing to install. Every real language spells these ideas\nits own way, and when you pick one up you will find you already know what its instructions\nare for.\n\n## Who it's for\n\nAnyone starting from nothing. If you have never written a line of code, start here. If you\nalready think in variables and loops, move on to whichever module is new to you.\n\nYou do not need a computer to follow this. You need somewhere to think.\nBASIC and assembly are independent entry points too; this module offers support,\nnot a course you must finish before choosing a machine.\n\n## The shape\n\n- **A program is instructions** — follow a small sequence and observe its output.\n- **One thing after another** — the order is part of the program.\n- **Showing your work** — output, and the difference quotation marks make.\n- **A place to remember** — a variable is a named box, and `=` means *put this in*.\n- **Asking the player** — submit text and use it in a greeting.\n\nNext comes **Working It Out**, where the computer starts doing arithmetic with what you give\nit."
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/index.mdx",
+      "sha256": "dfaff3bea318cc76de92914521b09adeacb9bb75579a82701486c2f7e4bc62f8",
+      "title": "Counting in Twos",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/counting-in-twos/index.mdx",
+      "body": "## What this is\n\nPrograms represent data with bit patterns. We can read a pattern as a number,\na character or part of a picture; the program decides what it means. This module\nstarts by reading whole numbers with no minus sign: in twos, in hex and two bytes\nat a time. Later we give some of the same patterns a negative-number reading.\n\nNothing here is tied to a machine. It is the same pseudocode the programming modules used,\nwith a few new words for writing a number the machine's way.\n\n## Who it's for\n\nAnyone heading down into a machine, and sooner than you might expect. Assembly needs this on\nevery line. BASIC reaches for it the moment you draw your own character. Nothing here gates\na machine, though: if you would rather start a game first and come back when bits turn up,\ndo that.\n\nYou will add small whole numbers and double place values: 1, 2, 4, 8 and so on.\nWe show those steps locally. [Working It Out](/foundations/working-it-out/) offers\nmore arithmetic practice if you want it; prior course attendance is not required.\n\n## The shape\n\n- **Ten fingers, two wires** — why we count in tens and the machine counts in twos; the bit\n  and the byte.\n- **Four bits at a time** — hex, and why it shows you the switches where decimal hides them.\n- **Two bytes together** — the unsigned range 0–65535 and a 64K address space.\n- **A minus with no minus sign** — two's complement, and how addition can also subtract.\n\nNext comes **Working the Bits**, where you stop reading the switches and start changing\nthem."
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/index.mdx",
+      "sha256": "368ab306e606ea146977c1d886124ed11e866c8d597da0534253ec7bde8493e3",
+      "title": "Decisions",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/decisions/index.mdx",
+      "body": "## What this is\n\nA greeting can already use different input to produce different output while\nfollowing the same instructions. Here we choose **which instructions run**: ask\na question and take a path according to its answer.\n\nFour units take that from a single test to a chain of them, to keeping an answer in a box\nfor later, to joining questions so one test can ask about several things at once.\n\n## Who it's for\n\nYou will use stored values and compare numbers: less than, greater than and\nequal to. We explain each test as it appears. [The Basics](/foundations/basics/)\nand [Working It Out](/foundations/working-it-out/) offer more practice; prior\nattendance is not required. BASIC and assembly remain independent entry points.\n\n## The shape\n\n- **Making a choice** — `IF`, and the questions `=`, `<` and `>`.\n- **One or the other** — `ELSE`, and a chain of questions with one answer.\n- **A yes you can keep** — `TRUE` and `FALSE` as values, and the flag that carries an answer\n  from where it was found to where it is needed.\n- **Asking two things at once** — `AND`, `OR` and `NOT`, and brackets that say what to work\n  out first.\n\nNext comes **Repeating**. If your tests are getting tangled, **Truth Tables** is a short\nside-path from here that shows you how to be sure what a test does."
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/index.mdx",
+      "sha256": "98fae7556f8b62937df16ef9123149426aa3a667b599eb4907731e25c952f121",
+      "title": "From Source to Silicon",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/from-source-to-silicon/index.mdx",
+      "body": "## What this is\n\nYou write `SHOW \"Hello\"`. What makes the computer carry it out?\n\nWe follow three routes: an assembler turns assembly source into machine code; a\nnative-code compiler turns higher-level source into machine code; an interpreter\nreads a stored program and carries out its operations. In every route the\nprocessor executes machine instructions. What differs is how we describe the\nprogram and which work the tools do before and during execution.\n\n**Source** is what we write and edit. **Machine code** is instructions encoded for\na processor. **Compilation** is a translation process that can produce machine\ncode. We will keep those meanings separate, then investigate how the route we\nchoose affects the work a program performs.\n\nBy the end you can trace a translator built from lookup lists and loops, including\nwhat it does when a name is unknown. This is teaching notation to follow on paper,\nnot a program to paste into a particular computer.\n\n## Who it's for\n\nAnyone wondering what happens between writing a program and running it, or how\nBASIC, assembly and compiled languages relate to the processor.\n\nYou will use short lists, a loop and an IF question. List positions start at 1;\nwe recall the lookup as we use it. [Structure](/foundations/structure/) offers\nmore practice, and [Counting in Twos](/foundations/counting-in-twos/) explains\nbinary and bytes. Prior attendance is not required. BASIC and assembly remain\nindependent ways into a system track.\n\n## What it is not\n\nThis is not how to write assembly. Not one real instruction for one real machine. That is\n*Meet Assembly*, in your machine's own words, once you have picked one. Here we stay a\nlevel up: what kind of thing an interpreter is, what kind of thing an assembler is, and\nhow translation, implementation choices and the target can affect the work a\nprogram performs.\n\n## The shape\n\n- **The program is not what runs** — source, machine code and three routes to execution.\n- **Translating as you go** — the interpreter, and the work it repeats inside a loop.\n- **Translating once** — two routes to machine code, and a toy assembler we can trace.\n- **What speed costs you** — diagnostics, explicit detail and portability.\n- **Put it on the clock** — comparable work, deadlines and the clock behind a measurement.\n\nFrom here the road goes into a real machine, where the numbers stop being made up."
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/index.mdx",
+      "sha256": "e58d633ee166c5616f0caadc9951e13313e0a625e6626a0a33badd893cbc598d",
+      "title": "Gates and the Adder",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/gates-and-the-adder/index.mdx",
+      "body": "## What this is\n\nA truth table lists the output for each combination of 0 and 1 inputs. A gate\nimplements a rule such as AND, OR or XOR. Join those rules and we can describe\nsomething that adds binary numbers.\n\nBy the end, you can trace a one-bit adder and follow its carry through three\ncolumns. The interactive drawings use an ideal Boolean model; understanding\nthat model is a useful step towards understanding physical hardware.\n\n## Who it's for\n\nAnyone who has ever wondered what a processor *is*.\n\nNot what it does, which you can read anywhere. What it is made of, at the bottom, where the\nexplanations usually stop and say \"and then it adds the numbers\".\n\n## What you need first\n\nYou will use 0/1 values, small sums and binary place values: 1, 2, 4, 8. We recall\nthe rules as they appear. [Truth Tables](/foundations/truth-tables/) and\n[Counting in Twos](/foundations/counting-in-twos/) offer more practice; prior\nattendance is not required.\n\nThis gates nothing in turn. Nothing later in the curriculum requires it. It is here because\nit is one of the most satisfying things a beginner can learn, and because after it the word\n\"hardware\" stops sounding like a different subject.\n\n## The shape\n\n- **The same table, drawn** — a gate's Boolean rule, drawn with wires. Set the inputs and watch\n  the output follow.\n- **The half adder** — add two bits and you need two answers, a sum and a carry. One is\n  `XOR` and the other is `AND`. That is the entire circuit.\n- **The full adder and the ripple** — accept a carry as well as produce one, then chain them\n  together and add whole numbers.\n\n## The model we use\n\nWe treat inputs and outputs as settled 0 or 1 values. These drawings do not\nmeasure voltages, power or the time an output takes to settle. A physical part\nneeds electrical and timing specifications as well as a Boolean table.\n\nBASIC and assembly remain independent entry points. Use this module when you\nwant to look inside an arithmetic operation; completing it is not a condition\nfor starting a system track."
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/index.mdx",
+      "sha256": "831ba31267ae0dfce2c70285c9e7d31154e9e491d880b8ec5be9efe94dbbe59c",
+      "title": "Repeating",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/repeating/index.mdx",
+      "body": "## What this is\n\nA **loop** does a piece of work over and over, and you write the work once.\n\nWe use three loop forms in this module. By the end\nof the second one you will have turned the guessing game from **Decisions** into something\nyou can play.\n\n## Who it's for\n\nYou will use stored values and yes/no comparisons. We recall the question as we\nuse it. [Decisions](/foundations/decisions/) offers more practice; prior attendance\nis not required. BASIC and assembly remain independent entry points.\n\n## The shape\n\n- **Doing it again** — the counted loop, and a counter you can use as it goes.\n- **Until you get it** — test after the work, use `RANDOM`, and follow a small\n  game-loop model.\n- **Checking before you start** — the loop that asks first, so the work can happen no times\n  at all.\n\nNext comes **Structure**, where a box holds many values and a job gets a name."
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/index.mdx",
+      "sha256": "9bfbc1ca97dba42cbcfeae0761a5b8463a95258d6a4b42007385dd1a3856f05d",
+      "title": "Structure",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/structure/index.mdx",
+      "body": "## What this is\n\nPrograms grow. A box that holds one value is not enough for a row of enemies, and a job\nthat turns up in five places should be written once. This module is about giving a program\nshape so it stays readable as it gets bigger.\n\nIt ends with the most useful unit on the whole shelf: what to do when a program does the\nwrong thing, by looking at what it did rather than guessing.\n\n## Who it's for\n\nAnyone ready to organise a small program. `LET` stores a value in a named\nvariable; `SHOW` displays it. A loop repeats some work. The examples recall these\nideas where they use them. [Repeating](/foundations/repeating/) gives loops more\nroom if you want it; no particular language course is required.\n\n## The shape\n\n- **A box that holds many** — lists, reaching into them, and walking along them.\n- **A job with a name** — write it once, call it wherever you need it, and leave a note.\n- **Telling a job what to work on** — a job that takes a value and hands one back.\n- **When it's wrong** — look, narrow down, read; make the program show its working; suspect\n  your own code first.\n\nThese ideas support both BASIC and assembly. You can use a system track while\nreading Foundations, or return here when a program gives you a reason to ask why.\nNeither language route requires completing this shelf first."
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/index.mdx",
+      "sha256": "84e997ed409903b30c6bedb0d9682849470b5ae7f21c3a6e8918fd48b4920892",
+      "title": "Truth Tables",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/truth-tables/index.mdx",
+      "body": "## What this is\n\nA condition such as `alive AND (ammo > 0)` joins two Boolean answers: is the\nplayer alive, and is there ammunition? `AND` requires both to be true.\n[Asking Two Things at Once](/foundations/decisions/unit-04/) explains joined\nconditions if you want that introduction.\n\nThis is the other half. Not how to write a test, but how to **know what it does**: all of\nit, for each combination of Boolean input values.\n\nThe instrument is a **truth table**. It is a small grid that lists every combination the\ninputs can be in and what comes out of each one. Because it lists *every* combination, it\nlets you check every Boolean row. You still need to check that the inputs\nrepresent the game facts you intended and that the target language evaluates\nthem as expected.\n\n## Who it's for\n\nAnyone whose `IF` has grown a second condition, then a third, and has stopped being sure\nwhat it does.\n\nThat happens quickly. A guard like \"let them jump if the button is down and they are on the\nground and they are not stunned\" is three conditions with two words joining them, and the\ndifference between what you wrote and what you meant is not visible by staring.\n\nYou need no binary notation or machine for this. The Boolean reasoning transfers;\na language’s numeric representation and evaluation rules need their own check.\n\n## What it is not\n\nThe units briefly recall `AND`, `OR` and `NOT`; prior attendance is not required.\n\nNor does it teach circuits. That comes later, in *Gates and the Adder*, once you have met\nbinary and there is something worth building.\n\n## The shape\n\n- **True and false** — a question has two answers, and a table lists them all. `NOT` turns\n  one round.\n- **Both, either, different** — `AND`, `OR` and the one you have not met, which asks whether\n  two things *differ*.\n- **Two guards, one guard** — proving that a tangled test and a plain one are the same\n  test, and swapping the tangled one out.\n\nNothing here gates anything. It is a side-path, and a short one. Take it when your\nconditions start getting away from you."
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/index.mdx",
+      "sha256": "9287217915296887cbd6cd727994242ac5b29d0556404a529381ec4dec87e961",
+      "title": "Working It Out",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/working-it-out/index.mdx",
+      "body": "## What this is\n\nThree units on what a computer does with numbers. It works a value out from values it was\ngiven. It puts a box's own value back into the box, larger, which is the line behind every\nscore. And it decides what to do when a sum does not come out evenly, which turns out to be\na question every program has to answer.\n\n## Who it's for\n\nAnyone ready to work with numbers. A **variable** is a named place holding a value.\n`LET` puts a value there, `ASK` reads an answer into it, and `SHOW` displays a result.\nWe use numbers for the input in these examples.\n\nIf those ideas are new, [The Basics](/foundations/basics/) gives them more room.\nYou do not need to have followed a particular language course.\n\n## The shape\n\n- **Working it out** — arithmetic from values the player types, why `*` means multiply,\n  and the order sums happen in.\n- **A box that grows from itself** — `LET score = score + 10`, the most useful line in any\n  game.\n- **When it doesn't divide evenly** — the whole answer, how many fit, what is left over,\n  and rounding.\n\nNext comes **Decisions**, where a program stops running the same lines every time and starts\nto react."
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/index.mdx",
+      "sha256": "515eabf0d847aa56f3724f33379a7afb88974527bf6d859cababdb83d115cfb8",
+      "title": "Working the Bits",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/working-the-bits/index.mdx",
+      "body": "## What this is\n\n**Counting in Twos** taught you to read a byte. This module is about doing things to one:\nmasking a switch out, sliding the whole row sideways, and then using those tools on the two\nkinds of value a game cannot do without, letters and fractions.\n\n## Who it's for\n\nAnyone who has finished **Counting in Twos**. You also need **Decisions**, because the bit\ntools share their names with the question-joining words you met there, and the difference\nmatters.\n\n## The shape\n\n- **Switch by switch** — `BITAND`, `BITOR`, `BITXOR` and `BITNOT`, and what a mask is.\n- **Slide the whole row** — shifting, and why it is the machine's fastest multiply.\n- **A letter is a number** — character codes, the trap that `\"7\"` is 55, and why changing\n  case is one bit.\n- **Numbers that aren't whole** — floating-point, and why it can never be exact.\n- **Nailing the point down** — fixed-point, the answer games used.\n\nFrom here the road goes down into a real machine: **Meet the Machine**, and the code that\nspeaks in exactly these terms. **Gates and the Adder** is a side-path from here that builds\nthe part of a processor that does the adding."
+    }
+  ],
+  "units": [
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-01.mdx",
+      "sha256": "6bf2f74bb0496df0a830dbb32991098d5b059c7f1101d2c27b27ce6e384ffa51",
+      "title": "A Program Is Instructions",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/basics/unit-01.mdx",
+      "id": "basics/01",
+      "goal_synthesis": "Trace SHOW; separate displayed words from actions and intention from valid instructions.",
+      "knowledge_used_inference": "Read ordinary words in sequence; no programming course needed.",
+      "local_support_review": "Pseudocode and one-instruction execution are introduced locally.",
+      "suggested_support_units": [],
+      "objective_evidence": {
+        "line": 70,
+        "text": "## What you've learnt\n\n- Our first programs are **sequences** followed from top to bottom.\n- A valid instruction can express the wrong intention; other errors may be diagnosed.\n- **Output** is how a program shows you something: `SHOW` here, `PRINT` in BASIC, and its\n  own way in every language."
+      },
+      "opening_excerpt": "This course teaches the ideas behind every programming language, rather than one\nlanguage. You do not need a computer to follow it.\n\nWe write each idea in **pseudocode**: plain words for a person to read, not a machine to\nrun. Every real language spells these ideas its own way. The ideas underneath stay the\nsame, and those are the ones worth keeping.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "Question prompt",
+          "line": 54,
+          "text": "<Question prompt={'If SHOW \"Put your shoes on\" runs, has the computer put anyone’s shoes on?'}>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "entering real instructions on a Spectrum",
+          "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-02.mdx",
+      "sha256": "95cc1ee7335539494ddd3c62f33e311948a1a975b4ee845986d3f4b48337a835",
+      "title": "One Thing After Another",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/basics/unit-02.mdx",
+      "id": "basics/02",
+      "goal_synthesis": "Predict output order after rearranging a sequence.",
+      "knowledge_used_inference": "SHOW and reading top to bottom.",
+      "local_support_review": "Three complete SHOW lines recall output; unit 1 gives the fuller introduction.",
+      "suggested_support_units": [
+        "basics/01"
+      ],
+      "objective_evidence": {
+        "line": 77,
+        "text": "## What you've learnt\n\n- These examples are **sequences**, followed one instruction at a time.\n- The **order is part of the program**. The same instructions in a different order make a\n  different program, and often a broken one.\n- Valid instructions can still produce an unintended order; check their result."
+      },
+      "opening_excerpt": "One instruction is a program. So is a list of them. Give the computer several\ninstructions in these examples and it does them in order, from the top.\n\nThat order matters as much as the instructions do.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "Question prompt",
+          "line": 62,
+          "text": "<Question prompt=\"If we swap the first two SHOW lines, does Go outside move to the first output line?\">"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-03.mdx",
+      "sha256": "8a4466da4292a495cedc5045628067c70a19a2416a04d3a2a0ee589feb9bbeb7",
+      "title": "Showing Your Work",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/basics/unit-03.mdx",
+      "id": "basics/03",
+      "goal_synthesis": "Distinguish quoted text from arithmetic; join text and values with explicit spaces.",
+      "knowledge_used_inference": "SHOW, small addition and sequence.",
+      "local_support_review": "The quoted/unquoted pair and comma rule are explained locally.",
+      "suggested_support_units": [
+        "basics/02"
+      ],
+      "objective_evidence": {
+        "line": 60,
+        "text": "## What you've learnt\n\n- Output can show a **value the computer works out**, not only fixed text.\n- **Quotation marks choose the meaning.** Inside them it is text. Outside them the\n  computer works it out.\n- **Joining** text to a value makes output readable, and the comma adds nothing of its own."
+      },
+      "opening_excerpt": "So far the computer has shown you words you typed between quotation marks. Now it shows\nyou something it works out for itself.\n",
+      "explicit_prompt_evidence": [],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-04.mdx",
+      "sha256": "b70d5015f5ea4c531a836f69d1ac2c5c2f52cf3bede3cdd9d339773a83063dfa",
+      "title": "A Place to Remember",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/basics/unit-04.mdx",
+      "id": "basics/04",
+      "goal_synthesis": "Trace assignment, repeated reads and replacement without rewriting earlier output.",
+      "knowledge_used_inference": "SHOW, names and sequence.",
+      "local_support_review": "LET, reading a name and assignment meaning are introduced locally.",
+      "suggested_support_units": [
+        "basics/03"
+      ],
+      "objective_evidence": {
+        "line": 99,
+        "text": "## What you've learnt\n\n- A **variable** is a named box that holds a value. It is the program's memory.\n- You **put** a value in with `LET`, and **use** it by writing its name.\n- The **contents change and the name stays**. That is how a score climbs.\n- `=` in `LET` means **put this in the box**, not \"equals\". Hold on to that."
+      },
+      "opening_excerpt": "A program often needs to use a value more than once: a score to show, a life count\nto check, or a player's position to change. It needs somewhere to keep that value.\n\nThe tool for that is a **variable**, and almost everything from here on builds on it.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 61,
+          "text": "<summary>Check your prediction</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "storing and changing a greeting in Sinclair BASIC",
+          "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-05.mdx",
+      "sha256": "17551aecd268be4663ef853b62bc2f10e64096e8657aa33fbbe908808f5855d2",
+      "title": "Asking the Player",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/basics/unit-05.mdx",
+      "id": "basics/05",
+      "goal_synthesis": "Trace submitted text, repeated input, empty input and spaces.",
+      "knowledge_used_inference": "Stored values, SHOW and comma joins.",
+      "local_support_review": "ASK submission is defined; comma spacing explicitly refers to unit 3.",
+      "suggested_support_units": [
+        "basics/03",
+        "basics/04"
+      ],
+      "objective_evidence": {
+        "line": 74,
+        "text": "## What you've learnt\n\n- **Input** lets a program read what someone types and keep it in a box.\n- This greeting uses submitted text without changing its instructions. Repeating\n  the same answer gives the same greeting.\n- That is the difference between watching and playing."
+      },
+      "opening_excerpt": "So far our examples have chosen the values in the program. **Input** lets us\nsupply a value while the program runs. A greeting is a useful first example.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "Question prompt",
+          "line": 57,
+          "text": "<Question prompt=\"We submit Ada twice, then an empty line. Which runs give the same greeting, and does the empty line leave the program waiting?\">"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "asking for words to build a story",
+          "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-01.mdx",
+      "sha256": "768151d2ab970e3e7ebb9e78b1a3ad94f44cad12839294dd25dd4adca736197d",
+      "title": "Ten Fingers, Two Wires",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/counting-in-twos/unit-01.mdx",
+      "id": "counting-in-twos/01",
+      "goal_synthesis": "Convert binary and decimal; separate notation, width and unsigned range.",
+      "knowledge_used_inference": "Small whole-number addition and decimal place value.",
+      "local_support_review": "Place values, bit model and byte introduced with worked reverse conversion.",
+      "suggested_support_units": [
+        "working-it-out/01"
+      ],
+      "objective_evidence": {
+        "line": 122,
+        "text": "## What you've learnt\n\n- We count in **tens** out of habit, not because numbers demand it.\n- A **bit** is a binary digit, 0 or 1; the switch is our picture of it.\n- Each place is worth **twice** the one to its right, so a row of switches spells an ordinary\n  number.\n- Eight bits make a **byte**: 256 patterns, read here as unsigned 0 to **255**.\n- **`BIN`** marks binary notation; leading zeros change its written width, not its value."
+      },
+      "opening_excerpt": "Decimal uses ten digits. Binary uses just two. The place-value idea stays the\nsame: a digit's position tells us what it is worth.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 103,
+          "text": "<summary>Does BIN 00000101 hold a bigger number than BIN 101? Can BIN 100000000 fit in one unsigned byte?</summary>"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-02.mdx",
+      "sha256": "6f686111d9083edea9232c0d092d80cdf813d0419feeb5867320360d3f2f7d79",
+      "title": "Four Bits at a Time",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/counting-in-twos/unit-02.mdx",
+      "id": "counting-in-twos/02",
+      "goal_synthesis": "Group bits from the right into hex; distinguish value from storage width.",
+      "knowledge_used_inference": "Binary places, addition and multiplication.",
+      "local_support_review": "Bit/byte/place values recalled; nibble and hex table introduced locally.",
+      "suggested_support_units": [
+        "counting-in-twos/01"
+      ],
+      "objective_evidence": {
+        "line": 164,
+        "text": "## What you've learnt\n\n- **Hex** is base sixteen: one symbol per nibble, so four bits become one character.\n- Counting runs **0–9 then A–F**, and the letters are the digits past nine.\n- We can write a **byte in two hex digits**, 00 to FF. `FF` is 255, with all eight bits on.\n- Hex earns its keep because it **shows the bits** where decimal hides them."
+      },
+      "opening_excerpt": "`11110000` in binary is `F0` in hexadecimal. Both mean 240. Hex gives each group of\nfour bits one digit, making a long row of switches easier to read.\n\nA **bit** is one binary digit: 0 or 1, like a switch that is off or on. A **byte** is\neight bits. In binary, the positions count 1, 2, 4, 8 and so on from right to left;\nadd the values of the positions containing a 1 to get the number.\n\n`11111111` — quick, how many ones? You had to count. Binary tells the whole truth, but\neight switches is more than you can take in at a glance, and programmers look at these all\nday. They wanted a shorthand that still showed the bits. That shorthand is **hexadecimal**.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 135,
+          "text": "<summary>Do HEX 10 and decimal 10 mean the same value? Which fits in an unsigned byte: HEX FF or HEX 100?</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "A byte becomes pixels",
+          "target": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/"
+        },
+        {
+          "label": "Two bytes together",
+          "target": "/foundations/counting-in-twos/unit-03/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-03.mdx",
+      "sha256": "a33401ca1d8d5c024682563366cf265c176e0522d364bd950fd761b57cd299b6",
+      "title": "Two Bytes Together",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/counting-in-twos/unit-03.mdx",
+      "id": "counting-in-twos/03",
+      "goal_synthesis": "Combine high/low bytes and distinguish address space from installed memory.",
+      "knowledge_used_inference": "Binary/hex, multiplication and carry.",
+      "local_support_review": "Sixteen-bit places and high-byte weighting explained; relies on BIN/HEX familiarity.",
+      "suggested_support_units": [
+        "counting-in-twos/01",
+        "counting-in-twos/02"
+      ],
+      "objective_evidence": {
+        "line": 129,
+        "text": "## What you've learnt\n\n- Two bytes are **sixteen switches**, and they count to **65535**.\n- In hex that is **four digits**, `FFFF`, and the split into two bytes shows in the digits.\n- The **high byte** counts 256s and the **low byte** counts ones.\n- Sixteen-bit byte addresses select **65536** places: a **64K address space**.\n- The address space and the amount of **RAM fitted** are different facts."
+      },
+      "opening_excerpt": "A byte counts to 255. That covers plenty: a colour, a letter, a life count, the position of\nsomething across a screen.\n\nIt does not cover a score. Nobody wants a game where 255 points is the most you can get.\nIt does not cover the number of a place in memory, either, and a machine has thousands of\nthose. So the machine does what you do when you run out of fingers, and it did in Unit 1.\nIt uses more.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 103,
+          "text": "<summary>A machine has addresses 0 to 65535. Does that prove it has 64K of RAM?</summary>"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-04.mdx",
+      "sha256": "5ae50facc1f7bcf8351e194335a52df64469d974e02af2674aca5415e52c2925",
+      "title": "A Minus With No Minus Sign",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/counting-in-twos/unit-04.mdx",
+      "id": "counting-in-twos/04",
+      "goal_synthesis": "Interpret signed byte patterns and distinguish carry from signed overflow.",
+      "knowledge_used_inference": "Unsigned bytes, binary places, addition and negative numbers.",
+      "local_support_review": "Signed range and complement mapping introduced with explicit low-byte retention.",
+      "suggested_support_units": [
+        "counting-in-twos/01",
+        "counting-in-twos/03"
+      ],
+      "objective_evidence": {
+        "line": 117,
+        "text": "## What you've learnt\n\n- The machine writes negatives with **two's complement**. In a byte the pattern for −n is\n  **256 − n**, so −1 is `11111111`.\n- In a **signed two’s-complement byte**, the top bit is the sign; on means negative.\n- The same switches mean a positive or a negative. The **reading** decides.\n- Adding a negative pattern and keeping the **low eight bits** gives the subtraction result.\n- **Carry** out of a byte and **signed overflow** are different conditions.\n- There is a **seam**: counting past +127 wraps to −128."
+      },
+      "opening_excerpt": "Every number so far has been zero or up. Programs go down too. A score drops, a player moves\nleft, a countdown runs out. They need **negative** numbers.\n\nHere the machine has a real problem. It has no minus sign. It has switches, and a switch is\nonly ever on or off. So how do you write **−1** with nothing but bits?\n\nThe answer is called **two's complement**.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 96,
+          "text": "<summary>For a one-byte result, does 127 + 1 carry out of the byte? Does it overflow signed?</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "Meet Assembly’s byte-and-pixels experiment",
+          "target": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/"
+        },
+        {
+          "label": "Zilog’s *Z80 CPU User Manual*",
+          "target": "https://www.zilog.com/docs/z80/um0080.pdf"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-01.mdx",
+      "sha256": "185c6e6e7de61f531920e9d561b71efba4fdcd3e699d41e7533b2011b8012269",
+      "title": "Making a Choice",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/decisions/unit-01.mdx",
+      "id": "decisions/01",
+      "goal_synthesis": "Predict conditional output at boundaries without changing the tested value.",
+      "knowledge_used_inference": "Input, stored values and numeric comparison.",
+      "local_support_review": "IF and comparison signs introduced; assignment/comparison distinguished.",
+      "suggested_support_units": [
+        "basics/04",
+        "basics/05"
+      ],
+      "objective_evidence": {
+        "line": 120,
+        "text": "## What you've learnt\n\n- A **condition** is a question with a yes-or-no answer.\n- **`IF`** carries out its instruction only when the answer is yes, and skips it otherwise.\n- The questions you can ask are `=`, `<` and `>`.\n- `=` as a **question** is a different job from `=` as **put this in the box**.\n- A decision is what lets a program **react**, which is the first thing that makes it feel\n  like a game."
+      },
+      "opening_excerpt": "So far, a program can give different answers from different input values. A greeting\nuses the name you type; a sum uses the numbers. Those examples still carry out the\nsame instructions in the same order.\n\nNow we will make a program carry out an instruction only when a condition is true.\nThe computer will **choose whether to do that step**.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 105,
+          "text": "<summary>Check the three cases</summary>"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-02.mdx",
+      "sha256": "9f7d280ab5be41dfdfff24abb4a316de73dd6baa41b4aba8662a009a056622a9",
+      "title": "One or the Other",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/decisions/unit-02.mdx",
+      "id": "decisions/02",
+      "goal_synthesis": "Trace first matching branch, overlapping tests and continuation after END.",
+      "knowledge_used_inference": "IF, comparisons and numeric input.",
+      "local_support_review": "The separate tests are shown in full; valid numeric input explicitly assumed.",
+      "suggested_support_units": [
+        "decisions/01"
+      ],
+      "objective_evidence": {
+        "line": 125,
+        "text": "## What you've learnt\n\n- **`ELSE`** gives a question a second path, and exactly one path always runs.\n- **`ELSE IF`** selects the first matching branch; execution continues after END.\n- A last **`ELSE`** catches everything the questions above it did not.\n- A chain says that these answers belong to one question. Separate `IF`s do not."
+      },
+      "opening_excerpt": "We use ordinary numeric guesses in this unit. Assume ASK has supplied a valid\nnumber; checking typed text or rejecting an invalid answer is extra behaviour.\nHere are the three separate tests from the guessing example:\n\n```text\nIF guess < 7 THEN SHOW \"Too low\"\nIF guess > 7 THEN SHOW \"Too high\"\nIF guess = 7 THEN SHOW \"Correct!\"\n```\n\nThe computer runs all three, every time. It asks whether the guess is low, then whether it\nis high, then whether it is right. Only one of them can be true, but nothing in the\nprogram says so. Those three questions do not know about each other.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "Question prompt",
+          "line": 104,
+          "text": "<Question prompt=\"If we put score >"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-03.mdx",
+      "sha256": "60a1825e405e8bd40546a9a7b84218efe37743fefdb988c0231d9cf3c9d4b3a9",
+      "title": "A Yes You Can Keep",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/decisions/unit-03.mdx",
+      "id": "decisions/03",
+      "goal_synthesis": "Distinguish stored Boolean answers, fresh comparisons, latches and restart resets.",
+      "knowledge_used_inference": "Assignment and IF.",
+      "local_support_review": "TRUE/FALSE, flags and refresh/reset examples explained locally.",
+      "suggested_support_units": [
+        "basics/04",
+        "decisions/01"
+      ],
+      "objective_evidence": {
+        "line": 142,
+        "text": "## What you've learnt\n\n- The answer to a question is a **value**, `TRUE` or `FALSE`, and a box can hold one.\n- A box holding one is a **flag**, and `IF alive` reads it without needing `=`.\n- You can put a question's answer in a box, which gives the question a **name**.\n- A flag carries an answer from **where it was found to where it is needed**."
+      },
+      "opening_excerpt": "Every question an `IF` asks has a yes or a no for an answer. So far the program gets the\nanswer, acts on it, and forgets it in the same breath.\n\nYou can keep it. A yes or a no is a value, just as `7` and `\"Sam\"` are, and a box can hold\none.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "Question prompt",
+          "line": 81,
+          "text": "<Question prompt=\"After the three code lines, is IF tooLow true or false? What about a fresh test of guess < 7?\">"
+        },
+        {
+          "kind": "Question prompt",
+          "line": 120,
+          "text": "<Question prompt=\"If a restart restores three lives but omits gameOver = FALSE, does IF gameOver still choose Game over?\">"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-04.mdx",
+      "sha256": "8ac6743785e0a5591177114de925b71c7f0d3d54135353f2124968a3e4d1e24a",
+      "title": "Asking Two Things at Once",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/decisions/unit-04.mdx",
+      "id": "decisions/04",
+      "goal_synthesis": "Construct complete compound questions and use brackets for grouping.",
+      "knowledge_used_inference": "Boolean comparisons, flags and IF/ELSE.",
+      "local_support_review": "AND/OR/NOT and comparison signs explained; brackets recalled from arithmetic.",
+      "suggested_support_units": [
+        "decisions/01",
+        "decisions/03",
+        "working-it-out/01"
+      ],
+      "objective_evidence": {
+        "line": 106,
+        "text": "## What you've learnt\n\n- **`AND`** is true when both halves are true. **`OR`** is true when either is.\n- **`NOT`** turns an answer round, and **`<>`** asks whether two things differ.\n- **`>=`** and **`<=`** ask *at least* and *at most*.\n- Each half of a joined question has to be **a question in its own right**."
+      },
+      "opening_excerpt": "Real questions are rarely about one thing. Can the player shoot? Only if they are alive\n**and** they have ammo. Is that a valid guess? Only if it is at least 1 **and** at most 10.\n\nYou can join questions together.\n",
+      "explicit_prompt_evidence": [],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-01.mdx",
+      "sha256": "0477fd4589f0de8db9d57c6c7a0bf76e372fc8bc65a6eab19fbf5d5741cfff2e",
+      "title": "The Program Is Not What Runs",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/from-source-to-silicon/unit-01.mdx",
+      "id": "from-source-to-silicon/01",
+      "goal_synthesis": "Distinguish source, instructions and data; trace an invented instruction stream.",
+      "knowledge_used_inference": "Stored values, addition and doubling.",
+      "local_support_review": "Three routes and the invented machine defined locally; byte notion used.",
+      "suggested_support_units": [
+        "basics/04",
+        "working-it-out/02",
+        "counting-in-twos/01"
+      ],
+      "objective_evidence": {
+        "line": 140,
+        "text": "## What you've learnt\n\n- **Source** is what we write and edit, including assembly source.\n- **Machine code** encodes instructions for a processor; source is stored as bytes too.\n- Assemblers and native-code compilers can both produce machine code.\n- An interpreter executes as machine code while reading our program as data."
+      },
+      "opening_excerpt": "Here is a program in our teaching notation:\n\n```text\nLET score = 0\nLET score = score + 10\nSHOW score\n```\n\nWe can follow it: start the score at zero, add ten, show ten. A processor has no\ninstruction called `LET score = score + 10`. Software must turn that request into\nwork the processor knows how to do.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 109,
+          "text": "<summary>Are character codes instructions?</summary>"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-02.mdx",
+      "sha256": "a2965613106820a5697b6d9bb887a5987fcc34b5cd8ae26e743ff884a1ea540b",
+      "title": "Translating As You Go",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/from-source-to-silicon/unit-02.mdx",
+      "id": "from-source-to-silicon/02",
+      "goal_synthesis": "Explain interpreter/token work and distinguish update rate from display refresh.",
+      "knowledge_used_inference": "Repeated updates, numeric loops and source/instruction distinction.",
+      "local_support_review": "Interpreter recalled; ROM/RAM and tokens introduced; loop control assumed.",
+      "suggested_support_units": [
+        "repeating/01",
+        "working-it-out/02",
+        "from-source-to-silicon/01"
+      ],
+      "objective_evidence": {
+        "line": 112,
+        "text": "## What you've learnt\n\n- The processor executes the **interpreter**, which reads our program as data.\n- Spectrum BASIC stores keyword **tokens**; they are not native Z80 instructions.\n- Inside a loop our model repeatedly handles the same statement, as well as\n  performing the operation it requests.\n- Game updates and display refresh are distinct; repeated work uses update time.\n- Interpreters make experimentation convenient and can run finished games too."
+      },
+      "opening_excerpt": "An **interpreter** is a program that reads another program and carries out its\noperations. We will follow a simple interpreter that reads a statement, works\nout which operation it requests, and performs that operation.\n\nThe processor executes the interpreter's machine instructions throughout. If our\nstatement asks for an addition, the interpreter uses its arithmetic routines to\ncalculate the result. It does not have to generate a new piece of machine code\nfor that statement.\n",
+      "explicit_prompt_evidence": [],
+      "authored_links": [
+        {
+          "label": "chapter 14, “The Character Set”",
+          "target": "https://worldofspectrum.org/ZXBasicManual/zxmanchap14.html"
+        },
+        {
+          "label": "chapter 24, “The memory”",
+          "target": "https://worldofspectrum.org/ZXBasicManual/zxmanchap24.html"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-03.mdx",
+      "sha256": "9a8861b0520a7cec2af9bb8ba1cfb5c1ed7c970fcb544012d26b878330b6e680",
+      "title": "Translating Once",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/from-source-to-silicon/unit-03.mdx",
+      "id": "from-source-to-silicon/03",
+      "goal_synthesis": "Compare compilation/assembly; trace valid, invalid and empty toy translations.",
+      "knowledge_used_inference": "Lists, indexed lookup, nested loops, comparisons and Boolean flags.",
+      "local_support_review": "Index origin, matching tables, pending output and latched invalidity explained; constructs span several modules.",
+      "suggested_support_units": [
+        "structure/01",
+        "repeating/01",
+        "decisions/03",
+        "from-source-to-silicon/01",
+        "from-source-to-silicon/02"
+      ],
+      "objective_evidence": {
+        "line": 200,
+        "text": "## What you've learnt\n\n- A **native-code compiler** chooses machine instructions to implement higher-level source.\n- An **assembler** encodes instructions selected in assembly source.\n- Both can produce **native machine code** for the same processor.\n- You traced a toy encoder using lists and loops, with **no code emitted after an unknown name**.\n- Removing runtime translation work does not establish the whole program's speed."
+      },
+      "opening_excerpt": "Our interpreter model repeatedly reads and handles a stored statement. Another\napproach prepares machine instructions before execution.\n\nTranslate the whole program first. All of it, before a single line runs. What is left\nafterwards is a sequence of instructions. The machine still has to perform their\nwork; reading and interpreting the source statement is no longer part of each\npass. We translate again when we change the source and rebuild.\n\n<TraceTable\n  columns={[\"When\", \"Read the line\", \"Work out what it means\", \"Do it\", \"total\"]}\n  watch=\"total\"\n  rows={[\n    [\"before running\", \"LET total = total + 1\", \"put total plus one in total\", \"—\", \"—\"],\n    [\"pass 1\", \"—\", \"—\", \"0 + 1\", \"1\"],\n    [\"pass 2\", \"—\", \"—\", \"1 + 1\", \"2\"],\n    [\"…\", \"…\", \"…\", \"…\", \"…\"],\n    [\"pass 1000\", \"—\", \"—\", \"999 + 1\", \"1000\"],\n  ]}\n>\n  The middle column has one entry now, and it is above the loop rather than inside it. The\n  table counts the additions and translation lookups. It omits other work such as\n  controlling the loop; it is not an instruction or timing measurement.\n</TraceTable>\n\nA **native-code compiler** translates higher-level source into instructions for\nthe target processor. For `LET total = total + 1`, it must arrange for the old\nvalue to be read, one to be added, and the result to be stored. It can also\ncombine or remove operations when that preserves the program's meaning.\n\nThe resulting machine code can include calls to library routines for jobs such\nas arithmetic or printing. Those routines still do work when the program runs;\ncompilation does not make that work disappear.\n\nThe build may have several stages. For example, a compiler can produce assembly\nsource, an assembler can encode it, and a **linker** can join the pieces and\nlibrary routines into a program. We use “compile” for the overall build in many\ntools, but these stages have different jobs.\n\nNot every compiler produces native code before a program starts. Some produce\n**bytecode**, instructions for a software machine, and some compile while the\nprogram is running. Here we are following the route that builds native machine\ncode in advance.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 139,
+          "text": "<summary>Does a recognised last word make the program valid?</summary>"
+        },
+        {
+          "kind": "disclosure prompt",
+          "line": 180,
+          "text": "<summary>Follow the compiler's output</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "“Overall Options”",
+          "target": "https://gcc.gnu.org/onlinedocs/gcc/Overall-Options.html"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-04.mdx",
+      "sha256": "9cc1e26f436f306b0f8df1e71f65ad6718299b5f73cdc6087d3ca24e4bbf4a90",
+      "title": "What Speed Costs You",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/from-source-to-silicon/unit-04.mdx",
+      "id": "from-source-to-silicon/04",
+      "goal_synthesis": "Separate diagnostics from intention; distinguish algorithm, source and machine-interface portability.",
+      "knowledge_used_inference": "Source/translation, named responsibilities and expected/actual comparison.",
+      "local_support_review": "Small examples explain each responsibility; diagnosis support explicitly linked.",
+      "suggested_support_units": [
+        "from-source-to-silicon/01",
+        "from-source-to-silicon/03",
+        "structure/04"
+      ],
+      "objective_evidence": {
+        "line": 86,
+        "text": "## What we've learnt\n\n- Translation tools can diagnose some mistakes; valid code can still express the wrong rule.\n- Matching listings and debugging information help connect execution to source.\n- More explicit control brings responsibilities, not an automatic speed guarantee.\n- Algorithms, source code and complete programs have different portability limits."
+      },
+      "opening_excerpt": "Translating before a program runs can remove work from its execution. It does not\nmake every program faster or make assembly the right choice for every game.\nThe result depends on the program, its implementation and the machine.\n\nWe can compare three responsibilities before choosing how to build something.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 71,
+          "text": "<summary>Compare rules and drawing</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "diagnosis lesson",
+          "target": "/foundations/structure/unit-04/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-05.mdx",
+      "sha256": "5bcdea8862584e399922b7ab4d06b706a3e404c052e1dfd81f51db5145d62336",
+      "title": "Put It on the Clock",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/from-source-to-silicon/unit-05.mdx",
+      "id": "from-source-to-silicon/05",
+      "goal_synthesis": "Specify comparable work/clocks, inspect deadlines and preserve correctness.",
+      "knowledge_used_inference": "Small averages, loops and measurement units.",
+      "local_support_review": "Invented timing table is self-contained; native inspector route is optional and qualified.",
+      "suggested_support_units": [
+        "from-source-to-silicon/04",
+        "working-it-out/01"
+      ],
+      "objective_evidence": {
+        "line": 115,
+        "text": "## What we've learnt\n\n- Counted operations and measured time answer different questions.\n- Compare a named workload and preserve its required behaviour.\n- Look for slow updates and missed deadlines, not just an average.\n- Name the clock and distinguish guest measurements from host performance.\n- Explain the change, then measure again; a lower number alone is not completion."
+      },
+      "opening_excerpt": "[Unit 4](../unit-04/) separated control over instructions from a promise of speed.\nNow we need evidence: which work takes time, what could change, and whether the\nchange helps the game we want to make.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 57,
+          "text": "<summary>Compare the average with the slow update</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "Unit 4",
+          "target": "../unit-04/"
+        },
+        {
+          "label": "Meteor Storm unit 20",
+          "target": "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-20/"
+        },
+        {
+          "label": "unit 21",
+          "target": "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-21/#compare-a-measured-budget"
+        },
+        {
+          "label": "Systems",
+          "target": "/systems/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-01.mdx",
+      "sha256": "11088d3dd1fe775f60a0603dbae143fceeb6b07aacec2885b3e2bcb123e42edc",
+      "title": "The Same Table, Drawn",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/gates-and-the-adder/unit-01.mdx",
+      "id": "gates-and-the-adder/01",
+      "goal_synthesis": "Relate gate diagrams to all Boolean rows and distinguish settled model from physical behaviour.",
+      "knowledge_used_inference": "0/1, table reading and Boolean rules.",
+      "local_support_review": "Bit model and gates introduced; AND/OR/XOR/NOT tables supplied locally.",
+      "suggested_support_units": [
+        "truth-tables/01",
+        "truth-tables/02"
+      ],
+      "objective_evidence": {
+        "line": 126,
+        "text": "## What you've learnt\n\n- Our model gives each wire a **bit**: 0 or 1.\n- A truth table describes a gate's settled **Boolean behaviour**.\n- **`AND`**, **`OR`**, **`XOR`** take two wires in; **`NOT`** takes one.\n- The small **circle** means inverted.\n- Four rows cover a two-input Boolean model, not all physical behaviour.\n\n<details>\n<summary>If a drawing matches all four AND rows, have we measured a real chip's delay?</summary>\n\nNo. We checked its **Boolean results**. Measuring a physical chip's delay needs\nan input change, a time measurement and stated electrical conditions. The\ninteractive drawing does not supply those measurements.\n\n</details>"
+      },
+      "opening_excerpt": "In our Boolean model, each wire has a value: **0** or **1**. We draw 1 as lit\nand 0 as unlit. A physical signal represents those values, but the drawing\ndoes not measure its voltage or model changes while it settles.\n\nA **bit** is one binary digit. Here the two digits let us describe a gate's\ninput and output without drawing its internal electronics.\n\nNow put a part in the middle of some wires. Two wires in, one wire out, and a rule saying\nwhat comes out for each combination going in.\n\nThat rule is a truth table. The part is called a **gate**.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 135,
+          "text": "<summary>If a drawing matches all four AND rows, have we measured a real chip's delay?</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "SNx4HC08 data sheet",
+          "target": "https://www.ti.com/lit/ds/symlink/sn74hc08.pdf"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-02.mdx",
+      "sha256": "0f34faa265e33382e09a1dd077a00139db93da181088e1b26f5e486228ddca9a",
+      "title": "The Half Adder",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/gates-and-the-adder/unit-02.mdx",
+      "id": "gates-and-the-adder/02",
+      "goal_synthesis": "Derive half-adder sum/carry and retain the complete numeric answer.",
+      "knowledge_used_inference": "Small sums, binary places, XOR and AND.",
+      "local_support_review": "Binary 1+1 and SUM+2*CARRY explained; gate rules recalled through columns.",
+      "suggested_support_units": [
+        "counting-in-twos/01",
+        "gates-and-the-adder/01"
+      ],
+      "objective_evidence": {
+        "line": 126,
+        "text": "## What you've learnt\n\n- Adding two bits gives **two answers**: a sum and a carry.\n- The sum column is **`XOR`** and the carry column is **`AND`**.\n- A **half adder** is those two gates on the same inputs.\n- It cannot **accept** a carry, only produce one, which is why it is half of something."
+      },
+      "opening_excerpt": "Add two bits together. There are only four sums to do, so do all of them:\n\n```text\n0 + 0 = 0\n0 + 1 = 1\n1 + 0 = 1\n1 + 1 = 10\n```\n\nThree of those fit in one bit. The last one does not.\n\n**1 + 1 is two**, and two in binary is `10`. It needs two bits: a 0 in the ones place and a 1\nin the twos place. Exactly what happens on paper when a column overflows and you carry one.\n\nThe result has **two output bits**. The **sum bit** stays in the current column;\nthe **carry bit** has twice its place value. Read the complete numeric result\nas `SUM + 2 * CARRY`. For 1 + 1, that is 0 + 2 × 1 = 2.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 110,
+          "text": "<summary>For A = 1 and B = 1, is a dark SUM output evidence that the answer is zero?</summary>"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-03.mdx",
+      "sha256": "2d175e6377ffb83892a11e741db803b6d9914497263f843756a5849af23b9258",
+      "title": "The Full Adder and the Ripple",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/gates-and-the-adder/unit-03.mdx",
+      "id": "gates-and-the-adder/03",
+      "goal_synthesis": "Trace full-adder input carry and a multi-column ripple result with final carry.",
+      "knowledge_used_inference": "Half adders, binary places and eight input combinations.",
+      "local_support_review": "Carry-in starting state and full arithmetic identity stated; static overview distinguished from controls.",
+      "suggested_support_units": [
+        "gates-and-the-adder/02",
+        "truth-tables/01"
+      ],
+      "objective_evidence": {
+        "line": 172,
+        "text": "## What you've learnt\n\n- A **full adder** takes two operand bits and an incoming carry bit.\n- Its sum is **`XOR` of all three**, and its carry is on when **at least two** inputs are.\n- Our five-gate construction uses two half adders and an `OR` for their carries.\n- Chaining one per bit gives a **ripple-carry adder**, where the carry travels along the\n  chain.\n- Keeping the final carry preserves a wider answer; discarding it keeps only low bits."
+      },
+      "opening_excerpt": "The half adder produces a carry and cannot accept one. A higher column may\nreceive a carry, so we need a third input. For an ordinary sum of two numbers,\nwe start the rightmost column with carry in **0**. A full adder can accept a\ndifferent starting carry when the operation calls for it.\n\nCall it **carry in**. Three inputs now: `A`, `B` and the carry arriving from the column to\nthe right.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 141,
+          "text": "<summary>Does 111 + 001 give zero or eight? What if we keep only three sum bits?</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "Counting in Twos: A Minus With No Minus Sign",
+          "target": "/foundations/counting-in-twos/unit-04/"
+        },
+        {
+          "label": "Meet Assembly",
+          "target": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-01/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/unit-01.mdx",
+      "sha256": "1fc427c8eda435a8f8ee59a5270c271c04597f289e02a0799a44cb930942008e",
+      "title": "Doing It Again",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/repeating/unit-01.mdx",
+      "id": "repeating/01",
+      "goal_synthesis": "Trace inclusive counted loops, counter values, zero/one-pass ranges and body placement.",
+      "knowledge_used_inference": "SHOW, variables and multiplication.",
+      "local_support_review": "FOR/END and counter introduced; assumes familiarity with variable expressions.",
+      "suggested_support_units": [
+        "basics/04",
+        "working-it-out/01"
+      ],
+      "objective_evidence": {
+        "line": 85,
+        "text": "## What you've learnt\n\n- A **loop** repeats work without you writing it out. How many times is a value you set.\n- A **counted loop** runs a fixed number of times and keeps a **counter** that climbs as\n  it goes.\n- The counter is a **variable you can use** in the repeated work. That is what makes a\n  loop build things rather than only count."
+      },
+      "opening_excerpt": "To show the numbers 1 to 10 with what you know so far, you would write ten `SHOW` lines.\nFor 1 to 100, a hundred of them. Computers exist so that you never have to.\n\nA **loop** does a piece of work over and over, as many times as you say, and you write\nthat work once.\n",
+      "explicit_prompt_evidence": [],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/unit-02.mdx",
+      "sha256": "dea5bed5aacf181b49989337ecf195b243fdd6b774baeb31c34a774d1f737039",
+      "title": "Until You Get It",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/repeating/unit-02.mdx",
+      "id": "repeating/02",
+      "goal_synthesis": "Trace post-test repetition and round-stable randomness; distinguish reachable from guaranteed exits.",
+      "knowledge_used_inference": "ASK, numeric comparisons and IF branches.",
+      "local_support_review": "Full guessing example recalled; valid numbers assumed; RANDOM range and waiting explained.",
+      "suggested_support_units": [
+        "decisions/02",
+        "repeating/01"
+      ],
+      "objective_evidence": {
+        "line": 156,
+        "text": "## What you've learnt\n\n- A **loop-until** repeats until something becomes true, for when you do not know how many\n  times in advance.\n- The question sits at the **bottom**, so the work always happens at least once.\n- This do-it, check, repeat shape models one kind of repeated game work.\n- For a loop intended to finish, ask what makes it leave and whether that event\n  is guaranteed, input-dependent or prevented by a bug."
+      },
+      "opening_excerpt": "The counted loop is for when you know how many times. Often you do not. You keep going\n**until something happens**: until the player guesses right, runs out of lives, or gives\nup. You cannot count that in advance.\n\nOur guessing examples assume ASK supplies a valid number. Checking typed text or\nrejecting an invalid answer is extra behaviour, separate from repeating the work.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 133,
+          "text": "<summary>If the last round chose 7, can the next round choose 7 too?</summary>"
+        },
+        {
+          "kind": "Question prompt",
+          "line": 92,
+          "text": "<Question prompt=\"The player submits 4, then 4 again. Does a reachable winning case guarantee this guessing loop will finish?\">"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "Choose a new secret in Sinclair BASIC",
+          "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/unit-03.mdx",
+      "sha256": "b9fbdc89e94277b949749805b3ccd34d171c8cccb3ca595f663081c455dcdf68",
+      "title": "Checking Before You Start",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/repeating/unit-03.mdx",
+      "id": "repeating/03",
+      "goal_synthesis": "Choose a pre-test loop and explain progress, misplaced resets and zero-pass behaviour.",
+      "knowledge_used_inference": "Comparisons, decrement and post-test repetition.",
+      "local_support_review": "WHILE explained locally; numeric domain and update rules stated; REPEAT recalled.",
+      "suggested_support_units": [
+        "working-it-out/02",
+        "repeating/02"
+      ],
+      "objective_evidence": {
+        "line": 141,
+        "text": "## What you've learnt\n\n- **`WHILE`** asks its question first and runs the work only while the answer is yes.\n- A `WHILE` can run **no times at all**. A `REPEAT` always runs at least once.\n- Pick by the work: check first when doing it wrongly would be a mistake, check afterwards\n  when there is nothing to check until you have.\n- For a loop intended to finish, identify progress or the event it awaits;\n  check that a misplaced update or reset does not prevent the exit."
+      },
+      "opening_excerpt": "`REPEAT` asks its question at the bottom, after the work. That suits a guessing game: you\nhave to make one guess before anyone can say whether you were right.\n\nSometimes the work should not happen at all. Then the question goes first.\n\nIn the lives examples, start with a non-negative whole number. Each completed\npass subtracts exactly one; no other instruction changes lives. We use ordinary\ninteger arithmetic here, not a target machine’s wrapping byte counter.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "Question prompt",
+          "line": 88,
+          "text": "<Question prompt=\"Does moving LET lives = 3 before WHILE repair this loop? Where should a new game restore its starting lives?\">"
+        },
+        {
+          "kind": "Question prompt",
+          "line": 118,
+          "text": "<Question prompt=\"With lives starting at 0, how many times does WHILE run? What if the same body uses REPEAT ... UNTIL lives <= 0?\">"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "saved flag",
+          "target": "/foundations/decisions/unit-03/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-01.mdx",
+      "sha256": "ca128a5139dd8b5e3ffe57a5c633edf75c169e7dbb405073fd981c3eb49844f6",
+      "title": "A Box That Holds Many",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/structure/unit-01.mdx",
+      "id": "structure/01",
+      "goal_synthesis": "Use list indices, append, length, empty traversal and nested loop counts.",
+      "knowledge_used_inference": "LET, SHOW, loops and small multiplication.",
+      "local_support_review": "LET/SHOW recalled; FOR EACH introduced; counted nested loops rely on the preceding loop concept.",
+      "suggested_support_units": [
+        "basics/04",
+        "repeating/01"
+      ],
+      "objective_evidence": {
+        "line": 146,
+        "text": "## What you've learnt\n\n- A **list** holds values in order; valid indices run from 1 through its length.\n- An **empty list** has no valid index, and its `FOR EACH` body runs zero times.\n- **`scores[2]`** reaches one item, counting from 1 here and from 0 in many languages.\n- **`APPEND`** grows a list, and **`LENGTH`** says how many items it holds.\n- **`FOR EACH`** runs work once per item, without you knowing how many there are."
+      },
+      "opening_excerpt": "Every box so far holds one value: a score, a guess, a name. Plenty of things come in rows,\nthough. Five high scores. Four lives. A screen full of enemies.\n\nA **list** is one name holding values in order. `LET` stores a value; `SHOW`\ndisplays it. These examples use pseudocode, so a target language may spell the\noperations differently.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 102,
+          "text": "<summary>With scores = [10], are scores[0], scores[1] and scores[2] all valid? What changes after APPEND 20?</summary>"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-02.mdx",
+      "sha256": "615603a9090b7d8b9bf6ee9cda17e56e04d94a519deeab9a3a52e1dd8869f8fc",
+      "title": "A Job With a Name",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/structure/unit-02.mdx",
+      "id": "structure/02",
+      "goal_synthesis": "Trace definition/call/return control; decide whether shared work should change together.",
+      "knowledge_used_inference": "SHOW and sequence.",
+      "local_support_review": "DEFINE/CALL introduced with a full trace; no parameter knowledge required.",
+      "suggested_support_units": [
+        "basics/02"
+      ],
+      "objective_evidence": {
+        "line": 141,
+        "text": "## What you've learnt\n\n- A **subroutine** is a piece of work with a name, written once and called wherever you\n  need it.\n- **`DEFINE`** names the job. **`CALL`** runs it, and the program carries on from where it\n  called.\n- A shared job gives us one place to change behaviour that should stay the same.\n- A name can also make a responsibility easier to understand and check."
+      },
+      "opening_excerpt": "As a program grows, the same little job turns up again and again: draw the border, show the\nscore, play the sound. Copy it into every place that needs it and two things go wrong. The\nprogram bloats, and the day you want to change that job you have to find every copy.\n\nHere both copies do the same job and should change together. Giving that job one home\nmakes the change easier to check.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 92,
+          "text": "<summary>Check which callers change</summary>"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-03.mdx",
+      "sha256": "c7dccf4e80e4e336ab33ff29058ea54dbe466dbfba12bbc6bcb8e25c62df5713",
+      "title": "Telling a Job What to Work On",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/structure/unit-03.mdx",
+      "id": "structure/03",
+      "goal_synthesis": "Explain local numeric parameter copies, returned values, effects and caller contracts.",
+      "knowledge_used_inference": "Named jobs, assignment and multiplication.",
+      "local_support_review": "Builds on divider; parameter scope and numeric-copy rule stated; contrasts BASIC locally.",
+      "suggested_support_units": [
+        "structure/02",
+        "basics/04",
+        "working-it-out/01"
+      ],
+      "objective_evidence": {
+        "line": 139,
+        "text": "## What you've learnt\n\n- A job can take a value: the name in brackets holds whatever the caller hands over.\n- **`RETURN`** hands a value back, and the answer lands where you wrote the call.\n- A job you **`CALL`** does something. A job you use for its answer goes where a value goes.\n- The names inside a job belong to the job."
+      },
+      "opening_excerpt": "The divider from Unit 2 does the same thing every time. That is fine for a divider. Most\njobs are not like that: you want the same work done to a different value each time.\n\nSo you give the job something to work on.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 83,
+          "text": "<summary>With n = 3, what do LET result = double(n) and LET n = double(n) leave in the caller?</summary>"
+        },
+        {
+          "kind": "disclosure prompt",
+          "line": 100,
+          "text": "<summary>Compare their promises</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "Write the repeated job once",
+          "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-11-write-the-repeated-job-once/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-04.mdx",
+      "sha256": "0dae1f6051a46f9040e27358b0b8d6665af827e37f116a2de11dcdbe1e96f243",
+      "title": "When It's Wrong",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/structure/unit-04.mdx",
+      "id": "structure/04",
+      "goal_synthesis": "Reproduce a fault, predict distinguishing evidence, repair and check regressions.",
+      "knowledge_used_inference": "Numeric input, arithmetic, lists and repeated updates.",
+      "local_support_review": "Small broken/fixed programs shown; later tracing example uses FOR EACH from unit 1.",
+      "suggested_support_units": [
+        "working-it-out/01",
+        "working-it-out/02",
+        "structure/01"
+      ],
+      "objective_evidence": {
+        "line": 134,
+        "text": "## What you've learnt\n\n- Describe what we expected and what actually happened, with an input we can repeat.\n- Predict evidence that could support or contradict a specific explanation.\n- Inspect one relevant value or change one thing, then explain the result.\n- Repair the cause and repeat the failing case and previously working cases.\n- A successful output is evidence; choose other cases that could reveal a hidden fault.\n\nFor a later investigation with a real machine, [Meet Assembly’s debugger lesson](/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-08/) uses the same method to investigate movement. It introduces registers and stepping when they become useful."
+      },
+      "opening_excerpt": "Every program you write will, at some point, do the wrong thing. Every one.\n\nWe do not need to avoid every mistake. We need a way to investigate one without changing\nthings at random.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 47,
+          "text": "<summary>Compare the predictions</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "Meet Assembly’s debugger lesson",
+          "target": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-08/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/unit-01.mdx",
+      "sha256": "dceaa799f42ceb22bd408094629beda5bca1af90d9bc240c79fe1ddf4f49a01d",
+      "title": "True and False",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/truth-tables/unit-01.mdx",
+      "id": "truth-tables/01",
+      "goal_synthesis": "Enumerate Boolean inputs, NOT and reachable versus general table rows.",
+      "knowledge_used_inference": "Yes/no questions and reading a grid.",
+      "local_support_review": "Boolean inputs and the local 0/1 notation introduced; no binary course needed.",
+      "suggested_support_units": [
+        "decisions/04"
+      ],
+      "objective_evidence": {
+        "line": 93,
+        "text": "## What you've learnt\n\n- A Boolean input has **two values**; a fixed number of them gives a finite table.\n- A **truth table** writes down every case and what comes out of each.\n- **0** is false and **1** is true.\n- **`NOT`** turns an answer round.\n- Each extra Boolean input **doubles** the full table; game rules may exclude some combinations."
+      },
+      "opening_excerpt": "Here we study **Boolean conditions**: tests whose result is `TRUE` or `FALSE`.\nFor an ordinary number of lives, `lives > 0` is one such test.\n\nTwo possible values let us **write down every input combination** for a fixed\nnumber of Boolean inputs. We can then check the result for each combination.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 76,
+          "text": "<summary>Does testing the same unchanged score twice create four possible game states?</summary>"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/unit-02.mdx",
+      "sha256": "dcf8e37b6c5c1982e96a62689603cd9592585a3b475f732d2bbe9188a0546933",
+      "title": "Both, Either, Different",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/truth-tables/unit-02.mdx",
+      "id": "truth-tables/02",
+      "goal_synthesis": "Compare AND/OR/XOR and find the distinguishing both-true row.",
+      "knowledge_used_inference": "Boolean input rows and NOT.",
+      "local_support_review": "Four cases and operators explained; game example also uses IF and CALL.",
+      "suggested_support_units": [
+        "truth-tables/01",
+        "decisions/04",
+        "structure/02"
+      ],
+      "objective_evidence": {
+        "line": 105,
+        "text": "## What you've learnt\n\n- Two questions make **four cases**, and three make eight.\n- **`AND`** is true only when both Boolean inputs are true; an added condition cannot add passing cases.\n- **`OR`** includes the both-true case; an added condition cannot remove passing cases.\n- **`XOR`** asks whether the two answers **differ**.\n- Comparing two **columns** shows you which case tells them apart."
+      },
+      "opening_excerpt": "Two questions, four cases. Both false, one or the other true, both true. That is the whole\nlist, and it is short enough to look at.\n\nYou already write `AND` and `OR`. Here we look at what they do to all four cases at once.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 77,
+          "text": "<summary>Must A AND A have fewer passing cases than A? Must A OR A have more?</summary>"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/unit-03.mdx",
+      "sha256": "7af4a2a687c2940a96e8bdd4ab34e35ef107388936bd818988602e7387f117ff",
+      "title": "Two Guards, One Guard",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/truth-tables/unit-03.mdx",
+      "id": "truth-tables/03",
+      "goal_synthesis": "Prove Boolean equivalence under fixed-input/complement assumptions; detect a stale-flag counterexample.",
+      "knowledge_used_inference": "AND/OR/NOT tables and current versus saved state.",
+      "local_support_review": "Complement assumptions are stated before proof; target evaluation is a separate boundary.",
+      "suggested_support_units": [
+        "truth-tables/01",
+        "truth-tables/02",
+        "decisions/03"
+      ],
+      "objective_evidence": {
+        "line": 126,
+        "text": "## What you've learnt\n\n- Matching columns prove equal **Boolean results for the same inputs**, not every runtime behaviour.\n- **De Morgan's laws**: push a `NOT` inside a bracket and `AND` swaps with `OR`.\n- The point is **readable guards**: say a condition the way you think about it.\n- Columns that **disagree** have shown you a case worth looking at."
+      },
+      "opening_excerpt": "Here is a guard for a game loop:\n\n```text\nIF NOT (dead OR finished) THEN\n  CALL keepPlaying\nEND\n```\n\nYou can work out what it means, but it takes a moment. Two negatives fighting each other:\nnot one thing or the other thing.\n\nNow here is another line:\n\n```text\nIF alive AND unfinished THEN\n  CALL keepPlaying\nEND\n```\n\nThat one you read at a glance. The claim of this unit is that **they are the same test**, and\nthat you can prove it under explicit assumptions rather than take it on trust.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 65,
+          "text": "<summary>What if dead is TRUE but a separately stored alive flag is still TRUE?</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "Keep guessing",
+          "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing/"
+        },
+        {
+          "label": "Game State Machine pattern",
+          "target": "/patterns/cross-platform/framework/state-machine/"
+        },
+        {
+          "label": "Conditions",
+          "target": "https://worldofspectrum.org/ZXBasicManual/zxmanchap13.html"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/unit-01.mdx",
+      "sha256": "80edc34253f5fe086be5ea4a9196e560213f78f6fb2975e6692f4a27f7fc4365",
+      "title": "Working It Out",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/working-it-out/unit-01.mdx",
+      "id": "working-it-out/01",
+      "goal_synthesis": "Calculate input-driven expressions with precedence and brackets.",
+      "knowledge_used_inference": "Small arithmetic, numeric input and stored values.",
+      "local_support_review": "ASK and SHOW recalled; numeric input assumed, not validated; operator priorities explained.",
+      "suggested_support_units": [
+        "basics/04",
+        "basics/05"
+      ],
+      "objective_evidence": {
+        "line": 108,
+        "text": "## What you've learnt\n\n- The computer does **arithmetic**, working a new value out from ones it already has.\n- It can work from values the **player gives**, so the same program gives different answers.\n- `*` means multiply and `/` means divide in this notation.\n- **Multiply and divide happen before add and subtract**, and **brackets** say what to work\n  out first. Equal-priority operations work from left to right here."
+      },
+      "opening_excerpt": "A computer can work out `2 + 2` and show `4`. It can also work from values it\ndid not have when you wrote the program.\n\nHere we use pseudocode: notation for explaining a program. `ASK` stores an answer in\na named variable, and `SHOW` displays a result. Type numbers for these examples.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 89,
+          "text": "<summary>What will 20 - 5 - 2 show? Where would brackets make it 17?</summary>"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/unit-02.mdx",
+      "sha256": "8ba6b8505d7f66ca91224696ee11f2928ad51e0b6d1f05d9874dcb2b6d7bfd17",
+      "title": "A Box That Grows From Itself",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/working-it-out/unit-02.mdx",
+      "id": "working-it-out/02",
+      "goal_synthesis": "Trace read-before-write updates and explain why two assignments do not swap values.",
+      "knowledge_used_inference": "Variables, addition and subtraction.",
+      "local_support_review": "LET is recalled and a trace explains the update order.",
+      "suggested_support_units": [
+        "basics/04",
+        "working-it-out/01"
+      ],
+      "objective_evidence": {
+        "line": 84,
+        "text": "## What you've learnt\n\n- A box can **grow from its own value**, which is useful for counters.\n- The computer works out the **right-hand side first**, then puts the answer back.\n- The same move subtracts, which is how a life count falls.\n- `=` means **put this in the box**, which is exactly why a box can grow from itself."
+      },
+      "opening_excerpt": "Here is a pattern used for scores, timers and life counts. `LET` means\n*put the right-hand value in the named box*. In this assignment, `=` separates\nthe destination from the expression to work out.\n\n```text\nLET score = 0\nSHOW \"Score: \", score\nLET score = score + 10\nSHOW \"Score: \", score\n```\n\n<Output>{`Score: 0\nScore: 10`}</Output>\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 67,
+          "text": "<summary>With a = 2 and b = 5, do LET a = b then LET b = a swap them?</summary>"
+        }
+      ],
+      "authored_links": [],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/unit-03.mdx",
+      "sha256": "d066fd3eaf1df19216d44a2bb4a0aba69cbb3332c0e8ce907cadef77f351705a",
+      "title": "When It Doesn't Divide Evenly",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/working-it-out/unit-03.mdx",
+      "id": "working-it-out/03",
+      "goal_synthesis": "Choose quotient, floor, remainder or nearest rounding; explain their domains.",
+      "knowledge_used_inference": "Division, fractions, ordered numbers and brackets.",
+      "local_support_review": "Floor including a negative example, remainder domain and positive halfway rule are given locally.",
+      "suggested_support_units": [
+        "working-it-out/01"
+      ],
+      "objective_evidence": {
+        "line": 137,
+        "text": "## What you've learnt\n\n- **`/`** keeps a fractional quotient in this notation; target division rules may differ.\n- **`ROUND DOWN`** goes to the greatest whole number no larger than the input.\n- **`REMAINDER`** gives the part left over for our non-negative whole inputs and positive divisor.\n- Together those two account for the original number.\n- A **remainder of 0** means it divided exactly, which can identify multiples of two or four.\n- **`ROUND`** goes to the nearest whole number, which is a different question again."
+      },
+      "opening_excerpt": "Some sums come out exactly. Six divided by two is three, and nothing is left over.\n\nMost do not. Seven divided by two is where the trouble starts, and every program has to\ndecide what to do about it.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 117,
+          "text": "<summary>Do 7 / 2, ROUND DOWN (7 / 2), 7 REMAINDER 2 and ROUND (7 / 2) answer the same question?</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "Choose a new secret",
+          "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret/"
+        },
+        {
+          "label": "Centre Text on a Character Screen",
+          "target": "/patterns/cross-platform/rendering/centre-text-on-a-character-screen/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-01.mdx",
+      "sha256": "68b03d266d72fa45351e7e41718d824991b9d2ec607ecef18b1c7965cb783aab",
+      "title": "Switch by Switch",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/working-the-bits/unit-01.mdx",
+      "id": "working-the-bits/01",
+      "goal_synthesis": "Choose masks to keep/set/toggle bits; explain width-dependent complement.",
+      "knowledge_used_inference": "Binary bytes and Boolean questions.",
+      "local_support_review": "Contrasts Boolean and bitwise operators and supplies tables; byte reading assumed.",
+      "suggested_support_units": [
+        "counting-in-twos/01",
+        "decisions/04"
+      ],
+      "objective_evidence": {
+        "line": 152,
+        "text": "## What you've learnt\n\n- Four tools work a byte **one switch at a time**.\n- **`BITAND`** masks, **`BITOR`** sets, **`BITXOR`** flips, **`BITNOT`** inverts the lot.\n- A **mask** is a byte whose 1s mark the switches you mean to act on.\n- These are not the question-joining `AND`, `OR` and `NOT`. They take numbers and give a\n  number back."
+      },
+      "opening_excerpt": "So far we have read bytes. Now we start changing them.\n\nNot the number as a whole, but the switches inside it, one position at a time. There are four\ntools for the job, and each one fits in a four-line table. Line two bytes up and these work\nstraight down the columns, pairing the bits in the same place.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 131,
+          "text": "<summary>Start with 11001010. What does XOR with 00001111 change? What if you apply it twice?</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "Meet Assembly’s byte-and-pixels experiment",
+          "target": "/systems/sinclair-zx-spectrum/assembly/meet-assembly/unit-02/"
+        },
+        {
+          "label": "Zilog’s *Z80 CPU User Manual*",
+          "target": "https://www.zilog.com/docs/z80/um0080.pdf"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-02.mdx",
+      "sha256": "f5c451b5f000005790b820051250317019a2d1affc96c9a62b3d959b5c30cb50",
+      "title": "Slide the Whole Row",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/working-the-bits/unit-02.mdx",
+      "id": "working-the-bits/02",
+      "goal_synthesis": "Predict width-limited shifts and qualify arithmetic and speed equivalence.",
+      "knowledge_used_inference": "Binary places, unsigned/signed interpretation and division.",
+      "local_support_review": "Eight-bit zero-fill contract stated; signed alternative and target timing contrast explained.",
+      "suggested_support_units": [
+        "counting-in-twos/01",
+        "counting-in-twos/04",
+        "working-it-out/03"
+      ],
+      "objective_evidence": {
+        "line": 110,
+        "text": "## What you've learnt\n\n- **Shifting** slides every bit one place at once, the whole row together.\n- **Left** is **×2** while the result fits; a shift by *n* places scales by 2ⁿ under that condition.\n- Our **zero-fill right shift** divides an unsigned value by two, dropping the remainder.\n- A signed **arithmetic right shift** preserves the old top bit instead of filling with zero.\n- Speed depends on the **processor and instructions**, not just the name of the operation."
+      },
+      "opening_excerpt": "One move left. The bit logic in Unit 1 changed which switches were on. This tool does not care\nwhich are on. It slides the **whole row** sideways, every bit shuffling one place over\ntogether.\n\nIt is called **shifting**, and the interesting part is what the sliding does to the number.\n\nHere we use **eight-bit unsigned values**, from 0 to 255. A shift keeps eight bits,\nputs 0 in each newly empty position, and drops bits that leave the row. This is a\n**logical shift**. Those rules matter when a value is near the ends of the range.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 83,
+          "text": "<summary>Using our eight-bit zero-fill rules, what are 200 shifted left once and 5 shifted right once?</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "Zilog’s *Z80 CPU User Manual*",
+          "target": "https://www.zilog.com/docs/z80/um0080.pdf"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-03.mdx",
+      "sha256": "5dcbe13c8514e406e3aad4880efd8c5594945399dc87bba56d0c991294ed1408",
+      "title": "A Letter Is a Number",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/working-the-bits/unit-03.mdx",
+      "id": "working-the-bits/03",
+      "goal_synthesis": "Distinguish code from quantity and validate ASCII digit/case conversions.",
+      "knowledge_used_inference": "Bytes, ranges, subtraction and masks.",
+      "local_support_review": "Encoding introduced; BITOR setting recalled; ASCII domain restrictions explicit.",
+      "suggested_support_units": [
+        "counting-in-twos/01",
+        "decisions/04",
+        "working-the-bits/01"
+      ],
+      "objective_evidence": {
+        "line": 160,
+        "text": "## What you've learnt\n\n- A program interprets stored bits using a character **encoding**.\n- Which number is an **agreement**, commonly **ASCII**, and machines did not all agree.\n- ASCII letters and digits occupy ordered ranges; **code order** depends on the encoding.\n- The character `\"7\"` is **not** the number 7.\n- Validate **one digit** before subtracting `CODE \"0\"` to obtain its value.\n- The 26 ASCII letter pairs differ by **one bit**; check their range before setting or clearing it."
+      },
+      "opening_excerpt": "A byte holds eight bits. A program can interpret those bits as a number, a pixel\npattern or a character code.\n\nWhen a program shows you the word `SCORE`, it needs an agreement about which\ncodes stand for those letters. The code and the shape drawn on screen are different things.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 91,
+          "text": "<summary>Does CODE \"7\" give 7? Can subtracting CODE \"0\" turn any character into a valid digit?</summary>"
+        },
+        {
+          "kind": "disclosure prompt",
+          "line": 133,
+          "text": "<summary>What does BITOR 32 do to ASCII \"7\" and \"@\"? Does either result prove the input was a letter?</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "Meet BASIC’s stored greeting",
+          "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/"
+        },
+        {
+          "label": "Vault’s PETSCII chart",
+          "target": "/vault/reference/petscii-chart/"
+        },
+        {
+          "label": "*ZX Spectrum BASIC Programming*, chapter 14",
+          "target": "https://worldofspectrum.org/ZXBasicManual/zxmanchap14.html"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-04.mdx",
+      "sha256": "9dfad3db5bb13e1ef0c97008214ccf4de7065b697b38b08207e1fe6303440189",
+      "title": "Numbers That Aren't Whole",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/working-the-bits/unit-04.mdx",
+      "id": "working-the-bits/04",
+      "goal_synthesis": "Explain exact binary fractions versus rounding, finite range and display limits.",
+      "knowledge_used_inference": "Fractions, division and binary place value.",
+      "local_support_review": "Fractional binary places explained; no required floating-point implementation exercise.",
+      "suggested_support_units": [
+        "working-it-out/03",
+        "counting-in-twos/01"
+      ],
+      "objective_evidence": {
+        "line": 103,
+        "text": "## What you've learnt\n\n- A **floating-point** number lets the point sit wherever the value needs it.\n- It stores significant bits and a scale, with limits on **precision and range**.\n- Some fractions, such as **0.5**, fit exactly. Others, such as **0.1**, need rounding\n  in a finite binary format.\n- Software floating-point has a cost; whether it is suitable depends on the **target and task**."
+      },
+      "opening_excerpt": "Every number so far has been a whole one. The moment you write a game, you need the in-between:\na ship that drifts half a pixel a frame, a ball at two-thirds speed.\n\nThe machine counts in whole steps. So how do you give it a fraction?\n\nWe will compare two ways to store fractions. This unit looks at **binary floating-point**;\nthe next looks at fixed-point. Each has limits, and the right choice depends on the job.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 76,
+          "text": "<summary>Can binary floating-point store 0.5 exactly? What about 0.1?</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "*ZX Spectrum BASIC Programming*, chapter 24",
+          "target": "https://worldofspectrum.org/ZXBasicManual/zxmanchap24.html"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-05.mdx",
+      "sha256": "6548c71d56595f28af4e31081d1f806d56a966a90768f487ecdfe10531480aee",
+      "title": "Nailing the Point Down",
+      "source_url": "https://github.com/code198x/website/blob/2b9905262dcb7261314b6ef6490db7b8a5c803ed/src/content/curriculum/foundations/working-the-bits/unit-05.mdx",
+      "id": "working-the-bits/05",
+      "goal_synthesis": "Decode fixed-point, separate whole-part extraction and choose width/scale/rounding.",
+      "knowledge_used_inference": "Fractions, multiplication/division, bytes and shifts.",
+      "local_support_review": "Unsigned 16-bit scale-256 model specified; comparison with unit 4 and scale-10 alternative.",
+      "suggested_support_units": [
+        "working-it-out/03",
+        "counting-in-twos/03",
+        "working-the-bits/02",
+        "working-the-bits/04"
+      ],
+      "objective_evidence": {
+        "line": 122,
+        "text": "## What you've learnt\n\n- **Fixed-point** stores a fraction as a **whole number** at an agreed scale.\n- **Addition at one scale** uses integer addition, while the result fits.\n- Extracting the **whole part** with a shift is different from reading the full fraction.\n- You carry the bookkeeping: remembering the scale, and keeping every value in a sum on the same\n  one.\n- Its **precision, range and rounding** depend on the chosen width and scale.\n- Its speed depends on the **target and operations**, so measure the work that matters."
+      },
+      "opening_excerpt": "Unit 4 showed a flexible representation with finite precision. Another option is\n**fixed-point**: agree on one scale and store a whole number of those smaller steps.\nThat can simplify the arithmetic, but it does not make every fraction exact.\n",
+      "explicit_prompt_evidence": [
+        {
+          "kind": "disclosure prompt",
+          "line": 68,
+          "text": "<summary>At scale 256, does shifting stored 384 right by eight give 1.5?</summary>"
+        }
+      ],
+      "authored_links": [
+        {
+          "label": "Meet BASIC’s secret-number expression",
+          "target": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret/"
+        }
+      ],
+      "verification": "source reviewed; examples not rerun; learner outcomes unknown"
+    }
+  ],
+  "catalogue": {
+    "path": "src/content/modules/foundations.yaml",
+    "sha256": "2326920e96e3f5c8af32de74680870f07d1a411bbbb5e5d9188c44b557310e06",
+    "text": "# The cross-platform section. Every module here is language-neutral and gates\n# nothing; a learner who wants a machine first can go straight to one. The\n# programming modules run Basics -> Working It Out -> Decisions -> Repeating ->\n# Structure. Counting in Twos and Working the Bits are the number sense a machine\n# assumes. Truth Tables and Gates and the Adder are side-paths. From Source to\n# Silicon explains how source reaches execution. See Code198x\n# docs/specifications/curriculum.md\nsection: foundations\ngroups:\n  - slug: programming\n    name: Programming\n    strap: What a program is. Follow these five in order, or visit an idea when you need it.\n  - slug: numbers\n    name: Numbers\n    strap: How a machine counts. For anyone heading down to a machine, and sooner than you might think.\n  - slug: machine\n    name: The machine underneath\n    strap: What it is made of, and how your program reaches it. Three modules that gate nothing.\nmodules:\n  - number: 1\n    slug: basics\n    group: programming\n    name: The Basics\n    kind: teaching\n    status: complete\n    tagline: What a program is, before any machine\n    skills:\n      - A program is instructions in order\n      - Output\n      - Variables\n      - Input\n    requires: []\n  - number: 2\n    slug: working-it-out\n    group: programming\n    name: Working It Out\n    kind: teaching\n    status: complete\n    tagline: Arithmetic, the counter, and the leftover\n    skills:\n      - Arithmetic and precedence\n      - A box that grows from itself\n      - Remainder and rounding\n    requires:\n      - basics\n  - number: 3\n    slug: decisions\n    group: programming\n    name: Decisions\n    kind: teaching\n    status: complete\n    tagline: A program that reacts\n    skills:\n      - IF and ELSE\n      - Flags\n      - AND, OR and NOT\n    requires:\n      - working-it-out\n  - number: 4\n    slug: truth-tables\n    group: machine\n    name: Truth Tables\n    kind: teaching\n    status: complete\n    tagline: Every case a question can have, written down\n    skills:\n      - Propositions and NOT\n      - AND, OR and XOR\n      - De Morgan's laws\n      - Proving two guards the same\n    requires:\n      - decisions\n  - number: 5\n    slug: repeating\n    group: programming\n    name: Repeating\n    kind: teaching\n    status: complete\n    tagline: Three kinds of loop, and the game loop\n    skills:\n      - Counted loops\n      - Loop-until and the game loop\n      - The loop that checks first\n    requires:\n      - decisions\n  - number: 6\n    slug: structure\n    group: programming\n    name: Structure\n    kind: teaching\n    status: complete\n    tagline: Lists, named jobs, and finding out why it's wrong\n    skills:\n      - Lists\n      - Subroutines and parameters\n      - Debugging\n    requires:\n      - repeating\n  - number: 7\n    slug: counting-in-twos\n    group: numbers\n    name: Counting in Twos\n    kind: teaching\n    status: complete\n    tagline: Binary, hex, two bytes, and a minus made of switches\n    skills:\n      - Decimal, binary and hex\n      - Bits, nibbles, bytes and words\n      - Two's complement\n    requires:\n      - working-it-out\n  - number: 8\n    slug: working-the-bits\n    group: numbers\n    name: Working the Bits\n    kind: teaching\n    status: complete\n    tagline: Masks, shifts, letters and fractions\n    skills:\n      - Masking and shifting\n      - Character codes\n      - Floating-point and fixed-point\n    requires:\n      - counting-in-twos\n      - decisions\n  - number: 9\n    slug: gates-and-the-adder\n    group: machine\n    name: Gates and the Adder\n    kind: teaching\n    status: complete\n    tagline: The same tables, built out of wire, until they add\n    skills:\n      - A gate is a truth table\n      - The half adder\n      - The full adder\n      - Ripple carry\n    requires:\n      - truth-tables\n      - counting-in-twos\n  - number: 10\n    slug: from-source-to-silicon\n    group: machine\n    name: From Source to Silicon\n    kind: teaching\n    status: complete\n    tagline: When the translating happens decides whether a game keeps up\n    skills:\n      - Source is text, what runs is numbers\n      - The interpreter and its cost\n      - The compiler and the assembler\n      - What speed costs you\n    requires:\n      - structure\n      - counting-in-twos\n"
+  }
+}
