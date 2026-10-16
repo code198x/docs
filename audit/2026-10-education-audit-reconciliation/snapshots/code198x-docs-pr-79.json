@@ -1,0 +1,13 @@
+{
+  "body": "Sixteen bounded pilots now have retained evidence, but the umbrella issues still mix completed technical work with unobserved learner outcomes. Reconcile #114/#115/#124 criterion by criterion, preserve their open status, and identify five next priorities with four deduplicated follow-up issues.\n\nRetain immutable source inventory (39 Foundations units, 11 Maths for Games units), hashed registry of sixteen pilots plus five supporting reports, exact parent criteria and follow-up bodies. Link the report from README and the coverage map. The next curriculum slice is game-maths probability under #78.\n\nValidation: evidence verifier passes all 61 source hashes, 21 report identities, three live parent criteria/state checks, four live follow-up bodies and 81 local links. Empty registry and wrong-hash negative controls both reject. Ruff check/format and git diff --check pass; Vale reports zero errors/warnings and one advisory word-choice suggestion. Commit hooks ran. No browser/native pilot rerun or learner trial is claimed.\n\nUmbrella: https://github.com/stevehill1981/198x/issues/114, https://github.com/stevehill1981/198x/issues/115, https://github.com/stevehill1981/198x/issues/124.\n",
+  "headRefOid": "4ba686e0c481f95ec6e3d7a68443509dbfb04224",
+  "mergeCommit": {
+    "oid": "fe4c21505ebcd7542aa37b8dcf15f27db43718a5"
+  },
+  "mergedAt": "2026-10-15T15:57:06Z",
+  "number": 79,
+  "state": "MERGED",
+  "title": "Reconcile education pilot evidence and remaining acceptance gaps",
+  "url": "https://github.com/code198x/docs/pull/79",
+  "repository": "code198x/docs"
+}

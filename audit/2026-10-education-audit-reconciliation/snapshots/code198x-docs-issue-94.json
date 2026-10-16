@@ -1,0 +1,9 @@
+{
+  "body": "The opening source audit confirms six lesson includes and six capture-driver typing payloads match their maintained source. The six capture manifests name only `commodore-amiga-amos` or `commodore-amiga-blitz`; they do not bind a particular CPU, RAM, ROM/OS, editor/compiler release or observed run result. Existing screenshots agree visually with the stated result but do not prove a repeatable source-to-runtime route. The inspected Build Amiga Assembly CI job builds `.asm`; its success is not AMOS/Blitz qualification.\n\nBound the next execution slice to unit 1 of Meet AMOS and unit 1 of Meet Blitz. Resolve one lawful installed runtime/distribution for each, record exact emulator/machine/ROM/OS/runtime identities and source hashes, enter/load the maintained greeting, run/compile it, observe the greeting, change its words and recover from a deliberate syntax error. Record unavailable media or tools as skipped/unknown. Do not substitute a fabricated transcript, image or host-language simulation.\n\nAcceptance: retain actual source, build/run observations, edited result and negative/error-repair evidence with declared limits. Resolve the paired website setup issue from the same proven route before scaling. No new dependencies or licensed media downloads without normal project approval. Parent: stevehill1981/198x#116; related cross-stack qualification #69 remains separate.\n",
+  "number": 94,
+  "state": "OPEN",
+  "title": "Qualify the first AMOS and Blitz greetings with named runtime identities",
+  "updatedAt": "2026-10-16T13:14:31Z",
+  "url": "https://github.com/code198x/docs/issues/94",
+  "repository": "code198x/docs"
+}

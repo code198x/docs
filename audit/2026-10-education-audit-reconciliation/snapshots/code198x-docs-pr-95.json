@@ -1,0 +1,13 @@
+{
+  "body": "The next education improvement should qualify the Amiga language openings before revising or expanding them. This source-first audit reads both setup pages, both module overviews and the first three AMOS/Blitz units, with a bounded objective/prerequisite map.\n\nAll six lesson includes, manifest program references and capture-driver typing payloads match their maintained sources. Existing screenshots were inspected, but no fresh Amiga execution is claimed. The report distinguishes those observations from missing named runtime/configuration results and from the assembly-only CI job.\n\nThree specific follow-ups are filed: website #766 for a tested setup and actual IDE requirements; docs #94 for the first greeting/edit/error-repair route in each language; website #767 for workload-free speed and representation claims. Upstream README revisions/hashes are pinned. The next recommended slice is the two first greetings, then setup corrections from the proven route.\n\nSource/evidence validation passes 65 file hashes, six exact typing comparisons, local links, three issue references, six manifest entries and two rejected negative controls. Ruff, prose checks and commit hooks pass. No dependency, public lesson, runtime, licence permission or learner outcome is introduced or inferred. #116 and the education/UX parents remain open.\n",
+  "headRefOid": "75d142e15deeb64ab4c987364225d7b7c877a2b4",
+  "mergeCommit": {
+    "oid": "f31f541c05f5434fcd5fb89f1fcccabbcb00b563"
+  },
+  "mergedAt": "2026-10-16T10:39:10Z",
+  "number": 95,
+  "state": "MERGED",
+  "title": "Audit setup and execution contracts in the Amiga language openings",
+  "url": "https://github.com/code198x/docs/pull/95",
+  "repository": "code198x/docs"
+}

@@ -1,0 +1,13 @@
+{
+  "body": "There was no valid end-to-end latency baseline for the first-session machine task. Add a bounded live verifier for Meet BASIC unit 1, measuring five sequential fresh-context cold starts, five same-page unchanged runs and five edited greetings.\n\nTiming starts at the Run click event and ends only after fresh complete ROM output, successful completion, two animation-frame callbacks and nonblank canvas readback. Edited runs also retain source-input-event to result. A missing expected result fails without producing a latency. Retain individual observations, network/cache records, source/runtime hashes and ranges/medians; no product optimisation or performance budget is introduced.\n\nLive Chrome results: cold 3.43\u20133.74s, warm unchanged 3.31\u20133.44s, warm edited 3.23\u20133.37s. Five trials per group on one unthrottled M2 Max desktop; cold means cache-disabled fresh context, warm means module reuse on the same page. No first-pixel, Core Web Vitals, mobile, learner or causal speedup claim. Companion docs retain exact boundaries and observation overhead.\n\nValidation: 15 complete machine outcomes, deliberate missing-result failure, independent statistics and five rejected corrupted-evidence controls; node --check, zero inserted semicolons and git diff --check pass. Uses existing dependencies only.\n\nFixes #748 when the companion evidence is accepted. Umbrella #124 remains open.\n\nCompanion evidence: https://github.com/code198x/docs/pull/82 .\n",
+  "headRefOid": "8f88bd42036f9bfd7b3737addbc25b7e3d0a8119",
+  "mergeCommit": {
+    "oid": "2b9905262dcb7261314b6ef6490db7b8a5c803ed"
+  },
+  "mergedAt": "2026-10-16T07:13:31Z",
+  "number": 751,
+  "state": "MERGED",
+  "title": "Measure complete first-session BASIC outcomes across cold and warm runs",
+  "url": "https://github.com/code198x/website/pull/751",
+  "repository": "code198x/website"
+}

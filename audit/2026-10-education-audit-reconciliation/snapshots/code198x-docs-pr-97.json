@@ -1,0 +1,13 @@
+{
+  "body": "The Amiga opening audit identified unsupported language-wide speed, numeric-safety and OS-trade claims. This records the bounded corrections, primary-source locators, exact before/after claims, source identities and three retained AmiBlitz probes. It also explains the misplaced disk-settling wait corrected in code198x/code-samples#99.\n\nValidation: production build passes (2,459 pages); content checks pass; ten generated routes have linked header styles and resolving Amiga links. Exact capture typing and probe/source checks pass; the old wait order is rejected. All seven evidence hashes pass.\n\nFresh runtime and desktop/phone visual checks are **not performed**: computer use reports \u201cSky Computer Use native pipe startup failed\u201d, with no available apps or browsers. The report also retains the partial archive-extraction failure. No benchmark, whole-course compatibility or learner-effectiveness result is claimed. Keep draft until remaining review or explicit owner acceptance.\n\nPart of code198x/website#767 and stevehill1981/198x#116. The website draft will link here; merge the sample correction before the website.\n",
+  "headRefOid": "3adfe9cb48c103b513dbd91dfc8249fecbbffb23",
+  "mergeCommit": {
+    "oid": "665df785928f7c0ac56c5eee850ad7cfc103979c"
+  },
+  "mergedAt": "2026-10-16T13:30:21Z",
+  "number": 97,
+  "state": "MERGED",
+  "title": "Record evidence for the Amiga opening claims corrections",
+  "url": "https://github.com/code198x/docs/pull/97",
+  "repository": "code198x/docs"
+}

@@ -1,0 +1,13 @@
+{
+  "body": "We qualify the interpreter unit's changed-state predictions and a reproduced narrow trace-table defect. Six finite accumulator models and eight fresh ROM BASIC runs agree on the selected results. Stored program records remain unchanged across RUN, an unchanged repeat runs again, an instrumented trace exposes intermediate values, and a real reset-inside variant fails with nonzero exit.\n\nThe companion [website #762](https://github.com/code198x/website/pull/762) keeps numeric trace cells intact and adds local recall plus two independent prediction/explanation checks. All seven TraceTable consumers have complete before/after records at 1440px and 390px. Their cell contents agree; a labelled synthetic long-cell control positively exercises keyboard overflow handling. Earlier incomplete and failed attempts remain separately labelled.\n\nThe pack retains source/tool/build identities, complete screen rows and stored line records, fixtures, readable captures, independent learner prompts and assessor notes. Its validator rejects wrong source hashes, missing rows and the original arbitrary cell-wrapping policy. The full per-unit inventory keeps its immutable baseline.\n\nValidation: final production build, 237 tests in 32 files, two interpreter viewports, six keyboard behaviour groups, fourteen table/viewport cases, scoped axe scans, Ruff, Vale, design detector and all 93 manifest entries pass. These are selected technical observations, not CPU instruction counts or timing measurements. Learner effectiveness, retention and unaided transfer remain unknown; #114/#115/#124 stay open.\n\nNext: return to the per-unit evidence map and select another observable reasoning gap. Reuse accepted execution evidence when it already answers the same question.\n",
+  "headRefOid": "0f67ae7bdaf7487630bcab7df3ff6bdf5c31b8e9",
+  "mergeCommit": {
+    "oid": "04f4fd048893b130b886d17ed339fa41c4475b6a"
+  },
+  "mergedAt": "2026-10-16T09:14:32Z",
+  "number": 88,
+  "state": "MERGED",
+  "title": "Qualify interpreter traces and the narrow table repair",
+  "url": "https://github.com/code198x/docs/pull/88",
+  "repository": "code198x/docs"
+}

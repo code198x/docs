@@ -1,0 +1,13 @@
+{
+  "body": "The recent readiness pass covered five changed units. This checks live delivery of the full authored Foundations surface: all 39 units and ten module overviews at 1440px and 390px.\n\nAll 98 page/viewport cases pass, with 104 keyboard answer opens across 52 authored disclosures. All 385 collected root-relative/same-page links resolve, including 274 HTML fragments. No document overflow, uncaught page error or product blocker was observed. No website change is proposed.\n\nThe report retains source/response identities, raw results and the initial typography-matching failure. A deliberately wrong Question expectation fails against the real page. Evidence validation rejects a missing page/viewport case and a missing answer record; all thirteen manifest entries, local links, Ruff, prose and commit hooks pass. New verification JavaScript uses explicit semicolons.\n\nThis checks delivery and selected keyboard activation, not question quality, learner understanding, full Tab order or whole-site accessibility. No fresh contrast/axe, native, latency, VoiceOver or physical-touch qualification is claimed. #114/#115/#124 and website #749 remain open. The existing public guide and learner observation sheet remain ready.\n",
+  "headRefOid": "a762cd5e0fdaf494604701514cba20eae561b046",
+  "mergeCommit": {
+    "oid": "4d846313e3ef3f400066d278c522186ecf99b7b7"
+  },
+  "mergedAt": "2026-10-16T10:29:27Z",
+  "number": 93,
+  "state": "MERGED",
+  "title": "Verify the complete Foundations publication surface",
+  "url": "https://github.com/code198x/docs/pull/93",
+  "repository": "code198x/docs"
+}

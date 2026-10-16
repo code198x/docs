@@ -1,0 +1,13 @@
+{
+  "body": "We retain the evidence for [website #764](https://github.com/code198x/website/pull/764), which brings the reviewed fixed-point state experiment into the existing unit. Six fresh calls to the accepted model functions agree with the earlier traces; the deliberately wrong retention policy exits nonzero. The lesson separates full stored state, decoded position and the whole drawing coordinate, with a hint, explanation and quarter-step variation.\n\nThe final production build, 237 tests in 32 files and ten wide/narrow browser behaviour groups pass. Exact rendered rows match the model, six disclosures open by keyboard and four support-link/Back journeys work. Visual review caught split table headings in the initial render; the existing TraceTable component corrects them. No shared component or layout was changed.\n\nRaw axe records show no violations and one narrow listing-line contrast incomplete. A bounded two-endpoint probe measures 16.8168:1 for that text/background pair. This qualifies that uncertainty without claiming blanket accessibility. Source/build/model identities, readable captures, negative controls and all 23 manifest entries are retained. Ruff, Vale and whitespace checks pass.\n\nWe link the accepted learner/assessor sheets rather than copying them. No new target execution, timing, motion quality or learner effectiveness is claimed. #114/#115/#124 stay open. After review, prioritise approved publication and reproduced blockers for tomorrow's readiness pass.\n",
+  "headRefOid": "7734675fcd40d5c5a71e19a2b0874d1f4bdec3af",
+  "mergeCommit": {
+    "oid": "eea9f55ae490653a8d3e5baa88a75f2c7c7649a3"
+  },
+  "mergedAt": "2026-10-16T09:48:24Z",
+  "number": 90,
+  "state": "MERGED",
+  "title": "Qualify the repeated fixed-point lesson experiment",
+  "url": "https://github.com/code198x/docs/pull/90",
+  "repository": "code198x/docs"
+}

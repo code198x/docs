@@ -1,0 +1,9 @@
+{
+  "body": "Parent epic: https://github.com/stevehill1981/198x/issues/110\n\n## Scope and completion evidence\nPrepare one Spectrum lesson sequence sharing reviewed objectives, code/assets, exercises and versions across written, emulator-interactive and short video material. Test captions/transcripts/accessibility and maintenance/correction propagation. Gather actual learner feedback and understanding checks; assess whether video adds measurable value before scaling production.\n\n## Done when\n- Results and source/version/environment identities are recorded, with passed/failed/skipped/unknown distinguished.\n- Findings are filed as specific follow-up issues or linked to existing ones; no duplicate implementation plan.\n- Reviewed findings, limits and next bounded step are linked from this issue.\n\nMaintain existing product architecture and avoid broad rewrites.",
+  "number": 119,
+  "state": "OPEN",
+  "title": "[Education] Pilot one aligned written, interactive and video tutorial",
+  "updatedAt": "2026-10-15T07:49:28Z",
+  "url": "https://github.com/stevehill1981/198x/issues/119",
+  "repository": "stevehill1981/198x"
+}

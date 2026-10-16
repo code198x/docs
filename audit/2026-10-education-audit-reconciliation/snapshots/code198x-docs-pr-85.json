@@ -1,0 +1,13 @@
+{
+  "body": "We retain a bounded audit of Decisions unit 4\u2019s interval and grouping contracts: 11 exact-rational numeric cases, all eight Boolean guard states and 115 actual Spectrum ROM outputs. The report separates correct interval acceptance from missing whole-number validation and distinguishes teaching notation from Sinclair BASIC numeric truth rules.\n\nIndependent learner prompts and assessor notes cover prediction, explanation, repair, modification and creation. No learner is available, so effectiveness remains unknown. The source map keeps its immutable baseline; current coverage links the fresh evidence.\n\nValidation: wrong native OR rejected with nonzero exit; missing transcript and wrong source hash rejected; 105 local links and the 29-file evidence manifest pass. Website build/all 237 tests and focused Chrome keyboard/answer/support checks pass. Four raw narrow contrast incompletes are retained alongside eight measured 16.8168:1 text/background samples. Initial sandbox browser-launch failure and the discovered inline-code rendering defect remain visible in the report. Ruff, Vale and whitespace checks pass.\n\nPartial evidence for stevehill1981/198x#114/#115/#124; parents remain open. Next proposed slice: counted-loop zero/one-pass and body-placement semantics, with target-language differences checked before proposing a correction.\n\nLesson/verifier correction: https://github.com/code198x/website/pull/755 .\n",
+  "headRefOid": "74018255b8217d789ed62784a1959218193a5781",
+  "mergeCommit": {
+    "oid": "e68cf6d9b03c98ae2bb20936a947d810d73246dc"
+  },
+  "mergedAt": "2026-10-16T08:16:25Z",
+  "number": 85,
+  "state": "MERGED",
+  "title": "Audit compound-condition domains with native and learner evidence",
+  "url": "https://github.com/code198x/docs/pull/85",
+  "repository": "code198x/docs"
+}

@@ -1,0 +1,13 @@
+{
+  "body": "Retain a reproducible first-session latency baseline for website #748: fifteen successful live runs across five cold/warm/edited trials, exact task boundaries, individual values and independent statistics.\n\nCold click-to-result: 3.43\u20133.74s (median 3.55s); warm unchanged: 3.31\u20133.44s (median 3.41s); warm edited: 3.23\u20133.37s (median 3.31s). These are application-observed complete-result endpoints, including screen-text cadence, two animation-frame callbacks and canvas readback. Five samples on one unthrottled desktop do not establish learner tolerance, a performance budget or an isolated cache speedup.\n\nRetain actual complete greeting/ROM reports, source and live asset identities, cache conditions, same-origin network response records, deployment metadata and three inspected canvas screenshots. Missing-result control fails without latency; empty, incomplete, stale, false-median and falsely fast evidence all reject. No positive sample was dropped.\n\nCompanion website verifier: code198x/website#751. Python evidence verification, independent statistics, Ruff check/format, Vale (zero findings), JS syntax/explicit-semicolon checks and git diff --check pass. No product change, new dependency, mobile/accessibility/CWV audit or learner effectiveness claim. Next is website #749; umbrella #124 stays open.\n",
+  "headRefOid": "ff4e0c3562a52cf6c6df03c52f38c5837f2ff5c7",
+  "mergeCommit": {
+    "oid": "6c8f43dcdee646cd018f863e1fa02e0e58f33d87"
+  },
+  "mergedAt": "2026-10-16T07:13:26Z",
+  "number": 82,
+  "state": "MERGED",
+  "title": "Retain first-session cold and warm latency evidence",
+  "url": "https://github.com/code198x/docs/pull/82",
+  "repository": "code198x/docs"
+}

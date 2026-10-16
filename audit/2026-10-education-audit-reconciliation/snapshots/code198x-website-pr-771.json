@@ -1,0 +1,13 @@
+{
+  "body": "The Amiga openings imply that compilation guarantees speed, AMOS numbers are universally safe and every Amiga game disables the OS. Replace those claims with explanations of numeric ranges, value storage and the services available in each mode. Correct AMOS\u2019s \u201ctwo kinds\u201d claim, show signed Blitz ranges and make optional overflow checking explicit.\n\nBlitz units 2\u20133 now follow the qualified PED `.ab3` import and Compile & Run controls. The word experiment also updates its fixed output labels. Unit 2 explains the pre-BLITZ disk-settling wait corrected in code198x/code-samples#99; **merge that sample PR first**. AMOS units 2\u20133 carry forward Return after the end-of-program message. Only five pages change; both first lessons and the AMOS overview were reviewed and retained.\n\nEvidence: code198x/docs#97. Production build passes (2,459 pages), content checks pass, and ten generated routes pass linked header-style and Amiga-link checks. Source/capture/probe consistency and an old-order negative control pass.\n\nFresh numeric/graphics execution and desktop/phone visual/clickthrough review remain blocked: computer use returned \u201cSky Computer Use native pipe startup failed\u201d and no apps or browsers were available. Keep draft pending those checks or explicit owner acceptance. No timing benchmark or learner-effectiveness claim is made.\n\nAddresses #767 under stevehill1981/198x#116; the outstanding first-session browser checks remain in #766.\n",
+  "headRefOid": "4b8fd2aaa67c5fe718575381ab8e2e9a21416744",
+  "mergeCommit": {
+    "oid": "fc80d24b20dbd3e3d7a3152732a59387091bc30f"
+  },
+  "mergedAt": "2026-10-16T13:30:15Z",
+  "number": 771,
+  "state": "MERGED",
+  "title": "Explain Amiga storage and OS choices without blanket speed claims",
+  "url": "https://github.com/code198x/website/pull/771",
+  "repository": "code198x/website"
+}

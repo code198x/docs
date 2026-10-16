@@ -1,0 +1,13 @@
+{
+  "body": "The stored-value audit left the exact BASIC browser task unqualified after a discarded harness sampled an empty transcript. Add a bounded verifier for the live Meet BASIC unit 2 machine and retain its usage instructions.\n\nEight live Chrome stages pass: ONE/ONE/TWO; wrong stored line 30; single-line repair; immediate wrong-name error and repair through canvas key events; RUN; fresh Restart; reset to the original maintained greeting. The check requires actual complete machine text, handles the tape loader header, distinguishes fresh reloads from stale output and rejects a missing repeated read. No lesson/runtime change or learner-effectiveness claim.\n\nEvidence and failed harness attempts are retained in the companion docs PR: https://github.com/code198x/docs/pull/81 . Exact historical cause remains unknown because the discarded source was not retained. Validation: live Chrome 155.0.8059.40 at 1440\u00d71000, eight stages, actual canvas screenshots inspected, 14 served JS/WASM response identities, node --check, Acorn zero inserted semicolons and git diff --check. No fresh build or broader device/accessibility/latency qualification is claimed.\n\nFixes #747 when the companion evidence is accepted. Parent umbrellas #115/#124 remain open.\n",
+  "headRefOid": "e1e25f816f8d9f5707425ca538666bc4fb93efde",
+  "mergeCommit": {
+    "oid": "97f306dc7bbd3b8190c06498eb5eccfca7e0cb43"
+  },
+  "mergedAt": "2026-10-15T16:21:09Z",
+  "number": 750,
+  "state": "MERGED",
+  "title": "Qualify embedded BASIC stored values and error recovery",
+  "url": "https://github.com/code198x/website/pull/750",
+  "repository": "code198x/website"
+}

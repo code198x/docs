@@ -1,0 +1,1002 @@
+{
+  "docsRevision": "e215d476ab445ccdacbc208c0639b7fc71c15336",
+  "docs": [
+    {
+      "path": "PROJECT.md",
+      "sha256": "e51af4b5b35540c7a3fb6e020c2a97682b10c743a6f1fe213320ba8037933b38"
+    },
+    {
+      "path": "audit/2026-10-aiming-boundaries/REPORT.md",
+      "sha256": "705d15a7f576ef44dec5702947413d6cc2cb5cbf27c23e7351fb8ceb990bcff8"
+    },
+    {
+      "path": "audit/2026-10-amiga-claims/REPORT.md",
+      "sha256": "b9e676784cd2f4b6a93b2bc17fc8dea14a54bf558464cb944d284e6bbd51b19c"
+    },
+    {
+      "path": "audit/2026-10-amiga-decisions/REPORT.md",
+      "sha256": "82e70169f745260efcf394e2695daae981da9e148a2c2d7a386a9139335547e7"
+    },
+    {
+      "path": "audit/2026-10-amiga-greetings/REPORT.md",
+      "sha256": "34ead88a7eb63134eac049cf5ed4fa16e4272e3c037cd78b2137ef3a866babb5"
+    },
+    {
+      "path": "audit/2026-10-amiga-opening/OBJECTIVES.md",
+      "sha256": "bf045ae254c9369c27b774b5bacd2536222965da4aa35ac8884d257d1e0c0543"
+    },
+    {
+      "path": "audit/2026-10-amiga-opening/REPORT.md",
+      "sha256": "ced09c96e2a0924fea3b288bcd5ea51c829b2ca2c42d03e7dfb0ecf74947dbfa"
+    },
+    {
+      "path": "audit/2026-10-amiga-unit-five/REPORT.md",
+      "sha256": "fd127572fbf985840085b8ae2777656ec1aab9e5548d0a98afa5f13d417c377f"
+    },
+    {
+      "path": "audit/2026-10-arithmetic-pilot/REPORT.md",
+      "sha256": "91f37d85b288a710d0a1291308676d51d62a73f1c31dc0cbfb3eb6eee78cb410"
+    },
+    {
+      "path": "audit/2026-10-basics-input-pilot/REPORT.md",
+      "sha256": "a72f3323bea09bde2e832ebe31e543ff18fa111f32da2f70851f26a1cbf164a2"
+    },
+    {
+      "path": "audit/2026-10-binary-hex-pilot/REPORT.md",
+      "sha256": "a9fd5b97acad367b8dca22b165295dff091d8cea4ea053deb961c49d0f6f3298"
+    },
+    {
+      "path": "audit/2026-10-bits-shifts-pilot/REPORT.md",
+      "sha256": "536ca8818d8f910d02d59e3f9f35b981f6fb0e1e00ae655084e7129e607c3224"
+    },
+    {
+      "path": "audit/2026-10-boolean-logic-pilot/REPORT.md",
+      "sha256": "2298baf73bd43e0ac9a8359fdfbb0e0ea0ec338c6946c743af3feba808de9ce3"
+    },
+    {
+      "path": "audit/2026-10-character-codes-pilot/REPORT.md",
+      "sha256": "596eea19a77ded7b1c8cca484e0b315b515de0a7dd1fb374300d5869e46013bf"
+    },
+    {
+      "path": "audit/2026-10-compound-conditions/REPORT.md",
+      "sha256": "6d2783de9c2e35f11031cb169fb2d334d31815fbf54341fff516b923ea605087"
+    },
+    {
+      "path": "audit/2026-10-counted-loops/REPORT.md",
+      "sha256": "64b949b0fe67c60b7eff88fe32b4e7ac6e0aaa68e699b656581ce9b1fd431bce"
+    },
+    {
+      "path": "audit/2026-10-decimal-investigation/REPORT.md",
+      "sha256": "0433b3f00905d9a1661c270296ba11684516452433799923309d168e9b6db644"
+    },
+    {
+      "path": "audit/2026-10-decisions-boundary-pilot/REPORT.md",
+      "sha256": "f05434f75aba8385e98868e301067878706a7341964ca1798f136724a863a788"
+    },
+    {
+      "path": "audit/2026-10-decisions-state-pilot/REPORT.md",
+      "sha256": "13b2b8f3bacd70df9ece8852c7519bf544a4bb6de01fbcfe5072fed6fa732ca5"
+    },
+    {
+      "path": "audit/2026-10-education-reconciliation/REPORT.md",
+      "sha256": "78a37e99dad1887a1b682e58bc64acef6e36dd910896a9a3145de54aeb335634"
+    },
+    {
+      "path": "audit/2026-10-embedded-basic/REPORT.md",
+      "sha256": "57ee4caaeeee60cbaf8852fa8e7c96208e2f8761e7d080fe0790549aa0626143"
+    },
+    {
+      "path": "audit/2026-10-embedded-latency/REPORT.md",
+      "sha256": "0d26b5196f1c0af77c8a49d2c120c2f2b02637bef2479bb885c81fa67c1214ea"
+    },
+    {
+      "path": "audit/2026-10-first-session-operability/REPORT.md",
+      "sha256": "0d845e470d6a467d73ccba1090dd568d26cf567800cd5e107a7c50a89abacbc8"
+    },
+    {
+      "path": "audit/2026-10-fixed-point-state/REPORT.md",
+      "sha256": "5c4ea837eaffe4419e181e66fab5ef0c568d8d4472205bd19c4c71bb14d20925"
+    },
+    {
+      "path": "audit/2026-10-foundations-coverage.md",
+      "sha256": "d99bc4e4ac2aac54631e3d21ce8c9665b7679854cc85fbde52db052a1107b40f"
+    },
+    {
+      "path": "audit/2026-10-foundations-evidence-queue/REPORT.md",
+      "sha256": "d430a168f593d6ad9e819ca74ab92f6fd55055a83eff46af237e9c4b8f57a1fa"
+    },
+    {
+      "path": "audit/2026-10-foundations-objectives/MAP.md",
+      "sha256": "a0879ed8f90577fbc0bf4b1a106908a28b5065dea542e25035d11053fc261980"
+    },
+    {
+      "path": "audit/2026-10-foundations-objectives/REPORT.md",
+      "sha256": "6cef29c5ee9a04cd9cae3d125d1a0ee3cf9283fce619b128284bfe5e14bdabcc"
+    },
+    {
+      "path": "audit/2026-10-foundations-publication/REPORT.md",
+      "sha256": "32415d5f2773c38cd6fffdd17d80dc1b360ca10b6ca36c031ff47707458b8fd5"
+    },
+    {
+      "path": "audit/2026-10-foundations-publication/source.json",
+      "sha256": "21deb998429d369d09f85da3f7f3bd3f56f6b3c093b9b1194ef34da2f13d1a99"
+    },
+    {
+      "path": "audit/2026-10-fractions-pilot/REPORT.md",
+      "sha256": "ec32abdfabb9c00e3581dc99a6ba4f3b23b1e4fd235a52ec9ce56b8385119daa"
+    },
+    {
+      "path": "audit/2026-10-gates-adder-pilot/REPORT.md",
+      "sha256": "c1d019286c9fcc44ef29c2d1cf919b47d0de913928a9d7bb761baccfb79bd899"
+    },
+    {
+      "path": "audit/2026-10-interpreter-trace/REPORT.md",
+      "sha256": "73bffc31a927d1fac0313c984fe16eca0009958e536573290f43dadec973ffeb"
+    },
+    {
+      "path": "audit/2026-10-numbers-pilot/REPORT.md",
+      "sha256": "83f686fe4d14718a220dad20be310b35488c43cf154576ecf11e2e55309d9feb"
+    },
+    {
+      "path": "audit/2026-10-output-joining/REPORT.md",
+      "sha256": "a595a759f2e4735897bbed4bf116cf78c3014e7cd338eb7af6bc38e711ce3a27"
+    },
+    {
+      "path": "audit/2026-10-probability-pilot/OBJECTIVES.md",
+      "sha256": "dce41d67354afa31441d9be20ed64646961ca37117ca1e5dea2d2454eb90012e"
+    },
+    {
+      "path": "audit/2026-10-probability-pilot/REPORT.md",
+      "sha256": "2e12481753ab0208580f58987c61aeb6ae662f8c87869f1914606d0bd840543a"
+    },
+    {
+      "path": "audit/2026-10-publication-readiness/REPORT.md",
+      "sha256": "6dd8d3b4b55a833595235397643740775e7063fbbc0a0cff99d7ae765b49d1a2"
+    },
+    {
+      "path": "audit/2026-10-repetition-pilot/REPORT.md",
+      "sha256": "99b2dabfe8f4df47cc35bb5658a38e77742a8f6d6f891954be430182e28a7866"
+    },
+    {
+      "path": "audit/2026-10-repetition-progress-pilot/REPORT.md",
+      "sha256": "66a1d59dc0baa5895e455690b3c1dcbb024de8014d5b45054e961a09eeafd504"
+    },
+    {
+      "path": "audit/2026-10-source-silicon-pilot/REPORT.md",
+      "sha256": "0ed80c87eab5481442b07e722fccb0b2215c9d031e44789772199b619e165d21"
+    },
+    {
+      "path": "audit/2026-10-spectrum-learner-journey/FIXES.md",
+      "sha256": "1f43b9ed7768ea92413187d826e3909f70c0f46ac035331be942c40bf3b982a9"
+    },
+    {
+      "path": "audit/2026-10-spectrum-learner-journey/REPORT.md",
+      "sha256": "766864fde57b120089290c4983ba4d84648e3519ee28da8c85128273fb6af2cf"
+    },
+    {
+      "path": "audit/2026-10-spectrum-learner-journey/stored-value-pilot/ASSESSOR.md",
+      "sha256": "46d03fd5f305d53028d4fb4375ba17d22225da2d54cec472978c05bf0f17fa64"
+    },
+    {
+      "path": "audit/2026-10-spectrum-learner-journey/stored-value-pilot/LEARNER-TASKS.md",
+      "sha256": "8884f3177df93054b61aabc1ca4b8e05c5b385c154074706e9f99d7f694014f5"
+    },
+    {
+      "path": "audit/2026-10-spectrum-learner-journey/stored-value-pilot/PREREQUISITES.md",
+      "sha256": "1bddbcb2cad4c6afa41a9346bfd814d5423e4a033396e49d09f49db210084951"
+    },
+    {
+      "path": "audit/2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md",
+      "sha256": "c276dfa0a3cf3c8b119c7811acf459790385c6d28e30cbc70436fdcfae955838"
+    },
+    {
+      "path": "audit/2026-10-structure-pilot/REPORT.md",
+      "sha256": "6ba6cd2b526719e671dc68f2481168912c78e25569bb70de46f4709fce8619d5"
+    },
+    {
+      "path": "audit/2026-10-structure-pilot/contrast-follow-up/REPORT.md",
+      "sha256": "80668717d064cb46113630dd8f773bfe61e58f9c0d5120f169f74d6957a3505d"
+    },
+    {
+      "path": "guides/first-session/PUBLICATION.md",
+      "sha256": "980cbfdd21453c766e4066eb135219b43a9983454db5fab929527a2eb8f13c99"
+    },
+    {
+      "path": "guides/first-session/README.md",
+      "sha256": "848e005800916271ab35ed45ff7aa17e447bac26e0d33d49913e5aa109fe3dcd"
+    },
+    {
+      "path": "guides/first-session/session-observations.md",
+      "sha256": "5dc12f1f09e6f1dee407758a696f2dc66eb8fd01b518a23e5d5af8d8bc0db147"
+    },
+    {
+      "path": "specifications/curriculum.md",
+      "sha256": "7f1985bb3a4a5651c4eb707533da7649bc3b4dc8ce66c882b73b2d99069657f6"
+    },
+    {
+      "path": "specifications/unit.md",
+      "sha256": "3bc2ed89222f5b96abe85fe1b3c15a410af2f69e2cbea310d06ea6b210c0461e"
+    }
+  ],
+  "website": {
+    "revision": "4fdbef7e9744bb472ccf9fe481fec3f81d930176",
+    "files": [
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/getting-started.mdx",
+        "sha256": "c2219058c857e00c8d5179a851fb8e0c7c1920379b5751ed73a5728fb8ff6c5b"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/index.mdx",
+        "sha256": "15ad3ff907cc1d50d513fc6a41e1fa17cca7507ad17c96c1fdc54c77d82ec05f"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-01.mdx",
+        "sha256": "1feed598494f8486da0f85a987e21d21569b88b0fa058b314e0d7869fc180bac"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-02.mdx",
+        "sha256": "e887428b4fd737e88a59f14e830c47f00d3805ca23de832c46debacc443e87e8"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-03.mdx",
+        "sha256": "9622efff3af73609feecc8e0b4b5fe7ea303295f1bbd8b240702b51c194d394e"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-04.mdx",
+        "sha256": "763774955051009672e3be8f6921ee2abed7a9bff22dd2736d511afa92895fcf"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-05.mdx",
+        "sha256": "8a11a3834746036578518ca5bea356428066c4d44200ff125c7f4f537116fb68"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-06.mdx",
+        "sha256": "e0db350d572d525157efe9a7c0cf87d3ff85b113751f7d48813c2e2c74854d62"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-07.mdx",
+        "sha256": "3627e0f97ad5ae8383fe6b6b0283902a6e0a6bbd485ec040a3fd1852589b29b1"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-08.mdx",
+        "sha256": "7ddf9343b04005ec8f601234a49d3036004fdff35a1d6029a25ef8eb3c636b53"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-09.mdx",
+        "sha256": "20fe88eb1a808d82d7c4fd8b6ce72dcde93cf065e9c923cc42492f8ab63233b3"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-10.mdx",
+        "sha256": "e7d78ab74355342c5cd5c095d6890c1282c481e2247f29a50f408f0b8c28d71f"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-11.mdx",
+        "sha256": "e90c2296775c32e16ba5d5a1b7f976dd4299d8d851158c34ebfe13fbc224753c"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-12.mdx",
+        "sha256": "097606ef62221dca04785c14c00a079e15fe181fab128d8fc6770a35a2bab4c9"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-13.mdx",
+        "sha256": "74758f7d40af2d0833bbe6bfdea82ed258a135a5ed013bcda47e69e0e47d8179"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-14.mdx",
+        "sha256": "a8138544725fa1e088d4c538d6820d90398d4e8a3d7afd4fd4e808b78d74aa03"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-15.mdx",
+        "sha256": "f0e296790a8164cd5df925bbdbc0d9b80d3ae0a9e320361fac62d46055b3fe97"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-16.mdx",
+        "sha256": "d8e3d995ef5ae0c34b91e6f937e452e3f0d222bd2f5dcfd5d8d0a3d016ee48a2"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-17.mdx",
+        "sha256": "c6eb9f4d143d48a6353f99d66a2d61292ac94ca5bb1de05b27152e4908d6630f"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/getting-started.mdx",
+        "sha256": "c3410faa9283c7335ca330984541727bfb0c3ee4be2e1abb239fb40894eb85e6"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/index.mdx",
+        "sha256": "be967e012ebf0fb58291f4e0aa087260a484f85db3668b771b086b62c7c4e37d"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-01.mdx",
+        "sha256": "91503f28df672772ce3506926468c14ff7bceb1a0d50402912096f85edb45ef1"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-02.mdx",
+        "sha256": "0929af8b8673bc8f71403b857bdd8a9a36c3ef66cf806268bcd8f285fcbd2458"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-03.mdx",
+        "sha256": "ec72bf7053211b25aa2e499cc87157d60e01baa81f4f76a719f9db3b3fbdd3b7"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-04.mdx",
+        "sha256": "04a4984a8127be10b3ae2c1eb56a61bf712283dfe8557009ebe720168be78ab4"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-05.mdx",
+        "sha256": "99ebc8198c97e631eb148f929afe140cec3a1cee7ae0292eb1975ea862fde73a"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-06.mdx",
+        "sha256": "e37b3c0b4a03a30a99dab1b5dc59f2b48b00894bfe26f1e10e196c31931863d2"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-07.mdx",
+        "sha256": "039dca2910c4f82f7a55edfb277124cf8ee54ef0ac51b975a5059fd415d84be2"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-08.mdx",
+        "sha256": "669383aa9a1510f3fa8ae08878e7a2728abdf0eb405e7c725b19f184eb5492ed"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-09.mdx",
+        "sha256": "1e445713ccee178fbe00a30f1b750617248e1b913aa8cb16e798fb9d8569fb19"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-10.mdx",
+        "sha256": "89e76d075aef2932cd1ee02c33d8e2a23c167c3ccee94ac6747102614776f367"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-11.mdx",
+        "sha256": "f8db7b6041d5e51c7335760fd9a34ae3f6acb5c6dc1dfe56c4b92f3099ed558c"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-12.mdx",
+        "sha256": "37832e24d9766ae9aaac2df47592461f76d20eb283a06e225a25523ff7ca50fc"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-13.mdx",
+        "sha256": "ba2bfcce3de2d9ed9f51586833842311f8e27a37984d7990b5c2f723fba82b19"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-14.mdx",
+        "sha256": "b05c45c818645ea784119acfe48f817b98ee1f0706d039211bde20bcfbca3597"
+      },
+      {
+        "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-15.mdx",
+        "sha256": "392a78e7ba319065e7714564ea8d89e5bbb520986360b5866cde5436d9127506"
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/index.mdx",
+        "sha256": "6de69e5eb466fcf684aa8c27646d58607b7ee9ebe3ab1e45a4854da4143364e0"
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-01.mdx",
+        "sha256": "28b819662d8ffdd6b9233e12a75fd1a2c93c069ca55f57140ff63c32fce534c0"
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-02.mdx",
+        "sha256": "9dc87e1eb1761deb0e40e233b5d8ac2adb122db679b91f2d61bb4f397e65341a"
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-03.mdx",
+        "sha256": "b6029c6297164675ce3f173a56483851d3aa505b6566e789561242805b77b7a8"
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-04.mdx",
+        "sha256": "67909c41a20323e075498647bef87e493c0dbd44bffae407d44466b983c6aeea"
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-05.mdx",
+        "sha256": "e0ee0d0e75ee2188d5653e33ca91f117b3631c65f1ca52f0e9414c37326d6fcd"
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-06.mdx",
+        "sha256": "8b28243a0613eb73cf44218e6a3743d920ad8ee42732752996b11f864cfc830a"
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-07.mdx",
+        "sha256": "f50781cebe145f8d82a7ad897287f306cffd7489eea3cdc60c3df0206fd37ad7"
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-08.mdx",
+        "sha256": "44f8be70259595374d595f8728828b663a439da56dcbb0b3b39d4f2428d9db3e"
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-09.mdx",
+        "sha256": "176197364d3d0278d57a1626e5191931cb3acbd649d69cd5d5308c7ff5fa5a5a"
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-10.mdx",
+        "sha256": "98ce4431426a2e934de33a978a3e30ec36206dd93d4ef958ec0cc8546ccb67c7"
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-11.mdx",
+        "sha256": "44e180cf49b73bf6ac02b8b949dbb9e92b7f008f3f3715b2791489dba343c603"
+      },
+      {
+        "path": "src/content/curriculum/foundations/basics/index.mdx",
+        "sha256": "f5e5ed6fcc96365834270dfb4158de378acac432c2e6b6a67e37bd9e41eff0a0"
+      },
+      {
+        "path": "src/content/curriculum/foundations/basics/unit-01.mdx",
+        "sha256": "6bf2f74bb0496df0a830dbb32991098d5b059c7f1101d2c27b27ce6e384ffa51"
+      },
+      {
+        "path": "src/content/curriculum/foundations/basics/unit-02.mdx",
+        "sha256": "95cc1ee7335539494ddd3c62f33e311948a1a975b4ee845986d3f4b48337a835"
+      },
+      {
+        "path": "src/content/curriculum/foundations/basics/unit-03.mdx",
+        "sha256": "e1d108e5564892cc69136872add5089e235efd47543fc541b7baab0eba522ff1"
+      },
+      {
+        "path": "src/content/curriculum/foundations/basics/unit-04.mdx",
+        "sha256": "b70d5015f5ea4c531a836f69d1ac2c5c2f52cf3bede3cdd9d339773a83063dfa"
+      },
+      {
+        "path": "src/content/curriculum/foundations/basics/unit-05.mdx",
+        "sha256": "17551aecd268be4663ef853b62bc2f10e64096e8657aa33fbbe908808f5855d2"
+      },
+      {
+        "path": "src/content/curriculum/foundations/counting-in-twos/index.mdx",
+        "sha256": "dfaff3bea318cc76de92914521b09adeacb9bb75579a82701486c2f7e4bc62f8"
+      },
+      {
+        "path": "src/content/curriculum/foundations/counting-in-twos/unit-01.mdx",
+        "sha256": "768151d2ab970e3e7ebb9e78b1a3ad94f44cad12839294dd25dd4adca736197d"
+      },
+      {
+        "path": "src/content/curriculum/foundations/counting-in-twos/unit-02.mdx",
+        "sha256": "6f686111d9083edea9232c0d092d80cdf813d0419feeb5867320360d3f2f7d79"
+      },
+      {
+        "path": "src/content/curriculum/foundations/counting-in-twos/unit-03.mdx",
+        "sha256": "a33401ca1d8d5c024682563366cf265c176e0522d364bd950fd761b57cd299b6"
+      },
+      {
+        "path": "src/content/curriculum/foundations/counting-in-twos/unit-04.mdx",
+        "sha256": "5ae50facc1f7bcf8351e194335a52df64469d974e02af2674aca5415e52c2925"
+      },
+      {
+        "path": "src/content/curriculum/foundations/decisions/index.mdx",
+        "sha256": "368ab306e606ea146977c1d886124ed11e866c8d597da0534253ec7bde8493e3"
+      },
+      {
+        "path": "src/content/curriculum/foundations/decisions/unit-01.mdx",
+        "sha256": "185c6e6e7de61f531920e9d561b71efba4fdcd3e699d41e7533b2011b8012269"
+      },
+      {
+        "path": "src/content/curriculum/foundations/decisions/unit-02.mdx",
+        "sha256": "9f7d280ab5be41dfdfff24abb4a316de73dd6baa41b4aba8662a009a056622a9"
+      },
+      {
+        "path": "src/content/curriculum/foundations/decisions/unit-03.mdx",
+        "sha256": "60a1825e405e8bd40546a9a7b84218efe37743fefdb988c0231d9cf3c9d4b3a9"
+      },
+      {
+        "path": "src/content/curriculum/foundations/decisions/unit-04.mdx",
+        "sha256": "b7cd667e6304aa45da909e7875836adb5ed450192afe6b29af9e0e6f28ba3bdd"
+      },
+      {
+        "path": "src/content/curriculum/foundations/from-source-to-silicon/index.mdx",
+        "sha256": "98fae7556f8b62937df16ef9123149426aa3a667b599eb4907731e25c952f121"
+      },
+      {
+        "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-01.mdx",
+        "sha256": "0477fd4589f0de8db9d57c6c7a0bf76e372fc8bc65a6eab19fbf5d5741cfff2e"
+      },
+      {
+        "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-02.mdx",
+        "sha256": "6b3b7f64604897343c6a168c1019ee2c40cd91923b6338293b1280d8b3fa3eb5"
+      },
+      {
+        "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-03.mdx",
+        "sha256": "9a8861b0520a7cec2af9bb8ba1cfb5c1ed7c970fcb544012d26b878330b6e680"
+      },
+      {
+        "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-04.mdx",
+        "sha256": "9cc1e26f436f306b0f8df1e71f65ad6718299b5f73cdc6087d3ca24e4bbf4a90"
+      },
+      {
+        "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-05.mdx",
+        "sha256": "5bcdea8862584e399922b7ab4d06b706a3e404c052e1dfd81f51db5145d62336"
+      },
+      {
+        "path": "src/content/curriculum/foundations/gates-and-the-adder/index.mdx",
+        "sha256": "e58d633ee166c5616f0caadc9951e13313e0a625e6626a0a33badd893cbc598d"
+      },
+      {
+        "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-01.mdx",
+        "sha256": "11088d3dd1fe775f60a0603dbae143fceeb6b07aacec2885b3e2bcb123e42edc"
+      },
+      {
+        "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-02.mdx",
+        "sha256": "0f34faa265e33382e09a1dd077a00139db93da181088e1b26f5e486228ddca9a"
+      },
+      {
+        "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-03.mdx",
+        "sha256": "2d175e6377ffb83892a11e741db803b6d9914497263f843756a5849af23b9258"
+      },
+      {
+        "path": "src/content/curriculum/foundations/repeating/index.mdx",
+        "sha256": "831ba31267ae0dfce2c70285c9e7d31154e9e491d880b8ec5be9efe94dbbe59c"
+      },
+      {
+        "path": "src/content/curriculum/foundations/repeating/unit-01.mdx",
+        "sha256": "8293f9a6eca8c8ee54bb0d99ec3e651175fda68975202a26ff78b6ecbd12fbda"
+      },
+      {
+        "path": "src/content/curriculum/foundations/repeating/unit-02.mdx",
+        "sha256": "dea5bed5aacf181b49989337ecf195b243fdd6b774baeb31c34a774d1f737039"
+      },
+      {
+        "path": "src/content/curriculum/foundations/repeating/unit-03.mdx",
+        "sha256": "b9fbdc89e94277b949749805b3ccd34d171c8cccb3ca595f663081c455dcdf68"
+      },
+      {
+        "path": "src/content/curriculum/foundations/structure/index.mdx",
+        "sha256": "9bfbc1ca97dba42cbcfeae0761a5b8463a95258d6a4b42007385dd1a3856f05d"
+      },
+      {
+        "path": "src/content/curriculum/foundations/structure/unit-01.mdx",
+        "sha256": "ca128a5139dd8b5e3ffe57a5c633edf75c169e7dbb405073fd981c3eb49844f6"
+      },
+      {
+        "path": "src/content/curriculum/foundations/structure/unit-02.mdx",
+        "sha256": "615603a9090b7d8b9bf6ee9cda17e56e04d94a519deeab9a3a52e1dd8869f8fc"
+      },
+      {
+        "path": "src/content/curriculum/foundations/structure/unit-03.mdx",
+        "sha256": "c7dccf4e80e4e336ab33ff29058ea54dbe466dbfba12bbc6bcb8e25c62df5713"
+      },
+      {
+        "path": "src/content/curriculum/foundations/structure/unit-04.mdx",
+        "sha256": "0dae1f6051a46f9040e27358b0b8d6665af827e37f116a2de11dcdbe1e96f243"
+      },
+      {
+        "path": "src/content/curriculum/foundations/truth-tables/index.mdx",
+        "sha256": "84e997ed409903b30c6bedb0d9682849470b5ae7f21c3a6e8918fd48b4920892"
+      },
+      {
+        "path": "src/content/curriculum/foundations/truth-tables/unit-01.mdx",
+        "sha256": "dceaa799f42ceb22bd408094629beda5bca1af90d9bc240c79fe1ddf4f49a01d"
+      },
+      {
+        "path": "src/content/curriculum/foundations/truth-tables/unit-02.mdx",
+        "sha256": "dcf8e37b6c5c1982e96a62689603cd9592585a3b475f732d2bbe9188a0546933"
+      },
+      {
+        "path": "src/content/curriculum/foundations/truth-tables/unit-03.mdx",
+        "sha256": "7af4a2a687c2940a96e8bdd4ab34e35ef107388936bd818988602e7387f117ff"
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-it-out/index.mdx",
+        "sha256": "9287217915296887cbd6cd727994242ac5b29d0556404a529381ec4dec87e961"
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-it-out/unit-01.mdx",
+        "sha256": "80edc34253f5fe086be5ea4a9196e560213f78f6fb2975e6692f4a27f7fc4365"
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-it-out/unit-02.mdx",
+        "sha256": "8ba6b8505d7f66ca91224696ee11f2928ad51e0b6d1f05d9874dcb2b6d7bfd17"
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-it-out/unit-03.mdx",
+        "sha256": "d066fd3eaf1df19216d44a2bb4a0aba69cbb3332c0e8ce907cadef77f351705a"
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-the-bits/index.mdx",
+        "sha256": "a94f9ff103ab14c27cdba915122d914b39ee60bcde22106bbb93efaa29bb378e"
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-the-bits/unit-01.mdx",
+        "sha256": "68b03d266d72fa45351e7e41718d824991b9d2ec607ecef18b1c7965cb783aab"
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-the-bits/unit-02.mdx",
+        "sha256": "f5c451b5f000005790b820051250317019a2d1affc96c9a62b3d959b5c30cb50"
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-the-bits/unit-03.mdx",
+        "sha256": "5dcbe13c8514e406e3aad4880efd8c5594945399dc87bba56d0c991294ed1408"
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-the-bits/unit-04.mdx",
+        "sha256": "9dfad3db5bb13e1ef0c97008214ccf4de7065b697b38b08207e1fe6303440189"
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-the-bits/unit-05.mdx",
+        "sha256": "8d355d2955df7c74de78fc044a89462ba77f78d78e124b3ecbb173a0987f58f6"
+      }
+    ],
+    "comparison": [
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-01.mdx",
+        "previousSha256": "28b819662d8ffdd6b9233e12a75fd1a2c93c069ca55f57140ff63c32fce534c0",
+        "currentSha256": "28b819662d8ffdd6b9233e12a75fd1a2c93c069ca55f57140ff63c32fce534c0",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-02.mdx",
+        "previousSha256": "9dc87e1eb1761deb0e40e233b5d8ac2adb122db679b91f2d61bb4f397e65341a",
+        "currentSha256": "9dc87e1eb1761deb0e40e233b5d8ac2adb122db679b91f2d61bb4f397e65341a",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-03.mdx",
+        "previousSha256": "b6029c6297164675ce3f173a56483851d3aa505b6566e789561242805b77b7a8",
+        "currentSha256": "b6029c6297164675ce3f173a56483851d3aa505b6566e789561242805b77b7a8",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-04.mdx",
+        "previousSha256": "67909c41a20323e075498647bef87e493c0dbd44bffae407d44466b983c6aeea",
+        "currentSha256": "67909c41a20323e075498647bef87e493c0dbd44bffae407d44466b983c6aeea",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-05.mdx",
+        "previousSha256": "e0ee0d0e75ee2188d5653e33ca91f117b3631c65f1ca52f0e9414c37326d6fcd",
+        "currentSha256": "e0ee0d0e75ee2188d5653e33ca91f117b3631c65f1ca52f0e9414c37326d6fcd",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-06.mdx",
+        "previousSha256": "8b28243a0613eb73cf44218e6a3743d920ad8ee42732752996b11f864cfc830a",
+        "currentSha256": "8b28243a0613eb73cf44218e6a3743d920ad8ee42732752996b11f864cfc830a",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-07.mdx",
+        "previousSha256": "f50781cebe145f8d82a7ad897287f306cffd7489eea3cdc60c3df0206fd37ad7",
+        "currentSha256": "f50781cebe145f8d82a7ad897287f306cffd7489eea3cdc60c3df0206fd37ad7",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-08.mdx",
+        "previousSha256": "44f8be70259595374d595f8728828b663a439da56dcbb0b3b39d4f2428d9db3e",
+        "currentSha256": "44f8be70259595374d595f8728828b663a439da56dcbb0b3b39d4f2428d9db3e",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-09.mdx",
+        "previousSha256": "176197364d3d0278d57a1626e5191931cb3acbd649d69cd5d5308c7ff5fa5a5a",
+        "currentSha256": "176197364d3d0278d57a1626e5191931cb3acbd649d69cd5d5308c7ff5fa5a5a",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-10.mdx",
+        "previousSha256": "98ce4431426a2e934de33a978a3e30ec36206dd93d4ef958ec0cc8546ccb67c7",
+        "currentSha256": "98ce4431426a2e934de33a978a3e30ec36206dd93d4ef958ec0cc8546ccb67c7",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/craft/maths-for-games/unit-11.mdx",
+        "previousSha256": "44e180cf49b73bf6ac02b8b949dbb9e92b7f008f3f3715b2791489dba343c603",
+        "currentSha256": "44e180cf49b73bf6ac02b8b949dbb9e92b7f008f3f3715b2791489dba343c603",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/basics/index.mdx",
+        "previousSha256": "f5e5ed6fcc96365834270dfb4158de378acac432c2e6b6a67e37bd9e41eff0a0",
+        "currentSha256": "f5e5ed6fcc96365834270dfb4158de378acac432c2e6b6a67e37bd9e41eff0a0",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/basics/unit-01.mdx",
+        "previousSha256": "6bf2f74bb0496df0a830dbb32991098d5b059c7f1101d2c27b27ce6e384ffa51",
+        "currentSha256": "6bf2f74bb0496df0a830dbb32991098d5b059c7f1101d2c27b27ce6e384ffa51",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/basics/unit-02.mdx",
+        "previousSha256": "95cc1ee7335539494ddd3c62f33e311948a1a975b4ee845986d3f4b48337a835",
+        "currentSha256": "95cc1ee7335539494ddd3c62f33e311948a1a975b4ee845986d3f4b48337a835",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/basics/unit-03.mdx",
+        "previousSha256": "e1d108e5564892cc69136872add5089e235efd47543fc541b7baab0eba522ff1",
+        "currentSha256": "e1d108e5564892cc69136872add5089e235efd47543fc541b7baab0eba522ff1",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/basics/unit-04.mdx",
+        "previousSha256": "b70d5015f5ea4c531a836f69d1ac2c5c2f52cf3bede3cdd9d339773a83063dfa",
+        "currentSha256": "b70d5015f5ea4c531a836f69d1ac2c5c2f52cf3bede3cdd9d339773a83063dfa",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/basics/unit-05.mdx",
+        "previousSha256": "17551aecd268be4663ef853b62bc2f10e64096e8657aa33fbbe908808f5855d2",
+        "currentSha256": "17551aecd268be4663ef853b62bc2f10e64096e8657aa33fbbe908808f5855d2",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/counting-in-twos/index.mdx",
+        "previousSha256": "dfaff3bea318cc76de92914521b09adeacb9bb75579a82701486c2f7e4bc62f8",
+        "currentSha256": "dfaff3bea318cc76de92914521b09adeacb9bb75579a82701486c2f7e4bc62f8",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/counting-in-twos/unit-01.mdx",
+        "previousSha256": "768151d2ab970e3e7ebb9e78b1a3ad94f44cad12839294dd25dd4adca736197d",
+        "currentSha256": "768151d2ab970e3e7ebb9e78b1a3ad94f44cad12839294dd25dd4adca736197d",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/counting-in-twos/unit-02.mdx",
+        "previousSha256": "6f686111d9083edea9232c0d092d80cdf813d0419feeb5867320360d3f2f7d79",
+        "currentSha256": "6f686111d9083edea9232c0d092d80cdf813d0419feeb5867320360d3f2f7d79",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/counting-in-twos/unit-03.mdx",
+        "previousSha256": "a33401ca1d8d5c024682563366cf265c176e0522d364bd950fd761b57cd299b6",
+        "currentSha256": "a33401ca1d8d5c024682563366cf265c176e0522d364bd950fd761b57cd299b6",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/counting-in-twos/unit-04.mdx",
+        "previousSha256": "5ae50facc1f7bcf8351e194335a52df64469d974e02af2674aca5415e52c2925",
+        "currentSha256": "5ae50facc1f7bcf8351e194335a52df64469d974e02af2674aca5415e52c2925",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/decisions/index.mdx",
+        "previousSha256": "368ab306e606ea146977c1d886124ed11e866c8d597da0534253ec7bde8493e3",
+        "currentSha256": "368ab306e606ea146977c1d886124ed11e866c8d597da0534253ec7bde8493e3",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/decisions/unit-01.mdx",
+        "previousSha256": "185c6e6e7de61f531920e9d561b71efba4fdcd3e699d41e7533b2011b8012269",
+        "currentSha256": "185c6e6e7de61f531920e9d561b71efba4fdcd3e699d41e7533b2011b8012269",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/decisions/unit-02.mdx",
+        "previousSha256": "9f7d280ab5be41dfdfff24abb4a316de73dd6baa41b4aba8662a009a056622a9",
+        "currentSha256": "9f7d280ab5be41dfdfff24abb4a316de73dd6baa41b4aba8662a009a056622a9",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/decisions/unit-03.mdx",
+        "previousSha256": "60a1825e405e8bd40546a9a7b84218efe37743fefdb988c0231d9cf3c9d4b3a9",
+        "currentSha256": "60a1825e405e8bd40546a9a7b84218efe37743fefdb988c0231d9cf3c9d4b3a9",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/decisions/unit-04.mdx",
+        "previousSha256": "b7cd667e6304aa45da909e7875836adb5ed450192afe6b29af9e0e6f28ba3bdd",
+        "currentSha256": "b7cd667e6304aa45da909e7875836adb5ed450192afe6b29af9e0e6f28ba3bdd",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/from-source-to-silicon/index.mdx",
+        "previousSha256": "98fae7556f8b62937df16ef9123149426aa3a667b599eb4907731e25c952f121",
+        "currentSha256": "98fae7556f8b62937df16ef9123149426aa3a667b599eb4907731e25c952f121",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-01.mdx",
+        "previousSha256": "0477fd4589f0de8db9d57c6c7a0bf76e372fc8bc65a6eab19fbf5d5741cfff2e",
+        "currentSha256": "0477fd4589f0de8db9d57c6c7a0bf76e372fc8bc65a6eab19fbf5d5741cfff2e",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-02.mdx",
+        "previousSha256": "6b3b7f64604897343c6a168c1019ee2c40cd91923b6338293b1280d8b3fa3eb5",
+        "currentSha256": "6b3b7f64604897343c6a168c1019ee2c40cd91923b6338293b1280d8b3fa3eb5",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-03.mdx",
+        "previousSha256": "9a8861b0520a7cec2af9bb8ba1cfb5c1ed7c970fcb544012d26b878330b6e680",
+        "currentSha256": "9a8861b0520a7cec2af9bb8ba1cfb5c1ed7c970fcb544012d26b878330b6e680",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-04.mdx",
+        "previousSha256": "9cc1e26f436f306b0f8df1e71f65ad6718299b5f73cdc6087d3ca24e4bbf4a90",
+        "currentSha256": "9cc1e26f436f306b0f8df1e71f65ad6718299b5f73cdc6087d3ca24e4bbf4a90",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-05.mdx",
+        "previousSha256": "5bcdea8862584e399922b7ab4d06b706a3e404c052e1dfd81f51db5145d62336",
+        "currentSha256": "5bcdea8862584e399922b7ab4d06b706a3e404c052e1dfd81f51db5145d62336",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/gates-and-the-adder/index.mdx",
+        "previousSha256": "e58d633ee166c5616f0caadc9951e13313e0a625e6626a0a33badd893cbc598d",
+        "currentSha256": "e58d633ee166c5616f0caadc9951e13313e0a625e6626a0a33badd893cbc598d",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-01.mdx",
+        "previousSha256": "11088d3dd1fe775f60a0603dbae143fceeb6b07aacec2885b3e2bcb123e42edc",
+        "currentSha256": "11088d3dd1fe775f60a0603dbae143fceeb6b07aacec2885b3e2bcb123e42edc",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-02.mdx",
+        "previousSha256": "0f34faa265e33382e09a1dd077a00139db93da181088e1b26f5e486228ddca9a",
+        "currentSha256": "0f34faa265e33382e09a1dd077a00139db93da181088e1b26f5e486228ddca9a",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-03.mdx",
+        "previousSha256": "2d175e6377ffb83892a11e741db803b6d9914497263f843756a5849af23b9258",
+        "currentSha256": "2d175e6377ffb83892a11e741db803b6d9914497263f843756a5849af23b9258",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/repeating/index.mdx",
+        "previousSha256": "831ba31267ae0dfce2c70285c9e7d31154e9e491d880b8ec5be9efe94dbbe59c",
+        "currentSha256": "831ba31267ae0dfce2c70285c9e7d31154e9e491d880b8ec5be9efe94dbbe59c",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/repeating/unit-01.mdx",
+        "previousSha256": "8293f9a6eca8c8ee54bb0d99ec3e651175fda68975202a26ff78b6ecbd12fbda",
+        "currentSha256": "8293f9a6eca8c8ee54bb0d99ec3e651175fda68975202a26ff78b6ecbd12fbda",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/repeating/unit-02.mdx",
+        "previousSha256": "dea5bed5aacf181b49989337ecf195b243fdd6b774baeb31c34a774d1f737039",
+        "currentSha256": "dea5bed5aacf181b49989337ecf195b243fdd6b774baeb31c34a774d1f737039",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/repeating/unit-03.mdx",
+        "previousSha256": "b9fbdc89e94277b949749805b3ccd34d171c8cccb3ca595f663081c455dcdf68",
+        "currentSha256": "b9fbdc89e94277b949749805b3ccd34d171c8cccb3ca595f663081c455dcdf68",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/structure/index.mdx",
+        "previousSha256": "9bfbc1ca97dba42cbcfeae0761a5b8463a95258d6a4b42007385dd1a3856f05d",
+        "currentSha256": "9bfbc1ca97dba42cbcfeae0761a5b8463a95258d6a4b42007385dd1a3856f05d",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/structure/unit-01.mdx",
+        "previousSha256": "ca128a5139dd8b5e3ffe57a5c633edf75c169e7dbb405073fd981c3eb49844f6",
+        "currentSha256": "ca128a5139dd8b5e3ffe57a5c633edf75c169e7dbb405073fd981c3eb49844f6",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/structure/unit-02.mdx",
+        "previousSha256": "615603a9090b7d8b9bf6ee9cda17e56e04d94a519deeab9a3a52e1dd8869f8fc",
+        "currentSha256": "615603a9090b7d8b9bf6ee9cda17e56e04d94a519deeab9a3a52e1dd8869f8fc",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/structure/unit-03.mdx",
+        "previousSha256": "c7dccf4e80e4e336ab33ff29058ea54dbe466dbfba12bbc6bcb8e25c62df5713",
+        "currentSha256": "c7dccf4e80e4e336ab33ff29058ea54dbe466dbfba12bbc6bcb8e25c62df5713",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/structure/unit-04.mdx",
+        "previousSha256": "0dae1f6051a46f9040e27358b0b8d6665af827e37f116a2de11dcdbe1e96f243",
+        "currentSha256": "0dae1f6051a46f9040e27358b0b8d6665af827e37f116a2de11dcdbe1e96f243",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/truth-tables/index.mdx",
+        "previousSha256": "84e997ed409903b30c6bedb0d9682849470b5ae7f21c3a6e8918fd48b4920892",
+        "currentSha256": "84e997ed409903b30c6bedb0d9682849470b5ae7f21c3a6e8918fd48b4920892",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/truth-tables/unit-01.mdx",
+        "previousSha256": "dceaa799f42ceb22bd408094629beda5bca1af90d9bc240c79fe1ddf4f49a01d",
+        "currentSha256": "dceaa799f42ceb22bd408094629beda5bca1af90d9bc240c79fe1ddf4f49a01d",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/truth-tables/unit-02.mdx",
+        "previousSha256": "dcf8e37b6c5c1982e96a62689603cd9592585a3b475f732d2bbe9188a0546933",
+        "currentSha256": "dcf8e37b6c5c1982e96a62689603cd9592585a3b475f732d2bbe9188a0546933",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/truth-tables/unit-03.mdx",
+        "previousSha256": "7af4a2a687c2940a96e8bdd4ab34e35ef107388936bd818988602e7387f117ff",
+        "currentSha256": "7af4a2a687c2940a96e8bdd4ab34e35ef107388936bd818988602e7387f117ff",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-it-out/index.mdx",
+        "previousSha256": "9287217915296887cbd6cd727994242ac5b29d0556404a529381ec4dec87e961",
+        "currentSha256": "9287217915296887cbd6cd727994242ac5b29d0556404a529381ec4dec87e961",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-it-out/unit-01.mdx",
+        "previousSha256": "80edc34253f5fe086be5ea4a9196e560213f78f6fb2975e6692f4a27f7fc4365",
+        "currentSha256": "80edc34253f5fe086be5ea4a9196e560213f78f6fb2975e6692f4a27f7fc4365",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-it-out/unit-02.mdx",
+        "previousSha256": "8ba6b8505d7f66ca91224696ee11f2928ad51e0b6d1f05d9874dcb2b6d7bfd17",
+        "currentSha256": "8ba6b8505d7f66ca91224696ee11f2928ad51e0b6d1f05d9874dcb2b6d7bfd17",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-it-out/unit-03.mdx",
+        "previousSha256": "d066fd3eaf1df19216d44a2bb4a0aba69cbb3332c0e8ce907cadef77f351705a",
+        "currentSha256": "d066fd3eaf1df19216d44a2bb4a0aba69cbb3332c0e8ce907cadef77f351705a",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-the-bits/index.mdx",
+        "previousSha256": "a94f9ff103ab14c27cdba915122d914b39ee60bcde22106bbb93efaa29bb378e",
+        "currentSha256": "a94f9ff103ab14c27cdba915122d914b39ee60bcde22106bbb93efaa29bb378e",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-the-bits/unit-01.mdx",
+        "previousSha256": "68b03d266d72fa45351e7e41718d824991b9d2ec607ecef18b1c7965cb783aab",
+        "currentSha256": "68b03d266d72fa45351e7e41718d824991b9d2ec607ecef18b1c7965cb783aab",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-the-bits/unit-02.mdx",
+        "previousSha256": "f5c451b5f000005790b820051250317019a2d1affc96c9a62b3d959b5c30cb50",
+        "currentSha256": "f5c451b5f000005790b820051250317019a2d1affc96c9a62b3d959b5c30cb50",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-the-bits/unit-03.mdx",
+        "previousSha256": "5dcbe13c8514e406e3aad4880efd8c5594945399dc87bba56d0c991294ed1408",
+        "currentSha256": "5dcbe13c8514e406e3aad4880efd8c5594945399dc87bba56d0c991294ed1408",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-the-bits/unit-04.mdx",
+        "previousSha256": "9dfad3db5bb13e1ef0c97008214ccf4de7065b697b38b08207e1fe6303440189",
+        "currentSha256": "9dfad3db5bb13e1ef0c97008214ccf4de7065b697b38b08207e1fe6303440189",
+        "unchanged": true
+      },
+      {
+        "path": "src/content/curriculum/foundations/working-the-bits/unit-05.mdx",
+        "previousSha256": "8d355d2955df7c74de78fc044a89462ba77f78d78e124b3ecbb173a0987f58f6",
+        "currentSha256": "8d355d2955df7c74de78fc044a89462ba77f78d78e124b3ecbb173a0987f58f6",
+        "unchanged": true
+      }
+    ]
+  },
+  "code-samples": {
+    "revision": "eb32726a9ee3c209ea7478ad8e132e68361b6711",
+    "files": [
+      {
+        "path": "commodore-amiga/amos/meet-amos/unit-05/loop.amos",
+        "sha256": "2d09b01b5d98bf2998e31b45ff692a49d699ed3fb0f3704d2fc7740675c0efa7"
+      },
+      {
+        "path": "commodore-amiga/blitz/meet-blitz/unit-05/capture/many.script.json",
+        "sha256": "50ef1f2d4aec2b10361679a5b7ad148d6a4b25bbae50f78e0b8e5e327f2392e0"
+      },
+      {
+        "path": "commodore-amiga/blitz/meet-blitz/unit-05/many.bb2",
+        "sha256": "43fb2fa92d7f6b05cfa2080dac97a949d0458ecb437481f6f94b4329344b3e43"
+      }
+    ]
+  },
+  "pendingEvidence": {
+    "pr": "https://github.com/code198x/docs/pull/99",
+    "state": "OPEN",
+    "revision": "3aa0c759eaeb79814e1d61a616dc995cbf64ac2e",
+    "path": "audit/2026-10-amiga-opening-qualification/REPORT.md",
+    "sha256": "b31faef83acbcf9ddc972340ac3a7a99b9a08b3d6d156de00e3a117ee5bc937e",
+    "url": "https://github.com/code198x/docs/blob/3aa0c759eaeb79814e1d61a616dc995cbf64ac2e/audit/2026-10-amiga-opening-qualification/REPORT.md",
+    "accepted": false
+  }
+}
