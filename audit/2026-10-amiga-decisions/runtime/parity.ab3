@@ -1,0 +1,8 @@
+; XTRA
+; RuntimeDebug    = 0
+; /XTRA
+NPrint "DECISIONS-PARITY-20261016"
+For x=0 To 9
+  NPrint x, " old=", x/2*2=x, " remainder=", x MOD 2
+Next
+End

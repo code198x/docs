@@ -1,0 +1,4 @@
+CD Tools:AmiBlitz3.13
+Assign LIBS: Tools:AmiBlitz3.13/Libs ADD
+AmiBlitz3 -s Tools:colourbug.ab3 -e Tools:colourbug.exe > Tools:colourbug-compile.txt
+Tools:colourbug.exe

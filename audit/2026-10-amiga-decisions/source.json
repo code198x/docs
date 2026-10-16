@@ -1,0 +1,17 @@
+{
+  "website": {
+    "base": "fc80d24b20dbd3e3d7a3152732a59387091bc30f",
+    "files": {
+      "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-04.mdx": "763774955051009672e3be8f6921ee2abed7a9bff22dd2736d511afa92895fcf",
+      "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-04.mdx": "04a4984a8127be10b3ae2c1eb56a61bf712283dfe8557009ebe720168be78ab4"
+    }
+  },
+  "code-samples": {
+    "base": "0ee95b1175c203dad636b6e3038c34a5904343d0",
+    "files": {
+      "commodore-amiga/blitz/meet-blitz/unit-04/capture/loop.script.json": "9cc754ee5fa944568d09886cd91d0f6c0982c59f1f4718a3d11024b3c28fe06f",
+      "commodore-amiga/blitz/meet-blitz/unit-04/loop.bb2": "a208938ac80a724e9ba500e75789e2974d76f7a5573817e9a1f5d766480fe4bb",
+      "commodore-amiga/amos/meet-amos/unit-04/branch.amos": "4ecabb241e73a71f6d4990658a6b25560b503d8f64ada4fde4ac9217454495d2"
+    }
+  }
+}
