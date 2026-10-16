@@ -1,0 +1,19 @@
+{
+  "website": {
+    "base": "e98bcf78e5dd359d4b4a0bf7698efec663a5905a",
+    "changedFiles": {
+      "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-02.mdx": "e887428b4fd737e88a59f14e830c47f00d3805ca23de832c46debacc443e87e8",
+      "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-03.mdx": "9622efff3af73609feecc8e0b4b5fe7ea303295f1bbd8b240702b51c194d394e",
+      "src/content/curriculum/commodore-amiga/blitz/meet-blitz/index.mdx": "be967e012ebf0fb58291f4e0aa087260a484f85db3668b771b086b62c7c4e37d",
+      "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-02.mdx": "0929af8b8673bc8f71403b857bdd8a9a36c3ef66cf806268bcd8f285fcbd2458",
+      "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-03.mdx": "ec72bf7053211b25aa2e499cc87157d60e01baa81f4f76a719f9db3b3fbdd3b7"
+    }
+  },
+  "samples": {
+    "base": "9cefafae02f9f1b2118241770d6a32681952a16e",
+    "changedFiles": {
+      "commodore-amiga/blitz/meet-blitz/unit-02/blitzmode.bb2": "8c07f478f3d721a158355cef403c80be87e136a83991d7c768d57d2432e87a5c",
+      "commodore-amiga/blitz/meet-blitz/unit-02/capture/blitzmode.script.json": "7e49a94b1cf9a2dce230a807e7d8038926e0d3f3fae4a312f8e44f51b41425f1"
+    }
+  }
+}

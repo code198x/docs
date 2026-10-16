@@ -1,0 +1,82 @@
+{
+  "routes": [
+    {
+      "route": "/systems/commodore-amiga/amos/meet-amos",
+      "content": "pass",
+      "linkedHeaderCSS": "pass",
+      "amigaLinks": "pass"
+    },
+    {
+      "route": "/systems/commodore-amiga/amos/meet-amos/unit-01",
+      "content": "pass",
+      "linkedHeaderCSS": "pass",
+      "amigaLinks": "pass"
+    },
+    {
+      "route": "/systems/commodore-amiga/amos/meet-amos/unit-02",
+      "content": "pass",
+      "linkedHeaderCSS": "pass",
+      "amigaLinks": "pass"
+    },
+    {
+      "route": "/systems/commodore-amiga/amos/meet-amos/unit-03",
+      "content": "pass",
+      "linkedHeaderCSS": "pass",
+      "amigaLinks": "pass"
+    },
+    {
+      "route": "/systems/commodore-amiga/amos/getting-started",
+      "content": "pass",
+      "linkedHeaderCSS": "pass",
+      "amigaLinks": "pass"
+    },
+    {
+      "route": "/systems/commodore-amiga/blitz/meet-blitz",
+      "content": "pass",
+      "linkedHeaderCSS": "pass",
+      "amigaLinks": "pass"
+    },
+    {
+      "route": "/systems/commodore-amiga/blitz/meet-blitz/unit-01",
+      "content": "pass",
+      "linkedHeaderCSS": "pass",
+      "amigaLinks": "pass"
+    },
+    {
+      "route": "/systems/commodore-amiga/blitz/meet-blitz/unit-02",
+      "content": "pass",
+      "linkedHeaderCSS": "pass",
+      "amigaLinks": "pass"
+    },
+    {
+      "route": "/systems/commodore-amiga/blitz/meet-blitz/unit-03",
+      "content": "pass",
+      "linkedHeaderCSS": "pass",
+      "amigaLinks": "pass"
+    },
+    {
+      "route": "/systems/commodore-amiga/blitz/getting-started",
+      "content": "pass",
+      "linkedHeaderCSS": "pass",
+      "amigaLinks": "pass"
+    }
+  ],
+  "sourceIdentities": "pass",
+  "capturePayload": "pass",
+  "waitOrder": "pass",
+  "wrongOrderNegativeControl": "rejected",
+  "browserVisual": "not performed",
+  "runtime": "not performed",
+  "productionBuild": {
+    "exitCode": 0,
+    "pages": 2459,
+    "warning": "Vite reports chunks larger than 500 kB; Pagefind logs a deprecated Search UI notice."
+  },
+  "contentChecks": {
+    "exitCode": 0,
+    "vaultLinks": 25972
+  },
+  "browserBlocker": "Sky Computer Use native pipe startup failed; inventory returned no apps or browsers.",
+  "runtimeBlocker": "Native computer-use unavailable; no new emulator run. Partial release extraction also exited 1 on accented catalogue path.",
+  "learnerTrial": "not performed"
+}
