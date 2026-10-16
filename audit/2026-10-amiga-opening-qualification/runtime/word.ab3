@@ -1,0 +1,17 @@
+; XTRA
+; RuntimeDebug    = 0
+; OverflowCheck   = 0
+; /XTRA
+; Blitz lets you choose how big each number is.
+big.l = 1000000
+small.w = 100
+
+NPrint "A long holds big numbers:      ", big
+NPrint "A word holds -32768 to 32767:  ", small
+NPrint ""
+NPrint "Now add 50 to the word..."
+small = small + 50
+NPrint "100 + 50 in a word gives:      ", small
+NPrint "(150 fits in a signed word)"
+MouseWait
+End

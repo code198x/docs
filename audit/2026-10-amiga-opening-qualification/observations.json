@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-16",
+  "runtime": {
+    "emulator": "FS-UAE 3.2.35",
+    "machine": "A1200 PAL 68020, 2 MB chip + 8 MB fast, Kickstart 3.1 rev 40.68, Workbench 3.1 rev 40.42 and Fonts",
+    "compiler": "AmiBlitz v3.13.0b",
+    "route": "CLI compilation and standalone execution with retained guest output; not a new PED edit/compile qualification",
+    "byte": "Actual guest output: 1000000, 100, -106",
+    "word": "Actual guest output: 1000000, 100, 150",
+    "graphics": "Filled pink rectangle and purple outlined circle observed on black background; left mouse click restored Workbench."
+  },
+  "browser": {
+    "name": "Google Chrome",
+    "version": "155.0.8059.80",
+    "surface": "live code198x.com",
+    "observed": [
+      "Both setup and first-program pages styled and readable at 390x844 and 1440x900",
+      "Both setup-to-first-program routes and return-to-setup links exercised",
+      "AMOS and Blitz greeting Copy buttons showed Copied on direct pointer clicks; clipboard bytes not inspected",
+      "AMOS unit 3 numeric distinctions, Blitz unit 2 source/mode instructions, Blitz unit 3 overflow instructions and Blitz module introduction reviewed at both widths; prose readable, code contained"
+    ],
+    "notCompleted": [],
+    "clipboardBytes": "not inspected",
+    "viewports": [
+      [
+        390,
+        844
+      ],
+      [
+        1440,
+        900
+      ]
+    ],
+    "scope": "Representative sections of eight published pages; not every section of the complete opening modules"
+  },
+  "failures": [
+    "Computer Use server error -10005: cgWindowNotFound (both FS-UAE and Chrome); connection recovered without changing configuration; graphics and browser review then completed",
+    "LHA accented catalogue path extraction failure (exit 1); compiler/core hashes matched and numeric programs ran",
+    "Direct HTTP page check: HTTP Error 403: Forbidden",
+    "Web fetch fallback returned an older cached Blitz setup page and an AMOS cache miss; neither qualifies current live publication",
+    "An accessibility-index Copy invocation showed Copy failed; a later direct pointer click on the visible Blitz button showed Copied. No ordinary-pointer copy failure reproduced."
+  ],
+  "limits": [
+    "No new human learner trial",
+    "No VoiceOver",
+    "No benchmark",
+    "No overflow-check-on diagnostic observed"
+  ]
+}

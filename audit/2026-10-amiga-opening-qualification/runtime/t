@@ -1,0 +1,4 @@
+CD Tools:AmiBlitz3.13
+Assign LIBS: Tools:AmiBlitz3.13/Libs ADD
+AmiBlitz3 -s Tools:types.ab3 -e Tools:types.exe > Tools:types-compile.txt
+Tools:types.exe > Tools:types.txt

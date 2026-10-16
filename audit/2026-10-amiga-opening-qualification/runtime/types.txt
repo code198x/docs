@@ -1,0 +1,6 @@
+A long holds big numbers:      1000000
+A byte holds just -128 to 127: 100
+
+Now add 50 to the byte...
+100 + 50 in a byte gives:      -106
+(150 won't fit, so it wrapped round to a negative)
