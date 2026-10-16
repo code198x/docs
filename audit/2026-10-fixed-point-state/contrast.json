@@ -1,0 +1,28 @@
+{
+  "status": "passed bounded colour probe",
+  "samples": [
+    {
+      "selector": ".ll-line:nth-child(5) > .ll-text",
+      "endpoint": "left",
+      "text": "  LET pixel = position SHIFTRIGHT 8\n",
+      "foreground": "rgb(27, 26, 23)",
+      "background": "rgb(252, 251, 248)",
+      "scrollLeft": 0,
+      "client": 356,
+      "total": 384,
+      "ratio": 16.816837173024243
+    },
+    {
+      "selector": ".ll-line:nth-child(5) > .ll-text",
+      "endpoint": "right",
+      "text": "  LET pixel = position SHIFTRIGHT 8\n",
+      "foreground": "rgb(27, 26, 23)",
+      "background": "rgb(252, 251, 248)",
+      "scrollLeft": 28,
+      "client": 356,
+      "total": 384,
+      "ratio": 16.816837173024243
+    }
+  ],
+  "limits": "One axe-incomplete listing line at both horizontal endpoints; not blanket accessibility or screen-reader validation."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed source/model/browser evidence checks",
+  "finite_model_rechecks": 6,
+  "browser_viewports": 2,
+  "keyboard_behaviour_groups": 10,
+  "local_links": 111,
+  "wrong_policy_exit": 1,
+  "negative_controls_rejected": {
+    "wrong_source_hash": "Proposed source hash mismatch",
+    "changed_rendered_cell": "Rendered table/output mismatch"
+  },
+  "contrast_samples": 2,
+  "limits": "Selected local page and retained model evidence; not target execution, physical-device/screen-reader use, motion quality or learner validation."
+}
