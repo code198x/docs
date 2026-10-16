@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "date": "2026-10-16T08:51:22.468Z",
+  "base": "http://127.0.0.1:48926",
+  "browser": "155.0.8059.80",
+  "viewports": [],
+  "checks": [],
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: Local recall/evidence boundaries missing"
+}

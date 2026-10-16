@@ -1,0 +1,50 @@
+[
+  {
+    "tag": "DIV",
+    "cls": "scroll",
+    "display": "block",
+    "overflow": "auto",
+    "client": 358,
+    "total": 358
+  },
+  {
+    "tag": "TABLE",
+    "cls": "",
+    "display": "block",
+    "overflow": "auto",
+    "client": 356,
+    "total": 356
+  },
+  {
+    "tag": "THEAD",
+    "cls": "",
+    "display": "table-header-group",
+    "overflow": "visible",
+    "client": 356,
+    "total": 356
+  },
+  {
+    "tag": "TBODY",
+    "cls": "",
+    "display": "table-row-group",
+    "overflow": "visible",
+    "client": 356,
+    "total": 356
+  },
+  {
+    "tag": "FIGCAPTION",
+    "cls": "",
+    "display": "block",
+    "overflow": "visible",
+    "client": 358,
+    "total": 358
+  },
+  {
+    "tag": "P",
+    "cls": "",
+    "display": "block",
+    "overflow": "visible",
+    "client": 358,
+    "total": 358
+  }
+]

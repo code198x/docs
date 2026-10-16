@@ -1,0 +1,5 @@
+10 LET s=0
+20 FOR i=1 TO 1000
+30 LET s=s+1
+40 NEXT i
+50 PRINT s

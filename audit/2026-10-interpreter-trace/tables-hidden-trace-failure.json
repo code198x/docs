@@ -1,0 +1,367 @@
+{
+  "status": "failed",
+  "phase": "after",
+  "browser": "155.0.8059.80",
+  "cases": [
+    {
+      "route": "structure/unit-02",
+      "width": 1440,
+      "index": 0,
+      "geometry": {
+        "client": 902,
+        "total": 902,
+        "tableDisplay": "table",
+        "wrap": "normal",
+        "cells": [
+          "Step",
+          "What runs",
+          "Shown",
+          "1",
+          "CALL divider",
+          "—",
+          "2",
+          "the SHOW inside the job",
+          "----------",
+          "3",
+          "the job ends, back to the CALL",
+          "—",
+          "4",
+          "SHOW \"Top news\"",
+          "Top news"
+        ]
+      },
+      "keyboard": {
+        "left": 0,
+        "lastRight": 1322.703125,
+        "right": 1323.203125
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "route": "structure/unit-02",
+      "width": 390,
+      "index": 0,
+      "geometry": {
+        "client": 358,
+        "total": 358,
+        "tableDisplay": "table",
+        "wrap": "normal",
+        "cells": [
+          "Step",
+          "What runs",
+          "Shown",
+          "1",
+          "CALL divider",
+          "—",
+          "2",
+          "the SHOW inside the job",
+          "----------",
+          "3",
+          "the job ends, back to the CALL",
+          "—",
+          "4",
+          "SHOW \"Top news\"",
+          "Top news"
+        ]
+      },
+      "keyboard": {
+        "left": 0,
+        "lastRight": 373.5,
+        "right": 374
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "route": "structure/unit-04",
+      "width": 1440,
+      "index": 0,
+      "geometry": {
+        "client": 902,
+        "total": 902,
+        "tableDisplay": "table",
+        "wrap": "normal",
+        "cells": [
+          "Pass",
+          "price",
+          "total before",
+          "total after",
+          "1",
+          "10",
+          "0",
+          "10",
+          "2",
+          "25",
+          "10",
+          "35",
+          "3",
+          "5",
+          "35",
+          "40"
+        ]
+      },
+      "keyboard": {
+        "left": 0,
+        "lastRight": 1322.703125,
+        "right": 1323.203125
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "route": "structure/unit-04",
+      "width": 390,
+      "index": 0,
+      "geometry": {
+        "client": 358,
+        "total": 358,
+        "tableDisplay": "table",
+        "wrap": "normal",
+        "cells": [
+          "Pass",
+          "price",
+          "total before",
+          "total after",
+          "1",
+          "10",
+          "0",
+          "10",
+          "2",
+          "25",
+          "10",
+          "35",
+          "3",
+          "5",
+          "35",
+          "40"
+        ]
+      },
+      "keyboard": {
+        "left": 0,
+        "lastRight": 373.5,
+        "right": 374
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "route": "from-source-to-silicon/unit-02",
+      "width": 1440,
+      "index": 0,
+      "geometry": {
+        "client": 902,
+        "total": 902,
+        "tableDisplay": "table",
+        "wrap": "normal",
+        "cells": [
+          "Pass",
+          "Read the statement",
+          "Work out what it means",
+          "Do it",
+          "total",
+          "1",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "0 + 1",
+          "1",
+          "2",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "1 + 1",
+          "2",
+          "3",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "2 + 1",
+          "3",
+          "…",
+          "…",
+          "…",
+          "…",
+          "…",
+          "1000",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "999 + 1",
+          "1000"
+        ]
+      },
+      "keyboard": {
+        "left": 0,
+        "lastRight": 1322.703125,
+        "right": 1323.203125
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "route": "from-source-to-silicon/unit-02",
+      "width": 390,
+      "index": 0,
+      "geometry": {
+        "client": 358,
+        "total": 358,
+        "tableDisplay": "table",
+        "wrap": "normal",
+        "cells": [
+          "Pass",
+          "Read the statement",
+          "Work out what it means",
+          "Do it",
+          "total",
+          "1",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "0 + 1",
+          "1",
+          "2",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "1 + 1",
+          "2",
+          "3",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "2 + 1",
+          "3",
+          "…",
+          "…",
+          "…",
+          "…",
+          "…",
+          "1000",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "999 + 1",
+          "1000"
+        ]
+      },
+      "keyboard": {
+        "left": 0,
+        "lastRight": 373.5,
+        "right": 374
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "route": "from-source-to-silicon/unit-03",
+      "width": 1440,
+      "index": 0,
+      "geometry": {
+        "client": 902,
+        "total": 902,
+        "tableDisplay": "table",
+        "wrap": "normal",
+        "cells": [
+          "When",
+          "Read the line",
+          "Work out what it means",
+          "Do it",
+          "total",
+          "before running",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "—",
+          "—",
+          "pass 1",
+          "—",
+          "—",
+          "0 + 1",
+          "1",
+          "pass 2",
+          "—",
+          "—",
+          "1 + 1",
+          "2",
+          "…",
+          "…",
+          "…",
+          "…",
+          "…",
+          "pass 1000",
+          "—",
+          "—",
+          "999 + 1",
+          "1000"
+        ]
+      },
+      "keyboard": {
+        "left": 0,
+        "lastRight": 1322.703125,
+        "right": 1323.203125
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "route": "from-source-to-silicon/unit-03",
+      "width": 390,
+      "index": 0,
+      "geometry": {
+        "client": 358,
+        "total": 358,
+        "tableDisplay": "table",
+        "wrap": "normal",
+        "cells": [
+          "When",
+          "Read the line",
+          "Work out what it means",
+          "Do it",
+          "total",
+          "before running",
+          "LET total = total + 1",
+          "put total plus one in total",
+          "—",
+          "—",
+          "pass 1",
+          "—",
+          "—",
+          "0 + 1",
+          "1",
+          "pass 2",
+          "—",
+          "—",
+          "1 + 1",
+          "2",
+          "…",
+          "…",
+          "…",
+          "…",
+          "…",
+          "pass 1000",
+          "—",
+          "—",
+          "999 + 1",
+          "1000"
+        ]
+      },
+      "keyboard": {
+        "left": 0,
+        "lastRight": 373.5,
+        "right": 374
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    }
+  ],
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: Trace wrapper not keyboard focusable"
+}
