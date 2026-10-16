@@ -1,0 +1,14 @@
+{
+  "status": "passed evidence checks",
+  "model_ranges": 5,
+  "fresh_native_runs": 11,
+  "browser_viewports": 2,
+  "keyboard_behaviour_groups": 6,
+  "local_links": 106,
+  "negative_controls_rejected": {
+    "wrong_source_hash": "Baseline source hash mismatch",
+    "missing_native_transcript": "Native complete transcript mismatch"
+  },
+  "native_wrong_policy_exit": 1,
+  "limits": "Source/fixture/evidence agreement checks; not independent execution or learner validation."
+}

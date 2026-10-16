@@ -1,0 +1,138 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "start": 1,
+      "end": 0,
+      "visits": [],
+      "count": 0,
+      "total": 0,
+      "outside_after": [
+        "BEFORE",
+        "TOTAL 0",
+        "AFTER"
+      ],
+      "inside_after": [
+        "BEFORE",
+        "TOTAL 0"
+      ]
+    },
+    {
+      "start": 1,
+      "end": 1,
+      "visits": [
+        1
+      ],
+      "count": 1,
+      "total": 1,
+      "outside_after": [
+        "BEFORE",
+        "1",
+        "TOTAL 1",
+        "AFTER"
+      ],
+      "inside_after": [
+        "BEFORE",
+        "1",
+        "AFTER",
+        "TOTAL 1"
+      ]
+    },
+    {
+      "start": 1,
+      "end": 3,
+      "visits": [
+        1,
+        2,
+        3
+      ],
+      "count": 3,
+      "total": 6,
+      "outside_after": [
+        "BEFORE",
+        "1",
+        "2",
+        "3",
+        "TOTAL 6",
+        "AFTER"
+      ],
+      "inside_after": [
+        "BEFORE",
+        "1",
+        "AFTER",
+        "2",
+        "AFTER",
+        "3",
+        "AFTER",
+        "TOTAL 6"
+      ]
+    },
+    {
+      "start": 0,
+      "end": 3,
+      "visits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "count": 4,
+      "total": 6,
+      "outside_after": [
+        "BEFORE",
+        "0",
+        "1",
+        "2",
+        "3",
+        "TOTAL 6",
+        "AFTER"
+      ],
+      "inside_after": [
+        "BEFORE",
+        "0",
+        "AFTER",
+        "1",
+        "AFTER",
+        "2",
+        "AFTER",
+        "3",
+        "AFTER",
+        "TOTAL 6"
+      ]
+    },
+    {
+      "start": -2,
+      "end": 1,
+      "visits": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "count": 4,
+      "total": -2,
+      "outside_after": [
+        "BEFORE",
+        "-2",
+        "-1",
+        "0",
+        "1",
+        "TOTAL -2",
+        "AFTER"
+      ],
+      "inside_after": [
+        "BEFORE",
+        "-2",
+        "AFTER",
+        "-1",
+        "AFTER",
+        "0",
+        "AFTER",
+        "1",
+        "AFTER",
+        "TOTAL -2"
+      ]
+    }
+  ],
+  "limits": "Whole-number endpoints, ascending increment of one, fixed bounds and unmodified counter. Host model, not a shared pseudocode runtime."
+}
