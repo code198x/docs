@@ -1,0 +1,13 @@
+{
+  "body": "The aiming README still described the approved six-part sequence as an unpublished draft. Identify its public entry and release record, and distinguish the maintained standalone teaching copy from the website's public prose.\n\nOnly the README changes. The existing five model tests pass; prose and diff checks pass. No model, control, lesson or dependency changes.\n\nCloses #94. Found during the game-maths audit under stevehill1981/198x#114.\n",
+  "headRefOid": "6ec4c84bf0ed93aff92f69a5770a291d2bb21773",
+  "mergeCommit": {
+    "oid": "82ef057bcc31a5d6c27aadf4175073693798ab8a"
+  },
+  "mergedAt": "2026-10-16T10:06:38Z",
+  "number": 95,
+  "state": "MERGED",
+  "title": "Correct the published status of the aiming samples",
+  "url": "https://github.com/code198x/code-samples/pull/95",
+  "repository": "code198x/code-samples"
+}

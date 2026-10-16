@@ -1,0 +1,13 @@
+{
+  "body": "The earlier stored-value pilot did not qualify its BASIC browser task. Retain eight live execution stages for Meet BASIC unit 2: repeated reads/replacement, wrong stored line 30 and its single-line repair, immediate wrong-name error and repair, RUN, fresh Restart and reset to the original greeting.\n\nCompanion verifier: https://github.com/code198x/website/pull/750 . No product defect was reproduced; the website change adds verification only. Preserve two failed harness attempts and the intermediate passing run. The discarded historical harness cause remains unknown; current startup and selector observations do not establish that cause.\n\nEvidence includes actual text rows, six inspected canvas screenshots, served HTML/JS/WASM hashes, source/tool identities and deployment metadata. Eight stages and evidence validation pass; empty stages, a lost repeated read and a missing error report all reject. Ruff check/format, Vale (zero findings), explicit-semicolon/syntax checks and diff checks pass. No learner, latency, physical mobile or accessibility qualification is claimed.\n\nSupports code198x/website#747; umbrella #115/#124 remain open. Approved docs #80 is merged. Next work is code198x/website#748, actual startup/edit-to-result latency.\n",
+  "headRefOid": "ec6a0afaa843a0595895977c91015b525751a9fc",
+  "mergeCommit": {
+    "oid": "dc585af6160ea6e1ec9c2043c9a1a86d62f7c40b"
+  },
+  "mergedAt": "2026-10-15T16:21:02Z",
+  "number": 81,
+  "state": "MERGED",
+  "title": "Retain embedded BASIC stored-value and recovery qualification",
+  "url": "https://github.com/code198x/docs/pull/81",
+  "repository": "code198x/docs"
+}

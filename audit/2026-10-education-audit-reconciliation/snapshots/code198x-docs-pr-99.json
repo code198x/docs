@@ -1,0 +1,11 @@
+{
+  "body": "The published byte-to-word experiment and first graphics example now have fresh execution evidence on the named AmiBlitz/A1200 setup. Guest output confirms -106 for the byte and 150 for the word; the graphics program displayed both shapes and returned to Workbench on a click. All three compiled with zero errors.\n\nBoth live setup-to-first-program routes and representative changed opening pages were reviewed at 390\u00d7844 and 1440\u00d7900. The retained verifier checks numeric invariants, compiler completion and unchanged probe identities; its wrong-value control is rejected. No public lessons or samples changed, so no site rebuild is required.\n\nThe report records the temporary computer-use failure and recovery, failed HTTP fallback, archive extraction limit and actual browser coverage. This is CLI execution plus native observation, not a repeated PED cycle, learner trial, overflow-check-on diagnostic or benchmark.\n\nCloses code198x/website#766.\nCloses code198x/website#767.\nPart of stevehill1981/198x#116, which remains open.\n",
+  "headRefOid": "3aa0c759eaeb79814e1d61a616dc995cbf64ac2e",
+  "mergeCommit": null,
+  "mergedAt": null,
+  "number": 99,
+  "state": "OPEN",
+  "title": "Verify the Amiga opening numeric and graphics examples",
+  "url": "https://github.com/code198x/docs/pull/99",
+  "repository": "code198x/docs"
+}

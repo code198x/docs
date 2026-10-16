@@ -1,0 +1,13 @@
+{
+  "body": "The opening graphics example waits only after entering Blitz mode, so its delay cannot let disk activity finish before the OS is suspended. Move the existing `VWait 100` before `BLITZ`, following the Blitz BASIC 2.1 manual (chapter 7, printed p. 47), and keep the capture driver\u2019s typed source identical. Drawing commands and dimensions are unchanged.\n\nPart of code198x/website#767 and stevehill1981/198x#116. The paired lesson/evidence drafts will link here.\n\nValidation: exact maintained-source/capture-payload match, wait-order assertion and rejected old-order control; diff check passes. Fresh compilation and visual execution are blocked: computer use returned \u201cSky Computer Use native pipe startup failed\u201d. No new runtime pass or crash reproduction is claimed. Keep draft pending runtime review or explicit owner acceptance of that limit.\n",
+  "headRefOid": "69fa6fc6cfb67ffe75875130c6ff8c42dd04a490",
+  "mergeCommit": {
+    "oid": "0ee95b1175c203dad636b6e3038c34a5904343d0"
+  },
+  "mergedAt": "2026-10-16T13:30:09Z",
+  "number": 99,
+  "state": "MERGED",
+  "title": "Wait before suspending AmigaOS in the opening Blitz sample",
+  "url": "https://github.com/code198x/code-samples/pull/99",
+  "repository": "code198x/code-samples"
+}

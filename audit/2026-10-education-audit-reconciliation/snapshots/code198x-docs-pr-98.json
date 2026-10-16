@@ -1,0 +1,13 @@
+{
+  "body": "Retain the evidence for the AMOS and Blitz unit-4 improvements: actual AmiBlitz parity output and compiler logs, graphical test variants, AMOS branch/boundary observations, source and media hashes, browser observations, and an artifact verifier that rejects the old wait order.\n\nThe old Blitz parity expression was true for all ten counter values on the named runtime; MOD alternated correctly. The graphical baseline, stripes, colour-state bug and repair were observed. AMOS selected the expected branches for 3/1/0/-1 and reproduced then repaired the zero boundary bug.\n\nBuild and content checks passed; both local production pages reviewed at 390\u00d7844 and 1440\u00d7900. The report separates actual execution from sourced timing explanations and records setup failures. No learner, VoiceOver, performance or fresh PED cycle claim.\n\nPart of code198x/website#773 and stevehill1981/198x#116. Coordinated sample PR: code198x/code-samples#100.\n\nLesson changes: https://github.com/code198x/website/pull/775\n",
+  "headRefOid": "8927e98d26e39f768e8b7e44a352953ab6a2f68c",
+  "mergeCommit": {
+    "oid": "ce2eb914b9c08f0ca7ad6ee8fcaf0f546cb212b6"
+  },
+  "mergedAt": "2026-10-16T14:10:44Z",
+  "number": 98,
+  "state": "MERGED",
+  "title": "Record native checks for Amiga decisions and repetition",
+  "url": "https://github.com/code198x/docs/pull/98",
+  "repository": "code198x/docs"
+}

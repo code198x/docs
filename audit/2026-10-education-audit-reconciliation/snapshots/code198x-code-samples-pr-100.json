@@ -1,0 +1,13 @@
+{
+  "body": "The unit-4 bars listing entered BLITZ before its existing wait. Move that wait before the mode switch, matching the qualified graphics setup, and keep the capture payload identical to the listing.\n\nNative AmiBlitz 3.13.0b on the named PAL A1200 compiled and ran the changed listing: ten bars, only the sixth purple, then return to Workbench on a left click. Source/capture equality and a deliberately broken wait-order control were checked. The older capture editor-control sequence was not requalified as PED automation.\n\nPart of code198x/website#773 and stevehill1981/198x#116. Merge this sample correction before the coordinated website lesson PR.\n\nLesson changes: https://github.com/code198x/website/pull/775\nEvidence: https://github.com/code198x/docs/pull/98\n",
+  "headRefOid": "546b155de709210121313bff228b682bfc488560",
+  "mergeCommit": {
+    "oid": "99b64a2d1d6b0a39b164cb39c213a8c6f0c64821"
+  },
+  "mergedAt": "2026-10-16T14:10:36Z",
+  "number": 100,
+  "state": "MERGED",
+  "title": "Wait before entering Blitz mode in the loop example",
+  "url": "https://github.com/code198x/code-samples/pull/100",
+  "repository": "code198x/code-samples"
+}

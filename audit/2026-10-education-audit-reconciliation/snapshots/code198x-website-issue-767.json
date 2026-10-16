@@ -1,0 +1,9 @@
+{
+  "body": "The reviewed AMOS/Blitz openings make workload-free performance and safety claims. Examples include Blitz unit 1's \u201ccompiled code runs many times faster\u201d and unit 3's comparison that an interpreted AMOS number uses a \u201cbig, safe box for everything\u201d. The mode lesson also generalises its OS trade to every Amiga game. The included sources/captures demonstrate greetings, graphics and one byte wrap; they supply no comparative timing or whole-language range proof.\n\nReview only the two module overviews and first three units of each track. Preserve the concrete edit/run/compile and storage explanations, but replace general rankings with named mechanisms and explicit boundaries. Treat runtime type/range behaviour as a language contract requiring primary documentation and selected execution, and performance as a processor/language/workload measurement. Do not add invented benchmarks or use a historical generalisation as proof.\n\nAcceptance: retain exact before/after claims and primary citations; any comparative measurement names the same task/configuration and preserves correct results. Keep AMOS and Blitz independent peers. Verify the changed prose and representative rendered pages; no broad rewrite.\n\nParent: stevehill1981/198x#116. Source audit: Code198x/docs `audit/2026-10-amiga-opening/REPORT.md` (pending review).\n",
+  "number": 767,
+  "state": "OPEN",
+  "title": "Qualify the Amiga opening lessons\u2019 speed and representation claims",
+  "updatedAt": "2026-10-16T14:31:54Z",
+  "url": "https://github.com/code198x/website/issues/767",
+  "repository": "code198x/website"
+}

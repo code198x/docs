@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-16",
+  "evidenceVerification": {
+    "criteria": 33,
+    "issues": 4,
+    "githubSnapshots": 53,
+    "documentHashes": 54,
+    "sourceCounts": {
+      "foundationsUnits": 39,
+      "foundationsOverviews": 10,
+      "mathsUnits": 11,
+      "amosUnits": 17,
+      "blitzUnits": 15
+    },
+    "unchangedSourceComparisons": 60,
+    "localLinks": 85,
+    "negativeControlsRejected": [
+      "missing criterion",
+      "missing issue",
+      "wrong source hash",
+      "pending PR counted as accepted",
+      "learner issue closed with unknown outcomes"
+    ],
+    "learnerOutcomes": "unknown",
+    "freshRuntimeOrBrowserTrials": 0
+  },
+  "ruffCheck": {
+    "exitCode": 0
+  },
+  "ruffFormatCheck": {
+    "exitCode": 0
+  },
+  "vale": {
+    "exitCode": 0,
+    "output": "\u2714 0 errors, 0 warnings and 0 suggestions in 2 files."
+  },
+  "diffCheck": {
+    "exitCode": 0
+  },
+  "freshRuntimeTrials": 0,
+  "freshBrowserTrials": 0,
+  "learnerTrials": 0,
+  "initialFailures": [
+    {
+      "check": "local report links",
+      "outcome": "AssertionError: validation.json",
+      "reason": "The report linked the validation file before the initial record was created; creating the record and checking the completed bundle resolved it. No product failure."
+    },
+    {
+      "check": "Ruff",
+      "outcome": "I001: Import block is un-sorted or un-formatted; format check required formatting.",
+      "reason": "Sorted imports and formatted only the new verifier, then repeated both checks successfully."
+    }
+  ],
+  "initialValeSuggestions": [
+    "Remove merely; prefer show to demonstrate. Both amended before final check."
+  ],
+  "websiteBuild": "Not required: docs-only evidence reconciliation.",
+  "review": "Pending owner acceptance; no issues closed or PRs merged."
+}

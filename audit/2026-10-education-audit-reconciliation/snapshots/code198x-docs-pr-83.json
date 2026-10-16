@@ -1,0 +1,13 @@
+{
+  "body": "We now have bounded native Safari evidence for the first-session BASIC route: discovery, editing, keyboard run/exit, deliberate errors, repair, reset, and saving/reopening an edited greeting. The report retains the actual downloaded tape, exact observed output and configuration limits.\n\nVoiceOver was skipped at the user\u2019s request; physical touch remains untested. Native accessibility-tree inspection does not establish screen-reader usability or learner effectiveness. The general player\u2019s unchanged lesson filename after loading the saved tape is recorded as a follow-up candidate, not a reproduced blocker. No website change is proposed.\n\nValidation: eight source hashes checked with a deliberately wrong hash rejected; 85 local links checked; retained tape has two valid checksum blocks; Vale and git diff --check pass. Runtime observations are manual native Safari checks, not automated assertions.\n\nPartial evidence for code198x/website#749 and stevehill1981/198x#124; neither issue is closed.\n",
+  "headRefOid": "a625dcc9e4d08c4db3ebb372a589b86d2f07ce65",
+  "mergeCommit": {
+    "oid": "8e5c619167ffbb745b9da926d8d45823356f5b83"
+  },
+  "mergedAt": "2026-10-16T07:36:16Z",
+  "number": 83,
+  "state": "MERGED",
+  "title": "Record native Safari first-session operation and tape recovery",
+  "url": "https://github.com/code198x/docs/pull/83",
+  "repository": "code198x/docs"
+}

@@ -1,0 +1,13 @@
+{
+  "body": "The umbrella reconciliation identified published game maths as a coverage gap. Map objectives, local prerequisites and maintained source ownership for all eleven units, then qualify the unit 3 boundary between exact counts and rounded sample shares.\n\nSeven fresh native cases pass: three ordinary RUNs of the maintained shares checkpoint and four explicitly labelled BASIC diagnostic fixtures. Six equal counts render as six 16.7% entries, totalling 100.2%, while exact accounting remains correct. The existing lesson explains this correctly, so this change proposes no website or sample correction.\n\nRetain actual screen/state results, source/tool/ROM/driver hashes, source inventory, independent rational rounding checks, six learner tasks and separate assessor notes. Link the evidence from the maths specification, README and coverage map. All learner outcomes remain unobserved; the prepared two-decimal task and browser/device/accessibility/latency/tape paths were not executed here.\n\nValidation: seven native cases, two rejected known-red controls and rejection of an empty observation; eleven objective rows, six task/assessor pairs, fifteen unique sample identities and 86 local links checked. Ruff check/format and git diff --check pass. Vale and commit hooks pass with one pre-existing advisory wording suggestion in the maths specification.\n\nCloses #78. Continues umbrella #114/#115/#124 without closing them. Next technical slice: code198x/website#747, the exact embedded BASIC observation gap.\n",
+  "headRefOid": "6eb444f13c5e41bcae5081abe0f493a31d55f7fa",
+  "mergeCommit": {
+    "oid": "ddb7b803d5faed6ac2518816458c1e16f468dc0b"
+  },
+  "mergedAt": "2026-10-15T16:07:29Z",
+  "number": 80,
+  "state": "MERGED",
+  "title": "Qualify probability shares and map published maths objectives",
+  "url": "https://github.com/code198x/docs/pull/80",
+  "repository": "code198x/docs"
+}

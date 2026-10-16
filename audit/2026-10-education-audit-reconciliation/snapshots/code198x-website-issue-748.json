@@ -1,0 +1,9 @@
+{
+  "body": "Umbrella #124 explicitly asks for embedded WASM latency. The retained journey and pilot reports do not contain valid end-to-end timing measurements.\n\nSelect one published first-session machine task. Define startup from a named user action through an observable ready machine, and edit-to-result through the actual changed machine output. Measure repeated cold and warm runs with explicit cache, network, device/browser and deployment conditions. Retain individual observations, sample counts and a range; do not infer a range from one run or time only script loading.\n\nAcceptance: publish the reproducible procedure, exact measurement boundaries, identities, raw timings, visible success signal and limitations. A failed boot or missing result must fail the run rather than produce a fast timing. Report findings before proposing budgets or optimisation; this issue does not assert that performance is poor. Parent: https://github.com/stevehill1981/198x/issues/124 . Evidence: Code198x/docs `audit/2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md`.\n",
+  "number": 748,
+  "state": "CLOSED",
+  "title": "Measure embedded machine startup and edit-to-result latency",
+  "updatedAt": "2026-10-16T07:13:33Z",
+  "url": "https://github.com/code198x/website/issues/748",
+  "repository": "code198x/website"
+}

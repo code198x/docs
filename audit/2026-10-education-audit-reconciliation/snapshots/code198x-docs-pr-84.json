@@ -1,0 +1,13 @@
+{
+  "body": "We now have a source-backed objective and knowledge map for every authored Foundations unit: 39 units and ten overviews at an immutable website revision. Each record separates the lesson\u2019s own learning summary from reviewer goals, knowledge used, local recall and optional support. The catalogue snapshot is retained too.\n\nThe report reconciles this inventory with sampled pilot evidence, records stale module summaries under code198x/website#752 (correction: https://github.com/code198x/website/pull/753), and identifies compound-condition numeric domains as the next bounded investigation. Inventory completeness does not establish conceptual accuracy, execution of every example or learner effectiveness. The four units without explicit prompt markup are a selection aid, not a question-quota defect.\n\nValidation: 50 source hashes, exact source-set coverage, excerpts/line numbers, support targets and 92 local links pass. Missing-unit, wrong-hash, invented-excerpt and unknown-support controls are rejected. Ruff, Vale and whitespace checks pass. Website build/check and generated-artifact evidence are retained with checkout-preparation failures and corrected artifact assertions distinguished from product outcomes.\n\nPartial completion evidence for stevehill1981/198x#114; parent issues remain open. No new learner trial, screen-reader or physical-device evidence.\n",
+  "headRefOid": "163765fa28f71825b8af5f6480298c7e48b045c8",
+  "mergeCommit": {
+    "oid": "aa06e4f58267349801d6c4c2923f4a5b1b19c822"
+  },
+  "mergedAt": "2026-10-16T07:52:13Z",
+  "number": 84,
+  "state": "MERGED",
+  "title": "Map objectives and knowledge used across all Foundations units",
+  "url": "https://github.com/code198x/docs/pull/84",
+  "repository": "code198x/docs"
+}

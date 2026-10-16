@@ -1,0 +1,13 @@
+{
+  "body": "We retain a direct audit of Repeating unit 1: five exact counted-range models, 11 fresh Spectrum ROM body-placement runs, and independent learner/assessor sheets. Earlier zero/one/three-pass results remain labelled earlier evidence.\n\nThe shared notation specification now makes the existing introductory FOR convention explicit: fixed whole-number bounds, increment by one, inclusive non-empty ranges, and zero body visits when the start is past the end. Target steps, counter lifetime and loop-entry rules retain their own contracts.\n\nValidation: a shortened exclusive-end native variant is rejected with a nonzero exit; wrong source hashes and missing transcripts are rejected; 106 local links and all 34 evidence-manifest entries pass. The website build, all 237 tests and six desktop/narrow keyboard groups pass, with no scoped axe violations or incompletes. Ruff, Vale and whitespace checks pass. The initial browser-context harness failure is retained separately from the passing run.\n\nNo learner trial, other BASIC dialect, physical device, screen-reader, audio or live-publication qualification is claimed. Parent #114/#115/#124 remain open. Next proposed slice: Basics unit 3\u2019s output-joining and target separator contracts.\n\nLesson and browser verifier: https://github.com/code198x/website/pull/757 .\n",
+  "headRefOid": "45624c7bcf6ebe51a4e4141cd89817547043ab65",
+  "mergeCommit": {
+    "oid": "e5ea2c80cbc8c155aa46a06bcfcf5ea7b122c5ed"
+  },
+  "mergedAt": "2026-10-16T08:30:46Z",
+  "number": 86,
+  "state": "MERGED",
+  "title": "Verify counted-loop boundaries and repeated work",
+  "url": "https://github.com/code198x/docs/pull/86",
+  "repository": "code198x/docs"
+}

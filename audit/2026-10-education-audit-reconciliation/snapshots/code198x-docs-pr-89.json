@@ -1,0 +1,13 @@
+{
+  "body": "We have addressed the four explicit prompt gaps identified by the earlier Foundations inventory. This reconciliation compares all 39 unit and ten overview paths/hashes with the frozen map, records the four changed units and one overview, and distinguishes prompt presence from demonstrated understanding.\n\nThe next useful task is retaining fractional fixed-point state across repeated updates while drawing whole pixels. We compare it with existing diagnosis and byte/representation tasks, reuse accepted evidence, and queue [website #763](https://github.com/code198x/website/issues/763). The prepared paper trial and separate assessor notes show why one correct first drawing can hide a lost fraction; a later update distinguishes the policies. The public lesson is unchanged in this slice.\n\nValidation: six finite integer/exact-rational traces, three range rejections and the nonzero wrong-retention control pass. Evidence validation checks source sets/hashes, task arithmetic and 120 local links, rejecting missing rows, bad hashes and discarded state. Ruff, Vale, whitespace checks and all eleven manifest entries pass. The immutable full objective map remains unchanged.\n\nThis is a docs/model-only change. No new website build, browser/native run or learner outcome is claimed. #114/#115/#124 remain open. After review, implement #763 as one optional experiment in Working the Bits unit 5 with focused public-page verification.\n",
+  "headRefOid": "6f2eb0af35121fb0667a58437c9b1d87f1466618",
+  "mergeCommit": {
+    "oid": "a8ab271187c09001624a470a1eb4dc45b106300d"
+  },
+  "mergedAt": "2026-10-16T09:29:18Z",
+  "number": 89,
+  "state": "MERGED",
+  "title": "Choose the next Foundations task from accepted evidence",
+  "url": "https://github.com/code198x/docs/pull/89",
+  "repository": "code198x/docs"
+}

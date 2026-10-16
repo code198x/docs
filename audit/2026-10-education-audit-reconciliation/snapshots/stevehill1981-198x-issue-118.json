@@ -1,0 +1,9 @@
+{
+  "body": "Parent epic: https://github.com/stevehill1981/198x/issues/110\n\n## Scope and completion evidence\nPilot historically grounded era boundaries on Spectrum and Amiga with original sources and representative games. Distinguish possible, documented, typical and later-discovered techniques. Select one appropriately bounded game, establish era-specific gameplay, controls, art, audio, usability and reliability criteria, and evaluate gaps. Do not treat review scores or historical impressions as proof of commercial equivalence.\n\n## Done when\n- Results and source/version/environment identities are recorded, with passed/failed/skipped/unknown distinguished.\n- Findings are filed as specific follow-up issues or linked to existing ones; no duplicate implementation plan.\n- Reviewed findings, limits and next bounded step are linked from this issue.\n\nMaintain existing product architecture and avoid broad rewrites.",
+  "number": 118,
+  "state": "OPEN",
+  "title": "[Education] Research machine-specific development eras and benchmark a capstone game",
+  "updatedAt": "2026-10-15T07:49:26Z",
+  "url": "https://github.com/stevehill1981/198x/issues/118",
+  "repository": "stevehill1981/198x"
+}

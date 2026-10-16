@@ -1,0 +1,9 @@
+{
+  "body": "Parent epic: https://github.com/stevehill1981/198x/issues/110\n\n## Scope and completion evidence\nDesign layered foundations plus machine-specific projects for sprite/tile/bitplane graphics, palettes, pixel art, animation, asset creation/conversion, sound synthesis, envelopes, sequencing, playback, profiling and artistic direction. Include memory/timing constraints, original learner-produced assets and reproducible verification. Pilot one graphics and one audio exercise, with quality review beyond technical loading success.\n\n## Done when\n- Results and source/version/environment identities are recorded, with passed/failed/skipped/unknown distinguished.\n- Findings are filed as specific follow-up issues or linked to existing ones; no duplicate implementation plan.\n- Reviewed findings, limits and next bounded step are linked from this issue.\n\nMaintain existing product architecture and avoid broad rewrites.",
+  "number": 117,
+  "state": "OPEN",
+  "title": "[Education] Define graphics, technical art, sound and music learning progressions",
+  "updatedAt": "2026-10-15T07:49:24Z",
+  "url": "https://github.com/stevehill1981/198x/issues/117",
+  "repository": "stevehill1981/198x"
+}

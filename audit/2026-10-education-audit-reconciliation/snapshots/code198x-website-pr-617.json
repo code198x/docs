@@ -1,0 +1,13 @@
+{
+  "body": "Spectrum learners now see the browser starting point before optional local setup, can save edited source in the first lesson, and receive readable assembly diagnostics with buttons that select the correct source or companion line. Gateway firmware messaging follows the build's bundled-ROM metadata.\n\nAdds beginner guidance beside Meteor Storm entry links, corrects the older first-game claim, labels published lesson counts, folds the early prediction answer, and keeps the source drawer open when switching byte experiments. Existing browser verification scripts now open the native drawers explicitly and accept both canonical URL forms.\n\nValidation: 160 unit tests passed (9 existing skips); content/prepared-asset checks; 2,428-page build; 216 desktop/mobile browser checks; focused error-state accessibility; all eight Spectrum execution/release scripts; offline built-site links with zero errors.\n",
+  "headRefOid": "b9c3b234f7e39ed27de4a476e3a49d1dc9358f54",
+  "mergeCommit": {
+    "oid": "3484ed4a5592cb4cd8bc50aa4ea9c9a65d0fff12"
+  },
+  "mergedAt": "2026-10-04T18:10:25Z",
+  "number": 617,
+  "state": "MERGED",
+  "title": "Clarify Spectrum entry, source saving and error recovery",
+  "url": "https://github.com/code198x/website/pull/617",
+  "repository": "code198x/website"
+}
