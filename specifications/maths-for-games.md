@@ -139,6 +139,9 @@ The [probability pilot](../audit/2026-10-probability-pilot/REPORT.md) maps objec
 local prerequisites and maintained source ownership for the eleven published
 units. Fresh native checks cover the unit 3 count/share rounding boundary only;
 they do not qualify every maths objective or establish learner effectiveness.
+The [aiming boundary audit](../audit/2026-10-aiming-boundaries/REPORT.md) adds
+finite-segment contact, signed rounding and bounded representation checks against
+the maintained host model. It adds no learner or browser qualification.
 
 ## Reference and coverage provenance
 

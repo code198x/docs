@@ -1,0 +1,498 @@
+{
+  "status": "passed",
+  "date": "2026-10-16T09:57:44.488Z",
+  "node": "v24.22.0",
+  "policy": "actual",
+  "modelSha256": "c90793f4218235aeef591bc2a816bbc61ef10b1651f6b259b046ffa1189c6a8e",
+  "geometry": [
+    {
+      "name": "between-tick tangent",
+      "start": {
+        "x": 0,
+        "y": 0
+      },
+      "end": {
+        "x": 3,
+        "y": 0
+      },
+      "target": {
+        "x": 1.5,
+        "y": 5
+      },
+      "expectedSquared": 25,
+      "expectedHit": true,
+      "distance": 5,
+      "hit": true
+    },
+    {
+      "name": "outside",
+      "start": {
+        "x": 0,
+        "y": 0
+      },
+      "end": {
+        "x": 3,
+        "y": 0
+      },
+      "target": {
+        "x": 1.5,
+        "y": 5.001
+      },
+      "expectedSquared": 25.010001,
+      "expectedHit": false,
+      "distance": 5.001,
+      "hit": false
+    },
+    {
+      "name": "inside",
+      "start": {
+        "x": 0,
+        "y": 0
+      },
+      "end": {
+        "x": 3,
+        "y": 0
+      },
+      "target": {
+        "x": 1.5,
+        "y": 4.999
+      },
+      "expectedSquared": 24.990001,
+      "expectedHit": true,
+      "distance": 4.999,
+      "hit": true
+    },
+    {
+      "name": "beyond finish",
+      "start": {
+        "x": 0,
+        "y": 0
+      },
+      "end": {
+        "x": 3,
+        "y": 0
+      },
+      "target": {
+        "x": 9,
+        "y": 0
+      },
+      "expectedSquared": 36,
+      "expectedHit": false,
+      "distance": 6,
+      "hit": false
+    },
+    {
+      "name": "before start",
+      "start": {
+        "x": 0,
+        "y": 0
+      },
+      "end": {
+        "x": 3,
+        "y": 0
+      },
+      "target": {
+        "x": -6,
+        "y": 0
+      },
+      "expectedSquared": 36,
+      "expectedHit": false,
+      "distance": 6,
+      "hit": false
+    },
+    {
+      "name": "endpoint tangent",
+      "start": {
+        "x": 0,
+        "y": 0
+      },
+      "end": {
+        "x": 3,
+        "y": 0
+      },
+      "target": {
+        "x": 8,
+        "y": 0
+      },
+      "expectedSquared": 25,
+      "expectedHit": true,
+      "distance": 5,
+      "hit": true
+    },
+    {
+      "name": "vertical tangent",
+      "start": {
+        "x": 0,
+        "y": 0
+      },
+      "end": {
+        "x": 0,
+        "y": 3
+      },
+      "target": {
+        "x": -5,
+        "y": 1.5
+      },
+      "expectedSquared": 25,
+      "expectedHit": true,
+      "distance": 5,
+      "hit": true
+    },
+    {
+      "name": "reverse",
+      "start": {
+        "x": 3,
+        "y": 0
+      },
+      "end": {
+        "x": 0,
+        "y": 0
+      },
+      "target": {
+        "x": 1.5,
+        "y": 5
+      },
+      "expectedSquared": 25,
+      "expectedHit": true,
+      "distance": 5,
+      "hit": true
+    },
+    {
+      "name": "stationary tangent",
+      "start": {
+        "x": 2,
+        "y": 3
+      },
+      "end": {
+        "x": 2,
+        "y": 3
+      },
+      "target": {
+        "x": 5,
+        "y": 7
+      },
+      "expectedSquared": 25,
+      "expectedHit": true,
+      "distance": 5,
+      "hit": true
+    },
+    {
+      "name": "stationary outside",
+      "start": {
+        "x": 2,
+        "y": 3
+      },
+      "end": {
+        "x": 2,
+        "y": 3
+      },
+      "target": {
+        "x": 8,
+        "y": 3
+      },
+      "expectedSquared": 36,
+      "expectedHit": false,
+      "distance": 6,
+      "hit": false
+    }
+  ],
+  "rounding": [
+    {
+      "input": -2.5,
+      "expected": -3,
+      "actual": -3,
+      "mathRound": -2
+    },
+    {
+      "input": -1.5,
+      "expected": -2,
+      "actual": -2,
+      "mathRound": -1
+    },
+    {
+      "input": -0.5,
+      "expected": -1,
+      "actual": -1,
+      "mathRound": 0
+    },
+    {
+      "input": 0,
+      "expected": 0,
+      "actual": 0,
+      "mathRound": 0
+    },
+    {
+      "input": 0.5,
+      "expected": 1,
+      "actual": 1,
+      "mathRound": 1
+    },
+    {
+      "input": 1.5,
+      "expected": 2,
+      "actual": 2,
+      "mathRound": 2
+    },
+    {
+      "input": 2.5,
+      "expected": 3,
+      "actual": 3,
+      "mathRound": 3
+    },
+    {
+      "input": -0.499,
+      "expected": 0,
+      "actual": 0,
+      "mathRound": 0
+    },
+    {
+      "input": -0.501,
+      "expected": -1,
+      "actual": -1,
+      "mathRound": -1
+    }
+  ],
+  "directions": [
+    {
+      "x": 1,
+      "y": 0,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "expected": 45,
+      "actual": 45
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "expected": 90,
+      "actual": 90
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "expected": 135,
+      "actual": 135
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "expected": 180,
+      "actual": 180
+    },
+    {
+      "x": -1,
+      "y": -1,
+      "expected": 225,
+      "actual": 225
+    },
+    {
+      "x": 0,
+      "y": -1,
+      "expected": 270,
+      "actual": 270
+    },
+    {
+      "x": 1,
+      "y": -1,
+      "expected": 315,
+      "actual": 315
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "expected": null,
+      "actual": null
+    }
+  ],
+  "sweep": {
+    "combinations": 10800,
+    "maximumStoredComponent": 768,
+    "limits": "Declared tenths-of-a-degree input grid and three scales; not arbitrary floating-point values."
+  },
+  "shots": [
+    {
+      "angle": 32.8,
+      "scale": 4,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": false,
+      "minimumReference": 1.9371721601446894e-14,
+      "minimumFixed": 8.414700263924752,
+      "maximumStoredPosition": 800
+    },
+    {
+      "angle": 32.8,
+      "scale": 16,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 1.9371721601446894e-14,
+      "minimumFixed": 0.8595875190091692,
+      "maximumStoredPosition": 3200
+    },
+    {
+      "angle": 32.8,
+      "scale": 256,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 1.9371721601446894e-14,
+      "minimumFixed": 0.07667701001081383,
+      "maximumStoredPosition": 51680
+    },
+    {
+      "angle": 138.4,
+      "scale": 4,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 1.336885555457667e-14,
+      "minimumFixed": 0.1287818001037903,
+      "maximumStoredPosition": 720
+    },
+    {
+      "angle": 138.4,
+      "scale": 16,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 1.336885555457667e-14,
+      "minimumFixed": 0.1287818001037903,
+      "maximumStoredPosition": 2880
+    },
+    {
+      "angle": 138.4,
+      "scale": 256,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 1.336885555457667e-14,
+      "minimumFixed": 0.08119366013215527,
+      "maximumStoredPosition": 45920
+    },
+    {
+      "angle": 248.6,
+      "scale": 4,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": false,
+      "minimumReference": 4.424555649859924e-15,
+      "minimumFixed": 5.439925895041606,
+      "maximumStoredPosition": 880
+    },
+    {
+      "angle": 248.6,
+      "scale": 16,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 4.424555649859924e-15,
+      "minimumFixed": 1.5412891722709037,
+      "maximumStoredPosition": 3600
+    },
+    {
+      "angle": 248.6,
+      "scale": 256,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 4.424555649859924e-15,
+      "minimumFixed": 0.05480080679544809,
+      "maximumStoredPosition": 57200
+    },
+    {
+      "angle": 90,
+      "scale": 4,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 1.0600318413907346e-30,
+      "minimumFixed": 1.3471114790620885e-14,
+      "maximumStoredPosition": 960
+    },
+    {
+      "angle": 90,
+      "scale": 16,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 1.0600318413907346e-30,
+      "minimumFixed": 1.3471114790620885e-14,
+      "maximumStoredPosition": 3840
+    },
+    {
+      "angle": 90,
+      "scale": 256,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 1.0600318413907346e-30,
+      "minimumFixed": 1.3471114790620885e-14,
+      "maximumStoredPosition": 61440
+    },
+    {
+      "angle": 318.2,
+      "scale": 4,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 0,
+      "minimumFixed": 0.6391621642564047,
+      "maximumStoredPosition": 720
+    },
+    {
+      "angle": 318.2,
+      "scale": 16,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 0,
+      "minimumFixed": 0.6391621642564047,
+      "maximumStoredPosition": 2880
+    },
+    {
+      "angle": 318.2,
+      "scale": 256,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 0,
+      "minimumFixed": 0.06853859894183029,
+      "maximumStoredPosition": 45840
+    },
+    {
+      "angle": 180,
+      "scale": 4,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 2.1200636827814692e-30,
+      "minimumFixed": 2.694222958124177e-14,
+      "maximumStoredPosition": 960
+    },
+    {
+      "angle": 180,
+      "scale": 16,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 2.1200636827814692e-30,
+      "minimumFixed": 2.694222958124177e-14,
+      "maximumStoredPosition": 3840
+    },
+    {
+      "angle": 180,
+      "scale": 256,
+      "count": 80,
+      "referenceHit": true,
+      "fixedHit": true,
+      "minimumReference": 2.1200636827814692e-30,
+      "minimumFixed": 2.694222958124177e-14,
+      "maximumStoredPosition": 61440
+    }
+  ]
+}
