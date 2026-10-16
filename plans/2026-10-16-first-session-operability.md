@@ -28,10 +28,13 @@ Declared matrix before exercising the route:
 3. Verify any blocker twice with a reduced procedure, inspect its source cause,
    deduplicate #123/site issues, then file bounded findings. Do not widen to a
    redesign or invent a defect from unavailable hardware/tool affordances.
-4. If approved, exercise VoiceOver navigation/output/error/control announcements
-   on this task tab, then restore its initial off state. If not, document skipped
-   AT operation and keep #749's remaining scope visible.
+4. Respect the explicit VoiceOver skip. Complete Safari save/reopen after the
+   user's explicit site-download approval; retain the actual tape and compare
+   the fresh machine's recovered words. Keep remaining AT/touch limits visible.
 5. Retain bounded report, exact matrix/outcomes and evidence under
    `audit/2026-10-first-session-operability/`; link current coverage/README. Verify
    links/identities/prose, push reviewable draft PR(s), update tracking issues,
    verify remote retention and clean task tab/worktrees/processes/downloads.
+
+Outcome: edited tape saved and reopened in Safari. VoiceOver stayed off. The task
+Safari tabs were closed; the original Issues tab remained open.

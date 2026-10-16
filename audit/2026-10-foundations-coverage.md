@@ -71,7 +71,8 @@ stages for [website #748](https://github.com/code198x/website/issues/748), accep
 The [native Safari follow-up](2026-10-first-session-operability/REPORT.md) adds
 selected desktop operation under [website #749](https://github.com/code198x/website/issues/749).
 That issue remains open: VoiceOver is skipped at the user's request, physical
-touch is untested, and Safari save/reopen awaits download permission.
+touch is untested. Safari edited-tape save/reopen was observed working after
+explicit download permission approval.
 The complete per-unit Foundations objective/prerequisite map remains available
 source work under #114 while these configurations wait.
 Continue source and technical work while learner observations wait.

@@ -1,14 +1,14 @@
 # First-session BASIC: native Safari operability
 
 The selected BASIC route works in installed Safari 27 for discovery, source
-editing, running, keyboard activation/exit, deliberate errors, repair and reset.
+editing, running, keyboard activation/exit, deliberate errors, repair, reset and
+saving/reopening the edited tape.
 The greeting is visible on the machine canvas and exposed through Screen text
 in the native accessibility tree. We found no confirmed product blocker in those
 checks and propose no website change.
 
 **This is partial qualification.** VoiceOver was skipped at the user's explicit
-request. Physical touch was not tested. Safari save/reopen remains unqualified
-because approval to allow site downloads is pending. Keep
+request. Physical touch was not tested. Keep
 [website #749](https://github.com/code198x/website/issues/749) and umbrella
 [#124](https://github.com/stevehill1981/198x/issues/124) open. Native accessibility
 tree inspection is not a screen-reader trial or evidence of learner understanding.
@@ -72,6 +72,7 @@ confirmed navigation. Neither tool observation is filed as a product defect.
 | Deliberate runtime fault | `10 PRINT m$` produces `2 Variable not found, 10:1` on the canvas |
 | Repair the fault | Restore the quoted greeting in line 10; the three messages reappear in Screen text |
 | Listing validation | Unnumbered `PRINT "missing number"` exposes `line 1: start with a line number from 1 to 9999` and `Check the listing, then try again.`; focus remains in the source field |
+| Save and reopen | Downloaded greeting.tap (87 bytes); unit 2’s fresh player recovered Safari greeting / to you / from the Spectrum and `0 OK, 20:1` |
 | Reset and rerun | Reset to original restores the maintained Welcome source and Original code state; the diagnostic disappears. The next run exposes Welcome / to you / from the Spectrum |
 
 With the existing Safari keyboard settings, ordinary Tab from the source skipped
@@ -95,23 +96,37 @@ downloads from code198x.com. Automatic approval review rejected the Allow click:
 
 > Clicking Allow changes Safari’s per-site download permission, and the user has not specifically pre-approved or confirmed accepting this browser permission prompt.
 
-We requested explicit permission and cancelled the prompt while continuing the
-other checks. We did not bypass that rejection through a different download
-mechanism. No successful Safari tape download, file-content check or tape reopen
-is claimed. No downloaded file is retained as evidence. Permission is still pending
-at this report's cut-off; if approved, repeat the edited greeting, download it,
-then follow the actual unit 2 reopen instructions and compare the recovered words.
-This browser-permission boundary is not a confirmed product bug.
+We cancelled the prompt while continuing the other checks. The user then
+explicitly approved downloads from code198x.com. We reopened the edited listing,
+used Download tape and accepted the approved prompt. Safari reported Your tape
+is downloaded and its download list identified greeting.tap, 87 bytes.
+
+Following [unit 2's reopen instructions](https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save/#reopen-your-saved-greeting),
+we opened Run it here, chose that actual downloaded file through Choose program
+or disk, then pressed Start. The fresh machine displayed Program: greeting,
+Safari greeting / to you / from the Spectrum, and `0 OK, 20:1`. The recovered
+canvas therefore retained the edited words. We retain the actual
+[downloaded tape](greeting.tap); its byte count and SHA-256 appear in the
+[observation log](native-observations.json).
+
+The native file picker's paste action retained an old path. Setting its path
+field explicitly selected greeting.tap in Downloads before loading. This was a
+tool interaction limitation; no unrelated file was loaded. The general player
+continued to label its panel step-03.tap after the selected tape ran. We record
+that single-observation naming discrepancy as a follow-up candidate, not a
+reproduced blocker. Its inspected AX tree exposed the canvas name and controls,
+but no recovered screen transcript. The visual recovery result does not extend
+the editor panel's Screen text observation to this player or establish nonvisual
+save/reopen usability. VoiceOver remained off.
 
 ## Findings and next work
 
-No new product issue was filed: the sampled tasks worked, and unavailable or
-unapproved configurations do not justify speculative defects. This audit supplies
+No new product issue was filed: the sampled tasks worked, and skipped
+configurations do not justify speculative defects. This audit supplies
 Safari observations beyond the earlier Chromium viewport checks while preserving
 their limits. It does not complete #749's broader qualification.
 
-First finish Safari save/reopen if download permission is approved. When VoiceOver
-operation is wanted, explicitly qualify navigation, control/error announcements,
+When VoiceOver operation is wanted, explicitly qualify navigation, control/error announcements,
 text-result access and recovery; do not substitute this AX record. Exercise real
 touch hardware when available. Coordinate any confirmed shared accessibility
 finding with [umbrella #123](https://github.com/stevehill1981/198x/issues/123).
@@ -125,4 +140,4 @@ objective/prerequisite map identified in the
 
 [Document validation](validation.json) checks source identities, retained-record
 structure and links. It cannot independently turn a manual observation into an
-automated pass, a screen-reader result or a completed save/reopen cycle.
+automated pass, a screen-reader result or independent verification of the save/reopen cycle.
