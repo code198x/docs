@@ -1,0 +1,546 @@
+{
+  "website_revision": "d0de348ba750cac17bfd7757a217e5b37eb28042",
+  "frozen_inventory_revision": "2b9905262dcb7261314b6ef6490db7b8a5c803ed",
+  "units": 39,
+  "overviews": 10,
+  "earlier_units_with_explicit_prompt_markup": 35,
+  "current_units_with_explicit_prompt_markup": 39,
+  "earlier_missing_prompt_units": [
+    "basics/03",
+    "decisions/04",
+    "from-source-to-silicon/02",
+    "repeating/01"
+  ],
+  "records": [
+    {
+      "path": "src/content/curriculum/foundations/basics/index.mdx",
+      "baseline_sha256": "f5e5ed6fcc96365834270dfb4158de378acac432c2e6b6a67e37bd9e41eff0a0",
+      "current_sha256": "f5e5ed6fcc96365834270dfb4158de378acac432c2e6b6a67e37bd9e41eff0a0",
+      "changed": false,
+      "unit": false,
+      "explicit_prompt_markers": 0,
+      "prompts": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-01.mdx",
+      "baseline_sha256": "6bf2f74bb0496df0a830dbb32991098d5b059c7f1101d2c27b27ce6e384ffa51",
+      "current_sha256": "6bf2f74bb0496df0a830dbb32991098d5b059c7f1101d2c27b27ce6e384ffa51",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<Question prompt={'If SHOW \"Put your shoes on\" runs, has the computer put anyone\u2019s shoes on?'}>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-02.mdx",
+      "baseline_sha256": "95cc1ee7335539494ddd3c62f33e311948a1a975b4ee845986d3f4b48337a835",
+      "current_sha256": "95cc1ee7335539494ddd3c62f33e311948a1a975b4ee845986d3f4b48337a835",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<Question prompt=\"If we swap the first two SHOW lines, does Go outside move to the first output line?\">"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-03.mdx",
+      "baseline_sha256": "8a4466da4292a495cedc5045628067c70a19a2416a04d3a2a0ee589feb9bbeb7",
+      "current_sha256": "e1d108e5564892cc69136872add5089e235efd47543fc541b7baab0eba522ff1",
+      "changed": true,
+      "unit": true,
+      "explicit_prompt_markers": 2,
+      "prompts": [
+        "<Question prompt={'What does SHOW \"3 + 4\" display? What changes if we remove the quotation marks?'}>",
+        "<Question prompt={'We want Score: 5, but wrote SHOW \"Score:\", 2 + 3. What appears, and how would you repair it?'}>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-04.mdx",
+      "baseline_sha256": "b70d5015f5ea4c531a836f69d1ac2c5c2f52cf3bede3cdd9d339773a83063dfa",
+      "current_sha256": "b70d5015f5ea4c531a836f69d1ac2c5c2f52cf3bede3cdd9d339773a83063dfa",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Check your prediction</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-05.mdx",
+      "baseline_sha256": "17551aecd268be4663ef853b62bc2f10e64096e8657aa33fbbe908808f5855d2",
+      "current_sha256": "17551aecd268be4663ef853b62bc2f10e64096e8657aa33fbbe908808f5855d2",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<Question prompt=\"We submit Ada twice, then an empty line. Which runs give the same greeting, and does the empty line leave the program waiting?\">"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/index.mdx",
+      "baseline_sha256": "dfaff3bea318cc76de92914521b09adeacb9bb75579a82701486c2f7e4bc62f8",
+      "current_sha256": "dfaff3bea318cc76de92914521b09adeacb9bb75579a82701486c2f7e4bc62f8",
+      "changed": false,
+      "unit": false,
+      "explicit_prompt_markers": 0,
+      "prompts": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-01.mdx",
+      "baseline_sha256": "768151d2ab970e3e7ebb9e78b1a3ad94f44cad12839294dd25dd4adca736197d",
+      "current_sha256": "768151d2ab970e3e7ebb9e78b1a3ad94f44cad12839294dd25dd4adca736197d",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Does BIN 00000101 hold a bigger number than BIN 101? Can BIN 100000000 fit in one unsigned byte?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-02.mdx",
+      "baseline_sha256": "6f686111d9083edea9232c0d092d80cdf813d0419feeb5867320360d3f2f7d79",
+      "current_sha256": "6f686111d9083edea9232c0d092d80cdf813d0419feeb5867320360d3f2f7d79",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Do HEX 10 and decimal 10 mean the same value? Which fits in an unsigned byte: HEX FF or HEX 100?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-03.mdx",
+      "baseline_sha256": "a33401ca1d8d5c024682563366cf265c176e0522d364bd950fd761b57cd299b6",
+      "current_sha256": "a33401ca1d8d5c024682563366cf265c176e0522d364bd950fd761b57cd299b6",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>A machine has addresses 0 to 65535. Does that prove it has 64K of RAM?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-04.mdx",
+      "baseline_sha256": "5ae50facc1f7bcf8351e194335a52df64469d974e02af2674aca5415e52c2925",
+      "current_sha256": "5ae50facc1f7bcf8351e194335a52df64469d974e02af2674aca5415e52c2925",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>For a one-byte result, does 127 + 1 carry out of the byte? Does it overflow signed?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/index.mdx",
+      "baseline_sha256": "368ab306e606ea146977c1d886124ed11e866c8d597da0534253ec7bde8493e3",
+      "current_sha256": "368ab306e606ea146977c1d886124ed11e866c8d597da0534253ec7bde8493e3",
+      "changed": false,
+      "unit": false,
+      "explicit_prompt_markers": 0,
+      "prompts": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-01.mdx",
+      "baseline_sha256": "185c6e6e7de61f531920e9d561b71efba4fdcd3e699d41e7533b2011b8012269",
+      "current_sha256": "185c6e6e7de61f531920e9d561b71efba4fdcd3e699d41e7533b2011b8012269",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Check the three cases</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-02.mdx",
+      "baseline_sha256": "9f7d280ab5be41dfdfff24abb4a316de73dd6baa41b4aba8662a009a056622a9",
+      "current_sha256": "9f7d280ab5be41dfdfff24abb4a316de73dd6baa41b4aba8662a009a056622a9",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<Question prompt=\"If we put score >"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-03.mdx",
+      "baseline_sha256": "60a1825e405e8bd40546a9a7b84218efe37743fefdb988c0231d9cf3c9d4b3a9",
+      "current_sha256": "60a1825e405e8bd40546a9a7b84218efe37743fefdb988c0231d9cf3c9d4b3a9",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 2,
+      "prompts": [
+        "<Question prompt=\"After the three code lines, is IF tooLow true or false? What about a fresh test of guess < 7?\">",
+        "<Question prompt=\"If a restart restores three lives but omits gameOver = FALSE, does IF gameOver still choose Game over?\">"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-04.mdx",
+      "baseline_sha256": "8ac6743785e0a5591177114de925b71c7f0d3d54135353f2124968a3e4d1e24a",
+      "current_sha256": "b7cd667e6304aa45da909e7875836adb5ed450192afe6b29af9e0e6f28ba3bdd",
+      "changed": true,
+      "unit": true,
+      "explicit_prompt_markers": 2,
+      "prompts": [
+        "<Question prompt=\"Which values get Good guess: 0, 1, 1.5, 10 and 10.5? Does passing both bounds make a value a whole number?\">",
+        "<Question prompt=\"With alive FALSE, ammo 0 and grenades 1, does each version allow shooting? How would you repair the wrong guard?\">"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/index.mdx",
+      "baseline_sha256": "98fae7556f8b62937df16ef9123149426aa3a667b599eb4907731e25c952f121",
+      "current_sha256": "98fae7556f8b62937df16ef9123149426aa3a667b599eb4907731e25c952f121",
+      "changed": false,
+      "unit": false,
+      "explicit_prompt_markers": 0,
+      "prompts": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-01.mdx",
+      "baseline_sha256": "0477fd4589f0de8db9d57c6c7a0bf76e372fc8bc65a6eab19fbf5d5741cfff2e",
+      "current_sha256": "0477fd4589f0de8db9d57c6c7a0bf76e372fc8bc65a6eab19fbf5d5741cfff2e",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Are character codes instructions?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-02.mdx",
+      "baseline_sha256": "a2965613106820a5697b6d9bb887a5987fcc34b5cd8ae26e743ff884a1ea540b",
+      "current_sha256": "6b3b7f64604897343c6a168c1019ee2c40cd91923b6338293b1280d8b3fa3eb5",
+      "changed": true,
+      "unit": true,
+      "explicit_prompt_markers": 2,
+      "prompts": [
+        "<Question prompt=\"Change the starting total to 10 and the loop's last number to 3. What does SHOW total display, and how many times does the addition statement run?\">",
+        "<Question prompt=\"Three visits mean three executions of the addition statement. Have we counted three processor instructions, or measured the interpreter's extra time?\">"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-03.mdx",
+      "baseline_sha256": "9a8861b0520a7cec2af9bb8ba1cfb5c1ed7c970fcb544012d26b878330b6e680",
+      "current_sha256": "9a8861b0520a7cec2af9bb8ba1cfb5c1ed7c970fcb544012d26b878330b6e680",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 2,
+      "prompts": [
+        "<summary>Does a recognised last word make the program valid?</summary>",
+        "<summary>Follow the compiler's output</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-04.mdx",
+      "baseline_sha256": "9cc1e26f436f306b0f8df1e71f65ad6718299b5f73cdc6087d3ca24e4bbf4a90",
+      "current_sha256": "9cc1e26f436f306b0f8df1e71f65ad6718299b5f73cdc6087d3ca24e4bbf4a90",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Compare rules and drawing</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-05.mdx",
+      "baseline_sha256": "5bcdea8862584e399922b7ab4d06b706a3e404c052e1dfd81f51db5145d62336",
+      "current_sha256": "5bcdea8862584e399922b7ab4d06b706a3e404c052e1dfd81f51db5145d62336",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Compare the average with the slow update</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/index.mdx",
+      "baseline_sha256": "e58d633ee166c5616f0caadc9951e13313e0a625e6626a0a33badd893cbc598d",
+      "current_sha256": "e58d633ee166c5616f0caadc9951e13313e0a625e6626a0a33badd893cbc598d",
+      "changed": false,
+      "unit": false,
+      "explicit_prompt_markers": 0,
+      "prompts": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-01.mdx",
+      "baseline_sha256": "11088d3dd1fe775f60a0603dbae143fceeb6b07aacec2885b3e2bcb123e42edc",
+      "current_sha256": "11088d3dd1fe775f60a0603dbae143fceeb6b07aacec2885b3e2bcb123e42edc",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>If a drawing matches all four AND rows, have we measured a real chip's delay?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-02.mdx",
+      "baseline_sha256": "0f34faa265e33382e09a1dd077a00139db93da181088e1b26f5e486228ddca9a",
+      "current_sha256": "0f34faa265e33382e09a1dd077a00139db93da181088e1b26f5e486228ddca9a",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>For A = 1 and B = 1, is a dark SUM output evidence that the answer is zero?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-03.mdx",
+      "baseline_sha256": "2d175e6377ffb83892a11e741db803b6d9914497263f843756a5849af23b9258",
+      "current_sha256": "2d175e6377ffb83892a11e741db803b6d9914497263f843756a5849af23b9258",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Does 111 + 001 give zero or eight? What if we keep only three sum bits?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/index.mdx",
+      "baseline_sha256": "831ba31267ae0dfce2c70285c9e7d31154e9e491d880b8ec5be9efe94dbbe59c",
+      "current_sha256": "831ba31267ae0dfce2c70285c9e7d31154e9e491d880b8ec5be9efe94dbbe59c",
+      "changed": false,
+      "unit": false,
+      "explicit_prompt_markers": 0,
+      "prompts": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/unit-01.mdx",
+      "baseline_sha256": "1fc427c8eda435a8f8ee59a5270c271c04597f289e02a0799a44cb930942008e",
+      "current_sha256": "8293f9a6eca8c8ee54bb0d99ec3e651175fda68975202a26ff78b6ecbd12fbda",
+      "changed": true,
+      "unit": true,
+      "explicit_prompt_markers": 2,
+      "prompts": [
+        "<Question prompt=\"Which counter values are visited by 1 TO 0, 1 TO 1 and 0 TO 3? How many visits does each range give?\">",
+        "<Question prompt=\"Move SHOW Done just above END, keeping its quotation marks. How many Done messages appear for 1 TO 3? What about 1 TO 0?\">"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/unit-02.mdx",
+      "baseline_sha256": "dea5bed5aacf181b49989337ecf195b243fdd6b774baeb31c34a774d1f737039",
+      "current_sha256": "dea5bed5aacf181b49989337ecf195b243fdd6b774baeb31c34a774d1f737039",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 2,
+      "prompts": [
+        "<Question prompt=\"The player submits 4, then 4 again. Does a reachable winning case guarantee this guessing loop will finish?\">",
+        "<summary>If the last round chose 7, can the next round choose 7 too?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/unit-03.mdx",
+      "baseline_sha256": "b9fbdc89e94277b949749805b3ccd34d171c8cccb3ca595f663081c455dcdf68",
+      "current_sha256": "b9fbdc89e94277b949749805b3ccd34d171c8cccb3ca595f663081c455dcdf68",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 2,
+      "prompts": [
+        "<Question prompt=\"Does moving LET lives = 3 before WHILE repair this loop? Where should a new game restore its starting lives?\">",
+        "<Question prompt=\"With lives starting at 0, how many times does WHILE run? What if the same body uses REPEAT ... UNTIL lives <= 0?\">"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/index.mdx",
+      "baseline_sha256": "9bfbc1ca97dba42cbcfeae0761a5b8463a95258d6a4b42007385dd1a3856f05d",
+      "current_sha256": "9bfbc1ca97dba42cbcfeae0761a5b8463a95258d6a4b42007385dd1a3856f05d",
+      "changed": false,
+      "unit": false,
+      "explicit_prompt_markers": 0,
+      "prompts": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-01.mdx",
+      "baseline_sha256": "ca128a5139dd8b5e3ffe57a5c633edf75c169e7dbb405073fd981c3eb49844f6",
+      "current_sha256": "ca128a5139dd8b5e3ffe57a5c633edf75c169e7dbb405073fd981c3eb49844f6",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>With scores = [10], are scores[0], scores[1] and scores[2] all valid? What changes after APPEND 20?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-02.mdx",
+      "baseline_sha256": "615603a9090b7d8b9bf6ee9cda17e56e04d94a519deeab9a3a52e1dd8869f8fc",
+      "current_sha256": "615603a9090b7d8b9bf6ee9cda17e56e04d94a519deeab9a3a52e1dd8869f8fc",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Check which callers change</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-03.mdx",
+      "baseline_sha256": "c7dccf4e80e4e336ab33ff29058ea54dbe466dbfba12bbc6bcb8e25c62df5713",
+      "current_sha256": "c7dccf4e80e4e336ab33ff29058ea54dbe466dbfba12bbc6bcb8e25c62df5713",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 2,
+      "prompts": [
+        "<summary>With n = 3, what do LET result = double(n) and LET n = double(n) leave in the caller?</summary>",
+        "<summary>Compare their promises</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-04.mdx",
+      "baseline_sha256": "0dae1f6051a46f9040e27358b0b8d6665af827e37f116a2de11dcdbe1e96f243",
+      "current_sha256": "0dae1f6051a46f9040e27358b0b8d6665af827e37f116a2de11dcdbe1e96f243",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Compare the predictions</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/index.mdx",
+      "baseline_sha256": "84e997ed409903b30c6bedb0d9682849470b5ae7f21c3a6e8918fd48b4920892",
+      "current_sha256": "84e997ed409903b30c6bedb0d9682849470b5ae7f21c3a6e8918fd48b4920892",
+      "changed": false,
+      "unit": false,
+      "explicit_prompt_markers": 0,
+      "prompts": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/unit-01.mdx",
+      "baseline_sha256": "dceaa799f42ceb22bd408094629beda5bca1af90d9bc240c79fe1ddf4f49a01d",
+      "current_sha256": "dceaa799f42ceb22bd408094629beda5bca1af90d9bc240c79fe1ddf4f49a01d",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Does testing the same unchanged score twice create four possible game states?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/unit-02.mdx",
+      "baseline_sha256": "dcf8e37b6c5c1982e96a62689603cd9592585a3b475f732d2bbe9188a0546933",
+      "current_sha256": "dcf8e37b6c5c1982e96a62689603cd9592585a3b475f732d2bbe9188a0546933",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Must A AND A have fewer passing cases than A? Must A OR A have more?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/unit-03.mdx",
+      "baseline_sha256": "7af4a2a687c2940a96e8bdd4ab34e35ef107388936bd818988602e7387f117ff",
+      "current_sha256": "7af4a2a687c2940a96e8bdd4ab34e35ef107388936bd818988602e7387f117ff",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>What if dead is TRUE but a separately stored alive flag is still TRUE?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/index.mdx",
+      "baseline_sha256": "9287217915296887cbd6cd727994242ac5b29d0556404a529381ec4dec87e961",
+      "current_sha256": "9287217915296887cbd6cd727994242ac5b29d0556404a529381ec4dec87e961",
+      "changed": false,
+      "unit": false,
+      "explicit_prompt_markers": 0,
+      "prompts": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/unit-01.mdx",
+      "baseline_sha256": "80edc34253f5fe086be5ea4a9196e560213f78f6fb2975e6692f4a27f7fc4365",
+      "current_sha256": "80edc34253f5fe086be5ea4a9196e560213f78f6fb2975e6692f4a27f7fc4365",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>What will 20 - 5 - 2 show? Where would brackets make it 17?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/unit-02.mdx",
+      "baseline_sha256": "8ba6b8505d7f66ca91224696ee11f2928ad51e0b6d1f05d9874dcb2b6d7bfd17",
+      "current_sha256": "8ba6b8505d7f66ca91224696ee11f2928ad51e0b6d1f05d9874dcb2b6d7bfd17",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>With a = 2 and b = 5, do LET a = b then LET b = a swap them?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/unit-03.mdx",
+      "baseline_sha256": "d066fd3eaf1df19216d44a2bb4a0aba69cbb3332c0e8ce907cadef77f351705a",
+      "current_sha256": "d066fd3eaf1df19216d44a2bb4a0aba69cbb3332c0e8ce907cadef77f351705a",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Do 7 / 2, ROUND DOWN (7 / 2), 7 REMAINDER 2 and ROUND (7 / 2) answer the same question?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/index.mdx",
+      "baseline_sha256": "515eabf0d847aa56f3724f33379a7afb88974527bf6d859cababdb83d115cfb8",
+      "current_sha256": "a94f9ff103ab14c27cdba915122d914b39ee60bcde22106bbb93efaa29bb378e",
+      "changed": true,
+      "unit": false,
+      "explicit_prompt_markers": 0,
+      "prompts": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-01.mdx",
+      "baseline_sha256": "68b03d266d72fa45351e7e41718d824991b9d2ec607ecef18b1c7965cb783aab",
+      "current_sha256": "68b03d266d72fa45351e7e41718d824991b9d2ec607ecef18b1c7965cb783aab",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Start with 11001010. What does XOR with 00001111 change? What if you apply it twice?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-02.mdx",
+      "baseline_sha256": "f5c451b5f000005790b820051250317019a2d1affc96c9a62b3d959b5c30cb50",
+      "current_sha256": "f5c451b5f000005790b820051250317019a2d1affc96c9a62b3d959b5c30cb50",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Using our eight-bit zero-fill rules, what are 200 shifted left once and 5 shifted right once?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-03.mdx",
+      "baseline_sha256": "5dcbe13c8514e406e3aad4880efd8c5594945399dc87bba56d0c991294ed1408",
+      "current_sha256": "5dcbe13c8514e406e3aad4880efd8c5594945399dc87bba56d0c991294ed1408",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 2,
+      "prompts": [
+        "<summary>Does CODE \"7\" give 7? Can subtracting CODE \"0\" turn any character into a valid digit?</summary>",
+        "<summary>What does BITOR 32 do to ASCII \"7\" and \"@\"? Does either result prove the input was a letter?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-04.mdx",
+      "baseline_sha256": "9dfad3db5bb13e1ef0c97008214ccf4de7065b697b38b08207e1fe6303440189",
+      "current_sha256": "9dfad3db5bb13e1ef0c97008214ccf4de7065b697b38b08207e1fe6303440189",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>Can binary floating-point store 0.5 exactly? What about 0.1?</summary>"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-05.mdx",
+      "baseline_sha256": "6548c71d56595f28af4e31081d1f806d56a966a90768f487ecdfe10531480aee",
+      "current_sha256": "6548c71d56595f28af4e31081d1f806d56a966a90768f487ecdfe10531480aee",
+      "changed": false,
+      "unit": true,
+      "explicit_prompt_markers": 1,
+      "prompts": [
+        "<summary>At scale 256, does shifting stored 384 right by eight give 1.5?</summary>"
+      ]
+    }
+  ],
+  "limits": "Exact source-set/hash/markup reconciliation, not a fresh full-body review or a measure of assessment quality."
+}

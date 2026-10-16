@@ -1,0 +1,22 @@
+{
+  "website_revision": "d0de348ba750cac17bfd7757a217e5b37eb28042",
+  "docs_baseline": "04f4fd048893b130b886d17ed339fa41c4475b6a",
+  "python": "3.14.3",
+  "verifier_sha256": "756f13a0856b130aa5fb290556d13e747db2ddb495067bdbc776ae29268cd5ef",
+  "docs_source_sha256": {
+    "PROJECT.md": "e51af4b5b35540c7a3fb6e020c2a97682b10c743a6f1fe213320ba8037933b38",
+    "specifications/pseudocode.md": "1899c8cb115bbf8547dbd8e45acd7b75b30aaa6a61263d08d5a438647346b71a",
+    "specifications/unit.md": "3bc2ed89222f5b96abe85fe1b3c15a410af2f69e2cbea310d06ea6b210c0461e",
+    "specifications/curriculum.md": "7f1985bb3a4a5651c4eb707533da7649bc3b4dc8ce66c882b73b2d99069657f6",
+    "specifications/experiments/synthesis-and-transfer.md": "42d161c20c25414cdfe745f3dca71d22ac1c19defc5efe045da626f89664131c",
+    "audit/2026-10-foundations-objectives/units.json": "516430273f38f4fc54a745047d9aed1f62dcf5adfcd0e06f2db2d031fa918eb6",
+    "audit/2026-10-foundations-objectives/MAP.md": "a0879ed8f90577fbc0bf4b1a106908a28b5065dea542e25035d11053fc261980",
+    "audit/2026-10-structure-pilot/REPORT.md": "6ba6cd2b526719e671dc68f2481168912c78e25569bb70de46f4709fce8619d5",
+    "audit/2026-10-structure-pilot/LEARNER-TASKS.md": "3cf5b54b6d5b540dd86c3aa46d7cc6114f965e9c5d71a5330608cfe07f74910d",
+    "audit/2026-10-fractions-pilot/REPORT.md": "ec32abdfabb9c00e3581dc99a6ba4f3b23b1e4fd235a52ec9ce56b8385119daa",
+    "audit/2026-10-fractions-pilot/LEARNER-TASKS.md": "b4cc0847d09cd22613af0a349ee355d6c7cac42b9f42661bab678968785a5b81",
+    "audit/2026-10-numbers-pilot/REPORT.md": "83f686fe4d14718a220dad20be310b35488c43cf154576ecf11e2e55309d9feb",
+    "audit/2026-10-numbers-pilot/LEARNER-TASKS.md": "69d413ebcc7b949600c1f44a846d7026ee17da13eb320b4c37287a15b6c24e14",
+    "audit/2026-10-interpreter-trace/REPORT.md": "73bffc31a927d1fac0313c984fe16eca0009958e536573290f43dadec973ffeb"
+  }
+}
