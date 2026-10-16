@@ -1,0 +1,207 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "label": "half-step",
+      "trace": {
+        "initial": 0,
+        "step": 128,
+        "updates": 4,
+        "discard_after_drawing": false,
+        "rows": [
+          {
+            "update": 1,
+            "before": 0,
+            "updated": 128,
+            "decoded": "1/2",
+            "drawn": 0,
+            "retained": 128
+          },
+          {
+            "update": 2,
+            "before": 128,
+            "updated": 256,
+            "decoded": "1",
+            "drawn": 1,
+            "retained": 256
+          },
+          {
+            "update": 3,
+            "before": 256,
+            "updated": 384,
+            "decoded": "3/2",
+            "drawn": 1,
+            "retained": 384
+          },
+          {
+            "update": 4,
+            "before": 384,
+            "updated": 512,
+            "decoded": "2",
+            "drawn": 2,
+            "retained": 512
+          }
+        ],
+        "final_retained": 512
+      }
+    },
+    {
+      "label": "quarter-step",
+      "trace": {
+        "initial": 0,
+        "step": 64,
+        "updates": 4,
+        "discard_after_drawing": false,
+        "rows": [
+          {
+            "update": 1,
+            "before": 0,
+            "updated": 64,
+            "decoded": "1/4",
+            "drawn": 0,
+            "retained": 64
+          },
+          {
+            "update": 2,
+            "before": 64,
+            "updated": 128,
+            "decoded": "1/2",
+            "drawn": 0,
+            "retained": 128
+          },
+          {
+            "update": 3,
+            "before": 128,
+            "updated": 192,
+            "decoded": "3/4",
+            "drawn": 0,
+            "retained": 192
+          },
+          {
+            "update": 4,
+            "before": 192,
+            "updated": 256,
+            "decoded": "1",
+            "drawn": 1,
+            "retained": 256
+          }
+        ],
+        "final_retained": 256
+      }
+    },
+    {
+      "label": "one-and-half",
+      "trace": {
+        "initial": 768,
+        "step": 384,
+        "updates": 4,
+        "discard_after_drawing": false,
+        "rows": [
+          {
+            "update": 1,
+            "before": 768,
+            "updated": 1152,
+            "decoded": "9/2",
+            "drawn": 4,
+            "retained": 1152
+          },
+          {
+            "update": 2,
+            "before": 1152,
+            "updated": 1536,
+            "decoded": "6",
+            "drawn": 6,
+            "retained": 1536
+          },
+          {
+            "update": 3,
+            "before": 1536,
+            "updated": 1920,
+            "decoded": "15/2",
+            "drawn": 7,
+            "retained": 1920
+          },
+          {
+            "update": 4,
+            "before": 1920,
+            "updated": 2304,
+            "decoded": "9",
+            "drawn": 9,
+            "retained": 2304
+          }
+        ],
+        "final_retained": 2304
+      }
+    },
+    {
+      "label": "zero-updates",
+      "trace": {
+        "initial": 768,
+        "step": 128,
+        "updates": 0,
+        "discard_after_drawing": false,
+        "rows": [],
+        "final_retained": 768
+      }
+    },
+    {
+      "label": "stationary-fraction",
+      "trace": {
+        "initial": 384,
+        "step": 0,
+        "updates": 3,
+        "discard_after_drawing": false,
+        "rows": [
+          {
+            "update": 1,
+            "before": 384,
+            "updated": 384,
+            "decoded": "3/2",
+            "drawn": 1,
+            "retained": 384
+          },
+          {
+            "update": 2,
+            "before": 384,
+            "updated": 384,
+            "decoded": "3/2",
+            "drawn": 1,
+            "retained": 384
+          },
+          {
+            "update": 3,
+            "before": 384,
+            "updated": 384,
+            "decoded": "3/2",
+            "drawn": 1,
+            "retained": 384
+          }
+        ],
+        "final_retained": 384
+      }
+    },
+    {
+      "label": "last-fitting",
+      "trace": {
+        "initial": 65407,
+        "step": 128,
+        "updates": 1,
+        "discard_after_drawing": false,
+        "rows": [
+          {
+            "update": 1,
+            "before": 65407,
+            "updated": 65535,
+            "decoded": "65535/256",
+            "drawn": 255,
+            "retained": 65535
+          }
+        ],
+        "final_retained": 65535
+      }
+    }
+  ],
+  "model_source_sha256": "756f13a0856b130aa5fb290556d13e747db2ddb495067bdbc776ae29268cd5ef",
+  "accepted_models_sha256": "fa46aa5ce7d133572fe6ddafe404982c32c8debf9a1cbd7edff265c846f6bf48",
+  "limits": "Fresh finite model recheck through accepted functions; not a parser, target execution, motion or learner result."
+}

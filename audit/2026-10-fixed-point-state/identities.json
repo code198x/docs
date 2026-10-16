@@ -1,0 +1,33 @@
+{
+  "website_baseline": "d0de348ba750cac17bfd7757a217e5b37eb28042",
+  "docs_baseline": "a8ab271187c09001624a470a1eb4dc45b106300d",
+  "python": "3.14.3",
+  "baseline_website_sha256": {
+    "src/content/curriculum/foundations/working-the-bits/unit-05.mdx": "6548c71d56595f28af4e31081d1f806d56a966a90768f487ecdfe10531480aee",
+    "src/components/diagrams/TraceTable.astro": "410041031094ba2c5f7ed113869c94cef3ec2db501d21a6eec86098a97c0fe00",
+    "src/content/curriculum/foundations/repeating/unit-01.mdx": "8293f9a6eca8c8ee54bb0d99ec3e651175fda68975202a26ff78b6ecbd12fbda",
+    "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret.mdx": "d9730a0f1623bf3959faf03e58d756bd47eff4c98eafe4ce5901196a1f1ad0bf"
+  },
+  "proposed_website_sha256": {
+    "src/content/curriculum/foundations/working-the-bits/unit-05.mdx": "8d355d2955df7c74de78fc044a89462ba77f78d78e124b3ecbb173a0987f58f6",
+    "src/components/diagrams/TraceTable.astro": "410041031094ba2c5f7ed113869c94cef3ec2db501d21a6eec86098a97c0fe00",
+    "src/content/curriculum/foundations/repeating/unit-01.mdx": "8293f9a6eca8c8ee54bb0d99ec3e651175fda68975202a26ff78b6ecbd12fbda",
+    "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret.mdx": "d9730a0f1623bf3959faf03e58d756bd47eff4c98eafe4ce5901196a1f1ad0bf",
+    "scripts/verification/fixed-point-state-pilot.mjs": "bed20e28df9fc78a028a82f0cea315f8cff695a2ed14396b8e64bc701b8c4491",
+    "scripts/verification/fixed-point-contrast.mjs": "ed63fb25bd4472781d5389b4966a856e376d16f8ee0dea8ec4386771dfc99865",
+    "package.json": "f3faa82569755a565a9536c8cdb3cabd15c2ab91a5850c60a39c26c9e181516a",
+    "package-lock.json": "bc2e4820866c5590d6273220ec40dadd76e006cb05a0ba87a90998eb0c4d780d"
+  },
+  "docs_source_sha256": {
+    "PROJECT.md": "e51af4b5b35540c7a3fb6e020c2a97682b10c743a6f1fe213320ba8037933b38",
+    "specifications/unit.md": "3bc2ed89222f5b96abe85fe1b3c15a410af2f69e2cbea310d06ea6b210c0461e",
+    "specifications/pseudocode.md": "1899c8cb115bbf8547dbd8e45acd7b75b30aaa6a61263d08d5a438647346b71a",
+    "audit/2026-10-foundations-evidence-queue/verify.py": "756f13a0856b130aa5fb290556d13e747db2ddb495067bdbc776ae29268cd5ef",
+    "audit/2026-10-foundations-evidence-queue/models.json": "fa46aa5ce7d133572fe6ddafe404982c32c8debf9a1cbd7edff265c846f6bf48",
+    "audit/2026-10-foundations-evidence-queue/LEARNER-TASKS.md": "eaa0613c7cfb417cf97080f6851f54b2c8b200c752720e26a506e3bd37a27b29",
+    "audit/2026-10-foundations-evidence-queue/ASSESSOR.md": "0ed1bcc762ee6c8282eaceabe6cc4acdb685ee260bf49ac91120835aa630cfd4",
+    "audit/2026-10-fractions-pilot/REPORT.md": "ec32abdfabb9c00e3581dc99a6ba4f3b23b1e4fd235a52ec9ce56b8385119daa"
+  },
+  "built_lesson_sha256": "1d90b5d323ae8e9c520255dd39db6742d6e2ad1bbb7d75562111d7d4e8c9b5c9",
+  "ui_revision": "7eda45e1c2f8b8f919359c971b2e210822e431f2"
+}

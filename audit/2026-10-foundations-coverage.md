@@ -91,7 +91,9 @@ unit 2 changed-state predictions and selected ROM record/output evidence, keepin
 source updates distinct from instruction counts and timing. The [evidence queue](2026-10-foundations-evidence-queue/REPORT.md) now selects
 [website #763](https://github.com/code198x/website/issues/763): retaining fixed-point
 fractions across updates while drawing whole-pixel coordinates. The prepared paper
-trial adds a later-update distinction beyond the earlier one-move exercise.
+trial adds a later-update distinction beyond the earlier one-move exercise. The
+[lesson follow-up](2026-10-fixed-point-state/REPORT.md) now qualifies that optional
+experiment with exact rendered values and keyboard checks.
 Continue source and technical work while learner observations wait.
 
 Keep the public [first-session pack](https://code198x.com/try/) small and ready to

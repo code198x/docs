@@ -1,0 +1,41 @@
+{
+  "initial": 0,
+  "step": 128,
+  "updates": 4,
+  "discard_after_drawing": true,
+  "rows": [
+    {
+      "update": 1,
+      "before": 0,
+      "updated": 128,
+      "decoded": "1/2",
+      "drawn": 0,
+      "retained": 0
+    },
+    {
+      "update": 2,
+      "before": 0,
+      "updated": 128,
+      "decoded": "1/2",
+      "drawn": 0,
+      "retained": 0
+    },
+    {
+      "update": 3,
+      "before": 0,
+      "updated": 128,
+      "decoded": "1/2",
+      "drawn": 0,
+      "retained": 0
+    },
+    {
+      "update": 4,
+      "before": 0,
+      "updated": 128,
+      "decoded": "1/2",
+      "drawn": 0,
+      "retained": 0
+    }
+  ],
+  "final_retained": 0
+}

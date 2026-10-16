@@ -85,3 +85,7 @@ between source updates, machine instructions and measured time.
 The [Foundations evidence queue](audit/2026-10-foundations-evidence-queue/REPORT.md)
 reconciles the four earlier prompt gaps and prepares a repeated fixed-point
 trial on retained state and drawing coordinates, reusing accepted evidence.
+
+The [fixed-point state follow-up](audit/2026-10-fixed-point-state/REPORT.md) brings
+the prepared retained-fraction experiment into the existing lesson, with model,
+wide/narrow rendering and keyboard evidence.
