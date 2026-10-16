@@ -62,7 +62,7 @@ explain the actual game.
 The player's central choice should be visible before sophisticated graphics are
 needed: keep a useful total or risk losing it for a better result. A short
 session target gives that choice a changing purpose. The game brief provisionally
-uses one six-sided die, a round limit of 21, five rounds and a 90-point target;
+uses one six-sided die, a round limit of 10, five rounds and a 30-point target;
 those numbers require native play review.
 
 Start with a small message and save/reopen exercise, then show one roll and add
@@ -74,7 +74,7 @@ example alone demands risky play.
 
 Grow the session in separate stages: retain secured points, count finished
 rounds, evaluate the target and reset for replay. Teach the difference between
-current total, awarded points and secured score. A bust can show 22 while
+current total, awarded points and secured score. A bust can show 11 while
 awarding zero and preserving earlier points. Finish scoring once before asking
 for another input.
 
@@ -96,7 +96,7 @@ Let readers choose wording and presentation while explaining which numeric
 changes alter the game. Use small prescribed roll sequences to investigate
 boundaries before relying on ordinary random play; identify the test setup.
 Ask for predictions, action traces and diagnoses before revealing explanations.
-A useful fault is treating exactly 21 as a bust. A useful variation changes a
+A useful fault is treating exactly 10 as a bust. A useful variation changes a
 setting and explains how the checks and target must change with it.
 
 The [rules analysis](../games/bank-or-risk/rules-analysis.md) establishes some

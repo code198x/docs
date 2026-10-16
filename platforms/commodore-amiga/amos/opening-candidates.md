@@ -68,8 +68,8 @@ repeating a programming concept through a different game is expected.
 ## Selected direction and comparison
 
 The [first-game brief](../games/bank-or-risk/brief.md) provisionally uses one
-six-sided die, a limit of 21, five rounds and a target of 90 secured points.
-Exactly 21 banks automatically; going over loses that round's unbanked points.
+six-sided die, a limit of 10, five rounds and a target of 30 secured points.
+Exactly 10 banks automatically; going over loses that round's unbanked points.
 There are no cards, dealer, money or opponent. The Blackjack/Pontoon comparison
 concerns the decision to continue near a limit, not an adopted card ruleset.
 
@@ -82,8 +82,9 @@ total or risk losing it. Shared random-number concepts do not repeat the game.
 Increasing risk alone is insufficient if safe play always meets the target.
 The [exact rules analysis](../games/bank-or-risk/rules-analysis.md) checks the
 provisional target and shows why the current session need can change the choice
-at the same round total. It also exposes the one-bust failure consequence of this
-tuning. Native play must judge that consequence and whether the decision is fun.
+at the same round total. The recommended tuning permits recovery after a bust
+and compares safe, moderately risky and more aggressive play. Native play must
+still judge the balance and whether the decision is fun.
 
 The course starts with a tiny runnable message, saves it early, and introduces
 one roll, accumulation and the limit before building a round. Banking and
