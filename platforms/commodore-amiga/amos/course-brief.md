@@ -1,14 +1,15 @@
 # AMOS course brief
 
-**Status: course proposal; first game awaiting agreement.** We want a complete
-beginner to make and understand small games in AMOS, then grow towards more
-substantial Amiga games. An experienced programmer should be able to enter
-later without missing AMOS-specific explanations.
+**Status: bank-or-risk game direction agreed; course sequence proposed.** We
+want a complete beginner to make and understand small games in AMOS, then grow
+towards more substantial Amiga games. An experienced programmer should be able
+to enter later without missing AMOS-specific explanations.
 
-The [opening comparison](opening-candidates.md) recommends a small take-away
-game for discussion: two players remove one or two counters from a pile, and
-whoever takes the last wins. Its scope makes player choice and changing state
-visible before moving graphics, arrays or an opponent become necessary.
+The opening will build towards a solo dice game: approach a visible limit, bank
+what you have or risk another roll, and lose the current unbanked total if you go
+over. The [game brief](../games/bank-or-risk/brief.md) proposes the first native
+trial's scope and tuning. The [comparison](opening-candidates.md) distinguishes
+this activity from the curriculum's existing dice experiments.
 
 Apply the [charter](../../../PROJECT.md),
 [curriculum specification](../../../specifications/curriculum.md) and
@@ -56,66 +57,52 @@ A point-and-click adventure introduces too many interacting responsibilities for
 the current opening brief. Keep short drawing experiments where they help
 explain the actual game.
 
-## Proposed first game
+## First game and teaching progression
 
-One pile begins with seven counters. Two local players alternate taking one or
-two, and the player who takes the last wins. There is no timer. The program shows
-whose turn it is, what was taken and how many remain. An invalid choice or a take
-larger than the pile leaves both the count and active player unchanged. After a
-win, the result remains visible until replay or exit.
+The player's central choice should be visible before sophisticated graphics are
+needed: keep a useful total or risk losing it for a better result. A short
+session target gives that choice a changing purpose. The game brief provisionally
+uses one six-sided die, a round limit of 21, five rounds and a 90-point target;
+those numbers require native play review.
 
-A reader working alone can enter both players' choices while building and
-investigating the game. A computer opponent is a possible later addition, not
-an unexplained dependency of the first game. The prototype review must check
-whether two-player play is a suitable opening for the intended audience.
+Start with a small message and save/reopen exercise, then show one roll and add
+its result to a stored total. Introduce the limit decision, then input and
+repetition, then the ability to bank. A complete single round precedes the
+session target. Explain that the target creates a reason to balance safety
+against the points still needed; do not pretend that the single-round scoring
+example alone demands risky play.
 
-Start with text output and deliberate choice entry. The exact AMOS input method
-must be checked for invalid text and recovery before lesson development. A
-single-key route may be preferable to numeric entry if it gives a clearer,
-trustworthy explanation. Add a repeated picture of the counters once the game
-creates a reason to learn counted drawing.
+Grow the session in separate stages: retain secured points, count finished
+rounds, evaluate the target and reset for replay. Teach the difference between
+current total, awarded points and secured score. A bust can show 22 while
+awarding zero and preserving earlier points. Finish scoring once before asking
+for another input.
 
-## Proposed opening stages
-
-These are teaching stages, not executed programs or a fixed lesson count. Split
-any stage whose teaching load is too large. Each needs maintained complete source
-in code-samples and exact editing instructions.
-
-| Stage | Result and purpose | New idea explained locally | Observable check |
-| --- | --- | --- | --- |
-| State the game | Run a tiny program showing the rules and starting pile; change the wording | Instructions, execution order and editor controls | The edited words appear on the next run; an intentional syntax error can be repaired. |
-| Keep your work | Save, leave the session and reopen the edited program | Source files, filenames and storage | The reopened version contains the edit and runs; the reader can find the saved file. |
-| Change the pile | Store the count and carry out one named take | Assignment and subtraction | Predict seven minus two, then explain why printing the old count earlier does not change it retrospectively. |
-| Accept one choice | Let the player choose one or two and update the count | Input and decisions, introduced separately | Valid choices change the count as expected; invalid input can be rejected and retried. |
-| Continue playing | Repeat valid choices while counters remain; prevent an unavailable take | Repetition and boundary decisions, introduced separately | With one counter left, a request for two changes nothing; zero ends the game without another move. |
-| Take turns | Identify two players, switch after accepted moves and announce the last taker | A turn value and update order | An invalid move preserves the active player; the winner is the player who acted, not the next one. |
-| Show the counters | Draw one mark per remaining counter beside the numeric count | Counted repetition and coordinates, introduced separately | The displayed marks agree with the count from seven through zero. Old marks disappear after a move. |
-| Finish a round | Add instructions, readable result feedback, replay and exit | Initialisation and reset | Replay restores seven and the stated first player; repeated rounds preserve no stale winner or input. |
-| Explain and vary | Trace a whole game, repair a fault and change the starting count within a stated display range | Integration and an independent change with hints | The new range, picture, legal choices and result remain consistent. |
-
-Each runnable checkpoint contains only explained code. Do not supply a hidden
-input handler, screen framework, game loop or winner routine. A fixed starting
-pile and text display are sufficient before the counter picture is introduced.
-No arrays, random generation, frame-rate target or collision system are required
-by the proposed opening.
+The [game brief's stage table](../games/bank-or-risk/brief.md) owns the detailed
+sequence and checks. Split stages when their teaching load warrants it. Keep
+complete maintained sources in code-samples with exact add, replace and delete
+instructions. Every required line must have been explained before it runs.
+There is no fixed lesson count, frame-rate target or need for an unexplained
+screen, input or game framework.
 
 ## Presentation and participation
 
-Use labels and shapes to distinguish the players and remaining counters; colour
-can reinforce the information. Keep the last move visible long enough to discuss
-it. Teach a short result sound only after explaining its purpose and the required
-AMOS command. The winner must remain understandable with sound off, and the cue
-must happen once per result rather than repeat while the game is finished.
+Start with readable text and labelled totals. Add original die artwork and short
+result cues through separate, explained steps. Labels and numbers must carry all
+meaning with sound off and without relying on colour. An input should cause one
+action, and a held key must not roll repeatedly or act in a later round.
 
-Let readers choose wording, layout and counter artwork. Explain the limits of the
-permitted starting count before inviting changes. At useful milestones, ask for
-a prediction, trace or diagnosis before revealing the explanation. An example
-fault is switching players before preserving the winner; an independent variation
-is changing the starting count and checking the resulting complete round.
+Let readers choose wording and presentation while explaining which numeric
+changes alter the game. Use small prescribed roll sequences to investigate
+boundaries before relying on ordinary random play; identify the test setup.
+Ask for predictions, action traces and diagnoses before revealing explanations.
+A useful fault is treating exactly 21 as a bust. A useful variation changes a
+setting and explains how the checks and target must change with it.
 
-Keep checks conversational and available on paper. They support explanation and
-experimentation without requiring a particular score or a win against another
-player. Check keyboard operation in the actual game as well as the lesson page.
+The [rules analysis](../games/bank-or-risk/rules-analysis.md) establishes some
+mathematical design properties under an ideal die. It neither runs AMOS nor
+proves that the game is enjoyable. Keep probability optimisation optional;
+reasoning about the possible next roll is enough for the opening.
 
 ## Experienced entry
 
@@ -148,20 +135,20 @@ for its named configuration only: AMOS Professional 2.00, official source revisi
 2 MB chip and 8 MB fast memory, Kickstart and Workbench 3.1. This is a development
 baseline, not a minimum requirement or qualification of the proposed game.
 
-## First prototype and decision
+## First prototype and review
 
-After game agreement, prototype one take, validated choice, repetition, turns,
-win, replay and exit in the named original runtime. Check the save/reopen route
-early. Compare a text-first explanation with the later counter picture, without
-turning the picture into a prerequisite for the first playable version.
+Use the [game brief](../games/bank-or-risk/brief.md) for native prototype scope,
+source location, concrete rules and acceptance cases. Check one roll, limit
+boundaries, banking, session score, ending, replay and exit in the named original
+runtime. Check the learner's save/reopen route early.
 
-Check both players winning, one and zero counters, unavailable takes, invalid
-input, repeated actions and fresh rounds. Inspect the actual output and listen
-to any sound. Record native behaviour and play observations separately from
-learner understanding.
+The agreed mechanic gives us a game direction, not acceptance of numerical
+balance or a replacement lesson sequence. Play should establish whether the
+bank-or-roll choice remains interesting and whether the failure consequence is
+fair. The short session must not become a reason to introduce several unexplained
+state variables in one step.
 
-Reconsider the game if two-player use is unsuitable, its strategy is exhausted
-before the teaching is complete, or input and setup dominate the opening.
-Compare the other shortlisted candidates before adding mechanics to rescue it.
-No later lineup is selected. Preserve existing public routes until checked
-replacements and any necessary redirects are ready.
+If the first trial is unsatisfying, reconsider tuning and the size of its opening
+stages before adding features. A later uncoached beginner trial must establish
+what readers understand. No later AMOS lineup is selected. Preserve existing
+public routes until checked replacements and necessary redirects are ready.

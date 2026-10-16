@@ -5,9 +5,10 @@ interpreter or Blitz compiler if it makes reliable creation and investigation
 substantially more accessible. First establish which learner problems it solves
 and compare that work with improving access to the original tools.
 
-The [AMOS course brief](amos/course-brief.md) recommends a small take-away game
-for discussion; the [Blitz course brief](blitz/course-brief.md) retains a switch
-puzzle as a candidate. Both need
+The [AMOS course brief](amos/course-brief.md) develops the agreed bank-or-risk
+game direction; its [game brief](games/bank-or-risk/brief.md) proposes native
+trial rules and tuning. The [Blitz course brief](blitz/course-brief.md) retains a
+switch puzzle as a candidate. Both need
 repeatable run, edit, stop, save, reopen and error recovery. Neither requires a
 new language implementation to begin a native prototype.
 
@@ -22,9 +23,9 @@ new language implementation to begin a native prototype.
 | Check lessons | Build or load exact maintained sources, drive input and inspect outcomes | Records identify source, language, runtime, machine/media and input; checks reject an intentionally wrong result. |
 | Preserve the target | Explain which work occurs on the host and which on the Amiga | A host simulation is labelled as such; Amiga timing claims come from target execution and measurement. |
 
-For the AMOS opening, initially investigate text output, validated choices,
-values, decisions, loops and source storage. A later visual counter display can
-motivate counted drawing and routines. Pointer controls, moving objects and
+For the AMOS opening, initially investigate text output, random integer
+selection and seeding, validated choices, addition, comparisons, loops and source
+storage. A later die-face picture can motivate drawing and routines. Pointer controls, moving objects and
 collision are later capabilities rather than prerequisites for this first game.
 The full AMOS track can grow to substantial games as those needs emerge.
 For Blitz, investigate output, action input, values,
@@ -124,7 +125,7 @@ language implementation.
    an ownership decision.
 3. **Exercise the complete working loop in both languages.** Run the greeting,
    edited greeting, error/repair and save/reopen cycle from maintained source.
-   Then run a bounded AMOS take/update/result test and a Blitz switch-state test,
+   Then run a bounded AMOS roll/bank/bust test and a Blitz switch-state test,
    including held/released input and an ordinary exit. Reuse existing evidence
    where its route is identical; verify changed steps directly.
 4. **Write a small semantic comparison corpus.** Include at least one boundary

@@ -58,3 +58,25 @@ an explicitly agreed teaching purpose. Project candidates remain proposals.
 4. Check changed prose, relative links, proposal status and whitespace; push one
    follow-up commit to the existing PR. Update its description to the resulting
    scope. Verify the remote commit and remove the temporary worktree.
+
+## Bank or risk design
+
+The agreed opening direction is now a solo dice game: approach a visible limit,
+bank the current total or roll again, and lose the unbanked total if the roll
+takes it over the limit. Take-away is not the selected direction. Keep the first
+game small; do not add a dealer, card rules or a multi-round economy.
+
+1. Write `platforms/commodore-amiga/games/bank-or-risk/brief.md` with concrete
+   provisional tuning, input, scoring, finish/replay behaviour and teaching
+   stages. Distinguish the agreed mechanic from numbers awaiting native play.
+2. Check the rules using exact die-outcome enumeration and decision analysis.
+   Store a reproducible rules check and its results beside the brief, labelled
+   as a host model rather than AMOS execution. Include controls that reject
+   banking a bust and treating equality with the limit as a bust.
+3. Replace the take-away recommendation in the AMOS brief and candidate review;
+   align the index and tooling requirements, including random selection and
+   increasing risk. Keep the existing comparison scope and distinct-game rule.
+4. Check local links, style, model results and the final diff. Push the bounded
+   design change to PR #103, update its description and clean the worktree after
+   verifying remote retention. Live lessons, runtime implementations and learner
+   effectiveness are outside this design pass.
