@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-16",
+  "method": "Manual native Safari UI through computer-use app actions; this record is a curated observation log, not machine-generated assertions. Screenshots were viewed in the conversation tool session and are not committed.",
+  "routes": [
+    "https://code198x.com/try/",
+    "https://code198x.com/try/spectrum-basic/",
+    "https://code198x.com/systems/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer/"
+  ],
+  "source": "10 PRINT \"Safari greeting\"\n15 PRINT \"to you\"\n20 PRINT \"from the Spectrum\"",
+  "checks": [
+    {
+      "id": "S01",
+      "task": "Discover the BASIC activity and follow its lesson link",
+      "status": "observed pass",
+      "evidence": "Safari navigated /try/ \u2192 /try/spectrum-basic/ \u2192 Meet BASIC unit 1. Activity table cell selection alone was not link activation; clicking the visible underlined activity link navigated."
+    },
+    {
+      "id": "S02",
+      "task": "Edit and run the greeting",
+      "status": "observed pass",
+      "evidence": "Native text entry exposed Your BASIC listing; paste changed it to Safari greeting. Canvas showed Safari greeting / to you / from the Spectrum and 0 OK, 20:1."
+    },
+    {
+      "id": "S03",
+      "task": "Inspect the output alternative",
+      "status": "observed pass",
+      "evidence": "Expanded Screen text exposed Program: greeting, Safari greeting, to you, from the Spectrum in the native AX tree. The tool truncates long text values; full completion was inspected on canvas. No VoiceOver operation claim."
+    },
+    {
+      "id": "S04",
+      "task": "Operate Run with keyboard",
+      "status": "observed pass",
+      "evidence": "Ordinary Tab from source focused Listing options. Option-Shift-Tab reached Run this code; Return opened the machine. Option-Tab later reached Run from source. No Safari keyboard preference changed."
+    },
+    {
+      "id": "S05",
+      "task": "Leave canvas/panel with keyboard",
+      "status": "observed pass",
+      "evidence": "Tab from focused canvas reached On-screen keys summary. Escape from a non-canvas summary closed the modal and restored focus to Run this code."
+    },
+    {
+      "id": "S06",
+      "task": "Run a deliberate wrong variable",
+      "status": "observed pass",
+      "evidence": "Replacing line 10 with PRINT m$ and Command-Return produced 2 Variable not found, 10:1 on the canvas."
+    },
+    {
+      "id": "S07",
+      "task": "Repair the runtime fault",
+      "status": "observed pass",
+      "evidence": "Restoring line 10 and Command-Return produced Safari greeting / to you / from the Spectrum in the exposed transcript."
+    },
+    {
+      "id": "S08",
+      "task": "Inspect a listing-validation failure",
+      "status": "observed pass",
+      "evidence": "Source PRINT \"missing number\" without a line number produced native AX text line 1: start with a line number from 1 to 9999 and Check the listing, then try again. Focus remained on Your BASIC listing."
+    },
+    {
+      "id": "S09",
+      "task": "Reset after validation failure",
+      "status": "observed pass",
+      "evidence": "Reset to original restored maintained three-line Welcome source, displayed Original code, and removed the validation message from the changed AX state."
+    },
+    {
+      "id": "S10",
+      "task": "Run the reset original",
+      "status": "observed pass",
+      "evidence": "Option-Tab / Return ran the original. Native AX text exposed Program: greeting / Welcome / to you / from the Spectrum."
+    }
+  ],
+  "save_reopen": {
+    "status": "pending permission",
+    "evidence": "Listing options \u2192 Option-Tab reached Reset to original, next Option-Tab reached Download tape. Return opened Safari\u2019s Allow downloads from code198x.com prompt. Automatic approval review rejected Allow because per-site permission was not specifically authorised. Prompt was cancelled; no successful tape download/reopen is claimed. Approval question remains pending."
+  },
+  "matrix_limits": {
+    "VoiceOver": "skipped at explicit user request; remained off",
+    "physical_touch": "skipped; no physical device exposed",
+    "Playwright_WebKit": "installed but not exercised; shipping Safari was used directly",
+    "Safari_screen_reader_access": "unknown; AX inspection is not a screen-reader trial",
+    "learner_effectiveness": "unknown; no learner available"
+  }
+}

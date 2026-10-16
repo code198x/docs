@@ -1,0 +1,11 @@
+{
+  "status": "passed document checks",
+  "source_files_verified": 8,
+  "manual_records_present": 10,
+  "local_links_checked": 83,
+  "wrong_source_hash_rejected": true,
+  "automated_runtime_checks": 0,
+  "screen_reader_trials": 0,
+  "save_reopen": "pending permission",
+  "scope": "Identity/link/record validation only; not independent verification of manual UI outcomes."
+}

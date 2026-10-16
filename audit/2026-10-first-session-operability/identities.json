@@ -1,0 +1,28 @@
+{
+  "website_revision": "2b9905262dcb7261314b6ef6490db7b8a5c803ed",
+  "docs_revision": "6c8f43dcdee646cd018f863e1fa02e0e58f33d87",
+  "safari_version": "27.0",
+  "safari_build": "22625.1.29.11.27",
+  "os": "macOS 27 arm64",
+  "native_window_screenshot_pixels": [
+    3000,
+    2016
+  ],
+  "css_viewport": "not measured",
+  "files": {
+    "src/pages/try/index.md": "196dac9494996c274847b997b9af6b251a93e11d539373d3028c1f61c181add2",
+    "src/pages/try/spectrum-basic.md": "79e07c1b145d53fd22f87b342e51b2b5213a80ad4fe8dc2eeaa9421a3e3198f9",
+    "src/components/BasicAndRun.astro": "cbacc2e9c872064037a8a018dcac54a075460fb47b81c4958f147d0992354e76",
+    "src/components/BasicListing.astro": "c6b1d9267cd14bfed6dba7b2b6eee21545713fe9d5ea83e7a9fdca9493b18699",
+    "src/lib/basic-machine.ts": "d6e15132adb98eed1baeb07505ecad813c58c07ddded6c6fafcbc3488b2aa8d8",
+    "src/lib/basic-listing.ts": "b5153079496bc64f27f24d23528921f4f9b609627f1945b82edb1c43b4f4a0cd",
+    "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer.mdx": "56502febcd9b1c6a070a65b448c7b7ee251a1b6f812091dd56f118bbd5c6c892",
+    "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save.mdx": "ee93901795d31a8fa456cde96f783601da647ecd90f6721efad79f589ece8db4"
+  },
+  "separate_http_snapshot_attempt": {
+    "status": "failed",
+    "failure": "urllib.error.HTTPError: HTTP Error 403: Forbidden",
+    "scope": "Read-only Python request; not a Safari page failure; no successful snapshot claimed"
+  },
+  "limits": "Native screenshots were inspected in the tool session, not committed; unrelated browser chrome is excluded. No captured Safari response or ROM fingerprint."
+}
