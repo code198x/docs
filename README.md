@@ -96,3 +96,7 @@ site, with remaining learner and accessibility limits stated separately.
 
 The [aiming boundary audit](audit/2026-10-aiming-boundaries/REPORT.md) checks finite
 movement, signed rounding and retained state against the maintained game-maths model.
+
+The [full Foundations publication sweep](audit/2026-10-foundations-publication/REPORT.md)
+checks all 39 units and ten overviews at wide/narrow widths, every authored answer
+reveal and the collected internal links. It does not establish learner understanding.

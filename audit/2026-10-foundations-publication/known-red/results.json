@@ -1,0 +1,12 @@
+{
+  "status": "failed",
+  "date": "2026-10-16T10:11:00.881Z",
+  "base": "https://code198x.com",
+  "mode": "wrong-count",
+  "browser": "155.0.8059.80",
+  "sourceSha256": "21deb998429d369d09f85da3f7f3bd3f56f6b3c093b9b1194ef34da2f13d1a99",
+  "cases": [],
+  "links": [],
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: Question count /foundations/basics/\n\n0 !== 1\n"
+}

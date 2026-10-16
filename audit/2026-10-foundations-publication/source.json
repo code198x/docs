@@ -1,0 +1,467 @@
+{
+  "websiteRevision": "405c0594d30af56ecdfdc1ee4b6c119dead20ab7",
+  "pages": [
+    {
+      "path": "src/content/curriculum/foundations/basics/index.mdx",
+      "route": "/foundations/basics/",
+      "sha256": "f5e5ed6fcc96365834270dfb4158de378acac432c2e6b6a67e37bd9e41eff0a0",
+      "kind": "overview",
+      "questions": 0,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-01.mdx",
+      "route": "/foundations/basics/unit-01/",
+      "sha256": "6bf2f74bb0496df0a830dbb32991098d5b059c7f1101d2c27b27ce6e384ffa51",
+      "kind": "unit",
+      "questions": 1,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-02.mdx",
+      "route": "/foundations/basics/unit-02/",
+      "sha256": "95cc1ee7335539494ddd3c62f33e311948a1a975b4ee845986d3f4b48337a835",
+      "kind": "unit",
+      "questions": 1,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-03.mdx",
+      "route": "/foundations/basics/unit-03/",
+      "sha256": "e1d108e5564892cc69136872add5089e235efd47543fc541b7baab0eba522ff1",
+      "kind": "unit",
+      "questions": 2,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-04.mdx",
+      "route": "/foundations/basics/unit-04/",
+      "sha256": "b70d5015f5ea4c531a836f69d1ac2c5c2f52cf3bede3cdd9d339773a83063dfa",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Check your prediction"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/basics/unit-05.mdx",
+      "route": "/foundations/basics/unit-05/",
+      "sha256": "17551aecd268be4663ef853b62bc2f10e64096e8657aa33fbbe908808f5855d2",
+      "kind": "unit",
+      "questions": 1,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/index.mdx",
+      "route": "/foundations/counting-in-twos/",
+      "sha256": "dfaff3bea318cc76de92914521b09adeacb9bb75579a82701486c2f7e4bc62f8",
+      "kind": "overview",
+      "questions": 0,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-01.mdx",
+      "route": "/foundations/counting-in-twos/unit-01/",
+      "sha256": "768151d2ab970e3e7ebb9e78b1a3ad94f44cad12839294dd25dd4adca736197d",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Does BIN 00000101 hold a bigger number than BIN 101? Can BIN 100000000 fit in one unsigned byte?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-02.mdx",
+      "route": "/foundations/counting-in-twos/unit-02/",
+      "sha256": "6f686111d9083edea9232c0d092d80cdf813d0419feeb5867320360d3f2f7d79",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Do HEX 10 and decimal 10 mean the same value? Which fits in an unsigned byte: HEX FF or HEX 100?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-03.mdx",
+      "route": "/foundations/counting-in-twos/unit-03/",
+      "sha256": "a33401ca1d8d5c024682563366cf265c176e0522d364bd950fd761b57cd299b6",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "A machine has addresses 0 to 65535. Does that prove it has 64K of RAM?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/counting-in-twos/unit-04.mdx",
+      "route": "/foundations/counting-in-twos/unit-04/",
+      "sha256": "5ae50facc1f7bcf8351e194335a52df64469d974e02af2674aca5415e52c2925",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "For a one-byte result, does 127 + 1 carry out of the byte? Does it overflow signed?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/index.mdx",
+      "route": "/foundations/decisions/",
+      "sha256": "368ab306e606ea146977c1d886124ed11e866c8d597da0534253ec7bde8493e3",
+      "kind": "overview",
+      "questions": 0,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-01.mdx",
+      "route": "/foundations/decisions/unit-01/",
+      "sha256": "185c6e6e7de61f531920e9d561b71efba4fdcd3e699d41e7533b2011b8012269",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Check the three cases"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-02.mdx",
+      "route": "/foundations/decisions/unit-02/",
+      "sha256": "9f7d280ab5be41dfdfff24abb4a316de73dd6baa41b4aba8662a009a056622a9",
+      "kind": "unit",
+      "questions": 1,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-03.mdx",
+      "route": "/foundations/decisions/unit-03/",
+      "sha256": "60a1825e405e8bd40546a9a7b84218efe37743fefdb988c0231d9cf3c9d4b3a9",
+      "kind": "unit",
+      "questions": 2,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/decisions/unit-04.mdx",
+      "route": "/foundations/decisions/unit-04/",
+      "sha256": "b7cd667e6304aa45da909e7875836adb5ed450192afe6b29af9e0e6f28ba3bdd",
+      "kind": "unit",
+      "questions": 2,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/index.mdx",
+      "route": "/foundations/from-source-to-silicon/",
+      "sha256": "98fae7556f8b62937df16ef9123149426aa3a667b599eb4907731e25c952f121",
+      "kind": "overview",
+      "questions": 0,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-01.mdx",
+      "route": "/foundations/from-source-to-silicon/unit-01/",
+      "sha256": "0477fd4589f0de8db9d57c6c7a0bf76e372fc8bc65a6eab19fbf5d5741cfff2e",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Are character codes instructions?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-02.mdx",
+      "route": "/foundations/from-source-to-silicon/unit-02/",
+      "sha256": "6b3b7f64604897343c6a168c1019ee2c40cd91923b6338293b1280d8b3fa3eb5",
+      "kind": "unit",
+      "questions": 2,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-03.mdx",
+      "route": "/foundations/from-source-to-silicon/unit-03/",
+      "sha256": "9a8861b0520a7cec2af9bb8ba1cfb5c1ed7c970fcb544012d26b878330b6e680",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Does a recognised last word make the program valid?",
+        "Follow the compiler's output"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-04.mdx",
+      "route": "/foundations/from-source-to-silicon/unit-04/",
+      "sha256": "9cc1e26f436f306b0f8df1e71f65ad6718299b5f73cdc6087d3ca24e4bbf4a90",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Compare rules and drawing"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-05.mdx",
+      "route": "/foundations/from-source-to-silicon/unit-05/",
+      "sha256": "5bcdea8862584e399922b7ab4d06b706a3e404c052e1dfd81f51db5145d62336",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Compare the average with the slow update"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/index.mdx",
+      "route": "/foundations/gates-and-the-adder/",
+      "sha256": "e58d633ee166c5616f0caadc9951e13313e0a625e6626a0a33badd893cbc598d",
+      "kind": "overview",
+      "questions": 0,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-01.mdx",
+      "route": "/foundations/gates-and-the-adder/unit-01/",
+      "sha256": "11088d3dd1fe775f60a0603dbae143fceeb6b07aacec2885b3e2bcb123e42edc",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "If a drawing matches all four AND rows, have we measured a real chip's delay?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-02.mdx",
+      "route": "/foundations/gates-and-the-adder/unit-02/",
+      "sha256": "0f34faa265e33382e09a1dd077a00139db93da181088e1b26f5e486228ddca9a",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "For A = 1 and B = 1, is a dark SUM output evidence that the answer is zero?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-03.mdx",
+      "route": "/foundations/gates-and-the-adder/unit-03/",
+      "sha256": "2d175e6377ffb83892a11e741db803b6d9914497263f843756a5849af23b9258",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Does 111 + 001 give zero or eight? What if we keep only three sum bits?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/index.mdx",
+      "route": "/foundations/repeating/",
+      "sha256": "831ba31267ae0dfce2c70285c9e7d31154e9e491d880b8ec5be9efe94dbbe59c",
+      "kind": "overview",
+      "questions": 0,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/unit-01.mdx",
+      "route": "/foundations/repeating/unit-01/",
+      "sha256": "8293f9a6eca8c8ee54bb0d99ec3e651175fda68975202a26ff78b6ecbd12fbda",
+      "kind": "unit",
+      "questions": 2,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/unit-02.mdx",
+      "route": "/foundations/repeating/unit-02/",
+      "sha256": "dea5bed5aacf181b49989337ecf195b243fdd6b774baeb31c34a774d1f737039",
+      "kind": "unit",
+      "questions": 1,
+      "summaries": [
+        "If the last round chose 7, can the next round choose 7 too?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/repeating/unit-03.mdx",
+      "route": "/foundations/repeating/unit-03/",
+      "sha256": "b9fbdc89e94277b949749805b3ccd34d171c8cccb3ca595f663081c455dcdf68",
+      "kind": "unit",
+      "questions": 2,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/index.mdx",
+      "route": "/foundations/structure/",
+      "sha256": "9bfbc1ca97dba42cbcfeae0761a5b8463a95258d6a4b42007385dd1a3856f05d",
+      "kind": "overview",
+      "questions": 0,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-01.mdx",
+      "route": "/foundations/structure/unit-01/",
+      "sha256": "ca128a5139dd8b5e3ffe57a5c633edf75c169e7dbb405073fd981c3eb49844f6",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "With scores = [10], are scores[0], scores[1] and scores[2] all valid? What changes after APPEND 20?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-02.mdx",
+      "route": "/foundations/structure/unit-02/",
+      "sha256": "615603a9090b7d8b9bf6ee9cda17e56e04d94a519deeab9a3a52e1dd8869f8fc",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Check which callers change"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-03.mdx",
+      "route": "/foundations/structure/unit-03/",
+      "sha256": "c7dccf4e80e4e336ab33ff29058ea54dbe466dbfba12bbc6bcb8e25c62df5713",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "With n = 3, what do LET result = double(n) and LET n = double(n) leave in the caller?",
+        "Compare their promises"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/structure/unit-04.mdx",
+      "route": "/foundations/structure/unit-04/",
+      "sha256": "0dae1f6051a46f9040e27358b0b8d6665af827e37f116a2de11dcdbe1e96f243",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Compare the predictions"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/index.mdx",
+      "route": "/foundations/truth-tables/",
+      "sha256": "84e997ed409903b30c6bedb0d9682849470b5ae7f21c3a6e8918fd48b4920892",
+      "kind": "overview",
+      "questions": 0,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/unit-01.mdx",
+      "route": "/foundations/truth-tables/unit-01/",
+      "sha256": "dceaa799f42ceb22bd408094629beda5bca1af90d9bc240c79fe1ddf4f49a01d",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Does testing the same unchanged score twice create four possible game states?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/unit-02.mdx",
+      "route": "/foundations/truth-tables/unit-02/",
+      "sha256": "dcf8e37b6c5c1982e96a62689603cd9592585a3b475f732d2bbe9188a0546933",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Must A AND A have fewer passing cases than A? Must A OR A have more?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/truth-tables/unit-03.mdx",
+      "route": "/foundations/truth-tables/unit-03/",
+      "sha256": "7af4a2a687c2940a96e8bdd4ab34e35ef107388936bd818988602e7387f117ff",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "What if dead is TRUE but a separately stored alive flag is still TRUE?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/index.mdx",
+      "route": "/foundations/working-it-out/",
+      "sha256": "9287217915296887cbd6cd727994242ac5b29d0556404a529381ec4dec87e961",
+      "kind": "overview",
+      "questions": 0,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/unit-01.mdx",
+      "route": "/foundations/working-it-out/unit-01/",
+      "sha256": "80edc34253f5fe086be5ea4a9196e560213f78f6fb2975e6692f4a27f7fc4365",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "What will 20 - 5 - 2 show? Where would brackets make it 17?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/unit-02.mdx",
+      "route": "/foundations/working-it-out/unit-02/",
+      "sha256": "8ba6b8505d7f66ca91224696ee11f2928ad51e0b6d1f05d9874dcb2b6d7bfd17",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "With a = 2 and b = 5, do LET a = b then LET b = a swap them?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-it-out/unit-03.mdx",
+      "route": "/foundations/working-it-out/unit-03/",
+      "sha256": "d066fd3eaf1df19216d44a2bb4a0aba69cbb3332c0e8ce907cadef77f351705a",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Do 7 / 2, ROUND DOWN (7 / 2), 7 REMAINDER 2 and ROUND (7 / 2) answer the same question?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/index.mdx",
+      "route": "/foundations/working-the-bits/",
+      "sha256": "a94f9ff103ab14c27cdba915122d914b39ee60bcde22106bbb93efaa29bb378e",
+      "kind": "overview",
+      "questions": 0,
+      "summaries": []
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-01.mdx",
+      "route": "/foundations/working-the-bits/unit-01/",
+      "sha256": "68b03d266d72fa45351e7e41718d824991b9d2ec607ecef18b1c7965cb783aab",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Start with 11001010. What does XOR with 00001111 change? What if you apply it twice?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-02.mdx",
+      "route": "/foundations/working-the-bits/unit-02/",
+      "sha256": "f5c451b5f000005790b820051250317019a2d1affc96c9a62b3d959b5c30cb50",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Using our eight-bit zero-fill rules, what are 200 shifted left once and 5 shifted right once?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-03.mdx",
+      "route": "/foundations/working-the-bits/unit-03/",
+      "sha256": "5dcbe13c8514e406e3aad4880efd8c5594945399dc87bba56d0c991294ed1408",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Does CODE \"7\" give 7? Can subtracting CODE \"0\" turn any character into a valid digit?",
+        "What does BITOR 32 do to ASCII \"7\" and \"@\"? Does either result prove the input was a letter?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-04.mdx",
+      "route": "/foundations/working-the-bits/unit-04/",
+      "sha256": "9dfad3db5bb13e1ef0c97008214ccf4de7065b697b38b08207e1fe6303440189",
+      "kind": "unit",
+      "questions": 0,
+      "summaries": [
+        "Can binary floating-point store 0.5 exactly? What about 0.1?"
+      ]
+    },
+    {
+      "path": "src/content/curriculum/foundations/working-the-bits/unit-05.mdx",
+      "route": "/foundations/working-the-bits/unit-05/",
+      "sha256": "8d355d2955df7c74de78fc044a89462ba77f78d78e124b3ecbb173a0987f58f6",
+      "kind": "unit",
+      "questions": 1,
+      "summaries": [
+        "At scale 256, does shifting stored 384 right by eight give 1.5?",
+        "A hint before the explanation",
+        "Check the quarter-pixel moves"
+      ]
+    }
+  ],
+  "questionComponentSha256": "b602f9b0a582258a83d598f80868b77c3930fa9607af6f499beec6373ae7f9ab",
+  "totals": {
+    "units": 39,
+    "overviews": 10,
+    "questions": 18,
+    "rawDisclosures": 34
+  }
+}

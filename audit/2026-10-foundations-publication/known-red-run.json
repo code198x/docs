@@ -1,0 +1,13 @@
+{
+  "command": [
+    "node",
+    "audit/2026-10-foundations-publication/verify-live.mjs",
+    "/Users/stevehill/Projects/198x/Code198x/website",
+    "audit/2026-10-foundations-publication/source.json",
+    "audit/2026-10-foundations-publication/known-red",
+    "wrong-count"
+  ],
+  "exit": 1,
+  "stdout": "",
+  "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Question count /foundations/basics/\n\n0 !== 1\n\n    at file:///private/tmp/198x-acceptance-docs/audit/2026-10-foundations-publication/verify-live.mjs:45:14 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 0,\n  expected: 1,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.22.0\n"
+}
