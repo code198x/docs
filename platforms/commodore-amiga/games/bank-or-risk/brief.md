@@ -1,10 +1,11 @@
 # Bank or risk AMOS opening game
 
-**Status: game direction agreed; rules and numerical tuning prepared for native
-prototype review.** Build a solo dice game around the choice to keep a total or
+**Status: game direction and 10/5/30 trial tuning agreed; native source prepared,
+execution pending.** The [prototype record](prototype.md) identifies the source,
+prepared probes and native-access blocker. Build a solo dice game around the choice to keep a total or
 risk another roll. The risk increases as the total approaches a visible limit.
 It is the proposed first game in the [AMOS course](../../amos/course-brief.md).
-No AMOS prototype or replacement lessons are delivered by this brief.
+No native execution or replacement lessons are established by this brief.
 
 ## Experience and first scope
 
@@ -23,8 +24,8 @@ Retain the result and offer a fresh challenge or exit.
 The appeal is the decision before a roll: what could be gained, what could be
 lost, and how much the session still needs. Near the target, banking a modest
 total can be the right choice; after low earlier scores, taking a risk may be
-the only way to stay in contention. These numbers are tuning for a play trial,
-not an approved difficulty or a claim about beginner success rates.
+the only way to stay in contention. These numbers are agreed for the play trial,
+not an accepted final balance or a claim about beginner success rates.
 
 Keep one die and one player. Cards, a dealer, betting money, a computer opponent,
 multiple dice, persistent records, animation, pointer controls and a campaign
