@@ -1,0 +1,4 @@
+CD Tools:AmiBlitz3.13
+Assign LIBS: Tools:AmiBlitz3.13/Libs ADD
+AmiBlitz3 -s Tools:blitzmode.ab3 -e Tools:blitzmode.exe > Tools:blitzmode-compile.txt
+Tools:blitzmode.exe

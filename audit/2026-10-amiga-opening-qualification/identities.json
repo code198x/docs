@@ -1,0 +1,12 @@
+{
+  "runtime": {
+    "kickstart.rom": "6d43840d4099a74170ea0f0425b6257c3891ebcaa39c4d1840075a9ab22b5707",
+    "workbench.adf": "a8f167bad2897e8c7f2cfe73de7a9f8dad10c7a5b1f78ca17f818ab17278b985",
+    "fonts.adf": "fb16055e4ab41ad044c51ce97cf808957ae5a0531b027e890f7f64912fbc1827",
+    "amiblitz.lha": "e728b213f9e45cb2a2098dd41c9d3ea7d4810ff363725f9a75810bd09e788b3e",
+    "AmiBlitz3": "b85caf464f00f6a6f7e4783ea4f9dadf5f61299772a2e78607c9df643fc749e6"
+  },
+  "websiteCommit": "9180e96ab8e171cdfee5b966f7b6dd93338125b2",
+  "samplesCommit": "99b64a2d1d6b0a39b164cb39c213a8c6f0c64821",
+  "docsBase": "ce2eb914b9c08f0ca7ad6ee8fcaf0f546cb212b6"
+}

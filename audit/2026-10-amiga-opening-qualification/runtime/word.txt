@@ -1,0 +1,6 @@
+A long holds big numbers:      1000000
+A word holds -32768 to 32767:  100
+
+Now add 50 to the word...
+100 + 50 in a word gives:      150
+(150 fits in a signed word)
