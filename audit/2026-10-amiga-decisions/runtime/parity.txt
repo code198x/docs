@@ -1,0 +1,11 @@
+DECISIONS-PARITY-20261016
+0 old=-1 remainder=0
+1 old=-1 remainder=1
+2 old=-1 remainder=0
+3 old=-1 remainder=1
+4 old=-1 remainder=0
+5 old=-1 remainder=1
+6 old=-1 remainder=0
+7 old=-1 remainder=1
+8 old=-1 remainder=0
+9 old=-1 remainder=1

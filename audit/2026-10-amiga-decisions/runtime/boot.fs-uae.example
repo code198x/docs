@@ -1,0 +1,21 @@
+[fs-uae]
+base_dir = TEST_ROOT/state
+amiga_model = A1200
+chip_memory = 2048
+fast_memory = 8192
+kickstart_file = TEST_ROOT/kickstart.rom
+floppy_drive_0 = TEST_ROOT/workbench.adf
+hard_drive_0 = TEST_ROOT/tools
+hard_drive_0_label = Tools
+hard_drive_0_priority = -10
+fullscreen = 0
+window_width = 1024
+window_height = 768
+initial_input_grab = 0
+automatic_input_grab = 0
+volume = 0
+floppy_drive_volume = 0
+joystick_port_1 = none
+floppy_drive_1 = TEST_ROOT/fonts.adf
+
+keyboard_key_lsuper = action_key_amiga_right

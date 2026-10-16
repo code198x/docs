@@ -1,0 +1,21 @@
+{
+  "sourceHashes": "pass",
+  "capturePayload": "pass",
+  "runtimeFixtures": "pass",
+  "wrongWaitControl": "rejected",
+  "nativeParityRows": 10,
+  "oldExpressionTrueCount": 10,
+  "remainderZeroCount": 5,
+  "routes": [
+    {
+      "route": "/systems/commodore-amiga/amos/meet-amos/unit-04/",
+      "questions": 2,
+      "amigaLinks": "pass"
+    },
+    {
+      "route": "/systems/commodore-amiga/blitz/meet-blitz/unit-04/",
+      "questions": 3,
+      "amigaLinks": "pass"
+    }
+  ]
+}

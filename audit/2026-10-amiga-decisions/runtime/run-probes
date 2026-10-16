@@ -1,0 +1,4 @@
+CD Tools:AmiBlitz3.13
+Assign LIBS: Tools:AmiBlitz3.13/Libs ADD
+AmiBlitz3 -s Tools:parity.ab3 -e RAM:parity.exe > Tools:compile.txt
+RAM:parity.exe > Tools:parity.txt

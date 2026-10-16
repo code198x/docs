@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-16",
+  "configuration": {
+    "emulator": "FS-UAE 3.2.35",
+    "machine": "A1200",
+    "cpu": "68020",
+    "video": "PAL",
+    "chipMiB": 2,
+    "fastMiB": 8,
+    "workbench": "3.1 rev 40.42",
+    "kickstart": "3.1 rev 40.68",
+    "amos": "AMOS Professional 2.00",
+    "amiblitz": "3.13.0b"
+  },
+  "amos": [
+    {
+      "lives": 3,
+      "condition": ">0",
+      "observed": "Still in the game!",
+      "printedLives": 3
+    },
+    {
+      "lives": 1,
+      "condition": ">0",
+      "observed": "Still in the game!",
+      "printedLives": 1
+    },
+    {
+      "lives": 0,
+      "condition": ">0",
+      "observed": "Game over, man.",
+      "printedLives": 0
+    },
+    {
+      "lives": -1,
+      "condition": ">0",
+      "observed": "Game over, man.",
+      "printedLives": -1
+    },
+    {
+      "lives": 0,
+      "condition": ">=0",
+      "observed": "Still in the game!",
+      "role": "intentional boundary bug"
+    },
+    {
+      "lives": 0,
+      "condition": ">0",
+      "observed": "Game over, man.",
+      "role": "repair"
+    },
+    {
+      "lives": 1,
+      "condition": ">0",
+      "observed": "Still in the game!",
+      "role": "repair boundary check"
+    }
+  ],
+  "blitz": {
+    "execution": "CLI compilation followed by execution of each standalone executable in native FS-UAE",
+    "bars": "ten bars; only sixth purple",
+    "stripes": "ten bars; positions 1, 3, 5, 7, 9 purple",
+    "colourbug": "first five pink; sixth through tenth purple",
+    "repair": "baseline recompiled and rerun; only sixth purple",
+    "compilerErrors": 0
+  },
+  "browser": {
+    "name": "Google Chrome",
+    "version": "155.0.8059.80",
+    "source": "local production dist",
+    "viewports": [
+      [
+        390,
+        844
+      ],
+      [
+        1440,
+        900
+      ]
+    ],
+    "method": "native browser UI; DevTools responsive emulation",
+    "observed": "Both pages styled and readable; code blocks contained; AMOS prediction and boundary disclosures opened; Blitz parity disclosure opened and toggled with Return."
+  },
+  "unverified": [
+    "real learner trial",
+    "VoiceOver",
+    "fresh unit-4 PED edit/compile cycle",
+    "physical touch device",
+    "timing or performance benchmark"
+  ]
+}

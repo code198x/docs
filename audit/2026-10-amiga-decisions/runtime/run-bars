@@ -1,0 +1,4 @@
+CD Tools:AmiBlitz3.13
+Assign LIBS: Tools:AmiBlitz3.13/Libs ADD
+AmiBlitz3 -s Tools:bars.ab3 -e Tools:bars.exe > Tools:bars-compile.txt
+Tools:bars.exe
