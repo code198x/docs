@@ -9,3 +9,7 @@ Create sourced, bounded writing tasks in `code198x/website`, with one parent tra
 5. Commit and push the tracking changes, open a pull request, and remove the temporary docs worktree after verifying its commit exists on the remote. Preserve the user's unrelated docs and website changes.
 
 Historical controls: distinguish NACA from NASA and each person's job; treat film scenes as dramatisation; explain human computers without an all-women/before-men origin claim; qualify priority claims and credit teams; cite discrimination specifically and attribute recollections. Follow the current Vault evidence and human review requirements. Earlier work supplies context under the Vault's existing scope provision, without promising earlier-era curriculum.
+
+## Follow-up: Hidden Figures as a cultural work
+
+Check current film/television entries and candidates, then commission one film entry under the existing Culture category. Preserve the existing Tron and The Wizard candidates. Add a ready candidate and sourced writing issue for Hidden Figures, link it to the parent and theme without making it a first-tranche prerequisite, validate the CSV and issue relationships, and update the existing tracking pull request. No new medium category or bulk film/television commissions are part of this task.
