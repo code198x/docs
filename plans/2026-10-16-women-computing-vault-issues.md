@@ -25,3 +25,7 @@ Record the accepted documentary, BBC television and fiction suggestions as needs
 ## Follow-up: music connections
 
 Compare all proposed music connections with current main Vault paths/prose, candidate identities and open/closed issue coverage. Extend the existing Electric Dreams film candidate for Oakey/Moroder. Record the Warhol/Harry launch event as covered by the Amiga entry, with no duplicate commission. Add missing album/program, game, music-computer, CD-ROM and computer-performance subjects at needs-triage; keep Gabriel's two works distinct and collaborators visible. Preserve every other record, validate the full CSV and the existing regression suite, inspect the diff, update this pull request and push. Remove the temporary music checkout after checking tracked/untracked/ignored files and verifying its commit on the remote.
+
+## Follow-up: Bitmap Brothers and pop music
+
+Check current Xenon 2, Bitmap Brothers, Renegade and Gods coverage and the existing Bomb the Bass, Magic Pockets, Rhythm King, Richard Joseph and John Foxx candidate identities. Add coverage and credit notes to those five existing records, keeping full-game, person and company scopes distinct from already covered soundtrack connections. Preserve IDs and status; add no duplicate candidates or issues. Validate the CSV and regression tests, prove other rows unchanged, push the bounded follow-up and clean up its temporary checkout after remote verification.
