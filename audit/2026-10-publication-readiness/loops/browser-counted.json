@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "date": "2026-10-16T09:49:32.082Z",
+  "base": "https://code198x.com",
+  "browser": "155.0.8059.80",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440
+      },
+      "responseSha256": "a1867171da9fa3ef5971418af2c51ecc01e658bf97dce73b78b11b68e6098539",
+      "text": "Doing It Again\n\nA loop repeats work without writing it out over and over, a set number of times, with a counter you can use as it goes.\n\nFoundations\n\nTo show the numbers 1 to 10 with what you know so far, you would write ten SHOW lines. For 1 to 100, a hundred of them. Computers exist so that you never have to.\n\nA loop does a piece of work over and over, as many times as you say, and you write that work once.\n\nWe use teaching notation to trace on paper, not commands to paste into a machine. A variable is a named place holding a value; SHOW displays it. The loop will give a variable a series of values without us assigning each one.\n\nCount, without writing it out\nCode\nFOR i = 1 TO 10\n\n  SHOW i\n\nEND\nOutput\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\nFOR i = 1 TO 10 starts a loop with a counter called i. END marks where the repeated work stops. The computer runs everything between them with i set to 1, then runs it again with i set to 2, and keeps going up to 10.\n\nHere the endpoints are whole numbers, and the counter increases by one after each completed visit. Both endpoints are included when the start is not past the end. If the start is already greater than the end, the body runs no times. Keep the endpoints and counter unchanged inside these introductory loops. A real language explains its own loop rules and spelling.\n\nPREDICT IT!\n\nWhich counter values are visited by 1 TO 0, 1 TO 1 and 0 TO 3? How many visits does each range give?\n\nShow the explanation\n\nThree lines did the work of ten. Changing that 10 to 100 would do a hundred without another keystroke. That is the point of a loop: how much repetition you get is a number you set, not lines you type.\n\nThe counter is a value you can use\n\nThe counter is not only for keeping count. It is a variable, holding a different value each time round, and you can use it in the work:\n\nCode\nFOR i = 1 TO 10\n\n  SHOW i, \" times 7 is \", i * 7\n\nEND\nPass\ti\ti * 7\tShown\n1\t1\t7\t1 times 7 is 7\n2\t2\t14\t2 times 7 is 14\n3\t3\t21\t3 times 7 is 21\n…\t…\t…\t…\n10\t10\t70\t10 times 7 is 70\n\nTen visits to the same SHOW line. Only i changes, and the computer works i * 7 out afresh from it each time round.\n\nA loop that counts and hands you the count is how you fill a row, draw a grid or lay out a level: anywhere the work is the same thing, once per number.\n\nWhich lines repeat?\n\nThe body is the work between FOR and its matching END. Indentation helps us see that boundary:\n\nCode\nSHOW \"Starting\"\n\nFOR i = 1 TO 3\n\n  SHOW i\n\nEND\n\nSHOW \"Done\"\n\nThe output is Starting, then 1, 2, 3, then Done, each on its own line. In this straight-line example, the two messages outside the loop each appear once. Even if the range is empty, we still reach the message after END.\n\nPREDICT IT!\n\nMove SHOW Done just above END, keeping its quotation marks. How many Done messages appear for 1 TO 3? What about 1 TO 0?\n\nShow the explanation\n\nFor a machine example, Give the answer a rhythm explains a three-dot loop in Sinclair BASIC. Its “Describe the repetition once” section recalls the counter; BASIC uses NEXT i where we use END. The later sound is after the loop, so it happens once. Read those explanations without playing the preceding game; running the complete program is optional.\n\nWhen it’s wrong, see why\nIt runs once, or not at all. Check the range. FOR i = 1 TO 1 runs once. FOR i = 1 TO 0 runs no times, because the start is already past the end.\nThe numbers are out by one. 1 TO 10 gives ten passes. 0 TO 10 gives eleven. Decide whether you are counting things or counting from zero, then set the range to match.\nOnly part of the work repeats. The repeated work is everything between FOR and END. In the straight-line example above, a line after END runs once, even when the loop body runs no times.\nWhat you’ve learnt\nA loop repeats work without you writing it out. How many times is a value you set.\nA counted loop runs a fixed number of times and keeps a counter that climbs as it goes.\nThe counter is a variable you can use in the repeated work. That is what makes a loop build things rather than only count.\nWhat’s next\n\nA counted loop is for when you know how many times. Often you do not: you repeat until something happens. In Unit 2 we meet that loop, and use it to turn the guessing game into something you can play.\n\nIN THIS LESSON\nCount, without writing it out\nThe counter is a value you can use\nWhich lines repeat?\nWhen it’s wrong, see why\nWhat you’ve learnt\nWhat’s next\nPRIMER OVERVIEW\nRepeating\nNEXT UNIT\nUntil You Get It",
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "http": 200,
+      "dimensions": {
+        "viewport": 390,
+        "document": 390
+      },
+      "responseSha256": "a1867171da9fa3ef5971418af2c51ecc01e658bf97dce73b78b11b68e6098539",
+      "text": "Doing It Again\n\nA loop repeats work without writing it out over and over, a set number of times, with a counter you can use as it goes.\n\nFoundations\n\nTo show the numbers 1 to 10 with what you know so far, you would write ten SHOW lines. For 1 to 100, a hundred of them. Computers exist so that you never have to.\n\nA loop does a piece of work over and over, as many times as you say, and you write that work once.\n\nWe use teaching notation to trace on paper, not commands to paste into a machine. A variable is a named place holding a value; SHOW displays it. The loop will give a variable a series of values without us assigning each one.\n\nCount, without writing it out\nCode\nFOR i = 1 TO 10\n\n  SHOW i\n\nEND\nOutput\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\nFOR i = 1 TO 10 starts a loop with a counter called i. END marks where the repeated work stops. The computer runs everything between them with i set to 1, then runs it again with i set to 2, and keeps going up to 10.\n\nHere the endpoints are whole numbers, and the counter increases by one after each completed visit. Both endpoints are included when the start is not past the end. If the start is already greater than the end, the body runs no times. Keep the endpoints and counter unchanged inside these introductory loops. A real language explains its own loop rules and spelling.\n\nPREDICT IT!\n\nWhich counter values are visited by 1 TO 0, 1 TO 1 and 0 TO 3? How many visits does each range give?\n\nShow the explanation\n\nThree lines did the work of ten. Changing that 10 to 100 would do a hundred without another keystroke. That is the point of a loop: how much repetition you get is a number you set, not lines you type.\n\nThe counter is a value you can use\n\nThe counter is not only for keeping count. It is a variable, holding a different value each time round, and you can use it in the work:\n\nCode\nFOR i = 1 TO 10\n\n  SHOW i, \" times 7 is \", i * 7\n\nEND\nPass\ti\ti * 7\tShown\n1\t1\t7\t1 times 7 is 7\n2\t2\t14\t2 times 7 is 14\n3\t3\t21\t3 times 7 is 21\n…\t…\t…\t…\n10\t10\t70\t10 times 7 is 70\n\nTen visits to the same SHOW line. Only i changes, and the computer works i * 7 out afresh from it each time round.\n\nA loop that counts and hands you the count is how you fill a row, draw a grid or lay out a level: anywhere the work is the same thing, once per number.\n\nWhich lines repeat?\n\nThe body is the work between FOR and its matching END. Indentation helps us see that boundary:\n\nCode\nSHOW \"Starting\"\n\nFOR i = 1 TO 3\n\n  SHOW i\n\nEND\n\nSHOW \"Done\"\n\nThe output is Starting, then 1, 2, 3, then Done, each on its own line. In this straight-line example, the two messages outside the loop each appear once. Even if the range is empty, we still reach the message after END.\n\nPREDICT IT!\n\nMove SHOW Done just above END, keeping its quotation marks. How many Done messages appear for 1 TO 3? What about 1 TO 0?\n\nShow the explanation\n\nFor a machine example, Give the answer a rhythm explains a three-dot loop in Sinclair BASIC. Its “Describe the repetition once” section recalls the counter; BASIC uses NEXT i where we use END. The later sound is after the loop, so it happens once. Read those explanations without playing the preceding game; running the complete program is optional.\n\nWhen it’s wrong, see why\nIt runs once, or not at all. Check the range. FOR i = 1 TO 1 runs once. FOR i = 1 TO 0 runs no times, because the start is already past the end.\nThe numbers are out by one. 1 TO 10 gives ten passes. 0 TO 10 gives eleven. Decide whether you are counting things or counting from zero, then set the range to match.\nOnly part of the work repeats. The repeated work is everything between FOR and END. In the straight-line example above, a line after END runs once, even when the loop body runs no times.\nWhat you’ve learnt\nA loop repeats work without you writing it out. How many times is a value you set.\nA counted loop runs a fixed number of times and keeps a counter that climbs as it goes.\nThe counter is a variable you can use in the repeated work. That is what makes a loop build things rather than only count.\nWhat’s next\n\nA counted loop is for when you know how many times. Often you do not: you repeat until something happens. In Unit 2 we meet that loop, and use it to turn the guessing game into something you can play.\n\nIN THIS LESSON\nCount, without writing it out\nThe counter is a value you can use\nWhich lines repeat?\nWhen it’s wrong, see why\nWhat you’ve learnt\nWhat’s next\nPRIMER OVERVIEW\nRepeating\nNEXT UNIT\nUntil You Get It",
+      "violations": [],
+      "incomplete": [],
+      "revealedIncomplete": []
+    }
+  ],
+  "checks": [
+    {
+      "width": 1440,
+      "check": "prediction and keyboard answer",
+      "index": 0,
+      "answer": "1 TO 0 visits none: the start is already past the end. 1 TO 1 visits 1 once. 0 TO 3 visits 0, 1, 2, 3: four visits, including zero. For an ascending range like this, count both endpoints; subtracting 0 from 3 counts three gaps between values, rather than four values."
+    },
+    {
+      "width": 1440,
+      "check": "prediction and keyboard answer",
+      "index": 1,
+      "answer": "Inside the body, SHOW \"Done\" runs three times for 1 TO 3, after each counter value. For 1 TO 0, it runs zero times, because the whole body is skipped. Outside, after END, it runs once in either example. Moving a line across the loop boundary changes the repetition; changing indentation alone does not move the END marker in our notation."
+    },
+    {
+      "width": 1440,
+      "check": "optional BASIC loop/after-loop explanation and Back"
+    },
+    {
+      "width": 390,
+      "check": "prediction and keyboard answer",
+      "index": 0,
+      "answer": "1 TO 0 visits none: the start is already past the end. 1 TO 1 visits 1 once. 0 TO 3 visits 0, 1, 2, 3: four visits, including zero. For an ascending range like this, count both endpoints; subtracting 0 from 3 counts three gaps between values, rather than four values."
+    },
+    {
+      "width": 390,
+      "check": "prediction and keyboard answer",
+      "index": 1,
+      "answer": "Inside the body, SHOW \"Done\" runs three times for 1 TO 3, after each counter value. For 1 TO 0, it runs zero times, because the whole body is skipped. Outside, after END, it runs once in either example. Moving a line across the loop boundary changes the repetition; changing indentation alone does not move the END marker in our notation."
+    },
+    {
+      "width": 390,
+      "check": "optional BASIC loop/after-loop explanation and Back"
+    }
+  ],
+  "errors": []
+}

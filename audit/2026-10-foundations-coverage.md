@@ -8,6 +8,9 @@ validated. The [complete per-unit source map](2026-10-foundations-objectives/MAP
 inventories goals, knowledge used and local support for all 39 units at its named revision.
 The [current evidence queue](2026-10-foundations-evidence-queue/REPORT.md) reconciles
 subsequent changes and selects a task on keeping fractions between fixed-point updates.
+The [fixed-point follow-up](2026-10-fixed-point-state/REPORT.md) delivers that
+experiment; the [publication readiness snapshot](2026-10-publication-readiness/REPORT.md)
+checks the latest five changed units and first-session guide on the live site.
 
 At website baseline
 `b1ddbdfc5f72e79e2a97bd6ed42ae8402e25c883`, Foundations has ten modules and 39

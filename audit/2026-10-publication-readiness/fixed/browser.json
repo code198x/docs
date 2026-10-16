@@ -1,0 +1,309 @@
+{
+  "status": "passed",
+  "date": "2026-10-16T09:52:25.032Z",
+  "browser": "155.0.8059.80",
+  "acceptedModelsSha256": "fa46aa5ce7d133572fe6ddafe404982c32c8debf9a1cbd7edff265c846f6bf48",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "outputs": [
+        "1.5",
+        "512"
+      ],
+      "responseSha256": "34e921f62169252bc59589304d557cd5b58d1f6f8a8f39fb607ac4eef63a2f55",
+      "closed": {
+        "violations": [],
+        "incomplete": []
+      },
+      "headerWrap": "normal",
+      "rows": [
+        [
+          "1",
+          "128",
+          "0.5",
+          "0"
+        ],
+        [
+          "2",
+          "256",
+          "1",
+          "1"
+        ],
+        [
+          "3",
+          "384",
+          "1.5",
+          "1"
+        ],
+        [
+          "4",
+          "512",
+          "2",
+          "2"
+        ]
+      ],
+      "numericLines": [
+        {
+          "text": "1",
+          "lines": 1
+        },
+        {
+          "text": "128",
+          "lines": 1
+        },
+        {
+          "text": "0.5",
+          "lines": 1
+        },
+        {
+          "text": "0",
+          "lines": 1
+        },
+        {
+          "text": "2",
+          "lines": 1
+        },
+        {
+          "text": "256",
+          "lines": 1
+        },
+        {
+          "text": "1",
+          "lines": 1
+        },
+        {
+          "text": "1",
+          "lines": 1
+        },
+        {
+          "text": "3",
+          "lines": 1
+        },
+        {
+          "text": "384",
+          "lines": 1
+        },
+        {
+          "text": "1.5",
+          "lines": 1
+        },
+        {
+          "text": "1",
+          "lines": 1
+        },
+        {
+          "text": "4",
+          "lines": 1
+        },
+        {
+          "text": "512",
+          "lines": 1
+        },
+        {
+          "text": "2",
+          "lines": 1
+        },
+        {
+          "text": "2",
+          "lines": 1
+        }
+      ],
+      "revealed": {
+        "violations": [],
+        "incomplete": []
+      },
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "http": 200,
+      "outputs": [
+        "1.5",
+        "512"
+      ],
+      "responseSha256": "34e921f62169252bc59589304d557cd5b58d1f6f8a8f39fb607ac4eef63a2f55",
+      "closed": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  ".ll-line:nth-child(5) > .ll-text"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      },
+      "headerWrap": "normal",
+      "rows": [
+        [
+          "1",
+          "128",
+          "0.5",
+          "0"
+        ],
+        [
+          "2",
+          "256",
+          "1",
+          "1"
+        ],
+        [
+          "3",
+          "384",
+          "1.5",
+          "1"
+        ],
+        [
+          "4",
+          "512",
+          "2",
+          "2"
+        ]
+      ],
+      "numericLines": [
+        {
+          "text": "1",
+          "lines": 1
+        },
+        {
+          "text": "128",
+          "lines": 1
+        },
+        {
+          "text": "0.5",
+          "lines": 1
+        },
+        {
+          "text": "0",
+          "lines": 1
+        },
+        {
+          "text": "2",
+          "lines": 1
+        },
+        {
+          "text": "256",
+          "lines": 1
+        },
+        {
+          "text": "1",
+          "lines": 1
+        },
+        {
+          "text": "1",
+          "lines": 1
+        },
+        {
+          "text": "3",
+          "lines": 1
+        },
+        {
+          "text": "384",
+          "lines": 1
+        },
+        {
+          "text": "1.5",
+          "lines": 1
+        },
+        {
+          "text": "1",
+          "lines": 1
+        },
+        {
+          "text": "4",
+          "lines": 1
+        },
+        {
+          "text": "512",
+          "lines": 1
+        },
+        {
+          "text": "2",
+          "lines": 1
+        },
+        {
+          "text": "2",
+          "lines": 1
+        }
+      ],
+      "revealed": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  ".ll-line:nth-child(5) > .ll-text"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ]
+          }
+        ]
+      },
+      "dimensions": {
+        "viewport": 390,
+        "document": 390
+      }
+    }
+  ],
+  "checks": [
+    {
+      "width": 1440,
+      "check": "independent keyboard hint"
+    },
+    {
+      "width": 1440,
+      "check": "keyboard prediction, exact model table and repair"
+    },
+    {
+      "width": 1440,
+      "check": "keyboard quarter-step variation"
+    },
+    {
+      "width": 1440,
+      "check": "keyboard support link and Back",
+      "targetRoute": "/foundations/repeating/unit-01/"
+    },
+    {
+      "width": 1440,
+      "check": "keyboard support link and Back",
+      "targetRoute": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret/"
+    },
+    {
+      "width": 390,
+      "check": "independent keyboard hint"
+    },
+    {
+      "width": 390,
+      "check": "keyboard prediction, exact model table and repair"
+    },
+    {
+      "width": 390,
+      "check": "keyboard quarter-step variation"
+    },
+    {
+      "width": 390,
+      "check": "keyboard support link and Back",
+      "targetRoute": "/foundations/repeating/unit-01/"
+    },
+    {
+      "width": 390,
+      "check": "keyboard support link and Back",
+      "targetRoute": "/systems/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret/"
+    }
+  ],
+  "errors": []
+}

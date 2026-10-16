@@ -1,0 +1,36 @@
+{
+  "Code198x/website": [
+    {
+      "number": 749,
+      "title": "Qualify one first-session machine journey beyond Chromium viewport checks",
+      "url": "https://github.com/code198x/website/issues/749"
+    }
+  ],
+  "Code198x/docs": [
+    {
+      "number": 10,
+      "title": "Finish curriculum discovery: syllabus summaries, machine images and route-map decision",
+      "url": "https://github.com/code198x/docs/issues/10"
+    },
+    {
+      "number": 6,
+      "title": "[Vectrex] Establish verified vector rendering and curriculum capture",
+      "url": "https://github.com/code198x/docs/issues/6"
+    },
+    {
+      "number": 5,
+      "title": "[Next-tier \u00b7 Proposal] Decide 6809 track order, machine variants and OS-9 scope",
+      "url": "https://github.com/code198x/docs/issues/5"
+    },
+    {
+      "number": 4,
+      "title": "[Track \u00b7 Proposal] Vectrex assembly: teach vector drawing through timing and beam control",
+      "url": "https://github.com/code198x/docs/issues/4"
+    },
+    {
+      "number": 3,
+      "title": "[Next-tier] Verify execution and curriculum capture readiness for six machines",
+      "url": "https://github.com/code198x/docs/issues/3"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node",
+    "scripts/verification/fixed-point-state-pilot.mjs",
+    "https://code198x.com",
+    "/private/tmp/198x-readiness-docs/audit/2026-10-publication-readiness/known-red",
+    "/private/tmp/198x-readiness-docs/audit/2026-10-publication-readiness/known-red/wrong-model.json"
+  ],
+  "exit": 1,
+  "stdout": "",
+  "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Rendered state/full/drawn values differ from accepted model\n+ actual - expected\n... Skipped lines\n\n  [\n    [\n      '1',\n      '128',\n      '0.5',\n...\n      '1',\n+     '1'\n-     '99'\n    ],\n    [\n      '3',\n      '384',\n      '1.5',\n\n    at file:///private/tmp/198x-readiness-website/scripts/verification/fixed-point-state-pilot.mjs:70:12 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [\n    [ '1', '128', '0.5', '0' ],\n    [ '2', '256', '1', '1' ],\n    [ '3', '384', '1.5', '1' ],\n    [ '4', '512', '2', '2' ]\n  ],\n  expected: [\n    [ '1', '128', '0.5', '0' ],\n    [ '2', '256', '1', '99' ],\n    [ '3', '384', '1.5', '1' ],\n    [ '4', '512', '2', '2' ]\n  ],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.22.0\n"
+}

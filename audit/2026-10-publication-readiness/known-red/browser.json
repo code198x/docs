@@ -1,0 +1,30 @@
+{
+  "status": "failed",
+  "date": "2026-10-16T09:52:32.046Z",
+  "browser": "155.0.8059.80",
+  "acceptedModelsSha256": "921ffdc9f79024268b35a0c271bd6bc03a489a07ba11b6fcd0a32f69ee6de733",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "http": 200,
+      "outputs": [
+        "1.5",
+        "512"
+      ],
+      "responseSha256": "34e921f62169252bc59589304d557cd5b58d1f6f8a8f39fb607ac4eef63a2f55",
+      "closed": {
+        "violations": [],
+        "incomplete": []
+      }
+    }
+  ],
+  "checks": [
+    {
+      "width": 1440,
+      "check": "independent keyboard hint"
+    }
+  ],
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: Rendered state/full/drawn values differ from accepted model\n+ actual - expected\n... Skipped lines\n\n  [\n    [\n      '1',\n      '128',\n      '0.5',\n...\n      '1',\n+     '1'\n-     '99'\n    ],\n    [\n      '3',\n      '384',\n      '1.5',\n"
+}

@@ -1,0 +1,89 @@
+[
+  {
+    "name": "compound",
+    "command": [
+      "node",
+      "scripts/verification/compound-conditions-pilot.mjs",
+      "https://code198x.com",
+      "/private/tmp/198x-readiness-docs/audit/2026-10-publication-readiness/compound",
+      "after"
+    ],
+    "exit": 0,
+    "stdout": "PASS after: two viewports, 6 behaviour groups\n",
+    "stderr": ""
+  },
+  {
+    "name": "loops",
+    "command": [
+      "node",
+      "scripts/verification/counted-loop-pilot.mjs",
+      "https://code198x.com",
+      "/private/tmp/198x-readiness-docs/audit/2026-10-publication-readiness/loops"
+    ],
+    "exit": 0,
+    "stdout": "PASS two viewports, six keyboard behaviour groups\n",
+    "stderr": ""
+  },
+  {
+    "name": "output",
+    "command": [
+      "node",
+      "scripts/verification/output-joining-pilot.mjs",
+      "https://code198x.com",
+      "/private/tmp/198x-readiness-docs/audit/2026-10-publication-readiness/output"
+    ],
+    "exit": 0,
+    "stdout": "PASS two viewports, exact output, four keyboard reveals and two link/Back routes\n",
+    "stderr": ""
+  },
+  {
+    "name": "interpreter",
+    "command": [
+      "node",
+      "scripts/verification/interpreter-trace-pilot.mjs",
+      "https://code198x.com",
+      "/private/tmp/198x-readiness-docs/audit/2026-10-publication-readiness/interpreter"
+    ],
+    "exit": 0,
+    "stdout": "PASS exact output/trace, two widths, four keyboard reveals and two support routes\n",
+    "stderr": ""
+  },
+  {
+    "name": "guide",
+    "command": [
+      "node",
+      "scripts/verification/first-session-guide.mjs",
+      "https://code198x.com",
+      "/private/tmp/198x-readiness-docs/audit/2026-10-publication-readiness/guide",
+      "pages"
+    ],
+    "exit": 0,
+    "stdout": "{\"status\":\"passed\",\"pages\":12,\"checks\":2}\n",
+    "stderr": ""
+  },
+  {
+    "name": "fixed",
+    "command": [
+      "node",
+      "scripts/verification/fixed-point-state-pilot.mjs",
+      "https://code198x.com",
+      "/private/tmp/198x-readiness-docs/audit/2026-10-publication-readiness/fixed",
+      "/private/tmp/198x-readiness-docs/audit/2026-10-foundations-evidence-queue/models.json"
+    ],
+    "exit": 0,
+    "stdout": "PASS two widths, accepted-model table, six keyboard reveals and four support routes\n",
+    "stderr": ""
+  },
+  {
+    "name": "contrast",
+    "command": [
+      "node",
+      "scripts/verification/fixed-point-contrast.mjs",
+      "https://code198x.com",
+      "/private/tmp/198x-readiness-docs/audit/2026-10-publication-readiness/fixed"
+    ],
+    "exit": 0,
+    "stdout": "PASS clipped listing colour at both scroll endpoints\n",
+    "stderr": ""
+  }
+]
