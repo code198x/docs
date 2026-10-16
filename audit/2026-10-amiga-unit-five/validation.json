@@ -1,0 +1,34 @@
+{
+  "build": {
+    "command": "CODE_SAMPLES_PATH=<samples> PLAY198X_WASM_PATH=<existing-pkg-node> npm run build",
+    "exitCode": 0,
+    "pages": 2459,
+    "warnings": "Existing Vite and Pagefind notices; mise could not update tracking-config symlinks outside the workspace."
+  },
+  "content": {
+    "command": "npm run check:content",
+    "exitCode": 0,
+    "warnings": "Existing editorial coverage advisories; all Vault links resolve."
+  },
+  "browser": "browser/results.json",
+  "runtime": "observations.json",
+  "sourceVerification": {
+    "sourceHashes": "pass",
+    "capturePayload": "pass",
+    "experimentInputs": "pass",
+    "builtListingsAndLinks": "pass",
+    "questionsPerLesson": 3,
+    "bufferReasoningControl": "rejected",
+    "routes": [
+      "/systems/commodore-amiga/amos/meet-amos/unit-05/",
+      "/systems/commodore-amiga/blitz/meet-blitz/unit-05/"
+    ]
+  },
+  "failedAttempts": [
+    "Initial browser launch in sandbox aborted with SIGABRT; reran with approved normal browser execution.",
+    "One browser run overlapped final build output replacement and timed out waiting for main; reran after the build completed.",
+    "Native responsive-toolbar focus caused unintended field edits; restored width 320 and empty height, closed task window, used isolated headless Chrome for exact viewport checks.",
+    "AmiBlitz LHA extraction returned 1 for an accented catalogue pathname. Required compiler hash matches and all six retained programs compiled and executed.",
+    "Some native key/click batches failed or reached a different UI target; inspected fresh state and used exact listings before claiming native results."
+  ]
+}

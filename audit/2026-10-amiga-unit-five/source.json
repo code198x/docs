@@ -1,0 +1,19 @@
+{
+  "website": {
+    "base": "9180e96ab8e171cdfee5b966f7b6dd93338125b2",
+    "files": {
+      "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-05.mdx": "8a11a3834746036578518ca5bea356428066c4d44200ff125c7f4f537116fb68",
+      "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-05.mdx": "99ebc8198c97e631eb148f929afe140cec3a1cee7ae0292eb1975ea862fde73a"
+    },
+    "commit": "f27d5c5812a75996775ce9c4a118cf86a6b0dc16"
+  },
+  "code-samples": {
+    "base": "99b64a2d1d6b0a39b164cb39c213a8c6f0c64821",
+    "files": {
+      "commodore-amiga/amos/meet-amos/unit-05/loop.amos": "2d09b01b5d98bf2998e31b45ff692a49d699ed3fb0f3704d2fc7740675c0efa7",
+      "commodore-amiga/blitz/meet-blitz/unit-05/many.bb2": "43fb2fa92d7f6b05cfa2080dac97a949d0458ecb437481f6f94b4329344b3e43",
+      "commodore-amiga/blitz/meet-blitz/unit-05/capture/many.script.json": "50ef1f2d4aec2b10361679a5b7ad148d6a4b25bbae50f78e0b8e5e327f2392e0"
+    },
+    "commit": "75f6c4000cac172285d3e8bfd1d8a53660d992bc"
+  }
+}
