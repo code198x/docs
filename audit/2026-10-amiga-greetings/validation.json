@@ -1,0 +1,37 @@
+{
+  "artifactChecks": {
+    "sourceCopiesMatchNamedGitRevision": true,
+    "bothChangedBuiltPagesContainExpectedContent": true,
+    "AmosInternalLinksResolveToBuiltPages": true,
+    "gitDiffCheck": "passed"
+  },
+  "websiteBuild": {
+    "command": "CODE_SAMPLES_PATH=<existing code-samples checkout> npm run build",
+    "exitCode": 0,
+    "node": "24.22.0",
+    "bootstrapFailures": [
+      "Missing generated public/emulators/catalog.json: copied existing generated player input.",
+      "Astro compile metadata failed for symlinked UI kit, then symlinked dependencies: copied both existing pinned inputs locally, then full build passed."
+    ]
+  },
+  "browserReview": {
+    "method": "Manual Chrome via CUA against built static output",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "outcome": "Both pages have document scrollWidth equal to viewport width; headings/code readable in inspected views. Setup-to-unit and unit-to-setup links followed successfully. Repair exercise inspected at both widths.",
+    "limits": "No new assistive-technology, touch-device or learner trial. No screenshot files retained."
+  },
+  "runtime": {
+    "amos": "manual baseline/edit/syntax-error/repair observed",
+    "amiblitz": "incomplete after Compiling...; no output observed"
+  },
+  "integrity": "SHA256SUMS checks retained evidence only, not runtime correctness"
+}

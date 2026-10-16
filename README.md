@@ -104,3 +104,6 @@ reveal and the collected internal links. It does not establish learner understan
 The [Amiga opening audit](audit/2026-10-amiga-opening/REPORT.md) reviews the AMOS
 and Blitz setups and first three lessons, separating maintained source/capture
 consistency from unqualified runtime and learner outcomes.
+
+The [first Amiga greetings trial](audit/2026-10-amiga-greetings/REPORT.md) records
+AMOS's run/edit/error/repair loop and the incomplete AmiBlitz compilation check.
