@@ -35,8 +35,11 @@ The [Spectrum assembly opening review](sinclair-zx-spectrum/assembly/course-revi
 
 The [AMOS course brief](commodore-amiga/amos/course-brief.md) and
 [Blitz course brief](commodore-amiga/blitz/course-brief.md) propose independent
-beginner routes with later entry for experienced programmers. A drawing toy and
-a switch puzzle are candidates for review, not agreed replacement sequences.
+beginner routes with later entry for experienced programmers. A small take-away
+game and a switch puzzle are candidates for review, not agreed replacement
+sequences. The [opening comparison](commodore-amiga/amos/opening-candidates.md)
+checks playing experience and beginner teaching load against existing games and
+retained proposals across the four current systems.
 The [tooling feasibility brief](commodore-amiga/tooling-feasibility.md) compares
 original-runtime delivery, a compatible host interpreter and a cross-compiler
 producing Amiga programs. No language implementation is commissioned by these

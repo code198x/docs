@@ -5,9 +5,10 @@ understand a small Blitz program, including the distinction between editing
 source, compiling it and running the resulting program. Experienced readers
 should be able to enter later without missing the environment's particular rules.
 
-The recommended first prototype is a small switch puzzle. A paddle-and-ball
-game remains an alternative. Blitz need not share AMOS's project, pace or lesson
-count, and neither language is a compulsory introduction to assembly.
+The proposed switch puzzle remains a candidate for review. Its smallest playable
+form must justify the teaching load before we choose it as an opening. Blitz
+need not share AMOS's project, pace or lesson count, and neither language is a
+compulsory introduction to assembly.
 
 Apply the [charter](../../../PROJECT.md),
 [curriculum specification](../../../specifications/curriculum.md) and
@@ -31,13 +32,18 @@ no compulsory marks or completion gates.
 
 | Choice | What the learner makes | Why consider it | What could make it unsuitable |
 | --- | --- | --- | --- |
-| Switch puzzle, recommended for the first prototype | A small board of lit and unlit cells; selecting a cell changes it and its immediate neighbours; the goal is all lights off | A deliberate action produces a traceable state change. It gives arrays and routines a purpose without requiring continuous moving graphics at the outset. | A seemingly small puzzle can become hard to solve, and the board representation may arrive before the reader is ready. |
-| Paddle-and-ball game | A paddle keeps a ball in play, with clear contact, recovery and restart | It gives motion, redraw and collision an immediately playable purpose. | Display setup, input and several interacting movement rules may overload the opening. |
+| Switch puzzle, candidate | A small board of lit and unlit cells; selecting a cell changes it and its immediate neighbours; the goal is all lights off | A deliberate action produces a traceable state change. It gives arrays and routines a purpose without requiring continuous moving graphics at the outset. | A seemingly small puzzle can become hard to solve, and the board representation may arrive before the reader is ready. |
 
 The puzzle is not selected because Blitz is uniquely suited to puzzles. It is a
 candidate way to teach the language before making display machinery compulsory.
 The same decision would be revisited if the native prototype is awkward to
-build, unsatisfying to play or hard to explain.
+build, unsatisfying to play or hard to explain. The
+[cross-track comparison](../amos/opening-candidates.md) rejects paddle-and-ball
+as a default alternative because Volley and Brick Bash already teach closely
+related play. A switch puzzle shares a board representation with other games,
+but the neighbour-changing rule must provide a distinct playing experience.
+Compare its final scope with the inherited Gridlock puzzle proposal before
+approval; its catalogue description alone does not settle that question.
 
 ## Proposed opening stages
 
@@ -130,7 +136,7 @@ assets separately.
 
 Reconsider the puzzle if the rule needs too much explanation, the intermediate
 programs are unrewarding, or the representation change dominates the learning.
-Try the paddle alternative if those failures persist. Develop lessons only after
+Compare another distinct, smaller game if those failures persist. Develop lessons only after
 the selected prototype is accepted; preserve current public content until a
 checked replacement route exists. An uncoached beginner trial remains necessary
 to assess the course's effectiveness when a learner becomes available.

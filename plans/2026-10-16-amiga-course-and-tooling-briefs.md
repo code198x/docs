@@ -31,7 +31,30 @@ interpreter or compiler is an option to investigate, not an agreed architecture.
 
 ## Scope
 
-Do not change the live lessons, catalogues, samples or charter. Do not download
+Do not change the live lessons, catalogues or samples. Do not download
 dependencies, create a new tool repository, implement either language, or claim
 that these project designs have been executed or tried by a learner. Preserve
 the existing documentation checkout's unrelated README and work queue edits.
+
+## Review revision
+
+The agreed design constraints now favour a game over the drawing toy, keep the
+opening gentle, allow the full AMOS track to grow towards substantial games, and
+make distinct games the default across tracks and systems. Repeated games need
+an explicitly agreed teaching purpose. Project candidates remain proposals.
+
+1. Compare the four systems' current module catalogues and the relevant authored
+   lessons and retained designs. Record positive examples of overlapping play,
+   distinguishing published material from inherited proposals. Store the bounded
+   comparison and a short candidate list in
+   `platforms/commodore-amiga/amos/opening-candidates.md`.
+2. Record the agreed distinct-game principle in `PROJECT.md`,
+   `specifications/curriculum.md` and `specifications/brief.md`. It applies to
+   new choices; do not remove existing games or rewrite catalogue status.
+3. Revise the AMOS brief around a gentle proposed game and a full-track ambition.
+   Recheck Blitz alternatives and align the tooling brief and platforms index.
+   Do not start a game prototype or language implementation before its design
+   is agreed.
+4. Check changed prose, relative links, proposal status and whitespace; push one
+   follow-up commit to the existing PR. Update its description to the resulting
+   scope. Verify the remote commit and remove the temporary worktree.

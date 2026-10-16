@@ -8,6 +8,12 @@ Store a brief at `platforms/<system>/games/<slug>/brief.md`. Use a stable identi
 
 Describe the central mechanic, the player's recurring activity, decisions and feedback. Explain why it is enjoyable to build and play, why it suits the target and language, and what makes the finished project complete. Name content scale, ending or repeatable cycle, and intended session length where useful. Choose failure and retry behaviour for this game rather than requiring a losing state. Explain how consequences, feedback and progress support its intended experience, including recovery where relevant. Identify deliberate exclusions and design risks.
 
+Compare the player's actions, decisions and goal with the nearest authored games
+and retained proposals across systems and tracks. Cite the material inspected and
+distinguish its status. Prefer a distinct game; a new title, setting or language
+is insufficient. For a deliberate revisit, record the explicitly agreed teaching
+purpose. Do not increase the beginner's teaching load solely to avoid overlap.
+
 A small BASIC game need not be commercially saleable. Selected ambitious projects may state a higher target. Scope must justify itself through experience and teaching rather than feature parity with another game.
 
 ## Learning and connections
