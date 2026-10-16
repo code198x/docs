@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-16",
+  "inputs": {
+    "archive": {
+      "bytes": 13835564,
+      "sha256": "e728b213f9e45cb2a2098dd41c9d3ea7d4810ff363725f9a75810bd09e788b3e"
+    },
+    "kickstart": {
+      "bytes": 524288,
+      "sha256": "6d43840d4099a74170ea0f0425b6257c3891ebcaa39c4d1840075a9ab22b5707"
+    },
+    "workbench": {
+      "bytes": 901120,
+      "sha256": "a8f167bad2897e8c7f2cfe73de7a9f8dad10c7a5b1f78ca17f818ab17278b985"
+    },
+    "fonts": {
+      "bytes": 901120,
+      "sha256": "fb16055e4ab41ad044c51ce97cf808957ae5a0531b027e890f7f64912fbc1827"
+    },
+    "source": {
+      "bytes": 77,
+      "sha256": "55514fdc4b738c8dec7852cf32a453f34a12afb145d49eaa6b81fbacb5fc9dd0"
+    },
+    "runtime": {
+      "bytes": 388344,
+      "sha256": "b85caf464f00f6a6f7e4783ea4f9dadf5f61299772a2e78607c9df643fc749e6"
+    }
+  },
+  "method": "Manual CUA input and visual inspection; fresh task copies of the named A1200 configuration.",
+  "observations": [
+    {
+      "action": "Read pinned PED handle_CompileError and error.include.ab3",
+      "result": "Compiler error uses EasyRequestArgs with one OK gadget; AmigaOS documentation names left-Amiga+V for the affirmative action."
+    },
+    {
+      "action": "Initial launch Tools:start-blitz",
+      "result": "file is not executable; failed returncode 10. Subsequent keys went to this output window; reset rather than continue blind."
+    },
+    {
+      "action": "Fresh Workbench: Execute Tools:start-blitz",
+      "result": "PED opened."
+    },
+    {
+      "action": "File picker controls",
+      "result": "Several unsuccessful keyboard/mouse attempts; incidental g in drawer and extra character in filename discarded by clearing both fields. Left-Amiga+V selected Volumes here, not Load. Return with Tools: drawer and hello.ab3 file loaded exact four lines with keyword highlighting."
+    },
+    {
+      "action": "Right-Amiga+#",
+      "result": "Building executable, 4% observed."
+    },
+    {
+      "action": "F12 menu inspection before guest click",
+      "result": "Blank Sourcecode View remained; no waiting-state greeting observed."
+    },
+    {
+      "action": "Close emulator menu, left click",
+      "result": "Hello from Blitz!; Compiled, not interpreted.; Program terminated.; Press <ENTER> to return to the IDE ..."
+    },
+    {
+      "action": "Return; Shift+Right; append +; compile",
+      "result": "Shift+Right moved to line end. Compile Error: Syntax error! Line 1: --> NPrint \"Hello from Blitz!\"+."
+    },
+    {
+      "action": "Left-Amiga+V",
+      "result": "Requester dismissed; source listing restored with trailing + and cursor after it."
+    },
+    {
+      "action": "BackSpace then Right-Amiga+#",
+      "result": "Trailing + removed; building executable observed."
+    },
+    {
+      "action": "Click after repaired build",
+      "result": "Hello from Blitz! and Compiled, not interpreted.; Program terminated.; Press <ENTER> to return to the IDE ... . Recovery rerun observed."
+    },
+    {
+      "action": "Load plain.ab3 with XTRA RuntimeDebug = 0 around unchanged four statements",
+      "result": "Metadata hidden in PED; debugger flag changed from light to dark. Filename initially typed with shifted characters; explicit both-shift chord/release then clearing filename restored plain.ab3."
+    },
+    {
+      "action": "Compile plain.ab3",
+      "result": "Building executable observed."
+    },
+    {
+      "action": "Inspect RuntimeDebug=0 build before guest click, using emulator menu only",
+      "result": "AmiBlitz3 Console Output showed Hello from Blitz! and Compiled, not interpreted.; no termination message. Waiting output observed."
+    },
+    {
+      "action": "Left click then Return",
+      "result": "Program terminated.; Press <ENTER> to return to the IDE ...; PED restored after Return."
+    },
+    {
+      "action": "Insert Edited inside first string in PED and compile",
+      "result": "Console showed Edited Hello from Blitz! and Compiled, not interpreted. before any guest click."
+    },
+    {
+      "action": "Return through termination prompt; add trailing + to first line and compile",
+      "result": "Compile Error: Syntax error! Line 1: --> NPrint \"Edited Hello from Blitz!\"+."
+    },
+    {
+      "action": "Left-Amiga+V, BackSpace, compile",
+      "result": "Requester dismissed, but subsequent run showed only Compiled, not interpreted. Inspection in PED found first line blank. This was an input/edit failure, not a successful repair. A held Shift state is suspected after earlier shifted filename input; mechanism not established."
+    },
+    {
+      "action": "Right-Amiga+U",
+      "result": "Did not restore the first line."
+    },
+    {
+      "action": "Release both Shift modifiers with a chord, retype corrected first line in PED and inspect all four statements; compile",
+      "result": "Console showed Edited Hello from Blitz! and Compiled, not interpreted. while waiting. Actual repaired output verified."
+    },
+    {
+      "action": "Left click, Return, inspect PED",
+      "result": "Returned to four-line edited source, no trailing plus. Full bounded console loop completed."
+    }
+  ],
+  "outcome": {
+    "baselineWaitingOutput": "observed with RuntimeDebug=0",
+    "editedWaitingOutput": "observed with RuntimeDebug=0",
+    "syntaxError": "observed",
+    "errorDismissal": "left-Amiga+V observed",
+    "repairedOutput": "both lines observed after restoring first line in PED",
+    "returnToEditor": "observed",
+    "scope": "named configuration and greeting only; no learner, timing, audio, save/reopen or whole-course compatibility qualification"
+  },
+  "sources": [
+    "https://github.com/AmiBlitz/AmiBlitz3/blob/5dd815f880d72c5285b380ef3ddebfa5766d0626/Sourcecodes/Amiblitz3/PED/PED.ab3#L10969",
+    "https://github.com/AmiBlitz/AmiBlitz3/blob/5dd815f880d72c5285b380ef3ddebfa5766d0626/Sourcecodes/Includes/error.include.ab3#L223",
+    "https://wiki.amigaos.net/wiki/Intuition_Requesters",
+    "Official v3.13.0b bundled Docs/AmiBlitz3.guide FILEFORMAT section"
+  ]
+}

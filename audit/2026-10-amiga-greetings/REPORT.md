@@ -1,12 +1,13 @@
 # First Amiga language greetings: bounded runtime trial
 
-AMOS Professional 2.00 ran the maintained greeting, an edited greeting and a
-repaired program after a real syntax error. A fresh AmiBlitz retry ran both the
-baseline and edited greetings after importing the plain-text sample as `.ab3`.
-It also produced a deliberate syntax error, but recovery was not completed.
-**The paired qualification is incomplete.** [Docs #94](https://github.com/code198x/docs/issues/94),
+AMOS Professional 2.00 and AmiBlitz v3.13.0b both completed a bounded greeting,
+edit, syntax-error and repair loop on the named configuration. AmiBlitz required
+plain-text `.ab3` import and **RuntimeDebug=0** to show the greeting while
+waiting for a click. **This qualifies the first greeting route only.**
+[Docs #94](https://github.com/code198x/docs/issues/94),
 [website #766](https://github.com/code198x/website/issues/766) and
-[umbrella #116](https://github.com/stevehill1981/198x/issues/116) stay open.
+[umbrella #116](https://github.com/stevehill1981/198x/issues/116) track the paired
+lesson corrections and the remaining wider review.
 
 ## Method and identities
 
@@ -117,6 +118,49 @@ a repair. The bounded trial stopped there. **No recovered rerun or complete
 Blitz edit/error/repair loop is claimed.** Host-prepared edited/fault files were
 not used as substitutes for that missing observation.
 
+## AmiBlitz: recovery and visible waiting output
+
+The [recovery observations](recovery/observations.json) record a fresh session
+with matching runtime/media hashes. Launching the plain-text script directly
+reported **file is not executable** and **failed returncode 10**. From a fresh
+Workbench session, **Execute Tools:start-blitz** opened PED. Use the explicit
+`Execute` command; subsequent keys in the first failed launch had gone into its
+output window, so that attempt was reset.
+
+A trailing `+` produced **Syntax error!**. **Left-Amiga+V** dismissed the Compile
+Error requester, restoring the affected source line. Removing the plus and
+rerunning restored the baseline output after a click. PED's pinned
+[error handler](https://github.com/AmiBlitz/AmiBlitz3/blob/5dd815f880d72c5285b380ef3ddebfa5766d0626/Sourcecodes/Amiblitz3/PED/PED.ab3#L10969)
+uses the [error include's EasyRequestArgs](https://github.com/AmiBlitz/AmiBlitz3/blob/5dd815f880d72c5285b380ef3ddebfa5766d0626/Sourcecodes/Includes/error.include.ab3#L223)
+with an OK gadget. The shortcut agrees with the
+[AmigaOS requester documentation](https://wiki.amigaos.net/wiki/Intuition_Requesters).
+It is not a generic Load shortcut: in the file picker, Left-Amiga+V selected
+Volumes during this trial. Loading succeeded with the correct Drawer/File
+fields and Return.
+
+The retained [plain-console fixture](recovery/plain.ab3) prepends a minimal XTRA
+header to the unchanged four maintained statements. The bundled FILEFORMAT
+section documents the header and `RuntimeDebug` field. Loading it hid the
+header and changed PED's D indicator to dark. Compile & Run then opened
+**AmiBlitz3 Console Output** showing both greeting lines **before any guest
+click**, unlike the debugger-enabled runs. The emulator menu was opened and
+closed for inspection without sending a click to the guest. This isolates a
+usable source configuration; it does not establish the internals of the
+previous blank-view behaviour.
+
+A left click produced **Program terminated.** and **Press <ENTER> to return to
+the IDE ...**; Return restored PED. Editing the first string in PED produced
+**Edited Hello from Blitz!** while waiting, with the second line unchanged.
+Appending `+` gave the real syntax error again, dismissed with Left-Amiga+V.
+The first repair attempt cleared the first line and the next run showed only
+the second output line. Inspection caught this: it is a failed edit, not a
+pass. Shift-like input had also produced an uppercase, punctuated filename;
+a stuck qualifier is a hypothesis, not a diagnosed guest bug. After releasing
+both shift modifiers and retyping the corrected first line in PED, visual
+inspection confirmed all four statements. The rebuilt program displayed both
+expected lines while waiting, then returned through click and Return to PED.
+No host-prepared edited program replaced this in-editor recovery.
+
 ## Harness limits and next action
 
 [Observation records](observations.json) include failures as well as passes.
@@ -128,15 +172,22 @@ navigation/requester attempts also produced unwanted source edits and one
 sample. The first LHA extraction failed on a French directory name; a fresh
 extraction using the already-installed 7z completed with “Everything is Ok”.
 
-The paired website change can now correct AMOS's distribution, named setup,
-launch, return-to-editor loop and actual error example. **Blitz's public setup
-remains unresolved.** Its next trial should use the established plain-text `.ab3` import, resolve
-output visibility and dismiss the compiler requester before verifying an actual
-repair and rerun. Original Blitz BASIC 2/Ted and
-whole-course AmiBlitz compatibility remain untested.
+The paired website draft can now name both runtime configurations and the
+observed launch/import/compile/return/error-repair steps. The Blitz route uses
+plain-text `.ab3` with the tested header, PED and right-Amiga+#. Original Blitz
+BASIC 2/Ted and whole-course AmiBlitz compatibility remain untested. The earlier
+failed attempts remain in the observation records; the final route does not
+qualify those other configurations.
 
 Only the baseline, string edit and stated fault/recovery are qualified for
-AMOS. No save/reopen, second-Print extension, later unit, timing, audio,
+each language on its recorded configuration. No save/reopen, second-Print extension, later unit, timing, audio,
 assistive-technology, physical-touch or original-hardware claim follows. No
 learner was available; understanding, retention and unaided transfer remain
 unknown. The parent education issues remain open.
+
+The [follow-up validation](recovery/validation.json) records the clean 2,459-page
+production build and generated-page checks. The setup page reported no horizontal
+overflow at 1,440 px. Browser screenshot/CDP timeouts prevented completing the
+new wide/narrow visual and click-through review; earlier AMOS browser checks do
+not qualify the new Blitz pages. Keep the paired website PR in draft until that
+review is completed.
