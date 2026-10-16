@@ -1,0 +1,123 @@
+{
+  "checkedAt": "2026-10-16T16:52:54.502Z",
+  "results": [
+    {
+      "route": "/from-the-metal/endianness/",
+      "width": 1440,
+      "status": 200,
+      "title": "Why the bytes come out backwards",
+      "figures": 2,
+      "images": [],
+      "labelledIllustrations": [],
+      "overflow": false
+    },
+    {
+      "route": "/from-the-metal/bitmasks-and-registers/",
+      "width": 1440,
+      "status": 200,
+      "title": "The register is the bitfield",
+      "figures": 2,
+      "images": [],
+      "labelledIllustrations": [],
+      "overflow": false
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-01",
+      "width": 1440,
+      "status": 200,
+      "title": "Carry a pixel into the next byte",
+      "figures": 1,
+      "images": [],
+      "labelledIllustrations": [
+        {
+          "tag": "CANVAS",
+          "label": "ZX Spectrum screen"
+        },
+        {
+          "tag": "CANVAS",
+          "label": "Magnified bits read from the actual screen bitmap"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/craft/maths-for-games/unit-01",
+      "width": 1440,
+      "status": 200,
+      "title": "Roll a die",
+      "figures": 0,
+      "images": [],
+      "labelledIllustrations": [],
+      "overflow": false
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-01",
+      "width": 1440,
+      "status": 200,
+      "title": "Ten Fingers, Two Wires",
+      "figures": 3,
+      "images": [],
+      "labelledIllustrations": [],
+      "overflow": false
+    },
+    {
+      "route": "/from-the-metal/endianness/",
+      "width": 390,
+      "status": 200,
+      "title": "Why the bytes come out backwards",
+      "figures": 2,
+      "images": [],
+      "labelledIllustrations": [],
+      "overflow": false
+    },
+    {
+      "route": "/from-the-metal/bitmasks-and-registers/",
+      "width": 390,
+      "status": 200,
+      "title": "The register is the bitfield",
+      "figures": 2,
+      "images": [],
+      "labelledIllustrations": [],
+      "overflow": false
+    },
+    {
+      "route": "/systems/sinclair-zx-spectrum/assembly/meteor-storm/unit-01",
+      "width": 390,
+      "status": 200,
+      "title": "Carry a pixel into the next byte",
+      "figures": 1,
+      "images": [],
+      "labelledIllustrations": [
+        {
+          "tag": "CANVAS",
+          "label": "ZX Spectrum screen"
+        },
+        {
+          "tag": "CANVAS",
+          "label": "Magnified bits read from the actual screen bitmap"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "/craft/maths-for-games/unit-01",
+      "width": 390,
+      "status": 200,
+      "title": "Roll a die",
+      "figures": 0,
+      "images": [],
+      "labelledIllustrations": [],
+      "overflow": false
+    },
+    {
+      "route": "/foundations/counting-in-twos/unit-01",
+      "width": 390,
+      "status": 200,
+      "title": "Ten Fingers, Two Wires",
+      "figures": 3,
+      "images": [],
+      "labelledIllustrations": [],
+      "overflow": false
+    }
+  ]
+}
