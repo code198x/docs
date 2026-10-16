@@ -17,3 +17,7 @@ Check current film/television entries and candidates, then commission one film e
 ## Follow-up: seven film and television candidates
 
 Record the user's WarGames, Sneakers, Micro Men, Pirates of Silicon Valley, Halt and Catch Fire, The Terminator and D.A.R.R.Y.L. suggestions as needs-triage Culture candidates, after checking existing names, aliases and issues. Record distinct reader questions and tentative referring entries; do not commission articles or add a category. Check the Terminator assembly-code lead and retain the need for frame/listing comparison before publication. Validate the full CSV and existing regression tests, prove every prior record unchanged, push the small follow-up commit to this pull request, and remove the temporary checkout after verifying remote retention.
+
+## Follow-up: accepted suggestions and Ready Player One
+
+Record the accepted documentary, BBC television and fiction suggestions as needs-triage candidates, plus Ready Player One as a film with a specific Adventure/Warren Robinett/Atari connection. Check candidate names and retain existing coverage. Keep the novel and film distinct and check the film's Easter-egg priority claim against earlier examples. Validate the CSV and regression tests, preserve prior records, push the change and remove the temporary checkout after remote verification.
