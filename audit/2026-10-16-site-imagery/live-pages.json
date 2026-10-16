@@ -1,0 +1,1599 @@
+{
+  "checkedAt": "2026-10-16T16:49:08.312Z",
+  "results": [
+    {
+      "route": "/",
+      "width": 1440,
+      "status": 200,
+      "title": "You can make these.",
+      "headings": [
+        "Different games.\nDifferent possibilities.",
+        "Never programmed before?",
+        "Different Machines.\nDifferent Ways In.",
+        "Build Things.\nUnderstand More.",
+        "Same Curiosity.\nDifferent Possibilities.",
+        "One Game.\nOne Small First Step.",
+        "What Will\nYou Make?"
+      ],
+      "images": [
+        {
+          "src": "/images/learning/nes.png",
+          "alt": "Dash on the NES, from the 6502 assembly course",
+          "width": 256,
+          "height": 240,
+          "renderWidth": 256,
+          "top": 337,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/c64.png",
+          "alt": "Safe Cracker on the Commodore 64, from the BASIC course",
+          "width": 416,
+          "height": 312,
+          "renderWidth": 416,
+          "top": 337,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-spectrum.png",
+          "alt": "ZX Spectrum 48K with its rubber keyboard and rainbow case stripe",
+          "width": 2168,
+          "height": 1593,
+          "renderWidth": 579,
+          "top": 1183,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-c64.jpg",
+          "alt": "Commodore 64 breadbin computer with brown keys",
+          "width": 4600,
+          "height": 2600,
+          "renderWidth": 579,
+          "top": 1183,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-amiga.jpg",
+          "alt": "Commodore Amiga 500 Plus photographed on a white background",
+          "width": 1095,
+          "height": 734,
+          "renderWidth": 579,
+          "top": 1735,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-nes.jpg",
+          "alt": "Nintendo Entertainment System console with its wired controller",
+          "width": 5560,
+          "height": 3020,
+          "renderWidth": 579,
+          "top": 1735,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/dice.png",
+          "alt": "A BASIC dice experiment showing six counts and a coloured frequency chart",
+          "width": 352,
+          "height": 296,
+          "renderWidth": 352,
+          "top": 2963,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/colour-clash.png",
+          "alt": "Two diagrams show a white sprite meeting a red brick wall: either the sprite or the wall supplies the cell colour.",
+          "width": 1076,
+          "height": 446,
+          "renderWidth": 1076,
+          "top": 3897,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/c64.png",
+          "alt": "Safe Cracker, a real Commodore 64 · BASIC curriculum capture",
+          "width": 416,
+          "height": 312,
+          "renderWidth": 768,
+          "top": 5075,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/nes.png",
+          "alt": "Dash, a real NES · 6502 assembly curriculum capture",
+          "width": 256,
+          "height": 240,
+          "renderWidth": 768,
+          "top": 5764,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/amiga.png",
+          "alt": "Flock, a real Commodore Amiga · 68000 assembly curriculum capture",
+          "width": 768,
+          "height": 576,
+          "renderWidth": 768,
+          "top": 6597,
+          "loaded": true
+        }
+      ],
+      "figures": 8,
+      "svg": [
+        {
+          "role": "img",
+          "label": "Responsive: stopped after releasing the control",
+          "hidden": null,
+          "width": 310
+        },
+        {
+          "role": "img",
+          "label": "Slippery: still moving after releasing the control",
+          "hidden": null,
+          "width": 310
+        },
+        {
+          "role": "img",
+          "label": "Heavy: stopped after releasing the control",
+          "hidden": null,
+          "width": 310
+        }
+      ],
+      "canvas": [],
+      "interactive": 0,
+      "header": "game-feature",
+      "overflow": false,
+      "height": 9105
+    },
+    {
+      "route": "/start-here/",
+      "width": 1440,
+      "status": 200,
+      "title": "Start Here.",
+      "headings": [
+        "Make A Game",
+        "Explore Programming Ideas",
+        "Understand How Programs Run",
+        "Explore Game-Making Ideas",
+        "Explore Computing History",
+        "Parents And Teachers"
+      ],
+      "images": [
+        {
+          "src": "/images/learning/c64.png",
+          "alt": "Safe Cracker, a complete guessing game from the Commodore 64 BASIC lessons",
+          "width": 416,
+          "height": 312,
+          "renderWidth": 416,
+          "top": 658,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/dice.png",
+          "alt": "A BASIC dice experiment showing six totals and a coloured frequency chart",
+          "width": 352,
+          "height": 296,
+          "renderWidth": 352,
+          "top": 1831,
+          "loaded": true
+        }
+      ],
+      "figures": 2,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "start-opening",
+      "overflow": false,
+      "height": 4006
+    },
+    {
+      "route": "/curriculum/",
+      "width": 1440,
+      "status": 200,
+      "title": "How the curriculum fits together.",
+      "headings": [
+        "System tracks",
+        "Foundations",
+        "The Craft",
+        "The Vault",
+        "Pattern Library",
+        "Begin with what you want to make or understand",
+        "Build in guided, runnable stages",
+        "Explore Foundations and The Craft.",
+        "Where the ideas become code."
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "hero",
+      "overflow": false,
+      "height": 4824
+    },
+    {
+      "route": "/foundations/",
+      "width": 1440,
+      "status": 200,
+      "title": "The Ideas Every\nMachine Shares.",
+      "headings": [
+        "One Instruction.\nOne Result.",
+        "Programming",
+        "Numbers",
+        "The machine underneath",
+        "Put The Ideas To Work."
+      ],
+      "images": [],
+      "figures": 1,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "hero",
+      "overflow": false,
+      "height": 5284
+    },
+    {
+      "route": "/foundations/basics/",
+      "width": 1440,
+      "status": 200,
+      "title": "The Basics.",
+      "headings": [
+        "What this is",
+        "Who it’s for",
+        "The shape",
+        "The units"
+      ],
+      "images": [],
+      "figures": 1,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "basics-opening",
+      "overflow": false,
+      "height": 3468
+    },
+    {
+      "route": "/foundations/counting-in-twos/",
+      "width": 1440,
+      "status": 200,
+      "title": "Counting in Twos",
+      "headings": [
+        "What this is",
+        "Who it’s for",
+        "The shape",
+        "The units"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "page-heading",
+      "overflow": false,
+      "height": 3239
+    },
+    {
+      "route": "/craft/",
+      "width": 1440,
+      "status": 200,
+      "title": "What makes a game worth playing?",
+      "headings": [
+        "Explore the current material",
+        "More of The Craft",
+        "Change one rule. Play again.",
+        "Take an idea into a game"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "hero",
+      "overflow": false,
+      "height": 4290
+    },
+    {
+      "route": "/craft/maths-for-games/",
+      "width": 1440,
+      "status": 200,
+      "title": "Maths for Games",
+      "headings": [
+        "Chance and samples",
+        "Aiming and movement",
+        "Further explorations"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "page-heading",
+      "overflow": false,
+      "height": 3016
+    },
+    {
+      "route": "/patterns/",
+      "width": 1440,
+      "status": 200,
+      "title": "Make one part\nwork.",
+      "headings": [
+        "Turn a number\ninto a signal.",
+        "Find your technique.",
+        "Put the pieces together."
+      ],
+      "images": [],
+      "figures": 1,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "pattern-opening",
+      "overflow": false,
+      "height": 14161
+    },
+    {
+      "route": "/from-the-metal/",
+      "width": 1440,
+      "status": 200,
+      "title": "Programming explained through the machine.",
+      "headings": [
+        "Why \"unroll your loops\" is real advice",
+        "When 255 + 1 = 0",
+        "Why everything is a power of two",
+        "\"Stack overflow\" is a real place",
+        "Racing the beam",
+        "The fastest function is the one you already ran",
+        "The register is the bitfield",
+        "Mario moves in fractions of a pixel",
+        "Why your structs have holes in them",
+        "Why the bytes come out backwards",
+        "A pointer is just an address you stored somewhere",
+        "Why there's a chip that does nothing but move memory",
+        "Code that rewrites itself",
+        "What a switch actually compiles to"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "page-heading",
+      "overflow": false,
+      "height": 3106
+    },
+    {
+      "route": "/timeline/",
+      "width": 1440,
+      "status": 200,
+      "title": "Nothing happened\nin isolation.",
+      "headings": [
+        "How did games find their sound?",
+        "What changes when the enemies move?",
+        "Who gets to make a game?",
+        "Find your decade.",
+        "What’s in the chronology?"
+      ],
+      "images": [
+        {
+          "src": "/images/learning/hardware-c64.jpg",
+          "alt": "Commodore 64 breadbin computer with brown keys",
+          "width": 4600,
+          "height": 2600,
+          "renderWidth": 400,
+          "top": 743,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-spectrum.png",
+          "alt": "ZX Spectrum 48K with its rubber keyboard and rainbow case stripe",
+          "width": 2168,
+          "height": 1593,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": true
+        }
+      ],
+      "figures": 2,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "timeline-heading",
+      "overflow": false,
+      "height": 3625
+    },
+    {
+      "route": "/systems/",
+      "width": 1440,
+      "status": 200,
+      "title": "Choose Your Machine.",
+      "headings": [
+        "Lessons you can start today.",
+        "Prioritised next.",
+        "The wider catalogue."
+      ],
+      "images": [
+        {
+          "src": "/images/learning/hardware-spectrum.png",
+          "alt": "ZX Spectrum 48K with its rubber keyboard and rainbow case stripe",
+          "width": 2168,
+          "height": 1593,
+          "renderWidth": 360,
+          "top": 724,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-c64.jpg",
+          "alt": "Commodore 64 breadbin computer with brown keys",
+          "width": 4600,
+          "height": 2600,
+          "renderWidth": 360,
+          "top": 1064,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-amiga.jpg",
+          "alt": "Commodore Amiga 500 Plus photographed on a white background",
+          "width": 1095,
+          "height": 734,
+          "renderWidth": 360,
+          "top": 1415,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-nes.jpg",
+          "alt": "Nintendo Entertainment System console with its wired controller",
+          "width": 5560,
+          "height": 3020,
+          "renderWidth": 360,
+          "top": 1786,
+          "loaded": true
+        },
+        {
+          "src": "/images/systems/acorn-bbc-micro/poster.png",
+          "alt": "The BBC Micro switched on, running its own firmware in our emulator.",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/acorn-bbc-micro/poster.png",
+          "alt": "",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/msx/poster.png",
+          "alt": "The MSX switched on, running its own firmware in our emulator.",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/msx/poster.png",
+          "alt": "",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/amstrad-cpc/poster.png",
+          "alt": "The Amstrad CPC switched on, running its own firmware in our emulator.",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/amstrad-cpc/poster.png",
+          "alt": "",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/commodore-vic-20/poster.png",
+          "alt": "The VIC-20 switched on, running its own firmware in our emulator.",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/commodore-vic-20/poster.png",
+          "alt": "",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/sega-master-system/poster.png",
+          "alt": "A test cartridge we wrote, running on the Master System.",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/sega-master-system/poster.png",
+          "alt": "",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        }
+      ],
+      "figures": 4,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "page-head",
+      "overflow": false,
+      "height": 3933
+    },
+    {
+      "route": "/systems/commodore-64/",
+      "width": 1440,
+      "status": 200,
+      "title": "Commodore 64",
+      "headings": [
+        "Make games.\nUnderstand the machine.",
+        "Choose Your Route.",
+        "Try the machine",
+        "Set Up Your Machine",
+        "Follow Your Curiosity."
+      ],
+      "images": [
+        {
+          "src": "/images/learning/hardware-c64.jpg",
+          "alt": "Commodore 64 breadbin computer with brown keys",
+          "width": 4600,
+          "height": 2600,
+          "renderWidth": 576,
+          "top": 197,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/c64.png",
+          "alt": "Safe Cracker, a game from the C64 lessons",
+          "width": 416,
+          "height": 312,
+          "renderWidth": 416,
+          "top": 727,
+          "loaded": true
+        }
+      ],
+      "figures": 2,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "machine-masthead",
+      "overflow": false,
+      "height": 3671
+    },
+    {
+      "route": "/systems/commodore-amiga/",
+      "width": 1440,
+      "status": 200,
+      "title": "Commodore Amiga",
+      "headings": [
+        "Make games.\nUnderstand the machine.",
+        "Choose Your Route.",
+        "Try the machine",
+        "Set Up Your Machine",
+        "Follow Your Curiosity."
+      ],
+      "images": [
+        {
+          "src": "/images/learning/hardware-amiga.jpg",
+          "alt": "Commodore Amiga 500 Plus photographed on a white background",
+          "width": 1095,
+          "height": 734,
+          "renderWidth": 576,
+          "top": 197,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/amiga.png",
+          "alt": "Flock, a game from the Amiga lessons",
+          "width": 768,
+          "height": 576,
+          "renderWidth": 768,
+          "top": 727,
+          "loaded": true
+        }
+      ],
+      "figures": 2,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "machine-masthead",
+      "overflow": true,
+      "height": 4163
+    },
+    {
+      "route": "/setup/",
+      "width": 1440,
+      "status": 200,
+      "title": "Get your program running.",
+      "headings": [
+        "Start in your browser",
+        "Work on your own computer",
+        "A tool for each job",
+        "Make it yours, then keep it",
+        "Already using another assembler?",
+        "When a step does not work"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [
+        {
+          "role": null,
+          "label": null,
+          "hidden": null,
+          "width": 0
+        }
+      ],
+      "canvas": [],
+      "interactive": 0,
+      "header": "setup-header",
+      "overflow": false,
+      "height": 4788
+    },
+    {
+      "route": "/teaching/",
+      "width": 1440,
+      "status": 200,
+      "title": "Explore it together.",
+      "headings": [
+        "Choose a useful starting point",
+        "A small activity to try together",
+        "Help without taking over",
+        "Prepare the activity and its tools",
+        "Make room for different ways of learning",
+        "Using Code198x in a class, club or course",
+        "Tell us what helped and what got in the way"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [
+        {
+          "role": null,
+          "label": null,
+          "hidden": null,
+          "width": 0
+        }
+      ],
+      "canvas": [],
+      "interactive": 0,
+      "header": "",
+      "overflow": false,
+      "height": 5394
+    },
+    {
+      "route": "/demoscene/",
+      "width": 1440,
+      "status": 200,
+      "title": "Constraint is the craft.",
+      "headings": [
+        "The demos",
+        "The groups",
+        "The parties",
+        "From admiring it to making it"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "page-heading",
+      "overflow": false,
+      "height": 5466
+    },
+    {
+      "route": "/vault/",
+      "width": 1440,
+      "status": 200,
+      "title": "THE VAULT",
+      "headings": [
+        "The music behind the game.",
+        "See what’s happening.",
+        "Why do the colours clash?",
+        "Another way in.",
+        "Help expand the Vault."
+      ],
+      "images": [
+        {
+          "src": "/images/vault/techniques/colour-clash/dizzy-sprite-single-ink.png",
+          "alt": "Dizzy airborne and clear of the scenery, his sprite drawn entirely in white.",
+          "width": 512,
+          "height": 384,
+          "renderWidth": 512,
+          "top": 1756,
+          "loaded": true
+        },
+        {
+          "src": "/images/vault/techniques/colour-clash/dizzy-sprite-two-inks.png",
+          "alt": "Dizzy moving into the platform’s colour cells, with part of his sprite turning red.",
+          "width": 512,
+          "height": 384,
+          "renderWidth": 512,
+          "top": 2197,
+          "loaded": true
+        }
+      ],
+      "figures": 2,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "overflow": false,
+      "height": 4195
+    },
+    {
+      "route": "/family/",
+      "width": 1440,
+      "status": 200,
+      "title": "One umbrella, several missions",
+      "headings": [
+        "Emu198x",
+        "Asm198x",
+        "Cat198x",
+        "Forge198x",
+        "Build198x",
+        "Isa198x",
+        "Format198x",
+        "Debug198x",
+        "Play198x"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "hero",
+      "overflow": false,
+      "height": 3337
+    },
+    {
+      "route": "/patterns/sinclair-zx-spectrum/basic/rendering/progress-bar/",
+      "width": 1440,
+      "status": 200,
+      "title": "Progress Bar (BASIC)",
+      "headings": [
+        "Overview",
+        "Calling the routine",
+        "True-zero behaviour",
+        "Underlying mechanism",
+        "Code",
+        "Trade-offs",
+        "Related",
+        "Using this pattern"
+      ],
+      "images": [],
+      "figures": 1,
+      "svg": [
+        {
+          "role": null,
+          "label": null,
+          "hidden": null,
+          "width": 0
+        }
+      ],
+      "canvas": [],
+      "interactive": 0,
+      "header": "pattern-reading-header with-example",
+      "overflow": false,
+      "height": 5044
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "status": 200,
+      "title": "You can make these.",
+      "headings": [
+        "Different games.\nDifferent possibilities.",
+        "Never programmed before?",
+        "Different Machines.\nDifferent Ways In.",
+        "Build Things.\nUnderstand More.",
+        "Same Curiosity.\nDifferent Possibilities.",
+        "One Game.\nOne Small First Step.",
+        "What Will\nYou Make?"
+      ],
+      "images": [
+        {
+          "src": "/images/learning/nes.png",
+          "alt": "Dash on the NES, from the 6502 assembly course",
+          "width": 256,
+          "height": 240,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/c64.png",
+          "alt": "Safe Cracker on the Commodore 64, from the BASIC course",
+          "width": 416,
+          "height": 312,
+          "renderWidth": 390,
+          "top": 113,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-spectrum.png",
+          "alt": "ZX Spectrum 48K with its rubber keyboard and rainbow case stripe",
+          "width": 2168,
+          "height": 1593,
+          "renderWidth": 358,
+          "top": 1828,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-c64.jpg",
+          "alt": "Commodore 64 breadbin computer with brown keys",
+          "width": 4600,
+          "height": 2600,
+          "renderWidth": 358,
+          "top": 2232,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-amiga.jpg",
+          "alt": "Commodore Amiga 500 Plus photographed on a white background",
+          "width": 1095,
+          "height": 734,
+          "renderWidth": 358,
+          "top": 2637,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-nes.jpg",
+          "alt": "Nintendo Entertainment System console with its wired controller",
+          "width": 5560,
+          "height": 3020,
+          "renderWidth": 358,
+          "top": 3062,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/dice.png",
+          "alt": "A BASIC dice experiment showing six counts and a coloured frequency chart",
+          "width": 352,
+          "height": 296,
+          "renderWidth": 352,
+          "top": 4660,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/colour-clash.png",
+          "alt": "Two diagrams show a white sprite meeting a red brick wall: either the sprite or the wall supplies the cell colour.",
+          "width": 1076,
+          "height": 446,
+          "renderWidth": 390,
+          "top": 6345,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/c64.png",
+          "alt": "Safe Cracker, a real Commodore 64 · BASIC curriculum capture",
+          "width": 416,
+          "height": 312,
+          "renderWidth": 390,
+          "top": 7957,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/nes.png",
+          "alt": "Dash, a real NES · 6502 assembly curriculum capture",
+          "width": 256,
+          "height": 240,
+          "renderWidth": 390,
+          "top": 8728,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/amiga.png",
+          "alt": "Flock, a real Commodore Amiga · 68000 assembly curriculum capture",
+          "width": 768,
+          "height": 576,
+          "renderWidth": 390,
+          "top": 9572,
+          "loaded": true
+        }
+      ],
+      "figures": 8,
+      "svg": [
+        {
+          "role": "img",
+          "label": "Responsive: stopped after releasing the control",
+          "hidden": null,
+          "width": 310
+        },
+        {
+          "role": "img",
+          "label": "Slippery: still moving after releasing the control",
+          "hidden": null,
+          "width": 310
+        },
+        {
+          "role": "img",
+          "label": "Heavy: stopped after releasing the control",
+          "hidden": null,
+          "width": 310
+        }
+      ],
+      "canvas": [],
+      "interactive": 0,
+      "header": "game-feature",
+      "overflow": false,
+      "height": 12996
+    },
+    {
+      "route": "/start-here/",
+      "width": 390,
+      "status": 200,
+      "title": "Start Here.",
+      "headings": [
+        "Make A Game",
+        "Explore Programming Ideas",
+        "Understand How Programs Run",
+        "Explore Game-Making Ideas",
+        "Explore Computing History",
+        "Parents And Teachers"
+      ],
+      "images": [
+        {
+          "src": "/images/learning/c64.png",
+          "alt": "Safe Cracker, a complete guessing game from the Commodore 64 BASIC lessons",
+          "width": 416,
+          "height": 312,
+          "renderWidth": 390,
+          "top": 1416,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/dice.png",
+          "alt": "A BASIC dice experiment showing six totals and a coloured frequency chart",
+          "width": 352,
+          "height": 296,
+          "renderWidth": 352,
+          "top": 3295,
+          "loaded": true
+        }
+      ],
+      "figures": 2,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "start-opening",
+      "overflow": false,
+      "height": 6324
+    },
+    {
+      "route": "/curriculum/",
+      "width": 390,
+      "status": 200,
+      "title": "How the curriculum fits together.",
+      "headings": [
+        "System tracks",
+        "Foundations",
+        "The Craft",
+        "The Vault",
+        "Pattern Library",
+        "Begin with what you want to make or understand",
+        "Build in guided, runnable stages",
+        "Explore Foundations and The Craft.",
+        "Where the ideas become code."
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "hero",
+      "overflow": false,
+      "height": 7906
+    },
+    {
+      "route": "/foundations/",
+      "width": 390,
+      "status": 200,
+      "title": "The Ideas Every\nMachine Shares.",
+      "headings": [
+        "One Instruction.\nOne Result.",
+        "Programming",
+        "Numbers",
+        "The machine underneath",
+        "Put The Ideas To Work."
+      ],
+      "images": [],
+      "figures": 1,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "hero",
+      "overflow": false,
+      "height": 7764
+    },
+    {
+      "route": "/foundations/basics/",
+      "width": 390,
+      "status": 200,
+      "title": "The Basics.",
+      "headings": [
+        "What this is",
+        "Who it’s for",
+        "The shape",
+        "The units"
+      ],
+      "images": [],
+      "figures": 1,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "basics-opening",
+      "overflow": false,
+      "height": 5177
+    },
+    {
+      "route": "/foundations/counting-in-twos/",
+      "width": 390,
+      "status": 200,
+      "title": "Counting in Twos",
+      "headings": [
+        "What this is",
+        "Who it’s for",
+        "The shape",
+        "The units"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "page-heading",
+      "overflow": false,
+      "height": 4419
+    },
+    {
+      "route": "/craft/",
+      "width": 390,
+      "status": 200,
+      "title": "What makes a game worth playing?",
+      "headings": [
+        "Explore the current material",
+        "More of The Craft",
+        "Change one rule. Play again.",
+        "Take an idea into a game"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "hero",
+      "overflow": false,
+      "height": 7725
+    },
+    {
+      "route": "/craft/maths-for-games/",
+      "width": 390,
+      "status": 200,
+      "title": "Maths for Games",
+      "headings": [
+        "Chance and samples",
+        "Aiming and movement",
+        "Further explorations"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "page-heading",
+      "overflow": false,
+      "height": 4869
+    },
+    {
+      "route": "/patterns/",
+      "width": 390,
+      "status": 200,
+      "title": "Make one part\nwork.",
+      "headings": [
+        "Turn a number\ninto a signal.",
+        "Find your technique.",
+        "Put the pieces together."
+      ],
+      "images": [],
+      "figures": 1,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "pattern-opening",
+      "overflow": false,
+      "height": 26950
+    },
+    {
+      "route": "/from-the-metal/",
+      "width": 390,
+      "status": 200,
+      "title": "Programming explained through the machine.",
+      "headings": [
+        "Why \"unroll your loops\" is real advice",
+        "When 255 + 1 = 0",
+        "Why everything is a power of two",
+        "\"Stack overflow\" is a real place",
+        "Racing the beam",
+        "The fastest function is the one you already ran",
+        "The register is the bitfield",
+        "Mario moves in fractions of a pixel",
+        "Why your structs have holes in them",
+        "Why the bytes come out backwards",
+        "A pointer is just an address you stored somewhere",
+        "Why there's a chip that does nothing but move memory",
+        "Code that rewrites itself",
+        "What a switch actually compiles to"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "page-heading",
+      "overflow": false,
+      "height": 6428
+    },
+    {
+      "route": "/timeline/",
+      "width": 390,
+      "status": 200,
+      "title": "Nothing happened\nin isolation.",
+      "headings": [
+        "How did games find their sound?",
+        "What changes when the enemies move?",
+        "Who gets to make a game?",
+        "Find your decade.",
+        "What’s in the chronology?"
+      ],
+      "images": [
+        {
+          "src": "/images/learning/hardware-c64.jpg",
+          "alt": "Commodore 64 breadbin computer with brown keys",
+          "width": 4600,
+          "height": 2600,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-spectrum.png",
+          "alt": "ZX Spectrum 48K with its rubber keyboard and rainbow case stripe",
+          "width": 2168,
+          "height": 1593,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": true
+        }
+      ],
+      "figures": 2,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "timeline-heading",
+      "overflow": false,
+      "height": 6552
+    },
+    {
+      "route": "/systems/",
+      "width": 390,
+      "status": 200,
+      "title": "Choose Your Machine.",
+      "headings": [
+        "Lessons you can start today.",
+        "Prioritised next.",
+        "The wider catalogue."
+      ],
+      "images": [
+        {
+          "src": "/images/learning/hardware-spectrum.png",
+          "alt": "ZX Spectrum 48K with its rubber keyboard and rainbow case stripe",
+          "width": 2168,
+          "height": 1593,
+          "renderWidth": 358,
+          "top": 959,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-c64.jpg",
+          "alt": "Commodore 64 breadbin computer with brown keys",
+          "width": 4600,
+          "height": 2600,
+          "renderWidth": 358,
+          "top": 1594,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-amiga.jpg",
+          "alt": "Commodore Amiga 500 Plus photographed on a white background",
+          "width": 1095,
+          "height": 734,
+          "renderWidth": 358,
+          "top": 2229,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/hardware-nes.jpg",
+          "alt": "Nintendo Entertainment System console with its wired controller",
+          "width": 5560,
+          "height": 3020,
+          "renderWidth": 358,
+          "top": 2929,
+          "loaded": true
+        },
+        {
+          "src": "/images/systems/acorn-bbc-micro/poster.png",
+          "alt": "The BBC Micro switched on, running its own firmware in our emulator.",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/acorn-bbc-micro/poster.png",
+          "alt": "",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/msx/poster.png",
+          "alt": "The MSX switched on, running its own firmware in our emulator.",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/msx/poster.png",
+          "alt": "",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/amstrad-cpc/poster.png",
+          "alt": "The Amstrad CPC switched on, running its own firmware in our emulator.",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/amstrad-cpc/poster.png",
+          "alt": "",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/commodore-vic-20/poster.png",
+          "alt": "The VIC-20 switched on, running its own firmware in our emulator.",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/commodore-vic-20/poster.png",
+          "alt": "",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/sega-master-system/poster.png",
+          "alt": "A test cartridge we wrote, running on the Master System.",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        },
+        {
+          "src": "/images/systems/sega-master-system/poster.png",
+          "alt": "",
+          "width": 0,
+          "height": 0,
+          "renderWidth": 0,
+          "top": 0,
+          "loaded": false
+        }
+      ],
+      "figures": 4,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "page-head",
+      "overflow": false,
+      "height": 6508
+    },
+    {
+      "route": "/systems/commodore-64/",
+      "width": 390,
+      "status": 200,
+      "title": "Commodore 64",
+      "headings": [
+        "Make games.\nUnderstand the machine.",
+        "Choose Your Route.",
+        "Try the machine",
+        "Set Up Your Machine",
+        "Follow Your Curiosity."
+      ],
+      "images": [
+        {
+          "src": "/images/learning/hardware-c64.jpg",
+          "alt": "Commodore 64 breadbin computer with brown keys",
+          "width": 4600,
+          "height": 2600,
+          "renderWidth": 358,
+          "top": 275,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/c64.png",
+          "alt": "Safe Cracker, a game from the C64 lessons",
+          "width": 416,
+          "height": 312,
+          "renderWidth": 390,
+          "top": 1149,
+          "loaded": true
+        }
+      ],
+      "figures": 2,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "machine-masthead",
+      "overflow": false,
+      "height": 5388
+    },
+    {
+      "route": "/systems/commodore-amiga/",
+      "width": 390,
+      "status": 200,
+      "title": "Commodore Amiga",
+      "headings": [
+        "Make games.\nUnderstand the machine.",
+        "Choose Your Route.",
+        "Try the machine",
+        "Set Up Your Machine",
+        "Follow Your Curiosity."
+      ],
+      "images": [
+        {
+          "src": "/images/learning/hardware-amiga.jpg",
+          "alt": "Commodore Amiga 500 Plus photographed on a white background",
+          "width": 1095,
+          "height": 734,
+          "renderWidth": 358,
+          "top": 275,
+          "loaded": true
+        },
+        {
+          "src": "/images/learning/amiga.png",
+          "alt": "Flock, a game from the Amiga lessons",
+          "width": 768,
+          "height": 576,
+          "renderWidth": 390,
+          "top": 1170,
+          "loaded": true
+        }
+      ],
+      "figures": 2,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "machine-masthead",
+      "overflow": false,
+      "height": 5714
+    },
+    {
+      "route": "/setup/",
+      "width": 390,
+      "status": 200,
+      "title": "Get your program running.",
+      "headings": [
+        "Start in your browser",
+        "Work on your own computer",
+        "A tool for each job",
+        "Make it yours, then keep it",
+        "Already using another assembler?",
+        "When a step does not work"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [
+        {
+          "role": null,
+          "label": null,
+          "hidden": null,
+          "width": 16
+        }
+      ],
+      "canvas": [],
+      "interactive": 0,
+      "header": "setup-header",
+      "overflow": false,
+      "height": 7429
+    },
+    {
+      "route": "/teaching/",
+      "width": 390,
+      "status": 200,
+      "title": "Explore it together.",
+      "headings": [
+        "Choose a useful starting point",
+        "A small activity to try together",
+        "Help without taking over",
+        "Prepare the activity and its tools",
+        "Make room for different ways of learning",
+        "Using Code198x in a class, club or course",
+        "Tell us what helped and what got in the way"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [
+        {
+          "role": null,
+          "label": null,
+          "hidden": null,
+          "width": 0
+        }
+      ],
+      "canvas": [],
+      "interactive": 0,
+      "header": "",
+      "overflow": false,
+      "height": 9754
+    },
+    {
+      "route": "/demoscene/",
+      "width": 390,
+      "status": 200,
+      "title": "Constraint is the craft.",
+      "headings": [
+        "The demos",
+        "The groups",
+        "The parties",
+        "From admiring it to making it"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "page-heading",
+      "overflow": false,
+      "height": 11672
+    },
+    {
+      "route": "/vault/",
+      "width": 390,
+      "status": 200,
+      "title": "THE VAULT",
+      "headings": [
+        "The music behind the game.",
+        "See what’s happening.",
+        "Why do the colours clash?",
+        "Another way in.",
+        "Help expand the Vault."
+      ],
+      "images": [
+        {
+          "src": "/images/vault/techniques/colour-clash/dizzy-sprite-single-ink.png",
+          "alt": "Dizzy airborne and clear of the scenery, his sprite drawn entirely in white.",
+          "width": 512,
+          "height": 384,
+          "renderWidth": 334,
+          "top": 2654,
+          "loaded": true
+        },
+        {
+          "src": "/images/vault/techniques/colour-clash/dizzy-sprite-two-inks.png",
+          "alt": "Dizzy moving into the platform’s colour cells, with part of his sprite turning red.",
+          "width": 512,
+          "height": 384,
+          "renderWidth": 334,
+          "top": 2961,
+          "loaded": true
+        }
+      ],
+      "figures": 2,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "overflow": false,
+      "height": 6587
+    },
+    {
+      "route": "/family/",
+      "width": 390,
+      "status": 200,
+      "title": "One umbrella, several missions",
+      "headings": [
+        "Emu198x",
+        "Asm198x",
+        "Cat198x",
+        "Forge198x",
+        "Build198x",
+        "Isa198x",
+        "Format198x",
+        "Debug198x",
+        "Play198x"
+      ],
+      "images": [],
+      "figures": 0,
+      "svg": [],
+      "canvas": [],
+      "interactive": 0,
+      "header": "hero",
+      "overflow": false,
+      "height": 6338
+    },
+    {
+      "route": "/patterns/sinclair-zx-spectrum/basic/rendering/progress-bar/",
+      "width": 390,
+      "status": 200,
+      "title": "Progress Bar (BASIC)",
+      "headings": [
+        "Overview",
+        "Calling the routine",
+        "True-zero behaviour",
+        "Underlying mechanism",
+        "Code",
+        "Trade-offs",
+        "Related",
+        "Using this pattern"
+      ],
+      "images": [],
+      "figures": 1,
+      "svg": [
+        {
+          "role": null,
+          "label": null,
+          "hidden": null,
+          "width": 16
+        }
+      ],
+      "canvas": [],
+      "interactive": 0,
+      "header": "pattern-reading-header with-example",
+      "overflow": false,
+      "height": 7666
+    }
+  ]
+}

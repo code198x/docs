@@ -1,0 +1,85 @@
+{
+  "amiga": {
+    "viewport": 1440,
+    "document": 1499,
+    "wide": [
+      {
+        "tag": "FIGURE",
+        "cls": "capture",
+        "text": "Flock · Amiga. A game you can learn to build.",
+        "width": 768,
+        "right": 1499.203125
+      },
+      {
+        "tag": "IMG",
+        "cls": "",
+        "text": "",
+        "width": 768,
+        "right": 1499.203125
+      },
+      {
+        "tag": "FIGCAPTION",
+        "cls": "",
+        "text": "Flock · Amiga. A game you can learn to build.",
+        "width": 768,
+        "right": 1499.203125
+      }
+    ]
+  },
+  "posters": [
+    {
+      "id": "acorn-bbc-micro",
+      "status": 200
+    },
+    {
+      "id": "msx",
+      "status": 200
+    },
+    {
+      "id": "amstrad-cpc",
+      "status": 200
+    },
+    {
+      "id": "commodore-vic-20",
+      "status": 200
+    },
+    {
+      "id": "sega-master-system",
+      "status": 200
+    }
+  ],
+  "detail": [
+    {
+      "summary": "Browse 159 machines",
+      "open": false
+    }
+  ],
+  "progress": {
+    "caption": "Illustration of the 28-cell BASIC bar, from empty to full. Colours follow the listing; this is not an emulator capture.",
+    "rows": [
+      {
+        "label": "0 / 100",
+        "colours": [
+          "#000000"
+        ]
+      },
+      {
+        "label": "50 / 100",
+        "colours": [
+          "#0000d7",
+          "#d7d700",
+          "#000000"
+        ]
+      },
+      {
+        "label": "100 / 100",
+        "colours": [
+          "#0000d7",
+          "#d7d700",
+          "#d70000",
+          "#d7d7d7"
+        ]
+      }
+    ]
+  }
+}
