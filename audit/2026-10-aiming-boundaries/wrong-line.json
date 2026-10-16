@@ -1,0 +1,90 @@
+{
+  "status": "failed",
+  "date": "2026-10-16T09:57:44.622Z",
+  "node": "v24.22.0",
+  "policy": "line",
+  "modelSha256": "c90793f4218235aeef591bc2a816bbc61ef10b1651f6b259b046ffa1189c6a8e",
+  "geometry": [
+    {
+      "name": "between-tick tangent",
+      "start": {
+        "x": 0,
+        "y": 0
+      },
+      "end": {
+        "x": 3,
+        "y": 0
+      },
+      "target": {
+        "x": 1.5,
+        "y": 5
+      },
+      "expectedSquared": 25,
+      "expectedHit": true,
+      "distance": 5,
+      "hit": true
+    },
+    {
+      "name": "outside",
+      "start": {
+        "x": 0,
+        "y": 0
+      },
+      "end": {
+        "x": 3,
+        "y": 0
+      },
+      "target": {
+        "x": 1.5,
+        "y": 5.001
+      },
+      "expectedSquared": 25.010001,
+      "expectedHit": false,
+      "distance": 5.001,
+      "hit": false
+    },
+    {
+      "name": "inside",
+      "start": {
+        "x": 0,
+        "y": 0
+      },
+      "end": {
+        "x": 3,
+        "y": 0
+      },
+      "target": {
+        "x": 1.5,
+        "y": 4.999
+      },
+      "expectedSquared": 24.990001,
+      "expectedHit": true,
+      "distance": 4.999,
+      "hit": true
+    },
+    {
+      "name": "beyond finish",
+      "start": {
+        "x": 0,
+        "y": 0
+      },
+      "end": {
+        "x": 3,
+        "y": 0
+      },
+      "target": {
+        "x": 9,
+        "y": 0
+      },
+      "expectedSquared": 36,
+      "expectedHit": false,
+      "distance": 0,
+      "hit": true
+    }
+  ],
+  "rounding": [],
+  "directions": [],
+  "sweep": {},
+  "shots": [],
+  "failure": "AssertionError [ERR_ASSERTION]: beyond finish: wrong finite segment distance"
+}

@@ -1,0 +1,13 @@
+✔ axes, quadrants and undefined direction (1.334625ms)
+✔ signed rounding and cardinal components (0.204542ms)
+✔ swept contact includes a target crossed between ticks (0.207916ms)
+✔ coarse velocity misses an accurately aimed shot; finer precision hits (0.9025ms)
+✔ all target quadrants hit with fine precision and fractional position survives (1.548625ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 111.045875

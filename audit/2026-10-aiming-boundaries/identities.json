@@ -1,0 +1,55 @@
+{
+  "websiteRevision": "405c0594d30af56ecdfdc1ee4b6c119dead20ab7",
+  "samplesBaseline": "163e74e18e9536fb555ef7319fa08bbc1836542b",
+  "docsBaseline": "6131fce9dfe227f08fa47bc868a642663e5881c4",
+  "units": [
+    {
+      "unit": 6,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-06.mdx",
+      "sha256": "8b28243a0613eb73cf44218e6a3743d920ad8ee42732752996b11f864cfc830a",
+      "unchangedSinceObjectiveMap": true
+    },
+    {
+      "unit": 7,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-07.mdx",
+      "sha256": "f50781cebe145f8d82a7ad897287f306cffd7489eea3cdc60c3df0206fd37ad7",
+      "unchangedSinceObjectiveMap": true
+    },
+    {
+      "unit": 8,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-08.mdx",
+      "sha256": "44f8be70259595374d595f8728828b663a439da56dcbb0b3b39d4f2428d9db3e",
+      "unchangedSinceObjectiveMap": true
+    },
+    {
+      "unit": 9,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-09.mdx",
+      "sha256": "176197364d3d0278d57a1626e5191931cb3acbd649d69cd5d5308c7ff5fa5a5a",
+      "unchangedSinceObjectiveMap": true
+    },
+    {
+      "unit": 10,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-10.mdx",
+      "sha256": "98ce4431426a2e934de33a978a3e30ec36206dd93d4ef958ec0cc8546ccb67c7",
+      "unchangedSinceObjectiveMap": true
+    },
+    {
+      "unit": 11,
+      "path": "src/content/curriculum/craft/maths-for-games/unit-11.mdx",
+      "sha256": "44e180cf49b73bf6ac02b8b949dbb9e92b7f008f3f3715b2791489dba343c603",
+      "unchangedSinceObjectiveMap": true
+    }
+  ],
+  "samples": {
+    "craft/maths-for-games/aiming/model.mjs": "c90793f4218235aeef591bc2a816bbc61ef10b1651f6b259b046ffa1189c6a8e",
+    "craft/maths-for-games/aiming/model.test.mjs": "33595d02c54618aa5b34b9da9a34ba0c7704167cc425303faf67c01ee39ad444",
+    "craft/maths-for-games/aiming/lessons.mjs": "ecc022ecb48e9c37f8a890bb26453e2d0c387aaba4114add3f83f1d7cdf09251",
+    "craft/maths-for-games/aiming/lesson-content.mjs": "8dca706a8d44d33b1062db93f810877d81fc359f0825565831a6ac4bd2734c53",
+    "craft/maths-for-games/aiming/README.md": "1e22c1ca165fbf69cefc2aaf81e68d363a4c5ea1f24caa847f189d4d98e4b937"
+  },
+  "samplesCorrection": {
+    "revision": "6ec4c84bf0ed93aff92f69a5770a291d2bb21773",
+    "path": "craft/maths-for-games/aiming/README.md",
+    "sha256": "4c349c429c4b2be0914e0dff93309e399825af59df804a91a895e2e14862d5ee"
+  }
+}

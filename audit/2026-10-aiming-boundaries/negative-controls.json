@@ -1,0 +1,14 @@
+[
+  {
+    "policy": "endpoints",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: between-tick tangent: wrong finite segment distance\n    at file:///private/tmp/198x-aiming-docs/audit/2026-10-aiming-boundaries/verify-model.mjs:34:5 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.22.0\n"
+  },
+  {
+    "policy": "line",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: beyond finish: wrong finite segment distance\n    at file:///private/tmp/198x-aiming-docs/audit/2026-10-aiming-boundaries/verify-model.mjs:34:5 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.22.0\n"
+  }
+]

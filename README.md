@@ -93,3 +93,6 @@ wide/narrow rendering and keyboard evidence.
 The [publication readiness snapshot](audit/2026-10-publication-readiness/REPORT.md)
 checks the latest five Foundations changes and first-session guide on the public
 site, with remaining learner and accessibility limits stated separately.
+
+The [aiming boundary audit](audit/2026-10-aiming-boundaries/REPORT.md) checks finite
+movement, signed rounding and retained state against the maintained game-maths model.

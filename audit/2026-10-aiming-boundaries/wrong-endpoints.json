@@ -1,0 +1,33 @@
+{
+  "status": "failed",
+  "date": "2026-10-16T09:57:44.582Z",
+  "node": "v24.22.0",
+  "policy": "endpoints",
+  "modelSha256": "c90793f4218235aeef591bc2a816bbc61ef10b1651f6b259b046ffa1189c6a8e",
+  "geometry": [
+    {
+      "name": "between-tick tangent",
+      "start": {
+        "x": 0,
+        "y": 0
+      },
+      "end": {
+        "x": 3,
+        "y": 0
+      },
+      "target": {
+        "x": 1.5,
+        "y": 5
+      },
+      "expectedSquared": 25,
+      "expectedHit": true,
+      "distance": 5.220153254455275,
+      "hit": false
+    }
+  ],
+  "rounding": [],
+  "directions": [],
+  "sweep": {},
+  "shots": [],
+  "failure": "AssertionError [ERR_ASSERTION]: between-tick tangent: wrong finite segment distance"
+}
