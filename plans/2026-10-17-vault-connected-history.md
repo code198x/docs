@@ -1,7 +1,7 @@
-# Keep the Vault opening broad
+# Keep the Vault opening broad and visual
 
-User-approved guidance: represent computing's interconnected history across entities and decades, including subjects not yet documented. Under-recognised contributors belong within that history; no one group or machine defines the opening.
+User-approved direction: a layered, full-bleed collage hints at connectivity through imagery rather than explicitly mapping named subjects. People, institutions, machines, software and culture share the composition; no single machine or group stands for the whole. This replaces the earlier mapping interpretation.
 
-1. Add this requirement to specifications/vault.md under Presentation and discovery.
-2. Review the exact diff against the approved wording and existing editorial rules; run whitespace validation.
-3. Commit, push and open a narrow documentation PR linked to website PR810. Preserve unrelated README.md and work.md edits in the primary docs checkout.
+1. Record the visual-vs-mapping distinction in specifications/vault.md, scoped to the opening. Preserve requirements for sourced article imagery.
+2. Review exact wording against the approved clarification and run whitespace validation.
+3. Commit and push the correction to existing PR104, linked to website PR810. Preserve unrelated README.md and work.md edits in the primary docs checkout.
