@@ -128,14 +128,19 @@ relying on it.
 | --- | --- | --- | --- |
 | State the challenge | Display an inviting message and the limit; edit the words | Instructions, strings, run and return to editing | Edited output appears; deliberate syntax error can be repaired. |
 | Keep the program | Save and reopen the edited source | Filename, storage and source versus output | The fresh session runs the saved edit. |
+| Draw the die | Draw an original fixed face, then choose its palette in a separate step | Pixel coordinates, shapes and colour selection | Moving a pip changes the intended shape; text remains legible. |
 | Make one roll | Show one die result | Random selection and its exact integer range | Prescribed boundary results are 1 and 6; ordinary runs stay within range without claiming a finite sample proves fairness. |
 | Add a roll | Combine a stored total and a new result | Assignment and addition | Explain old total, rolled value and new total separately. |
 | Read the limit | Display active, exact-limit and bust results using prescribed examples | Comparisons and decisions | Totals 9, 10 and 11 take their intended paths. |
+| Show the face | Make the picture follow the stored roll | Decisions select a visual representation | All six supplied values produce matching pips and numbers; old pips are cleared. |
 | Choose another roll | Repeat while the round is active, with a reliable quit | Input and repetition, taught in separate steps | One accepted choice requests one roll; waiting does not change the total. |
 | Keep or risk it | Bank ends the round with its score; bust scores zero | A player's decision and distinct displayed total versus awarded points | Bank preserves the shown points; bust can show 11 while awarding zero. |
+| Sound the result | Add bank and bust cues after once-only scoring is explained | Sound parameters and event timing, introduced separately | Listen to each cue; waiting, invalid input and held keys do not repeat it. |
 | Build a challenge | Retain secured points across rounds, count finished rounds, and show the target | Values with different lifetimes, introduced separately | The current total resets while secured points remain; each result is counted once. |
+| Arrange the board | Group current and secured points, remaining opportunities and target | Apply the taught drawing and palette facilities | Labels, picture and values agree after a bank and bust. |
 | Finish deliberately | End at the target or when it is unreachable; offer replay and exit | Session conditions, reset and input boundaries, introduced separately | Known success and failure sequences; no extra round, repeated bank or stale replay input. |
-| Improve and investigate | Add an original die-face picture, readable layout and short result cues in separate stages | Counted drawing or a named drawing routine when useful; sound tied to an event | Numbers and picture agree, labels remain legible, result cues fire once, and play works muted. |
+| Sound success | Add a distinct session-success cue | Reuse the explained sound facilities at the ending | The success cue occurs once; its relationship to the final bank cue is deliberate. |
+| Review and investigate | Check the complete presentation and make a small variation | Drawing and sound express the same rules | Numbers and picture agree, labels remain legible, result cues fire once, and play works muted. |
 
 The first complete single-round game precedes the session challenge. Explain that
 the session target adds a reason to balance safety against the points still
@@ -156,10 +161,14 @@ to secure points or expose the current total to a growing risk of loss. Sharing
 a die and random-number syntax does not repeat that activity. No existing game
 is commissioned for a deliberate revisit here.
 
-Use readable text first. Add an original die image and sound through explained
-stages, with numbers and labels carrying every essential result. Keep the current
-total, limit and secured score visually distinct. Leave enough time to read a
-roll; do not use blocking decoration or sound as an unexplained timing mechanism.
+The user agreed to develop graphics, palette choices and short event sounds
+through the opening, rather than collecting them in a final presentation stage.
+Use the [teaching map](teaching-map.md) for the smaller steps. Keep numbers and
+labels carrying every essential result, and current total, limit and secured
+score visually distinct. Leave enough time to read a roll; do not use decoration
+or sound as an unexplained timing mechanism. The prepared silent text source
+remains the initial rules trial; the planned visual and audible stages require
+their own native checks before they become lesson sources.
 
 The prototype acceptance run must cover rolls 1 and 6, totals 9/10/11, banking
 exactly once, a bust preserving earlier points, target equality, an unreachable
