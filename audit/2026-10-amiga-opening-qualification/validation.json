@@ -1,0 +1,20 @@
+{
+  "byteValues": [
+    1000000,
+    100,
+    -106
+  ],
+  "wordValues": [
+    1000000,
+    100,
+    150
+  ],
+  "wrongValueControl": "rejected",
+  "compilerLines": {
+    "types": 13,
+    "word": 13,
+    "blitzmode": 10
+  },
+  "priorProbeIdentity": "pass",
+  "graphicsVisualResult": "manual observation recorded in observations.json; not asserted by this verifier"
+}
