@@ -31,6 +31,21 @@ The [BASIC performance-revisit proposal](sinclair-zx-spectrum/basic/performance-
 
 The [Spectrum assembly opening review](sinclair-zx-spectrum/assembly/course-review.md) and replacement direction are approved. The [opening design](sinclair-zx-spectrum/assembly/opening.md) and [Meteor Storm brief](sinclair-zx-spectrum/games/meteor-storm/brief.md) define the selected first native trial; the [implemented prototype](sinclair-zx-spectrum/games/meteor-storm/prototype.md) is accepted after native play. Its [teaching progression](sinclair-zx-spectrum/games/meteor-storm/lesson-brief.md) now supports the approved, published twenty-four-lesson course; the separate [Meet the Machine / Meet Assembly introduction](sinclair-zx-spectrum/assembly/meet-assembly.md) supplies the first experiments before the game checkpoints. Review evidence separates builds and smoke execution from teaching suitability.
 
+## Amiga language course proposals
+
+The [AMOS course brief](commodore-amiga/amos/course-brief.md) and
+[Blitz course brief](commodore-amiga/blitz/course-brief.md) propose independent
+beginner routes with later entry for experienced programmers. The AMOS
+[bank-or-risk game direction](commodore-amiga/games/bank-or-risk/brief.md) is
+agreed, with numerical tuning prepared for a native trial; the Blitz switch
+puzzle remains a candidate. Replacement lesson sequences are not yet agreed. The [opening comparison](commodore-amiga/amos/opening-candidates.md)
+checks playing experience and beginner teaching load against existing games and
+retained proposals across the four current systems.
+The [tooling feasibility brief](commodore-amiga/tooling-feasibility.md) compares
+original-runtime delivery, a compatible host interpreter and a cross-compiler
+producing Amiga programs. No language implementation is commissioned by these
+proposals, and current public lessons remain available.
+
 ## Existing briefs
 
 | System | Game |

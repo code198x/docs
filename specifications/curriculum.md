@@ -134,6 +134,14 @@ Keep feedback explanatory, available without penalty and useful to parents or te
 
 Use [the game brief](brief.md) to compare appeal, teaching value and suitability. Retain, reshape or replace existing ideas on those grounds. Assembly is independent of BASIC; it need not port every BASIC game.
 
+Follow the charter's default of distinct games across tracks and systems. Compare
+the proposed playing experience with authored games and retained proposals,
+keeping their status explicit. Shared variables, loops, movement or data structures
+do not make two games duplicates; compare what the player does and why. Record
+close overlaps and choose another project unless a deliberate revisit is
+explicitly agreed for its teaching value. Keep the opening approachable rather
+than adding systems solely to make a familiar game appear different.
+
 Choose projects that reveal each system's character. Compare language design, CPU architecture, memory, graphics, sound, input, storage, timing and bandwidth, and the circumstances behind those choices. Explain what transfers and what changes without assuming the Spectrum came first or portraying another machine as deficient.
 
 State the target configuration and development workflow for every game. Read existing model and successor-machine decisions before changing scope. A modern host, emulator or transfer device does not silently change what a stock target can do.
