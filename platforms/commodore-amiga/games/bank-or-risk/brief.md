@@ -120,7 +120,9 @@ A host-side rules model supplies neither the AMOS program nor its save evidence.
 ## Proposed teaching sequence
 
 These are stages to split into lessons as necessary, with complete maintained
-sources and explicit edits. Introduce every required line before relying on it.
+sources and explicit edits. The [teaching map](teaching-map.md) proposes smaller
+checkpoints and supported investigations. Introduce every required line before
+relying on it.
 
 | Stage | Result | Idea to explain locally | Check |
 | --- | --- | --- | --- |
