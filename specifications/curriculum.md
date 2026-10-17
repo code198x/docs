@@ -2,6 +2,14 @@
 
 Apply [Project purpose and direction](../PROJECT.md). This specification assigns teaching responsibilities; it does not assert that every subject below has been written or commit to a new navigation structure.
 
+## Participation, games and scope
+
+Apply the charter's Play · Build · Understand invitations without imposing an order. A reader may play, inspect, predict, change a rule, create an asset, investigate evidence or build a program. Offer a clear, worthwhile activity and enough explanation to continue from the reader's actual starting point. Programming is one route into the work; other creative and investigative contributions have value in their own right.
+
+Games from any era and physical games can provide activities and comparisons within the charter's scope. Card, board or paper play can make rules, state, probability, strategy and interaction tangible. Keep such an activity worthwhile on its own terms; a computer implementation is optional unless it is the agreed purpose. In comparisons, distinguish shared game rules from the controls, presentation, capabilities and costs of each medium or machine.
+
+Choose work through the charter's [admission test](../PROJECT.md#choosing-what-to-take-on). Broader scope does not change current track priorities, commission new era or language coverage, require every game to be ported, or imply support from another family tool. Existing guided programming sequences, executable intermediate stages and finished-game standards remain in force for system-building work.
+
 ## Shared subjects
 
 The [Craft coverage map](craft-coverage.md) records module responsibilities, agreed
@@ -143,3 +151,5 @@ State the target configuration and development workflow for every game. Read exi
 A useful link explains why to follow it: “The Foundations unit on binary numbers explores how these eight bits represent the row.” Avoid “you will remember”. Supply enough context locally to continue.
 
 Lessons guide building; shared subjects develop concepts; the Vault gives fuller context; patterns make techniques reusable. Link in both directions where useful. Do not duplicate canonical explanations or turn the lesson into a list of compulsory excursions.
+
+Connect the people, creative practices and circumstances behind an idea where they illuminate the activity. Explain relevant collaboration, cultural exchange, access and recognition with evidence. A sound, rule, image or historical question can provide a useful entry point; do not require prior coding to follow every connection. Related reading is optional depth, and a lesson must still work without taking every excursion.

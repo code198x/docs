@@ -1,6 +1,6 @@
 # The Vault
 
-The Vault is our encyclopaedia of people, companies, systems, hardware, software, games, culture and related subjects, centred on the project's period and including later ones. It gives fuller context room to breathe while lessons retain enough explanation for the immediate task.
+The Vault is our encyclopaedia of people, companies, systems, hardware, software, games, culture and related subjects within the [Code198x charter's scope](../PROJECT.md#scope-across-systems). It may follow games and computing across eras and physical or digital forms, with vintage computing retaining its current depth and delivery focus. It gives fuller context room to breathe while lessons retain enough explanation for the immediate task.
 
 ## Organisation
 
@@ -103,7 +103,9 @@ Distinguish documented facts, recollections, allegations, disputed accounts and 
 
 A dispute, allegation, lawsuit or falling-out between named people or companies needs at least two independent sources. A single source is enough when it quotes the person making the claim directly. Present it as their words, attributed to them ("Bell wrote that…", "in Sinclair's words"), never as something the Vault itself asserts. One party's account retold in someone else's words is not enough: keep only what a second source confirms.
 
-The covered period sets where the Vault's depth goes, not where an entry's story stops. An entry about a company, person, machine or series that carried on past the early 2000s follows it to the present, as far as sources support. The covered period gets the most depth, and later history is still told, not cut to a footnote. A subject that begins after the early 2000s may have its own entry too (owner's decision, 11 October 2026); it is reviewed to the same standard as any other.
+Vintage computing remains the present focus of depth, not a date boundary on an entry or its subject. Follow a person, company, machine or series through its relevant history as far as sources support. Earlier roots and subjects beginning after the early 2000s may have entries under the charter's scope and admission test, with the same evidence and review standard. This does not commission exhaustive coverage of another era.
+
+Games outside video games can be subjects in their own right when they earn a useful, bounded entry. No immediate programming exercise or digital adaptation is required. Use an existing category where it fits; this scope does not create new categories or require a page for every referenced work. Cultural connections, including music and screen works, should explain a documented relationship rather than rest on resemblance or speculation.
 
 An entry is about its subject, not about Code198x. Do not describe how the subject shapes the curriculum, calibrates a game, informs the project's voice or appears in a brief, and do not name a module whose place in the course is undecided. A plain link to a published lesson that uses the subject is fine; see [Connections and review](#connections-and-review).
 
@@ -147,6 +149,10 @@ existing web-source fallback and attribution requirements still apply.
 ## Connections and review
 
 Link selectively to related Vault entries, fuller conceptual explanations and lessons that use the subject. A technique entry gives context; a Pattern Library entry gives an adaptable implementation. Avoid reproducing either inside the other.
+
+Make useful relationships discoverable through selective links, comparisons and curated reading paths. Integrate creative practice, collaboration, cultural exchange, access, discrimination and recognition into the history where evidence warrants them. Underrepresented people's contributions belong in the main account; no individual, machine or group should stand for the entire history. A link can supply optional depth without making every reader study the whole project.
+
+Apply the charter's [admission test](../PROJECT.md#choosing-what-to-take-on) and the existing candidate-triage workflow before commissioning an entry. Independent historical value is legitimate, but a connection alone is not a writing commitment. Choose the smallest form that serves the reader, and keep candidates, agreed writing and reviewed publication distinct. Broader editorial coverage does not establish curriculum, emulator or assembler support.
 
 Before publication check sources, dates, names, internal links, image rights and alt text, and the actual rendered page. Use the website's existing Vault validation scripts for schema, links, dates, source and imagery checks as applicable. Automated checks support editorial review; they cannot establish historical truth.
 
