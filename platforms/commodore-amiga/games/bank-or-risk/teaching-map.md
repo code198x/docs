@@ -1,0 +1,123 @@
+# Bank or risk teaching map
+
+**Proposed teaching sequence; no replacement lessons or executed stage sources.**
+We can plan small steps while the [native prototype](prototype.md) awaits
+execution. Native play may change the tuning or expose input behaviour that
+changes this order. The [game brief](brief.md) owns the rules; this map explains
+how we could teach them without importing an unexplained game framework.
+
+Show the complete game's purpose early: bank points towards 30, or risk another
+roll while staying at or below 10. Five rounds give us a limited opportunity to
+reach the target. A native demonstration must wait for execution checks. The
+first exercises below are runnable fragments of that game, not finished games.
+
+## From a message to one round
+
+Each row describes a checkpoint to develop and execute later, not a promised
+lesson count. Split a row further if its implementation needs another unfamiliar
+idea. Keep a complete source for each checkpoint in code-samples, with exact
+editing instructions and expected output in the lesson.
+
+| Checkpoint | New understanding | Expected result and learner investigation |
+| --- | --- | --- |
+| Display the challenge | Instructions execute in order; quoted text is displayed | Change the welcome text, run it, stop and return to editing. Repair a deliberately missing quote. |
+| Keep the changed program | Source, filename and saved output are different things | Save, leave the editor session, reopen and run the changed words. A screenshot or emulator snapshot does not satisfy this check. |
+| Show one die result | A random choice has a defined range | Explain the die expression after checking it against the original manual and runtime. Investigate how the smallest and largest generated values become 1 and 6. |
+| Store a running total | Assignment uses an old value to produce a new one | First use prescribed values 4 then 3. Show old total, roll and new total separately; predict 7 before running. Mark this as a test setup, not random play. |
+| Decide what a total means | Comparisons choose a path | Separate runs with supplied totals 9, 10 and 11 show active, perfect and bust. Ask which comparison admits exactly 10. |
+| Read one choice | A key becomes a value the program can inspect | Read and report R, B or Q once, then stop. An unrelated key changes no score. This stage does not yet run a repeated game. |
+| Ask again | A loop returns to a decision | Repeat the prompt, accept Q to leave, and keep the total unchanged while waiting. Explain the loop's entry and exit before adding repeated rolls. |
+| Accept a fresh press | A held key and a new choice are different | Teach and check the required release/buffer handling in a small example before the game depends on it. Holding R produces one accepted action; release and press again produces another. |
+| Play one round | The choice changes whether the round continues | Connect the explained input and limit decisions. R adds one roll, B after a roll banks, exact 10 ends automatically, and a bust awards zero. Show a result before returning to the editor. |
+
+Teach random play and prescribed test values as separate versions with explicit
+edits. Do not introduce DATA, a test generator or a hidden die routine just to
+make an early example deterministic. Native acceptance probes are authoring
+tools; learners need only the small test setup explained at that checkpoint.
+
+The single round shows the controls and scoring. Explain that it lacks
+the full challenge's reason to take risks: banking a safe total can be repeated
+without trying to meet a session target. Do not present it as evidence that the
+finished game is compelling.
+
+## From one round to a challenge
+
+| Checkpoint | New understanding | Expected result and learner investigation |
+| --- | --- | --- |
+| Keep secured points | Values can survive a round | Bank 4, then reset the current total for another round while preserving the secured 4. Introduce the next-round continuation separately from scoring. |
+| Award the result once | Showing a result and changing a score are different actions | Finish a round, then wait and press an invalid key. The secured score does not change. Trace where the one award happens. |
+| Count completed rounds | A counter records finished work | Increment once after a round, not after a roll or a display refresh. After two rounds, three of the five opportunities remain. |
+| Recognise success | A session decision uses the secured score | Three perfect rounds reach 30. Hold the result; another roll cannot change it. Include target equality in the check. |
+| Recognise impossibility | Remaining opportunities bound what can still happen | Explain secured points plus 10 times the remaining rounds. Three opening busts leave at most 20, so end without offering a fourth round. |
+| Start again | Reset follows the lifetimes of all stored values | Replay restores score, completed rounds, current total and input readiness. Compare a fresh challenge with the original start. |
+| Make results easier to read | Presentation expresses existing state | Introduce layout changes, a die picture and short event sounds in separate steps. Numbers, labels and picture agree; sounds occur once and play remains understandable muted. |
+
+The prototype's title screen, routines and final input handling are an endpoint
+to investigate, not starter code to copy wholesale. Introduce a routine when
+repeated work gives it a purpose. Explain its inputs, changed values and return
+before callers depend on it. Recheck every affected checkpoint after moving code.
+
+## Give each value a job
+
+Use learner-friendly labels before choosing source identifiers. The authored
+names can follow the checked implementation; the distinct responsibilities must
+remain visible.
+
+| Value | When it changes | What must remain true |
+| --- | --- | --- |
+| Die result | Each accepted roll | It is from 1 through 6 in ordinary play. |
+| Current total | A roll, or the start of a new round | It can display 11 after a bust even though the award is zero. |
+| Round award | Once when the round ends | It is zero for a bust; otherwise it is the banked total. |
+| Secured score | Once for a completed round, or replay | A bust preserves points from earlier rounds. |
+| Completed rounds | Once when a round finishes, or replay | A roll is not a completed round. At most five rounds finish. |
+| Input readiness | Accepted press, release and state transition | Holding a key cannot act twice or carry an action into the next round. |
+
+Limit, target and maximum rounds are settings, not scores. Teach each setting
+where it first affects behaviour. Do not declare all endpoint variables at the
+opening and expect the reader to remember their purpose.
+
+## Entry routes
+
+A complete beginner follows the checkpoints in order, with essential explanations
+on the page. Optional Foundations reading can deepen understanding without
+supplying missing instructions.
+
+An experienced programmer still needs the named environment's run, stop, save,
+reopen and recovery route. Offer entry at the single-round and session boundaries
+with a complete checked source, a short explanation of the state already present
+and links to the relevant earlier explanations. Supply those sources only once
+they exist and run; do not link planned samples as available material.
+
+Use a prediction to help someone choose an entry point, with the answer available
+immediately. It is advice, not an exam or an unlock condition. Familiarity with
+variables does not establish familiarity with AMOS input or storage.
+
+## Prompts and explanatory answers
+
+**Predict:** We have secured 4 points. In the next round we roll 5, then 6.
+What should the result show, and what remains for the following round?
+
+The current total is 11, the round awards zero and the secured score stays 4.
+Two rounds have finished, leaving three. Reset the next round's current total
+to zero, but keep the secured score. Do not erase the bust total before the
+player has had a chance to read it.
+
+**Repair:** A perfect total of 10 is labelled a bust. Which decision should we
+inspect, and what examples distinguish the intended rule from the fault?
+
+Inspect the bust comparison: it must reject totals above the limit, not totals
+equal to it. Check 9, 10 and 11; checking only 11 would leave the fault hidden.
+Recheck that a perfect 10 banks once and that 11 awards zero.
+
+**Vary:** Change the game's wording and die presentation while keeping its
+rules. How can we check that this is still the same challenge?
+
+Replay known sequences and compare totals, awards, score and endings. Keep
+labels readable and outcomes understandable without colour or sound. Offer
+hints before a full explanation. A later numeric variation needs a separate
+look at the limit, target and remaining-round calculation together.
+
+Parents and teachers can ask the prompt, allow time to think and record whether
+the learner predicted, ran, explained or needed a hint. Reveal answers when
+useful. Do not turn these suggestions into claimed learner findings: no
+uncoached trial has taken place.

@@ -78,9 +78,12 @@ current total, awarded points and secured score. A bust can show 11 while
 awarding zero and preserving earlier points. Finish scoring once before asking
 for another input.
 
-The [game brief's stage table](../games/bank-or-risk/brief.md) owns the detailed
-sequence and checks. Split stages when their teaching load warrants it. Keep
-complete maintained sources in code-samples with exact add, replace and delete
+The [game brief's stage table](../games/bank-or-risk/brief.md) gives the broad
+sequence and checks. The [teaching map](../games/bank-or-risk/teaching-map.md)
+splits the busiest stages into proposed checkpoints, with state responsibilities,
+entry routes and explanatory answers. Split stages further when their teaching
+load warrants it. Keep complete maintained sources in code-samples with exact
+add, replace and delete
 instructions. Every required line must have been explained before it runs.
 There is no fixed lesson count, frame-rate target or need for an unexplained
 screen, input or game framework.
