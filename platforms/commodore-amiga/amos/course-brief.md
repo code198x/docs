@@ -90,10 +90,21 @@ screen, input or game framework.
 
 ## Presentation and participation
 
-Start with readable text and labelled totals. Add original die artwork and short
-result cues through separate, explained steps. Labels and numbers must carry all
-meaning with sound off and without relying on colour. An input should cause one
-action, and a held key must not roll repeatedly or act in a later round.
+Develop graphics and sound alongside the rules. After the first save/reopen
+exercise, draw a fixed die and explore a small palette in separate steps. Once
+decisions are understood, make the pip pattern follow the stored roll. Grow a
+labelled board as secured points, rounds and the target enter the program.
+After once-only scoring is understood, introduce short bank and bust sounds;
+add a distinct success cue when the session ending is taught. Explain the
+sound parameters and check their effect on input and pacing.
+
+The [teaching map](../games/bank-or-risk/teaching-map.md) gives each addition its
+own checkpoint. Use AMOS drawing and sound facilities directly, with every
+required line explained. The silent text prototype remains the first rules
+trial; it does not define the finished game's presentation. Labels and numbers
+must carry all meaning with sound off and without relying on colour. An input
+should cause one action, and a held key must not roll repeatedly or act in a
+later round.
 
 Let readers choose wording and presentation while explaining which numeric
 changes alter the game. Use small prescribed roll sequences to investigate

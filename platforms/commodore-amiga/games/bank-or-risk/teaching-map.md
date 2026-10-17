@@ -5,6 +5,9 @@ We can plan small steps while the [native prototype](prototype.md) awaits
 execution. Native play may change the tuning or expose input behaviour that
 changes this order. The [game brief](brief.md) owns the rules; this map explains
 how we could teach them without importing an unexplained game framework.
+The user agreed that drawing, colour and sound should develop through the game.
+The silent text prototype checks the proposed rules; it is not the intended
+finished presentation.
 
 Show the complete game's purpose early: bank points towards 30, or risk another
 roll while staying at or below 10. Five rounds give us a limited opportunity to
@@ -22,9 +25,12 @@ editing instructions and expected output in the lesson.
 | --- | --- | --- |
 | Display the challenge | Instructions execute in order; quoted text is displayed | Change the welcome text, run it, stop and return to editing. Repair a deliberately missing quote. |
 | Keep the changed program | Source, filename and saved output are different things | Save, leave the editor session, reopen and run the changed words. A screenshot or emulator snapshot does not satisfy this check. |
+| Draw a die | Pixel coordinates place shapes | Draw an outline and one central pip using explained fixed coordinates. Change one position and predict which shape moves. Distinguish pixel positions from text rows and columns. |
+| Choose its colours | A palette entry and the colour selected for drawing have different jobs | Change a small palette deliberately, then change which entry a shape uses. Keep the pip, die and text distinguishable; explain the colour notation locally. |
 | Show one die result | A random choice has a defined range | Explain the die expression after checking it against the original manual and runtime. Investigate how the smallest and largest generated values become 1 and 6. |
 | Store a running total | Assignment uses an old value to produce a new one | First use prescribed values 4 then 3. Show old total, roll and new total separately; predict 7 before running. Mark this as a test setup, not random play. |
 | Decide what a total means | Comparisons choose a path | Separate runs with supplied totals 9, 10 and 11 show active, perfect and bust. Ask which comparison admits exactly 10. |
+| Match picture to roll | Decisions select a representation of stored data | Draw the corresponding pip pattern for each supplied value 1 through 6. Keep the printed number beside it and explain every branch before introducing random faces. Clear the old face without erasing the labels. |
 | Read one choice | A key becomes a value the program can inspect | Read and report R, B or Q once, then stop. An unrelated key changes no score. This stage does not yet run a repeated game. |
 | Ask again | A loop returns to a decision | Repeat the prompt, accept Q to leave, and keep the total unchanged while waiting. Explain the loop's entry and exit before adding repeated rolls. |
 | Accept a fresh press | A held key and a new choice are different | Teach and check the required release/buffer handling in a small example before the game depends on it. Holding R produces one accepted action; release and press again produces another. |
@@ -46,16 +52,51 @@ finished game is compelling.
 | --- | --- | --- |
 | Keep secured points | Values can survive a round | Bank 4, then reset the current total for another round while preserving the secured 4. Introduce the next-round continuation separately from scoring. |
 | Award the result once | Showing a result and changing a score are different actions | Finish a round, then wait and press an invalid key. The secured score does not change. Trace where the one award happens. |
+| Hear a bank or bust | A sound belongs to an event, not every redraw | First teach one short sound's pitch, duration and volume through an explained example. Then give banking and busting distinct cues in separate edits at the once-only result transition. Listen while waiting, redrawing and holding a key: the cue must not repeat. |
 | Count completed rounds | A counter records finished work | Increment once after a round, not after a roll or a display refresh. After two rounds, three of the five opportunities remain. |
+| Lay out the challenge | A board groups values with different meanings | Place the die/current total, secured score, round/remaining rounds and target in labelled regions. Reuse the taught drawing and colour facilities. Keep the bust total visible beside its zero award and preserve the layout across rounds. |
 | Recognise success | A session decision uses the secured score | Three perfect rounds reach 30. Hold the result; another roll cannot change it. Include target equality in the check. |
+| Hear success | Reuse an explained cue at a different event | Add a distinct short success cue once at the session ending. Decide explicitly whether it replaces the final bank cue or follows it; check for overlap and confirm the visual result alone explains success. |
 | Recognise impossibility | Remaining opportunities bound what can still happen | Explain secured points plus 10 times the remaining rounds. Three opening busts leave at most 20, so end without offering a fourth round. |
 | Start again | Reset follows the lifetimes of all stored values | Replay restores score, completed rounds, current total and input readiness. Compare a fresh challenge with the original start. |
-| Make results easier to read | Presentation expresses existing state | Introduce layout changes, a die picture and short event sounds in separate steps. Numbers, labels and picture agree; sounds occur once and play remains understandable muted. |
+| Review the finished presentation | Drawing and sound must agree with the rules | Run all six faces, bank, bust, success, failure and replay. Check readable labels, stable results, once-only cues and play with sound off. Change the wording or palette and repeat the same rule checks. |
 
 The prototype's title screen, routines and final input handling are an endpoint
 to investigate, not starter code to copy wholesale. Introduce a routine when
 repeated work gives it a purpose. Explain its inputs, changed values and return
 before callers depend on it. Recheck every affected checkpoint after moving code.
+
+## Use AMOS without increasing the rules load
+
+The fixed die drawing comes before its random value. At that point it is an
+explained picture, not a claim that the face represents a roll. Once decisions
+have been taught, connect the picture to the stored result and check all six
+faces. A round that has not rolled yet must show a clear empty/ready state,
+not an old die face presented as its current result.
+
+Use AMOS drawing primitives for the original die and board. A small explicit
+face selection is acceptable before arrays or asset banks are useful. Do not
+hide unexplained loops, data tables or routines inside a supplied renderer.
+Change palette and layout in separate stages from scoring. Recheck numbers and
+pictures together whenever a display change is made.
+
+Begin sound with a short built-in tone whose parameters we explain and listen
+to. Sound selection remains subject to the native trial; avoid requiring a
+sample library or tracker player for these first cues. Teach timing or sound
+completion controls before relying on them. Test that cues do not delay accepted
+input, obscure a result or act as an unexplained pause. Every outcome remains
+clear through labels and numbers with sound off and without colour distinctions.
+
+The original AMOS Professional Manual's
+[Graphics chapter](https://amospromanual.dev/06-04-graphics.html) covers drawing
+coordinates, shapes, drawing colours and palettes. Its
+[Music chapter](https://amospromanual.dev/08-01-music.html) covers built-in sound
+effects and pitched sounds. These are source references for choosing the later
+implementation, not proof that the proposed checkpoints run.
+
+Bobs, sprites, scrolling and AMAL can enter later games when they serve the play.
+The first game should make useful, explained use of AMOS graphics and sound
+without adding movement, animation or new rules just to cover more commands.
 
 ## Give each value a job
 
