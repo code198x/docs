@@ -48,3 +48,11 @@ The following extensions remain candidates; the two static companion drafts abov
 | A distinct Studies collection, linked from both | Gives whole-game investigations an identity that can cross subjects | Do several finished studies justify a new collection and its maintenance/navigation cost? |
 
 **Working recommendation:** keep the content portable in the documentation repo until the pilot has been read and tried. Then choose its site home from the actual experience. No proposed URL, schema, top-level navigation label or new category is adopted by this record. Existing Vault/Craft pages can eventually provide entry points regardless of the storage choice.
+
+## Lives, local circumstances and routes of exchange
+
+The [standing approach](../../specifications/game-studies.md#lives-constraints-and-place) now covers changing people, specific constraints and their costs, local circumstances and exchange. The pilot follows Russell's account of railways/electronics and theatre, Japanese films reaching a Massachusetts group, the club's controller materials and later Stanford play. These additions explain particular people and settings; they do not establish that a trauma caused a game, that a nation had one outlook or that international exchange inevitably made games alike.
+
+Existing VC-2870 (Russell), VC-2889 (TMRC), VC-2893 (Stanford), VC-2896 (Toho) and VC-2897 (Rolling Stone) receive more precise research leads. Retained funding, shared-access and wartime-context candidates on PR #101 remain the theme homes. Tolkien's name in Brand's report also earns a coverage check and a bounded candidate lead, distinct from the existing Lord of the Rings/Shadows of Mordor game row. No issue batch, regional category or revised delivery order follows from these additions.
+
+Later studies can ask what changed through import, localisation, licensing, migration, copying, new networks and changing markets. They need their own evidence, including local sources and language limits. The Spacewar evidence does not support filling a country-by-country comparison of Japan, Britain, Europe, the USA, South America and the Soviet bloc; it supports the specific journeys described here.

@@ -161,6 +161,8 @@ Distinguish proposed design, source-checked claims, code that builds, behaviour 
 
 For people and organisations, distinguish established facts, recollections, disputed accounts, allegations and interpretation. Do not invent dialogue, motives or anecdotes. Acknowledge documented wrongdoing proportionately without sensationalising it or treating technical achievement as an excuse. Use age-appropriate language without concealing relevant facts. Avoid unsupported “first”, “invented by” and single-author origin stories.
 
+Biographical and regional context belongs in that understanding. Follow people as they change through their lives and establish how particular experiences affected their opportunities or work without inventing a psychological explanation. Investigate specific places and routes of cultural exchange; shared nationality does not make people alike, and wider exchange does not automatically erase differences. The [game-study approach](specifications/game-studies.md#lives-constraints-and-place) applies this to people, constraints and the circumstances of making and playing games. Current principles and delivery priorities remain intact.
+
 ## Licensing
 
 Original Code198x prose is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0), permitting reuse and adaptation, including commercial reuse, with the required attribution and notices. [LICENSE.md](LICENSE.md) defines the scope and exclusions. Executable code, media, marks, inherited material and third-party works retain their separate terms; the maintained code-samples repository uses MIT. New original prose contributions use CC BY 4.0 unless another arrangement is explicitly agreed and recorded.

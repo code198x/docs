@@ -10,7 +10,7 @@ Name/alias searches also covered website routing and redirects. Distinguish Stev
 
 Existing website #394 (closed) concerns the PDP systems catalogue, #798 concerns two existing-content reading paths and #801 concerns first-tranche imagery. None commissions these biographies or this study. Reuse the earlier history work rather than open another geopolitical theme issue. No new issues were created.
 
-Stable IDs VC-2816–VC-2869 are retained on codex/women-computing-vault-issues ([documentation PR #101](https://github.com/code198x/docs/pull/101)). They remain reserved even though that branch is not yet merged. New rows here begin at VC-2870. Existing public/military funding VC-2858, affordability/shared access VC-2863 and wartime/displacement VC-2854 are relevant future reading-path leads; this pass does not duplicate them or import unrelated branch work.
+Stable IDs VC-2816–VC-2869 are retained on codex/women-computing-vault-issues ([documentation PR #101](https://github.com/code198x/docs/pull/101)). They remain reserved even though that branch is not yet merged. New rows here begin at VC-2870; the subsequent lives/place pass adds VC-2902. Existing public/military funding VC-2858, affordability/shared access VC-2863 and wartime/displacement VC-2854 are relevant future reading-path leads; this pass does not duplicate them or import unrelated branch work.
 
 ## New candidate dispositions
 
@@ -88,6 +88,16 @@ Chromium, Node and Playwright are modern research tools, not historical actors i
 
 ## Follow-through
 
-32 new candidates and eight existing-record updates are recorded in the CSV. New rows remain needs-triage with blank issue and publication fields. Possible backlinks are existing Vault paths, verified against website origin/main; they are proposals to assess, not links inserted into published articles. The loop/display entries provide Spacewar context for several people and works; those backlinks need useful local explanation before adoption rather than an undifferentiated list of names.
+33 new candidates and eight existing-record updates are recorded in the CSV. New rows remain needs-triage with blank issue and publication fields. Possible backlinks are existing Vault paths, verified against website origin/main; they are proposals to assess, not links inserted into published articles. The loop/display entries provide Spacewar context for several people and works; those backlinks need useful local explanation before adoption rather than an undifferentiated list of names.
 
 Prioritise directly needed game/contributor context and the literary works when selecting writing work. Research broader institutions and preservation biographies to the depth their reader questions warrant. No publication sequence is automatically scheduled; current delivery priorities remain intact. Human source/editorial review, study placement and later interactive work remain separate decisions.
+
+## Lives and regional-context follow-up
+
+The further owner-authorised pass adds one candidate, VC-2902 (J. R. R. Tolkien), and enriches seven existing research records. Across this PR, the candidate additions now total 33. Tolkien/JRR/J. R. R. aliases were checked against website origin/main titles, relevant prose/routes, current and retained candidate work, and open/closed website issues. The Hobbit, Melbourne House, Lords of Midnight and Will Crowther already supply specific literary/adaptation/comparison contexts; no dedicated Tolkien biography or writing issue was found. VC-2168 concerns two computer games, not a biography or the original literary works. Brand's later room description establishes a cultural presence at Stanford, not an influence on Spacewar's original rules.
+
+Russell VC-2870, TMRC VC-2889, Stanford VC-2893, Toho VC-2896, Rolling Stone VC-2897, Brand VC-2883 and Spacewar VC-2076 are reused with more precise leads. No new rows are needed for them. The Department of Defense/ARPA acknowledgement belongs to the existing funding theme VC-2858 on PR #101 and the Stanford institutional candidate; this pass does not establish a reader need for another separate agency history. Treat the AI project/laboratory as the proposed institutional section already recorded rather than a new Stanford identity.
+
+Lester Earnest is credited as the funding report's editor in the evidence register. Consider that source role within Stanford coverage for now; no separate biography is commissioned from an editorial credit alone. The other principal-investigator names on the report's title are not added to the study narrative. Private family members and theatre colleagues are not named; “college” in Russell's recollection introduces no additional named institution. No unverified King/Smith reference, trauma diagnosis, Vietnam-service claim or country-wide cultural explanation is added.
+
+Research on South America, individual Soviet-bloc countries, Britain, Japan and other regions should bring its own local sources and historical dates. The pilot supplies specific examples of exchange and differing communities, not enough evidence for a comparative regional survey or a claim that borders and cultural differences disappeared together. Reuse the existing funding/access/geopolitical themes when those investigations produce concrete cases.

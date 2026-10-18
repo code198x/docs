@@ -108,7 +108,7 @@ The screen edges belong to the rules too. Coordinates wrap rather than making th
 
 Before there were ships on the screen, there were space adventures in the common room.
 
-Writing in 1981, Martin Graetz recalled reading E. E. “Doc” Smith's *Skylark* and *Lensman* novels with Russell and Wiitanen, watching Toho's effects-heavy films, and imagining space epics of their own. Their joking “Hingham Institute” was shared accommodation in Cambridge, Massachusetts. The name makes it sound rather grander. [4][source-4]
+Writing in 1981, Martin Graetz recalled reading E. E. “Doc” Smith's *Skylark* and *Lensman* novels with Russell and Wiitanen, watching Japanese studio Toho's effects-heavy films in Boston cinemas, and imagining space epics of their own. Their joking “Hingham Institute” was shared accommodation in Cambridge, Massachusetts. The name makes it sound rather grander. [4][source-4]
 
 What sort of adventure were they imagining? In *The Skylark of Space*, scientific discovery opens the way to travel beyond Earth. Its 1928 serial credits Edward Elmer Smith **in collaboration with Lee Hawkins Garby**. Following the books back to their pages brings another contributor into view. [14][source-14]
 
@@ -119,6 +119,14 @@ If you've just overshot an opponent in Spacewar!, that predicament should feel f
 Nor is Spacewar! a playable adaptation of the novel. There is no chapter-by-chapter plot to follow and no requirement to know the characters. You get a ship, another pilot and a situation. The little outline in the screenshot is enough to put you inside it. Turning a story's excitement into something a player can do is a substantial act of invention.
 
 The film connection opens another question. Cinema can choose the angle, the cut and the instant of an explosion. A game has to keep presenting a scene while the players change what happens. Look again at the exchange of fire: the ships must remain readable while moving points compete for your attention. Spectacle and useful information have to share the display.
+
+A game made in America can contain journeys from elsewhere. Here, part of that journey led from Japanese film studios to a Boston cinema.
+
+## Before the spaceships
+
+Russell's interests had already taken him through several worlds. In his 2008 interview, he traced his interest in electronics to the signals and increasingly elaborate layouts of his childhood model railway. At college he became a student technical director, then spent a summer working in theatre. He did less theatre later: “Computers were more absorbing, at the time anyway.” [3][source-3]
+
+That last qualification leaves room for a person beyond the invention we remember. Here is someone talking about things he enjoyed doing and how his attention shifted. Spacewar! was one thing he made along the way.
 
 ## A place to make it happen
 
@@ -143,6 +151,8 @@ Try changing a ship's outline in a sketch, or imagine removing its exhaust. What
 ## The game in your hands
 
 In a 2008 interview, Russell remembered controllers with quiet switches. Why did quiet matter? Because otherwise an opponent could hear you trying to fire after you'd run out of ammunition. The controls could give away your predicament. He also recalled earlier controls wearing out under heavy use. [3][source-3]
+
+Graetz recalled Kotok and Saunders building control boxes from wood, wire, Bakelite and switchboard parts around the Tech Model Railroad Club's layout. [4][source-4] Making the game included finding parts and arranging the controls for two people at a screen.
 
 The controller affects what each player knows, as well as what they can do. Even the sound of a switch can become part of the contest.
 
@@ -170,7 +180,7 @@ Spacewar! lets us keep the question concrete: what should turning a control chan
 
 Russell wrote the first implementation, but the Spacewar! we remember grew through other people's work. Graetz and Wiitanen shared in its conception; Peter Samson and Dan Edwards contributed to its development. The preserved program's collective credit also names Alan Kotok, Steve Piner and Robert A. Saunders. [1][source-1], [7][source-7]
 
-Graetz's later recollection describes overlapping work. Samson's Expensive Planetarium brought in a sky based on astronomical data. Edwards added gravity and replaced the repeated interpretation of ship outlines with code compiled at the start of a game, freeing time in the display cycle. Different people improved different parts of the experience. [4][source-4]
+Graetz recalled Samson's astronomical starfield, Expensive Planetarium, and Edwards's gravity calculations. Edwards also compiled the ship outlines once at the start of play, replacing work repeated in every display cycle. [4][source-4]
 
 It's easy to look backwards and see a finished design waiting to be discovered. The more interesting story is people noticing an opportunity, making a change and giving one another something new to respond to.
 
@@ -198,6 +208,12 @@ The influence also reached coin-operated games. The Computer History Museum trac
 
 Ten years later, Stewart Brand's *Rolling Stone* report took readers into organised Spacewar play at Stanford, with spectators and competition around a PDP-10 variant. This was a later game scene on a different machine, with different match arrangements. The activity had continued to develop around the program. [6][source-6]
 
+Brand noticed anti-Vietnam-War posters and door labels in Tolkien's Elvish script. [6][source-6] The room had its own mixture of work, play, politics and shared reading. Another group had made a setting of its own for playing the game.
+
+Stanford's report on its first ten years of artificial intelligence research acknowledged support from the US Department of Defense. [15][source-15] Set that beside Brand's description of anti-war posters. Funding and the views displayed by people in a workplace are different parts of its history.
+
+The move from MIT to later Stanford play gives us a small journey to follow. Who could use the machine? Who could change the program? Who brought other people in? Those answers help explain the game that a particular group encountered.
+
 A decade after its creation, people were still finding reasons to play, change and compete at Spacewar! A game first shared on program tapes had become an activity people organised around.
 
 ## Take the controls
@@ -218,7 +234,7 @@ Those are questions we can take into our own work. Spacewar! gives us a small en
 
 1. [Computer History Museum: Spacewar!](https://www.computerhistory.org/pdp-1/spacewar/)
 2. [Martin Graetz: “Spacewar! Real-Time Capability of the PDP-1,” 1962 DECUS proceedings, published 1963, pp. 37–39](https://bitsavers.computerhistory.org/pdf/dec/decus/confProceedings/DECUS_1962.pdf#page=39)
-3. [Steve Russell interviewed by Al Kossow, 9 August 2008, pp. 14–16](https://archive.computerhistory.org/resources/access/text/2012/08/102746453-05-01-acc.pdf#page=14)
+3. [Steve Russell interviewed by Al Kossow, 9 August 2008, pp. 4, 6–7 and 14–16](https://archive.computerhistory.org/resources/access/text/2012/08/102746453-05-01-acc.pdf#page=14)
 4. [Martin Graetz: “The Origin of Spacewar,” 1981, sections I–III; annotated transcription incorporating the 1983 reprint](https://www.masswerk.at/spacewar/SpacewarOrigin.html)
 5. [Edwards and Graetz: “PDP-1 Plays at Spacewar,” April 1962; transcription](https://www.wheels.org/spacewar/decuscope.html)
 6. [Stewart Brand: “Spacewar: Fanatic Life and Symbolic Death Among the Computer Bums,” 7 December 1972; transcription](https://www.wheels.org/spacewar/stone/rolling_stone.html)
@@ -232,6 +248,7 @@ Those are questions we can take into our own work. Spacewar! gives us a small en
 
 13. [Computer History Museum, 1971: Computer Space](https://www.computerhistory.org/timeline/1971/)
 14. [Edward Elmer Smith in collaboration with Lee Hawkins Garby: *The Skylark of Space*, 1928 serial text, title credit and chapter X, “The Rescue”](https://www.gutenberg.org/files/20869/20869-h/20869-h.htm). This transcription does not establish which edition the Spacewar creators read.
+15. [Stanford Artificial Intelligence Laboratory: *The First Ten Years of Artificial Intelligence Research at Stanford*, AIM-228, dated July 1973, title and abstract; archived PUB source](https://www.saildart.org/FINAL.PUB%5BD%2CLES%5D). The title also carries report number STAN-CS-74-409.
 
 [source-1]: https://www.computerhistory.org/pdp-1/spacewar/
 [source-2]: https://bitsavers.computerhistory.org/pdf/dec/decus/confProceedings/DECUS_1962.pdf#page=39
@@ -248,3 +265,5 @@ Those are questions we can take into our own work. Spacewar! gives us a small en
 [source-13]: https://www.computerhistory.org/timeline/1971/
 
 [source-14]: https://www.gutenberg.org/files/20869/20869-h/20869-h.htm
+
+[source-15]: https://www.saildart.org/FINAL.PUB%5BD%2CLES%5D
