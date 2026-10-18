@@ -1,87 +1,105 @@
-# Spacewar!: two ships, a star and the people around the screen
+# Spacewar!: a universe worth playing in
 
-Two people share a display. Each has a ship to steer and an opponent to hit. Turning changes where the ship points; thrust changes its motion. Those are different actions, and learning to coordinate them is part of learning the game.
+You turn your ship towards your opponent and fire. The shot misses. You swing round for another attempt, but your ship is still travelling in the direction you sent it a moment ago. Now you need to think about where you're going as well as where you're pointing. Meanwhile, the other player has plans of their own.
 
-The basic contest is easy to describe. Playing it requires you to think about where both ships will be, rather than only where they are. A shot takes time to cross the intervening space. Your opponent can move while it travels. The movement that gives you a promising shot may also leave you badly placed for the next encounter. This is a useful way to begin investigating Spacewar!: watch the consequences of a decision continue after the decision itself.
+There's a lot happening between those few marks on the screen.
 
-By April 1962, Dan Edwards and Martin Graetz were describing the game in *Decuscope*. Their account includes the players and the people watching them, and offers both symbolic and binary program tapes through Steve Russell. It presents a game people were already gathering around, as well as a demonstration of a computer's real-time capabilities. [Edwards and Graetz, April 1962, mirrored transcription](https://www.wheels.org/spacewar/decuscope.html)
+Spacewar! brought a space battle to the PDP-1 computer at MIT in 1962. Two people could steer, shoot and try to outwit each other in a world that responded while they played. Its makers gave them enough to get into trouble, enough to develop some skill, and another person to surprise them. More than sixty years later, that's still an inviting combination. [1][source-1]
 
-## Which Spacewar!?
+We can admire its place in computing history, but let's also give it the attention we'd give a game released yesterday. What makes us want another go? Where does the tension come from? And how did a group of people turn their enthusiasm for computers and science fiction into something other people wanted to gather around?
 
-For this study, the reference is the edition labelled **Spacewar! 3.1, 24 Sep 62** in [Norbert Landsteiner's browser emulator](https://www.masswerk.at/spacewar/). Its documentation identifies an archived binary tape as the source. The browser also supplies a title screen, keyboard controls, a simulated display and other facilities that are not the original program.
+## Your ship has other ideas
 
-That distinction matters. A preserved game, a reconstruction, a later variant and a modern presentation can share a name while differing in behaviour. We should identify the edition and settings whenever we compare an observation. The browser checks accompanying this draft use version 3.1 with all six sense switches off; the engine and module hashes are recorded separately. They do not establish the appearance, timing or physical controls of an actual PDP-1.
+The first thing to get to grips with is movement. Turning points the ship somewhere new. Thrust accelerates it in the direction it faces. Those are separate actions, so pointing away from danger doesn't by itself send you away from danger.
 
-## Learning to move and to aim
+That little distinction gives the player a surprisingly rich problem. You can be facing your opponent while travelling sideways. Fire, and the torpedo starts with your ship's velocity as well as the velocity of its launch. Aiming means thinking ahead: where will the shot go, and where will the other ship be when it gets there?
 
-Graetz's paper in the proceedings of the 1962 DECUS meetings describes thrust accelerating a ship along the direction it faces. A torpedo begins with the ship's velocity plus its launch velocity. The central star affects the ships but not the torpedoes. These rules make the ship's movement part of aiming. [Graetz, “Spacewar! Real-Time Capability of the PDP-1,” pp. 37–38; proceedings published 1963](https://bitsavers.computerhistory.org/pdf/dec/decus/confProceedings/DECUS_1962.pdf#page=39)
+Then there's the central star. In Graetz's 1962 technical description, its gravity pulls at the ships while the torpedoes escape that influence. The two kinds of object follow different rules. Your opponent's movement, your own movement and your shot all need to come together at the right moment. [2][source-2]
 
-Suppose you turn towards an opponent while drifting sideways. The nose shows the direction of the launcher, but your existing motion also matters. The interesting task is to learn a relationship among orientation, velocity, distance and time. We can explain that relationship without first requiring a course in mechanics.
+You don't need to solve an equation before you can enjoy that. You can try a manoeuvre, see what happens and gradually get a feel for it. The equations can follow when curiosity takes you there.
 
-The other player makes the problem change. They can notice your approach, turn away, fire first or force you to spend attention on avoiding a threat. Prediction becomes a conversation between two people making decisions, rather than an exercise with a fixed target.
+And your opponent keeps the problem alive. A promising approach can turn into a scramble when they fire first. The move that saves you now can leave you awkwardly placed for the next encounter. There's room for judgement here, and room for someone else to upset it.
 
-The same paper describes translation to the screen's antipoint after star capture and an early three-jump hyperspace device. These rules describe that paper's development state, not every edition. [Graetz, pp. 37–38](https://bitsavers.computerhistory.org/pdf/dec/decus/confProceedings/DECUS_1962.pdf#page=39)
+Steve Russell later recalled preferring settings that left more time for marksmanship. Even one of the game's creators had his own idea of a satisfying pace. That's a useful thought to carry into a game of our own: faster isn't automatically better. We need to know what sort of decisions we're giving people time to make. [3][source-3]
 
-A useful design question follows: how does a shared environmental rule change the choices available to both players? Before answering, we should try the named configuration, observe it and compare what each person expected. Changing one setting can support a later experiment; it should not be mistaken for playing an untouched historical configuration.
+## Space battles begin somewhere
 
-## Reading a battle from a few marks
+The ships came from a world beyond the computer room.
 
-A ship's shape has work to do. You need to distinguish it from the other ship, read its orientation and notice when thrust is being applied. Graetz's contemporary description identifies different outlines, a visible exhaust and torpedoes drawn as moving points. It also warns that torpedoes resemble stars. [Graetz, p. 38, “The Spaceships”](https://bitsavers.computerhistory.org/pdf/dec/decus/confProceedings/DECUS_1962.pdf#page=40)
+In his 1981 account, Martin Graetz remembered the group's enthusiasm for E. E. “Doc” Smith's *Skylark* and *Lensman* stories, science-fiction films and imaginary screen adventures of their own. Books, cinema and conversations helped supply the setting they wanted to play in. [4][source-4]
 
-That gives us something concrete to examine. Which marks can you recognise immediately? Which require motion or context? What information do you lose while concentrating on your own ship? A sparse picture still demands interpretation, and adding more visible detail would not automatically make its important information clearer.
+That's a lovely connection to keep in mind when looking at the display. A few marks can carry an enormous amount of imagination. Call a shape a spaceship, let someone steer it, and give it a convincing response: there's room for the player to supply much of the adventure.
 
-A brief browser check showed exhaust during a thrust input, a visible projectile after a fire input and the first ship disappearing after a hyperspace input. These are limited observations of the selected implementation. They do not measure skill, establish a probability of survival or tell us how a pair of people experiences a match.
+We do it whenever we become absorbed in a game whose graphics leave plenty unsaid. What we bring to it matters too. Someone steeped in space adventures may read those shapes differently from someone meeting them for the first time. The picture and the player's imagination work together.
 
-There is also more to presentation than the image. In a 2008 interview, Russell recalled quiet controller switches that prevented a player from hearing an opponent repeatedly try to fire after exhausting their supplies. He also recalled earlier controllers failing under heavy use. Sound, physical arrangement and durability could affect play even when they were outside the displayed world. [Russell, interview by Al Kossow, 9 August 2008, pp. 15–16](https://archive.computerhistory.org/resources/access/text/2012/08/102746453-05-01-acc.pdf#page=15)
+The people making the game also had lives beyond their shared enthusiasm. Graetz recalled Wayne Wiitanen, who helped conceive Spacewar!, being called to active military duty during the Berlin crisis. That took him away from its development. Even this small group's story reaches into the Cold War. [4][source-4]
 
-This is a recollection, not a measured comparison of surviving controllers. It nevertheless suggests a useful question for our own designs: what information does the whole playing arrangement reveal, including information we did not intend it to reveal?
+## Making the battle readable
 
-## The imagination behind the ships
+Once you've imagined a space battle, you still have to make it playable.
 
-Writing in 1981, Graetz connected the group's ideas with their enjoyment of E. E. “Doc” Smith's *Skylark* and *Lensman* stories and spectacular science-fiction films. He remembered discussing space-film sequences they could not make. He also recalled Wayne Wiitanen being called to active military duty during the Berlin crisis and consequently missing the development of an idea he had helped conceive. These are attributed memories of influences and circumstances. [Graetz, “The Origin of Spacewar,” sections I and II, later recollection in an annotated transcription](https://www.masswerk.at/spacewar/SpacewarOrigin.html)
+The ships need to look different enough for each player to recognise their own. Their outlines need to show which way they're facing. Exhaust can tell us when a ship is thrusting. Graetz's contemporary account describes these choices, along with a wonderfully awkward problem: torpedoes drawn as points can resemble the stars behind them. [2][source-2]
 
-The visible shapes do not have to depict everything a player imagines. A recognisable ship, a star and motion with consequences can invite someone to supply a larger setting. That is an interpretation of the relationship between the game and its fiction, not evidence that all its players imagined the same adventure.
+Look at how much those small visual decisions are being asked to do. A shape helps you find your ship, read its direction and decide what to do next. Movement helps you tell a threat from the background. When attention is divided between two ships and an incoming shot, that information has to earn its place.
 
-This makes a useful investigation of our own assumptions possible. What do we bring to the display from other games, books or films? What seems self-explanatory only because we have encountered something similar before? Ask two people what they think the marks represent before giving them the names. Their disagreement may tell us something useful about the picture.
+This is where studying an early game can be particularly rewarding. We can see individual choices clearly. Try changing a ship's outline in a sketch, or imagine removing its exhaust. What would become harder to read? More detail might help, but the useful question is which detail helps the player act.
 
-## A game made through contributions
+There's a splendid example beyond the screen, too. In a 2008 interview, Russell remembered controllers with quiet switches. Why did quiet matter? Because otherwise an opponent could hear you trying to fire after you'd run out of ammunition. The controls could give away your predicament. He also recalled earlier controls wearing out under heavy use. [3][source-3]
 
-The Computer History Museum credits the conception to Russell, Graetz and Wiitanen, and describes the first implementation and subsequent contributions from a wider group. Its account identifies Peter Samson's and Dan Edwards's work as part of the game's development. Spacewar! should not be presented as the complete invention of a lone programmer. [Computer History Museum, PDP-1 restoration project](https://www.computerhistory.org/pdp-1/spacewar/)
+A space battle has acquired problems of secrecy and durability through the switches in someone's hands. That's the sort of detail that makes the whole game worth exploring. Its design reaches out of the program and into the room.
 
-Graetz later described overlapping work rather than a tidy succession of completed steps. His account connects additions to perceived problems in play and presentation: a background to help read movement, gravity to change the contest, and controls to improve the physical arrangement. [Graetz, “The Origin of Spacewar,” sections II–III](https://www.masswerk.at/spacewar/SpacewarOrigin.html)
+## More hands, a better game
 
-For a production study, this suggests examining both the program and the conditions of iteration. Who could try it? Who could change it? How quickly could an observation become a modification? A later retelling can make that process look inevitable. We should resist inventing a project plan, budget, release deadline or formal playtest method where the evidence does not supply one.
+Russell wrote the first implementation, but the Spacewar! we remember grew through other people's work. Graetz and Wiitanen shared in its conception; Peter Samson and Dan Edwards contributed to its development. The Computer History Museum's account gives us a group making something together. [1][source-1]
 
-Russell's later account also complicates the idea of a single correct pace. He remembered choosing parameters that allowed more time for marksmanship, and acknowledged that he was not representative of every arcade player. A setting can embody a preference without being the universally best setting. [Russell, 2008, p. 14](https://archive.computerhistory.org/resources/access/text/2012/08/102746453-05-01-acc.pdf#page=14)
+Graetz's later recollection describes overlapping work and additions prompted by what people wanted the game to do better. A starfield could help make movement readable. Gravity could give the contest another dimension. Better controls could improve the experience of playing. [4][source-4]
 
-## Reaching people without a shop shelf
+It's easy to look backwards and see a finished design waiting to be discovered. The more interesting story is people noticing an opportunity, making a change and giving one another something new to respond to.
 
-The April 1962 newsletter gives us a concrete distribution mechanism: contact Russell for program tapes. The game needed a suitable computer and people who could obtain and run it. We can study that route without treating it as equivalent to buying a cassette in a shop. [Edwards and Graetz, April 1962](https://www.wheels.org/spacewar/decuscope.html)
+That connects directly to building games now. A feature earns its keep through what it does for the experience. A handsome background might also help you judge motion. A physical switch might be comfortable but reveal information you meant to conceal. We can learn a great deal by asking what a change solved, and what new trouble it introduced.
 
-The museum describes the game being used to demonstrate the PDP-1 to prospective customers. Its public role could therefore extend beyond the people operating the controls. [Computer History Museum, “Spacewar!”](https://www.computerhistory.org/pdp-1/spacewar/)
+It also gives us a better way to appreciate the people involved. We can follow their individual contributions and see how the game grew through their interaction. The finished program is one part of that story; the conversations and opportunities to try it are another.
 
-This provides a different business question from the one we might ask about a packaged home-computer release. How can a compelling use help people understand the value of a machine? The available account establishes use in demonstrations; it does not establish the number of computers sold because of the game. We should keep those claims separate.
+## How do you share a game in 1962?
 
-## The audience changes, and so does the game
+There was no home-computer cassette to take to the counter. The April 1962 *Decuscope* account offered symbolic and binary program tapes through Russell. Reaching another player meant reaching someone with a suitable computer and the means to run the program. The same account describes people watching as well as playing. [5][source-5]
 
-Stewart Brand's December 1972 *Rolling Stone* report describes organised play at Stanford, spectators, competition and a Spacewar variant running on a PDP-10. Its multiple ships and match arrangements are evidence of that later scene, not a description of our two-ship reference edition. Brand places computing within a wider cultural argument; his enthusiasm is part of the source's perspective. [Brand, “Spacewar: Fanatic Life and Symbolic Death Among the Computer Bums,” 7 December 1972, mirrored transcription](https://www.wheels.org/spacewar/stone/rolling_stone.html)
+That changes the business questions we ask. A retail game's box has to attract a buyer and promise an experience. Spacewar! could put an experience in front of an audience directly. The museum describes it being used to demonstrate the PDP-1 to prospective customers. Here was something a visitor could watch happening, with human decisions producing visible results. [1][source-1]
 
-That change of audience matters to a whole-game study. A program can become a shared activity, acquire local variants and later become an object of preservation. A report of excitement in one laboratory does not measure the response of everyone who encountered it. A museum's decision to preserve a game is another kind of reception, not a substitute for its original players' accounts.
+A game could help make a machine's capabilities understandable. We don't need a sales figure to see why that would be useful.
 
-Today's browser presentation changes access again. It makes an encounter possible without standing at the original machine, while introducing a keyboard, a modern display, timing decisions and interface elements of its own. We can value that access and still name what it cannot reproduce. The [museum's separate browser edition](https://www.computerhistory.org/pdp-1/playspacewar/) explicitly documents changes to ship size and timing, a useful reminder to inspect each implementation rather than assume equivalence.
+Ten years later, Stewart Brand's *Rolling Stone* report took readers into organised Spacewar play at Stanford, with spectators and competition around a PDP-10 variant. This was a later game scene on a different machine, with different match arrangements. The activity had continued to develop around the program. [6][source-6]
 
-## Investigating what makes it special
+That is part of why Spacewar! matters. Its history gives us play and spectatorship, people exchanging software, changes made by successive contributors, and a machine shown through something people could enjoy doing. These are threads we can follow through later games without pretending every later development came from this one source.
 
-An initial reading is that Spacewar!'s interest lies in the interaction of movement, prediction, another person's decisions and a legible fictional setting. The surrounding evidence adds collaborators, physical controls, access to a machine, program exchange and people watching. None of these alone explains the whole experience.
+## Take the controls
 
-Try a short investigation with another person:
+You can explore Spacewar! in [Norbert Landsteiner's browser emulator](https://www.masswerk.at/spacewar/). For this study, we've selected the edition labelled **Spacewar! 3.1, 24 Sep 62**. The page supplies controls and several other versions. Start with the named edition and leave its options unchanged while getting acquainted. [7][source-7]
 
-1. Choose and record the edition, controls and settings. Let each player explore turning and thrust before trying to win.
-2. Predict what releasing thrust will do, then observe it. Describe the result without treating a prediction as a mistake to hide.
-3. Play several encounters. Identify a moment when a choice helped or hindered you, and ask what the other player thought was happening.
-4. Compare one setting or control arrangement. Record what changed and what remained constant; avoid changing several things and crediting one of them.
-5. Explain which observation might inform a game of your own, and where the comparison would stop being useful.
+Versions matter here because the game kept changing. For example, Graetz's early technical paper describes three hyperspace jumps and being transported after capture by the star. We shouldn't carry those rules unexamined into every later edition. The browser's modern display and keyboard arrangement also give us a different encounter from standing at a PDP-1. [2][source-2], [7][source-7]
 
-These are proposed activities, not results of a completed two-player trial. Someone can investigate through playing, discussion or a drawing without implementing a PDP-1 program. Deeper work can examine the physics, display and code when the question calls for it.
+Find someone to explore it with if you can. Give yourselves permission to spend a while learning to move before trying to win. Turn without thrusting, then thrust and release. What can you control immediately? What have you set in motion that you now need to live with?
 
-The study should continue to test that initial reading. What is difficult to learn? Which details become readable with experience? Who finds the contest inviting, and who does not? What changes when the version or playing arrangement changes? Understanding the game includes those differences as well as its achievements.
+Once you're exchanging shots, look for a moment worth talking about. Perhaps you missed an apparently easy target, escaped by accident or noticed what the other player was about to do. Compare accounts. The same encounter can look very different from the other set of controls.
+
+Then return to the game as a designer. Which choice would you change? Would you make the ships easier to steer, give people more time to aim, or make an incoming shot easier to recognise? What would your change give the players, and what might they lose?
+
+Those are questions we can take into our own work. Spacewar! gives us a small enough world to examine closely and enough happening inside it to keep us arguing. Put two people at the controls and there's still something to discover.
+
+## Sources
+
+1. [Computer History Museum: Spacewar!](https://www.computerhistory.org/pdp-1/spacewar/)
+2. [Martin Graetz: “Spacewar! Real-Time Capability of the PDP-1,” 1962 DECUS proceedings, published 1963, pp. 37–39](https://bitsavers.computerhistory.org/pdf/dec/decus/confProceedings/DECUS_1962.pdf#page=39)
+3. [Steve Russell interviewed by Al Kossow, 9 August 2008, pp. 14–16](https://archive.computerhistory.org/resources/access/text/2012/08/102746453-05-01-acc.pdf#page=14)
+4. [Martin Graetz: “The Origin of Spacewar,” 1981, sections I–III; annotated transcription incorporating the 1983 reprint](https://www.masswerk.at/spacewar/SpacewarOrigin.html)
+5. [Edwards and Graetz: “PDP-1 Plays at Spacewar,” April 1962; transcription](https://www.wheels.org/spacewar/decuscope.html)
+6. [Stewart Brand: “Spacewar: Fanatic Life and Symbolic Death Among the Computer Bums,” 7 December 1972; transcription](https://www.wheels.org/spacewar/stone/rolling_stone.html)
+7. [Norbert Landsteiner: Spacewar! browser emulator and version documentation](https://www.masswerk.at/spacewar/)
+
+[source-1]: https://www.computerhistory.org/pdp-1/spacewar/
+[source-2]: https://bitsavers.computerhistory.org/pdf/dec/decus/confProceedings/DECUS_1962.pdf#page=39
+[source-3]: https://archive.computerhistory.org/resources/access/text/2012/08/102746453-05-01-acc.pdf#page=14
+[source-4]: https://www.masswerk.at/spacewar/SpacewarOrigin.html
+[source-5]: https://www.wheels.org/spacewar/decuscope.html
+[source-6]: https://www.wheels.org/spacewar/stone/rolling_stone.html
+[source-7]: https://www.masswerk.at/spacewar/
