@@ -101,3 +101,13 @@ Russell VC-2870, TMRC VC-2889, Stanford VC-2893, Toho VC-2896, Rolling Stone VC-
 Lester Earnest is credited as the funding report's editor in the evidence register. Consider that source role within Stanford coverage for now; no separate biography is commissioned from an editorial credit alone. The other principal-investigator names on the report's title are not added to the study narrative. Private family members and theatre colleagues are not named; “college” in Russell's recollection introduces no additional named institution. No unverified King/Smith reference, trauma diagnosis, Vietnam-service claim or country-wide cultural explanation is added.
 
 Research on South America, individual Soviet-bloc countries, Britain, Japan and other regions should bring its own local sources and historical dates. The pilot supplies specific examples of exchange and differing communities, not enough evidence for a comparative regional survey or a claim that borders and cultural differences disappeared together. Reuse the existing funding/access/geopolitical themes when those investigations produce concrete cases.
+
+## Home-computer follow-up dispositions
+
+- Apple II Space War: distinct from arcade Space Wars (VC-2075) and PDP-1 Spacewar! (VC-2076). A substantive draft is explicitly commissioned here at games/space-war-apple-ii in website PR #824. No duplicate writing issue or needs-triage row for already commissioned work.
+- Star Control: mentions under Accolade are not a dedicated game entry; no matching game candidate/issue found. A substantive draft at games/star-control is commissioned in the same PR. Avoid a duplicate Star Control II entry or treating it as an original-program port.
+- Bill Budge: reuse VC-0285. California Pacific: supply the immediate publisher context within the Apple II game entry; separate institutional history is not required to follow this passage.
+- Paul Reiche III and Fred Ford: creators named in source attribution and the supporting game entry, rather than added to the study narrative as biographical subjects. Their roles receive local coverage; no separate biography is commissioned in this pass. Toys for Bob retains VC-1263. Revisit separate biographies through normal triage when their own scope/source set is ready.
+- Inputs: existing analog-control, trackball, steering-wheel and light-gun entries and Game Feel provide onward routes. No new general control-device survey or category is required.
+
+Checked current-main and the paired website draft titles/routes/aliases, current candidate records and retained connected-history candidate work, and open/closed website issue searches for Space War, Star Control and Budge. No candidate IDs are allocated and the CSV is unchanged.

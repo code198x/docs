@@ -2,6 +2,14 @@
 
 This file holds bounded next work and proposals. [PROJECT.md](PROJECT.md) owns agreed direction; source files, catalogues and Git establish implementation state. The linked specifications and evidence records own the detail of finished work. Remove an item when it is done; do not keep a second status history here.
 
+## Proposal: a Spacewar-inspired curriculum game
+
+Consider one or more original two-player space-duel implementations, informed by [the Spacewar study](studies/spacewar/study.md) and its home-computer comparisons. The owner explicitly wants this considered; it is not an agreed lineup, assigned system, promised release or instruction to begin building. Keep the current delivery queue intact.
+
+Evaluate where rotation, thrust/velocity, inherited projectile motion, wrapping, object lifetimes, collisions and optional gravity make a coherent progression. Start with a playable small duel and add meaningful rules in working stages. Separate implementations are worthwhile only where language, input or display constraints reveal different useful solutions. The eventual scope could be a full game; it is not restricted to isolated demonstrations. Conversely, other studies may yield just a bounded example or no implementation.
+
+Use original code, graphics, sound, wording and presentation. Check reuse licences and the intended title/branding before commissioning the build; neither historical influence nor attribution grants permission. Record the teaching purpose, target, rights decisions and finish bar in the relevant game brief before admitting it to a track.
+
 ## Do next
 
 1. **The Vault.** The [September 2026 content audit](audit/2026-09-content-audit/REPORT.md) found no Vault entry reviewed and a sample of checked claims wrong one time in six (H1). The owner has made the Vault the next priority and chose the review process in [the Vault specification](specifications/vault.md#reviewing-existing-entries): batches of about fifty since 8 October 2026 (about ten before), one pull request each, owner approval as sign-off, and unreviewed entries kept out of search engines. Batches 1 to 100 have merged (batch 100 as website PR #576): 993 of the 1,486 entries are reviewed, and 493 remain. Batches 101 to 110 cover those 493, about fifty a batch, ranked by inbound links after batch 100's queued entry; once they are open, work moves to writing entries from the candidates list. The owner signs off a batch by approving it in conversation, since GitHub does not let the owner approve their own PRs; stacked batches merge together with `gh stack merge <top-pr> --rebase`. Each PR lists the entries it queues for the next batch, and each batch adds its reviewers' candidates to the candidates list. [Candidates](vault-candidates.md) lists missing entries. See [Vault editorial work](#vault-editorial-work).

@@ -59,6 +59,12 @@ Later studies can ask what changed through import, localisation, licensing, migr
 
 ## Further static reading and visual treatment
 
-The combined play situation brings movement, aiming and resources together before the ending sequence; alternative input mappings extend the controller discussion. A dated institutional price-list summary adds a concrete machine-access question without asserting MIT's purchase cost. Existing PDP-1, DEC and access/funding candidates remain the relevant research records; no additional candidate batch is required.
+The combined play situation brings movement, aiming and resources together before the ending sequence; the broader input-device discussion is routed to existing Vault and Game Feel coverage. A dated institutional price-list summary adds a concrete machine-access question without asserting MIT's purchase cost. Existing PDP-1, DEC and access/funding candidates remain the relevant research records; no additional candidate batch is required.
 
 The website draft demonstrates reusable article-opening, figure and pull-quote structures in a development-only catalogue route, not an agreed new top-level Studies home. The canonical study is synced at a recorded revision. The original header artwork is labelled as illustration; game captures and explanatory diagrams retain their existing identities and credits.
+
+## Home versions and selective curriculum work
+
+The study now refers briefly to two commissioned draft Vault entries: games/space-war-apple-ii (Budge's retail two-player duel) and games/star-control (a descendant with creator-attributed influence through the arcade Space Wars). The paired website draft supplies both real destinations; these links must not publish ahead of those entries. Keep detailed adaptations in the Vault and the wider peripheral discussion in existing hardware/Game Feel coverage. BYTE's implementation and other similarly named games remain research leads, not linked entries or a claim of verified lineage.
+
+The bounded proposal in work.md retains the owner's interest in one or more original curriculum versions. No target or lineup is assigned and no code work is commissioned. The study remains useful independently of whether that proposal is admitted. Existing biographies/candidates and the game entries carry the immediate context; no automatic issue batch follows.

@@ -42,6 +42,14 @@ Add useful missing subjects to vault-candidates.csv using its existing fields an
 
 Link reviewed work back in both directions where it helps readers. A study can send someone to an institution's history, while the institution's entry can offer the game as one concrete example. Historical articles retain their own subject focus; they do not become descriptions of the Code198x curriculum. Connections can lead to Maths for Games, Game Feel and other Craft explanations without claiming a planned lesson already exists.
 
+## Onward explanations and practical work
+
+Keep explanations of the studied game's controls, rules and behaviour local enough to follow play. Use brief onward links for broader topics such as control devices; a game study need not become a survey of peripherals. Put detailed accounts of later versions and descendants in their own Vault entries, with concise references from the study. Identify adaptations, creator-attributed influences and our comparisons separately, including any intermediate game in the chain. Link actual coverage rather than proposed routes.
+
+Studies do not each require a curriculum game or remake. Select practical examples when they serve a clear teaching purpose: a deliberately limited behaviour experiment can be sufficient. A fuller original game can grow in playable stages when it earns a place in progression. Multiple implementations can be worth considering when different machines or languages reveal useful choices; they are not an automatic porting programme or a change to current delivery priorities.
+
+Use our own implementation and original presentation. Check source licences before reusing code, and permissions before reusing protected artwork, sound, text or other expression. Assess the proposed name, branding and presentation separately before publication; acknowledgement does not substitute for permission. A historical game's availability, age or an imitation elsewhere is not a rights clearance. The existing capture/imagery decisions still govern historical illustrations. Record unresolved rights questions before choosing what to reuse, without claiming that a code rewrite alone resolves every issue.
+
 ## Bound the work
 
 Begin with the agreed vintage studies: Spacewar!, Monty Mole, Elite and Lemmings. Investigate each as a whole game rather than assigning it one exclusive concept. These are an initial selection, not a limit of twelve games or a restriction against later-era comparisons. Rachel remains outside this first selection.

@@ -1,6 +1,6 @@
 # Spacewar! whole-game study pilot
 
-**Status: draft for owner review, 18 October 2026.** Site placement, navigation and publication remain undecided. This is authoring work under [the charter](../../PROJECT.md), not a new module, public route, lesson prerequisite or claim of PDP-1 support. No website content is changed.
+**Status: draft for owner review, 18 October 2026.** Site placement, navigation and publication remain undecided. This is authoring work under [the charter](../../PROJECT.md), not a new module, public route, lesson prerequisite or claim of PDP-1 support. A paired draft website change supplies the unpublished visual preview and two supporting Vault drafts; nothing is merged or deployed.
 
 Read [the study](study.md) first. [Evidence](evidence.md) identifies sources, claim limits and outstanding work. [Observations](observations.json) records the selected browser implementation and bounded execution checks. [Connections](connections.md) separates existing destinations from gaps and gives placement options. The [plan](../../plans/2026-10-18-spacewar-study-pilot.md) records the task boundary.
 
@@ -47,3 +47,9 @@ Interactive examples are deliberately deferred at the owner's request. This revi
 ## Editorial website prototype
 
 A separate draft website change develops opt-in article openings, integrated breadcrumbs, wider/captioned figures and pull quotes. Its development-only catalogue preview records the canonical documentation revision; use its sync script after text revisions rather than maintaining two independent essays. This study's publication home remains open. Header illustration is contemporary editorial artwork, while the existing game frames remain unchanged, credited captures.
+
+## Home versions and onward routes
+
+The broad input-method survey has become onward links; original controller history and the thrust-response explanation remain in the study. A short home-computer passage links to draft Vault entries for Budge's Apple II Space War and Star Control, with the latter's arcade intermediary named. Their detailed treatment belongs in those entries. Publication of the study depends on its linked destinations being present in the same release.
+
+One or more original Spacewar-inspired curriculum games are a proposal in work.md, without assigned systems, development work or a delivery commitment. The game-study specification distinguishes selective examples and fuller games, with original implementation/presentation and reuse/naming checks.
