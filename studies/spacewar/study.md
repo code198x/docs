@@ -2,7 +2,7 @@
 
 Two ships share a starfield. Each has an engine, a launcher and a human pilot trying to destroy the other. While you decide what to do next, your ship keeps moving, the star keeps pulling, and your opponent is trying to get a shot into the space you're about to occupy.
 
-Spacewar! was doing this on MIT's PDP-1 in 1962. It is one of the earliest video games: a moving contest on an electronic display, shaped continuously by the people at its controls. [1][source-1]
+Spacewar! was doing this on the Massachusetts Institute of Technology’s (MIT) PDP-1 in 1962. It is one of the earliest video games: a moving contest on an electronic display, shaped continuously by the people at its controls. [1][source-1]
 
 ![The opening display of Spacewar 3.1: the narrow Needle ship is at the upper right, the broader Wedge is at the lower left, and the gravitational star is in the centre.](captures/opening.png)
 
@@ -106,15 +106,29 @@ The screen edges belong to the rules too. Coordinates wrap rather than making th
 
 ## Space battles begin somewhere
 
-The ships came from a world beyond the computer room.
+Before there were ships on the screen, there were space adventures in the common room.
 
-In his 1981 account, Martin Graetz remembered the group's enthusiasm for E. E. “Doc” Smith's *Skylark* and *Lensman* stories, science-fiction films and imaginary screen adventures of their own. Books, cinema and conversations helped supply the setting they wanted to play in. [4][source-4]
+Writing in 1981, Martin Graetz recalled reading E. E. “Doc” Smith's *Skylark* and *Lensman* novels with Russell and Wiitanen, watching Toho's effects-heavy films, and imagining space epics of their own. Their joking “Hingham Institute” was shared accommodation in Cambridge, Massachusetts. The name makes it sound rather grander. [4][source-4]
 
-A few marks can carry an enormous amount of imagination. Call a shape a spaceship, let someone steer it, and give it a convincing response: there's room for the player to supply much of the adventure.
+What sort of adventure were they imagining? In *The Skylark of Space*, scientific discovery opens the way to travel beyond Earth. Its 1928 serial credits Edward Elmer Smith **in collaboration with Lee Hawkins Garby**. Following the books back to their pages brings another contributor into view. [14][source-14]
 
-We do it whenever we become absorbed in a game whose graphics leave plenty unsaid. Someone steeped in space adventures may read those shapes differently from someone meeting them for the first time. The picture leaves space for both.
+During a rescue in chapter X, the travellers have to slow their ship to meet another moving craft. They calculate both speeds, reverse the drive and allow time to lose velocity. Pointing the right way isn't enough: they must deal with the motion they already have. [14][source-14]
 
-The people making the game also had lives beyond their shared enthusiasm. Graetz recalled Wayne Wiitanen, who helped conceive Spacewar!, being called to active military duty during the Berlin crisis. That took him away from its development. [4][source-4]
+If you've just overshot an opponent in Spacewar!, that predicament should feel familiar. The novel turns calculation into suspense; the game makes you judge the manoeuvre yourself, with someone else trying to spoil it. This is a comparison we can make from the two works. Graetz names the novels as an influence, but that doesn't establish this passage as the source of a particular game rule.
+
+Nor is Spacewar! a playable adaptation of the novel. There is no chapter-by-chapter plot to follow and no requirement to know the characters. You get a ship, another pilot and a situation. The little outline in the screenshot is enough to put you inside it. Turning a story's excitement into something a player can do is a substantial act of invention.
+
+The film connection opens another question. Cinema can choose the angle, the cut and the instant of an explosion. A game has to keep presenting a scene while the players change what happens. Look again at the exchange of fire: the ships must remain readable while moving points compete for your attention. Spectacle and useful information have to share the display.
+
+## A place to make it happen
+
+Enthusiasm needed access to a machine. Graetz contrasts operator-mediated work on Harvard's IBM 704 with running programs himself on MIT's TX-0. [4][source-4]
+
+That difference gives experimentation a practical meaning. How readily can you try an idea, see its result and change it? A shared interest in space adventures doesn't by itself provide computer time, a display, working equipment or people who can help. The room and the institution belong in the game's history alongside the program.
+
+The wider world could also take people away. Graetz recalled Wiitanen being called to active military duty during the Berlin crisis. That interrupted his involvement. [4][source-4]
+
+That gives the Cold War a very immediate place in this story: one of the people who conceived the game was no longer there to help develop it.
 
 ## Making the battle readable
 
@@ -154,7 +168,7 @@ Spacewar! lets us keep the question concrete: what should turning a control chan
 
 ## More hands, a better game
 
-Russell wrote the first implementation, but the Spacewar! we remember grew through other people's work. Graetz and Wiitanen shared in its conception; Peter Samson and Dan Edwards contributed to its development. The Computer History Museum's account gives us a group making something together. [1][source-1]
+Russell wrote the first implementation, but the Spacewar! we remember grew through other people's work. Graetz and Wiitanen shared in its conception; Peter Samson and Dan Edwards contributed to its development. The preserved program's collective credit also names Alan Kotok, Steve Piner and Robert A. Saunders. [1][source-1], [7][source-7]
 
 Graetz's later recollection describes overlapping work. Samson's Expensive Planetarium brought in a sky based on astronomical data. Edwards added gravity and replaced the repeated interpretation of ship outlines with code compiled at the start of a game, freeing time in the display cycle. Different people improved different parts of the experience. [4][source-4]
 
@@ -217,6 +231,7 @@ Those are questions we can take into our own work. Spacewar! gives us a small en
 12. [Brookhaven National Laboratory: The First Video Game?](https://www.bnl.gov/about/history/firstvideo.php)
 
 13. [Computer History Museum, 1971: Computer Space](https://www.computerhistory.org/timeline/1971/)
+14. [Edward Elmer Smith in collaboration with Lee Hawkins Garby: *The Skylark of Space*, 1928 serial text, title credit and chapter X, “The Rescue”](https://www.gutenberg.org/files/20869/20869-h/20869-h.htm). This transcription does not establish which edition the Spacewar creators read.
 
 [source-1]: https://www.computerhistory.org/pdp-1/spacewar/
 [source-2]: https://bitsavers.computerhistory.org/pdf/dec/decus/confProceedings/DECUS_1962.pdf#page=39
@@ -231,3 +246,5 @@ Those are questions we can take into our own work. Spacewar! gives us a small en
 [source-11]: https://www.computerhistory.org/timeline/1952/
 [source-12]: https://www.bnl.gov/about/history/firstvideo.php
 [source-13]: https://www.computerhistory.org/timeline/1971/
+
+[source-14]: https://www.gutenberg.org/files/20869/20869-h/20869-h.htm

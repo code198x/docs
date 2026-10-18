@@ -152,6 +152,8 @@ Link selectively to related Vault entries, fuller conceptual explanations and le
 
 Make useful relationships discoverable through selective links, comparisons and curated reading paths. Integrate creative practice, collaboration, cultural exchange, access, discrimination and recognition into the history where evidence warrants them. Underrepresented people's contributions belong in the main account; no individual, machine or group should stand for the entire history. A link can supply optional depth without making every reader study the whole project.
 
+[Whole-game studies](game-studies.md) investigate inspirations and cultural circumstances, and consider coverage for each named person and institution. Their research audits reuse existing entries and candidate identities, with useful missing subjects entering the single candidate backlog before commissioning.
+
 Apply the charter's [admission test](../PROJECT.md#choosing-what-to-take-on) and the existing candidate-triage workflow before commissioning an entry. Independent historical value is legitimate, but a connection alone is not a writing commitment. Choose the smallest form that serves the reader, and keep candidates, agreed writing and reviewed publication distinct. Broader editorial coverage does not establish curriculum, emulator or assembler support.
 
 Before publication check sources, dates, names, internal links, image rights and alt text, and the actual rendered page. Use the website's existing Vault validation scripts for schema, links, dates, source and imagery checks as applicable. Automated checks support editorial review; they cannot establish historical truth.

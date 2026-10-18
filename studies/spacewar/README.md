@@ -30,6 +30,10 @@ The explicit output directory receives captures and `observations-raw.json`. Rev
 
 The complete-round capture can be reproduced with capture-encounter.mjs; see [capture instructions and credits](captures/README.md).
 
+## Inspirations and related coverage
+
+The [whole-game study specification](../../specifications/game-studies.md) records the agreed approach for future studies. The [Vault disposition audit](vault-audit.md) checks named people, institutions and cultural works against existing articles, candidates and issues. It points to the single candidate CSV rather than commissioning a biography for every mention.
+
 ## Before publication
 
 A human should review the draft and source interpretations, including the disagreements and unknowns in evidence.md. Conduct a two-player reading/play session on the named setup, and refine the activity instructions from what happens. Review the selected screenshots and original diagrams, including their credits, captions and text alternatives. Then agree placement and check the rendered website page, links, keyboard use, narrow screens and source presentation. Do not set a reviewed flag or claim those checks have happened on the strength of this draft.

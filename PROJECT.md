@@ -56,6 +56,8 @@ Independent historical and cultural value is legitimate; a subject need not supp
 - **The Vault** supplies encyclopaedic historical, cultural and technical context.
 - **The Pattern Library** supplies concrete techniques readers can adapt, with their assumptions and trade-offs.
 
+[Whole-game studies](specifications/game-studies.md) bring these responsibilities together through close investigation of games, their inspirations, cultural circumstances and the people and institutions around them. Their publication home remains open.
+
 These are responsibilities, not a mandate to create a top-level module for every subject. [Curriculum design](specifications/curriculum.md) places the shared subjects and explains progression. Existing navigation and authored content are evidence of implementation, not limits on the intended coverage.
 
 ## Public presentation and publishing

@@ -18,6 +18,7 @@ verification and how to add activities after the first learner observations.
 | [Curriculum design](specifications/curriculum.md) | Shared subjects, progression, independent entry and checks for understanding |
 | [Recurring progressions](specifications/recurring-progressions.md) | Eight connected learning threads, existing-game placements, gaps and implementation priorities |
 | [Data, memory and tools](specifications/experiments/data-memory-tools.md) | Asset representations, small converters, validation, storage and runtime costs |
+| [Whole-game studies](specifications/game-studies.md) | Play, design, inspirations, culture, production and reception; people, institutions and Vault follow-through |
 | [Game brief](specifications/brief.md) | The experience, target, teaching, runnable stages and verification of one game |
 | [Unit](specifications/unit.md) | Guided construction, local explanations, questions and publishing checks |
 | [Content workflow](specifications/content-creation-workflow.md) | Research, agreement, prototyping, authoring and verification |
