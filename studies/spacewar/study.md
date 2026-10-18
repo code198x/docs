@@ -1,12 +1,22 @@
 # Spacewar!: a universe worth playing in
 
-You turn your ship towards your opponent and fire. The shot misses. You swing round for another attempt, but your ship is still travelling in the direction you sent it a moment ago. Now you need to think about where you're going as well as where you're pointing. Meanwhile, the other player has plans of their own.
+Two ships share a starfield. Each has an engine, a launcher and a human pilot trying to destroy the other. While you decide what to do next, your ship keeps moving, the star keeps pulling, and your opponent is trying to get a shot into the space you're about to occupy.
 
-There's a lot happening between those few marks on the screen.
+Spacewar! was doing this on MIT's PDP-1 in 1962. It is one of the earliest video games: a moving contest on an electronic display, shaped continuously by the people at its controls. [1][source-1]
 
-Spacewar! brought a space battle to the PDP-1 computer at MIT in 1962. Two people could steer, shoot and try to outwit each other in a world that responded while they played. Its makers gave them enough to get into trouble, enough to develop some skill, and another person to surprise them. More than sixty years later, that's still an inviting combination. [1][source-1]
+![The opening display of Spacewar 3.1: the narrow Needle ship is at the upper right, the broader Wedge is at the lower left, and the gravitational star is in the centre.](captures/opening.png)
 
-Getting the ship to do what you want is only the beginning. The person beside you is learning too.
+*Spacewar! 3.1 (MIT contributors, 1962, PDP-1), self-captured in Norbert Landsteiner's browser emulator. The Needle starts at upper right and the Wedge at lower left. Their outlines identify the ships and show their headings. The bright mark in the centre is the gravitational star; the background stars are scenery. These are emulator captures, not photographs of the original display.*
+
+## What the players are trying to do
+
+Hit the other ship with a torpedo while keeping yours intact. A collision between ships can destroy both. If both go down, neither has won that round. In this browser edition, the ships are set up again with fresh supplies after the ending delay. [10][source-10]
+
+Each pilot can turn either way, apply thrust, fire and attempt a hyperspace escape. Turning changes the ship's heading. Thrust changes its velocity. Fire launches a torpedo when the tube is ready. Hyperspace takes the ship out of ordinary play for a time, with a dangerous return.
+
+For the browser version used here, **WASD controls the Wedge**: A and D turn, S thrusts and W fires; Q requests hyperspace. **IJKL controls the Needle**: J and L turn, K thrusts and I fires; U requests hyperspace. These are the emulator's keyboard assignments, not the original control-box labels. Start with version **3.1, 24 Sep 62**, and the default switch settings. [7][source-7]
+
+You can begin by thinking of it as a shooting contest. Very quickly, steering becomes part of aiming, and survival becomes part of both.
 
 ## Pointing, moving and changing your mind
 
@@ -32,11 +42,23 @@ Now put the star back. Gravity accelerates the ship towards it, so your velocity
 
 *Gravity supplies another change in velocity. The dashed orange arrow repeats that change at the tip of the old velocity so we can add them. The green result is the new velocity; it isn't an orbit prediction.*
 
-Now your opponent has to judge a changing course. So do you. A shot aimed at where the other ship is now can miss where it will be when the torpedo arrives. Graetz's 1962 description adds another wrinkle: a torpedo inherits its ship's velocity as well as its launch velocity. The ship's motion becomes part of the shot. [2][source-2]
-
 We can work with all of this as horizontal and vertical amounts. Add each change to the matching part of velocity, then use the new velocity to move the ship. That's a small numerical model we can draw, calculate and eventually program.
 
 In [Maths for Games](https://code198x.com/craft/maths-for-games/), [Place a point](https://code198x.com/craft/maths-for-games/unit-06/) introduces coordinates, and [Keep fractional movement in integers](https://code198x.com/craft/maths-for-games/unit-11/) shows how a stored velocity becomes a change of position on each tick. Spacewar! gives those ideas a pressing purpose: getting your ship and your shot where you want them. Gravity and changing velocity take the investigation further.
+
+## Getting a torpedo to meet a ship
+
+Pointing at your opponent is a good way to miss. A torpedo needs time to get there, and the target can move during that time. You need to send the shot towards a future meeting point.
+
+Your own motion complicates it. Graetz's technical paper explains that the torpedo starts with your ship's velocity added to its launch velocity. If you're drifting sideways, the shot carries that sideways movement too. Turning the nose towards the target doesn't remove it. [2][source-2]
+
+![Both ships are turned towards one another while bright torpedoes and their fading display trails cross the space between them near the central star.](captures/exchange.png)
+
+*Spacewar! 3.1 (MIT contributors, 1962, PDP-1), self-captured in Landsteiner's emulator. Both ships have turned and fired. The bright moving points are torpedoes; the green trails are fading marks retained by the emulator's phosphor simulation, not solid beams. The screenshot shows the contest's visible information; it cannot by itself establish a projectile's velocity.*
+
+Gravity pulls at the ships but not the torpedoes. That lets a shot cross the star's neighbourhood while a ship's course curves under its pull. You need to judge where the two paths will meet, and your opponent can spoil the prediction by thrusting. [2][source-2]
+
+Try imagining a ship moving upwards at 30 units per second. It fires right at 50 units per second relative to itself. The torpedo moves at (50, 30), not (50, 0). To get a shot that travels directly right, the launcher has to contribute a downward component that cancels the upward 30. The [moving-shot explanation](companions/shooting-from-a-moving-ship.md) works through that calculation, then lets the target move too. These are teaching values, not Spacewar's stored units.
 
 ## Enough physics for a space battle
 
@@ -49,6 +71,38 @@ Many games work this way. They borrow motion, friction, collisions or steering f
 The diagrams here isolate the ideas so we can see them. They're original explanations of motion, rather than captured frames or a reconstruction of the PDP-1's calculations.
 
 Steve Russell later recalled preferring settings that left more time for marksmanship. Once the rules are in place, their pace is another choice. How much time should a player have to read a course, line up a shot and react? [3][source-3]
+
+## Supplies, delays and a risky way out
+
+In this 3.1 configuration, each ship has **32 torpedoes**. Holding fire launches them repeatedly as the tube reloads. That pause matters: you can lay down a sequence of threats, but you can't place an unlimited wall of shots wherever you want. Torpedoes also expire, so firing from any distance is not equally useful. [10][source-10]
+
+Fuel is limited too. Burning the engine spends it; coasting preserves it. Once the fuel is gone, you can still have motion to manage, but you have lost the thrust that could change it. Planning an approach includes leaving yourself a way out.
+
+Hyperspace offers another escape. The ship disappears from normal play, then returns at a changed position with a changed velocity. Version 3.1 includes a recharge delay and a growing risk of destruction on re-entry. It gets you out of an immediate firing line without promising a safe landing. [10][source-10]
+
+Those rules make timing and restraint part of the duel. A shot costs ammunition, a manoeuvre costs fuel, and an escape can cost the ship. The [duel-design companion](companions/designing-a-duel.md) examines those choices and what would change if we removed their limits.
+
+The star has a surprise of its own. With this edition's default switches, contact sends a ship to the screen's antipoint, at the corner boundary, and clears its velocity. The lethal-star switch changes that to destruction. Learn which rule you're playing: the star isn't an unconditional death trap in every version or configuration. [10][source-10]
+
+## When a round ends
+
+Both pilots can lose the same exchange. In the round captured below, both ships broke up and the score stayed level. In the browser, a fresh pair appeared with new supplies after the ending delay.
+
+![Both ships have broken into bright clusters of points, one above and one below the central star, after their exchange of fire.](captures/destruction.png)
+
+*Spacewar! 3.1 (MIT contributors, 1962, PDP-1), self-captured in Landsteiner's emulator. Both ship outlines have become bursts of points. Destruction is a visible state change, distinct from an intact ship passing out of view. This round ended without a surviving winner. The capture record also follows it through the next reset.*
+
+The original score wasn't another number drawn beside the ships. The 3.1 program puts the results in two processor registers, whose bits could be read on the PDP-1's console lights, and executes a halt instruction. The browser supplies its own score bar outside the game display and continues into the next round. Some later editions added on-screen score displays. [7][source-7], [10][source-10]
+
+The reset gives the players another attempt at the same problem. You can change an opening manoeuvre, wait longer before firing or conserve more fuel, then see what happens. One encounter gives you something to bring to the next.
+
+## What the computer keeps doing
+
+Behind the moving display, the program keeps track of objects: their positions, movement and current state. A ship can be flying normally, travelling through hyperspace or exploding. A torpedo has a position, motion and remaining life. The program repeatedly reads controls, updates the objects, checks contacts and plots the display. [10][source-10]
+
+That repeating work is a [game loop](https://code198x.com/vault/techniques/game-loop/). It lets two people act while the world continues around them. You don't take a turn, submit a command and wait for the other person to finish. An unpressed control is still a decision made while the ship moves.
+
+The screen edges belong to the rules too. Coordinates wrap rather than making the edge a wall. A ship that leaves one side can return on the other; disappearing at the boundary is different from being destroyed or entering hyperspace. Watch what reappears, where it reappears and which way it is moving.
 
 ## Space battles begin somewhere
 
@@ -89,10 +143,10 @@ Other devices give games different information. Here are some possible uses:
 | Device | What the game can work with |
 |---|---|
 | Digital joystick or buttons | On/off directions and button states: apply thrust or turning while held, or trigger an action. |
-| Analogue joystick | A graduated position: vary thrust or steering with how far the stick moves. |
-| Mouse or trackball | Relative movement: move a pointer, aim or turn by an amount chosen by the game. |
-| Steering wheel | Steering position, sometimes with force feedback: turn and feel resistance or effects. |
-| Light gun | Pointing at a display target: aim directly rather than steer a cursor towards it. |
+| [Analogue joystick](https://code198x.com/vault/hardware/analog-control/) | A graduated position: vary thrust or steering with how far the stick moves. |
+| Mouse or [trackball](https://code198x.com/vault/hardware/trackball/) | Relative movement: move a pointer, aim or turn by an amount chosen by the game. |
+| [Steering wheel](https://code198x.com/vault/hardware/steering-wheel/) | Steering position, sometimes with force feedback: turn and feel resistance or effects. |
+| [Light gun](https://code198x.com/vault/hardware/light-gun/) | Pointing at a display target: aim directly rather than steer a cursor towards it. |
 
 The device supplies input; the game chooses its meaning. A joystick's position can set a target, a speed or a turning rate. [9][source-9] The same hand movement can mean something quite different after the designer has interpreted it.
 
@@ -102,17 +156,31 @@ Spacewar! lets us keep the question concrete: what should turning a control chan
 
 Russell wrote the first implementation, but the Spacewar! we remember grew through other people's work. Graetz and Wiitanen shared in its conception; Peter Samson and Dan Edwards contributed to its development. The Computer History Museum's account gives us a group making something together. [1][source-1]
 
-Graetz's later recollection describes overlapping work and additions prompted by what people wanted the game to do better. A starfield could help make movement readable. Gravity could give the contest another dimension. Better controls could improve the experience of playing. [4][source-4]
+Graetz's later recollection describes overlapping work. Samson's Expensive Planetarium brought in a sky based on astronomical data. Edwards added gravity and replaced the repeated interpretation of ship outlines with code compiled at the start of a game, freeing time in the display cycle. Different people improved different parts of the experience. [4][source-4]
 
 It's easy to look backwards and see a finished design waiting to be discovered. The more interesting story is people noticing an opportunity, making a change and giving one another something new to respond to.
 
 A feature earns its keep through what it does for the experience. A handsome background might also help you judge motion. A physical switch might be comfortable but reveal information you meant to conceal. We can learn a great deal by asking what a change solved, and what new trouble it introduced.
+
+## One of the earliest video games
+
+Spacewar! arrived early enough that even the screen needs some explanation. A game didn't have to use a television set. An electronic display could be an oscilloscope or a computer's cathode-ray tube, with very different machinery behind it.
+
+In **1952**, A. S. Douglas's noughts-and-crosses program, now known as OXO, ran on Cambridge's EDSAC. A player entered moves with a telephone dial; the machine displayed the board on a cathode-ray tube. [11][source-11]
+
+In **1958**, William Higinbotham and Bob Dvorak made Tennis for Two at Brookhaven National Laboratory. Two visitors used controllers to play a ball game on an oscilloscope, with an analogue computer producing its motion. They showed it to visitors on 18 October 1958. Screen-based play and simulated movement were already taking shape before Spacewar! [12][source-12]
+
+In **1962**, Spacewar! put a freely moving, two-person space duel on a programmable digital computer. Its pilots could turn, thrust and shoot while the program maintained the moving world. Its creators could change that world by changing the program. The stars, gravity, controls and hyperspace grew through different people's contributions. [1][source-1]
+
+These examples give us a clearer history than awarding one game every “first”. Spacewar! belongs among the earliest video games, and its particular combination is worth understanding: simultaneous human opposition, movement you have to learn, rules you can change, and software that could travel to other suitable computers.
 
 ## How do you share a game in 1962?
 
 There was no home-computer cassette to take to the counter. The April 1962 *Decuscope* account offered symbolic and binary program tapes through Russell. Reaching another player meant reaching someone with a suitable computer and the means to run the program. The same account describes people watching as well as playing. [5][source-5]
 
 A retail game's box has to attract a buyer and promise an experience. Spacewar! could put an experience in front of an audience directly. The museum describes it being used to demonstrate the PDP-1 to prospective customers. Here was something a visitor could watch happening, with human decisions producing visible results. [1][source-1]
+
+The influence also reached coin-operated games. The Computer History Museum traces Nolan Bushnell and Ted Dabney's 1971 Computer Space to Spacewar! and other early space-battle games. That required a different technical and commercial form: an arcade game for people who didn't have access to a research computer. [13][source-13]
 
 Ten years later, Stewart Brand's *Rolling Stone* report took readers into organised Spacewar play at Stanford, with spectators and competition around a PDP-10 variant. This was a later game scene on a different machine, with different match arrangements. The activity had continued to develop around the program. [6][source-6]
 
@@ -122,7 +190,7 @@ A decade after its creation, people were still finding reasons to play, change a
 
 You can explore Spacewar! in [Norbert Landsteiner's browser emulator](https://www.masswerk.at/spacewar/). For this study, we've selected the edition labelled **Spacewar! 3.1, 24 Sep 62**. The page supplies controls and several other versions. Start with the named edition and leave its options unchanged while getting acquainted. [7][source-7]
 
-Versions matter here because the game kept changing. For example, Graetz's early technical paper describes three hyperspace jumps and being transported after capture by the star. We shouldn't carry those rules unexamined into every later edition. The browser's modern display and keyboard arrangement also give us a different encounter from standing at a PDP-1. [2][source-2], [7][source-7]
+Versions matter here because the game kept changing. For example, Graetz's early technical paper describes three hyperspace jumps and being transported after capture by the star. We shouldn't carry those rules unexamined into every later edition. The browser's display and keyboard arrangement also give us a different encounter from standing at a PDP-1. [2][source-2], [7][source-7]
 
 Find someone to explore it with if you can. Give yourselves permission to spend a while learning to move before trying to win. Turn without thrusting, then thrust and release. What can you control immediately? What have you set in motion that you now need to live with?
 
@@ -144,6 +212,12 @@ Those are questions we can take into our own work. Spacewar! gives us a small en
 8. [NASA: Newton’s laws of motion](https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/newtons-laws-of-motion/)
 9. Control examples: [W3C Gamepad model](https://www.w3.org/TR/gamepad/#model), [W3C relative pointer movement](https://www.w3.org/TR/pointerlock/#extensions-to-the-mouseevent-interface), and [Logitech wheel position sensing and force feedback](https://www.logitechg.com/en-us/products/driving/driving-force-racing-wheel.html).
 
+10. [Spacewar! 3.1 source listing](https://www.masswerk.at/spacewar/sources/spacewar3.1_complete.txt): parameters `tno`, `rlt`, `tlf`, `foo`; object tables; torpedo, hyperspace and star-contact routines. Capture configuration, tape identity and observed results are recorded in the accompanying research notes.
+11. [Cambridge's EDSAC example-program collection](https://www.cl.cam.ac.uk/events/EDSAC99/simulators/india/examples.html) and [Computer History Museum, 1952: OXO](https://www.computerhistory.org/timeline/1952/).
+12. [Brookhaven National Laboratory: The First Video Game?](https://www.bnl.gov/about/history/firstvideo.php)
+
+13. [Computer History Museum, 1971: Computer Space](https://www.computerhistory.org/timeline/1971/)
+
 [source-1]: https://www.computerhistory.org/pdp-1/spacewar/
 [source-2]: https://bitsavers.computerhistory.org/pdf/dec/decus/confProceedings/DECUS_1962.pdf#page=39
 [source-3]: https://archive.computerhistory.org/resources/access/text/2012/08/102746453-05-01-acc.pdf#page=14
@@ -153,3 +227,7 @@ Those are questions we can take into our own work. Spacewar! gives us a small en
 [source-7]: https://www.masswerk.at/spacewar/
 [source-8]: https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/newtons-laws-of-motion/
 [source-9]: https://www.w3.org/TR/gamepad/#model
+[source-10]: https://www.masswerk.at/spacewar/sources/spacewar3.1_complete.txt
+[source-11]: https://www.computerhistory.org/timeline/1952/
+[source-12]: https://www.bnl.gov/about/history/firstvideo.php
+[source-13]: https://www.computerhistory.org/timeline/1971/

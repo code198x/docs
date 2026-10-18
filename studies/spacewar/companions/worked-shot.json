@@ -1,0 +1,42 @@
+{
+  "units": "chosen teaching units, not game storage units",
+  "stationaryTarget": {
+    "launchVelocity": [
+      40,
+      -30
+    ],
+    "worldVelocity": [
+      40,
+      0
+    ],
+    "seconds": 2.5,
+    "projectilePosition": [
+      100.0,
+      0.0
+    ],
+    "targetPosition": [
+      100,
+      0
+    ]
+  },
+  "movingTarget": {
+    "launchVelocity": [
+      45.8257569495584,
+      -20
+    ],
+    "worldVelocity": [
+      45.8257569495584,
+      10
+    ],
+    "seconds": 2.182178902359924,
+    "projectilePosition": [
+      100.0,
+      21.82178902359924
+    ],
+    "targetPosition": [
+      100,
+      21.82178902359924
+    ]
+  },
+  "checks": "Launch magnitudes agree with the fixed launch speed; independently evaluated projectile and target endpoints meet."
+}
