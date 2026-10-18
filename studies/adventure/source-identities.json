@@ -6,5 +6,42 @@
     "advent-source/WOOD0350/advent.for": "a52830ca4bcc5d508290fe89b5507d26fa55441119869e9a6dd5a736ed677fa9",
     "advent-source/WOOD0350/advent.dat": "ab024845bb60f1ff753b25103de578120db307c672575e7435aeede4c9cc15ff",
     "jerz.html": "fbaf0255d031554ba05909258ea30cedd7c398b0982aa8709fafe2ad693bbc52"
-  }
+  },
+  "expansion_sources": [
+    {
+      "url": "https://dhq.digitalhumanities.org/vol/1/2/000009/000009.html",
+      "sha256": "fbaf0255d031554ba05909258ea30cedd7c398b0982aa8709fafe2ad693bbc52"
+    },
+    {
+      "url": "https://ifarchive.org/if-archive/info/Craft.Of.Adventure.txt",
+      "sha256": "bbc3bf0000bcf7aae8e452891be31c77c5739de689d1f9b57728e38cbcbe040f"
+    },
+    {
+      "url": "https://ifarchive.org/if-archive/infocom/articles/articles.zip",
+      "sha256": "bb37797e3e8403b574e902dc287ca7f8873e214768e801fe4aa9461b6cc290ec"
+    },
+    {
+      "url": "https://ifarchive.org/if-archive/infocom/articles/NZT-testing-text",
+      "sha256": "f51025fbb58c6bd4c73e923c75adfdb442dd7c9c7cbdca7ba3ae2e6ee5788c3d"
+    },
+    {
+      "url": "https://gamedisks.pcjs.org/pcx86/game/microsoft/adventure/Adventure_Manual.pdf",
+      "sha256": "9b5676eb1893df001cb111cb90be2ee9630eebccde289b3307b1a6dfd279bfef"
+    },
+    {
+      "url": "https://mocagh.org/rainbird/colossaladv-manual.pdf",
+      "sha256": "2d31ca23732ec92737257ba2da121f5353d72a1054830e2891ef0b955c5fe41d"
+    },
+    {
+      "url": "https://mocagh.org/miscgame/quill-manual.pdf",
+      "sha256": "6836bab3fae99c1e1b7efd7a8c94adc39b7322c3b600dd09c2cfbc5d5f9dc25e"
+    },
+    {
+      "title": "BYTE 5.12, December 1980, Scott Adams, Pirate\u2019s Adventure, printed pp.192\u2013212",
+      "url": "https://archive.org/details/byte-magazine-1980-12",
+      "source_sha256": "02b5fe03d2fc39831c7582d94e2954b09b8282caa29ce71cf398b4dd15121047",
+      "checked": "Article introduction/program notes, printed p.192; not redistributed.",
+      "identity_from_existing_source_record": true
+    }
+  ]
 }
