@@ -50,3 +50,7 @@ Bob Liddil is used here as a named contemporary reviewer. The citation provides 
 ## Dizzy onward connection
 
 Reuse the existing Dizzy game entry and Oliver Twins biography. The creators’ retrospective explains a text-adventure influence, including Zork; the study does not infer a direct Adventure-to-Dizzy chain. No candidate or biography duplicates are needed.
+
+## Illustration credits
+
+Photographers and source-image crop contributors are credited as image authors, not as developers of the game. No biography is commissioned merely because a source image is used. For Elite, Philip Castle is retained explicitly as the box artist in the advertising credit; this pass does not create a duplicate or an unresearched biography.

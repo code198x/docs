@@ -12,3 +12,5 @@ Owner selected both studies, at the depth and approach of Adventure, Monty and E
 7. Owner requested portraits and period advertising during preparation. Record exact candidates, source credits/licences and outstanding project permission checks in studies/imagery-candidates.{md,json}; do not turn a source lead into a publication clearance.
 
 7. Owner requested portraits and period advertising during preparation. Record exact candidates, source credits/licences and outstanding project permission checks in studies/imagery-candidates.{md,json}; do not turn a source lead into a publication clearance.
+
+Publication authorised 18 October 2026. Reuse approved article structures, add verified sourced photographs and two necessary advertising excerpts to the earlier studies, retain design-note leads without guessing rights or copying unavailable images. The website publication plan owns build/browser/live checks.

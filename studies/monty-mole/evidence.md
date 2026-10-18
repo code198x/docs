@@ -32,3 +32,7 @@ The jump diagram is original, schematic and explicitly not Monty’s measured tr
 ## Review before publication
 
 Owner reading and historical/editorial sign-off remain open. Complete original-hardware validation and full-game execution are not claimed or required for the selected image claims. A future deeper technical account of jumps or crushers needs new execution/source evidence, not more confidence in this draft. Do not turn the current exploratory emulator limitation into a statement about the historical game.
+
+## Sourced illustration pass — 18 October 2026
+
+Owner approved publication and sourced images after umbrella PR #191. A necessary small advertising detail is recorded in advertising/manifest.json and advertising/README.md. The actual page was inspected and cropped; the published excerpt stays below 100,000 pixels, is the only baseline published-artwork reproduction in this study, and sits beside direct discussion of marketing. It is not an openly licensed image.

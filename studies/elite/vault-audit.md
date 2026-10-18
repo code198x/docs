@@ -27,3 +27,7 @@ Future reference subjects are already retained or adequately scoped within exist
 The 18 October follow-up reuses VC-1494 (Frontier: Elite II and Frontier: First Encounters) and existing games/elite-dangerous, companies/frontier-developments and people/david-braben. Frontier’s absence as a published focused game entry is explicit: no proposed route is linked. Existing VC-0925 retains GameTek. The new account provides reader questions for VC-1494: how do Newtonian flight, planetary travel, working careers and in-world news change the original experience?
 
 Manda Scott’s credited story/journal work is covered locally and belongs in VC-1494’s future reference treatment; this mention alone does not commission a biography. Tony Dillon/Franke Scheper are documentary credits, not silently promoted to original programmers. Fuel Rats is explained as a player-organised activity within the existing Elite Dangerous subject; a separate community article is not required to make that example intelligible. Stephen Benedetti is a cited company spokesperson, not a claimed original-game participant. No duplicate subject, candidate ID or issue batch was added.
+
+## Illustration credits
+
+Photographers and source-image crop contributors are credited as image authors, not as developers of the game. No biography is commissioned merely because a source image is used. For Elite, Philip Castle is retained explicitly as the box artist in the advertising credit; this pass does not create a duplicate or an unresearched biography.

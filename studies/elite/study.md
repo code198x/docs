@@ -218,6 +218,12 @@ Bell’s surviving development guide is revealing about that shared invention. H
 
 For this study, a comparison with space adventure stories is useful: a small trader, dangerous journeys, strange names and a life beyond the next encounter are familiar fictional pleasures. Specific claims that one film or tabletop game caused a particular feature need creator testimony. We do not need to label every resemblance an influence to enjoy how the game invites that imagination.
 
+![Detail of Acornsoft’s 1984 advertisement showing the illustrated Elite box above the Acornsoft name](advertising/acornsoft-package-1984.png)
+
+*The package was part of the promise. Detail from Acornsoft’s advertisement in Acorn User 27, October 1984, PDF page 19. Box artwork by Philip Castle. Cropped and reduced for discussion of the marketed package; underlying artwork remains with its owners.*
+
+[Original advertising spread](https://acorn.huininga.nl/pub/magazines/Acorn%20User/Acorn_User_Number_027_1984-10_Redwood_Publishing_GB_text.pdf#page=19) · [Excerpt provenance and credits](advertising/README.md).
+
 ## Four decades beyond Lave
 
 The view from the BBC Micro is the beginning of a much longer journey. Follow Elite forward and the tiny white-line planet becomes somewhere you can land; the solitary trader becomes one pilot among other people; the story told around the program becomes something players can help shape.

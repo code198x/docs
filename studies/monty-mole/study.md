@@ -148,6 +148,14 @@ The account is wonderfully concrete. A shop supplied a meeting place. A programm
 
 It is tempting to flatten this into a solitary young genius story because one programmer’s name is such a strong credit. Harrap’s authorship matters. So do the people and arrangements which helped a game reach buyers.
 
+![Detail of Gremlin’s launch advertisement, with Peter Harrap’s name above the Wanted Monty Mole title and a cartoon miner mole](advertising/gremlin-launch-1984.png)
+
+*Gremlin sold the creator as well as the character. Detail from its two-game launch advertisement, Computer & Video Games 35, September 1984, page 25: Harrap’s name appears above Monty. Illustrator uncredited on the inspected page. Cropped and reduced for criticism/review; artwork remains with its owners.*
+
+[Original advertisement](https://worldofspectrum.org/archive/magazines/pages/computer--video-games/35/25) · [Excerpt provenance and credit research](advertising/README.md).
+
+The advertisement places the new programmer beside his character and pairs Monty with Tony Crowther’s *Potty Pigeon*. A new publisher could offer two games while giving each a recognisable author. The cartoon sells a comic adventure before a buyer sees how the game actually looks on a television. [7]
+
 Stewart was equally clear about publicity. The Scargill caricature gave Gremlin a news hook, and getting the game into newspapers, radio and television took deliberate work. Attention did not arrive merely because the subject was topical. [5]
 
 That explains something a screenshot cannot: how a small publisher could put a new character in front of people who were not reading game reviews. The same subject could interest a player as a challenge, a journalist as a news item, and a publisher as a way to establish a name.
@@ -186,3 +194,5 @@ The original’s value is broader than a template. It lets us examine movement, 
 6. *CRASH* 21, October 1985, [“CRASHBack”](https://www.crashonline.org.uk/21/crashback.htm), Monty section. Contemporary reassessment of object changes and route-finding.
 
 The screenshots illustrate selected early encounters; they do not establish a complete playthrough. [Evidence, capture credits and limits](evidence.md) records what was actually observed. The header and jump diagram are original editorial illustrations. All rights in the underlying game remain with their owners; no game media, audio, complete map or walkthrough is distributed.
+
+7. Gremlin Graphics, launch advertisement for *Potty Pigeon* and *Wanted! Monty Mole*, *Computer & Video Games* 35, September 1984, p.25. [Preserved page](https://worldofspectrum.org/archive/magazines/pages/computer--video-games/35/25). Inspected for developer naming, paired launch presentation and character illustration; artist not credited on this page.
