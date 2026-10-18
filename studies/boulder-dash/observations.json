@@ -1,0 +1,184 @@
+{
+  "status": "bounded observations, not complete playthrough",
+  "scripts": [
+    {
+      "script": "boulder-native.json",
+      "steps": [
+        {
+          "action": "run_frames",
+          "frames": 300
+        },
+        {
+          "action": "save_screenshot",
+          "path": "boulder-native-loaded.png"
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "start",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "start",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "run_frames",
+          "frames": 150
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "fire",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "fire",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "run_frames",
+          "frames": 480
+        },
+        {
+          "action": "save_screenshot",
+          "path": "boulder-native-play.png"
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "down",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 15
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "down",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "left",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 15
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "left",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "right",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 25
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "right",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "save_screenshot",
+          "path": "boulder-native-moved.png"
+        }
+      ]
+    }
+  ]
+}

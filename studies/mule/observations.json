@@ -1,0 +1,341 @@
+{
+  "status": "bounded observations, not complete playthrough",
+  "scripts": [
+    {
+      "script": "mule-native.json",
+      "steps": [
+        {
+          "action": "run_frames",
+          "frames": 1800
+        },
+        {
+          "action": "save_screenshot",
+          "path": "mule-native-loaded.png"
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "fire",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "fire",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "run_frames",
+          "frames": 120
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "select",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "select",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "select",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "select",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "select",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "select",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "start",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "start",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "run_frames",
+          "frames": 400
+        },
+        {
+          "action": "save_screenshot",
+          "path": "mule-native-choice.png"
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "fire",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 30
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "fire",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "run_frames",
+          "frames": 180
+        },
+        {
+          "action": "save_screenshot",
+          "path": "mule-native-species.png"
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "fire",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 30
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "fire",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "run_frames",
+          "frames": 600
+        },
+        {
+          "action": "save_screenshot",
+          "path": "mule-native-species-ready.png"
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "fire",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 30
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "fire",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 10
+        },
+        {
+          "action": "run_frames",
+          "frames": 700
+        },
+        {
+          "action": "save_screenshot",
+          "path": "mule-native-map.png"
+        }
+      ]
+    },
+    {
+      "script": "mule-continue.json",
+      "steps": [
+        {
+          "action": "load_snapshot",
+          "path": "mule-land.snapshot"
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "fire",
+                "pressed": true
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 15
+        },
+        {
+          "action": "input",
+          "events": [
+            {
+              "Key": {
+                "name": "fire",
+                "pressed": false
+              }
+            }
+          ]
+        },
+        {
+          "action": "run_frames",
+          "frames": 15
+        },
+        {
+          "action": "run_frames",
+          "frames": 1000
+        },
+        {
+          "action": "save_screenshot",
+          "path": "mule-native-colony.png"
+        }
+      ]
+    }
+  ]
+}
