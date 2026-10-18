@@ -1,0 +1,10 @@
+{
+  "accessed": "2026-10-18",
+  "source_commit": "142b61f37063cb00bc9037f67b19411f257099b1",
+  "sha256": {
+    "advent-source/ODWY0350/advent.c": "e653232f97bc0d0dae003f909201a11f663a71a6e37a83d0810c30907e920724",
+    "advent-source/WOOD0350/advent.for": "a52830ca4bcc5d508290fe89b5507d26fa55441119869e9a6dd5a736ed677fa9",
+    "advent-source/WOOD0350/advent.dat": "ab024845bb60f1ff753b25103de578120db307c672575e7435aeede4c9cc15ff",
+    "jerz.html": "fbaf0255d031554ba05909258ea30cedd7c398b0982aa8709fafe2ad693bbc52"
+  }
+}

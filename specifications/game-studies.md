@@ -66,6 +66,8 @@ Begin with the agreed vintage studies: Spacewar!, Monty Mole, Elite and Lemmings
 
 Apply the charter's admission test to extensions. Independent cultural and historical value can warrant coverage; an immediate programming exercise is not required. Current delivery priorities and the principles remain intact. Wider coverage does not promise another system track, emulator capability or a new navigation collection.
 
-Spacewar is the documentation pilot. Its agreed initial home is the Vault; its interactive examples remain explicitly deferred. Static explanations and companions can be developed and reviewed now. Agree any later interactive work and publication separately; do not let the study quietly commission a new course or feature.
+Spacewar is the documentation pilot. The owner selected Adventure / Colossal Cave as the second study, before returning to the other agreed vintage subjects. Follow its particular play and context; the Spectrum adventure scene and graphical storytelling are useful outward questions, not a compulsory lineage. Its initial draft does not authorise publication or curriculum implementation.
+
+Spacewar’s agreed initial home is the Vault; its interactive examples remain explicitly deferred. Static explanations and companions can be developed and reviewed now. Agree any later interactive work and publication separately; do not let the study quietly commission a new course or feature.
 
 Before publication, verify claims, source interpretation, calculations, links, imagery rights, credits and the actual rendered page. Record what was executed and what remains to be tried with people. Automated checks and an author's review do not replace the existing human publication sign-off.

@@ -19,6 +19,8 @@ verification and how to add activities after the first learner observations.
 | [Recurring progressions](specifications/recurring-progressions.md) | Eight connected learning threads, existing-game placements, gaps and implementation priorities |
 | [Data, memory and tools](specifications/experiments/data-memory-tools.md) | Asset representations, small converters, validation, storage and runtime costs |
 | [Whole-game studies](specifications/game-studies.md) | Play, design, inspirations, culture, production and reception; people, institutions and Vault follow-through |
+| [Spacewar study](studies/spacewar/README.md) | First published investigation and its evidence, companions and capture records |
+| [Adventure study draft](studies/adventure/README.md) | Second investigation: words, world state, caving and home adaptations; owner review pending |
 | [Game brief](specifications/brief.md) | The experience, target, teaching, runnable stages and verification of one game |
 | [Unit](specifications/unit.md) | Guided construction, local explanations, questions and publishing checks |
 | [Content workflow](specifications/content-creation-workflow.md) | Research, agreement, prototyping, authoring and verification |
