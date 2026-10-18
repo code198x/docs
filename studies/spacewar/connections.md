@@ -16,9 +16,20 @@ Checked against the website's main branch during this pass. These are potential 
 | [Graphics and audio](../../specifications/graphics-and-audio.md) | Connect silhouette, motion cues and the physical playing arrangement to intended experience. The pilot does not establish historical audio behaviour. |
 | [Vault specification](../../specifications/vault.md) | Owns historical evidence, credit, responsible interpretation and article review. A study can refer to canonical entries without making those entries about Code198x. |
 
-The initial filename/title inventory did not identify dedicated Spacewar or contributor entries. That is a lead, not proof of absence: check aliases, redirects, existing sections and the structured candidate backlog before opening article issues. The earlier closed website issue #394 concerns PDP systems catalogue coverage, not this study. No new article issues or candidate rows are created in this pass.
+The existing [Game Design](https://code198x.com/vault/design/game-design/), [Game Loop](https://code198x.com/vault/techniques/game-loop/), [Analogue Control](https://code198x.com/vault/hardware/analog-control/), [Trackball](https://code198x.com/vault/hardware/trackball/), [Steering Wheel](https://code198x.com/vault/hardware/steering-wheel/), [Light Gun](https://code198x.com/vault/hardware/light-gun/) and [Physics Engines](https://code198x.com/vault/technologies/physics-engines/) entries provide canonical context. The control comparison now links those device entries rather than proposing duplicate biographies of the hardware. Game Design is already a sourced historical article about designers' practice; the pilot's applied questions belong in complementary explanations, not a replacement history.
 
-## Proposed investigations to develop after review
+Spacewar! already has a row in vault-candidates.md with incoming-link leads. Issue #394 is closed and concerns PDP systems catalogue coverage, not this study. Title/filename, candidates and GitHub issue searches were checked before choosing companion scope; search results are not proof against every possible alias. No new issue batch or duplicate Spacewar candidate is added.
+
+## Companion drafts now written
+
+| Draft | Gap it addresses | Relationship to existing material |
+|---|---|---|
+| [Shooting from a moving ship](companions/shooting-from-a-moving-ship.md) | Inherited launch velocity and interception, with checked stationary- and moving-target calculations | Builds on published coordinates, triangle, angle and fixed-point velocity lessons. Does not replace them or claim they already teach interception. |
+| [What makes a duel worth another go?](companions/designing-a-duel.md) | Resource limits, commitment, risk, feedback and counterplay explained through actual Spacewar rules | An applied design explanation alongside the historical Game Design article and existing Game Feel experiments. Not a new course lineup or a universal design formula. |
+
+Both are readable drafts linked from the study; publication home and a further editorial pass remain open. Existing website articles are linked, not silently overwritten or marked reviewed. Specific expansion proposals are now concrete text rather than only backlog suggestions.
+
+## Later investigation candidates — interactive work deferred
 
 - **Input and continuing motion:** predict a release outcome, observe it and compare the capped-speed Game Feel model with the chosen Spacewar configuration. Do not transfer frame counts or units between them without a defined conversion.
 - **Aiming while moving:** draw the next moment from a recorded state before running it. Distinguish ship motion, launch direction and the opponent's possible response. No new runnable physics tool is commissioned here.
@@ -26,7 +37,7 @@ The initial filename/title inventory did not identify dedicated Spacewar or cont
 - **Design through iteration:** compare one documented early rule or presentation change with its stated purpose, and test whether present-day participants experience the proposed effect. Historical testimony and present-day observations remain separate.
 - **Reaching an audience:** compare what a demonstration, a shared program tape and a packaged retail game ask of their audience. Elite and Monty may later provide retail contrasts; those chapters are not written by this pilot.
 
-These are candidate companions for existing Craft homes. A design claim should become a lesson only when the comparison, limits and reader outcome are clear. None is a new prerequisite or a reason to retrofit every system course.
+The following extensions remain candidates; the two static companion drafts above are the bounded work completed in this pass. Interactive examples are held back at the owner’s request. These extensions could serve existing Craft homes. A design claim should become a lesson only when the comparison, limits and reader outcome are clear. None is a new prerequisite or a reason to retrofit every system course.
 
 ## Where might studies live?
 
