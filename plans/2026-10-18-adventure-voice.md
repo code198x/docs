@@ -1,0 +1,13 @@
+# Let the Adventure study speak through play
+
+Owner request: an editorial pass on the published Adventure study. Keep the comprehensive coverage and evidence, but reduce dry analytical distance and let curiosity, experiments and discoveries carry the explanation. The existing voice specification already calls for this; no new binding rule or scope change is needed.
+
+1. Read `studies/adventure/study.md`, `specifications/writing-voice.md` and `specifications/game-studies.md`. Identify abstractions introduced before the player has a reason to care, repeated methodological qualifications and research-process language.
+2. Edit `studies/adventure/study.md` and correct the stale publication status in `studies/adventure/README.md`: bring requests, objects, puzzles and consequences forward; explain unfamiliar concepts from those examples; retain evidence distinctions, technical depth, versions, collaborators, citations, spoiler disclosures and figure captions. Preserve headings used by live section links and exact pull-quote sentences used by the sync script. No new historical claims or invented game output.
+3. Read the entire revised text as a reading experience, then compare the diff with the original for lost claims or scope changes. Check source numbering, figure/disclosure counts, headings and pull-quote anchors; retain the bibliography verbatim. Save a reviewable reading copy.
+4. Commit/push the canonical docs revision, then sync into the website with `scripts/sync-adventure-study.mjs`. Verify deterministic sync, content/unit checks, production build and the existing Adventure browser checks. No layout, artwork, component, dependency or test changes.
+5. Prepare linked draft docs/website PRs for review, preserve output previews, and clean up task worktrees/builds/processes after verifying remote refs. Merge/deployment await owner review of the revised prose.
+
+## Editorial review
+
+Reworked the introduction and passages throughout the study, leading explanations through the player’s requests and discoveries. The maze, bird, rod/bridge and gold examples now carry more of the design discussion; later sections connect survey work, home editions and authoring to the experience of exploring. The complete account remains substantial (approximately 8,400 whitespace-delimited words including Markdown and bibliography). All headings, tables, figure markup/captions, spoiler summaries, source citation counts and bibliography are preserved. Exact pull-quote anchors remain. Rechecked the clearer scope/reach distinction against Inform Designer’s Manual section32; no historical sources or observed game outcomes were added.
