@@ -1,0 +1,580 @@
+{
+  "referenceEdition": "Spacewar! 3.1, 24 Sep 62",
+  "url": "https://www.masswerk.at/spacewar/",
+  "method": "Automated keyboard inputs in Chromium; browser implementation, not PDP-1 hardware or a human two-player trial.",
+  "browser": "151.0.7922.34",
+  "responses": [
+    {
+      "url": "https://www.masswerk.at/spacewar/modules/spacewar_3_1.js",
+      "bytes": 12119,
+      "sha256": "f84be5748f3d033bbf63f94ebe93814f843052ebb4e63f9f89bec5b8920d59ec"
+    },
+    {
+      "url": "https://www.masswerk.at/spacewar/spacewar_pdp1_engine_ng.js",
+      "bytes": 141437,
+      "sha256": "01d425147f3dc18524d882992678fa477b1993259a67230064e13ec057582b58"
+    }
+  ],
+  "cases": [
+    {
+      "scenario": "baseline",
+      "actions": [
+        {
+          "noInputMilliseconds": 400
+        }
+      ],
+      "configuration": {
+        "id": "spacewar3.1",
+        "fullid": "spacewar3.1",
+        "idparam": "spacewar3.1",
+        "sense": "",
+        "testword": 0
+      },
+      "parameters": {
+        "tno": {
+          "label": "number of torps +1",
+          "min": 4,
+          "max": 63,
+          "value": 33,
+          "default": 33,
+          "shift": false
+        },
+        "tvl": {
+          "label": "torpedo velocity",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        },
+        "rlt": {
+          "label": "torpedo reload time",
+          "min": 1,
+          "max": 255,
+          "value": 16,
+          "default": 16,
+          "shift": false
+        },
+        "tlf": {
+          "label": "torpedo life",
+          "min": 1,
+          "max": 255,
+          "value": 96,
+          "default": 96,
+          "shift": false
+        },
+        "maa": {
+          "label": "spaceship angular acceleration",
+          "min": 1,
+          "max": 24,
+          "value": 8,
+          "default": 8,
+          "shift": false
+        },
+        "sac": {
+          "label": "spaceship acceleration",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        },
+        "the": {
+          "label": "amount of torpedo warpage",
+          "min": 0,
+          "max": 9,
+          "value": 9,
+          "default": 9,
+          "shift": true
+        },
+        "mhs": {
+          "label": "number of hyperspace shots",
+          "min": 1,
+          "max": 16,
+          "value": 8,
+          "default": 8,
+          "shift": false
+        },
+        "hr1": {
+          "label": "hyperspatial displacement",
+          "min": 0,
+          "max": 9,
+          "value": 9,
+          "default": 9,
+          "shift": true
+        },
+        "hr2": {
+          "label": "hyperspatially induced velocity",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        }
+      },
+      "canvas": {
+        "width": 512,
+        "height": 512
+      },
+      "memoryWordsChanged": 35,
+      "memoryBeforeSha256": "2d68fbfa34c3a25e8ade44a31c3dc5603aea4c8cccbc4ff4b697c08eea5f340b",
+      "memoryAfterSha256": "d410f62f48104693c944f53421d7f7a2447b250671430492eb5385e3cf3ebf29",
+      "errors": [],
+      "limitations": "Wall-clock intervals are approximate. Memory changes establish execution, not a particular physical rule or player experience."
+    },
+    {
+      "scenario": "thrust-release",
+      "actions": [
+        {
+          "held": "s",
+          "approximateBrowserMilliseconds": 400
+        },
+        {
+          "released": "s",
+          "approximateBrowserMilliseconds": 400
+        }
+      ],
+      "configuration": {
+        "id": "spacewar3.1",
+        "fullid": "spacewar3.1",
+        "idparam": "spacewar3.1",
+        "sense": "",
+        "testword": 0
+      },
+      "parameters": {
+        "tno": {
+          "label": "number of torps +1",
+          "min": 4,
+          "max": 63,
+          "value": 33,
+          "default": 33,
+          "shift": false
+        },
+        "tvl": {
+          "label": "torpedo velocity",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        },
+        "rlt": {
+          "label": "torpedo reload time",
+          "min": 1,
+          "max": 255,
+          "value": 16,
+          "default": 16,
+          "shift": false
+        },
+        "tlf": {
+          "label": "torpedo life",
+          "min": 1,
+          "max": 255,
+          "value": 96,
+          "default": 96,
+          "shift": false
+        },
+        "maa": {
+          "label": "spaceship angular acceleration",
+          "min": 1,
+          "max": 24,
+          "value": 8,
+          "default": 8,
+          "shift": false
+        },
+        "sac": {
+          "label": "spaceship acceleration",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        },
+        "the": {
+          "label": "amount of torpedo warpage",
+          "min": 0,
+          "max": 9,
+          "value": 9,
+          "default": 9,
+          "shift": true
+        },
+        "mhs": {
+          "label": "number of hyperspace shots",
+          "min": 1,
+          "max": 16,
+          "value": 8,
+          "default": 8,
+          "shift": false
+        },
+        "hr1": {
+          "label": "hyperspatial displacement",
+          "min": 0,
+          "max": 9,
+          "value": 9,
+          "default": 9,
+          "shift": true
+        },
+        "hr2": {
+          "label": "hyperspatially induced velocity",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        }
+      },
+      "canvas": {
+        "width": 512,
+        "height": 512
+      },
+      "memoryWordsChanged": 36,
+      "memoryBeforeSha256": "2d68fbfa34c3a25e8ade44a31c3dc5603aea4c8cccbc4ff4b697c08eea5f340b",
+      "memoryAfterSha256": "a77527f559e85182906ef44a161c989ca8c671b8b9c877bcf123eeb4b7e19923",
+      "errors": [],
+      "limitations": "Wall-clock intervals are approximate. Memory changes establish execution, not a particular physical rule or player experience."
+    },
+    {
+      "scenario": "rotate",
+      "actions": [
+        {
+          "held": "d",
+          "approximateBrowserMilliseconds": 400
+        },
+        {
+          "released": "d",
+          "approximateBrowserMilliseconds": 400
+        }
+      ],
+      "configuration": {
+        "id": "spacewar3.1",
+        "fullid": "spacewar3.1",
+        "idparam": "spacewar3.1",
+        "sense": "",
+        "testword": 0
+      },
+      "parameters": {
+        "tno": {
+          "label": "number of torps +1",
+          "min": 4,
+          "max": 63,
+          "value": 33,
+          "default": 33,
+          "shift": false
+        },
+        "tvl": {
+          "label": "torpedo velocity",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        },
+        "rlt": {
+          "label": "torpedo reload time",
+          "min": 1,
+          "max": 255,
+          "value": 16,
+          "default": 16,
+          "shift": false
+        },
+        "tlf": {
+          "label": "torpedo life",
+          "min": 1,
+          "max": 255,
+          "value": 96,
+          "default": 96,
+          "shift": false
+        },
+        "maa": {
+          "label": "spaceship angular acceleration",
+          "min": 1,
+          "max": 24,
+          "value": 8,
+          "default": 8,
+          "shift": false
+        },
+        "sac": {
+          "label": "spaceship acceleration",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        },
+        "the": {
+          "label": "amount of torpedo warpage",
+          "min": 0,
+          "max": 9,
+          "value": 9,
+          "default": 9,
+          "shift": true
+        },
+        "mhs": {
+          "label": "number of hyperspace shots",
+          "min": 1,
+          "max": 16,
+          "value": 8,
+          "default": 8,
+          "shift": false
+        },
+        "hr1": {
+          "label": "hyperspatial displacement",
+          "min": 0,
+          "max": 9,
+          "value": 9,
+          "default": 9,
+          "shift": true
+        },
+        "hr2": {
+          "label": "hyperspatially induced velocity",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        }
+      },
+      "canvas": {
+        "width": 512,
+        "height": 512
+      },
+      "memoryWordsChanged": 50,
+      "memoryBeforeSha256": "2d68fbfa34c3a25e8ade44a31c3dc5603aea4c8cccbc4ff4b697c08eea5f340b",
+      "memoryAfterSha256": "4938976b13e7531dca8b2c9d3497bb064c441d795064406284b12b41bc1fe94c",
+      "errors": [],
+      "limitations": "Wall-clock intervals are approximate. Memory changes establish execution, not a particular physical rule or player experience."
+    },
+    {
+      "scenario": "fire",
+      "actions": [
+        {
+          "held": "w",
+          "approximateBrowserMilliseconds": 400
+        },
+        {
+          "released": "w",
+          "approximateBrowserMilliseconds": 400
+        }
+      ],
+      "configuration": {
+        "id": "spacewar3.1",
+        "fullid": "spacewar3.1",
+        "idparam": "spacewar3.1",
+        "sense": "",
+        "testword": 0
+      },
+      "parameters": {
+        "tno": {
+          "label": "number of torps +1",
+          "min": 4,
+          "max": 63,
+          "value": 33,
+          "default": 33,
+          "shift": false
+        },
+        "tvl": {
+          "label": "torpedo velocity",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        },
+        "rlt": {
+          "label": "torpedo reload time",
+          "min": 1,
+          "max": 255,
+          "value": 16,
+          "default": 16,
+          "shift": false
+        },
+        "tlf": {
+          "label": "torpedo life",
+          "min": 1,
+          "max": 255,
+          "value": 96,
+          "default": 96,
+          "shift": false
+        },
+        "maa": {
+          "label": "spaceship angular acceleration",
+          "min": 1,
+          "max": 24,
+          "value": 8,
+          "default": 8,
+          "shift": false
+        },
+        "sac": {
+          "label": "spaceship acceleration",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        },
+        "the": {
+          "label": "amount of torpedo warpage",
+          "min": 0,
+          "max": 9,
+          "value": 9,
+          "default": 9,
+          "shift": true
+        },
+        "mhs": {
+          "label": "number of hyperspace shots",
+          "min": 1,
+          "max": 16,
+          "value": 8,
+          "default": 8,
+          "shift": false
+        },
+        "hr1": {
+          "label": "hyperspatial displacement",
+          "min": 0,
+          "max": 9,
+          "value": 9,
+          "default": 9,
+          "shift": true
+        },
+        "hr2": {
+          "label": "hyperspatially induced velocity",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        }
+      },
+      "canvas": {
+        "width": 512,
+        "height": 512
+      },
+      "memoryWordsChanged": 54,
+      "memoryBeforeSha256": "2d68fbfa34c3a25e8ade44a31c3dc5603aea4c8cccbc4ff4b697c08eea5f340b",
+      "memoryAfterSha256": "e12a30a476165afca4ddc1ad62f4b9b725f8b9f41c95d8be9df3374f2c96b55c",
+      "errors": [],
+      "limitations": "Wall-clock intervals are approximate. Memory changes establish execution, not a particular physical rule or player experience."
+    },
+    {
+      "scenario": "hyperspace",
+      "actions": [
+        {
+          "held": "q",
+          "approximateBrowserMilliseconds": 400
+        },
+        {
+          "released": "q",
+          "approximateBrowserMilliseconds": 400
+        }
+      ],
+      "configuration": {
+        "id": "spacewar3.1",
+        "fullid": "spacewar3.1",
+        "idparam": "spacewar3.1",
+        "sense": "",
+        "testword": 0
+      },
+      "parameters": {
+        "tno": {
+          "label": "number of torps +1",
+          "min": 4,
+          "max": 63,
+          "value": 33,
+          "default": 33,
+          "shift": false
+        },
+        "tvl": {
+          "label": "torpedo velocity",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        },
+        "rlt": {
+          "label": "torpedo reload time",
+          "min": 1,
+          "max": 255,
+          "value": 16,
+          "default": 16,
+          "shift": false
+        },
+        "tlf": {
+          "label": "torpedo life",
+          "min": 1,
+          "max": 255,
+          "value": 96,
+          "default": 96,
+          "shift": false
+        },
+        "maa": {
+          "label": "spaceship angular acceleration",
+          "min": 1,
+          "max": 24,
+          "value": 8,
+          "default": 8,
+          "shift": false
+        },
+        "sac": {
+          "label": "spaceship acceleration",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        },
+        "the": {
+          "label": "amount of torpedo warpage",
+          "min": 0,
+          "max": 9,
+          "value": 9,
+          "default": 9,
+          "shift": true
+        },
+        "mhs": {
+          "label": "number of hyperspace shots",
+          "min": 1,
+          "max": 16,
+          "value": 8,
+          "default": 8,
+          "shift": false
+        },
+        "hr1": {
+          "label": "hyperspatial displacement",
+          "min": 0,
+          "max": 9,
+          "value": 9,
+          "default": 9,
+          "shift": true
+        },
+        "hr2": {
+          "label": "hyperspatially induced velocity",
+          "min": 0,
+          "max": 9,
+          "value": 4,
+          "default": 4,
+          "shift": true
+        }
+      },
+      "canvas": {
+        "width": 512,
+        "height": 512
+      },
+      "memoryWordsChanged": 53,
+      "memoryBeforeSha256": "2d68fbfa34c3a25e8ade44a31c3dc5603aea4c8cccbc4ff4b697c08eea5f340b",
+      "memoryAfterSha256": "b2f1c35bdf822580815d6efd7b40bfb3a174ce26e2e62316eef886e1b020248c",
+      "errors": [],
+      "limitations": "Wall-clock intervals are approximate. Memory changes establish execution, not a particular physical rule or player experience."
+    }
+  ],
+  "date": "2026-10-18",
+  "scope": "Bounded automated browser observations only; no complete match, human trial or original hardware check.",
+  "visualReview": {
+    "baseline": "Two ship silhouettes, background points and central feature visible after startup.",
+    "thrust-release": "Exhaust visible while s held; this short capture does not quantify acceleration or inertia.",
+    "rotate": "Orientation differs during d input; no angular-rate claim.",
+    "fire": "A projectile visible after w input; no ammunition-count or hit-probability claim.",
+    "hyperspace": "The lower-left ship disappears after q input; no survival probability or later re-entry claim."
+  },
+  "archiveIdentity": "The emulator module is labelled 3.1 and records an upstream tape URL; an independent byte comparison to that archival tape remains outstanding."
+}
