@@ -1,0 +1,25 @@
+{
+  "note": "Identity of privately inspected original-document copies. No source scans reproduced here; bibliography supplies public citations.",
+  "documents": [
+    {
+      "document": "mule-original-manual.pdf",
+      "sha256": "5d605abc65de70888108fce70051e02a560c2017d1832f42d846095f37ef427c",
+      "bytes": 7419324
+    },
+    {
+      "document": "mule-manual.pdf",
+      "sha256": "9844b9d22f96eda248e15acdf69a507ffe0d918a22947d00eb9622fb2062cb4a",
+      "bytes": 4982826
+    },
+    {
+      "document": "mule-refcard.pdf",
+      "sha256": "ad0315a3dd837d1c1a6a4fd1c2ca391095aa4bdaee088fe74a5d917bf1760cfb",
+      "bytes": 843363
+    },
+    {
+      "document": "mule-package.pdf",
+      "sha256": "e04afd98d0e4a8791af980560533a3d762b75b89e3ab6d6c4014e91e77e063dc",
+      "bytes": 2355467
+    }
+  ]
+}

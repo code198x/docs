@@ -43,3 +43,13 @@ The owner approved the amendment, now adopted in [umbrella PR #191](https://gith
 Inspected advertising excerpts are now added for Monty (C+VG 35, p.25) and Elite (Acorn User 27, PDF p.19), each within the shared one-image/100,000-pixel baseline, beside direct marketing/package discussion. Their manifests record crops and research into credits. Source leads earlier in this file remain the dated research trail, not independent clearances.
 
 Gary Timmons’s Lemmings character sketches are a worthwhile design-note source. Dailly identifies them and their purpose, but its image returned HTTP 500 during this pass. No uninspected drawing is copied. No surviving Manic Miner notebook image or suitably cleared design-note reproduction is asserted here. Design notes should be treated as authored documents, with creator, date/purpose, source and reuse basis checked, rather than assumed free because they are working papers.
+
+## Boulder Dash and M.U.L.E. study pass — 18 October 2026
+
+- Peter Liepa: the portrait on the rights-holder’s interview page has no separately verified photo licence. Record the lead; do not treat the page’s authorised interview transcription as a photo licence. Source: https://boulder-dash.com/boulder-dash-interview-with-peter-liepa/.
+- Dani Bunten Berry / Ozark: the original EA package includes Allen Say’s maker photograph and printed credits. This study uses its single small published-artwork allowance for Lou Beach’s front cover instead; do not add the photograph as a second package excerpt or silently treat it as openly licensed. Source: https://www.mocagh.org/ea/mule.pdf.
+- Roy Glover: the 2024 participant interview includes identified historical and modern photographs, but no verified open reuse terms were found. Source: https://www.carpeludum.com/2024-interview-with-roy-glover-composer-of-the-m-u-l-e-theme-music/. Keep as a permission lead, no image copied.
+- Bunten design notes: The Strong’s finding aid establishes holdings and restrictions. No underlying design-note images were inspected or copied; archive description and access do not grant reproduction rights.
+- A newly uploaded illustrated likeness labelled as Dani on Commons is not an archival photograph; it is not used as historical evidence or substituted for a sourced portrait.
+
+No rights-holder was contacted; none of these leads implies permission. Captures and original explanatory diagrams illustrate the drafts while portrait rights remain unresolved.
