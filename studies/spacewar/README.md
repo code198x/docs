@@ -43,3 +43,7 @@ A human should review the draft and source interpretations, including the disagr
 The study includes four original explanatory diagrams and three self-captured game-display PNGs. The diagrams illustrate concepts; they are not captured game frames or a reconstruction of the PDP-1 implementation. [Capture credits, purpose and conditions](captures/README.md) distinguish the game imagery from our own prose and diagrams. No third-party photograph, borrowed screenshot, source file, game binary, audio or video is bundled.
 
 Interactive examples are deliberately deferred at the owner's request. This revision contains static images, explanations and worked calculations. It neither implements a simulator nor commits a later interactive feature to the delivery queue.
+
+## Editorial website prototype
+
+A separate draft website change develops opt-in article openings, integrated breadcrumbs, wider/captioned figures and pull quotes. Its development-only catalogue preview records the canonical documentation revision; use its sync script after text revisions rather than maintaining two independent essays. This study's publication home remains open. Header illustration is contemporary editorial artwork, while the existing game frames remain unchanged, credited captures.

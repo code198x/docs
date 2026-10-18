@@ -56,3 +56,9 @@ The [standing approach](../../specifications/game-studies.md#lives-constraints-a
 Existing VC-2870 (Russell), VC-2889 (TMRC), VC-2893 (Stanford), VC-2896 (Toho) and VC-2897 (Rolling Stone) receive more precise research leads. Retained funding, shared-access and wartime-context candidates on PR #101 remain the theme homes. Tolkien's name in Brand's report also earns a coverage check and a bounded candidate lead, distinct from the existing Lord of the Rings/Shadows of Mordor game row. No issue batch, regional category or revised delivery order follows from these additions.
 
 Later studies can ask what changed through import, localisation, licensing, migration, copying, new networks and changing markets. They need their own evidence, including local sources and language limits. The Spacewar evidence does not support filling a country-by-country comparison of Japan, Britain, Europe, the USA, South America and the Soviet bloc; it supports the specific journeys described here.
+
+## Further static reading and visual treatment
+
+The combined play situation brings movement, aiming and resources together before the ending sequence; alternative input mappings extend the controller discussion. A dated institutional price-list summary adds a concrete machine-access question without asserting MIT's purchase cost. Existing PDP-1, DEC and access/funding candidates remain the relevant research records; no additional candidate batch is required.
+
+The website draft demonstrates reusable article-opening, figure and pull-quote structures in a development-only catalogue route, not an agreed new top-level Studies home. The canonical study is synced at a recorded revision. The original header artwork is labelled as illustration; game captures and explanatory diagrams retain their existing identities and credits.

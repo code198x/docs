@@ -84,6 +84,18 @@ Those rules make timing and restraint part of the duel. A shot costs ammunition,
 
 The star has a surprise of its own. With this edition's default switches, contact sends a ship to the screen's antipoint, at the corner boundary, and clears its velocity. The lethal-star switch changes that to destruction. Learn which rule you're playing: the star isn't an unconditional death trap in every version or configuration. [10][source-10]
 
+## Reading the next few seconds
+
+Imagine you have just missed a shot. Your opponent is passing below you, your ship is still travelling right, and the star is pulling you inward. Turning towards the opponent changes your heading immediately, but it hasn't yet put your next torpedo on a useful course.
+
+There are several things to read together. Where will the opponent be when the shot arrives? How much sideways movement will your own ship pass on to it? If you burn the engine to improve the angle, where will that leave you when the opponent fires back?
+
+You could fire as soon as the tube is ready, making the other pilot deal with a threat. You could save the shot and keep turning. You could spend fuel to change the approach, or coast and let gravity continue changing it. Each is a different bet about the next few seconds. Hyperspace offers a way out of ordinary movement, with its own wait and danger on return.
+
+The controls fit in a few fingers; the decision doesn't fit in one button. Even knowing all the rules leaves plenty to judge. Your opponent can change the situation while you are deciding, and a useful manoeuvre can become an awkward one before you've finished it.
+
+Once you're at the controls, look for your own example: a moment when aiming, movement and survival asked for different things. That is where the small set of rules begins to produce a much larger game.
+
 ## When a round ends
 
 Both pilots can lose the same exchange. In the round captured below, both ships broke up and the score stayed level. In the browser, a fresh pair appeared with new supplies after the ending delay.
@@ -174,6 +186,10 @@ Other devices give games different information. Here are some possible uses:
 
 The device supplies input; the game chooses its meaning. A joystick's position can set a target, a speed or a turning rate. [9][source-9] The same hand movement can mean something quite different after the designer has interpreted it.
 
+A familiar control can bring an unhelpful expectation with it. You might expect pushing towards a target to move you towards it, and releasing the control to stop you. Spacewar asks you to manage a heading and a continuing velocity instead. A different controller still has to teach that relationship.
+
+Imagine mapping a stick's sideways position to a rate of turning. A little movement could turn slowly; a larger movement could turn faster. That would give the pilot another degree of control, while asking them to judge an amount as well as a direction. Mapping it directly to a heading would produce a different task again. These are alternative designs to compare, not claims about the original control boxes. More possible input values give us more decisions about their meaning.
+
 Spacewar! lets us keep the question concrete: what should turning a control change, and what should happen when we let go? Our [Game Feel](https://code198x.com/craft/game-feel/) experiments compare immediate movement with acceleration and different release behaviour. The input is only the beginning of the response.
 
 ## More hands, a better game
@@ -201,6 +217,12 @@ These examples give us a clearer history than awarding one game every “first�
 ## How do you share a game in 1962?
 
 There was no home-computer cassette to take to the counter. The April 1962 *Decuscope* account offered symbolic and binary program tapes through Russell. Reaching another player meant reaching someone with a suitable computer and the means to run the program. The same account describes people watching as well as playing. [5][source-5]
+
+Access began well before anyone picked up a controller. The Computer History Museum's catalogue describes a February 1963 DEC price list with a **$120,000 base price** for the PDP-1. That is a dated machine price, not the cost of a Spacewar package or a bill for MIT's installation. [16][source-16]
+
+Put the offer of program tapes beside that figure. The program could travel without a retail box, but its audience still needed access to substantial equipment. Someone had to provide the machine, keep it working and allow people to spend time at it. Distributing a program and making it accessible are different parts of the task.
+
+The emulator changes that starting point. We can open a browser where the original players needed access to a particular kind of computer. We gain a route into the game, while encountering different keys, display behaviour and timing. It is easier to reach the rules than to recreate the room around them.
 
 A retail game's box has to attract a buyer and promise an experience. Spacewar! could put an experience in front of an audience directly. The museum describes it being used to demonstrate the PDP-1 to prospective customers. Here was something a visitor could watch happening, with human decisions producing visible results. [1][source-1]
 
@@ -250,6 +272,8 @@ Those are questions we can take into our own work. Spacewar! gives us a small en
 14. [Edward Elmer Smith in collaboration with Lee Hawkins Garby: *The Skylark of Space*, 1928 serial text, title credit and chapter X, “The Rescue”](https://www.gutenberg.org/files/20869/20869-h/20869-h.htm). This transcription does not establish which edition the Spacewar creators read.
 15. [Stanford Artificial Intelligence Laboratory: *The First Ten Years of Artificial Intelligence Research at Stanford*, AIM-228, dated July 1973, title and abstract; archived PUB source](https://www.saildart.org/FINAL.PUB%5BD%2CLES%5D). The title also carries report number STAN-CS-74-409.
 
+16. [Computer History Museum: DEC PDP-1 price list, dated 1 February 1963, accession 102652408, catalogue description](https://www.computerhistory.org/pdp-1/ad6b7367b8cbd0133326c23c49a029d0/). The base-price figure follows the museum's catalogue summary.
+
 [source-1]: https://www.computerhistory.org/pdp-1/spacewar/
 [source-2]: https://bitsavers.computerhistory.org/pdf/dec/decus/confProceedings/DECUS_1962.pdf#page=39
 [source-3]: https://archive.computerhistory.org/resources/access/text/2012/08/102746453-05-01-acc.pdf#page=14
@@ -267,3 +291,5 @@ Those are questions we can take into our own work. Spacewar! gives us a small en
 [source-14]: https://www.gutenberg.org/files/20869/20869-h/20869-h.htm
 
 [source-15]: https://www.saildart.org/FINAL.PUB%5BD%2CLES%5D
+
+[source-16]: https://www.computerhistory.org/pdp-1/ad6b7367b8cbd0133326c23c49a029d0/
