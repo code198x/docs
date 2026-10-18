@@ -21,3 +21,9 @@ Checked 18 October 2026 against website origin/main `86f8c5abd4285904a33ff75633c
 | Spacewar!, Adventure, Monty Mole | First two studies published. Monty is paired draft, with existing VC-2242 reference candidate; no link to an unmerged study route. |
 
 Future reference subjects are already retained or adequately scoped within existing company/book/game coverage. This audit is a disposition record, not a second candidate backlog. Specific film/tabletop influence claims remain an evidence question; resemblance alone is insufficient to add a chain of cultural entries.
+
+## Heritage follow-through
+
+The 18 October follow-up reuses VC-1494 (Frontier: Elite II and Frontier: First Encounters) and existing games/elite-dangerous, companies/frontier-developments and people/david-braben. Frontier’s absence as a published focused game entry is explicit: no proposed route is linked. Existing VC-0925 retains GameTek. The new account provides reader questions for VC-1494: how do Newtonian flight, planetary travel, working careers and in-world news change the original experience?
+
+Manda Scott’s credited story/journal work is covered locally and belongs in VC-1494’s future reference treatment; this mention alone does not commission a biography. Tony Dillon/Franke Scheper are documentary credits, not silently promoted to original programmers. Fuel Rats is explained as a player-organised activity within the existing Elite Dangerous subject; a separate community article is not required to make that example intelligible. Stephen Benedetti is a cited company spokesperson, not a claimed original-game participant. No duplicate subject, candidate ID or issue batch was added.
