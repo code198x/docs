@@ -46,3 +46,7 @@ No candidate records or GitHub issues were added in this expansion. A source aut
 Scott Adams and Adventure International reuse VC-0717. Alexis Adams’s scenario contribution is retained within that combined coverage scope, rather than erased or turned into an automatic new biography issue. Pirate’s Adventure is a bounded primary-article example of interpreter/data reuse, not commissioned as a separate whole-game study. BYTE already has magazines/byte coverage. None of these additions changes the candidate CSV.
 
 Bob Liddil is used here as a named contemporary reviewer. The citation provides the context this study needs; it does not commission a biography or create a candidate merely because a review is cited. The BYTE editorial note is signed GW; the study preserves that signature and does not expand it to a named biography without source verification.
+
+## Dizzy onward connection
+
+Reuse the existing Dizzy game entry and Oliver Twins biography. The creators’ retrospective explains a text-adventure influence, including Zork; the study does not infer a direct Adventure-to-Dizzy chain. No candidate or biography duplicates are needed.
