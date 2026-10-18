@@ -4,6 +4,16 @@ Game studies investigate what playing a game is like, how it works and how it ca
 
 Apply [the charter](../PROJECT.md), [writing voice](writing-voice.md) and the [Vault evidence standard](vault.md). Studies connect play, design, technology, art, sound, people, culture, production, distribution, marketing, business and reception where the evidence supports useful questions. These are lines of enquiry, not compulsory equal-length sections. Explain the actual release and configuration being examined; distinguish later ports, variants and recollections.
 
+## Site placement
+
+Game Studies initially lives within the Vault at `/vault/studies/`, with individual studies such as `/vault/studies/spacewar/` and supporting companions beneath them. This is the agreed initial placement, not a permanent restriction: the collection may become an independent section later.
+
+Keep studies distinct from the Vault's encyclopaedic game entries. A study examines the whole experience in depth; a game entry supplies focused reference coverage. Link them where useful without duplicating their bodies or adding a new subject category. Make the collection discoverable from the Vault and relevant articles; no new primary navigation item is required now.
+
+Keep stable study identities and canonical content independent of the current URL parent. Shared placement metadata owns generated links and breadcrumbs. If the collection moves later, retain redirects from published study and companion URLs, update discovery links and preserve one canonical destination per page. An initial Vault home does not require implementing the future move now.
+
+Placement does not constitute historical review or deployment approval. Apply the existing human sign-off, unreviewed notice, noindex and sitemap conventions. Do not list proposed studies as coming soon.
+
 ## Follow the game outwards
 
 Investigate its inspirations and cultural circumstances as part of every study. Look beyond earlier video games: books, film, music, art, physical play, science, work, family, place and institutions can all matter. Political and economic events may affect people's opportunities, resources, decisions or audiences. Follow demonstrated connections rather than imposing a theme on every game.
@@ -56,6 +66,6 @@ Begin with the agreed vintage studies: Spacewar!, Monty Mole, Elite and Lemmings
 
 Apply the charter's admission test to extensions. Independent cultural and historical value can warrant coverage; an immediate programming exercise is not required. Current delivery priorities and the principles remain intact. Wider coverage does not promise another system track, emulator capability or a new navigation collection.
 
-Spacewar is the documentation pilot. Its publication home remains undecided, and its interactive examples are explicitly deferred. Static explanations and companions can be developed and reviewed now. Agree any later interactive work and site placement separately; do not let the study quietly commission a new course or feature.
+Spacewar is the documentation pilot. Its agreed initial home is the Vault; its interactive examples remain explicitly deferred. Static explanations and companions can be developed and reviewed now. Agree any later interactive work and publication separately; do not let the study quietly commission a new course or feature.
 
 Before publication, verify claims, source interpretation, calculations, links, imagery rights, credits and the actual rendered page. Record what was executed and what remains to be tried with people. Automated checks and an author's review do not replace the existing human publication sign-off.

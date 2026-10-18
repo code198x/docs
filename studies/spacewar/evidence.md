@@ -49,7 +49,7 @@ These works retain their own terms. Links and restrained original paraphrase are
 5. Investigate audio/acoustic conditions before writing a historical sound account. The inspected browser engine contains no audio API references; that does not establish historical silence or the room's sound.
 6. Identify period demonstrations and distribution material in more depth before quantifying reach, commercial effects or production resources. Do not invent a retail package for this game.
 7. Choose permitted imagery and record source/credit/reuse terms under existing policy. Research screenshots are not article-ready publication assets. A CRT photograph, browser capture and illustrative diagram must remain distinguishable.
-8. Human editorial review of the historical claims and design interpretation; then agree site placement and verify the rendered page. None of these steps changes the standing delivery queue automatically.
+8. Human editorial review of the historical claims and design interpretation; then verify the rendered page at the agreed initial Vault home. None of these steps changes the standing delivery queue automatically.
 
 ## Voice revision
 
@@ -125,7 +125,7 @@ The combined-play passage is an authored thought experiment based on the establi
 
 S10: Computer History Museum catalogue, DEC *PDP-1 Price List*, dated 1 February 1963, accession 102652408, catalogue description: https://www.computerhistory.org/pdp-1/ad6b7367b8cbd0133326c23c49a029d0/ . The museum gives $120,000 as the base price. This is an attributed institutional summary; it does not establish options, an installation total, MIT's acquisition cost or a universal price across countries/dates. The four-page scan's text extraction omits the base-price column; browser screenshot retrieval was not usable and direct retrieval returned `HTTP Error 403: Forbidden`. No optional display price or claim of visually reading that column is included. The public catalogue and its linked original remain available for a future primary-page check.
 
-The website prototype is a development-only catalogue route on a separate draft branch. Its original header illustration is labelled and kept apart from game captures. The canonical text remains this document; the website sync script records the source revision and hashes. Editorial pull quotes repeat this article's prose as emphasis, with no invented attribution. Wider figure placement changes presentation, not the PNG/SVG evidence. User approval covers this prototype and draft change, not publication, a reviewed flag or a decided Studies collection.
+The paired website draft now supplies dedicated Vault study routes and an index; the reusable catalogue specimen remains development-only. Its original header illustration is labelled and kept apart from game captures. The canonical text remains this document; the website sync script records the source revision and hashes. Editorial pull quotes repeat this article's prose as emphasis, with no invented attribution. Wider figure placement changes presentation, not the PNG/SVG evidence. User approval covers this prototype and draft change, not publication, a reviewed flag or a decided Studies collection.
 
 ## S11–S14: home-computer routes
 
