@@ -30,3 +30,7 @@ The completed expansion explains the whole game and parser/text-adventure princi
 Ruff, local destinations, SVG parsing, unchanged candidate validation (2,848 rows) and ten existing validator tests pass. The standalone reading draft uses the approved article styles, five section-navigation links, wrapping semantic tables and keyboard-operable puzzle disclosures. Browser checks cover 1,440, 390 and 320 pixels with all disclosures open, image loading, narrow-screen source selection, anchors, overflow and axe. The first phone pass exposed an inherited scrolling-table accessibility issue; using semantic table layout with wrapping resolves it without suppressing the check. Desktop/phone figures and full reading previews are retained for review.
 
 Publication remains unapproved. The full ending is source-inspected rather than played; human play/read, original-hardware verification, exact Level 9 issue identification and proportionate historical terminal captures remain explicit limits. No new candidate IDs/issues or changes to the current curriculum queue are introduced.
+
+## Website integration follow-up
+
+The independent website visual review found that the wide maze diagram’s loop arrows touched its bottom labels. Move both label baselines from 362 to 382, preserving the explanatory meaning and phone artwork. Commit this source correction before syncing it into the website. Verify clear separation in the rendered wide figure; retain source hashes and the new canonical revision.
