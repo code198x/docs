@@ -13,3 +13,11 @@ These are editorial dispositions, not a compulsory reading sequence or a second 
 | Where can we explore rules and feedback as design? | The Craft is a relevant future explanation home. Avoid pretending a specific parser-design lesson is already published. Explain the local behaviour before offering onward reading. |
 
 Do not schedule an Adventure remake or another platform track. A tiny original room/object experiment might eventually earn a place, but no implementation or curriculum work is commissioned here. Keep text, source, naming and presentation rights separate if that proposal is pursued.
+
+## Added by the comprehensive pass
+
+- Parser grammar, scope, disambiguation and state explanations are substantial parts of the study itself. They are not deferred to links or treated as if a Craft parser module already exists.
+- Zork’s original designers and Inform’s authoring documentation provide explicit, bounded comparisons. Reuse people/dave-lebling and people/marc-blank; existing candidate VC-0772 covers Tim Anderson and VC-2539 covers Inform/Graham Nelson. No unbuilt public routes.
+- Microsoft Adventure’s June 1981 IBM manual establishes Gordon Letwin’s implementation credit and the bootable PC edition. Existing Microsoft/IBM coverage supplies company context; a dedicated version study can later examine its complete packaging, execution and reception.
+- The selected Quill manual is 1985 Oric/Atmos. The Quill and Tim Gilberts coverage provide the natural outward route without labelling this manual as Spectrum evidence.
+- Regional, linguistic, access and authoring questions remain local and specific: institutional accounts, English vocabulary, particular hardware/media and a British authoring scene. No global history or compulsory progress from text to graphics is inferred.

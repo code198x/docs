@@ -24,3 +24,25 @@ Checked 18 October 2026 against current website coverage, aliases, the canonical
 | Kentucky, Colossal Cave, Bedquilt | Place context within the game account. No new category, travel content or claim that the whole game is an exact physical map. |
 
 No missing public route is linked. Further claims about The Quill, home editions or later graphical works require the relevant artefact and creator evidence; their relevance is a research lead rather than a proven chain of influence. Check newer issues and active candidate branches again before promoting any candidate to commissioned work.
+
+## Expanded parser/design sources and commercial edition credits
+
+The comprehensive pass adds named credits and practitioner sources without commissioning a biography for every citation. Checked current filenames and candidate subjects, and the relevant Microsoft/Infocom/Zork body sections.
+
+| Subject | Disposition |
+|---|---|
+| Graham Nelson and Inform | Existing VC-2539, “Inform and Graham Nelson”. Reuse its identity. The Designer’s Manual and Craft of Adventure are later primary design sources, not Adventure development credits; no proposed public Inform route is linked. |
+| Dave / P. David Lebling | Existing people/dave-lebling. Source author and Zork contributor; reuse. |
+| Marc S. Blank | Existing people/marc-blank. Coauthor of the 1979 Zork paper; reuse. |
+| Tim / Timothy A. Anderson | Existing VC-0772. Distinct from the covered Chris Anderson. Reuse the candidate; cite the paper and attributed 1985 recollections accurately. |
+| Stu Galley | Context within existing Infocom/Zork coverage and primary article credits. The present study needs the bounded practitioner-source and porting context; no separate biography is commissioned by this citation. Reassess scope during future dedicated Infocom production coverage. |
+| Gordon Letwin | The IBM manual explicitly credits this Microsoft Adventure implementation. Existing Microsoft coverage supplies the company context; retain the implementer credit in this study. A dedicated biography is not needed to explain the one documented edition, and none is commissioned here. |
+| IBM and Microsoft | Existing companies/ibm and companies/microsoft; June 1981 product documentation, not a change to any platform-support claim. |
+| Graeme Yeandle | Existing people/graeme-yeandle and tools/the-quill. Reuse. |
+| Tim Gilberts | Existing people/tim-gilberts. Credit the 1985 Oric/Atmos conversion; do not transfer that edition’s particular features to the original Spectrum release. |
+
+No candidate records or GitHub issues were added in this expansion. A source author's mention does not establish involvement in Adventure. A comparison with an engine does not prove its direct descent or make its features part of the 350-point game.
+
+Scott Adams and Adventure International reuse VC-0717. Alexis Adams’s scenario contribution is retained within that combined coverage scope, rather than erased or turned into an automatic new biography issue. Pirate’s Adventure is a bounded primary-article example of interpreter/data reuse, not commissioned as a separate whole-game study. BYTE already has magazines/byte coverage. None of these additions changes the candidate CSV.
+
+Bob Liddil is used here as a named contemporary reviewer. The citation provides the context this study needs; it does not commission a biography or create a candidate merely because a review is cited. The BYTE editorial note is signed GW; the study preserves that signature and does not expand it to a named biography without source verification.
