@@ -1,6 +1,6 @@
 # Spacewar! whole-game study pilot
 
-**Status: draft for owner review, 18 October 2026.** The agreed initial home is Game Studies within the Vault; publication approval remains open. This is authoring work under [the charter](../../PROJECT.md), not a new module, lesson prerequisite or claim of PDP-1 support. A paired draft website change supplies the unpublished visual preview and two supporting Vault drafts; nothing is merged or deployed.
+**Status: owner-approved release, 18 October 2026.** Game Studies lives within the Vault; docs #106 and website #824 are merged. Historical fact-check and paired human play remain outstanding, so the website retains its unreviewed notice and noindex status. This is authoring work under [the charter](../../PROJECT.md), not a new module, lesson prerequisite or claim of PDP-1 support. The paired website release supplies the illustrated study and two supporting Vault entries. Its deployment record is in website #824.
 
 Read [the study](study.md) first. [Evidence](evidence.md) identifies sources, claim limits and outstanding work. [Observations](observations.json) records the selected browser implementation and bounded execution checks. [Connections](connections.md) separates existing destinations from gaps and records the agreed initial placement. The [plan](../../plans/2026-10-18-spacewar-study-pilot.md) records the task boundary.
 
@@ -36,9 +36,9 @@ The [whole-game study specification](../../specifications/game-studies.md) recor
 
 The pilot also follows particular lives, resources and routes of exchange: Russell's recollected railway/electronics and theatre interests, Japanese films watched in Boston, the club's controller materials and the different social setting of later Stanford play. These are bounded examples, not a survey of national computing cultures. The standing specification covers how later studies should investigate regional differences and changing people without flattening either.
 
-## Before publication
+## Remaining human review
 
-A human should review the draft and source interpretations, including the disagreements and unknowns in evidence.md. Conduct a two-player reading/play session on the named setup, and refine the activity instructions from what happens. Review the selected screenshots and original diagrams, including their credits, captions and text alternatives. Then check the rendered website page, links, keyboard use, narrow screens and source presentation. Do not set a reviewed flag or claim those checks have happened on the strength of this draft.
+The owner approved publication without setting historical reviewed flags. A human should review the draft and source interpretations, including the disagreements and unknowns in evidence.md. Conduct a two-player reading/play session on the named setup, and refine the activity instructions from what happens. Review the selected screenshots and original diagrams, including their credits, captions and text alternatives. Then check the rendered website page, links, keyboard use, narrow screens and source presentation. Do not set a reviewed flag or claim those checks have happened on the strength of this draft.
 
 The study includes four original explanatory diagrams and three self-captured game-display PNGs. The diagrams illustrate concepts; they are not captured game frames or a reconstruction of the PDP-1 implementation. [Capture credits, purpose and conditions](captures/README.md) distinguish the game imagery from our own prose and diagrams. No third-party photograph, borrowed screenshot, source file, game binary, audio or video is bundled.
 
@@ -46,10 +46,10 @@ Interactive examples are deliberately deferred at the owner's request. This revi
 
 ## Editorial website prototype
 
-A separate draft website change develops opt-in article openings, integrated breadcrumbs, wider/captioned figures and pull quotes. Its Vault study renderer records the canonical documentation revision; use its sync script after text revisions rather than maintaining two independent essays. The index is /vault/studies/ and this study is /vault/studies/spacewar/, with companions beneath it. The catalogue specimen remains development-only. Header illustration is contemporary editorial artwork, while the existing game frames remain unchanged, credited captures.
+The merged website change supplies opt-in article openings, integrated breadcrumbs, wider/captioned figures and pull quotes. Its Vault study renderer records the canonical documentation revision; use its sync script after text revisions rather than maintaining two independent essays. The index is /vault/studies/ and this study is /vault/studies/spacewar/, with companions beneath it. The catalogue specimen remains development-only. Header illustration is contemporary editorial artwork, while the existing game frames remain unchanged, credited captures.
 
 ## Home versions and onward routes
 
-The broad input-method survey has become onward links; original controller history and the thrust-response explanation remain in the study. A short home-computer passage links to draft Vault entries for Budge's Apple II Space War and Star Control, with the latter's arcade intermediary named. Their detailed treatment belongs in those entries. Publication of the study depends on its linked destinations being present in the same release.
+The broad input-method survey has become onward links; original controller history and the thrust-response explanation remain in the study. A short home-computer passage links to supporting Vault entries for Budge's Apple II Space War and Star Control, with the latter's arcade intermediary named. Their detailed treatment belongs in those entries. Publication of the study depends on its linked destinations being present in the same release.
 
 One or more original Spacewar-inspired curriculum games are a proposal in work.md, without assigned systems, development work or a delivery commitment. The game-study specification distinguishes selective examples and fuller games, with original implementation/presentation and reuse/naming checks.
