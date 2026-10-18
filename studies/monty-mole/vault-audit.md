@@ -17,3 +17,7 @@ Checked 18 October 2026 against website origin/main `86f8c5abd4285904a33ff75633c
 | Adventure, Spacewar!, Elite | Existing published studies for the first two; existing game entry for Elite and a paired unpublished study. No public link to an unmerged paired route. |
 
 The study links to current Craft and Adventure material only where it helps explain a concrete question. It does not claim a new Monty lesson exists. Existing candidate subjects are enough to retain the obvious future reference work; no new stable IDs are needed.
+
+## Illustration credits
+
+Photographers and source-image crop contributors are credited as image authors, not as developers of the game. No biography is commissioned merely because a source image is used. For Elite, Philip Castle is retained explicitly as the box artist in the advertising credit; this pass does not create a duplicate or an unresearched biography.

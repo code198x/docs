@@ -140,6 +140,12 @@ Russell's interests had already taken him through several worlds. In his 2008 in
 
 That last qualification leaves room for a person beyond the invention we remember. Here is someone talking about things he enjoyed doing and how his attention shifted. Spacewar! was one thing he made along the way.
 
+![Steve Russell at the Computer History Museum in 2011, wearing a PDP-1 restoration team badge](photos/steve-russell-2011.png)
+
+*Steve Russell at the Computer History Museum in January 2011, decades after the original game. Photograph by vonguard, existing crop by Jonny Nixon, CC BY-SA 2.0; converted to PNG without further cropping.*
+
+[Photograph source and credit](https://commons.wikimedia.org/wiki/File:Stephen_Russell_2011_(cropped).jpg) · [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+
 ## A place to make it happen
 
 Enthusiasm needed access to a machine. Graetz contrasts operator-mediated work on Harvard's IBM 704 with running programs himself on MIT's TX-0. [4][source-4]

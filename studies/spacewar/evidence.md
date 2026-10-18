@@ -139,3 +139,7 @@ The Apple II entry uses a bounded comparison to the original duel, rather than a
 Source retrieval limits: the Games Database manual link returned 404; Lemon Amiga manual returned 403. The Steam bundle's manual was inspected and identified as Star Control II, so it was rejected for claims about the first game. The original game's designer article supplies the retained primary detail instead. These failures do not support a claim that a first-game manual was verified.
 
 The generic device API references are removed with the broad controls survey; the remaining numbered study references are renumbered consecutively. The original thrust-response diagram remains relevant. The curriculum text is explicitly a proposal/authoring policy, not historical evidence or legal clearance.
+
+## Sourced illustration pass — 18 October 2026
+
+Owner approved publication and sourced images after umbrella PR #191. A verified licensed public-event photograph is recorded in photos/manifest.json and photos/README.md. Subject identity, occasion, date, author, exact licence, transformations, dimensions and source/output hashes were checked; original pixels were visually inspected. Image licensing remains separate from the prose.

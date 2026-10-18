@@ -36,3 +36,9 @@ The inspected Just Dig briefing supplies a second own capture: ten lemmings, 10%
 Original schematics have separate desktop/phone compositions: preparing a route while containing the crowd; and three independent kinds of deadline. They do not reproduce a level, actual release-rate formula, sprite or source code. Header artwork is an imagined landscape, not a screenshot, actual map or copied cover. artwork/provenance.json records exact built-in image-generation prompt, derivatives and hashes.
 
 The reading copy reuses the approved article composition with full-width opening, integrated breadcrumbs, wide figures and duplicate pull quotes hidden from assistive technology. It is a review artefact, not an integrated/deployed website change. Original prose/diagrams and third-party game rights remain distinct. Owner reading and historical/editorial sign-off remain open.
+
+## Sourced illustration pass — 18 October 2026
+
+Owner approved publication and sourced images after umbrella PR #191. A verified licensed public-event photograph is recorded in photos/manifest.json and photos/README.md. Subject identity, occasion, date, author, exact licence, transformations, dimensions and source/output hashes were checked; original pixels were visually inspected. Image licensing remains separate from the prose.
+
+Design-note lead: Dailly’s revision-17 history identifies “Original Lemmings Concept Drawings by Gary Timmons”, made after development was underway for packaging/adverts. The linked LemConcept1.gif returned HTTP 500 twice during this pass; no drawing image is copied or presented as inspected. The text credits the documented sketch purpose, without calling it an initial game design or commissioned reproduction.

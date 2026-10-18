@@ -153,6 +153,12 @@ There is a useful caution here for our own curriculum. Once we know the solution
 
 ## A small animation in Dundee
 
+![John Letford, Russell Kay, Mike Dailly, Steve Hammond, Gary Timmons and Dave Jones standing together at the Lemmings anniversary event](photos/dma-team-2011.png)
+
+*Twenty years later, a shared achievement. At the 2011 Dundee anniversary event, left to right: John Letford, Russell Kay, Mike Dailly, Steve Hammond, Gary Timmons and Dave Jones. Photograph credited to Steve Hammond, CC BY-SA 2.0; resized, no crop.*
+
+[Photograph source and credit](https://commons.wikimedia.org/wiki/File:The_Lemmings_Gang_and_Lord_Provost.jpg) · [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+
 Lemmings began within DMA Design's working life in Dundee, with friends and colleagues experimenting on available machines. Steve Hammond traces the studio's roots through the Kingsway Amateur Computer Club; it was a local network before it became a famous name. [5]
 
 Dailly's account places an animation experiment alongside work on *Walker*. He wanted to demonstrate how small a recognisable moving figure could be; Gary Timmons developed the character further. The creatures were funny before there was a finished game for them to inhabit. [4]
@@ -168,6 +174,8 @@ The name draws on the familiar image of lemmings following one another into dang
 The art tells us what the creatures are doing. The green hair and blue bodies separate a very small figure into recognisable parts. A builder's labour, a basher's fists and an umbrella opening have to read while other creatures are moving nearby.
 
 A bigger character might show more detail, but it would occupy more of the landscape and change the scale of the puzzles. Smallness helps make a crowd possible. Expressive animation stops the crowd becoming an anonymous moving texture.
+
+Dailly also reproduces Gary Timmons’s character sketches, made after development had begun to show Psygnosis what the tiny figures were meant to look like. [4] A publisher needed characters it could put on a box; a handful of moving pixels left plenty for the artist to decide.
 
 The team used Deluxe Paint, and its familiar interface helped shape the level-making tools. [4] That links the game to the working habits of Amiga artists as much as to other games. A tool which makes it easy to try something can influence what people are willing to attempt.
 

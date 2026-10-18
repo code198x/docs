@@ -111,3 +111,7 @@ Research on South America, individual Soviet-bloc countries, Britain, Japan and 
 - Inputs: existing analog-control, trackball, steering-wheel and light-gun entries and Game Feel provide onward routes. No new general control-device survey or category is required.
 
 Checked current-main and the paired website draft titles/routes/aliases, current candidate records and retained connected-history candidate work, and open/closed website issue searches for Space War, Star Control and Budge. No candidate IDs are allocated and the CSV is unchanged.
+
+## Illustration credits
+
+Photographers and source-image crop contributors are credited as image authors, not as developers of the game. No biography is commissioned merely because a source image is used. For Elite, Philip Castle is retained explicitly as the box artist in the advertising credit; this pass does not create a duplicate or an unresearched biography.

@@ -114,6 +114,12 @@ We can trace earlier platform games outwards from here without turning the study
 
 ## Designing the rooms, making the product
 
+![Matthew Smith seated on stage during his Screenplay appearance in 2005](photos/matthew-smith-2005.png)
+
+*Matthew Smith at Screenplay, Nottingham, 2005: the interview discussed below comes from this festival. Photograph by Jontintinjordan, CC BY-SA 3.0; converted to PNG, no crop.*
+
+[Photograph source and credit](https://commons.wikimedia.org/wiki/File:Matthew_Smith.jpg) · [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+
 In the 2005 interview, Smith recalled drawing Manic Miner's screens in a red notebook. [4] Paper is a useful place to begin a game whose geography can be seen all at once. A platform can be moved without waiting for the program to run.
 
 But a drawing cannot settle how a room feels. The same arrangement must work with a particular jump, a particular guardian speed and the time allowed. Moving a ledge a small distance can turn an apparent route into an impossible one. Making the player repeat it reveals costs that are easy to miss on paper.

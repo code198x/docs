@@ -185,3 +185,7 @@ Bob Liddil’s December 1980 BYTE review examines Microsoft Adventure on a **32K
 ## Dizzy connection
 
 The Oliver Twins’ own retrospective account at https://www.olivertwins.com/dizzy1 names Zork, Philosopher’s Quest and Sphinx Adventure among text adventures they had played and describes giving objects more purpose when making Dizzy. The study follows the documented text-adventure connection, naming Zork; it does not invent a direct Crowther/Woods-to-Dizzy influence claim. Reviewed existing Vault entries cover Dizzy and the Oliver Twins.
+
+## Sourced illustration pass — 18 October 2026
+
+Owner approved publication and sourced images after umbrella PR #191. A verified licensed public-event photograph is recorded in photos/manifest.json and photos/README.md. Subject identity, occasion, date, author, exact licence, transformations, dimensions and source/output hashes were checked; original pixels were visually inspected. Image licensing remains separate from the prose.

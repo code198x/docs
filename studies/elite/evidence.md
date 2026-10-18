@@ -50,3 +50,9 @@ The owner identified the missing decades beyond the 1984 game. The study now fol
 - Fuel Rats participant records support player-organised refuelling and cooperative procedures. Their archival dates are displayed in fictional years such as 3301; no real-world founding date is inferred by subtracting a constant. No service availability, response time or rescue total is asserted.
 
 The observations about what these choices feel like are our design comparisons, with hypothetical braking/encounter examples. They do not claim a new Frontier/First Encounters/Dangerous execution session, direct influence on unrelated games, or that a more realistic flight model is an objective improvement. The earlier BBC capture limits remain unchanged.
+
+## Sourced illustration pass — 18 October 2026
+
+Owner approved publication and sourced images after umbrella PR #191. A necessary small advertising detail is recorded in advertising/manifest.json and advertising/README.md. The actual page was inspected and cropped; the published excerpt stays below 100,000 pixels, is the only baseline published-artwork reproduction in this study, and sits beside direct discussion of marketing. It is not an openly licensed image.
+
+The box-art attribution to Philip Castle is corroborated by contemporary Acorn News, December 1984, p.3, indexed at elitehomepage.org/archive/a4120000.htm. The live archive has a TLS hostname mismatch during this pass; no certificate check was disabled. The advertisement itself was retrieved and inspected from the preserved Acorn User PDF.

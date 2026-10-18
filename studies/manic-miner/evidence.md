@@ -32,3 +32,7 @@ Two original diagrams each have a desktop and phone composition. They use invent
 ## Remaining review
 
 Owner reading and historical/editorial sign-off remain open. Specific technical claims beyond this scope need new execution/source work. The draft has not commissioned a curriculum remake or independent studies for all mentioned games.
+
+## Sourced illustration pass — 18 October 2026
+
+Owner approved publication and sourced images after umbrella PR #191. A verified licensed public-event photograph is recorded in photos/manifest.json and photos/README.md. Subject identity, occasion, date, author, exact licence, transformations, dimensions and source/output hashes were checked; original pixels were visually inspected. Image licensing remains separate from the prose.
