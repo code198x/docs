@@ -23,6 +23,8 @@ verification and how to add activities after the first learner observations.
 | [Adventure study draft](studies/adventure/README.md) | Second investigation: words, world state, caving and home adaptations; owner review pending |
 | [Monty Mole study draft](studies/monty-mole/README.md) | Play, coal, Sheffield, character and the platform adventure |
 | [Elite study draft](studies/elite/README.md) | Trade, flight, docking, procedural worlds and the imagined life around them |
+| [Manic Miner study draft](studies/manic-miner/README.md) | Jumps, cavern design, music, influences and the journey into Jet Set Willy and community creation |
+| [Lemmings study draft](studies/lemmings/README.md) | Indirect control, crowds, terrain, collaborative production and a changing rescue game |
 | [Game brief](specifications/brief.md) | The experience, target, teaching, runnable stages and verification of one game |
 | [Unit](specifications/unit.md) | Guided construction, local explanations, questions and publishing checks |
 | [Content workflow](specifications/content-creation-workflow.md) | Research, agreement, prototyping, authoring and verification |

@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-18",
+  "scope": "Selected original-game startup, briefing and Just Dig gameplay; not a complete playthrough.",
+  "runtime": "Emu198x Amiga Fleet WASM",
+  "variant": "a500-a501",
+  "firmware": "Held Kickstart 1.3; no firmware distributed.",
+  "frame_method": "Fleet.step() once per native frame, periodic discarded audio.",
+  "startup": [
+    {
+      "load": "disk 1 into floppy-0 after boot"
+    },
+    {
+      "frames": 1600
+    },
+    {
+      "key": "space",
+      "hold_frames": 30
+    },
+    {
+      "frames": 100
+    },
+    {
+      "mouse": "left",
+      "hold_frames": 5
+    },
+    {
+      "frames": 5000
+    },
+    {
+      "observed": "Intro illustration"
+    },
+    {
+      "mouse": "left",
+      "hold_frames": 10
+    },
+    {
+      "frames": 700
+    },
+    {
+      "observed": "Disk 2 requested"
+    },
+    {
+      "load": "disk 2 into floppy-0"
+    },
+    {
+      "frames": 50
+    },
+    {
+      "mouse": "left",
+      "hold_frames": 10
+    },
+    {
+      "frames": 1000
+    },
+    {
+      "observed": "Game menu"
+    }
+  ],
+  "navigation": "Relative pointer counts must be sent in small deltas; a single large vertical delta wrapped the guest counter. Menu/briefing animations must finish before another click. State snapshots were private continuation aids, not published assets.",
+  "briefing": {
+    "level": 1,
+    "name": "Just dig!",
+    "lemmings": 10,
+    "save_percent": 10,
+    "release_rate": 50,
+    "minutes": 5,
+    "rating": "Fun",
+    "minimum_rescue_count": 1
+  },
+  "gameplay": {
+    "entry": "Left click after the briefing displayed Press mouse button to continue; hold 30 frames, release, step 400 frames.",
+    "observed": "Three walkers on the upper platform, exit below; OUT 3, IN 00%, TIME 4:53; ten diggers available.",
+    "capture": "captures/just-dig.png",
+    "limits": "No completed level or assigned-skill trace claimed."
+  }
+}
