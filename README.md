@@ -21,6 +21,8 @@ verification and how to add activities after the first learner observations.
 | [Whole-game studies](specifications/game-studies.md) | Play, design, inspirations, culture, production and reception; people, institutions and Vault follow-through |
 | [Spacewar study](studies/spacewar/README.md) | First published investigation and its evidence, companions and capture records |
 | [Adventure study draft](studies/adventure/README.md) | Second investigation: words, world state, caving and home adaptations; owner review pending |
+| [Monty Mole study draft](studies/monty-mole/README.md) | Play, coal, Sheffield, character and the platform adventure |
+| [Elite study draft](studies/elite/README.md) | Trade, flight, docking, procedural worlds and the imagined life around them |
 | [Game brief](specifications/brief.md) | The experience, target, teaching, runnable stages and verification of one game |
 | [Unit](specifications/unit.md) | Guided construction, local explanations, questions and publishing checks |
 | [Content workflow](specifications/content-creation-workflow.md) | Research, agreement, prototyping, authoring and verification |
