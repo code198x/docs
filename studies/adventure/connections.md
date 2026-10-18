@@ -21,3 +21,5 @@ Do not schedule an Adventure remake or another platform track. A tiny original r
 - Microsoft Adventure’s June 1981 IBM manual establishes Gordon Letwin’s implementation credit and the bootable PC edition. Existing Microsoft/IBM coverage supplies company context; a dedicated version study can later examine its complete packaging, execution and reception.
 - The selected Quill manual is 1985 Oric/Atmos. The Quill and Tim Gilberts coverage provide the natural outward route without labelling this manual as Spectrum evidence.
 - Regional, linguistic, access and authoring questions remain local and specific: institutional accounts, English vocabulary, particular hardware/media and a British authoring scene. No global history or compulsory progress from text to graphics is inferred.
+
+- Object puzzles beyond the parser lead naturally to existing `/vault/games/dizzy/` and `/vault/people/oliver-twins/` coverage. The creators name text adventures, including Zork, as influences; do not replace that with an unsupported direct influence from Colossal Cave. No new entry or issue is required.

@@ -93,3 +93,95 @@ The longer study is not presented as a completed human review. Remaining indepen
 The expanded authoring section also uses Scott Adams, “Pirate’s Adventure”, BYTE 5.12 (December 1980), printed p. 192 introduction and Program Notes, with continuation/listings through p. 212. The printed opening page was visually checked against the issue scan. It establishes his attributed experience of the 350-point Adventure, choosing original games, interpreter/data reuse, the 16K Level II BASIC TRS-80 product and Alexis Adams’s scenario ideas. This is a creator account, not an independent verification of every remembered time or a chronology of all editions. Incidental family anecdotes, program listings and the game’s full solution are not reproduced. BYTE is already covered by magazines/byte; Scott Adams/Adventure International remain VC-0717. Alexis’s contribution can be covered within that existing combined scope without a duplicate candidate.
 
 Contemporary reception now includes Bob Liddil’s “Microsoft Adventure”, BYTE 5.12 (December 1980), printed pp. 264/266. The first printed review page was visually inspected: TRS-80, 32K and one drive; $29.95; presentation/shorthand/prose discussion; editorial Crowther/Woods credit note signed GW. Page 266 supplies packaging/documentation and save comments. The reviewer’s disk-text explanation is attributed, not asserted as our independent implementation test. Keep this edition distinct from the June 1981 IBM manual. One review is not a sales or universal-reception claim.
+
+## Implementation detail kept outside the reading narrative
+
+The prose pass keeps the main account focused on play. The following supporting detail remains here for reproducibility and version comparison. It describes the named source/build and does not claim universal Adventure behaviour.
+
+**The version we're exploring.** We follow the **350-point Crowther and Woods game**, using Arthur O'Dwyer's modern C port alongside the preserved PDP-10 FORTRAN source. We've tried selected encounters in that port; our account of the ending comes from reading the source. This isn't a complete playthrough on original hardware. We'll distinguish Crowther's earlier game, commercial adaptations and later authoring systems as we meet them. [1–3]
+
+## Which Adventure are we playing?
+
+Before we go much further, we need to know which cave we have entered. Adventure grew as people expanded and adapted it, and the same request can work differently in different versions.
+
+| Version or context | What we can learn from it |
+|---|---|
+| Crowther’s game, written in the 1975–76 period | The real cave, the original exploration and fantasy, and the design before Woods’s expansion. Recovered files were preserved in Woods’s account in 1977; those dates are not the composition date. |
+| Crowther and Woods’s 350-point game, expanded in 1977 | The familiar treasure hunt, expanded cave, inventory and score, additional creatures, resource pressure and closing sequence. This is our central design reference. |
+| The modern ODWY0350 C port | A practical way to execute selected encounters and inspect readable source. It has its own implementation choices; the native build used here lacks saving. |
+| Home-computer adaptations | Products with particular memory limits, media, manuals and changes. Microsoft’s IBM PC edition and Level 9’s BBC adaptation are examined as separate cases. |
+
+Crowther's original cave already had puzzles, magic and danger. Woods found plenty to build on. His additions changed the expedition considerably, including inventory and scoring; we should keep those contributions distinct when looking back at the earlier game. [1]
+
+Even the prompt can catch us out. Our C port rejects input longer than two words; the preserved FORTRAN routine extracts the first two without that same rejection message. If your copy responds differently to an example below, its version may explain why. [2][3]
+
+
+
+*Our diagram explains the early entrance rule. It is not a historical screen or complete cave map. Carrying the keys works; in this version, keys dropped beside the grate also count as nearby.*
+
+In the tested Adventure port, the process is compact. Input is converted to lower case and split into one or two words. Vocabulary lookup recognises the first five characters of a word. Several spellings can lead to the same meaning: `GET` and `TAKE` request the same action; `LAMP` and `LANTERN` can identify the same object. Directions, objects, actions and fixed-message words belong to different vocabulary classes. [2]
+
+You might expect that to let you shorten any word however you like. It doesn't. `N` and `NE` work because those short forms are in the vocabulary; an arbitrary fragment may still leave the game baffled. Equally, a long word that shares a recognised five-character beginning can fool the lookup. The program is matching entries in a list.
+
+| What we entered in the tested port | What the encounter establishes |
+|---|---|
+| `TAKE THE LAMP` | This three-word form is rejected. Friendly-looking English can exceed the accepted format. |
+| `TAKE`, then `LAMP` | The game asks for the missing object and completes the request after the reply. |
+| `LAMP`, then `DROP` | The reverse conversation also works: identify the thing, then say what to do with it. |
+| `LAMP TAKE` | The two recognised meanings can be supplied in reverse order. |
+| `TAKE LANTERN` while carrying the lamp | The synonym reaches the existing object; the game recognises that it is already carried. |
+| `SAVE` in our native C build | The word is unavailable here. Other Adventure implementations do provide saving. |
+
+The table records what our chosen port did. Its small kindnesses are worth noticing. After `TAKE`, it can ask what you mean and remember your answer. You get to finish the thought instead of starting the whole request again.
+
+
+
+Those are explanatory stages, not a claim that every engine executes them in that order. Adventure itself advances some clocks before vocabulary lookup.
+
+Adventure’s preserved FORTRAN data includes location descriptions, travel information, vocabulary and messages. The program applies conditions and actions to those records. O’Dwyer’s port builds corresponding location and travel tables in C. Neither needs a paragraph of English to serve as the actual identity of a location. Two places can have the same description while remaining different places internally. [2][3]
+
+| Keys location | Beside the grate | Satisfies this version’s nearby-keys check. |
+
+We tried this with food. Drop it, go north, and there it is again. The source confirms what the marker suggests: that route loops back to the same location. At last, something to put on the map with confidence. We have found no treasure, but we have found our bearings. [2]
+
+The same captured bird can remove the snake blocking routes from the Hall of the Mountain King. In our encounter, the southward route is refused before releasing it and leads to the next chamber afterwards. The bird becomes useful somewhere else in the cave, and the rod has affected whether we can bring it along at all. [2]
+
+The fissure stops your westward journey. Wave the rod and a bridge appears. Now you can cross. Wave it again and the bridge disappears. We checked both changes in the port. [2]
+
+You can stop typing and think. In our tested build, ordinary command processing does not advance while you sit at the prompt. That gives text play a different rhythm from steering a ship in real time.
+
+But waiting to type is different from entering a command that accomplishes little. Accepted input can advance turns and consume a resource even if your intended action fails.
+
+We checked what happened when we added one extra input to the same short expedition with the lamp lit, starting a fresh game for each comparison:
+
+| Extra input added to the same short, lit-lamp session | Change in final turn count |
+|---|---:|
+| An unrecognised word | +1 |
+| `INVENTORY` | +1 |
+| `TAKE THE LAMP`, rejected by the port’s input-length check | 0 |
+
+The source explains the distinction. The input routine rejects the three-word form before returning to the main loop. Once an input line passes that stage, the turn count and lamp checks occur before vocabulary lookup. A spelling failure can therefore cost more than an input-format failure. The preserved FORTRAN also increments its turn count and handles lamp consumption before its later word processing, but its input handling differs. [2][3]
+
+
+
+There is a wrinkle: a turn doesn't make everything in the cave act in lockstep. In this program, hostile characters move on particular paths through the code. We can count a turn without claiming that every creature and every timer has advanced in exactly the same way.
+
+The lamp limit also varies with introductory help in this port: the initial allowance is 330 or 1,000 units according to the instructions choice. Those numbers describe the inspected implementation, not every Adventure. Later hints can affect the allowance too. [2]
+
+Chance contributes to this uncertainty, but a modern C library’s random sequence is not the original PDP-10’s behaviour. Our runs establish specific encounters in the chosen port, not calibrated historical probabilities or a guarantee that another play session will unfold identically.
+
+In our darkness encounter, the player dies, accepts reincarnation and returns without the former inventory. The lamp is recoverable at the road. The code handles other carried objects separately and limits repeated returns; reincarnation is unavailable once the cave is closing. [2][3]
+
+Our native port does not recognise `SAVE`, because the relevant build option is absent. That is a limitation of the chosen executable. Microsoft’s 1981 manual explicitly documents saving and returning to a saved adventure; it would be wrong to infer from our test that Adventure players universally lacked that option. [4]
+
+We have examined this phase in the source rather than played through a complete victory. Its trigger involves discoveries, clocks and location; returning a last treasure alone does not explain it. We will leave the winning sequence for you to discover.
+
+The loading instructions identify this as a BBC manual, but its exact issue is uncertain. We cannot safely assign all of its details to the original 1982 release. Each edition deserves a closer look: a familiar name on the box can hide changes to both the cave and the experience of playing it.
+
+Bob Liddil’s December 1980 BYTE review examines Microsoft Adventure on a **32K TRS-80 with a disk drive**, rather than the later IBM edition. Its price table lists $29.95. He praises the descriptions, shorthand input, documentation and packaging, and attributes the room for fuller prose to fetching text from disk. Those are a reviewer’s observations and explanation, not our independent execution of that edition. [16]
+
+[The Quill](https://code198x.com/vault/tools/the-quill/) is a natural route into the Spectrum’s adventure scene. The original system appeared there; the **1985 Oric/Atmos manual** inspected for this study credits Graeme Yeandle and the Oric conversion by Tim Gilberts. It explicitly explains limited vocabulary and presents editable adventure tables. It is evidence for that edition, not a substitute for checking every Spectrum feature. [11]
+
+## Dizzy connection
+
+The Oliver Twins’ own retrospective account at https://www.olivertwins.com/dizzy1 names Zork, Philosopher’s Quest and Sphinx Adventure among text adventures they had played and describes giving objects more purpose when making Dizzy. The study follows the documented text-adventure connection, naming Zork; it does not invent a direct Crowther/Woods-to-Dizzy influence claim. Reviewed existing Vault entries cover Dizzy and the Oliver Twins.
