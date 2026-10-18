@@ -1,6 +1,6 @@
 # Connections and placement for the Spacewar! pilot
 
-**Status: authoring proposal, 18 October 2026.** The first study is agreed; site placement and the teaching experiments below are not implemented or published. [The charter](../../PROJECT.md) remains authoritative. Start with [the draft](study.md), not a new navigation commitment.
+**Status: authoring proposal, 18 October 2026.** The first study and its initial Vault home are agreed; publication and the teaching experiments below remain open. [The charter](../../PROJECT.md) remains authoritative. Start with [the draft](study.md), within the agreed Game Studies collection.
 
 ## Existing destinations worth connecting
 
@@ -8,7 +8,7 @@ Checked against the website's main branch during this pass. These are potential 
 
 | Destination | Purpose and boundary |
 |---|---|
-| [Game Feel](https://code198x.com/craft/game-feel/) and [the movement playground](https://code198x.com/experiments/game-feel/) | Existing controls-and-response material can help separate an input, a change of velocity and the resulting movement. The study now includes the control-to-motion chain and contrasts input signals and possible mappings. The existing one-dimensional capped-speed experiments are not a Spacewar physics model. Explain that difference rather than claim they reproduce the duel. |
+| [Game Feel](https://code198x.com/craft/game-feel/) and [the movement playground](https://code198x.com/experiments/game-feel/) | Existing controls-and-response material can help separate an input, a change of velocity and the resulting movement. The study keeps the control-to-motion chain and sends broader device comparisons outward. The existing one-dimensional capped-speed experiments are not a Spacewar physics model. Explain that difference rather than claim they reproduce the duel. |
 | [Maths for Games](https://code198x.com/craft/maths-for-games/) | The illustrated study now links directly to the published coordinates (unit-06) and fractional-velocity (unit-11) lessons, after explaining velocity and acceleration locally. A full gravitational-orbit derivation is not established by that coverage. |
 | [The Craft](https://code198x.com/craft/) and [its coverage map](../../specifications/craft-coverage.md) | Compare design choice and moment-to-moment experience. Game Design is an agreed home with lessons still to develop; do not invent a missing lesson link. |
 | [Thrust in the Vault](https://code198x.com/vault/games/thrust/) | A later vintage comparison for control, gravity and inertia. Similarities are a comparison opportunity; establish an influence separately before asserting a direct lineage. Read the existing entry rather than duplicate it. |
@@ -27,7 +27,7 @@ Spacewar! already has candidate VC-2076 in vault-candidates.csv with incoming-li
 | [Shooting from a moving ship](companions/shooting-from-a-moving-ship.md) | Inherited launch velocity and interception, with checked stationary- and moving-target calculations | Builds on published coordinates, triangle, angle and fixed-point velocity lessons. Does not replace them or claim they already teach interception. |
 | [What makes a duel worth another go?](companions/designing-a-duel.md) | Resource limits, commitment, risk, feedback and counterplay explained through actual Spacewar rules | An applied design explanation alongside the historical Game Design article and existing Game Feel experiments. Not a new course lineup or a universal design formula. |
 
-Both are readable drafts linked from the study; publication home and a further editorial pass remain open. Existing website articles are linked, not silently overwritten or marked reviewed. Specific expansion proposals are now concrete text rather than only backlog suggestions.
+Both are readable drafts linked beneath the Vault study route; a further editorial pass and publication approval remain open. Existing website articles are linked, not silently overwritten or marked reviewed. Specific expansion proposals are now concrete text rather than only backlog suggestions.
 
 ## Later investigation candidates — interactive work deferred
 
@@ -39,15 +39,11 @@ Both are readable drafts linked from the study; publication home and a further e
 
 The following extensions remain candidates; the two static companion drafts above are the bounded work completed in this pass. Interactive examples are held back at the owner’s request. These extensions could serve existing Craft homes. A design claim should become a lesson only when the comparison, limits and reader outcome are clear. None is a new prerequisite or a reason to retrofit every system course.
 
-## Where might studies live?
+## Agreed initial placement
 
-| Option | Advantage | Question to settle |
-|---|---|---|
-| A study associated with a Vault game entry | Starts from an existing subject and gives a natural historical link | How will we keep guided investigation distinct from the canonical encyclopaedia entry and avoid duplicated claims? |
-| A linked sequence within The Craft's Game Design home | Makes practical design questions and application prominent | Can a reader arrive for the cultural or production history without being funnelled through a course? |
-| A distinct Studies collection, linked from both | Gives whole-game investigations an identity that can cross subjects | Do several finished studies justify a new collection and its maintenance/navigation cost? |
+Game Studies lives at /vault/studies/ and Spacewar at /vault/studies/spacewar/, with moving-shot, duel-design and capture-credit companions beneath it. The Vault directory and title search provide routes in; related game entries can link back to the investigation. The collection remains distinct from encyclopaedic game entries, with one canonical body per page.
 
-**Working recommendation:** keep the content portable in the documentation repo until the pilot has been read and tried. Then choose its site home from the actual experience. No proposed URL, schema, top-level navigation label or new category is adopted by this record. Existing Vault/Craft pages can eventually provide entry points regardless of the storage choice.
+An independent section remains possible later. Keep stable study identities and content outside the Vault entry category tree. Move the route wrappers and central placement metadata when justified, retaining redirects from any published study or companion URL. No new primary navigation item is required now. Placement is agreed; historical sign-off and deployment remain separate.
 
 ## Lives, local circumstances and routes of exchange
 
@@ -61,7 +57,7 @@ Later studies can ask what changed through import, localisation, licensing, migr
 
 The combined play situation brings movement, aiming and resources together before the ending sequence; the broader input-device discussion is routed to existing Vault and Game Feel coverage. A dated institutional price-list summary adds a concrete machine-access question without asserting MIT's purchase cost. Existing PDP-1, DEC and access/funding candidates remain the relevant research records; no additional candidate batch is required.
 
-The website draft demonstrates reusable article-opening, figure and pull-quote structures in a development-only catalogue route, not an agreed new top-level Studies home. The canonical study is synced at a recorded revision. The original header artwork is labelled as illustration; game captures and explanatory diagrams retain their existing identities and credits.
+The website draft demonstrates reusable article-opening, figure and pull-quote structures in dedicated Vault study routes, without a new top-level navigation item. The canonical study is synced at a recorded revision. The original header artwork is labelled as illustration; game captures and explanatory diagrams retain their existing identities and credits.
 
 ## Home versions and selective curriculum work
 

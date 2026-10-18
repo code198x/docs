@@ -35,6 +35,12 @@ File a thing by what it is: a language goes in Languages even when it ships with
 
 Use the existing category and canonical entry when one fits. A new entry should answer a useful question or support a meaningful curriculum connection, not merely increase a count.
 
+## Game Studies
+
+[Whole-game studies](game-studies.md#site-placement) initially live under the Vault at `/vault/studies/`, with their own index and article composition. They complement encyclopaedic game entries and link through to those entries, Craft explanations and other relevant material. They are a reading collection, not a new subject category or a requirement for every game entry.
+
+The collection may move to an independent section later. Keep identities/content separate from current route ancestry and redirect published URLs if it moves. The initial placement leaves current delivery priorities and human review requirements intact.
+
 ## Presentation and discovery
 
 The Vault contents page combines a magazine-style featured article, related reading, a complete subject directory and title search. Keep the paper background and dark reading text. Use verified captures and other evidence from the featured article for the feature itself. On narrow screens, the subject directory can fold away so the feature remains within easy reach.
