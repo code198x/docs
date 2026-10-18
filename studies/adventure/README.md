@@ -1,6 +1,6 @@
 # Adventure / Colossal Cave — second game study
 
-**Expanded draft for owner review, 18 October 2026. Not integrated or deployed.** The owner requested a fairly comprehensive account of Adventure and text-adventure/parser principles after finding the first pass too brief. Wider connections develop from the game rather than forming a required itinerary.
+**The full study is [published in The Vault](https://code198x.com/vault/studies/adventure/).** This branch prepares a further prose pass for owner review, bringing play, curiosity and discovery forward while retaining the comprehensive coverage. Wider connections develop from the game rather than forming a required itinerary.
 
 Read [the study](study.md), then [evidence and limits](evidence.md). [Connections](connections.md) records useful existing destinations; [the named-subject audit](vault-audit.md) reuses the candidate backlog. The original [entrance observations](observations.json) and [script](observe.py) remain, alongside the broader [encounter records](deep-observations.json) and [repeatable encounter check](check-encounters.py). [The plan](../../plans/2026-10-18-adventure-study.md) bounds this work.
 
