@@ -1,6 +1,6 @@
 # Spacewar! pilot evidence and review limits
 
-**Status: working evidence record, 18 October 2026.** This records the first draft's basis and outstanding checks; it does not establish human sign-off or publication readiness. [The charter](../../PROJECT.md) and existing evidence standards govern the work. The study is [study.md](study.md).
+**Status: working evidence record, 18 October 2026.** This records the revised draft's basis and outstanding checks; it does not establish human sign-off or publication readiness. [The charter](../../PROJECT.md) and existing evidence standards govern the work. The study is [study.md](study.md).
 
 ## Source register
 
@@ -25,7 +25,7 @@ These works retain their own terms. Links and restrained original paraphrase are
 | Thrust direction, inherited projectile velocity, gravity on ships rather than torpedoes | S2, p. 37, Introduction / The Game | Supported for the described state. Browser smoke checks are not a numerical physics verification. |
 | Star capture/antipoint and three hyperspace jumps | S2, pp. 37–38 | Supported as early rules; explicitly not universalised to 3.1 or later variants. |
 | Different ship shapes, exhaust and point-like torpedoes | S2, p. 38, The Spaceships | Supported description. Modern browser observations provide a separate visual check. |
-| Initial/browser player action responses | Bounded observations in observations.json | Execution and inspected captures support the limited statements made. Five cases, not gameplay coverage. |
+| Browser player action responses, retained as supporting research rather than article narrative | Bounded observations in observations.json | Five execution cases and inspected captures; not gameplay coverage or a two-person play session. The revision makes no article claim based on a completed play session. |
 | Silent switches and controller wear | S4, pp. 15–16 | Attributed recollection. Do not claim measured impact or an uncontested unique controller design. |
 | Science-fiction influences and Wiitanen's absence | S3, section I, Lensman/Skylark; section II, First Steps | Attributed recollection. No invented motives, dialogue or geopolitical causation beyond that account. |
 | Collective creation | S6 main account; S2 credits relevant to individual contributions | Supported; no single-author invention story. A full contributor biography set is not supplied by this draft. |
@@ -36,7 +36,7 @@ These works retain their own terms. Links and restrained original paraphrase are
 | Browser emulation changes the means of encounter | S7/S8 disclosures, actual browser execution | Implementation-specific. No assertion of timing, CRT, controller or acoustic fidelity. |
 | Decisions have continuing consequences; anticipation links movement and aiming | Analysis from the stated rules | Design interpretation, not a recovered quotation or documented intention. |
 | Sparse imagery invites a larger imagined setting | Interpretation grounded in the game and attributed cultural account | A proposition for discussion, not evidence of what every player imagined. |
-| Institutional access shapes the possible audience | Inference from the documented requirement for a PDP-1 and routes of exchange | Bounded inference. No unsupported demographic census or specific exclusion allegation. |
+| Distribution required access to a suitable machine and a way to run the tape | S1 tape offer and S6 machine context | Bounded explanation of the distribution route; no unsupported demographic census or exclusion allegation. |
 | Proposed two-player investigation | Author-designed activity | Not executed as a human trial or calibrated exercise. No difficulty/time/age claim. |
 
 ## Evidence needed before a publishable study
@@ -49,3 +49,7 @@ These works retain their own terms. Links and restrained original paraphrase are
 6. Identify period demonstrations and distribution material in more depth before quantifying reach, commercial effects or production resources. Do not invent a retail package for this game.
 7. Choose permitted imagery and record source/credit/reuse terms under existing policy. Research screenshots are not article-ready publication assets. A CRT photograph, browser capture and illustrative diagram must remain distinguishable.
 8. Human editorial review of the historical claims and design interpretation; then agree site placement and verify the rendered page. None of these steps changes the standing delivery queue automatically.
+
+## Voice revision
+
+The revised article starts with an illustrative player situation, not a reconstructed historical event or a report of a human trial. Source markers refer to the numbered reading list; S1–S8 above retain the research register numbering, which differs from that reading list. Methods, response identities and uncompleted checks remain here and in observations.json. The article retains attribution for recollections and edition differences where those affect its meaning. Warmth and interpretation do not establish additional historical facts.

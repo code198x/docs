@@ -12,7 +12,7 @@ The draft's reference is the module labelled Spacewar! 3.1, 24 Sep 62, in Norber
 
 ## What this pass delivers
 
-- A substantive first narrative covering the experience and the circumstances that made it possible, with source references beside historical claims.
+- A revised, reader-facing narrative covering the experience and the circumstances that made it possible, with source markers and a compact reading list. Research methods and review limits stay in the accompanying notes.
 - Period technical and reception evidence, attributed later recollections, and explicitly bounded design interpretation.
 - Five automated browser observations with the actual configuration and source-response identities; a repeatable observation script.
 - Connections to existing Game Feel material and Vault coverage without inventing missing article destinations.
