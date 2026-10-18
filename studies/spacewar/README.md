@@ -34,6 +34,8 @@ The complete-round capture can be reproduced with capture-encounter.mjs; see [ca
 
 The [whole-game study specification](../../specifications/game-studies.md) records the agreed approach for future studies. The [Vault disposition audit](vault-audit.md) checks named people, institutions and cultural works against existing articles, candidates and issues. It points to the single candidate CSV rather than commissioning a biography for every mention.
 
+The pilot also follows particular lives, resources and routes of exchange: Russell's recollected railway/electronics and theatre interests, Japanese films watched in Boston, the club's controller materials and the different social setting of later Stanford play. These are bounded examples, not a survey of national computing cultures. The standing specification covers how later studies should investigate regional differences and changing people without flattening either.
+
 ## Before publication
 
 A human should review the draft and source interpretations, including the disagreements and unknowns in evidence.md. Conduct a two-player reading/play session on the named setup, and refine the activity instructions from what happens. Review the selected screenshots and original diagrams, including their credits, captions and text alternatives. Then agree placement and check the rendered website page, links, keyboard use, narrow screens and source presentation. Do not set a reviewed flag or claim those checks have happened on the strength of this draft.
