@@ -1,0 +1,65 @@
+{
+  "observations": [
+    {
+      "kind": "press_keys",
+      "keys": [
+        "ramiga",
+        "lshift",
+        "m"
+      ],
+      "hold_frames": 3,
+      "reached": 288678668
+    },
+    {
+      "kind": "run_frames",
+      "frames": 30,
+      "reached": 292928108,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "type_string",
+      "chars_typed": 13,
+      "reached": 306384668
+    },
+    {
+      "kind": "press_key",
+      "key": "Return",
+      "hold_frames": 3,
+      "reached": 306951260
+    },
+    {
+      "kind": "run_frames",
+      "frames": 120,
+      "reached": 323949020,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "f2",
+      "hold_frames": 3,
+      "reached": 324515612
+    },
+    {
+      "kind": "run_frames",
+      "frames": 60,
+      "reached": 333014492,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "f1",
+      "hold_frames": 3,
+      "reached": 333581084
+    },
+    {
+      "kind": "run_frames",
+      "frames": 300,
+      "reached": 376075484,
+      "stop_reason": "ReachedTarget"
+    }
+  ],
+  "time": 376075484,
+  "boot_detected": true,
+  "boot_reason": "display-active",
+  "query_values": []
+}

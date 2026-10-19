@@ -1,0 +1,80 @@
+{
+  "observations": [
+    {
+      "kind": "press_key",
+      "key": "Space",
+      "hold_frames": 3,
+      "reached": 395056316
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 396756092,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "Return",
+      "hold_frames": 3,
+      "reached": 397322684
+    },
+    {
+      "kind": "run_frames",
+      "frames": 120,
+      "reached": 414320444,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "f2",
+      "hold_frames": 3,
+      "reached": 414887036
+    },
+    {
+      "kind": "run_frames",
+      "frames": 60,
+      "reached": 423385916,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "Space",
+      "hold_frames": 3,
+      "reached": 395056316
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 396756092,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "Return",
+      "hold_frames": 3,
+      "reached": 397322684
+    },
+    {
+      "kind": "run_frames",
+      "frames": 120,
+      "reached": 414320444,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "f2",
+      "hold_frames": 3,
+      "reached": 414887036
+    },
+    {
+      "kind": "run_frames",
+      "frames": 60,
+      "reached": 423385916,
+      "stop_reason": "ReachedTarget"
+    }
+  ],
+  "time": 423385916,
+  "boot_detected": true,
+  "boot_reason": "display-active",
+  "query_values": []
+}

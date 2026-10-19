@@ -3,14 +3,14 @@
 **Native rules, input and save/reopen checks pass on the recorded Emu198x setup.**
 The user accepted the browser trial's simple scope: one six-sided die, limit 10,
 at most five rounds and target 30. The silent prototype now runs in AMOS
-Professional 2.00 with an outlined die matching the stored roll. The labelled
-board progression, sound and remaining lesson sources
-remain to be developed and checked.
+Professional 2.00 with an outlined die matching the stored roll and grouped
+round/session values. Sound and remaining lesson sources still need development
+and checks.
 
 ## Source and execution
 
 The source is `commodore-amiga/amos/bank-or-risk/prototype/bank-or-risk.amos` in
-[samples revision b3998ba](https://github.com/code198x/code-samples/tree/b3998ba18646ac4f318fe311e25c43004285f917/commodore-amiga/amos/bank-or-risk/prototype).
+[samples revision 231ba66](https://github.com/code198x/code-samples/tree/231ba66625e4c67afc6a017886975036f184387c/commodore-amiga/amos/bank-or-risk/prototype).
 It is ASCII for Merge ASCII. Native Save As produces a separate tokenised AMOS
 program; these two representations must not be confused.
 
@@ -36,6 +36,11 @@ save/reopen checks below belong to the earlier pre-palette source.
 The [drawing audit](../../../../audit/2026-10-amos-bank-or-risk-die/REPORT.md)
 checks the two drawing fragments and all six game faces, clearing/reset, bank,
 bust, success, failure and replay. It preserves all existing scoring/input code.
+
+The [board audit](../../../../audit/2026-10-amos-bank-or-risk-board/REPORT.md)
+checks supplied round/challenge snapshots and the grouped live display, including
+later/unused rounds, all result types and replay. Only the display routine
+changes; scoring, input and die drawing remain identical to the drawing revision.
 
 The [probe manifest](native-probes.json) binds the current source and five
 fixed-roll copies by SHA-256. The generator changes the die supplier to
@@ -76,9 +81,8 @@ owner play feedback on the JavaScript trial, not AMOS play approval or evidence
 of beginner understanding. Keep the agreed scale while developing the native
 [teaching direction](teaching-map.md), including progressive graphics and sound.
 
-The next source tasks are the labelled board progression and short event
-cues. Check each addition in AMOS; do not
-treat the text prototype's execution as qualification of future lesson sources.
+The next source tasks are short event cues and remaining teaching checkpoints.
+Check each addition in AMOS; do not treat the text prototype's execution as qualification of future lesson sources.
 A later uncoached beginner trial remains pending.
 
 The [original Maths chapter](https://amospromanual.dev/05-03-maths.html#rnd)
