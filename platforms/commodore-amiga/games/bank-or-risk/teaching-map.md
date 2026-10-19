@@ -1,10 +1,12 @@
 # Bank or risk teaching map
 
-**Fixed-die and supplied-face sources now have native checks; no replacement lessons.**
+**Die and board display sources have native checks; no replacement lessons.**
 The [native text prototype](prototype.md) has rules, input and persistence
 evidence on a named Emu198x setup. The [drawing audit](../../../../audit/2026-10-amos-bank-or-risk-die/REPORT.md)
-checks the fixed picture and supplied faces 1–6. Other teaching checkpoints below
-still require implementation and execution. Native presentation work may expose
+checks the fixed picture and supplied faces 1–6. The
+[board audit](../../../../audit/2026-10-amos-bank-or-risk-board/REPORT.md)
+checks supplied one-round/challenge snapshots and the live grouped display.
+Other teaching checkpoints below still require implementation and execution. Native presentation work may expose
 behaviour that changes their boundaries. The [game brief](brief.md) owns the rules; this map explains
 how we could teach them without importing an unexplained game framework.
 The user agreed that drawing, colour and sound should develop through the game.
@@ -18,15 +20,15 @@ edits or checkpoint boundaries; they do not require adding more game mechanics.
 Show the complete game's purpose early: bank points towards 30, or risk another
 roll while staying at or below 10. Five rounds give us a limited opportunity to
 reach the target. Use native demonstrations only for the checked prototype and drawing fragments;
-later board and sound versions need their own execution evidence. The
+later sound versions and remaining checkpoints need their own execution evidence. The
 first exercises below are runnable fragments of that game, not finished games.
 
 ## From a message to one round
 
 Each row describes a checkpoint, not a promised lesson count. The fixed-die and
 supplied-face [sources](https://github.com/code198x/code-samples/tree/amos-bank-or-risk-prototype/commodore-amiga/amos/bank-or-risk/stages)
-are implemented; the rest remain development work. Split a row further if its implementation needs another unfamiliar
-idea. Keep a complete source for each checkpoint in code-samples, with exact
+and supplied board snapshots are implemented; the rest remain development work.
+Split a row further if its implementation needs another unfamiliar idea. Keep a complete source for each checkpoint in code-samples, with exact
 editing instructions and expected output in the lesson.
 
 | Checkpoint | New understanding | Expected result and learner investigation |

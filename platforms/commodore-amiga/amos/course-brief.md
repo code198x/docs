@@ -1,7 +1,7 @@
 # AMOS course brief
 
 **Status: bank-or-risk browser scope and teaching direction agreed; native
-rules, palette and die drawing checked; board, sound and remaining lesson sources pending.** We
+rules, palette, die and board drawing checked; sound and remaining lesson sources pending.** We
 want a complete beginner to make and understand small games in AMOS, then grow
 towards more substantial Amiga games. An experienced programmer should be able
 to enter later without missing AMOS-specific explanations.

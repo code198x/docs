@@ -1,0 +1,36 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/base-listing.state"
+  },
+  {
+    "action": "press_key",
+    "key": "f2",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/base-syntax.png"
+  },
+  {
+    "action": "press_key",
+    "key": "f1",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 300
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/base-title.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/base-title.state"
+  }
+]
