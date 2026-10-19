@@ -1,0 +1,28 @@
+{
+  "valid_filesystem": {
+    "sound": true,
+    "problems": []
+  },
+  "filename": "welcome.amos",
+  "program_bytes": 108,
+  "program_sha256": "6bbca5fa8465752fd7de122bbfee07075b025fbfa54bd435f101e67050178161",
+  "changed_question_present": true,
+  "old_invitation_absent": true,
+  "linked_and_logical_reads_agree": true,
+  "disk_sha256": "36670a869317557e1a7051f5ad230859c05475b67a80bf796ac069169d47f1da",
+  "cold_boot_reopen_syntax_run_verified": true,
+  "printed_text_region": [
+    164,
+    50,
+    1444,
+    82
+  ],
+  "printed_text_before_after_identical": true,
+  "original_invitation_negative_control_rejected": true,
+  "old_invitation_negative_control_region": [
+    340,
+    66,
+    1200,
+    82
+  ]
+}

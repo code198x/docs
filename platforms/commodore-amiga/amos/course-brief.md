@@ -184,6 +184,8 @@ adds distinctive title/score lettering. Those game checks pass. The
 verifies the larger endpoint's native Save, cold Load and execution on the
 fixed emulator revision; the original pre-fix verifier remains red.
 Replacement lessons are not published, and an uncoached learner trial remains pending.
+The [first lesson pair](../games/bank-or-risk/lesson-drafts/README.md) is now
+drafted for review, covering the message/edit and native save/reopen steps.
 
 The accepted browser playtest establishes the intended scale and tuning for the
 first game. It does not qualify AMOS execution or establish learner outcomes.

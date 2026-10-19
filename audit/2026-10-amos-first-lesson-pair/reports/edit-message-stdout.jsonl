@@ -1,0 +1,14 @@
+{"jsonrpc":"2.0","id":1,"result":{"content":[{"text":"null","type":"text"}]}}
+{"jsonrpc":"2.0","id":2,"result":{"content":[{"text":"{\"kind\":\"press_key\",\"key\":\"space\",\"hold_frames\":3,\"reached\":373384172}","type":"text"}]}}
+{"jsonrpc":"2.0","id":3,"result":{"content":[{"text":"{\"kind\":\"run_frames\",\"frames\":30,\"reached\":377633612,\"stop_reason\":\"ReachedTarget\"}","type":"text"}]}}
+{"jsonrpc":"2.0","id":4,"result":{"content":[{"text":"{\"kind\":\"press_key\",\"key\":\"Return\",\"hold_frames\":3,\"reached\":378200204}","type":"text"}]}}
+{"jsonrpc":"2.0","id":5,"result":{"content":[{"text":"{\"kind\":\"run_frames\",\"frames\":30,\"reached\":382449644,\"stop_reason\":\"ReachedTarget\"}","type":"text"}]}}
+{"jsonrpc":"2.0","id":6,"result":{"content":[{"text":"{\"kind\":\"press_key\",\"key\":\"up\",\"hold_frames\":3,\"reached\":383016236}","type":"text"}]}}
+{"jsonrpc":"2.0","id":7,"result":{"content":[{"text":"{\"kind\":\"press_key\",\"key\":\"up\",\"hold_frames\":3,\"reached\":383582828}","type":"text"}]}}
+{"jsonrpc":"2.0","id":8,"result":{"content":[{"text":"{\"kind\":\"press_key\",\"key\":\"up\",\"hold_frames\":3,\"reached\":384149420}","type":"text"}]}}
+{"jsonrpc":"2.0","id":9,"result":{"content":[{"text":"{\"kind\":\"press_keys\",\"keys\":[\"control\",\"q\"],\"hold_frames\":3,\"reached\":384716012}","type":"text"}]}}
+{"jsonrpc":"2.0","id":10,"result":{"content":[{"text":"{\"kind\":\"type_string\",\"chars_typed\":33,\"reached\":412337372}","type":"text"}]}}
+{"jsonrpc":"2.0","id":11,"result":{"content":[{"text":"{\"kind\":\"press_key\",\"key\":\"f2\",\"hold_frames\":3,\"reached\":412903964}","type":"text"}]}}
+{"jsonrpc":"2.0","id":12,"result":{"content":[{"text":"{\"kind\":\"run_frames\",\"frames\":30,\"reached\":417153404,\"stop_reason\":\"ReachedTarget\"}","type":"text"}]}}
+{"jsonrpc":"2.0","id":13,"result":{"content":[{"text":"null","type":"text"}]}}
+{"jsonrpc":"2.0","id":14,"result":{"content":[{"text":"null","type":"text"}]}}

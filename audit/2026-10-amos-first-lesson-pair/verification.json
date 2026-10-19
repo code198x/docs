@@ -1,0 +1,18 @@
+{
+  "status": "typed_edit_repair_native_save_cold_load_verified",
+  "typed_entry_verified": true,
+  "merge_ascii_used": false,
+  "single_line_edit_verified": true,
+  "misspelt_command_rejected": true,
+  "repaired_syntax_accepted": true,
+  "native_program_bytes": 108,
+  "native_storage_verified": true,
+  "independent_cold_boot_and_native_load_verified": true,
+  "printed_text_region_before_after_equal": true,
+  "old_invitation_negative_control_rejected": true,
+  "learner_trial_completed": false,
+  "host_gui_export_qualified": false,
+  "public_website_changed": false,
+  "preview_browser_inspected": false,
+  "preview_browser_limit": "in-app browser unavailable; CommonMark preview generated and structurally checked"
+}

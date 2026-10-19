@@ -1,0 +1,6 @@
+{"jsonrpc":"2.0","id":1,"result":{"content":[{"text":"null","type":"text"}]}}
+{"jsonrpc":"2.0","id":2,"result":{"content":[{"text":"{\"kind\":\"type_string\",\"chars_typed\":55,\"reached\":354686636}","type":"text"}]}}
+{"jsonrpc":"2.0","id":3,"result":{"content":[{"text":"{\"kind\":\"press_key\",\"key\":\"f2\",\"hold_frames\":3,\"reached\":355253228}","type":"text"}]}}
+{"jsonrpc":"2.0","id":4,"result":{"content":[{"text":"{\"kind\":\"run_frames\",\"frames\":30,\"reached\":359502668,\"stop_reason\":\"ReachedTarget\"}","type":"text"}]}}
+{"jsonrpc":"2.0","id":5,"result":{"content":[{"text":"null","type":"text"}]}}
+{"jsonrpc":"2.0","id":6,"result":{"content":[{"text":"null","type":"text"}]}}
