@@ -1,6 +1,7 @@
 # AMOS course brief
 
-**Status: bank-or-risk game direction agreed; course sequence proposed.** We
+**Status: bank-or-risk browser scope and teaching direction agreed; native
+implementation and lesson sources pending.** We
 want a complete beginner to make and understand small games in AMOS, then grow
 towards more substantial Amiga games. An experienced programmer should be able
 to enter later without missing AMOS-specific explanations.
@@ -61,9 +62,10 @@ explain the actual game.
 
 The player's central choice should be visible before sophisticated graphics are
 needed: keep a useful total or risk losing it for a better result. A short
-session target gives that choice a changing purpose. The game brief provisionally
-uses one six-sided die, a round limit of 10, five rounds and a 30-point target;
-those numbers require native play review.
+session target gives that choice a changing purpose. The user accepted the
+browser playtest with one six-sided die, a round limit of 10, five rounds and a
+30-point target. Retain that scope and tuning for the AMOS implementation;
+native play must still check the resulting experience.
 
 Start with a small message and save/reopen exercise, then show one roll and add
 its result to a stored total. Introduce the limit decision, then input and
@@ -156,11 +158,12 @@ source location, concrete rules and acceptance cases. Check one roll, limit
 boundaries, banking, session score, ending, replay and exit in the named original
 runtime. Check the learner's save/reopen route early.
 
-The agreed mechanic gives us a game direction, not acceptance of numerical
-balance or a replacement lesson sequence. Play should establish whether the
-bank-or-roll choice remains interesting and whether the failure consequence is
-fair. The short session must not become a reason to introduce several unexplained
-state variables in one step.
+The accepted browser playtest establishes the intended scale and tuning for the
+first game. It does not qualify AMOS execution or establish learner outcomes.
+The teaching direction is agreed, including graphics and sound developed through
+small steps; individual sources and lesson boundaries still require native
+checks. The short session must not become a reason to introduce several
+unexplained state variables in one step.
 
 If the first trial is unsatisfying, reconsider tuning and the size of its opening
 stages before adding features. A later uncoached beginner trial must establish
