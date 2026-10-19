@@ -1,0 +1,30 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/misspelt-print-listing.state"
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${RUN}/amos-work.adf",
+    "writable": true
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "press_key",
+    "key": "f2",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/misspelt-print-syntax.png"
+  }
+]

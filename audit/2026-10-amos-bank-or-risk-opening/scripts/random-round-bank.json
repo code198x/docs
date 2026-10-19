@@ -1,0 +1,88 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/one-round-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/random-round-bank-0-B.png"
+  },
+  {
+    "action": "press_key",
+    "key": "X",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/random-round-bank-1-X.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/random-round-bank-2-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/random-round-bank-3-B.png"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/random-round-bank-stable.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/random-round-bank-editor.png"
+  }
+]

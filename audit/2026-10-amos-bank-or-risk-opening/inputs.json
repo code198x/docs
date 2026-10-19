@@ -1,0 +1,45 @@
+{
+  "emulator_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+  "emulator_version": "0.34.2",
+  "model": "a1200",
+  "profile": "PAL A1200, stock 2 MiB chip RAM, no fast RAM",
+  "software": "AMOS Professional 2.00, version observed in the booted editor",
+  "build198x_revision": "f7016398deb1fff9dc1efb6713dfab8c7bacf2d0",
+  "inputs": {
+    "kickstart.rom": {
+      "bytes": 524288,
+      "sha256": "6d43840d4099a74170ea0f0425b6257c3891ebcaa39c4d1840075a9ab22b5707"
+    },
+    "amos-system.adf": {
+      "bytes": 901120,
+      "sha256": "7ffbfb5ed5c28869e323a2bff9a591ce519727be2e0dd66972a86ebfe7bcbfdc"
+    },
+    "amos-work.adf": {
+      "bytes": 901120,
+      "sha256": "f5052c16b47b33dedc51ffb15c2467a5b566377c5060c9826897b10bec36c6f5"
+    },
+    "opening.adf": {
+      "bytes": 901120,
+      "sha256": "164d3b8ea93b808c14e80d0e643de0eb51cb420db77da07e0dc8807cd90feeb4"
+    },
+    "edits.adf": {
+      "bytes": 901120,
+      "sha256": "b94a68e9bc2bbf4b534b1ddbf328a73a1f24a04e9953e0238a3adb76ae8485a9"
+    }
+  },
+  "sources": {
+    "ask-again.amos": "b513eb83609a4e6341ae6240290bb03b1dd788b473757d5ac3de80936daefa2a",
+    "die-colours.amos": "a1d81a5ba5697aa64bac351d74c0b326d56fcbc0b6f78112f577f412287dcc09",
+    "edited-message.amos": "4f950a45c2ad1071c95f669ffaf53215135cd2702e377456727d1d87d3a87e30",
+    "fresh-choice.amos": "f23f33365533c9c3938707397e019b461fa3a0271bd8952c347b04d8039f9935",
+    "message.amos": "eaf0563bbc824452c1b477970590945ad92cdbe2565bd840930a42d068661cf9",
+    "one-choice.amos": "9388d5b4fe10f34f0ba78259d988d62f3491bdea929580c39118a567387b7ba2",
+    "one-roll.amos": "36085da83286ecc5e7a2fdd7240fd99249f9f9db2afca41980adf7c9127e9ae8",
+    "one-round.amos": "5d78c7f604ea4e5e67cf4befc158e404a0a3fef8923aac5b2a1fb7fec1447107",
+    "running-total.amos": "7b9c6e207fabad9c7581dba4f4c7834534784bccf08c38b14fb3a20382d0d60d",
+    "total-meaning.amos": "d32c6c2624e531c73bf0ed25c94c0d4eaacecbbd3c7271dd0ace28a9bbd49ad5"
+  },
+  "initial_opening_disk_sha256": "7f3c75a7ebdddb13c1417618ce98f51076ab376af71f28057cb70ac385a83d1e",
+  "initial_edits_disk_sha256": "01971a68d4f8a6f967e469f6a8ef1fb5bc67ad49cb578669a8b52cbd647f8650",
+  "sample_revision": "696c429ad225bbdbc17e582115bb61d0e8371a7a"
+}

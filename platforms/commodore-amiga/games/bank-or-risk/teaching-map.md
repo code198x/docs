@@ -1,6 +1,6 @@
 # Bank or risk teaching map
 
-**Die, board and sound sources have native checks; listening acceptance and replacement lessons remain pending.**
+**The early route through one round now has complete sources; later session teaching sources and replacement lessons remain pending.**
 The [native text prototype](prototype.md) has rules, input and persistence
 evidence on a named Emu198x setup. The [drawing audit](../../../../audit/2026-10-amos-bank-or-risk-die/REPORT.md)
 checks the fixed picture and supplied faces 1–6. The
@@ -8,7 +8,11 @@ checks the fixed picture and supplied faces 1–6. The
 checks supplied one-round/challenge snapshots and the live grouped display.
 The [sound record](../../../../audit/2026-10-amos-bank-or-risk-sound/REPORT.md)
 checks pitch/volume/fade variations, event counts, muting and named input windows;
-it does not establish human listening preference. Other teaching checkpoints still require implementation and execution. Native presentation work may expose
+it does not establish human listening preference. The
+[opening record](../../../../audit/2026-10-amos-bank-or-risk-opening/REPORT.md)
+checks the message/edit/save, colour variation, roll, total, comparisons and
+input route through one round. Later session checkpoints still require their
+own implementation and execution. Native presentation work may expose
 behaviour that changes their boundaries. The [game brief](brief.md) owns the rules; this map explains
 how we could teach them without importing an unexplained game framework.
 The user agreed that drawing, colour and sound should develop through the game.
@@ -22,7 +26,7 @@ edits or checkpoint boundaries; they do not require adding more game mechanics.
 Show the complete game's purpose early: bank points towards 30, or risk another
 roll while staying at or below 10. Five rounds give us a limited opportunity to
 reach the target. Use native demonstrations only for the checked prototype and drawing fragments;
-later variations and remaining checkpoints need their own execution evidence. The
+later session variations and remaining checkpoints need their own execution evidence. The
 first exercises below are runnable fragments of that game, not finished games.
 
 ## From a message to one round
@@ -30,13 +34,16 @@ first exercises below are runnable fragments of that game, not finished games.
 Each row describes a checkpoint, not a promised lesson count. The fixed-die and
 supplied-face [sources](https://github.com/code198x/code-samples/tree/amos-bank-or-risk-prototype/commodore-amiga/amos/bank-or-risk/stages)
 and supplied board snapshots are implemented. Short-tone and separate
-bank/bust/success sources are also available; the rest remain development work.
+bank/bust/success sources are also available. The
+[opening guide](https://github.com/code198x/code-samples/tree/amos-bank-or-risk-prototype/commodore-amiga/amos/bank-or-risk/stages/opening)
+now supplies the earlier steps through one round with exact edits and answers.
+The later session-scoring rows remain development work.
 Split a row further if its implementation needs another unfamiliar idea. Keep a complete source for each checkpoint in code-samples, with exact
 editing instructions and expected output in the lesson.
 
 | Checkpoint | New understanding | Expected result and learner investigation |
 | --- | --- | --- |
-| Display the challenge | Instructions execute in order; quoted text is displayed | Change the welcome text, run it, stop and return to editing. Repair a deliberately missing quote. |
+| Display the challenge | Instructions execute in order; quoted text is displayed | Change the welcome text, run it, stop and return to editing. Repair a deliberately misspelt Print command. The checked Merge ASCII route repairs a missing closing quote automatically. |
 | Keep the changed program | Source, filename and saved output are different things | Save, leave the editor session, reopen and run the changed words. A screenshot or emulator snapshot does not satisfy this check. |
 | Draw a die | Pixel coordinates place shapes | Draw an outline and one central pip using explained fixed coordinates. Change one position and predict which shape moves. Distinguish pixel positions from text rows and columns. |
 | Choose its colours | A palette entry and the colour selected for drawing have different jobs | Change a small palette deliberately, then change which entry a shape uses. Keep the pip, die and text distinguishable; explain the colour notation locally. |
