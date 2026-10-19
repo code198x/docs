@@ -1,0 +1,787 @@
+[
+  {
+    "path": "src/content/patterns/commodore-64/assembly/audio/sid-multi-voice.mdx",
+    "title": "SID Multi-Voice",
+    "system": "commodore-64",
+    "category": "audio",
+    "difficulty": "advanced",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 1185
+  },
+  {
+    "path": "src/content/patterns/commodore-64/assembly/audio/sid-note-trigger.mdx",
+    "title": "SID Note Trigger",
+    "system": "commodore-64",
+    "category": "audio",
+    "difficulty": "beginner",
+    "status": "assembled and emulator-executed.",
+    "includes": [
+      "commodore-64/patterns/assembly/audio/sid-note-trigger/sid-note.inc",
+      "commodore-64/patterns/assembly/audio/sid-note-trigger/demo.asm"
+    ],
+    "words": 1401
+  },
+  {
+    "path": "src/content/patterns/commodore-64/assembly/audio/sid-voice-setup.mdx",
+    "title": "SID Voice Setup",
+    "system": "commodore-64",
+    "category": "audio",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 6, Unit 3",
+    "words": 1004
+  },
+  {
+    "path": "src/content/patterns/commodore-64/assembly/framework/game-loop-basic.mdx",
+    "title": "Game Loop (Basic)",
+    "system": "commodore-64",
+    "category": "framework",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 6, Unit 3",
+    "words": 348
+  },
+  {
+    "path": "src/content/patterns/commodore-64/assembly/input/joystick-reading.mdx",
+    "title": "Joystick Reading",
+    "system": "commodore-64",
+    "category": "input",
+    "difficulty": "beginner",
+    "status": "assembled and emulator-executed.",
+    "includes": [
+      "commodore-64/patterns/assembly/input/joystick-reading/demo.asm",
+      "commodore-64/patterns/assembly/input/joystick-reading/joystick.inc"
+    ],
+    "words": 1145
+  },
+  {
+    "path": "src/content/patterns/commodore-64/assembly/physics/sprite-movement-bounds.mdx",
+    "title": "Sprite Movement with Bounds",
+    "system": "commodore-64",
+    "category": "physics",
+    "difficulty": "beginner",
+    "status": "assembled and emulator-executed.",
+    "includes": [
+      "commodore-64/patterns/assembly/physics/sprite-movement-bounds/demo.asm",
+      "commodore-64/patterns/assembly/physics/sprite-movement-bounds/movement.inc"
+    ],
+    "words": 1049
+  },
+  {
+    "path": "src/content/patterns/commodore-64/assembly/rendering/hardware-sprites.mdx",
+    "title": "Hardware Sprites",
+    "system": "commodore-64",
+    "category": "rendering",
+    "difficulty": "beginner",
+    "status": "assembled and emulator-executed.",
+    "includes": [
+      "commodore-64/patterns/assembly/rendering/hardware-sprites/demo.asm",
+      "commodore-64/patterns/assembly/rendering/hardware-sprites/sprite.inc",
+      "commodore-64/patterns/assembly/rendering/hardware-sprites/shape.inc"
+    ],
+    "words": 1080
+  },
+  {
+    "path": "src/content/patterns/commodore-64/assembly/rendering/raster-splits.mdx",
+    "title": "Raster Splits",
+    "system": "commodore-64",
+    "category": "rendering",
+    "difficulty": "intermediate",
+    "status": "assembled and emulator-executed.",
+    "includes": [
+      "commodore-64/patterns/assembly/rendering/raster-splits/demo.asm",
+      "commodore-64/patterns/assembly/rendering/raster-splits/split.inc"
+    ],
+    "words": 1137
+  },
+  {
+    "path": "src/content/patterns/commodore-64/assembly/rendering/smooth-scrolling.mdx",
+    "title": "Smooth Scrolling",
+    "system": "commodore-64",
+    "category": "rendering",
+    "difficulty": "intermediate",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 736
+  },
+  {
+    "path": "src/content/patterns/commodore-64/assembly/rendering/sprite-multiplexing.mdx",
+    "title": "Sprite Multiplexing",
+    "system": "commodore-64",
+    "category": "rendering",
+    "difficulty": "advanced",
+    "status": "assembled and emulator-executed.",
+    "includes": [
+      "commodore-64/patterns/assembly/rendering/sprite-multiplexing/demo.asm",
+      "commodore-64/patterns/assembly/rendering/sprite-multiplexing/multiplexer.inc"
+    ],
+    "words": 790
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/audio/four-channel-music.mdx",
+    "title": "Four-Channel Music",
+    "system": "commodore-amiga",
+    "category": "audio",
+    "difficulty": "advanced",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 1059
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/audio/one-shot-samples.mdx",
+    "title": "One-Shot Samples",
+    "system": "commodore-amiga",
+    "category": "audio",
+    "difficulty": "intermediate",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 972
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/audio/playing-a-sample.mdx",
+    "title": "Playing a Sample",
+    "system": "commodore-amiga",
+    "category": "audio",
+    "difficulty": "beginner",
+    "status": "assembled and emulator-executed.",
+    "includes": [
+      "commodore-amiga/patterns/assembly/audio/playing-a-sample/paula-sample.inc",
+      "commodore-amiga/patterns/assembly/audio/playing-a-sample/demo.asm",
+      "commodore-amiga/patterns/assembly/audio/playing-a-sample/demo.asm"
+    ],
+    "words": 1615
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/framework/system-takeover.mdx",
+    "title": "System Takeover",
+    "system": "commodore-amiga",
+    "category": "framework",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 1",
+    "words": 834
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/framework/vblank-game-loop.mdx",
+    "title": "VBlank Game Loop",
+    "system": "commodore-amiga",
+    "category": "framework",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 2",
+    "words": 726
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/input/joystick-edge-detection.mdx",
+    "title": "Joystick Edge Detection",
+    "system": "commodore-amiga",
+    "category": "input",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 5",
+    "words": 524
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/input/joystick-reading.mdx",
+    "title": "Joystick Reading",
+    "system": "commodore-amiga",
+    "category": "input",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 2",
+    "words": 619
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/physics/sprite-movement-bounds.mdx",
+    "title": "Sprite Movement with Bounds",
+    "system": "commodore-amiga",
+    "category": "physics",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 2",
+    "words": 529
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/rendering/blitter-copy.mdx",
+    "title": "Blitter Copy",
+    "system": "commodore-amiga",
+    "category": "rendering",
+    "difficulty": "intermediate",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 805
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/rendering/blitter-line-draw.mdx",
+    "title": "Blitter Line Draw",
+    "system": "commodore-amiga",
+    "category": "rendering",
+    "difficulty": "advanced",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 1112
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/rendering/cookie-cut-blit.mdx",
+    "title": "Cookie-Cut Blit",
+    "system": "commodore-amiga",
+    "category": "rendering",
+    "difficulty": "advanced",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 874
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/rendering/copper-colour-bars.mdx",
+    "title": "Copper Colour Bars",
+    "system": "commodore-amiga",
+    "category": "rendering",
+    "difficulty": "intermediate",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 709
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/rendering/copper-list-basics.mdx",
+    "title": "Copper List Basics",
+    "system": "commodore-amiga",
+    "category": "rendering",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 1",
+    "words": 925
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/rendering/copper-split-screen.mdx",
+    "title": "Copper Split Screen",
+    "system": "commodore-amiga",
+    "category": "rendering",
+    "difficulty": "advanced",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 822
+  },
+  {
+    "path": "src/content/patterns/commodore-amiga/assembly/rendering/sprite-control-words.mdx",
+    "title": "Sprite Control Words",
+    "system": "commodore-amiga",
+    "category": "rendering",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 2",
+    "words": 859
+  },
+  {
+    "path": "src/content/patterns/cross-platform/audio/making-a-sound.mdx",
+    "title": "Four Ways to Make a Sound",
+    "system": "cross-platform",
+    "category": "audio",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 1883
+  },
+  {
+    "path": "src/content/patterns/cross-platform/audio/tune-sequencer.mdx",
+    "title": "Tune Sequencer with Two Terminators",
+    "system": "cross-platform",
+    "category": "audio",
+    "difficulty": "intermediate",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Flock Units 17\u201318 (Amiga) \u00b7 Starfield Unit 17 (C64) \u00b7 Dash Unit 17 (NES)",
+    "words": 1834
+  },
+  {
+    "path": "src/content/patterns/cross-platform/framework/ending-dwell.mdx",
+    "title": "The Ending Dwell",
+    "system": "cross-platform",
+    "category": "framework",
+    "difficulty": "beginner",
+    "status": "illustrative pseudocode.",
+    "includes": [],
+    "taught_in": "Game Feel Unit 4 (The Craft) \u00b7 Flock Unit 17 (Amiga) \u00b7 Starfield Unit 17 (C64)",
+    "words": 647
+  },
+  {
+    "path": "src/content/patterns/cross-platform/framework/escalation-as-data.mdx",
+    "title": "Escalation as Data",
+    "system": "cross-platform",
+    "category": "framework",
+    "difficulty": "intermediate",
+    "status": "illustrative pseudocode.",
+    "includes": [],
+    "taught_in": "Flock Unit 18 (Amiga) \u00b7 Starfield Unit 17 (C64) \u00b7 Dash Unit 17 (NES)",
+    "words": 699
+  },
+  {
+    "path": "src/content/patterns/cross-platform/framework/lfsr-random.mdx",
+    "title": "LFSR Random Numbers",
+    "system": "cross-platform",
+    "category": "framework",
+    "difficulty": "intermediate",
+    "status": "illustrative pseudocode.",
+    "includes": [],
+    "words": 991
+  },
+  {
+    "path": "src/content/patterns/cross-platform/framework/state-machine.mdx",
+    "title": "Game State Machine",
+    "system": "cross-platform",
+    "category": "framework",
+    "difficulty": "beginner",
+    "status": "illustrative pseudocode.",
+    "includes": [],
+    "words": 1643
+  },
+  {
+    "path": "src/content/patterns/cross-platform/framework/three-caps.mdx",
+    "title": "Three Caps: Counter, Index, Digit",
+    "system": "cross-platform",
+    "category": "framework",
+    "difficulty": "beginner",
+    "status": "illustrative pseudocode.",
+    "includes": [],
+    "taught_in": "Flock Unit 18 (Amiga) \u00b7 Starfield Unit 17 (C64) \u00b7 Dash Unit 17 (NES)",
+    "words": 613
+  },
+  {
+    "path": "src/content/patterns/cross-platform/input/edge-detection.mdx",
+    "title": "Input Edge Detection",
+    "system": "cross-platform",
+    "category": "input",
+    "difficulty": "beginner",
+    "status": "illustrative pseudocode.",
+    "includes": [],
+    "words": 1381
+  },
+  {
+    "path": "src/content/patterns/cross-platform/physics/aabb-collision.mdx",
+    "title": "AABB Collision Detection",
+    "system": "cross-platform",
+    "category": "physics",
+    "difficulty": "beginner",
+    "status": "illustrative pseudocode with an executed Python reference.",
+    "includes": [],
+    "words": 1263
+  },
+  {
+    "path": "src/content/patterns/cross-platform/physics/fixed-point-math.mdx",
+    "title": "Fixed-Point Math",
+    "system": "cross-platform",
+    "category": "physics",
+    "difficulty": "intermediate",
+    "status": "illustrative pseudocode.",
+    "includes": [],
+    "taught_in": "Maths for Games, Unit 2 (The Craft)",
+    "words": 806
+  },
+  {
+    "path": "src/content/patterns/cross-platform/physics/grace-window.mdx",
+    "title": "The Grace Window",
+    "system": "cross-platform",
+    "category": "physics",
+    "difficulty": "beginner",
+    "status": "illustrative pseudocode.",
+    "includes": [],
+    "taught_in": "Game Feel Unit 3 (The Craft) \u00b7 Starfield Unit 14 (C64) \u00b7 Dash Unit 17 (NES)",
+    "words": 612
+  },
+  {
+    "path": "src/content/patterns/cross-platform/rendering/blink-on-a-clock.mdx",
+    "title": "Blink on a Clock",
+    "system": "cross-platform",
+    "category": "rendering",
+    "difficulty": "beginner",
+    "status": "illustrative pseudocode.",
+    "includes": [],
+    "taught_in": "Game Feel Unit 2 (The Craft) \u00b7 Flock Unit 18 (Amiga) \u00b7 Dash Unit 17 (NES)",
+    "words": 561
+  },
+  {
+    "path": "src/content/patterns/cross-platform/rendering/centre-text-on-a-character-screen.mdx",
+    "title": "Centre Text on a Character Screen",
+    "system": "cross-platform",
+    "category": "rendering",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 478
+  },
+  {
+    "path": "src/content/patterns/cross-platform/rendering/sprite-animation.mdx",
+    "title": "Sprite Animation",
+    "system": "cross-platform",
+    "category": "rendering",
+    "difficulty": "beginner",
+    "status": "illustrative pseudocode.",
+    "includes": [],
+    "words": 765
+  },
+  {
+    "path": "src/content/patterns/nintendo-nes/assembly/audio/music-engine.mdx",
+    "title": "A Music Engine",
+    "system": "nintendo-nes",
+    "category": "audio",
+    "difficulty": "advanced",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 946
+  },
+  {
+    "path": "src/content/patterns/nintendo-nes/assembly/audio/sound-effects.mdx",
+    "title": "Sound Effects",
+    "system": "nintendo-nes",
+    "category": "audio",
+    "difficulty": "intermediate",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 774
+  },
+  {
+    "path": "src/content/patterns/nintendo-nes/assembly/audio/square-wave.mdx",
+    "title": "A Square Wave",
+    "system": "nintendo-nes",
+    "category": "audio",
+    "difficulty": "beginner",
+    "status": "assembled and emulator-executed.",
+    "includes": [
+      "nintendo-entertainment-system/patterns/assembly/audio/square-wave/square-wave.inc",
+      "nintendo-entertainment-system/patterns/assembly/audio/square-wave/demo.asm"
+    ],
+    "words": 1315
+  },
+  {
+    "path": "src/content/patterns/nintendo-nes/assembly/framework/nmi-game-loop.mdx",
+    "title": "NMI Game Loop",
+    "system": "nintendo-nes",
+    "category": "framework",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 1",
+    "words": 702
+  },
+  {
+    "path": "src/content/patterns/nintendo-nes/assembly/framework/reset-sequence.mdx",
+    "title": "Reset Sequence",
+    "system": "nintendo-nes",
+    "category": "framework",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 1",
+    "words": 770
+  },
+  {
+    "path": "src/content/patterns/nintendo-nes/assembly/input/controller-reading.mdx",
+    "title": "Controller Reading",
+    "system": "nintendo-nes",
+    "category": "input",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 2",
+    "words": 691
+  },
+  {
+    "path": "src/content/patterns/nintendo-nes/assembly/physics/sprite-movement-bounds.mdx",
+    "title": "Sprite Movement with Bounds",
+    "system": "nintendo-nes",
+    "category": "physics",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 2",
+    "words": 810
+  },
+  {
+    "path": "src/content/patterns/nintendo-nes/assembly/rendering/column-feeding.mdx",
+    "title": "Feeding New Columns",
+    "system": "nintendo-nes",
+    "category": "rendering",
+    "difficulty": "advanced",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 796
+  },
+  {
+    "path": "src/content/patterns/nintendo-nes/assembly/rendering/multi-sprite-oam.mdx",
+    "title": "Multi-Sprite OAM Update",
+    "system": "nintendo-nes",
+    "category": "rendering",
+    "difficulty": "intermediate",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 5",
+    "words": 875
+  },
+  {
+    "path": "src/content/patterns/nintendo-nes/assembly/rendering/nametable-scrolling.mdx",
+    "title": "Nametables and Scrolling",
+    "system": "nintendo-nes",
+    "category": "rendering",
+    "difficulty": "intermediate",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 745
+  },
+  {
+    "path": "src/content/patterns/nintendo-nes/assembly/rendering/palette-loading.mdx",
+    "title": "Palette Loading",
+    "system": "nintendo-nes",
+    "category": "rendering",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 1",
+    "words": 777
+  },
+  {
+    "path": "src/content/patterns/nintendo-nes/assembly/rendering/sprite-zero-split.mdx",
+    "title": "Sprite 0 Split",
+    "system": "nintendo-nes",
+    "category": "rendering",
+    "difficulty": "advanced",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 852
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/audio/ay-envelopes-noise.mdx",
+    "title": "AY Envelopes and Noise",
+    "system": "sinclair-zx-spectrum",
+    "category": "audio",
+    "difficulty": "intermediate",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 844
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/audio/ay-music.mdx",
+    "title": "AY Music",
+    "system": "sinclair-zx-spectrum",
+    "category": "audio",
+    "difficulty": "advanced",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 985
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/audio/ay-tone.mdx",
+    "title": "AY Tone",
+    "system": "sinclair-zx-spectrum",
+    "category": "audio",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 791
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/audio/beeper-music.mdx",
+    "title": "Beeper Music",
+    "system": "sinclair-zx-spectrum",
+    "category": "audio",
+    "difficulty": "intermediate",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 995
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/audio/sound-beep.mdx",
+    "title": "Sound Beep",
+    "system": "sinclair-zx-spectrum",
+    "category": "audio",
+    "difficulty": "beginner",
+    "status": "assembled and emulator-executed.",
+    "includes": [
+      "sinclair-zx-spectrum/patterns/assembly/audio/sound-beep/sound-beep.inc",
+      "sinclair-zx-spectrum/patterns/assembly/audio/sound-beep/effects.inc"
+    ],
+    "words": 1019
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/framework/game-loop-halt.mdx",
+    "title": "Game Loop (HALT)",
+    "system": "sinclair-zx-spectrum",
+    "category": "framework",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 1",
+    "words": 540
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/framework/profile-a-routine.mdx",
+    "title": "Profile a Routine",
+    "system": "sinclair-zx-spectrum",
+    "category": "framework",
+    "difficulty": "intermediate",
+    "status": "assembled and emulator-executed.",
+    "includes": [
+      "sinclair-zx-spectrum/patterns/assembly/framework/profile-a-routine/loop.asm",
+      "sinclair-zx-spectrum/patterns/assembly/framework/profile-a-routine/unrolled.asm"
+    ],
+    "words": 1562
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/framework/state-machine-loop.mdx",
+    "title": "State Machine Loop",
+    "system": "sinclair-zx-spectrum",
+    "category": "framework",
+    "difficulty": "intermediate",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 7",
+    "words": 627
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/input/keyboard-reading.mdx",
+    "title": "Keyboard Reading",
+    "system": "sinclair-zx-spectrum",
+    "category": "input",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 1",
+    "words": 837
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/physics/grid-movement-bounds.mdx",
+    "title": "Grid Movement with Bounds",
+    "system": "sinclair-zx-spectrum",
+    "category": "physics",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 1",
+    "words": 600
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/rendering/attribute-clash.mdx",
+    "title": "Attribute Clash",
+    "system": "sinclair-zx-spectrum",
+    "category": "rendering",
+    "difficulty": "intermediate",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 876
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/rendering/attribute-writing.mdx",
+    "title": "Attribute Writing",
+    "system": "sinclair-zx-spectrum",
+    "category": "rendering",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 1",
+    "words": 730
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/rendering/bitmap-addressing.mdx",
+    "title": "Bitmap Addressing",
+    "system": "sinclair-zx-spectrum",
+    "category": "rendering",
+    "difficulty": "intermediate",
+    "status": "executed sample.",
+    "includes": [
+      "sinclair-zx-spectrum/patterns/assembly/rendering/bitmap-addressing/bitmap-addressing.inc"
+    ],
+    "words": 779
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/rendering/character-printing.mdx",
+    "title": "Character Printing",
+    "system": "sinclair-zx-spectrum",
+    "category": "rendering",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 4",
+    "words": 821
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/rendering/masked-sprites.mdx",
+    "title": "Masked Sprites",
+    "system": "sinclair-zx-spectrum",
+    "category": "rendering",
+    "difficulty": "advanced",
+    "status": "illustrative code.",
+    "includes": [],
+    "words": 821
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/assembly/rendering/numeric-display.mdx",
+    "title": "Numeric Display",
+    "system": "sinclair-zx-spectrum",
+    "category": "rendering",
+    "difficulty": "beginner",
+    "status": "illustrative code.",
+    "includes": [],
+    "taught_in": "Game 1, Unit 4",
+    "words": 771
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/basic/framework/screen-frame.mdx",
+    "title": "Screen Frame (BASIC)",
+    "system": "sinclair-zx-spectrum",
+    "category": "framework",
+    "difficulty": "beginner",
+    "status": "maintained BASIC subroutine.",
+    "includes": [
+      "sinclair-zx-spectrum/patterns/basic/screen-frame.bas"
+    ],
+    "taught_in": "BASIC Game 1, Unit 1",
+    "words": 367
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/basic/framework/text-utilities.mdx",
+    "title": "Text Utilities (BASIC)",
+    "system": "sinclair-zx-spectrum",
+    "category": "framework",
+    "difficulty": "beginner",
+    "status": "maintained BASIC subroutine.",
+    "includes": [
+      "sinclair-zx-spectrum/patterns/basic/text-utilities.bas"
+    ],
+    "taught_in": "BASIC Game 1, Unit 1",
+    "words": 231
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/basic/rendering/progress-bar.mdx",
+    "title": "Progress Bar (BASIC)",
+    "system": "sinclair-zx-spectrum",
+    "category": "rendering",
+    "difficulty": "beginner",
+    "status": "maintained BASIC subroutine.",
+    "includes": [
+      "sinclair-zx-spectrum/patterns/basic/progress-bar.bas"
+    ],
+    "taught_in": "BASIC Game 1, Unit 1",
+    "words": 590
+  },
+  {
+    "path": "src/content/patterns/sinclair-zx-spectrum/basic/rendering/seven-segment-digits.mdx",
+    "title": "Seven-Segment Digits (BASIC)",
+    "system": "sinclair-zx-spectrum",
+    "category": "rendering",
+    "difficulty": "beginner",
+    "status": "maintained BASIC subroutine.",
+    "includes": [
+      "sinclair-zx-spectrum/patterns/basic/seven-segment-digits.bas"
+    ],
+    "taught_in": "BASIC Game 1, Unit 1",
+    "words": 375
+  }
+]

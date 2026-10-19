@@ -1,0 +1,1314 @@
+[
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "meet-the-machine",
+    "status": "complete",
+    "authoredUnits": 16
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "starfield",
+    "status": "complete",
+    "authoredUnits": 17
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "platform-panic",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "maze-raider",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "brick-basher",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "night-raid",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "velocity",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "hornet",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "sid-symphony",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "catacombs",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "raster-rider",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "maelstrom",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "deephold",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "tumbledown",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "mega-blaster",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "knuckle",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/assembly.yaml",
+    "system": "commodore-64",
+    "track": "assembly",
+    "slug": "strata",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "meet-c64-basic",
+    "status": "complete",
+    "authoredUnits": 15
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "skyline",
+    "status": "complete",
+    "authoredUnits": 6
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "oracle",
+    "status": "complete",
+    "authoredUnits": 6
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "reflex",
+    "status": "complete",
+    "authoredUnits": 6
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "tally",
+    "status": "complete",
+    "authoredUnits": 6
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "bleeper",
+    "status": "complete",
+    "authoredUnits": 6
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "safe-cracker",
+    "status": "complete",
+    "authoredUnits": 6
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "rover",
+    "status": "complete",
+    "authoredUnits": 6
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "dropzone",
+    "status": "complete",
+    "authoredUnits": 6
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "gridlock",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "codebreaker",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "meet-the-vic-ii",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "glyph",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "sidestep",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "nibbler",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "bouncer",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "treasure-map",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "quizmaster",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "vectors",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "cascade",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "soundsmith",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "raster",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "salvage-run",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "dungeon",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "trackside",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "showtime",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "glide-pt1",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "glide-pt2",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "strongroom-pt1",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "strongroom-pt2",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "clash",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "conductor",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "homestead",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-64/basic.yaml",
+    "system": "commodore-64",
+    "track": "basic",
+    "slug": "masterwork",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/amos.yaml",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "slug": "meet-amos",
+    "status": "complete",
+    "authoredUnits": 17
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/amos.yaml",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "slug": "star-catcher",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/amos.yaml",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "slug": "crate-stack",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/amos.yaml",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "slug": "space-swarm",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/amos.yaml",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "slug": "bounce-back",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/amos.yaml",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "slug": "warren",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/amos.yaml",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "slug": "dungeon-doors",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/amos.yaml",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "slug": "knight-watch",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/amos.yaml",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "slug": "scroll-quest",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/amos.yaml",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "slug": "nomad",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/amos.yaml",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "slug": "block-drop",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "meet-the-machine",
+    "status": "complete",
+    "authoredUnits": 19
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "flock",
+    "status": "complete",
+    "authoredUnits": 18
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "exodus",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "shatter-point",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "copper-dma",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "signal",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "ascent",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "crypt",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "gobble",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "wanderer",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "onslaught",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "highway",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "parallax",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "brawler",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "fortress",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "echoes-of-the-ancients",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/assembly.yaml",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "slug": "ascension-the-guru-meditation",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/blitz.yaml",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "slug": "meet-blitz",
+    "status": "complete",
+    "authoredUnits": 15
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/blitz.yaml",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "slug": "flashpoint",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/blitz.yaml",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "slug": "gridlock",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/blitz.yaml",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "slug": "tarmac",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/blitz.yaml",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "slug": "star-drift",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/blitz.yaml",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "slug": "ballistic",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/blitz.yaml",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "slug": "skyfire",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/commodore-amiga/blitz.yaml",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "slug": "slipstream",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/craft.yaml",
+    "system": "craft",
+    "track": "",
+    "slug": "maths-for-games",
+    "status": "in-progress",
+    "authoredUnits": 11
+  },
+  {
+    "catalogue": "src/content/modules/craft.yaml",
+    "system": "craft",
+    "track": "",
+    "slug": "game-feel",
+    "status": "in-progress",
+    "authoredUnits": 4
+  },
+  {
+    "catalogue": "src/content/modules/craft.yaml",
+    "system": "craft",
+    "track": "",
+    "slug": "game-design",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/craft.yaml",
+    "system": "craft",
+    "track": "",
+    "slug": "game-ai",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/craft.yaml",
+    "system": "craft",
+    "track": "",
+    "slug": "game-data-and-algorithms",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/craft.yaml",
+    "system": "craft",
+    "track": "",
+    "slug": "graphics-and-animation",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/craft.yaml",
+    "system": "craft",
+    "track": "",
+    "slug": "sound-and-music",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/foundations.yaml",
+    "system": "foundations",
+    "track": "",
+    "slug": "basics",
+    "status": "complete",
+    "authoredUnits": 5
+  },
+  {
+    "catalogue": "src/content/modules/foundations.yaml",
+    "system": "foundations",
+    "track": "",
+    "slug": "working-it-out",
+    "status": "complete",
+    "authoredUnits": 3
+  },
+  {
+    "catalogue": "src/content/modules/foundations.yaml",
+    "system": "foundations",
+    "track": "",
+    "slug": "decisions",
+    "status": "complete",
+    "authoredUnits": 4
+  },
+  {
+    "catalogue": "src/content/modules/foundations.yaml",
+    "system": "foundations",
+    "track": "",
+    "slug": "truth-tables",
+    "status": "complete",
+    "authoredUnits": 3
+  },
+  {
+    "catalogue": "src/content/modules/foundations.yaml",
+    "system": "foundations",
+    "track": "",
+    "slug": "repeating",
+    "status": "complete",
+    "authoredUnits": 3
+  },
+  {
+    "catalogue": "src/content/modules/foundations.yaml",
+    "system": "foundations",
+    "track": "",
+    "slug": "structure",
+    "status": "complete",
+    "authoredUnits": 4
+  },
+  {
+    "catalogue": "src/content/modules/foundations.yaml",
+    "system": "foundations",
+    "track": "",
+    "slug": "counting-in-twos",
+    "status": "complete",
+    "authoredUnits": 4
+  },
+  {
+    "catalogue": "src/content/modules/foundations.yaml",
+    "system": "foundations",
+    "track": "",
+    "slug": "working-the-bits",
+    "status": "complete",
+    "authoredUnits": 5
+  },
+  {
+    "catalogue": "src/content/modules/foundations.yaml",
+    "system": "foundations",
+    "track": "",
+    "slug": "gates-and-the-adder",
+    "status": "complete",
+    "authoredUnits": 3
+  },
+  {
+    "catalogue": "src/content/modules/foundations.yaml",
+    "system": "foundations",
+    "track": "",
+    "slug": "from-source-to-silicon",
+    "status": "complete",
+    "authoredUnits": 5
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "meet-the-machine",
+    "status": "complete",
+    "authoredUnits": 18
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "dash",
+    "status": "complete",
+    "authoredUnits": 17
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "crate-escape",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "fracture-point",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "pellet-panic",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "fangs-for-the-memory",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "thunder-run",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "pixel-plains",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "ion-trail",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "crypt-crawler",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "gridlock",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "iron-assault",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "pavement-justice",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "tarmac-terror",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "echoes-of-eponium",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/nintendo-entertainment-system/assembly.yaml",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "slug": "requiem-for-a-mapper",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "meet-assembly",
+    "status": "complete",
+    "authoredUnits": 8
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "meteor-storm",
+    "status": "complete",
+    "authoredUnits": 36
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "gloaming",
+    "status": "complete",
+    "authoredUnits": 20
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "the-long-night",
+    "status": "complete",
+    "authoredUnits": 10
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "shadowkeep",
+    "status": "complete",
+    "authoredUnits": 19
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "lamplight",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "ricochet",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "deepdelve",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "nibble-run",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "skyhawk",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "greypeak",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "starfall",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "hard-rain",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "wyrmhold",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "spectral-legacy",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/assembly.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "slug": "meet-the-machine",
+    "status": "complete",
+    "authoredUnits": 16
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "meet-basic",
+    "status": "complete",
+    "authoredUnits": 15
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "bright-spark",
+    "status": "complete",
+    "authoredUnits": 7
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "volley",
+    "status": "complete",
+    "authoredUnits": 8
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "touchdown",
+    "status": "complete",
+    "authoredUnits": 11
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "sonar",
+    "status": "complete",
+    "authoredUnits": 10
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "crates",
+    "status": "complete",
+    "authoredUnits": 11
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "locksmith",
+    "status": "complete",
+    "authoredUnits": 9
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "three-in-a-row",
+    "status": "complete",
+    "authoredUnits": 11
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "cipher",
+    "status": "complete",
+    "authoredUnits": 7
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "tail-chase",
+    "status": "complete",
+    "authoredUnits": 10
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "brick-bash",
+    "status": "complete",
+    "authoredUnits": 10
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "drift",
+    "status": "complete",
+    "authoredUnits": 9
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "quickstep",
+    "status": "complete",
+    "authoredUnits": 10
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "the-caverns",
+    "status": "complete",
+    "authoredUnits": 11
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "yearfall",
+    "status": "complete",
+    "authoredUnits": 14
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "night-patrol",
+    "status": "complete",
+    "authoredUnits": 10
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "the-hungry-maze",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "blockstorm",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "rooftops-pt1",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "stonefall-pt1",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "rooftops-pt2",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "stonefall-pt2",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "dorin-pt1",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "thornwood-pt1",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "dorin-pt2",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "thornwood-pt2",
+    "status": "coming-soon",
+    "authoredUnits": 0
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/basic.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "slug": "basic-reference",
+    "status": "complete",
+    "authoredUnits": 15
+  },
+  {
+    "catalogue": "src/content/modules/sinclair-zx-spectrum/machine.yaml",
+    "system": "sinclair-zx-spectrum",
+    "track": "machine",
+    "slug": "meet-the-machine",
+    "status": "in-progress",
+    "authoredUnits": 5
+  }
+]

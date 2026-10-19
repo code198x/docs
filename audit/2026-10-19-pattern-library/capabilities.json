@@ -1,0 +1,1208 @@
+[
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Running and scheduling",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/framework/state-machine.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/framework/game-loop-halt.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/framework/profile-a-routine.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/framework/state-machine-loop.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode.",
+      "illustrative code.",
+      "assembled and emulator-executed.",
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-07.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/half-rate-clock/meteor-storm.asm"
+    ],
+    "gap_and_next_step": "Existing clocks and multiple update rates; promote a bounded loop with missed-frame and interrupt contracts.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Running and scheduling",
+    "published_patterns": [
+      "src/content/patterns/commodore-64/assembly/framework/game-loop-basic.mdx",
+      "src/content/patterns/cross-platform/framework/state-machine.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-02.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-02/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-02/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Raster-wait loop already taught; qualify frame edge, PAL/NTSC and work that overruns.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Running and scheduling",
+    "published_patterns": [
+      "src/content/patterns/commodore-amiga/assembly/framework/system-takeover.mdx",
+      "src/content/patterns/commodore-amiga/assembly/framework/vblank-game-loop.mdx",
+      "src/content/patterns/cross-platform/framework/state-machine.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-03.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-03/snippets/01-steer.asm",
+      "commodore-amiga/assembly/flock/unit-03/snippets/02-updsprite.asm",
+      "commodore-amiga/assembly/flock/unit-03/flock.asm"
+    ],
+    "gap_and_next_step": "Two-phase frame wait already explained; extract with explicit takeover/DMA and interrupt ownership.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Running and scheduling",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/framework/state-machine.mdx",
+      "src/content/patterns/nintendo-nes/assembly/framework/nmi-game-loop.mdx",
+      "src/content/patterns/nintendo-nes/assembly/framework/reset-sequence.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode.",
+      "illustrative code.",
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-17.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/01-next-level.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/02-the-speed-table.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/03-tune-tick.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/04-the-phrases.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/tempo/scheduler/scheduler.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/handoff/mailbox.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/notification/counter.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/05-the-blink.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/06-the-grace-window.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/dash.asm"
+    ],
+    "gap_and_next_step": "NMI/main scheduling and mailbox examples exist; separate update, render publication and acknowledgement.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Input",
+    "published_patterns": [
+      "src/content/patterns/sinclair-zx-spectrum/assembly/input/keyboard-reading.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-07.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-07/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-07/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Held-state, repeat and pacing exist; connect the verified draft reader and edge routines to published entries.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Input",
+    "published_patterns": [
+      "src/content/patterns/commodore-64/assembly/input/joystick-reading.mdx"
+    ],
+    "pattern_labels": [
+      "assembled and emulator-executed."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-02.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-02/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-02/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Verified reusable joystick reader exists; expose initialisation, both ports and keyboard/CIA ownership in compositions.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Input",
+    "published_patterns": [
+      "src/content/patterns/commodore-amiga/assembly/input/joystick-edge-detection.mdx",
+      "src/content/patterns/commodore-amiga/assembly/input/joystick-reading.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-03.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-03/snippets/01-steer.asm",
+      "commodore-amiga/assembly/flock/unit-03/snippets/02-updsprite.asm",
+      "commodore-amiga/assembly/flock/unit-03/flock.asm"
+    ],
+    "gap_and_next_step": "Reader is game-context code and the published entry is illustrative; reuse the verified draft rather than write another reader.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Input",
+    "published_patterns": [
+      "src/content/patterns/nintendo-nes/assembly/input/controller-reading.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-02.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-02/snippets/01-read-controller.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-02/snippets/02-move-player.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-02/snippets/03-nmi-flag.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-02/dash.asm"
+    ],
+    "gap_and_next_step": "Serial reader exists in lessons; promote the verified draft and retain DMC-disabled and controller bit-layout contracts.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "World and object data",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-13.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/object-pool/meteor-storm.asm"
+    ],
+    "gap_and_next_step": "Twenty-slot record pool already exists; extract allocation, full-pool policy and safe update/removal contracts.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "World and object data",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-10.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-10/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-10/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Parallel arrays and spawn traversal exist; distinguish this fixed collection from a general reusable pool.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "World and object data",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-08.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-08/snippets/01-drivelanes.asm",
+      "commodore-amiga/assembly/flock/unit-08/flock.asm"
+    ],
+    "gap_and_next_step": "Data-driven lane mover exists; extract a record/table contract before adding allocation machinery.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "World and object data",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-07.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-07/snippets/02-level-data.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-07/snippets/01-tile-collision.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-07/dash.asm"
+    ],
+    "gap_and_next_step": "Tile data and row pointers exist; entity pool and reusable data-access routines need separate work.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Drawing",
+    "published_patterns": [
+      "src/content/patterns/sinclair-zx-spectrum/assembly/rendering/attribute-clash.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/rendering/attribute-writing.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/rendering/bitmap-addressing.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/rendering/character-printing.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "illustrative code.",
+      "executed sample.",
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-08.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-08/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-08/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Save/restore background exists; bitmap address helper is maintained. Promote one drawing contract instead of copying illustrative sprites.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Drawing",
+    "published_patterns": [
+      "src/content/patterns/commodore-64/assembly/rendering/hardware-sprites.mdx",
+      "src/content/patterns/commodore-64/assembly/rendering/sprite-multiplexing.mdx"
+    ],
+    "pattern_labels": [
+      "assembled and emulator-executed.",
+      "assembled and emulator-executed."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-01.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-01/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-01/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Reusable sprite setup and multiplexing exist; compose them with movement without conflicting writers.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Drawing",
+    "published_patterns": [
+      "src/content/patterns/commodore-amiga/assembly/rendering/blitter-copy.mdx",
+      "src/content/patterns/commodore-amiga/assembly/rendering/blitter-line-draw.mdx",
+      "src/content/patterns/commodore-amiga/assembly/rendering/cookie-cut-blit.mdx",
+      "src/content/patterns/commodore-amiga/assembly/rendering/copper-colour-bars.mdx",
+      "src/content/patterns/commodore-amiga/assembly/rendering/copper-list-basics.mdx",
+      "src/content/patterns/commodore-amiga/assembly/rendering/copper-split-screen.mdx",
+      "src/content/patterns/commodore-amiga/assembly/rendering/sprite-control-words.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-04.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-04/snippets/02-step-images.asm",
+      "commodore-amiga/assembly/flock/unit-04/snippets/01-showframe.asm",
+      "commodore-amiga/assembly/flock/unit-04/flock.asm"
+    ],
+    "gap_and_next_step": "Pointer-driven sprites and bitplanes exist; published blitter/Copper entries remain illustrative and need bounded callers.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Drawing",
+    "published_patterns": [
+      "src/content/patterns/nintendo-nes/assembly/rendering/multi-sprite-oam.mdx",
+      "src/content/patterns/nintendo-nes/assembly/rendering/palette-loading.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-10.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-10/snippets/01-nmi-score.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-10/dash.asm"
+    ],
+    "gap_and_next_step": "Tile/OAM and VBlank writes exist; turn the write budget and PPU state restoration into a reusable bounded writer.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Animation and feedback",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/rendering/sprite-animation.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-27.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/debris/meteor-storm.asm"
+    ],
+    "gap_and_next_step": "Debris and render-budget examples exist; isolate lifetime, erase order and data costs.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Animation and feedback",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/rendering/sprite-animation.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-08.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-08/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-08/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Explosion and later life-loss flashing exist; extract frame advance and lifetime policies.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Animation and feedback",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/rendering/sprite-animation.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-04.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-04/snippets/02-step-images.asm",
+      "commodore-amiga/assembly/flock/unit-04/snippets/01-showframe.asm",
+      "commodore-amiga/assembly/flock/unit-04/flock.asm"
+    ],
+    "gap_and_next_step": "Frame selection follows hops; distinguish animation clock from movement before generalising.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Animation and feedback",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/rendering/sprite-animation.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-17.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/01-next-level.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/02-the-speed-table.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/03-tune-tick.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/04-the-phrases.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/tempo/scheduler/scheduler.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/handoff/mailbox.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/notification/counter.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/05-the-blink.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/06-the-grace-window.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/dash.asm"
+    ],
+    "gap_and_next_step": "Blink and grace-window snippets exist; give each an explicit clock/state contract.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Movement",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/physics/fixed-point-math.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/physics/grid-movement-bounds.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode.",
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-15.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/drift/meteor-storm.asm"
+    ],
+    "gap_and_next_step": "Fractional drift and elapsed-time updates exist; package position/velocity and overflow bounds.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Movement",
+    "published_patterns": [
+      "src/content/patterns/commodore-64/assembly/physics/sprite-movement-bounds.mdx",
+      "src/content/patterns/cross-platform/physics/fixed-point-math.mdx"
+    ],
+    "pattern_labels": [
+      "assembled and emulator-executed.",
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-03.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-03/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-03/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Maintained movement include already exists; reuse its ninth-bit and clamp contract.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Movement",
+    "published_patterns": [
+      "src/content/patterns/commodore-amiga/assembly/physics/sprite-movement-bounds.mdx",
+      "src/content/patterns/cross-platform/physics/fixed-point-math.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-03.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-03/snippets/01-steer.asm",
+      "commodore-amiga/assembly/flock/unit-03/snippets/02-updsprite.asm",
+      "commodore-amiga/assembly/flock/unit-03/flock.asm"
+    ],
+    "gap_and_next_step": "Hop cooldown and clamp exist; movement pattern listing is illustrative and needs a reusable implementation.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Movement",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/physics/fixed-point-math.mdx",
+      "src/content/patterns/nintendo-nes/assembly/physics/sprite-movement-bounds.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode.",
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-03.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-03/snippets/01-jump.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-03/snippets/02-physics.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-03/dash.asm"
+    ],
+    "gap_and_next_step": "Signed vertical speed, gravity and grounded state exist; extract coordinate range and update-order contracts.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Collision and queries",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/physics/aabb-collision.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode with an executed Python reference."
+    ],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-10.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/first-dodge/meteor-storm.asm"
+    ],
+    "gap_and_next_step": "Inset software contact and two simulation steps per draw exist; no qualified native box/mask comparison family located.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Collision and queries",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/physics/aabb-collision.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode with an executed Python reference."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-07.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-07/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-07/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Software distance checks explain why hardware flags are insufficient; retain coordinate-width assumptions in a reusable test.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Collision and queries",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/physics/aabb-collision.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode with an executed Python reference."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-06.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-06/snippets/01-checksquash.asm",
+      "commodore-amiga/assembly/flock/unit-06/flock.asm"
+    ],
+    "gap_and_next_step": "CLXDAT once-per-frame snapshot already taught; compare its grouping/clearing semantics with software boxes, not a universal per-pair result.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Collision and queries",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/physics/aabb-collision.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode with an executed Python reference."
+    ],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-08.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-08/snippets/01-wall-collision.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-08/dash.asm"
+    ],
+    "gap_and_next_step": "Floor and wall tile checks exist; separate tile queries from response. General native box/mask alternatives remain work.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Rules and interactions",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/framework/ending-dwell.mdx",
+      "src/content/patterns/cross-platform/framework/escalation-as-data.mdx",
+      "src/content/patterns/cross-platform/framework/three-caps.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode.",
+      "illustrative pseudocode.",
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-29.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/voyage/meteor-storm.asm"
+    ],
+    "gap_and_next_step": "Storm transitions, scoring and pickups exist; extract rules only where the state contract is reusable.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Rules and interactions",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/framework/ending-dwell.mdx",
+      "src/content/patterns/cross-platform/framework/escalation-as-data.mdx",
+      "src/content/patterns/cross-platform/framework/three-caps.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode.",
+      "illustrative pseudocode.",
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-17.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-17/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-02.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-03.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-04.asm"
+    ],
+    "gap_and_next_step": "Waves, escalation and restart are developed; data-driven policies need small independent callers.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Rules and interactions",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/framework/ending-dwell.mdx",
+      "src/content/patterns/cross-platform/framework/escalation-as-data.mdx",
+      "src/content/patterns/cross-platform/framework/three-caps.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode.",
+      "illustrative pseudocode.",
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-09.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-09/snippets/01-trypen.asm",
+      "commodore-amiga/assembly/flock/unit-09/flock.asm"
+    ],
+    "gap_and_next_step": "Pen, lives and win state exist; extract state ownership and event consumption rather than a game-specific rule engine.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Rules and interactions",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/framework/ending-dwell.mdx",
+      "src/content/patterns/cross-platform/framework/escalation-as-data.mdx",
+      "src/content/patterns/cross-platform/framework/three-caps.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode.",
+      "illustrative pseudocode.",
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-17.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/01-next-level.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/02-the-speed-table.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/03-tune-tick.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/04-the-phrases.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/tempo/scheduler/scheduler.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/handoff/mailbox.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/notification/counter.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/05-the-blink.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/06-the-grace-window.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/dash.asm"
+    ],
+    "gap_and_next_step": "Level turnover, score and respawn exist; document resetting all changed state together.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Behaviour",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/framework/state-machine.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/framework/state-machine-loop.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode.",
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-12.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-12/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Room wardens and pursuit offer richer candidates; draft original local-turn chooser remains C64-only.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Behaviour",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/framework/state-machine.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-17.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-17/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-02.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-03.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-04.asm"
+    ],
+    "gap_and_next_step": "Hunt/target selection exists in game code; retain it separately from the draft local-turn chooser until reconciled.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Behaviour",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/framework/state-machine.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-08.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-08/snippets/01-drivelanes.asm",
+      "commodore-amiga/assembly/flock/unit-08/flock.asm"
+    ],
+    "gap_and_next_step": "Deterministic lane behaviour exists; pathfinding/perception are wider future entries, not covered by this mover.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Behaviour",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/framework/state-machine.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative pseudocode."
+    ],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-04.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-04/snippets/01-obstacle.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-04/snippets/02-collision.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-04/dash.asm"
+    ],
+    "gap_and_next_step": "Obstacle movement is a small behaviour example; richer decision/path routines are not evidenced by the pattern catalogue.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Cameras and scrolling",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-05.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-05/steps/step-01.asm"
+    ],
+    "gap_and_next_step": "Room links and screen changes exist; continuous scrolling needs a separate implementation and cost case.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Cameras and scrolling",
+    "published_patterns": [
+      "src/content/patterns/commodore-64/assembly/rendering/smooth-scrolling.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-15.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-15/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-15/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Background star motion exists; it is not world-camera scrolling. The dedicated smooth-scrolling entry is illustrative.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Cameras and scrolling",
+    "published_patterns": [
+      "src/content/patterns/commodore-amiga/assembly/rendering/copper-split-screen.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code."
+    ],
+    "lesson_anchor": null,
+    "source_anchors": [],
+    "gap_and_next_step": "No dedicated reusable camera/scroll routine identified; moving vehicles and Copper splits are different capabilities.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Cameras and scrolling",
+    "published_patterns": [
+      "src/content/patterns/nintendo-nes/assembly/rendering/column-feeding.mdx",
+      "src/content/patterns/nintendo-nes/assembly/rendering/nametable-scrolling.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "illustrative code."
+    ],
+    "lesson_anchor": null,
+    "source_anchors": [],
+    "gap_and_next_step": "Several dedicated scrolling entries exist but are illustrative; qualify a specific nametable/column update path.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Audio",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/audio/making-a-sound.mdx",
+      "src/content/patterns/cross-platform/audio/tune-sequencer.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/audio/ay-envelopes-noise.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/audio/ay-music.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/audio/ay-tone.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/audio/beeper-music.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/audio/sound-beep.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative code.",
+      "assembled and emulator-executed."
+    ],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-26.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/sound-frames/meteor-storm.asm"
+    ],
+    "gap_and_next_step": "Maintained beep plus sound scheduling examples exist; clearly distinguish blocking calls from interleaved sound work.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Audio",
+    "published_patterns": [
+      "src/content/patterns/commodore-64/assembly/audio/sid-multi-voice.mdx",
+      "src/content/patterns/commodore-64/assembly/audio/sid-note-trigger.mdx",
+      "src/content/patterns/commodore-64/assembly/audio/sid-voice-setup.mdx",
+      "src/content/patterns/cross-platform/audio/making-a-sound.mdx",
+      "src/content/patterns/cross-platform/audio/tune-sequencer.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "assembled and emulator-executed.",
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-17.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-17/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-02.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-03.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-04.asm"
+    ],
+    "gap_and_next_step": "Maintained SID note driver and game music/effect handoff exist; shared filter and voice arbitration need explicit contracts.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Audio",
+    "published_patterns": [
+      "src/content/patterns/commodore-amiga/assembly/audio/four-channel-music.mdx",
+      "src/content/patterns/commodore-amiga/assembly/audio/one-shot-samples.mdx",
+      "src/content/patterns/commodore-amiga/assembly/audio/playing-a-sample.mdx",
+      "src/content/patterns/cross-platform/audio/making-a-sound.mdx",
+      "src/content/patterns/cross-platform/audio/tune-sequencer.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "illustrative code.",
+      "assembled and emulator-executed.",
+      "illustrative code.",
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-11.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-11/snippets/01-playsound.asm",
+      "commodore-amiga/assembly/flock/unit-11/ownership/requestsound.asm",
+      "commodore-amiga/assembly/flock/unit-11/flock.asm"
+    ],
+    "gap_and_next_step": "Maintained Paula driver and frame-ticked two-note effect exist; distinguish replacement policy from priority/queue support.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Audio",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/audio/making-a-sound.mdx",
+      "src/content/patterns/cross-platform/audio/tune-sequencer.mdx",
+      "src/content/patterns/nintendo-nes/assembly/audio/music-engine.mdx",
+      "src/content/patterns/nintendo-nes/assembly/audio/sound-effects.mdx",
+      "src/content/patterns/nintendo-nes/assembly/audio/square-wave.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative code.",
+      "illustrative code.",
+      "assembled and emulator-executed."
+    ],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-17.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/01-next-level.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/02-the-speed-table.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/03-tune-tick.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/04-the-phrases.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/tempo/scheduler/scheduler.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/handoff/mailbox.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/notification/counter.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/05-the-blink.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/06-the-grace-window.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/dash.asm"
+    ],
+    "gap_and_next_step": "Maintained pulse driver plus tempo/mailbox examples exist; retain channel ownership, overflow and request lifecycle.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Interface and text",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/rendering/centre-text-on-a-character-screen.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/assembly/rendering/numeric-display.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/basic/framework/screen-frame.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/basic/framework/text-utilities.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/basic/rendering/progress-bar.mdx",
+      "src/content/patterns/sinclair-zx-spectrum/basic/rendering/seven-segment-digits.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code.",
+      "illustrative code.",
+      "maintained BASIC subroutine.",
+      "maintained BASIC subroutine.",
+      "maintained BASIC subroutine.",
+      "maintained BASIC subroutine."
+    ],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-23.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/finished/meteor-storm.asm"
+    ],
+    "gap_and_next_step": "Text layout, numeric conversion and BASIC utility routines exist; extract a font/output contract for assembly.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Interface and text",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/rendering/centre-text-on-a-character-screen.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-09.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-09/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-09/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Score rendering and title text exist; general formatting/menu callers need extraction.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Interface and text",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/rendering/centre-text-on-a-character-screen.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-10.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-10/snippets/01-drawscore.asm",
+      "commodore-amiga/assembly/flock/unit-10/flock.asm"
+    ],
+    "gap_and_next_step": "Score and later title routines exist; document font, coordinates, buffers and redraw ownership.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Interface and text",
+    "published_patterns": [
+      "src/content/patterns/cross-platform/rendering/centre-text-on-a-character-screen.mdx"
+    ],
+    "pattern_labels": [
+      "illustrative code."
+    ],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-10.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-10/snippets/01-nmi-score.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-10/dash.asm"
+    ],
+    "gap_and_next_step": "Digit tiles and VBlank score update exist; unify interface writes with the same PPU budget rather than independent writers.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Levels and content",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-05.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-05/steps/step-01.asm"
+    ],
+    "gap_and_next_step": "Room graph and writable room state exist; Crates supplies a BASIC map parser/validator. These need reusable format contracts.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Levels and content",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": null,
+    "source_anchors": [],
+    "gap_and_next_step": "Starfield wave tables are content; no dedicated reusable room/map loader located in current library.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Levels and content",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-08.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-08/snippets/01-drivelanes.asm",
+      "commodore-amiga/assembly/flock/unit-08/flock.asm"
+    ],
+    "gap_and_next_step": "Lane tables are content; room/map loading remains a distinct gap, not a claim that no data-driven code exists.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Levels and content",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-07.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-07/snippets/02-level-data.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-07/snippets/01-tile-collision.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-07/dash.asm"
+    ],
+    "gap_and_next_step": "Map rows, pointers and solid tiles exist; separate rendering representation from collision interpretation.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Persistence",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-07.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-07/steps/step-01.asm"
+    ],
+    "gap_and_next_step": "Room changes persist in RAM; Meteor Storm bests survive a new run. Neither is a durable file-save routine.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Persistence",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-17.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-17/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-02.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-03.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-04.asm"
+    ],
+    "gap_and_next_step": "Restart state is inspected in the lesson; no durable save-format or recovery implementation identified.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Persistence",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-17.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-17/snippets/01-the-spine.asm",
+      "commodore-amiga/assembly/flock/unit-17/snippets/02-tunetick.asm",
+      "commodore-amiga/assembly/flock/unit-17/snippets/03-the-jingle.asm",
+      "commodore-amiga/assembly/flock/unit-17/flock.asm"
+    ],
+    "gap_and_next_step": "Game-state lifecycle exists; no durable save-format or recovery implementation identified.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Persistence",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-15.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-15/snippets/01-state-machine.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-15/dash.asm"
+    ],
+    "gap_and_next_step": "Restart lifecycle exists; cartridge save RAM/password/persistence need an explicitly selected cartridge model.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Memory and assets",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-02.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/eight-shifts/meteor-storm.asm"
+    ],
+    "gap_and_next_step": "Shifted graphics trade asset bytes for runtime work; object pool and release tape provide further anchors.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Memory and assets",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-10.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-10/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-10/steps/step-02.asm"
+    ],
+    "gap_and_next_step": "Parallel arrays and fixed sprite allocation exist; banking/compression are not established by this game.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Memory and assets",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-09.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-09/snippets/01-trypen.asm",
+      "commodore-amiga/assembly/flock/unit-09/flock.asm"
+    ],
+    "gap_and_next_step": "Second bitplane and sample memory costs are explained; isolate Chip RAM placement and competing DMA costs.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Memory and assets",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-10.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-10/snippets/01-nmi-score.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-10/dash.asm"
+    ],
+    "gap_and_next_step": "CHR tiles, zero-page state and VBlank writes exist; banked cartridge assets need a named mapper and new evidence.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Debugging and optimisation",
+    "published_patterns": [
+      "src/content/patterns/sinclair-zx-spectrum/assembly/framework/profile-a-routine.mdx"
+    ],
+    "pattern_labels": [
+      "assembled and emulator-executed."
+    ],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-21.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/render-budget/meteor-storm.asm"
+    ],
+    "gap_and_next_step": "Measured render/update trade-off plus maintained routine profiler exist; adapt them to composed routines and worst cases.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Debugging and optimisation",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/commodore-64/assembly/starfield/unit-17.mdx",
+    "source_anchors": [
+      "commodore-64/assembly/starfield/unit-17/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-02.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-03.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-04.asm"
+    ],
+    "gap_and_next_step": "Restart and ninth-bit investigations exist; reusable headroom instrumentation and collision cost comparisons need work.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Debugging and optimisation",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/commodore-amiga/assembly/flock/unit-11.mdx",
+    "source_anchors": [
+      "commodore-amiga/assembly/flock/unit-11/snippets/01-playsound.asm",
+      "commodore-amiga/assembly/flock/unit-11/ownership/requestsound.asm",
+      "commodore-amiga/assembly/flock/unit-11/flock.asm"
+    ],
+    "gap_and_next_step": "Channel replacement trace/comparison exists; add bounded timing/contended-resource measurements to new reusable routines.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Debugging and optimisation",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-17.mdx",
+    "source_anchors": [
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/01-next-level.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/02-the-speed-table.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/03-tune-tick.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/04-the-phrases.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/tempo/scheduler/scheduler.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/handoff/mailbox.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/notification/counter.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/05-the-blink.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/06-the-grace-window.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/dash.asm"
+    ],
+    "gap_and_next_step": "Late work, mailbox publication and notification counter examples exist; promote their observables rather than only prose.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "sinclair-zx-spectrum",
+    "family": "Building and releasing",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-36.mdx",
+    "source_anchors": [
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/loading-screen/meteor-storm.asm"
+    ],
+    "gap_and_next_step": "Fresh-ROM tape loading is taught; preserve distinction from snapshot startup and include all data/assets in example builds.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-64",
+    "family": "Building and releasing",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": null,
+    "source_anchors": [],
+    "gap_and_next_step": "Maintained pattern Makefiles and captures exist; no single composed release recipe for the expanded library yet.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "commodore-amiga",
+    "family": "Building and releasing",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": null,
+    "source_anchors": [],
+    "gap_and_next_step": "Maintained sample mastering exists; a reusable composition must declare takeover/exit policy and full chip-memory assets.",
+    "review": "Selected body and source anchors; no execution rerun"
+  },
+  {
+    "system": "nintendo-entertainment-system",
+    "family": "Building and releasing",
+    "published_patterns": [],
+    "pattern_labels": [],
+    "lesson_anchor": null,
+    "source_anchors": [],
+    "gap_and_next_step": "Maintained cartridge builds exist; release recipe must name mapper, region, CHR and reset/NMI ownership.",
+    "review": "Selected body and source anchors; no execution rerun"
+  }
+]

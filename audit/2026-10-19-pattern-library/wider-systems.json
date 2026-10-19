@@ -1,0 +1,165 @@
+[
+  {
+    "system": "BBC Micro Model B",
+    "sample_prefix": "bbc-micro",
+    "tracked_sample_files": 2,
+    "authored_sample_files": 0,
+    "profile_source": "crates/runtime-acorn-bbc-micro/src/profiles.rs",
+    "runtime_test_sources": [
+      "crates/runtime-acorn-bbc-micro/tests/cassette.rs",
+      "crates/runtime-acorn-bbc-micro/tests/snapshot_roundtrip.rs"
+    ],
+    "emulator_source_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+    "qualification": "Source existence only; no boot/capture qualification run in this inventory",
+    "teaching_contrast_to_investigate": "ROM/OS-managed input, frame pacing and queued sound versus direct hardware ownership",
+    "proposed_placement": "First wider-system qualification proposal"
+  },
+  {
+    "system": "VIC-20",
+    "sample_prefix": "commodore-vic-20",
+    "tracked_sample_files": 2,
+    "authored_sample_files": 0,
+    "profile_source": "crates/runtime-commodore-vic-20/src/profiles.rs",
+    "runtime_test_sources": [
+      "crates/runtime-commodore-vic-20/tests/cartridge.rs",
+      "crates/runtime-commodore-vic-20/tests/catalogue.rs",
+      "crates/runtime-commodore-vic-20/tests/debug_target.rs",
+      "crates/runtime-commodore-vic-20/tests/program.rs",
+      "crates/runtime-commodore-vic-20/tests/snapshot_roundtrip.rs"
+    ],
+    "emulator_source_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+    "qualification": "Source existence only; no boot/capture qualification run in this inventory",
+    "teaching_contrast_to_investigate": "Reuse 6502 reasoning while exposing RAM expansion, screen/character placement and limited audio budgets",
+    "proposed_placement": "Next small machine comparison"
+  },
+  {
+    "system": "MSX1",
+    "sample_prefix": "msx",
+    "tracked_sample_files": 2,
+    "authored_sample_files": 0,
+    "profile_source": "crates/runtime-msx/src/profiles.rs",
+    "runtime_test_sources": [
+      "crates/runtime-msx/tests/catalogue.rs",
+      "crates/runtime-msx/tests/debug_target.rs",
+      "crates/runtime-msx/tests/media.rs",
+      "crates/runtime-msx/tests/queries.rs",
+      "crates/runtime-msx/tests/snapshot_roundtrip.rs"
+    ],
+    "emulator_source_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+    "qualification": "Source existence only; no boot/capture qualification run in this inventory",
+    "teaching_contrast_to_investigate": "Separate BIOS-assisted and direct VDP/controller/audio ownership; choose firmware and learner media route",
+    "proposed_placement": "Later Z80/VDP comparison"
+  },
+  {
+    "system": "Master System",
+    "sample_prefix": "sega-master-system",
+    "tracked_sample_files": 1,
+    "authored_sample_files": 0,
+    "profile_source": "crates/runtime-sega-master-system/src/profiles.rs",
+    "runtime_test_sources": [
+      "crates/runtime-sega-master-system/tests/queries.rs",
+      "crates/runtime-sega-master-system/tests/snapshot_roundtrip.rs",
+      "crates/runtime-sega-master-system/tests/variants.rs"
+    ],
+    "emulator_source_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+    "qualification": "Source existence only; no boot/capture qualification run in this inventory",
+    "teaching_contrast_to_investigate": "Homebrew cartridge, controller, VDP transfers and frame interrupt contract",
+    "proposed_placement": "Later console comparison alongside MSX"
+  },
+  {
+    "system": "CPC464",
+    "sample_prefix": "amstrad-cpc",
+    "tracked_sample_files": 0,
+    "authored_sample_files": 0,
+    "profile_source": "crates/runtime-amstrad-cpc/src/profiles.rs",
+    "runtime_test_sources": [
+      "crates/runtime-amstrad-cpc/tests/firmware_catalogue.rs",
+      "crates/runtime-amstrad-cpc/tests/snapshot_roundtrip.rs"
+    ],
+    "emulator_source_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+    "qualification": "Source existence only; no boot/capture qualification run in this inventory",
+    "teaching_contrast_to_investigate": "Firmware-managed versus direct display/input/audio access on a Z80 system",
+    "proposed_placement": "Existing #3 qualification candidate"
+  },
+  {
+    "system": "Acorn Atom",
+    "sample_prefix": "acorn-atom",
+    "tracked_sample_files": 2,
+    "authored_sample_files": 0,
+    "profile_source": "crates/runtime-acorn-atom/src/profiles.rs",
+    "runtime_test_sources": [
+      "crates/runtime-acorn-atom/tests/audio.rs",
+      "crates/runtime-acorn-atom/tests/cassette.rs",
+      "crates/runtime-acorn-atom/tests/cassette_save.rs",
+      "crates/runtime-acorn-atom/tests/printer.rs",
+      "crates/runtime-acorn-atom/tests/program.rs",
+      "crates/runtime-acorn-atom/tests/snapshot_roundtrip.rs",
+      "crates/runtime-acorn-atom/tests/utility_rom.rs",
+      "crates/runtime-acorn-atom/tests/variants.rs"
+    ],
+    "emulator_source_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+    "qualification": "Source existence only; no boot/capture qualification run in this inventory",
+    "teaching_contrast_to_investigate": "Small-memory bitmap/text and keyboard routines with explicit graphics configuration",
+    "proposed_placement": "Inventory candidate; no launch order"
+  },
+  {
+    "system": "Acorn Electron",
+    "sample_prefix": "acorn-electron",
+    "tracked_sample_files": 2,
+    "authored_sample_files": 0,
+    "profile_source": "crates/runtime-acorn-electron/src/profiles.rs",
+    "runtime_test_sources": [
+      "crates/runtime-acorn-electron/tests/cassette.rs",
+      "crates/runtime-acorn-electron/tests/firmware_catalogue.rs",
+      "crates/runtime-acorn-electron/tests/queries.rs",
+      "crates/runtime-acorn-electron/tests/snapshot_roundtrip.rs"
+    ],
+    "emulator_source_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+    "qualification": "Source existence only; no boot/capture qualification run in this inventory",
+    "teaching_contrast_to_investigate": "Compare shared 6502/Acorn ideas without assuming BBC timing or interfaces transfer unchanged",
+    "proposed_placement": "Inventory candidate; no launch order"
+  },
+  {
+    "system": "Dragon 32",
+    "sample_prefix": "dragon",
+    "tracked_sample_files": 0,
+    "authored_sample_files": 0,
+    "profile_source": "crates/runtime-dragon/src/profiles.rs",
+    "runtime_test_sources": [
+      "crates/runtime-dragon/tests/debug_target.rs",
+      "crates/runtime-dragon/tests/dragon64_serial.rs",
+      "crates/runtime-dragon/tests/golden_basic.rs",
+      "crates/runtime-dragon/tests/goldens/.gitignore",
+      "crates/runtime-dragon/tests/goldens/dragon32-basic.png",
+      "crates/runtime-dragon/tests/snapshot_roundtrip.rs"
+    ],
+    "emulator_source_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+    "qualification": "Source existence only; no boot/capture qualification run in this inventory",
+    "teaching_contrast_to_investigate": "6809 alternative with an existing model/firmware/media qualification proposal",
+    "proposed_placement": "Coordinate #5 before scheduling"
+  },
+  {
+    "system": "Vectrex",
+    "sample_prefix": "vectrex",
+    "tracked_sample_files": 0,
+    "authored_sample_files": 0,
+    "profile_source": null,
+    "runtime_test_sources": [],
+    "emulator_source_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+    "qualification": "Source existence only; no boot/capture qualification run in this inventory",
+    "teaching_contrast_to_investigate": "Vector refresh, beam control and analogue input need their own loop concepts",
+    "proposed_placement": "Coordinate #4/#6; emulator dependency"
+  },
+  {
+    "system": "Atari ST",
+    "sample_prefix": "atari-st",
+    "tracked_sample_files": 0,
+    "authored_sample_files": 0,
+    "profile_source": null,
+    "runtime_test_sources": [],
+    "emulator_source_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+    "qualification": "Source existence only; no boot/capture qualification run in this inventory",
+    "teaching_contrast_to_investigate": "68000 alone does not transfer Amiga custom-chip techniques",
+    "proposed_placement": "Existing #3 dependency; not first tranche"
+  }
+]

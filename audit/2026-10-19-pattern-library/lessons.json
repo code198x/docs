@@ -1,0 +1,5626 @@
+[
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-01.mdx",
+    "title": "Assemble and Run",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1343,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-01/border.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-02.mdx",
+    "title": "LDA Is Not LET",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1141,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-02/registers.asm",
+      "commodore-64/assembly/meet-the-machine/unit-02/longer-trip.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-03.mdx",
+    "title": "Everything Is a Number",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 883,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-03/letter.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-04.mdx",
+    "title": "A Street of Numbered Boxes",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 964,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-04/numbered-boxes.asm",
+      "commodore-64/assembly/meet-the-machine/unit-04/two-boxes.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-05.mdx",
+    "title": "The Screen Is Memory",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 972,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-05/screen-is-memory.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-06.mdx",
+    "title": "Colour Is a Separate Map",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 877,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-06/colour-map.asm",
+      "commodore-64/assembly/meet-the-machine/unit-06/colour-block.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-07.mdx",
+    "title": "Test, Then Jump",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 939,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-07/test-and-jump.asm",
+      "commodore-64/assembly/meet-the-machine/unit-07/three-way.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-08.mdx",
+    "title": "The Machine Can Hear You",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 841,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-08/read-joystick.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-09.mdx",
+    "title": "A Finger on the Boxes",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 705,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-09/a-finger.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-10.mdx",
+    "title": "The Counted Loop",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 725,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-10/counted-loop.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-11.mdx",
+    "title": "Call, Return, and a Stack You Can See",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 849,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-11/call-and-return.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-12.mdx",
+    "title": "Adding and Taking Away",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 791,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-12/arithmetic.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-13.mdx",
+    "title": "Working With Bits",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 650,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-13/working-with-bits.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-14.mdx",
+    "title": "Bigger Than a Byte",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 881,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-14/bigger-than-a-byte.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-15.mdx",
+    "title": "The Machine Speaks Back",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 903,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-15/sid.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/meet-the-machine/unit-16.mdx",
+    "title": "The Machine Trusts You",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 924,
+    "includes": [
+      "commodore-64/assembly/meet-the-machine/unit-16/no-safety-net.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-01.mdx",
+    "title": "Ship on Screen",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1338,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-01/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-01/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-02.mdx",
+    "title": "Joystick Movement",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1456,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-02/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-02/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-03.mdx",
+    "title": "Screen Edges",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1091,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-03/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-03/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-04.mdx",
+    "title": "Fire Button Shoots",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1383,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-04/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-04/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-05.mdx",
+    "title": "Laser Sound",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1688,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-05/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-05/steps/step-02.asm",
+      "commodore-64/assembly/starfield/unit-05/steps/step-03.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-06.mdx",
+    "title": "Enemy Appears",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1376,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-06/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-06/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-07.mdx",
+    "title": "Direct Hit",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1248,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-07/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-07/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-08.mdx",
+    "title": "Explosion",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1261,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-08/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-08/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-09.mdx",
+    "title": "Scoring Points",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1053,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-09/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-09/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-10.mdx",
+    "title": "Enemy Waves",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1231,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-10/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-10/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-11.mdx",
+    "title": "Player Death",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1144,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-11/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-11/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-12.mdx",
+    "title": "Game Over",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1050,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-12/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-12/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-13.mdx",
+    "title": "Three Lives",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 959,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-13/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-13/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-14.mdx",
+    "title": "Life Lost Flash",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1065,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-14/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-14/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-15.mdx",
+    "title": "Starfield",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1230,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-15/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-15/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-16.mdx",
+    "title": "Title Screen",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 1200,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-16/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-16/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/assembly/starfield/unit-17.mdx",
+    "title": "The Curve",
+    "system": "commodore-64",
+    "track": "assembly",
+    "words": 5510,
+    "includes": [
+      "commodore-64/assembly/starfield/unit-17/steps/step-01.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-02.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-03.asm",
+      "commodore-64/assembly/starfield/unit-17/steps/step-04.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/bleeper/unit-01.mdx",
+    "title": "Light and Bleep",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 428,
+    "includes": [
+      "commodore-64/basic/bleeper/unit-01/panel.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/bleeper/unit-02.mdx",
+    "title": "Four Panels, Four Notes",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 414,
+    "includes": [
+      "commodore-64/basic/bleeper/unit-02/panels.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/bleeper/unit-03.mdx",
+    "title": "A Sequence from an Array",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 391,
+    "includes": [
+      "commodore-64/basic/bleeper/unit-03/sequence.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/bleeper/unit-04.mdx",
+    "title": "One More Each Round",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 445,
+    "includes": [
+      "commodore-64/basic/bleeper/unit-04/grow.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/bleeper/unit-05.mdx",
+    "title": "Your Turn",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 454,
+    "includes": [
+      "commodore-64/basic/bleeper/unit-05/echo.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/bleeper/unit-06.mdx",
+    "title": "How Far Can You Hold?",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 519,
+    "includes": [
+      "commodore-64/basic/bleeper/unit-06/bleeper.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/dropzone/unit-01.mdx",
+    "title": "A Falling Dot",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 428,
+    "includes": [
+      "commodore-64/basic/dropzone/unit-01/fall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/dropzone/unit-02.mdx",
+    "title": "Gravity Pulls",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 424,
+    "includes": [
+      "commodore-64/basic/dropzone/unit-02/gravity.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/dropzone/unit-03.mdx",
+    "title": "Thrust Pushes Back",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 426,
+    "includes": [
+      "commodore-64/basic/dropzone/unit-03/thrust.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/dropzone/unit-04.mdx",
+    "title": "The Landing Pad",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 441,
+    "includes": [
+      "commodore-64/basic/dropzone/unit-04/pad.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/dropzone/unit-05.mdx",
+    "title": "Soft or Hard",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 457,
+    "includes": [
+      "commodore-64/basic/dropzone/unit-05/land.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/dropzone/unit-06.mdx",
+    "title": "Fuel \u2014 The Squeeze",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 571,
+    "includes": [
+      "commodore-64/basic/dropzone/unit-06/dropzone.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-01.mdx",
+    "title": "You Type the Whole Word",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 903,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-01/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-02.mdx",
+    "title": "The Line Number Is an Address",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 1044,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-02/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-03.mdx",
+    "title": "PRINT, and Its Punctuation",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 920,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-03/steps/step-01.bas",
+      "commodore-64/basic/meet-c64-basic/unit-03/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-04.mdx",
+    "title": "LET, and the First Two Letters",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 831,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-04/steps/step-01.bas",
+      "commodore-64/basic/meet-c64-basic/unit-04/steps/step-02.bas",
+      "commodore-64/basic/meet-c64-basic/unit-04/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-05.mdx",
+    "title": "INPUT \u2014 the Program Listens",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 701,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-05/steps/step-01.bas",
+      "commodore-64/basic/meet-c64-basic/unit-05/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-06.mdx",
+    "title": "IF / THEN, the C64 Way",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 715,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-06/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-07.mdx",
+    "title": "FOR / NEXT Counts For You",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 669,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-07/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-08.mdx",
+    "title": "GOTO, GOSUB, and the Game Loop",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 863,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-08/steps/step-01.bas",
+      "commodore-64/basic/meet-c64-basic/unit-08/steps/step-02.bas",
+      "commodore-64/basic/meet-c64-basic/unit-08/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-09.mdx",
+    "title": "The Screen Is Memory",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 865,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-09/steps/step-01.bas",
+      "commodore-64/basic/meet-c64-basic/unit-09/steps/step-02.bas",
+      "commodore-64/basic/meet-c64-basic/unit-09/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-10.mdx",
+    "title": "Colour Lives Somewhere Else",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 1032,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-10/steps/step-01.bas",
+      "commodore-64/basic/meet-c64-basic/unit-10/steps/step-02.bas",
+      "commodore-64/basic/meet-c64-basic/unit-10/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-11.mdx",
+    "title": "The Machine Can Sing",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 987,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-11/steps/step-01.bas",
+      "commodore-64/basic/meet-c64-basic/unit-11/steps/step-02.bas",
+      "commodore-64/basic/meet-c64-basic/unit-11/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-12.mdx",
+    "title": "Reading the Joystick",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 995,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-12/steps/step-01.bas",
+      "commodore-64/basic/meet-c64-basic/unit-12/steps/step-02.bas",
+      "commodore-64/basic/meet-c64-basic/unit-12/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-13.mdx",
+    "title": "A Shape That Moves",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 892,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-13/steps/step-01.bas",
+      "commodore-64/basic/meet-c64-basic/unit-13/steps/step-02.bas",
+      "commodore-64/basic/meet-c64-basic/unit-13/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-14.mdx",
+    "title": "Keeping Your Work",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 777,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-14/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/meet-c64-basic/unit-15.mdx",
+    "title": "When It's Wrong",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 987,
+    "includes": [
+      "commodore-64/basic/meet-c64-basic/unit-15/steps/step-01.bas",
+      "commodore-64/basic/meet-c64-basic/unit-15/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/oracle/unit-01.mdx",
+    "title": "Ask the Oracle",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 306,
+    "includes": [
+      "commodore-64/basic/oracle/unit-01/ask.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/oracle/unit-02.mdx",
+    "title": "The Oracle Chooses",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 320,
+    "includes": [
+      "commodore-64/basic/oracle/unit-02/choose.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/oracle/unit-03.mdx",
+    "title": "A List of Answers",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 325,
+    "includes": [
+      "commodore-64/basic/oracle/unit-03/answers.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/oracle/unit-04.mdx",
+    "title": "The Oracle Thinks",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 337,
+    "includes": [
+      "commodore-64/basic/oracle/unit-04/thinking.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/oracle/unit-05.mdx",
+    "title": "Mood in Colour",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 377,
+    "includes": [
+      "commodore-64/basic/oracle/unit-05/mood.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/oracle/unit-06.mdx",
+    "title": "Ask Again",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 398,
+    "includes": [
+      "commodore-64/basic/oracle/unit-06/oracle.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/reflex/unit-01.mdx",
+    "title": "The Flash",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 377,
+    "includes": [
+      "commodore-64/basic/reflex/unit-01/flash.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/reflex/unit-02.mdx",
+    "title": "An Unknown Wait",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 380,
+    "includes": [
+      "commodore-64/basic/reflex/unit-02/wait.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/reflex/unit-03.mdx",
+    "title": "Timing the Press",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 396,
+    "includes": [
+      "commodore-64/basic/reflex/unit-03/timing.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/reflex/unit-04.mdx",
+    "title": "Catch It Instantly",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 392,
+    "includes": [
+      "commodore-64/basic/reflex/unit-04/get.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/reflex/unit-05.mdx",
+    "title": "Jiffies and Seconds",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 404,
+    "includes": [
+      "commodore-64/basic/reflex/unit-05/result.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/reflex/unit-06.mdx",
+    "title": "How Fast Are You?",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 484,
+    "includes": [
+      "commodore-64/basic/reflex/unit-06/reflex.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/rover/unit-01.mdx",
+    "title": "Place the Rover",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 417,
+    "includes": [
+      "commodore-64/basic/rover/unit-01/rover.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/rover/unit-02.mdx",
+    "title": "Drive It with the Stick",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 451,
+    "includes": [
+      "commodore-64/basic/rover/unit-02/move.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/rover/unit-03.mdx",
+    "title": "Walls That Stop You",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 461,
+    "includes": [
+      "commodore-64/basic/rover/unit-03/walls.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/rover/unit-04.mdx",
+    "title": "Pickups and Score",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 472,
+    "includes": [
+      "commodore-64/basic/rover/unit-04/pickups.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/rover/unit-05.mdx",
+    "title": "Clear the Board",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 431,
+    "includes": [
+      "commodore-64/basic/rover/unit-05/clear.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/rover/unit-06.mdx",
+    "title": "Make It a Game",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 480,
+    "includes": [
+      "commodore-64/basic/rover/unit-06/rover.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/safe-cracker/unit-01.mdx",
+    "title": "Pick a Secret",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 397,
+    "includes": [
+      "commodore-64/basic/safe-cracker/unit-01/secret.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/safe-cracker/unit-02.mdx",
+    "title": "Take a Guess",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 390,
+    "includes": [
+      "commodore-64/basic/safe-cracker/unit-02/guess.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/safe-cracker/unit-03.mdx",
+    "title": "Higher or Lower",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 416,
+    "includes": [
+      "commodore-64/basic/safe-cracker/unit-03/hint.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/safe-cracker/unit-04.mdx",
+    "title": "Loop Until Cracked",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 425,
+    "includes": [
+      "commodore-64/basic/safe-cracker/unit-04/loop.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/safe-cracker/unit-05.mdx",
+    "title": "Colour the Feedback",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 466,
+    "includes": [
+      "commodore-64/basic/safe-cracker/unit-05/colour.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/safe-cracker/unit-06.mdx",
+    "title": "A Stake That Runs Out",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 511,
+    "includes": [
+      "commodore-64/basic/safe-cracker/unit-06/safe-cracker.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/skyline/unit-01.mdx",
+    "title": "One Block on the Screen",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 342,
+    "includes": [
+      "commodore-64/basic/skyline/unit-01/one-block.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/skyline/unit-02.mdx",
+    "title": "A Tower",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 345,
+    "includes": [
+      "commodore-64/basic/skyline/unit-02/tower.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/skyline/unit-03.mdx",
+    "title": "A Row of Towers",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 344,
+    "includes": [
+      "commodore-64/basic/skyline/unit-03/towers.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/skyline/unit-04.mdx",
+    "title": "Lights in the Windows",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 363,
+    "includes": [
+      "commodore-64/basic/skyline/unit-04/windows.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/skyline/unit-05.mdx",
+    "title": "No Two Cities Alike",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 374,
+    "includes": [
+      "commodore-64/basic/skyline/unit-05/random-city.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/skyline/unit-06.mdx",
+    "title": "Sunset",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 434,
+    "includes": [
+      "commodore-64/basic/skyline/unit-06/skyline.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/tally/unit-01.mdx",
+    "title": "A Die Roll",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 405,
+    "includes": [
+      "commodore-64/basic/tally/unit-01/roll.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/tally/unit-02.mdx",
+    "title": "Two Dice, One Total",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 434,
+    "includes": [
+      "commodore-64/basic/tally/unit-02/total.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/tally/unit-03.mdx",
+    "title": "Counting the Totals",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 440,
+    "includes": [
+      "commodore-64/basic/tally/unit-03/count.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/tally/unit-04.mdx",
+    "title": "A Thousand Rolls",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 440,
+    "includes": [
+      "commodore-64/basic/tally/unit-04/longrun.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/tally/unit-05.mdx",
+    "title": "The Bell in Bars",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 485,
+    "includes": [
+      "commodore-64/basic/tally/unit-05/chart.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-64/basic/tally/unit-06.mdx",
+    "title": "You Set the Rolls",
+    "system": "commodore-64",
+    "track": "basic",
+    "words": 499,
+    "includes": [
+      "commodore-64/basic/tally/unit-06/tally.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-01.mdx",
+    "title": "Type and Run",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 779,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-01/hello.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-02.mdx",
+    "title": "Print and the Screen",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 844,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-02/screen.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-03.mdx",
+    "title": "Variables and Types",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 947,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-03/variables.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-04.mdx",
+    "title": "If, Then, Else",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 1175,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-04/branch.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-05.mdx",
+    "title": "Loops",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 959,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-05/loop.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-06.mdx",
+    "title": "Procedures",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 1003,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-06/divider.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-07.mdx",
+    "title": "Open a Screen",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 971,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-07/screen.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-08.mdx",
+    "title": "Colour and the Palette",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 1057,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-08/palette.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-09.mdx",
+    "title": "Drawing and Shapes",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 1023,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-09/shapes.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-10.mdx",
+    "title": "Your First Bob",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 1059,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-10/bob.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-11.mdx",
+    "title": "The Frame Loop",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 1056,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-11/move.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-12.mdx",
+    "title": "Reading the Player",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 1073,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-12/steer.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-13.mdx",
+    "title": "AMAL: Movement That Runs Itself",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 1109,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-13/amal.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-14.mdx",
+    "title": "Bumping Into Things",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 1024,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-14/collide.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-15.mdx",
+    "title": "AMOS Makes a Sound",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 960,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-15/sound.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-16.mdx",
+    "title": "Keeping Your Work",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 930,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/amos/meet-amos/unit-17.mdx",
+    "title": "The AMOS Way",
+    "system": "commodore-amiga",
+    "track": "amos",
+    "words": 1171,
+    "includes": [
+      "commodore-amiga/amos/meet-amos/unit-17/theamosway.amos"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-01.mdx",
+    "title": "The Farmyard",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1276,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-01/snippets/01-copper-bands.asm",
+      "commodore-amiga/assembly/flock/unit-01/snippets/02-rectfill.asm",
+      "commodore-amiga/assembly/flock/unit-01/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-02.mdx",
+    "title": "The Sheep",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1153,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-02/snippets/01-sheep-data.asm",
+      "commodore-amiga/assembly/flock/unit-02/snippets/02-sprite-pointers.asm",
+      "commodore-amiga/assembly/flock/unit-02/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-03.mdx",
+    "title": "Steering",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1402,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-03/snippets/01-steer.asm",
+      "commodore-amiga/assembly/flock/unit-03/snippets/02-updsprite.asm",
+      "commodore-amiga/assembly/flock/unit-03/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-04.mdx",
+    "title": "The Amble",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1054,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-04/snippets/02-step-images.asm",
+      "commodore-amiga/assembly/flock/unit-04/snippets/01-showframe.asm",
+      "commodore-amiga/assembly/flock/unit-04/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-05.mdx",
+    "title": "The Tractor",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1185,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-05/snippets/01-drivetractor.asm",
+      "commodore-amiga/assembly/flock/unit-05/snippets/02-setpos.asm",
+      "commodore-amiga/assembly/flock/unit-05/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-06.mdx",
+    "title": "Squashed",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1218,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-06/snippets/01-checksquash.asm",
+      "commodore-amiga/assembly/flock/unit-06/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-07.mdx",
+    "title": "The Flock in Hand",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1139,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-07/snippets/02-hud-crossing.asm",
+      "commodore-amiga/assembly/flock/unit-07/snippets/01-drawflock.asm",
+      "commodore-amiga/assembly/flock/unit-07/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-08.mdx",
+    "title": "Busy Lanes",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1169,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-08/snippets/01-drivelanes.asm",
+      "commodore-amiga/assembly/flock/unit-08/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-09.mdx",
+    "title": "The Fold",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1148,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-09/snippets/01-trypen.asm",
+      "commodore-amiga/assembly/flock/unit-09/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-10.mdx",
+    "title": "Keeping Score",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 926,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-10/snippets/01-drawscore.asm",
+      "commodore-amiga/assembly/flock/unit-10/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-11.mdx",
+    "title": "A Soft Baa",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 2751,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-11/snippets/01-playsound.asm",
+      "commodore-amiga/assembly/flock/unit-11/ownership/requestsound.asm",
+      "commodore-amiga/assembly/flock/unit-11/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-12.mdx",
+    "title": "The Stream",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1359,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-12/snippets/01-checkstream.asm",
+      "commodore-amiga/assembly/flock/unit-12/snippets/02-vblank-phantom.asm",
+      "commodore-amiga/assembly/flock/unit-12/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-13.mdx",
+    "title": "The Duck",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1220,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-13/snippets/02-two-decks.asm",
+      "commodore-amiga/assembly/flock/unit-13/snippets/01-tendduck.asm",
+      "commodore-amiga/assembly/flock/unit-13/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-14.mdx",
+    "title": "The Cow",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1285,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-14/snippets/01-fractional-mover.asm",
+      "commodore-amiga/assembly/flock/unit-14/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-15.mdx",
+    "title": "The Black Sheep",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1488,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-15/snippets/01-newsheep-and-rnd.asm",
+      "commodore-amiga/assembly/flock/unit-15/snippets/02-the-gamble-pays.asm",
+      "commodore-amiga/assembly/flock/unit-15/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-16.mdx",
+    "title": "The Nervous Sheep",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1194,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-16/snippets/01-fret.asm",
+      "commodore-amiga/assembly/flock/unit-16/snippets/02-trembling.asm",
+      "commodore-amiga/assembly/flock/unit-16/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-17.mdx",
+    "title": "The Title",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1256,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-17/snippets/01-the-spine.asm",
+      "commodore-amiga/assembly/flock/unit-17/snippets/02-tunetick.asm",
+      "commodore-amiga/assembly/flock/unit-17/snippets/03-the-jingle.asm",
+      "commodore-amiga/assembly/flock/unit-17/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/flock/unit-18.mdx",
+    "title": "The Whole Flock Home",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1858,
+    "includes": [
+      "commodore-amiga/assembly/flock/unit-18/snippets/01-the-level-table.asm",
+      "commodore-amiga/assembly/flock/unit-18/snippets/02-leveltab.asm",
+      "commodore-amiga/assembly/flock/unit-18/snippets/03-buffered-hop.asm",
+      "commodore-amiga/assembly/flock/unit-18/snippets/04-the-last-yard.asm",
+      "commodore-amiga/assembly/flock/unit-18/snippets/05-the-stings.asm",
+      "commodore-amiga/assembly/flock/unit-18/flock.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-01.mdx",
+    "title": "Assemble and Run",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1295,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-01/screen.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-02.mdx",
+    "title": "MOVE Is the Verb",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 878,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-02/registers.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-03.mdx",
+    "title": "Bytes, Words and Longs",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 715,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-03/sizes.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-04.mdx",
+    "title": "A Register for Every Job",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 706,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-04/registers-job.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-05.mdx",
+    "title": "A Vast Street of Memory",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 784,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-05/memory.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-06.mdx",
+    "title": "The Screen Is a Bitmap",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 897,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-06/bitmap.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-07.mdx",
+    "title": "Colour and the Copper",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 952,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-07/copper.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-08.mdx",
+    "title": "Test, Then Branch",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 791,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-08/decide.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-09.mdx",
+    "title": "The Vertical Blank",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 1178,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-09/heartbeat.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-10.mdx",
+    "title": "Reading the Player",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 867,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-10/input.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-11.mdx",
+    "title": "Pointers and the Address Registers",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 857,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-11/pointers.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-12.mdx",
+    "title": "The Counted Loop",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 869,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-12/loop.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-13.mdx",
+    "title": "Call, Return, and the Stack",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 901,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-13/subroutine.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-14.mdx",
+    "title": "Adding and Taking Away",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 831,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-14/arithmetic.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-15.mdx",
+    "title": "Working With Bits",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 870,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-15/bits.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-16.mdx",
+    "title": "The Blitter Moves It",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 900,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-16/blitter.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-17.mdx",
+    "title": "A Sprite of Your Own",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 930,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-17/sprite.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-18.mdx",
+    "title": "Paula Makes a Sound",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 909,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-18/sound.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/assembly/meet-the-machine/unit-19.mdx",
+    "title": "The Machine Trusts You",
+    "system": "commodore-amiga",
+    "track": "assembly",
+    "words": 948,
+    "includes": [
+      "commodore-amiga/assembly/meet-the-machine/unit-19/oops.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-01.mdx",
+    "title": "Type, Compile, Run",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 935,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-01/hello.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-02.mdx",
+    "title": "Amiga Mode and Blitz Mode",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 850,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-02/blitzmode.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-03.mdx",
+    "title": "Variables and Blitz's Types",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 1043,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-03/types.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-04.mdx",
+    "title": "Decisions, Loops, and the Frame",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 1147,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-04/loop.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-05.mdx",
+    "title": "Many Things at Once",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 1354,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-05/many.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-06.mdx",
+    "title": "Slices and the Display",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 1044,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-06/slices.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-07.mdx",
+    "title": "Shapes",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 943,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-07/shapes.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-08.mdx",
+    "title": "Blitting",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 1054,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-08/bounce.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-09.mdx",
+    "title": "Reading the Joystick",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 1125,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-09/steer.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-10.mdx",
+    "title": "Animating a Shape",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 935,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-10/animate.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-11.mdx",
+    "title": "Bumping Into Things",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 1195,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-11/collide.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-12.mdx",
+    "title": "Smooth Scrolling",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 1096,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-12/scroll.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-13.mdx",
+    "title": "Reaching the Hardware",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 1246,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-13/cycle.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-14.mdx",
+    "title": "Hardware Sprites",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 1223,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-14/sprite.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/commodore-amiga/blitz/meet-blitz/unit-15.mdx",
+    "title": "The Blitz Way",
+    "system": "commodore-amiga",
+    "track": "blitz",
+    "words": 1169,
+    "includes": [
+      "commodore-amiga/blitz/meet-blitz/unit-15/swarm.bb2"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/craft/game-feel/unit-01.mdx",
+    "title": "Respond to input",
+    "system": "craft",
+    "track": "game-feel",
+    "words": 478,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/craft/game-feel/unit-02.mdx",
+    "title": "Build up speed",
+    "system": "craft",
+    "track": "game-feel",
+    "words": 429,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/craft/game-feel/unit-03.mdx",
+    "title": "Let go and slow down",
+    "system": "craft",
+    "track": "game-feel",
+    "words": 423,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/craft/game-feel/unit-04.mdx",
+    "title": "Reverse direction",
+    "system": "craft",
+    "track": "game-feel",
+    "words": 497,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/craft/maths-for-games/unit-01.mdx",
+    "title": "Roll a die",
+    "system": "craft",
+    "track": "maths-for-games",
+    "words": 571,
+    "includes": [
+      "sinclair-zx-spectrum/basic/dice-roller/teaching/roll/dice-roller.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/craft/maths-for-games/unit-02.mdx",
+    "title": "Keep the tallies",
+    "system": "craft",
+    "track": "maths-for-games",
+    "words": 618,
+    "includes": [
+      "sinclair-zx-spectrum/basic/dice-roller/teaching/tally/changes.bas",
+      "sinclair-zx-spectrum/basic/dice-roller/teaching/tally/dice-roller.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/craft/maths-for-games/unit-03.mdx",
+    "title": "Compare shares",
+    "system": "craft",
+    "track": "maths-for-games",
+    "words": 486,
+    "includes": [
+      "sinclair-zx-spectrum/basic/dice-roller/teaching/shares/changes.bas",
+      "sinclair-zx-spectrum/basic/dice-roller/teaching/shares/dice-roller.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/craft/maths-for-games/unit-04.mdx",
+    "title": "Watch the distribution",
+    "system": "craft",
+    "track": "maths-for-games",
+    "words": 699,
+    "includes": [
+      "sinclair-zx-spectrum/basic/dice-roller/teaching/live/changes.bas",
+      "sinclair-zx-spectrum/basic/dice-roller/teaching/live/dice-roller.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/craft/maths-for-games/unit-05.mdx",
+    "title": "Compare experiments",
+    "system": "craft",
+    "track": "maths-for-games",
+    "words": 978,
+    "includes": [
+      "sinclair-zx-spectrum/basic/dice-roller/teaching/finished/changes.bas",
+      "sinclair-zx-spectrum/basic/dice-roller/teaching/finished/dice-roller.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/craft/maths-for-games/unit-06.mdx",
+    "title": "Place a point",
+    "system": "craft",
+    "track": "maths-for-games",
+    "words": 275,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/craft/maths-for-games/unit-07.mdx",
+    "title": "Measure the triangle",
+    "system": "craft",
+    "track": "maths-for-games",
+    "words": 281,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/craft/maths-for-games/unit-08.mdx",
+    "title": "Turn an angle into movement",
+    "system": "craft",
+    "track": "maths-for-games",
+    "words": 334,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/craft/maths-for-games/unit-09.mdx",
+    "title": "Measure angles in radians",
+    "system": "craft",
+    "track": "maths-for-games",
+    "words": 298,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/craft/maths-for-games/unit-10.mdx",
+    "title": "Find the angle to a target",
+    "system": "craft",
+    "track": "maths-for-games",
+    "words": 313,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/craft/maths-for-games/unit-11.mdx",
+    "title": "Keep fractional movement in integers",
+    "system": "craft",
+    "track": "maths-for-games",
+    "words": 368,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/basics/unit-01.mdx",
+    "title": "A Program Is Instructions",
+    "system": "foundations",
+    "track": "basics",
+    "words": 565,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/basics/unit-02.mdx",
+    "title": "One Thing After Another",
+    "system": "foundations",
+    "track": "basics",
+    "words": 491,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/basics/unit-03.mdx",
+    "title": "Showing Your Work",
+    "system": "foundations",
+    "track": "basics",
+    "words": 716,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/basics/unit-04.mdx",
+    "title": "A Place to Remember",
+    "system": "foundations",
+    "track": "basics",
+    "words": 681,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/basics/unit-05.mdx",
+    "title": "Asking the Player",
+    "system": "foundations",
+    "track": "basics",
+    "words": 605,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/counting-in-twos/unit-01.mdx",
+    "title": "Ten Fingers, Two Wires",
+    "system": "foundations",
+    "track": "counting-in-twos",
+    "words": 894,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/counting-in-twos/unit-02.mdx",
+    "title": "Four Bits at a Time",
+    "system": "foundations",
+    "track": "counting-in-twos",
+    "words": 1276,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/counting-in-twos/unit-03.mdx",
+    "title": "Two Bytes Together",
+    "system": "foundations",
+    "track": "counting-in-twos",
+    "words": 996,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/counting-in-twos/unit-04.mdx",
+    "title": "A Minus With No Minus Sign",
+    "system": "foundations",
+    "track": "counting-in-twos",
+    "words": 940,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/decisions/unit-01.mdx",
+    "title": "Making a Choice",
+    "system": "foundations",
+    "track": "decisions",
+    "words": 867,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/decisions/unit-02.mdx",
+    "title": "One or the Other",
+    "system": "foundations",
+    "track": "decisions",
+    "words": 833,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/decisions/unit-03.mdx",
+    "title": "A Yes You Can Keep",
+    "system": "foundations",
+    "track": "decisions",
+    "words": 1065,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/decisions/unit-04.mdx",
+    "title": "Asking Two Things at Once",
+    "system": "foundations",
+    "track": "decisions",
+    "words": 1051,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-01.mdx",
+    "title": "The Program Is Not What Runs",
+    "system": "foundations",
+    "track": "from-source-to-silicon",
+    "words": 1041,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-02.mdx",
+    "title": "Translating As You Go",
+    "system": "foundations",
+    "track": "from-source-to-silicon",
+    "words": 1170,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-03.mdx",
+    "title": "Translating Once",
+    "system": "foundations",
+    "track": "from-source-to-silicon",
+    "words": 1331,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-04.mdx",
+    "title": "What Speed Costs You",
+    "system": "foundations",
+    "track": "from-source-to-silicon",
+    "words": 724,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/from-source-to-silicon/unit-05.mdx",
+    "title": "Put It on the Clock",
+    "system": "foundations",
+    "track": "from-source-to-silicon",
+    "words": 986,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-01.mdx",
+    "title": "The Same Table, Drawn",
+    "system": "foundations",
+    "track": "gates-and-the-adder",
+    "words": 885,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-02.mdx",
+    "title": "The Half Adder",
+    "system": "foundations",
+    "track": "gates-and-the-adder",
+    "words": 805,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/gates-and-the-adder/unit-03.mdx",
+    "title": "The Full Adder and the Ripple",
+    "system": "foundations",
+    "track": "gates-and-the-adder",
+    "words": 1413,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/repeating/unit-01.mdx",
+    "title": "Doing It Again",
+    "system": "foundations",
+    "track": "repeating",
+    "words": 1009,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/repeating/unit-02.mdx",
+    "title": "Until You Get It",
+    "system": "foundations",
+    "track": "repeating",
+    "words": 1082,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/repeating/unit-03.mdx",
+    "title": "Checking Before You Start",
+    "system": "foundations",
+    "track": "repeating",
+    "words": 1008,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/structure/unit-01.mdx",
+    "title": "A Box That Holds Many",
+    "system": "foundations",
+    "track": "structure",
+    "words": 927,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/structure/unit-02.mdx",
+    "title": "A Job With a Name",
+    "system": "foundations",
+    "track": "structure",
+    "words": 940,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/structure/unit-03.mdx",
+    "title": "Telling a Job What to Work On",
+    "system": "foundations",
+    "track": "structure",
+    "words": 978,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/structure/unit-04.mdx",
+    "title": "When It's Wrong",
+    "system": "foundations",
+    "track": "structure",
+    "words": 1063,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/truth-tables/unit-01.mdx",
+    "title": "True and False",
+    "system": "foundations",
+    "track": "truth-tables",
+    "words": 696,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/truth-tables/unit-02.mdx",
+    "title": "Both, Either, Different",
+    "system": "foundations",
+    "track": "truth-tables",
+    "words": 804,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/truth-tables/unit-03.mdx",
+    "title": "Two Guards, One Guard",
+    "system": "foundations",
+    "track": "truth-tables",
+    "words": 1028,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/working-it-out/unit-01.mdx",
+    "title": "Working It Out",
+    "system": "foundations",
+    "track": "working-it-out",
+    "words": 760,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/working-it-out/unit-02.mdx",
+    "title": "A Box That Grows From Itself",
+    "system": "foundations",
+    "track": "working-it-out",
+    "words": 575,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/working-it-out/unit-03.mdx",
+    "title": "When It Doesn't Divide Evenly",
+    "system": "foundations",
+    "track": "working-it-out",
+    "words": 1004,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/working-the-bits/unit-01.mdx",
+    "title": "Switch by Switch",
+    "system": "foundations",
+    "track": "working-the-bits",
+    "words": 994,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/working-the-bits/unit-02.mdx",
+    "title": "Slide the Whole Row",
+    "system": "foundations",
+    "track": "working-the-bits",
+    "words": 902,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/working-the-bits/unit-03.mdx",
+    "title": "A Letter Is a Number",
+    "system": "foundations",
+    "track": "working-the-bits",
+    "words": 1105,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/working-the-bits/unit-04.mdx",
+    "title": "Numbers That Aren't Whole",
+    "system": "foundations",
+    "track": "working-the-bits",
+    "words": 869,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/foundations/working-the-bits/unit-05.mdx",
+    "title": "Nailing the Point Down",
+    "system": "foundations",
+    "track": "working-the-bits",
+    "words": 1463,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-01.mdx",
+    "title": "See Your Character",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 2072,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-01/snippets/01-header.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-01/snippets/02-reset.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-01/snippets/03-palette.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-01/snippets/04-sprite.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-01/snippets/05-nmi.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-01/snippets/06-chr.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-01/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-02.mdx",
+    "title": "Controller Input",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1458,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-02/snippets/01-read-controller.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-02/snippets/02-move-player.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-02/snippets/03-nmi-flag.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-02/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-03.mdx",
+    "title": "Jump",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1676,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-03/snippets/01-jump.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-03/snippets/02-physics.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-03/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-04.mdx",
+    "title": "Obstacle",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1682,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-04/snippets/01-obstacle.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-04/snippets/02-collision.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-04/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-05.mdx",
+    "title": "Jump Sound",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1673,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-05/snippets/01-jump-sound.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-05/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-06.mdx",
+    "title": "Background Tiles",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1794,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-06/snippets/01-nametable.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-06/snippets/02-attributes.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-06/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-07.mdx",
+    "title": "Platform Collision",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1917,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-07/snippets/02-level-data.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-07/snippets/01-tile-collision.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-07/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-08.mdx",
+    "title": "Wall Collision",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1654,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-08/snippets/01-wall-collision.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-08/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-09.mdx",
+    "title": "Collectible Items",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1538,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-09/snippets/01-check-collect.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-09/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-10.mdx",
+    "title": "Score Display",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1304,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-10/snippets/01-nmi-score.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-10/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-11.mdx",
+    "title": "Collect Sound",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1814,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-11/snippets/01-collect-sound.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-11/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-12.mdx",
+    "title": "Hazard Tiles",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1365,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-12/snippets/01-hazard-check.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-12/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-13.mdx",
+    "title": "Three Lives",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1270,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-13/snippets/01-take-damage.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-13/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-14.mdx",
+    "title": "Game Over Screen",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1579,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-14/snippets/01-game-over-text.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-14/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-15.mdx",
+    "title": "Title Screen + Restart",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1304,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-15/snippets/01-state-machine.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-15/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-16.mdx",
+    "title": "Integration + Polish",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1334,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-16/snippets/01-animation.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-16/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/dash/unit-17.mdx",
+    "title": "The Last Yard",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 4707,
+    "includes": [
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/01-next-level.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/02-the-speed-table.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/03-tune-tick.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/04-the-phrases.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/tempo/scheduler/scheduler.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/handoff/mailbox.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/notification/counter.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/05-the-blink.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/snippets/06-the-grace-window.asm",
+      "nintendo-entertainment-system/assembly/dash/unit-17/dash.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-01.mdx",
+    "title": "Assemble and Run",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1376,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-02.mdx",
+    "title": "LDA Is Not LET",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1120,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-02/registers.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-03.mdx",
+    "title": "Everything Is a Number",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 954,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-03/letter.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-04.mdx",
+    "title": "A Street of Numbered Boxes",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1034,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-04/boxes.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-05.mdx",
+    "title": "The Screen Is Behind a Window",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1204,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-05/screen-window.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-06.mdx",
+    "title": "Colour Lives in a Palette",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1041,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-06/palette.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-07.mdx",
+    "title": "Where the Shapes Come From",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1098,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-07/shapes.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-08.mdx",
+    "title": "Test, Then Jump",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1074,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-08/decide.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-09.mdx",
+    "title": "The Machine Has a Heartbeat",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1104,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-09/heartbeat.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-10.mdx",
+    "title": "The Joypad in Your Hand",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 1165,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-10/read-pad.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-11.mdx",
+    "title": "A Finger on the Boxes",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 788,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-11/index.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-12.mdx",
+    "title": "The Counted Loop",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 784,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-12/loop.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-13.mdx",
+    "title": "Call, Return, and a Stack You Can See",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 866,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-13/call.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-14.mdx",
+    "title": "Adding and Taking Away",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 825,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-14/maths.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-15.mdx",
+    "title": "Working With Bits",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 674,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-15/bits.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-16.mdx",
+    "title": "Bigger Than a Byte",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 883,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-16/wide.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-17.mdx",
+    "title": "The Machine Speaks Back",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 880,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-17/apu.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/nintendo-entertainment-system/assembly/meet-the-machine/unit-18.mdx",
+    "title": "The Machine Trusts You",
+    "system": "nintendo-entertainment-system",
+    "track": "assembly",
+    "words": 939,
+    "includes": [
+      "nintendo-entertainment-system/assembly/meet-the-machine/unit-18/oops.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-01.mdx",
+    "title": "The Empty Square",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 2251,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-01/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-01/steps/step-03.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-02.mdx",
+    "title": "The Cobbles and the Brick",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 2007,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-02/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-03.mdx",
+    "title": "The Lamplighter",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1499,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-03/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-04.mdx",
+    "title": "The Heartbeat",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1695,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-04/steps/step-03.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-05.mdx",
+    "title": "Reading the Keys",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1542,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-05/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-05/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-06.mdx",
+    "title": "One Step",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1614,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-06/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-06/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-07.mdx",
+    "title": "Taming the Key",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1537,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-07/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-07/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-08.mdx",
+    "title": "Save and Restore",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1679,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-08/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-08/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-09.mdx",
+    "title": "Walls",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1824,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-09/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-09/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-10.mdx",
+    "title": "Edges",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1753,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-10/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-10/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-11.mdx",
+    "title": "The Lamps",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1808,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-11/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-11/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-12.mdx",
+    "title": "Light It",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1620,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-12/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-12/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-13.mdx",
+    "title": "The Tally",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1658,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-13/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-13/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-14.mdx",
+    "title": "The Square Warms",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1858,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-14/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-14/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-15.mdx",
+    "title": "The Night Is Held",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1872,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-15/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-15/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-16.mdx",
+    "title": "The Draught",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 2116,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-16/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-16/steps/step-02.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-16/steps/step-03.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-17.mdx",
+    "title": "Lives, and the Fall of Night",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1879,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-17/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-17/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-18.mdx",
+    "title": "A Small Sound",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1801,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-18/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-18/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-19.mdx",
+    "title": "The Title",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1659,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-19/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-19/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/gloaming/unit-20.mdx",
+    "title": "Again",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 3240,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/gloaming/unit-20/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-20/steps/step-02.asm",
+      "sinclair-zx-spectrum/assembly/gloaming/unit-20/steps/step-03.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-01.mdx",
+    "title": "Change the border",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1546,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-assembly/opening/first-program.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-02.mdx",
+    "title": "A byte becomes pixels",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 944,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-assembly/opening/one-byte.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-03.mdx",
+    "title": "Build an eight-row shape",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 995,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-assembly/opening/eight-rows.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-04.mdx",
+    "title": "Draw with a counted loop",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 931,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-assembly/opening/row-loop.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-05.mdx",
+    "title": "Call a drawing routine",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 988,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-assembly/opening/draw-routine.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-06.mdx",
+    "title": "Move your character",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1185,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-assembly/opening/move-character.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-07.mdx",
+    "title": "Give movement a clock",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1095,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-assembly/opening/clocked-character.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-08.mdx",
+    "title": "Find the first wrong step",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 762,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-01.mdx",
+    "title": "Assemble and Run",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1248,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-01/border.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-02.mdx",
+    "title": "LD Is Not LET",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1091,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-02/registers.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-03.mdx",
+    "title": "Everything Is a Number",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 914,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-03/everything-is-a-number.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-04.mdx",
+    "title": "A Street of Numbered Boxes",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 928,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-04/numbered-boxes.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-05.mdx",
+    "title": "The Screen Is Memory",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1012,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-05/screen-is-memory.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-06.mdx",
+    "title": "Colour Is a Separate Map",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 991,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-06/colour-map.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-07.mdx",
+    "title": "Test, Then Jump",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1050,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-07/test-and-jump.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-08.mdx",
+    "title": "The Machine Can Hear You",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 922,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-08/read-a-key.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-09.mdx",
+    "title": "A Finger on the Boxes",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 729,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-09/a-finger-on-the-boxes.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-10.mdx",
+    "title": "Counting Toward Zero",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 868,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-10/counting-toward-zero.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-11.mdx",
+    "title": "Call, Return, and a Stack You Can See",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 842,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-11/call-and-return.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-12.mdx",
+    "title": "Adding and Taking Away",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 745,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-12/arithmetic.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-13.mdx",
+    "title": "Working With Bits",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 691,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-13/working-with-bits.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-14.mdx",
+    "title": "Bigger Than a Byte",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 736,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-14/bigger-than-a-byte.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-15.mdx",
+    "title": "The Machine Speaks Back",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1080,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-15/beeper.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-the-machine/unit-16.mdx",
+    "title": "The Machine Trusts You",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 985,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meet-the-machine/unit-16/no-safety-net.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-01.mdx",
+    "title": "Carry a pixel into the next byte",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 632,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-02.mdx",
+    "title": "Prepare eight horizontal positions",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 521,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-03.mdx",
+    "title": "Find a pixel in Spectrum memory",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 564,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-04.mdx",
+    "title": "Draw the whole ship",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 615,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-05.mdx",
+    "title": "Erase before moving",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 543,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-06.mdx",
+    "title": "Give the interrupt a small job",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 561,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-07.mdx",
+    "title": "Count frames, choose updates",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 444,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-08.mdx",
+    "title": "Put steering on the frame clock",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 478,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-09.mdx",
+    "title": "Let a meteor move independently",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 504,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-10.mdx",
+    "title": "Distinguish a hit from a near miss",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 583,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-11.mdx",
+    "title": "Give the game clear phases",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1204,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-12.mdx",
+    "title": "Give each object a record",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1028,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-13.mdx",
+    "title": "Walk the pool and reuse a slot",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 869,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-14.mdx",
+    "title": "Make a storm with an end",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 637,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-15.mdx",
+    "title": "Give meteors a gentle drift",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 521,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-16.mdx",
+    "title": "Collect something worth the risk",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 647,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-17.mdx",
+    "title": "Turn a score into readable digits",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 633,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-18.mdx",
+    "title": "Measure time without counting distance",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 556,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-19.mdx",
+    "title": "Show seconds and hundredths",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 584,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-20.mdx",
+    "title": "Hold Space to boost",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 562,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-21.mdx",
+    "title": "Draw once, check twice",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 534,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-22.mdx",
+    "title": "Keep the best time and score",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 563,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-23.mdx",
+    "title": "Make the instructions fit",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 585,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-24.mdx",
+    "title": "Turn a click into a tone",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1499,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-25.mdx",
+    "title": "Give every event a sound",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1530,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-26.mdx",
+    "title": "Pay for sound in the frame",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 2578,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-27.mdx",
+    "title": "Break the ship apart",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 3356,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-28.mdx",
+    "title": "Colour the storm by place",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 3460,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-29.mdx",
+    "title": "Chain storms into a voyage",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 2372,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-30.mdx",
+    "title": "Let the score outgrow a byte",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1575,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-31.mdx",
+    "title": "Reward each storm cleared",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1131,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-32.mdx",
+    "title": "Make each storm harder",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1720,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-33.mdx",
+    "title": "Remember the furthest storm",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1088,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-34.mdx",
+    "title": "Let the title play itself",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1476,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-35.mdx",
+    "title": "Draw a loading screen",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1789,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/loading-screen/compose.py",
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/loading-screen/screen.asm",
+      "sinclair-zx-spectrum/assembly/meteor-storm/checkpoints/loading-screen/loader.bas",
+      "sinclair-zx-spectrum/assembly/meteor-storm/unit-35/Makefile"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-36.mdx",
+    "title": "Keep and share the game",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1279,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-01.mdx",
+    "title": "A Hooded Figure",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1858,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-01/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-02.mdx",
+    "title": "The First Hall",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1724,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-02/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-03.mdx",
+    "title": "A Place to Move",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1613,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-03/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-04.mdx",
+    "title": "The Keep's Hand",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1541,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-04/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-05.mdx",
+    "title": "The Room Graph",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1684,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-05/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-06.mdx",
+    "title": "Through the Doorway",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1535,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-06/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-07.mdx",
+    "title": "The Hero Remembers",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1597,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-07/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-08.mdx",
+    "title": "Three Rooms",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1554,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-08/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-09.mdx",
+    "title": "The Keep's Gold",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1693,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-09/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-10.mdx",
+    "title": "Something in the Dark",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1761,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-10/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-11.mdx",
+    "title": "Join the Sleepers",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1742,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-11/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-12.mdx",
+    "title": "A Warden for Every Room",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1732,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-12/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-13.mdx",
+    "title": "Light and Shadow",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1839,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-13/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-14.mdx",
+    "title": "Furnishings",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1577,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-14/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-15.mdx",
+    "title": "Mood through Constraint",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1581,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-15/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-16.mdx",
+    "title": "A Keep with Character",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1587,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-16/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-17.mdx",
+    "title": "Footsteps and Doors",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1628,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-17/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-18.mdx",
+    "title": "A Theme in One Voice",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1673,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-18/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/shadowkeep/unit-19.mdx",
+    "title": "Stand or Sleep",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 2142,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-19/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/shadowkeep/unit-19/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/the-long-night/unit-01.mdx",
+    "title": "The Dark Seeks the Light",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1545,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-01/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-01/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/the-long-night/unit-02.mdx",
+    "title": "It Carries Its Prize Home",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1417,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-02/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-02/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/the-long-night/unit-03.mdx",
+    "title": "The Pools of Light",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1475,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-03/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-03/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/the-long-night/unit-04.mdx",
+    "title": "The Tendril",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1795,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-04/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-04/steps/step-02.asm",
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-04/steps/step-03.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/the-long-night/unit-05.mdx",
+    "title": "The Night Bears Grudges",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1539,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-05/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/the-long-night/unit-06.mdx",
+    "title": "The Night Deepens",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1646,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-06/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-06/steps/step-02.asm",
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-06/steps/step-03.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/the-long-night/unit-07.mdx",
+    "title": "Dawn Breaks",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1397,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-07/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-07/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/the-long-night/unit-08.mdx",
+    "title": "The Dusk Bells",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1948,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-08/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-08/steps/step-02.asm",
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-08/steps/step-03.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/the-long-night/unit-09.mdx",
+    "title": "Your Longest Night",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 1208,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-09/steps/step-01.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/the-long-night/unit-10.mdx",
+    "title": "The Dawn Phrase",
+    "system": "sinclair-zx-spectrum",
+    "track": "assembly",
+    "words": 2523,
+    "includes": [
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-10/steps/step-01.asm",
+      "sinclair-zx-spectrum/assembly/the-long-night/unit-10/steps/step-02.asm"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-01.mdx",
+    "title": "The Keyboard Types Words",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 910,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-01/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-02.mdx",
+    "title": "The Line Number Is an Address",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 891,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-02/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-02/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-02/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-03.mdx",
+    "title": "PRINT, Properly",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 761,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-03/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-03/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-04.mdx",
+    "title": "LET, and What You May Name",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 898,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-04/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-04/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-05.mdx",
+    "title": "INPUT \u2014 the Program Listens",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 652,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-05/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-05/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-06.mdx",
+    "title": "IF / THEN, the Spectrum Way",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 763,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-06/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-06/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-07.mdx",
+    "title": "FOR / NEXT Counts For You",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 735,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-07/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-07/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-08.mdx",
+    "title": "GO TO, GO SUB, and the Game Loop",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 967,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-08/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-08/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-08/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-09.mdx",
+    "title": "The Screen Is a Grid",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 724,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-09/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-09/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-10.mdx",
+    "title": "Colour, and Text in Many Colours",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 844,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-10/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-10/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-11.mdx",
+    "title": "The Machine Can Sing",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 707,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-11/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-11/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-11/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-12.mdx",
+    "title": "Drawing With Light",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 770,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-12/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-12/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-12/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-13.mdx",
+    "title": "Making It Move",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 697,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-13/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-14.mdx",
+    "title": "Keeping Your Work",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 667,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-14/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/basic-reference/unit-15.mdx",
+    "title": "When It's Wrong",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1069,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/unit-15/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/unit-15/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-01-draw-below-the-character-grid.mdx",
+    "title": "Draw below the character grid",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 702,
+    "includes": [
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-01/brick-bash.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-02-send-the-ball-bouncing.mdx",
+    "title": "Send the ball bouncing",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 701,
+    "includes": [
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-02/changes.bas",
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-02/brick-bash.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-03-put-the-paddle-under-your-control.mdx",
+    "title": "Put the paddle under your control",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 633,
+    "includes": [
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-03/changes.bas",
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-03/brick-bash.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-04-catch-the-falling-ball.mdx",
+    "title": "Catch the falling ball",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 570,
+    "includes": [
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-04/changes.bas",
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-04/brick-bash.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-05-break-one-brick.mdx",
+    "title": "Break one brick",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 670,
+    "includes": [
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-05/changes.bas",
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-05/brick-bash.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-06-give-the-wall-an-address.mdx",
+    "title": "Give the wall an address",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 964,
+    "includes": [
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-06/changes.bas",
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-06/brick-bash.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-07-break-the-whole-wall.mdx",
+    "title": "Break the whole wall",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 708,
+    "includes": [
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-07/changes.bas",
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-07/brick-bash.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-08-aim-with-the-paddle.mdx",
+    "title": "Aim with the paddle",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 619,
+    "includes": [
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-08/changes.bas",
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-08/brick-bash.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-09-finish-the-round.mdx",
+    "title": "Finish the round",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 634,
+    "includes": [
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-09/changes.bas",
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-09/brick-bash.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/brick-bash/unit-10-keep-the-game.mdx",
+    "title": "Keep the game",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 457,
+    "includes": [
+      "sinclair-zx-spectrum/basic/brick-bash/teaching/unit-09/brick-bash.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-01-four-choices-on-the-screen.mdx",
+    "title": "Four choices on the screen",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1176,
+    "includes": [
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-01/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-01/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-01/steps/step-03.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-01/steps/step-04.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-02-give-a-choice-a-signal.mdx",
+    "title": "Give a choice a signal",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1807,
+    "includes": [
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-02/snippets/main.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-02/snippets/renderer.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-02/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-02/snippets/sound-changes.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-02/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-02/snippets/four-cues.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-02/steps/step-03.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-02/experiments/pitch.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-02/experiments/duration.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-02/experiments/restore.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-03-remember-an-order.mdx",
+    "title": "Remember an order",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1011,
+    "includes": [
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-03/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-03/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-03/snippets/step-02.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-03/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-03/snippets/step-03.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-03/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-04-play-the-stored-order.mdx",
+    "title": "Play the stored order",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1465,
+    "includes": [
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-04/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-04/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-04/snippets/step-02.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-04/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-05-let-the-player-repeat-it.mdx",
+    "title": "Let the player repeat it",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1394,
+    "includes": [
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-05/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-05/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-05/snippets/step-02.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-05/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-06-grow-a-new-round.mdx",
+    "title": "Grow a new round",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1606,
+    "includes": [
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-06/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-06/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-06/snippets/step-02.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-06/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-07-finish-replay-and-keep-it.mdx",
+    "title": "Finish, replay and keep it",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 2081,
+    "includes": [
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-07/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-07/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-07/snippets/step-02.bas",
+      "sinclair-zx-spectrum/basic/bright-spark/opening/unit-07/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/cipher/unit-01-reveal-the-matches.mdx",
+    "title": "Reveal the matches",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 484,
+    "includes": [
+      "sinclair-zx-spectrum/basic/cipher/teaching/reveal/cipher.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/cipher/unit-02-choose-a-letter.mdx",
+    "title": "Choose a letter",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 555,
+    "includes": [
+      "sinclair-zx-spectrum/basic/cipher/teaching/guess/cipher.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/cipher/unit-03-make-a-round.mdx",
+    "title": "Make a round",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 676,
+    "includes": [
+      "sinclair-zx-spectrum/basic/cipher/teaching/rules/changes.bas",
+      "sinclair-zx-spectrum/basic/cipher/teaching/rules/cipher.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/cipher/unit-04-read-the-board.mdx",
+    "title": "Read the board",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 606,
+    "includes": [
+      "sinclair-zx-spectrum/basic/cipher/teaching/board/changes.bas",
+      "sinclair-zx-spectrum/basic/cipher/teaching/board/cipher.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/cipher/unit-05-choose-another-word.mdx",
+    "title": "Choose another word",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 606,
+    "includes": [
+      "sinclair-zx-spectrum/basic/cipher/teaching/finished/changes.bas",
+      "sinclair-zx-spectrum/basic/cipher/teaching/finished/cipher.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/cipher/unit-06-keep-cipher.mdx",
+    "title": "Keep Cipher",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 517,
+    "includes": [
+      "sinclair-zx-spectrum/basic/cipher/teaching/finished/cipher.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/cipher/unit-07-quit-in-one-place.mdx",
+    "title": "Quit in one place",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1057,
+    "includes": [
+      "sinclair-zx-spectrum/basic/cipher/teaching/quit/changes.bas",
+      "sinclair-zx-spectrum/basic/cipher/teaching/quit/cipher.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/crates/unit-01-draw-a-wooden-crate.mdx",
+    "title": "Draw a wooden crate",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 733,
+    "includes": [
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-01/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/crates/unit-02-give-the-warehouse-a-memory.mdx",
+    "title": "Give the warehouse a memory",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1460,
+    "includes": [
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-02/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-02/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-02/snippets/step-02-edits.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-02/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-02/snippets/step-03-edits.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-02/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/crates/unit-03-look-before-you-walk.mdx",
+    "title": "Look before you walk",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 685,
+    "includes": [
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-03/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-03/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/crates/unit-04-make-room-for-a-push.mdx",
+    "title": "Make room for a push",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 556,
+    "includes": [
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-04/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-04/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/crates/unit-05-keep-the-target-underneath.mdx",
+    "title": "Keep the target underneath",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 531,
+    "includes": [
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-05/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-05/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/crates/unit-06-finish-one-room.mdx",
+    "title": "Finish one room",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 632,
+    "includes": [
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-06/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-06/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-06/snippets/step-02-edits.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-06/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/crates/unit-07-read-the-room-from-a-map.mdx",
+    "title": "Read the room from a map",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1159,
+    "includes": [
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-07/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-07/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/crates/unit-08-check-a-room-before-playing.mdx",
+    "title": "Check a room before playing",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1717,
+    "includes": [
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-08/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-08/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/crates/unit-09-choose-another-approach.mdx",
+    "title": "Choose another approach",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 596,
+    "includes": [
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-09/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-09/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/crates/unit-10-make-space-for-another-crate.mdx",
+    "title": "Make space for another crate",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 614,
+    "includes": [
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-10/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-10/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/crates/unit-11-keep-the-warehouse.mdx",
+    "title": "Keep the warehouse",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 603,
+    "includes": [
+      "sinclair-zx-spectrum/basic/crates/teaching/unit-10/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-01-give-the-ship-a-nose.mdx",
+    "title": "Give the ship a nose",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 710,
+    "includes": [
+      "sinclair-zx-spectrum/basic/drift/teaching/draw-ship/drift.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-02-point-somewhere-else.mdx",
+    "title": "Point somewhere else",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 972,
+    "includes": [
+      "sinclair-zx-spectrum/basic/drift/teaching/heading/changes.bas",
+      "sinclair-zx-spectrum/basic/drift/teaching/heading/drift.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-03-burn-then-let-go.mdx",
+    "title": "Burn, then let go",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 677,
+    "includes": [
+      "sinclair-zx-spectrum/basic/drift/teaching/flight/changes.bas",
+      "sinclair-zx-spectrum/basic/drift/teaching/flight/drift.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-04-turn-back-to-brake.mdx",
+    "title": "Turn back to brake",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 607,
+    "includes": [
+      "sinclair-zx-spectrum/basic/drift/teaching/flight/drift.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-05-read-the-motion.mdx",
+    "title": "Read the motion",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 682,
+    "includes": [
+      "sinclair-zx-spectrum/basic/drift/teaching/readout/changes.bas",
+      "sinclair-zx-spectrum/basic/drift/teaching/readout/drift.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-06-arrive-gently.mdx",
+    "title": "Arrive gently",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 629,
+    "includes": [
+      "sinclair-zx-spectrum/basic/drift/teaching/docking/changes.bas",
+      "sinclair-zx-spectrum/basic/drift/teaching/docking/drift.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-07-finish-the-flight.mdx",
+    "title": "Finish the flight",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 584,
+    "includes": [
+      "sinclair-zx-spectrum/basic/drift/teaching/finished/changes.bas",
+      "sinclair-zx-spectrum/basic/drift/teaching/finished/drift.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-08-keep-the-game.mdx",
+    "title": "Keep the game",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 572,
+    "includes": [
+      "sinclair-zx-spectrum/basic/drift/teaching/finished/drift.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/drift/unit-09-redraw-only-what-changed.mdx",
+    "title": "Redraw only what changed",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1404,
+    "includes": [
+      "sinclair-zx-spectrum/basic/drift/teaching/steady/changes.bas",
+      "sinclair-zx-spectrum/basic/drift/teaching/steady/drift.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-01-make-room-for-a-guess.mdx",
+    "title": "Make room for a guess",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 493,
+    "includes": [
+      "sinclair-zx-spectrum/basic/locksmith/teaching/board/locksmith.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-02-edit-four-digits.mdx",
+    "title": "Edit four digits",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 595,
+    "includes": [
+      "sinclair-zx-spectrum/basic/locksmith/teaching/editor/changes.bas",
+      "sinclair-zx-spectrum/basic/locksmith/teaching/editor/locksmith.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-03-check-the-places.mdx",
+    "title": "Check the places",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 528,
+    "includes": [
+      "sinclair-zx-spectrum/basic/locksmith/teaching/exact/changes.bas",
+      "sinclair-zx-spectrum/basic/locksmith/teaching/exact/locksmith.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-04-count-each-digit-once.mdx",
+    "title": "Count each digit once",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 635,
+    "includes": [
+      "sinclair-zx-spectrum/basic/locksmith/teaching/clues/changes.bas",
+      "sinclair-zx-spectrum/basic/locksmith/teaching/clues/locksmith.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-05-keep-earlier-clues.mdx",
+    "title": "Keep earlier clues",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 577,
+    "includes": [
+      "sinclair-zx-spectrum/basic/locksmith/teaching/history/changes.bas",
+      "sinclair-zx-spectrum/basic/locksmith/teaching/history/locksmith.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-06-put-the-clues-together.mdx",
+    "title": "Put the clues together",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 536,
+    "includes": [
+      "sinclair-zx-spectrum/basic/locksmith/teaching/history/locksmith.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-07-hide-a-new-code.mdx",
+    "title": "Hide a new code",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 536,
+    "includes": [
+      "sinclair-zx-spectrum/basic/locksmith/teaching/round/changes.bas",
+      "sinclair-zx-spectrum/basic/locksmith/teaching/round/locksmith.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-08-invite-the-player-in.mdx",
+    "title": "Invite the player in",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 539,
+    "includes": [
+      "sinclair-zx-spectrum/basic/locksmith/teaching/finished/changes.bas",
+      "sinclair-zx-spectrum/basic/locksmith/teaching/finished/locksmith.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/locksmith/unit-09-keep-the-game.mdx",
+    "title": "Keep the game",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 475,
+    "includes": [
+      "sinclair-zx-spectrum/basic/locksmith/teaching/finished/locksmith.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer.mdx",
+    "title": "Make the Spectrum answer",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1236,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/opening/unit-01/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/opening/unit-01/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/opening/unit-01/steps/step-03.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/opening/unit-01/steps/step-04.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save.mdx",
+    "title": "Remember a name; keep the program",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1362,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/opening/unit-02/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/opening/unit-02/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/opening/unit-02/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer.mdx",
+    "title": "Ask, then use the answer",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 774,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/opening/unit-03/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/opening/unit-03/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-04-a-story-worth-sharing.mdx",
+    "title": "A story worth sharing",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1577,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/opening/unit-04/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/opening/unit-04/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-05-give-a-useful-clue.mdx",
+    "title": "Give a useful clue",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1028,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/lucky-number/unit-05/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/lucky-number/unit-05/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/lucky-number/unit-05/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing.mdx",
+    "title": "Keep guessing",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1416,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/lucky-number/unit-06/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/lucky-number/unit-06/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/lucky-number/unit-06/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret.mdx",
+    "title": "Choose a new secret",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 767,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/lucky-number/unit-07/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/lucky-number/unit-07/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-08-feedback-and-another-round.mdx",
+    "title": "Feedback and another round",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 890,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/lucky-number/unit-08/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/lucky-number/unit-08/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/lucky-number/unit-08/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-09-choose-an-answer.mdx",
+    "title": "Choose an answer",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 635,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/oracle/unit-09/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/oracle/unit-09/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-10-give-the-answer-a-rhythm.mdx",
+    "title": "Give the answer a rhythm",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 692,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/oracle/unit-10/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/oracle/unit-10/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/oracle/unit-10/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-11-write-the-repeated-job-once.mdx",
+    "title": "Write the repeated job once",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 705,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/oracle/unit-11/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/oracle/unit-11/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-12-put-it-somewhere.mdx",
+    "title": "Put it somewhere",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 576,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/movement/unit-12/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/movement/unit-12/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-13-make-it-move.mdx",
+    "title": "Make it move",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 667,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/movement/unit-13/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/movement/unit-13/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/movement/unit-13/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-14-let-the-player-steer.mdx",
+    "title": "Let the player steer",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 651,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/movement/unit-14/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-15-one-press-one-step.mdx",
+    "title": "One press, one step",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 925,
+    "includes": [
+      "sinclair-zx-spectrum/basic/meet-basic/movement/unit-15/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/meet-basic/movement/unit-15/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/night-patrol/unit-01.mdx",
+    "title": "Draw the archive",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 668,
+    "includes": [
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/archive/night-patrol.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/night-patrol/unit-02.mdx",
+    "title": "Walk the corridors",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 623,
+    "includes": [
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/movement/changes.bas",
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/movement/night-patrol.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/night-patrol/unit-03.mdx",
+    "title": "Take the file home",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 500,
+    "includes": [
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/mission/changes.bas",
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/mission/night-patrol.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/night-patrol/unit-04.mdx",
+    "title": "Keep a patrol moving",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 634,
+    "includes": [
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/patrol/changes.bas",
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/patrol/night-patrol.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/night-patrol/unit-05.mdx",
+    "title": "Look around at corners",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 528,
+    "includes": [
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/scans/changes.bas",
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/scans/night-patrol.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/night-patrol/unit-06.mdx",
+    "title": "Mark what can be seen",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 789,
+    "includes": [
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/sight/changes.bas",
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/sight/night-patrol.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/night-patrol/unit-07.mdx",
+    "title": "Prepare the sight changes",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 839,
+    "includes": [
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/data/sight-changes.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/night-patrol/unit-08.mdx",
+    "title": "Move the field of view",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 680,
+    "includes": [
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/stealth/changes.bas",
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/stealth/night-patrol.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/night-patrol/unit-09.mdx",
+    "title": "Finish Night Patrol",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 651,
+    "includes": [
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/finished/changes.bas",
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/finished/night-patrol.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/night-patrol/unit-10.mdx",
+    "title": "Keep Night Patrol",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 520,
+    "includes": [
+      "sinclair-zx-spectrum/basic/night-patrol/teaching/finished/night-patrol.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-01-make-a-place-to-cross.mdx",
+    "title": "Make a place to cross",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 736,
+    "includes": [
+      "sinclair-zx-spectrum/basic/quickstep/teaching/board/quickstep.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-02-take-one-step.mdx",
+    "title": "Take one step",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 640,
+    "includes": [
+      "sinclair-zx-spectrum/basic/quickstep/teaching/walk/changes.bas",
+      "sinclair-zx-spectrum/basic/quickstep/teaching/walk/quickstep.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-03-move-a-lane-around.mdx",
+    "title": "Move a lane around",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 661,
+    "includes": [
+      "sinclair-zx-spectrum/basic/quickstep/teaching/lane/changes.bas",
+      "sinclair-zx-spectrum/basic/quickstep/teaching/lane/quickstep.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-04-let-traffic-keep-moving.mdx",
+    "title": "Let traffic keep moving",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 664,
+    "includes": [
+      "sinclair-zx-spectrum/basic/quickstep/teaching/clock/changes.bas",
+      "sinclair-zx-spectrum/basic/quickstep/teaching/clock/quickstep.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-05-check-the-gap-twice.mdx",
+    "title": "Check the gap twice",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 691,
+    "includes": [
+      "sinclair-zx-spectrum/basic/quickstep/teaching/crossing/changes.bas",
+      "sinclair-zx-spectrum/basic/quickstep/teaching/crossing/quickstep.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-06-cross-two-banks-of-traffic.mdx",
+    "title": "Cross two banks of traffic",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 794,
+    "includes": [
+      "sinclair-zx-spectrum/basic/quickstep/teaching/six-lanes/changes.bas",
+      "sinclair-zx-spectrum/basic/quickstep/teaching/six-lanes/quickstep.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-07-look-beyond-the-next-gap.mdx",
+    "title": "Look beyond the next gap",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 678,
+    "includes": [
+      "sinclair-zx-spectrum/basic/quickstep/teaching/six-lanes/quickstep.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-08-remember-a-short-press.mdx",
+    "title": "Remember a short press",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 620,
+    "includes": [
+      "sinclair-zx-spectrum/basic/quickstep/teaching/buffered/changes.bas",
+      "sinclair-zx-spectrum/basic/quickstep/teaching/buffered/quickstep.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-09-present-the-crossing.mdx",
+    "title": "Present the crossing",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 593,
+    "includes": [
+      "sinclair-zx-spectrum/basic/quickstep/teaching/finished/changes.bas",
+      "sinclair-zx-spectrum/basic/quickstep/teaching/finished/quickstep.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/quickstep/unit-10-keep-the-game.mdx",
+    "title": "Keep the game",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 501,
+    "includes": [
+      "sinclair-zx-spectrum/basic/quickstep/teaching/finished/quickstep.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/sonar/unit-01-a-sea-to-search.mdx",
+    "title": "A sea to search",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 700,
+    "includes": [
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-01/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-01/snippets/step-02-edits.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-01/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/sonar/unit-02-send-a-probe.mdx",
+    "title": "Send a probe",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 740,
+    "includes": [
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-02/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-02/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-02/snippets/step-02-edits.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-02/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/sonar/unit-03-measure-the-distance.mdx",
+    "title": "Measure the distance",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 540,
+    "includes": [
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-03/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-03/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/sonar/unit-04-read-the-sonar.mdx",
+    "title": "Read the sonar",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 488,
+    "includes": [
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-04/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-04/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/sonar/unit-05-remember-the-clues.mdx",
+    "title": "Remember the clues",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 699,
+    "includes": [
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-05/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-05/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-05/snippets/step-02-edits.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-05/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/sonar/unit-06-one-probe-one-count.mdx",
+    "title": "One probe, one count",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 477,
+    "includes": [
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-06/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-06/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/sonar/unit-07-a-complete-round.mdx",
+    "title": "A complete round",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 467,
+    "includes": [
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-07/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-07/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/sonar/unit-08-search-somewhere-new.mdx",
+    "title": "Search somewhere new",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 439,
+    "includes": [
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-08/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-08/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/sonar/unit-09-keep-your-game.mdx",
+    "title": "Keep your game",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1014,
+    "includes": [
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-08/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/sonar/unit-10-one-key-one-choice.mdx",
+    "title": "One key, one choice",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1355,
+    "includes": [
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-10/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/sonar/teaching/unit-10/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/tail-chase/unit-01-give-the-snake-a-face.mdx",
+    "title": "Give the snake a face",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 592,
+    "includes": [
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-01/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-01/snippets/step-02-edits.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-01/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/tail-chase/unit-02-keep-moving.mdx",
+    "title": "Keep moving",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 550,
+    "includes": [
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-02/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-02/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/tail-chase/unit-03-choose-the-next-turn.mdx",
+    "title": "Choose the next turn",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 493,
+    "includes": [
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-03/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-03/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/tail-chase/unit-04-remember-where-the-head-went.mdx",
+    "title": "Remember where the head went",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 477,
+    "includes": [
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-04/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-04/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/tail-chase/unit-05-reuse-the-empty-slot.mdx",
+    "title": "Reuse the empty slot",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1023,
+    "includes": [
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-05/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-05/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/tail-chase/unit-06-leave-the-tail-behind.mdx",
+    "title": "Leave the tail behind",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 831,
+    "includes": [
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-06/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-06/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-06/snippets/step-02-edits.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-06/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/tail-chase/unit-07-ask-the-board.mdx",
+    "title": "Ask the board",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 576,
+    "includes": [
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-07/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-07/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-07/snippets/step-02-edits.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-07/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/tail-chase/unit-08-find-another-snack.mdx",
+    "title": "Find another snack",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 424,
+    "includes": [
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-08/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-08/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/tail-chase/unit-09-eat-all-eight.mdx",
+    "title": "Eat all eight",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 509,
+    "includes": [
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-09/snippets/step-01-edits.bas",
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-09/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/tail-chase/unit-10-keep-the-game.mdx",
+    "title": "Keep the game",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 444,
+    "includes": [
+      "sinclair-zx-spectrum/basic/tail-chase/teaching/unit-09/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/the-caverns/unit-01-name-a-room.mdx",
+    "title": "Name a room",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 562,
+    "includes": [
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/room/caverns.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/the-caverns/unit-02-connect-the-rooms.mdx",
+    "title": "Connect the rooms",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 554,
+    "includes": [
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/map/changes.bas",
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/map/caverns.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/the-caverns/unit-03-follow-a-tunnel.mdx",
+    "title": "Follow a tunnel",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 542,
+    "includes": [
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/walk/changes.bas",
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/walk/caverns.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/the-caverns/unit-04-leave-a-glint.mdx",
+    "title": "Leave a glint",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 444,
+    "includes": [
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/treasure/changes.bas",
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/treasure/caverns.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/the-caverns/unit-05-warn-about-the-pit.mdx",
+    "title": "Warn about the pit",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 473,
+    "includes": [
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/pit/changes.bas",
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/pit/caverns.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/the-caverns/unit-06-give-the-creature-a-route.mdx",
+    "title": "Give the creature a route",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 488,
+    "includes": [
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/patrol/changes.bas",
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/patrol/caverns.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/the-caverns/unit-07-leave-time-to-escape.mdx",
+    "title": "Leave time to escape",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 539,
+    "includes": [
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/patrol/caverns.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/the-caverns/unit-08-bring-the-treasures-home.mdx",
+    "title": "Bring the treasures home",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 428,
+    "includes": [
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/expedition/changes.bas",
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/expedition/caverns.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/the-caverns/unit-09-invite-the-explorer.mdx",
+    "title": "Invite the explorer",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 449,
+    "includes": [
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/finished/changes.bas",
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/finished/caverns.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/the-caverns/unit-10-keep-the-expedition.mdx",
+    "title": "Keep the expedition",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 399,
+    "includes": [
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/finished/caverns.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/the-caverns/unit-11-update-only-what-changes.mdx",
+    "title": "Update only what changes",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1464,
+    "includes": [
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/steady/changes.bas",
+      "sinclair-zx-spectrum/basic/the-caverns/teaching/steady/caverns.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/three-in-a-row/unit-01-draw-nine-squares.mdx",
+    "title": "Draw nine squares",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 555,
+    "includes": [
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/board/three.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/three-in-a-row/unit-02-place-a-cross.mdx",
+    "title": "Place a cross",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 543,
+    "includes": [
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/place/changes.bas",
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/place/three.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/three-in-a-row/unit-03-take-turns.mdx",
+    "title": "Take turns",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 460,
+    "includes": [
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/turns/changes.bas",
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/turns/three.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/three-in-a-row/unit-04-read-a-winning-line.mdx",
+    "title": "Read a winning line",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 528,
+    "includes": [
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/results/changes.bas",
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/results/three.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/three-in-a-row/unit-05-choose-an-empty-square.mdx",
+    "title": "Choose an empty square",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 510,
+    "includes": [
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/reply/changes.bas",
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/reply/three.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/three-in-a-row/unit-06-win-before-blocking.mdx",
+    "title": "Win before blocking",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 505,
+    "includes": [
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/tactics/changes.bas",
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/tactics/three.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/three-in-a-row/unit-07-prefer-useful-squares.mdx",
+    "title": "Prefer useful squares",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 464,
+    "includes": [
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/policy/changes.bas",
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/policy/three.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/three-in-a-row/unit-08-make-two-threats.mdx",
+    "title": "Make two threats",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 428,
+    "includes": [
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/policy/three.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/three-in-a-row/unit-09-finish-the-session.mdx",
+    "title": "Finish the session",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 546,
+    "includes": [
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/finished/changes.bas",
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/finished/three.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/three-in-a-row/unit-10-keep-the-game.mdx",
+    "title": "Keep the game",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 430,
+    "includes": [
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/finished/three.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/three-in-a-row/unit-11-keep-colours-local.mdx",
+    "title": "Keep colours local",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1077,
+    "includes": [
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/finished/three.bas",
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/colours/changes.bas",
+      "sinclair-zx-spectrum/basic/three-in-a-row/teaching/colours/three.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/unit-01-let-the-craft-fall.mdx",
+    "title": "Let the craft fall",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 589,
+    "includes": [
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-01/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/unit-02-let-gravity-change-the-speed.mdx",
+    "title": "Let gravity change the speed",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 470,
+    "includes": [
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-02/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/unit-03-brake-before-you-arrive.mdx",
+    "title": "Brake before you arrive",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 553,
+    "includes": [
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-03/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/unit-04-make-another-attempt.mdx",
+    "title": "Make another attempt",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 866,
+    "includes": [
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-04/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-04/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/unit-05-make-each-burn-count.mdx",
+    "title": "Make each burn count",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 965,
+    "includes": [
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-05/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-05/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/unit-06-reach-a-landing-pad.mdx",
+    "title": "Reach a landing pad",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 596,
+    "includes": [
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-06/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-06/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/unit-07-steer-and-thrust-together.mdx",
+    "title": "Steer and thrust together",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 750,
+    "includes": [
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-07/diagnostic.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-07/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-07/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/unit-08-give-every-column-a-ground-height.mdx",
+    "title": "Give every column a ground height",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 523,
+    "includes": [
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-08/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-08/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/unit-09-read-the-shape-of-the-site.mdx",
+    "title": "Read the shape of the site",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 773,
+    "includes": [
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-09/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-09/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-09/snippets/step-02.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-09/steps/step-02.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-09/snippets/step-03.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-09/steps/step-03.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-09/snippets/step-04.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-09/steps/step-04.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/unit-10-draw-the-craft-and-its-flame.mdx",
+    "title": "Draw the craft and its flame",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 714,
+    "includes": [
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-10/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-10/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-10/snippets/step-02.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-10/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/touchdown/unit-11-finish-test-and-keep-touchdown.mdx",
+    "title": "Finish, test and keep Touchdown",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 800,
+    "includes": [
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-11/snippets/step-01.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-11/steps/step-01.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-11/snippets/step-02.bas",
+      "sinclair-zx-spectrum/basic/touchdown/teaching/unit-11/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/volley/unit-01-move-a-ball.mdx",
+    "title": "Move a ball",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 580,
+    "includes": [
+      "sinclair-zx-spectrum/basic/volley/prototype/steps/step-01.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/volley/unit-02-give-it-a-direction.mdx",
+    "title": "Give it a direction",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 577,
+    "includes": [
+      "sinclair-zx-spectrum/basic/volley/prototype/steps/step-02.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/volley/unit-03-use-the-whole-court.mdx",
+    "title": "Use the whole court",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 576,
+    "includes": [
+      "sinclair-zx-spectrum/basic/volley/prototype/steps/step-03.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/volley/unit-04-move-the-paddle.mdx",
+    "title": "Move the paddle",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 605,
+    "includes": [
+      "sinclair-zx-spectrum/basic/volley/prototype/snippets/step-04.bas",
+      "sinclair-zx-spectrum/basic/volley/prototype/steps/step-04.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/volley/unit-05-make-contact-matter.mdx",
+    "title": "Make contact matter",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1242,
+    "includes": [
+      "sinclair-zx-spectrum/basic/volley/prototype/snippets/step-05.bas",
+      "sinclair-zx-spectrum/basic/volley/prototype/steps/step-05.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/volley/unit-06-keep-score-and-play-again.mdx",
+    "title": "Keep score and play again",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 687,
+    "includes": [
+      "sinclair-zx-spectrum/basic/volley/prototype/snippets/step-06.bas",
+      "sinclair-zx-spectrum/basic/volley/prototype/steps/step-06.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/volley/unit-07-colour-the-court.mdx",
+    "title": "Colour the court",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 599,
+    "includes": [
+      "sinclair-zx-spectrum/basic/volley/prototype/snippets/step-07.bas",
+      "sinclair-zx-spectrum/basic/volley/prototype/steps/step-07.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/volley/unit-08-keep-the-ball-visible.mdx",
+    "title": "Keep the ball visible",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 922,
+    "includes": [
+      "sinclair-zx-spectrum/basic/volley/prototype/snippets/step-08.bas",
+      "sinclair-zx-spectrum/basic/volley/prototype/steps/step-08.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-01-read-the-settlement.mdx",
+    "title": "Read the settlement",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 437,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/ledger/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-02-feed-the-people.mdx",
+    "title": "Feed the people",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 415,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/food/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-03-share-the-grain.mdx",
+    "title": "Share the grain",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 385,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/seed/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-04-resolve-a-harvest.mdx",
+    "title": "Resolve a harvest",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 427,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/harvest/changes.bas",
+      "sinclair-zx-spectrum/basic/yearfall/teaching/harvest/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-05-edit-an-allocation.mdx",
+    "title": "Edit an allocation",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 539,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/editor/changes.bas",
+      "sinclair-zx-spectrum/basic/yearfall/teaching/editor/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-06-plan-before-committing.mdx",
+    "title": "Plan before committing",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 436,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/planner/changes.bas",
+      "sinclair-zx-spectrum/basic/yearfall/teaching/planner/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-07-carry-the-year-forward.mdx",
+    "title": "Carry the year forward",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 437,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/years/changes.bas",
+      "sinclair-zx-spectrum/basic/yearfall/teaching/years/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-08-buy-and-sell-land.mdx",
+    "title": "Buy and sell land",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 441,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/trade/changes.bas",
+      "sinclair-zx-spectrum/basic/yearfall/teaching/trade/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-09-read-a-shortage.mdx",
+    "title": "Read a shortage",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 460,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/trade/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-10-welcome-travellers.mdx",
+    "title": "Welcome travellers",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 560,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/visitors/changes.bas",
+      "sinclair-zx-spectrum/basic/yearfall/teaching/visitors/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-11-keep-ruling.mdx",
+    "title": "Keep ruling",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 434,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/continued/changes.bas",
+      "sinclair-zx-spectrum/basic/yearfall/teaching/continued/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-12-invite-the-ruler.mdx",
+    "title": "Invite the ruler",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 447,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/finished/changes.bas",
+      "sinclair-zx-spectrum/basic/yearfall/teaching/finished/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-13-keep-the-settlement.mdx",
+    "title": "Keep the settlement",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 434,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/finished/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/basic/yearfall/unit-14-redraw-less-quit-cleanly.mdx",
+    "title": "Redraw less, quit cleanly",
+    "system": "sinclair-zx-spectrum",
+    "track": "basic",
+    "words": 1395,
+    "includes": [
+      "sinclair-zx-spectrum/basic/yearfall/teaching/polished/changes.bas",
+      "sinclair-zx-spectrum/basic/yearfall/teaching/polished/yearfall.bas"
+    ]
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/machine/meet-the-machine/unit-01.mdx",
+    "title": "A Machine From 1982",
+    "system": "sinclair-zx-spectrum",
+    "track": "machine",
+    "words": 699,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/machine/meet-the-machine/unit-02.mdx",
+    "title": "The Z80 Inside It",
+    "system": "sinclair-zx-spectrum",
+    "track": "machine",
+    "words": 877,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/machine/meet-the-machine/unit-03.mdx",
+    "title": "Two Colours Per Square",
+    "system": "sinclair-zx-spectrum",
+    "track": "machine",
+    "words": 696,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/machine/meet-the-machine/unit-04.mdx",
+    "title": "One Bit of Sound",
+    "system": "sinclair-zx-spectrum",
+    "track": "machine",
+    "words": 685,
+    "includes": []
+  },
+  {
+    "path": "src/content/curriculum/sinclair-zx-spectrum/machine/meet-the-machine/unit-05.mdx",
+    "title": "48K, and Where It Goes",
+    "system": "sinclair-zx-spectrum",
+    "track": "machine",
+    "words": 793,
+    "includes": []
+  }
+]

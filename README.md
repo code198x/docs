@@ -47,6 +47,7 @@ verification and how to add activities after the first learner observations.
 | [Vault candidate backlog](vault-candidates.md) | Proposed subjects, triage and the handoff to writing issues; [structured records](vault-candidates.csv) |
 | [Pattern Library](specifications/pattern-library.md) | Low-level routines, reusable techniques, progression and implementation evidence |
 | [Game loops and ownership](guides/game-loops.md) | Reusable core-system waits, BBC/Electron MOS reuse, execution records and wider-system next steps |
+| [Pattern Library capability inventory](audit/2026-10-19-pattern-library/README.md) | Existing patterns, lessons and sources; per-system gaps, proposed first tranche and wider-system candidates |
 
 [Website and publishing](website.md) connects these specifications to the current schemas, source organisation, capture, testing and deployment. [Game-design material](platforms/README.md) lists the concrete existing designs worth consulting during re-specification.
 
