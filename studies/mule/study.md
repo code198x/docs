@@ -32,6 +32,10 @@ This makes the character more than a pointer on a spreadsheet. Distance, route a
 
 A round alternates between moments when we watch one settler work and moments when everyone can act. Land is claimed, plots are developed, production happens, supplies are checked, and goods go to auction. The next round begins with the consequences of the last one. [1]
 
+![Four differently coloured settlers work plots around the town during the first C64 development round](captures/development-c64.png)
+
+*Our Emu198x capture of the C64 computer demonstration, Ozark Softscape / Electronic Arts, 1983. Each colour identifies a different settler’s land and installations. The computer players are taking their development turns; this is not a human multiplayer session.*
+
 That rhythm is part of the pleasure. The development phase gives us a short, personal scramble. Production lets everyone see what the investments achieved. An auction suddenly brings all the players together over the same shortage.
 
 We are not waiting through four identical sets of menu choices. Different parts of the round ask us to look at the same colony in different ways.
@@ -51,6 +55,19 @@ Buyers begin below and sellers above. Raise your character to offer more; lower 
 ![A simplified auction shows a seller asking 50 and a buyer offering 30, followed by both agreeing at 40 and one unit changing hands](figures/meet-at-a-price.svg)
 
 *Our invented auction example, not a captured game screen. The numbers illustrate two offers meeting; they are not measured bids from a recorded match.*
+
+Watch what that looks like in the game. In this smithore auction, two computer settlers are selling. Their asks begin at 80; the buyers remain at the bottom of the screen. Nobody has traded yet.
+
+![Two sellers ask 80 in a C64 smithore auction while the buyers remain below and no units have traded](captures/auction-offers-c64.png)
+
+*Our Emu198x capture of the C64 Beginner computer demonstration. The two asks are both 80, and the units-traded counters are zero.*
+
+The asks come down. At 50, the game records a sale: the purple seller’s cash rises from 927 to 977 and its traded count becomes one. The store is a participant in the market too; an exchange need not wait for another settler to move up to the seller. [1]
+
+![The C64 auction displays asks of 50, one unit traded and the purple seller’s cash increased to 977](captures/auction-trade-c64.png)
+
+*The same computer demonstration a moment later. The highlighted exchange and “Units traded 1” make the result visible. These are observed computer bids and a recorded transaction, separate from the invented example above.*
+
 
 It is a graph you can argue with.
 
@@ -111,6 +128,10 @@ M.U.L.E. leaves room for sharp play. It also makes outright ruin a questionable 
 That makes cooperation a practical question. We can help someone because it is kind, because we need their next harvest, because we want a later favour, or because keeping a customer solvent is profitable. The same visible action can have several motives.
 
 The game does not need to decide which one is ours.
+
+![The C64 colony map displays Production number 1 with output markers over the settlers’ plots](captures/production-c64.png)
+
+*Our Emu198x capture of the C64 computer demonstration’s first production round. Development has become a result on the same plots: the game shows where the output came from before moving on to the trading screens.*
 
 ## A way back into the argument
 

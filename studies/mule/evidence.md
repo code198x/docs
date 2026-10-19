@@ -1,6 +1,6 @@
 # M.U.L.E. — evidence, interpretation and limits
 
-18 October 2026. Canonical illustrated draft for owner review. Original Atari design and documented C64 control differences are distinguished from later products. Full match, multiplayer experience, production and auction execution are not verified in this pass. Do not convert a setup capture into a gameplay claim.
+19 October 2026. Original Atari design and documented C64 control differences are distinguished from later products. Atari setup and the later C64 computer demonstration have separate evidence records. The C64 pass verifies first-round development, production and an auction transaction; full-match and human multiplayer experience remain unverified.
 
 ## Rules and original documents
 
@@ -35,9 +35,19 @@ Fresh Emu198x native headless runner, unchanged source revision 6cc5d5f9e7fe6507
 
 The final interactive attempt selected one human Beginner game, chose a colour/species, and reached a roster of three computer Mechtrons and one human Gollumer. The included image is the Gollumer setup screen. A later attempt stalls/loses display after the transition towards the colony; zero-human demonstration likewise failed later in startup. Whether media, compatibility or emulation accounts for that is not established. This does not prove the historical game has that fault. Stop this capture route rather than alter the game or emulator to create apparently working evidence.
 
-Prepared older Atari/C64 browser WASM and installed VICE were bounded fallbacks. VICE booted a C64 menu, but no verified auction capture resulted. A fresh native C64 PRG probe did not reach the game. No fallback image is included, no successful input/gameplay claim attached to them and no emulator source changes made. Full auction/production execution and a human group session remain useful follow-up validation before expanding observational claims.
+The earlier native C64 PRG startup failure was traced to the direct importer omitting the KERNAL load-end pointer required by the unpacker. The correction is merged in emu198x/emu198x#1839; the Atari display transition remains separately tracked in #1838. The initial failed C64 probe is not evidence of a general keyboard defect.
 
-`observations.json` preserves the successful setup input schedules without distributing game disks, firmware, save states or full recordings. Original maps/resource/auction diagrams explain documented rules using invented layouts and prices. They are not screenshots, observed transactions or a copied colony map.
+### C64 follow-up, 19 October
+
+Rebuilt the merged source `b5f8fe59cea181e4232c0caf9b5917994f8c5414` as a native headless release runner without changing emulator or game code. Genuine C64 firmware, PRG and companion D64 identities are recorded in `captures/c64-manifest.json`. Direct PRG import now reaches the title; the game still needs its companion disk for the later load. Without a mounted disk it reports a loading error. Adding the matching held disk and allowing the loading interval reaches the colony. This is a configuration observation, not proof of untouched retail image authenticity.
+
+The zero-human Beginner computer demonstration accepts F5 player-count changes and F7 start. Initial rapid presses before the menu had settled missed selections; the retained successful schedule begins from an inspected menu and allows 90 released frames between presses. The game’s own command summary documents the zero-human demonstration and joystick fire for accelerating computer turns. All button presses in the retained schedule are released.
+
+The first development round, an acid-rain event, first production, smithore status, buyer/seller declaration and a live auction are visible. Two computer sellers initially ask 80. Later both ask 50; one recorded exchange raises the purple seller’s cash from 927 to 977 and shows one unit traded. These observations support the paired auction frames. They do not validate every economy rule, the whole match or human negotiation. The store’s market role is also described in the original manual.
+
+Four full native 416×288 PNG frames are copied without cropping, scaling, interpolation or retouching. The article labels them as C64 computer-demonstration captures and retains the Atari species-selection image. No borrowed gameplay imagery is included.
+
+`observations.json` preserves both the original Atari setup schedule and the successful C64 continuation schedules, with private paths removed. State filenames describe local checkpoints; the save states themselves, commercial program and disk bytes, firmware and full recordings are not distributed. Original diagrams still explain invented layouts and prices rather than pretending to be captured transactions.
 
 ## Images, voice and publication
 

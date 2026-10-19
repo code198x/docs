@@ -337,5 +337,506 @@
         }
       ]
     }
-  ]
+  ],
+  "c64_follow_up": {
+    "date": "2026-10-19",
+    "mode": "zero-human Beginner computer demonstration",
+    "scripts": [
+      {
+        "script": "disk-menu.json",
+        "steps": [
+          {
+            "action": "run_frames",
+            "frames": 120
+          },
+          {
+            "action": "type_string",
+            "text": "RUN\n",
+            "hold_frames": 6
+          },
+          {
+            "action": "run_frames",
+            "frames": 4200
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-ready-menu.png"
+          },
+          {
+            "action": "save_snapshot",
+            "path": "disk-menu.state"
+          }
+        ]
+      },
+      {
+        "script": "disk-demo.json",
+        "steps": [
+          {
+            "action": "load_snapshot",
+            "path": "disk-menu.state"
+          },
+          {
+            "action": "press_key",
+            "key": "F5",
+            "hold_frames": 12
+          },
+          {
+            "action": "run_frames",
+            "frames": 90
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-count-0.png"
+          },
+          {
+            "action": "press_key",
+            "key": "F5",
+            "hold_frames": 12
+          },
+          {
+            "action": "run_frames",
+            "frames": 90
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-count-1.png"
+          },
+          {
+            "action": "press_key",
+            "key": "F5",
+            "hold_frames": 12
+          },
+          {
+            "action": "run_frames",
+            "frames": 90
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-count-2.png"
+          },
+          {
+            "action": "press_key",
+            "key": "F5",
+            "hold_frames": 12
+          },
+          {
+            "action": "run_frames",
+            "frames": 90
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-count-3.png"
+          },
+          {
+            "action": "press_key",
+            "key": "F7",
+            "hold_frames": 12
+          },
+          {
+            "action": "run_frames",
+            "frames": 300
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-demo-00.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 300
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-demo-01.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 300
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-demo-02.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 300
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-demo-03.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 300
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-demo-04.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 300
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-demo-05.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 300
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-demo-06.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 300
+          },
+          {
+            "action": "save_screenshot",
+            "path": "disk-demo-07.png"
+          },
+          {
+            "action": "save_snapshot",
+            "path": "colony.state"
+          }
+        ]
+      },
+      {
+        "script": "continue.json",
+        "steps": [
+          {
+            "action": "load_snapshot",
+            "path": "colony.state"
+          },
+          {
+            "action": "run_frames",
+            "frames": 1000
+          },
+          {
+            "action": "save_screenshot",
+            "path": "continued-00.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 1000
+          },
+          {
+            "action": "save_screenshot",
+            "path": "continued-01.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 1000
+          },
+          {
+            "action": "save_screenshot",
+            "path": "continued-02.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 1000
+          },
+          {
+            "action": "save_screenshot",
+            "path": "continued-03.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 1000
+          },
+          {
+            "action": "save_screenshot",
+            "path": "continued-04.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 1000
+          },
+          {
+            "action": "save_screenshot",
+            "path": "continued-05.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 1000
+          },
+          {
+            "action": "save_screenshot",
+            "path": "continued-06.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 1000
+          },
+          {
+            "action": "save_screenshot",
+            "path": "continued-07.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 1000
+          },
+          {
+            "action": "save_screenshot",
+            "path": "continued-08.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 1000
+          },
+          {
+            "action": "save_screenshot",
+            "path": "continued-09.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 1000
+          },
+          {
+            "action": "save_screenshot",
+            "path": "continued-10.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 1000
+          },
+          {
+            "action": "save_screenshot",
+            "path": "continued-11.png"
+          },
+          {
+            "action": "save_snapshot",
+            "path": "late-demo.state"
+          }
+        ]
+      },
+      {
+        "script": "auction.json",
+        "steps": [
+          {
+            "action": "load_snapshot",
+            "path": "late-demo.state"
+          },
+          {
+            "action": "input",
+            "events": [
+              {
+                "Button": {
+                  "port": 1,
+                  "name": "fire",
+                  "pressed": true
+                }
+              },
+              {
+                "Button": {
+                  "port": 2,
+                  "name": "fire",
+                  "pressed": true
+                }
+              }
+            ]
+          },
+          {
+            "action": "run_frames",
+            "frames": 15
+          },
+          {
+            "action": "input",
+            "events": [
+              {
+                "Button": {
+                  "port": 1,
+                  "name": "fire",
+                  "pressed": false
+                }
+              },
+              {
+                "Button": {
+                  "port": 2,
+                  "name": "fire",
+                  "pressed": false
+                }
+              }
+            ]
+          },
+          {
+            "action": "run_frames",
+            "frames": 15
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-00.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-01.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-02.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-03.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-04.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-05.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-06.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-07.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-08.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-09.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-10.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-11.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-12.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-13.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-14.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-15.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-16.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-17.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-18.png"
+          },
+          {
+            "action": "run_frames",
+            "frames": 150
+          },
+          {
+            "action": "save_screenshot",
+            "path": "auction-19.png"
+          },
+          {
+            "action": "save_snapshot",
+            "path": "auction.state"
+          }
+        ]
+      }
+    ],
+    "observations": [
+      "First development round observed.",
+      "Production #1 reached.",
+      "Smithore asks of 80 fell to 50; one trade registered; purple seller cash increased 927 to 977.",
+      "Partial run only; no human group experience or complete match established."
+    ],
+    "manifest": "captures/c64-manifest.json"
+  }
 }
