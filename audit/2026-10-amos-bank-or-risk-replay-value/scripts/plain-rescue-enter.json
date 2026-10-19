@@ -1,0 +1,23 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/rescue-six-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/plain-rescue-active.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/plain-rescue-active.state"
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "five-three": {
+    "stage": "replay-value/five-rounds",
+    "roll": 3,
+    "sha256": "f560171ed310cc9909ca5b31db4bb2e1c16c8b4de059b3a3c6189b22c981bc65"
+  },
+  "best-five": {
+    "stage": "replay-value/personal-best",
+    "roll": 5,
+    "sha256": "7832a446279390accd2f2847bea471201e81b95e68a23ebfa483174a6d0cbc49"
+  },
+  "card-four": {
+    "stage": "replay-value/scorecard",
+    "roll": 4,
+    "sha256": "51a7c24bebb4c8f2b5aaf10db2fe9f2a4711a86817cae71f3b1d3ab2a1b2ddae"
+  },
+  "rescue-six": {
+    "stage": "replay-value/rescue",
+    "roll": 6,
+    "sha256": "d5beb8ceed861a3c122fcdc76b37141c6c8e1194e79c8da885f31eb9f22e1cdd"
+  },
+  "feedback-five": {
+    "stage": "replay-value/feedback",
+    "roll": 5,
+    "sha256": "ca46814c6da2ef24d7232b8a7e04db5f596a6e8749f8d0937e801324fd1b4d67"
+  },
+  "feedback-six": {
+    "stage": "replay-value/feedback",
+    "roll": 6,
+    "sha256": "dc95214be579c8a4a8493d8f7a1a8d838547c9f000f03b080e477353d34c47a6"
+  },
+  "muted-five": {
+    "stage": "replay-value/feedback",
+    "roll": 5,
+    "sha256": "b2bf0cfd9ebad552eb18d420d33cdeb10fdb3aa34fc02a244c58eb5541e58145",
+    "volume": 0
+  },
+  "varied": {
+    "stage": "replay-value/feedback",
+    "rolls": [
+      4,
+      5,
+      6,
+      1
+    ],
+    "sha256": "38c2a09559c52d6c633bcbb5e79da87155a4e5196b0840438c0d5f094286352c"
+  }
+}

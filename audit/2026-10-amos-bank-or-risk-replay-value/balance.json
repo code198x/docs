@@ -1,0 +1,95 @@
+{
+  "assumption": "Ideal independent fair die; exact policy calculations, not AMOS or human win rates",
+  "settings": {
+    "limit": 10,
+    "rounds": 5,
+    "target": 30
+  },
+  "policies": {
+    "5": {
+      "no_rescue": {
+        "reach_30_percent": 80.63070642261566,
+        "mean_final_score": 32.42091049382716,
+        "exact_reach_30": "424510038454012165/526486815369068544"
+      },
+      "first_bust_rescue": {
+        "reach_30_percent": 80.63070642261566,
+        "mean_final_score": 32.42091049382716,
+        "exact_reach_30": "424510038454012165/526486815369068544"
+      }
+    },
+    "6": {
+      "no_rescue": {
+        "reach_30_percent": 86.83620145197978,
+        "mean_final_score": 34.993998628257884,
+        "exact_reach_30": "5999131071452627154125/6908559991272917434368"
+      },
+      "first_bust_rescue": {
+        "reach_30_percent": 96.89895567132626,
+        "mean_final_score": 36.54169092782456,
+        "exact_reach_30": "13388644966941051315085/13817119982545834868736"
+      }
+    },
+    "7": {
+      "no_rescue": {
+        "reach_30_percent": 77.92263856054349,
+        "mean_final_score": 34.39361139689072,
+        "exact_reach_30": "334886331471951951650292619/429767699937105647757164544"
+      },
+      "first_bust_rescue": {
+        "reach_30_percent": 90.31924272666825,
+        "mean_final_score": 38.02153362275107,
+        "exact_reach_30": "86258429348225265581974487/95503933319356810612703232"
+      }
+    }
+  },
+  "target_optimising_maximum_percent": 99.09344751183585,
+  "score_optimising_mean": {
+    "without_rescue": 34.993998628257884,
+    "with_rescue": 38.597022611318664
+  },
+  "example_rescue_decisions": [
+    {
+      "rounds_including_current": 1,
+      "pre_bust_total": 5,
+      "undo_mean": 6.666666666666667,
+      "accept_mean": 0.0,
+      "score_policy_choice": "undo"
+    },
+    {
+      "rounds_including_current": 1,
+      "pre_bust_total": 8,
+      "undo_mean": 8.0,
+      "accept_mean": 0.0,
+      "score_policy_choice": "undo"
+    },
+    {
+      "rounds_including_current": 1,
+      "pre_bust_total": 9,
+      "undo_mean": 9.0,
+      "accept_mean": 0.0,
+      "score_policy_choice": "undo"
+    },
+    {
+      "rounds_including_current": 5,
+      "pre_bust_total": 5,
+      "undo_mean": 34.661865569272976,
+      "accept_mean": 31.20543934191236,
+      "score_policy_choice": "undo"
+    },
+    {
+      "rounds_including_current": 5,
+      "pre_bust_total": 8,
+      "undo_mean": 35.99519890260631,
+      "accept_mean": 31.20543934191236,
+      "score_policy_choice": "undo"
+    },
+    {
+      "rounds_including_current": 5,
+      "pre_bust_total": 9,
+      "undo_mean": 36.99519890260631,
+      "accept_mean": 31.20543934191236,
+      "score_policy_choice": "undo"
+    }
+  ]
+}

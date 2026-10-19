@@ -1,0 +1,34 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/risk-pending.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/accept.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/accept-result-1.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/accept-result-1.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

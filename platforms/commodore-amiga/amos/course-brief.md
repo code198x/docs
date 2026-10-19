@@ -64,7 +64,9 @@ The player's central choice should be visible before sophisticated graphics are
 needed: keep a useful total or risk losing it for a better result. A short
 session target gives that choice a changing purpose. The user accepted the
 browser playtest with one six-sided die, a round limit of 10, five rounds and a
-30-point target. Retain that scope and tuning for the AMOS implementation;
+30-point target. The approved extension keeps these numbers, finishes all five
+rounds, records a memory-only personal best, shows the five awards and supplies
+one rescue. Treat 30 as the welcoming goal while the score chase extends replay;
 native play must still check the resulting experience.
 
 Start with a small message and save/reopen exercise, then show one roll and add
@@ -168,8 +170,10 @@ own save/reopen record. The opening record now checks the earlier message-to-one
 The session record now checks the separate scoring, completed-count, ending
 and replay steps. The [presentation record](../../../audit/2026-10-amos-bank-or-risk-presentation/REPORT.md)
 checks their continuous route into the board, result cues and ready screen,
-keeping the completed-round model. Authored replacement lessons and human
-trials remain pending.
+keeping the completed-round model. The [replay-value record](../../../audit/2026-10-amos-bank-or-risk-replay-value/REPORT.md)
+checks the later five-round score chase, best, scorecard, rescue and feedback
+stages. Those extend the game after the original core has been explained.
+Authored replacement lessons and human trials remain pending.
 
 The accepted browser playtest establishes the intended scale and tuning for the
 first game. It does not qualify AMOS execution or establish learner outcomes.

@@ -1,0 +1,34 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/risk-restored.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/rescue-bank.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/risk-result-1.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/risk-result-1.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

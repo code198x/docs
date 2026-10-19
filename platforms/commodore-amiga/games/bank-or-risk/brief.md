@@ -1,12 +1,11 @@
 # Bank or risk AMOS opening game
 
-**Status: browser playtest accepted at 10/5/30; native rules, input and
-save/reopen checked on the recorded Emu198x configuration.** The
-[prototype record](prototype.md) identifies source, probes and execution evidence.
-Build a solo dice game around the choice to keep a total or risk another roll. The risk increases as the total approaches a visible limit.
-It is the proposed first game in the [AMOS course](../../amos/course-brief.md).
-The prototype record distinguishes native execution from pending presentation
-stages and replacement lessons.
+**Status: the five-round score chase, personal best, scorecard and one rescue
+are approved extensions to the accepted opening game.** The
+[prototype record](prototype.md) distinguishes the earlier early-ending
+implementation from the extended native teaching route and its evidence.
+Build a solo dice game around keeping a total or risking another roll.
+It is the first game in the [AMOS course](../../amos/course-brief.md).
 
 ## Experience and first scope
 
@@ -15,57 +14,85 @@ whether to bank that total or risk adding another number. A total above 10
 busts: the round contributes zero. Exactly 10 banks automatically. Banking
 secures the current total and begins the next round.
 
-The accepted opening challenge is **30 points across at most five rounds**, with a
-round limit of **10**. Show the limit, round, current total, secured score and
-target together. The player has
-time to consider the choice; there is no reaction timer. End with success at
-the target, or failure when the remaining rounds cannot possibly reach it.
-Retain the result and offer a fresh challenge or exit.
+The current challenge is **five completed rounds**, limit **10**, with **30**
+as the first goal. Continue after reaching 30 or losing the possibility of
+reaching it. The final score gives the next attempt something to beat. Keep a
+personal best across in-program replays, updated only after all five rounds;
+quitting an unfinished challenge does not record its partial score. This record
+starts at zero when the program starts and is not written to disk.
 
-The appeal is the decision before a roll: what could be gained, what could be
-lost, and how much the session still needs. Near the target, banking a modest
-total can be the right choice; after low earlier scores, taking a risk may be
-the only way to stay in contention. The user accepted the browser playtest's
-scope and tuning as appropriate for the first game. Retain that simplicity while
-developing the native AMOS version. This does not establish beginner success
-rates or qualify the native implementation.
+Show five awards, the current points at risk, secured score, completed count,
+target and best. The current slot is a question mark, future slots are dashes,
+and a completed bust is zero. These are different states, even though unplayed
+storage entries are initialised to zero.
+
+Give one rescue per challenge. When an available rescue meets a bust, retain
+the bust total and ask: U undoes that roll, or B accepts zero and keeps rescue.
+Undo restores the pre-roll total and last accepted face, spends the rescue and
+leaves the round active. The player can bank or risk another roll. A later bust
+with no rescue completes immediately. Q abandons a pending round without award.
+
+This extension replaces the earlier prototype's immediate success/impossibility
+endings. Reachability can still inform the message, but all five rounds remain
+worth playing for a score. The user approved this after reviewing the game's
+limited replay appeal. The earlier browser acceptance establishes the original
+scale, not human acceptance of the extension.
 
 Keep one die and one player. Cards, a dealer, betting money, a computer opponent,
-multiple dice, persistent records, animation, pointer controls and a campaign
-are outside the first prototype. The resemblance to Blackjack/Pontoon is the
-bank-or-continue decision near a limit; this is not an implementation of their
-card or dealer rules.
+multiple dice, disk records, pointer controls and a campaign remain outside this
+scope. A brief explained die reveal, visible once-only award and acknowledgement
+of the first target crossing support feedback without adding game rules.
+Decisions have no reaction timer. The resemblance to Blackjack/Pontoon is the
+bank-or-continue decision near a limit, not its card or dealer rules.
 
 ## Rules and state
 
 | Situation | Result |
 | --- | --- |
-| Start a challenge | Secured score 0, round 1, current total 0. The first roll is required before banking. |
-| Roll at a current total below 10 | Add one value from 1 through 6, showing the value and new total. |
-| New total below 10 | Wait for a new roll or bank choice. Do not roll again automatically. |
+| Start/replay | Secured 0, completed 0, current total 0, empty scorecard, rescue 1. Keep Best on replay. |
+| Roll below the limit | Add one value from 1 through 6 and show its face. A held key supplies one roll. |
+| New total below 10 | Ask for another fresh roll or bank choice. |
 | New total exactly 10 | Secure 10 once and finish the round. Equality is not a bust. |
-| New total above 10 | Show the bust total, secure zero for that round and preserve earlier secured points. |
-| Bank after a roll | Add the current total to secured points once and finish the round. |
-| Finish a round | Evaluate the secured score and remaining opportunities before beginning another round at zero. |
-| Target reached | Hold a success result; no further rolls change the score. |
-| Secured score plus 10 times remaining rounds is below target | Hold a failure result and explain why the challenge has ended. |
-| Invalid input or bank before the first roll | Keep score, round and total unchanged; repeat the relevant prompt. |
-| Replay at a result | Restore the full initial state, including input readiness; do not retain an earlier total. |
-| Quit | Return to the editor through the checked route. An unfinished total is not banked by quitting. |
+| Bust with rescue available | Keep total/face visible, offer U/B/Q, and leave score, completed count and scorecard unchanged. |
+| U at the rescue question | Restore pre-roll total/face, spend rescue, continue the same round. |
+| B at the rescue question | Award zero, complete the round, preserve rescue. Never bank the bust total. |
+| Bust with rescue spent | Award zero and complete the round immediately. |
+| Bank after a valid roll | Award the total once and complete the round. |
+| Complete a round | Add award once, increment completed once, write that scorecard entry once. |
+| Reach 30 before round 5 | Acknowledge the first crossing and continue building the score. |
+| Target becomes impossible | Explain it without ending the remaining rounds. |
+| Complete round 5 | Hold the final result; compare with Best using a strict greater-than test. No sixth round. |
+| Invalid input / B before rolling | Keep the appropriate state unchanged. U has no ordinary-play action. |
+| Replay | Reset score, card, rescue and per-challenge flags; preserve Best and fresh-key handling. |
+| Quit | Return to the editor without banking or recording unfinished work. |
 
-The completed-round count is distinct from the number shown for an active round.
-There are at most five completed rounds. Finish and scoring work happens once
-per completed round. A held key must not supply another roll, bank twice, or
-start and act in the next round. After resolving a round, show what was secured
-and require a fresh continue action if the challenge can continue.
-
-A bust consumes one round, not the entire challenge. After an opening bust,
-four rounds can still secure up to 40 points, so the target of 30 remains
-reachable. Recovery depends on the score and rounds remaining: a sufficiently
-late bust can still make the target impossible. Explain that outcome through the
-visible secured score and remaining opportunities.
+A round award differs from the displayed total. A bust can show 12 while its
+award is 0; an undecided rescue question has no completed award yet. The card's
+completed entries sum to secured points. The renderer and preview cannot award,
+spend rescue, advance the counter or update Best.
 
 ## Risk and target checks
+
+The original no-rescue calculations below describe the earlier prototype.
+Finishing all five rounds alone does not change whether a given policy reaches
+30; the personal-best goal gives later rounds a purpose. Rescue does change
+outcome probabilities and needs its own analysis.
+
+The exact [extension model](replay_value_check.py), retained with the
+[execution record](../../../../audit/2026-10-amos-bank-or-risk-replay-value/REPORT.md),
+compares fixed banking policies, with and without undoing the first bust.
+For an ideal independent fair die, banking at 6 reaches 30 in 86.836201% without
+rescue and 96.898956% with that rescue policy; mean final score rises from
+34.993999 to 36.541691. Banking at 7 with that policy reaches 30 less often
+(90.319243%) but gives a higher mean score (38.021534). Target probability and
+score chasing are different objectives. These are mathematical policy results,
+not AMOS random-generator measurements, human win rates or evidence of fun.
+
+Keep 30 for the welcoming first goal. Best-score play supplies the longer-lived
+challenge. Human play should assess whether the rescue feels useful and the
+five-round loop invites another attempt before increasing the target.
+
+### Earlier no-rescue analysis
 
 Assume an ideal die with six equally likely independent outcomes for this design
 analysis. Totals through 4 cannot bust on the next roll. At 5, one outcome busts;
@@ -178,9 +205,10 @@ checks tone variations and once-only cues with native PCM. Listening acceptance
 and remaining teaching checkpoints still need their own evidence.
 
 The prototype acceptance run must cover rolls 1 and 6, totals 9/10/11, banking
-exactly once, a bust preserving earlier points, target equality, an unreachable
-target, final-round completion, invalid input, held/released input, repeated
-rounds, replay, quit and fresh save/reopen. Inspect graphics and listen to cues
+exactly once, a bust preserving earlier points, target equality, continuation when the target
+is unreachable, all five rounds, scorecard/score agreement, personal-best
+higher/lower/tie behaviour, both rescue choices and spent/reset rescue, invalid
+and held input, replay, quit and fresh save/reopen. Inspect graphics and listen to cues
 if present. Negative controls must reject an equal-limit bust and a bust that
 awards its displayed total.
 

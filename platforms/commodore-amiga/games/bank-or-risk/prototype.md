@@ -1,5 +1,12 @@
 # Bank or risk native prototype status
 
+The extended teaching endpoint is `stages/replay-value/feedback.amos` in
+code-samples. Its [native record](../../../../audit/2026-10-amos-bank-or-risk-replay-value/REPORT.md)
+checks all five rounds, in-program best, five awards, one rescue and feedback.
+The earlier prototype and presentation sources below retain their early endings
+and their own evidence; the [current brief](brief.md) owns the extended rules.
+Human play/listening feedback and learner outcomes remain pending.
+
 **Native rules, input and save/reopen checks pass on the recorded Emu198x setup.**
 The user accepted the browser trial's simple scope: one six-sided die, limit 10,
 at most five rounds and target 30. The prototype now runs in AMOS
