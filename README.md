@@ -16,7 +16,6 @@ verification and how to add activities after the first learner observations.
 | Guide | Responsibility |
 |---|---|
 | [Curriculum design](specifications/curriculum.md) | Shared subjects, progression, independent entry and checks for understanding |
-| [Pattern Library](specifications/pattern-library.md) | Low-level routines, reusable techniques, progression, implementation evidence and discovery |
 | [Recurring progressions](specifications/recurring-progressions.md) | Eight connected learning threads, existing-game placements, gaps and implementation priorities |
 | [Data, memory and tools](specifications/experiments/data-memory-tools.md) | Asset representations, small converters, validation, storage and runtime costs |
 | [Whole-game studies](specifications/game-studies.md) | Play, design, inspirations, culture, production and reception; people, institutions and Vault follow-through |
@@ -46,7 +45,7 @@ verification and how to add activities after the first learner observations.
 | [Profiling progression](specifications/experiments/profiling-progression.md) | Game-led measurement practice, verified tool surfaces and separate guest/host investigations |
 | [Vault](specifications/vault.md) | Sourced encyclopaedic context |
 | [Vault candidate backlog](vault-candidates.md) | Proposed subjects, triage and the handoff to writing issues; [structured records](vault-candidates.csv) |
-| [Pattern Library](specifications/pattern-library.md) | Adaptable implementations and their contracts |
+| [Pattern Library](specifications/pattern-library.md) | Low-level routines, reusable techniques, progression and implementation evidence |
 
 [Website and publishing](website.md) connects these specifications to the current schemas, source organisation, capture, testing and deployment. [Game-design material](platforms/README.md) lists the concrete existing designs worth consulting during re-specification.
 
