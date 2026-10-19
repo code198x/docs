@@ -1,0 +1,16 @@
+# Reusable game loops and BBC Micro example
+
+Agreed scope: improve the four existing core-system loop entries, reuse maintained code and bring one BBC Micro example alongside them. Wider machines are candidates for bounded execution probes, not automatic new full tracks. Parent: #117; inventory: #118. No merge or deployment is included.
+
+1. Inspect maintained loop/input/audio callers and lesson implementations. Record startup, frame boundary, interrupt and resource owners for C64, Spectrum, Amiga and NES; use named PAL/NTSC models. For BBC Model B, inspect original MOS documentation and existing emulator load/input tests; use firmware services rather than silently taking over the machine.
+2. Add a reusable frame-wait/notification routine and complete visible caller in code-samples for each machine. Keep init/update/draw and intentionally slow work visible; expose counters and use existing input routines where practical. Use .inc for fragments and .asm for complete programs. No universal hardware API or dependencies.
+3. Execute normal, short and deliberately over-budget work with actual machine clocks. Check one update per consumed boundary, counters that continue, input response and missed-frame behaviour. Include meaningful negative controls. Record source/tool/firmware identity, exact startup path and retained evidence; source existence and successful assembly are not runtime proof.
+4. Improve the four existing Pattern Library pages through CodeFromFile and add the BBC entry. Deliberately extend only necessary platform discovery/schema handling for the approved new system; retain all current URLs. Explain use, state, registers, frame timing, interrupts, ownership, limits, startup and differences. Do not promise constant frame rate or emulator-wide correctness.
+5. Assess VIC-20, MSX, Master System and CPC load paths for the same small probe. Add a bounded further example only if a concrete teaching purpose and usable existing path are established; report blockers and link existing readiness #3 rather than expanding emulator scope silently.
+6. Build the website and run relevant content/unit/browser checks; inspect narrow/wide pages. Preserve runnable media, proof and review files. Push source/site/docs PRs, link them to #117/#3, verify remote retention and clean temporary builds/worktrees/processes.
+
+## Execution outcome
+
+All five requested configurations pass, plus a bounded Electron run sharing the BBC MOS-facing executable. Normal/recovered windows each produce 30 updates in 30 native frames; excessive CPU work reduces update rate on every machine; the same guard rejects all unpaced controls. Fresh Spectrum ROM tape loading also passes. Source/observer/firmware hashes are retained with the sample records. No emulator source changes were made. C64 --load/MCP omission is separately tracked in emu198x/emu198x#1858 and the working script-import/resume path is explicit.
+
+The Electron typed loader needed an outcome-based installation wait rather than the BBC’s short delay. MODE 6 and an executable above HIMEM are shared without sharing an assumed frame budget. Wider VIC-20/MSX/Master System/CPC examples remain candidates with named qualification requirements; this slice does not call their builds runtime passes.

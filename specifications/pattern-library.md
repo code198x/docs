@@ -27,7 +27,7 @@ Compare plausible alternatives. Distinguish measured costs from estimates and av
 
 Entries live under the website's `src/content/patterns/`. Published routes follow `/patterns/{system}/{track}/{category}/{slug}/`, with cross-platform entries under `/patterns/cross-platform/{category}/{slug}/`.
 
-The current schema requires `title`, `summary`, `platform`, `category` and `difficulty`. Platforms currently accepted are `commodore-64`, `sinclair-zx-spectrum`, `commodore-amiga`, `nintendo-nes` and `cross-platform`. Categories are `rendering`, `input`, `audio`, `physics`, `ai` and `framework`; difficulty is `beginner`, `intermediate` or `advanced`.
+The current schema requires `title`, `summary`, `platform`, `category` and `difficulty`. Platforms accepted by the loop expansion are `commodore-64`, `sinclair-zx-spectrum`, `commodore-amiga`, `nintendo-nes`, `bbc-micro`, `acorn-electron` and `cross-platform`. Categories are `rendering`, `input`, `audio`, `physics`, `ai` and `framework`; difficulty is `beginner`, `intermediate` or `advanced`.
 
 `taught_in` is an optional string, tags default to an empty array, and optional `evolution` and `related` objects carry neighbouring patterns and Vault links. Check `src/content.config.ts` and current route helpers before authoring these fields. Extending the curriculum to another system may require a deliberate schema change; the current enum does not define the project's ultimate scope.
 
@@ -80,3 +80,10 @@ Prototype with existing input-state reading, input-edge detection, a basic sound
 Before choosing a schema or migrating the catalogue, demonstrate that readers can find a small hardware operation, reach an appropriate implementation, distinguish it from an illustrative listing, identify a sensible next technique and follow old URLs. Check keyboard access, narrow/wide layouts, searching without JavaScript and representation of more than one machine or language. Keep the existing catalogue usable throughout.
 
 The [accepted study-theme direction](../plans/2026-10-19-study-themes-and-library-scale.md) provides concrete Craft candidates. Approval of this scope does not claim that a new lesson, taxonomy, interface or implementation has shipped, and leaves the charter's current delivery priorities intact.
+
+
+## Coverage before a complete track
+
+A machine can gain a qualified reusable technique before it has a full curriculum track. Pattern discovery uses actual entries to avoid empty machine facets; a new pattern does not change the system’s curriculum readiness tier. Keep the machine identity explicit and retain the direct machine/language routes.
+
+The [game-loop comparison and qualification notes](../guides/game-loops.md) explain the first slice: four core implementations, a MOS-facing BBC Micro caller, and separate Electron execution of the shared source. Keep code, contracts and records together. A passing example establishes the named workload and startup route, not every facility of its emulator.
