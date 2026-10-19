@@ -46,6 +46,7 @@ verification and how to add activities after the first learner observations.
 | [Vault](specifications/vault.md) | Sourced encyclopaedic context |
 | [Vault candidate backlog](vault-candidates.md) | Proposed subjects, triage and the handoff to writing issues; [structured records](vault-candidates.csv) |
 | [Pattern Library](specifications/pattern-library.md) | Low-level routines, reusable techniques, progression and implementation evidence |
+| [Game loops and ownership](guides/game-loops.md) | Reusable core-system waits, BBC/Electron MOS reuse, execution records and wider-system next steps |
 
 [Website and publishing](website.md) connects these specifications to the current schemas, source organisation, capture, testing and deployment. [Game-design material](platforms/README.md) lists the concrete existing designs worth consulting during re-specification.
 
