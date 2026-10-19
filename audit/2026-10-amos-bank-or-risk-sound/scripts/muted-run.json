@@ -1,0 +1,54 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/muted-listing.state"
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${RUN}/amos-work.adf",
+    "writable": true
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "press_key",
+    "key": "f2",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/muted-syntax.png"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/muted-startup.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "f1",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 300
+  },
+  {
+    "action": "stop_audio_recording"
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/muted-title.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/muted-title.state"
+  }
+]

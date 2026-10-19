@@ -1,6 +1,6 @@
 {
   "status": "Prepared native test inputs, not execution results",
-  "source_sha256": "5f9e363119ed0caa1f4bd9d2ba9f613b847cc148b255af12e33d459298cac14f",
+  "source_sha256": "8e886151b90fb04cf25b9690dc849862aee1c3140f77a9176ef833724ad2f339",
   "method": "Replace random supplier with READ, restore DATA at each challenge, append prescribed values. Retain all game logic and input. Actions mean separate press/release cycles; do not type the whole sequence at once. Stop at the named result; further rolls exhaust DATA.",
   "cases": {
     "die-faces": {
@@ -15,7 +15,7 @@
       "actions": "SPACE R R R R SPACE R R SPACE",
       "expected": "Faces 1, 2, 3, 4 give totals 1, 3, 6, 10 and bank 10. Next round faces 5, 6 give totals 5, 11 and bust; secured 10 stays. SPACE starts round 3 with last roll 0 and an empty outline.",
       "file": "die-faces.asc",
-      "sha256": "a600f4458be052e73e1c7d91a5ab4a8d5103c86384c018d2d3207859fac784da"
+      "sha256": "1b565def0c19571947f0165860670c145514db252e2b05c28a7d5fad55b519f3"
     },
     "perfect-success": {
       "rolls": [
@@ -29,7 +29,7 @@
       "actions": "SPACE R R SPACE R R SPACE R R",
       "expected": "Perfect 10 each round; target reached in round 3; secured 30.",
       "file": "perfect-success.asc",
-      "sha256": "45d93f1596d267873a3ada4e7e3f9b790dcbf0a15cf30e5b00a5e7142efd0ca7"
+      "sha256": "d53461322e88d1d769f016efa32fe71c3b229a699318ff030f91bbfd69331745"
     },
     "preserve-and-recover": {
       "rolls": [
@@ -45,7 +45,7 @@
       "actions": "SPACE B X R B SPACE R R SPACE R B SPACE R R SPACE R R",
       "expected": "B and X at zero leave state unchanged. Round contributions 4, 0 (bust 11), 6, 10, 10; secured 4, 4, 10, 20, 30. Success on round 5; no sixth round.",
       "file": "preserve-and-recover.asc",
-      "sha256": "d1ba13adeaf2c5a52ae3470def7676d4b40414696a1bade78e00160015077587"
+      "sha256": "1a4ca2e2ba2e467de12620ddd62c2d02aa3b7629f3ea5106e9e7beaa030f7f59"
     },
     "range-and-limit": {
       "rolls": [
@@ -57,7 +57,7 @@
       "actions": "SPACE R R R R Q",
       "expected": "Current totals 1, 7, 9, 10. Exact 10 banks automatically; round 1 secured 10. Q quits at the between-round prompt.",
       "file": "range-and-limit.asc",
-      "sha256": "7a77163bd0711739d7850a7a70a7032a6f601b45c6d6167a2d1b180815dc053b"
+      "sha256": "84e51c3cdaae79411c6022409c4a3d3ccb99e23ec10294e7f8b07e7899ce869f"
     },
     "unreachable": {
       "rolls": [
@@ -71,7 +71,7 @@
       "actions": "SPACE R R SPACE R R SPACE R R",
       "expected": "Three bust totals of 12 secure zero. Two rounds could score only 20, so the target is out of reach after round 3.",
       "file": "unreachable.asc",
-      "sha256": "063b1aba5fc235196e04d226c0fb9a13d098bd10c67bd816de0b2892dc0cd0d0"
+      "sha256": "442c1b9bc504c11d2d0e27ad07167046088b0bfa205dbf3cd3cda894257b0d81"
     }
   }
 }

@@ -172,8 +172,10 @@ score visually distinct. Leave enough time to read a roll; do not use decoration
 or sound as an unexplained timing mechanism. The initial text trial checked
 rules; the [drawing audit](../../../../audit/2026-10-amos-bank-or-risk-die/REPORT.md)
 checks the fixed/supplied faces and stored-roll picture. The [board audit](../../../../audit/2026-10-amos-bank-or-risk-board/REPORT.md)
-checks grouped labels and supplied snapshots. Audible and remaining teaching
-stages require their own native checks before they become lesson sources.
+checks grouped labels and supplied snapshots. The
+[sound record](../../../../audit/2026-10-amos-bank-or-risk-sound/REPORT.md)
+checks tone variations and once-only cues with native PCM. Listening acceptance
+and remaining teaching checkpoints still need their own evidence.
 
 The prototype acceptance run must cover rolls 1 and 6, totals 9/10/11, banking
 exactly once, a bust preserving earlier points, target equality, an unreachable

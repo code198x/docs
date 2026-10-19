@@ -1,7 +1,7 @@
 # AMOS course brief
 
 **Status: bank-or-risk browser scope and teaching direction agreed; native
-rules, palette, die and board drawing checked; sound and remaining lesson sources pending.** We
+rules, graphics and sound signals checked; listening acceptance and remaining lesson sources pending.** We
 want a complete beginner to make and understand small games in AMOS, then grow
 towards more substantial Amiga games. An experienced programmer should be able
 to enter later without missing AMOS-specific explanations.
@@ -104,7 +104,10 @@ The [teaching map](../games/bank-or-risk/teaching-map.md) gives each addition it
 own checkpoint. Use AMOS drawing and sound facilities directly, with every
 required line explained. The initial text trial established rules behaviour;
 the [drawing record](../../../audit/2026-10-amos-bank-or-risk-die/REPORT.md)
-now checks fixed/supplied faces and the stored-roll picture. The prototype does
+now checks fixed/supplied faces and the stored-roll picture. The
+[sound record](../../../audit/2026-10-amos-bank-or-risk-sound/REPORT.md)
+checks the short tone, event cue counts, muting and named input windows;
+subjective listening acceptance remains pending. The prototype does
 not define the finished game's presentation. Labels and numbers
 must carry all meaning with sound off and without relying on colour. An input
 should cause one action, and a held key must not roll repeatedly or act in a

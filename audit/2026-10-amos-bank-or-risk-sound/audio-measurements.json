@@ -1,0 +1,366 @@
+{
+  "tone": {
+    "rate": 48000,
+    "frames": 291371,
+    "duration_s": 6.070229166666667,
+    "peak_pcm": 12823,
+    "channel_peaks_pcm": [
+      12823,
+      12456
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 0.775,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3118115327909
+      }
+    ]
+  },
+  "lower": {
+    "rate": 48000,
+    "frames": 291372,
+    "duration_s": 6.07025,
+    "peak_pcm": 13060,
+    "channel_peaks_pcm": [
+      13060,
+      12711
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 0.775,
+        "duration_s": 0.185,
+        "pitch_hz": 262.65275442826265
+      }
+    ]
+  },
+  "quieter": {
+    "rate": 48000,
+    "frames": 291371,
+    "duration_s": 6.070229166666667,
+    "peak_pcm": 6128,
+    "channel_peaks_pcm": [
+      6128,
+      5957
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 0.775,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3093335964821
+      }
+    ]
+  },
+  "longer": {
+    "rate": 48000,
+    "frames": 291371,
+    "duration_s": 6.070229166666667,
+    "peak_pcm": 12804,
+    "channel_peaks_pcm": [
+      12804,
+      12450
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 0.775,
+        "duration_s": 0.365,
+        "pitch_hz": 525.3136997485555
+      }
+    ]
+  },
+  "perfect": {
+    "rate": 48000,
+    "frames": 388176,
+    "duration_s": 8.087,
+    "peak_pcm": 12602,
+    "channel_peaks_pcm": [
+      12602,
+      12366
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 1.815,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3129322924517
+      },
+      {
+        "start_s": 5.05,
+        "duration_s": 0.185,
+        "pitch_hz": 525.306157934134
+      },
+      {
+        "start_s": 6.01,
+        "duration_s": 0.185,
+        "pitch_hz": 1050.6166806975157
+      }
+    ]
+  },
+  "recover": {
+    "rate": 48000,
+    "frames": 706384,
+    "duration_s": 14.716333333333333,
+    "peak_pcm": 13243,
+    "channel_peaks_pcm": [
+      13243,
+      12897
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 5.33,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3096602843358
+      },
+      {
+        "start_s": 8.025,
+        "duration_s": 0.185,
+        "pitch_hz": 131.32677364559194
+      },
+      {
+        "start_s": 8.985,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3091214678965
+      },
+      {
+        "start_s": 11.68,
+        "duration_s": 0.185,
+        "pitch_hz": 525.305878425278
+      },
+      {
+        "start_s": 12.64,
+        "duration_s": 0.18,
+        "pitch_hz": 1050.6221138659348
+      }
+    ]
+  },
+  "fail": {
+    "rate": 48000,
+    "frames": 224280,
+    "duration_s": 4.6725,
+    "peak_pcm": 13438,
+    "channel_peaks_pcm": [
+      13438,
+      13122
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 0.68,
+        "duration_s": 0.18,
+        "pitch_hz": 131.3252408175398
+      },
+      {
+        "start_s": 1.635,
+        "duration_s": 0.185,
+        "pitch_hz": 131.32750793367785
+      },
+      {
+        "start_s": 2.595,
+        "duration_s": 0.185,
+        "pitch_hz": 131.32611628085658
+      }
+    ]
+  },
+  "muted": {
+    "rate": 48000,
+    "frames": 388175,
+    "duration_s": 8.086979166666667,
+    "peak_pcm": 0,
+    "channel_peaks_pcm": [
+      0,
+      0
+    ],
+    "clipped_samples": 0,
+    "bursts": []
+  },
+  "bank-test": {
+    "rate": 48000,
+    "frames": 388176,
+    "duration_s": 8.087,
+    "peak_pcm": 12760,
+    "channel_peaks_pcm": [
+      12760,
+      12400
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 1.815,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3062900870278
+      },
+      {
+        "start_s": 5.05,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3125512722636
+      },
+      {
+        "start_s": 6.01,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3099151604525
+      }
+    ]
+  },
+  "bust-test": {
+    "rate": 48000,
+    "frames": 706384,
+    "duration_s": 14.716333333333333,
+    "peak_pcm": 13471,
+    "channel_peaks_pcm": [
+      13471,
+      13091
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 5.33,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3078636942428
+      },
+      {
+        "start_s": 8.025,
+        "duration_s": 0.185,
+        "pitch_hz": 131.32743071243826
+      },
+      {
+        "start_s": 8.985,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3082472101788
+      },
+      {
+        "start_s": 11.68,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3073078433578
+      },
+      {
+        "start_s": 12.64,
+        "duration_s": 0.18,
+        "pitch_hz": 525.3035306441415
+      }
+    ]
+  },
+  "held-controls": {
+    "rate": 48000,
+    "frames": 486897,
+    "duration_s": 10.1436875,
+    "peak_pcm": 12794,
+    "channel_peaks_pcm": [
+      12794,
+      12438
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 0.04,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3125438892798
+      }
+    ]
+  },
+  "rapid-next": {
+    "rate": 48000,
+    "frames": 94887,
+    "duration_s": 1.9768125,
+    "peak_pcm": 12794,
+    "channel_peaks_pcm": [
+      12794,
+      12438
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 0.04,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3125438892798
+      }
+    ]
+  },
+  "replay-tail": {
+    "rate": 48000,
+    "frames": 115973,
+    "duration_s": 2.4161041666666665,
+    "peak_pcm": 6562,
+    "channel_peaks_pcm": [
+      6562,
+      6367
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 0.0,
+        "duration_s": 0.025,
+        "pitch_hz": 1050.5862631281166
+      }
+    ]
+  },
+  "quit-tail": {
+    "rate": 48000,
+    "frames": 151436,
+    "duration_s": 3.154916666666667,
+    "peak_pcm": 6562,
+    "channel_peaks_pcm": [
+      6562,
+      6367
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 0.0,
+        "duration_s": 0.025,
+        "pitch_hz": 1050.5862631281166
+      }
+    ]
+  },
+  "base-startup": {
+    "rate": 48000,
+    "frames": 291371,
+    "duration_s": 6.070229166666667,
+    "peak_pcm": 0,
+    "channel_peaks_pcm": [
+      0,
+      0
+    ],
+    "clipped_samples": 0,
+    "bursts": []
+  },
+  "passive-tail": {
+    "rate": 48000,
+    "frames": 57507,
+    "duration_s": 1.1980625,
+    "peak_pcm": 6562,
+    "channel_peaks_pcm": [
+      6562,
+      6367
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 0.0,
+        "duration_s": 0.085,
+        "pitch_hz": 1050.6209828732158
+      }
+    ]
+  },
+  "tone-timing": {
+    "rate": 48000,
+    "frames": 128434,
+    "duration_s": 2.675708333333333,
+    "peak_pcm": 12824,
+    "channel_peaks_pcm": [
+      12824,
+      12447
+    ],
+    "clipped_samples": 0,
+    "bursts": [
+      {
+        "start_s": 0.775,
+        "duration_s": 0.185,
+        "pitch_hz": 525.3068655572197
+      }
+    ]
+  }
+}

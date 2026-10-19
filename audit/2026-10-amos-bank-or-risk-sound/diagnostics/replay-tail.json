@@ -1,0 +1,26 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/success-active.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/replay-tail.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "A",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/replay-quiet.png"
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

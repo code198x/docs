@@ -1,0 +1,130 @@
+{
+  "observations": [
+    {
+      "kind": "press_key",
+      "key": "Space",
+      "hold_frames": 3,
+      "reached": 428343596
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 430043372,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "R",
+      "hold_frames": 60,
+      "reached": 438683900
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 440383676,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "R",
+      "hold_frames": 60,
+      "reached": 449024204
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 450723980,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "Space",
+      "hold_frames": 60,
+      "reached": 459364508
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 461064284,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "R",
+      "hold_frames": 3,
+      "reached": 461630876
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 463330652,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "R",
+      "hold_frames": 3,
+      "reached": 463897244
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 465597020,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "Space",
+      "hold_frames": 3,
+      "reached": 466163612
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 467863388,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "R",
+      "hold_frames": 3,
+      "reached": 468429980
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 470129756,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "R",
+      "hold_frames": 3,
+      "reached": 470696348
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 472396124,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "run_frames",
+      "frames": 90,
+      "reached": 485144444,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "stop_audio_recording",
+      "path": "${RUN}/muted.wav",
+      "samples": 388175,
+      "sample_rate": 48000,
+      "channels": 2,
+      "duration_ms": 8086
+    }
+  ],
+  "time": 485144444,
+  "boot_detected": true,
+  "boot_reason": "display-active",
+  "query_values": []
+}

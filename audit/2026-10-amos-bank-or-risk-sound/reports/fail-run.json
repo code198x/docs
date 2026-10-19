@@ -1,0 +1,46 @@
+{
+  "observations": [
+    {
+      "kind": "run_frames",
+      "frames": 60,
+      "reached": 374942300,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "f2",
+      "hold_frames": 3,
+      "reached": 375508892
+    },
+    {
+      "kind": "run_frames",
+      "frames": 60,
+      "reached": 384007772,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "f1",
+      "hold_frames": 3,
+      "reached": 384574364
+    },
+    {
+      "kind": "run_frames",
+      "frames": 300,
+      "reached": 427068764,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "stop_audio_recording",
+      "path": "${RUN}/fail-startup.wav",
+      "samples": 291371,
+      "sample_rate": 48000,
+      "channels": 2,
+      "duration_ms": 6070
+    }
+  ],
+  "time": 427068764,
+  "boot_detected": true,
+  "boot_reason": "display-active",
+  "query_values": []
+}
