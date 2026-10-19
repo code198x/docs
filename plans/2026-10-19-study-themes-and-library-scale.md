@@ -1,6 +1,6 @@
 # Carry the game studies into The Craft and the Pattern Library
 
-Proposal for review, 19 October 2026. Agreed study order: M.U.L.E. observation pass, Pac-Man, SimCity. This does not implement a new navigation, content schema or module.
+Direction approved by the owner, 19 October 2026. The owner also confirmed that the Pattern Library covers low-level hardware techniques, including keyboard and joystick reading and basic audio, progressing towards more complex work. The [Pattern Library specification](../specifications/pattern-library.md) records that breadth. Agreed study order: M.U.L.E. observation pass, Pac-Man, SimCity. This does not implement a new navigation, content schema or module.
 
 ## What the current site already gives us
 
@@ -24,12 +24,12 @@ The state-machine pattern already discusses transitions, priority and input edge
 | Lemmings | What does the player control when the characters act for themselves? | Game AI; Game Design | Per-entity states, assignment of an action and bounded resource counts | Do not imply the original uses a modern generic AI framework |
 | Boulder Dash | What changes when removing a tile also removes support? | Game Data and Algorithms; Game Design | Grid updates, support tests and explicit scheduling | Traversal order can change results; demonstrate alternatives |
 | M.U.L.E. | Why can an individual bargain be bad for the whole colony? | Game Design | Resource accounting, staged production and matched offers | Original rules and our interpretation are distinct; a diagram is not a play observation |
-| Pac-Man (next) | How can a few opponent rules create different pressures? | Game AI; Game Feel | Target selection, legal turns, tie-breaking and timed modes | Preserve original implementation quirks; avoid invented ghost personalities as explanations |
-| SimCity (afterwards) | How does the player reason about consequences that arrive later? | Game Design; Game Data and Algorithms | Tick scheduling, spatial summaries and visible feedback | Identify edition; do not universalise its chosen social/economic model |
+| Pac-Man | How can a few opponent rules create different pressures? | Game AI; Game Feel | Target selection, legal turns, tie-breaking and timed modes | Preserve original implementation quirks; avoid invented ghost personalities as explanations |
+| SimCity | How does the player reason about consequences that arrive later? | Game Design; Game Data and Algorithms | Tick scheduling, spatial summaries and visible feedback | Identify edition; do not universalise its chosen social/economic model |
 
 Production, marketing, packaging, audience and cultural reception belong in the whole-game account and related Vault subjects. They can support practical Craft work when a reader has a concrete decision to make. They should not be squeezed into an implementation-pattern category just to connect everything.
 
-## First Craft increment to propose after the observations
+## First Craft direction: meaningful choices
 
 A small Game Design opening: **What makes this a choice?** Start with a colony that can afford one food installation or one energy installation. Show what each supports and what is sacrificed. Let a reader predict a consequence, trace one clearly labelled invented round, and change one rule. Bring in M.U.L.E. as a historical example after the choice is understood. No dependence on playing or completing the study; no claim to reproduce the complete M.U.L.E. economy.
 
@@ -54,7 +54,7 @@ Do not combine every concern into one all-purpose pattern record. A design princ
 
 Audit existing pattern content and link integrity before changing the model. Prototype with the existing state machine, input-edge detection and two grounded study examples; avoid a bulk rewrite. Compare task completion on narrow and wide screens, keyboard navigation, search without JavaScript, and the migration of existing relation fields. Choose the smallest change that demonstrates a reader benefit.
 
-## Proposed delivery order
+## Agreed direction and next delivery
 
 Finish the M.U.L.E. observation increment. Develop Pac-Man, then SimCity, as separate reviewed study changes. Keep updating this evidence-led map. Propose the first Game Design lesson with concrete materials, and a separate small Pattern Library prototype, before any structural implementation. The scope and principles in PROJECT.md and the current specifications remain binding.
 
