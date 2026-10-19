@@ -1,0 +1,30 @@
+{
+  "mode": "one-player early Amiga city-building experiment",
+  "script": "captures/build-city.lua",
+  "stages": [
+    {
+      "frame": 13100,
+      "observed": "Empty generated map, Easy $20,000, August 1901."
+    },
+    {
+      "frame": 14200,
+      "observed": "Three R/C/I zones and coal plant placed; January 1902 $16,697; blackout message remains visible."
+    },
+    {
+      "frame": 17000,
+      "observed": "January 1903 budget: 7% tax, $8 collected, $4 transit, $0 fire/police; previous funds $16,627, cash flow +$4, current funds $16,631."
+    },
+    {
+      "frame": 17400,
+      "observed": "Budget confirmed; houses and industrial structures visible, commercial zone still undeveloped, short road above zones."
+    }
+  ],
+  "not_verified": [
+    "Long-term stable city",
+    "Scenario win",
+    "Later game editions",
+    "Audio",
+    "Identical binary implementation to Micropolis source"
+  ],
+  "harness_notes": "An early mouse configuration override was corrected. A temporary checkpoint replay produced black output and was abandoned; final published frames use full cold-boot run."
+}
