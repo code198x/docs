@@ -1,0 +1,72 @@
+path,title,system,category,difficulty,status,includes,words,taught_in
+src/content/patterns/commodore-64/assembly/audio/sid-multi-voice.mdx,SID Multi-Voice,commodore-64,audio,advanced,illustrative code.,,1185,
+src/content/patterns/commodore-64/assembly/audio/sid-note-trigger.mdx,SID Note Trigger,commodore-64,audio,beginner,assembled and emulator-executed.,commodore-64/patterns/assembly/audio/sid-note-trigger/sid-note.inc; commodore-64/patterns/assembly/audio/sid-note-trigger/demo.asm,1401,
+src/content/patterns/commodore-64/assembly/audio/sid-voice-setup.mdx,SID Voice Setup,commodore-64,audio,beginner,illustrative code.,,1004,"Game 6, Unit 3"
+src/content/patterns/commodore-64/assembly/framework/game-loop-basic.mdx,Game Loop (Basic),commodore-64,framework,beginner,illustrative code.,,348,"Game 6, Unit 3"
+src/content/patterns/commodore-64/assembly/input/joystick-reading.mdx,Joystick Reading,commodore-64,input,beginner,assembled and emulator-executed.,commodore-64/patterns/assembly/input/joystick-reading/demo.asm; commodore-64/patterns/assembly/input/joystick-reading/joystick.inc,1145,
+src/content/patterns/commodore-64/assembly/physics/sprite-movement-bounds.mdx,Sprite Movement with Bounds,commodore-64,physics,beginner,assembled and emulator-executed.,commodore-64/patterns/assembly/physics/sprite-movement-bounds/demo.asm; commodore-64/patterns/assembly/physics/sprite-movement-bounds/movement.inc,1049,
+src/content/patterns/commodore-64/assembly/rendering/hardware-sprites.mdx,Hardware Sprites,commodore-64,rendering,beginner,assembled and emulator-executed.,commodore-64/patterns/assembly/rendering/hardware-sprites/demo.asm; commodore-64/patterns/assembly/rendering/hardware-sprites/sprite.inc; commodore-64/patterns/assembly/rendering/hardware-sprites/shape.inc,1080,
+src/content/patterns/commodore-64/assembly/rendering/raster-splits.mdx,Raster Splits,commodore-64,rendering,intermediate,assembled and emulator-executed.,commodore-64/patterns/assembly/rendering/raster-splits/demo.asm; commodore-64/patterns/assembly/rendering/raster-splits/split.inc,1137,
+src/content/patterns/commodore-64/assembly/rendering/smooth-scrolling.mdx,Smooth Scrolling,commodore-64,rendering,intermediate,illustrative code.,,736,
+src/content/patterns/commodore-64/assembly/rendering/sprite-multiplexing.mdx,Sprite Multiplexing,commodore-64,rendering,advanced,assembled and emulator-executed.,commodore-64/patterns/assembly/rendering/sprite-multiplexing/demo.asm; commodore-64/patterns/assembly/rendering/sprite-multiplexing/multiplexer.inc,790,
+src/content/patterns/commodore-amiga/assembly/audio/four-channel-music.mdx,Four-Channel Music,commodore-amiga,audio,advanced,illustrative code.,,1059,
+src/content/patterns/commodore-amiga/assembly/audio/one-shot-samples.mdx,One-Shot Samples,commodore-amiga,audio,intermediate,illustrative code.,,972,
+src/content/patterns/commodore-amiga/assembly/audio/playing-a-sample.mdx,Playing a Sample,commodore-amiga,audio,beginner,assembled and emulator-executed.,commodore-amiga/patterns/assembly/audio/playing-a-sample/paula-sample.inc; commodore-amiga/patterns/assembly/audio/playing-a-sample/demo.asm; commodore-amiga/patterns/assembly/audio/playing-a-sample/demo.asm,1615,
+src/content/patterns/commodore-amiga/assembly/framework/system-takeover.mdx,System Takeover,commodore-amiga,framework,beginner,illustrative code.,,834,"Game 1, Unit 1"
+src/content/patterns/commodore-amiga/assembly/framework/vblank-game-loop.mdx,VBlank Game Loop,commodore-amiga,framework,beginner,illustrative code.,,726,"Game 1, Unit 2"
+src/content/patterns/commodore-amiga/assembly/input/joystick-edge-detection.mdx,Joystick Edge Detection,commodore-amiga,input,beginner,illustrative code.,,524,"Game 1, Unit 5"
+src/content/patterns/commodore-amiga/assembly/input/joystick-reading.mdx,Joystick Reading,commodore-amiga,input,beginner,illustrative code.,,619,"Game 1, Unit 2"
+src/content/patterns/commodore-amiga/assembly/physics/sprite-movement-bounds.mdx,Sprite Movement with Bounds,commodore-amiga,physics,beginner,illustrative code.,,529,"Game 1, Unit 2"
+src/content/patterns/commodore-amiga/assembly/rendering/blitter-copy.mdx,Blitter Copy,commodore-amiga,rendering,intermediate,illustrative code.,,805,
+src/content/patterns/commodore-amiga/assembly/rendering/blitter-line-draw.mdx,Blitter Line Draw,commodore-amiga,rendering,advanced,illustrative code.,,1112,
+src/content/patterns/commodore-amiga/assembly/rendering/cookie-cut-blit.mdx,Cookie-Cut Blit,commodore-amiga,rendering,advanced,illustrative code.,,874,
+src/content/patterns/commodore-amiga/assembly/rendering/copper-colour-bars.mdx,Copper Colour Bars,commodore-amiga,rendering,intermediate,illustrative code.,,709,
+src/content/patterns/commodore-amiga/assembly/rendering/copper-list-basics.mdx,Copper List Basics,commodore-amiga,rendering,beginner,illustrative code.,,925,"Game 1, Unit 1"
+src/content/patterns/commodore-amiga/assembly/rendering/copper-split-screen.mdx,Copper Split Screen,commodore-amiga,rendering,advanced,illustrative code.,,822,
+src/content/patterns/commodore-amiga/assembly/rendering/sprite-control-words.mdx,Sprite Control Words,commodore-amiga,rendering,beginner,illustrative code.,,859,"Game 1, Unit 2"
+src/content/patterns/cross-platform/audio/making-a-sound.mdx,Four Ways to Make a Sound,cross-platform,audio,beginner,illustrative code.,,1883,
+src/content/patterns/cross-platform/audio/tune-sequencer.mdx,Tune Sequencer with Two Terminators,cross-platform,audio,intermediate,illustrative code.,,1834,Flock Units 17–18 (Amiga) · Starfield Unit 17 (C64) · Dash Unit 17 (NES)
+src/content/patterns/cross-platform/framework/ending-dwell.mdx,The Ending Dwell,cross-platform,framework,beginner,illustrative pseudocode.,,647,Game Feel Unit 4 (The Craft) · Flock Unit 17 (Amiga) · Starfield Unit 17 (C64)
+src/content/patterns/cross-platform/framework/escalation-as-data.mdx,Escalation as Data,cross-platform,framework,intermediate,illustrative pseudocode.,,699,Flock Unit 18 (Amiga) · Starfield Unit 17 (C64) · Dash Unit 17 (NES)
+src/content/patterns/cross-platform/framework/lfsr-random.mdx,LFSR Random Numbers,cross-platform,framework,intermediate,illustrative pseudocode.,,991,
+src/content/patterns/cross-platform/framework/state-machine.mdx,Game State Machine,cross-platform,framework,beginner,illustrative pseudocode.,,1643,
+src/content/patterns/cross-platform/framework/three-caps.mdx,"Three Caps: Counter, Index, Digit",cross-platform,framework,beginner,illustrative pseudocode.,,613,Flock Unit 18 (Amiga) · Starfield Unit 17 (C64) · Dash Unit 17 (NES)
+src/content/patterns/cross-platform/input/edge-detection.mdx,Input Edge Detection,cross-platform,input,beginner,illustrative pseudocode.,,1381,
+src/content/patterns/cross-platform/physics/aabb-collision.mdx,AABB Collision Detection,cross-platform,physics,beginner,illustrative pseudocode with an executed Python reference.,,1263,
+src/content/patterns/cross-platform/physics/fixed-point-math.mdx,Fixed-Point Math,cross-platform,physics,intermediate,illustrative pseudocode.,,806,"Maths for Games, Unit 2 (The Craft)"
+src/content/patterns/cross-platform/physics/grace-window.mdx,The Grace Window,cross-platform,physics,beginner,illustrative pseudocode.,,612,Game Feel Unit 3 (The Craft) · Starfield Unit 14 (C64) · Dash Unit 17 (NES)
+src/content/patterns/cross-platform/rendering/blink-on-a-clock.mdx,Blink on a Clock,cross-platform,rendering,beginner,illustrative pseudocode.,,561,Game Feel Unit 2 (The Craft) · Flock Unit 18 (Amiga) · Dash Unit 17 (NES)
+src/content/patterns/cross-platform/rendering/centre-text-on-a-character-screen.mdx,Centre Text on a Character Screen,cross-platform,rendering,beginner,illustrative code.,,478,
+src/content/patterns/cross-platform/rendering/sprite-animation.mdx,Sprite Animation,cross-platform,rendering,beginner,illustrative pseudocode.,,765,
+src/content/patterns/nintendo-nes/assembly/audio/music-engine.mdx,A Music Engine,nintendo-nes,audio,advanced,illustrative code.,,946,
+src/content/patterns/nintendo-nes/assembly/audio/sound-effects.mdx,Sound Effects,nintendo-nes,audio,intermediate,illustrative code.,,774,
+src/content/patterns/nintendo-nes/assembly/audio/square-wave.mdx,A Square Wave,nintendo-nes,audio,beginner,assembled and emulator-executed.,nintendo-entertainment-system/patterns/assembly/audio/square-wave/square-wave.inc; nintendo-entertainment-system/patterns/assembly/audio/square-wave/demo.asm,1315,
+src/content/patterns/nintendo-nes/assembly/framework/nmi-game-loop.mdx,NMI Game Loop,nintendo-nes,framework,beginner,illustrative code.,,702,"Game 1, Unit 1"
+src/content/patterns/nintendo-nes/assembly/framework/reset-sequence.mdx,Reset Sequence,nintendo-nes,framework,beginner,illustrative code.,,770,"Game 1, Unit 1"
+src/content/patterns/nintendo-nes/assembly/input/controller-reading.mdx,Controller Reading,nintendo-nes,input,beginner,illustrative code.,,691,"Game 1, Unit 2"
+src/content/patterns/nintendo-nes/assembly/physics/sprite-movement-bounds.mdx,Sprite Movement with Bounds,nintendo-nes,physics,beginner,illustrative code.,,810,"Game 1, Unit 2"
+src/content/patterns/nintendo-nes/assembly/rendering/column-feeding.mdx,Feeding New Columns,nintendo-nes,rendering,advanced,illustrative code.,,796,
+src/content/patterns/nintendo-nes/assembly/rendering/multi-sprite-oam.mdx,Multi-Sprite OAM Update,nintendo-nes,rendering,intermediate,illustrative code.,,875,"Game 1, Unit 5"
+src/content/patterns/nintendo-nes/assembly/rendering/nametable-scrolling.mdx,Nametables and Scrolling,nintendo-nes,rendering,intermediate,illustrative code.,,745,
+src/content/patterns/nintendo-nes/assembly/rendering/palette-loading.mdx,Palette Loading,nintendo-nes,rendering,beginner,illustrative code.,,777,"Game 1, Unit 1"
+src/content/patterns/nintendo-nes/assembly/rendering/sprite-zero-split.mdx,Sprite 0 Split,nintendo-nes,rendering,advanced,illustrative code.,,852,
+src/content/patterns/sinclair-zx-spectrum/assembly/audio/ay-envelopes-noise.mdx,AY Envelopes and Noise,sinclair-zx-spectrum,audio,intermediate,illustrative code.,,844,
+src/content/patterns/sinclair-zx-spectrum/assembly/audio/ay-music.mdx,AY Music,sinclair-zx-spectrum,audio,advanced,illustrative code.,,985,
+src/content/patterns/sinclair-zx-spectrum/assembly/audio/ay-tone.mdx,AY Tone,sinclair-zx-spectrum,audio,beginner,illustrative code.,,791,
+src/content/patterns/sinclair-zx-spectrum/assembly/audio/beeper-music.mdx,Beeper Music,sinclair-zx-spectrum,audio,intermediate,illustrative code.,,995,
+src/content/patterns/sinclair-zx-spectrum/assembly/audio/sound-beep.mdx,Sound Beep,sinclair-zx-spectrum,audio,beginner,assembled and emulator-executed.,sinclair-zx-spectrum/patterns/assembly/audio/sound-beep/sound-beep.inc; sinclair-zx-spectrum/patterns/assembly/audio/sound-beep/effects.inc,1019,
+src/content/patterns/sinclair-zx-spectrum/assembly/framework/game-loop-halt.mdx,Game Loop (HALT),sinclair-zx-spectrum,framework,beginner,illustrative code.,,540,"Game 1, Unit 1"
+src/content/patterns/sinclair-zx-spectrum/assembly/framework/profile-a-routine.mdx,Profile a Routine,sinclair-zx-spectrum,framework,intermediate,assembled and emulator-executed.,sinclair-zx-spectrum/patterns/assembly/framework/profile-a-routine/loop.asm; sinclair-zx-spectrum/patterns/assembly/framework/profile-a-routine/unrolled.asm,1562,
+src/content/patterns/sinclair-zx-spectrum/assembly/framework/state-machine-loop.mdx,State Machine Loop,sinclair-zx-spectrum,framework,intermediate,illustrative code.,,627,"Game 1, Unit 7"
+src/content/patterns/sinclair-zx-spectrum/assembly/input/keyboard-reading.mdx,Keyboard Reading,sinclair-zx-spectrum,input,beginner,illustrative code.,,837,"Game 1, Unit 1"
+src/content/patterns/sinclair-zx-spectrum/assembly/physics/grid-movement-bounds.mdx,Grid Movement with Bounds,sinclair-zx-spectrum,physics,beginner,illustrative code.,,600,"Game 1, Unit 1"
+src/content/patterns/sinclair-zx-spectrum/assembly/rendering/attribute-clash.mdx,Attribute Clash,sinclair-zx-spectrum,rendering,intermediate,illustrative code.,,876,
+src/content/patterns/sinclair-zx-spectrum/assembly/rendering/attribute-writing.mdx,Attribute Writing,sinclair-zx-spectrum,rendering,beginner,illustrative code.,,730,"Game 1, Unit 1"
+src/content/patterns/sinclair-zx-spectrum/assembly/rendering/bitmap-addressing.mdx,Bitmap Addressing,sinclair-zx-spectrum,rendering,intermediate,executed sample.,sinclair-zx-spectrum/patterns/assembly/rendering/bitmap-addressing/bitmap-addressing.inc,779,
+src/content/patterns/sinclair-zx-spectrum/assembly/rendering/character-printing.mdx,Character Printing,sinclair-zx-spectrum,rendering,beginner,illustrative code.,,821,"Game 1, Unit 4"
+src/content/patterns/sinclair-zx-spectrum/assembly/rendering/masked-sprites.mdx,Masked Sprites,sinclair-zx-spectrum,rendering,advanced,illustrative code.,,821,
+src/content/patterns/sinclair-zx-spectrum/assembly/rendering/numeric-display.mdx,Numeric Display,sinclair-zx-spectrum,rendering,beginner,illustrative code.,,771,"Game 1, Unit 4"
+src/content/patterns/sinclair-zx-spectrum/basic/framework/screen-frame.mdx,Screen Frame (BASIC),sinclair-zx-spectrum,framework,beginner,maintained BASIC subroutine.,sinclair-zx-spectrum/patterns/basic/screen-frame.bas,367,"BASIC Game 1, Unit 1"
+src/content/patterns/sinclair-zx-spectrum/basic/framework/text-utilities.mdx,Text Utilities (BASIC),sinclair-zx-spectrum,framework,beginner,maintained BASIC subroutine.,sinclair-zx-spectrum/patterns/basic/text-utilities.bas,231,"BASIC Game 1, Unit 1"
+src/content/patterns/sinclair-zx-spectrum/basic/rendering/progress-bar.mdx,Progress Bar (BASIC),sinclair-zx-spectrum,rendering,beginner,maintained BASIC subroutine.,sinclair-zx-spectrum/patterns/basic/progress-bar.bas,590,"BASIC Game 1, Unit 1"
+src/content/patterns/sinclair-zx-spectrum/basic/rendering/seven-segment-digits.mdx,Seven-Segment Digits (BASIC),sinclair-zx-spectrum,rendering,beginner,maintained BASIC subroutine.,sinclair-zx-spectrum/patterns/basic/seven-segment-digits.bas,375,"BASIC Game 1, Unit 1"

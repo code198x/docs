@@ -1,0 +1,27 @@
+{
+  "website": {
+    "repository": "code198x/website",
+    "revision": "9a436eed24e5129d3b83e15f8d0438d9f038e518"
+  },
+  "code-samples": {
+    "repository": "code198x/code-samples",
+    "revision": "49e350adb4f2c4495c0601cb14e23a9260e304a1"
+  },
+  "website-prototype": {
+    "repository": "code198x/website",
+    "revision": "8b8e76201aa1dc0f3f0d1d4fc4623565863dec3f"
+  },
+  "samples-prototype": {
+    "repository": "code198x/code-samples",
+    "revision": "ca95c288b071f307a925b03d208473441fbf9629"
+  },
+  "docs": {
+    "repository": "code198x/docs",
+    "revision": "63632e65a57449f8393355901a96ff3644771640"
+  },
+  "emulator_source": {
+    "repository": "emu198x/emu198x",
+    "revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+    "meaning": "Source inspected only; not an execution-readiness claim"
+  }
+}
