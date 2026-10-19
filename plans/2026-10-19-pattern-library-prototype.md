@@ -1,0 +1,23 @@
+# First Pattern Library connections prototype
+
+Approved brief: input reading, press detection and sound triggering, plus one study-derived technique. Show how they fit before expanding the catalogue. Extend the incumbent Pattern Library identity and layouts; prepare an unpublished draft for review, not deployment or a global migration.
+
+1. Audit the existing four-machine readers, cross-platform edge-detection explanation and executed C64 note trigger. Preserve exact entry URLs, authorship and evidence status. Choose target selection plus legal-neighbour choice as an original, simplified example motivated by the Pac-Man study.
+2. Build an isolated /catalogue/pattern-library/ preview in the website with four conceptual technique records, validated links to current collection entries and explicit implementation/evidence summaries. Show task search, machine/language discovery, next-step connections, and dedicated technique pages. Keep the current public directory and pattern schema untouched; exclude preview routes from the sitemap and mark noindex.
+3. Add one bounded browser experiment showing input samples → new press → one sound event, plus a step-through pursuit example. Use original geometry and browser code, not a historic game's assets or a claimed hardware implementation. Audio starts only on explicit activation; provide visual feedback, mute and keyboard/touch controls, no timing or sound-fidelity claims. Baseline reading/links must work without JavaScript.
+4. Verify relation resolution, old URLs, multi-machine/language presentation, empty/filter state, keyboard use, transition/held-input cases, deterministic legal movement and browser sound scheduling. Test actual wiring as well as the model. Build, then inspect desktop and phone together, repair identified defects in one batch and confirm once. Run the skill's mechanical detector and required finish review. No new dependencies.
+5. Push draft PRs, save portable working previews and desktop/phone screenshots in the chat outputs folder, and explain what is a prototype versus an existing implementation. Keep deployment and expansion for the owner's review. Remove task-owned worktrees/builds/processes after preserving remote commits and deliverables.
+
+Expected website files: src/data/pattern-techniques.ts; src/lib/pattern-techniques.ts and a focused invariant test; src/components/patterns/TechniqueDirectory.astro, TechniqueExperiment.astro; src/scripts/pattern-experiment.ts; src/styles/pattern-prototype.css; src/pages/catalogue/pattern-library/[...technique].astro; astro.config.mjs (precise preview exclusion); tests/pattern-prototype.spec.ts. Verify current paths before edits; simplify where existing components serve the job.
+
+## Review outcome
+
+Implemented four conceptual technique records and five review pages. Exact collection IDs resolve to the existing pattern entries, and evidence summaries are checked against their source status. No code listings, public directory, collection schema or existing URLs were changed. The pursuit example is an original browser demonstration with simplified rules, not a claimed reproduction or completed machine routine.
+
+The input experiment uses explicit held-control selection and manual sampling so history and press events are inspectable. Sound starts off; enabling it schedules one bounded browser tone per new Fire press. Entry-history seeding, release/repress and multiple held controls are demonstrated. The pursuit board separates a target rule from legal local movement and shows distance comparisons and the tie-break.
+
+Verification: 252 unit tests passed, with 9 existing skips; 24 browser tests passed across desktop and phone, covering the current library and prototype, accessibility, no-JavaScript reading, filter intersections, held/seeded controls, actual sound scheduling and offline-rendered waveform output. The opt-in production build passed, including shared-frame checks. Sitemap exclusion was checked. The portable five-page review was exercised directly from local files, including its input and pursuit interactions, without browser errors.
+
+Visual captures at 1440, 390 and 320 pixels passed the Impeccable finish review with disposition `ship` and no material fixes. The mechanical detector returned no findings. The extension preserves the incumbent visual authority. Earlier Spacewar-specific PRODUCT.md context was noted as pre-existing drift and left alone.
+
+Normal production builds omit these routes; opt-in review builds use `PATTERN_PROTOTYPE=1`. The browser test file uses the same opt-in flag. Review and publication are separate: this work is prepared as draft changes, not merged or deployed.
