@@ -1,0 +1,14 @@
+{
+  "observations": [
+    {
+      "kind": "run_frames",
+      "frames": 1000,
+      "reached": 141648044,
+      "stop_reason": "ReachedTarget"
+    }
+  ],
+  "time": 141648044,
+  "boot_detected": true,
+  "boot_reason": "display-active",
+  "query_values": []
+}

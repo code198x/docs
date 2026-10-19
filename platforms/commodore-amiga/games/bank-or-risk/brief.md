@@ -169,9 +169,10 @@ through the opening, rather than collecting them in a final presentation stage.
 Use the [teaching map](teaching-map.md) for the smaller steps. Keep numbers and
 labels carrying every essential result, and current total, limit and secured
 score visually distinct. Leave enough time to read a roll; do not use decoration
-or sound as an unexplained timing mechanism. The prepared silent text source
-remains the initial rules trial; the planned visual and audible stages require
-their own native checks before they become lesson sources.
+or sound as an unexplained timing mechanism. The initial text trial checked
+rules; the [drawing audit](../../../../audit/2026-10-amos-bank-or-risk-die/REPORT.md)
+checks the fixed/supplied faces and stored-roll picture. Remaining board and
+audible stages require their own native checks before they become lesson sources.
 
 The prototype acceptance run must cover rolls 1 and 6, totals 9/10/11, banking
 exactly once, a bust preserving earlier points, target equality, an unreachable

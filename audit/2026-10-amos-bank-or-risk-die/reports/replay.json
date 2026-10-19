@@ -1,0 +1,20 @@
+{
+  "observations": [
+    {
+      "kind": "press_key",
+      "key": "A",
+      "hold_frames": 90,
+      "reached": 452707052
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 454406828,
+      "stop_reason": "ReachedTarget"
+    }
+  ],
+  "time": 454406828,
+  "boot_detected": true,
+  "boot_reason": "display-active",
+  "query_values": []
+}
