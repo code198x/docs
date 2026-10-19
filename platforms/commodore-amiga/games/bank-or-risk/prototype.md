@@ -5,6 +5,20 @@ the trial tuning: one six-sided die, limit 10, at most five rounds and target 30
 The text-first endpoint and four fixed-roll probes are prepared in code-samples.
 They have not been imported, syntax-checked, run or saved/reopened in AMOS.
 
+## Accepted browser playtest
+
+The user played the separate
+[browser version at samples revision 6e166c4](https://github.com/code198x/code-samples/tree/6e166c4eb93b60019c3eb2638ac893d5b37442f8/commodore-amiga/amos/bank-or-risk/browser)
+and judged that it worked well at the simple scale needed for the first game.
+The user agreed to retain limit 10, at most five rounds and target 30, and to
+continue through the planned AMOS drawing, colour and sound steps. Do not add
+mechanics just to make the opening more complex.
+
+This is positive owner play feedback on the JavaScript design trial, not a
+measured player study or evidence of beginner understanding. The browser record
+contains its own rules, input, accessibility and display checks. Its graphics,
+tones and controls do not qualify the native AMOS source below.
+
 ## Source and verification
 
 The proposed source is
@@ -75,8 +89,10 @@ and final result. Save a native project, leave the editor session, reopen the
 saved version and play again. Verify the fresh-key routine against the runtime;
 source inspection alone cannot establish its repeat behaviour.
 
-After correctness checks, ask for human play feedback on pace, recovery and
-whether another attempt is appealing. No learner is currently available, so
+After correctness checks, review the native experience against the accepted
+browser scope, including input, readability, pace and recovery. Keep the agreed
+tuning unless native play supplies a concrete reason to reconsider it. No
+learner is currently available, so
 educational effectiveness remains a separate pending question. Keep samples in
 draft review and do not derive or publish replacement lessons from an unexecuted
 endpoint. The current limitation is native access, not a reproduced AMOS failure.

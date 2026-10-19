@@ -1,6 +1,6 @@
 # Bank or risk teaching map
 
-**Proposed teaching sequence; no replacement lessons or executed stage sources.**
+**Teaching direction agreed; no replacement lessons or executed stage sources.**
 We can plan small steps while the [native prototype](prototype.md) awaits
 execution. Native play may change the tuning or expose input behaviour that
 changes this order. The [game brief](brief.md) owns the rules; this map explains
@@ -8,6 +8,10 @@ how we could teach them without importing an unexplained game framework.
 The user agreed that drawing, colour and sound should develop through the game.
 The silent text prototype checks the proposed rules; it is not the intended
 finished presentation.
+
+The user accepted the browser playtest's simple scope and 10/5/30 tuning. Keep
+that basis while implementing this progression. Native checks may change exact
+edits or checkpoint boundaries; they do not require adding more game mechanics.
 
 Show the complete game's purpose early: bank points towards 30, or risk another
 roll while staying at or below 10. Five rounds give us a limited opportunity to

@@ -1,6 +1,6 @@
 # Bank or risk AMOS opening game
 
-**Status: game direction and 10/5/30 trial tuning agreed; native source prepared,
+**Status: browser playtest accepted at 10/5/30; native source prepared,
 execution pending.** The [prototype record](prototype.md) identifies the source,
 prepared probes and native-access blocker. Build a solo dice game around the choice to keep a total or
 risk another roll. The risk increases as the total approaches a visible limit.
@@ -14,7 +14,7 @@ whether to bank that total or risk adding another number. A total above 10
 busts: the round contributes zero. Exactly 10 banks automatically. Banking
 secures the current total and begins the next round.
 
-The provisional challenge is **30 points across at most five rounds**, with a
+The accepted opening challenge is **30 points across at most five rounds**, with a
 round limit of **10**. Show the limit, round, current total, secured score and
 target together. The player has
 time to consider the choice; there is no reaction timer. End with success at
@@ -24,8 +24,10 @@ Retain the result and offer a fresh challenge or exit.
 The appeal is the decision before a roll: what could be gained, what could be
 lost, and how much the session still needs. Near the target, banking a modest
 total can be the right choice; after low earlier scores, taking a risk may be
-the only way to stay in contention. These numbers are agreed for the play trial,
-not an accepted final balance or a claim about beginner success rates.
+the only way to stay in contention. The user accepted the browser playtest's
+scope and tuning as appropriate for the first game. Retain that simplicity while
+developing the native AMOS version. This does not establish beginner success
+rates or qualify the native implementation.
 
 Keep one die and one player. Cards, a dealer, betting money, a computer opponent,
 multiple dice, persistent records, animation, pointer controls and a campaign
@@ -177,9 +179,10 @@ rounds, replay, quit and fresh save/reopen. Inspect graphics and listen to cues
 if present. Negative controls must reject an equal-limit bust and a bust that
 awards its displayed total.
 
-Native play should answer whether the decision remains interesting, whether recovery after a
-bust feels credible, and whether the target invites another
-attempt. A real beginner should later try the opening without coaching. Until
+Native play should check whether the accepted design remains readable and
+responsive with AMOS input, graphics and sound. Revisit tuning if native play
+reveals a concrete problem; additional complexity is not the next goal.
+A real beginner should later try the opening without coaching. Until
 then, keep design analysis, native correctness, human play and learning evidence
 separate. The rest of the AMOS lineup and any language implementation remain
 independent decisions.
