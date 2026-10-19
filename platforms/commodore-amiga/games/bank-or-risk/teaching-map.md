@@ -231,4 +231,7 @@ follow the first animation: hidden drawing and deliberate presentation, then
 ROM text with measured baselines, then an authored bitmap alphabet for title and
 scores. Each has a complete source and explanatory guide. The
 [native record](../../../../audit/2026-10-amos-bank-or-risk-complete-frames/REPORT.md)
-separates passed game/frame checks from the blocked native save/reopen route.
+separates passed game/frame checks from its pre-fix native storage failure.
+The [storage follow-up](../../../../audit/2026-10-amos-storage-follow-up/REPORT.md)
+verifies the larger endpoint on the fixed emulator revision. It also separates
+scripted export verification from the learner's host disk-export workflow.
