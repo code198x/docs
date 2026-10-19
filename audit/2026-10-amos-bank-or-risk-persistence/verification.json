@@ -1,0 +1,103 @@
+{
+  "disks": {
+    "base": {
+      "disk_sha256": "75484b1d30b43e8aaf654c2da1e349f4723f7c67e2d769c2486914ae8ece131f",
+      "program_bytes": 5892,
+      "program_sha256": "3721acb6060de9b3d9eb26e480f0cea6b32226a6dbf6c3bb9cacc18fa2ca6f43",
+      "original_files_preserved": 78
+    },
+    "perfect": {
+      "disk_sha256": "b1590628ab21c0756dec04aa8b90dc3e96d2424883f2924418239706625c939f",
+      "program_bytes": 5932,
+      "program_sha256": "131993d1efb2301e0061b76156c7aff77ef2c0bca3399946a675f358d2299dee",
+      "original_files_preserved": 78
+    }
+  },
+  "identical_game_captures": [
+    "perfect-00-Space.png",
+    "perfect-01-R.png",
+    "perfect-02-R.png",
+    "perfect-03-Space.png",
+    "perfect-04-R.png",
+    "perfect-05-R.png",
+    "perfect-06-Space.png",
+    "perfect-07-R.png",
+    "perfect-08-R.png"
+  ],
+  "audio": {
+    "perfect": {
+      "rate": 48000,
+      "frames": 388176,
+      "duration_s": 8.087,
+      "peak_pcm": 12602,
+      "channel_peaks_pcm": [
+        12602,
+        12366
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 1.815,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3129322924517
+        },
+        {
+          "start_s": 5.05,
+          "duration_s": 0.185,
+          "pitch_hz": 525.306157934134
+        },
+        {
+          "start_s": 6.01,
+          "duration_s": 0.185,
+          "pitch_hz": 1050.6166806975157
+        }
+      ]
+    },
+    "perfect-reopened": {
+      "rate": 48000,
+      "frames": 388175,
+      "duration_s": 8.086979166666667,
+      "peak_pcm": 12711,
+      "channel_peaks_pcm": [
+        12711,
+        12359
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 1.815,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3095804228574
+        },
+        {
+          "start_s": 5.05,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3094803794614
+        },
+        {
+          "start_s": 6.01,
+          "duration_s": 0.185,
+          "pitch_hz": 1050.6178373209377
+        }
+      ]
+    },
+    "base-reopened-bank": {
+      "rate": 48000,
+      "frames": 162938,
+      "duration_s": 3.3945416666666666,
+      "peak_pcm": 12791,
+      "channel_peaks_pcm": [
+        12791,
+        12435
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 1.395,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3049911861165
+        }
+      ]
+    }
+  }
+}

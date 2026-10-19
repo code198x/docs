@@ -1,0 +1,142 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/perfect-title.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/perfect.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-00-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 60
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-01-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 60
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-02-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 60
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-03-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-04-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-05-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-06-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-07-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/success-active.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-08-R.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/perfect-final.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]
