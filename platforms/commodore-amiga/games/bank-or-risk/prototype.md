@@ -97,14 +97,18 @@ of beginner understanding. Keep the agreed scale while developing the native
 The [opening audit](../../../../audit/2026-10-amos-bank-or-risk-opening/REPORT.md)
 checks ten earlier sources through one playable round, including native saving
 of the edited message, a real syntax fault/repair and held-key experiments.
-Those source checks do not establish how beginners learn from them. The next
-teaching work is the presentation join. The
+Those source checks do not establish how beginners learn from them. The
 [session audit](../../../../audit/2026-10-amos-bank-or-risk-session/REPORT.md)
 checks eight sources for value lifetime, repeated rounds, once-only awards,
 completed counts, success/impossibility and replay, including saved-program
-reopen. Its explicit completed counter differs from the endpoint's one-based
-For counter; that conversion must be explained and the join checked before it
-becomes a beginner route. Human listening/play feedback remains pending. Check each addition in AMOS; do not treat the text prototype's execution as qualification of future lesson sources.
+reopen. The [presentation audit](../../../../audit/2026-10-amos-bank-or-risk-presentation/REPORT.md)
+checks six further sources through shared display, grouped board, separate
+result cues and a ready screen, including native storage. The continuous
+teaching route keeps completed rounds; its renderer adapts the older current-round
+calculation. The historical For-based prototype remains an alternative with
+its own source pins. Human listening/play feedback and authored replacement
+lessons remain pending. Check each addition in AMOS; earlier prototype
+execution does not qualify a changed teaching source.
 A later uncoached beginner trial remains pending.
 
 The [original Maths chapter](https://amospromanual.dev/05-03-maths.html#rnd)

@@ -1,0 +1,93 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/ready-result-3.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/ready-replay.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "A",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/ready-reset.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/ready-reset.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/ready-reset-wait.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/ready-reset-wait.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/ready-fresh.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/ready-fresh.state"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/ready-new-bank.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/ready-new-bank.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/ready-editor.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/ready-editor.state"
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

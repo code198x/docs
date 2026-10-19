@@ -1,0 +1,27 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/integrated-cold-boot.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 1000
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/integrated-cold-editor.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/integrated-cold-editor.state"
+  }
+]

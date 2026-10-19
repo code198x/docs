@@ -1,0 +1,120 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/shared-four-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/shared-0.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/shared-0.state"
+  },
+  {
+    "action": "press_key",
+    "key": "X",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/shared-1.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/shared-1.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/shared-2.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/shared-2.state"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/shared-3.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/shared-3.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/shared-wait.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/shared-wait.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/shared-reset.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/shared-reset.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/shared-editor.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/shared-editor.state"
+  }
+]

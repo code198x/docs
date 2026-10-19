@@ -1,0 +1,52 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/work-editor.state"
+  },
+  {
+    "action": "press_keys",
+    "keys": [
+      "ramiga",
+      "lshift",
+      "m"
+    ],
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${RUN}/presentation.adf"
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "type_string",
+    "text": "DF0:shared-display.asc\n",
+    "hold_frames": 3,
+    "settle_frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 360
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/shared-display-imported.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/shared-display-listing.state"
+  }
+]

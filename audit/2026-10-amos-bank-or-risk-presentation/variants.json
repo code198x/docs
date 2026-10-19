@@ -1,0 +1,58 @@
+{
+  "baseline-four": {
+    "stage": "session/replay",
+    "roll": 4,
+    "sha256": "b5e0e737020593b13cff338265875746cf1fea2a7c36301c29554c02e43ce522"
+  },
+  "shared-four": {
+    "stage": "presentation/shared-display",
+    "roll": 4,
+    "sha256": "71438f5afe738e5f9d809b169b633d2e16d8660410c0aaa4c5c81052ff0f598d"
+  },
+  "board-four": {
+    "stage": "presentation/grouped-board",
+    "roll": 4,
+    "sha256": "ce627485e7560533b783035fa7e86761adb8f74b0c2c775b554a398285feb59d"
+  },
+  "bank-five": {
+    "stage": "presentation/bank-cue",
+    "roll": 5,
+    "sha256": "adc4341824c5e84849f98596e0755a81e5afebce54d87c32ea72b53e4d7f92a8"
+  },
+  "bust-six": {
+    "stage": "presentation/bust-cue",
+    "roll": 6,
+    "sha256": "96d43feadc209f577c051e55f0e25f2d0be3d17c62fc696f0e3518ef597cda6d"
+  },
+  "success-five": {
+    "stage": "presentation/success-cue",
+    "roll": 5,
+    "sha256": "e2bc1d48ddd72e73214c2b7bd0fdd7e49e86fd9b9d7aa8689ff7fbc776e36b50"
+  },
+  "ready-five": {
+    "stage": "presentation/ready-screen",
+    "roll": 5,
+    "sha256": "0576c644f06682f965cea5a5bf387f1521c64a9486fab96095aded269e1aae52"
+  },
+  "ready-six": {
+    "stage": "presentation/ready-screen",
+    "roll": 6,
+    "sha256": "8318ebe13894e73a44483b7bb08eccee2b0a21b1cb78c4eded3ad18617f4363d"
+  },
+  "ready-four": {
+    "stage": "presentation/ready-screen",
+    "roll": 4,
+    "sha256": "1b7d76cf84aa984e2569d54dc06748e3b6d069c5db49192b0f0f8c2d09a5e199"
+  },
+  "muted-five": {
+    "stage": "presentation/ready-screen",
+    "roll": 5,
+    "volume": 0,
+    "sha256": "43e8b3aa095cf5eed20d080bb04ccff344ce8b2a838373959490da0a2555b33f"
+  },
+  "ready-three": {
+    "stage": "presentation/ready-screen",
+    "roll": 3,
+    "sha256": "5674b93ba7f7f3e8c35b4e8f7f7c355446c39687a5a921a4bad9604eb523c9c8"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "amos-work.adf": {
+    "independent_rebuild_identical": true,
+    "bytes": 901120,
+    "sha256": "f5052c16b47b33dedc51ffb15c2467a5b566377c5060c9826897b10bec36c6f5"
+  },
+  "presentation.adf": {
+    "independent_rebuild_identical": true,
+    "bytes": 901120,
+    "sha256": "71eebdf450d033764a3ad8209a76b408d9b28a612adf759e292e609dd962412c"
+  },
+  "negative_controls": [
+    {
+      "control": "missing required capture",
+      "rejected": true,
+      "reason": "[Errno 2] No such file or directory: '${RUN_ROOT}/controls/missing-capture/fifth-result-5.png'"
+    },
+    {
+      "control": "valid but wrong reset image",
+      "rejected": true,
+      "reason": "('ready-active', 'ready-reset')"
+    },
+    {
+      "control": "silent bank recording",
+      "rejected": true,
+      "reason": "list index out of range"
+    },
+    {
+      "control": "valid disk without saved program",
+      "rejected": true,
+      "reason": "'integrated.amos'"
+    },
+    {
+      "control": "changed source",
+      "rejected": true
+    },
+    {
+      "control": "populated preparation output",
+      "rejected": true
+    }
+  ]
+}

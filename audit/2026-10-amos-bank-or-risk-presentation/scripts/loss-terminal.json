@@ -1,0 +1,68 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/loss-result-3.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/loss-terminal.wav"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "press_key",
+    "key": "X",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/loss-invalid.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/loss-invalid.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/loss-ignored-roll.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/loss-ignored-roll.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/loss-ignored-space.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/loss-ignored-space.state"
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

@@ -166,8 +166,10 @@ those checks on a named Emu198x configuration, including native save and indepen
 cold-boot reopen. The current sound-enabled presentation endpoint also has its
 own save/reopen record. The opening record now checks the earlier message-to-one-round sources.
 The session record now checks the separate scoring, completed-count, ending
-and replay steps. Their presentation join and authored replacement lessons
-still need their own work.
+and replay steps. The [presentation record](../../../audit/2026-10-amos-bank-or-risk-presentation/REPORT.md)
+checks their continuous route into the board, result cues and ready screen,
+keeping the completed-round model. Authored replacement lessons and human
+trials remain pending.
 
 The accepted browser playtest establishes the intended scale and tuning for the
 first game. It does not qualify AMOS execution or establish learner outcomes.

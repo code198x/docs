@@ -1,0 +1,94 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/bust-six-start.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/bust.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/bust-zero.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/bust-zero.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/bust-roll.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/bust-roll.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/bust-result.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/bust-result.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "press_key",
+    "key": "X",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/bust-stable.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/bust-stable.state"
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

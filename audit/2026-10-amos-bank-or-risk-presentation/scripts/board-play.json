@@ -1,0 +1,137 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/board-four-start.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/board-initial.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/board-initial.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/board-roll.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/board-roll.state"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/board-bank.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/board-bank.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/board-next.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/board-next.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/board-risk1.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/board-risk1.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/board-risk2.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/board-risk2.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/board-bust.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/board-bust.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/board-editor.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/board-editor.state"
+  }
+]

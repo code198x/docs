@@ -1,0 +1,51 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/success-five-start.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/success-round-1.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/success-roll-1.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/success-roll-1.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/success-result-1.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/success-result-1.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]
