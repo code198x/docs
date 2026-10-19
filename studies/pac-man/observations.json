@@ -1,0 +1,23 @@
+{
+  "mode": "one-player early arcade encounter",
+  "capture_scripts": [
+    "captures/play.lua",
+    "captures/power.lua"
+  ],
+  "coin_frames": [
+    600,
+    606
+  ],
+  "start_frames": [
+    660,
+    666
+  ],
+  "readiness_frame": 900,
+  "first_route_frame": 1120,
+  "power_pellet_frame": 1180,
+  "limits": [
+    "No full maze or match completed.",
+    "Frightened behaviour observed visually; detailed target rules sourced separately.",
+    "No audio recording, hardware latency or physical joystick measurements."
+  ]
+}
