@@ -82,7 +82,7 @@ For a deliberately invented budget, suppose our treasury contains $2,000. We spe
 
 `2,000 − 600 + 900 − 1,100 = 1,200`
 
-Those are our teaching figures, not a captured SimCity balance or its tax formula. The point is that the city can look richer while its reserves get smaller.
+Those are our teaching figures, not a captured SimCity balance or its tax formula. The city can look richer while its reserves get smaller.
 
 ![An invented budget separates starting funds, construction, tax and service costs, leaving twelve hundred dollars](figures/budget.svg)
 

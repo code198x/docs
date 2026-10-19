@@ -25,3 +25,7 @@ These observations are an early building experiment, not a scenario victory, lon
 ## Publication
 
 Canonical prose remains separate from the concise game entry. Human historical and voice review is pending; reviewed stays false and the study is excluded from sitemap/search indexing. Future practical work and any Pattern Library restructuring need their own agreed design. See the existing Craft/Pattern proposal rather than treating these themes as published lessons.
+
+## Static validation
+
+Six figure paths and seventeen numbered bibliography sources resolve. All four native capture hashes/dimensions checked, all four original SVGs parsed, and the two invented budget balances recomputed. The CSV has 2,887 records, unique stable IDs and fifteen new needs-triage rows. Open and closed issue title audit returned 281 issues, with no matching new subjects. Website rendering and browser evidence are recorded with its integration PR.
