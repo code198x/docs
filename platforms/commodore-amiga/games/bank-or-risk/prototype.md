@@ -7,9 +7,10 @@ The [arcade record](../../../../audit/2026-10-amos-bank-or-risk-arcade/REPORT.md
 checks the following palette, layout and animated-roll stages. The
 [complete-frame record](../../../../audit/2026-10-amos-bank-or-risk-complete-frames/REPORT.md)
 checks the visible-redraw fix, ROM text and custom title/score lettering. Game
-checks pass; native save/reopen for that larger endpoint is blocked by the
-reported media-change/save failure in Emu198x #1877. Earlier persistence evidence
-does not qualify this endpoint.
+checks pass. The [storage follow-up](../../../../audit/2026-10-amos-storage-follow-up/REPORT.md)
+verifies native Save, cold Load and execution of that larger endpoint on the
+fixed emulator revision. The original pre-fix failure remains recorded;
+version 0.34.2 alone does not establish that the disk-change fix is present.
 The earlier prototype and presentation sources below retain their early endings
 and their own evidence; the [current brief](brief.md) owns the extended rules.
 The user played the rescue endpoint and reported that it works well, then

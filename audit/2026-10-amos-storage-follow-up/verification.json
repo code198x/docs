@@ -1,0 +1,17 @@
+{
+  "status": "native_storage_verified_on_fixed_revision",
+  "samples_revision": "1b0a7a5ed28344ba4829e351654734e8ef7d447e",
+  "source": "commodore-amiga/amos/bank-or-risk/stages/arcade/styled-board.amos",
+  "source_sha256": "ca4621a510913529223277ce41fb40e5b8e0d507ecaae4c2f8626a32b89f4fdf",
+  "emulator_revision": "6ff929f366e8762d5d5b9dadf53367b2cc692821",
+  "evidence_revision": "a35897e2b965b6ec20063d4e2749bce1d412b1cf",
+  "evidence_url": "https://github.com/emu198x/docs/tree/a35897e2b965b6ec20063d4e2749bce1d412b1cf/plans/2026-10-19-amiga-native-save-investigation/fix",
+  "native_storage_verified": true,
+  "native_program_bytes": 17734,
+  "native_program_sha256": "795dc45439a741932ec90af0e2ce4946dc24096105f9d48def936dc6b482a55b",
+  "disk_sha256": "a13d48f120973b41e4cf8ec18f08407d7ab866c366367f5a1c12d931db1c2128",
+  "cold_boot_load_run_roll_bank_verified": true,
+  "beginner_host_export_workflow_verified": false,
+  "learner_trial_completed": false,
+  "historical_verifier_unchanged": true
+}

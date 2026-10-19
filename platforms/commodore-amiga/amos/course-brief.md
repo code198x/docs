@@ -179,9 +179,11 @@ separate colour, layout and slowing-die stages, preserving those rules. The user
 played the rescue endpoint and reported that it works well; the new presentation
 still needs their review. The [complete-frame record](../../../audit/2026-10-amos-bank-or-risk-complete-frames/REPORT.md)
 then fixes a reproduced visible redraw, introduces ROM graphical text and
-adds distinctive title/score lettering. Those game checks pass; native
-save/reopen for the larger source remains blocked by Emu198x #1877.
-Authored replacement lessons and an uncoached learner trial remain pending.
+adds distinctive title/score lettering. Those game checks pass. The
+[storage follow-up](../../../audit/2026-10-amos-storage-follow-up/REPORT.md)
+verifies the larger endpoint's native Save, cold Load and execution on the
+fixed emulator revision; the original pre-fix verifier remains red.
+Replacement lessons are not published, and an uncoached learner trial remains pending.
 
 The accepted browser playtest establishes the intended scale and tuning for the
 first game. It does not qualify AMOS execution or establish learner outcomes.
