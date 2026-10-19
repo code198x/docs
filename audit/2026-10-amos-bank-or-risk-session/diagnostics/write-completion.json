@@ -1,0 +1,12 @@
+{
+  "additional_frames": 240,
+  "changed_blocks": [
+    880,
+    881
+  ],
+  "initial_bitmap_flag": 0,
+  "settled_bitmap_flag": 4294967295,
+  "all_file_payloads_identical": true,
+  "early_disk_sha256": "9013920cde727cff7d6992746e50cf5f5045f20cc4f2f80faf7ad6e803d20b54",
+  "settled_disk_sha256": "d30fbe630089b40192524d0fe91c89f41a989dc8c82058d272c898c2f5d60afa"
+}

@@ -165,7 +165,9 @@ runtime. The [prototype record](../games/bank-or-risk/prototype.md) now establis
 those checks on a named Emu198x configuration, including native save and independent
 cold-boot reopen. The current sound-enabled presentation endpoint also has its
 own save/reopen record. The opening record now checks the earlier message-to-one-round sources.
-The later session teaching steps still need their own sources and checks.
+The session record now checks the separate scoring, completed-count, ending
+and replay steps. Their presentation join and authored replacement lessons
+still need their own work.
 
 The accepted browser playtest establishes the intended scale and tuning for the
 first game. It does not qualify AMOS execution or establish learner outcomes.

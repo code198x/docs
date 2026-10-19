@@ -1,0 +1,41 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/success-2.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/success-3.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/success-3.state"
+  }
+]

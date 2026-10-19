@@ -1,0 +1,75 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/replay-loss-3.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/replay-loss-wait.png"
+  },
+  {
+    "action": "press_key",
+    "key": "X",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/replay-loss-invalid.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/replay-loss-roll-ignored.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/replay-loss-space-ignored.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/replay-loss-editor.png"
+  }
+]

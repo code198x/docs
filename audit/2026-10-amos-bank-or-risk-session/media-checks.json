@@ -1,0 +1,20 @@
+{
+  "amos-work.adf": {
+    "independent_rebuild_identical": true,
+    "sha256": "f5052c16b47b33dedc51ffb15c2467a5b566377c5060c9826897b10bec36c6f5",
+    "bytes": 901120
+  },
+  "session.adf": {
+    "independent_rebuild_identical": true,
+    "sha256": "a42c5c6d51d349a589386a7184c6edfacd1ba12c844cb74e2c211cd4baadfb3a",
+    "bytes": 901120
+  },
+  "negative_controls": [
+    "missing capture rejected",
+    "valid but incorrect replay-reset image rejected",
+    "early export rejected despite identical payloads",
+    "valid disk lacking saved program rejected",
+    "changed source rejected",
+    "populated preparation folder rejected"
+  ]
+}
