@@ -63,6 +63,10 @@ For input, knowing that a button is down differs from deciding that one action s
 
 The Craft explains intent and judgement: how a control feels, why an opponent anticipates a player, or why delayed feedback is understandable. The library explains adaptable mechanics. System tracks teach their use within growing games; Foundations explains general programming concepts; the Vault supplies historical context. Link where useful rather than duplicating a canonical explanation across all of them.
 
+## Code first, with a route into a project
+
+Usable machine-specific code is the centre of each entry. Show how to include, initialise and call the routine, explain its inputs, outputs, state and resource ownership, and show how it connects to other routines in a small project. Interactive examples support that explanation; they do not replace the reusable implementation.
+
 ## Entry contract and evidence
 
 Use the smallest form that serves the job. State the intended result early, name the machine/variant and language, and show the routine or refer to maintained code in code-samples. Explain inputs, outputs, representation, clobbered registers or shared state, memory ownership, timing assumptions and integration obligations where they matter. Address interactions with operating-system routines, interrupts and other users of the same hardware when relevant. Avoid ceremonial fields that add nothing.
