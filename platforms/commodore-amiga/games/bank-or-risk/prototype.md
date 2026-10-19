@@ -2,15 +2,15 @@
 
 **Native rules, input and save/reopen checks pass on the recorded Emu198x setup.**
 The user accepted the browser trial's simple scope: one six-sided die, limit 10,
-at most five rounds and target 30. The silent prototype now runs in AMOS
+at most five rounds and target 30. The prototype now runs in AMOS
 Professional 2.00 with an outlined die matching the stored roll and grouped
-round/session values. Sound and remaining lesson sources still need development
-and checks.
+round/session values. Short result cues have native PCM evidence. Listening
+acceptance and remaining lesson sources still need work.
 
 ## Source and execution
 
 The source is `commodore-amiga/amos/bank-or-risk/prototype/bank-or-risk.amos` in
-[samples revision 231ba66](https://github.com/code198x/code-samples/tree/231ba66625e4c67afc6a017886975036f184387c/commodore-amiga/amos/bank-or-risk/prototype).
+[samples revision 1fa0675](https://github.com/code198x/code-samples/tree/1fa0675b809ef6a40bcf01571b75d6196cce0e0e/commodore-amiga/amos/bank-or-risk/prototype).
 It is ASCII for Merge ASCII. Native Save As produces a separate tokenised AMOS
 program; these two representations must not be confused.
 
@@ -41,6 +41,12 @@ The [board audit](../../../../audit/2026-10-amos-bank-or-risk-board/REPORT.md)
 checks supplied round/challenge snapshots and the grouped live display, including
 later/unused rounds, all result types and replay. Only the display routine
 changes; scoring, input and die drawing remain identical to the drawing revision.
+
+The [sound record](../../../../audit/2026-10-amos-bank-or-risk-sound/REPORT.md)
+checks native tone parameters, bank/bust/success counts, silent controls and
+named input windows. All nine audible/muted perfect-run states agree byte for
+byte. Success replaces the last bank cue. Human listening acceptance remains
+pending; the sound record retains raw clips and a short listening preview.
 
 The [probe manifest](native-probes.json) binds the current source and five
 fixed-roll copies by SHA-256. The generator changes the die supplier to
@@ -81,8 +87,9 @@ owner play feedback on the JavaScript trial, not AMOS play approval or evidence
 of beginner understanding. Keep the agreed scale while developing the native
 [teaching direction](teaching-map.md), including progressive graphics and sound.
 
-The next source tasks are short event cues and remaining teaching checkpoints.
-Check each addition in AMOS; do not treat the text prototype's execution as qualification of future lesson sources.
+The next checks are human listening/play feedback and refreshed native
+save/reopen for the presentation endpoint, alongside remaining teaching
+checkpoints. Check each addition in AMOS; do not treat the text prototype's execution as qualification of future lesson sources.
 A later uncoached beginner trial remains pending.
 
 The [original Maths chapter](https://amospromanual.dev/05-03-maths.html#rnd)
