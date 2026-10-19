@@ -1,0 +1,80 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/baseline-four-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/baseline-0.png"
+  },
+  {
+    "action": "press_key",
+    "key": "X",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/baseline-1.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/baseline-2.png"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/baseline-3.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/baseline-editor.png"
+  }
+]

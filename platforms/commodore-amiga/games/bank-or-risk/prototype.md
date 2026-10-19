@@ -98,9 +98,13 @@ The [opening audit](../../../../audit/2026-10-amos-bank-or-risk-opening/REPORT.m
 checks ten earlier sources through one playable round, including native saving
 of the edited message, a real syntax fault/repair and held-key experiments.
 Those source checks do not establish how beginners learn from them. The next
-teaching work is the separate session route: keeping secured points, awarding
-once, counting rounds, success/impossibility and replay. Human listening/play
-feedback also remains pending. Check each addition in AMOS; do not treat the text prototype's execution as qualification of future lesson sources.
+teaching work is the presentation join. The
+[session audit](../../../../audit/2026-10-amos-bank-or-risk-session/REPORT.md)
+checks eight sources for value lifetime, repeated rounds, once-only awards,
+completed counts, success/impossibility and replay, including saved-program
+reopen. Its explicit completed counter differs from the endpoint's one-based
+For counter; that conversion must be explained and the join checked before it
+becomes a beginner route. Human listening/play feedback remains pending. Check each addition in AMOS; do not treat the text prototype's execution as qualification of future lesson sources.
 A later uncoached beginner trial remains pending.
 
 The [original Maths chapter](https://amospromanual.dev/05-03-maths.html#rnd)

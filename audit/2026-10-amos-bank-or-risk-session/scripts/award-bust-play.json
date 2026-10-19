@@ -1,0 +1,63 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/award-reset.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/award-bust.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/award-bust.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/award-editor.png"
+  }
+]

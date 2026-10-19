@@ -1,0 +1,76 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/next-four-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/next-result.png"
+  },
+  {
+    "action": "press_key",
+    "key": "X",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/next-ignored.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/next-reset.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/next-editor.png"
+  }
+]
