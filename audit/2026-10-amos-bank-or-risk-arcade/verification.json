@@ -1,0 +1,571 @@
+{
+  "sources": 3,
+  "variants": 9,
+  "capture_hashes": {
+    "work-editor.png": "186f4822e2980225377e4720fdabaa753ccf2b85eb09ac64185a61be857bba06",
+    "arcade-colours-imported.png": "723fa6c3b5f49d0d4f5cfe5fbe42450b48f032df8700090a968f58f28fd7d2fa",
+    "arcade-colours-syntax.png": "ef43c4c884597c24d7bfff992beac2d2be41e5de814f9bc06c2fa39661594ba5",
+    "arcade-colours-start.png": "fca45c2160e21dfad41c27eadfaead676275e2bbc638ec7a38e8b421da5b78bc",
+    "arcade-layout-imported.png": "0fc8941cf167f88a971f1ce97d98b276b5f479327944a2a4b834691f9eb42b81",
+    "arcade-layout-syntax.png": "467df5e7cec06756c9adbcb96f7fc57ac3a3eaf488bc0bb31c4107e553087163",
+    "arcade-layout-start.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "rolling-die-imported.png": "5431828d55aedf8384c697ab11b3b2e51296d57d6bf1cea71f96e128d4cb737f",
+    "rolling-die-syntax.png": "42e8eb9b698de7e8b6078bcd2f029adf820abd196764fc0e0d379c097fad608e",
+    "rolling-die-start.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "baseline-five-imported.png": "60df23faef0ec1fce6e4725f91465f25d0b03b36129f98709755a02cfd4da373",
+    "baseline-five-syntax.png": "e71e4fd82b9f5e195a7ea244239c94b06cca62936514224d9aa1554dfea4f32e",
+    "baseline-five-start.png": "24f6affa4c4030aadcd46c1c2b4225b3e90cff1debdb8e4f3ae003cf2c154545",
+    "gray-five-imported.png": "825c07bfb3b4b49e2b785fbdef3ce3d56de6b2cc7dd089dbf74ccfcda2ba9af4",
+    "gray-five-syntax.png": "35895514729bb8948a8612283702f810b765ebb9438aeba698a74ecdd147ab14",
+    "gray-five-start.png": "24f6affa4c4030aadcd46c1c2b4225b3e90cff1debdb8e4f3ae003cf2c154545",
+    "colour-five-imported.png": "ac51584c82b749d43d323dd2cb964f383d593cfa60946ec9c4c0354fc98cdd11",
+    "colour-five-syntax.png": "5d454458ce942282e9e7153e2a5ffadebdf88a31edde48e844e77fb666ef0563",
+    "colour-five-start.png": "fca45c2160e21dfad41c27eadfaead676275e2bbc638ec7a38e8b421da5b78bc",
+    "layout-five-imported.png": "1cc03ee3cbaf84acce5ae4a2abb28304d7dafcaa3505078dd9b2b0bb18a370a7",
+    "layout-five-syntax.png": "7f84f16e614847832f539f28786d7e9e03d6dbb6cefb02c9b69a191e0d9067fa",
+    "layout-five-start.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "live-five-imported.png": "77cda979d4ca7f7821cda338b19839fa761473882be1732a33718fdc172f755c",
+    "live-five-syntax.png": "b916cd7ac3d50e75fd4d38e35035b3c63ee53389e4ebf54a34736b6331804e68",
+    "live-five-start.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "live-six-imported.png": "d29b602f07c7e25336e988f68866bba1c851727957d2825def6b065979f51d4c",
+    "live-six-syntax.png": "8aa40a01651eb83921592b9b5d72d03c57456e619da5f4c265cc9c9573bcb841",
+    "live-six-start.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "static-five-imported.png": "65a8ecc81817c80090c1ce6e90ed033a1d5b60e1e73140e3eacbd786857adc49",
+    "static-five-syntax.png": "5d16f49b63c6d3c5d06b1d849c17729335ffec21796f221b87ac4be3e8981b62",
+    "static-five-start.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "muted-five-imported.png": "03a7b0fd33d4ea14df4d7bfd41a683fdd00a4a2f8a52959dc545aa5db469b222",
+    "muted-five-syntax.png": "c0a72cd798b8860e987de11f43add7ff033837add537a2c6085c87eaaa1375e1",
+    "muted-five-start.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "varied-imported.png": "0d5471d31451af6f850bb13efbab4e0bc1f0e3d6a03471219da365936735d1a4",
+    "varied-syntax.png": "de253ed2403405164f3ae5050e965717f7e80ecb605a3259d4a9d142559a2e51",
+    "varied-start.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "baseline-active.png": "8ce71c3a48552a3b257692f1b0db05a152f233c9ab1912e3f2a50c075f3520b4",
+    "baseline-roll.png": "5abe67d9985bbff211f81b85316bd4beeddac8500a2e0289c898328a66cf0fad",
+    "baseline-result.png": "bb80c8623cb4fafccff2d00bed78554519c76347dfd755f6f05db5c0091cff35",
+    "gray-active.png": "8ce71c3a48552a3b257692f1b0db05a152f233c9ab1912e3f2a50c075f3520b4",
+    "gray-roll.png": "5abe67d9985bbff211f81b85316bd4beeddac8500a2e0289c898328a66cf0fad",
+    "gray-result.png": "bb80c8623cb4fafccff2d00bed78554519c76347dfd755f6f05db5c0091cff35",
+    "colour-active.png": "3160c791b933a4f40d183774aed1179bdaf338333c06f656a8f0cb00c0d6659e",
+    "colour-roll.png": "ec025966557f46ba7c4c9b363aed1b6ed6cb304055dc81afa209efad1916a753",
+    "colour-result.png": "c3db0a20320e338747dbb27cc6a9fb3b6cbc09ac6a9b5df4792732c764ce6c6b",
+    "layout-active.png": "4d01cf64af1e9782f54f3a2c53aa2ffcd183200f851728eeb7d5f476c4a54f97",
+    "layout-roll.png": "b145201f39572d4b9612057af4582f5fc23e244fce8a77a494a8d6e287e4681c",
+    "layout-result.png": "3620f0d92b97e9546c36ac019b2a531c869084a0148fe7f3aec7420590b005d8",
+    "live-active.png": "4d01cf64af1e9782f54f3a2c53aa2ffcd183200f851728eeb7d5f476c4a54f97",
+    "live-roll-1.png": "b145201f39572d4b9612057af4582f5fc23e244fce8a77a494a8d6e287e4681c",
+    "live-result-1.png": "3620f0d92b97e9546c36ac019b2a531c869084a0148fe7f3aec7420590b005d8",
+    "live-active-2.png": "d94be5f0126741389a68dd0a1eade79fe0fee3d5a4aeb826383e81ad7dd63a5a",
+    "live-roll-2.png": "ffbf33d20463994d3934ff6b78c616e6c67b886cef067732fa8d1e1510f37a50",
+    "live-result-2.png": "0c46a6f36ec91dbbc7589f49e3ad3eb72454f25e7992dbaf8cc33fd084f289aa",
+    "live-active-3.png": "daba96fbb6017ed2d521b7bcbcb9758a6ce4694aa1ef46ac31387d87b70fbd5e",
+    "live-roll-3.png": "ed289b5d3616d40713ea544814e10e54d25edbb807c251e0aa2d49ff5d768146",
+    "live-result-3.png": "f685fc01985bc0260c087dab3944eaa5ebafbffa07e0628b329a92bb9fde53ba",
+    "live-active-4.png": "0094d8c150bcbeeef2d394b2e0e7200dcb0473b4827c91a3824df483f50188f9",
+    "live-roll-4.png": "adda44851dff47bc46d09671b3d5a534fdce6cd134a6038aa00daa422270f4a0",
+    "live-result-4.png": "9ff708305855e3340a6632a763605c7b2fa153af7338acffcc05c306a25c47f3",
+    "live-active-5.png": "341d8e53b2f6eeaf761e2f51400c7ca42741948df8b951461242c3608793be90",
+    "live-roll-5.png": "096aa012cc33fad59b8868a0563ae4f822f3bd231911fd0bbb4f92b45edbf158",
+    "live-result-5.png": "14545b9c2e8401b465baa33bdb91625cad39bacea00203b8f006991e60b38526",
+    "live-stable.png": "14545b9c2e8401b465baa33bdb91625cad39bacea00203b8f006991e60b38526",
+    "live-reset.png": "46b25e08540a8aa26b043bad7f8f1cdc4b37dc24096cbd7f1aa2090a1e23e870",
+    "live-reset-wait.png": "46b25e08540a8aa26b043bad7f8f1cdc4b37dc24096cbd7f1aa2090a1e23e870",
+    "live-new-bank.png": "8fe585ff89fba6b7252a8cc90ff56e7ac9afb9806bd7dd0d25e6e6a02fe2c2f2",
+    "static-active.png": "4d01cf64af1e9782f54f3a2c53aa2ffcd183200f851728eeb7d5f476c4a54f97",
+    "static-roll-1.png": "b145201f39572d4b9612057af4582f5fc23e244fce8a77a494a8d6e287e4681c",
+    "static-result-1.png": "3620f0d92b97e9546c36ac019b2a531c869084a0148fe7f3aec7420590b005d8",
+    "static-active-2.png": "d94be5f0126741389a68dd0a1eade79fe0fee3d5a4aeb826383e81ad7dd63a5a",
+    "static-roll-2.png": "ffbf33d20463994d3934ff6b78c616e6c67b886cef067732fa8d1e1510f37a50",
+    "static-result-2.png": "0c46a6f36ec91dbbc7589f49e3ad3eb72454f25e7992dbaf8cc33fd084f289aa",
+    "static-active-3.png": "daba96fbb6017ed2d521b7bcbcb9758a6ce4694aa1ef46ac31387d87b70fbd5e",
+    "static-roll-3.png": "ed289b5d3616d40713ea544814e10e54d25edbb807c251e0aa2d49ff5d768146",
+    "static-result-3.png": "f685fc01985bc0260c087dab3944eaa5ebafbffa07e0628b329a92bb9fde53ba",
+    "static-active-4.png": "0094d8c150bcbeeef2d394b2e0e7200dcb0473b4827c91a3824df483f50188f9",
+    "static-roll-4.png": "adda44851dff47bc46d09671b3d5a534fdce6cd134a6038aa00daa422270f4a0",
+    "static-result-4.png": "9ff708305855e3340a6632a763605c7b2fa153af7338acffcc05c306a25c47f3",
+    "static-active-5.png": "341d8e53b2f6eeaf761e2f51400c7ca42741948df8b951461242c3608793be90",
+    "static-roll-5.png": "096aa012cc33fad59b8868a0563ae4f822f3bd231911fd0bbb4f92b45edbf158",
+    "static-result-5.png": "14545b9c2e8401b465baa33bdb91625cad39bacea00203b8f006991e60b38526",
+    "static-stable.png": "14545b9c2e8401b465baa33bdb91625cad39bacea00203b8f006991e60b38526",
+    "muted-active.png": "4d01cf64af1e9782f54f3a2c53aa2ffcd183200f851728eeb7d5f476c4a54f97",
+    "muted-roll-1.png": "b145201f39572d4b9612057af4582f5fc23e244fce8a77a494a8d6e287e4681c",
+    "muted-result-1.png": "3620f0d92b97e9546c36ac019b2a531c869084a0148fe7f3aec7420590b005d8",
+    "muted-active-2.png": "d94be5f0126741389a68dd0a1eade79fe0fee3d5a4aeb826383e81ad7dd63a5a",
+    "muted-roll-2.png": "ffbf33d20463994d3934ff6b78c616e6c67b886cef067732fa8d1e1510f37a50",
+    "muted-result-2.png": "0c46a6f36ec91dbbc7589f49e3ad3eb72454f25e7992dbaf8cc33fd084f289aa",
+    "muted-active-3.png": "daba96fbb6017ed2d521b7bcbcb9758a6ce4694aa1ef46ac31387d87b70fbd5e",
+    "muted-roll-3.png": "ed289b5d3616d40713ea544814e10e54d25edbb807c251e0aa2d49ff5d768146",
+    "muted-result-3.png": "f685fc01985bc0260c087dab3944eaa5ebafbffa07e0628b329a92bb9fde53ba",
+    "muted-active-4.png": "0094d8c150bcbeeef2d394b2e0e7200dcb0473b4827c91a3824df483f50188f9",
+    "muted-roll-4.png": "adda44851dff47bc46d09671b3d5a534fdce6cd134a6038aa00daa422270f4a0",
+    "muted-result-4.png": "9ff708305855e3340a6632a763605c7b2fa153af7338acffcc05c306a25c47f3",
+    "muted-active-5.png": "341d8e53b2f6eeaf761e2f51400c7ca42741948df8b951461242c3608793be90",
+    "muted-roll-5.png": "096aa012cc33fad59b8868a0563ae4f822f3bd231911fd0bbb4f92b45edbf158",
+    "muted-result-5.png": "14545b9c2e8401b465baa33bdb91625cad39bacea00203b8f006991e60b38526",
+    "muted-stable.png": "14545b9c2e8401b465baa33bdb91625cad39bacea00203b8f006991e60b38526",
+    "risk-active.png": "4d01cf64af1e9782f54f3a2c53aa2ffcd183200f851728eeb7d5f476c4a54f97",
+    "risk-pending.png": "a45802f0af381530a8d6181a20c1e1b8e56beb3c1801705c3bf080a4bc9f45a6",
+    "risk-pending-stable.png": "a45802f0af381530a8d6181a20c1e1b8e56beb3c1801705c3bf080a4bc9f45a6",
+    "risk-restored.png": "12a7ade5c51af9d42025000e60addd859bd41ad4eadfff50fb34c47ff4089e57",
+    "risk-restored-stable.png": "12a7ade5c51af9d42025000e60addd859bd41ad4eadfff50fb34c47ff4089e57",
+    "risk-bank.png": "aef6b0189433bf2c4d7020b5c442a1d4f81f17fd67f89fcdf19fd69a00c3cb89",
+    "risk-spent-bust.png": "2dff9dd2d2989ed60e1fb8eff9de12caddd4be3bb6379d24f425d0c1bf37241e",
+    "risk-accepted.png": "791ee337e7ea8ed77eb7c8e2473e669f478291cb629c0c11495058ad22279cd2",
+    "varied-active.png": "4d01cf64af1e9782f54f3a2c53aa2ffcd183200f851728eeb7d5f476c4a54f97",
+    "varied-four.png": "634454a37f15a44309f6ff32363986ab270e06558e60fc223b6e032b8ba6fc5c",
+    "varied-nine.png": "c741d3b890411c4cb9d7c50ec68d7a63f2dad5d5c884713ce1ce2dff5a56204a",
+    "varied-bust.png": "676f990cc9672c3f383b6650b8a8a8dd830ef8b37c17c4f5293e05fd6fdaff21",
+    "varied-restored.png": "8aa266251437616e47d2dcaefb3d6029b11086120f976646faf5fc9f0c1103a6",
+    "varied-perfect.png": "ace98b53eb705c002e91b0d7e8300cf7fd3f2425bbbc6b0159ea910fabf9e220",
+    "motion-02.png": "dac828403929079bdc1d83bb1ff6eadd423abe8e4693aa6833217302bfb83757",
+    "motion-04.png": "8588a194fd885f053105c1f2e3ada720592cdfc3d548aa4ac5371db8db7035fb",
+    "motion-06.png": "8588a194fd885f053105c1f2e3ada720592cdfc3d548aa4ac5371db8db7035fb",
+    "motion-09.png": "2da933da606351f5320f26dcf311fcebb52e2d4af3776ed70564f1e9b08e9ca3",
+    "motion-12.png": "2da933da606351f5320f26dcf311fcebb52e2d4af3776ed70564f1e9b08e9ca3",
+    "motion-16.png": "ee8e7fb8183d13733f8e2559d826aee198644b3b4ef541900b4359b698feb9af",
+    "motion-22.png": "b145201f39572d4b9612057af4582f5fc23e244fce8a77a494a8d6e287e4681c",
+    "motion-30.png": "b145201f39572d4b9612057af4582f5fc23e244fce8a77a494a8d6e287e4681c",
+    "busy-bank-ignored.png": "b145201f39572d4b9612057af4582f5fc23e244fce8a77a494a8d6e287e4681c",
+    "motion-editor.png": "60e841a5d53a38f36972453ee8d73118b7b9c67ca1fbc2cf9850f4f48d8b19dc",
+    "title-editor.png": "250d9980089ff2e3e05dc53e6c10cfd994f51880a6bada0a208a10581be34fc2",
+    "active-editor.png": "352799bc013b8d288b2fa35a8c2c963ce22a9d33b98d67f17867df1b546b8cf5",
+    "pending-editor.png": "46218b0da752cbb186f2382756bafef36b04e4fd1e458a3e768999d843068af4",
+    "between-editor.png": "c08e7d69a1833e74a8da26b99dde128075fbee6acf0c985b33e9a4522821c6fd",
+    "ending-editor.png": "4640abe3dfad31c83a1dfbdf4cb16e93c77e73b50e9074b7fb86771354da6450",
+    "random-roll.png": "d979eca3d77484de1c4d455ff1d57882b8e36edfc0363e1ceabd59e45ce436d0",
+    "random-bank.png": "77fd1dde9d4279341a348f95b21c13318ebd423daaf66a38e11f66f42a4bb8a3",
+    "random-next.png": "3a8fc2c6070bf041519b102bb9bda53ebdf342f6b5858a7ab158ece012451aa5",
+    "random-editor.png": "288988abc45bfcf77b674b3363449226cfa1c604fd32651ebe5c56a86269e1a2",
+    "arcade-syntax.png": "2af0d411a81d2ccd4a8ba9eef185b40cbbd94986beaf8fcae098c4e473a65d8c",
+    "arcade-save-request.png": "68396cc511b56e0ad9c1677e673fbd312f79bc7c29aad26780fa12c827641dc2",
+    "arcade-saved.png": "dc5916a3a42950871246d12df2d0ff32f181a904cb342c834a49c0680cf486b5",
+    "arcade-settled.png": "06c879dfdcbed2fb8ee3b75130cd598d6703fc7d582423ff3bb07fb7f7904aed",
+    "arcade-cold-editor.png": "186f4822e2980225377e4720fdabaa753ccf2b85eb09ac64185a61be857bba06",
+    "arcade-reopened-listing.png": "06c879dfdcbed2fb8ee3b75130cd598d6703fc7d582423ff3bb07fb7f7904aed",
+    "arcade-reopened-syntax.png": "ea899a20d704ad1a939928967641c5b49bf298b19b64d9b256c4b6aaf39c0ae3",
+    "arcade-reopened-title.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "reopened-active.png": "4d01cf64af1e9782f54f3a2c53aa2ffcd183200f851728eeb7d5f476c4a54f97",
+    "reopened-roll.png": "4fafdd4eafb76f2599facc0ceffc53d49879411bcea7e3b9e5f3d01394d8b1d3",
+    "reopened-bank.png": "6c5ae8fc076bbb838682e35a17196e1fdc251c4a60a7463d6d595b0a4998fb3e",
+    "reopened-next.png": "af962577cb6b1f089c560620fca95a22208d4eb6489557ff9f09573ee0a7b4d5",
+    "reopened-editor.png": "7c0a9ae9c32f9b0702aca3859e6fe36102214a5efd574f895b0deed7a571360f"
+  },
+  "identical_picture_pairs": [
+    [
+      "baseline-active",
+      "gray-active"
+    ],
+    [
+      "baseline-roll",
+      "gray-roll"
+    ],
+    [
+      "baseline-result",
+      "gray-result"
+    ],
+    [
+      "live-active",
+      "static-active"
+    ],
+    [
+      "live-roll-1",
+      "static-roll-1"
+    ],
+    [
+      "live-result-1",
+      "static-result-1"
+    ],
+    [
+      "live-roll-2",
+      "static-roll-2"
+    ],
+    [
+      "live-result-2",
+      "static-result-2"
+    ],
+    [
+      "live-roll-3",
+      "static-roll-3"
+    ],
+    [
+      "live-result-3",
+      "static-result-3"
+    ],
+    [
+      "live-roll-4",
+      "static-roll-4"
+    ],
+    [
+      "live-result-4",
+      "static-result-4"
+    ],
+    [
+      "live-roll-5",
+      "static-roll-5"
+    ],
+    [
+      "live-result-5",
+      "static-result-5"
+    ],
+    [
+      "live-active",
+      "muted-active"
+    ],
+    [
+      "live-roll-1",
+      "muted-roll-1"
+    ],
+    [
+      "live-result-1",
+      "muted-result-1"
+    ],
+    [
+      "live-roll-2",
+      "muted-roll-2"
+    ],
+    [
+      "live-result-2",
+      "muted-result-2"
+    ],
+    [
+      "live-roll-3",
+      "muted-roll-3"
+    ],
+    [
+      "live-result-3",
+      "muted-result-3"
+    ],
+    [
+      "live-roll-4",
+      "muted-roll-4"
+    ],
+    [
+      "live-result-4",
+      "muted-result-4"
+    ],
+    [
+      "live-roll-5",
+      "muted-roll-5"
+    ],
+    [
+      "live-result-5",
+      "muted-result-5"
+    ],
+    [
+      "live-result-5",
+      "live-stable"
+    ],
+    [
+      "static-result-5",
+      "static-stable"
+    ],
+    [
+      "muted-result-5",
+      "muted-stable"
+    ],
+    [
+      "risk-pending",
+      "risk-pending-stable"
+    ],
+    [
+      "risk-restored",
+      "risk-restored-stable"
+    ],
+    [
+      "live-reset",
+      "live-reset-wait"
+    ],
+    [
+      "live-roll-1",
+      "busy-bank-ignored"
+    ],
+    [
+      "live-roll-1",
+      "motion-30"
+    ]
+  ],
+  "native_palette_colours": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      17,
+      17,
+      34
+    ],
+    [
+      34,
+      34,
+      68
+    ],
+    [
+      68,
+      255,
+      255
+    ],
+    [
+      119,
+      255,
+      153
+    ],
+    [
+      187,
+      170,
+      221
+    ],
+    [
+      255,
+      102,
+      187
+    ],
+    [
+      255,
+      238,
+      68
+    ],
+    [
+      255,
+      255,
+      238
+    ]
+  ],
+  "early_motion_change_bounds": [
+    1148,
+    158,
+    1391,
+    279
+  ],
+  "audio": {
+    "accept.wav": {
+      "rate": 48000,
+      "frames": 211819,
+      "duration_s": 4.412895833333334,
+      "peak_pcm": 13084,
+      "channel_peaks_pcm": [
+        13080,
+        13084
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 0.04,
+          "duration_s": 0.185,
+          "pitch_hz": 131.32536838290756
+        }
+      ]
+    },
+    "live-round-1.wav": {
+      "rate": 48000,
+      "frames": 253991,
+      "duration_s": 5.291479166666667,
+      "peak_pcm": 12727,
+      "channel_peaks_pcm": [
+        12727,
+        12377
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 3.075,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3133132348671
+        }
+      ]
+    },
+    "live-round-2.wav": {
+      "rate": 48000,
+      "frames": 296164,
+      "duration_s": 6.170083333333333,
+      "peak_pcm": 12724,
+      "channel_peaks_pcm": [
+        12724,
+        12382
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 3.95,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3141530369982
+        }
+      ]
+    },
+    "live-round-3.wav": {
+      "rate": 48000,
+      "frames": 296164,
+      "duration_s": 6.170083333333333,
+      "peak_pcm": 12639,
+      "channel_peaks_pcm": [
+        12639,
+        12266
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 3.95,
+          "duration_s": 0.185,
+          "pitch_hz": 1050.6208628459544
+        }
+      ]
+    },
+    "live-round-4.wav": {
+      "rate": 48000,
+      "frames": 296164,
+      "duration_s": 6.170083333333333,
+      "peak_pcm": 12684,
+      "channel_peaks_pcm": [
+        12684,
+        12327
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 3.95,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3074821236686
+        }
+      ]
+    },
+    "live-round-5.wav": {
+      "rate": 48000,
+      "frames": 296164,
+      "duration_s": 6.170083333333333,
+      "peak_pcm": 12728,
+      "channel_peaks_pcm": [
+        12728,
+        12371
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 3.95,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3122054067086
+        }
+      ]
+    },
+    "muted-round-1.wav": {
+      "rate": 48000,
+      "frames": 253992,
+      "duration_s": 5.2915,
+      "peak_pcm": 0,
+      "channel_peaks_pcm": [
+        0,
+        0
+      ],
+      "clipped_samples": 0,
+      "bursts": []
+    },
+    "muted-round-2.wav": {
+      "rate": 48000,
+      "frames": 296164,
+      "duration_s": 6.170083333333333,
+      "peak_pcm": 0,
+      "channel_peaks_pcm": [
+        0,
+        0
+      ],
+      "clipped_samples": 0,
+      "bursts": []
+    },
+    "muted-round-3.wav": {
+      "rate": 48000,
+      "frames": 296163,
+      "duration_s": 6.1700625,
+      "peak_pcm": 0,
+      "channel_peaks_pcm": [
+        0,
+        0
+      ],
+      "clipped_samples": 0,
+      "bursts": []
+    },
+    "muted-round-4.wav": {
+      "rate": 48000,
+      "frames": 296164,
+      "duration_s": 6.170083333333333,
+      "peak_pcm": 0,
+      "channel_peaks_pcm": [
+        0,
+        0
+      ],
+      "clipped_samples": 0,
+      "bursts": []
+    },
+    "muted-round-5.wav": {
+      "rate": 48000,
+      "frames": 296163,
+      "duration_s": 6.1700625,
+      "peak_pcm": 0,
+      "channel_peaks_pcm": [
+        0,
+        0
+      ],
+      "clipped_samples": 0,
+      "bursts": []
+    },
+    "pending-invalid.wav": {
+      "rate": 48000,
+      "frames": 376674,
+      "duration_s": 7.847375,
+      "peak_pcm": 0,
+      "channel_peaks_pcm": [
+        0,
+        0
+      ],
+      "clipped_samples": 0,
+      "bursts": []
+    },
+    "reveal.wav": {
+      "rate": 48000,
+      "frames": 61342,
+      "duration_s": 1.2779583333333333,
+      "peak_pcm": 0,
+      "channel_peaks_pcm": [
+        0,
+        0
+      ],
+      "clipped_samples": 0,
+      "bursts": []
+    },
+    "spent-bust.wav": {
+      "rate": 48000,
+      "frames": 212778,
+      "duration_s": 4.432875,
+      "peak_pcm": 13331,
+      "channel_peaks_pcm": [
+        13331,
+        12954
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 2.215,
+          "duration_s": 0.185,
+          "pitch_hz": 131.32782289106117
+        }
+      ]
+    }
+  },
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1536,
+        "height": 576,
+        "r_frame_rate": "50/1",
+        "nb_frames": "63"
+      }
+    ],
+    "format": {
+      "duration": "1.277958"
+    }
+  },
+  "video_sha256": "bda1350b14bb67882f8de376206ba70b67114cadaa7aa75f9c9a843d563a8a70",
+  "saved_program_bytes": 10970,
+  "saved_program_sha256": "06902b6c062920f98726a22fe5df42e4eadcefb8cc4b3fab2586c2ce9b20f1e3",
+  "saved_disk_sha256": "39f9a51c157d3f83c3a786445bbfa3a2111d77ecc5c26423ccda6691c56ba9e6",
+  "original_files_preserved": 78
+}

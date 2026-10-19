@@ -21,7 +21,8 @@ counter, preserving the session loops. The [game brief](brief.md) owns the rules
 how we could teach them without importing an unexplained game framework.
 The user agreed that drawing, colour and sound should develop through the game.
 The initial text prototype checked the proposed rules; the current presentation
-has graphics and sound, with human listening/play feedback still pending.
+has graphics and sound. The user played the rescue endpoint and reported that
+it works well; explicit listening preference and learner outcomes remain pending.
 
 The user accepted the browser playtest's simple scope and 10/5/30 tuning. Keep
 that basis while implementing this progression. Native checks may change exact
@@ -49,6 +50,15 @@ continues with separate display extraction, board, bank/bust/success cues and
 ready-screen steps. It keeps completed rounds throughout. The older For-based
 prototype and top-level cue sources are alternative implementations, not an
 unexplained next step in this route.
+The [arcade guide](https://github.com/code198x/code-samples/tree/amos-bank-or-risk-prototype/commodore-amiga/amos/bank-or-risk/stages/arcade)
+continues the score-chase endpoint through three separate checkpoints: colour
+roles with the old geometry, a spaced board with a relative die origin, then a
+slowing reveal. Predict which fields change with a palette entry; repair a slot
+position while preserving five awards; explain why preview faces never change
+the accepted roll. Compare motion and static sources with the same supplied
+rolls. These are complete sources with a [native record](../../../../audit/2026-10-amos-bank-or-risk-arcade/REPORT.md);
+authored lesson boundaries and learner understanding remain unverified.
+
 Split a row further if its implementation needs another unfamiliar idea. Keep a complete source for each checkpoint in code-samples, with exact
 editing instructions and expected output in the lesson.
 

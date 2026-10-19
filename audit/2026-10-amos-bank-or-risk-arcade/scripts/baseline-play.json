@@ -1,0 +1,57 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/baseline-five-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 40
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/baseline-active.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/baseline-active.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 40
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/baseline-roll.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/baseline-roll.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 40
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/baseline-result.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/baseline-result.state"
+  }
+]

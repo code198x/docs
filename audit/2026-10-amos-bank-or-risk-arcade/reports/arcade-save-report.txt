@@ -1,0 +1,1 @@
+{"observations":[{"kind":"type_string","chars_typed":12,"reached":457523084}],"time":457523084,"boot_detected":true,"boot_reason":"display-active","query_values":[]}

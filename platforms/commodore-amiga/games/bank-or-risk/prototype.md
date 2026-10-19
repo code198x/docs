@@ -1,11 +1,15 @@
 # Bank or risk native prototype status
 
-The extended teaching endpoint is `stages/replay-value/feedback.amos` in
-code-samples. Its [native record](../../../../audit/2026-10-amos-bank-or-risk-replay-value/REPORT.md)
+The current teaching endpoint is `stages/arcade/rolling-die.amos` in
+code-samples. The [score-chase record](../../../../audit/2026-10-amos-bank-or-risk-replay-value/REPORT.md)
 checks all five rounds, in-program best, five awards, one rescue and feedback.
+The [arcade record](../../../../audit/2026-10-amos-bank-or-risk-arcade/REPORT.md)
+checks the following palette, layout and animated-roll stages.
 The earlier prototype and presentation sources below retain their early endings
 and their own evidence; the [current brief](brief.md) owns the extended rules.
-Human play/listening feedback and learner outcomes remain pending.
+The user played the rescue endpoint and reported that it works well, then
+requested colour, spacing and an animated roll. Acceptance of the new
+presentation, explicit listening preference and learner outcomes remain pending.
 
 **Native rules, input and save/reopen checks pass on the recorded Emu198x setup.**
 The user accepted the browser trial's simple scope: one six-sided die, limit 10,
@@ -113,8 +117,10 @@ checks six further sources through shared display, grouped board, separate
 result cues and a ready screen, including native storage. The continuous
 teaching route keeps completed rounds; its renderer adapts the older current-round
 calculation. The historical For-based prototype remains an alternative with
-its own source pins. Human listening/play feedback and authored replacement
-lessons remain pending. Check each addition in AMOS; earlier prototype
+its own source pins. The user has since played the later rescue endpoint and reported
+that it works well. The following arcade pass develops the requested presentation;
+its acceptance, explicit listening preference and authored replacement lessons
+remain pending. Check each addition in AMOS; earlier prototype
 execution does not qualify a changed teaching source.
 A later uncoached beginner trial remains pending.
 
