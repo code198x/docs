@@ -1,0 +1,28 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/styled-active.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-motion-editor.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-motion-editor.state"
+  }
+]

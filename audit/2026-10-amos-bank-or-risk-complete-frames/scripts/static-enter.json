@@ -1,0 +1,23 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/styled-static-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/static-active.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/static-active.state"
+  }
+]

@@ -1,0 +1,3 @@
+{
+  "observation": "The former 40-frame waits did not qualify the new graphical-text renderer: the nominal fifth-result capture still showed only three completed rounds and 30 points; replay inputs arrived before that phase. Script completion was not game completion. Repeat with explicit 90-frame settled waits, then inspect the fifth-result and replay state."
+}

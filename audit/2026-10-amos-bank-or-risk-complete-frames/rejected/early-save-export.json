@@ -1,0 +1,5 @@
+{
+  "sha256": "8f0ecaac16df8628fa663077d5fd3417a961165ed9a55915f3bce338e46d3e05",
+  "validation_error": "build198x-adf: corrupt ADF: unknown secondary type",
+  "observation": "Native requester says Volume AMOSPro_System is full. Extra waiting does not solve insufficient free space. Use a separate empty data disk."
+}

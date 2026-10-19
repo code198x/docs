@@ -1,0 +1,1 @@
+{"observations":[{"kind":"run_frames","frames":60,"reached":478062044,"stop_reason":"ReachedTarget"},{"kind":"type_string","chars_typed":16,"reached":540387164}],"time":540387164,"boot_detected":true,"boot_reason":"display-active","query_values":[]}

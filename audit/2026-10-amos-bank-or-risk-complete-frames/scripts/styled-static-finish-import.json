@@ -1,0 +1,18 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/styled-static-listing.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 500
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-static-imported.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-static-listing.state"
+  }
+]

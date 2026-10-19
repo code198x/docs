@@ -225,3 +225,10 @@ Parents and teachers can ask the prompt, allow time to think and record whether
 the learner predicted, ran, explained or needed a hint. Reveal answers when
 useful. Do not turn these suggestions into claimed learner findings: no
 uncoached trial has taken place.
+
+The [complete-frame and typography stages](https://github.com/code198x/code-samples/tree/amos-bank-or-risk-prototype/commodore-amiga/amos/bank-or-risk/stages/arcade)
+follow the first animation: hidden drawing and deliberate presentation, then
+ROM text with measured baselines, then an authored bitmap alphabet for title and
+scores. Each has a complete source and explanatory guide. The
+[native record](../../../../audit/2026-10-amos-bank-or-risk-complete-frames/REPORT.md)
+separates passed game/frame checks from the blocked native save/reopen route.

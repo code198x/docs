@@ -1,0 +1,23 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/styled-five-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-title-editor.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-title-editor.state"
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/finish-save-request.state"
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${RUN}/save-data.adf",
+    "writable": true
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "type_string",
+    "text": "DF0:finish.amos\n",
+    "hold_frames": 3,
+    "settle_frames": 360
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/finish-saved.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/finish-saved.state"
+  }
+]
