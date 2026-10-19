@@ -36,7 +36,9 @@ This extension replaces the earlier prototype's immediate success/impossibility
 endings. Reachability can still inform the message, but all five rounds remain
 worth playing for a score. The user approved this after reviewing the game's
 limited replay appeal. The earlier browser acceptance establishes the original
-scale, not human acceptance of the extension.
+scale. The user has since played the native rescue endpoint and reported
+that it works well, while requesting brighter colour, more space and an animated
+roll. The arcade presentation remains subject to review.
 
 Keep one die and one player. Cards, a dealer, betting money, a computer opponent,
 multiple dice, disk records, pointer controls and a campaign remain outside this

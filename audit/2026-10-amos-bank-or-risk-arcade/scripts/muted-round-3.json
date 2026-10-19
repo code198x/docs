@@ -1,0 +1,68 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/muted-result-2.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/muted-round-3.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 40
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/muted-active-3.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/muted-active-3.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 40
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/muted-roll-3.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/muted-roll-3.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 40
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/muted-result-3.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/muted-result-3.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

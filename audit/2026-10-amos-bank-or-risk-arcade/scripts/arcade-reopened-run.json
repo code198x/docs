@@ -1,0 +1,36 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/arcade-reopened-listing.state"
+  },
+  {
+    "action": "press_key",
+    "key": "f2",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 180
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/arcade-reopened-syntax.png"
+  },
+  {
+    "action": "press_key",
+    "key": "f1",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 300
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/arcade-reopened-title.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/arcade-reopened-title.state"
+  }
+]

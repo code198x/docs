@@ -1,0 +1,28 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/live-active.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 40
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/busy-bank-ignored.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/busy-bank-ignored.state"
+  }
+]

@@ -67,7 +67,8 @@ browser playtest with one six-sided die, a round limit of 10, five rounds and a
 30-point target. The approved extension keeps these numbers, finishes all five
 rounds, records a memory-only personal best, shows the five awards and supplies
 one rescue. Treat 30 as the welcoming goal while the score chase extends replay;
-native play must still check the resulting experience.
+the user has now played the native rescue endpoint and reported that it works
+well. Their requested arcade presentation is a subsequent review.
 
 Start with a small message and save/reopen exercise, then show one roll and add
 its result to a stored total. Introduce the limit decision, then input and
@@ -172,8 +173,12 @@ and replay steps. The [presentation record](../../../audit/2026-10-amos-bank-or-
 checks their continuous route into the board, result cues and ready screen,
 keeping the completed-round model. The [replay-value record](../../../audit/2026-10-amos-bank-or-risk-replay-value/REPORT.md)
 checks the later five-round score chase, best, scorecard, rescue and feedback
-stages. Those extend the game after the original core has been explained.
-Authored replacement lessons and human trials remain pending.
+stages. Those extend the game after the original core has been explained. The
+[arcade record](../../../audit/2026-10-amos-bank-or-risk-arcade/REPORT.md) adds
+separate colour, layout and slowing-die stages, preserving those rules. The user
+played the rescue endpoint and reported that it works well; the new presentation
+still needs their review.
+Authored replacement lessons and an uncoached learner trial remain pending.
 
 The accepted browser playtest establishes the intended scale and tuning for the
 first game. It does not qualify AMOS execution or establish learner outcomes.

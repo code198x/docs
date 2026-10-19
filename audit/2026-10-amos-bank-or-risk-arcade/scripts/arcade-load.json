@@ -1,0 +1,41 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/arcade-cold-editor.state"
+  },
+  {
+    "action": "press_keys",
+    "keys": [
+      "ramiga",
+      "l"
+    ],
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "type_string",
+    "text": "DF0:arcade.amos\n",
+    "hold_frames": 3,
+    "settle_frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 360
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/arcade-reopened-listing.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/arcade-reopened-listing.state"
+  }
+]
