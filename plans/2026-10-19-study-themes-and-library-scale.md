@@ -57,3 +57,13 @@ Audit existing pattern content and link integrity before changing the model. Pro
 ## Proposed delivery order
 
 Finish the M.U.L.E. observation increment. Develop Pac-Man, then SimCity, as separate reviewed study changes. Keep updating this evidence-led map. Propose the first Game Design lesson with concrete materials, and a separate small Pattern Library prototype, before any structural implementation. The scope and principles in PROJECT.md and the current specifications remain binding.
+
+## Pac-Man and SimCity research: concrete next examples
+
+Pac-Man now supplies sourced distinctions between a target, a legal local turn and a timed mode. A small AI explanation should let readers change one target while keeping movement rules fixed, then change the movement rule while keeping the target fixed. This avoids a “personality” label replacing the actual algorithm. Its original corner cases stay in the historical study; an original teaching experiment can choose simpler, explicit rules.
+
+SimCity adds a separate Game Design question: **How can a player see a consequence that arrives later?** Begin with an invented little settlement and one delayed resource change. Let the reader compare the map, a warning and a time graph, predict an outcome, then change one condition. Distinguish an action cost, a recurring cost, stored resources and a rate. Do not present an invented teaching economy as the SimCity formula, or a game model as evidence for real planning policy.
+
+For Pattern Library prototypes, these yield two bounded implementations after design approval: target selection plus legal-neighbour choice, and a scheduled update with history samples and an explicit feedback display. The explanatory lesson owns intent, the pattern owns adaptable mechanics, and the study owns historical evidence. A pattern should state its assumptions, update order, units, costs and verification; a new category does not supply those things by itself.
+
+The existing escalation entry's implied compulsory curve remains an editorial question for review. SimCity makes the conflict with the charter's creative-game allowance concrete: a worthwhile session can end because a reader is pleased with a place, not because a difficulty curve reaches a losing state. No binding scope, pattern schema, navigation or published lesson is changed in this proposal.
