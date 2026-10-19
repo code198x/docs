@@ -1,0 +1,46 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/live-active.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/reveal.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 2
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/reveal-preview.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/reveal-preview.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/reveal-committed.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/reveal-committed.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "emulator_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+  "emulator_version": "0.34.2",
+  "model": "a1200",
+  "profile": "PAL A1200, stock 2 MiB chip RAM, no fast RAM",
+  "software": "AMOS Professional 2.00, version observed in the booted editor",
+  "inputs": {
+    "kickstart.rom": {
+      "bytes": 524288,
+      "sha256": "6d43840d4099a74170ea0f0425b6257c3891ebcaa39c4d1840075a9ab22b5707"
+    },
+    "amos-system.adf": {
+      "bytes": 901120,
+      "sha256": "7ffbfb5ed5c28869e323a2bff9a591ce519727be2e0dd66972a86ebfe7bcbfdc"
+    },
+    "amos-work.adf": {
+      "bytes": 901120,
+      "sha256": "f5052c16b47b33dedc51ffb15c2467a5b566377c5060c9826897b10bec36c6f5"
+    },
+    "value.adf": {
+      "bytes": 901120,
+      "sha256": "273f9537ad0c9161e42e7895ff61c19e366b703e595da15b329461949a6a5550"
+    },
+    "varied.adf": {
+      "bytes": 901120,
+      "sha256": "69f0799e0542d2da4c2b2254d1a915aac88931a27ddcd91d732c752a02e800ae"
+    }
+  },
+  "build198x_revision": "f7016398deb1fff9dc1efb6713dfab8c7bacf2d0",
+  "sources": {
+    "feedback.amos": "8b47c1937fd3c7125c62029e174685fe8ecc1a74610f50f162a4e461ec1e97d6",
+    "five-rounds.amos": "aa21e6da0222fc6d2330d0138183c85a5749c8b0d35fa00398d4d5732c8f1b99",
+    "personal-best.amos": "0a8b47561047f7b48054a4751d89111536e927a162c816cc246aa8860fc6013f",
+    "rescue.amos": "7f00020b240853447efcf25d4d10a176a50013a057fde9f5725a483597a8424b",
+    "scorecard.amos": "0ba7ad63c0a05b31f631665b30d1c4179eb7708c41a06f52300d30fa0bac6842"
+  },
+  "sample_revision": "da45d25c0bed7dd3e251b098bec65f8e762aa3fd",
+  "balance_model_sha256": "f88c918d0c2bb12267ceb1973d87562abcaed69523ac5cfdf78b90742de91be7"
+}

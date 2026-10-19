@@ -97,6 +97,28 @@ to investigate, not starter code to copy wholesale. Introduce a routine when
 repeated work gives it a purpose. Explain its inputs, changed values and return
 before callers depend on it. Recheck every affected checkpoint after moving code.
 
+## Give the completed game a reason to replay
+
+The user approved the [score-chase extension](brief.md): finish all five rounds,
+keep an in-program personal best, show the five awards and offer one rescue.
+The [replay-value guide](https://github.com/code198x/code-samples/tree/amos-bank-or-risk-prototype/commodore-amiga/amos/bank-or-risk/stages/replay-value)
+develops these in five complete stages after the presentation bridge. Its final
+`feedback.amos` is the extended teaching endpoint. Earlier sources keep their
+early endings as an explained working stage; the extension changes that design
+after its replay limitation becomes visible.
+
+| Stage | Idea | Investigation |
+| --- | --- | --- |
+| Five rounds | A target and a stopping rule need not be identical | Reach 30 in round 3, then continue. Also continue when 30 becomes impossible. |
+| Personal best | A value can outlive one replay | Complete higher, lower and tied scores; record only a strict improvement after round 5. |
+| Five awards | An indexed table stores repeated values | Distinguish completed zero, current question mark and future dash; reconcile the completed entries with secured score. |
+| One rescue | A limited resource adds a pending decision | Undo to the pre-roll state or accept zero while saving rescue. Neither pending nor invalid input completes a round. |
+| Feedback | A reveal and a result event have different jobs | A short preview changes no score; first reaching 30 produces one acknowledgement, with readable muted outcomes. |
+
+The [native record](../../../../audit/2026-10-amos-bank-or-risk-replay-value/REPORT.md)
+qualifies the named source versions and cases. Personal best is memory-only;
+disk records, additional mechanics and beginner learning claims are outside it.
+
 ## Use AMOS without increasing the rules load
 
 The fixed die drawing comes before its random value. At that point it is an

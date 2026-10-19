@@ -1,0 +1,60 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/risk-result-2.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/risk-round-3.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/risk-active-3.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/risk-active-3.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/risk-result-3.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/risk-result-3.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

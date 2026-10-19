@@ -1,0 +1,47 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/risk-pending.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/undo.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "U",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/risk-restored.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/risk-restored.state"
+  },
+  {
+    "action": "press_key",
+    "key": "U",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/risk-restored-stable.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/risk-restored-stable.state"
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

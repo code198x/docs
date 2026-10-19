@@ -1,0 +1,66 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/plain-rescue-active.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/plain-rescue-pending.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/plain-rescue-pending.state"
+  },
+  {
+    "action": "press_key",
+    "key": "U",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/plain-rescue-restored.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/plain-rescue-restored.state"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/plain-rescue-bank.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/plain-rescue-bank.state"
+  }
+]
