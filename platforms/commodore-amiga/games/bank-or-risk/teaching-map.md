@@ -1,9 +1,10 @@
 # Bank or risk teaching map
 
 **Teaching direction agreed; no replacement lessons or executed stage sources.**
-We can plan small steps while the [native prototype](prototype.md) awaits
-execution. Native play may change the tuning or expose input behaviour that
-changes this order. The [game brief](brief.md) owns the rules; this map explains
+The [native text prototype](prototype.md) has rules, input and persistence
+evidence on a named Emu198x setup. The individual teaching checkpoints below
+still require implementation and execution. Native presentation work may expose
+behaviour that changes their boundaries. The [game brief](brief.md) owns the rules; this map explains
 how we could teach them without importing an unexplained game framework.
 The user agreed that drawing, colour and sound should develop through the game.
 The silent text prototype checks the proposed rules; it is not the intended
@@ -15,7 +16,8 @@ edits or checkpoint boundaries; they do not require adding more game mechanics.
 
 Show the complete game's purpose early: bank points towards 30, or risk another
 roll while staying at or below 10. Five rounds give us a limited opportunity to
-reach the target. A native demonstration must wait for execution checks. The
+reach the target. Use a native demonstration only for the checked text prototype; later visual
+and sound versions need their own execution evidence. The
 first exercises below are runnable fragments of that game, not finished games.
 
 ## From a message to one round

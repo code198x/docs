@@ -1,0 +1,62 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/retry-pointer.state"
+  },
+  {
+    "action": "input",
+    "events": [
+      {
+        "PointerMotion": {
+          "device": "mouse-1",
+          "dx": 98,
+          "dy": -28
+        }
+      }
+    ]
+  },
+  {
+    "action": "run_frames",
+    "frames": 10
+  },
+  {
+    "action": "input",
+    "events": [
+      {
+        "PointerButton": {
+          "device": "mouse-1",
+          "button": "left",
+          "pressed": true
+        }
+      }
+    ]
+  },
+  {
+    "action": "run_frames",
+    "frames": 3
+  },
+  {
+    "action": "input",
+    "events": [
+      {
+        "PointerButton": {
+          "device": "mouse-1",
+          "button": "left",
+          "pressed": false
+        }
+      }
+    ]
+  },
+  {
+    "action": "run_frames",
+    "frames": 200
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/retry-click.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/retry-click.state"
+  }
+]

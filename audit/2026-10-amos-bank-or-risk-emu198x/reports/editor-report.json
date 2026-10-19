@@ -1,0 +1,1 @@
+{"observations":[{"kind":"press_key","key":"Return","hold_frames":3,"reached":283862636},{"kind":"run_frames","frames":30,"reached":288112076,"stop_reason":"ReachedTarget"}],"time":288112076,"boot_detected":true,"boot_reason":"display-active","query_values":[]}

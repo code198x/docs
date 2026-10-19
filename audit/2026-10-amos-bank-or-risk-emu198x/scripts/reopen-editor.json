@@ -1,0 +1,26 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/reopen-1000.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 1000
+  },
+  {
+    "action": "press_key",
+    "key": "Return"
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/reopen-editor.state"
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/reopen-editor.png"
+  }
+]

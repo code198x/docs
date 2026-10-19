@@ -1,0 +1,94 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/prefixed-title.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Q"
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "press_key",
+    "key": "Return"
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/quit-title.png"
+  },
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/prefixed-title.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space"
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "press_key",
+    "key": "Q"
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "press_key",
+    "key": "Return"
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/quit-active.png"
+  },
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/range-final.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/quit-between.png"
+  },
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/perfect-final.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Q"
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "press_key",
+    "key": "Return"
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/quit-final.png"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/save-retry.state"
+  },
+  {
+    "action": "input",
+    "events": [
+      {
+        "PointerMotion": {
+          "device": "mouse-1",
+          "dx": 96,
+          "dy": -24
+        }
+      }
+    ]
+  },
+  {
+    "action": "run_frames",
+    "frames": 15
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/retry-pointer.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/retry-pointer.state"
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/save-as.state"
+  },
+  {
+    "action": "type_string",
+    "text": "bank.amos\n",
+    "settle_frames": 250
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/saved.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/saved.state"
+  }
+]

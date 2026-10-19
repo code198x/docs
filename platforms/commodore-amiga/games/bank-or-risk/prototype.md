@@ -1,98 +1,77 @@
 # Bank or risk native prototype status
 
-**Prepared source; native execution blocked before app access.** The user accepted
-the trial tuning: one six-sided die, limit 10, at most five rounds and target 30.
-The text-first endpoint and four fixed-roll probes are prepared in code-samples.
-They have not been imported, syntax-checked, run or saved/reopened in AMOS.
+**Native rules, input and save/reopen checks pass on the recorded Emu198x setup.**
+The user accepted the browser trial's simple scope: one six-sided die, limit 10,
+at most five rounds and target 30. The silent text prototype now runs in AMOS
+Professional 2.00. Palette/readability, die graphics, sound and lesson sources
+remain to be developed and checked.
 
-## Accepted browser playtest
+## Source and execution
+
+The source is `commodore-amiga/amos/bank-or-risk/prototype/bank-or-risk.amos` in
+[samples revision 0c55096](https://github.com/code198x/code-samples/tree/0c55096fdaa858111cf68f3690fd3dec41160793/commodore-amiga/amos/bank-or-risk/prototype).
+It is ASCII for Merge ASCII. Native Save As produces a separate tokenised AMOS
+program; these two representations must not be confused.
+
+The [execution audit](../../../../audit/2026-10-amos-bank-or-risk-emu198x/REPORT.md)
+owns configuration, identities, scripts, captures, observed results and limits.
+It uses Emu198x 0.34.2 at `6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c`, PAL
+A1200, stock 2 MiB chip RAM, no fast RAM, the recorded Kickstart 3.1 image and a
+local AMOS Professional 2.00 system disk. This is distinct from the earlier
+FS-UAE/official-repository installation and is not a minimum hardware claim.
+
+The first native import exposed command-prefix collisions in our identifiers.
+A reduced failing program and an isolated successful naming probe establish the
+cause. Game identifiers now use `BR_`; removing that prefix reproduces the
+original source exactly. Scoring and input logic are unchanged. The source is
+syntax-checked and executed in AMOS, not compiled with the separate AMOS compiler.
+
+The [probe manifest](native-probes.json) binds the corrected source and four
+fixed-roll copies by SHA-256. The generator changes the die supplier to
+`Read BR_FACE`, restores DATA at each challenge and appends prescribed values.
+Its expectations are preparation data; actual observations live in the audit.
+
+| Native check | Observed result |
+| --- | --- |
+| Perfect success | Three perfect rounds secure 30; equality banks automatically. |
+| Preserve and recover | Contributions 4, 0, 6, 10, 10 reach 30 on round 5; bust 11 preserves the earlier 4. |
+| Range and limit | Rolls 1, 6, 2, 1 show totals 1, 7, 9, 10; exact 10 secures 10 once. |
+| Unreachable | Three busts at 12 leave the target unreachable after round 3. |
+| Input boundaries | B and X at zero change no score; the tested held R/B/SPACE/A windows cause no duplicate action. Replay resets the challenge. |
+| Exit | Q then Return reaches the editor from title, active, between-round and final-result states. |
+| Persistence | A native saved program is exported on a verified work disk, loaded after a separate cold boot, played and exited. |
+
+## Media and access
+
+The former desktop-control failure does not block the emulator's script/MCP
+interface. Native input and display checks use that interface; desktop-window
+menu integration is not qualified by this pass.
+
+The initial AMOS input disk fails a bitmap-bounds check, and a Save attempt
+reported a write-protected boot volume. The successful persistence run uses a
+fresh filesystem with all 78 original file contents preserved and an in-memory
+writable mount from boot. Those setup changes were not isolated as causes of
+the earlier failure. The audit records both outcomes; no confirmed emulator
+defect was inferred. Original media is unchanged and excluded from the repo.
+Historical FS-UAE preparation identities remain in [native-inputs.json](native-inputs.json);
+the audit owns current execution identities.
+
+## Accepted browser playtest and next work
 
 The user played the separate
 [browser version at samples revision 6e166c4](https://github.com/code198x/code-samples/tree/6e166c4eb93b60019c3eb2638ac893d5b37442f8/commodore-amiga/amos/bank-or-risk/browser)
-and judged that it worked well at the simple scale needed for the first game.
-The user agreed to retain limit 10, at most five rounds and target 30, and to
-continue through the planned AMOS drawing, colour and sound steps. Do not add
-mechanics just to make the opening more complex.
+and accepted its simple scope and 10/5/30 tuning for the first game. That is
+owner play feedback on the JavaScript trial, not AMOS play approval or evidence
+of beginner understanding. Keep the agreed scale while developing the native
+[teaching direction](teaching-map.md), including progressive graphics and sound.
 
-This is positive owner play feedback on the JavaScript design trial, not a
-measured player study or evidence of beginner understanding. The browser record
-contains its own rules, input, accessibility and display checks. Its graphics,
-tones and controls do not qualify the native AMOS source below.
-
-## Source and verification
-
-The proposed source is
-`commodore-amiga/amos/bank-or-risk/prototype/bank-or-risk.amos` in
-[samples revision c62991d](https://github.com/code198x/code-samples/tree/c62991d670568190dbd007af36fc951edd60ec6f/commodore-amiga/amos/bank-or-risk/prototype).
-It is ASCII for Merge ASCII, not a tokenised AMOS project. Its README describes
-the intended controls and repeatable import route. The endpoint is deliberately
-silent; artwork and sound remain later teaching stages.
-
-The [probe manifest](native-probes.json) binds the maintained source and four
-generated inputs by SHA-256. The generator changes only the die supplier to
-`Read FACE`, restores DATA at each new challenge and appends prescribed rolls.
-All input, scoring, round transitions, endings and replay logic remain in the
-generated source. Expected results are manually specified, not observations.
-
-| Probe | Expected checkpoint | Current evidence |
-| --- | --- | --- |
-| Perfect success | Three rounds of 4 then 6 secure 30; exact 10 banks automatically | Generated source and hash checked; not run |
-| Preserve and recover | Contributions 4, 0, 6, 10, 10; bust 11 preserves earlier 4; final-round success at 30 | Generated source and hash checked; not run |
-| Range and limit | Rolls 1, 6, 2, 1 give totals 1, 7, 9, 10, then normal quit | Generated source and hash checked; not run |
-| Unreachable | Three busts of 12 leave two rounds unable to reach 30 | Generated source and hash checked; not run |
-
-The preparation checks confirm four exact transformations, matching hashes and
-rejection of a nonempty output directory without overwriting it. Ruff lint and
-format checks pass for the generator. These checks do not parse or execute AMOS
-and cannot qualify the program's syntax, display, input or rules.
-
-## Native access failure
-
-Computer-use inventory failed with:
-
-```text
-Native apps: Error: Sky Computer Use native pipe startup failed
-```
-
-Resetting the computer-use session and retrying returned the same error. Neither
-attempt reached an app; FS-UAE was not launched. No native screenshot, successful
-play, syntax result, held-key observation or save/reopen result is claimed.
-
-The previously approved official AMOS archive was reacquired at the pinned
-revision and matched its earlier SHA-256. Test copies of the earlier firmware
-and Workbench/Fonts images also matched. [Input identities](native-inputs.json)
-record the public archive URL and hashes without paths or redistributing media.
-Temporary copies are removed after this preparation pass; reacquire the same
-inputs for the later native run.
-
-## Source discrepancy
+The next source task is a readable, explicit palette, followed by the explained
+die and board stages and short event cues. Check each addition in AMOS; do not
+treat the text prototype's execution as qualification of future lesson sources.
+A later uncoached beginner trial remains pending.
 
 The [original Maths chapter](https://amospromanual.dev/05-03-maths.html#rnd)
-defines an inclusive upper bound for `Rnd(n)`. The proposed die therefore uses
-`Rnd(5)+1`. The quick reference instead uses an exclusive bound and `Rnd(6)+1`;
-it also disagrees with the manual's default angle unit. The source contradiction
-is filed as [umbrella #173](https://github.com/stevehill1981/198x/issues/173).
-The prepared `random-range.amos` probe counts the results of the disputed
-expression. It has not run, and a finite sample would not prove fairness.
-
-## Resume conditions and acceptance
-
-When native computer control is available, acquire the named inputs and follow
-the [native plan](../../../../plans/2026-10-16-amos-bank-or-risk-native.md).
-Import the exact maintained source and qualify the syntax before interpreting
-any later result. Run the four probes and ordinary random play through actual
-press/release input. Record actual observed values separately from this manifest.
-
-Check invalid input, B at zero, held R/B/SPACE/A, waiting without action, once-only
-scoring, result stability, replay, and quit at title, active round, between rounds
-and final result. Save a native project, leave the editor session, reopen the
-saved version and play again. Verify the fresh-key routine against the runtime;
-source inspection alone cannot establish its repeat behaviour.
-
-After correctness checks, review the native experience against the accepted
-browser scope, including input, readability, pace and recovery. Keep the agreed
-tuning unless native play supplies a concrete reason to reconsider it. No
-learner is currently available, so
-educational effectiveness remains a separate pending question. Keep samples in
-draft review and do not derive or publish replacement lessons from an unexecuted
-endpoint. The current limitation is native access, not a reproduced AMOS failure.
+defines the inclusive `Rnd(n)` bound used by the die. The separate reference
+investigation in [umbrella #173](https://github.com/stevehill1981/198x/issues/173)
+still has its own random-range and angle-mode probes; these game checks do not
+complete them or prove random fairness.

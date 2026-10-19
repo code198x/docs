@@ -1,0 +1,38 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/first-run.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Return"
+  },
+  {
+    "action": "run_frames",
+    "frames": 200
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/listing-imported.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/listing-imported.state"
+  },
+  {
+    "action": "press_key",
+    "key": "f1"
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/native-title.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/native-title.state"
+  }
+]

@@ -1,0 +1,1 @@
+{"observations":[{"kind":"run_frames","frames":1000,"reached":283296044,"stop_reason":"ReachedTarget"},{"kind":"query","result":{"path":"cpu.pc","value":16257538}}],"time":283296044,"boot_detected":true,"boot_reason":"display-active","query_values":[]}

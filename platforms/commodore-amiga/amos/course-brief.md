@@ -1,7 +1,7 @@
 # AMOS course brief
 
 **Status: bank-or-risk browser scope and teaching direction agreed; native
-implementation and lesson sources pending.** We
+rules prototype checked; presentation and lesson sources pending.** We
 want a complete beginner to make and understand small games in AMOS, then grow
 towards more substantial Amiga games. An experienced programmer should be able
 to enter later without missing AMOS-specific explanations.
@@ -156,7 +156,9 @@ baseline, not a minimum requirement or qualification of the proposed game.
 Use the [game brief](../games/bank-or-risk/brief.md) for native prototype scope,
 source location, concrete rules and acceptance cases. Check one roll, limit
 boundaries, banking, session score, ending, replay and exit in the named original
-runtime. Check the learner's save/reopen route early.
+runtime. The [prototype record](../games/bank-or-risk/prototype.md) now establishes
+those checks on a named Emu198x configuration, including native save and independent
+cold-boot reopen. Later presentation and teaching sources need their own checks.
 
 The accepted browser playtest establishes the intended scale and tuning for the
 first game. It does not qualify AMOS execution or establish learner outcomes.

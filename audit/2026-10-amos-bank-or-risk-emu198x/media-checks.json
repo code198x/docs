@@ -1,0 +1,17 @@
+{
+  "original-system": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "build198x-adf: corrupt ADF: filesystem structure\n"
+  },
+  "fresh-work": {
+    "exit_code": 0,
+    "stdout": "${RUN}/amos-work.adf: OK \u2014 880K OFS \"AMOSPro_System\"\n",
+    "stderr": ""
+  },
+  "native-saved": {
+    "exit_code": 0,
+    "stdout": "${RUN}/native-saved.save.adf: OK \u2014 880K OFS \"AMOSPro_System\"\n",
+    "stderr": ""
+  }
+}
