@@ -55,3 +55,14 @@ Coordinate those runnable examples and capture paths with [readiness #3](https:/
 Run `python3 scripts/verify-game-loops.py --help` from code-samples. Provide the native emulator directory, Spectrum executable, existing firmware locations and Build198x. The default matrix covers the core four plus BBC; `--include-electron` adds the independently recorded shared-source run. `--only` selects a single configuration.
 
 Keep complete demo.asm sources, frame.inc contracts, Makefiles and retained verification/results.json files together. The new input readers preserve their existing paths/content from the earlier prototype. The whole loop expansion is additive to those open source/UI/specification PRs; no merge or publication is implied by these notes.
+
+
+## Turn progression and timing are independent
+
+An untimed adventure can wait for a command. A turn-based game can run a deadline while waiting. An action game can advance a simulation while display and audio follow their own schedules. Keep progression, clocks, input acceptance and presentation separate enough to combine. A frame wait is one implementation tool; it is not compulsory for every game.
+
+The next slice adds Master System, Game Gear and SG-1000 cartridges. Button 1 commits a turn once per press; button 2 toggles a 120-accepted-tick deadline. Each has its own input, deadline and visible-output evidence. The deadline restarts after an action; action takes precedence over expiry within the sampled iteration. A polling flag loses missed time, so this is not an unrestricted wall-clock countdown.
+
+The Sega palette and display setup remain machine-specific. Shared turn operations do not touch hardware; each complete caller supplies startup, input and the display interface. Neither a shared Z80 nor a passing Master System record qualifies the Game Gear or SG-1000.
+
+Track the complete 30-machine target in [the sample coverage inventory](https://github.com/code198x/code-samples/blob/9b867450b26605b283bea2f0d124b326d366a4fd/docs/probe-coverage.md) and its machine-readable companion. Nine machine configurations currently have retained execution evidence; 21 remain planned. The membership checker compares every machine/crate pair with the emulator registry and rejects unsupported qualification claims. These counts do not imply parity of tested features. Catalogue systems beyond this registry are future targets as runnable paths become available.
