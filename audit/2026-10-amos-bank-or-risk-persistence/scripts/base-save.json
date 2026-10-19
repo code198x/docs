@@ -1,0 +1,20 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/base-save-request.state"
+  },
+  {
+    "action": "type_string",
+    "text": "base.amos\n",
+    "hold_frames": 3,
+    "settle_frames": 360
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/base-saved.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/base-saved.state"
+  }
+]

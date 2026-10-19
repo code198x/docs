@@ -31,7 +31,8 @@ syntax-checked and executed in AMOS, not compiled with the separate AMOS compile
 The [palette audit](../../../../audit/2026-10-amos-bank-or-risk-palette/REPORT.md)
 retains the explicit black/white title, active, bank, bust and success checks.
 It repeats the perfect and recovery cases; the broader rules/input and
-save/reopen checks below belong to the earlier pre-palette source.
+original save/reopen checks below belong to the earlier pre-palette source.
+The endpoint persistence record below covers the current presentation and sound.
 
 The [drawing audit](../../../../audit/2026-10-amos-bank-or-risk-die/REPORT.md)
 checks the two drawing fragments and all six game faces, clearing/reset, bank,
@@ -47,6 +48,12 @@ checks native tone parameters, bank/bust/success counts, silent controls and
 named input windows. All nine audible/muted perfect-run states agree byte for
 byte. Success replaces the last bank cue. Human listening acceptance remains
 pending; the sound record retains raw clips and a short listening preview.
+
+The [endpoint persistence audit](../../../../audit/2026-10-amos-bank-or-risk-persistence/REPORT.md)
+repeats native Save As, disk export and independent cold-boot Load for the current
+sound-enabled source. Its maintained random game rolls and banks four, then
+returns to the editor. A separately saved fixed-roll copy compares the same
+nine game states and bank/bank/success cues before and after saving.
 
 The [probe manifest](native-probes.json) binds the current source and five
 fixed-roll copies by SHA-256. The generator changes the die supplier to
@@ -87,8 +94,7 @@ owner play feedback on the JavaScript trial, not AMOS play approval or evidence
 of beginner understanding. Keep the agreed scale while developing the native
 [teaching direction](teaching-map.md), including progressive graphics and sound.
 
-The next checks are human listening/play feedback and refreshed native
-save/reopen for the presentation endpoint, alongside remaining teaching
+The next checks are human listening/play feedback and remaining teaching
 checkpoints. Check each addition in AMOS; do not treat the text prototype's execution as qualification of future lesson sources.
 A later uncoached beginner trial remains pending.
 

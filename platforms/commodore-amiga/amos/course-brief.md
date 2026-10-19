@@ -163,7 +163,8 @@ source location, concrete rules and acceptance cases. Check one roll, limit
 boundaries, banking, session score, ending, replay and exit in the named original
 runtime. The [prototype record](../games/bank-or-risk/prototype.md) now establishes
 those checks on a named Emu198x configuration, including native save and independent
-cold-boot reopen. Later presentation and teaching sources need their own checks.
+cold-boot reopen. The current sound-enabled presentation endpoint also has its
+own save/reopen record. Earlier teaching checkpoints still need their own checks.
 
 The accepted browser playtest establishes the intended scale and tuning for the
 first game. It does not qualify AMOS execution or establish learner outcomes.

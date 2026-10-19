@@ -1,0 +1,41 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/perfect-reopened-final.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "A",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-reopened-replay.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 3
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-reopened-editor.png"
+  }
+]
