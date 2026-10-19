@@ -1,0 +1,94 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/bank-five-start.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/bank.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/bank-zero.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/bank-zero.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/bank-roll.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/bank-roll.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/bank-result.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/bank-result.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "press_key",
+    "key": "X",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/bank-stable.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/bank-stable.state"
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

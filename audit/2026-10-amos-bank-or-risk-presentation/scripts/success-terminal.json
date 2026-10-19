@@ -1,0 +1,68 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/success-result-3.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/success-terminal.wav"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "press_key",
+    "key": "X",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/success-invalid.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/success-invalid.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/success-ignored-roll.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/success-ignored-roll.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/success-ignored-space.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/success-ignored-space.state"
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

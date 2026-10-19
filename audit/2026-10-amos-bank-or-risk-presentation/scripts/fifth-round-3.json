@@ -1,0 +1,58 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/fifth-result-2.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fifth-active-3.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/fifth-active-3.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fifth-result-3.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/fifth-result-3.state"
+  }
+]

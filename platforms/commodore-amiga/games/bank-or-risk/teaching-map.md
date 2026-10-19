@@ -1,6 +1,6 @@
 # Bank or risk teaching map
 
-**Opening and session checkpoints now have complete sources; presentation integration and replacement lessons remain pending.**
+**Opening, session and presentation checkpoints now have complete sources; authored replacement lessons remain pending.**
 The [native text prototype](prototype.md) has rules, input and persistence
 evidence on a named Emu198x setup. The [drawing audit](../../../../audit/2026-10-amos-bank-or-risk-die/REPORT.md)
 checks the fixed picture and supplied faces 1–6. The
@@ -14,9 +14,10 @@ checks the message/edit/save, colour variation, roll, total, comparisons and
 input route through one round. The
 [session record](../../../../audit/2026-10-amos-bank-or-risk-session/REPORT.md)
 checks the next-round, score, completed-count, ending and replay sources.
-Joining that route to the maintained board/sound endpoint still requires an
-explained counter conversion and native checks. Native presentation work may expose
-behaviour that changes their boundaries. The [game brief](brief.md) owns the rules; this map explains
+The [presentation record](../../../../audit/2026-10-amos-bank-or-risk-presentation/REPORT.md)
+checks the continuous route into a shared display, grouped board, event cues
+and ready screen. It adapts the old current-round display to the completed
+counter, preserving the session loops. The [game brief](brief.md) owns the rules; this map explains
 how we could teach them without importing an unexplained game framework.
 The user agreed that drawing, colour and sound should develop through the game.
 The initial text prototype checked the proposed rules; the current presentation
@@ -29,7 +30,7 @@ edits or checkpoint boundaries; they do not require adding more game mechanics.
 Show the complete game's purpose early: bank points towards 30, or risk another
 roll while staying at or below 10. Five rounds give us a limited opportunity to
 reach the target. Use native demonstrations only for the checked prototype and drawing fragments;
-the presentation join and later variations need their own execution evidence. The
+later variations need their own execution evidence. The
 first exercises below are runnable fragments of that game, not finished games.
 
 ## From a message to one round
@@ -43,7 +44,11 @@ now supplies the earlier steps through one round with exact edits and answers.
 The [session guide](https://github.com/code198x/code-samples/tree/amos-bank-or-risk-prototype/commodore-amiga/amos/bank-or-risk/stages/session)
 supplies the later scoring, completed-count, ending and replay steps. It
 separates a supplied lifetime trace, input extraction and continuation before
-live scoring. The final presentation join remains development work.
+live scoring. The [presentation guide](https://github.com/code198x/code-samples/tree/amos-bank-or-risk-prototype/commodore-amiga/amos/bank-or-risk/stages/presentation)
+continues with separate display extraction, board, bank/bust/success cues and
+ready-screen steps. It keeps completed rounds throughout. The older For-based
+prototype and top-level cue sources are alternative implementations, not an
+unexplained next step in this route.
 Split a row further if its implementation needs another unfamiliar idea. Keep a complete source for each checkpoint in code-samples, with exact
 editing instructions and expected output in the lesson.
 
