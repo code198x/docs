@@ -1,0 +1,23 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/work-save-request.state"
+  },
+  {
+    "action": "type_string",
+    "text": "bank.amos\n",
+    "settle_frames": 300
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/work-saved.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/work-saved.state"
+  },
+  {
+    "action": "query",
+    "path": "disk.writable"
+  }
+]

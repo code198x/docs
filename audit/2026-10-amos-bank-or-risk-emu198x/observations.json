@@ -1,0 +1,81 @@
+{
+  "method": "Manual inspection of unedited native frame captures; source/probe supplier identity separately checked. Script success alone is not an outcome assertion.",
+  "checks": {
+    "perfect-success": {
+      "screens": [
+        "perfect-01-R.png",
+        "perfect-02-R.png",
+        "perfect-03-Space.png",
+        "perfect-08-R.png"
+      ],
+      "observed": "First held R gives total 4, next held R secures exactly 10 once; next held Space starts round 2 at zero. Three perfect rounds reach secured 30 in round 3."
+    },
+    "preserve-and-recover": {
+      "screens": [
+        "recover-02-X.png",
+        "recover-04-B.png",
+        "recover-07-R.png",
+        "recover-10-B.png",
+        "recover-13-R.png",
+        "recover-16-R.png"
+      ],
+      "observed": "B and X before the first roll leave state unchanged; contributions 4, 0, 6, 10, 10 produce secured totals 4, 4, 10, 20, 30. Bust total 11 awards zero and preserves 4. Success occurs on round 5."
+    },
+    "range-and-limit": {
+      "screens": [
+        "range-01-R.png",
+        "range-02-R.png",
+        "range-03-R.png",
+        "range-04-R.png"
+      ],
+      "observed": "Prescribed rolls 1, 6, 2, 1 show totals 1, 7, 9 and 10. Exact 10 secures 10."
+    },
+    "unreachable": {
+      "screens": [
+        "fail-08-R.png"
+      ],
+      "observed": "Three busts at 12 secure zero; the target is declared out of reach in round 3."
+    },
+    "replay-and-held-input": {
+      "screens": [
+        "ending-stable.png",
+        "replay-reset.png",
+        "replay-first-roll.png",
+        "held-bank.png",
+        "held-continue.png"
+      ],
+      "observed": "A held for 90 frames resets the challenge; a held R produces the first prescribed roll 4 once. A held B banks 4 once while the result waits. A held Space starts the next round at zero; the previous action does not become another roll."
+    },
+    "random-game": {
+      "screens": [
+        "prefixed-00-Space.png",
+        "prefixed-02-X.png",
+        "prefixed-03-R.png"
+      ],
+      "observed": "The ordinary random source starts at score/total zero, ignores B and X at zero, and the held R produces one roll (observed 6)."
+    },
+    "save-and-reopen": {
+      "screens": [
+        "work-saved.png",
+        "reopened-title.png",
+        "reopened-bank.png",
+        "reopened-editor.png"
+      ],
+      "observed": "Save As produces bank.amos (3728 bytes); exported disk passes filesystem verification and contains the native file. A new cold boot from that export loads bank.amos through native Load, runs it, rolls and banks 6, then returns to the editor. Snapshots only bridge bounded phases of the independent boot, not the original edited session."
+    },
+    "quit-phases": {
+      "screens": [
+        "quit-title.png",
+        "quit-active.png",
+        "quit-between.png",
+        "quit-final.png"
+      ],
+      "observed": "Q then Return returns to the editor from title, active play, between rounds and a final result. Captures allow 120 frames for the editor transition."
+    }
+  },
+  "pending": [
+    "Palette/readability improvement",
+    "Original die artwork and event sound stages",
+    "Uncoached beginner trial"
+  ]
+}

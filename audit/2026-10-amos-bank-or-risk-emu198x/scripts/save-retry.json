@@ -1,0 +1,40 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/saved.state"
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${AMOS}",
+    "writable": true
+  },
+  {
+    "action": "run_frames",
+    "frames": 100
+  },
+  {
+    "action": "press_keys",
+    "keys": [
+      "lamiga",
+      "v"
+    ]
+  },
+  {
+    "action": "run_frames",
+    "frames": 250
+  },
+  {
+    "action": "query",
+    "path": "disk"
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/save-retry.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/save-retry.state"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/boot.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 1000
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/boot-2000.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/boot-2000.state"
+  },
+  {
+    "action": "query",
+    "path": "cpu.pc"
+  }
+]

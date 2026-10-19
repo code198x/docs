@@ -1,0 +1,36 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/merge-request.state"
+  },
+  {
+    "action": "type_string",
+    "text": "DF0:bank.asc\n",
+    "hold_frames": 3,
+    "settle_frames": 200
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/listing.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/listing.state"
+  },
+  {
+    "action": "press_key",
+    "key": "f1"
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/first-run.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/first-run.state"
+  }
+]

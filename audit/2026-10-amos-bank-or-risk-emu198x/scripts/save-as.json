@@ -1,0 +1,41 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/prefixed-final.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${RUN}/prefixed.adf",
+    "writable": true
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "press_keys",
+    "keys": [
+      "ramiga",
+      "lshift",
+      "s"
+    ]
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/save-as.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/save-as.state"
+  }
+]

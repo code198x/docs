@@ -1,0 +1,1 @@
+{"observations":[{"kind":"type_string","chars_typed":10,"reached":391656764},{"kind":"query","result":{"path":"disk.writable","value":true}}],"time":391656764,"boot_detected":true,"boot_reason":"display-active","query_values":[]}

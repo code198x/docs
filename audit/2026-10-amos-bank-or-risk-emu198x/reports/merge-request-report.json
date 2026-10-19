@@ -1,0 +1,1 @@
+{"observations":[{"kind":"run_frames","frames":100,"reached":302276876,"stop_reason":"ReachedTarget"},{"kind":"press_keys","keys":["ramiga","lshift","m"],"hold_frames":3,"reached":302843468},{"kind":"run_frames","frames":60,"reached":311342348,"stop_reason":"ReachedTarget"}],"time":311342348,"boot_detected":true,"boot_reason":"display-active","query_values":[]}

@@ -1,11 +1,12 @@
 # Bank or risk AMOS opening game
 
-**Status: browser playtest accepted at 10/5/30; native source prepared,
-execution pending.** The [prototype record](prototype.md) identifies the source,
-prepared probes and native-access blocker. Build a solo dice game around the choice to keep a total or
-risk another roll. The risk increases as the total approaches a visible limit.
+**Status: browser playtest accepted at 10/5/30; native rules, input and
+save/reopen checked on the recorded Emu198x configuration.** The
+[prototype record](prototype.md) identifies source, probes and execution evidence.
+Build a solo dice game around the choice to keep a total or risk another roll. The risk increases as the total approaches a visible limit.
 It is the proposed first game in the [AMOS course](../../amos/course-brief.md).
-No native execution or replacement lessons are established by this brief.
+The prototype record distinguishes native execution from pending presentation
+stages and replacement lessons.
 
 ## Experience and first scope
 
