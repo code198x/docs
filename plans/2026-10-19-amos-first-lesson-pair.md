@@ -29,3 +29,16 @@ Worktrees: `/private/tmp/198x-amos-first-lessons-docs` and
 `output/bank-or-risk-playtest/first-lessons/` under the umbrella. Reuse the
 fixed headless binary at source `6ff929f366e8762d5d5b9dadf53367b2cc692821`;
 no builds, dependencies, public website changes or active-app manipulation.
+
+## Outcome
+
+The draft pair and native audit are complete. Actual typed entry, one-line edit,
+syntax failure/repair and independent native Save/Load passed on the fixed source
+revision. The saved `welcome.amos` is 108 bytes; its printed text matches before
+save and after cold Load, while the old invitation fails the comparison.
+
+Source excerpts, local links, evidence hashes and prose checks pass. A local
+CommonMark preview is structurally checked; browser review remains pending
+because the in-app browser was unavailable. Public setup, host keyboard mapping,
+modified-disk export, availability of the fixed build and an uncoached learner
+trial remain release gates. No public website or executable lesson source changed.

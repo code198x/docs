@@ -1,0 +1,10 @@
+{"jsonrpc":"2.0","id":1,"result":{"content":[{"text":"null","type":"text"}]}}
+{"jsonrpc":"2.0","id":2,"result":{"content":[{"text":"{\"kind\":\"press_keys\",\"keys\":[\"control\",\"q\"],\"hold_frames\":3,\"reached\":441375212}","type":"text"}]}}
+{"jsonrpc":"2.0","id":3,"result":{"content":[{"text":"{\"kind\":\"type_string\",\"chars_typed\":20,\"reached\":459789452}","type":"text"}]}}
+{"jsonrpc":"2.0","id":4,"result":{"content":[{"text":"{\"kind\":\"press_key\",\"key\":\"f2\",\"hold_frames\":3,\"reached\":460356044}","type":"text"}]}}
+{"jsonrpc":"2.0","id":5,"result":{"content":[{"text":"{\"kind\":\"run_frames\",\"frames\":30,\"reached\":464605484,\"stop_reason\":\"ReachedTarget\"}","type":"text"}]}}
+{"jsonrpc":"2.0","id":6,"result":{"content":[{"text":"null","type":"text"}]}}
+{"jsonrpc":"2.0","id":7,"result":{"content":[{"text":"{\"kind\":\"press_key\",\"key\":\"f1\",\"hold_frames\":3,\"reached\":465172076}","type":"text"}]}}
+{"jsonrpc":"2.0","id":8,"result":{"content":[{"text":"{\"kind\":\"run_frames\",\"frames\":60,\"reached\":473670956,\"stop_reason\":\"ReachedTarget\"}","type":"text"}]}}
+{"jsonrpc":"2.0","id":9,"result":{"content":[{"text":"null","type":"text"}]}}
+{"jsonrpc":"2.0","id":10,"result":{"content":[{"text":"null","type":"text"}]}}

@@ -1,6 +1,10 @@
 # Bank or risk teaching map
 
-**Opening, session and presentation checkpoints now have complete sources; authored replacement lessons remain pending.**
+**Complete source checkpoints exist; the first lesson pair is drafted for review, not published.**
+The [first two lesson drafts](lesson-drafts/README.md) cover typing and editing
+a message, then saving and independently reopening it. Their review notes keep
+host setup/export qualification and an uncoached learner trial separate from
+native execution. Later replacement lessons remain unauthored.
 The [native text prototype](prototype.md) has rules, input and persistence
 evidence on a named Emu198x setup. The [drawing audit](../../../../audit/2026-10-amos-bank-or-risk-die/REPORT.md)
 checks the fixed picture and supplied faces 1–6. The
