@@ -16,6 +16,7 @@ verification and how to add activities after the first learner observations.
 | Guide | Responsibility |
 |---|---|
 | [Curriculum design](specifications/curriculum.md) | Shared subjects, progression, independent entry and checks for understanding |
+| [Pattern Library](specifications/pattern-library.md) | Low-level routines, reusable techniques, progression, implementation evidence and discovery |
 | [Recurring progressions](specifications/recurring-progressions.md) | Eight connected learning threads, existing-game placements, gaps and implementation priorities |
 | [Data, memory and tools](specifications/experiments/data-memory-tools.md) | Asset representations, small converters, validation, storage and runtime costs |
 | [Whole-game studies](specifications/game-studies.md) | Play, design, inspirations, culture, production and reception; people, institutions and Vault follow-through |

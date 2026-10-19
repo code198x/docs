@@ -153,3 +153,7 @@ A useful link explains why to follow it: “The Foundations unit on binary numbe
 Lessons guide building; shared subjects develop concepts; the Vault gives fuller context; patterns make techniques reusable. Link in both directions where useful. Do not duplicate canonical explanations or turn the lesson into a list of compulsory excursions.
 
 Connect the people, creative practices and circumstances behind an idea where they illuminate the activity. Explain relevant collaboration, cultural exchange, access and recognition with evidence. A sound, rule, image or historical question can provide a useful entry point; do not require prior coding to follow every connection. Related reading is optional depth, and a lesson must still work without taking every excursion.
+
+## Pattern Library breadth and progression
+
+The [Pattern Library](pattern-library.md) covers low-level operations as well as larger reusable techniques: keyboard and joystick/controller reading, basic sound and graphics, timing, data and memory work, progressing to more complex behaviours and systems. Readers can look up a small job independently or follow useful onward steps. Game studies are one source of examples, not an admission requirement. Preserve direct machine/language routes while prototyping shared technique identities with linked implementations; the detailed schema and navigation remain for review. The Craft teaches intent and judgement, the library supplies adaptable mechanics, and system tracks put them to work in games. Current delivery priorities are unchanged.
