@@ -1,0 +1,85 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/work-editor.state"
+  },
+  {
+    "action": "press_keys",
+    "keys": [
+      "ramiga",
+      "lshift",
+      "m"
+    ],
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${RUN}/fixtures.adf"
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "type_string",
+    "text": "DF0:fail.asc\n",
+    "hold_frames": 3,
+    "settle_frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${RUN}/amos-work.adf",
+    "writable": true
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "press_key",
+    "key": "f2",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fail-syntax.png"
+  },
+  {
+    "action": "press_key",
+    "key": "f1",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 300
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fail-title.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/fail-title.state"
+  }
+]

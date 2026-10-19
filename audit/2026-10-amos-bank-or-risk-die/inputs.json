@@ -1,0 +1,38 @@
+{
+  "emulator_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+  "emulator_version": "0.34.2",
+  "model": "a1200",
+  "profile": "PAL A1200, stock 2 MiB chip RAM, no fast RAM",
+  "software": "AMOS Professional 2.00, version observed in the booted editor",
+  "comparison_limit": "Local AMOS system ADF; byte identity is recorded, not asserted equal to the earlier official-repository installation.",
+  "inputs": {
+    "kickstart.rom": {
+      "bytes": 524288,
+      "sha256": "6d43840d4099a74170ea0f0425b6257c3891ebcaa39c4d1840075a9ab22b5707"
+    },
+    "amos-system.adf": {
+      "bytes": 901120,
+      "sha256": "7ffbfb5ed5c28869e323a2bff9a591ce519727be2e0dd66972a86ebfe7bcbfdc"
+    },
+    "source": {
+      "bytes": 3953,
+      "sha256": "3747aef856e2960c3be429918a7dcb0a2f0db3a4b89332fb20cc4b6c4699751a"
+    },
+    "amos-work.adf": {
+      "bytes": 901120,
+      "sha256": "a94209144ba094d121a6c2420ab189a4ef5ed59d3cd2a1caa3361cc8c218177c"
+    },
+    "fixtures.adf": {
+      "bytes": 901120,
+      "sha256": "e51957a6c8120ddac183bd8ade3ce975d974e3c966e6e95d5705519b2a49f4a0"
+    }
+  },
+  "build198x_revision": "f7016398deb1fff9dc1efb6713dfab8c7bacf2d0",
+  "baseline_sample_revision": "e4f86e0f55ed360c1e74fd4ca8f8ce51eeb07419",
+  "source_change": "Add a drawing call and a routine reading BR_LASTROLL; existing game logic unchanged.",
+  "stages": {
+    "match-die.amos": "c92d7875504819023bea77f90e6b1c739a71327596783f7ae8e6b1dfe9b6610c",
+    "fixed-die.amos": "6f718f701d53123db5383caf93e5e0085788bfb5c05f53d8ea1890c989880770"
+  },
+  "sample_revision": "b3998ba18646ac4f318fe311e25c43004285f917"
+}

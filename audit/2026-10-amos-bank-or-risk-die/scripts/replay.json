@@ -1,0 +1,19 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/perfect-final.state"
+  },
+  {
+    "action": "press_key",
+    "key": "A",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/replay-ready.png"
+  }
+]

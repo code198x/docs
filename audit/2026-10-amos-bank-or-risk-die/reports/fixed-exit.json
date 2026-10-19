@@ -1,0 +1,32 @@
+{
+  "observations": [
+    {
+      "kind": "press_key",
+      "key": "Space",
+      "hold_frames": 3,
+      "reached": 394348076
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 396047852,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "Return",
+      "hold_frames": 3,
+      "reached": 396614444
+    },
+    {
+      "kind": "run_frames",
+      "frames": 120,
+      "reached": 413612204,
+      "stop_reason": "ReachedTarget"
+    }
+  ],
+  "time": 413612204,
+  "boot_detected": true,
+  "boot_reason": "display-active",
+  "query_values": []
+}
