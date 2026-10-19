@@ -1,0 +1,83 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/styled-board-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-random-roll.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-random-roll.state"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-random-bank.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-random-bank.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-random-next.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-random-next.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-random-editor.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-random-editor.state"
+  }
+]

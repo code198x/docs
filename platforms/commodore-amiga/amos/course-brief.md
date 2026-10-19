@@ -177,7 +177,10 @@ stages. Those extend the game after the original core has been explained. The
 [arcade record](../../../audit/2026-10-amos-bank-or-risk-arcade/REPORT.md) adds
 separate colour, layout and slowing-die stages, preserving those rules. The user
 played the rescue endpoint and reported that it works well; the new presentation
-still needs their review.
+still needs their review. The [complete-frame record](../../../audit/2026-10-amos-bank-or-risk-complete-frames/REPORT.md)
+then fixes a reproduced visible redraw, introduces ROM graphical text and
+adds distinctive title/score lettering. Those game checks pass; native
+save/reopen for the larger source remains blocked by Emu198x #1877.
 Authored replacement lessons and an uncoached learner trial remain pending.
 
 The accepted browser playtest establishes the intended scale and tuning for the

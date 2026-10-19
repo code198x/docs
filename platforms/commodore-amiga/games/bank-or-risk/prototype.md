@@ -1,10 +1,15 @@
 # Bank or risk native prototype status
 
-The current teaching endpoint is `stages/arcade/rolling-die.amos` in
+The current teaching endpoint is `stages/arcade/styled-board.amos` in
 code-samples. The [score-chase record](../../../../audit/2026-10-amos-bank-or-risk-replay-value/REPORT.md)
 checks all five rounds, in-program best, five awards, one rescue and feedback.
 The [arcade record](../../../../audit/2026-10-amos-bank-or-risk-arcade/REPORT.md)
-checks the following palette, layout and animated-roll stages.
+checks the following palette, layout and animated-roll stages. The
+[complete-frame record](../../../../audit/2026-10-amos-bank-or-risk-complete-frames/REPORT.md)
+checks the visible-redraw fix, ROM text and custom title/score lettering. Game
+checks pass; native save/reopen for that larger endpoint is blocked by the
+reported media-change/save failure in Emu198x #1877. Earlier persistence evidence
+does not qualify this endpoint.
 The earlier prototype and presentation sources below retain their early endings
 and their own evidence; the [current brief](brief.md) owns the extended rules.
 The user played the rescue endpoint and reported that it works well, then

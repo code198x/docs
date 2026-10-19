@@ -1,0 +1,51 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/finish-cold-editor.state"
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${RUN}/finish-settled.save.adf"
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "press_keys",
+    "keys": [
+      "ramiga",
+      "l"
+    ],
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "type_string",
+    "text": "DF0:finish.amos\n",
+    "hold_frames": 3,
+    "settle_frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 360
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/finish-reopened-listing.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/finish-reopened-listing.state"
+  }
+]

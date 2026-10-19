@@ -1,0 +1,637 @@
+{
+  "source_hashes": {
+    "stable-display.amos": "d540a483d722b4961f1abd70838d04d77c72f3e3596e78f63a011825414f9111",
+    "rom-text.amos": "014ef31d7fecfd13e4b7e269e4b2a53e3f156821aa17fd4c960ec6a740c4680b",
+    "styled-board.amos": "ca4621a510913529223277ce41fb40e5b8e0d507ecaae4c2f8626a32b89f4fdf"
+  },
+  "restored_original": true,
+  "game_rules_identical": true,
+  "sound_identical": true,
+  "required_capture_hashes": {
+    "work-editor.png": "186f4822e2980225377e4720fdabaa753ccf2b85eb09ac64185a61be857bba06",
+    "stable-display-imported.png": "8a0e743aad0b83cc040b7b8876f4b504d81254b74f364a58b8269296ef4d55f6",
+    "stable-display-syntax.png": "732fd46d2b7c6b92f0829315b0b66f80284fcecc3e2f2a84bdab5df45935ab47",
+    "stable-display-start.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "stable-five-imported.png": "99945480253828cf50302feddcf5477a1cd482599703eb58e5d645fa69f7c99e",
+    "stable-five-syntax.png": "a23b78608133f4cb94df5613f471d65dac018c724ec4a49bb76eecfc7b8a0a7e",
+    "stable-five-start.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "stable-six-imported.png": "e51b445435c98f923144af09429c0758702abada6013252f933e8290daef1a17",
+    "stable-six-syntax.png": "da910632eeeeb066179ea2b52609b1740d6ad91484d4b2f19561ee47ecb07097",
+    "stable-six-start.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "rom-font-imported.png": "b0a5f39d2b880cb2dbde41c800005203094dd92add52bca1c086821077b92413",
+    "rom-font-syntax.png": "7a0682aac85ea267506aad157f1132bcb90cc63a51239cbd9ed848c0f65d705e",
+    "rom-font-start.png": "fcfbc77a298c87e528ede0288b34e805c1be3822657a665415f55e84b5f1a1a7",
+    "rom-text-imported.png": "ce1520f564c70ee8914900bef01393c4ad6f70fa8ca54ad6c936555510ee02a1",
+    "rom-text-syntax.png": "77abf64a4a176ce5f7e71db1919d5792def0d56f7cb88141ddc77b857a655545",
+    "rom-text-start.png": "b7c35e303d64ac1c79cef0a92b8a71275a821764db8d6b1692758d0b3180fcf4",
+    "styled-board-imported.png": "937b2fa3b7850355479685daa32af7fc6270d05cb79ababacaddda1704a73b50",
+    "styled-board-syntax.png": "80a91d499e68ef2aa8026a0c6b33d4ac247d1a8f6ee5804002ed60c7361978d3",
+    "styled-board-start.png": "b37bc78d9e60e4666fa64c0e2d0b238233a37cd299186f91ca256be2c7b71e85",
+    "styled-five-imported.png": "29032af53cec5f54478c2daf3c99232a93e5b58392a43d6685f7621233133d7e",
+    "styled-five-syntax.png": "f125296b9cd32dfe6f706a4af153d41c3ae053055c49c9126108f99cc92e7318",
+    "styled-five-start.png": "b37bc78d9e60e4666fa64c0e2d0b238233a37cd299186f91ca256be2c7b71e85",
+    "styled-six-imported.png": "fd764dac1b321d375bea5a629080265477e1dea55a227627ae7ba8db3a6de706",
+    "styled-six-syntax.png": "c2f27ad770d7fc169346ee4e4e52f73700c8ad258bee822148ff3178c6c31106",
+    "styled-six-start.png": "b37bc78d9e60e4666fa64c0e2d0b238233a37cd299186f91ca256be2c7b71e85",
+    "styled-static-imported.png": "62ef3ef17f91576ab8d5c8aff050c41ad5f4442ada15b1f6567784c033fdd059",
+    "styled-static-syntax.png": "a2da08904eced73d68feea85a05814184a87e36bfb15a0d7945161c85ac2392d",
+    "styled-static-start.png": "b37bc78d9e60e4666fa64c0e2d0b238233a37cd299186f91ca256be2c7b71e85",
+    "rom-font-ready.png": "df1b7f9c342516b414a7be3a1a45125b4176594072e8776e3c7f1cb663b26d34",
+    "rom-active.png": "4d01cf64af1e9782f54f3a2c53aa2ffcd183200f851728eeb7d5f476c4a54f97",
+    "rom-roll.png": "d979eca3d77484de1c4d455ff1d57882b8e36edfc0363e1ceabd59e45ce436d0",
+    "rom-bank.png": "77fd1dde9d4279341a348f95b21c13318ebd423daaf66a38e11f66f42a4bb8a3",
+    "rom-exit.png": "e1db66c63a70ea321fd8b1223215f439492516c31be0439db98952e20fb37012",
+    "stable-active.png": "4d01cf64af1e9782f54f3a2c53aa2ffcd183200f851728eeb7d5f476c4a54f97",
+    "stable-motion-02.png": "d5ab719f88b371c636d3c2c364396b4a446522b0f9d34fa58e857213cee9ec05",
+    "stable-motion-04.png": "dac828403929079bdc1d83bb1ff6eadd423abe8e4693aa6833217302bfb83757",
+    "stable-motion-06.png": "dac828403929079bdc1d83bb1ff6eadd423abe8e4693aa6833217302bfb83757",
+    "stable-motion-09.png": "8588a194fd885f053105c1f2e3ada720592cdfc3d548aa4ac5371db8db7035fb",
+    "stable-motion-12.png": "8588a194fd885f053105c1f2e3ada720592cdfc3d548aa4ac5371db8db7035fb",
+    "stable-motion-16.png": "2da933da606351f5320f26dcf311fcebb52e2d4af3776ed70564f1e9b08e9ca3",
+    "stable-motion-22.png": "ee8e7fb8183d13733f8e2559d826aee198644b3b4ef541900b4359b698feb9af",
+    "stable-motion-30.png": "b145201f39572d4b9612057af4582f5fc23e244fce8a77a494a8d6e287e4681c",
+    "stable-roll-1.png": "b145201f39572d4b9612057af4582f5fc23e244fce8a77a494a8d6e287e4681c",
+    "stable-result-1.png": "3620f0d92b97e9546c36ac019b2a531c869084a0148fe7f3aec7420590b005d8",
+    "stable-active-2.png": "d94be5f0126741389a68dd0a1eade79fe0fee3d5a4aeb826383e81ad7dd63a5a",
+    "stable-roll-2.png": "ffbf33d20463994d3934ff6b78c616e6c67b886cef067732fa8d1e1510f37a50",
+    "stable-result-2.png": "0c46a6f36ec91dbbc7589f49e3ad3eb72454f25e7992dbaf8cc33fd084f289aa",
+    "stable-active-3.png": "daba96fbb6017ed2d521b7bcbcb9758a6ce4694aa1ef46ac31387d87b70fbd5e",
+    "stable-roll-3.png": "ed289b5d3616d40713ea544814e10e54d25edbb807c251e0aa2d49ff5d768146",
+    "stable-result-3.png": "f685fc01985bc0260c087dab3944eaa5ebafbffa07e0628b329a92bb9fde53ba",
+    "stable-active-4.png": "0094d8c150bcbeeef2d394b2e0e7200dcb0473b4827c91a3824df483f50188f9",
+    "stable-roll-4.png": "adda44851dff47bc46d09671b3d5a534fdce6cd134a6038aa00daa422270f4a0",
+    "stable-result-4.png": "9ff708305855e3340a6632a763605c7b2fa153af7338acffcc05c306a25c47f3",
+    "stable-active-5.png": "341d8e53b2f6eeaf761e2f51400c7ca42741948df8b951461242c3608793be90",
+    "stable-roll-5.png": "096aa012cc33fad59b8868a0563ae4f822f3bd231911fd0bbb4f92b45edbf158",
+    "stable-result-5.png": "14545b9c2e8401b465baa33bdb91625cad39bacea00203b8f006991e60b38526",
+    "stable-stable.png": "14545b9c2e8401b465baa33bdb91625cad39bacea00203b8f006991e60b38526",
+    "stable-reset.png": "46b25e08540a8aa26b043bad7f8f1cdc4b37dc24096cbd7f1aa2090a1e23e870",
+    "stable-reset-wait.png": "46b25e08540a8aa26b043bad7f8f1cdc4b37dc24096cbd7f1aa2090a1e23e870",
+    "stable-new-bank.png": "8fe585ff89fba6b7252a8cc90ff56e7ac9afb9806bd7dd0d25e6e6a02fe2c2f2",
+    "styled-active.png": "99ce4f9585735bf975b67024a81791c68c04ffdbf3a6abfa2dcb0c762e352e70",
+    "styled-motion-02.png": "b185a779d99a7d4d9b630812c31118bf5f3c1f3ccf16b8c4b64dff6958ee9712",
+    "styled-motion-04.png": "45ec9a74121483c0da3fdbe3aa16dc60882144a6588d7994d3f662451ce6c41f",
+    "styled-motion-06.png": "45ec9a74121483c0da3fdbe3aa16dc60882144a6588d7994d3f662451ce6c41f",
+    "styled-motion-09.png": "f53023f7b7b77291a32c7fe1ec85d062736912122b51dc282ad681117a9e5557",
+    "styled-motion-12.png": "f53023f7b7b77291a32c7fe1ec85d062736912122b51dc282ad681117a9e5557",
+    "styled-motion-16.png": "1fb47cb9c11f88686844bb0862cb38ab84cd9af44b301becd3eefe669bb2460a",
+    "styled-motion-22.png": "5895ed944374bbac547e4bf30f4cd151c3b0e720defeb117f6cc803eb57b3eed",
+    "styled-motion-30.png": "5895ed944374bbac547e4bf30f4cd151c3b0e720defeb117f6cc803eb57b3eed",
+    "styled-roll-1.png": "f5a74d6cfc572766f83cab61c34dc034c3e02b4f0bb42539ad06722303ead0d0",
+    "styled-result-1.png": "e817ff57a5fdc07bd781e9c33d41b0afddec6f48db6170baffbbaa845146f1bc",
+    "styled-active-2.png": "ff8faa971c5519007ed70cb9c5369041028e542273ca9cc110b6bf013d726860",
+    "styled-roll-2.png": "45673500d32c1dc75c41bb17c7a369f46d2e6ec9ae9f12b9213f972e5045eadd",
+    "styled-result-2.png": "078de237b5e4eafa68e3b1159ce3dba67366e643075f9bd56f4cba93e27fea3d",
+    "styled-active-3.png": "3949c1b8757b9d6aa8311de491cf8dccdf83229bd0e00472e01bded51d8ab0a6",
+    "styled-roll-3.png": "43666387cd78f3ed4a7e7c1294c1268f33d015d0214bab4376638b6318a03469",
+    "styled-result-3.png": "d1092048ea705668c53c2aed7857c64680e80c0b75e3b81d0f2dd1d239f0cbae",
+    "styled-active-4.png": "645edbb6c607441a48b5c3afd37c8bc76dc3361e1d34837cbda298d44c16b2af",
+    "styled-roll-4.png": "38aa29275b04597e7264be9553194dee2d23881a824df2364ce6ad9905628091",
+    "styled-result-4.png": "c7d1c2a4bccdda3b2cea69f156fbdbcc7aeb15ae78b3ce4625f9d9af8e01ee78",
+    "styled-active-5.png": "61319414c8a99cbf112d404d6cbb4a8ca08b248f8a0b91d7a5788c5a9ddd2852",
+    "styled-roll-5.png": "45259fa90889a28f3e7e62fd48f3621d5bb2f4799a51fdb614b0f4245b0f5ef1",
+    "styled-result-5.png": "cdcf1f1ab5f889788b1d4bacbd55e4eb70040f7a484ebd2b7b8089441c852d90",
+    "styled-stable.png": "cdcf1f1ab5f889788b1d4bacbd55e4eb70040f7a484ebd2b7b8089441c852d90",
+    "styled-reset.png": "ba071e4545d2cc7d184ddcb920d86399042d37b975a08a7f2dce62878bb39ebe",
+    "styled-reset-wait.png": "ba071e4545d2cc7d184ddcb920d86399042d37b975a08a7f2dce62878bb39ebe",
+    "styled-new-bank.png": "b87f1cb98b424b4db17634d5656fb3e380eaf6e8f26a1e5d449d12ae82fea2f8",
+    "static-active.png": "99ce4f9585735bf975b67024a81791c68c04ffdbf3a6abfa2dcb0c762e352e70",
+    "static-roll-1.png": "f5a74d6cfc572766f83cab61c34dc034c3e02b4f0bb42539ad06722303ead0d0",
+    "static-result-1.png": "e817ff57a5fdc07bd781e9c33d41b0afddec6f48db6170baffbbaa845146f1bc",
+    "static-active-2.png": "ff8faa971c5519007ed70cb9c5369041028e542273ca9cc110b6bf013d726860",
+    "static-roll-2.png": "45673500d32c1dc75c41bb17c7a369f46d2e6ec9ae9f12b9213f972e5045eadd",
+    "static-result-2.png": "078de237b5e4eafa68e3b1159ce3dba67366e643075f9bd56f4cba93e27fea3d",
+    "static-active-3.png": "3949c1b8757b9d6aa8311de491cf8dccdf83229bd0e00472e01bded51d8ab0a6",
+    "static-roll-3.png": "43666387cd78f3ed4a7e7c1294c1268f33d015d0214bab4376638b6318a03469",
+    "static-result-3.png": "d1092048ea705668c53c2aed7857c64680e80c0b75e3b81d0f2dd1d239f0cbae",
+    "static-active-4.png": "645edbb6c607441a48b5c3afd37c8bc76dc3361e1d34837cbda298d44c16b2af",
+    "static-roll-4.png": "38aa29275b04597e7264be9553194dee2d23881a824df2364ce6ad9905628091",
+    "static-result-4.png": "c7d1c2a4bccdda3b2cea69f156fbdbcc7aeb15ae78b3ce4625f9d9af8e01ee78",
+    "static-active-5.png": "61319414c8a99cbf112d404d6cbb4a8ca08b248f8a0b91d7a5788c5a9ddd2852",
+    "static-roll-5.png": "45259fa90889a28f3e7e62fd48f3621d5bb2f4799a51fdb614b0f4245b0f5ef1",
+    "static-result-5.png": "cdcf1f1ab5f889788b1d4bacbd55e4eb70040f7a484ebd2b7b8089441c852d90",
+    "static-stable.png": "cdcf1f1ab5f889788b1d4bacbd55e4eb70040f7a484ebd2b7b8089441c852d90",
+    "styled-risk-active.png": "99ce4f9585735bf975b67024a81791c68c04ffdbf3a6abfa2dcb0c762e352e70",
+    "styled-risk-pending.png": "a5e2ce3648e4013a09d57ecbc55f1a12f7ef82c3f92aa64c7eb58a05000a4753",
+    "styled-risk-pending-stable.png": "a5e2ce3648e4013a09d57ecbc55f1a12f7ef82c3f92aa64c7eb58a05000a4753",
+    "styled-risk-restored.png": "c6f3af488365864016ce32d446258a44e19615771f4ea551ce55642e0ff82757",
+    "styled-risk-restored-stable.png": "c6f3af488365864016ce32d446258a44e19615771f4ea551ce55642e0ff82757",
+    "styled-risk-bank.png": "25895ffb60636554f47b7bda7e1a60b6f38f4ababf59ca378c028ed7184ca972",
+    "styled-risk-spent-bust.png": "c82f8d6f556f3c9fdeab1c8a1f1dd36183a6cd7ae63d634ed9b4e7e10e305be5",
+    "styled-risk-accepted.png": "c76f18647bacb59f5f0a46c59e16fb0b8201e56bfb7cd36b7539d63a5830fb12",
+    "styled-busy-bank-ignored.png": "f5a74d6cfc572766f83cab61c34dc034c3e02b4f0bb42539ad06722303ead0d0",
+    "styled-motion-editor.png": "7be83fe06f68c85110d7ad17d9d1abee9db21a409bcad168e98c8e38d592913f",
+    "styled-title-editor.png": "4977e2e0f209dd2a54dac79dbeb759a2e115165c28ef52bccf16b279f0609e0d",
+    "styled-active-editor.png": "5a10846ad15b6b16d2bf1fed59e39bf865c23bdc45eac7846f8efd34d3f5cc9e",
+    "styled-pending-editor.png": "f5c729214be26f0465d4c18a8af375bfbbc046f6995afc10d5d6640a72e6d651",
+    "styled-between-editor.png": "06ed41845098e2dd2adf0c85a445d2185921b0289be676635328a39fa40e1604",
+    "styled-ending-editor.png": "34aa0db529cfef9817020be54433378140b297d56671d943227bc24de447fc77",
+    "styled-random-roll.png": "68ddaa2bf3b5bdb7828ce736aa034d56e295946b81824ab6fd89b14e17063b66",
+    "styled-random-bank.png": "7bed9d9a6b447432c4f058657a344d5ae6980a78242c6419e7b29a2d50d76771",
+    "styled-random-next.png": "aaf36f7e5ea57c2695c5c305873c9548b07aa7950a28a64e017b1c3e53464bc8",
+    "styled-random-editor.png": "82feb034893ab4c32fe03247cd541fa7edb4b72086689fc663fa005ad01228b6",
+    "finish-syntax.png": "3f6ff71fdd06a534341720bc3b70a537f33ee60c3ad70486e7045ba400fadd47",
+    "finish-save-request.png": "9417318a0bf8cf265f2f009fa64d56499a6f3839efa37122bfa859a6936f7cae",
+    "finish-saved.png": "5320f7e343c082e289919b0dca648399787e2bf31a2d59b29ba569dce207d0be",
+    "finish-settled.png": "5320f7e343c082e289919b0dca648399787e2bf31a2d59b29ba569dce207d0be",
+    "finish-confirmed.png": "376d29cd3df7455a461b67a31796db6fcc1578bff57d726ac2ee4f7a6b797a1b",
+    "finish-waited.png": "376d29cd3df7455a461b67a31796db6fcc1578bff57d726ac2ee4f7a6b797a1b",
+    "finish-cold-editor.png": "186f4822e2980225377e4720fdabaa753ccf2b85eb09ac64185a61be857bba06",
+    "finish-reopened-listing.png": "921bcbfa6dbf678d7116c5baaad53457c266d5ad793a3c75739b50a90e505d18",
+    "finish-reopened-syntax.png": "921bcbfa6dbf678d7116c5baaad53457c266d5ad793a3c75739b50a90e505d18",
+    "finish-reopened-title.png": "921bcbfa6dbf678d7116c5baaad53457c266d5ad793a3c75739b50a90e505d18",
+    "reopened-active.png": "921bcbfa6dbf678d7116c5baaad53457c266d5ad793a3c75739b50a90e505d18",
+    "reopened-roll.png": "921bcbfa6dbf678d7116c5baaad53457c266d5ad793a3c75739b50a90e505d18",
+    "reopened-bank.png": "921bcbfa6dbf678d7116c5baaad53457c266d5ad793a3c75739b50a90e505d18",
+    "reopened-next.png": "921bcbfa6dbf678d7116c5baaad53457c266d5ad793a3c75739b50a90e505d18",
+    "reopened-editor.png": "921bcbfa6dbf678d7116c5baaad53457c266d5ad793a3c75739b50a90e505d18"
+  },
+  "game_captures": {
+    "styled-active": "99ce4f9585735bf975b67024a81791c68c04ffdbf3a6abfa2dcb0c762e352e70",
+    "styled-stable": "cdcf1f1ab5f889788b1d4bacbd55e4eb70040f7a484ebd2b7b8089441c852d90",
+    "styled-reset": "ba071e4545d2cc7d184ddcb920d86399042d37b975a08a7f2dce62878bb39ebe",
+    "styled-reset-wait": "ba071e4545d2cc7d184ddcb920d86399042d37b975a08a7f2dce62878bb39ebe",
+    "styled-risk-pending": "a5e2ce3648e4013a09d57ecbc55f1a12f7ef82c3f92aa64c7eb58a05000a4753",
+    "styled-risk-pending-stable": "a5e2ce3648e4013a09d57ecbc55f1a12f7ef82c3f92aa64c7eb58a05000a4753",
+    "styled-risk-restored": "c6f3af488365864016ce32d446258a44e19615771f4ea551ce55642e0ff82757",
+    "styled-risk-restored-stable": "c6f3af488365864016ce32d446258a44e19615771f4ea551ce55642e0ff82757",
+    "styled-risk-spent-bust": "c82f8d6f556f3c9fdeab1c8a1f1dd36183a6cd7ae63d634ed9b4e7e10e305be5",
+    "styled-risk-accepted": "c76f18647bacb59f5f0a46c59e16fb0b8201e56bfb7cd36b7539d63a5830fb12",
+    "rom-active": "4d01cf64af1e9782f54f3a2c53aa2ffcd183200f851728eeb7d5f476c4a54f97",
+    "rom-roll": "d979eca3d77484de1c4d455ff1d57882b8e36edfc0363e1ceabd59e45ce436d0",
+    "rom-bank": "77fd1dde9d4279341a348f95b21c13318ebd423daaf66a38e11f66f42a4bb8a3",
+    "styled-roll-1": "f5a74d6cfc572766f83cab61c34dc034c3e02b4f0bb42539ad06722303ead0d0",
+    "styled-result-1": "e817ff57a5fdc07bd781e9c33d41b0afddec6f48db6170baffbbaa845146f1bc",
+    "styled-roll-2": "45673500d32c1dc75c41bb17c7a369f46d2e6ec9ae9f12b9213f972e5045eadd",
+    "styled-result-2": "078de237b5e4eafa68e3b1159ce3dba67366e643075f9bd56f4cba93e27fea3d",
+    "styled-roll-3": "43666387cd78f3ed4a7e7c1294c1268f33d015d0214bab4376638b6318a03469",
+    "styled-result-3": "d1092048ea705668c53c2aed7857c64680e80c0b75e3b81d0f2dd1d239f0cbae",
+    "styled-roll-4": "38aa29275b04597e7264be9553194dee2d23881a824df2364ce6ad9905628091",
+    "styled-result-4": "c7d1c2a4bccdda3b2cea69f156fbdbcc7aeb15ae78b3ce4625f9d9af8e01ee78",
+    "styled-roll-5": "45259fa90889a28f3e7e62fd48f3621d5bb2f4799a51fdb614b0f4245b0f5ef1",
+    "styled-result-5": "cdcf1f1ab5f889788b1d4bacbd55e4eb70040f7a484ebd2b7b8089441c852d90"
+  },
+  "stable_picture_pairs": [
+    [
+      "stable-active.png",
+      "live-active.png"
+    ],
+    [
+      "stable-roll-1.png",
+      "live-roll-1.png"
+    ],
+    [
+      "stable-result-1.png",
+      "live-result-1.png"
+    ],
+    [
+      "stable-roll-2.png",
+      "live-roll-2.png"
+    ],
+    [
+      "stable-result-2.png",
+      "live-result-2.png"
+    ],
+    [
+      "stable-roll-3.png",
+      "live-roll-3.png"
+    ],
+    [
+      "stable-result-3.png",
+      "live-result-3.png"
+    ],
+    [
+      "stable-roll-4.png",
+      "live-roll-4.png"
+    ],
+    [
+      "stable-result-4.png",
+      "live-result-4.png"
+    ],
+    [
+      "stable-roll-5.png",
+      "live-roll-5.png"
+    ],
+    [
+      "stable-result-5.png",
+      "live-result-5.png"
+    ],
+    [
+      "stable-stable.png",
+      "live-stable.png"
+    ],
+    [
+      "stable-reset.png",
+      "live-reset.png"
+    ],
+    [
+      "stable-reset-wait.png",
+      "live-reset-wait.png"
+    ]
+  ],
+  "styled_static_pairs": [
+    [
+      "styled-active.png",
+      "static-active.png"
+    ],
+    [
+      "styled-stable.png",
+      "static-stable.png"
+    ],
+    [
+      "styled-roll-1.png",
+      "static-roll-1.png"
+    ],
+    [
+      "styled-result-1.png",
+      "static-result-1.png"
+    ],
+    [
+      "styled-roll-2.png",
+      "static-roll-2.png"
+    ],
+    [
+      "styled-result-2.png",
+      "static-result-2.png"
+    ],
+    [
+      "styled-roll-3.png",
+      "static-roll-3.png"
+    ],
+    [
+      "styled-result-3.png",
+      "static-result-3.png"
+    ],
+    [
+      "styled-roll-4.png",
+      "static-roll-4.png"
+    ],
+    [
+      "styled-result-4.png",
+      "static-result-4.png"
+    ],
+    [
+      "styled-roll-5.png",
+      "static-roll-5.png"
+    ],
+    [
+      "styled-result-5.png",
+      "static-result-5.png"
+    ]
+  ],
+  "audio": {
+    "stable-reveal.wav": {
+      "rate": 48000,
+      "frames": 61341,
+      "duration_s": 1.2779375,
+      "peak_pcm": 0,
+      "channel_peaks_pcm": [
+        0,
+        0
+      ],
+      "clipped_samples": 0,
+      "bursts": []
+    },
+    "stable-round-1.wav": {
+      "rate": 48000,
+      "frames": 253992,
+      "duration_s": 5.2915,
+      "peak_pcm": 12703,
+      "channel_peaks_pcm": [
+        12703,
+        12356
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 3.195,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3072968921177
+        }
+      ]
+    },
+    "stable-round-2.wav": {
+      "rate": 48000,
+      "frames": 296163,
+      "duration_s": 6.1700625,
+      "peak_pcm": 12729,
+      "channel_peaks_pcm": [
+        12729,
+        12369
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 4.07,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3111423152177
+        }
+      ]
+    },
+    "stable-round-3.wav": {
+      "rate": 48000,
+      "frames": 296164,
+      "duration_s": 6.170083333333333,
+      "peak_pcm": 12641,
+      "channel_peaks_pcm": [
+        12641,
+        12263
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 4.07,
+          "duration_s": 0.185,
+          "pitch_hz": 1050.611411301752
+        }
+      ]
+    },
+    "stable-round-4.wav": {
+      "rate": 48000,
+      "frames": 296164,
+      "duration_s": 6.170083333333333,
+      "peak_pcm": 12679,
+      "channel_peaks_pcm": [
+        12679,
+        12331
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 4.07,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3142668457184
+        }
+      ]
+    },
+    "stable-round-5.wav": {
+      "rate": 48000,
+      "frames": 296164,
+      "duration_s": 6.170083333333333,
+      "peak_pcm": 12731,
+      "channel_peaks_pcm": [
+        12731,
+        12376
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 4.07,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3075839824902
+        }
+      ]
+    },
+    "static-round-1.wav": {
+      "rate": 48000,
+      "frames": 349838,
+      "duration_s": 7.288291666666667,
+      "peak_pcm": 12794,
+      "channel_peaks_pcm": [
+        12794,
+        12442
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 3.655,
+          "duration_s": 0.18,
+          "pitch_hz": 525.30835597919
+        }
+      ]
+    },
+    "static-round-2.wav": {
+      "rate": 48000,
+      "frames": 439932,
+      "duration_s": 9.16525,
+      "peak_pcm": 12788,
+      "channel_peaks_pcm": [
+        12788,
+        12453
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 5.53,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3108394537315
+        }
+      ]
+    },
+    "static-round-3.wav": {
+      "rate": 48000,
+      "frames": 439932,
+      "duration_s": 9.16525,
+      "peak_pcm": 12603,
+      "channel_peaks_pcm": [
+        12603,
+        12246
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 5.53,
+          "duration_s": 0.185,
+          "pitch_hz": 1050.6253013383837
+        }
+      ]
+    },
+    "static-round-4.wav": {
+      "rate": 48000,
+      "frames": 439932,
+      "duration_s": 9.16525,
+      "peak_pcm": 12752,
+      "channel_peaks_pcm": [
+        12752,
+        12392
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 5.53,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3080090606153
+        }
+      ]
+    },
+    "static-round-5.wav": {
+      "rate": 48000,
+      "frames": 439933,
+      "duration_s": 9.165270833333333,
+      "peak_pcm": 12788,
+      "channel_peaks_pcm": [
+        12788,
+        12451
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 5.53,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3101314928325
+        }
+      ]
+    },
+    "styled-accept.wav": {
+      "rate": 48000,
+      "frames": 259742,
+      "duration_s": 5.411291666666667,
+      "peak_pcm": 13083,
+      "channel_peaks_pcm": [
+        13080,
+        13083
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 0.04,
+          "duration_s": 0.185,
+          "pitch_hz": 131.32527622088284
+        }
+      ]
+    },
+    "styled-pending-invalid.wav": {
+      "rate": 48000,
+      "frames": 520443,
+      "duration_s": 10.8425625,
+      "peak_pcm": 0,
+      "channel_peaks_pcm": [
+        0,
+        0
+      ],
+      "clipped_samples": 0,
+      "bursts": []
+    },
+    "styled-reveal.wav": {
+      "rate": 48000,
+      "frames": 176357,
+      "duration_s": 3.6741041666666665,
+      "peak_pcm": 0,
+      "channel_peaks_pcm": [
+        0,
+        0
+      ],
+      "clipped_samples": 0,
+      "bursts": []
+    },
+    "styled-round-1.wav": {
+      "rate": 48000,
+      "frames": 349837,
+      "duration_s": 7.288270833333334,
+      "peak_pcm": 12728,
+      "channel_peaks_pcm": [
+        12728,
+        12371
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 4.19,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3104552995155
+        }
+      ]
+    },
+    "styled-round-2.wav": {
+      "rate": 48000,
+      "frames": 439932,
+      "duration_s": 9.16525,
+      "peak_pcm": 12729,
+      "channel_peaks_pcm": [
+        12729,
+        12377
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 6.07,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3133141886848
+        }
+      ]
+    },
+    "styled-round-3.wav": {
+      "rate": 48000,
+      "frames": 439933,
+      "duration_s": 9.165270833333333,
+      "peak_pcm": 12618,
+      "channel_peaks_pcm": [
+        12618,
+        12237
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 6.07,
+          "duration_s": 0.185,
+          "pitch_hz": 1050.6156542737617
+        }
+      ]
+    },
+    "styled-round-4.wav": {
+      "rate": 48000,
+      "frames": 439933,
+      "duration_s": 9.165270833333333,
+      "peak_pcm": 12703,
+      "channel_peaks_pcm": [
+        12703,
+        12358
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 6.07,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3078622174434
+        }
+      ]
+    },
+    "styled-round-5.wav": {
+      "rate": 48000,
+      "frames": 439932,
+      "duration_s": 9.16525,
+      "peak_pcm": 12727,
+      "channel_peaks_pcm": [
+        12727,
+        12372
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 6.07,
+          "duration_s": 0.185,
+          "pitch_hz": 525.3107670547024
+        }
+      ]
+    },
+    "styled-spent-bust.wav": {
+      "rate": 48000,
+      "frames": 356546,
+      "duration_s": 7.428041666666667,
+      "peak_pcm": 13354,
+      "channel_peaks_pcm": [
+        13354,
+        12978
+      ],
+      "clipped_samples": 0,
+      "bursts": [
+        {
+          "start_s": 4.33,
+          "duration_s": 0.185,
+          "pitch_hz": 131.32594833401814
+        }
+      ]
+    }
+  },
+  "rebuilt_disks": {
+    "amos-work.adf": "f5052c16b47b33dedc51ffb15c2467a5b566377c5060c9826897b10bec36c6f5",
+    "complete.adf": "9981cabcf30733155436fd0d180612a78b2035d0d10c192c2d766dce830af818",
+    "styled.adf": "6243d0f734eb7afcfc886a0c51e3c634029a20a4fe6f0c2cbf9c108530f9f12c",
+    "style-tests.adf": "7e0bc6e756fea6388e39a9cadcf7d0034c9bae737a523a90c26046e28741eccc",
+    "save-data.adf": "a98b12c7527cc087f65ac886fa63eff61cd5e9600641b645a08ad5dc297cd71e"
+  },
+  "native_storage_verified": false,
+  "status": "game_verified_storage_blocked",
+  "storage_failure": "build198x-adf: corrupt ADF: unknown secondary type\n",
+  "runtime_error_overlay_rejected": true
+}

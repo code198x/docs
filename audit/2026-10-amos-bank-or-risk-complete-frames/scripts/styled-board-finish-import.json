@@ -1,0 +1,18 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/styled-board-listing.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 500
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-board-imported.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-board-listing.state"
+  }
+]

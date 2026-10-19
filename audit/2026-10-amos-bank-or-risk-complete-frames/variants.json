@@ -1,0 +1,33 @@
+{
+  "styled-five": {
+    "sha256": "83f3077dda565f5b93a0caca46b6bd7bec59529a438fca395ccfbcaa2371b09e",
+    "source": "styled-board.amos",
+    "face": 5,
+    "static": false
+  },
+  "styled-six": {
+    "sha256": "1d662283f6b56450c55921c96b7283e426ccc87107e5f341f31a590dd93d2352",
+    "source": "styled-board.amos",
+    "face": 6,
+    "static": false
+  },
+  "stable-six": {
+    "sha256": "c0895bc84aa5a8e196e1d66e896f75624786f4bc8bdc51733857c841d047f04e",
+    "source": "stable-display.amos",
+    "face": 6
+  },
+  "rom-font": {
+    "sha256": "2d160c8fdeb612ca87db7cb7abad17f540d899b4a5b29c0475514de9fe1e6dd7"
+  },
+  "stable-five": {
+    "sha256": "a3d54418231e35369ec69af13f29524b4dfd2a95435f2be0e03635774236a98a",
+    "source": "stable-display.amos",
+    "face": 5
+  },
+  "styled-static": {
+    "sha256": "68c7a9720032df75a8a5882fdb88ba0badcb33e0e295bc375cb33f025e927b04",
+    "source": "styled-board.amos",
+    "face": 5,
+    "static": true
+  }
+}

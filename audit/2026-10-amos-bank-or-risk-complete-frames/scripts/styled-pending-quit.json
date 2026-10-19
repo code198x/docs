@@ -1,0 +1,23 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/styled-risk-pending.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-pending-editor.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-pending-editor.state"
+  }
+]

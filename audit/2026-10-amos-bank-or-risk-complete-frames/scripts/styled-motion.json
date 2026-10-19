@@ -1,0 +1,129 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/styled-active.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 1
+  },
+  {
+    "action": "start_video_recording",
+    "path": "${RUN}/styled-roll.mp4"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/styled-reveal.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 2
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-motion-02.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-motion-02.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 2
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-motion-04.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-motion-04.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 2
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-motion-06.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-motion-06.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 3
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-motion-09.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-motion-09.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 3
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-motion-12.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-motion-12.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 4
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-motion-16.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-motion-16.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 6
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-motion-22.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-motion-22.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 8
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-motion-30.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-motion-30.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 150
+  },
+  {
+    "action": "stop_audio_recording"
+  },
+  {
+    "action": "stop_video_recording"
+  }
+]
