@@ -6,7 +6,7 @@ A pattern is a concrete technique a reader can adapt to their own project. It ex
 
 The Pattern Library supplies concrete techniques readers can adapt. It covers the small routines needed to get a machine doing something as well as the larger structures that grow from them: reading a key, sampling a joystick, making a sound, drawing a sprite, organising a game loop, and handling more complex behaviour and presentation. A technique does not need to originate in a game study or be an advanced design pattern.
 
-The owner approved this scope and the direction of one conceptual technique linked to distinct implementations on 19 October 2026. Implementation and navigation details still need a bounded prototype and review. Preserve current machine entry points and published URLs; a new conceptual identity must not hide the hardware-specific work. No bulk rewrite or exhaustive porting matrix is commissioned.
+The owner approved this scope and the direction of one conceptual technique linked to distinct implementations on 19 October 2026. Implementation and navigation details still need a bounded prototype and review. Preserve current machine entry points and published URLs; a new conceptual identity must not hide the hardware-specific work. The approved probe expansion covers all 30 machines in the current Emu198x registry, with eventual coverage of every system in the catalogue. This commissions incremental, separately qualified probes, not every routine on every machine or a bulk library rewrite. A probe does not establish a complete curriculum track.
 
 ## What belongs here
 
@@ -27,7 +27,7 @@ Compare plausible alternatives. Distinguish measured costs from estimates and av
 
 Entries live under the website's `src/content/patterns/`. Published routes follow `/patterns/{system}/{track}/{category}/{slug}/`, with cross-platform entries under `/patterns/cross-platform/{category}/{slug}/`.
 
-The current schema requires `title`, `summary`, `platform`, `category` and `difficulty`. Platforms accepted by the loop expansion are `commodore-64`, `sinclair-zx-spectrum`, `commodore-amiga`, `nintendo-nes`, `bbc-micro`, `acorn-electron` and `cross-platform`. Categories are `rendering`, `input`, `audio`, `physics`, `ai` and `framework`; difficulty is `beginner`, `intermediate` or `advanced`.
+The current schema requires `title`, `summary`, `platform`, `category` and `difficulty`. Platforms accepted by the loop expansion are `commodore-64`, `sinclair-zx-spectrum`, `commodore-amiga`, `nintendo-nes`, `bbc-micro`, `acorn-electron`, `sega-master-system`, `sega-game-gear`, `sega-sg-1000` and `cross-platform`. Categories are `rendering`, `input`, `audio`, `physics`, `ai` and `framework`; difficulty is `beginner`, `intermediate` or `advanced`.
 
 `taught_in` is an optional string, tags default to an empty array, and optional `evolution` and `related` objects carry neighbouring patterns and Vault links. Check `src/content.config.ts` and current route helpers before authoring these fields. Extending the curriculum to another system may require a deliberate schema change; the current enum does not define the project's ultimate scope.
 
@@ -87,3 +87,17 @@ The [accepted study-theme direction](../plans/2026-10-19-study-themes-and-librar
 A machine can gain a qualified reusable technique before it has a full curriculum track. Pattern discovery uses actual entries to avoid empty machine facets; a new pattern does not change the system’s curriculum readiness tier. Keep the machine identity explicit and retain the direct machine/language routes.
 
 The [game-loop comparison and qualification notes](../guides/game-loops.md) explain the first slice: four core implementations, a MOS-facing BBC Micro caller, and separate Electron execution of the shared source. Keep code, contracts and records together. A passing example establishes the named workload and startup route, not every facility of its emulator.
+
+
+## Progression, clocks and presentation
+
+Treat these as separate choices that readers can combine:
+
+- **Progression:** an accepted command, a completed turn, a simulation step or an event changes the game state.
+- **Time:** an optional clock measures elapsed time, schedules an event or imposes a deadline. Turn-based games may have timed turns; real-time presentation can accompany an untimed decision.
+- **Input:** a blocking command reader, a polled state, a new-press event or buffered input determines when an action is accepted.
+- **Presentation:** redraw after a change, animate independently or synchronise display work with a safe hardware boundary.
+
+Do not force a frame wait into an untimed input/output game. Equally, do not describe turn-based games as inherently timer-free. Show how a deadline can cause a turn transition, how an action restarts or preserves that deadline, and how display/audio servicing continues while waiting where needed. State the ordering when an action and expiry coincide.
+
+Probe coverage is incremental. Track every registry machine explicitly, retaining its machine-to-crate join. Separate planned, built, executed and qualified records; retain source, tool and configuration identities and a failing control for each claimed behaviour. Shared CPU or display ancestry does not replace separate execution. Broader catalogue machines remain future targets until a runnable path exists.

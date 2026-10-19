@@ -54,7 +54,7 @@ Independent historical and cultural value is legitimate; a subject need not supp
 - **The Craft** develops game design, behavioural intent and practical game-making judgement in a language-neutral way. It can use runnable programs and inspectable real code; the explanation must remain approachable without prior knowledge of the demonstration language.
 - **System tracks** implement those ideas in concrete languages, tools and hardware.
 - **The Vault** supplies encyclopaedic historical, cultural and technical context.
-- **The Pattern Library** supplies concrete techniques readers can adapt, with their assumptions and trade-offs.
+- **The Pattern Library** supplies concrete techniques readers can adapt, with their assumptions and trade-offs. Reusable probes expand incrementally across all 30 currently registered Emu198x machines, with eventual coverage of every catalogue system. This does not commission complete tracks or change the four core delivery priorities. Separate turn progression, optional clocks/deadlines, input acceptance and presentation so readers can combine them for their game.
 
 [Whole-game studies](specifications/game-studies.md) bring these responsibilities together through close investigation of games, their inspirations, cultural circumstances and the people and institutions around them. Their initial home is Game Studies within the Vault, with the option of becoming an independent section later.
 
