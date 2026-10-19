@@ -16,7 +16,7 @@ Except the pink ghost is already coming the other way.
 
 Look at that screen. Almost everything we need to do is already there.
 
-The little dots show the unfinished work. The blue walls show the routes. Four larger dots mark the places where we can change the terms of an encounter. We can see where the ghosts are, where a junction lies, and how much room remains between us.
+The little dots show the unfinished work: 240 ordinary dots and four power pellets. Clearing them starts another round. [2] The blue walls show the routes. Four larger dots mark the places where we can change the terms of an encounter. We can see where the ghosts are, where a junction lies, and how much room remains between us.
 
 Seeing the whole maze does not make the game easy. It makes a bad decision understandable. We can watch a route close and know why we are in trouble. A ghost may surprise us, but the corridor it enters was not hidden off-screen.
 
@@ -72,7 +72,7 @@ Those rules explain why treating every ghost as the same pursuer is a poor plan.
 
 The names and colours help us attach an expectation to each moving shape. We can start by recognising that the red one is persistent and the pink one often seems to be in the way. Understanding every calculation is not a condition of enjoying the chase.
 
-For a designer, the useful distinction is between **choosing a target** and **choosing a route**. The first decides what a ghost is trying to approach. The second decides what movement it can make next. Different targets can produce different behaviour even when the movement procedure is shared.
+We can split the job in two: **choose a target**, then **choose the next move**. The first decides what a ghost is trying to approach. The second decides what movement it can make next. Different targets can produce different behaviour even when the movement procedure is shared.
 
 ![An invented coordinate example compares a direct target, a target ahead of the player, and a target extended from another pursuer](figures/choose-a-target.svg)
 
@@ -204,7 +204,7 @@ Calling any conversion a smaller copy misses the decisions involved. A different
 
 Other home versions and maze-chase games provided their own answers. Acornsoft's *Snapper* belongs in that wider history, for example, with its own account of adaptation rather than a place in a list of supposedly identical games. [8]
 
-The useful comparison is concrete: follow an encounter, identify what changed, then ask what that change does to the player's decision. A familiar title alone does not guarantee a familiar experience.
+Follow a single chase in each version. A different turn, a harder-to-read ghost or an altered escape route tells us more than a familiar name on the box.
 
 ## Keeping the chase, changing the game
 
