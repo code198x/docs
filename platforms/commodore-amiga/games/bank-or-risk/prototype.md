@@ -3,13 +3,13 @@
 **Native rules, input and save/reopen checks pass on the recorded Emu198x setup.**
 The user accepted the browser trial's simple scope: one six-sided die, limit 10,
 at most five rounds and target 30. The silent text prototype now runs in AMOS
-Professional 2.00. Palette/readability, die graphics, sound and lesson sources
+Professional 2.00. Die graphics, sound and lesson sources
 remain to be developed and checked.
 
 ## Source and execution
 
 The source is `commodore-amiga/amos/bank-or-risk/prototype/bank-or-risk.amos` in
-[samples revision 0c55096](https://github.com/code198x/code-samples/tree/0c55096fdaa858111cf68f3690fd3dec41160793/commodore-amiga/amos/bank-or-risk/prototype).
+[samples revision e4f86e0](https://github.com/code198x/code-samples/tree/e4f86e0f55ed360c1e74fd4ca8f8ce51eeb07419/commodore-amiga/amos/bank-or-risk/prototype).
 It is ASCII for Merge ASCII. Native Save As produces a separate tokenised AMOS
 program; these two representations must not be confused.
 
@@ -22,9 +22,15 @@ FS-UAE/official-repository installation and is not a minimum hardware claim.
 
 The first native import exposed command-prefix collisions in our identifiers.
 A reduced failing program and an isolated successful naming probe establish the
-cause. Game identifiers now use `BR_`; removing that prefix reproduces the
-original source exactly. Scoring and input logic are unchanged. The source is
+cause. Game identifiers now use `BR_`. That naming correction preserved the original
+source apart from the prefixes. The later palette change adds only an explicit
+black/white palette before the title; scoring and input logic are unchanged. The source is
 syntax-checked and executed in AMOS, not compiled with the separate AMOS compiler.
+
+The [palette audit](../../../../audit/2026-10-amos-bank-or-risk-palette/REPORT.md)
+retains the explicit black/white title, active, bank, bust and success checks.
+It repeats the perfect and recovery cases; the broader rules/input and
+save/reopen checks below belong to the earlier pre-palette source.
 
 The [probe manifest](native-probes.json) binds the corrected source and four
 fixed-roll copies by SHA-256. The generator changes the die supplier to
@@ -65,8 +71,8 @@ owner play feedback on the JavaScript trial, not AMOS play approval or evidence
 of beginner understanding. Keep the agreed scale while developing the native
 [teaching direction](teaching-map.md), including progressive graphics and sound.
 
-The next source task is a readable, explicit palette, followed by the explained
-die and board stages and short event cues. Check each addition in AMOS; do not
+The next source tasks are the explained die and board stages and short event
+cues. Check each addition in AMOS; do not
 treat the text prototype's execution as qualification of future lesson sources.
 A later uncoached beginner trial remains pending.
 
