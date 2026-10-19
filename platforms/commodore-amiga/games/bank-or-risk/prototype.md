@@ -94,8 +94,13 @@ owner play feedback on the JavaScript trial, not AMOS play approval or evidence
 of beginner understanding. Keep the agreed scale while developing the native
 [teaching direction](teaching-map.md), including progressive graphics and sound.
 
-The next checks are human listening/play feedback and remaining teaching
-checkpoints. Check each addition in AMOS; do not treat the text prototype's execution as qualification of future lesson sources.
+The [opening audit](../../../../audit/2026-10-amos-bank-or-risk-opening/REPORT.md)
+checks ten earlier sources through one playable round, including native saving
+of the edited message, a real syntax fault/repair and held-key experiments.
+Those source checks do not establish how beginners learn from them. The next
+teaching work is the separate session route: keeping secured points, awarding
+once, counting rounds, success/impossibility and replay. Human listening/play
+feedback also remains pending. Check each addition in AMOS; do not treat the text prototype's execution as qualification of future lesson sources.
 A later uncoached beginner trial remains pending.
 
 The [original Maths chapter](https://amospromanual.dev/05-03-maths.html#rnd)

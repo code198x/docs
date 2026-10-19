@@ -1,0 +1,19 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/one-roll-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/one-roll-result.png"
+  }
+]

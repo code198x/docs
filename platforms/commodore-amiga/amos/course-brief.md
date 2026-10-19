@@ -164,7 +164,8 @@ boundaries, banking, session score, ending, replay and exit in the named origina
 runtime. The [prototype record](../games/bank-or-risk/prototype.md) now establishes
 those checks on a named Emu198x configuration, including native save and independent
 cold-boot reopen. The current sound-enabled presentation endpoint also has its
-own save/reopen record. Earlier teaching checkpoints still need their own checks.
+own save/reopen record. The opening record now checks the earlier message-to-one-round sources.
+The later session teaching steps still need their own sources and checks.
 
 The accepted browser playtest establishes the intended scale and tuning for the
 first game. It does not qualify AMOS execution or establish learner outcomes.

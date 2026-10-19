@@ -1,0 +1,35 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/message-start.state"
+  },
+  {
+    "action": "press_keys",
+    "keys": [
+      "control",
+      "c"
+    ],
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/message-interrupted.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/message-interrupt-editor.png"
+  }
+]

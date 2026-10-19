@@ -1,0 +1,19 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/roll-one-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/roll-one-result.png"
+  }
+]

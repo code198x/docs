@@ -1,0 +1,19 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/one-choice-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/choice-R.png"
+  }
+]
