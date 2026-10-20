@@ -36,3 +36,5 @@ Keep actual reusable code in code-samples and include it on the website with Cod
 Verify the named machine/mode/toolchain independently: compare appropriate destination memory and visible output, preserve neighbours/guards, cover boundaries and deliberate faulty controls. Existing reset fixtures or pattern readbacks do not prove stock-OS loading, live-display timing or another machine's port. State what was built, executed or remains proposed.
 
 Explain code size, scratch/asset/table memory, bytes/words/VRAM transactions and scaling of work. Measure representative aligned/unaligned, small/large and worst-case workloads before claiming speed or a frame budget. Keep the maths locally understandable; link existing Maths for Games explanations where useful and record missing explanations rather than pretending they exist.
+
+For this explanation-only slice, verify worked calculations, diagrams and links against the named routine contracts. The shared machine-execution bar applies when a routine changes; link unchanged code’s existing evidence rather than inventing fresh machine results for prose edits.
