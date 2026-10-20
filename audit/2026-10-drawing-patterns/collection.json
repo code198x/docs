@@ -1,0 +1,24 @@
+{
+  "queries": [
+    "gh issue list --repo code198x/docs --state all --limit 3000 --json number,title,body,state,url,labels",
+    "same query for code-samples and website; all counts below limit",
+    "docs#117 body, comments and sub-issues",
+    "samples#133 and website#871 exact draft heads/state"
+  ],
+  "counts": {
+    "docs_issues": 10,
+    "samples_issues": 7,
+    "website_issues": 282
+  },
+  "source_search": {
+    "samples_text_files": 1892,
+    "samples_candidates": 860,
+    "website_curriculum_pattern_text_files": 755,
+    "website_candidates": 681,
+    "method": "candidate text search followed by source/page inspection; comments and filenames do not establish capability; case/keyword hits are not accepted without reading the implementation"
+  },
+  "revisions": {
+    "code-samples": "8555ae938d09db9e22c26deabfb355341904ff9c",
+    "website": "0441deeb55c76ad6f0ea61cc722e753c7cb7b300"
+  }
+}

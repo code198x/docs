@@ -1,0 +1,1206 @@
+{
+  "date": "2026-10-20",
+  "scope": "30-system registry at the pinned samples revision; source inspection, not fresh emulator execution",
+  "revisions": {
+    "code-samples": "8555ae938d09db9e22c26deabfb355341904ff9c",
+    "website": "0441deeb55c76ad6f0ea61cc722e753c7cb7b300"
+  },
+  "pending_revisions": {
+    "code-samples": "15f3b795e75e88c505bf47b020c3aa6555414643",
+    "website": "cf5ef651166ec993a4feb5bc65c5153d307ff4b5"
+  },
+  "legend": {
+    "R": "maintained reusable pattern with recorded execution for named configuration",
+    "A": "address helper only, not a pixel operation",
+    "L": "lesson/game/runtime example; extraction or new contract needed",
+    "S": "asset/pattern upload or display setup inside a caller",
+    "P": "probe demonstrates only its stated picture or text output",
+    "D": "executed draft region/character work in PR133/871; unmerged",
+    "I": "illustrative listing",
+    "G": "no complete reusable family found in inspected source; not a hardware impossibility"
+  },
+  "systems": [
+    {
+      "machine_id": "acorn-atom",
+      "folder": "acorn-atom",
+      "evidence": [
+        "probe-acorn-atom",
+        "region-acorn-atom",
+        "record-acorn-atom"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "G",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "256\u00d7192 mono bitmap region",
+      "trade_off": "A scanline layout and RAM allocation are already established; add bounded read/modify/write and spans rather than treating whole-tile copying as a plotter.",
+      "next_gap": "Pixel/readback and spans; software font extraction",
+      "gap_issues": [
+        {
+          "key": "bitmap-ports",
+          "url": "https://github.com/code198x/docs/issues/127"
+        },
+        {
+          "key": "geometry",
+          "url": "https://github.com/code198x/docs/issues/124"
+        },
+        {
+          "key": "pixel-text",
+          "url": "https://github.com/code198x/docs/issues/125"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "acorn-bbc-micro",
+      "folder": "bbc-micro",
+      "evidence": [
+        "probe-acorn-bbc-micro",
+        "region-acorn-bbc-micro",
+        "record-acorn-bbc-micro",
+        "bbc-positioned"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "G",
+        "pixel_text": "G (R substrate)",
+        "text_layout_scale": "G"
+      },
+      "native_route": "MODE 4 bitmap; positioned masked objects",
+      "trade_off": "Cell-interleaved scanlines; phase tables trade RAM for less shifting; bitmap bytes and OS colour/graphics coordinates are separate contracts.",
+      "next_gap": "Pixel/readback/spans/boxes first; adapt existing masked objects into text",
+      "gap_issues": [
+        {
+          "key": "pixels",
+          "url": "https://github.com/code198x/docs/issues/122"
+        },
+        {
+          "key": "geometry",
+          "url": "https://github.com/code198x/docs/issues/124"
+        },
+        {
+          "key": "pixel-text",
+          "url": "https://github.com/code198x/docs/issues/125"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "acorn-electron",
+      "folder": "acorn-electron",
+      "evidence": [
+        "probe-acorn-electron",
+        "region-acorn-electron",
+        "record-acorn-electron"
+      ],
+      "region": "D",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "G",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "MODE 4 bitmap, draft region",
+      "trade_off": "Same cell-style layout idea as BBC, separate ULA/ownership and timing evidence; 512-byte scanline tables in the draft are a space choice.",
+      "next_gap": "Extract pixel/span backend after the first batch",
+      "gap_issues": [
+        {
+          "key": "bitmap-ports",
+          "url": "https://github.com/code198x/docs/issues/127"
+        },
+        {
+          "key": "geometry",
+          "url": "https://github.com/code198x/docs/issues/124"
+        },
+        {
+          "key": "pixel-text",
+          "url": "https://github.com/code198x/docs/issues/125"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "amstrad-cpc",
+      "folder": "amstrad-cpc",
+      "evidence": [
+        "probe-amstrad-cpc",
+        "region-amstrad-cpc",
+        "record-amstrad-cpc"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "G",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "MODE 1 packed bitmap region",
+      "trade_off": "Two bytes per eight-pixel cell; interleaved colour bits and non-linear scanlines require correct read/modify/write and neighbour preservation.",
+      "next_gap": "Packed-colour pixel/span backend; fixed-width software fonts",
+      "gap_issues": [
+        {
+          "key": "bitmap-ports",
+          "url": "https://github.com/code198x/docs/issues/127"
+        },
+        {
+          "key": "geometry",
+          "url": "https://github.com/code198x/docs/issues/124"
+        },
+        {
+          "key": "pixel-text",
+          "url": "https://github.com/code198x/docs/issues/125"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "atari-2600",
+      "folder": "atari-2600",
+      "evidence": [
+        "probe-atari-2600"
+      ],
+      "region": "G",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "G",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "TIA playfield bar and frame kernel probe",
+      "trade_off": "The selected path emits scanlines, not a writable persistent framebuffer; visible-kernel cycles and object/playfield limits dominate.",
+      "next_gap": "Native scanline/playfield drawing study and bounded text kernel",
+      "gap_issues": [
+        {
+          "key": "raster",
+          "url": "https://github.com/code198x/docs/issues/130"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "atari-5200",
+      "folder": "atari-5200",
+      "evidence": [
+        "probe-atari-5200"
+      ],
+      "region": "G",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "G",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "ANTIC mode 8 bitmap probe",
+      "trade_off": "Probe is a coarse four-colour bitmap and explicit display list, not a general graphics API; reuse ANTIC ideas with this machine\u2019s own execution.",
+      "next_gap": "Choose and verify bitmap pixel/span mode; character-mode alternative",
+      "gap_issues": [
+        {
+          "key": "bitmap-ports",
+          "url": "https://github.com/code198x/docs/issues/127"
+        },
+        {
+          "key": "geometry",
+          "url": "https://github.com/code198x/docs/issues/124"
+        },
+        {
+          "key": "pixel-text",
+          "url": "https://github.com/code198x/docs/issues/125"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "atari-7800",
+      "folder": "atari-7800",
+      "evidence": [
+        "probe-atari-7800"
+      ],
+      "region": "G",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "G",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "MARIA display-list object probe",
+      "trade_off": "Object headers, zones and DMA data layout are the demonstrated path; drawing cost includes list/bandwidth limits, not only CPU plot cost.",
+      "next_gap": "Bounded MARIA character/object composition and drawing contract",
+      "gap_issues": [
+        {
+          "key": "raster",
+          "url": "https://github.com/code198x/docs/issues/130"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "atari-800xl",
+      "folder": "atari-800xl",
+      "evidence": [
+        "probe-atari-800xl",
+        "region-atari-800xl",
+        "record-atari-800xl"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "G",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "ANTIC F monochrome bitmap region",
+      "trade_off": "Screen counter 4 KB boundary and display-list addresses must agree with CPU tables; character modes are separate alternatives.",
+      "next_gap": "Pixel/span extraction; separate writable-character mode example",
+      "gap_issues": [
+        {
+          "key": "bitmap-ports",
+          "url": "https://github.com/code198x/docs/issues/127"
+        },
+        {
+          "key": "geometry",
+          "url": "https://github.com/code198x/docs/issues/124"
+        },
+        {
+          "key": "pixel-text",
+          "url": "https://github.com/code198x/docs/issues/125"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "coleco-colecovision",
+      "folder": "coleco-colecovision",
+      "evidence": [
+        "probe-coleco-colecovision",
+        "region-coleco-colecovision",
+        "record-coleco-colecovision"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "S",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "TMS-family Graphics I pattern/name region",
+      "trade_off": "Installed patterns and grouped colour data are separate from name writes. Port wiring/latch ownership and access timing are machine-specific; Graphics II pixel work needs its own mode/bank contract.",
+      "next_gap": "Extract pattern/font uploads; then mode-specific bitmap-like editing",
+      "gap_issues": [
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "commodore-amiga",
+      "folder": "commodore-amiga",
+      "evidence": [
+        "probe-commodore-amiga",
+        "region-commodore-amiga",
+        "record-commodore-amiga",
+        "amiga-line",
+        "amiga-read-box",
+        "amiga-digits",
+        "amiga-amos-shapes",
+        "amiga-amos-lesson",
+        "amiga-blitz-shapes",
+        "amiga-amos-text"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "L",
+        "lines_spans": "R/L",
+        "rectangles": "L",
+        "curves_fills": "L runtime",
+        "grid_characters": "L",
+        "pixel_text": "L aligned/runtime",
+        "text_layout_scale": "L runtime"
+      },
+      "native_route": "CPU bitplanes; blitter copy/line; hardware/software objects",
+      "trade_off": "Planes, Chip RAM, alignment, DMA and blitter ownership matter. Byte-aligned digit drawing is not arbitrary pixel text; AMOS/Blitz already expose useful higher-level shapes.",
+      "next_gap": "Extract bounded CPU pixels/spans; retain verified line backend; software font family",
+      "gap_issues": [
+        {
+          "key": "bitmap-ports",
+          "url": "https://github.com/code198x/docs/issues/127"
+        },
+        {
+          "key": "geometry",
+          "url": "https://github.com/code198x/docs/issues/124"
+        },
+        {
+          "key": "pixel-text",
+          "url": "https://github.com/code198x/docs/issues/125"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "commodore-c64",
+      "folder": "commodore-64",
+      "evidence": [
+        "probe-commodore-c64",
+        "c64-charset"
+      ],
+      "region": "G",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "L",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "Character screen, hardware sprites; lesson charset copy",
+      "trade_off": "VIC bank and character-base alignment, CPU ROM mapping, IRQ state and 2 KB character-set allocation need explicit ownership. Bitmap is a separate path.",
+      "next_gap": "Extract custom charset/character animation; later bitmap pixels/spans",
+      "gap_issues": [
+        {
+          "key": "bitmap-ports",
+          "url": "https://github.com/code198x/docs/issues/127"
+        },
+        {
+          "key": "geometry",
+          "url": "https://github.com/code198x/docs/issues/124"
+        },
+        {
+          "key": "pixel-text",
+          "url": "https://github.com/code198x/docs/issues/125"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "commodore-pet",
+      "folder": "commodore-pet",
+      "evidence": [
+        "probe-commodore-pet",
+        "region-commodore-pet",
+        "record-commodore-pet"
+      ],
+      "region": "D",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "D",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "40-column fixed-ROM character screen, draft region",
+      "trade_off": "No per-cell colour RAM in this selected configuration. Diagnostic font replacement is a fixture input, not software-redefinable stock glyphs.",
+      "next_gap": "Installed-ROM glyph selection, text layout and honest coarse graphics",
+      "gap_issues": [
+        {
+          "key": "character-alternatives",
+          "url": "https://github.com/code198x/docs/issues/129"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "commodore-vic-20",
+      "folder": "commodore-vic-20",
+      "evidence": [
+        "probe-commodore-vic-20",
+        "region-commodore-vic-20",
+        "record-commodore-vic-20"
+      ],
+      "region": "D",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "D",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "Unexpanded PAL RAM characters, draft region",
+      "trade_off": "Writable glyphs share scarce RAM with game data/screen. One glyph change affects all instances; colour bit 3 changes pixel interpretation.",
+      "next_gap": "Standalone character install/replace first",
+      "gap_issues": [
+        {
+          "key": "glyphs",
+          "url": "https://github.com/code198x/docs/issues/123"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "dragon",
+      "folder": "dragon-32",
+      "evidence": [
+        "probe-dragon",
+        "region-dragon",
+        "record-dragon"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "G",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "PMODE 4 monochrome bitmap region",
+      "trade_off": "Linear rows simplify addresses; whole-byte spans can avoid repeated pixel operations; 6809 calling/stack and display setup remain specific.",
+      "next_gap": "Pixel/readback/spans/boxes first",
+      "gap_issues": [
+        {
+          "key": "pixels",
+          "url": "https://github.com/code198x/docs/issues/122"
+        },
+        {
+          "key": "geometry",
+          "url": "https://github.com/code198x/docs/issues/124"
+        },
+        {
+          "key": "pixel-text",
+          "url": "https://github.com/code198x/docs/issues/125"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "jupiter-ace",
+      "folder": "jupiter-ace",
+      "evidence": [
+        "probe-jupiter-ace"
+      ],
+      "region": "G",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "P",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "Forth printed cell box; byte-map CPU fixture",
+      "trade_off": "The existing box is text, not a rectangle rasteriser. A writable-character candidate needs its own display-contention and Forth/RAM ownership example.",
+      "next_gap": "Character definitions/placement and native text contracts",
+      "gap_issues": [
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "mattel-aquarius",
+      "folder": "mattel-aquarius",
+      "evidence": [
+        "probe-mattel-aquarius",
+        "region-mattel-aquarius",
+        "record-mattel-aquarius"
+      ],
+      "region": "D",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "D",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "Fixed-ROM screen/colour planes, draft region",
+      "trade_off": "Foreground/background nibbles and border tied to cell zero. Diagnostic font ROM is not a software upload facility.",
+      "next_gap": "Fixed-ROM composition/text layout and border ownership",
+      "gap_issues": [
+        {
+          "key": "character-alternatives",
+          "url": "https://github.com/code198x/docs/issues/129"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "memotech-mtx",
+      "folder": "memotech-mtx",
+      "evidence": [
+        "probe-memotech-mtx",
+        "region-memotech-mtx",
+        "record-memotech-mtx"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "S",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "TMS-family Graphics I pattern/name region",
+      "trade_off": "Installed patterns and grouped colour data are separate from name writes. Port wiring/latch ownership and access timing are machine-specific; Graphics II pixel work needs its own mode/bank contract.",
+      "next_gap": "Extract pattern/font uploads; then mode-specific bitmap-like editing",
+      "gap_issues": [
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "microsoft-msx1",
+      "folder": "msx",
+      "evidence": [
+        "probe-microsoft-msx1",
+        "region-microsoft-msx1",
+        "record-microsoft-msx1"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "S",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "TMS-family Graphics I pattern/name region",
+      "trade_off": "Installed patterns and grouped colour data are separate from name writes. Port wiring/latch ownership and access timing are machine-specific; Graphics II pixel work needs its own mode/bank contract.",
+      "next_gap": "Extract pattern/font uploads; then mode-specific bitmap-like editing",
+      "gap_issues": [
+        {
+          "key": "glyphs",
+          "url": "https://github.com/code198x/docs/issues/123"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "nintendo-game-boy",
+      "folder": "nintendo-game-boy",
+      "evidence": [
+        "probe-nintendo-game-boy",
+        "region-nintendo-game-boy",
+        "record-nintendo-game-boy"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "S",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "DMG 2bpp tiles/background map; LCD-off region",
+      "trade_off": "Pattern upload is separate from name entries; VRAM access policy and shared glyph instances matter. LCD-off room loading is not a live update queue.",
+      "next_gap": "Standalone tile install/replace first; later bounded live transfers",
+      "gap_issues": [
+        {
+          "key": "glyphs",
+          "url": "https://github.com/code198x/docs/issues/123"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "nintendo-nes",
+      "folder": "nintendo-entertainment-system",
+      "evidence": [
+        "probe-nintendo-nes",
+        "nes-assets"
+      ],
+      "region": "G",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "S",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "CHR assets, PPU nametables/OAM in NROM callers",
+      "trade_off": "Existing cartridge assets do not prove writable CHR RAM. Mapper/CHR-ROM versus CHR-RAM choice, VBlank budget and attribute granularity must be named.",
+      "next_gap": "Explicit font asset/CHR-RAM variant, then queued updates",
+      "gap_issues": [
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "oric",
+      "folder": "oric-atmos",
+      "evidence": [
+        "probe-oric",
+        "region-oric",
+        "record-oric"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "G",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "HIRES six-pixel bitmap region",
+      "trade_off": "Pixel bytes must preserve bit 6; serial attribute columns affect following pixels. Text-character RAM is a separate mode/path, not the HIRES bitmap.",
+      "next_gap": "Safe six-bit plot/read/span backend; separate character definitions",
+      "gap_issues": [
+        {
+          "key": "bitmap-ports",
+          "url": "https://github.com/code198x/docs/issues/127"
+        },
+        {
+          "key": "geometry",
+          "url": "https://github.com/code198x/docs/issues/124"
+        },
+        {
+          "key": "pixel-text",
+          "url": "https://github.com/code198x/docs/issues/125"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "sega-game-gear",
+      "folder": "sega-game-gear",
+      "evidence": [
+        "probe-sega-game-gear",
+        "region-sega-game-gear",
+        "record-sega-game-gear"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "S",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "Mode 4 pattern/name-table region with viewport crop",
+      "trade_off": "Four-plane tile encoding, palette entries, logical map versus viewport and port/latch ownership; no native per-pixel framebuffer API supplied.",
+      "next_gap": "Reusable pattern loading and safe replacement; pixel edits through tile staging",
+      "gap_issues": [
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "sega-master-system",
+      "folder": "sega-master-system",
+      "evidence": [
+        "probe-sega-master-system",
+        "region-sega-master-system",
+        "record-sega-master-system"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "S",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "Mode 4 pattern/name-table region",
+      "trade_off": "Four-plane tile data and two-byte name entries; upload size/access budget differs from changing a name entry.",
+      "next_gap": "Pattern/font install and timed replacement; descriptor-aware text",
+      "gap_issues": [
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "sega-sg-1000",
+      "folder": "sega-sg-1000",
+      "evidence": [
+        "probe-sega-sg-1000",
+        "region-sega-sg-1000",
+        "record-sega-sg-1000"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "S",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "TMS-family Graphics I pattern/name region",
+      "trade_off": "Installed patterns and grouped colour data are separate from name writes. Port wiring/latch ownership and access timing are machine-specific; Graphics II pixel work needs its own mode/bank contract.",
+      "next_gap": "Extract pattern/font uploads; then mode-specific bitmap-like editing",
+      "gap_issues": [
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "sinclair-zx-spectrum",
+      "folder": "sinclair-zx-spectrum",
+      "evidence": [
+        "probe-sinclair-zx-spectrum",
+        "spectrum-address",
+        "spectrum-char",
+        "spectrum-shape-lesson",
+        "spectrum-udg-lesson",
+        "spectrum-segments",
+        "spectrum-positioned"
+      ],
+      "region": "G",
+      "capabilities": {
+        "pixels": "A/L",
+        "lines_spans": "L",
+        "rectangles": "L",
+        "curves_fills": "L",
+        "grid_characters": "R/L",
+        "pixel_text": "G (R substrate)",
+        "text_layout_scale": "R large digits / I layout; no generic scaling"
+      },
+      "native_route": "Interleaved bitmap; fixed-cell software text; BASIC UDGs",
+      "trade_off": "Verified address calculation is not pixel writing. Attributes cover 8\u00d78 cells; masked shifts and clipping can support text without pretending colour is per pixel.",
+      "next_gap": "Bounded pixel/read/span/box family first; later pixel-positioned glyphs",
+      "gap_issues": [
+        {
+          "key": "pixels",
+          "url": "https://github.com/code198x/docs/issues/122"
+        },
+        {
+          "key": "geometry",
+          "url": "https://github.com/code198x/docs/issues/124"
+        },
+        {
+          "key": "pixel-text",
+          "url": "https://github.com/code198x/docs/issues/125"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "sinclair-zx80",
+      "folder": "sinclair-zx80",
+      "evidence": [
+        "probe-sinclair-zx80"
+      ],
+      "region": "G",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "P",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "ROM text output; software-generated display",
+      "trade_off": "Selected examples print cells and query CPU RAM. Preserve display-file/refresh ownership; do not infer a bitmap or writable font from a RAM-only proof.",
+      "next_gap": "Stock glyph/coarse composition and display-aware text; research advanced variants separately",
+      "gap_issues": [
+        {
+          "key": "character-alternatives",
+          "url": "https://github.com/code198x/docs/issues/129"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "sinclair-zx81",
+      "folder": "sinclair-zx81",
+      "evidence": [
+        "probe-sinclair-zx81"
+      ],
+      "region": "G",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "P",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "ROM text output; software-generated display",
+      "trade_off": "Cell/block graphics and any high-resolution extension have different resolution, RAM and refresh obligations; neither follows from the query fixture.",
+      "next_gap": "Stock glyph/coarse composition; separately qualify advanced display variants",
+      "gap_issues": [
+        {
+          "key": "character-alternatives",
+          "url": "https://github.com/code198x/docs/issues/129"
+        },
+        {
+          "key": "layout",
+          "url": "https://github.com/code198x/docs/issues/126"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "sord-m5",
+      "folder": "sord-m5",
+      "evidence": [
+        "probe-sord-m5",
+        "region-sord-m5",
+        "record-sord-m5"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "S",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "TMS-family Graphics I pattern/name region",
+      "trade_off": "Installed patterns and grouped colour data are separate from name writes. Port wiring/latch ownership and access timing are machine-specific; Graphics II pixel work needs its own mode/bank contract.",
+      "next_gap": "Extract pattern/font uploads; then mode-specific bitmap-like editing",
+      "gap_issues": [
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "spectravideo-svi-328",
+      "folder": "spectravideo-svi-328",
+      "evidence": [
+        "probe-spectravideo-svi-328",
+        "region-spectravideo-svi-328",
+        "record-spectravideo-svi-328"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "S",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "TMS-family Graphics I pattern/name region",
+      "trade_off": "Installed patterns and grouped colour data are separate from name writes. Port wiring/latch ownership and access timing are machine-specific; Graphics II pixel work needs its own mode/bank contract.",
+      "next_gap": "Extract pattern/font uploads; then mode-specific bitmap-like editing",
+      "gap_issues": [
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    },
+    {
+      "machine_id": "tatung-einstein",
+      "folder": "tatung-einstein",
+      "evidence": [
+        "probe-tatung-einstein",
+        "region-tatung-einstein",
+        "record-tatung-einstein"
+      ],
+      "region": "R",
+      "capabilities": {
+        "pixels": "G",
+        "lines_spans": "G",
+        "rectangles": "G",
+        "curves_fills": "G",
+        "grid_characters": "S",
+        "pixel_text": "G",
+        "text_layout_scale": "G"
+      },
+      "native_route": "TMS-family Graphics I pattern/name region",
+      "trade_off": "Installed patterns and grouped colour data are separate from name writes. Port wiring/latch ownership and access timing are machine-specific; Graphics II pixel work needs its own mode/bank contract.",
+      "next_gap": "Extract pattern/font uploads; then mode-specific bitmap-like editing",
+      "gap_issues": [
+        {
+          "key": "glyph-ports",
+          "url": "https://github.com/code198x/docs/issues/128"
+        },
+        {
+          "key": "maths",
+          "url": "https://github.com/code198x/docs/issues/131"
+        }
+      ]
+    }
+  ],
+  "maths": [
+    {
+      "id": "maths-unit-01",
+      "title": "Roll a die",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-01.mdx"
+    },
+    {
+      "id": "maths-unit-02",
+      "title": "Keep the tallies",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-02.mdx"
+    },
+    {
+      "id": "maths-unit-03",
+      "title": "Compare shares",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-03.mdx"
+    },
+    {
+      "id": "maths-unit-04",
+      "title": "Watch the distribution",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-04.mdx"
+    },
+    {
+      "id": "maths-unit-05",
+      "title": "Compare experiments",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-05.mdx"
+    },
+    {
+      "id": "maths-unit-06",
+      "title": "Place a point",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-06.mdx"
+    },
+    {
+      "id": "maths-unit-07",
+      "title": "Measure the triangle",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-07.mdx"
+    },
+    {
+      "id": "maths-unit-08",
+      "title": "Turn an angle into movement",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-08.mdx"
+    },
+    {
+      "id": "maths-unit-09",
+      "title": "Measure angles in radians",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-09.mdx"
+    },
+    {
+      "id": "maths-unit-10",
+      "title": "Find the angle to a target",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-10.mdx"
+    },
+    {
+      "id": "maths-unit-11",
+      "title": "Keep fractional movement in integers",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-11.mdx"
+    }
+  ],
+  "scan": {
+    "samples_text_files": 1892,
+    "samples_candidates": 860,
+    "website_curriculum_pattern_text_files": 755,
+    "website_candidates": 681,
+    "method": "candidate text search followed by source/page inspection; comments and filenames do not establish capability; case/keyword hits are not accepted without reading the implementation"
+  }
+}
