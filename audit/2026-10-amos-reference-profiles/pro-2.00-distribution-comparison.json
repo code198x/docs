@@ -1,0 +1,11 @@
+{
+  "same_media_hash": false,
+  "only_in_executed_distribution": [],
+  "only_in_candidate_distribution": [],
+  "different_file_bytes": [
+    "s/Startup-Sequence"
+  ],
+  "identical_file_count": 77,
+  "executed_media_sha256": "7ffbfb5ed5c28869e323a2bff9a591ce519727be2e0dd66972a86ebfe7bcbfdc",
+  "candidate_media_sha256": "507828d923c0af5e485a03048e396c29c9c5dec7769e8b40b1c933d980ffba3b"
+}
