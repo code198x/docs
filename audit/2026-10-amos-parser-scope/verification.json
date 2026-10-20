@@ -1,0 +1,13 @@
+{
+  "status": "research_artifacts_verified_not_language_compatibility",
+  "source_revision": "b7f7dd9c07892f3c618ef52465772349887b4065",
+  "tracked_source_files": 62,
+  "source_hashes_recomputed": true,
+  "inventory_check_passed": true,
+  "corrupted_record_control_exit_code": 1,
+  "corrupted_record_control_error": "error: could not read IPC response\nerror: could not read IPC response\nFAIL: recorded inventory differs from the tracked samples",
+  "empty_source_selection_rejected": true,
+  "relative_links_resolve": true,
+  "new_native_compatibility_trials": 0,
+  "parser_implemented": false
+}

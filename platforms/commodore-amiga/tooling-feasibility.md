@@ -66,6 +66,17 @@ It does not establish an AMOS or Blitz host compiler. Assess Emu198x integration
 against actual language workloads before extending its assembly evidence to
 these routes. Keep the checked third-party route available during investigation.
 
+## Parser research before execution
+
+The [AMOS parser proposal](amos/parser-scope.md) starts with plain-text source
+analysis, a release ledger and extension profiles across Creator, Easy AMOS,
+Professional and later branches. Current native comparison starts at the checked
+Professional 2.00 installation; that does not restrict the research to Pro or
+qualify other releases. Syntax, static checking and runtime behaviour need
+separate evidence. Blitz should follow with its own version/library research;
+the same investigation method can serve other languages without committing us
+to a universal grammar or shared parser implementation.
+
 ## Implementation options
 
 | Option | Potential benefit | Substantial work and limitations | Useful first experiment |
