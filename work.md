@@ -79,11 +79,11 @@ Component names refer to the website's `src/components/`; their props and tests 
 | Explain code and changes | `CodeFromFile`, `CodeDiff`, `Output` | Real sources and focused changes; pseudocode stays distinct from executable code |
 | Trace values and decisions | `TraceTable`, `FlowDiagram`, `TruthTable`, `LogicCircuit` | `TraceTable` is a static table, not an interpreter |
 | Inspect representation | `MemoryMap`, `RegisterBits`, `SpriteGrid`, `SpectrumBitmapLayout` | Name assumptions; the bitmap component is Spectrum-specific |
-| Draw and examine graphics | `SpriteEditor`, `Figure`, `NativeImage`, `ImageComparison` | Check format and export support before promising an asset workflow |
-| Hear or see an outcome | `AudioClip`, `VideoPlayer`, `VideoEmbed`, `FieldVideo` | Pair media with captions and alternatives |
-| Run or edit target code | `AssembleAndRun`, `BasicAndRun`, `NesAssembleAndRun`, `LessonPlayer`, `BrowserPlayer`, `Emulator`, `Workbench` | Each has its own machine and language contract; a browser player does not establish curriculum support |
+| Draw and examine graphics | `SpriteEditor`, `Figure`, `NativeImage` | Check format and export support before promising an asset workflow |
+| Hear or see an outcome | `AudioClip`, `VideoPlayer`, `FieldVideo` | Pair media with captions and alternatives |
+| Run or edit target code | `AssembleAndRun`, `BasicAndRun`, `NesAssembleAndRun`, `LessonPlayer`, `BrowserPlayer`, `Emulator` | Each has its own machine and language contract; a browser player does not establish curriculum support |
 | Ask and explain | `Question`, plain details/summary | Visible prompt with a native disclosure; no scoring engine is needed |
-| Find a route or set up | `FirstStepCallout`, `CurriculumPosition`, `PathCard`, `UnitSteps`, `SetupCallout` | Support independent entry; no completion gates |
+| Find a route or set up | `CurriculumPosition`, `UnitSteps` | Support independent entry; no completion gates |
 
 Possible additions, in order of demonstrated need:
 
