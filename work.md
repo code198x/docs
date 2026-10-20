@@ -81,7 +81,7 @@ Component names refer to the website's `src/components/`; their props and tests 
 | Inspect representation | `MemoryMap`, `RegisterBits`, `SpriteGrid`, `SpectrumBitmapLayout` | Name assumptions; the bitmap component is Spectrum-specific |
 | Draw and examine graphics | `SpriteEditor`, `Figure`, `NativeImage` | Check format and export support before promising an asset workflow |
 | Hear or see an outcome | `AudioClip`, `VideoPlayer`, `FieldVideo` | Pair media with captions and alternatives |
-| Run or edit target code | `AssembleAndRun`, `BasicAndRun`, `NesAssembleAndRun`, `LessonPlayer`, `BrowserPlayer`, `Emulator` | Each has its own machine and language contract; a browser player does not establish curriculum support |
+| Run or edit target code | `AssembleAndRun`, `BasicAndRun`, `NesAssembleAndRun`, `RunIt`, `PlayerStage`, `Emulator` | Each has its own machine and language contract; a browser player does not establish curriculum support |
 | Ask and explain | `Question`, plain details/summary | Visible prompt with a native disclosure; no scoring engine is needed |
 | Find a route or set up | `CurriculumPosition`, `UnitSteps` | Support independent entry; no completion gates |
 
