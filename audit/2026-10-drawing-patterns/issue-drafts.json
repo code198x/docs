@@ -1,0 +1,101 @@
+[
+  {
+    "key": "pixels",
+    "title": "Build bounded pixel, span and box routines on Spectrum, BBC Micro and Dragon",
+    "path": "issue-bodies/pixels.md",
+    "labels": [
+      "enhancement",
+      "documentation",
+      "system:spectrum",
+      "system:bbc-micro",
+      "system:dragon"
+    ]
+  },
+  {
+    "key": "glyphs",
+    "title": "Extract custom-glyph install and replacement on VIC-20, MSX1 and Game Boy",
+    "path": "issue-bodies/glyphs.md",
+    "labels": [
+      "enhancement",
+      "documentation",
+      "system:vic-20",
+      "system:msx",
+      "system:game-boy"
+    ]
+  },
+  {
+    "key": "geometry",
+    "title": "Add clipped lines, circles, ellipses and span-filled shapes",
+    "path": "issue-bodies/geometry.md",
+    "labels": [
+      "enhancement",
+      "documentation"
+    ]
+  },
+  {
+    "key": "pixel-text",
+    "title": "Draw fixed-width bitmap text at arbitrary pixel positions",
+    "path": "issue-bodies/pixel-text.md",
+    "labels": [
+      "enhancement",
+      "documentation"
+    ]
+  },
+  {
+    "key": "layout",
+    "title": "Build text measurement, proportional layout and scaled-glyph variants",
+    "path": "issue-bodies/layout.md",
+    "labels": [
+      "enhancement",
+      "documentation"
+    ]
+  },
+  {
+    "key": "bitmap-ports",
+    "title": "Extend primitive backends to packed, attributed, ANTIC and planar displays",
+    "path": "issue-bodies/bitmap-ports.md",
+    "labels": [
+      "enhancement",
+      "documentation"
+    ]
+  },
+  {
+    "key": "glyph-ports",
+    "title": "Extend font and pattern loading across the remaining writable-character paths",
+    "path": "issue-bodies/glyph-ports.md",
+    "labels": [
+      "enhancement",
+      "documentation"
+    ]
+  },
+  {
+    "key": "character-alternatives",
+    "title": "Cover fixed-ROM and software-display drawing without inventing bitmap capabilities",
+    "path": "issue-bodies/character-alternatives.md",
+    "labels": [
+      "enhancement",
+      "documentation"
+    ]
+  },
+  {
+    "key": "raster",
+    "title": "Define reusable drawing contracts for TIA kernels and MARIA display lists",
+    "path": "issue-bodies/raster.md",
+    "labels": [
+      "enhancement",
+      "documentation",
+      "system:atari-2600",
+      "system:atari-7800"
+    ]
+  },
+  {
+    "key": "maths",
+    "title": "Connect drawing patterns to Maths for Games with worked geometry explanations",
+    "path": "issue-bodies/maths.md",
+    "labels": [
+      "enhancement",
+      "documentation",
+      "area:curriculum"
+    ]
+  }
+]

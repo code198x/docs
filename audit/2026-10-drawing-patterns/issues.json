@@ -1,0 +1,138 @@
+{
+  "reused": [
+    {
+      "url": "https://github.com/code198x/docs/issues/117",
+      "reason": "Overall reusable-capability expansion parent"
+    },
+    {
+      "url": "https://github.com/code198x/website/issues/802",
+      "reason": "Existing imagery queue; drawing work is separate"
+    },
+    {
+      "url": "https://github.com/code198x/code-samples/pull/133",
+      "reason": "Existing unmerged executed character regions, not duplicated"
+    },
+    {
+      "url": "https://github.com/code198x/website/pull/871",
+      "reason": "Existing unmerged character-region pages"
+    },
+    {
+      "url": "https://github.com/code198x/docs/issues/4",
+      "reason": "Vectrex proposal outside current 30-system registry"
+    },
+    {
+      "url": "https://github.com/code198x/docs/issues/6",
+      "reason": "Vectrex qualification outside current 30-system registry"
+    }
+  ],
+  "created": [
+    {
+      "key": "parent",
+      "title": "Expand drawing patterns from pixels and shapes to fonts across 30 systems",
+      "number": 121,
+      "id": 5941169596,
+      "url": "https://github.com/code198x/docs/issues/121",
+      "parent": "https://github.com/code198x/docs/issues/117",
+      "native_parent_number": 117
+    },
+    {
+      "key": "pixels",
+      "title": "Build bounded pixel, span and box routines on Spectrum, BBC Micro and Dragon",
+      "number": 122,
+      "id": 5941170042,
+      "url": "https://github.com/code198x/docs/issues/122",
+      "parent": "https://github.com/code198x/docs/issues/121",
+      "native_parent_number": 121
+    },
+    {
+      "key": "glyphs",
+      "title": "Extract custom-glyph install and replacement on VIC-20, MSX1 and Game Boy",
+      "number": 123,
+      "id": 5941170521,
+      "url": "https://github.com/code198x/docs/issues/123",
+      "parent": "https://github.com/code198x/docs/issues/121",
+      "native_parent_number": 121
+    },
+    {
+      "key": "geometry",
+      "title": "Add clipped lines, circles, ellipses and span-filled shapes",
+      "number": 124,
+      "id": 5941171050,
+      "url": "https://github.com/code198x/docs/issues/124",
+      "parent": "https://github.com/code198x/docs/issues/121",
+      "native_parent_number": 121
+    },
+    {
+      "key": "pixel-text",
+      "title": "Draw fixed-width bitmap text at arbitrary pixel positions",
+      "number": 125,
+      "id": 5941171533,
+      "url": "https://github.com/code198x/docs/issues/125",
+      "parent": "https://github.com/code198x/docs/issues/121",
+      "native_parent_number": 121
+    },
+    {
+      "key": "layout",
+      "title": "Build text measurement, proportional layout and scaled-glyph variants",
+      "number": 126,
+      "id": 5941171988,
+      "url": "https://github.com/code198x/docs/issues/126",
+      "parent": "https://github.com/code198x/docs/issues/121",
+      "native_parent_number": 121
+    },
+    {
+      "key": "bitmap-ports",
+      "title": "Extend primitive backends to packed, attributed, ANTIC and planar displays",
+      "number": 127,
+      "id": 5941172457,
+      "url": "https://github.com/code198x/docs/issues/127",
+      "parent": "https://github.com/code198x/docs/issues/121",
+      "native_parent_number": 121
+    },
+    {
+      "key": "glyph-ports",
+      "title": "Extend font and pattern loading across the remaining writable-character paths",
+      "number": 128,
+      "id": 5941172871,
+      "url": "https://github.com/code198x/docs/issues/128",
+      "parent": "https://github.com/code198x/docs/issues/121",
+      "native_parent_number": 121
+    },
+    {
+      "key": "character-alternatives",
+      "title": "Cover fixed-ROM and software-display drawing without inventing bitmap capabilities",
+      "number": 129,
+      "id": 5941173352,
+      "url": "https://github.com/code198x/docs/issues/129",
+      "parent": "https://github.com/code198x/docs/issues/121",
+      "native_parent_number": 121
+    },
+    {
+      "key": "raster",
+      "title": "Define reusable drawing contracts for TIA kernels and MARIA display lists",
+      "number": 130,
+      "id": 5941173754,
+      "url": "https://github.com/code198x/docs/issues/130",
+      "parent": "https://github.com/code198x/docs/issues/121",
+      "native_parent_number": 121
+    },
+    {
+      "key": "maths",
+      "title": "Connect drawing patterns to Maths for Games with worked geometry explanations",
+      "number": 131,
+      "id": 5941174193,
+      "url": "https://github.com/code198x/docs/issues/131",
+      "parent": "https://github.com/code198x/docs/issues/121",
+      "native_parent_number": 121
+    }
+  ],
+  "drawing_parent": {
+    "key": "parent",
+    "title": "Expand drawing patterns from pixels and shapes to fonts across 30 systems",
+    "number": 121,
+    "id": 5941169596,
+    "url": "https://github.com/code198x/docs/issues/121",
+    "parent": "https://github.com/code198x/docs/issues/117",
+    "native_parent_number": 117
+  }
+}
