@@ -1,0 +1,55 @@
+{
+  "baseline-five": {
+    "stage": "replay-value/feedback",
+    "roll": 5,
+    "sha256": "ca46814c6da2ef24d7232b8a7e04db5f596a6e8749f8d0937e801324fd1b4d67"
+  },
+  "gray-five": {
+    "stage": "arcade/arcade-colours",
+    "roll": 5,
+    "gray": true,
+    "sha256": "bd7be794b13176fcc988301794fbdd425f821e05c1ef5c13a43db5d2e3892d94"
+  },
+  "colour-five": {
+    "stage": "arcade/arcade-colours",
+    "roll": 5,
+    "sha256": "fb4402aabe6d5270419dd985280a03167a145bde40cb1928d0842c35d79a947a"
+  },
+  "layout-five": {
+    "stage": "arcade/arcade-layout",
+    "roll": 5,
+    "sha256": "143c5e0e289b05dc94d08df3199ee07f397873125c88d206a09aad4ac53ef1f3"
+  },
+  "live-five": {
+    "stage": "arcade/rolling-die",
+    "roll": 5,
+    "sha256": "304be5a3dd01b148759a31554c0d9cf03225fa81b6ac831c40e9d11a3b946318"
+  },
+  "live-six": {
+    "stage": "arcade/rolling-die",
+    "roll": 6,
+    "sha256": "90be94db1ee91ed07451deff8c57813205cafaa9df7fd22787814553a86a01e8"
+  },
+  "static-five": {
+    "stage": "arcade/rolling-die",
+    "roll": 5,
+    "motion": 0,
+    "sha256": "c8d62d529a30f8913b0f65638ab94982f6cfb430b4f823bd73a9a97c1e0734f9"
+  },
+  "muted-five": {
+    "stage": "arcade/rolling-die",
+    "roll": 5,
+    "volume": 0,
+    "sha256": "1138ce4982540bf2de63614c3ca8cd2ab0132a67dbe176805374e6c534db3227"
+  },
+  "varied": {
+    "stage": "arcade/rolling-die",
+    "rolls": [
+      4,
+      5,
+      6,
+      1
+    ],
+    "sha256": "2fd5bf97d4ae29b2ad7f114d83d7da7bd17ee43ae2e9fec68a6f7e42c2f62094"
+  }
+}

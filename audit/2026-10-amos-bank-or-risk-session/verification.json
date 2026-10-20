@@ -1,0 +1,345 @@
+{
+  "sources": 8,
+  "variants": 11,
+  "capture_hashes": {
+    "work-editor.png": "186f4822e2980225377e4720fdabaa753ccf2b85eb09ac64185a61be857bba06",
+    "award-once-imported.png": "aad14ea549e4ef43ce871d43a1852ce360309f47e8c622b49039b821c0316c18",
+    "award-once-syntax.png": "1313dff395e0ca97e77a2d3f749e4c96b7fa1f18f070e0fcd1fe3552d9cd81d4",
+    "award-once-start.png": "f870ccfd81fa05d73a7f4f8bacf116f394ba140b3cd92fbd52252ce1089826c2",
+    "count-rounds-imported.png": "9e34190d50a1699c830e5be24fad249d01dc7bcc8b00291dcefc0209211fa61b",
+    "count-rounds-syntax.png": "272e8b7145156abe2611a400e5a3d39832bcdf98220b0fdb398a9bba6f492c09",
+    "count-rounds-start.png": "11cb76febfc10fb0d8763665eaa831d2db7703c4b88f300b75198e9522da072e",
+    "keep-secured-imported.png": "066dba4893cadd1dd0caef040f4e7581355e795340f6617b12ec016b5cf0a476",
+    "keep-secured-syntax.png": "0aac41b3a5ff5b538226d8d477c5506237b4b2ca4ab69a3657f4e1d1b271c750",
+    "keep-secured-start.png": "7a04f4319424d177083253dbb9511a41c199477e6161387bb3027174f8310431",
+    "next-round-imported.png": "e06b7a2e27a72dca11f6f9e71845a20271fa89bfd2daca1ca4d94632f9526e3a",
+    "next-round-syntax.png": "876e82e717fd5886668d270a3066ce31a3fff2ba30028aedf29749b01cd11105",
+    "next-round-start.png": "f33b2cc3154d596802924b84cb6114fb787e9bcc1a82929568d2d68d875d7ce5",
+    "read-fresh-imported.png": "3e5b8a4f08e5ac5fe2ff30931aa2d6ef59c5e524f47a6492d5706f2dae0a8126",
+    "read-fresh-syntax.png": "6a84e317ffd39fea4f0e44fe8af65d7404f21689e455185498d9bcdb3eff0042",
+    "read-fresh-start.png": "cceb738166ebd5a515d3ae556c382279d36ad113bcff6b30d4f2a3fd67a657a1",
+    "recognise-impossibility-imported.png": "93338899c84d68ba1444cc5c298c86f240aa5895ada5b5ce765512d80f406fc9",
+    "recognise-impossibility-syntax.png": "edc048d3d90dccea25d51426fc7cb041c7806b55ad7127af5c2400c4a933909c",
+    "recognise-impossibility-start.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "recognise-success-imported.png": "55d6fc69d9aa4b0acdb540434373147706468a3ef228882a28a08aab3f721455",
+    "recognise-success-syntax.png": "26c9440a1dbc3b78248cae11835c45507524edf7078b6c1846e25009aabea838",
+    "recognise-success-start.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "replay-imported.png": "0a52043866d9ee21f03bdee54c63f3ceb5c2195cb54001d804f8e70703f4ccb7",
+    "replay-syntax.png": "dfddff5685cdac03f4ea1f3b4efe4e20e19abbb837a104a4a6f5d108eea660b3",
+    "replay-start.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "award-four-imported.png": "12be427bedff1fcd1156c4076aced65a7ddeae29ed407479909e995fad30b953",
+    "award-four-syntax.png": "1313dff395e0ca97e77a2d3f749e4c96b7fa1f18f070e0fcd1fe3552d9cd81d4",
+    "award-four-start.png": "f870ccfd81fa05d73a7f4f8bacf116f394ba140b3cd92fbd52252ce1089826c2",
+    "baseline-four-imported.png": "6c1eb15f4187da5fcd04d1a68f4013fb20e14a158a18a4067f4a2673d82b1359",
+    "baseline-four-syntax.png": "a269a1b9ace48cae6cf8df64b5823aab511202ea02b9cca1b7979a904c3b0ec1",
+    "baseline-four-start.png": "cceb738166ebd5a515d3ae556c382279d36ad113bcff6b30d4f2a3fd67a657a1",
+    "count-four-imported.png": "8961f5c12c3bc4734776c9054908a2d4731e15bb79ac830ac363bea58d78d723",
+    "count-four-syntax.png": "6997cc7d7da58dad7b55eaf652b9b88d7ae423118e00f63371cb95cf49d97c08",
+    "count-four-start.png": "11cb76febfc10fb0d8763665eaa831d2db7703c4b88f300b75198e9522da072e",
+    "input-four-imported.png": "8622ee801b501580f4da73c418af3bfe97e4bf9c8da69b6eee576349abd9c5ad",
+    "input-four-syntax.png": "6a84e317ffd39fea4f0e44fe8af65d7404f21689e455185498d9bcdb3eff0042",
+    "input-four-start.png": "cceb738166ebd5a515d3ae556c382279d36ad113bcff6b30d4f2a3fd67a657a1",
+    "next-four-imported.png": "fbd0c61c08c4a3d28041c01a12e6d6b2043f510459cbcaaa7a709b71100e9b94",
+    "next-four-syntax.png": "ac15bfc884217a4a13b7f0313e74bcf5d71821d7b69e1b297b47fd279b70e713",
+    "next-four-start.png": "f33b2cc3154d596802924b84cb6114fb787e9bcc1a82929568d2d68d875d7ce5",
+    "possible-five-imported.png": "db5db1811361c1d24703611a7bb9b0636b3718314236fb28f935db9bcaf097fc",
+    "possible-five-syntax.png": "9eba1673161ba0bd3f7648bbd646d27f466b028ab1ad2485e55f6988fae9cf58",
+    "possible-five-start.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "possible-six-imported.png": "9ea209edab29ff585f47ad4eb3847e03e220aa24c974a71ce88e2d6fc7a37161",
+    "possible-six-syntax.png": "c4cf605b0acf3e8900808649bdaaf8ce886b30e537f14d20db810b0e02170900",
+    "possible-six-start.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "replay-five-imported.png": "e5002c4fb3f6c5ad5bc9260be423caff3a6c9a9507645ab425e264625496c10a",
+    "replay-five-syntax.png": "09c1883b510f98b4507cb0ef08d86b05fde69f0fe647eb73b97f481fa4399f47",
+    "replay-five-start.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "replay-six-imported.png": "f40196e0d1032401ed60da0f197199fa91e7e820cdfd7c98b8b1a96f329fb198",
+    "replay-six-syntax.png": "c0246dcf6036407844db1b66d22b92e8aa0fb23a190cb91dcb69b0e6cbbe6e1e",
+    "replay-six-start.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "success-five-imported.png": "f1331ac461ba43d8f18655aa07388640a3086d6ffe1c107e3b2fcd778167e93c",
+    "success-five-syntax.png": "d3e3abba52212503c9336a7b493486486740024334e9c6444145afb6c5ff59f4",
+    "success-five-start.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "success-four-imported.png": "f1331ac461ba43d8f18655aa07388640a3086d6ffe1c107e3b2fcd778167e93c",
+    "success-four-syntax.png": "d3e3abba52212503c9336a7b493486486740024334e9c6444145afb6c5ff59f4",
+    "success-four-start.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "baseline-0.png": "cceb738166ebd5a515d3ae556c382279d36ad113bcff6b30d4f2a3fd67a657a1",
+    "baseline-1.png": "cceb738166ebd5a515d3ae556c382279d36ad113bcff6b30d4f2a3fd67a657a1",
+    "baseline-2.png": "47ffa74a985e745d60742e23ca5a0c41c1c24f91ba3ef90cb1269b7590eebc4b",
+    "baseline-3.png": "1ff1f62dd355f2c51c07bbc91b5e32a3460fc616c83f071ba34298478831ae8e",
+    "baseline-editor.png": "389d98e96093fca9d12779a7602d29acf5669f49731b1f028868bbd33933e55b",
+    "extracted-0.png": "cceb738166ebd5a515d3ae556c382279d36ad113bcff6b30d4f2a3fd67a657a1",
+    "extracted-1.png": "cceb738166ebd5a515d3ae556c382279d36ad113bcff6b30d4f2a3fd67a657a1",
+    "extracted-2.png": "47ffa74a985e745d60742e23ca5a0c41c1c24f91ba3ef90cb1269b7590eebc4b",
+    "extracted-3.png": "1ff1f62dd355f2c51c07bbc91b5e32a3460fc616c83f071ba34298478831ae8e",
+    "extracted-editor.png": "d8580c7eed0b8d44ed1db08a5baed5006fb75be2a9b6948319a0c478f781161d",
+    "next-result.png": "46525b8d0ba84ae402bd3e8d14125af054337c74a4bb76eb62c67a312101ee89",
+    "next-ignored.png": "46525b8d0ba84ae402bd3e8d14125af054337c74a4bb76eb62c67a312101ee89",
+    "next-reset.png": "f33b2cc3154d596802924b84cb6114fb787e9bcc1a82929568d2d68d875d7ce5",
+    "next-editor.png": "7ad2197f40bf05fe9f1f17ac554d586408aaf723aedf8c7ff11745f8595da4fe",
+    "award-bank.png": "07206e0ba3f5e8da8e7cdb79350a32b785c9d0dd197b293827e894437fdcd05a",
+    "award-wait.png": "07206e0ba3f5e8da8e7cdb79350a32b785c9d0dd197b293827e894437fdcd05a",
+    "award-invalid.png": "07206e0ba3f5e8da8e7cdb79350a32b785c9d0dd197b293827e894437fdcd05a",
+    "award-wrong-phase.png": "07206e0ba3f5e8da8e7cdb79350a32b785c9d0dd197b293827e894437fdcd05a",
+    "award-reset.png": "33b5e3a0e8ab25b6c5317c4bbe6cef5927fce61dc6f0c6da08928518c8445aa9",
+    "award-bust.png": "e37883c1500ffcde6a3b7639db9d9a374917bdf42bc9944df1247f48fbac78c5",
+    "award-editor.png": "c719717923f1680e321163a44afff96863484fa8c9becdbd757fc6a494178cd8",
+    "count-bust.png": "a43984781beaa3cebdae4d158d1deb3d0e900bc7f8e46e80c709989283f1aad1",
+    "count-bust-editor.png": "b6e8df302c650702a4c584cd29c25eb6c0855960e81977cf768f1224dcfe2527",
+    "count-1.png": "48ffc4797c308273f7d2de472c034f907617439d9464e09423c0aa7a3eeb1587",
+    "count-2.png": "589774f690d0ef7f1b89f79bc46eaf46a5c692e14a9122763a5d8be5169c1e1e",
+    "count-3.png": "11c7e80cbe637848d4c84e500e00fc8276c3b5a6f16e9f1cf04c5de8d943c1de",
+    "count-4.png": "fd1e689ec2b1477a732ddc2a671bca40e7db722cce0af505bf70d80207409cdf",
+    "count-5.png": "285418b2b988052619632613eb89354df19a13b213dc368b7097e52591cc96be",
+    "count-wait.png": "285418b2b988052619632613eb89354df19a13b213dc368b7097e52591cc96be",
+    "count-invalid.png": "285418b2b988052619632613eb89354df19a13b213dc368b7097e52591cc96be",
+    "count-roll-ignored.png": "285418b2b988052619632613eb89354df19a13b213dc368b7097e52591cc96be",
+    "count-space-ignored.png": "285418b2b988052619632613eb89354df19a13b213dc368b7097e52591cc96be",
+    "count-editor.png": "892e47251466a38c04cc5aaab34a4eb8c56910ea81f41373ef694aec47dbdfa1",
+    "missed-1.png": "48ffc4797c308273f7d2de472c034f907617439d9464e09423c0aa7a3eeb1587",
+    "missed-2.png": "589774f690d0ef7f1b89f79bc46eaf46a5c692e14a9122763a5d8be5169c1e1e",
+    "missed-3.png": "11c7e80cbe637848d4c84e500e00fc8276c3b5a6f16e9f1cf04c5de8d943c1de",
+    "missed-4.png": "fd1e689ec2b1477a732ddc2a671bca40e7db722cce0af505bf70d80207409cdf",
+    "missed-5.png": "5846a6ebcbf3203e48db523e4fefb414761bbc2d9c5d879ce50c1e744b1d1382",
+    "missed-wait.png": "5846a6ebcbf3203e48db523e4fefb414761bbc2d9c5d879ce50c1e744b1d1382",
+    "missed-invalid.png": "5846a6ebcbf3203e48db523e4fefb414761bbc2d9c5d879ce50c1e744b1d1382",
+    "missed-roll-ignored.png": "5846a6ebcbf3203e48db523e4fefb414761bbc2d9c5d879ce50c1e744b1d1382",
+    "missed-space-ignored.png": "5846a6ebcbf3203e48db523e4fefb414761bbc2d9c5d879ce50c1e744b1d1382",
+    "missed-editor.png": "7fc2f05446d58bb50bb7e970fa9fe677a8e51ae7ddcc24ef70ed31f20db4655f",
+    "success-1.png": "7fb9b116aee8cd59137dee8fa2097f0a3be7e98a3f7721ca772ecb8a462800db",
+    "success-2.png": "b2fc1426a598cb7117b4d7ed522c1ed395f8e032ef3ab78a89aa07b604b5ee03",
+    "success-3.png": "6b950048e197b5dfa14edf3a3a13f8bc43c8b1b97e3e76756da6473b7a974073",
+    "success-wait.png": "6b950048e197b5dfa14edf3a3a13f8bc43c8b1b97e3e76756da6473b7a974073",
+    "success-invalid.png": "6b950048e197b5dfa14edf3a3a13f8bc43c8b1b97e3e76756da6473b7a974073",
+    "success-roll-ignored.png": "6b950048e197b5dfa14edf3a3a13f8bc43c8b1b97e3e76756da6473b7a974073",
+    "success-space-ignored.png": "6b950048e197b5dfa14edf3a3a13f8bc43c8b1b97e3e76756da6473b7a974073",
+    "success-editor.png": "d1b8836d72676bf4c8fc300c427378b2b3b88d1daceadfc613969fa43f69140b",
+    "failure-1.png": "f2def06b3cccf78be015e570f92453f5af2555f8168e1d00cbb8e6f753977d52",
+    "failure-2.png": "9051522368bde197778a5eb71e2fb93816e58d2b184af945dbc1b2b919b49b70",
+    "failure-3.png": "e59465a25db3901209cd7cf99c2b7cb09a30f2d6d0313c0f7fb3e9b24c3789ec",
+    "failure-wait.png": "e59465a25db3901209cd7cf99c2b7cb09a30f2d6d0313c0f7fb3e9b24c3789ec",
+    "failure-invalid.png": "e59465a25db3901209cd7cf99c2b7cb09a30f2d6d0313c0f7fb3e9b24c3789ec",
+    "failure-roll-ignored.png": "e59465a25db3901209cd7cf99c2b7cb09a30f2d6d0313c0f7fb3e9b24c3789ec",
+    "failure-space-ignored.png": "e59465a25db3901209cd7cf99c2b7cb09a30f2d6d0313c0f7fb3e9b24c3789ec",
+    "failure-editor.png": "47241b5e1428d79817c367e817dcc07a8565c07f43280beb815ae51a4c9e6688",
+    "possible-success-1.png": "7fb9b116aee8cd59137dee8fa2097f0a3be7e98a3f7721ca772ecb8a462800db",
+    "possible-success-2.png": "b2fc1426a598cb7117b4d7ed522c1ed395f8e032ef3ab78a89aa07b604b5ee03",
+    "possible-success-3.png": "6b950048e197b5dfa14edf3a3a13f8bc43c8b1b97e3e76756da6473b7a974073",
+    "possible-success-wait.png": "6b950048e197b5dfa14edf3a3a13f8bc43c8b1b97e3e76756da6473b7a974073",
+    "possible-success-invalid.png": "6b950048e197b5dfa14edf3a3a13f8bc43c8b1b97e3e76756da6473b7a974073",
+    "possible-success-roll-ignored.png": "6b950048e197b5dfa14edf3a3a13f8bc43c8b1b97e3e76756da6473b7a974073",
+    "possible-success-space-ignored.png": "6b950048e197b5dfa14edf3a3a13f8bc43c8b1b97e3e76756da6473b7a974073",
+    "possible-success-editor.png": "cc3b8ba7f6af70410a85afa621297a28a53663af80e8cf1a70575ccac6118f1b",
+    "replay-win-1.png": "7fb9b116aee8cd59137dee8fa2097f0a3be7e98a3f7721ca772ecb8a462800db",
+    "replay-win-2.png": "b2fc1426a598cb7117b4d7ed522c1ed395f8e032ef3ab78a89aa07b604b5ee03",
+    "replay-win-3.png": "606fc26dd900a17f49cc79f2249ba91bc862bf56cd35565d41167f9c98e0df57",
+    "replay-win-wait.png": "606fc26dd900a17f49cc79f2249ba91bc862bf56cd35565d41167f9c98e0df57",
+    "replay-win-invalid.png": "606fc26dd900a17f49cc79f2249ba91bc862bf56cd35565d41167f9c98e0df57",
+    "replay-win-roll-ignored.png": "606fc26dd900a17f49cc79f2249ba91bc862bf56cd35565d41167f9c98e0df57",
+    "replay-win-space-ignored.png": "606fc26dd900a17f49cc79f2249ba91bc862bf56cd35565d41167f9c98e0df57",
+    "replay-win-editor.png": "821168c8ca769f73e0e2845a5b6a037cb0c55442018f54b574324b39719bcc75",
+    "replay-loss-1.png": "f2def06b3cccf78be015e570f92453f5af2555f8168e1d00cbb8e6f753977d52",
+    "replay-loss-2.png": "9051522368bde197778a5eb71e2fb93816e58d2b184af945dbc1b2b919b49b70",
+    "replay-loss-3.png": "b27aeca912bc904487386a4bc8b13b8a6ba0f285e89b8b77b6ed72ff3d0c5098",
+    "replay-loss-wait.png": "b27aeca912bc904487386a4bc8b13b8a6ba0f285e89b8b77b6ed72ff3d0c5098",
+    "replay-loss-invalid.png": "b27aeca912bc904487386a4bc8b13b8a6ba0f285e89b8b77b6ed72ff3d0c5098",
+    "replay-loss-roll-ignored.png": "b27aeca912bc904487386a4bc8b13b8a6ba0f285e89b8b77b6ed72ff3d0c5098",
+    "replay-loss-space-ignored.png": "b27aeca912bc904487386a4bc8b13b8a6ba0f285e89b8b77b6ed72ff3d0c5098",
+    "replay-loss-editor.png": "3fb57c70f3b7f7ba527d8291fef8919b93f1f5493522d39f219febf8a55e44c9",
+    "replay-win-reset.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "replay-win-reset-wait.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "replay-win-first-roll.png": "89c4accb5abf6750156d5bbe7d39cc8ae2f903446f23f80676f68cc8ccd4dc38",
+    "replay-win-new-bank.png": "3b40c136fe0923688633278dfaec83f0f03a10558c92bbdcec5871ff0c257dac",
+    "replay-win-after-replay-editor.png": "c97d4070f322c5d331f6a0d5c09cf488ee6d7150b4e29bb75098aaf77db5ff24",
+    "replay-loss-reset.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "replay-loss-reset-wait.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "replay-loss-first-roll.png": "b867ce3f2ff01a75a30df61dbc3b6f1b02128a8d03d99e17c1ea3cc45c63bb47",
+    "replay-loss-new-bank.png": "a951d0866863c00a9f37b2438fbf89a80a295195b77696c645add0f1e3bf779b",
+    "replay-loss-after-replay-editor.png": "3391fa8e34457e0a750dcc3cca8225a5ecbdbd9c6d7f0e5fdab46f0a75ea1433",
+    "random-roll.png": "89c4accb5abf6750156d5bbe7d39cc8ae2f903446f23f80676f68cc8ccd4dc38",
+    "random-bank.png": "3b40c136fe0923688633278dfaec83f0f03a10558c92bbdcec5871ff0c257dac",
+    "random-next.png": "042f193d1e0c8d8cb16079e26b3e59135a3370cbbfcd4a2cc18ac858fcb16f76",
+    "random-editor.png": "aae81354311123e5ebbbedb59590d8b141152f4f72255bb23e49485b17362754",
+    "between-editor.png": "d02943d1d9ce79fc13b3e191aeaf2bbae5ef9798ed3bfacce5a91ccddd5c89c3",
+    "active-editor.png": "e4d0668abdee56074b27b807027393bded272226904740f4694efc85d05d9b64",
+    "session-syntax.png": "dfddff5685cdac03f4ea1f3b4efe4e20e19abbb837a104a4a6f5d108eea660b3",
+    "session-save-request.png": "d2019f6569103d9f43714339ba8c9445ca29ac6b65c5cc48be89d90c46e68bf2",
+    "session-saved.png": "bec9da7da514f632f3ce6989b98f0a76e3c12fadf835f9efbfb6de527412a5d8",
+    "session-settled.png": "f5ee8292048165d192a4e1de993726f183df430a45dd79641c3df946b9b5f4ef",
+    "session-cold-editor.png": "186f4822e2980225377e4720fdabaa753ccf2b85eb09ac64185a61be857bba06",
+    "session-reopened-listing.png": "d4ff13a0239ab072f2a0c94e2ea514b2b103d68928fededa2367a09ea7f78432",
+    "session-reopened-syntax.png": "8beb1b91ff2d283eb47103b5ebabc6f2b6fd069ce481b090f88881177319de73",
+    "session-reopened-title.png": "bacca3b7eeb3640be9e30633fa21fa4324b321a06a86dbd145c7798d0e06bc70",
+    "reopened-roll.png": "89c4accb5abf6750156d5bbe7d39cc8ae2f903446f23f80676f68cc8ccd4dc38",
+    "reopened-bank.png": "3b40c136fe0923688633278dfaec83f0f03a10558c92bbdcec5871ff0c257dac",
+    "reopened-next.png": "042f193d1e0c8d8cb16079e26b3e59135a3370cbbfcd4a2cc18ac858fcb16f76",
+    "reopened-editor.png": "438330ffff3f9c0e46c6508d68356296a7c2e63c7feccaa7982e4cb6d746e1da"
+  },
+  "identical_picture_pairs": [
+    [
+      "baseline-0",
+      "extracted-0"
+    ],
+    [
+      "baseline-1",
+      "extracted-1"
+    ],
+    [
+      "baseline-2",
+      "extracted-2"
+    ],
+    [
+      "baseline-3",
+      "extracted-3"
+    ],
+    [
+      "next-result",
+      "next-ignored"
+    ],
+    [
+      "next-four-start",
+      "next-reset"
+    ],
+    [
+      "award-bank",
+      "award-wait"
+    ],
+    [
+      "award-bank",
+      "award-invalid"
+    ],
+    [
+      "award-bank",
+      "award-wrong-phase"
+    ],
+    [
+      "count-5",
+      "count-wait"
+    ],
+    [
+      "count-5",
+      "count-invalid"
+    ],
+    [
+      "count-5",
+      "count-roll-ignored"
+    ],
+    [
+      "count-5",
+      "count-space-ignored"
+    ],
+    [
+      "missed-5",
+      "missed-wait"
+    ],
+    [
+      "missed-5",
+      "missed-invalid"
+    ],
+    [
+      "missed-5",
+      "missed-roll-ignored"
+    ],
+    [
+      "missed-5",
+      "missed-space-ignored"
+    ],
+    [
+      "success-3",
+      "success-wait"
+    ],
+    [
+      "success-3",
+      "success-invalid"
+    ],
+    [
+      "success-3",
+      "success-roll-ignored"
+    ],
+    [
+      "success-3",
+      "success-space-ignored"
+    ],
+    [
+      "failure-3",
+      "failure-wait"
+    ],
+    [
+      "failure-3",
+      "failure-invalid"
+    ],
+    [
+      "failure-3",
+      "failure-roll-ignored"
+    ],
+    [
+      "failure-3",
+      "failure-space-ignored"
+    ],
+    [
+      "possible-success-3",
+      "possible-success-wait"
+    ],
+    [
+      "possible-success-3",
+      "possible-success-invalid"
+    ],
+    [
+      "possible-success-3",
+      "possible-success-roll-ignored"
+    ],
+    [
+      "possible-success-3",
+      "possible-success-space-ignored"
+    ],
+    [
+      "replay-win-3",
+      "replay-win-wait"
+    ],
+    [
+      "replay-win-3",
+      "replay-win-invalid"
+    ],
+    [
+      "replay-win-3",
+      "replay-win-roll-ignored"
+    ],
+    [
+      "replay-win-3",
+      "replay-win-space-ignored"
+    ],
+    [
+      "replay-loss-3",
+      "replay-loss-wait"
+    ],
+    [
+      "replay-loss-3",
+      "replay-loss-invalid"
+    ],
+    [
+      "replay-loss-3",
+      "replay-loss-roll-ignored"
+    ],
+    [
+      "replay-loss-3",
+      "replay-loss-space-ignored"
+    ],
+    [
+      "replay-five-start",
+      "replay-win-reset"
+    ],
+    [
+      "replay-win-reset",
+      "replay-win-reset-wait"
+    ],
+    [
+      "replay-six-start",
+      "replay-loss-reset"
+    ],
+    [
+      "replay-loss-reset",
+      "replay-loss-reset-wait"
+    ]
+  ],
+  "saved_program_bytes": 4452,
+  "saved_program_sha256": "d9b7fb0754967f1ae47168cdb31164cf2595de09e086b765fe57878841fb3a7a",
+  "saved_disk_sha256": "d30fbe630089b40192524d0fe91c89f41a989dc8c82058d272c898c2f5d60afa",
+  "original_files_preserved": 78
+}

@@ -2,6 +2,14 @@
 
 Apply [Project purpose and direction](../PROJECT.md). This specification assigns teaching responsibilities; it does not assert that every subject below has been written or commit to a new navigation structure.
 
+## Participation, games and scope
+
+Apply the charter's Play · Build · Understand invitations without imposing an order. A reader may play, inspect, predict, change a rule, create an asset, investigate evidence or build a program. Offer a clear, worthwhile activity and enough explanation to continue from the reader's actual starting point. Programming is one route into the work; other creative and investigative contributions have value in their own right.
+
+Games from any era and physical games can provide activities and comparisons within the charter's scope. Card, board or paper play can make rules, state, probability, strategy and interaction tangible. Keep such an activity worthwhile on its own terms; a computer implementation is optional unless it is the agreed purpose. In comparisons, distinguish shared game rules from the controls, presentation, capabilities and costs of each medium or machine.
+
+Choose work through the charter's [admission test](../PROJECT.md#choosing-what-to-take-on). Broader scope does not change current track priorities, commission new era or language coverage, require every game to be ported, or imply support from another family tool. Existing guided programming sequences, executable intermediate stages and finished-game standards remain in force for system-building work.
+
 ## Shared subjects
 
 The [Craft coverage map](craft-coverage.md) records module responsibilities, agreed
@@ -134,6 +142,14 @@ Keep feedback explanatory, available without penalty and useful to parents or te
 
 Use [the game brief](brief.md) to compare appeal, teaching value and suitability. Retain, reshape or replace existing ideas on those grounds. Assembly is independent of BASIC; it need not port every BASIC game.
 
+Follow the charter's default of distinct games across tracks and systems. Compare
+the proposed playing experience with authored games and retained proposals,
+keeping their status explicit. Shared variables, loops, movement or data structures
+do not make two games duplicates; compare what the player does and why. Record
+close overlaps and choose another project unless a deliberate revisit is
+explicitly agreed for its teaching value. Keep the opening approachable rather
+than adding systems solely to make a familiar game appear different.
+
 Choose projects that reveal each system's character. Compare language design, CPU architecture, memory, graphics, sound, input, storage, timing and bandwidth, and the circumstances behind those choices. Explain what transfers and what changes without assuming the Spectrum came first or portraying another machine as deficient.
 
 State the target configuration and development workflow for every game. Read existing model and successor-machine decisions before changing scope. A modern host, emulator or transfer device does not silently change what a stock target can do.
@@ -143,3 +159,9 @@ State the target configuration and development workflow for every game. Read exi
 A useful link explains why to follow it: “The Foundations unit on binary numbers explores how these eight bits represent the row.” Avoid “you will remember”. Supply enough context locally to continue.
 
 Lessons guide building; shared subjects develop concepts; the Vault gives fuller context; patterns make techniques reusable. Link in both directions where useful. Do not duplicate canonical explanations or turn the lesson into a list of compulsory excursions.
+
+Connect the people, creative practices and circumstances behind an idea where they illuminate the activity. Explain relevant collaboration, cultural exchange, access and recognition with evidence. A sound, rule, image or historical question can provide a useful entry point; do not require prior coding to follow every connection. Related reading is optional depth, and a lesson must still work without taking every excursion.
+
+## Pattern Library breadth and progression
+
+The [Pattern Library](pattern-library.md) covers low-level operations as well as larger reusable techniques: keyboard and joystick/controller reading, basic sound and graphics, timing, data and memory work, progressing to more complex behaviours and systems. Readers can look up a small job independently or follow useful onward steps. Game studies are one source of examples, not an admission requirement. Preserve direct machine/language routes while prototyping shared technique identities with linked implementations; the detailed schema and navigation remain for review. The Craft teaches intent and judgement, the library supplies adaptable mechanics, and system tracks put them to work in games. Current delivery priorities are unchanged.

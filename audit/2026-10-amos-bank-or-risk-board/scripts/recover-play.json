@@ -1,0 +1,231 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/recover-title.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-00-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 60
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-01-B.png"
+  },
+  {
+    "action": "press_key",
+    "key": "X",
+    "hold_frames": 60
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-02-X.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 60
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-03-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-04-B.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-05-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-06-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-07-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-08-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-09-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-10-B.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-11-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-12-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-13-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-14-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-15-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/recover-16-R.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/recover-final.state"
+  }
+]

@@ -1,8 +1,10 @@
 # Code198x: purpose and direction
 
-> You can understand the machine—and use that understanding to make things.
+> Play · Build · Understand
 
-Code198x is developing a comprehensive games development and programming curriculum. Vintage computers give us environments small enough to understand how the pieces work together: how a variable is represented, how a loop executes, how pictures and sound become data, and how a program communicates with hardware.
+Code198x is a comprehensive, game-focused project for exploring computing, creativity and their human history. People can enter through playing, making or investigating, and follow the connections between them. Its curriculum develops the knowledge and judgement to create things of their own. Play, build and understand are independent invitations, not a compulsory sequence.
+
+Vintage computers give us environments small enough to understand how the pieces work together: how a variable is represented, how a loop executes, how pictures and sound become data, and how a program communicates with hardware. You can understand the machine and use that understanding to make things.
 
 We explain both how and why. Opening an abstraction should also explain why people built it, what it makes easier and what it costs. Readers should become comfortable moving between levels of detail and choosing the right one for a task. That understanding should remain useful when they return to modern hardware, languages and tools.
 
@@ -10,13 +12,19 @@ The purpose is understanding, creation, investigation and informed choice. Histo
 
 ## Audience and voice
 
-We write for children, parents and teachers, while respecting adults and experienced programmers. Clear explanations make the material accessible; childish language and assumed prior attendance do not.
+Code198x is for everyone, regardless of age, background, identity or experience. Children, adults, parents, teachers, beginners and experienced practitioners are equally welcome. Playing, investigating, designing, making art or sound, writing and contributing evidence are worthwhile ways to participate. Becoming a programmer or producing an original project is not a condition of belonging.
+
+Assume intelligence, not prior knowledge. Explain prerequisites and unfamiliar terms, retain depth for experienced readers and avoid childish language or assumed prior attendance. Work to remove barriers involving disability, cost, equipment, language and cultural familiarity. Use accessible presentation, affordable routes and alternative formats where feasible. State actual requirements and available alternatives honestly; an inclusive purpose is not proof that every activity is already accessible on every device.
 
 The early layers take an Usborne-style approach: approachable, concrete, economical and inviting. Technical depth can grow without changing that respect for the reader. Use British English and “program” for computer software. The detailed editorial standard is [Writing voice](specifications/writing-voice.md).
 
 ## Scope across systems
 
-The family covers computing from the 1960s through the early 2000s, with the 1970s and 1980s at its centre of gravity. Coverage is worldwide. Cultural, geographic, commercial, state-supported, socialist-bloc, kit, DIY and hobbyist-import contexts can explain different engineering choices and experiences.
+Code198x may explore games and their connections to computing across all eras, including their earlier roots and present-day practice. This is the explicit [Code198x exception to the shared period boundary](https://github.com/stevehill1981/198x/blob/main/decisions/period-extends-to-the-1960s.md#code198x-exception). It overrides the 1960s-through-early-2000s subject boundary for Code198x because useful game, creative and historical connections cross it. The shared period and support responsibilities of other family projects remain unchanged.
+
+Vintage systems remain our strongest teaching base and current delivery focus, with the 1970s and 1980s at the centre of that work. Broader subject scope does not schedule a modern-system track, promise every port or change the current work below. Coverage is worldwide. Cultural, geographic, commercial, state-supported, socialist-bloc, kit, DIY and hobbyist-import contexts can explain different engineering choices and experiences.
+
+Physical games, including card, board and paper games, may belong when they offer a worthwhile game experience or illuminate rules, design, probability, interaction or implementation. An activity need not end in code. Comparisons between physical and digital versions or between machines should explain what transfers and what changes. This admits purposeful work, not an obligation to catalogue every game or form of play.
 
 Consider period, cultural and geographic coverage, support surface, form factor and role, and distribution or political-economic context when choosing a subject. A home computer, console, handheld, kit or workstation need not teach the same things.
 
@@ -26,6 +34,18 @@ The Spectrum is our first re-specification focus, not the destination every lear
 
 Use BASIC or FORTH where the machine provides an appropriate environment. Where it does not, begin with assembly. C and C++ may become relevant later; they are not the present track-development priority.
 
+## Choosing what to take on
+
+Curiosity suggests connections; editorial judgement decides their scope and priority. Before taking on a subject, establish:
+
+- What worthwhile question or experience it serves, and for whom.
+- Why it belongs in this game-focused project and how it connects with existing work or an agreed direction.
+- Whether it needs a separate article, activity, comparison, paragraph or link; reuse existing coverage where it serves the reader.
+- What evidence, permissions, work and maintenance its proposed scope requires, and whether we can finish it responsibly.
+- Whether it is a candidate, agreed work or something actually available.
+
+Independent historical and cultural value is legitimate; a subject need not support an immediate programming exercise. A connection alone does not create a commitment, and agreeing a subject does not commission every possible implementation. Keep candidates for later consideration without public stubs or promises. Prefer a useful, bounded contribution over an unfinished branch. The family's [When to Stop Pulling](https://github.com/stevehill1981/198x/blob/main/PRACTICE.md#when-to-stop-pulling) remains the stopping rule.
+
 ## A connected curriculum
 
 - **Lessons** guide readers through making things in meaningful stages.
@@ -34,7 +54,9 @@ Use BASIC or FORTH where the machine provides an appropriate environment. Where 
 - **The Craft** develops game design, behavioural intent and practical game-making judgement in a language-neutral way. It can use runnable programs and inspectable real code; the explanation must remain approachable without prior knowledge of the demonstration language.
 - **System tracks** implement those ideas in concrete languages, tools and hardware.
 - **The Vault** supplies encyclopaedic historical, cultural and technical context.
-- **The Pattern Library** supplies concrete techniques readers can adapt, with their assumptions and trade-offs.
+- **The Pattern Library** supplies concrete techniques readers can adapt, with their assumptions and trade-offs. Reusable probes expand incrementally across all 30 currently registered Emu198x machines, with eventual coverage of every catalogue system. This does not commission complete tracks or change the four core delivery priorities. Separate turn progression, optional clocks/deadlines, input acceptance and presentation so readers can combine them for their game.
+
+[Whole-game studies](specifications/game-studies.md) bring these responsibilities together through close investigation of games, their inspirations, cultural circumstances and the people and institutions around them. Their initial home is Game Studies within the Vault, with the option of becoming an independent section later.
 
 These are responsibilities, not a mandate to create a top-level module for every subject. [Curriculum design](specifications/curriculum.md) places the shared subjects and explains progression. Existing navigation and authored content are evidence of implementation, not limits on the intended coverage.
 
@@ -95,7 +117,9 @@ Programming, design, graphics, sound and finishing develop together. Appropriate
 
 Audio has equal standing with graphics, input and game logic. Develop it progressively throughout the games, with deeper musical, creative, hardware and playback investigations connected to timing and profiling using period techniques and modern tools. The [graphics and audio specification](specifications/graphics-and-audio.md#agreed-audio-and-performance-direction) owns this direction and its coverage audit. Current implementation covers ZX Spectrum, Commodore 64, NES and Amiga. MIDI, PC speaker, AdLib/OPL synthesis, Sound Blaster/sample playback and external MIDI modules are explicit future coverage; MIDI separates performance instructions from sound generation. This future direction does not expand current implementation scope.
 
-There are no fixed game counts, unit counts or universal language progressions. Historical games can inspire, explain or provide comparisons; a canonical ancestor is not a condition for a new teaching project. Reusing a mechanic across systems is welcome when it makes a useful contrast.
+There are no fixed game counts, unit counts or universal language progressions. Historical games can inspire, explain or provide comparisons; a canonical ancestor is not a condition for a new teaching project.
+
+Choose distinct games across tracks and systems by default. Compare the player's actions, decisions and goal with existing games and proposals before recommending a new project; changing the title, artwork or language alone does not make it distinct. Revisit a game only when explicitly agreed for a stated teaching purpose, such as comparing implementations or exploring a new constraint. Programming concepts can recur through different games. Distinctness must not force a beginner into a more difficult project. Apply this to new choices and reviews; it does not automatically retire existing games.
 
 The basis of a [Spectrum performance-revisit thread](platforms/sinclair-zx-spectrum/basic/performance-revisits.md) is agreed: extend existing BASIC games until a chosen experience exposes measurable limits. The initial BASIC rewrite is complete and published. This thread remains deferred until the owner chooses to resume it. Compare algorithm and representation changes, bounded machine-code helpers and full assembly implementations where evidence warrants them. Specific experiments and ports remain proposals; neither deeper games nor completion of BASIC implies a compulsory move to assembly.
 
@@ -110,6 +134,12 @@ The basis of a [Spectrum performance-revisit thread](platforms/sinclair-zx-spect
 **Experimental reasoning:** predict, observe, explain discrepancies and revise the model. Code, documentation, hardware variants and emulators can all contain surprises or faults.
 
 **Human engineering:** people made these systems under real constraints. Preserve their mistakes, compromises, collaboration and ingenuity without inventing motives or convenient origin stories.
+
+**Creative practice:** rules, interaction, visual design, sound, music and writing shape what a game feels like. Connect their creation to implementation without treating them as decoration added after programming.
+
+**People, access and recognition:** collaboration, cultural exchange, education, economic conditions, discrimination and recognition shape who can participate and whose work is remembered. Credit contributions within the main history, including underrepresented people and places; preserve uncertainty and avoid single-hero stories.
+
+Make these connections useful through local explanation, selective links, comparisons and occasional reading paths. Each connection should help the reader notice, understand or do something. No lesson must cover every thread, and no new top-level section follows automatically.
 
 ## Present-day relevance
 
@@ -132,6 +162,8 @@ Check technical and historical claims against reliable sources, preferring prima
 Distinguish proposed design, source-checked claims, code that builds, behaviour checked by execution and behaviour checked only in a named emulator or hardware configuration. Tool or repository existence is not evidence that an execution integration is available.
 
 For people and organisations, distinguish established facts, recollections, disputed accounts, allegations and interpretation. Do not invent dialogue, motives or anecdotes. Acknowledge documented wrongdoing proportionately without sensationalising it or treating technical achievement as an excuse. Use age-appropriate language without concealing relevant facts. Avoid unsupported “first”, “invented by” and single-author origin stories.
+
+Biographical and regional context belongs in that understanding. Follow people as they change through their lives and establish how particular experiences affected their opportunities or work without inventing a psychological explanation. Investigate specific places and routes of cultural exchange; shared nationality does not make people alike, and wider exchange does not automatically erase differences. The [game-study approach](specifications/game-studies.md#lives-constraints-and-place) applies this to people, constraints and the circumstances of making and playing games. Current principles and delivery priorities remain intact.
 
 ## Licensing
 

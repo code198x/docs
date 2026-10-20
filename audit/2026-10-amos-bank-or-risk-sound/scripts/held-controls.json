@@ -1,0 +1,65 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/bank-ready.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/held-controls.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/held-B.png"
+  },
+  {
+    "action": "press_key",
+    "key": "X",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/held-X.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/held-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/held-R.png"
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

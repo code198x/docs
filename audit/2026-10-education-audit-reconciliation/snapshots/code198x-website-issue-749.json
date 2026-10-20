@@ -1,0 +1,9 @@
+{
+  "body": "The first-session publication qualified narrow layouts, but machine edit/run/export interactions were desktop checks. Chromium viewport emulation does not establish Safari, assistive-technology or physical touch behaviour. This is a bounded journey qualification under #124, not a replacement for family-wide accessibility ownership in umbrella #123.\n\nSelect one /try/ machine route and declare the available browser/device/assistive-technology matrix before running. Cover discovery, source opening/editing, running, interpreting the changed result, error recovery and saving/reopening where offered. Include Safari/WebKit and keyboard/screen-reader checks; exercise physical touch where a device is available. Record unavailable configurations as skipped, never as passes. Check whether essential visual/audio information has an accessible equivalent on that route.\n\nAcceptance: retain actual pages, task steps, browser/OS/device sizes and input method, assistive technology, observable results and limits. File only reproduced blockers after deduplicating #123 and existing site issues. Keep learner effectiveness separate from expert operability. Do not claim cross-platform accessibility from a zero-violation scanner. Parent: https://github.com/stevehill1981/198x/issues/124 . Evidence: Code198x/docs `guides/first-session/PUBLICATION.md`.\n",
+  "number": 749,
+  "state": "OPEN",
+  "title": "Qualify one first-session machine journey beyond Chromium viewport checks",
+  "updatedAt": "2026-10-16T13:26:33Z",
+  "url": "https://github.com/code198x/website/issues/749",
+  "repository": "code198x/website"
+}

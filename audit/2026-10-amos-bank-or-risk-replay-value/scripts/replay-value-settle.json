@@ -1,0 +1,18 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/replay-value-saved.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 240
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/replay-value-settled.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/replay-value-settled.state"
+  }
+]

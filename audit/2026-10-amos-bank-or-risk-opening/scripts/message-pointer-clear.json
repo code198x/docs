@@ -1,0 +1,26 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/message-start.state"
+  },
+  {
+    "action": "input",
+    "events": [
+      {
+        "PointerMotion": {
+          "device": "mouse-1",
+          "dx": 96,
+          "dy": 80
+        }
+      }
+    ]
+  },
+  {
+    "action": "run_frames",
+    "frames": 15
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/message-start.png"
+  }
+]

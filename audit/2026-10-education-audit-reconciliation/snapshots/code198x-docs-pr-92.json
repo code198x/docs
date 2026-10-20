@@ -1,0 +1,13 @@
+{
+  "body": "The next game-maths audit checks finite movement, signed rounding and retained state against the actual maintained aiming model. The selected results agree with the published lessons; no lesson or model correction is proposed.\n\nTen diagnostic geometry fixtures distinguish swept contact from endpoint-only sampling and finite segments from infinite lines. Nine signed rounding cases, nine directions, all 10,800 declared angle-grid/scale velocity combinations and eighteen selected two-axis position traces pass. The original five model tests pass. Two wrong geometry policies fail with nonzero exits; the initial signed-zero verifier error is retained separately.\n\nThe report links the existing six-unit objective map, verifies those sources are unchanged, and prepares three optional learner tasks with separate assessor notes. It records the stale publication-status README finding in samples #94 and the bounded correction. No fresh browser/native/learner qualification is claimed.\n\nEvidence identities, all thirteen manifest entries, local links, missing-shot rejection, Ruff and focused prose checks pass. Commit hooks pass with one existing advisory on unchanged specification prose. #114/#115/#124 stay open; learner effectiveness and the separate VoiceOver/touch limits remain unverified.\n",
+  "headRefOid": "7d9774d55616b8170ee8709d8be6d45adfa82165",
+  "mergeCommit": {
+    "oid": "7236ab08d865b9e9c10620d763f13745235fdc26"
+  },
+  "mergedAt": "2026-10-16T10:06:33Z",
+  "number": 92,
+  "state": "MERGED",
+  "title": "Qualify aiming movement and rounding boundaries",
+  "url": "https://github.com/code198x/docs/pull/92",
+  "repository": "code198x/docs"
+}

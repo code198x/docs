@@ -1,0 +1,18 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/rom-font-start.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 300
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/rom-font-ready.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/rom-font-ready.state"
+  }
+]

@@ -1,0 +1,8 @@
+# Follow Elite through four decades
+
+Owner correction: the published 1984 study largely omits the decades of subsequent heritage. Extend the study's onward account and its reference links, keeping detailed descendants' treatment in the Vault as specified by game-studies.md. No global guidance or layout change.
+
+1. Inspect current Elite, Elite Dangerous, Frontier Developments and existing candidate coverage. Research original Frontier/First Encounters manuals and primary developer/release accounts for Dangerous; distinguish releases, later improvements and our design comparisons.
+2. Expand studies/elite/study.md with a clear route from 1984 through Frontier: Elite II (1993), Frontier: First Encounters (1995), Elite Dangerous (2014) and its expansions/community. Explain changes to flight, scale, freedom, place, storytelling and business; retain the original game as the study's focus. Update evidence.md and vault-audit.md; reuse VC-1494 and existing destinations, without duplicate issues or biographies.
+3. Commit canonical docs, adapt the published site through scripts/sync-paired-studies.mjs, update Elite's focused reference entry with a concise sequel section, connect Elite Dangerous back to the study and add a heritage contents link. Keep review flags and approved layout/artwork intact.
+4. Verify citations/links, source parity and paragraph readability; run the build, relevant browser/source/content checks and inspect desktop/phone heritage sections. Push linked reviewable PRs and retain reading evidence under outputs/elite-heritage. Do not merge/deploy further revisions without owner review. Preserve unrelated primary work, retained commits and clean temporary worktrees/processes.

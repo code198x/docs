@@ -1,0 +1,127 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/fail-title.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fail-00-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fail-01-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fail-02-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fail-03-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fail-04-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fail-05-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fail-06-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fail-07-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fail-08-R.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/fail-final.state"
+  }
+]

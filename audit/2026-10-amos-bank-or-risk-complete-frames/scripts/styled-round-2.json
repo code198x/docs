@@ -1,0 +1,68 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/styled-result-1.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/styled-round-2.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-active-2.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-active-2.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-roll-2.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-roll-2.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-result-2.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-result-2.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

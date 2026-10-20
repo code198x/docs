@@ -159,3 +159,9 @@ checks skipped locally) and ten movement-model tests. Browser verification cover
 worked traces, input, setting resets, source links, navigation, both themes,
 390/1280-pixel layouts and iframe sizing, with no page errors or scoped Axe
 violations.
+
+## From studies to practical Craft work
+
+The owner approved the [study-theme direction](../plans/2026-10-19-study-themes-and-library-scale.md): begin with meaningful choices, then develop grounded work on pursuit and delayed feedback within the existing module homes. These are agreed directions, not claims that new lessons have been authored or published. Specific lesson materials and a bounded library prototype still need review.
+
+The [Pattern Library](pattern-library.md) also has an independent low-level remit. Keyboard and joystick reading, basic audio and graphics, timing and memory routines are useful in their own right and can grow into larger techniques. Shared Craft explanations should connect to those routines where they help a reader act, without becoming register-reference courses or making every routine depend on a historical study. Preserve current system priorities and independent entry routes.

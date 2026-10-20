@@ -1,0 +1,142 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/perfect-reopened-title.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/perfect-reopened.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-reopened-00-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 60
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-reopened-01-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 60
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-reopened-02-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 60
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-reopened-03-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-reopened-04-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-reopened-05-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-reopened-06-Space.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-reopened-07-R.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/reopened-success-active.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/perfect-reopened-08-R.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/perfect-reopened-final.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

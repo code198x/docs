@@ -18,6 +18,13 @@ verification and how to add activities after the first learner observations.
 | [Curriculum design](specifications/curriculum.md) | Shared subjects, progression, independent entry and checks for understanding |
 | [Recurring progressions](specifications/recurring-progressions.md) | Eight connected learning threads, existing-game placements, gaps and implementation priorities |
 | [Data, memory and tools](specifications/experiments/data-memory-tools.md) | Asset representations, small converters, validation, storage and runtime costs |
+| [Whole-game studies](specifications/game-studies.md) | Play, design, inspirations, culture, production and reception; people, institutions and Vault follow-through |
+| [Spacewar study](studies/spacewar/README.md) | First published investigation and its evidence, companions and capture records |
+| [Adventure study draft](studies/adventure/README.md) | Second investigation: words, world state, caving and home adaptations; owner review pending |
+| [Monty Mole study draft](studies/monty-mole/README.md) | Play, coal, Sheffield, character and the platform adventure |
+| [Elite study draft](studies/elite/README.md) | Trade, flight, docking, procedural worlds and the imagined life around them |
+| [Manic Miner study draft](studies/manic-miner/README.md) | Jumps, cavern design, music, influences and the journey into Jet Set Willy and community creation |
+| [Lemmings study draft](studies/lemmings/README.md) | Indirect control, crowds, terrain, collaborative production and a changing rescue game |
 | [Game brief](specifications/brief.md) | The experience, target, teaching, runnable stages and verification of one game |
 | [Unit](specifications/unit.md) | Guided construction, local explanations, questions and publishing checks |
 | [Content workflow](specifications/content-creation-workflow.md) | Research, agreement, prototyping, authoring and verification |
@@ -38,7 +45,8 @@ verification and how to add activities after the first learner observations.
 | [Profiling progression](specifications/experiments/profiling-progression.md) | Game-led measurement practice, verified tool surfaces and separate guest/host investigations |
 | [Vault](specifications/vault.md) | Sourced encyclopaedic context |
 | [Vault candidate backlog](vault-candidates.md) | Proposed subjects, triage and the handoff to writing issues; [structured records](vault-candidates.csv) |
-| [Pattern Library](specifications/pattern-library.md) | Adaptable implementations and their contracts |
+| [Pattern Library](specifications/pattern-library.md) | Low-level routines, reusable techniques, progression and implementation evidence |
+| [Game loops and ownership](guides/game-loops.md) | Reusable core-system waits, BBC/Electron MOS reuse, execution records and wider-system next steps |
 
 [Website and publishing](website.md) connects these specifications to the current schemas, source organisation, capture, testing and deployment. [Game-design material](platforms/README.md) lists the concrete existing designs worth consulting during re-specification.
 
@@ -51,7 +59,7 @@ The [Spectrum assembly review](platforms/sinclair-zx-spectrum/assembly/course-re
 
 The [Craft coverage map](specifications/craft-coverage.md) defines seven agreed module homes and distinguishes available material from planned lessons. The [Maths for Games specification](specifications/maths-for-games.md) develops geometry, trigonometry, matrix algebra, 3D, curves, probability and fixed-point applications.
 
-The [Foundations audit coverage map](audit/2026-10-foundations-coverage.md) links sampled evidence to the ten modules and records the remaining audit gaps. The [education umbrella reconciliation](audit/2026-10-education-reconciliation/REPORT.md) separates accepted technical evidence, unknown learner outcomes and the next five priorities. The [probability pilot](audit/2026-10-probability-pilot/REPORT.md) maps the eleven published maths units and checks exact counts against rounded shares. The [embedded BASIC follow-up](audit/2026-10-embedded-basic/REPORT.md) qualifies repeated reads, replacement, errors and recovery in the live browser machine. The [latency baseline](audit/2026-10-embedded-latency/REPORT.md) retains five cold/warm trials with complete-result timing boundaries. The [native Safari follow-up](audit/2026-10-first-session-operability/REPORT.md) records selected first-session operation, successful edited-tape save/reopen and the remaining screen-reader/touch gaps.
+The [Foundations audit coverage map](audit/2026-10-foundations-coverage.md) links sampled evidence to the ten modules and records the remaining audit gaps. The [current education audit reconciliation](audit/2026-10-education-audit-reconciliation/REPORT.md) maps the four audit issues to accepted evidence, recommends bounded closures and names the remaining owners. The [earlier reconciliation](audit/2026-10-education-reconciliation/REPORT.md) retains the 15 October position. The [probability pilot](audit/2026-10-probability-pilot/REPORT.md) maps the eleven published maths units and checks exact counts against rounded shares. The [embedded BASIC follow-up](audit/2026-10-embedded-basic/REPORT.md) qualifies repeated reads, replacement, errors and recovery in the live browser machine. The [latency baseline](audit/2026-10-embedded-latency/REPORT.md) retains five cold/warm trials with complete-result timing boundaries. The [native Safari follow-up](audit/2026-10-first-session-operability/REPORT.md) records selected first-session operation, successful edited-tape save/reopen and the remaining screen-reader/touch gaps.
 
 ## Ownership and maintenance
 

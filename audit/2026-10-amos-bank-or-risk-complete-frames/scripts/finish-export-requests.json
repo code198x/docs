@@ -1,0 +1,24 @@
+[
+  {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "tools/call",
+    "params": {
+      "name": "load_snapshot",
+      "arguments": {
+        "path": "${RUN}/finish-settled.state"
+      }
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "tools/call",
+    "params": {
+      "name": "save_disk",
+      "arguments": {
+        "path": "${RUN}/finish-settled.adf"
+      }
+    }
+  }
+]

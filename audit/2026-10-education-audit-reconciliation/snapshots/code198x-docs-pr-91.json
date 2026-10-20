@@ -1,0 +1,13 @@
+{
+  "body": "The latest five Foundations improvements are now published. This records fresh live checks of compound conditions, counted loops, output, interpreter traces and fixed-point state, plus the public first-session guide. No product blocker was reproduced and no website change is proposed.\n\nTen lesson/viewport cases, twelve guide/viewport cases and 36 behaviour groups pass at 1440px and 390px. Existing code-contrast scanner uncertainties remain visible; ten endpoint measurements pass at 16.8168:1. A deliberately incorrect table expectation fails against the actual public page. The report retains source/response identities, deployment evidence, raw results and captures.\n\nThe evidence validator, missing-viewport rejection, all 63 manifest hashes, Ruff, Vale, local links and commit hooks pass. Earlier production/test evidence is linked rather than rerun. Learner effectiveness remains unknown; VoiceOver is skipped at the user's request and physical touch remains untested. Website #749 and umbrella #114/#115/#124 remain open. No further guide expansion is proposed before the first learner trial.\n",
+  "headRefOid": "dd46f5c6c579906cf336720873f7845636040159",
+  "mergeCommit": {
+    "oid": "6131fce9dfe227f08fa47bc868a642663e5881c4"
+  },
+  "mergedAt": "2026-10-16T09:55:23Z",
+  "number": 91,
+  "state": "MERGED",
+  "title": "Verify recent Foundations lessons on the public site",
+  "url": "https://github.com/code198x/docs/pull/91",
+  "repository": "code198x/docs"
+}

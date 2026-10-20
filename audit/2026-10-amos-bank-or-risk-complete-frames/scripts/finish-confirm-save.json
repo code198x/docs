@@ -1,0 +1,23 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/finish-settled.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 240
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/finish-confirmed.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/finish-settled.state"
+  }
+]

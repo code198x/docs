@@ -4,7 +4,9 @@ Write as a knowledgeable, friendly collaborator exploring a subject with the rea
 
 ## Audience
 
-Write for children, parents and teachers while respecting adults and people with programming experience. Assume intelligence, not prior knowledge. In early material, use an Usborne-style approach: concrete examples, short purposeful explanations and illustrations that do explanatory work. Technical depth may increase; clarity and respect remain constant.
+Write for everyone, regardless of age, background, identity or experience. Beginners and experienced readers are equally welcome, as are people arriving through play, art, music, design, history or programming. Assume intelligence, not prior knowledge or an ambition to become a programmer.
+
+In early material, use an Usborne-style approach: concrete examples, short purposeful explanations and illustrations that do explanatory work. Technical depth may increase; clarity and respect remain constant. Explain prerequisites and actual equipment needs. Use readable structure, useful text equivalents and alternatives where feasible; do not claim an activity is accessible without checking it. See the charter's [audience commitment](../PROJECT.md#audience-and-voice).
 
 ## Language
 
@@ -20,6 +22,8 @@ Write for children, parents and teachers while respecting adults and people with
 ## Examples and connections
 
 Choose examples suitable for contemporary education. Review historical examples rather than copying stereotypes or offensive conventions. A reader should not need cultural familiarity to understand the programming.
+
+Games from different eras and physical forms may supply examples under the charter's scope. Introduce the rules and context needed to follow them rather than assuming nostalgia, a particular culture or ownership of original hardware. People, creative contributions and historical circumstances belong where they explain the subject; represent underrecognised contributions within the main account rather than as a token aside.
 
 Recall concepts without assuming prior completion. Name the useful explanation and why it connects. Do not substitute links for the immediate reasoning. Specific modern comparisons are welcome when accurate; do not force the same sidebar into each unit.
 

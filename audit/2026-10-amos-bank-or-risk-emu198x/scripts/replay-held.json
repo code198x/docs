@@ -1,0 +1,74 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/perfect-final.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "press_key",
+    "key": "B"
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/ending-stable.png"
+  },
+  {
+    "action": "press_key",
+    "key": "A",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/replay-reset.png"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/replay-first-roll.png"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/held-bank.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/held-continue.png"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/success-active.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/quit-tail.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/quit-quiet.png"
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

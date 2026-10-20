@@ -1,0 +1,13 @@
+{
+  "body": "Make the first AMOS and AmiBlitz greetings reproducible with named runtime, OS and memory configurations, complete folder distributions and launch scripts, and the observed run/return/error-repair controls.\n\nAMOS launches from its package drawer, uses F1, and returns through its end requester. AmiBlitz uses PED, plain-text `.ab3` import and a RuntimeDebug=0 header so both output lines are visible while waiting for a left click. Correct Compile & Run to right-Amiga+#, distinguish the termination prompt from the compile-error dialog, and use a real trailing-plus error with left-Amiga+V dismissal. Remove the untested whole-course compatibility guarantee and use literal expected output for the Blitz greeting.\n\nValidation: manual baseline, edited greeting, genuine syntax error and repaired rerun observed for both languages on the recorded configurations (code198x/docs#96). Clean production build passes (2,459 pages); generated checks cover all four routes, matching linked header styles and resolving internal Amiga links. An initial MDX `<ENTER>` error was corrected; a subsequent preview exposed missing stylesheet references, resolved by clearing only the task build caches and rebuilding.\n\nRemaining review: the new Blitz wide/narrow visual and click-through checks are incomplete after Chrome screenshot/CDP timeouts. The desktop setup DOM reported width=scrollWidth=1440. Earlier AMOS wide/narrow checks passed, but do not qualify these new Blitz edits. Keep this PR in draft until that review is completed. No later lesson, sample, whole-course compatibility, timing, audio or learner-effectiveness claim.\n\nRelated: #766, code198x/docs#94 and stevehill1981/198x#116. Broader performance/representation claims remain separate in #767.\n",
+  "headRefOid": "84530406ba84d101cd7385cf6f6f317803566e5e",
+  "mergeCommit": {
+    "oid": "e98bcf78e5dd359d4b4a0bf7698efec663a5905a"
+  },
+  "mergedAt": "2026-10-16T13:14:17Z",
+  "number": 769,
+  "state": "MERGED",
+  "title": "Make the first AMOS and AmiBlitz greetings reproducible",
+  "url": "https://github.com/code198x/website/pull/769",
+  "repository": "code198x/website"
+}

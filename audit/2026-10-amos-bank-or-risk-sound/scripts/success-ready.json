@@ -1,0 +1,29 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/success-active.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 3
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/success-ready.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/success-ready.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/passive-tail.wav"
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

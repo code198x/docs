@@ -1,0 +1,22 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/boot-2000.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Return"
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/editor.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/editor.state"
+  }
+]

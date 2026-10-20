@@ -1,0 +1,38 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/editor.state"
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${RUN}/playtest.adf",
+    "writable": true
+  },
+  {
+    "action": "run_frames",
+    "frames": 100
+  },
+  {
+    "action": "press_keys",
+    "keys": [
+      "ramiga",
+      "lshift",
+      "m"
+    ],
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/merge-request.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/merge-request.state"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "body": "The Blitz alternating-bar task used `x/2*2=x`, which selects every bar with default Quick variables. Use MOD for a real remainder test and explain the result. Both unit-4 lessons now ask learners to predict, change one thing, diagnose a boundary or state bug, and repair it with stated checks.\n\nThe Blitz lesson also uses the qualified PED controls, distinguishes the static counted drawing from animation, and qualifies VWait timing for the PAL setup. AMOS checks one, zero and negative lives, then deliberately breaks and repairs the zero boundary.\n\nValidation: production build (2,459 pages), content check (25,972 Vault references), generated-route/source/capture checks with a rejected negative control, native AMOS branch and repair checks, and native AmiBlitz CLI compilation/execution of baseline, stripes, colour bug and repair. Both production pages reviewed in Chrome at 390\u00d7844 and 1440\u00d7900; explanation disclosures exercised, including keyboard activation. No learner trial or VoiceOver claim.\n\nCloses #773. Part of stevehill1981/198x#116.\n\nMerge code198x/code-samples#100 first: this page includes its corrected listing. Retained logs, program fixtures, hashes and scope limits accompany the coordinated docs PR.\n\nEvidence: https://github.com/code198x/docs/pull/98\n",
+  "headRefOid": "63a5dcd7cdd995c1be93d331a0572f6f1a6be2d2",
+  "mergeCommit": {
+    "oid": "9180e96ab8e171cdfee5b966f7b6dd93338125b2"
+  },
+  "mergedAt": "2026-10-16T14:10:40Z",
+  "number": 775,
+  "state": "MERGED",
+  "title": "Make Amiga decisions and repetition exercises reproducible",
+  "url": "https://github.com/code198x/website/pull/775",
+  "repository": "code198x/website"
+}

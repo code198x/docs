@@ -1,0 +1,63 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/work-editor.state"
+  },
+  {
+    "action": "press_keys",
+    "keys": [
+      "ramiga",
+      "lshift",
+      "m"
+    ]
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "type_string",
+    "text": "DF0:bank.asc\n",
+    "settle_frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return"
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "press_key",
+    "key": "f2"
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/work-tested.png"
+  },
+  {
+    "action": "press_keys",
+    "keys": [
+      "ramiga",
+      "lshift",
+      "s"
+    ]
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/work-save-request.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/work-save-request.state"
+  }
+]

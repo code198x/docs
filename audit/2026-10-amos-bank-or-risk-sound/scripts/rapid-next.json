@@ -1,0 +1,35 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/bank-ready.state"
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/rapid-next.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 1
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/rapid-next.png"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

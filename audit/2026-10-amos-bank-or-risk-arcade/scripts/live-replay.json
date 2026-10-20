@@ -1,0 +1,61 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/live-result-5.state"
+  },
+  {
+    "action": "press_key",
+    "key": "A",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 40
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/live-reset.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/live-reset.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/live-reset-wait.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/live-reset-wait.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 40
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 40
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/live-new-bank.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/live-new-bank.state"
+  }
+]

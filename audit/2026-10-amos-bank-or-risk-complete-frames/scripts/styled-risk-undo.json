@@ -1,0 +1,57 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/styled-risk-pending.state"
+  },
+  {
+    "action": "press_key",
+    "key": "U",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-risk-restored.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-risk-restored.state"
+  },
+  {
+    "action": "press_key",
+    "key": "U",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-risk-restored-stable.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-risk-restored-stable.state"
+  },
+  {
+    "action": "press_key",
+    "key": "B",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/styled-risk-bank.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/styled-risk-bank.state"
+  }
+]

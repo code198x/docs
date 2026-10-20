@@ -1,0 +1,17 @@
+{
+  "styled-five": {
+    "face": 5,
+    "static": false,
+    "sha256": "83f3077dda565f5b93a0caca46b6bd7bec59529a438fca395ccfbcaa2371b09e"
+  },
+  "styled-six": {
+    "face": 6,
+    "static": false,
+    "sha256": "1d662283f6b56450c55921c96b7283e426ccc87107e5f341f31a590dd93d2352"
+  },
+  "styled-static": {
+    "face": 5,
+    "static": true,
+    "sha256": "68c7a9720032df75a8a5882fdb88ba0badcb33e0e295bc375cb33f025e927b04"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "amos-work.adf": {
+    "bytes": 901120,
+    "sha256": "f5052c16b47b33dedc51ffb15c2467a5b566377c5060c9826897b10bec36c6f5",
+    "independent_rebuild_identical": true
+  },
+  "value.adf": {
+    "bytes": 901120,
+    "sha256": "273f9537ad0c9161e42e7895ff61c19e366b703e595da15b329461949a6a5550",
+    "independent_rebuild_identical": true
+  },
+  "varied.adf": {
+    "bytes": 901120,
+    "sha256": "69f0799e0542d2da4c2b2254d1a915aac88931a27ddcd91d732c752a02e800ae",
+    "independent_rebuild_identical": true
+  },
+  "negative_controls": [
+    {
+      "control": "missing required restored-face capture",
+      "rejected": true,
+      "reason": "[Errno 2] No such file or directory: '${RUN_ROOT}/controls/missing/varied-restored.png'"
+    },
+    {
+      "control": "valid but wrong pending-state picture",
+      "rejected": true,
+      "reason": "('risk-pending', 'risk-pending-stable')"
+    },
+    {
+      "control": "silent bank recording",
+      "rejected": true,
+      "reason": "list index out of range"
+    },
+    {
+      "control": "valid disk without saved program",
+      "rejected": true,
+      "reason": "'replay-value.amos'"
+    },
+    {
+      "control": "populated output",
+      "rejected": true
+    },
+    {
+      "control": "changed source",
+      "rejected": true
+    },
+    {
+      "control": "incorrect independent target probability",
+      "rejected": true
+    }
+  ]
+}

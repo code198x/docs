@@ -1,0 +1,20 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/integrated-save-request.state"
+  },
+  {
+    "action": "type_string",
+    "text": "integrated.amos\n",
+    "hold_frames": 3,
+    "settle_frames": 360
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/integrated-saved.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/integrated-saved.state"
+  }
+]

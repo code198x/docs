@@ -1,0 +1,41 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/tone-listing.state"
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${RUN}/amos-work.adf",
+    "writable": true
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "start_audio_recording",
+    "path": "${RUN}/tone-timing.wav"
+  },
+  {
+    "action": "press_key",
+    "key": "f1",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 40
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/tone-during.png"
+  },
+  {
+    "action": "run_frames",
+    "frames": 90
+  },
+  {
+    "action": "stop_audio_recording"
+  }
+]

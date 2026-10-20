@@ -1,0 +1,225 @@
+{
+  "method": "Scripted two-sided aiming through keyboard inputs with read-only state inspection; not a human play session.",
+  "edition": "Spacewar! 3.1, 24 Sep 62",
+  "browser": "151.0.7922.34",
+  "configuration": {
+    "id": "spacewar3.1",
+    "fullid": "spacewar3.1",
+    "idparam": "spacewar3.1",
+    "sense": "",
+    "testword": 0
+  },
+  "emulationSpeed": 1,
+  "identities": [
+    {
+      "url": "https://www.masswerk.at/spacewar/modules/spacewar_3_1.js",
+      "bytes": 12119,
+      "sha256": "f84be5748f3d033bbf63f94ebe93814f843052ebb4e63f9f89bec5b8920d59ec"
+    },
+    {
+      "url": "https://www.masswerk.at/spacewar/spacewar_pdp1_engine_ng.js",
+      "bytes": 141437,
+      "sha256": "01d425147f3dc18524d882992678fa477b1993259a67230064e13ec057582b58"
+    }
+  ],
+  "addresses": {
+    "routine": 1854,
+    "x": 1878,
+    "y": 1902,
+    "dx": 1974,
+    "dy": 1998,
+    "angle": 2024,
+    "fuel": 2026,
+    "torpedoes": 2028
+  },
+  "initial": [
+    {
+      "routine": 1224,
+      "x": 65536,
+      "y": 65536,
+      "dx": -5,
+      "dy": -5,
+      "angle": 51472,
+      "fuel": -8192,
+      "torpedoes": -33
+    },
+    {
+      "routine": 1228,
+      "x": -65536,
+      "y": -65536,
+      "dx": 5,
+      "dy": 5,
+      "angle": 0,
+      "fuel": -8192,
+      "torpedoes": -33
+    }
+  ],
+  "events": [
+    {
+      "kind": "exchange",
+      "step": 90,
+      "approximateInputMilliseconds": 100,
+      "heldKeys": [
+        "w",
+        "i"
+      ],
+      "ships": [
+        {
+          "routine": 1224,
+          "x": 52642,
+          "y": 52642,
+          "dx": -1205,
+          "dy": -1205,
+          "angle": 39184,
+          "fuel": -8192,
+          "torpedoes": -21
+        },
+        {
+          "routine": 1228,
+          "x": -52642,
+          "y": -52642,
+          "dx": 1205,
+          "dy": 1205,
+          "angle": 90656,
+          "fuel": -8192,
+          "torpedoes": -21
+        }
+      ],
+      "scores": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "kind": "destruction",
+      "step": 143,
+      "approximateInputMilliseconds": 100,
+      "heldKeys": [
+        "w",
+        "i"
+      ],
+      "ships": [
+        {
+          "routine": 132138,
+          "x": 28153,
+          "y": 28153,
+          "dx": -2849,
+          "dy": -2849,
+          "angle": 39184,
+          "fuel": -8192,
+          "torpedoes": -15
+        },
+        {
+          "routine": 132138,
+          "x": -28153,
+          "y": -28153,
+          "dx": 2849,
+          "dy": 2849,
+          "angle": 90656,
+          "fuel": -8192,
+          "torpedoes": -15
+        }
+      ],
+      "scores": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "kind": "inactive",
+      "step": 145,
+      "approximateInputMilliseconds": 100,
+      "heldKeys": [
+        "w",
+        "i"
+      ],
+      "ships": [
+        {
+          "routine": 0,
+          "x": 27441,
+          "y": 27441,
+          "dx": -2849,
+          "dy": -2849,
+          "angle": 39184,
+          "fuel": -8192,
+          "torpedoes": -15
+        },
+        {
+          "routine": 0,
+          "x": -27441,
+          "y": -27441,
+          "dx": 2849,
+          "dy": 2849,
+          "angle": 90656,
+          "fuel": -8192,
+          "torpedoes": -15
+        }
+      ],
+      "scores": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "kind": "restart-with-replenished-resources",
+      "step": 240,
+      "approximateInputMilliseconds": 100,
+      "heldKeys": [
+        "w",
+        "i"
+      ],
+      "ships": [
+        {
+          "routine": 1224,
+          "x": 65536,
+          "y": 65536,
+          "dx": -5,
+          "dy": -5,
+          "angle": 51472,
+          "fuel": -8192,
+          "torpedoes": -32
+        },
+        {
+          "routine": 1228,
+          "x": -65536,
+          "y": -65536,
+          "dx": 5,
+          "dy": 5,
+          "angle": 0,
+          "fuel": -8192,
+          "torpedoes": -32
+        }
+      ],
+      "scores": [
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "filename": "opening.png",
+      "step": -1,
+      "width": 512,
+      "height": 512,
+      "sha256": "9f0243821001606f063ac0d89be8367b3c683e34e6431e7a8b00e5d9a543c610"
+    },
+    {
+      "filename": "exchange.png",
+      "step": 90,
+      "width": 512,
+      "height": 512,
+      "sha256": "847130967b9f6f77ac632069b0263ffa097f874fefd8f572d9160dec42b205b5"
+    },
+    {
+      "filename": "destruction.png",
+      "step": 143,
+      "width": 512,
+      "height": 512,
+      "sha256": "e7ef4083aba74078a5857154b85ee23cb0b757be6e17972e70c8bff19528b575"
+    }
+  ],
+  "errors": [],
+  "limitation": "Wall-clock input intervals are approximate. Positions and velocities are game storage units, not physical units. Modern phosphor rendering is not original-hardware verification.",
+  "completedEncounter": true
+}

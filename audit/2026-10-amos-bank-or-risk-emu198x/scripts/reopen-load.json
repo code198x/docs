@@ -1,0 +1,94 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/reopen-editor.state"
+  },
+  {
+    "action": "press_keys",
+    "keys": [
+      "ramiga",
+      "l"
+    ]
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "type_string",
+    "text": "DF0:bank.amos\n",
+    "settle_frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return"
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/reopened-listing.png"
+  },
+  {
+    "action": "press_key",
+    "key": "f1"
+  },
+  {
+    "action": "run_frames",
+    "frames": 300
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/reopened-title.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Space"
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "press_key",
+    "key": "R"
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "press_key",
+    "key": "B"
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/reopened-bank.png"
+  },
+  {
+    "action": "press_key",
+    "key": "Q"
+  },
+  {
+    "action": "run_frames",
+    "frames": 12
+  },
+  {
+    "action": "press_key",
+    "key": "Return"
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/reopened-editor.png"
+  }
+]

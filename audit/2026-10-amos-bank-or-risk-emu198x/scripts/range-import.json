@@ -1,0 +1,60 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/merge-request.state"
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${RUN}/prefixed.adf",
+    "writable": true
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "type_string",
+    "text": "DF0:range.asc\n",
+    "settle_frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "Return"
+  },
+  {
+    "action": "run_frames",
+    "frames": 120
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/range-listing.state"
+  },
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${AMOS}"
+  },
+  {
+    "action": "run_frames",
+    "frames": 60
+  },
+  {
+    "action": "press_key",
+    "key": "f1"
+  },
+  {
+    "action": "run_frames",
+    "frames": 300
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/range-title.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/range-title.state"
+  }
+]

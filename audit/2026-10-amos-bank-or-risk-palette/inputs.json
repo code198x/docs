@@ -1,0 +1,30 @@
+{
+  "emulator_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+  "emulator_version": "0.34.2",
+  "model": "a1200",
+  "profile": "PAL A1200, stock 2 MiB chip RAM, no fast RAM",
+  "software": "AMOS Professional 2.00, version observed in the booted editor",
+  "comparison_limit": "Local AMOS system ADF; byte identity is recorded, not asserted equal to the earlier official-repository installation.",
+  "inputs": {
+    "kickstart.rom": {
+      "bytes": 524288,
+      "sha256": "6d43840d4099a74170ea0f0425b6257c3891ebcaa39c4d1840075a9ab22b5707"
+    },
+    "amos-system.adf": {
+      "bytes": 901120,
+      "sha256": "7ffbfb5ed5c28869e323a2bff9a591ce519727be2e0dd66972a86ebfe7bcbfdc"
+    },
+    "source": {
+      "sha256": "eea4ecc6d3ca87f6797f228e14a85141d66036855613dfd0810d9c705c4e41ad",
+      "bytes": 3212
+    },
+    "amos-work.adf": {
+      "bytes": 901120,
+      "sha256": "cacf14beb240b315af38665017e37d74d2b1bd7d95e822795907b0829e9e03e7"
+    }
+  },
+  "build198x_revision": "f7016398deb1fff9dc1efb6713dfab8c7bacf2d0",
+  "baseline_sample_revision": "0c55096fdaa858111cf68f3690fd3dec41160793",
+  "source_change": "Insert Palette $000,$FFF immediately after Curs Off; all other source bytes match baseline.",
+  "sample_revision": "e4f86e0f55ed360c1e74fd4ca8f8ce51eeb07419"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/finish-cold-boot.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 500
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/finish-cold-editor-half.state"
+  }
+]

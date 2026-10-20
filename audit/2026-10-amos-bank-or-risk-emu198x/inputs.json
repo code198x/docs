@@ -1,0 +1,38 @@
+{
+  "emulator_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+  "emulator_version": "0.34.2",
+  "model": "a1200",
+  "profile": "PAL A1200, stock 2 MiB chip RAM, no fast RAM",
+  "software": "AMOS Professional 2.00, version observed in the booted editor",
+  "comparison_limit": "Local AMOS system ADF; byte identity is recorded, not asserted equal to the earlier official-repository installation.",
+  "inputs": {
+    "kickstart.rom": {
+      "bytes": 524288,
+      "sha256": "6d43840d4099a74170ea0f0425b6257c3891ebcaa39c4d1840075a9ab22b5707"
+    },
+    "amos-system.adf": {
+      "bytes": 901120,
+      "sha256": "7ffbfb5ed5c28869e323a2bff9a591ce519727be2e0dd66972a86ebfe7bcbfdc"
+    },
+    "amos-work.adf": {
+      "bytes": 901120,
+      "sha256": "614b304ab53a09db0ad1769a9c25a08e1ac07879bd9669be3eec8676c1d4895c"
+    },
+    "native-saved.save.adf": {
+      "bytes": 901120,
+      "sha256": "15068fd473366763bd0f9a9dd8ec39135a012dee86b8b846bf373e3a4d089945"
+    },
+    "prefixed.adf": {
+      "bytes": 901120,
+      "sha256": "65682270b7e6ad283d50b34b106d7961d4e62a4dae39fbbe0deec6b02bc4291d"
+    }
+  },
+  "build198x_revision": "f7016398deb1fff9dc1efb6713dfab8c7bacf2d0",
+  "sample_revision": "0c55096fdaa858111cf68f3690fd3dec41160793",
+  "source_sha256": "0adb42caae4328f81cdcc927a59669d53a09ba6872749aa54af9177ec2f1437f",
+  "native_saved_program": {
+    "file": "bank.amos",
+    "bytes": 3728,
+    "sha256": "89dc7afe9a9c49546b2a1b6ed66b33e2bc4c14bd5883e20b54c27b0b9ace1d63"
+  }
+}

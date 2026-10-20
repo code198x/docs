@@ -1,0 +1,36 @@
+{
+  "implementation": "Quuxplusone/Advent ODWY0350",
+  "source_commit": "142b61f37063cb00bc9037f67b19411f257099b1",
+  "commands": [
+    "n",
+    "in",
+    "take keys",
+    "take lamp",
+    "out",
+    "south",
+    "south",
+    "south",
+    "down",
+    "unlock grate",
+    "down",
+    "west",
+    "on lamp",
+    "inventory",
+    "quit",
+    "y"
+  ],
+  "checks": {
+    "blocked_before_unlock": true,
+    "unlocked_after_keys": true,
+    "reached_below_grate": true,
+    "lamp_on": true,
+    "both_objects_carried": true,
+    "clean_exit": true
+  },
+  "stdout_sha256": "861764132d5d73e8eeabe5fcc8e1b183a9f74628bb0045461e64753356fd8faf",
+  "critical_extracts": [
+    "You can't go through a locked steel grate!",
+    "The grate is now unlocked."
+  ],
+  "limits": "Modern C port; bounded entrance only; no original-hardware, complete-game or human play-session verification."
+}

@@ -1,0 +1,47 @@
+{
+  "emulator_revision": "6cc5d5f9e7fe6507a079f237bc44da0dc95fe25c",
+  "emulator_version": "0.34.2",
+  "model": "a1200",
+  "profile": "PAL A1200, stock 2 MiB chip RAM, no fast RAM",
+  "software": "AMOS Professional 2.00, version observed in the booted editor",
+  "comparison_limit": "Local AMOS system ADF; byte identity is recorded, not asserted equal to the earlier official-repository installation.",
+  "inputs": {
+    "kickstart.rom": {
+      "bytes": 524288,
+      "sha256": "6d43840d4099a74170ea0f0425b6257c3891ebcaa39c4d1840075a9ab22b5707"
+    },
+    "amos-system.adf": {
+      "bytes": 901120,
+      "sha256": "7ffbfb5ed5c28869e323a2bff9a591ce519727be2e0dd66972a86ebfe7bcbfdc"
+    },
+    "source": {
+      "bytes": 4605,
+      "sha256": "8e886151b90fb04cf25b9690dc849862aee1c3140f77a9176ef833724ad2f339"
+    },
+    "amos-work.adf": {
+      "bytes": 901120,
+      "sha256": "f5052c16b47b33dedc51ffb15c2467a5b566377c5060c9826897b10bec36c6f5"
+    },
+    "fixtures.adf": {
+      "bytes": 901120,
+      "sha256": "4f19930666f7d06f10cfe52cf842040ed5d22b813fed9190b36ee38da879ac00"
+    },
+    "baseline.adf": {
+      "bytes": 901120,
+      "sha256": "96cb43d990463e992c597e1c3e190d4a794afd2c2dde88b686cd347ec2a7329d"
+    }
+  },
+  "build198x_revision": "f7016398deb1fff9dc1efb6713dfab8c7bacf2d0",
+  "baseline_sample_revision": "231ba66625e4c67afc6a017886975036f184387c",
+  "source_change": "Add envelope setup, one result cue call/routine, and Play Off at replay/quit; all original rules/board/die/input unchanged.",
+  "stages": {
+    "short-tone.amos": "3a7e1192a6a28e085a8ea9b45887add399215cddadcf52dd78ae6c132c5d09aa",
+    "bank-cue.amos": "3b21624456b8f78f36a3ebaab6338706496de1890113b64d45ea5454aca7e16c",
+    "bust-cue.amos": "0ae39452d65d2e9eb4904fcc1a588fd7a3489b669cb6bb9f6982d94b86c619a8",
+    "success-cue.amos": "8e886151b90fb04cf25b9690dc849862aee1c3140f77a9176ef833724ad2f339"
+  },
+  "pilot_data_disk_sha256": "004d30c2087d986603c9cb8f35c63a43401af42943db52c2da86f7a9ffb5c5ab",
+  "diagnostic_source_sha256": "45d93f1596d267873a3ada4e7e3f9b790dcbf0a15cf30e5b00a5e7142efd0ca7",
+  "sample_revision": "1fa0675b809ef6a40bcf01571b75d6196cce0e0e",
+  "scope": "Native Save As, sidecar export and independent cold-boot Load of the maintained sound endpoint and a prescribed-roll comparison copy."
+}

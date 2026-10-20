@@ -1,0 +1,13 @@
+{
+  "body": "The AMOS ten-line exercise overwrote part of line 8, and reversing its counter left the same final arrangement. The lesson now asks learners to predict both results, repair the overlap and change the row formula to make a visible countdown.\n\nBlitz now separates drawing from state changes, traces the displayed/drawing bitmap sequence, and uses a fixed colour before extending the circle count. Freeze and smaller-increment exercises have explicit observations. PED import/run and mouse-stop instructions match the qualified setup; unmeasured frame-rate and AMOS-versus-Blitz comparisons are removed.\n\nVerified the AMOS baseline and four variants in AMOS Professional; compiled and ran the Blitz baseline and focused variants in AmiBlitz 3.13.0b on the named FS-UAE/A1200 setup. Final build and content checks pass. Both pages pass 390\u00d7844 and 1440\u00d7900 browser checks, all six keyboard disclosures, complete listing delivery and video playback. A missing-toggle reasoning control is rejected. Beginner effectiveness, VoiceOver and update-rate performance remain unverified.\n\nRequires the matching code-samples `amiga-unit-five` PR first. Evidence is in the matching docs PR under `audit/2026-10-amiga-unit-five/`.\n\nCloses #776 after coordinated review/merge. Umbrella: stevehill1981/198x#116.\n\nCoordinated set: [samples #101](https://github.com/code198x/code-samples/pull/101), [lessons #778](https://github.com/code198x/website/pull/778), [evidence #100](https://github.com/code198x/docs/pull/100). Merge samples before lessons.\n",
+  "headRefOid": "f27d5c5812a75996775ce9c4a118cf86a6b0dc16",
+  "mergeCommit": {
+    "oid": "4fdbef7e9744bb472ccf9fe481fec3f81d930176"
+  },
+  "mergedAt": "2026-10-16T15:20:00Z",
+  "number": 778,
+  "state": "MERGED",
+  "title": "Make Amiga loop and animation experiments testable",
+  "url": "https://github.com/code198x/website/pull/778",
+  "repository": "code198x/website"
+}

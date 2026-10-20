@@ -1,0 +1,13 @@
+{
+  "body": "Retain the unit-5 AMOS overlap/countdown observations and AmiBlitz animation variants, with exact inputs, six compiler reports, source hashes and scoped limitations.\n\nThe audit includes the written plan, repeatable source/capture/built-listing verification, a rejected missing-toggle reasoning control, and isolated Chrome checks/screenshots at 390\u00d7844 and 1440\u00d7900. It records unsuccessful UI/browser attempts and short-click polling limitations. No frame-rate benchmark or learner-effectiveness result is claimed.\n\nPart of code198x/website#776 and stevehill1981/198x#116. Coordinated with the website and code-samples `amiga-unit-five` PRs. The opening qualification in #99 stays separate.\n\nCoordinated set: [samples #101](https://github.com/code198x/code-samples/pull/101), [lessons #778](https://github.com/code198x/website/pull/778), [evidence #100](https://github.com/code198x/docs/pull/100). Merge samples before lessons.\n",
+  "headRefOid": "c69822fda69e309de92c77c8755742934f36fe1b",
+  "mergeCommit": {
+    "oid": "e215d476ab445ccdacbc208c0639b7fc71c15336"
+  },
+  "mergedAt": "2026-10-16T15:20:15Z",
+  "number": 100,
+  "state": "MERGED",
+  "title": "Retain Amiga unit-5 runtime and delivery evidence",
+  "url": "https://github.com/code198x/docs/pull/100",
+  "repository": "code198x/docs"
+}

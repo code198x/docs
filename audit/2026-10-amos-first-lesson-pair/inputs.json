@@ -1,0 +1,26 @@
+{
+  "emulator_revision": "6ff929f366e8762d5d5b9dadf53367b2cc692821",
+  "emulator_version": "0.34.2",
+  "model": "a1200",
+  "profile": "PAL A1200, stock 2 MiB chip RAM, no fast RAM",
+  "software": "AMOS Professional 2.00, version observed in the booted editor",
+  "inputs": {
+    "kickstart.rom": {
+      "bytes": 524288,
+      "sha256": "6d43840d4099a74170ea0f0425b6257c3891ebcaa39c4d1840075a9ab22b5707"
+    },
+    "amos-system.adf": {
+      "bytes": 901120,
+      "sha256": "7ffbfb5ed5c28869e323a2bff9a591ce519727be2e0dd66972a86ebfe7bcbfdc"
+    }
+  },
+  "build198x_revision": "f7016398deb1fff9dc1efb6713dfab8c7bacf2d0",
+  "sources": {
+    "message.amos": "eaf0563bbc824452c1b477970590945ad92cdbe2565bd840930a42d068661cf9",
+    "edited-message.amos": "4f950a45c2ad1071c95f669ffaf53215135cd2702e377456727d1d87d3a87e30"
+  },
+  "sample_revision": "1b0a7a5ed28344ba4829e351654734e8ef7d447e",
+  "binary_sha256": "a3acfa056fb38e68752ca1e6b7c9c349f3312e582e20cfc209aeda1e783b202a",
+  "sample_source_revision": "633cd580",
+  "baseline_editor_state_sha256": "a475cd230c402b47a050a0355fcb3a1d2bf90ed369c8e5941d27fbc35cad3a86"
+}

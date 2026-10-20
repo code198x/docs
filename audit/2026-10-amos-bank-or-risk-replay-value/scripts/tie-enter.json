@@ -1,0 +1,23 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/lower-result-5.state"
+  },
+  {
+    "action": "press_key",
+    "key": "A",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/tie-active.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/tie-active.state"
+  }
+]

@@ -1,0 +1,9 @@
+# AMOS beginner checkpoints through one round
+
+Fill the missing early rows of `platforms/commodore-amiga/games/bank-or-risk/teaching-map.md`, preserving the maintained game and its existing evidence. This bounded set ends at one round; later session-scoring checkpoints remain separate work.
+
+1. Add complete ASCII sources under samples `commodore-amiga/amos/bank-or-risk/stages/opening/`: message, edited-message, die-colours, one-roll, running-total, total-meaning, one-choice, ask-again, fresh-choice and one-round. Reuse the existing fixed/supplied-face drawings. Explain exact edits, commands, expected results, repair/prediction answers and transitions in that folder's README. Use Input$(1) for the first blocking choice; teach polling and release handling separately.
+2. Add `audit/2026-10-amos-bank-or-risk-opening/` with pinned inputs, source hashes, explicit boundary variants, reproducible media preparation/scripts/reports and native captures. Reuse the qualified OFS reader and runtime reconstruction; no dependencies, ROMs, disks or snapshots enter public Git.
+3. Verify every source with native F2/F1. Check totals 9/10/11, 4+3, single choices R/B/Q/invalid, loop quit, held/released input and one-round chosen bank/perfect/bust/invalid/quit. Save the edited message through native Save As and load it from a separate cold boot. Inspect all captures; process exit alone is not evidence of success. Preserve rejected checks and explain causes.
+4. Update the teaching map and prototype status with exact coverage and remaining session work. Run Ruff, Vale, JSON/hash/link/media guards, and negative controls for any automated checks. Commit and push self-contained changes to existing PR branches without merging.
+5. Verify remote commits and remove task worktrees, build output, runtime copies and processes. Preserve main docs README/work changes. Human learning evidence remains pending.

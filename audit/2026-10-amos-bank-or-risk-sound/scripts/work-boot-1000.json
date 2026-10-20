@@ -1,0 +1,17 @@
+[
+  {
+    "action": "load_media",
+    "slot": "floppy-0",
+    "kind": "disk",
+    "path": "${RUN}/amos-work.adf",
+    "writable": true
+  },
+  {
+    "action": "run_frames",
+    "frames": 1000
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/work-boot-1000.state"
+  }
+]

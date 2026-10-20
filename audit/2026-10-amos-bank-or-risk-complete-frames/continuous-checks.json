@@ -1,0 +1,984 @@
+{
+  "stable": {
+    "settled_frames": 30,
+    "frames": 61,
+    "codec_tolerance_cells": 0,
+    "results": [
+      {
+        "frame": "stable-001.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-002.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-003.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-004.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-005.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-006.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-007.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-008.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-009.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-010.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-011.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-012.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-013.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-014.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-015.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-016.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-017.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-018.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-019.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-020.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-021.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-022.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-023.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-024.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-025.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-026.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-027.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-028.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-029.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-030.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-031.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-032.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-033.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-034.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-035.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-036.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-037.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-038.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-039.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-040.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-041.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-042.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-043.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-044.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-045.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-046.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-047.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-048.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-049.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-050.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-051.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-052.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-053.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-054.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-055.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-056.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-057.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-058.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-059.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-060.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "stable-061.png",
+        "mismatched_cells": 0
+      }
+    ]
+  },
+  "styled": {
+    "settled_frames": 140,
+    "frames": 181,
+    "codec_tolerance_cells": 0,
+    "results": [
+      {
+        "frame": "frame-001.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-002.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-003.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-004.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-005.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-006.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-007.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-008.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-009.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-010.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-011.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-012.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-013.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-014.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-015.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-016.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-017.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-018.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-019.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-020.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-021.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-022.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-023.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-024.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-025.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-026.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-027.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-028.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-029.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-030.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-031.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-032.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-033.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-034.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-035.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-036.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-037.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-038.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-039.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-040.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-041.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-042.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-043.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-044.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-045.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-046.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-047.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-048.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-049.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-050.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-051.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-052.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-053.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-054.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-055.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-056.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-057.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-058.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-059.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-060.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-061.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-062.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-063.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-064.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-065.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-066.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-067.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-068.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-069.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-070.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-071.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-072.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-073.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-074.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-075.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-076.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-077.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-078.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-079.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-080.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-081.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-082.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-083.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-084.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-085.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-086.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-087.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-088.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-089.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-090.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-091.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-092.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-093.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-094.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-095.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-096.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-097.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-098.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-099.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-100.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-101.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-102.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-103.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-104.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-105.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-106.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-107.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-108.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-109.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-110.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-111.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-112.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-113.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-114.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-115.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-116.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-117.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-118.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-119.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-120.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-121.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-122.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-123.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-124.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-125.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-126.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-127.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-128.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-129.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-130.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-131.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-132.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-133.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-134.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-135.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-136.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-137.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-138.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-139.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-140.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-141.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-142.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-143.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-144.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-145.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-146.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-147.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-148.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-149.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-150.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-151.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-152.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-153.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-154.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-155.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-156.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-157.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-158.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-159.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-160.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-161.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-162.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-163.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-164.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-165.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-166.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-167.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-168.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-169.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-170.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-171.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-172.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-173.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-174.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-175.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-176.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-177.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-178.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-179.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-180.png",
+        "mismatched_cells": 0
+      },
+      {
+        "frame": "frame-181.png",
+        "mismatched_cells": 0
+      }
+    ]
+  }
+}

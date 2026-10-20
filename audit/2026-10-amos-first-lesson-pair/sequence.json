@@ -1,0 +1,20 @@
+[
+  "message-start",
+  "message-finish",
+  "message-run",
+  "edit-message",
+  "wrong-command",
+  "repair-command",
+  "save-request",
+  "save-directory",
+  "save-pointer",
+  "save-welcome",
+  "cold-boot-500",
+  "cold-boot-1000",
+  "cold-boot-1500",
+  "cold-editor",
+  "reopen-request",
+  "reopen-directory",
+  "reopen-welcome",
+  "reopened-run"
+]

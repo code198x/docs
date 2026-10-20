@@ -1,0 +1,25 @@
+{
+  "note": "Identity of privately inspected original-document copies. No source scans reproduced here; bibliography supplies public citations.",
+  "documents": [
+    {
+      "document": "analog20.pdf",
+      "sha256": "de3bd116d719cb329e98230049c52fa39a0894fd38cafc0d589ae082603b08be",
+      "bytes": 122234223
+    },
+    {
+      "document": "construction.pdf",
+      "sha256": "776ac75b3348d209079a62dffde0703ce66d9c4cac4eb5c6c73e3a398a200d42",
+      "bytes": 2589613
+    },
+    {
+      "document": "boulder-crash.html",
+      "sha256": "fac7666031260ba7a7ddc32c5cffd796fe25edd7d4b25eafcec4d50a23b16a50",
+      "bytes": 9406
+    },
+    {
+      "document": "liepa.html",
+      "sha256": "dece2705d9b92040fddac6e99423c0e9bae75d54a330913c4d36506142e207e0",
+      "bytes": 119468
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "body": "The next bounded teaching review under stevehill1981/198x#116 is AMOS and Blitz unit 5. Source inspection finds concrete problems:\n\n- AMOS calls its four-line loop \u201cthree lines\u201d. Its ten-line experiment still places Done at row 12, where N=8 also prints. The descending experiment changes execution order while Locate 10,4+N still places each numbered line at its original row; the finished screen alone does not show the order of execution.\n- Blitz promises that 80 and then 200 circles stay at 50 updates per second and that interpreted BASIC cannot keep up. No named workload measurement supports those statements. It also uses the superseded Ted/right-Amiga+X instructions and omits the pre-BLITZ settling wait from the maintained sample.\n\nReview only the two unit-05 pages and their required sample/capture changes. Preserve the existing track structure and independently runnable languages. Explain counter values versus screen positions; make experiments predict/change/check/repair tasks with truthful final output. For animation, explain the displayed/drawing bitmap sequence and distinguish refresh synchronisation from measured update throughput. Use the qualified AmiBlitz/PED route and a reproducible stop action.\n\nAcceptance: maintain exact source/capture correspondence; run the baseline and changed experiments on the named configuration; inspect motion and stopping rather than inferring them from a still image; build and review representative desktop/phone pages. Keep unmeasured speed, timing and learner outcomes explicit. Current findings are source/trace findings, not fresh unit-5 execution results.\n",
+  "number": 776,
+  "state": "CLOSED",
+  "title": "Make the Amiga unit-5 loop and animation experiments testable",
+  "updatedAt": "2026-10-16T15:20:02Z",
+  "url": "https://github.com/code198x/website/issues/776",
+  "repository": "code198x/website"
+}

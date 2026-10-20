@@ -1,0 +1,2 @@
+{"jsonrpc":"2.0","id":1,"result":{"content":[{"text":"null","type":"text"}]}}
+{"jsonrpc":"2.0","id":2,"result":{"content":[{"text":"{\"bytes\":901120,\"overwrote_source\":false,\"path\":\"${RUN}/integrated-settled.save.adf\",\"saved\":true}","type":"text"}]}}

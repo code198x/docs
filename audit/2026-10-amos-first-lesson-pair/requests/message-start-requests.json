@@ -1,0 +1,37 @@
+[
+  {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "tools/call",
+    "params": {
+      "name": "load_snapshot",
+      "arguments": {
+        "path": "${BASELINE}/cold-ready.state"
+      }
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "tools/call",
+    "params": {
+      "name": "type_string",
+      "arguments": {
+        "text": "Cls 0\nPrint \"BANK OR RISK\"\n",
+        "hold_frames": 3,
+        "settle_frames": 30
+      }
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "method": "tools/call",
+    "params": {
+      "name": "save_snapshot",
+      "arguments": {
+        "path": "${RUN}/message-start.state"
+      }
+    }
+  }
+]

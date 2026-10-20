@@ -1,0 +1,32 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/possible-six-start.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/failure-1.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/failure-1.state"
+  }
+]

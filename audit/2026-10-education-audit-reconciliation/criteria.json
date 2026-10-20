@@ -1,0 +1,446 @@
+{
+  "criteria": [
+    {
+      "id": "114.inventory",
+      "issue": 114,
+      "requirement": "Inventory Foundation objectives and prerequisites, especially pseudocode, numbers/bits, logic and game maths.",
+      "status": "met",
+      "evidence": [
+        "audit/2026-10-foundations-objectives/REPORT.md",
+        "audit/2026-10-probability-pilot/REPORT.md",
+        "audit/2026-10-foundations-coverage.md"
+      ],
+      "finding": "All 39 Foundations units, ten overviews and eleven published maths units mapped. Exact current source comparison finds all 60 recorded unit/overview hashes unchanged from the later inventories; this is source continuity, not a fresh prose review.",
+      "remainingOwner": null
+    },
+    {
+      "id": "114.sample",
+      "issue": 114,
+      "requirement": "Sample and test examples.",
+      "status": "met-selected",
+      "evidence": [
+        "audit/2026-10-education-reconciliation/REPORT.md",
+        "audit/2026-10-foundations-coverage.md",
+        "audit/2026-10-aiming-boundaries/REPORT.md"
+      ],
+      "finding": "Bounded models, native runs and browser tasks retain results. The audit asks for sampling, not every example on every machine.",
+      "remainingOwner": null
+    },
+    {
+      "id": "114.findings",
+      "issue": 114,
+      "requirement": "Find misconceptions, gaps and cross-system dependencies.",
+      "status": "met-selected",
+      "evidence": [
+        "audit/2026-10-foundations-coverage.md",
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md",
+        "audit/2026-10-foundations-objectives/REPORT.md"
+      ],
+      "finding": "Concrete read/replace, representation, operators, loop and summary findings; language punctuation and storage contracts stay distinct. Optional support is not compulsory attendance.",
+      "remainingOwner": null
+    },
+    {
+      "id": "114.assessments",
+      "issue": 114,
+      "requirement": "Prototype predict/explain/modify/debug/create assessments that require genuine understanding rather than copying.",
+      "status": "met-preparation",
+      "evidence": [
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/LEARNER-TASKS.md",
+        "audit/2026-10-probability-pilot/REPORT.md",
+        "audit/2026-10-foundations-evidence-queue/REPORT.md"
+      ],
+      "finding": "Independent values, repairs and original small programs have separate assessor material. Difficulty and unaided transfer are unknown.",
+      "remainingOwner": 124
+    },
+    {
+      "id": "114.evidence",
+      "issue": 114,
+      "requirement": "Report editorial, technical and actual learner-testing evidence separately; prioritise bounded fixes.",
+      "status": "met-reporting",
+      "evidence": [
+        "audit/2026-10-education-reconciliation/REPORT.md",
+        "audit/2026-10-foundations-publication/REPORT.md",
+        "audit/2026-10-foundations-coverage.md"
+      ],
+      "finding": "Reports distinguish source review, models, execution, browser operation and unknown learner outcomes. This reconciliation updates priorities without expanding the public pack.",
+      "remainingOwner": 124
+    },
+    {
+      "id": "115.pathways",
+      "issue": 115,
+      "requirement": "Select one bounded pathway in each language; enumerate objectives and prerequisites,",
+      "status": "met-selected",
+      "evidence": [
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md",
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/PREREQUISITES.md",
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/LEARNER-TASKS.md"
+      ],
+      "finding": "The stored-value pilot selects Meet BASIC remember/save and Meet Assembly byte-to-pixels, with entry knowledge and independent route tasks.",
+      "remainingOwner": null
+    },
+    {
+      "id": "115.execution",
+      "issue": 115,
+      "requirement": "reproduce code on named machines/tool versions, trace generated artifacts to execution,",
+      "status": "met-selected",
+      "evidence": [
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md",
+        "audit/2026-10-embedded-basic/REPORT.md",
+        "guides/first-session/PUBLICATION.md"
+      ],
+      "finding": "Named native build/load/RAM/screen evidence plus the exact eight-stage live BASIC repeated-read/error/repair follow-up. Browser ROM identity relative to native remains unknown; no every-target qualification.",
+      "remainingOwner": null
+    },
+    {
+      "id": "115.transfer",
+      "issue": 115,
+      "requirement": "design independent-transfer and troubleshooting tasks.",
+      "status": "met-preparation",
+      "evidence": [
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/LEARNER-TASKS.md"
+      ],
+      "finding": "BASIC and assembly tasks ask for new values/patterns, replacement, faults, repair and creation; they are prepared, not learner-observed.",
+      "remainingOwner": 124
+    },
+    {
+      "id": "115.learners",
+      "issue": 115,
+      "requirement": "Pilot with actual learners where possible; do not claim educational validation from AI review.",
+      "status": "unavailable",
+      "evidence": [
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/LEARNER-TASKS.md",
+        "guides/first-session/session-observations.md"
+      ],
+      "finding": "Owner reports no learner available. The where-possible audit condition is honestly documented; actual learner outcomes stay unknown under #124 and parent #110.",
+      "remainingOwner": 124
+    },
+    {
+      "id": "115.friction",
+      "issue": 115,
+      "requirement": "Record friction and revise the lesson contract.",
+      "status": "met-selected",
+      "evidence": [
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md",
+        "audit/2026-10-embedded-basic/REPORT.md",
+        "guides/first-session/PUBLICATION.md",
+        "specifications/unit.md"
+      ],
+      "finding": "Bounded read/replace and journey corrections, explicit entry/expected-result/error-repair guidance and saved-work route. Expert operation is not educational validation.",
+      "remainingOwner": null
+    },
+    {
+      "id": "116.inventory",
+      "issue": 116,
+      "requirement": "Inventory existing AMOS/Blitz content and exact target/runtime configurations;",
+      "status": "partial",
+      "evidence": [
+        "audit/2026-10-amiga-opening/REPORT.md",
+        "audit/2026-10-amiga-opening/OBJECTIVES.md",
+        "audit/2026-10-amiga-greetings/REPORT.md",
+        "audit/2026-10-amiga-unit-five/REPORT.md"
+      ],
+      "finding": "Full file inventory counts 17 AMOS and 15 Blitz units and named setups; comparable objectives/prerequisites are mapped only for the opening slice. Later 12 AMOS and ten Blitz units remain unmapped in this audit.",
+      "remainingOwner": 116
+    },
+    {
+      "id": "116.concepts",
+      "issue": 116,
+      "requirement": "identify missing or divergent shared concepts and verify representative example build/run outcomes.",
+      "status": "partial",
+      "evidence": [
+        "audit/2026-10-amiga-opening/REPORT.md",
+        "audit/2026-10-amiga-greetings/REPORT.md",
+        "audit/2026-10-amiga-decisions/REPORT.md",
+        "audit/2026-10-amiga-unit-five/REPORT.md"
+      ],
+      "finding": "Opening read/replace, numeric, decision, loop and display differences have source/selected runtime evidence. Later-unit concept relationships remain unreviewed. Docs #99 numeric/graphics follow-up is still open, not accepted.",
+      "remainingOwner": 116
+    },
+    {
+      "id": "116.standards",
+      "issue": 116,
+      "requirement": "Apply the same learner-understanding standards as Spectrum without forcing identical lessons.",
+      "status": "met-selected",
+      "evidence": [
+        "audit/2026-10-amiga-decisions/REPORT.md",
+        "audit/2026-10-amiga-unit-five/REPORT.md",
+        "specifications/unit.md"
+      ],
+      "finding": "Opening questions ask for predictions, explanations, modifications and repairs. Both languages remain independent; no learner validation or forced identical syllabus.",
+      "remainingOwner": null
+    },
+    {
+      "id": "116.constraints",
+      "issue": 116,
+      "requirement": "Identify defects, licence constraints, emulator assumptions and prioritised corrective work.",
+      "status": "met-selected",
+      "evidence": [
+        "audit/2026-10-amiga-opening/REPORT.md",
+        "audit/2026-10-amiga-greetings/REPORT.md",
+        "audit/2026-10-amiga-unit-five/REPORT.md"
+      ],
+      "finding": "Specific setup/claims, import/IDE controls, parity and loop faults have owners and scoped fixes. Source licence does not confer ROM/OS redistribution rights; runtime/media identities and failed attempts are explicit.",
+      "remainingOwner": null
+    },
+    {
+      "id": "114.results",
+      "issue": 114,
+      "requirement": "Results and source/version/environment identities are recorded, with passed/failed/skipped/unknown distinguished.",
+      "status": "met-reporting",
+      "evidence": [
+        "audit/2026-10-foundations-coverage.md",
+        "audit/2026-10-foundations-publication/REPORT.md",
+        "audit/2026-10-probability-pilot/REPORT.md"
+      ],
+      "finding": "Retained records identify exact sources/configurations and separate positive observations, failed harness/UI attempts, unavailable configurations and unknown learner outcomes.",
+      "remainingOwner": null
+    },
+    {
+      "id": "114.owners",
+      "issue": 114,
+      "requirement": "Findings are filed as specific follow-up issues or linked to existing ones; no duplicate implementation plan.",
+      "status": "met-reporting",
+      "evidence": [
+        "audit/2026-10-education-reconciliation/REPORT.md",
+        "audit/2026-10-foundations-coverage.md"
+      ],
+      "finding": "Snapshots retain accepted fixes and existing outstanding owners. Reuse #749/#124 for access/learner work and #116 for remaining Amiga review; no duplicate issue is filed.",
+      "remainingOwner": null
+    },
+    {
+      "id": "114.review",
+      "issue": 114,
+      "requirement": "Reviewed findings, limits and next bounded step are linked from this issue.",
+      "status": "pending-review",
+      "evidence": [
+        "audit/2026-10-education-reconciliation/REPORT.md",
+        "audit/2026-10-foundations-coverage.md"
+      ],
+      "finding": "Earlier findings are linked. This reconciliation and its closure recommendations require owner review; linking a proposed report is not acceptance.",
+      "remainingOwner": null
+    },
+    {
+      "id": "114.architecture",
+      "issue": 114,
+      "requirement": "Maintain existing product architecture and avoid broad rewrites.",
+      "status": "met",
+      "evidence": [
+        "PROJECT.md",
+        "specifications/curriculum.md"
+      ],
+      "finding": "Changes stay bounded; this reconciliation changes documentation only, introduces no product architecture, dependencies or compulsory route.",
+      "remainingOwner": null
+    },
+    {
+      "id": "115.results",
+      "issue": 115,
+      "requirement": "Results and source/version/environment identities are recorded, with passed/failed/skipped/unknown distinguished.",
+      "status": "met-reporting",
+      "evidence": [
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md",
+        "audit/2026-10-embedded-basic/REPORT.md",
+        "audit/2026-10-first-session-operability/REPORT.md"
+      ],
+      "finding": "Retained records identify exact sources/configurations and separate positive observations, failed harness/UI attempts, unavailable configurations and unknown learner outcomes.",
+      "remainingOwner": null
+    },
+    {
+      "id": "115.owners",
+      "issue": 115,
+      "requirement": "Findings are filed as specific follow-up issues or linked to existing ones; no duplicate implementation plan.",
+      "status": "met-reporting",
+      "evidence": [
+        "audit/2026-10-education-reconciliation/REPORT.md",
+        "audit/2026-10-foundations-coverage.md"
+      ],
+      "finding": "Snapshots retain accepted fixes and existing outstanding owners. Reuse #749/#124 for access/learner work and #116 for remaining Amiga review; no duplicate issue is filed.",
+      "remainingOwner": null
+    },
+    {
+      "id": "115.review",
+      "issue": 115,
+      "requirement": "Reviewed findings, limits and next bounded step are linked from this issue.",
+      "status": "pending-review",
+      "evidence": [
+        "audit/2026-10-education-reconciliation/REPORT.md",
+        "audit/2026-10-foundations-coverage.md"
+      ],
+      "finding": "Earlier findings are linked. This reconciliation and its closure recommendations require owner review; linking a proposed report is not acceptance.",
+      "remainingOwner": null
+    },
+    {
+      "id": "115.architecture",
+      "issue": 115,
+      "requirement": "Maintain existing product architecture and avoid broad rewrites.",
+      "status": "met",
+      "evidence": [
+        "PROJECT.md",
+        "specifications/curriculum.md"
+      ],
+      "finding": "Changes stay bounded; this reconciliation changes documentation only, introduces no product architecture, dependencies or compulsory route.",
+      "remainingOwner": null
+    },
+    {
+      "id": "116.results",
+      "issue": 116,
+      "requirement": "Results and source/version/environment identities are recorded, with passed/failed/skipped/unknown distinguished.",
+      "status": "met-reporting",
+      "evidence": [
+        "audit/2026-10-amiga-greetings/REPORT.md",
+        "audit/2026-10-amiga-decisions/REPORT.md",
+        "audit/2026-10-amiga-unit-five/REPORT.md"
+      ],
+      "finding": "Retained records identify exact sources/configurations and separate positive observations, failed harness/UI attempts, unavailable configurations and unknown learner outcomes.",
+      "remainingOwner": null
+    },
+    {
+      "id": "116.owners",
+      "issue": 116,
+      "requirement": "Findings are filed as specific follow-up issues or linked to existing ones; no duplicate implementation plan.",
+      "status": "met-reporting",
+      "evidence": [
+        "audit/2026-10-amiga-opening/REPORT.md",
+        "audit/2026-10-amiga-greetings/REPORT.md",
+        "audit/2026-10-amiga-unit-five/REPORT.md"
+      ],
+      "finding": "Snapshots retain accepted fixes and existing outstanding owners. Reuse #749/#124 for access/learner work and #116 for remaining Amiga review; no duplicate issue is filed.",
+      "remainingOwner": null
+    },
+    {
+      "id": "116.review",
+      "issue": 116,
+      "requirement": "Reviewed findings, limits and next bounded step are linked from this issue.",
+      "status": "pending-review",
+      "evidence": [
+        "audit/2026-10-amiga-opening/REPORT.md",
+        "audit/2026-10-amiga-unit-five/REPORT.md"
+      ],
+      "finding": "Earlier findings are linked. This reconciliation and its closure recommendations require owner review; linking a proposed report is not acceptance.",
+      "remainingOwner": null
+    },
+    {
+      "id": "116.architecture",
+      "issue": 116,
+      "requirement": "Maintain existing product architecture and avoid broad rewrites.",
+      "status": "met",
+      "evidence": [
+        "PROJECT.md",
+        "specifications/curriculum.md"
+      ],
+      "finding": "Changes stay bounded; this reconciliation changes documentation only, introduces no product architecture, dependencies or compulsory route.",
+      "remainingOwner": null
+    },
+    {
+      "id": "124.journey",
+      "issue": 124,
+      "requirement": "Select one real learner journey across Foundations, machine-specific lesson, Vault/Pattern, runnable emulator and understanding check.",
+      "status": "met-selected",
+      "evidence": [
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md",
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/LEARNER-TASKS.md",
+        "audit/2026-10-spectrum-learner-journey/REPORT.md"
+      ],
+      "finding": "Real public page/task routes connect shared concepts, BASIC or assembly, optional Vault depth, execution and prepared understanding checks. Real pages do not mean observed learner completion.",
+      "remainingOwner": null
+    },
+    {
+      "id": "124.coverage",
+      "issue": 124,
+      "requirement": "Review navigation, mobile use, code readability, copy/paste versus active experimentation, media/graphics/audio accessibility and embedded WASM latency.",
+      "status": "partial",
+      "evidence": [
+        "guides/first-session/PUBLICATION.md",
+        "audit/2026-10-embedded-latency/REPORT.md",
+        "audit/2026-10-first-session-operability/REPORT.md",
+        "audit/2026-10-foundations-publication/REPORT.md"
+      ],
+      "finding": "Desktop Chromium and native Safari, narrow layouts and exact cold/warm task latency are recorded. Physical touch, screen-reader operation and wider media/audio access remain unqualified.",
+      "remainingOwner": 749
+    },
+    {
+      "id": "124.learner-outcomes",
+      "issue": 124,
+      "requirement": "Deliver a bounded improvement and measure outcomes with learners.",
+      "status": "partial",
+      "evidence": [
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md",
+        "guides/first-session/PUBLICATION.md",
+        "guides/first-session/session-observations.md"
+      ],
+      "finding": "Bounded improvement and before/after delivery evidence exist; measured learner outcomes do not. This explicit requirement prevents closure.",
+      "remainingOwner": 124
+    },
+    {
+      "id": "124.identities",
+      "issue": 124,
+      "requirement": "Cite actual pages, browsers, device sizes, tasks, measured results and known limitations.",
+      "status": "met-reporting",
+      "evidence": [
+        "guides/first-session/PUBLICATION.md",
+        "audit/2026-10-embedded-latency/REPORT.md",
+        "audit/2026-10-first-session-operability/REPORT.md",
+        "audit/2026-10-foundations-publication/REPORT.md"
+      ],
+      "finding": "Reports identify actual pages/tasks, configurations, timings and limits. Viewport emulation is not physical-device evidence; a current hash comparison does not rerun those observations.",
+      "remainingOwner": null
+    },
+    {
+      "id": "124.priorities",
+      "issue": 124,
+      "requirement": "Identify existing issues before creating new ones; report up to five first prioritised fixes.",
+      "status": "met-reporting",
+      "evidence": [
+        "audit/2026-10-education-reconciliation/REPORT.md",
+        "audit/2026-10-foundations-coverage.md"
+      ],
+      "finding": "This report has four priorities using existing issue owners and docs #99. No speculative product defect or duplicate implementation issue is created.",
+      "remainingOwner": null
+    },
+    {
+      "id": "124.improvement",
+      "issue": 124,
+      "requirement": "Propose or deliver one bounded improvement with before/after evidence rather than a full redesign.",
+      "status": "met-selected",
+      "evidence": [
+        "audit/2026-10-spectrum-learner-journey/REPORT.md",
+        "audit/2026-10-spectrum-learner-journey/FIXES.md",
+        "audit/2026-10-spectrum-learner-journey/stored-value-pilot/REPORT.md"
+      ],
+      "finding": "Website #617 addressed the six discovery/diagnostic/export findings; later stored-value correction supplies a bounded reasoning improvement. Neither measures learner success.",
+      "remainingOwner": null
+    },
+    {
+      "id": "124.access",
+      "issue": 124,
+      "requirement": "Preserve site-specific identity and cross-platform accessibility.",
+      "status": "partial",
+      "evidence": [
+        "guides/first-session/PUBLICATION.md",
+        "audit/2026-10-first-session-operability/REPORT.md",
+        "audit/2026-10-foundations-publication/REPORT.md"
+      ],
+      "finding": "Existing layouts and controls retained. Available browser/keyboard evidence is scoped; VoiceOver was explicitly skipped and physical touch is untested. #749 owns remaining route checks.",
+      "remainingOwner": 749
+    }
+  ],
+  "dispositions": {
+    "114": {
+      "recommendation": "close-after-review",
+      "reason": "Bounded conceptual audit criteria are supported; learner outcomes remain owned by #124/#110. This does not certify every objective or target."
+    },
+    "115": {
+      "recommendation": "close-after-review",
+      "reason": "Both selected language pathways have objective, execution and prepared transfer evidence; unavailable learner trial is documented and remains under #124."
+    },
+    "116": {
+      "recommendation": "keep-open",
+      "reason": "Complete later-unit objective/prerequisite and concept comparison for the 22 units outside the opening slice, then reconcile findings and review docs #99."
+    },
+    "124": {
+      "recommendation": "keep-open",
+      "reason": "Actual learner outcomes are explicitly required and unavailable; #749 retains access gaps."
+    }
+  },
+  "learnerOutcomes": "unknown",
+  "liveIssuesChanged": false
+}

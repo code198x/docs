@@ -1,0 +1,49 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/fifth-result-5.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fifth-no-sixth.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/fifth-no-sixth.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Q",
+    "hold_frames": 90
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/fifth-editor.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/fifth-editor.state"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/card-result-3.state"
+  },
+  {
+    "action": "press_key",
+    "key": "Space",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/card-active-4.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/card-active-4.state"
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "press_key",
+    "key": "R",
+    "hold_frames": 3
+  },
+  {
+    "action": "run_frames",
+    "frames": 30
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/card-result-4.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/card-result-4.state"
+  }
+]

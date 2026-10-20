@@ -1,0 +1,28 @@
+{
+  "observations": [
+    {
+      "kind": "run_frames",
+      "frames": 3,
+      "reached": 472537772,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "run_frames",
+      "frames": 60,
+      "reached": 481036652,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "stop_audio_recording",
+      "path": "${RUN}/passive-tail.wav",
+      "samples": 57507,
+      "sample_rate": 48000,
+      "channels": 2,
+      "duration_ms": 1198
+    }
+  ],
+  "time": 481036652,
+  "boot_detected": true,
+  "boot_reason": "display-active",
+  "query_values": []
+}

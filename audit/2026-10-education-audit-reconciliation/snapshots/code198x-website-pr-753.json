@@ -1,0 +1,13 @@
+{
+  "body": "The Working the Bits overview still requires prior attendance and repeats fastest-shift/universal-inexactness claims corrected in its lessons. We now name the knowledge used, link optional support and summarise the five lessons with their actual width, range, precision and target-dependent boundaries.\n\nWe also align From Source to Silicon\u2019s catalogue tagline/skills with its revised source/data and translation explanation. All module order/requires data is unchanged. The catalogue metadata correction does not imply its old tagline appeared on the built Foundations landing page.\n\nValidation: production build passes (2459 public pages frame-checked); all 237 tests and content/prepared-tool checks pass; Vale and whitespace checks pass. Generated overview text and its three link destinations were inspected, the baseline overview fails the same wording check, and a structural YAML comparison limits the catalogue change to the selected tagline/skills. No machine behaviour or layout changes; no new learner/browser execution claimed.\n\nCloses #752. Evidence and the complete per-unit map are in https://github.com/code198x/docs/pull/84 under stevehill1981/198x#114.\n",
+  "headRefOid": "67459b81f0b5bdaa98c196bf6c25cc2c1e104295",
+  "mergeCommit": {
+    "oid": "e59270e838c288a014cd191ed5404dba769d69f4"
+  },
+  "mergedAt": "2026-10-16T07:52:08Z",
+  "number": 753,
+  "state": "MERGED",
+  "title": "Align Foundations module summaries with their revised lessons",
+  "url": "https://github.com/code198x/website/pull/753",
+  "repository": "code198x/website"
+}

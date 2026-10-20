@@ -1,0 +1,18 @@
+[
+  {
+    "action": "load_snapshot",
+    "path": "${RUN}/integrated-saved.state"
+  },
+  {
+    "action": "run_frames",
+    "frames": 240
+  },
+  {
+    "action": "save_screenshot",
+    "path": "${RUN}/integrated-settled.png"
+  },
+  {
+    "action": "save_snapshot",
+    "path": "${RUN}/integrated-settled.state"
+  }
+]

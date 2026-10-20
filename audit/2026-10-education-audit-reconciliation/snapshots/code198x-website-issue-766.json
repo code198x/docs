@@ -1,0 +1,9 @@
+{
+  "body": "The Blitz getting-started page recommends AmiBlitz3 and an A1200/accelerated A500 with Kickstart 3.0+, but omits the IDE's CPU/RAM/disk/library requirements. Upstream README at 5dd815f880d72c5285b380ef3ddebfa5766d0626 requires a 68020, at least 8 MB RAM, 35 MB disk and its named Workbench/library setup. A machine name alone does not specify those resources. The page also directs readers to Ted and promises all original Blitz BASIC 2 course examples run unchanged, without a named tested release.\n\nCorrect `src/content/curriculum/commodore-amiga/blitz/getting-started.mdx` after qualifying one exact runtime route. Distinguish original Blitz BASIC 2 from AmiBlitz3, name the verified IDE/runtime and emulator configuration, and follow its actual launch/compile controls. State requirements for the IDE separately from generated programs. Check AMOS's paired on-ramp against its chosen distribution too; keep source-licence and disk-distribution claims scoped to the actual artefact.\n\nAcceptance: a beginner can reproduce the setup and first greeting using named versions/configuration; retain source-to-execution evidence and working source/download links. Do not infer a runtime failure from this documentation mismatch. No new course structure or dependency is authorised by this issue.\n\nPrimary requirements: https://github.com/AmiBlitz/AmiBlitz3/blob/5dd815f880d72c5285b380ef3ddebfa5766d0626/README.md . Parent: stevehill1981/198x#116. Coordinate with the bounded greeting qualification in the audit report.\n",
+  "number": 766,
+  "state": "OPEN",
+  "title": "Pin the tested Amiga BASIC setup and state its actual requirements",
+  "updatedAt": "2026-10-16T14:31:54Z",
+  "url": "https://github.com/code198x/website/issues/766",
+  "repository": "code198x/website"
+}

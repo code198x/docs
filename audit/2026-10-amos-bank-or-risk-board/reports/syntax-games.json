@@ -1,0 +1,116 @@
+{
+  "observations": [
+    {
+      "kind": "press_key",
+      "key": "Q",
+      "hold_frames": 3,
+      "reached": 414745388
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 416445164,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "Return",
+      "hold_frames": 3,
+      "reached": 417011756
+    },
+    {
+      "kind": "run_frames",
+      "frames": 120,
+      "reached": 434009516,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "f2",
+      "hold_frames": 3,
+      "reached": 434576108
+    },
+    {
+      "kind": "run_frames",
+      "frames": 60,
+      "reached": 443074988,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "Q",
+      "hold_frames": 3,
+      "reached": 440383676
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 442083452,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "Return",
+      "hold_frames": 3,
+      "reached": 442650044
+    },
+    {
+      "kind": "run_frames",
+      "frames": 120,
+      "reached": 459647804,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "f2",
+      "hold_frames": 3,
+      "reached": 460214396
+    },
+    {
+      "kind": "run_frames",
+      "frames": 60,
+      "reached": 468713276,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "Q",
+      "hold_frames": 3,
+      "reached": 458514620
+    },
+    {
+      "kind": "run_frames",
+      "frames": 12,
+      "reached": 460214396,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "Return",
+      "hold_frames": 3,
+      "reached": 460780988
+    },
+    {
+      "kind": "run_frames",
+      "frames": 120,
+      "reached": 477778748,
+      "stop_reason": "ReachedTarget"
+    },
+    {
+      "kind": "press_key",
+      "key": "f2",
+      "hold_frames": 3,
+      "reached": 478345340
+    },
+    {
+      "kind": "run_frames",
+      "frames": 60,
+      "reached": 486844220,
+      "stop_reason": "ReachedTarget"
+    }
+  ],
+  "time": 486844220,
+  "boot_detected": true,
+  "boot_reason": "display-active",
+  "query_values": []
+}

@@ -1,0 +1,13 @@
+{
+  "body": "AMOS Professional 2.00 and AmiBlitz v3.13.0b completed the bounded greeting, edit, syntax-error and repair loop on the recorded A1200 configuration. Keep the earlier failed attempts alongside the successful route.\n\nFor AmiBlitz, load the ASCII sample as `.ab3` with a minimal XTRA header setting RuntimeDebug=0. Both baseline and edited output were visible before the MouseWait click. A trailing plus produced a real syntax error; left-Amiga+V dismissed it. Retain the failed repair that cleared a line, followed by the actual in-PED restoration and verified two-line rerun. Explicit `Execute Tools:start-blitz` launches the text script.\n\nValidation: 17 evidence hashes and JSON pass; the debugger-disabled fixture preserves the exact four maintained statements. The paired clean website production build passes (2,459 pages); four built routes have matching linked header styles and resolving internal Amiga links. The new browser review remains incomplete because screenshot/CDP calls timed out; this draft and website#769 should remain drafts until the wide/narrow visual and click-through checks are finished.\n\nRelated: #94, code198x/website#766 and stevehill1981/198x#116. No binaries or licensed media included. Manual configuration-specific evidence; no original Blitz BASIC 2/Ted, whole-course compatibility, timing, audio, save/reopen or learner-effectiveness claim.\n",
+  "headRefOid": "084443faea5f09f8189f184613a4e9631cc69210",
+  "mergeCommit": {
+    "oid": "afc3f61714c7711164773f15dd1dfc0d35e7e417"
+  },
+  "mergedAt": "2026-10-16T13:14:13Z",
+  "number": 96,
+  "state": "MERGED",
+  "title": "Qualify the first AMOS and AmiBlitz greeting loops",
+  "url": "https://github.com/code198x/docs/pull/96",
+  "repository": "code198x/docs"
+}

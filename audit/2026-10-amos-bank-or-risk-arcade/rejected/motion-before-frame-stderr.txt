@@ -1,0 +1,1 @@
+error: script execution failed: cannot start video recording before the first frame is emitted
