@@ -1,0 +1,1597 @@
+{
+  "status": "bounded_read_only_candidates_not_reference_installations",
+  "tool_revision": "f7016398deb1fff9dc1efb6713dfab8c7bacf2d0",
+  "tool_sha256": "a28dc0496fee0e1fb9640f63f68ee56efa736d263e4d1288690623237211e384",
+  "catalogue_sha256": "1c7342016dadfae4cbfd5e6c85919234cc541cd1551df57d3c401d0751484051",
+  "candidates": [
+    {
+      "candidate": "creator-1.1",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "c9045afa08d662c9a2aebd648f613658d55572ced761af1a08b0fc7c8bff2247",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOS",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 1216: non-existent block 1763 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 156,
+      "component_files": [
+        {
+          "path": "AMOS",
+          "bytes": 88828,
+          "sha256": "e4814bb9527e818e49567725a304a7785d80eabe89b3fbdb23aff2e45dd00a5d"
+        },
+        {
+          "path": "AMOS.info",
+          "bytes": 2250,
+          "sha256": "285375c9a343acbde1a4aa1ede3ce7193717f2e55893525075cf01659f43a027"
+        },
+        {
+          "path": "AMOS_System/AMOS.Env",
+          "bytes": 12592,
+          "sha256": "9fc6f0e9e20b2845769c68715c6c69125ad6a20eaad4cfd5cf5168928c53449d"
+        },
+        {
+          "path": "AMOS_System.info",
+          "bytes": 894,
+          "sha256": "50b1109c8c3307f16c0ef70b4ff0b786023b24c16ecb56d5b9961dbf49bac1b8"
+        },
+        {
+          "path": "Config.AMOS",
+          "bytes": 33090,
+          "sha256": "cd7038b268a3a4c61ac061648ba8cf769979faa1ff6274841dbc68ffd07bcb67"
+        },
+        {
+          "path": "Help/Amosteroids_Documentation.Doc",
+          "bytes": 2752,
+          "sha256": "fe78ea6b69e95adaf1abafac997daa5f1f48168836c37adda304fe0183719d58"
+        },
+        {
+          "path": "Help/Amosteroids_Technical.Doc",
+          "bytes": 1507,
+          "sha256": "a004e80f5e3883b04b28b07c6d7d849d1f24449b673be100ef328c368e40e292"
+        },
+        {
+          "path": "s/startup-sequence",
+          "bytes": 6,
+          "sha256": "2a8fd454f6fab2efaada347e3ae4942385839816cfd88171db547ac2c811c093"
+        }
+      ]
+    },
+    {
+      "candidate": "creator-1.2",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "335d9fd17601b185b7acb89651a2bce0bee9c732c93b01bb18129437c287c05f",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOS",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 881: non-existent block 1760 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 149,
+      "component_files": [
+        {
+          "path": "AMOS1.2",
+          "bytes": 133568,
+          "sha256": "ffb55a1757faffe7dedb5bdc6347210d89fdf8b70da63b965233e79949b89585"
+        },
+        {
+          "path": "AMOS1.2.info",
+          "bytes": 2250,
+          "sha256": "f47876c63c3927d3c8d3e841a97c1205b5038a6cb5eddc4e86d83f4595eb8ce3"
+        },
+        {
+          "path": "AMOS_System/AMOS1_2.Env",
+          "bytes": 12516,
+          "sha256": "494dc9b0534507e0f538bf0d1db2463f14fa3f8a7121da7456d6b2d8e77ef604"
+        },
+        {
+          "path": "AMOS_System.info",
+          "bytes": 894,
+          "sha256": "c069f14e742b275d50a48e56d3be02b30cac8220604c3baba2c861e47f67f9a1"
+        },
+        {
+          "path": "Config1_2.AMOS",
+          "bytes": 33672,
+          "sha256": "0c65e9fbb833820a77f5d172263a855c57ca582b78212245d370be55acac2ac5"
+        },
+        {
+          "path": "Help/AMOS_Version1_21.Doc",
+          "bytes": 2513,
+          "sha256": "a0a8da8161f4040f21a71d6fbe4fe0f6b04ce2a204df30d2c60490b5ed26dfca"
+        },
+        {
+          "path": "s/Startup-Sequence",
+          "bytes": 26,
+          "sha256": "cc806e08b6da150e485beadecde169caa39a2e2fab320962f5c05c403f81430a"
+        }
+      ]
+    },
+    {
+      "candidate": "creator-1.31",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "844fa8f18e06e5c3d6bf4206e58e54d37feb2cfeddb858bc7d76f65cbb9b9763",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOS",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 884: non-existent block 1760 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 140,
+      "component_files": [
+        {
+          "path": "AMOS1.3",
+          "bytes": 92268,
+          "sha256": "5f4d9f404f22fb47034357e1b362af00b92087dbc3b5b01579166220da096a8e"
+        },
+        {
+          "path": "AMOS1.3.info",
+          "bytes": 2250,
+          "sha256": "285375c9a343acbde1a4aa1ede3ce7193717f2e55893525075cf01659f43a027"
+        },
+        {
+          "path": "AMOS_System/3d.lib",
+          "bytes": 4876,
+          "sha256": "c93a90e82a542836b0ecb985b8a81d1431e7edbf2e48a6646bd4197af023aa65"
+        },
+        {
+          "path": "AMOS_System/AMOS1_2.Env",
+          "bytes": 12516,
+          "sha256": "494dc9b0534507e0f538bf0d1db2463f14fa3f8a7121da7456d6b2d8e77ef604"
+        },
+        {
+          "path": "AMOS_System/AMOS1_3_NTSC.ENV",
+          "bytes": 9956,
+          "sha256": "3785644a9198e541df563437acfd333a1226e702860e5736d64e593997149203"
+        },
+        {
+          "path": "AMOS_System/AMOS1_3_PAL.ENV",
+          "bytes": 9956,
+          "sha256": "77c020177211a20162769ce84a2e12a93223583330ce822d9bdffbd4b0826fac"
+        },
+        {
+          "path": "AMOS_System/c3d.lib",
+          "bytes": 47696,
+          "sha256": "cb76133bd7eac024c9ea9cd79b01f7b2c1b20f31ecb0ef66907ea8dfdc83667d"
+        },
+        {
+          "path": "AMOS_System/Compact.Lib",
+          "bytes": 1860,
+          "sha256": "7043e216c7e3b8386b72eadc298df418fce6f8d0e2cd18ef0f7b568440122361"
+        },
+        {
+          "path": "AMOS_System/Music.Lib",
+          "bytes": 7396,
+          "sha256": "b4e94f2ea6d758118fac993a9d39075ff3d043808e45bae71e464fc2dcdd1938"
+        },
+        {
+          "path": "AMOS_System/RAMOS1_3.ENV",
+          "bytes": 5044,
+          "sha256": "b3529e6f4913ef37b5080c8a030b2b8b51b41e996a603241e947b1cb4df3ddfe"
+        },
+        {
+          "path": "AMOS_System/Request.Lib",
+          "bytes": 1440,
+          "sha256": "04b45bcc67862450a4c8fceb89e3020f5ad471114b16f005a6037e79ef1473fd"
+        },
+        {
+          "path": "AMOS_System/Serial.Lib",
+          "bytes": 2368,
+          "sha256": "0b6a93ed5278a261af83b0757a9c531ab7c6d6b591d850c8728b1488db97466c"
+        },
+        {
+          "path": "AMOS_System/W.Lib",
+          "bytes": 37492,
+          "sha256": "03a031e6529e2c804cf77fc29d3aad9fe0e878caf1f5ce3662770bc6c9941274"
+        },
+        {
+          "path": "Config1_3.AMOS",
+          "bytes": 36774,
+          "sha256": "af0beb88405a164fbf08ed587e2961bd27b07a8ea232712d72c6918b87873004"
+        },
+        {
+          "path": "s/startup-sequence",
+          "bytes": 25,
+          "sha256": "7fa1f5ed02c2e125cfc7f49c4745ac62765df4ac474f6aead9c03f3b167c386e"
+        }
+      ]
+    },
+    {
+      "candidate": "creator-1.32",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "7049ef051a3e1d2884099bda74c341f22dc7461e3c170cacbc15298e7227bdec",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOS",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 1078: non-existent block 1764 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 69,
+      "component_files": [
+        {
+          "path": "AMOS1.3",
+          "bytes": 92516,
+          "sha256": "854da13f03c5239a6a22f15dca375a76df7b5f94965519e0dc218e61400ebb41"
+        },
+        {
+          "path": "AMOS1.3.info",
+          "bytes": 2250,
+          "sha256": "285375c9a343acbde1a4aa1ede3ce7193717f2e55893525075cf01659f43a027"
+        },
+        {
+          "path": "AMOS_System/AMOS.Env",
+          "bytes": 12592,
+          "sha256": "9fc6f0e9e20b2845769c68715c6c69125ad6a20eaad4cfd5cf5168928c53449d"
+        },
+        {
+          "path": "AMOS_System/AMOS.Lib",
+          "bytes": 47328,
+          "sha256": "0f7ce9728c8c0acbf9a5e5738b586f0fa38335985aeea5f924c8e4bcd813b3df"
+        },
+        {
+          "path": "AMOS_System/AMOS1_3_NTSC.ENV",
+          "bytes": 9960,
+          "sha256": "ece39cb8d698e4c5e437d1da5014d28bb5bceaf715747699c93b41619b63bf6b"
+        },
+        {
+          "path": "AMOS_System/AMOS1_3_PAL.ENV",
+          "bytes": 9960,
+          "sha256": "46e60d92e61a4d7cccc6d6a72c10fa1d0238edd34d84ab3aa6125289313c2417"
+        },
+        {
+          "path": "AMOS_System/Compact.Lib",
+          "bytes": 1860,
+          "sha256": "7043e216c7e3b8386b72eadc298df418fce6f8d0e2cd18ef0f7b568440122361"
+        },
+        {
+          "path": "AMOS_System/Compiler.Lib",
+          "bytes": 2268,
+          "sha256": "00e42d780d42ae499ebae9c2b9d701de7e3025166a942b50d8a29a3c0c41c0e4"
+        },
+        {
+          "path": "AMOS_System/Compiler_Configuration",
+          "bytes": 3606,
+          "sha256": "69c462f8fc7be6f42732dec8f0d14d59d0e67db9fd0b5b56e49b87dd5377cf7f"
+        },
+        {
+          "path": "AMOS_System/Compiler_Configuration.Large",
+          "bytes": 3609,
+          "sha256": "dc82ea95f3ade8163d39838804624127cd811969f319fdd5f6206757ef8f306b"
+        },
+        {
+          "path": "AMOS_System/Header_BackStart.Lib",
+          "bytes": 2804,
+          "sha256": "798109b14d2952efaf21e120d9b8556f8eb87d3570a4ec8d9da245411137330c"
+        },
+        {
+          "path": "AMOS_System/Header_CLI.Lib",
+          "bytes": 2328,
+          "sha256": "eca609456863c7ffea97ef6a454eb603f8a7d49d62d26983f2f5ff3172bdc2cb"
+        },
+        {
+          "path": "AMOS_System/Music.Lib",
+          "bytes": 7396,
+          "sha256": "b4e94f2ea6d758118fac993a9d39075ff3d043808e45bae71e464fc2dcdd1938"
+        },
+        {
+          "path": "AMOS_System/RAMOS1_3.ENV",
+          "bytes": 5048,
+          "sha256": "9db1c7dc8cb0f4fd9623f32bde9c85a65606d484909b6b16944b65792b957dae"
+        },
+        {
+          "path": "AMOS_System/Request.Lib",
+          "bytes": 1440,
+          "sha256": "04b45bcc67862450a4c8fceb89e3020f5ad471114b16f005a6037e79ef1473fd"
+        },
+        {
+          "path": "AMOS_System/Serial.Lib",
+          "bytes": 2368,
+          "sha256": "0b6a93ed5278a261af83b0757a9c531ab7c6d6b591d850c8728b1488db97466c"
+        },
+        {
+          "path": "AMOS_System/W.Lib",
+          "bytes": 37496,
+          "sha256": "69b760e5ce904ec957a7c80ae19e2641998ef0d067ce0f719a81c8e76a83ca61"
+        },
+        {
+          "path": "AMOS_System.info",
+          "bytes": 894,
+          "sha256": "50b1109c8c3307f16c0ef70b4ff0b786023b24c16ecb56d5b9961dbf49bac1b8"
+        },
+        {
+          "path": "Compiler.AMOS",
+          "bytes": 56658,
+          "sha256": "3367e2fe89c5f226b9585f5ab60623bd4072ef96629399deb31cbcfe0f2576d0"
+        },
+        {
+          "path": "Config1_3.AMOS",
+          "bytes": 36774,
+          "sha256": "af0beb88405a164fbf08ed587e2961bd27b07a8ea232712d72c6918b87873004"
+        },
+        {
+          "path": "s/startup-sequence",
+          "bytes": 25,
+          "sha256": "7fa1f5ed02c2e125cfc7f49c4745ac62765df4ac474f6aead9c03f3b167c386e"
+        }
+      ]
+    },
+    {
+      "candidate": "creator-1.34",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "9de71d1e918dc83f6c2f6d573a7bb43c0abb3fb790e0285b0dc5d86cbade7573",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOS",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "root block: bitmap-valid flag is 0x00000001",
+          "bitmap block 1682: non-existent block 1760 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 147,
+      "component_files": [
+        {
+          "path": "AMOS",
+          "bytes": 25,
+          "sha256": "ff867aff39c1136b3cefb427e5ecc946157dda6a4f24aacd1d3d406c10f2eb57"
+        },
+        {
+          "path": "AMOS1.3",
+          "bytes": 93392,
+          "sha256": "623a815a76751c80f761fa2220cc21124caf02f3efcbecd70fade45fe1c8587b"
+        },
+        {
+          "path": "AMOS1.3.info",
+          "bytes": 2250,
+          "sha256": "285375c9a343acbde1a4aa1ede3ce7193717f2e55893525075cf01659f43a027"
+        },
+        {
+          "path": "AMOS_System/AMOS1_3_NTSC.ENV",
+          "bytes": 9936,
+          "sha256": "0115ac75c4e6a45b9230efbb62f12a19ebfed8afa74fa4894c13f6b42956b9dc"
+        },
+        {
+          "path": "AMOS_System/AMOS1_3_PAL.ENV",
+          "bytes": 9936,
+          "sha256": "7f2c49611968258ed8faa9d20c1ba4db13320d64d1d115a3b808069835a3affd"
+        },
+        {
+          "path": "AMOS_System/Compact.Lib",
+          "bytes": 1872,
+          "sha256": "36960d3962e9f4662fbe7848955c7f64a34a37399728acee4f3d88b01fd11521"
+        },
+        {
+          "path": "AMOS_System/Music.Lib",
+          "bytes": 12724,
+          "sha256": "2f8d3d2d8bc59f7dc0a3e6561c34f0840481111e0108b84924406199d9b13c0b"
+        },
+        {
+          "path": "AMOS_System/Request.Lib",
+          "bytes": 1856,
+          "sha256": "f9dd785d66fd2e437a9500d13aa405a44934f54363e050976b3cd731410e3c94"
+        },
+        {
+          "path": "AMOS_System/Serial.Lib",
+          "bytes": 2388,
+          "sha256": "36ded9a0852874ff5ccb793486725f346047818ce3cbe2e8b1cdc7b5e0c2054d"
+        },
+        {
+          "path": "AMOS_System/W.Lib",
+          "bytes": 37668,
+          "sha256": "51b035a2fb4848a0fed692da9949d96b1f62c3080df5c3e203fb1704c7fe4fd0"
+        },
+        {
+          "path": "AMOS_System.info",
+          "bytes": 894,
+          "sha256": "50b1109c8c3307f16c0ef70b4ff0b786023b24c16ecb56d5b9961dbf49bac1b8"
+        },
+        {
+          "path": "Config1_3.AMOS",
+          "bytes": 36774,
+          "sha256": "af0beb88405a164fbf08ed587e2961bd27b07a8ea232712d72c6918b87873004"
+        },
+        {
+          "path": "s/Startup-Sequence",
+          "bytes": 25,
+          "sha256": "7fa1f5ed02c2e125cfc7f49c4745ac62765df4ac474f6aead9c03f3b167c386e"
+        }
+      ]
+    },
+    {
+      "candidate": "creator-1.35",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "12eb1fee44fa981e332693b2dcd3d3dbe6af4d21691b782a44c0af97a063c4e7",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "Amos",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 881: non-existent block 1760 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 38,
+      "component_files": [
+        {
+          "path": "AMOS1.3",
+          "bytes": 93392,
+          "sha256": "595fd3000b4817b25e7f2fc510d4cc45d5c18816018f4c5a7bcd0a051cc00af5"
+        },
+        {
+          "path": "AMOS1.3.info",
+          "bytes": 2250,
+          "sha256": "285375c9a343acbde1a4aa1ede3ce7193717f2e55893525075cf01659f43a027"
+        },
+        {
+          "path": "AMOS_System.info",
+          "bytes": 894,
+          "sha256": "50b1109c8c3307f16c0ef70b4ff0b786023b24c16ecb56d5b9961dbf49bac1b8"
+        },
+        {
+          "path": "Compiler.AMOS",
+          "bytes": 56658,
+          "sha256": "3367e2fe89c5f226b9585f5ab60623bd4072ef96629399deb31cbcfe0f2576d0"
+        },
+        {
+          "path": "Config1_3.AMOS",
+          "bytes": 36774,
+          "sha256": "af0beb88405a164fbf08ed587e2961bd27b07a8ea232712d72c6918b87873004"
+        },
+        {
+          "path": "Orphaned_Files/AMOS1.3.info",
+          "bytes": 2250,
+          "sha256": "285375c9a343acbde1a4aa1ede3ce7193717f2e55893525075cf01659f43a027"
+        },
+        {
+          "path": "Orphaned_Files/AMOS1_3_NTSC.ENV",
+          "bytes": 9960,
+          "sha256": "b6f799d05f3b647b44ead8e2e28221bcc24dcb5efc7442e9ae0eadfeac16da73"
+        },
+        {
+          "path": "Orphaned_Files/AMOS1_3_PAL.ENV",
+          "bytes": 9960,
+          "sha256": "3d1f6dbc2431a3134592d0fd216dc9909a2fc385bbbcd2f18a33b2626f0671ad"
+        },
+        {
+          "path": "Orphaned_Files/AMOS_System.info",
+          "bytes": 894,
+          "sha256": "50b1109c8c3307f16c0ef70b4ff0b786023b24c16ecb56d5b9961dbf49bac1b8"
+        },
+        {
+          "path": "Orphaned_Files/Compact.Lib",
+          "bytes": 1876,
+          "sha256": "c616fc5c02301fbdaa7369982c88dbba56488532fb84de9336000f8be89e2456"
+        },
+        {
+          "path": "Orphaned_Files/Compiler.AMOS",
+          "bytes": 56658,
+          "sha256": "3367e2fe89c5f226b9585f5ab60623bd4072ef96629399deb31cbcfe0f2576d0"
+        },
+        {
+          "path": "Orphaned_Files/Compiler.Lib",
+          "bytes": 2276,
+          "sha256": "dd0d23f9b264c73973faa920d85aea7daba8bfd3f473b3e95d1a664f67ce7d26"
+        },
+        {
+          "path": "Orphaned_Files/Config1_3.AMOS",
+          "bytes": 35136,
+          "sha256": "c12b56723c1bbf441f18cab3429b9c8a70fcccb555f2734bf6d221a170d12a46"
+        },
+        {
+          "path": "Orphaned_Files/Music.Lib",
+          "bytes": 11212,
+          "sha256": "5afb65cd75fad21a12b0bbf64bdaa1f762d86c4f270a84fde412ccd191dd3e0b"
+        },
+        {
+          "path": "Orphaned_Files/RAMOS1_3.ENV",
+          "bytes": 5072,
+          "sha256": "77a2194dbdf288d5dd8ccf8203cfa2d57d05c61c03abceb07fbe671e53a8afc0"
+        },
+        {
+          "path": "Orphaned_Files/Request.Lib",
+          "bytes": 1856,
+          "sha256": "f9dd785d66fd2e437a9500d13aa405a44934f54363e050976b3cd731410e3c94"
+        },
+        {
+          "path": "Orphaned_Files/Serial.Lib",
+          "bytes": 2388,
+          "sha256": "36ded9a0852874ff5ccb793486725f346047818ce3cbe2e8b1cdc7b5e0c2054d"
+        },
+        {
+          "path": "Orphaned_Files/W.Lib",
+          "bytes": 38388,
+          "sha256": "4135f9b17b73d19d12f76047bfecc91f9f7d1ee3ffe93a06c91e0aa54132b944"
+        },
+        {
+          "path": "s/startup-sequence",
+          "bytes": 37,
+          "sha256": "475ecab26cb21f4f7e311df6f42f71026c28b1d1f5a63700d7a4580e227467ce"
+        }
+      ]
+    },
+    {
+      "candidate": "creator-1.36",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "274b14ef2e86f3f2944bd66d566821f513a2eaad90f84abd414a05305afdb482",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOS",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 881: non-existent block 1760 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 135,
+      "component_files": [
+        {
+          "path": "AMOS1.3",
+          "bytes": 93392,
+          "sha256": "9949ef46d13cb0b3725a710bb281e12e42bd82899379fec905d89e6a942c1ca3"
+        },
+        {
+          "path": "AMOS1.3.info",
+          "bytes": 2250,
+          "sha256": "285375c9a343acbde1a4aa1ede3ce7193717f2e55893525075cf01659f43a027"
+        },
+        {
+          "path": "AMOS_System/3d.lib",
+          "bytes": 4876,
+          "sha256": "c93a90e82a542836b0ecb985b8a81d1431e7edbf2e48a6646bd4197af023aa65"
+        },
+        {
+          "path": "AMOS_System/AMOS1_3_NTSC.ENV",
+          "bytes": 9956,
+          "sha256": "3785644a9198e541df563437acfd333a1226e702860e5736d64e593997149203"
+        },
+        {
+          "path": "AMOS_System/AMOS1_3_PAL.ENV",
+          "bytes": 9956,
+          "sha256": "77c020177211a20162769ce84a2e12a93223583330ce822d9bdffbd4b0826fac"
+        },
+        {
+          "path": "AMOS_System/c3d.lib",
+          "bytes": 47696,
+          "sha256": "cb76133bd7eac024c9ea9cd79b01f7b2c1b20f31ecb0ef66907ea8dfdc83667d"
+        },
+        {
+          "path": "AMOS_System/Compact.Lib",
+          "bytes": 1872,
+          "sha256": "36960d3962e9f4662fbe7848955c7f64a34a37399728acee4f3d88b01fd11521"
+        },
+        {
+          "path": "AMOS_System/Music.Lib",
+          "bytes": 11160,
+          "sha256": "aefa10082485f444c5b8b262399e7f07bd4d9f8aadef8033e4743407adfec068"
+        },
+        {
+          "path": "AMOS_System/RAMOS1_3.ENV",
+          "bytes": 5044,
+          "sha256": "b3529e6f4913ef37b5080c8a030b2b8b51b41e996a603241e947b1cb4df3ddfe"
+        },
+        {
+          "path": "AMOS_System/Request.Lib",
+          "bytes": 1856,
+          "sha256": "f9dd785d66fd2e437a9500d13aa405a44934f54363e050976b3cd731410e3c94"
+        },
+        {
+          "path": "AMOS_System/Serial.Lib",
+          "bytes": 2388,
+          "sha256": "36ded9a0852874ff5ccb793486725f346047818ce3cbe2e8b1cdc7b5e0c2054d"
+        },
+        {
+          "path": "AMOS_System/W.Lib",
+          "bytes": 38388,
+          "sha256": "3816c2ed14f94ef399025466fa68448f55e5aae23dd31ca95baf7ce745d968ba"
+        },
+        {
+          "path": "AMOS_System.info",
+          "bytes": 894,
+          "sha256": "50b1109c8c3307f16c0ef70b4ff0b786023b24c16ecb56d5b9961dbf49bac1b8"
+        },
+        {
+          "path": "Config1_3.AMOS",
+          "bytes": 36774,
+          "sha256": "af0beb88405a164fbf08ed587e2961bd27b07a8ea232712d72c6918b87873004"
+        },
+        {
+          "path": "s/Startup-Sequence",
+          "bytes": 25,
+          "sha256": "7fa1f5ed02c2e125cfc7f49c4745ac62765df4ac474f6aead9c03f3b167c386e"
+        }
+      ]
+    },
+    {
+      "candidate": "easy-1.01",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "c6d5acf5befcb9c2988caed131b7e20c11cd96b41dd1ebc12b8dcfbb274b1023",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "Easy_AMOS_Master_1",
+      "filesystem_verification": {
+        "sound": true,
+        "problems": []
+      },
+      "native_boot_tested": false,
+      "file_count": 23,
+      "component_files": [
+        {
+          "path": "Disc1_1",
+          "bytes": 156644,
+          "sha256": "ed318cfa0a3b2c92f08735359031695217a091f48ef561c2ca78a82cea5529dc"
+        },
+        {
+          "path": "Disc1_2",
+          "bytes": 116516,
+          "sha256": "1b5d2e0d5ca09e2170818076461f2532c8dc52fdbc3ce1729c61abbb3a8cc956"
+        },
+        {
+          "path": "Disc1_3",
+          "bytes": 117548,
+          "sha256": "aace130443a7730037786bd04c981365131232629f9334dca840e7d1fa815b3e"
+        },
+        {
+          "path": "Disc1_Size",
+          "bytes": 9,
+          "sha256": "aa39509e541f41e12ea25f56e6674ecc2f4a7ce341331780aa269fa0d7f108ef"
+        },
+        {
+          "path": "EasyInstall",
+          "bytes": 256336,
+          "sha256": "f1acdedd8992a4a2be755849ce704980f1db386a975019b62844ce9d8f88317f"
+        },
+        {
+          "path": "EasyInstall.info",
+          "bytes": 3218,
+          "sha256": "964018cc264a0ed82d691cad26471bc82d0de0a2ba1c28517b75ff7817abeb0d"
+        },
+        {
+          "path": "s/Startup-Sequence",
+          "bytes": 58,
+          "sha256": "5122e39a17eb6faf18c6d2dde57bfd9c9db49c78a7518a870ac3599db85a59bd"
+        }
+      ],
+      "installation_state": "Installer and split Disc1 payload; installed runtime not yet reconstructed."
+    },
+    {
+      "candidate": "pro-1.00",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "25e27448338ee8d3db08499f70e14c5cbb4bc8aa37334046bb9a2e33d9dcb19f",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOSPro_System",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 1098: non-existent block 1762 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 79,
+      "component_files": [
+        {
+          "path": "AMOSPro",
+          "bytes": 113516,
+          "sha256": "7f4a42eda25630a12910cf348f3d1b42a3b90c8f83b8b549dc03b3adbe8a58be"
+        },
+        {
+          "path": "AMOSPro.info",
+          "bytes": 3338,
+          "sha256": "1f446a5cc4ff049599631351b8e7302d44c9689f99257a8f49c4f51501eaeccb"
+        },
+        {
+          "path": "APSystem/AMOSPro_Compact.Lib",
+          "bytes": 1860,
+          "sha256": "7ad8fe1fc531944d691df0c54ed29eaa358ba703552108cce0055207896c833d"
+        },
+        {
+          "path": "APSystem/AMOSPro_Default.Font",
+          "bytes": 2048,
+          "sha256": "d6852addc09be7afae3215cc04e489bfd396bbc1eaa1425aa5aa40869af0bb92"
+        },
+        {
+          "path": "APSystem/AMOSPro_Default_Resource.Abk",
+          "bytes": 6474,
+          "sha256": "3765083e67a5622fdda0d651c1dd885e6eb91a5bb41fb42cc1eb07af031fd85b"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor",
+          "bytes": 33896,
+          "sha256": "78161a88ac52099530f17d5a2caf32e135327ce99715d9b54ba570f6be4f7724"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Config",
+          "bytes": 18512,
+          "sha256": "f82959922a9b16a5e8af87de92a09f26e087790969fb76d1d4d9853b3c6cbc83"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Macros",
+          "bytes": 31,
+          "sha256": "d5eb2cb76763a46bfe665ae3224cf36739724b8f8d56dcf7e7cc552233f57756"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Resource.Abk",
+          "bytes": 21368,
+          "sha256": "411a57ea13cef8603d5ec190bb7e42ece612b2430c0bf2acc12da317fbef7fb2"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Samples.Abk",
+          "bytes": 44476,
+          "sha256": "79facb77230682171c08aa3e37f92f6e4caf8819952467878507f1588277d355"
+        },
+        {
+          "path": "APSystem/AMOSPro_IOPorts.Lib",
+          "bytes": 3404,
+          "sha256": "a258f0a3e70615d7963a889c574595a58b93eb8966afff092a32d5eb66df1bcf"
+        },
+        {
+          "path": "APSystem/AMOSPro_Monitor",
+          "bytes": 11016,
+          "sha256": "db8bc4cdc4366282f4cf39f9b5e48738f6c3ed15e97075309b4b12520a028cd3"
+        },
+        {
+          "path": "APSystem/AMOSPro_Monitor_Resource.Abk",
+          "bytes": 13732,
+          "sha256": "fed774b1e31f78ea2453f71d3741e5bd1574f9b589abb44fb35ca9264dc2299e"
+        },
+        {
+          "path": "APSystem/AMOSPro_Mouse.abk",
+          "bytes": 2224,
+          "sha256": "2492e9d6d44ebb0ad3c48a9127f637468cd051d0d6b292c25a50efd908a474b0"
+        },
+        {
+          "path": "APSystem/AMOSPro_Music.Lib",
+          "bytes": 12828,
+          "sha256": "04023a627f9e52af86d03778faf2f243221066508a9583b7f60dd9f9a728642e"
+        },
+        {
+          "path": "APSystem/AMOSPro_Request.Lib",
+          "bytes": 4580,
+          "sha256": "e1e7ec5e205f6075a7713bd97c5ed5b0364ca65fc86dda9f15e4d72e50c91635"
+        },
+        {
+          "path": "Extra_Configs/AMOSPro_Configuration.Backup",
+          "bytes": 18540,
+          "sha256": "ba726ca926c1d05934080e6545044de4914634e0c34e638fc42e46a287025d72"
+        },
+        {
+          "path": "libs/amos.library",
+          "bytes": 38488,
+          "sha256": "89c1773561da436fd93bb023c7da6ee6cc50123c19548ade5adaf30375622700"
+        },
+        {
+          "path": "s/AMOSPro_Interpreter_Config",
+          "bytes": 676,
+          "sha256": "e115af69182f0a35219939d129937babe482ab1f619297a3bde83a5c77f16c29"
+        },
+        {
+          "path": "s/Startup-Sequence",
+          "bytes": 35,
+          "sha256": "47ced6482407c54dfcb47c1b8df44afa1708d202295da8b2704f8c085927924e"
+        }
+      ]
+    },
+    {
+      "candidate": "pro-1.11-update",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "7cd9e305bd069eb9671c067d7dc87c960fceefc276379b8a9d73ff2292331bb1",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOSPro_Update",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 1001: non-existent block 1760 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 39,
+      "component_files": [
+        {
+          "path": "amos_pd.doc",
+          "bytes": 2941,
+          "sha256": "b8d0f69ad0b4eecb827f955185491694c8b3f995db183da9dafbec8c5a891c35"
+        },
+        {
+          "path": "amos_pd.doc.info",
+          "bytes": 748,
+          "sha256": "062e54d58eef0eb1cdf578d1e361a27fd2f40c98ff445ca24c5c6b42dc287b7c"
+        },
+        {
+          "path": "AMOSPro",
+          "bytes": 115964,
+          "sha256": "acabf5f284e72d2db54fe3a6af59dbb91aa3ca741d985bd11227f607aaed441e"
+        },
+        {
+          "path": "AMOSPro_Update",
+          "bytes": 41568,
+          "sha256": "083d92230ab6b59c19de609652d692e97e1b06742ea5efa7710f09798df41a82"
+        },
+        {
+          "path": "AMOSPro_Update.info",
+          "bytes": 8170,
+          "sha256": "943cc2bf5cb3a73132e2dbfab93f5af575f6f782a1738d5693c66be95a9d1bff"
+        },
+        {
+          "path": "APSystem/AMOSPro_Compact.Lib",
+          "bytes": 1880,
+          "sha256": "976819dc91ada404e16d757c940b68892c52da64ffeac99e712573fd9233b69b"
+        },
+        {
+          "path": "APSystem/AMOSPro_Compiler.Lib",
+          "bytes": 2348,
+          "sha256": "b6b6361ed9064ae7d62e58c523e5fa785b73b0c98e7fb268a149ce86681673ad"
+        },
+        {
+          "path": "APSystem/AMOSPro_Default.Font",
+          "bytes": 2048,
+          "sha256": "d6852addc09be7afae3215cc04e489bfd396bbc1eaa1425aa5aa40869af0bb92"
+        },
+        {
+          "path": "APSystem/AMOSPro_Default_Resource.Abk",
+          "bytes": 8536,
+          "sha256": "4c06798614ed97e3995924ac073fe954f05124917ff71b5348cf51fadef900cd"
+        },
+        {
+          "path": "APSystem/AMOSPro_Mouse.abk",
+          "bytes": 2224,
+          "sha256": "2492e9d6d44ebb0ad3c48a9127f637468cd051d0d6b292c25a50efd908a474b0"
+        },
+        {
+          "path": "APSystem/AMOSPro_Music.Lib",
+          "bytes": 12952,
+          "sha256": "ad209f5a21ceb7c999cc06ac3555678835fff1b2dc128a9284f8137c1563b2f7"
+        },
+        {
+          "path": "APSystem/AMOSPro_Request.Lib",
+          "bytes": 4632,
+          "sha256": "a1bb279706cb4a29b5ed8b113a954c76121cf87390530598d3e7662684cf15ff"
+        },
+        {
+          "path": "libs/amos.library",
+          "bytes": 39688,
+          "sha256": "c5ff6b458f464454af4957167b5ddea143b2bf6496c098b908366e3343c83600"
+        },
+        {
+          "path": "s/AMOSPro_Interpreter_Config",
+          "bytes": 840,
+          "sha256": "0b473aaa04b4f3c8198ede15e7707e277223a08193f96884c36880ad9014b6aa"
+        },
+        {
+          "path": "s/startup-sequence",
+          "bytes": 443,
+          "sha256": "e5d14b4cfc65a57f580ee9f125b296640d4d74bb9c28edfd4763b5e260464d48"
+        },
+        {
+          "path": "Update/AMOSPro_1",
+          "bytes": 167044,
+          "sha256": "d123660ef21700607e914f846fd5e3b750fc99b502299615df9e1f63eccfc7b3"
+        },
+        {
+          "path": "Update/AMOSPro_2",
+          "bytes": 80536,
+          "sha256": "71d23165f5dc45903bdf72421d60091f123f7b89402c310fe983ce9fb146eb10"
+        },
+        {
+          "path": "Update/AMOSPro_3",
+          "bytes": 105656,
+          "sha256": "f25f5093f44cc0ef7ecaaf0c688674b5388b792d8f839bfcf5e5740f0d04e519"
+        },
+        {
+          "path": "Update/AMOSPro_4",
+          "bytes": 33300,
+          "sha256": "a5b036be962b0a2c42462a576b5a4cd5e56e83802ec137b4bd904b8548520cfe"
+        },
+        {
+          "path": "Update/AMOSPro_5",
+          "bytes": 8136,
+          "sha256": "a557f4e19b647d313faf6d3759a67b07897487948f44f9616304545d5622b30b"
+        },
+        {
+          "path": "Update/AMOSPro_6",
+          "bytes": 41948,
+          "sha256": "6ebb90b9650664b562b50ab6bda2680fd2064c951f34917154a1101253b2acd9"
+        },
+        {
+          "path": "Update/AMOSPro_7",
+          "bytes": 14696,
+          "sha256": "491a151c8822a2b9ba2938d3e520ad73bec07fbbf5da064f0839dba6975f0537"
+        },
+        {
+          "path": "Update/AMOSPro_8",
+          "bytes": 27428,
+          "sha256": "0e695f1572d6577c9d82729ff341f7d7d5695218f75eb7b2bd0d0b3d61bb07bd"
+        },
+        {
+          "path": "Update/AMOSPro_Size",
+          "bytes": 9,
+          "sha256": "2f7edb2adcc3d254750d079a35436640352b9e8710242ebbed57e268d14fcdf7"
+        }
+      ]
+    },
+    {
+      "candidate": "pro-1.12",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "7a7a739bc4b79321530147c2d5cd6f8bb331d461a107271919efca5ca65a5452",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOSPro_System",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 921: non-existent block 1763 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 100,
+      "component_files": [
+        {
+          "path": "AMOSPro",
+          "bytes": 115972,
+          "sha256": "b6e66c973f9ea919d8a360d614cb64c1af2d932bf74e86cb621d452ceb352280"
+        },
+        {
+          "path": "AMOSPro.info",
+          "bytes": 3338,
+          "sha256": "9be5e1cc5c6cca19c06e3c828e701fe8d71f72aec0f936d5c0cdd7130f3821e5"
+        },
+        {
+          "path": "APSystem/AMOSPro_Compact.Lib",
+          "bytes": 1880,
+          "sha256": "61de2e509239e782dd1b3031d1169182e227e2367da6842c561c6ae8e56c50e7"
+        },
+        {
+          "path": "APSystem/AMOSPro_Default.Font",
+          "bytes": 2048,
+          "sha256": "d6852addc09be7afae3215cc04e489bfd396bbc1eaa1425aa5aa40869af0bb92"
+        },
+        {
+          "path": "APSystem/AMOSPro_Default_Resource.Abk",
+          "bytes": 8536,
+          "sha256": "4c06798614ed97e3995924ac073fe954f05124917ff71b5348cf51fadef900cd"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor",
+          "bytes": 34508,
+          "sha256": "af7b7fe48f78314abb5d8a04433a322a5f77513182b8b3656e99b1a3452973af"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Config",
+          "bytes": 18692,
+          "sha256": "3bd1f8ec6d97981d88c7fe8cd6b50cba2dddbba01115d4e06ae0a19145f844bf"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Macros",
+          "bytes": 12,
+          "sha256": "97d2a684ef08b38811727bf8998ac8022b7fcb0e17d1bb599fa988692c83b379"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Resource.Abk",
+          "bytes": 21500,
+          "sha256": "9bf78136295faefc00fac7ea8a6e95cfe1ae3643a300c2f6c3f77d71c5567c8d"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Samples.Abk",
+          "bytes": 44476,
+          "sha256": "79facb77230682171c08aa3e37f92f6e4caf8819952467878507f1588277d355"
+        },
+        {
+          "path": "APSystem/AMOSPro_IoPorts.Lib",
+          "bytes": 3524,
+          "sha256": "06a1e0a7fa80c8e1cfe18219fcfbb4e4ece677756759ba66ed785bd3878fba1e"
+        },
+        {
+          "path": "APSystem/AMOSPro_Monitor",
+          "bytes": 11872,
+          "sha256": "5a6760a40ac7ee442b867850a85e87d10470b9a0ed874c13517f8299e0c149e6"
+        },
+        {
+          "path": "APSystem/AMOSPro_Monitor_Resource.Abk",
+          "bytes": 13946,
+          "sha256": "c5bae4e5ce788199b1b17ccc0cf16ea16f85d9d4acb318a62e8be2303512950d"
+        },
+        {
+          "path": "APSystem/AMOSPro_Mouse.Abk",
+          "bytes": 2224,
+          "sha256": "2492e9d6d44ebb0ad3c48a9127f637468cd051d0d6b292c25a50efd908a474b0"
+        },
+        {
+          "path": "APSystem/AMOSPro_Music.Lib",
+          "bytes": 12952,
+          "sha256": "1ba1568761aea6c2f12ba3da75aaab45ff0ff175936a57cf2ea248dadcb12a98"
+        },
+        {
+          "path": "APSystem/AMOSPro_Request.Lib",
+          "bytes": 4632,
+          "sha256": "8ef47f11cdb87d8e4004496905f43f98883404ac453283f34d38b3cc7e50f639"
+        },
+        {
+          "path": "Libs/amos.library",
+          "bytes": 39700,
+          "sha256": "9c30d046bdddd44c9a1abe5d3daff02215e5c2dc1e64ce579443483537e114cf"
+        },
+        {
+          "path": "s/AMOSPro_Interpreter_Config",
+          "bytes": 796,
+          "sha256": "eac6a16f380fb24a59358033d255f5d18e852d6690c8c4fd55acaabd3ee38125"
+        },
+        {
+          "path": "s/startup-sequence",
+          "bytes": 66,
+          "sha256": "2e904ca4c6233302bc77556d7cf4ad328078fc3aac5e3bccc9a7bc64cca96d6a"
+        }
+      ]
+    },
+    {
+      "candidate": "pro-1.12-update",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "136be7e518b90d298ec7304321d51a222aacbabf107336f0391efc54926b7fd5",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOSPro_Update",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 835: non-existent block 1760 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 36,
+      "component_files": [
+        {
+          "path": "AMOSPro",
+          "bytes": 115972,
+          "sha256": "c1d5f4ad070bc16bdf888526559ae70e45aeabbbb3ca65585c27f00f6269d003"
+        },
+        {
+          "path": "AMOSPro_Update",
+          "bytes": 41554,
+          "sha256": "690cfb9ae966952c06d1de903d41662dbefa67aa4411d5551135dc57bb181c38"
+        },
+        {
+          "path": "AMOSPro_Update.info",
+          "bytes": 8170,
+          "sha256": "943cc2bf5cb3a73132e2dbfab93f5af575f6f782a1738d5693c66be95a9d1bff"
+        },
+        {
+          "path": "APSystem/AMOSPro_Compact.Lib",
+          "bytes": 1880,
+          "sha256": "61de2e509239e782dd1b3031d1169182e227e2367da6842c561c6ae8e56c50e7"
+        },
+        {
+          "path": "APSystem/AMOSPro_Compiler.Lib",
+          "bytes": 2348,
+          "sha256": "b6b6361ed9064ae7d62e58c523e5fa785b73b0c98e7fb268a149ce86681673ad"
+        },
+        {
+          "path": "APSystem/AMOSPro_Default.Font",
+          "bytes": 2048,
+          "sha256": "d6852addc09be7afae3215cc04e489bfd396bbc1eaa1425aa5aa40869af0bb92"
+        },
+        {
+          "path": "APSystem/AMOSPro_Default_Resource.Abk",
+          "bytes": 8536,
+          "sha256": "4c06798614ed97e3995924ac073fe954f05124917ff71b5348cf51fadef900cd"
+        },
+        {
+          "path": "APSystem/AMOSPro_Mouse.abk",
+          "bytes": 2224,
+          "sha256": "2492e9d6d44ebb0ad3c48a9127f637468cd051d0d6b292c25a50efd908a474b0"
+        },
+        {
+          "path": "APSystem/AMOSPro_Music.Lib",
+          "bytes": 12952,
+          "sha256": "1ba1568761aea6c2f12ba3da75aaab45ff0ff175936a57cf2ea248dadcb12a98"
+        },
+        {
+          "path": "APSystem/AMOSPro_Request.Lib",
+          "bytes": 4632,
+          "sha256": "8ef47f11cdb87d8e4004496905f43f98883404ac453283f34d38b3cc7e50f639"
+        },
+        {
+          "path": "libs/amos.library",
+          "bytes": 39700,
+          "sha256": "9c30d046bdddd44c9a1abe5d3daff02215e5c2dc1e64ce579443483537e114cf"
+        },
+        {
+          "path": "s/AMOSPro_Interpreter_Config",
+          "bytes": 840,
+          "sha256": "0b473aaa04b4f3c8198ede15e7707e277223a08193f96884c36880ad9014b6aa"
+        },
+        {
+          "path": "s/startup-sequence",
+          "bytes": 439,
+          "sha256": "73c31b85193d1bdfb0e19ad2858422fd0e594a63f20ffbe51d98cfc12529db37"
+        },
+        {
+          "path": "Update/AMOSPro_1",
+          "bytes": 167060,
+          "sha256": "26c837bb22b02e83d4fe98890d79b64252b44f5d2644c04252246dcee9820db4"
+        },
+        {
+          "path": "Update/AMOSPro_2",
+          "bytes": 80528,
+          "sha256": "6ed9d318bcacbc3834a50be63dc28a11e6f675768d64abf013f21a0775967cd2"
+        },
+        {
+          "path": "Update/AMOSPro_3",
+          "bytes": 105656,
+          "sha256": "80c8470ff4e46080a55fb9ff10715a9867a04e98c6787207de5191b0bb053992"
+        },
+        {
+          "path": "Update/AMOSPro_4",
+          "bytes": 33300,
+          "sha256": "98dc138fae8b06071328a8195a78190baec5de0856695e21c8ca3b3c7dad2b5c"
+        },
+        {
+          "path": "Update/AMOSPro_5",
+          "bytes": 8136,
+          "sha256": "859e94aeb12db074913c528e38ee89b28208bc62087bf07f690f358741f15f8e"
+        },
+        {
+          "path": "Update/AMOSPro_6",
+          "bytes": 41948,
+          "sha256": "6ebb90b9650664b562b50ab6bda2680fd2064c951f34917154a1101253b2acd9"
+        },
+        {
+          "path": "Update/AMOSPro_7",
+          "bytes": 14696,
+          "sha256": "491a151c8822a2b9ba2938d3e520ad73bec07fbbf5da064f0839dba6975f0537"
+        },
+        {
+          "path": "Update/AMOSPro_8",
+          "bytes": 27428,
+          "sha256": "5ebd949b804e7c082c7bd4ee6e9e40f3d4fa974d2e2ebdb2796d29f95d960eb1"
+        },
+        {
+          "path": "Update/AMOSPro_Size",
+          "bytes": 9,
+          "sha256": "c2d7672673cc6e2433e45ea6b90acee589fa6e41269b122c0ed5a65a8f86d126"
+        }
+      ]
+    },
+    {
+      "candidate": "pro-2.00",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "507828d923c0af5e485a03048e396c29c9c5dec7769e8b40b1c933d980ffba3b",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOSPro_System",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 396: non-existent block 1768 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 78,
+      "component_files": [
+        {
+          "path": "AMOSPro",
+          "bytes": 22624,
+          "sha256": "bc28da02a89914f727db509f7c07f38d1cc468c2f794dad33e49328aae8118ae"
+        },
+        {
+          "path": "AMOSPro.info",
+          "bytes": 3338,
+          "sha256": "1f446a5cc4ff049599631351b8e7302d44c9689f99257a8f49c4f51501eaeccb"
+        },
+        {
+          "path": "APSystem/AMOSPro.Lib",
+          "bytes": 98184,
+          "sha256": "9ccd9c4c99876e62ba99bd59349b87538e60ee88bcffba835e5402f420f40c3a"
+        },
+        {
+          "path": "APSystem/AMOSPro_Compact.Lib",
+          "bytes": 1540,
+          "sha256": "1473cd4cc81a6b9a26c100c5431e0af3d26187a0c632f23586e1b776fb6a01ba"
+        },
+        {
+          "path": "APSystem/AMOSPro_Default_Resource.Abk",
+          "bytes": 9302,
+          "sha256": "0e00ac32a92e0a5c045bd88b2e0a50eb57ee28a85a79123f1f9c1319ace4dee8"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor",
+          "bytes": 37248,
+          "sha256": "e866a66aab53d294dbe5ffd3e95acdb7344d78809eafdff98400b6c7f2f56f35"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Config",
+          "bytes": 18738,
+          "sha256": "8a488668a66b8ae4a57eb66edea76a8f3aace0dfdcd278d29f5641490d466603"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Macros",
+          "bytes": 31,
+          "sha256": "d5eb2cb76763a46bfe665ae3224cf36739724b8f8d56dcf7e7cc552233f57756"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Resource.Abk",
+          "bytes": 21778,
+          "sha256": "f64b993af02fc32ad2a16fe498ea123fbc005731029b6620d761f68e8f088212"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Samples.Abk",
+          "bytes": 44476,
+          "sha256": "79facb77230682171c08aa3e37f92f6e4caf8819952467878507f1588277d355"
+        },
+        {
+          "path": "APSystem/AMOSPro_IOPorts.Lib",
+          "bytes": 3680,
+          "sha256": "1a905c8eb11591049b2cbbb16fb1e30658bb4461ee72718c8b1e2489386ba4bb"
+        },
+        {
+          "path": "APSystem/AMOSPro_Monitor",
+          "bytes": 11864,
+          "sha256": "924192f24bb569d2c217a6d61aaf3b9f3ff11dc83679a008b27f043422c4d62b"
+        },
+        {
+          "path": "APSystem/AMOSPro_Monitor_Resource.Abk",
+          "bytes": 14094,
+          "sha256": "9c32f9d28851511f7747164242697e15617abf883f8c537405cd487a637e06d9"
+        },
+        {
+          "path": "APSystem/AMOSPro_Music.Lib",
+          "bytes": 12712,
+          "sha256": "64bd6d0410acae2051926f032c68741bd3021508dab0dab35812c8085fc9bb86"
+        },
+        {
+          "path": "APSystem/AMOSPro_Request.Lib",
+          "bytes": 264,
+          "sha256": "c74c476529b7606aa8f74afe306804d781a67c8b06ce6367f90faaf0ca23c015"
+        },
+        {
+          "path": "libs/amos.library",
+          "bytes": 46948,
+          "sha256": "bdb467799360957d765a75143084c37b78f15ec1c299f876b6bd9487ecdbd8dd"
+        },
+        {
+          "path": "s/AMOSPro_Interpreter_Config",
+          "bytes": 770,
+          "sha256": "bbf706682fca348832e41b6adafd0948a5216de232afa698c0af40212e27f294"
+        },
+        {
+          "path": "s/Startup-Sequence",
+          "bytes": 35,
+          "sha256": "47ced6482407c54dfcb47c1b8df44afa1708d202295da8b2704f8c085927924e"
+        }
+      ]
+    },
+    {
+      "candidate": "compiler-1.0",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "ec46a4c7d719854f037e3d7aed901d840fa14c5181612253cb7a7b393dd4b6b3",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOS_Compiler",
+      "filesystem_verification": {
+        "sound": true,
+        "problems": []
+      },
+      "native_boot_tested": false,
+      "file_count": 47,
+      "component_files": [
+        {
+          "path": "Compiler_Install",
+          "bytes": 101220,
+          "sha256": "e2211f85b9dd90f0e409c50324df45a5f803f57642fd1903f8242b266960293d"
+        },
+        {
+          "path": "Examples/Amosteroids_II.AMOS",
+          "bytes": 106784,
+          "sha256": "9c20a7ce73ddd89bc225da5aa2eb0a5d5d498c12c485092373dfbecda8042a60"
+        },
+        {
+          "path": "Files/AMOS_System/AMOS.Lib",
+          "bytes": 47148,
+          "sha256": "029b307ece40d529b027e93ddc60039cb0cf7316a49281eceb43c5267fb35f3f"
+        },
+        {
+          "path": "Files/AMOS_System/Compiler.Lib",
+          "bytes": 2268,
+          "sha256": "00e42d780d42ae499ebae9c2b9d701de7e3025166a942b50d8a29a3c0c41c0e4"
+        },
+        {
+          "path": "Files/AMOS_System/Compiler_Configuration",
+          "bytes": 3606,
+          "sha256": "acbe4e53f634fe5259fd6bf15d3a65cca0fab6712baf5ff2bed12a8a91b19c55"
+        },
+        {
+          "path": "Files/AMOS_System/Compiler_Configuration.Large",
+          "bytes": 3609,
+          "sha256": "e63ecf003d5438ac03b91e4f7f6b976c28b9a366271681dbce9867cd2ea483e9"
+        },
+        {
+          "path": "Files/AMOS_System/Header_BackStart.Lib",
+          "bytes": 2804,
+          "sha256": "798109b14d2952efaf21e120d9b8556f8eb87d3570a4ec8d9da245411137330c"
+        },
+        {
+          "path": "Files/AMOS_System/Header_CLI.Lib",
+          "bytes": 2328,
+          "sha256": "eca609456863c7ffea97ef6a454eb603f8a7d49d62d26983f2f5ff3172bdc2cb"
+        },
+        {
+          "path": "Files/AMOS_System/RAMOS1_3.ENV",
+          "bytes": 5072,
+          "sha256": "77a2194dbdf288d5dd8ccf8203cfa2d57d05c61c03abceb07fbe671e53a8afc0"
+        },
+        {
+          "path": "Files/Compiler.AMOS",
+          "bytes": 56588,
+          "sha256": "0eed0f56eeaeeed6e259f0df16a4758d6a55fa329fa97e6ebad678e8760354fa"
+        },
+        {
+          "path": "s/startup-sequence",
+          "bytes": 25,
+          "sha256": "e88bea854dfff6a837be1c790b343eb435cda8cd31f9da9c4df5395c4c4b0509"
+        }
+      ]
+    },
+    {
+      "candidate": "pro-compiler-2.00",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "1d7c46986780c8487816a67da2b6f1b1a5bb35697e85af6920303c7a6f9e0710",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOSPro_Compiler",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 827: non-existent block 1760 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 65,
+      "component_files": [
+        {
+          "path": "APSystem/AMOSPro.Lib",
+          "bytes": 98184,
+          "sha256": "9ccd9c4c99876e62ba99bd59349b87538e60ee88bcffba835e5402f420f40c3a"
+        },
+        {
+          "path": "APSystem/AMOSPro_Compact.Lib",
+          "bytes": 1540,
+          "sha256": "1473cd4cc81a6b9a26c100c5431e0af3d26187a0c632f23586e1b776fb6a01ba"
+        },
+        {
+          "path": "APSystem/AMOSPro_Compiler.Lib",
+          "bytes": 3952,
+          "sha256": "daea26059524f447f87f4f660bddb420f0620a9d6b0a165bec9864937b7019f4"
+        },
+        {
+          "path": "APSystem/AMOSPro_CompilerA_Resource.Abk",
+          "bytes": 10216,
+          "sha256": "f649142488a9d7fc82f757e82755895050ecc6d0748fcbad51677823e7d1f7e8"
+        },
+        {
+          "path": "APSystem/AMOSPro_Default_Resource.Abk",
+          "bytes": 9302,
+          "sha256": "0e00ac32a92e0a5c045bd88b2e0a50eb57ee28a85a79123f1f9c1319ace4dee8"
+        },
+        {
+          "path": "APSystem/AMOSPro_Editor_Config",
+          "bytes": 18776,
+          "sha256": "994faaf4410363d3bad15b992c88cc81a0c390d7dabfe8e5d4ef408dc7c99110"
+        },
+        {
+          "path": "APSystem/AMOSPro_IOPorts.Lib",
+          "bytes": 3680,
+          "sha256": "1a905c8eb11591049b2cbbb16fb1e30658bb4461ee72718c8b1e2489386ba4bb"
+        },
+        {
+          "path": "APSystem/AMOSPro_Music.Lib",
+          "bytes": 12712,
+          "sha256": "64bd6d0410acae2051926f032c68741bd3021508dab0dab35812c8085fc9bb86"
+        },
+        {
+          "path": "APSystem/AMOSPro_Request.Lib",
+          "bytes": 264,
+          "sha256": "c74c476529b7606aa8f74afe306804d781a67c8b06ce6367f90faaf0ca23c015"
+        },
+        {
+          "path": "APSystem/APCmp",
+          "bytes": 29528,
+          "sha256": "d9fd67ce3d5795d5567115eeaab7df3e1e5952156d0f1119a12d3d14cee616c5"
+        },
+        {
+          "path": "APSystem/Compiler.Lib",
+          "bytes": 29276,
+          "sha256": "f8197a0f51a495e366fa887e0feaeadc75ec7bbdfb469638254468f1e4e38e3e"
+        },
+        {
+          "path": "APSystem/Header_Backstart.Lib",
+          "bytes": 3436,
+          "sha256": "6b4bda87129fcffccf7fa4c457ab1e8887207a392f30e6181568ae1fee31281e"
+        },
+        {
+          "path": "APSystem/Header_CLI.Lib",
+          "bytes": 2928,
+          "sha256": "37f1dbbf0cbb610adbb68df070b649974466a1cb13e28998aca987ed166f8b49"
+        },
+        {
+          "path": "Compiler_Install",
+          "bytes": 96192,
+          "sha256": "bdb28982d5430176022f0995012cae6ee83d89897032ddbda9ad9781877a89e6"
+        },
+        {
+          "path": "Compiler_Install.info",
+          "bytes": 8698,
+          "sha256": "eab06da3b23e940b15bbcbf9f4659a2359d67ef3006d634d51ba0985debcd889"
+        },
+        {
+          "path": "Compiler_Shell",
+          "bytes": 131304,
+          "sha256": "dbcf71564965cafc692bfb538f0e2bdbcd24c0d21215c83ff5a144d4bf07af44"
+        },
+        {
+          "path": "Compiler_Shell.AMOS",
+          "bytes": 79460,
+          "sha256": "e4a377e64a9318641f2b621956c31d1ff4791ab8dde517c4b4243c5ad9990067"
+        },
+        {
+          "path": "Compiler_Shell.info",
+          "bytes": 3338,
+          "sha256": "97864805834e43d62bac701f055d41126d2dbffb5a6ba7f6fcdd65e268ecb51c"
+        },
+        {
+          "path": "libs/AMOS.Library",
+          "bytes": 46948,
+          "sha256": "bdb467799360957d765a75143084c37b78f15ec1c299f876b6bd9487ecdbd8dd"
+        },
+        {
+          "path": "s/AMOSPro_Compiler_Config",
+          "bytes": 1532,
+          "sha256": "141d9fbdd519fc400835545be4b979d4f98d518cd9d4d86df9e0a6dd11b39ff1"
+        },
+        {
+          "path": "s/AMOSPro_Interpreter_Config",
+          "bytes": 824,
+          "sha256": "4ad36028fa4c86f945574095602aadc424510a89119ab9e8c826784d9e0ca9e5"
+        },
+        {
+          "path": "s/startup-sequence",
+          "bytes": 45,
+          "sha256": "c53d893ecf50752144d9fb9a99743401dd9c1c5037c97f038556f9b0832bef97"
+        }
+      ]
+    },
+    {
+      "candidate": "pro-2.00-update",
+      "identity_status": "media_label_not_boot_observed",
+      "bytes": 901120,
+      "sha256": "45784f8fb9541ab83b2d9d7e6e4f630fde20cf1e4aa92f1b37e0b2e49111a4c0",
+      "archive_crc_verified": true,
+      "catalogue_size_crc_sha1_match": true,
+      "filesystem": "ofs",
+      "volume_label": "AMOSPro_Update",
+      "filesystem_verification": {
+        "sound": false,
+        "problems": [
+          "bitmap block 881: non-existent block 1760 is marked free"
+        ]
+      },
+      "native_boot_tested": false,
+      "file_count": 27,
+      "component_files": [
+        {
+          "path": "AMOSPro_Update",
+          "bytes": 95932,
+          "sha256": "a893a9f04d087749d26f8f37bd8a8c28ae173de8e5c05a36e71aaa81e124d239"
+        },
+        {
+          "path": "AMOSPro_Update.info",
+          "bytes": 8162,
+          "sha256": "673d314f0d99c3fefb96447a026be8a21cab2dca9700d5d519595f12c3707e69"
+        },
+        {
+          "path": "libs/amos.library",
+          "bytes": 46948,
+          "sha256": "bdb467799360957d765a75143084c37b78f15ec1c299f876b6bd9487ecdbd8dd"
+        },
+        {
+          "path": "s/startup-sequence",
+          "bytes": 437,
+          "sha256": "ee6e451b584e348ddf4b2eb5efa528c4f4a3fa31a7ead7f1a44c591b45788b97"
+        },
+        {
+          "path": "Update/AMOSPro_1",
+          "bytes": 163408,
+          "sha256": "8bb803dc4aed59547ae1bc6c2cfffb166e20a2da86ed70af2f49e7aec20f3658"
+        },
+        {
+          "path": "Update/AMOSPro_2",
+          "bytes": 83192,
+          "sha256": "e1515b4e301eef3d65614e6019fbe4a615f9b6c3da0866e6cb89c5211a28abd7"
+        },
+        {
+          "path": "Update/AMOSPro_3",
+          "bytes": 102852,
+          "sha256": "49d720bbe83f4bdbd249cf33487c785511cc472594435e4283d90712e0b5afa7"
+        },
+        {
+          "path": "Update/AMOSPro_4",
+          "bytes": 53240,
+          "sha256": "e8a33b921863a6623f052d259f2f3de95ba884294baae2d7d54dc2398a1494af"
+        },
+        {
+          "path": "Update/AMOSPro_5",
+          "bytes": 8136,
+          "sha256": "ae635b832befd76f3537b0f4acd4e2e5f3281b57c84b1e9c53e2bc6bde285970"
+        },
+        {
+          "path": "Update/AMOSPro_6",
+          "bytes": 41972,
+          "sha256": "c9bdbb62d31cbca3c0e69dc039e5707110a0e9bc4417d47130906a752776e765"
+        },
+        {
+          "path": "Update/AMOSPro_7",
+          "bytes": 14696,
+          "sha256": "491a151c8822a2b9ba2938d3e520ad73bec07fbbf5da064f0839dba6975f0537"
+        },
+        {
+          "path": "Update/AMOSPro_8",
+          "bytes": 42380,
+          "sha256": "a6615fe632b50ff73e13727f46f70ef947854a94b7f1a8bff3bfceb862d7e5c2"
+        },
+        {
+          "path": "Update/AMOSPro_Size",
+          "bytes": 9,
+          "sha256": "fa8744177d226501d35306e0ebbf91bcd1260c1a2c1dc68e976a37c67622e48c"
+        }
+      ]
+    }
+  ],
+  "component_selection": "Files ending .lib or _config; basenames beginning amos/easy/apcmp/compiler/ramos/config/disc1; s/startup-sequence. Other files were hashed but are omitted here."
+}

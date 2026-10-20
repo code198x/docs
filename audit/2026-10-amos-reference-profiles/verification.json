@@ -1,0 +1,16 @@
+{
+  "status": "read_only_media_and_research_checks_not_native_language_qualification",
+  "candidate_payloads": 16,
+  "catalogue_and_archive_matches": 16,
+  "filesystem_sound": 2,
+  "filesystem_rejected": 14,
+  "executed_baseline_file_hashes_preserved": 78,
+  "second_pro_distribution_identical_files": 77,
+  "second_pro_distribution_changed_files": [
+    "s/Startup-Sequence"
+  ],
+  "new_native_trials": 0,
+  "source_media_unchanged": true,
+  "relative_links_resolve": true,
+  "ownership_adopted": false
+}

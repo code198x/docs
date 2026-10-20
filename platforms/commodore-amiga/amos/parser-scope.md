@@ -79,6 +79,14 @@ checked native baseline remains Professional 2.00; no Creator/Easy compatibility
 trial was performed for this proposal. Later derivatives stay visible in the
 ledger, with implementation breadth decided after their evidence is gathered.
 
+The follow-up [reference installation plan](reference-profiles.md) separates
+sixteen inspected media candidates from the previously executed Pro 2.00
+profile. It retains filesystem failures, installer dependencies and a startup
+script difference rather than treating media availability as qualification.
+The [ownership options](parser-ownership-options.md) recommend a dedicated
+language-tooling sibling and compare it with an explicit Asm198x frontend scope;
+that recommendation awaits a separate decision.
+
 ## Differences worth testing first
 
 The original documents already give concrete reasons to retain release identity:
