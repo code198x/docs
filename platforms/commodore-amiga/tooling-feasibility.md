@@ -77,6 +77,11 @@ separate evidence. Blitz should follow with its own version/library research;
 the same investigation method can serve other languages without committing us
 to a universal grammar or shared parser implementation.
 
+[Lang198x now owns the language tooling](amos/parser-ownership-options.md),
+including language services/LSP. Its first implementation design and native
+reference work remain open. Existing BASIC parser/diagnostic code is a migration
+candidate to assess, not a prerequisite family-wide move.
+
 ## Implementation options
 
 | Option | Potential benefit | Substantial work and limitations | Useful first experiment |
@@ -131,9 +136,9 @@ language implementation.
    the tools around them.
 2. **Inventory actual reusable tools and source.** Record revisions, build
    requirements, component permissions, diagnostics, source import and available
-   automation. Check dependencies before proposing additions. Do not assign a
-   new compiler or interpreter to Asm198x, Emu198x or a new repository without
-   an ownership decision.
+   automation. Check dependencies before proposing additions. Lang198x is the
+   agreed home; agree the first implementation design and repository layout
+   before introducing code or moving existing functionality.
 3. **Exercise the complete working loop in both languages.** Run the greeting,
    edited greeting, error/repair and save/reopen cycle from maintained source.
    Then run a bounded AMOS roll/bank/bust test and a Blitz switch-state test,

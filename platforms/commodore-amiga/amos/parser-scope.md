@@ -83,9 +83,9 @@ The follow-up [reference installation plan](reference-profiles.md) separates
 sixteen inspected media candidates from the previously executed Pro 2.00
 profile. It retains filesystem failures, installer dependencies and a startup
 script difference rather than treating media availability as qualification.
-The [ownership options](parser-ownership-options.md) recommend a dedicated
-language-tooling sibling and compare it with an explicit Asm198x frontend scope;
-that recommendation awaits a separate decision.
+[Lang198x ownership](parser-ownership-options.md) is now agreed, including
+language services/LSP. The umbrella decision owns that boundary and the review
+gates for moving existing functionality.
 
 ## Differences worth testing first
 
@@ -185,8 +185,8 @@ limit. A valid AMOS wrapper does not validate the embedded program.
 
 1. **Release and extension evidence.** Expand the ledger into component-pinned
    profiles. Establish Creator, Easy and Pro baselines and representative release
-   differences. Label missing binaries/documents. Approve ownership and the
-   implementation approach before adding code or dependencies.
+   differences. Label missing binaries/documents. Use the agreed Lang198x home
+   and agree the first implementation design before adding code or dependencies.
 2. **First useful text parser.** Propose the opening program surface with located
    syntax trees and explicit unsupported cases. Include valid variations and
    deliberately malformed input, not only our two message listings. Establish
@@ -209,10 +209,10 @@ media is unavailable, label the result source/manual-checked, not executed.
 Source/table extraction and native observations are complementary evidence.
 
 Do not make the lessons wait for a host interpreter. Original AMOS remains the
-execution baseline. No time estimate, parser library, crate name, new repository
-or cross-project owner is selected here. The existing tooling feasibility guide
-requires an ownership decision, and the family tool rules do not make a syntax
-analyser belong to Build198x because it is tooling.
+execution baseline. Lang198x is the agreed owner; a parser framework, package API,
+repository layout and implementation estimate have not been selected. The
+umbrella decision also requires reviewing the existing Spectrum parser and
+BASIC diagnostics before any migration, rather than creating competing copies.
 
 ## Blitz and other languages
 

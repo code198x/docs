@@ -104,6 +104,7 @@ never identify an extension solely by its slot number. Then select one separatel
 versioned extension, such as TOME or AMOS 3D, with original documentation and a
 qualified runtime. No third-party extension media were inspected in this pass.
 
-The next implementation-home choice is described in
-[ownership options](parser-ownership-options.md). These candidate findings do not
-resolve that architectural decision or commission a parser implementation.
+[Lang198x ownership](parser-ownership-options.md) is now agreed, including
+language services/LSP. These candidate findings remain inputs to its first AMOS
+implementation design; they do not qualify another native installation or
+commission a parser implementation by themselves.
