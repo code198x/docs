@@ -1,0 +1,8 @@
+# Verified Pattern Library error examples
+
+1. Reuse the open Atari source/website branches (#147/#891); preserve their working routines. Inspect retained controls and primary timing/list rules.
+2. In code-samples, maintain labelled wrong/fixed fragments for PF0 bit order, late PF writes, field length, MARIA width, object position and termination. Fresh native execution must reach completion, compare full output with the good model, and independently check each named symptom. Keep a terminator fault deliberately bounded by a second valid terminator. An unchanged still must not be presented as visible instability.
+3. Update scripts/verify-tia-maria.py and check-tia-maria-records.py, retained native records and corruption tests. Verify fixes through the unchanged good caller and exact fragment substitution; retain tool identity. Run fresh native/bounds checks and relevant tests.
+4. Add symptom/cause/fix sections to the two website entries with CodeFromFile fragments and full native captures, and expand tests/tia-maria-patterns.spec.ts. Explain still-image limits and inspect desktop/phone output. Refresh provenance source pins.
+5. Update specifications/pattern-library.md: revealing common mistakes, verified symptoms, causes, minimal fixes, labelled broken code, bounded reproduction and honest capture/trace limits. User explicitly authorised recording this approach; no further approval needed.
+6. Push reviewed changes to the two existing PRs, open a narrow docs PR, update #130 and the matrix source links without adding coverage claims. Keep work unmerged. Preserve remote commits/evidence, then remove task worktrees/tools/processes.
