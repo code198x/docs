@@ -1,0 +1,7 @@
+# Make Pattern Library routines your own
+
+1. Extend open source #147, website #891 and guidance #136; keep working libraries and failure examples unchanged. Update issue #130's scope and acceptance for customisation rather than opening a parallel issue.
+2. Add maintained standalone customisation callers using parent includes: TIA maze, replacement arrow, foreground colour and repeated/reflected variants; MARIA wider original ship graphics, positions and two palettes. Keep static setup outside the kernel / before DMA; do not imply animation or a new generic API.
+3. Independently verify full picture buffers/list headers, palettes, full native frames, bounds/guards and unchanged TIA field period. Record exact customisation code/data/work costs and identify which changes require a new timing/list/memory contract. Retain hashes and corruption checks; build with publishing tools.
+4. Add Make it your own sections to both entries, with maintained CodeFromFile edits, verified captures, cost/constraint tables and links to the complete callers. Explain what to change, expected result and how to verify it. Validate production pages, image identity, code, internal links, mobile layout and accessibility.
+5. Record this approach in specifications/pattern-library.md. Push review commits and update #130 with implementation/evidence links. Two entries remain two entries in the matrix. No merge/deploy requested. Preserve remote commits and evidence; clean all task-owned worktrees, tools and processes.

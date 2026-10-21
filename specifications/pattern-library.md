@@ -23,6 +23,28 @@ Each entry explains:
 
 Compare plausible alternatives. Distinguish measured costs from estimates and avoid unsupported cycle counts or universal performance claims. A shorter listing is not necessarily faster. Explain what an optimisation enables for the player.
 
+## Make it your own
+
+Help readers adapt the routine to their own projects. Where the technique has
+useful variations, include a “Make it your own” section with a small maintained
+working example. Show the exact parameter, data or caller change, its visible
+or measurable result, and how to confirm that it still works. Use CodeFromFile
+for runnable code and retain configuration-specific execution evidence.
+
+Explain the editable inputs, data layout and bounds. State the effect on code,
+assets, scratch memory and runtime or transfer work where it matters. Prefer a
+concrete before-and-after comparison to “experiment with these values”. Do not
+add a variation solely to fill a quota.
+
+Distinguish edits that preserve the existing contract from extensions that need
+new design and verification. Replacing a glyph inside its allocation differs
+from changing a kernel's scanline schedule; more display-list objects need RAM
+and DMA bandwidth. Name those boundaries, including resource ownership and
+incompatible neighbouring routines. Link advanced alternatives when they exist,
+and label unimplemented directions honestly. Keep the original working example
+easy to find. Customisations deepen an entry; they do not automatically become
+separate patterns or additional coverage claims.
+
 ## Common mistakes and their symptoms
 
 Where a failure reveals something useful about the technique, show a small,
