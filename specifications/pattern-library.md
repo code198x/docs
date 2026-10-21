@@ -23,6 +23,31 @@ Each entry explains:
 
 Compare plausible alternatives. Distinguish measured costs from estimates and avoid unsupported cycle counts or universal performance claims. A shorter listing is not necessarily faster. Explain what an optimisation enables for the player.
 
+## Common mistakes and their symptoms
+
+Where a failure reveals something useful about the technique, show a small,
+verified example alongside the working implementation. Choose recognisable
+mistakes rather than filling a quota. Help readers diagnose their own programs:
+
+- Describe what the reader sees, hears or measures, and show a verified capture,
+  trace or other suitable evidence when it makes the symptom clearer.
+- Explain the cause in terms of the routine's contract and the machine's
+  behaviour. Distinguish the observed result from other possible consequences.
+- Show the smallest clear correction, using maintained wrong/fixed fragments,
+  and explain how to confirm the fix with the working example.
+
+Label deliberately broken code before the listing. Keep it separate from the
+reusable implementation and normal download. Use a bounded reproduction that
+cannot be mistaken for the recommended routine. Verify that the faulty example
+actually ran and produced the stated symptom; a crashed loader or incomplete
+call is not evidence of the intended fault. Check the repaired path too.
+
+A still image may hide a timing fault, redundant fetch or intermittent failure.
+Say so, and use a measured counter, trace or animation when appropriate. Do not
+claim television instability from an emulator still, or generalise one
+configuration's behaviour to every machine. Keep the known-good result easy to
+find and state the tested tools, configuration and limits with the example.
+
 ## Files and schema
 
 Entries live under the website's `src/content/patterns/`. Published routes follow `/patterns/{system}/{track}/{category}/{slug}/`, with cross-platform entries under `/patterns/cross-platform/{category}/{slug}/`.
