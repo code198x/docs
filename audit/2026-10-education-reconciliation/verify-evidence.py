@@ -104,13 +104,16 @@ def main() -> None:
             cwd=args.website,
         )
         require(digest(content) == source["sha256"], "Website source hash mismatch")
-    for number in (114, 115, 124):
-        issue = json.loads((HERE / f"issue-{number}.json").read_text())
+    # The parent issues are private, so only their identities are retained:
+    # state, and the length and SHA-256 of the exact body used.
+    parent_record = json.loads((HERE / "parent-issues.json").read_text())
+    parents = parent_record["issues"]
+    require([p["number"] for p in parents] == [114, 115, 124], "Expected three parents")
+    for issue in parents:
+        number = issue["number"]
         require(
-            issue["number"] == number
-            and issue["state"] == "OPEN"
-            and len(issue["body"]) > 200,
-            "Invalid parent snapshot",
+            issue["state"] == "OPEN" and issue["body_length"] > 200,
+            "Invalid parent record",
         )
         live = json.loads(
             subprocess.check_output(
@@ -120,7 +123,7 @@ def main() -> None:
                     "view",
                     str(number),
                     "-R",
-                    "stevehill1981/198x",
+                    parent_record["repository"],
                     "--json",
                     "body,state,url",
                 ],
@@ -128,7 +131,10 @@ def main() -> None:
             )
         )
         require(
-            all(live[k] == issue[k] for k in ("body", "state", "url")),
+            live["state"] == issue["state"]
+            and live["url"]
+            == f"https://github.com/{parent_record['repository']}/issues/{number}"
+            and digest(live["body"].encode()) == issue["body_sha256"],
             "Parent criteria/state changed",
         )
     followups = json.loads((HERE / "follow-ups.json").read_text())

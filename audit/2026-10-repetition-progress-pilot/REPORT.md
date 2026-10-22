@@ -1,6 +1,6 @@
 # Repetition progress and exit pilot: evidence and limits
 
-We continued umbrella [#114](https://github.com/stevehill1981/198x/issues/114), [#115](https://github.com/stevehill1981/198x/issues/115) and [#124](https://github.com/stevehill1981/198x/issues/124) with a sixteenth bounded pilot: Repeating overview and units 2–3. The earlier repetition pilot retains counted-loop/random-secret evidence. This follow-up supplies progress, test-position and intervention evidence; learner effectiveness remains unverified.
+We continued umbrella #114, #115 and #124 with a sixteenth bounded pilot: Repeating overview and units 2–3. The earlier repetition pilot retains counted-loop/random-secret evidence. This follow-up supplies progress, test-position and intervention evidence; learner effectiveness remains unverified.
 
 Website baseline: `114f3614f5f0f6be107e550aa64d26785afa07a2`; docs baseline: `fa2f02934d3f075a9afdb37d26c18422f1996d5a`. These include approved Decisions website #742 and docs #76. Shared UI remains at `7eda45e1c2f8b8f919359c971b2e210822e431f2`.
 

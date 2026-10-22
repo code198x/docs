@@ -20,7 +20,7 @@ The early layers take an Usborne-style approach: approachable, concrete, economi
 
 ## Scope across systems
 
-Code198x may explore games and their connections to computing across all eras, including their earlier roots and present-day practice. This is the explicit [Code198x exception to the shared period boundary](https://github.com/stevehill1981/198x/blob/main/decisions/period-extends-to-the-1960s.md#code198x-exception). It overrides the 1960s-through-early-2000s subject boundary for Code198x because useful game, creative and historical connections cross it. The shared period and support responsibilities of other family projects remain unchanged.
+Code198x may explore games and their connections to computing across all eras, including their earlier roots and present-day practice. This is the explicit Code198x exception to the shared period boundary. It overrides the 1960s-through-early-2000s subject boundary for Code198x because useful game, creative and historical connections cross it. The shared period and support responsibilities of other family projects remain unchanged.
 
 Vintage systems remain our strongest teaching base and current delivery focus, with the 1970s and 1980s at the centre of that work. Broader subject scope does not schedule a modern-system track, promise every port or change the current work below. Coverage is worldwide. Cultural, geographic, commercial, state-supported, socialist-bloc, kit, DIY and hobbyist-import contexts can explain different engineering choices and experiences.
 
@@ -44,7 +44,7 @@ Curiosity suggests connections; editorial judgement decides their scope and prio
 - What evidence, permissions, work and maintenance its proposed scope requires, and whether we can finish it responsibly.
 - Whether it is a candidate, agreed work or something actually available.
 
-Independent historical and cultural value is legitimate; a subject need not support an immediate programming exercise. A connection alone does not create a commitment, and agreeing a subject does not commission every possible implementation. Keep candidates for later consideration without public stubs or promises. Prefer a useful, bounded contribution over an unfinished branch. The family's [When to Stop Pulling](https://github.com/stevehill1981/198x/blob/main/PRACTICE.md#when-to-stop-pulling) remains the stopping rule.
+Independent historical and cultural value is legitimate; a subject need not support an immediate programming exercise. A connection alone does not create a commitment, and agreeing a subject does not commission every possible implementation. Keep candidates for later consideration without public stubs or promises. Prefer a useful, bounded contribution over an unfinished branch. The family's When to Stop Pulling remains the stopping rule.
 
 ## A connected curriculum
 

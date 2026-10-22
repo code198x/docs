@@ -7,7 +7,7 @@ optional support. This completes the per-unit source inventory gap identified in
 [the umbrella reconciliation](../2026-10-education-reconciliation/REPORT.md).
 It does not establish that every objective is accurate, every example executes,
 or that learners can transfer the ideas unaided. Umbrella
-[#114](https://github.com/stevehill1981/198x/issues/114) remains open.
+#114 remains open.
 
 ## Source and method
 

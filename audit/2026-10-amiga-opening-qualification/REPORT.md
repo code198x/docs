@@ -2,7 +2,7 @@
 
 The remaining named numeric and graphics probes now have fresh execution evidence. With `RuntimeDebug=0` and `OverflowCheck=0`, the byte program printed 1000000, 100 and -106; the word variant printed 1000000, 100 and 150. The first graphics program displayed its rectangle and circle, then returned to Workbench on a left click. All three compiled with zero errors.
 
-Both live setup-to-first-program routes and representative changed opening pages were reviewed at phone and desktop widths. This supplies the remaining bounded checks requested by [website #767](https://github.com/code198x/website/issues/767) and [#766](https://github.com/code198x/website/issues/766), under [Amiga audit #116](https://github.com/stevehill1981/198x/issues/116). The two focused issues can close after review of this evidence; the wider audit remains open. No lesson or sample changed in this follow-up.
+Both live setup-to-first-program routes and representative changed opening pages were reviewed at phone and desktop widths. This supplies the remaining bounded checks requested by [website #767](https://github.com/code198x/website/issues/767) and [#766](https://github.com/code198x/website/issues/766), under Amiga audit #116. The two focused issues can close after review of this evidence; the wider audit remains open. No lesson or sample changed in this follow-up.
 
 ## Inputs and execution
 

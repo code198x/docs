@@ -1,6 +1,6 @@
 # Binary and hex pilot: evidence and limits
 
-We continued umbrella [#114](https://github.com/stevehill1981/198x/issues/114), [#115](https://github.com/stevehill1981/198x/issues/115) and [#124](https://github.com/stevehill1981/198x/issues/124) with an eleventh bounded pilot: the Counting in Twos overview and units 1–2. The earlier numbers pilot principally sampled units 3–4; this adds conversion and interpretation evidence without claiming learner outcomes.
+We continued umbrella #114, #115 and #124 with an eleventh bounded pilot: the Counting in Twos overview and units 1–2. The earlier numbers pilot principally sampled units 3–4; this adds conversion and interpretation evidence without claiming learner outcomes.
 
 Website baseline: `3235b0352f9f8201b0d35826d134977c18b260bb`. Docs baseline: `3aed21029c553b3932bff6a1e7ccf44b2b06accc`. Shared UI remained at `7eda45e1c2f8b8f919359c971b2e210822e431f2`. The approved arithmetic/Structure publication completed in [deployment 38745470315](https://github.com/code198x/website/actions/runs/38745470315); separate live verification is retained below.
 

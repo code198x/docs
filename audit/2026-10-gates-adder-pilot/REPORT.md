@@ -1,6 +1,6 @@
 # Gates and the Adder pilot: evidence and limits
 
-We continued umbrella [#114](https://github.com/stevehill1981/198x/issues/114), [#115](https://github.com/stevehill1981/198x/issues/115) and [#124](https://github.com/stevehill1981/198x/issues/124) with a twelfth bounded pilot: the Gates and the Adder overview and all three units. This adds source, native arithmetic and browser evidence. Learner effectiveness remains unverified.
+We continued umbrella #114, #115 and #124 with a twelfth bounded pilot: the Gates and the Adder overview and all three units. This adds source, native arithmetic and browser evidence. Learner effectiveness remains unverified.
 
 Website baseline: `95695874b13428e7e8da1c1e1b037a4bed8f1161`; docs baseline: `945fb47017e34d212979b37442a274ff2a99459e`. These include the approved binary/hex pilot. Shared UI remains at `7eda45e1c2f8b8f919359c971b2e210822e431f2`.
 
@@ -27,7 +27,7 @@ All three lessons add a closed prediction. Optional links lead to the existing c
 
 ## Primary sources and native execution
 
-Texas Instruments, *SNx4HC08 Quadruple 2-Input AND Gates*, SCLS081J, originally issued December 1982, revised February 2025: [manufacturer data sheet](https://www.ti.com/lit/ds/symlink/sn74hc08.pdf). We visually checked printed page 4 (recommended operating conditions), page 6 (switching characteristics), and page 10 (AND function table). This is a modern manufacturer revision of a period family, not an unchanged period document. [Source PR #132](https://github.com/stevehill1981/198x/pull/132) retains the source note and PDF URL, revision, byte count and SHA-256 before the derived curriculum claims.
+Texas Instruments, *SNx4HC08 Quadruple 2-Input AND Gates*, SCLS081J, originally issued December 1982, revised February 2025: [manufacturer data sheet](https://www.ti.com/lit/ds/symlink/sn74hc08.pdf). We visually checked printed page 4 (recommended operating conditions), page 6 (switching characteristics), and page 10 (AND function table). This is a modern manufacturer revision of a period family, not an unchanged period document. Source PR #132 retains the source note and PDF URL, revision, byte count and SHA-256 before the derived curriculum claims.
 
 The existing Zilog *Z80 CPU User Manual*, UM008011-0816, supplies the architecture, register/control/ALU account and ADD/ADC instruction descriptions: [manual](https://map.grauw.nl/resources/cpu/z80.pdf). Observed arithmetic is not evidence that this CPU implements our particular five-gate full adder.
 

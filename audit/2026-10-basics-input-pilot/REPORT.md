@@ -1,6 +1,6 @@
 # Basics sequence and input pilot: evidence and limits
 
-We continued umbrella [#114](https://github.com/stevehill1981/198x/issues/114), [#115](https://github.com/stevehill1981/198x/issues/115) and [#124](https://github.com/stevehill1981/198x/issues/124) with a fourteenth bounded pilot: the Basics overview and units 1, 2 and 5. Earlier stored-value work principally sampled units 3–4. Together they supply selected evidence, not complete educational validation.
+We continued umbrella #114, #115 and #124 with a fourteenth bounded pilot: the Basics overview and units 1, 2 and 5. Earlier stored-value work principally sampled units 3–4. Together they supply selected evidence, not complete educational validation.
 
 Website baseline: `7c0fb762aef44edf6bcd8dec5f26aaa224ef4a74`; docs baseline: `984aa7306e4f01a0e21e70ab71b0711093829e5f`. These include approved Source/Silicon website #736 and docs #74. Shared UI remains at `7eda45e1c2f8b8f919359c971b2e210822e431f2`.
 

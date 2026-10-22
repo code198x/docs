@@ -6,8 +6,8 @@ qualify a beginner's route. The strongest next improvement is to pin and exercis
 one real editor/runtime configuration per language, then revise the setup from
 that evidence. No public lesson rewrite is proposed in this source-first slice.
 
-This begins [#116](https://github.com/stevehill1981/198x/issues/116) under the
-[education epic](https://github.com/stevehill1981/198x/issues/110), after approved
+This begins umbrella #116 under the
+education epic, after approved
 [docs #93](https://github.com/code198x/docs/pull/93) merged at
 `4d846313e3ef3f400066d278c522186ecf99b7b7`.
 The [plan](../../plans/2026-10-16-amiga-opening-audit.md) bounds the work.

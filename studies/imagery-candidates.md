@@ -38,7 +38,7 @@ Adventure and Monty still need an exact, visually checked advertising selection;
 
 ## Approved policy and selected images
 
-The owner approved the amendment, now adopted in [umbrella PR #191](https://github.com/stevehill1981/198x/pull/191). Verified licensed editorial portraits no longer universally require separate subject approval. The selections in this publication pass are public professional appearances: Smith at Screenplay, the DMA anniversary group, Russell at CHM and Woods at PAX East. Their file-level rights, credits, dates and processing are retained in each study’s photos/manifest.json. The outdoor Crowther portrait and low-resolution Braben candidate are not used.
+The owner approved the amendment, now adopted in umbrella PR #191. Verified licensed editorial portraits no longer universally require separate subject approval. The selections in this publication pass are public professional appearances: Smith at Screenplay, the DMA anniversary group, Russell at CHM and Woods at PAX East. Their file-level rights, credits, dates and processing are retained in each study’s photos/manifest.json. The outdoor Crowther portrait and low-resolution Braben candidate are not used.
 
 Inspected advertising excerpts are now added for Monty (C+VG 35, p.25) and Elite (Acorn User 27, PDF p.19), each within the shared one-image/100,000-pixel baseline, beside direct marketing/package discussion. Their manifests record crops and research into credits. Source leads earlier in this file remain the dated research trail, not independent clearances.
 

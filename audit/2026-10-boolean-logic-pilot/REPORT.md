@@ -1,6 +1,6 @@
 # Boolean logic pilot: evidence and limits
 
-We continued umbrella issues [#114](https://github.com/stevehill1981/198x/issues/114), [#115](https://github.com/stevehill1981/198x/issues/115) and [#124](https://github.com/stevehill1981/198x/issues/124) with an eighth bounded pilot: the Truth Tables overview and three units. This is technical and editorial verification. No learner has completed these tasks, so educational effectiveness remains unverified.
+We continued umbrella issues #114, #115 and #124 with an eighth bounded pilot: the Truth Tables overview and three units. This is technical and editorial verification. No learner has completed these tasks, so educational effectiveness remains unverified.
 
 The first-session guide pack is already published. Further guide expansion can wait for feedback; the umbrella audit continues without waiting for a learner. The [Foundations coverage map](../2026-10-foundations-coverage.md) records ten modules and 39 units, sampled evidence and remaining gaps. It is an inventory with evidence boundaries, not a claim that every unit has been audited. Working It Out is the next bounded slice: arithmetic, grouping, remainders and rounding. Maths for Games has a separate eleven-unit directory and is not covered by the number pilots.
 

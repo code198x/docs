@@ -8,8 +8,8 @@ product defect requiring a lesson or runtime change.
 
 This supplies current execution evidence for
 [website #747](https://github.com/code198x/website/issues/747), continuing umbrella
-[#115](https://github.com/stevehill1981/198x/issues/115) and
-[#124](https://github.com/stevehill1981/198x/issues/124). The
+#115 and
+#124. The
 [earlier supplemental result](../2026-10-spectrum-learner-journey/stored-value-pilot/supplemental-browser-failure.json)
 remains a failed historical harness attempt with an unknown product outcome.
 Fresh success does not establish why that discarded harness failed.

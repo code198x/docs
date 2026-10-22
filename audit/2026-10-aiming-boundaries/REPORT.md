@@ -11,7 +11,7 @@ approved, published sequence an unpublished draft.
 [Samples #94](https://github.com/code198x/code-samples/issues/94) owns the bounded
 status correction. It changes no arithmetic, controls or curriculum prose.
 The [plan](../../plans/2026-10-16-aiming-boundaries.md) records this investigation
-under [umbrella #114](https://github.com/stevehill1981/198x/issues/114).
+under umbrella #114.
 Approved [docs #91](https://github.com/code198x/docs/pull/91) merged first at
 `6131fce9dfe227f08fa47bc868a642663e5881c4`.
 

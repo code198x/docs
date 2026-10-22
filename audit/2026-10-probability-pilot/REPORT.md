@@ -9,9 +9,9 @@ Actual learner understanding remains unobserved.
 
 This addresses the bounded technical/editorial work in
 [docs #78](https://github.com/code198x/docs/issues/78), continuing umbrella
-[#114](https://github.com/stevehill1981/198x/issues/114),
-[#115](https://github.com/stevehill1981/198x/issues/115) and
-[#124](https://github.com/stevehill1981/198x/issues/124). Approved reconciliation
+#114,
+#115 and
+#124. Approved reconciliation
 [docs #79](https://github.com/code198x/docs/pull/79) merged at
 `fe4c21505ebcd7542aa37b8dcf15f27db43718a5`, the docs baseline for this pilot.
 The [reconciliation](../2026-10-education-reconciliation/REPORT.md) remains the

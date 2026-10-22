@@ -6,8 +6,8 @@ work in the tested keyboard activation path, and every collected root-relative
 or same-page link resolves. No product blocker was reproduced; no website
 change is proposed.
 
-This continues [#114](https://github.com/stevehill1981/198x/issues/114) and
-[#124](https://github.com/stevehill1981/198x/issues/124), following the approved
+This continues umbrella #114 and
+umbrella #124, following the approved
 [aiming evidence](https://github.com/code198x/docs/pull/92) and
 [sample status correction](https://github.com/code198x/code-samples/pull/95).
 The [plan](../../plans/2026-10-16-foundations-publication-sweep.md) bounds the work.

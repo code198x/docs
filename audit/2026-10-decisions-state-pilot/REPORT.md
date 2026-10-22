@@ -1,6 +1,6 @@
 # Decisions chains and saved-state pilot: evidence and limits
 
-We continued umbrella [#114](https://github.com/stevehill1981/198x/issues/114), [#115](https://github.com/stevehill1981/198x/issues/115) and [#124](https://github.com/stevehill1981/198x/issues/124) with a fifteenth bounded pilot: Decisions overview and units 2–3. This adds first-match and saved/reset-state evidence beside the earlier choice and Boolean pilots. Learner effectiveness remains unverified.
+We continued umbrella #114, #115 and #124 with a fifteenth bounded pilot: Decisions overview and units 2–3. This adds first-match and saved/reset-state evidence beside the earlier choice and Boolean pilots. Learner effectiveness remains unverified.
 
 Website baseline: `81033dc11717f5140f0e62420f6d2a3b4145d0cc`; docs baseline: `693034b18e60fd0cd5879d59997f74984d12cb92`. These include approved Basics website #739 and docs #75. Shared UI remains at `7eda45e1c2f8b8f919359c971b2e210822e431f2`.
 

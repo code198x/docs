@@ -1,9 +1,9 @@
 # Foundations and Spectrum understanding pilot
 
 Agreed approach: one bounded pilot contributing separate evidence to umbrella
-[#114](https://github.com/stevehill1981/198x/issues/114),
-[#115](https://github.com/stevehill1981/198x/issues/115) and
-[#124](https://github.com/stevehill1981/198x/issues/124).
+#114,
+#115 and
+#124.
 
 ## Objective and boundaries
 
