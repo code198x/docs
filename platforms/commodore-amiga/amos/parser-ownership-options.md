@@ -1,18 +1,20 @@
 # Lang198x owns the language tools
 
 **Ownership agreed, 20 October 2026.** Steve registered Lang198x and included
-language-server tools in its scope. The adopted cross-project boundary lives in
-the [umbrella decision](https://github.com/stevehill1981/198x/blob/dd9bdfa0cf272fb87763c15afa45f6b35e0978e2/decisions/lang198x-language-tools.md).
-That record is the authority; this page routes the AMOS research to it.
+language-server tools in its scope. The adopted cross-project boundary is the
+family's Lang198x language-tools decision, summarised publicly in
+[Lang198x's scope and boundaries](https://github.com/lang198x/lang198x/blob/main/decisions/README.md).
+That decision is the authority; this page routes the AMOS research to it.
 
 Lang198x is the home for language frontends, analysis, release/extension profiles
 and language services, including LSP delivery. Code198x consumes the tooling;
-Forge198x can consume its services as the future workbench. A first AMOS parser
-and language server still need their own bounded implementation designs.
+Studio198x, the future workbench that absorbs Forge198x, can consume its
+services. A first AMOS parser and language server still need their own bounded
+implementation designs.
 
-The [migration inventory](https://github.com/stevehill1981/198x/blob/dd9bdfa0cf272fb87763c15afa45f6b35e0978e2/docs/brainstorms/2026-10-20-lang198x-migration-inventory.md)
-identifies existing Spectrum AST/parser code in Format198x and language-oriented
-BASIC linting in Build198x as candidates for assessment. Existing tokenised-file
+The family's Lang198x migration inventory (20 October 2026) identifies existing
+Spectrum AST/parser code in Format198x and language-oriented BASIC linting in
+Build198x as candidates for assessment. Existing tokenised-file
 codecs, build conversion and assembly semantics retain their current owners.
 The decision does not move code, change published APIs or require a family-wide
 reorganisation before AMOS work can progress.
