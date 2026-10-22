@@ -1,6 +1,6 @@
 # Working It Out pilot: evidence and limits
 
-We continued umbrella [#114](https://github.com/stevehill1981/198x/issues/114), [#115](https://github.com/stevehill1981/198x/issues/115) and [#124](https://github.com/stevehill1981/198x/issues/124) with a ninth bounded pilot. It covers the Working It Out overview and all three units. This report separates editorial findings, native observations, rendered checks and unobserved learner outcomes.
+We continued umbrella #114, #115 and #124 with a ninth bounded pilot. It covers the Working It Out overview and all three units. This report separates editorial findings, native observations, rendered checks and unobserved learner outcomes.
 
 The approved Boolean pair was merged first: website [#722](https://github.com/code198x/website/pull/722) at `3c4e6f6c29d3b65ee92af8f8a34989c932fe939f` and docs [#68](https://github.com/code198x/docs/pull/68) at `df7c2e57ec9f9cd1bc43cac509d6fc3edf1cde32`. Those commits are this pilot's baselines. The website deployment [38741039411](https://github.com/code198x/website/actions/runs/38741039411) succeeded. A [live post-deployment check](boolean-live.json) passed eight page/viewport cases and eleven behaviour checks for the approved Boolean pages, including 76 independent table-output comparisons; its retained incomplete contrast check remains unknown. The installed shared UI remained pinned to `7eda45e1c2f8b8f919359c971b2e210822e431f2`.
 

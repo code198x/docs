@@ -61,7 +61,7 @@ Source availability does not establish host portability, a complete build path,
 permissions for every bundled component or compatibility with original Blitz 2.
 
 The family's existing assembly build/capture direction is recorded in
-[the tooling migration decision](https://github.com/stevehill1981/198x/blob/main/decisions/code198x-dev-tooling-migration.md).
+the tooling migration decision.
 It does not establish an AMOS or Blitz host compiler. Assess Emu198x integration
 against actual language workloads before extending its assembly evidence to
 these routes. Keep the checked third-party route available during investigation.
@@ -113,7 +113,7 @@ input states, sound and file behaviour as those capabilities enter scope.
 Use original manuals and source to form expectations; investigate discrepancies
 by executing the named original implementation.
 
-The [family general-tools decision](https://github.com/stevehill1981/198x/blob/main/decisions/family-tools-are-general.md)
+The family general-tools decision
 requires correctness within a supported capability. It allows staged breadth;
 it does not allow hard-coding lesson examples or silently accepting unsupported
 behaviour. Reject unsupported features with diagnostics that name them. Preserve the original tool's

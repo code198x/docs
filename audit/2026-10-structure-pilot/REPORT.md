@@ -1,6 +1,6 @@
 # Structure pilot: evidence and limits
 
-We continued umbrella [#114](https://github.com/stevehill1981/198x/issues/114), [#115](https://github.com/stevehill1981/198x/issues/115) and [#124](https://github.com/stevehill1981/198x/issues/124) with a tenth bounded pilot. We read the Structure overview and all four units, preserved the useful routine/debugging material, and proposed corrections only to the overview and units 1 and 3.
+We continued umbrella #114, #115 and #124 with a tenth bounded pilot. We read the Structure overview and all four units, preserved the useful routine/debugging material, and proposed corrections only to the overview and units 1 and 3.
 
 The user-approved semicolon follow-up [#726](https://github.com/code198x/website/pull/726) was merged at website `98d6f00cb57a106ef04093e2155d0407a62a6186`; that is the website baseline. Docs baseline is `df7c2e57ec9f9cd1bc43cac509d6fc3edf1cde32`. The arithmetic pair, website [#725](https://github.com/code198x/website/pull/725) / docs [#69](https://github.com/code198x/docs/pull/69), remains a separate draft. Continuing Structure does not imply approval of that pair. Shared UI remained at `7eda45e1c2f8b8f919359c971b2e210822e431f2`.
 

@@ -1,0 +1,27 @@
+{
+  "note": "The parent issues are in the private umbrella repository, so their text is not retained here. Each record identifies the exact body used by its length and SHA-256 of its UTF-8 text; verify-evidence.py compares the live issue against it.",
+  "repository": "stevehill1981/198x",
+  "issues": [
+    {
+      "number": 114,
+      "state": "OPEN",
+      "updatedAt": "2026-10-15T15:37:22Z",
+      "body_length": 890,
+      "body_sha256": "0f6e3515eedeab8c8bf59ef75841ca78e6b941caf1a7ad43eaa75d7f926403dd"
+    },
+    {
+      "number": 115,
+      "state": "OPEN",
+      "updatedAt": "2026-10-15T15:37:24Z",
+      "body_length": 852,
+      "body_sha256": "8cdb43a4197989fc30579d98e55ee6c329797ebcdb5ce26e1a81b5e3a89554e4"
+    },
+    {
+      "number": 124,
+      "state": "OPEN",
+      "updatedAt": "2026-10-15T15:37:25Z",
+      "body_length": 797,
+      "body_sha256": "e1680d501b122c9922079e102f376c5920c7457a748e6fedf8aec1d22b01a4f2"
+    }
+  ]
+}

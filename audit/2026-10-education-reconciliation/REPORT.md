@@ -43,8 +43,9 @@ coverage gap in this review, not a claim that the existing maths has never been 
 
 We use **met for the selected scope**, **partial**, **unknown** and **skipped**
 explicitly. A selected technical pass cannot close a broader educational criterion.
-The retained [#114](issue-114.json), [#115](issue-115.json) and
-[#124](issue-124.json) snapshots preserve the exact issue wording used here.
+The parent issues #114, #115 and #124 are private, so their wording is not
+retained here; [parent-issues.json](parent-issues.json) identifies the exact text
+used by its length and SHA-256.
 
 ### #114: shared concepts and transfer
 
@@ -135,7 +136,7 @@ until observations justify expanding it.
 | 2 | [Website #747: exact embedded BASIC task](https://github.com/code198x/website/issues/747) | Reproduce the old observation failure; retain actual repeated reads, replacement, error and successful repair in the maintained browser machine. Missing output must fail. |
 | 3 | [Website #748: startup/edit-to-result latency](https://github.com/code198x/website/issues/748) | Define user-visible boundaries and retain repeated cold/warm timings with actual machine success, cache/network/device identities and raw observations. No assumed performance defect or invented budget. |
 | 4 | [Website #749: broader first-session operability](https://github.com/code198x/website/issues/749) | Qualify one route on declared browser/input/assistive-technology configurations; record unavailable hardware as skipped and file only reproduced blockers. Coordinate with umbrella #123. |
-| 5 | [Existing #115](https://github.com/stevehill1981/198x/issues/115) and [#124](https://github.com/stevehill1981/198x/issues/124): uncoached learner trial | Use the [published pack](https://code198x.com/try/) and [observation sheet](../../guides/first-session/session-observations.md) when a learner is available. Record help and prediction/explanation separately from copying or successful execution. |
+| 5 | Existing umbrella #115 and #124: uncoached learner trial | Use the [published pack](https://code198x.com/try/) and [observation sheet](../../guides/first-session/session-observations.md) when a learner is available. Record help and prediction/explanation separately from copying or successful execution. |
 
 We searched existing open site/docs issues and targeted all-state searches before
 filing. The four [retained follow-up bodies](follow-ups.json) describe evidence gaps,

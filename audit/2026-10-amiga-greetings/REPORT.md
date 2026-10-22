@@ -6,7 +6,7 @@ plain-text `.ab3` import and **RuntimeDebug=0** to show the greeting while
 waiting for a click. **This qualifies the first greeting route only.**
 [Docs #94](https://github.com/code198x/docs/issues/94),
 [website #766](https://github.com/code198x/website/issues/766) and
-[umbrella #116](https://github.com/stevehill1981/198x/issues/116) track the paired
+umbrella #116 track the paired
 lesson corrections and the remaining wider review.
 
 ## Method and identities

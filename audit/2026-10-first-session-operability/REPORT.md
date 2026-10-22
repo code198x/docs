@@ -10,7 +10,7 @@ checks and propose no website change.
 **This is partial qualification.** VoiceOver was skipped at the user's explicit
 request. Physical touch was not tested. Keep
 [website #749](https://github.com/code198x/website/issues/749) and umbrella
-[#124](https://github.com/stevehill1981/198x/issues/124) open. Native accessibility
+#124 open. Native accessibility
 tree inspection is not a screen-reader trial or evidence of learner understanding.
 
 Approved [website #751](https://github.com/code198x/website/pull/751) and
@@ -129,11 +129,11 @@ their limits. It does not complete #749's broader qualification.
 When VoiceOver operation is wanted, explicitly qualify navigation, control/error announcements,
 text-result access and recovery; do not substitute this AX record. Exercise real
 touch hardware when available. Coordinate any confirmed shared accessibility
-finding with [umbrella #123](https://github.com/stevehill1981/198x/issues/123).
+finding with umbrella #123.
 
 No learner trial is recorded. The public first-session pack stays small; no
 expansion, redesign or new dependency is proposed. Source/technical work under
-[#114](https://github.com/stevehill1981/198x/issues/114) can continue while the
+umbrella #114 can continue while the
 remaining configurations wait, especially the complete per-unit Foundations
 objective/prerequisite map identified in the
 [reconciliation](../2026-10-education-reconciliation/REPORT.md).

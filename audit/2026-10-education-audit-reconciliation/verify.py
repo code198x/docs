@@ -71,10 +71,32 @@ def git(repo: Path, *args: str) -> bytes:
     return subprocess.check_output(["git", *args], cwd=repo)
 
 
-def snapshot(repo: str, kind: str, number: int) -> dict[str, Any]:
-    return read_json(
-        ROOT / "snapshots" / f"{repo.replace('/', '-')}-{kind}-{number}.json"
-    )
+PRIVATE_REPO = "stevehill1981/198x"
+
+
+def private_hashes() -> dict[str, str]:
+    """Hashes of the private umbrella issue snapshots.
+
+    The umbrella repository is private, so its issue text is not published
+    with this audit. `private-snapshots.sha256` keeps each removed snapshot's
+    hash; restoring a snapshot at its path re-enables the checks that read it.
+    """
+    lines = (ROOT / "private-snapshots.sha256").read_text().splitlines()
+    return {path: digest for digest, path in (line.split("  ", 1) for line in lines)}
+
+
+def snapshot_path(repo: str, kind: str, number: int) -> str:
+    return f"snapshots/{repo.replace('/', '-')}-{kind}-{number}.json"
+
+
+def snapshot(repo: str, kind: str, number: int) -> dict[str, Any] | None:
+    path = snapshot_path(repo, kind, number)
+    if repo == PRIVATE_REPO:
+        expected = private_hashes()[path]
+        if not (ROOT / path).is_file():
+            return None
+        assert sha256((ROOT / path).read_bytes()) == expected, path
+    return read_json(ROOT / path)
 
 
 def check_criteria(data: dict[str, Any]) -> None:
@@ -103,10 +125,9 @@ def check_criteria(data: dict[str, Any]) -> None:
     }
     for row in rows:
         assert row["status"] in allowed
-        assert (
-            row["requirement"]
-            in snapshot("stevehill1981/198x", "issue", row["issue"])["body"]
-        )
+        issue = snapshot(PRIVATE_REPO, "issue", row["issue"])
+        if issue is not None:
+            assert row["requirement"] in issue["body"]
         assert row["evidence"] and row["finding"]
         assert all((DOCS / path).is_file() for path in row["evidence"])
         if row["status"] in {"partial", "unavailable"}:
@@ -252,6 +273,11 @@ def check_github() -> int:
     assert len(records) == 53
     assert len({r["path"] for r in records}) == len(records)
     for record in records:
+        if record["repository"] == PRIVATE_REPO:
+            # Private: the hash is retained even when the text is not.
+            assert record["path"] in private_hashes(), record["path"]
+            if not (ROOT / record["path"]).is_file():
+                continue
         data = read_json(ROOT / record["path"])
         assert (
             data["repository"] == record["repository"]
@@ -303,6 +329,17 @@ def check_github() -> int:
     return len(records)
 
 
+def private_status() -> str:
+    hashes = private_hashes()
+    present = sum((ROOT / path).is_file() for path in hashes)
+    if present == len(hashes):
+        return f"all {len(hashes)} restored and hash-checked"
+    return (
+        f"{len(hashes) - present} of {len(hashes)} not published (private repository); "
+        "their requirement-wording checks were skipped"
+    )
+
+
 def expect_rejection(name: str, check: Any, value: Any) -> str:
     try:
         check(value)
@@ -342,6 +379,7 @@ def verify(website: Path, samples: Path) -> dict[str, Any]:
         "criteria": 33,
         "issues": 4,
         "githubSnapshots": github_count,
+        "privateIssueSnapshots": private_status(),
         "documentHashes": len(sources["docs"]),
         "sourceCounts": counts,
         "unchangedSourceComparisons": 60,

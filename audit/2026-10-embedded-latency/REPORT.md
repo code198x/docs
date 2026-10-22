@@ -8,7 +8,7 @@ specified desktop task and observation method, not a performance rating or a
 promise for other learners, browsers or networks. No optimisation is proposed.
 
 This addresses [website #748](https://github.com/code198x/website/issues/748)
-under umbrella [#124](https://github.com/stevehill1981/198x/issues/124), after
+under umbrella #124, after
 approved [website #750](https://github.com/code198x/website/pull/750) and
 [docs #81](https://github.com/code198x/docs/pull/81) merged. The
 [preceding browser qualification](../2026-10-embedded-basic/REPORT.md) established

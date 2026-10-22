@@ -6,9 +6,9 @@ parents, teachers and learners. No product blocker was reproduced in this pass;
 no additional lesson change is proposed.
 
 This is a bounded readiness snapshot on 16 October 2026 under
-[#114](https://github.com/stevehill1981/198x/issues/114),
-[#115](https://github.com/stevehill1981/198x/issues/115) and
-[#124](https://github.com/stevehill1981/198x/issues/124). It does not certify the
+umbrella #114,
+#115 and
+#124. It does not certify the
 whole curriculum or establish educational effectiveness. All three parents stay open.
 The [plan](../../plans/2026-10-16-publication-readiness.md) records the scope.
 

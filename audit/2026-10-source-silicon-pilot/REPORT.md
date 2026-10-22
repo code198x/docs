@@ -1,6 +1,6 @@
 # From Source to Silicon pilot: evidence and limits
 
-We continued umbrella [#114](https://github.com/stevehill1981/198x/issues/114), [#115](https://github.com/stevehill1981/198x/issues/115) and [#124](https://github.com/stevehill1981/198x/issues/124) with a thirteenth bounded pilot. We read the overview and all five units, repaired the toy translator's silent omission, and checked selected model, source/byte and browser claims. Learner effectiveness remains unverified.
+We continued umbrella #114, #115 and #124 with a thirteenth bounded pilot. We read the overview and all five units, repaired the toy translator's silent omission, and checked selected model, source/byte and browser claims. Learner effectiveness remains unverified.
 
 Website baseline: `5569e9add8fea7d96840fac33068c1f10310f01e`; docs baseline: `cc99811729c1ec3551c18231b51c963928bdc1f1`. These include approved Gates/Adder website #734 and docs #73. Primary gate provenance #132 merged first at umbrella `0826858c7fedfa87accc4acf4c8b7a6aafea69f8`. Shared UI remains at `7eda45e1c2f8b8f919359c971b2e210822e431f2`.
 

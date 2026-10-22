@@ -132,6 +132,6 @@ A later uncoached beginner trial remains pending.
 
 The [original Maths chapter](https://amospromanual.dev/05-03-maths.html#rnd)
 defines the inclusive `Rnd(n)` bound used by the die. The separate reference
-investigation in [umbrella #173](https://github.com/stevehill1981/198x/issues/173)
+investigation in umbrella #173
 still has its own random-range and angle-mode probes; these game checks do not
 complete them or prove random fairness.

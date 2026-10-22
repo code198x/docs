@@ -1,9 +1,0 @@
-{
-  "body": "Parent epic: https://github.com/stevehill1981/198x/issues/110\n\n## Scope and completion evidence\nInventory Foundation objectives and prerequisites, especially pseudocode, numbers/bits, logic and game maths. Sample and test examples. Find misconceptions, gaps and cross-system dependencies. Prototype predict/explain/modify/debug/create assessments that require genuine understanding rather than copying. Report editorial, technical and actual learner-testing evidence separately; prioritise bounded fixes.\n\n## Done when\n- Results and source/version/environment identities are recorded, with passed/failed/skipped/unknown distinguished.\n- Findings are filed as specific follow-up issues or linked to existing ones; no duplicate implementation plan.\n- Reviewed findings, limits and next bounded step are linked from this issue.\n\nMaintain existing product architecture and avoid broad rewrites.",
-  "number": 114,
-  "state": "OPEN",
-  "title": "[Education] Audit shared Foundations for conceptual accuracy and transferable understanding",
-  "updatedAt": "2026-10-16T11:20:48Z",
-  "url": "https://github.com/stevehill1981/198x/issues/114",
-  "repository": "stevehill1981/198x"
-}

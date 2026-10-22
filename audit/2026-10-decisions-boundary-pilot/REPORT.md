@@ -9,9 +9,9 @@ answer. It is prepared for review, not published.
 No learner is currently available. The [learner prompts](LEARNER-TASKS.md) and
 [separate assessor notes](ASSESSOR.md) are draft trial material, not evidence that
 the lessons teach effectively. Umbrella
-[#114](https://github.com/stevehill1981/198x/issues/114),
-[#115](https://github.com/stevehill1981/198x/issues/115) and
-[#124](https://github.com/stevehill1981/198x/issues/124) remain open.
+#114,
+#115 and
+#124 remain open.
 
 ## Identities and method
 

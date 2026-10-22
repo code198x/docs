@@ -1,9 +1,0 @@
-{
-  "body": "Parent epic: https://github.com/stevehill1981/198x/issues/110\n\n## Scope and completion evidence\nInventory existing AMOS/Blitz content and exact target/runtime configurations; identify missing or divergent shared concepts and verify representative example build/run outcomes. Apply the same learner-understanding standards as Spectrum without forcing identical lessons. Identify defects, licence constraints, emulator assumptions and prioritised corrective work.\n\n## Done when\n- Results and source/version/environment identities are recorded, with passed/failed/skipped/unknown distinguished.\n- Findings are filed as specific follow-up issues or linked to existing ones; no duplicate implementation plan.\n- Reviewed findings, limits and next bounded step are linked from this issue.\n\nMaintain existing product architecture and avoid broad rewrites.",
-  "number": 116,
-  "state": "OPEN",
-  "title": "[Education] Audit Amiga AMOS and Blitz BASIC pathways and portability of learning objectives",
-  "updatedAt": "2026-10-16T15:20:51Z",
-  "url": "https://github.com/stevehill1981/198x/issues/116",
-  "repository": "stevehill1981/198x"
-}

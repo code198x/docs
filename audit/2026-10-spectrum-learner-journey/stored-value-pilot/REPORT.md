@@ -10,9 +10,9 @@ contains the correction and bounded verifier at commit `080d205ea`.
 
 No learner is currently available, as confirmed by the owner. The trial pack is
 ready for review; educational effectiveness remains unknown. Keep umbrella
-[#114](https://github.com/stevehill1981/198x/issues/114),
-[#115](https://github.com/stevehill1981/198x/issues/115) and
-[#124](https://github.com/stevehill1981/198x/issues/124) open.
+#114,
+#115 and
+#124 open.
 
 ## Scope and identities
 

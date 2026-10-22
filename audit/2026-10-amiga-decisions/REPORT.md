@@ -2,7 +2,7 @@
 
 Both unit-4 lessons now have bounded prediction, change and debugging tasks. The Blitz parity exercise had a reproducible bug: with the default Quick type, `x/2*2=x` was true for every counter from 0 through 9. `x MOD 2` produced alternating remainders. The maintained listing also now waits before entering BLITZ mode, matching the qualified setup route.
 
-Tracked by [website #773](https://github.com/code198x/website/issues/773), under [Amiga audit #116](https://github.com/stevehill1981/198x/issues/116). Source identities are in `source.json`; media/archive hashes are in `inputs.json`. No ROMs or runtime binaries are included.
+Tracked by [website #773](https://github.com/code198x/website/issues/773), under Amiga audit #116. Source identities are in `source.json`; media/archive hashes are in `inputs.json`. No ROMs or runtime binaries are included.
 
 ## Native execution
 

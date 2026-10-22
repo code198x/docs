@@ -9,9 +9,9 @@ Neither prior attendance nor a new machine entry route is required.
 No learner is available. This report establishes source, execution and browser
 observations, not educational effectiveness. [LEARNER-TASKS](LEARNER-TASKS.md) and
 [ASSESSOR](ASSESSOR.md) prepare a future uncoached trial. Umbrella issues
-[114](https://github.com/stevehill1981/198x/issues/114),
-[115](https://github.com/stevehill1981/198x/issues/115) and
-[124](https://github.com/stevehill1981/198x/issues/124) remain open.
+#114,
+#115 and
+#124 remain open.
 
 ## Findings and bounded change
 

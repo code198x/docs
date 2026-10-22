@@ -5,7 +5,7 @@ ranking languages by unsupported speed or safety claims. The graphics sample
 also moves its disk-settling wait before `BLITZ`. These changes are ready for
 source review; fresh runtime and desktop/phone visual checks remain blocked.
 This is work on [website #767](https://github.com/code198x/website/issues/767)
-under [#116](https://github.com/stevehill1981/198x/issues/116).
+under umbrella #116.
 
 ## Scope and evidence
 

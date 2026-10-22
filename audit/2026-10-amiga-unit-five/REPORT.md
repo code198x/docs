@@ -2,7 +2,7 @@
 
 Both lessons now give learners edits with specific, observable results. AMOS distinguishes counting order from screen position and repairs the ten-line message overlap. Blitz distinguishes drawing from changing state, traces the two bitmaps and uses a fixed colour for the larger workload. No update-rate or language-speed comparison is claimed.
 
-This is the bounded pilot for [website #776](https://github.com/code198x/website/issues/776), under [umbrella #116](https://github.com/stevehill1981/198x/issues/116). The opening qualification in docs #99 is separate.
+This is the bounded pilot for [website #776](https://github.com/code198x/website/issues/776), under umbrella #116. The opening qualification in docs #99 is separate.
 
 ## What we ran
 
