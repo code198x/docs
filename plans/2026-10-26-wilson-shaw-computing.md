@@ -50,3 +50,17 @@ Keep VC-0738, VC-0247 and VC-2826 in progress, with original issue URLs. Reuse V
 The wider full-site browser and release suites are not claimed for this bounded draft batch.
 
 Final verification: the corrected build passes with 2,848 public pages and 50 shared-frame families checked. Repeated targeted Chromium checks pass for all three entries at both widths, including six axe checks and 32 internal links. The rendered 1940s timeline names all six original programmers. Both document and diagram credits are accurately labelled. The required twelve incoming links and the additional Atom link are present. No broad browser/release-suite result is claimed.
+
+## Owner-approved publication
+
+The owner approved the three completed entries on 26 October 2026.
+
+1. Set only their three `reviewed` flags to true; keep AI provenance. Run content checks, commit and push to website PR #1236.
+2. Run the checks and production build with a current isolated code-samples checkout. Confirm reviewed/indexable pages, images, twelve incoming links and sitemap inclusion. Complete required GitHub checks and merge by rebase.
+3. Verify the live deployment before marking VC-0738, VC-0247 and VC-2826 published. Replace planned references to the now-published theme with its verified path, preserving all candidate identities and states. Validate the whole backlog and merge docs PR #267; close the three writing issues.
+4. Verify remote retention, stop task-owned processes and remove temporary worktrees and generated files.
+
+Approval verification: the review-flag commit passes content/link/imagery checks; fresh full checks pass with 230 unit tests and the accepted 73-finding type baseline. The production build passes at 2,848 pages. Approved articles are indexable and in the built sitemap; image and SVG-source hashes match. Twelve incoming relationships, 24 distinct outgoing links and the visible ENIAC programmer credit verify. All six 390px/1440px main-content axe checks pass. Required GitHub checks passed, including 252 production browser tests and 1,579 development browser tests (25 skipped).
+
+
+Publication verified: website PR #1236 merged by rebase as cffe564c9bf60589effda5e4ec4e7ec1073443fe. Deployment 40339828792 succeeded. All three live pages are reviewed, indexable and included in the sitemap; photographs/diagram/source hashes match, twelve incoming relationships and 24 distinct outgoing links work, and the visible timeline credits all six programmers. VC-0738, VC-0247 and VC-2826 are published. Twelve planned theme references now name its verified source path, preserving every other candidate status and all 2,951 identities.
