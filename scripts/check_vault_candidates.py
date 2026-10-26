@@ -42,6 +42,7 @@ def load_backlog(source: Path, website: Path | None = None) -> list[dict[str, st
     ids: set[str] = set()
     subjects: set[tuple[str, str]] = set()
     issues: set[str] = set()
+    planned_sources: list[tuple[str, str]] = []
     for number, row in enumerate(rows, 1):
         if set(row) != set(FIELDS) or any(not isinstance(v, str) for v in row.values()):
             raise ValueError(f"Record {number}: missing or extra fields")
@@ -74,13 +75,31 @@ def load_backlog(source: Path, website: Path | None = None) -> list[dict[str, st
         require(row["status"] in STATUSES, "unknown status")
         for field in ("link_from", "covered_by"):
             for entry in paths(row[field]):
+                if entry.startswith("candidate:"):
+                    require(
+                        field == "link_from",
+                        "planned candidate references are only allowed in link_from",
+                    )
+                    require(
+                        re.fullmatch(r"candidate:VC-[0-9]{4,}", entry) is not None,
+                        f"invalid planned source reference: {entry}",
+                    )
+                    target = entry.removeprefix("candidate:")
+                    require(
+                        target != row["id"],
+                        "candidate cannot be its own planned source",
+                    )
+                    planned_sources.append((row["id"], target))
+                    continue
                 require(
                     re.fullmatch(r"[a-z0-9-]+/[a-z0-9-]+", entry) is not None,
                     f"invalid {field} path: {entry}",
                 )
                 if vault is not None:
+                    study_page = website / "src/pages/vault" / entry / "index.astro"
                     require(
-                        (vault / f"{entry}.mdx").is_file(),
+                        (vault / f"{entry}.mdx").is_file()
+                        or (entry.startswith("studies/") and study_page.is_file()),
                         f"missing {field} entry: {entry}",
                     )
         if row["status"] != "needs-triage":
@@ -105,6 +124,13 @@ def load_backlog(source: Path, website: Path | None = None) -> list[dict[str, st
                 "issue already assigned to another candidate",
             )
             issues.add(row["issue"])
+    # Resolve after validating every row: planned sources can appear later in the CSV.
+    candidate_ids = {row["id"] for row in rows}
+    for source_id, target_id in planned_sources:
+        if target_id not in candidate_ids:
+            raise ValueError(
+                f"{source_id}: unknown planned source candidate: {target_id}"
+            )
     return rows
 
 
