@@ -2962,3 +2962,6 @@ VC-2960,Argus,languages,needs-triage,Explain how the language addressed communic
 VC-2961,Adele Goldstine,people,needs-triage,Distinguish ENIAC documentation and later development from membership of its original six-programmer group.,candidate:VC-2822,,,
 VC-2962,J. Halcombe Laning,people,needs-triage,Explain the Executive and timed-task design credited in Apollo participant accounts.,candidate:VC-2816,,,
 VC-2963,Stephen Robertson,people,needs-triage,Trace collaborative relevance weighting and probabilistic information retrieval.,candidate:VC-2825,,,
+VC-2964,Jeannette Wing,people,needs-triage,Explain the collaborative work on behavioural subtyping and its formal requirements.,candidate:VC-2824,,,
+VC-2965,Liskov Substitution Principle,design,needs-triage,"Explain safe substitution through promised behaviour, with concrete valid and invalid examples.",candidate:VC-2824,,,
+VC-2966,SOLID,design,needs-triage,Explain the five software design principles and their historical relation to Liskov’s research.,candidate:VC-2824,,,
