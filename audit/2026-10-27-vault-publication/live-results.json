@@ -1,0 +1,111 @@
+{
+  "checked_at": "2026-10-27T15:06:51.261Z",
+  "transport": "Normal Chromium browser; command-line client receives Cloudflare1010. No security setting changed.",
+  "approved_entries": [
+    "/vault/books/mapping-the-commodore-64",
+    "/vault/communities/codebase64",
+    "/vault/communities/csdb",
+    "/vault/companies/atarisoft",
+    "/vault/companies/software-creations",
+    "/vault/companies/strategic-simulations",
+    "/vault/companies/tengen",
+    "/vault/emulators/scummvm",
+    "/vault/events/breakpoint",
+    "/vault/magazines/amazing-computing",
+    "/vault/magazines/amigaworld",
+    "/vault/magazines/big-k",
+    "/vault/magazines/byte",
+    "/vault/magazines/super-play",
+    "/vault/magazines/wireframe",
+    "/vault/magazines/your-computer",
+    "/vault/systems/acorn-electron",
+    "/vault/systems/amiga-cd32",
+    "/vault/systems/atari-5200",
+    "/vault/systems/atari-7800",
+    "/vault/systems/atari-falcon030",
+    "/vault/systems/atari-jaguar",
+    "/vault/systems/commodore-128",
+    "/vault/systems/commodore-cdtv",
+    "/vault/systems/commodore-pet",
+    "/vault/systems/commodore-sx-64",
+    "/vault/systems/ti-99-4a",
+    "/vault/tools/seuck"
+  ],
+  "pages_checked": 301,
+  "link_edges_checked": 480,
+  "images": [
+    {
+      "path": "/images/vault/communities/csdb/logo.png",
+      "status": 200,
+      "sha256": "2975323bd2d58e1aa4f09f631cf385e326056f5845e153f096696422c843409b",
+      "matches": true
+    },
+    {
+      "path": "/images/vault/emulators/scummvm/logo.png",
+      "status": 200,
+      "sha256": "320ff982e041a8ef687f6d638c2c65dad9fbd0267e5cd42182dd8a7596c60dc6",
+      "matches": true
+    },
+    {
+      "path": "/images/vault/magazines/amazing-computing/cover.png",
+      "status": 200,
+      "sha256": "c07dc511d904d71087fef63a2c31015939d31b60f4fcc8e7b22e772b88e65b77",
+      "matches": true
+    },
+    {
+      "path": "/images/vault/magazines/amigaworld/cover.png",
+      "status": 200,
+      "sha256": "d0ec477e2b7fdfffe03d655a47630bf6c63a447208b09c8e4d7018108df307c4",
+      "matches": true
+    },
+    {
+      "path": "/images/vault/magazines/big-k/cover.png",
+      "status": 200,
+      "sha256": "9884816790b6ce5fd45a1cbd38efba16300ad1e38108df1cb8a6765c91fe9476",
+      "matches": true
+    },
+    {
+      "path": "/images/vault/magazines/byte/cover.png",
+      "status": 200,
+      "sha256": "0b9a82d0e40297d3cfc91174e8ff519f7f23402dd324f6f90244212d3c2ee62d",
+      "matches": true
+    },
+    {
+      "path": "/images/vault/magazines/super-play/cover.png",
+      "status": 200,
+      "sha256": "8cf84f2e292ce6e7c26eea74d98e44479a132e3e6b8eb575467efae8d2050059",
+      "matches": true
+    },
+    {
+      "path": "/images/vault/magazines/wireframe/cover.png",
+      "status": 200,
+      "sha256": "0a2f99e2f565a9605bb756e858feaacce4177f7d6e056b68a95aa046fc31586c",
+      "matches": true
+    },
+    {
+      "path": "/images/vault/magazines/your-computer/cover.png",
+      "status": 200,
+      "sha256": "afc27e667698730f92d05a8683caa9078b94a69b3d34ee104fa677d0f8b4240e",
+      "matches": true
+    },
+    {
+      "path": "/images/vault/systems/atari-7800/maria-display.png",
+      "status": 200,
+      "sha256": "cb72badbacccd272a5efbb41ddece2bfc029bb24210326af5ac7bcecf17594f6",
+      "matches": true
+    },
+    {
+      "path": "/images/vault/systems/atari-jaguar/processing-roles.png",
+      "status": 200,
+      "sha256": "640c7dbaa2bc6d4f732fa248d0e71e5e377c9697f8aa63c4ba496d44a41e6fe3",
+      "matches": true
+    },
+    {
+      "path": "/images/vault/systems/commodore-128/operating-modes.png",
+      "status": 200,
+      "sha256": "cc1ca8d7c96d932333d5547f75779b317d8a69d7133208803d257fcc605b262e",
+      "matches": true
+    }
+  ],
+  "failures": []
+}

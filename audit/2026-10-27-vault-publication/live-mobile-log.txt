@@ -1,0 +1,10 @@
+{"entry":"commodore-128","status":200,"main":1,"frames":["https://code198x.com"],"violations":[]}
+{"entry":"commodore-sx-64","status":200,"main":1,"frames":["https://code198x.com"],"violations":[]}
+{"entry":"ti-99-4a","status":200,"main":1,"frames":["https://code198x.com"],"violations":[]}
+{"entry":"atari-7800","status":200,"main":1,"frames":["https://code198x.com"],"violations":[]}
+{"entry":"atari-jaguar","status":200,"main":1,"frames":["https://code198x.com"],"violations":[]}
+{"entry":"atari-falcon030","status":200,"main":1,"frames":["https://code198x.com"],"violations":[]}
+{"entry":"acorn-electron","status":200,"main":1,"frames":["https://code198x.com"],"violations":[]}
+{"entry":"atari-5200","status":200,"main":1,"frames":["https://code198x.com"],"violations":[]}
+{"entry":"commodore-cdtv","status":200,"main":1,"frames":["https://code198x.com"],"violations":[]}
+{"views":9,"failures":[]}
