@@ -1,0 +1,142 @@
+[
+  {
+    "path": "src/content/vault/books/mapping-the-commodore-64.mdx",
+    "sha256": "3c330fd1d6901bdbd94ba9728a66f22f4214e6665c59bdce563ea58f7288fd17",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/communities/codebase64.mdx",
+    "sha256": "6f283e5fcbc4fb13d3f8c20913667baa605ec6ad15f114a2fddc698475089383",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/communities/csdb.mdx",
+    "sha256": "c4d84663b96bbc23dd13fe4ef8c036a4dba3d3e9786c7aaa592ab469adf334fa",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/companies/atarisoft.mdx",
+    "sha256": "a6b679b0090002a8d289b6f38b97a3f97bb231e0c36cb5b8475640f2e2bbaf6f",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/companies/software-creations.mdx",
+    "sha256": "5c5b3b98a4b76a445116469e62a1b259c62f8d691c1fe07bfc97175c85c12892",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/companies/strategic-simulations.mdx",
+    "sha256": "632016eb0ae4cabdbf9e75f3e1dffff6ef49f7e54f6c42e028415d8a6152910d",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/companies/tengen.mdx",
+    "sha256": "3e42538246df6cc72cedf5d7e8eba5aa6fee32b049a138e950d5d3609636e804",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/emulators/scummvm.mdx",
+    "sha256": "58c4c04ebb82aa66a4432278755504ab662c6ba3c0a2fe166d5d4d433d3a10f0",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/events/breakpoint.mdx",
+    "sha256": "9ce6b32c3108ac1f5cb1a22497e529735c3a458b437f053ee56f3899131296a2",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/magazines/amazing-computing.mdx",
+    "sha256": "b45fbd00e283ad2c5af7811e817ff6046dcad6e056a8ce56da7a261129e2022d",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/magazines/amigaworld.mdx",
+    "sha256": "dcb767b983ecaae60b1d90743a4ec45b7e2e0ce6d0a44a461a7116acbc19ab96",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/magazines/big-k.mdx",
+    "sha256": "6694cd02d696016c75e9adf43d228d5c331e4a3ab53f502ab4ba57b5efb7daa4",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/magazines/byte.mdx",
+    "sha256": "5516945ff780ee479ee555b92b99506c4c78e765d60f65a890a16297890e2d41",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/magazines/super-play.mdx",
+    "sha256": "6dc00af9e5aa92c428779e5b73780d69e522030cf39dcff3cd28aec681adb072",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/magazines/wireframe.mdx",
+    "sha256": "d30a08ec3211689151ee35486034656427fa172e1975848bd727eb72b21d6ba0",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/magazines/your-computer.mdx",
+    "sha256": "2b502b0e40331e60e5104f892e2b394bc251b51a7e2a94df5e782b3efcc52030",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/systems/amiga-cd32.mdx",
+    "sha256": "86be7786a0b92c6b42c3e18233266b4229efab86e840a5bed86b4a0fdbbb2f89",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/systems/commodore-pet.mdx",
+    "sha256": "299c1064c38049563a93f61ae7fbfd8657a71b8b00c2a454d0ad5123f61283a0",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/tools/seuck.mdx",
+    "sha256": "f25d6422a51bdd702e3bfb10bce2e5ea654f6ae0e2a4ad1642dfdb82ea584fc8",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/systems/commodore-128.mdx",
+    "sha256": "8db4b088d9b86e52ba4de9697aeec32681360485e7f77f8d669753c7223e644e",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/systems/commodore-sx-64.mdx",
+    "sha256": "f9bc53ba2c6ac55249ff5a2b881c5662c1c29bc82dadc4ebf142df80ca6b51f2",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/systems/ti-99-4a.mdx",
+    "sha256": "628ae2f35e36dc990b0826a546a532d2ad1203180047c2a038c3549b29e4f668",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/systems/atari-7800.mdx",
+    "sha256": "5c91bcb9497b96fd318537d10144774f23b0f79399bc618718b9c7ec3e65c8b5",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/systems/atari-jaguar.mdx",
+    "sha256": "8d70790dbdaa9b982cce804173b679d5d062f329f18089b51aad63c014667580",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/systems/atari-falcon030.mdx",
+    "sha256": "a8ff1e17fefab2675602662f34510607c155c6b6c7a8082b3c6bf9b8c2a493dd",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/systems/acorn-electron.mdx",
+    "sha256": "55fce2f0d013c9798a96b1072a179f286642179e32de79b97e5a46ed0fa2f23a",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/systems/atari-5200.mdx",
+    "sha256": "1795295ffe4c0ff334708c9f5fe029ff99d0871da9dd501bdbb5fc0a2fa3c122",
+    "matches_approved_source": true
+  },
+  {
+    "path": "src/content/vault/systems/commodore-cdtv.mdx",
+    "sha256": "62ce41605462934d33e030257456f6c7d01ed52faee8cfa100adb97dd417ff61",
+    "matches_approved_source": true
+  }
+]
