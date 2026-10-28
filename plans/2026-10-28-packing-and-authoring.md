@@ -1,0 +1,6 @@
+# Packing and authoring candidate batches — 28 October 2026
+
+1. Triage the fourteen candidate IDs listed in the companion website plan. Check current coverage, aliases, referring contexts and open/closed writing issues before commissioning. Record scope, source leads and decisions in `audit/2026-10-28-packing-and-authoring/triage.json`.
+2. Retain existing records and stable IDs in `vault-candidates.csv`. For split rows, allocate the next unused ID to each additional subject and record the relationship. Add canonical writing issues only after readiness, then mark authored drafts in-progress with their actual paths. Keep publication and human review pending.
+3. Audit named subjects introduced by the new writing. Reuse existing entries/candidates and add useful missing subjects as needs-triage without creating issues. Record the audit in the same evidence directory and link it from `README.md`.
+4. Validate the whole CSV against the matching website worktree and run all nineteen candidate-checker tests. Review the precise diff, commit and push without changing unrelated files, open and attach a draft PR stacked on music-and-sharing, and remove temporary worktrees after verifying remote retention.
