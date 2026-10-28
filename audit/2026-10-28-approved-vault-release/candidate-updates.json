@@ -1,0 +1,536 @@
+{
+  "published": [
+    {
+      "id": "VC-0009",
+      "path": "hardware/intel-8080",
+      "issue": "https://github.com/code198x/website/issues/1293"
+    },
+    {
+      "id": "VC-0024",
+      "path": "hardware/motorola-6800",
+      "issue": "https://github.com/code198x/website/issues/1295"
+    },
+    {
+      "id": "VC-0020",
+      "path": "hardware/mos-6560-vic",
+      "issue": "https://github.com/code198x/website/issues/1294"
+    },
+    {
+      "id": "VC-0025",
+      "path": "hardware/mc6883-sam",
+      "issue": "https://github.com/code198x/website/issues/1296"
+    },
+    {
+      "id": "VC-0037",
+      "path": "hardware/spc700-s-dsp",
+      "issue": "https://github.com/code198x/website/issues/1297"
+    },
+    {
+      "id": "VC-0039",
+      "path": "hardware/tms9918",
+      "issue": "https://github.com/code198x/website/issues/1298"
+    },
+    {
+      "id": "VC-0040",
+      "path": "hardware/master-system-vdp",
+      "issue": "https://github.com/code198x/website/issues/1299"
+    },
+    {
+      "id": "VC-0041",
+      "path": "hardware/sn76489",
+      "issue": "https://github.com/code198x/website/issues/1300"
+    },
+    {
+      "id": "VC-0043",
+      "path": "hardware/mega-drive-vdp",
+      "issue": "https://github.com/code198x/website/issues/1301"
+    },
+    {
+      "id": "VC-0047",
+      "path": "hardware/mos-6522-via",
+      "issue": "https://github.com/code198x/website/issues/1302"
+    },
+    {
+      "id": "VC-0064",
+      "path": "hardware/antic-gtia",
+      "issue": "https://github.com/code198x/website/issues/1303"
+    },
+    {
+      "id": "VC-0067",
+      "path": "hardware/arm",
+      "issue": "https://github.com/code198x/website/issues/1304"
+    },
+    {
+      "id": "VC-0130",
+      "path": "hardware/mc6845-crtc",
+      "issue": "https://github.com/code198x/website/issues/1305"
+    },
+    {
+      "id": "VC-0152",
+      "path": "hardware/pokey",
+      "issue": "https://github.com/code198x/website/issues/1306"
+    },
+    {
+      "id": "VC-3058",
+      "path": "hardware/8563-vdc",
+      "issue": "https://github.com/code198x/website/issues/1307"
+    },
+    {
+      "id": "VC-3059",
+      "path": "hardware/maria",
+      "issue": "https://github.com/code198x/website/issues/1308"
+    },
+    {
+      "id": "VC-3061",
+      "path": "hardware/motorola-56001",
+      "issue": "https://github.com/code198x/website/issues/1309"
+    },
+    {
+      "id": "VC-2369",
+      "path": "languages/bbc-basic",
+      "issue": "https://github.com/code198x/website/issues/1322"
+    },
+    {
+      "id": "VC-2401",
+      "path": "languages/applesoft-basic",
+      "issue": "https://github.com/code198x/website/issues/1324"
+    },
+    {
+      "id": "VC-2523",
+      "path": "languages/hisoft-basic",
+      "issue": "https://github.com/code198x/website/issues/1326"
+    },
+    {
+      "id": "VC-2524",
+      "path": "tools/hisoft-devpac",
+      "issue": "https://github.com/code198x/website/issues/1327"
+    },
+    {
+      "id": "VC-2577",
+      "path": "languages/microsoft-basic",
+      "issue": "https://github.com/code198x/website/issues/1328"
+    },
+    {
+      "id": "VC-2588",
+      "path": "languages/music-macro-language",
+      "issue": "https://github.com/code198x/website/issues/1329"
+    },
+    {
+      "id": "VC-2611",
+      "path": "languages/pascal",
+      "issue": "https://github.com/code198x/website/issues/1330"
+    },
+    {
+      "id": "VC-2667",
+      "path": "languages/smalltalk-squeak",
+      "issue": "https://github.com/code198x/website/issues/1331"
+    },
+    {
+      "id": "VC-2391",
+      "path": "books/40-best-machine-code-routines",
+      "issue": "https://github.com/code198x/website/issues/1323"
+    },
+    {
+      "id": "VC-2462",
+      "path": "books/de-re-atari",
+      "issue": "https://github.com/code198x/website/issues/1325"
+    },
+    {
+      "id": "VC-3082",
+      "path": "books/inside-the-dragon",
+      "issue": "https://github.com/code198x/website/issues/1332"
+    },
+    {
+      "id": "VC-3083",
+      "path": "books/bbc-micro-advanced-user-guide",
+      "issue": "https://github.com/code198x/website/issues/1333"
+    },
+    {
+      "id": "VC-0230",
+      "path": "people/rj-mical",
+      "issue": "https://github.com/code198x/website/issues/1311"
+    },
+    {
+      "id": "VC-0239",
+      "path": "people/bill-mensch",
+      "issue": "https://github.com/code198x/website/issues/1312"
+    },
+    {
+      "id": "VC-0241",
+      "path": "people/martin-walker",
+      "issue": "https://github.com/code198x/website/issues/1313"
+    },
+    {
+      "id": "VC-0245",
+      "path": "people/doug-neubauer",
+      "issue": "https://github.com/code198x/website/issues/1314"
+    },
+    {
+      "id": "VC-0308",
+      "path": "people/allister-brimble",
+      "issue": "https://github.com/code198x/website/issues/1315"
+    },
+    {
+      "id": "VC-0353",
+      "path": "people/chris-butler",
+      "issue": "https://github.com/code198x/website/issues/1316"
+    },
+    {
+      "id": "VC-0398",
+      "path": "people/dominic-robinson",
+      "issue": "https://github.com/code198x/website/issues/1317"
+    },
+    {
+      "id": "VC-0566",
+      "path": "people/lasse-oorni",
+      "issue": "https://github.com/code198x/website/issues/1318"
+    },
+    {
+      "id": "VC-0647",
+      "path": "people/pasi-ojala",
+      "issue": "https://github.com/code198x/website/issues/1319"
+    },
+    {
+      "id": "VC-0688",
+      "path": "people/richard-joseph",
+      "issue": "https://github.com/code198x/website/issues/1320"
+    },
+    {
+      "id": "VC-0751",
+      "path": "people/steve-furber",
+      "issue": "https://github.com/code198x/website/issues/1321"
+    },
+    {
+      "id": "VC-2602",
+      "path": "software/noisetracker",
+      "issue": "https://github.com/code198x/website/issues/1346"
+    },
+    {
+      "id": "VC-2368",
+      "path": "software/octamed",
+      "issue": "https://github.com/code198x/website/issues/1336"
+    },
+    {
+      "id": "VC-2489",
+      "path": "software/fasttracker-2",
+      "issue": "https://github.com/code198x/website/issues/1338"
+    },
+    {
+      "id": "VC-2655",
+      "path": "software/scream-tracker",
+      "issue": "https://github.com/code198x/website/issues/1348"
+    },
+    {
+      "id": "VC-2532",
+      "path": "software/impulse-tracker",
+      "issue": "https://github.com/code198x/website/issues/1343"
+    },
+    {
+      "id": "VC-2518",
+      "path": "software/goattracker",
+      "issue": "https://github.com/code198x/website/issues/1340"
+    },
+    {
+      "id": "VC-2643",
+      "path": "emulators/resid",
+      "issue": "https://github.com/code198x/website/issues/1347"
+    },
+    {
+      "id": "VC-2695",
+      "path": "software/tfmx",
+      "issue": "https://github.com/code198x/website/issues/1350"
+    },
+    {
+      "id": "VC-0947",
+      "path": "distribution/17-bit-software",
+      "issue": "https://github.com/code198x/website/issues/1335"
+    },
+    {
+      "id": "VC-2504",
+      "path": "distribution/fred-fish-disks",
+      "issue": "https://github.com/code198x/website/issues/1339"
+    },
+    {
+      "id": "VC-2383",
+      "path": "communities/compunet",
+      "issue": "https://github.com/code198x/website/issues/1337"
+    },
+    {
+      "id": "VC-2575",
+      "path": "communities/micronet-prestel",
+      "issue": "https://github.com/code198x/website/issues/1344"
+    },
+    {
+      "id": "VC-2526",
+      "path": "communities/homebrew-computer-club",
+      "issue": "https://github.com/code198x/website/issues/1341"
+    },
+    {
+      "id": "VC-2531",
+      "path": "communities/icpug",
+      "issue": "https://github.com/code198x/website/issues/1342"
+    },
+    {
+      "id": "VC-2600",
+      "path": "communities/no-intro",
+      "issue": "https://github.com/code198x/website/issues/1345"
+    },
+    {
+      "id": "VC-2669",
+      "path": "communities/software-preservation-society",
+      "issue": "https://github.com/code198x/website/issues/1349"
+    },
+    {
+      "id": "VC-2426",
+      "path": "tools/byteboozer",
+      "issue": "https://github.com/code198x/website/issues/1352"
+    },
+    {
+      "id": "VC-2449",
+      "path": "tools/crinkler",
+      "issue": "https://github.com/code198x/website/issues/1353"
+    },
+    {
+      "id": "VC-2487",
+      "path": "tools/exomizer",
+      "issue": "https://github.com/code198x/website/issues/1354"
+    },
+    {
+      "id": "VC-3143",
+      "path": "tools/pucrunch",
+      "issue": "https://github.com/code198x/website/issues/1355"
+    },
+    {
+      "id": "VC-2551",
+      "path": "tools/kkrunchy",
+      "issue": "https://github.com/code198x/website/issues/1356"
+    },
+    {
+      "id": "VC-2624",
+      "path": "tools/powerpacker",
+      "issue": "https://github.com/code198x/website/issues/1357"
+    },
+    {
+      "id": "VC-3144",
+      "path": "tools/turbo-imploder",
+      "issue": "https://github.com/code198x/website/issues/1358"
+    },
+    {
+      "id": "VC-2628",
+      "path": "tools/propack",
+      "issue": "https://github.com/code198x/website/issues/1359"
+    },
+    {
+      "id": "VC-2395",
+      "path": "tools/adventuron",
+      "issue": "https://github.com/code198x/website/issues/1360"
+    },
+    {
+      "id": "VC-2459",
+      "path": "tools/daad",
+      "issue": "https://github.com/code198x/website/issues/1361"
+    },
+    {
+      "id": "VC-2513",
+      "path": "tools/garry-kitchens-gamemaker",
+      "issue": "https://github.com/code198x/website/issues/1362"
+    },
+    {
+      "id": "VC-2530",
+      "path": "tools/hypercard",
+      "issue": "https://github.com/code198x/website/issues/1363"
+    },
+    {
+      "id": "VC-2539",
+      "path": "tools/inform",
+      "issue": "https://github.com/code198x/website/issues/1364"
+    },
+    {
+      "id": "VC-2568",
+      "path": "tools/megazeux",
+      "issue": "https://github.com/code198x/website/issues/1365"
+    },
+    {
+      "id": "VC-2642",
+      "path": "tools/repton-infinity",
+      "issue": "https://github.com/code198x/website/issues/1366"
+    },
+    {
+      "id": "VC-2687",
+      "path": "tools/tads",
+      "issue": "https://github.com/code198x/website/issues/1367"
+    },
+    {
+      "id": "VC-1504",
+      "path": "games/ridge-racer",
+      "issue": "https://github.com/code198x/website/issues/1369"
+    },
+    {
+      "id": "VC-1622",
+      "path": "games/commander-keen",
+      "issue": "https://github.com/code198x/website/issues/1370"
+    },
+    {
+      "id": "VC-2106",
+      "path": "games/stunt-car-racer",
+      "issue": "https://github.com/code198x/website/issues/1371"
+    },
+    {
+      "id": "VC-2224",
+      "path": "games/ultima-underworld",
+      "issue": "https://github.com/code198x/website/issues/1372"
+    },
+    {
+      "id": "VC-2236",
+      "path": "games/virtua-racing",
+      "issue": "https://github.com/code198x/website/issues/1373"
+    },
+    {
+      "id": "VC-2264",
+      "path": "games/wolfenstein-3d",
+      "issue": "https://github.com/code198x/website/issues/1374"
+    },
+    {
+      "id": "VC-2420",
+      "path": "tools/brender",
+      "issue": "https://github.com/code198x/website/issues/1375"
+    },
+    {
+      "id": "VC-2424",
+      "path": "tools/build-engine",
+      "issue": "https://github.com/code198x/website/issues/1376"
+    },
+    {
+      "id": "VC-2520",
+      "path": "tools/goldsrc",
+      "issue": "https://github.com/code198x/website/issues/1377"
+    },
+    {
+      "id": "VC-2521",
+      "path": "tools/grime",
+      "issue": "https://github.com/code198x/website/issues/1378"
+    },
+    {
+      "id": "VC-2533",
+      "path": "tools/imuse",
+      "issue": "https://github.com/code198x/website/issues/1379"
+    },
+    {
+      "id": "VC-2541",
+      "path": "tools/insane",
+      "issue": "https://github.com/code198x/website/issues/1380"
+    },
+    {
+      "id": "VC-2632",
+      "path": "tools/quakeworld",
+      "issue": "https://github.com/code198x/website/issues/1381"
+    },
+    {
+      "id": "VC-2739",
+      "path": "tools/virtual-theatre",
+      "issue": "https://github.com/code198x/website/issues/1382"
+    },
+    {
+      "id": "VC-3172",
+      "path": "tools/worldcraft",
+      "issue": "https://github.com/code198x/website/issues/1383"
+    },
+    {
+      "id": "VC-3173",
+      "path": "tools/glquake",
+      "issue": "https://github.com/code198x/website/issues/1384"
+    }
+  ],
+  "plannedReferralsResolved": [
+    {
+      "row": "VC-0292",
+      "from": "candidate:VC-1622",
+      "to": "games/commander-keen"
+    },
+    {
+      "row": "VC-0581",
+      "from": "candidate:VC-3172",
+      "to": "tools/worldcraft"
+    },
+    {
+      "row": "VC-0657",
+      "from": "candidate:VC-2224",
+      "to": "games/ultima-underworld"
+    },
+    {
+      "row": "VC-0674",
+      "from": "candidate:VC-2533",
+      "to": "tools/imuse"
+    },
+    {
+      "row": "VC-0765",
+      "from": "candidate:VC-2236",
+      "to": "games/virtua-racing"
+    },
+    {
+      "row": "VC-0781",
+      "from": "candidate:VC-1622",
+      "to": "games/commander-keen"
+    },
+    {
+      "row": "VC-0789",
+      "from": "candidate:VC-2739",
+      "to": "tools/virtual-theatre"
+    },
+    {
+      "row": "VC-2045",
+      "from": "candidate:VC-2424",
+      "to": "tools/build-engine"
+    },
+    {
+      "row": "VC-2909",
+      "from": "candidate:VC-0152",
+      "to": "hardware/pokey"
+    },
+    {
+      "row": "VC-3172",
+      "from": "candidate:VC-2520",
+      "to": "tools/goldsrc"
+    },
+    {
+      "row": "VC-3173",
+      "from": "candidate:VC-2632",
+      "to": "tools/quakeworld"
+    },
+    {
+      "row": "VC-3174",
+      "from": "candidate:VC-2424",
+      "to": "tools/build-engine"
+    },
+    {
+      "row": "VC-3175",
+      "from": "candidate:VC-2521",
+      "to": "tools/grime"
+    },
+    {
+      "row": "VC-3176",
+      "from": "candidate:VC-2521",
+      "to": "tools/grime"
+    },
+    {
+      "row": "VC-3177",
+      "from": "candidate:VC-2533",
+      "to": "tools/imuse"
+    },
+    {
+      "row": "VC-3178",
+      "from": "candidate:VC-2541",
+      "to": "tools/insane"
+    },
+    {
+      "row": "VC-3179",
+      "from": "candidate:VC-3172",
+      "to": "tools/worldcraft"
+    },
+    {
+      "row": "VC-3180",
+      "from": "candidate:VC-2224",
+      "to": "games/ultima-underworld"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "rows": 3178,
+  "published": 134,
+  "covered": 15,
+  "needsTriage": 3028,
+  "ready": 1,
+  "inProgress": 0,
+  "websiteAwareValidationExit": 0,
+  "regressionTests": 19,
+  "regressionTestExit": 0,
+  "newlyPublished": 88,
+  "plannedReferralsResolved": 18
+}
