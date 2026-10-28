@@ -45,6 +45,7 @@ verification and how to add activities after the first learner observations.
 | [Profiling progression](specifications/experiments/profiling-progression.md) | Game-led measurement practice, verified tool surfaces and separate guest/host investigations |
 | [Vault](specifications/vault.md) | Sourced encyclopaedic context |
 | [Vault candidate backlog](vault-candidates.md) | Proposed subjects, triage and the handoff to writing issues; [structured records](vault-candidates.csv) |
+| [Vault packing and authoring batches](audit/2026-10-28-packing-and-authoring/README.md) | Sixteen draft entries, retained candidate identities, source evidence and uncommissioned follow-ups |
 | [Pattern Library](specifications/pattern-library.md) | Low-level routines, reusable techniques, progression and implementation evidence |
 | [Game loops and ownership](guides/game-loops.md) | Reusable core-system waits, BBC/Electron MOS reuse, execution records and wider-system next steps |
 | [Pattern Library capability inventory](audit/2026-10-19-pattern-library/README.md) | Existing patterns, lessons and sources; per-system gaps, proposed first tranche and wider-system candidates |
