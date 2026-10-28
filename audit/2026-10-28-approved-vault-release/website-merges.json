@@ -1,0 +1,42 @@
+[
+  {
+    "number": 1310,
+    "html_url": "https://github.com/code198x/website/pull/1310",
+    "state": "closed",
+    "merged": true,
+    "merge_commit_sha": "570aca873bbd7f3f849c7b8b3e15bdd4b91b9928",
+    "merged_at": "2026-10-28T16:11:54Z"
+  },
+  {
+    "number": 1334,
+    "html_url": "https://github.com/code198x/website/pull/1334",
+    "state": "closed",
+    "merged": true,
+    "merge_commit_sha": "7142d0f647258351d8cea76cc83414cd976faa09",
+    "merged_at": "2026-10-28T16:11:56Z"
+  },
+  {
+    "number": 1351,
+    "html_url": "https://github.com/code198x/website/pull/1351",
+    "state": "closed",
+    "merged": true,
+    "merge_commit_sha": "fc895add60f90bafc460655a5ae2ad2f5999e33f",
+    "merged_at": "2026-10-28T16:11:58Z"
+  },
+  {
+    "number": 1368,
+    "html_url": "https://github.com/code198x/website/pull/1368",
+    "state": "closed",
+    "merged": true,
+    "merge_commit_sha": "27c986d8f138452ffb06504d727df5d2ff8af9dc",
+    "merged_at": "2026-10-28T16:11:59Z"
+  },
+  {
+    "number": 1385,
+    "html_url": "https://github.com/code198x/website/pull/1385",
+    "state": "closed",
+    "merged": true,
+    "merge_commit_sha": "960ca93899b068b6b221d994c1849d31caa0c79e",
+    "merged_at": "2026-10-28T16:12:01Z"
+  }
+]

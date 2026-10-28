@@ -1,0 +1,13 @@
+{
+  "site": "https://code198x.com",
+  "plainHttpClient": {
+    "status": 403,
+    "cloudflareError": 1010
+  },
+  "normalChromiumPreReleaseProbe": {
+    "url": "https://code198x.com/vault/games/ridge-racer",
+    "status": 404,
+    "title": "Page not found | Code Like It\u2019s 198x"
+  },
+  "verificationTransport": "Unmodified Chromium client; public same-origin fetches; no user-agent overrides, challenge bypass or security-rule changes. Response bytes are cached for verification and then removed."
+}
