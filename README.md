@@ -15,6 +15,7 @@ verification and how to add activities after the first learner observations.
 
 | Guide | Responsibility |
 |---|---|
+| [Coverage and Learning Map](specifications/coverage-learning-map.md) | Cross-curriculum evidence rules, proposed depth targets and the representative repository baseline |
 | [Curriculum design](specifications/curriculum.md) | Shared subjects, progression, independent entry and checks for understanding |
 | [Recurring progressions](specifications/recurring-progressions.md) | Eight connected learning threads, existing-game placements, gaps and implementation priorities |
 | [Data, memory and tools](specifications/experiments/data-memory-tools.md) | Asset representations, small converters, validation, storage and runtime costs |
