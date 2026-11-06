@@ -12,7 +12,7 @@
 | `scope` | Semicolon-separated scope axes the subject belongs to: `region:<slug>` for where it was made or used (`region:ussr`, `region:japan`, `region:east-germany`) and `period:<decade>` for when (`period:1960s`). Set during triage; leave blank when neither says anything useful. |
 | `status` | One of the states below. |
 | `why` | The existing reason to consider this subject. Verify it before promoting the candidate. |
-| `link_from` | Semicolon-separated referring sources: existing Vault paths (`category/slug`), `lesson:<path>` for a lesson that wants the entry (its path under the website's `src/content/curriculum/`, without `.mdx`), or `candidate:VC-0001` for a planned source identified by its existing candidate ID. These record intended backlinks, not links that already exist. |
+| `link_from` | Semicolon-separated referring sources: existing Vault paths (`category/slug`), or `candidate:VC-0001` for a planned source identified by its existing candidate ID. Lessons record what they want in their own `wants` frontmatter instead (see below). These record intended backlinks, not links that already exist. |
 | `triage_notes` | Scope, checks for existing coverage and aliases, source leads, relevant lessons and the reasoning behind a triage decision. |
 | `covered_by` | Semicolon-separated paths of existing Vault entries that cover the subject, required for `covered` and `published`. |
 | `issue` | The canonical `code198x/website` issue URL once the candidate is ready and an issue exists. Blank until then. |
@@ -21,7 +21,7 @@ Use a CSV-aware editor or Python's `csv` module. Quotes and commas in names and 
 
 For an unwritten referring entry, use its stable candidate identity rather than a proposed URL. For example, `candidate:VC-2826` identifies the women's computing theme as a planned source. The referenced record must exist and cannot be the referring candidate itself. Keep any earlier proposed path in `triage_notes` for context; a candidate reference does not reserve a URL or establish publication. Once the referring entry is published, check its actual path and replace the candidate reference with that path.
 
-Candidate and lesson references are allowed only in `link_from`. `covered_by` always names actual entry paths: another candidate is not evidence that coverage exists.
+Candidate references are allowed only in `link_from`. `covered_by` always names actual entry paths: another candidate is not evidence that coverage exists.
 
 ## Triage and status
 
@@ -84,9 +84,19 @@ python3.13 scripts/check_vault_candidates.py --status needs-triage --category ha
 python3.13 scripts/check_vault_candidates.py --website ../website --limit 20
 ```
 
-The checker validates the entire CSV, including planned source IDs, before displaying a filtered list. It sorts displayed candidates by demand, with ID as the tie-breaker: each distinct lesson in `link_from` counts 3, each existing Vault entry 1, and a planned candidate nothing. `--website` optionally checks every existing-page reference against a website checkout; point it at the checkout you are actually using. It recognises Vault collection MDX files and concrete Game Study `index.astro` pages. It does not infer arbitrary pages from dynamic routes or assess prose, historical claims, aliases, issue state or a successful production build.
+The checker validates the entire CSV, including planned source IDs, before displaying a filtered list. It sorts displayed candidates by demand, with ID as the tie-breaker: each lesson that wants the candidate counts 3, each existing Vault entry in `link_from` 1, and a planned candidate nothing. Lesson wants are only counted with `--website`. `--website` optionally checks every existing-page reference against a website checkout; point it at the checkout you are actually using. It recognises Vault collection MDX files and concrete Game Study `index.astro` pages. It does not infer arbitrary pages from dynamic routes or assess prose, historical claims, aliases, issue state or a successful production build.
 
 Run the checker's regression tests with `PYTHONDONTWRITEBYTECODE=1 python3.13 -m unittest discover -s scripts -p 'test_*.py'`. They exercise malformed records, duplicate identities, incomplete status changes and filtering that must not hide invalid rows.
+
+## What lessons want
+
+A lesson lists the Vault pages it would link to for depth but can't yet, in its frontmatter: `wants: [VC-0123, games/example]`. A want is a candidate ID, or the path of an existing entry still awaiting review. The website rejects any other form, and its `check-lesson-wants.mjs` fails when a wanted entry doesn't exist. Wants live in the lessons, so dropping one drops the demand; nothing here is stored or deleted.
+
+With `--website`, the checker counts each lesson that wants a candidate in its demand, and fails if a lesson wants a candidate ID that isn't in this backlog. `--wanted-reviews` lists the entries lessons want in two groups: unreviewed entries, which are review demand, and reviewed entries a lesson still only wants. The website only warns about the second group, so a review batch isn't blocked by lessons it never touched; the factory's link pass turns them into links.
+
+```sh
+python3.13 scripts/check_vault_candidates.py --website ../website --wanted-reviews --limit 20
+```
 
 ## Lanes for world computing and early subjects
 
