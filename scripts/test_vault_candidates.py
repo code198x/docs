@@ -357,6 +357,23 @@ class BacklogTests(unittest.TestCase):
                 shown = [line.split()[0] for line in result.stdout.splitlines() if line.startswith("VC-")]
                 self.assertEqual(shown, expected)
 
+    def test_world_lane_takes_regions_in_turn(self) -> None:
+        def row(n: int, region: str, refs: int) -> dict[str, str]:
+            sources = ";".join(f"games/source-{i}" for i in range(refs))
+            return self.row | {
+                "id": f"VC-{n:04}", "subject": f"S{n}", "scope": f"region:{region}", "link_from": sources,
+            }
+        self.write(
+            row(1, "japan", 5), row(2, "japan", 4), row(3, "japan", 3),
+            row(4, "poland", 2), row(5, "ussr", 1),
+            row(6, "uk", 9),  # not in the world lane at all
+        )
+        result = self.run_checker("--lane", "world")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        shown = [line.split()[0] for line in result.stdout.splitlines() if line.startswith("VC-")]
+        # Round one takes each region's strongest, strongest region first.
+        self.assertEqual(shown, ["VC-0001", "VC-0004", "VC-0005", "VC-0002", "VC-0003"])
+
 
 if __name__ == "__main__":
     unittest.main()

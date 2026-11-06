@@ -90,10 +90,10 @@ Run the checker's regression tests with `PYTHONDONTWRITEBYTECODE=1 python3.13 -m
 
 ## Lanes for world computing and early subjects
 
-Demand alone mirrors what the Vault already covers, which leans towards British and American machines of the 1980s. Two lanes keep the scope axes in view, ranked by demand within each:
+Demand alone mirrors what the Vault already covers, which leans towards British and American machines of the 1980s. Two lanes keep the scope axes in view:
 
-- **world:** any `region:` other than `region:us` or `region:uk`.
-- **early:** `period:1950s` or `period:1960s`.
+- **world:** any `region:` other than `region:us` or `region:uk`. The lane takes regions in turn, each region's candidates in demand order, so one well-covered region (Japan has the most) can't fill it. A candidate with two world regions stands in the first listed.
+- **early:** `period:1950s` or `period:1960s`, in demand order.
 
 ```sh
 python3.13 scripts/check_vault_candidates.py --status needs-triage --lane world --limit 20
