@@ -1,6 +1,6 @@
 # Plan: a content factory with many entry points
 
-6 November 2026. A proposal, not an adopted direction. Steps marked **(ask)** need Steve's decision first.
+6 November 2026. A proposal for review. Decisions Steve has made are marked **agreed** with their date.
 
 ## Bottom line
 
@@ -13,13 +13,15 @@ The scarce input is Steve's judgement, not production. The factory spends it on 
 | Part | Where | Role in the factory |
 |---|---|---|
 | Vault | website `src/content/vault/`: 1,621 entries, 23 categories including `demos`, `groups`, `events` and `techniques`; `ai_generated` and `reviewed` on every entry | The largest surface; its links are the graph readers see |
-| Vault frontier | `vault-candidates.csv` (IDs, status, why, `link_from`, triage notes, `covered_by`, writing issue) and `vault-candidates.md` | The work queue, with an admission rule: "A candidate earns an entry by helping a reader of an existing entry or lesson, not by being mentioned." |
+| Vault frontier | `vault-candidates.csv` (IDs, status, why, `link_from`, triage notes, `covered_by`, writing issue) and `vault-candidates.md`. About 3,200 rows, almost all `needs-triage` | The Vault's work queue, with an admission rule: "A candidate earns an entry by helping a reader of an existing entry or lesson, not by being mentioned." |
 | Vault gates | website `scripts/check-vault-{links,sources,dates,frontmatter-vs-prose,imagery,platform-balance}.mjs`, `find-vault-duplicates.mjs`, `vault-candidates.mjs` | Machine checks for the Vault line |
-| Systems | website `src/content/systems/`: 162 files, with `tier` (`live`, `next`, `planned`, `edge`, `beyond`) and `devReady` | The system-led entry point |
+| Systems | website `src/content/systems/`: 162 files. `tier` is the single source of truth for curriculum readiness (4 `live`, 6 `next`, 124 `planned`, 13 `edge`, 14 `beyond`). The `emu198x` and `devReady` flags record support surfaces, and `npm run surfaces:gaps` lists what's missing | The system-led entry point |
 | Knowledge graph | `ops/scripts/knowledge.py` over `reference/_tools/facts.sqlite`: entities, aliases, releases and edges with evidence | Finds neighbours (people, companies, releases) from primary sources |
 | Production workflow | `specifications/content-creation-workflow.md`; website per-game review checks; `scripts/check-release.sh`; the `Emulator` component | The production line's stations, written for people |
 | Book tools | `code198x/books` `tools/check-listings.rb`, `tools/capture-screens.rb` | Assemble, run and capture listings headless, with byte-identical captures |
-| Tools | Emu198x (33 machine runtimes, headless and scripted), Asm198x, Isa198x, Build198x | Gates that run the code |
+| Tools | Emu198x (33 machine runtimes, headless and scripted), Asm198x, Isa198x, Build198x, Format198x | Gates that run the code, and where blocked work sends its demand |
+| Tool workflows | umbrella `docs/workflows/add-a-new-system.md`, `add-an-emulator-core.md`, `add-a-new-cpu.md`, `add-build-format-support.md`, `add-curriculum-support.md` | How a tool gains the support that blocked work asks for |
+| AI disclosure | website `src/pages/ai.astro`, *How 198x uses AI* | Says AI writes almost all first drafts and Steve reviews through pull requests before publication |
 
 ## The model: one graph, several lines
 
@@ -31,7 +33,8 @@ A run starts at one subject, on any surface, and makes three kinds of move:
 
 1. **Fill.** Give the subject a surface it lacks: a Vault entry for a candidate, a pattern for a technique, a fuller profile for a system.
 2. **Link.** Connect existing work: add the reciprocal links a candidate names, and link Vault entries and curriculum both ways.
-3. **Spawn.** Record new subjects found along the way as candidates. A run **records** spawns; it never fills them in the same run.
+3. **Spawn.** Record new subjects found along the way as candidates, in the queue for their surface (see step 2). A run **records** spawns; it never fills them in the same run.
+4. **Block.** When a tool can't do what the work needs (the emulator lacks a machine or mis-times an effect, the assembler lacks a CPU or dialect, the build tools lack a media format), the run stops that item and records the blocker as a request to the tool. It never fakes a result or quietly drops the item. See "When the tools can't do it yet".
 
 Each surface has its own **line**: stations and gates suited to its cost.
 
@@ -49,51 +52,75 @@ The cost decides the gate. Cheap work flows and is reviewed in batches. A produc
 
 **Vault-led.** A candidate becomes an entry. The run adds the links named in its `link_from`, records new candidates it meets, and proposes curriculum hooks. A person leads to the systems they worked on and the games they made; a game leads to its techniques; a technique leads to a pattern, a From the Metal article or a production that needs it.
 
-**System-led.** Pick one of the 162 systems. Give it a sourced Vault entry and a system profile covering what the machine can do and what it was used for. Name its support surfaces precisely (Emu198x, Asm198x, curriculum). Then propose curriculum hooks: Craft lessons and From the Metal articles it can illustrate and, where there's a concrete teaching purpose, a production brief. "Wider systems enter through a concrete teaching purpose" (`PROJECT.md`) still decides whether a system gets a track.
+**System-led.** Pick one of the 162 systems and deepen its coverage: a sourced Vault entry and a system profile covering what the machine can do and what it was used for. Name its support surfaces precisely (Emu198x, Asm198x, curriculum). Then propose curriculum hooks: Craft lessons and From the Metal articles it can illustrate and, where there's a concrete teaching purpose, a production brief. Depth is not readiness: the factory never changes a system's `tier` (see step 7). "Wider systems enter through a concrete teaching purpose" (`PROJECT.md`) still decides whether a system gets a track.
 
 **Subject-led.** Start from a Craft topic, for example the economics of budget software. Find its historical anchors in the Vault, link both ways, and propose a production that shows it in play.
 
 **Production-led.** Start from an agreed brief, as `content-creation-workflow.md` already describes, and fan the production's evidence out to From the Metal, the Vault, Field Notes and patterns.
+
+## When the tools can't do it yet
+
+If something can't be made to work today, the factory works out what would make it possible tomorrow. Blocked work is a signal of what the tools should do next.
+
+- **Record the blocker.** The blocked item stays in its queue with status `blocked` and a link to an issue in the tool's own repository (emu198x, asm198x, isa198x, build198x, format198x and so on). The issue states the symptom, not a guessed mechanism. It includes a repeatable case (the production record and its script, or the listing and its expected result) and lists the content waiting on it.
+- **Rank tool work by what it unblocks.** A tool issue's priority is the number of queued items it blocks, counted the same way as content demand. The tools' own sessions get a list driven by what the site needs, not by guesswork.
+- **Missing machines and CPUs count too.** When content wants a machine no tool supports (Emu198x has no IBM PC or Apple II, for example), the request follows the umbrella workflows for adding a system, an emulator core, a CPU or a build format, and names its support surface precisely.
+- **Unblock automatically.** When a tool issue closes and a release ships, its blocked items go back to `open` and re-run their gates. A fix isn't trusted until the content that was waiting on it passes.
+- **Content becomes test material.** A production's verify script, and especially a demo's per-model timing, goes into the tool's regression corpus (Emu198x's private fixture store, with provenance), so a later change can't silently break it.
+- **The factory doesn't edit the tools.** Tool changes happen in the tool's own repository and session, under its own decisions and review. The factory supplies the demand, the repeatable cases and the re-check.
 
 ## Keeping it in bounds
 
 - **Admission.** The Vault's rule applies to every surface: a subject earns work by helping a reader of something that already exists.
 - **Priority by demand.** Rank candidates by how many existing pages would link to them (the length of `link_from`), plus whether they connect to a live track or a system with tools. Demand comes from the site, not from the agent.
 - **A budget per run.** At most two hops from the start; fill about one batch (around ten items); record every spawn but fill none.
-- **No merging by guesswork.** The knowledge graph never auto-merges fuzzy identity matches (see `build_graph.py`). The factory follows the same rule: an uncertain identity goes to the frontier as a question, not into an entry.
+- **No merging by guesswork.** The knowledge graph never auto-merges fuzzy identity matches (see `build_graph.py`). The factory follows the same rule: an uncertain identity goes to the queue as a question, not into an entry.
 - **Everything is a pull request.** Work happens in worktrees and ends in a pull request. Nothing reaches the site without passing the gates and, for its line, a person.
 
 ## Steps
 
 Each step ends in a commit and a check that can fail.
 
-0. **Demos in the charter (done).** Agreed with Steve and merged on 6 November 2026 (#282): a track step is a finished production, a full game or a full demo, and `PROJECT.md` now has a "What makes a finished demo" section. Verify: the production line's demo gate (step 7) quotes that section.
+0. **Demos in the charter (done).** Agreed with Steve and merged on 6 November 2026 (#282): a track step is a finished production, a full game or a full demo, and `PROJECT.md` now has a "What makes a finished demo" section. Verify: the production line's demo gate (step 8) quotes that section.
 
 1. **Prove the gates can fail.** Run each existing Vault and release check against a deliberate fault: a broken link, an unsourced claim, a frontmatter date that contradicts the prose, a duplicate. Verify: every check exits non-zero on its fault. List any that don't, and fix them before the factory relies on them.
 
-2. **(ask) One frontier or several.** Add a `surface` column to `vault-candidates.csv`, so non-Vault work (patterns, explainers, system profiles, production hooks) joins the same queue with the same IDs and issues. The alternative is a sibling frontier file per surface. Recommendation: one file, because a spawn often crosses surfaces. Verify: existing rows keep their IDs and statuses; `vault-candidates.mjs` still runs.
+2. **Two queues, linked by ID (agreed 6 November 2026).** `vault-candidates.csv` stays exactly as it is: its columns (`link_from` and `covered_by` hold Vault paths) and statuses belong to the Vault's review process, and its 3,000 untriaged rows would bury other work. Everything else (patterns, From the Metal articles, Craft lessons, system profiles, production hooks) goes in a new `content-candidates.csv` with its own IDs (`CC-0001` onwards), the columns those surfaces need (surface, subject, why, target system and models where relevant, status, issue), and a `from` column that can cite a `VC-` or `CC-` ID. A spawn that crosses surfaces is recorded in the right queue and points back by ID. Verify: a check rejects a `from` value that names no existing ID, and fails on a planted bad reference; `vault-candidates.csv` is unchanged.
 
-3. **Rank by demand.** Extend `vault-candidates.mjs` to score open rows by `link_from` length and by connection to live tracks or systems with tools. Verify: hand-check that the top ten on current data deserve to be there, and that a row with no referring pages scores zero.
+3. **Rank by demand.** Extend `vault-candidates.mjs` to score open rows by `link_from` length and by connection to live tracks or systems with tools. With about 3,000 untriaged rows, this decides which candidates are looked at first. Verify: hand-check that the top ten on current data deserve to be there, and that a row with no referring pages scores zero.
 
-4. **Expansion step.** A script or agent that, given a subject, proposes neighbours from `knowledge.py`, existing Vault links and `reference/` indexes, and writes them to the frontier as candidates with evidence. It never creates entries. Verify: run it on three entries Steve knows well and compare against his expectations; `find-vault-duplicates.mjs` finds no new duplicates; one deliberately ambiguous name comes back as a question, not a merge.
+4. **Expansion step.** A script or agent that, given a subject, proposes neighbours from `knowledge.py`, existing Vault links and `reference/` indexes, and writes them to the right queue as candidates with evidence. It never creates entries. Verify: run it on three entries Steve knows well and compare against his expectations; `find-vault-duplicates.mjs` finds no new duplicates; one deliberately ambiguous name comes back as a question, not a merge.
 
-5. **The Vault line as a saved workflow.** Encode the existing batch process (as in `plans/2026-10-27-vault-continuation.md`) as a workflow that takes a list of candidate IDs and ends in a draft pull request with review notes. Verify: one batch runs end to end with all gates green, and a planted fault makes it stop.
+5. **Blocked work becomes tool demand.** Add the `blocked` status and an issue link to both queues, a check that every blocked row links to an open or closed issue in a family tool repository, and a report that ranks tool issues by how many items each one blocks. When an issue closes and its fix is released, the blocked items return to `open` and re-run their gates. Verify: a planted blocked row with no issue link fails the check; closing a test issue moves its items back to `open`; a re-run that still fails puts them back to `blocked` with a note.
 
-6. **(ask) System profiles.** Define what a system profile contains, and what evidence moves a system between the existing `tier` values. Read the current tier definitions before proposing anything. Pilot on one thin system that Emu198x already runs, such as the Oric Atmos, Jupiter Ace or Dragon. Verify: every claim in the profile cites a source, and every support surface it names is checked by running the tool.
+6. **The Vault line as a saved workflow.** Encode the existing batch process (as in `plans/2026-10-27-vault-continuation.md`) as a workflow that takes a list of candidate IDs and ends in a draft pull request with review notes. Verify: one batch runs end to end with all gates green, and a planted fault makes it stop.
 
-7. **The production line, piloted on the first Spectrum demo.** Add a production record (target models, stages, expected captures, play or run scripts), extending the website catalogues rather than inventing a format. Build one `verify` command that runs every gate and exits non-zero on any failure. For a demo, the key gate is that it runs to its end, with matching repeat runs, on every model it names. Verify: a deliberately mistimed effect fails on the model it breaks and passes on the others. Emulator bugs found here become emu198x issues for the Emu198x session.
+7. **System depth, separate from tier (agreed 6 November 2026).** `tier` stays the single source of truth for curriculum readiness, and moving a system between tiers stays Steve's decision. The factory may propose a move with evidence, never make one. Depth is a third axis beside readiness and support surfaces, and it is **derived, not stored**, in the manner of `npm run surfaces:gaps`: for each system, report whether it has a Vault entry and whether that entry is reviewed, a capability profile, a historical-use section, and how many linked games, techniques and patterns it has. A missing item is a gap the factory can pick up. Define the profile's sections first, then pilot on one thin `planned` system that Emu198x already runs, such as the Oric Atmos, Jupiter Ace or Dragon. Verify: the depth report changes when the pilot's profile lands; every claim in the profile cites a source; every support surface it names is checked by running the tool; no `tier` value changes.
 
-8. **The explainer line.** Generate a From the Metal article from the pilot demo's evidence: one broken rule, traced across machines and decades, with a live figure. Verify: every fact cites a source; the figure runs in the page; the article links to the production and the production links back.
+8. **The production line, piloted on the first Spectrum demo.** Add a production record (target models, stages, expected captures, play or run scripts), extending the website catalogues rather than inventing a format. Build one `verify` command that runs every gate and exits non-zero on any failure. For a demo, the key gate is that it runs to its end, with matching repeat runs, on every model it names. Verify: a deliberately mistimed effect fails on the model it breaks and passes on the others. Emulator gaps and bugs found here go through step 5.
 
-9. **One walk that exercises everything.** Start from a Spectrum multicolour candidate. No `techniques/` entry covers it yet; check for coverage under other names first. Fill the Vault entry, spawn its neighbours (the Pentagon, the Russian disk magazines, the groups that used the effect), link it to `techniques/raster-effects` and `techniques/attribute-aware-design` where the prose supports it, and connect it to the step 8 article and the step 7 demo. Verify: every surface the walk touches passes its gates, and the frontier holds the spawns.
+9. **The explainer line.** Generate a From the Metal article from the pilot demo's evidence: one broken rule, traced across machines and decades, with a live figure. Verify: every fact cites a source; the figure runs in the page; the article links to the production and the production links back.
 
-10. **Measure, then decide on scale.** Record how many minutes of Steve's time each item took, what the gates missed, and what reviewers changed. Verify: a short Field Note or review file with the numbers. Scale up only the lines whose gates caught what review would have caught.
+10. **One walk that exercises everything.** Start from a Spectrum multicolour candidate. No `techniques/` entry covers it yet; check for coverage under other names first. Fill the Vault entry, spawn its neighbours (the Pentagon, the Russian disk magazines, the groups that used the effect), link it to `techniques/raster-effects` and `techniques/attribute-aware-design` where the prose supports it, and connect it to the step 9 article and the step 8 demo. Verify: every surface the walk touches passes its gates, and both queues hold the spawns.
+
+11. **Measure, then decide on scale.** Record how many minutes of Steve's time each item took, what the gates missed, and what reviewers changed. Verify: a review file with the numbers. Scale up only the lines whose gates caught what review would have caught.
+
+## Disclosing AI (agreed 6 November 2026)
+
+*How 198x uses AI* already covers authorship across the site. What a reader needs on an individual page is whether a person has checked its claims. So the rule is: **a surface carries `ai_generated` and `reviewed` if it can be published before a person has checked it.**
+
+- **Vault entries:** yes, as now.
+- **From the Metal articles and patterns:** yes, but only if the factory publishes them in batches ahead of review. If they publish only after review, they don't need the flags.
+- **Lessons and productions:** no. They publish only after Steve's approval, so the flags would always read the same, and the AI page covers them.
+
+Adding the flags to a collection that needs them is a schema change for that collection, made only when its line starts publishing ahead of review.
+
+**Field Notes are written by Steve.** The publishing guide says first-person accounts "must reflect the author's actual experience". The factory can draft a Field Note from evidence, but Steve rewrites it in his own words, or it is published in the third person.
 
 ## Risks
 
 - **Volume outruns review.** Cheap production makes admission and priority more important. If the review queue grows faster than Steve clears it, the factory slows down; it doesn't lower the bar.
 - **Polished but empty prose.** The voice rules (plain, engaging, concrete, sourced, no invented names) must be checks or reviewer instructions, not hopes.
 - **Single-source claims.** Find a second source or mark the claim single-sourced, as the Vault already does.
-- **Honesty about AI.** Every Vault entry already carries `ai_generated` and `reviewed`. **(ask)** Extending these flags to other surfaces (From the Metal, patterns, lessons) is a schema change.
 - **Demo parties.** Check a party's rules on AI-assisted work before entering anything.
 - **Parallel agents.** Worktrees, unique temporary names, `cd` before `git`, staging by explicit path, and no `git stash`. The workflows must enforce these.
