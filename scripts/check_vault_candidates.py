@@ -175,6 +175,32 @@ LANES = {
 }
 
 
+def by_demand(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    return sorted(rows, key=lambda row: (-demand(row), int(row["id"][3:])))
+
+
+def world_region(row: dict[str, str]) -> str:
+    """The first region on the row that counts for the world lane."""
+    return next(s for s in paths(row["scope"]) if LANES["world"](s))
+
+
+def rotate_by_region(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Interleave regions, so one well-covered region can't fill the world lane.
+
+    Each region's candidates keep their demand order. Each round takes the next
+    candidate from every region that has one, strongest first. A row with two
+    world regions stands in the first listed.
+    """
+    regions: dict[str, list[dict[str, str]]] = {}
+    for row in by_demand(rows):
+        regions.setdefault(world_region(row), []).append(row)
+    queues = sorted(regions.values(), key=lambda q: (-demand(q[0]), int(q[0]["id"][3:])))
+    rotated: list[dict[str, str]] = []
+    for depth in range(max((len(q) for q in queues), default=0)):
+        rotated.extend(q[depth] for q in queues if depth < len(q))
+    return rotated
+
+
 def demand(row: dict[str, str]) -> int:
     """Score a candidate by who already asks for it; no referrers scores zero."""
     score = 0
@@ -217,10 +243,15 @@ def main() -> int:
             and (not args.status or row["status"] == args.status)
             and (not args.lane or any(map(LANES[args.lane], paths(row["scope"]))))
         ]
-        selected.sort(key=lambda row: (-demand(row), int(row["id"][3:])))
+        if args.lane == "world":
+            selected = rotate_by_region(selected)
+            order = "taking regions in turn, each by demand"
+        else:
+            selected = by_demand(selected)
+            order = "highest demand first"
         lane = f" in the {args.lane} lane" if args.lane else ""
         print(
-            f"\n{len(selected):,} matching candidates{lane}, highest demand first "
+            f"\n{len(selected):,} matching candidates{lane}, {order} "
             f"(lesson links weigh {LESSON_WEIGHT}, entry links {ENTRY_WEIGHT})"
         )
         for row in selected[: args.limit]:
