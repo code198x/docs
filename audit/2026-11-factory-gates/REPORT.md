@@ -42,11 +42,12 @@ The Playwright suites in `check:release` (536 tests) and in CI were not given pl
 
 - **website#1398** runs `check-frontmatter-quoting` first in `check:content`, as its header asks. `check:content` passes on `main` and exits 1 on the planted fault.
 - **website#1399** links system pages to Asm198x's current instruction pages rather than the redirect stubs, and makes the publish test refuse redirects. With the old addresses restored, the test fails with `Received: 301`.
+- **website#1404** puts the player back on the eleven system pages with a hardware render (website#1401). Running `check:release` for these changes found that the hardware gallery had replaced each player stage with the render, so `check-browser-player --built` failed on `main`. CI doesn't run that step, so only the local release check could catch it. Earlier release runs in this audit missed it because their scratch worktrees symlinked `public/emulators` from another checkout instead of letting the build stage the pinned player.
 
 ## Decisions (Steve, 6 November 2026)
 
-1. **`check-vault-sources` becomes a gate.** `--strict` fails on any uncited dated claim; `check:content` runs it. In website#1400, awaiting merge.
-2. **Duplicates become a gate at 0.9, with a confirmed-distinct list.** `find-vault-duplicates.mjs --fail-at 0.9`, with `scripts/vault-distinct-pairs.json`. Steve chose new or changed entries only; website#1400 gates every pair instead, which has the same effect today and needs no change to CI's shallow checkout. In website#1400, awaiting merge.
-3. **The two `prose-dates` disagreements were careful prose, not errors, and the check now runs.** Louis Castle's evidence allows 1964 or 1965, so `born` is left unstated. `released` means earliest documented public availability (docs#286), so Diablo stays 1996 and its facts line leads with it. `check:content` runs the check. In website#1400, awaiting merge.
+1. **`check-vault-sources` becomes a gate.** `--strict` fails on any uncited dated claim; `check:content` runs it. Merged in website#1400.
+2. **Duplicates become a gate at 0.9, with a confirmed-distinct list.** `find-vault-duplicates.mjs --fail-at 0.9`, with `scripts/vault-distinct-pairs.json`. Steve chose new or changed entries only; website#1400 gates every pair instead, which has the same effect today and needs no change to CI's shallow checkout. Merged in website#1400.
+3. **The two `prose-dates` disagreements were careful prose, not errors, and the check now runs.** Louis Castle's evidence allows 1964 or 1965, so `born` is left unstated. `released` means earliest documented public availability (docs#286), so Diablo stays 1996 and its facts line leads with it. `check:content` runs the check. Merged in website#1400.
 4. **`check-vault-dates` and `check-vault-platform-balance` stay reports.** The factory's Vault line attaches their output for each batch's new entries to the review notes.
-5. **The Asm198x link test retries on a server error** before failing, so another site's outage doesn't turn a correct pull request red. In progress.
+5. **The Asm198x link test retries on a server error** before failing, so another site's outage doesn't turn a correct pull request red. Merged in website#1402.
