@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from check_vault_candidates import FIELDS, demand, load_backlog
+from check_vault_candidates import FIELDS, check_wants, demand, load_backlog, load_lesson_wants
 
 
 class BacklogTests(unittest.TestCase):
@@ -262,63 +262,82 @@ class BacklogTests(unittest.TestCase):
             load_backlog(self.source)
 
     def website_fixture(self) -> None:
-        """A website with two Vault entries and one lesson."""
+        """A website with two Vault entries (one reviewed) and two lessons."""
         vault = self.root / "src/content/vault/games"
         vault.mkdir(parents=True)
-        for name in ("example", "other"):
-            (vault / f"{name}.mdx").write_text("Entry", encoding="utf-8")
-        lesson = self.root / "src/content/curriculum/core-micro/basic/game"
-        lesson.mkdir(parents=True)
-        (lesson / "unit-01.mdx").write_text("Lesson", encoding="utf-8")
+        (vault / "example.mdx").write_text("---\nreviewed: false\n---\nEntry", encoding="utf-8")
+        (vault / "other.mdx").write_text("---\nreviewed: true\n---\nEntry", encoding="utf-8")
+        self.lessons = self.root / "src/content/curriculum/core-micro/basic/game"
+        self.lessons.mkdir(parents=True)
+        self.lesson("unit-01.mdx", "")
+        self.lesson("unit-02.mdx", "")
+
+    def lesson(self, name: str, wants: str) -> None:
+        (self.lessons / name).write_text(f"---\ntitle: Lesson\n{wants}---\nBody", encoding="utf-8")
 
     def test_no_referrers_score_zero_and_planned_candidates_count_nothing(self) -> None:
         self.assertEqual(demand(self.row | {"link_from": ""}), 0)
         self.assertEqual(demand(self.row | {"link_from": "candidate:VC-0002"}), 0)
 
-    def test_lessons_weigh_more_than_entries_and_repeats_count_once(self) -> None:
-        row = self.row | {
-            "link_from": "lesson:core-micro/basic/game/unit-01;games/example;games/example"
-        }
-        self.assertEqual(demand(row), 3 + 1)
-
-    def test_lesson_references_are_checked(self) -> None:
+    def test_wants_are_read_in_flow_and_block_form(self) -> None:
         self.website_fixture()
-        for changes, message in [
-            ({"link_from": "lesson:core-micro"}, "invalid lesson reference"),
-            ({"link_from": "lesson:core-micro/basic/game/unit-09"}, "missing lesson"),
-            (
-                {"status": "covered", "triage_notes": "Found", "covered_by": "lesson:core-micro/basic/game/unit-01"},
-                "only allowed in link_from",
-            ),
-        ]:
-            with self.subTest(changes=changes):
-                self.write(self.row | changes)
-                with self.assertRaisesRegex(ValueError, message):
-                    load_backlog(self.source, self.root)
-        good = self.row | {"link_from": "lesson:core-micro/basic/game/unit-01;games/example"}
-        self.write(good)
-        self.assertEqual(load_backlog(self.source, self.root), [good])
-
-    def test_shortlist_ranks_by_demand_not_by_count(self) -> None:
-        self.website_fixture()
-        many_others = self.row | {"subject": "Many", "link_from": "games/other;games/example"}
-        one_lesson = self.row | {
-            "id": "VC-0002",
-            "subject": "Lesson",
-            "link_from": "lesson:core-micro/basic/game/unit-01",
-        }
-        self.write(many_others, one_lesson)
-        result = subprocess.run(
-            [
-                sys.executable,
-                str(Path(__file__).with_name("check_vault_candidates.py")),
-                "--file", str(self.source), "--website", str(self.root), "--limit", "2",
-            ],
-            capture_output=True, text=True, check=False,
+        self.lesson("unit-01.mdx", "wants: ['VC-0001', games/example]\n")
+        self.lesson("unit-02.mdx", "wants:\n  - VC-0001\n")
+        self.assertEqual(
+            load_lesson_wants(self.root),
+            {
+                "VC-0001": {"core-micro/basic/game/unit-01", "core-micro/basic/game/unit-02"},
+                "games/example": {"core-micro/basic/game/unit-01"},
+            },
         )
+
+    def test_each_wanting_lesson_weighs_more_than_an_entry(self) -> None:
+        row = self.row | {"link_from": "games/example;games/example"}
+        wants = {"VC-0001": {"a/b/unit-01"}}
+        self.assertEqual(demand(row), 1)
+        self.assertEqual(demand(row, wants), 3 + 1)
+
+    def test_demand_follows_the_lesson_and_nothing_is_deleted(self) -> None:
+        self.website_fixture()
+        self.write(self.row)
+        self.lesson("unit-01.mdx", "wants: [VC-0001]\n")
+        self.assertEqual(demand(self.row, load_lesson_wants(self.root)), 3 + 1)
+        self.lesson("unit-01.mdx", "")
+        self.assertEqual(demand(self.row, load_lesson_wants(self.root)), 1)
+        self.assertEqual(load_backlog(self.source), [self.row])
+
+    def test_a_lesson_cannot_want_an_unknown_candidate(self) -> None:
+        self.website_fixture()
+        self.write(self.row)
+        self.lesson("unit-02.mdx", "wants: [VC-0042]\n")
+        with self.assertRaisesRegex(ValueError, "unit-02 wants unknown candidate VC-0042"):
+            check_wants(load_backlog(self.source), load_lesson_wants(self.root))
+        result = self.run_checker("--website", str(self.root))
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("unknown candidate VC-0042", result.stderr)
+
+    def test_shortlist_ranks_a_wanted_candidate_above_more_links(self) -> None:
+        self.website_fixture()
+        many_links = self.row | {"subject": "Many", "link_from": "games/other;games/example"}
+        wanted = self.row | {"id": "VC-0002", "subject": "Wanted", "link_from": "games/example"}
+        self.write(many_links, wanted)
+        self.lesson("unit-01.mdx", "wants: [VC-0002]\n")
+        result = self.run_checker("--website", str(self.root), "--limit", "2")
         self.assertEqual(result.returncode, 0, result.stderr)
         ranked = [line.split()[0] for line in result.stdout.splitlines() if line.startswith("VC-")]
         self.assertEqual(ranked, ["VC-0002", "VC-0001"])
+
+    def test_wanted_reviews_separates_review_demand_from_satisfied_wants(self) -> None:
+        self.website_fixture()
+        self.write(self.row)
+        self.lesson("unit-01.mdx", "wants: [games/example, games/other]\n")
+        result = self.run_checker("--website", str(self.root), "--wanted-reviews")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        review, satisfied = result.stdout.split("reviewed entries lessons still only want")
+        self.assertIn("games/example", review)
+        self.assertNotIn("games/other", review)
+        self.assertIn("games/other", satisfied)
+        self.assertNotIn("games/example", satisfied)
 
     def run_checker(self, *args: str) -> subprocess.CompletedProcess[str]:
         return subprocess.run(

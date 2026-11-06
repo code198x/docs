@@ -84,22 +84,6 @@ def load_backlog(source: Path, website: Path | None = None) -> list[dict[str, st
         require(row["status"] in STATUSES, "unknown status")
         for field in ("link_from", "covered_by"):
             for entry in paths(row[field]):
-                if entry.startswith("lesson:"):
-                    require(
-                        field == "link_from",
-                        "lesson references are only allowed in link_from",
-                    )
-                    lesson = entry.removeprefix("lesson:")
-                    require(
-                        re.fullmatch(r"[a-z0-9-]+(?:/[a-z0-9-]+){1,3}", lesson) is not None,
-                        f"invalid lesson reference: {entry}",
-                    )
-                    if website is not None:
-                        require(
-                            (website / "src/content/curriculum" / f"{lesson}.mdx").is_file(),
-                            f"missing lesson: {entry}",
-                        )
-                    continue
                 if entry.startswith("candidate:"):
                     require(
                         field == "link_from",
@@ -160,11 +144,13 @@ def load_backlog(source: Path, website: Path | None = None) -> list[dict[str, st
 
 
 # Demand: how much the site already asks for a subject. A lesson that wants the
-# entry counts most, because a learner is waiting on it; an existing Vault entry
-# counts once; a planned candidate counts nothing, because nobody can read it
-# yet. Demand alone mirrors whatever the Vault already covers, so world
-# computing and early subjects get their own lanes (see LANES) rather than
-# being weighted down by it.
+# subject counts most, because a learner is waiting on it; an existing Vault
+# entry that would link to it counts once; a planned candidate counts nothing,
+# because nobody can read it yet. Lessons say what they want in their own
+# frontmatter (`wants`), read from a website checkout, so dropping a want drops
+# the demand and nothing here goes stale. Demand alone mirrors whatever the
+# Vault already covers, so world computing and early subjects get their own
+# lanes (see LANES) rather than being weighted down by it.
 LESSON_WEIGHT = 3
 ENTRY_WEIGHT = 1
 # Lanes reserve room for the scope axes plain demand would sideline. A batch
@@ -173,10 +159,49 @@ LANES = {
     "world": lambda scope: scope.startswith("region:") and scope not in {"region:us", "region:uk"},
     "early": lambda scope: scope in {"period:1950s", "period:1960s"},
 }
+Wants = dict[str, set[str]]
 
 
-def by_demand(rows: list[dict[str, str]]) -> list[dict[str, str]]:
-    return sorted(rows, key=lambda row: (-demand(row), int(row["id"][3:])))
+def frontmatter_list(front: str, key: str) -> list[str]:
+    """Read a YAML list in flow (`[a, 'b']`) or block (`- a`) form, without a YAML library."""
+    flow = re.search(rf"^{key}:[ \t]*\[(.*?)\][ \t]*$", front, re.M)
+    if flow:
+        return [item.strip().strip("'\"") for item in flow.group(1).split(",") if item.strip()]
+    block = re.search(rf"^{key}:[ \t]*\n((?:[ \t]+-[^\n]*\n?)+)", front, re.M)
+    if block:
+        return [line.split("-", 1)[1].strip().strip("'\"") for line in block.group(1).splitlines()]
+    return []
+
+
+def load_lesson_wants(website: Path) -> Wants:
+    """Map each wanted Vault path or candidate ID to the lessons that want it."""
+    root = website / "src/content/curriculum"
+    wants: Wants = {}
+    for lesson in sorted(root.rglob("unit-*.mdx")):
+        parts = lesson.read_text(encoding="utf-8").split("---")
+        front = parts[1] if len(parts) > 2 else ""
+        for want in frontmatter_list(front, "wants"):
+            wants.setdefault(want, set()).add(lesson.relative_to(root).with_suffix("").as_posix())
+    return wants
+
+
+def check_wants(rows: list[dict[str, str]], wants: Wants) -> None:
+    """A lesson can only want a candidate that exists."""
+    ids = {row["id"] for row in rows}
+    for want, lessons in sorted(wants.items()):
+        if re.fullmatch(r"VC-[0-9]{4,}", want) and want not in ids:
+            raise ValueError(f"{min(lessons)} wants unknown candidate {want}")
+
+
+def demand(row: dict[str, str], wants: Wants | None = None) -> int:
+    """Score a candidate by who already asks for it; no one asking scores zero."""
+    entries = {s for s in paths(row["link_from"]) if not s.startswith("candidate:")}
+    lessons = (wants or {}).get(row["id"], set())
+    return LESSON_WEIGHT * len(lessons) + ENTRY_WEIGHT * len(entries)
+
+
+def by_demand(rows: list[dict[str, str]], wants: Wants | None = None) -> list[dict[str, str]]:
+    return sorted(rows, key=lambda row: (-demand(row, wants), int(row["id"][3:])))
 
 
 def world_region(row: dict[str, str]) -> str:
@@ -184,7 +209,7 @@ def world_region(row: dict[str, str]) -> str:
     return next(s for s in paths(row["scope"]) if LANES["world"](s))
 
 
-def rotate_by_region(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+def rotate_by_region(rows: list[dict[str, str]], wants: Wants | None = None) -> list[dict[str, str]]:
     """Interleave regions, so one well-covered region can't fill the world lane.
 
     Each region's candidates keep their demand order. Each round takes the next
@@ -192,23 +217,13 @@ def rotate_by_region(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     world regions stands in the first listed.
     """
     regions: dict[str, list[dict[str, str]]] = {}
-    for row in by_demand(rows):
+    for row in by_demand(rows, wants):
         regions.setdefault(world_region(row), []).append(row)
-    queues = sorted(regions.values(), key=lambda q: (-demand(q[0]), int(q[0]["id"][3:])))
+    queues = sorted(regions.values(), key=lambda q: (-demand(q[0], wants), int(q[0]["id"][3:])))
     rotated: list[dict[str, str]] = []
     for depth in range(max((len(q) for q in queues), default=0)):
         rotated.extend(q[depth] for q in queues if depth < len(q))
     return rotated
-
-
-def demand(row: dict[str, str]) -> int:
-    """Score a candidate by who already asks for it; no referrers scores zero."""
-    score = 0
-    for source in set(paths(row["link_from"])):
-        if source.startswith("candidate:"):
-            continue
-        score += LESSON_WEIGHT if source.startswith("lesson:") else ENTRY_WEIGHT
-    return score
 
 
 def positive(value: str) -> int:
@@ -226,15 +241,28 @@ def main() -> int:
     parser.add_argument("--category")
     parser.add_argument("--lane", choices=sorted(LANES))
     parser.add_argument("--limit", type=positive)
+    parser.add_argument(
+        "--wanted-reviews",
+        action="store_true",
+        help="list unreviewed Vault entries that lessons want (needs --website)",
+    )
     args = parser.parse_args()
+    if args.wanted_reviews and not args.website:
+        parser.error("--wanted-reviews needs --website")
     try:
         rows = load_backlog(args.file, args.website)
+        wants = load_lesson_wants(args.website) if args.website else None
+        if wants is not None:
+            check_wants(rows, wants)
     except (OSError, UnicodeError, csv.Error, ValueError) as error:
         print(f"FAIL: {error}", file=sys.stderr)
         return 1
     print(f"PASS: {len(rows):,} candidates validated")
     for status, count in sorted(Counter(row["status"] for row in rows).items()):
         print(f"  {status}: {count:,}")
+    if wants is not None:
+        lessons = len({lesson for wanters in wants.values() for lesson in wanters})
+        print(f"  lesson wants: {len(wants):,} subjects wanted by {lessons:,} lessons")
     if args.category or args.status or args.limit or args.lane:
         selected = [
             row
@@ -244,25 +272,46 @@ def main() -> int:
             and (not args.lane or any(map(LANES[args.lane], paths(row["scope"]))))
         ]
         if args.lane == "world":
-            selected = rotate_by_region(selected)
+            selected = rotate_by_region(selected, wants)
             order = "taking regions in turn, each by demand"
         else:
-            selected = by_demand(selected)
+            selected = by_demand(selected, wants)
             order = "highest demand first"
         lane = f" in the {args.lane} lane" if args.lane else ""
+        basis = "" if wants is not None else "; pass --website to count lesson wants"
         print(
             f"\n{len(selected):,} matching candidates{lane}, {order} "
-            f"(lesson links weigh {LESSON_WEIGHT}, entry links {ENTRY_WEIGHT})"
+            f"(each wanting lesson weighs {LESSON_WEIGHT}, each linking entry {ENTRY_WEIGHT}{basis})"
         )
         for row in selected[: args.limit]:
+            lessons = len((wants or {}).get(row["id"], ()))
             refs = len({s for s in paths(row["link_from"]) if not s.startswith("candidate:")})
             scope = f"  [{row['scope']}]" if row["scope"] else ""
             print(
-                f"{row['id']}  demand {demand(row):3}  {refs:3} refs  "
+                f"{row['id']}  demand {demand(row, wants):3}  {lessons:2} lessons  {refs:3} refs  "
                 f"{row['category']}  {row['subject']}{scope}"
             )
-    return 0
+    if args.wanted_reviews:
+        entries = [(w, l) for w, l in wants.items() if not re.fullmatch(r"VC-[0-9]{4,}", w)]
+        entries.sort(key=lambda item: (-len(item[1]), item[0]))
 
+        def reviewed(path: str) -> bool:
+            entry = args.website / "src/content/vault" / f"{path}.mdx"
+            front = entry.read_text(encoding="utf-8").split("---")[1] if entry.is_file() else ""
+            return re.search(r"^reviewed:[ \t]*true[ \t]*$", front, re.M) is not None
+
+        # A reviewed entry a lesson still only wants is satisfied: the lesson
+        # should link to it now. The website warns rather than fails, so a
+        # review batch isn't blocked by lessons it never touched; this list is
+        # where the link pass picks them up.
+        for label, group in (
+            ("unreviewed entries that lessons want (review demand)", [e for e in entries if not reviewed(e[0])]),
+            ("reviewed entries lessons still only want (turn into links)", [e for e in entries if reviewed(e[0])]),
+        ):
+            print(f"\n{len(group):,} {label}, most wanted first")
+            for want, lessons in group[: args.limit]:
+                print(f"{len(lessons):3} lessons  {want}  ← {min(lessons)}")
+    return 0
 
 if __name__ == "__main__":
     sys.exit(main())
