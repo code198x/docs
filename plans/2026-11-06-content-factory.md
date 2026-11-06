@@ -105,7 +105,7 @@ If something can't be made to work today, the factory works out what would make 
 
 Each step ends in a commit and a check that can fail.
 
-0. **Demos and tools in the charter.** Demos agreed with Steve and merged on 6 November 2026 (#282): a track step is a finished production, a full game or a full demo, and `PROJECT.md` now has a "What makes a finished demo" section. Finished tools followed the same day, with a "What makes a finished tool" section (#283, awaiting Steve's review before merging). Verify: the production line's demo and tool gates (step 9) quote those sections.
+0. **Demos and tools in the charter (done).** Demos agreed with Steve and merged on 6 November 2026 (#282): a track step is a finished production, a full game or a full demo, and `PROJECT.md` now has a "What makes a finished demo" section. Finished tools followed the same day, with a "What makes a finished tool" section (#283, merged). Verify: the production line's demo and tool gates (step 9) quote those sections.
 
 1. **Prove the gates can fail.** Run each existing Vault and release check against a deliberate fault: a broken link, an unsourced claim, a frontmatter date that contradicts the prose, a duplicate. Verify: every check exits non-zero on its fault. List any that don't, and fix them before the factory relies on them.
 
