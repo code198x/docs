@@ -36,10 +36,12 @@ The Playwright suites in `check:release` (536 tests) and in CI were not given pl
 - **`check-vault-sources` and `check-vault-dates` say they are reports.** `sources`: "It reports; it does not fail. Grounding is a long job and a red build helps nobody." `dates`: "a ranked list of contradictions to read, not a verdict." The `sources` reason has lapsed: on `main` every one of 1,298 dated claims is cited.
 - **`check-vault-dates` needs the reference corpus.** From a scratch worktree it exits 1 because `../../reference` doesn't exist. Set `REFERENCE_CORPUS` to `reference/_tools/search.sqlite`. On `main`, games alone produce 91 flags; every flag needs a person.
 - **`find-vault-duplicates` separates copies from neighbours.** A planted copy scores 1.000; the highest pair on `main` is 0.801 (Vortex Software and Costa Panayi, a company and the programmer it was built around). 199 pairs score 0.45 or more.
+- **A required CI gate depends on a live external site.** `tests/asm198x-links.spec.ts`, part of the required "Browser tests" gate, fetches every mapped page on asm198x.github.io. On website#1398, a change that touches no page, it failed with a 503 from GitHub Pages; the page answered 200 minutes later, and the failed job was re-run. The same test followed redirects, so it passed links that point at Asm198x's old redirect stubs.
 
 ## Fixed
 
 - **website#1398** runs `check-frontmatter-quoting` first in `check:content`, as its header asks. `check:content` passes on `main` and exits 1 on the planted fault.
+- **website#1399** links system pages to Asm198x's current instruction pages rather than the redirect stubs, and makes the publish test refuse redirects. With the old addresses restored, the test fails with `Received: 301`.
 
 ## Decisions for Steve
 
@@ -47,3 +49,4 @@ The Playwright suites in `check:release` (536 tests) and in CI were not given pl
 2. **Make duplicates a gate for new entries only.** Fail when an entry added or changed in a pull request scores 0.9 or more against an existing entry. Existing pairs stay a report. 0.9 sits well above the highest legitimate pair (0.801) and below a copy (1.000).
 3. **Fix the two `prose-dates` disagreements, then add it to `check:content`.** Each correction needs a source, so they go to the Vault line as corrections.
 4. **Keep `check-vault-dates` and `check-vault-platform-balance` as reports.** Corpus noise and editorial balance need a person. The factory's Vault line runs both on each batch's new entries and attaches the output to the review notes.
+5. **Decide how the Asm198x link test treats outages.** A server error from another site shouldn't turn a correct pull request red. Either retry the request on a 5xx before failing, or move the external fetch into a scheduled check that opens an issue, leaving the card tests in the required gate. I'd retry: it keeps the check where a broken mapping is introduced.
