@@ -98,6 +98,17 @@ With `--website`, the checker counts each lesson that wants a candidate in its d
 python3.13 scripts/check_vault_candidates.py --website ../website --wanted-reviews --limit 20
 ```
 
+## Expand from an entry
+
+`scripts/expand_vault_entry.py` proposes candidates related to one existing entry, from three sources: names its prose emphasises that have no entry yet, its neighbours in the knowledge graph (publishers, developers, games and people, with the magazine or catalogue record for each), and existing candidates it names whose `link_from` lacks it. It never creates entries. A name that matches more than one graph identity of the same type, nearly matches something that already exists, or has no known category comes back as a question, not a proposal.
+
+```sh
+python3.13 scripts/expand_vault_entry.py companies/ultimate --website ../website
+python3.13 scripts/expand_vault_entry.py companies/ultimate --website ../website --apply
+```
+
+With `--apply` it appends the new candidates (`needs-triage`, citing the entry in `link_from`) and the `link_from` additions, then revalidates the backlog and leaves the file unchanged if anything is invalid. Review the result as a pull request. The graph lives in the umbrella's `reference/` library, so the step runs locally; without it, pass `--no-graph` and only the prose and the queue are used.
+
 ## Lanes for world computing and early subjects
 
 Demand alone mirrors what the Vault already covers, which leans towards British and American machines of the 1980s. Two lanes keep the scope axes in view:
