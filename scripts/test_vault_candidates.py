@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from check_vault_candidates import FIELDS, load_backlog
+from check_vault_candidates import FIELDS, demand, load_backlog
 
 
 class BacklogTests(unittest.TestCase):
@@ -260,6 +260,102 @@ class BacklogTests(unittest.TestCase):
         self.source.write_text(original.rstrip() + ",unexpected\n", encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "missing or extra fields"):
             load_backlog(self.source)
+
+    def website_fixture(self) -> None:
+        """A website with two Vault entries and one lesson."""
+        vault = self.root / "src/content/vault/games"
+        vault.mkdir(parents=True)
+        for name in ("example", "other"):
+            (vault / f"{name}.mdx").write_text("Entry", encoding="utf-8")
+        lesson = self.root / "src/content/curriculum/core-micro/basic/game"
+        lesson.mkdir(parents=True)
+        (lesson / "unit-01.mdx").write_text("Lesson", encoding="utf-8")
+
+    def test_no_referrers_score_zero_and_planned_candidates_count_nothing(self) -> None:
+        self.assertEqual(demand(self.row | {"link_from": ""}), 0)
+        self.assertEqual(demand(self.row | {"link_from": "candidate:VC-0002"}), 0)
+
+    def test_lessons_weigh_more_than_entries_and_repeats_count_once(self) -> None:
+        row = self.row | {
+            "link_from": "lesson:core-micro/basic/game/unit-01;games/example;games/example"
+        }
+        self.assertEqual(demand(row), 3 + 1)
+
+    def test_lesson_references_are_checked(self) -> None:
+        self.website_fixture()
+        for changes, message in [
+            ({"link_from": "lesson:core-micro"}, "invalid lesson reference"),
+            ({"link_from": "lesson:core-micro/basic/game/unit-09"}, "missing lesson"),
+            (
+                {"status": "covered", "triage_notes": "Found", "covered_by": "lesson:core-micro/basic/game/unit-01"},
+                "only allowed in link_from",
+            ),
+        ]:
+            with self.subTest(changes=changes):
+                self.write(self.row | changes)
+                with self.assertRaisesRegex(ValueError, message):
+                    load_backlog(self.source, self.root)
+        good = self.row | {"link_from": "lesson:core-micro/basic/game/unit-01;games/example"}
+        self.write(good)
+        self.assertEqual(load_backlog(self.source, self.root), [good])
+
+    def test_shortlist_ranks_by_demand_not_by_count(self) -> None:
+        self.website_fixture()
+        many_others = self.row | {"subject": "Many", "link_from": "games/other;games/example"}
+        one_lesson = self.row | {
+            "id": "VC-0002",
+            "subject": "Lesson",
+            "link_from": "lesson:core-micro/basic/game/unit-01",
+        }
+        self.write(many_others, one_lesson)
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(Path(__file__).with_name("check_vault_candidates.py")),
+                "--file", str(self.source), "--website", str(self.root), "--limit", "2",
+            ],
+            capture_output=True, text=True, check=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        ranked = [line.split()[0] for line in result.stdout.splitlines() if line.startswith("VC-")]
+        self.assertEqual(ranked, ["VC-0002", "VC-0001"])
+
+    def run_checker(self, *args: str) -> subprocess.CompletedProcess[str]:
+        return subprocess.run(
+            [sys.executable, str(Path(__file__).with_name("check_vault_candidates.py")),
+             "--file", str(self.source), *args],
+            capture_output=True, text=True, check=False,
+        )
+
+    def test_scope_names_a_region_or_a_decade(self) -> None:
+        for scope, message in [
+            ("Region:USSR", "invalid scope"),
+            ("region:ussr;region:ussr", "duplicate scope"),
+            ("period:1965", "invalid scope"),
+            ("era:early", "invalid scope"),
+        ]:
+            with self.subTest(scope=scope):
+                self.write(self.row | {"scope": scope})
+                with self.assertRaisesRegex(ValueError, message):
+                    load_backlog(self.source)
+        good = self.row | {"scope": "region:east-germany;period:1960s"}
+        self.write(good)
+        self.assertEqual(load_backlog(self.source), [good])
+
+    def test_lanes_select_world_computing_and_early_subjects(self) -> None:
+        rows = [
+            self.row | {"id": "VC-0001", "subject": "Soviet", "scope": "region:ussr"},
+            self.row | {"id": "VC-0002", "subject": "British", "scope": "region:uk"},
+            self.row | {"id": "VC-0003", "subject": "Early", "scope": "period:1960s;region:us"},
+            self.row | {"id": "VC-0004", "subject": "Unscoped"},
+        ]
+        self.write(*rows)
+        for lane, expected in [("world", ["VC-0001"]), ("early", ["VC-0003"])]:
+            with self.subTest(lane=lane):
+                result = self.run_checker("--lane", lane)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                shown = [line.split()[0] for line in result.stdout.splitlines() if line.startswith("VC-")]
+                self.assertEqual(shown, expected)
 
 
 if __name__ == "__main__":

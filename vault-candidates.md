@@ -9,9 +9,10 @@
 | `id` | Stable identifier, such as `VC-0001`. Allocate the next unused number; never renumber or reuse an ID. It is not an article slug. |
 | `subject` | Proposed subject name. Different subjects may share a name; check the category and reason. |
 | `category` | Proposed Vault category. Confirm it during triage. |
+| `scope` | Semicolon-separated scope axes the subject belongs to: `region:<slug>` for where it was made or used (`region:ussr`, `region:japan`, `region:east-germany`) and `period:<decade>` for when (`period:1960s`). Set during triage; leave blank when neither says anything useful. |
 | `status` | One of the states below. |
 | `why` | The existing reason to consider this subject. Verify it before promoting the candidate. |
-| `link_from` | Semicolon-separated referring sources: existing Vault paths (`category/slug`), or `candidate:VC-0001` for a planned source identified by its existing candidate ID. These record intended backlinks, not links that already exist. |
+| `link_from` | Semicolon-separated referring sources: existing Vault paths (`category/slug`), `lesson:<path>` for a lesson that wants the entry (its path under the website's `src/content/curriculum/`, without `.mdx`), or `candidate:VC-0001` for a planned source identified by its existing candidate ID. These record intended backlinks, not links that already exist. |
 | `triage_notes` | Scope, checks for existing coverage and aliases, source leads, relevant lessons and the reasoning behind a triage decision. |
 | `covered_by` | Semicolon-separated paths of existing Vault entries that cover the subject, required for `covered` and `published`. |
 | `issue` | The canonical `code198x/website` issue URL once the candidate is ready and an issue exists. Blank until then. |
@@ -20,7 +21,7 @@ Use a CSV-aware editor or Python's `csv` module. Quotes and commas in names and 
 
 For an unwritten referring entry, use its stable candidate identity rather than a proposed URL. For example, `candidate:VC-2826` identifies the women's computing theme as a planned source. The referenced record must exist and cannot be the referring candidate itself. Keep any earlier proposed path in `triage_notes` for context; a candidate reference does not reserve a URL or establish publication. Once the referring entry is published, check its actual path and replace the candidate reference with that path.
 
-Candidate references are allowed only in `link_from`. `covered_by` always names actual entry paths: another candidate is not evidence that coverage exists.
+Candidate and lesson references are allowed only in `link_from`. `covered_by` always names actual entry paths: another candidate is not evidence that coverage exists.
 
 ## Triage and status
 
@@ -83,9 +84,23 @@ python3.13 scripts/check_vault_candidates.py --status needs-triage --category ha
 python3.13 scripts/check_vault_candidates.py --website ../website --limit 20
 ```
 
-The checker validates the entire CSV, including planned source IDs, before displaying a filtered list. It sorts displayed candidates by the number of distinct referring sources, with ID as the tie-breaker. `--website` optionally checks every existing-page reference against a website checkout; point it at the checkout you are actually using. It recognises Vault collection MDX files and concrete Game Study `index.astro` pages. It does not infer arbitrary pages from dynamic routes or assess prose, historical claims, aliases, issue state or a successful production build.
+The checker validates the entire CSV, including planned source IDs, before displaying a filtered list. It sorts displayed candidates by demand, with ID as the tie-breaker: each distinct lesson in `link_from` counts 3, each existing Vault entry 1, and a planned candidate nothing. `--website` optionally checks every existing-page reference against a website checkout; point it at the checkout you are actually using. It recognises Vault collection MDX files and concrete Game Study `index.astro` pages. It does not infer arbitrary pages from dynamic routes or assess prose, historical claims, aliases, issue state or a successful production build.
 
 Run the checker's regression tests with `PYTHONDONTWRITEBYTECODE=1 python3.13 -m unittest discover -s scripts -p 'test_*.py'`. They exercise malformed records, duplicate identities, incomplete status changes and filtering that must not hide invalid rows.
+
+## Lanes for world computing and early subjects
+
+Demand alone mirrors what the Vault already covers, which leans towards British and American machines of the 1980s. Two lanes keep the scope axes in view, ranked by demand within each:
+
+- **world:** any `region:` other than `region:us` or `region:uk`.
+- **early:** `period:1950s` or `period:1960s`.
+
+```sh
+python3.13 scripts/check_vault_candidates.py --status needs-triage --lane world --limit 20
+python3.13 scripts/check_vault_candidates.py --status needs-triage --lane early --limit 20
+```
+
+A batch takes at least a third of its subjects from these lanes whenever they hold candidates, and the rest from the overall ranking. Lanes only see candidates whose `scope` is set, so triage records it.
 
 ## Existing scope notes
 

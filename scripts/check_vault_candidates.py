@@ -11,6 +11,7 @@ FIELDS = [
     "id",
     "subject",
     "category",
+    "scope",
     "status",
     "why",
     "link_from",
@@ -69,12 +70,36 @@ def load_backlog(source: Path, website: Path | None = None) -> list[dict[str, st
             re.fullmatch(r"[a-z]+(?:-[a-z]+)*", row["category"]) is not None,
             "invalid category slug",
         )
+        scopes = paths(row["scope"])
+        require(len(scopes) == len(set(scopes)), "duplicate scope")
+        for scope in scopes:
+            require(
+                re.fullmatch(r"region:[a-z0-9]+(?:-[a-z0-9]+)*|period:(?:19|20)[0-9]0s", scope)
+                is not None,
+                f"invalid scope: {scope}",
+            )
         subject = (row["category"], row["subject"].casefold())
         require(subject not in subjects, "duplicate subject in the same category")
         subjects.add(subject)
         require(row["status"] in STATUSES, "unknown status")
         for field in ("link_from", "covered_by"):
             for entry in paths(row[field]):
+                if entry.startswith("lesson:"):
+                    require(
+                        field == "link_from",
+                        "lesson references are only allowed in link_from",
+                    )
+                    lesson = entry.removeprefix("lesson:")
+                    require(
+                        re.fullmatch(r"[a-z0-9-]+(?:/[a-z0-9-]+){1,3}", lesson) is not None,
+                        f"invalid lesson reference: {entry}",
+                    )
+                    if website is not None:
+                        require(
+                            (website / "src/content/curriculum" / f"{lesson}.mdx").is_file(),
+                            f"missing lesson: {entry}",
+                        )
+                    continue
                 if entry.startswith("candidate:"):
                     require(
                         field == "link_from",
@@ -134,6 +159,32 @@ def load_backlog(source: Path, website: Path | None = None) -> list[dict[str, st
     return rows
 
 
+# Demand: how much the site already asks for a subject. A lesson that wants the
+# entry counts most, because a learner is waiting on it; an existing Vault entry
+# counts once; a planned candidate counts nothing, because nobody can read it
+# yet. Demand alone mirrors whatever the Vault already covers, so world
+# computing and early subjects get their own lanes (see LANES) rather than
+# being weighted down by it.
+LESSON_WEIGHT = 3
+ENTRY_WEIGHT = 1
+# Lanes reserve room for the scope axes plain demand would sideline. A batch
+# takes a share from each lane; vault-candidates.md says how much.
+LANES = {
+    "world": lambda scope: scope.startswith("region:") and scope not in {"region:us", "region:uk"},
+    "early": lambda scope: scope in {"period:1950s", "period:1960s"},
+}
+
+
+def demand(row: dict[str, str]) -> int:
+    """Score a candidate by who already asks for it; no referrers scores zero."""
+    score = 0
+    for source in set(paths(row["link_from"])):
+        if source.startswith("candidate:"):
+            continue
+        score += LESSON_WEIGHT if source.startswith("lesson:") else ENTRY_WEIGHT
+    return score
+
+
 def positive(value: str) -> int:
     number = int(value)
     if number < 1:
@@ -147,6 +198,7 @@ def main() -> int:
     parser.add_argument("--website", type=Path)
     parser.add_argument("--status", choices=sorted(STATUSES))
     parser.add_argument("--category")
+    parser.add_argument("--lane", choices=sorted(LANES))
     parser.add_argument("--limit", type=positive)
     args = parser.parse_args()
     try:
@@ -157,22 +209,27 @@ def main() -> int:
     print(f"PASS: {len(rows):,} candidates validated")
     for status, count in sorted(Counter(row["status"] for row in rows).items()):
         print(f"  {status}: {count:,}")
-    if args.category or args.status or args.limit:
+    if args.category or args.status or args.limit or args.lane:
         selected = [
             row
             for row in rows
             if (not args.category or row["category"] == args.category)
             and (not args.status or row["status"] == args.status)
+            and (not args.lane or any(map(LANES[args.lane], paths(row["scope"]))))
         ]
-        selected.sort(
-            key=lambda row: (-len(set(paths(row["link_from"]))), int(row["id"][3:]))
-        )
+        selected.sort(key=lambda row: (-demand(row), int(row["id"][3:])))
+        lane = f" in the {args.lane} lane" if args.lane else ""
         print(
-            f"\n{len(selected):,} matching candidates; highest referring-entry counts first"
+            f"\n{len(selected):,} matching candidates{lane}, highest demand first "
+            f"(lesson links weigh {LESSON_WEIGHT}, entry links {ENTRY_WEIGHT})"
         )
         for row in selected[: args.limit]:
-            count = len(set(paths(row["link_from"])))
-            print(f"{row['id']}  {count:3} refs  {row['category']}  {row['subject']}")
+            refs = len({s for s in paths(row["link_from"]) if not s.startswith("candidate:")})
+            scope = f"  [{row['scope']}]" if row["scope"] else ""
+            print(
+                f"{row['id']}  demand {demand(row):3}  {refs:3} refs  "
+                f"{row['category']}  {row['subject']}{scope}"
+            )
     return 0
 
 
