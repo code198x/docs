@@ -18,8 +18,14 @@ FIELDS = [
     "triage_notes",
     "covered_by",
     "issue",
+    "blocked_by",
 ]
-STATUSES = {"needs-triage", "ready", "in-progress", "covered", "published", "deferred"}
+STATUSES = {"needs-triage", "ready", "in-progress", "blocked", "covered", "published", "deferred"}
+# A blocker lives with the tool that has to change; both queues name one this way.
+TOOL_ISSUE = (
+    r"https://github\.com/(?:emu198x|asm198x|isa198x|build198x|format198x|cat198x"
+    r"|debug198x|lang198x|play198x|code198x)/[A-Za-z0-9._-]+/issues/[1-9][0-9]*"
+)
 ROOT = Path(__file__).resolve().parent.parent
 
 
@@ -133,6 +139,11 @@ def load_backlog(source: Path, website: Path | None = None) -> list[dict[str, st
                 "issue already assigned to another candidate",
             )
             issues.add(row["issue"])
+        if row["status"] == "blocked":
+            require(bool(row["blocked_by"]), "a blocked item needs the tool issue it waits on")
+            require(re.fullmatch(TOOL_ISSUE, row["blocked_by"]) is not None, "invalid tool issue URL")
+        else:
+            require(not row["blocked_by"], "only a blocked item names a blocking issue")
     # Resolve after validating every row: planned sources can appear later in the CSV.
     candidate_ids = {row["id"] for row in rows}
     for source_id, target_id in planned_sources:

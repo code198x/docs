@@ -57,6 +57,21 @@ class BacklogTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, message):
                     load_backlog(self.source)
 
+    def test_a_blocked_candidate_names_the_tool_issue_it_waits_on(self) -> None:
+        blocked = {"status": "blocked", "triage_notes": "Needs a capture."}
+        tool = "https://github.com/emu198x/emu198x/issues/12"
+        for changes, message in [
+            (blocked, "needs the tool issue"),
+            (blocked | {"blocked_by": "https://example.com/issues/1"}, "invalid tool issue URL"),
+            ({"blocked_by": tool}, "only a blocked item"),
+        ]:
+            with self.subTest(changes=changes):
+                self.write(self.row | changes)
+                with self.assertRaisesRegex(ValueError, message):
+                    load_backlog(self.source)
+        self.write(self.row | blocked | {"blocked_by": tool})
+        self.assertEqual(load_backlog(self.source)[0]["status"], "blocked")
+
     def test_incomplete_transitions_are_rejected(self) -> None:
         for changes, message in [
             ({"status": "ready"}, "needs notes"),

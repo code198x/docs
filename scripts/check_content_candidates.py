@@ -14,7 +14,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from check_vault_candidates import load_backlog
+from check_vault_candidates import TOOL_ISSUE, load_backlog
 
 FIELDS = [
     "id",
@@ -36,10 +36,6 @@ STATUSES = {"needs-triage", "ready", "in-progress", "blocked", "covered", "publi
 SLUG = r"[a-z0-9]+(?:-[a-z0-9]+)*"
 # A work item is tracked where its work happens; a blocker lives with the tool.
 WORK_ISSUE = r"https://github\.com/code198x/(?:website|docs|code-samples)/issues/[1-9][0-9]*"
-TOOL_ISSUE = (
-    r"https://github\.com/(?:emu198x|asm198x|isa198x|build198x|format198x|cat198x"
-    r"|debug198x|lang198x|play198x|code198x)/[A-Za-z0-9._-]+/issues/[1-9][0-9]*"
-)
 ROOT = Path(__file__).resolve().parent.parent
 
 
