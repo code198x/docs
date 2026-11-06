@@ -1,8 +1,8 @@
 name: Queues
 # Validates the content factory's two work queues on every change:
-# vault-candidates.csv and content-candidates.csv, their regression tests, and
-# every path they name in the website, which is checked out sparsely beside
-# this repository. Nothing else runs these checks automatically.
+# vault-candidates.csv and content-candidates.csv, their regression tests,
+# every tool issue that blocks their work, and every path they name in the
+# website, which is checked out sparsely beside this repository. Nothing else runs these checks automatically.
 
 on:
   pull_request:
@@ -40,3 +40,9 @@ jobs:
         run: python scripts/check_vault_candidates.py --website website
       - name: Content queue
         run: python scripts/check_content_candidates.py --website website
+      - name: Tool issues that block queued work
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/tool_demand.py --website website
+          python scripts/tool_demand.py --check-issues

@@ -16,6 +16,7 @@
 | `triage_notes` | Scope, checks for existing coverage and aliases, source leads, relevant lessons and the reasoning behind a triage decision. |
 | `covered_by` | Semicolon-separated paths of existing Vault entries that cover the subject, required for `covered` and `published`. |
 | `issue` | The canonical `code198x/website` issue URL once the candidate is ready and an issue exists. Blank until then. |
+| `blocked_by` | For `blocked` only: the issue in a family tool repository the entry waits on, such as an Emu198x issue for a machine it can't yet capture. See [blocked work](content-candidates.md#blocked-work). |
 
 Use a CSV-aware editor or Python's `csv` module. Quotes and commas in names and reasons must survive editing. Keep the header and field order. Add new candidates to the CSV with the next ID and `needs-triage`; do not add a second list here. Keep resolved records and their IDs so later reviews can recognise subjects already assessed.
 
@@ -32,6 +33,7 @@ Candidate references are allowed only in `link_from`. `covered_by` always names 
 | `in-progress` | Writing has started against the linked issue. Retain the triage notes. |
 | `covered` | Existing coverage already serves the reader. Record the entry paths and explain the match; arrange any missing backlinks through the existing issue workflow. |
 | `published` | The finished entry and required backlinks are published and verified. Record the entry path and retain the issue link. |
+| `blocked` | The work can't go on until a family tool changes. Name the tool issue in `blocked_by` and say what is waiting in the notes. |
 | `deferred` | A decision has been made to leave this subject for later. Record why and what would justify reconsidering it. |
 
 Read the referring entries before deciding what the candidate means. Check existing titles, aliases, redirects and relevant sections, not just matching filenames. A matching name is a prompt to inspect coverage; it is not enough to merge or discard a candidate. Likewise, an absent match does not prove an article is missing.
