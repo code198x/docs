@@ -1,0 +1,42 @@
+name: Queues
+# Validates the content factory's two work queues on every change:
+# vault-candidates.csv and content-candidates.csv, their regression tests, and
+# every path they name in the website, which is checked out sparsely beside
+# this repository. Nothing else runs these checks automatically.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: queues-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  queues:
+    name: Queues
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+        with:
+          repository: code198x/website
+          path: website
+          sparse-checkout: src
+          filter: blob:none
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Regression tests
+        run: python -m unittest discover -s scripts -p 'test_*.py'
+      - name: Vault queue
+        run: python scripts/check_vault_candidates.py --website website
+      - name: Content queue
+        run: python scripts/check_content_candidates.py --website website
