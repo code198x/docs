@@ -89,7 +89,7 @@ Screenshots and illustrations have different jobs. A diagram may explain memory;
 
 System units live at `src/content/curriculum/<system>/<track>/<module>/unit-NN.mdx` in the website. Shared units live at `src/content/curriculum/<section>/<module>/unit-NN.mdx`.
 
-Use the fields accepted by `src/content.config.ts`: `title`, optional `description` and `pubDate`, and the required `game` and `unit` numbers; `tags` may be supplied. The numeric `game` field is an implementation requirement, not a curriculum-wide fixed game count. Navigation and system metadata are derived rather than copied into frontmatter.
+Use the fields accepted by `src/content.config.ts`: `title`, optional `description` and `pubDate`, and the required `game` and `unit` numbers; `tags` may be supplied. When the unit would link to a Vault page for depth but the page doesn't exist yet or hasn't been reviewed, record it in `wants` instead of linking: a candidate ID from the [Vault candidate backlog](../vault-candidates.md) (`VC-0123`), or the entry path still awaiting review (`category/slug`). Add a candidate first if the subject has none. Wants rank the Vault queue, so a learner's need reaches the writing work. Once the entry is reviewed, replace the want with a link. The numeric `game` field is an implementation requirement, not a curriculum-wide fixed game count. Navigation and system metadata are derived rather than copied into frontmatter.
 
 Use existing components for code, outputs, traces and diagrams. Pseudocode can be inline; maintained executable listings belong in code-samples. Check imports and use paths relative to the component's documented content root.
 
@@ -99,7 +99,7 @@ Use existing components for code, outputs, traces and diagrams. Pseudocode can b
 - Every runnable state builds or loads with the stated tools and behaves as described in the named configuration.
 - The expected result, media, experiments and troubleshooting were checked; limitations are explicit.
 - Code and assets develop through explained changes, with provenance and permissions addressed.
-- Required links resolve and provide useful context. Proposed pages are not presented as available.
+- Required links resolve and provide useful context. Proposed pages are not presented as available; a page the unit would link to but can't yet is recorded in `wants`.
 - The prose follows the editorial standard and the relevant site checks pass.
 
 These are authoring checks, not learner pass/fail gates. At game completion, also run the end-to-end and playtesting checks in [the workflow](content-creation-workflow.md).
