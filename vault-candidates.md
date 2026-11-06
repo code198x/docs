@@ -102,6 +102,8 @@ python3.13 scripts/check_vault_candidates.py --status needs-triage --lane early 
 
 A batch takes at least a third of its subjects from these lanes whenever they hold candidates, and the rest from the overall ranking. Lanes only see candidates whose `scope` is set, so triage records it.
 
+Every candidate's `scope` was backfilled on 6 November 2026 by a model pass over each row's subject, reason and notes, with instructions to leave a field blank rather than guess. 99 rows were left empty. These are prioritisation hints, not checked facts: triage confirms or corrects a candidate's scope along with the rest of the record.
+
 ## Existing scope notes
 
 The *Your Sinclair* Smash Tapes and *Sinclair User* Megatape fit better as sections of `distribution/cover-tapes` than as entries.
