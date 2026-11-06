@@ -43,10 +43,10 @@ The Playwright suites in `check:release` (536 tests) and in CI were not given pl
 - **website#1398** runs `check-frontmatter-quoting` first in `check:content`, as its header asks. `check:content` passes on `main` and exits 1 on the planted fault.
 - **website#1399** links system pages to Asm198x's current instruction pages rather than the redirect stubs, and makes the publish test refuse redirects. With the old addresses restored, the test fails with `Received: 301`.
 
-## Decisions for Steve
+## Decisions (Steve, 6 November 2026)
 
-1. **Make `check-vault-sources` a gate.** Fail on any uncited dated claim. Nothing is grandfathered, because `main` is fully cited. The report stays available for its `--queue` use.
-2. **Make duplicates a gate for new entries only.** Fail when an entry added or changed in a pull request scores 0.9 or more against an existing entry. Existing pairs stay a report. 0.9 sits well above the highest legitimate pair (0.801) and below a copy (1.000).
-3. **Fix the two `prose-dates` disagreements, then add it to `check:content`.** Each correction needs a source, so they go to the Vault line as corrections.
-4. **Keep `check-vault-dates` and `check-vault-platform-balance` as reports.** Corpus noise and editorial balance need a person. The factory's Vault line runs both on each batch's new entries and attaches the output to the review notes.
-5. **Decide how the Asm198x link test treats outages.** A server error from another site shouldn't turn a correct pull request red. Either retry the request on a 5xx before failing, or move the external fetch into a scheduled check that opens an issue, leaving the card tests in the required gate. I'd retry: it keeps the check where a broken mapping is introduced.
+1. **`check-vault-sources` becomes a gate.** `--strict` fails on any uncited dated claim; `check:content` runs it. Done in website#1400.
+2. **Duplicates become a gate at 0.9, with a confirmed-distinct list.** `find-vault-duplicates.mjs --fail-at 0.9`, with `scripts/vault-distinct-pairs.json`. Steve chose new or changed entries only; website#1400 gates every pair instead, which has the same effect today and needs no change to CI's shallow checkout. Done in website#1400.
+3. **The two `prose-dates` disagreements were careful prose, not errors, and the check now runs.** Louis Castle's evidence allows 1964 or 1965, so `born` is left unstated. `released` means earliest documented public availability (docs#286), so Diablo stays 1996 and its facts line leads with it. `check:content` runs the check. Done in website#1400.
+4. **`check-vault-dates` and `check-vault-platform-balance` stay reports.** The factory's Vault line attaches their output for each batch's new entries to the review notes.
+5. **The Asm198x link test retries on a server error** before failing, so another site's outage doesn't turn a correct pull request red. In progress.
