@@ -99,8 +99,8 @@ Within a game, provide a guided development sequence. Readers are not expected t
 **How a track is shaped.** These are defaults, applied with judgement:
 
 - **A track ladders up.** Each game exists to teach the next technique, and the order follows what each game teaches. This is the one that matters most.
-- **Each step is a full game, not a tech demo.** A technique enters the track inside a game that needs it. Sound, loaders, timing tricks and tools arrive as part of a game, not as standalone showpieces.
-- **A track covers as many genres as practical.** Where two games could teach the same technique, prefer the genre the track has not yet covered.
+- **Each step is a finished production, not a tech demo.** A step ends in a full game or a full demo. A tech demo, a narrow exploration of one technique, is not a step. A technique enters the track inside a production that needs it. Sound, loaders, timing tricks and tools arrive as part of a game or demo, not as standalone showpieces.
+- **A track covers as many genres as practical.** For demos, the scene's own formats play the part of genres, from size-limited intros to full demos. Where two productions could teach the same technique, prefer the genre or format the track has not yet covered.
 - **A track aims for a capstone:** one larger game that brings together what the track taught. It is an aim for the track's shape, not a reserved slot or a promised release.
 - **A unit introduces one new idea where it can.** A unit that needs two new ideas is usually two units.
 - **AMOS and Blitz are peers of Amiga assembly.** They are full tracks in their own right, never a stepping stone to assembly.
@@ -122,6 +122,10 @@ There are no fixed game counts, unit counts or universal language progressions. 
 Choose distinct games across tracks and systems by default. Compare the player's actions, decisions and goal with existing games and proposals before recommending a new project; changing the title, artwork or language alone does not make it distinct. Revisit a game only when explicitly agreed for a stated teaching purpose, such as comparing implementations or exploring a new constraint. Programming concepts can recur through different games. Distinctness must not force a beginner into a more difficult project. Apply this to new choices and reviews; it does not automatically retire existing games.
 
 The basis of a [Spectrum performance-revisit thread](platforms/sinclair-zx-spectrum/basic/performance-revisits.md) is agreed: extend existing BASIC games until a chosen experience exposes measurable limits. The initial BASIC rewrite is complete and published. This thread remains deferred until the owner chooses to resume it. Compare algorithm and representation changes, bounded machine-code helpers and full assembly implementations where evidence warrants them. Specific experiments and ports remain proposals; neither deeper games nor completion of BASIC implies a compulsory move to assembly.
+
+## What makes a finished demo
+
+A demo should be complete, deliberate and watchable from start to end. Its effects, music, graphics and pacing belong together, and it runs to its end on the models it names. It meets the standard of a party release in its format: a finished production, not a single effect on a loop. Name the models a demo supports, because its timing may hold on one model and fail on another.
 
 ## Threads to keep visible
 

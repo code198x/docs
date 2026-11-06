@@ -16,9 +16,9 @@ There are no fixed counts. Most readers stop somewhere on the ladder; each game
 stands on its own. The capstone gathers the track, and the tiers past it go as
 far as the machine goes.
 
-Every rung is a [full game, not a tech demo](../../../PROJECT.md#entry-and-progression).
-Sound, loaders, timing tricks and tools enter the track inside a game that
-needs them. The one exception is rung 0, Meet Assembly, which is already
+Every rung is a [finished production, not a tech demo](../../../PROJECT.md#entry-and-progression):
+a full game or, where one fits, a full demo. Sound, loaders, timing tricks and
+tools enter the track inside a production that needs them. The one exception is rung 0, Meet Assembly, which is already
 published as exercises.
 
 **Evidence** records what `198x/reference/` already supports.
