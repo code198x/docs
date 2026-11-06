@@ -8,6 +8,8 @@ Code198x already does most of its work as a series of agent-run stations with hu
 
 The scarce input is Steve's judgement, not production. The factory spends it on choosing what to make and on taste, and on nothing a check can do instead.
 
+The curriculum is the main product. It is the factory's strongest source of demand (what lessons need) and its strictest gate (what learners can follow), not only where other work ends up.
+
 ## What already exists
 
 | Part | Where | Role in the factory |
@@ -42,21 +44,41 @@ Each surface has its own **line**: stations and gates suited to its cost.
 |---|---|---|
 | Vault entry | triage → sources → write → link → check | Batch review in Steve's own time (`reviewed: true`) |
 | System profile | capability (what the machine can do, from `reference/`, Isa198x and Emu198x support) → historical use (what it was used for, from the knowledge graph and Cat198x) → curriculum hooks | Batch review |
-| Explainer (From the Metal, pattern, Craft lesson) | question → sourced explanation → runnable example → links | Batch review |
+| Explainer (From the Metal, pattern) | question → sourced explanation → runnable example → links | Batch review |
+| Track | propose a track's sequence: which productions, in what order, which genres or demo formats, the capstone, with evidence of what each track already teaches and covers, and distinctness from other tracks | **Steve agrees the sequence** |
 | Production (game or demo) | brief → finished endpoint → runnable stages → units → fan-out → review → publish | **Approve the brief**, then **play or watch the finished production** |
+| Progression (Craft, Foundations, recurring threads) | question → prototype or playground → sequence of lessons with exercises → links | **Steve approves the prototype**, then tests the sequence |
 | Link pass | find mentions that should link → add links → check | None beyond the checks |
 
 The cost decides the gate. Cheap work flows and is reviewed in batches. A production or a new track needs its brief agreed first, as this repository's `AGENTS.md` already requires for new lineups ("New lineups require agreement before bulk lesson development").
 
 ## Entry points
 
+**Lesson-led.** Start from a lesson and fill what it needs: the pages it links to for depth, the explanation and exercise gaps the audits record against it, and the patterns its techniques deserve. See "The curriculum at the centre".
+
 **Vault-led.** A candidate becomes an entry. The run adds the links named in its `link_from`, records new candidates it meets, and proposes curriculum hooks. A person leads to the systems they worked on and the games they made; a game leads to its techniques; a technique leads to a pattern, a From the Metal article or a production that needs it.
 
-**System-led.** Pick one of the 162 systems and deepen its coverage: a sourced Vault entry and a system profile covering what the machine can do and what it was used for. Name its support surfaces precisely (Emu198x, Asm198x, curriculum). Then propose curriculum hooks: Craft lessons and From the Metal articles it can illustrate and, where there's a concrete teaching purpose, a production brief. Depth is not readiness: the factory never changes a system's `tier` (see step 7). "Wider systems enter through a concrete teaching purpose" (`PROJECT.md`) still decides whether a system gets a track.
+**System-led.** Pick one of the 162 systems and deepen its coverage: a sourced Vault entry and a system profile covering what the machine can do and what it was used for. Name its support surfaces precisely (Emu198x, Asm198x, curriculum). Then propose curriculum hooks: Craft lessons and From the Metal articles it can illustrate and, where there's a concrete teaching purpose, a production brief. Depth is not readiness: the factory never changes a system's `tier` (see step 8). "Wider systems enter through a concrete teaching purpose" (`PROJECT.md`) still decides whether a system gets a track. A thin system can feed Craft examples and From the Metal articles without one; a track comes only through the Track line, after Steve moves the system's tier.
 
 **Subject-led.** Start from a Craft topic, for example the economics of budget software. Find its historical anchors in the Vault, link both ways, and propose a production that shows it in play.
 
 **Production-led.** Start from an agreed brief, as `content-creation-workflow.md` already describes, and fan the production's evidence out to From the Metal, the Vault, Field Notes and patterns.
+
+## The curriculum at the centre
+
+**Demand.** Lessons already say what they need:
+
+- `specifications/unit.md` has a lesson explain what it uses "with optional links for depth". A wanted link to a page that doesn't exist, or to an unreviewed Vault entry, becomes a candidate.
+- `specifications/recurring-progressions.md` audits the four tracks for explanation gaps, exercise gaps and topic gaps. Each gap becomes a row in `content-candidates.csv`, citing the lesson it came from.
+- `specifications/craft-coverage.md` lists planned Craft sequences; each becomes a candidate for the Progression line.
+
+A page wanted by a lesson counts for more than one wanted by a Vault entry, so the Vault grows towards what learners need.
+
+**Gates.** The curriculum specifications already set most of them:
+
+- **Machine checks.** Every checkpoint builds and runs. BASIC listings survive Build198x's round trip and match the machine's `LIST`. Build198x's BASIC lint rejects Spectrum keywords used as variable names. Required links resolve, and proposed pages aren't presented as available (`unit.md`). A course's final source matches its accepted endpoint.
+- **Reviewer checks, with Steve's sign-off.** One new idea per unit where it can be done, and programs contain only code that has been taught. Agents flag problems against these; they don't decide them.
+- **People (agreed 6 November 2026).** Steve is the primary tester: he plays every game, watches every demo and works through new sequences before they publish, as `content-creation-workflow.md` requires. Trials with other learners, such as the trial pack the Foundations and Spectrum pilot is building, are used where practical, not required. The factory's job is to make Steve's testing and any learner trial cheap to run (ready-to-load builds, the expected result for each stage, a record of what he found), never to replace it.
 
 ## When the tools can't do it yet
 
@@ -72,7 +94,7 @@ If something can't be made to work today, the factory works out what would make 
 ## Keeping it in bounds
 
 - **Admission.** The Vault's rule applies to every surface: a subject earns work by helping a reader of something that already exists.
-- **Priority by demand.** Rank candidates by how many existing pages would link to them (the length of `link_from`), plus whether they connect to a live track or a system with tools. Demand comes from the site, not from the agent.
+- **Priority by demand.** Rank candidates by how many existing pages would link to them (the length of `link_from`), weighting links from lessons above links from other pages, plus whether they connect to a live track or a system with tools. Demand comes from the site, not from the agent.
 - **A budget per run.** At most two hops from the start; fill about one batch (around ten items); record every spawn but fill none.
 - **No merging by guesswork.** The knowledge graph never auto-merges fuzzy identity matches (see `build_graph.py`). The factory follows the same rule: an uncertain identity goes to the queue as a question, not into an entry.
 - **Everything is a pull request.** Work happens in worktrees and ends in a pull request. Nothing reaches the site without passing the gates and, for its line, a person.
@@ -81,29 +103,31 @@ If something can't be made to work today, the factory works out what would make 
 
 Each step ends in a commit and a check that can fail.
 
-0. **Demos in the charter (done).** Agreed with Steve and merged on 6 November 2026 (#282): a track step is a finished production, a full game or a full demo, and `PROJECT.md` now has a "What makes a finished demo" section. Verify: the production line's demo gate (step 8) quotes that section.
+0. **Demos in the charter (done).** Agreed with Steve and merged on 6 November 2026 (#282): a track step is a finished production, a full game or a full demo, and `PROJECT.md` now has a "What makes a finished demo" section. Verify: the production line's demo gate (step 9) quotes that section.
 
 1. **Prove the gates can fail.** Run each existing Vault and release check against a deliberate fault: a broken link, an unsourced claim, a frontmatter date that contradicts the prose, a duplicate. Verify: every check exits non-zero on its fault. List any that don't, and fix them before the factory relies on them.
 
 2. **Two queues, linked by ID (agreed 6 November 2026).** `vault-candidates.csv` stays exactly as it is: its columns (`link_from` and `covered_by` hold Vault paths) and statuses belong to the Vault's review process, and its 3,000 untriaged rows would bury other work. Everything else (patterns, From the Metal articles, Craft lessons, system profiles, production hooks) goes in a new `content-candidates.csv` with its own IDs (`CC-0001` onwards), the columns those surfaces need (surface, subject, why, target system and models where relevant, status, issue), and a `from` column that can cite a `VC-` or `CC-` ID. A spawn that crosses surfaces is recorded in the right queue and points back by ID. Verify: a check rejects a `from` value that names no existing ID, and fails on a planted bad reference; `vault-candidates.csv` is unchanged.
 
-3. **Rank by demand.** Extend `vault-candidates.mjs` to score open rows by `link_from` length and by connection to live tracks or systems with tools. With about 3,000 untriaged rows, this decides which candidates are looked at first. Verify: hand-check that the top ten on current data deserve to be there, and that a row with no referring pages scores zero.
+3. **Rank by demand.** Extend `vault-candidates.mjs` to score open rows by `link_from` length, weighting links from lessons above other pages, and by connection to live tracks or systems with tools. With about 3,000 untriaged rows, this decides which candidates are looked at first. Verify: hand-check that the top ten on current data deserve to be there, and that a row with no referring pages scores zero.
 
-4. **Expansion step.** A script or agent that, given a subject, proposes neighbours from `knowledge.py`, existing Vault links and `reference/` indexes, and writes them to the right queue as candidates with evidence. It never creates entries. Verify: run it on three entries Steve knows well and compare against his expectations; `find-vault-duplicates.mjs` finds no new duplicates; one deliberately ambiguous name comes back as a question, not a merge.
+4. **Curriculum demand.** Feed what lessons need into the queues: wanted links for depth that point to missing or unreviewed pages, the explanation, exercise and topic gaps in `recurring-progressions.md`, and the planned sequences in `craft-coverage.md`. Each row cites the lesson or specification it came from. Verify: a lesson link planted to a missing page appears as a candidate citing that lesson; removing the link removes the demand on the next run, but never deletes a row already being worked on.
 
-5. **Blocked work becomes tool demand.** Add the `blocked` status and an issue link to both queues, a check that every blocked row links to an open or closed issue in a family tool repository, and a report that ranks tool issues by how many items each one blocks. When an issue closes and its fix is released, the blocked items return to `open` and re-run their gates. Verify: a planted blocked row with no issue link fails the check; closing a test issue moves its items back to `open`; a re-run that still fails puts them back to `blocked` with a note.
+5. **Expansion step.** A script or agent that, given a subject, proposes neighbours from `knowledge.py`, existing Vault links and `reference/` indexes, and writes them to the right queue as candidates with evidence. It never creates entries. Verify: run it on three entries Steve knows well and compare against his expectations; `find-vault-duplicates.mjs` finds no new duplicates; one deliberately ambiguous name comes back as a question, not a merge.
 
-6. **The Vault line as a saved workflow.** Encode the existing batch process (as in `plans/2026-10-27-vault-continuation.md`) as a workflow that takes a list of candidate IDs and ends in a draft pull request with review notes. Verify: one batch runs end to end with all gates green, and a planted fault makes it stop.
+6. **Blocked work becomes tool demand.** Add the `blocked` status and an issue link to both queues, a check that every blocked row links to an open or closed issue in a family tool repository, and a report that ranks tool issues by how many items each one blocks. When an issue closes and its fix is released, the blocked items return to `open` and re-run their gates. Verify: a planted blocked row with no issue link fails the check; closing a test issue moves its items back to `open`; a re-run that still fails puts them back to `blocked` with a note.
 
-7. **System depth, separate from tier (agreed 6 November 2026).** `tier` stays the single source of truth for curriculum readiness, and moving a system between tiers stays Steve's decision. The factory may propose a move with evidence, never make one. Depth is a third axis beside readiness and support surfaces, and it is **derived, not stored**, in the manner of `npm run surfaces:gaps`: for each system, report whether it has a Vault entry and whether that entry is reviewed, a capability profile, a historical-use section, and how many linked games, techniques and patterns it has. A missing item is a gap the factory can pick up. Define the profile's sections first, then pilot on one thin `planned` system that Emu198x already runs, such as the Oric Atmos, Jupiter Ace or Dragon. Verify: the depth report changes when the pilot's profile lands; every claim in the profile cites a source; every support surface it names is checked by running the tool; no `tier` value changes.
+7. **The Vault line as a saved workflow.** Encode the existing batch process (as in `plans/2026-10-27-vault-continuation.md`) as a workflow that takes a list of candidate IDs and ends in a draft pull request with review notes. Verify: one batch runs end to end with all gates green, and a planted fault makes it stop.
 
-8. **The production line, piloted on the first Spectrum demo.** Add a production record (target models, stages, expected captures, play or run scripts), extending the website catalogues rather than inventing a format. Build one `verify` command that runs every gate and exits non-zero on any failure. For a demo, the key gate is that it runs to its end, with matching repeat runs, on every model it names. Verify: a deliberately mistimed effect fails on the model it breaks and passes on the others. Emulator gaps and bugs found here go through step 5.
+8. **System depth, separate from tier (agreed 6 November 2026).** `tier` stays the single source of truth for curriculum readiness, and moving a system between tiers stays Steve's decision. The factory may propose a move with evidence, never make one. Depth is a third axis beside readiness and support surfaces, and it is **derived, not stored**, in the manner of `npm run surfaces:gaps`: for each system, report whether it has a Vault entry and whether that entry is reviewed, a capability profile, a historical-use section, and how many linked games, techniques and patterns it has. A missing item is a gap the factory can pick up. Define the profile's sections first, then pilot on one thin `planned` system that Emu198x already runs, such as the Oric Atmos, Jupiter Ace or Dragon. Verify: the depth report changes when the pilot's profile lands; every claim in the profile cites a source; every support surface it names is checked by running the tool; no `tier` value changes.
 
-9. **The explainer line.** Generate a From the Metal article from the pilot demo's evidence: one broken rule, traced across machines and decades, with a live figure. Verify: every fact cites a source; the figure runs in the page; the article links to the production and the production links back.
+9. **The production line, piloted on the first Spectrum demo.** Add a production record (target models, stages, expected captures, play or run scripts), extending the website catalogues rather than inventing a format. Build one `verify` command that runs every gate and exits non-zero on any failure. For a demo, the key gate is that it runs to its end, with matching repeat runs, on every model it names. Verify: a deliberately mistimed effect fails on the model it breaks and passes on the others. Emulator gaps and bugs found here go through step 6.
 
-10. **One walk that exercises everything.** Start from a Spectrum multicolour candidate. No `techniques/` entry covers it yet; check for coverage under other names first. Fill the Vault entry, spawn its neighbours (the Pentagon, the Russian disk magazines, the groups that used the effect), link it to `techniques/raster-effects` and `techniques/attribute-aware-design` where the prose supports it, and connect it to the step 9 article and the step 8 demo. Verify: every surface the walk touches passes its gates, and both queues hold the spawns.
+10. **The explainer line.** Generate a From the Metal article from the pilot demo's evidence: one broken rule, traced across machines and decades, with a live figure. Verify: every fact cites a source; the figure runs in the page; the article links to the production and the production links back.
 
-11. **Measure, then decide on scale.** Record how many minutes of Steve's time each item took, what the gates missed, and what reviewers changed. Verify: a review file with the numbers. Scale up only the lines whose gates caught what review would have caught.
+11. **One walk that exercises everything.** Start from a Spectrum multicolour candidate. No `techniques/` entry covers it yet; check for coverage under other names first. Fill the Vault entry, spawn its neighbours (the Pentagon, the Russian disk magazines, the groups that used the effect), link it to `techniques/raster-effects` and `techniques/attribute-aware-design` where the prose supports it, and connect it to the step 10 article and the step 9 demo. Verify: every surface the walk touches passes its gates, and both queues hold the spawns.
+
+12. **Measure, then decide on scale.** Record how many minutes of Steve's time each item took, what the gates missed, and what reviewers changed. Verify: a review file with the numbers. Scale up only the lines whose gates caught what review would have caught.
 
 ## Disclosing AI (agreed 6 November 2026)
 
