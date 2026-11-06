@@ -17,8 +17,8 @@ stands on its own. The capstone gathers the track, and the tiers past it go as
 far as the machine goes.
 
 Every rung is a [finished production, not a tech demo](../../../PROJECT.md#entry-and-progression):
-a full game or, where one fits, a full demo. Sound, loaders, timing tricks and
-tools enter the track inside a production that needs them. The one exception is rung 0, Meet Assembly, which is already
+a full game or, where one fits, a full demo or a finished tool. Sound, loaders and
+timing tricks enter the track inside a production that needs them. The one exception is rung 0, Meet Assembly, which is already
 published as exercises.
 
 **Evidence** records what `198x/reference/` already supports.

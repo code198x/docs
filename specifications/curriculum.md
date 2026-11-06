@@ -118,7 +118,7 @@ These are coverage responsibilities, not a checklist every game or machine must 
 
 ## Guided development and multiple entry points
 
-A module groups a coherent learning experience; it may teach concepts, build a game or revisit one. A unit develops a focused idea through meaningful, inspectable stages. Shared units may produce a trace, diagram or paper experiment; system-building units produce runnable results.
+A module groups a coherent learning experience; it may teach concepts, build a production (a game, demo or tool) or revisit one. A unit develops a focused idea through meaningful, inspectable stages. Shared units may produce a trace, diagram or paper experiment; system-building units produce runnable results.
 
 There are no universal unit durations, fixed code-diff limits or required counts. Keep changes small enough to explain, and split overloaded stages. A richer game can introduce several techniques across an understandable sequence.
 
