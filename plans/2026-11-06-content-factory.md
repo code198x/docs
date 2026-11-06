@@ -67,7 +67,7 @@ The cost decides the gate. Cheap work flows and is reviewed in batches. A produc
 
 Each step ends in a commit and a check that can fail.
 
-0. **(ask) Demos in the charter.** Change "Each step is a full game, not a tech demo" in `PROJECT.md` to "a finished production: a full game or a full demo", and add a "What makes a finished demo" section. The wording was drafted in conversation on 6 November 2026. Verify: the production line's demo gate (step 7) quotes the new section.
+0. **Demos in the charter (done).** Agreed with Steve and merged on 6 November 2026 (#282): a track step is a finished production, a full game or a full demo, and `PROJECT.md` now has a "What makes a finished demo" section. Verify: the production line's demo gate (step 7) quotes that section.
 
 1. **Prove the gates can fail.** Run each existing Vault and release check against a deliberate fault: a broken link, an unsourced claim, a frontmatter date that contradicts the prose, a duplicate. Verify: every check exits non-zero on its fault. List any that don't, and fix them before the factory relies on them.
 
