@@ -97,7 +97,9 @@ Set provenance honestly. `ai_generated` records machine-written prose; `reviewed
 | Hardware/Systems | `introduced` | `discontinued` | Produced | `introduced: 1982`, `discontinued: 1994` |
 
 
-Dates must have evidence. Omit or use the schema's nullable field when unknown; do not invent a beginning or end to make a timeline neat. Additional structured fields, including publishers and hardware relationships, must match the actual schema and distinguish an entity from its parent organisation.
+Dates must have evidence. Omit or use the schema's nullable field when unknown; do not invent a beginning or end to make a timeline neat.
+
+`released` is the year of the earliest documented public availability: the first time the public could buy, download or watch the work. A later official date, a regional launch or a publisher's announcement belongs in the prose. *Diablo* was on sale on the American West Coast on 31 December 1996, and Blizzard's official date was 3 January 1997, so its entry says `released: 1996` and its prose gives both. When the evidence allows more than one year for any dated field, as an age reported in a single interview does for a birth year, leave the field unstated and give the range in the prose. Additional structured fields, including publishers and hardware relationships, must match the actual schema and distinguish an entity from its parent organisation.
 
 ## Writing and evidence
 
