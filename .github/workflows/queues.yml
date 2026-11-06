@@ -2,7 +2,8 @@ name: Queues
 # Validates the content factory's two work queues on every change:
 # vault-candidates.csv and content-candidates.csv, their regression tests,
 # every tool issue that blocks their work, and every path they name in the
-# website, which is checked out sparsely beside this repository. Nothing else runs these checks automatically.
+# website, which is checked out sparsely beside this repository. Nothing else
+# runs these checks automatically.
 
 on:
   pull_request:
