@@ -125,13 +125,18 @@ class Known:
             return "entry", self.entries[key]
         if key in self.candidates:
             return "candidate", self.candidates[key]
-        # "Jet-Pac" is the Jetpac entry: compare without word breaks too.
-        compact = key.replace("-", "")
+        # "Jet-Pac" is the Jetpac entry and "Galaxians" the Galaxian one:
+        # compare without word breaks or a final s too.
+        def loose(name: str) -> str:
+            squeezed = name.replace("-", "")
+            return squeezed[:-1] if len(squeezed) > 4 and squeezed.endswith("s") else squeezed
+
+        compact = loose(key)
         for known, target in self.entries.items():
-            if known.replace("-", "") == compact:
+            if loose(known) == compact:
                 return "entry", target
         for known, row in self.candidates.items():
-            if known.replace("-", "") == compact:
+            if loose(known) == compact:
                 return "candidate", row
         return None
 

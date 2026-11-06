@@ -52,6 +52,7 @@ class ExpansionTests(unittest.TestCase):
         for path, title in [
             ("companies/acme", "Acme Software"),
             ("games/jetpac", "Jetpac"),
+            ("games/galaxian", "Galaxian"),
             ("systems/atari-st", "Atari ST"),
             ("systems/msx", "MSX"),
         ]:
@@ -97,7 +98,7 @@ class ExpansionTests(unittest.TestCase):
         self.assertEqual([(p.subject, p.category) for p in result.new], [("Cyberun", "games")])
 
     def test_known_subjects_are_never_proposed_again(self) -> None:
-        self.entry("*Jet-Pac*, *Old Name*, [*Bubbler*](/vault/games/bubbler) and *Atari ST*.")
+        self.entry("*Jet-Pac*, *Old Name*, *Galaxians*, [*Bubbler*](/vault/games/bubbler) and *Atari ST*.")
         result = self.run_expand()
         self.assertEqual(result.new, [])
         self.assertEqual(result.questions, [])
