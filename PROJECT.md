@@ -99,8 +99,8 @@ Within a game, provide a guided development sequence. Readers are not expected t
 **How a track is shaped.** These are defaults, applied with judgement:
 
 - **A track ladders up.** Each game exists to teach the next technique, and the order follows what each game teaches. This is the one that matters most.
-- **Each step is a finished production, not a tech demo.** A step ends in a full game or a full demo. A tech demo, a narrow exploration of one technique, is not a step. A technique enters the track inside a production that needs it. Sound, loaders, timing tricks and tools arrive as part of a game or demo, not as standalone showpieces.
-- **A track covers as many genres as practical.** For demos, the scene's own formats play the part of genres, from size-limited intros to full demos. Where two productions could teach the same technique, prefer the genre or format the track has not yet covered.
+- **Each step is a finished production, not a tech demo.** A step ends in a full game, a full demo or a finished tool. A tech demo, a narrow exploration of one technique, is not a step. A technique enters the track inside a production that needs it. Sound, loaders and timing tricks arrive as part of a production, not as standalone showpieces, and a tool is a step only when it is finished as a tool in its own right.
+- **A track covers as many genres as practical.** For demos, the scene's own formats play the part of genres, from size-limited intros to full demos; for tools, the kind of tool does, such as an editor, a music tracker or a game maker. Where two productions could teach the same technique, prefer the genre, format or kind the track has not yet covered.
 - **A track aims for a capstone:** one larger game that brings together what the track taught. It is an aim for the track's shape, not a reserved slot or a promised release.
 - **A unit introduces one new idea where it can.** A unit that needs two new ideas is usually two units.
 - **AMOS and Blitz are peers of Amiga assembly.** They are full tracks in their own right, never a stepping stone to assembly.
@@ -126,6 +126,10 @@ The basis of a [Spectrum performance-revisit thread](platforms/sinclair-zx-spect
 ## What makes a finished demo
 
 A demo should be complete, deliberate and watchable from start to end. Its effects, music, graphics and pacing belong together, and it runs to its end on the models it names. It meets the standard of a party release in its format: a finished production, not a single effect on a loop. Name the models a demo supports, because its timing may hold on one model and fail on another.
+
+## What makes a finished tool
+
+A tool should let someone make something real with it on the machine, without help from its author. It saves and reloads its own work without loss, in a format the tool documents, and handles mistakes without destroying that work. It comes with enough instruction to use it, and meets the standard of a published utility of its era for its kind, such as a sprite editor, a music tracker or a game maker. Prefer tools whose output a later production in the track uses: an editor whose sprites appear in the next game shows why the tool exists.
 
 ## Threads to keep visible
 
