@@ -29,7 +29,9 @@ The curriculum is the main product. It is the factory's strongest source of dema
 
 **Subjects** are the things the site covers: systems, people, companies, groups, games, demos, techniques, hardware, events, magazines, and Craft topics such as paper prototyping, maths for games, game design and the economics of computers and games.
 
-**Surfaces** are the places a subject can appear: a Vault entry, a system page, a production (game or demo) in a track, a pattern, a From the Metal article, a Craft lesson, a Field Note, and later a book chapter.
+**Surfaces** are the places a subject can appear: a Vault entry, a system page, a production (game, demo or tool) in a track, a pattern, a From the Metal article, a Craft lesson, a Field Note, and later a book chapter.
+
+**How the curriculum is built.** A system can have several **tracks**: one per language (`basic`, `assembly`, `amos`, `blitz`), plus a `machine` track, the briefing every language track on that system assumes. Today the Spectrum has three, the Amiga three, the C64 two and the NES one. Foundations and The Craft are **sections**, not tracks. A track is a sequence of **modules**, and a module may teach concepts, build a production or revisit one (`kind: teaching`, `game` or `interval`). A track holds many **productions**, each a full game, a full demo or a finished tool, and one production can be built across several modules: *Gloaming* is pass 1, and *The Long Night* revisits it as pass 2. **Units** are the lessons inside a module.
 
 A run starts at one subject, on any surface, and makes three kinds of move:
 
@@ -45,8 +47,8 @@ Each surface has its own **line**: stations and gates suited to its cost.
 | Vault entry | triage → sources → write → link → check | Batch review in Steve's own time (`reviewed: true`) |
 | System profile | capability (what the machine can do, from `reference/`, Isa198x and Emu198x support) → historical use (what it was used for, from the knowledge graph and Cat198x) → curriculum hooks | Batch review |
 | Explainer (From the Metal, pattern) | question → sourced explanation → runnable example → links | Batch review |
-| Track | propose a track's sequence: which productions, in what order, which genres or demo formats, the capstone, with evidence of what each track already teaches and covers, and distinctness from other tracks | **Steve agrees the sequence** |
-| Production (game or demo) | brief → finished endpoint → runnable stages → units → fan-out → review → publish | **Approve the brief**, then **play or watch the finished production** |
+| Track | propose one track's sequence of modules: which productions (games, demos, tools), in what order, which genres, demo formats or kinds of tool, and the capstone, with evidence of what the track already teaches. Then check it against the system's other tracks: distinct productions, independent entry points, and the shared `machine` briefing | **Steve agrees the sequence** |
+| Production (game, demo or tool) | brief → finished endpoint → runnable stages → modules and units → fan-out → review → publish | **Approve the brief**, then **play, watch or use the finished production** |
 | Progression (Craft, Foundations, recurring threads) | question → prototype or playground → sequence of lessons with exercises → links | **Steve approves the prototype**, then tests the sequence |
 | Link pass | find mentions that should link → add links → check | None beyond the checks |
 
@@ -103,7 +105,7 @@ If something can't be made to work today, the factory works out what would make 
 
 Each step ends in a commit and a check that can fail.
 
-0. **Demos in the charter (done).** Agreed with Steve and merged on 6 November 2026 (#282): a track step is a finished production, a full game or a full demo, and `PROJECT.md` now has a "What makes a finished demo" section. Verify: the production line's demo gate (step 9) quotes that section.
+0. **Demos and tools in the charter.** Demos agreed with Steve and merged on 6 November 2026 (#282): a track step is a finished production, a full game or a full demo, and `PROJECT.md` now has a "What makes a finished demo" section. Finished tools followed the same day, with a "What makes a finished tool" section (#283, awaiting Steve's review before merging). Verify: the production line's demo and tool gates (step 9) quote those sections.
 
 1. **Prove the gates can fail.** Run each existing Vault and release check against a deliberate fault: a broken link, an unsourced claim, a frontmatter date that contradicts the prose, a duplicate. Verify: every check exits non-zero on its fault. List any that don't, and fix them before the factory relies on them.
 
@@ -121,7 +123,7 @@ Each step ends in a commit and a check that can fail.
 
 8. **System depth, separate from tier (agreed 6 November 2026).** `tier` stays the single source of truth for curriculum readiness, and moving a system between tiers stays Steve's decision. The factory may propose a move with evidence, never make one. Depth is a third axis beside readiness and support surfaces, and it is **derived, not stored**, in the manner of `npm run surfaces:gaps`: for each system, report whether it has a Vault entry and whether that entry is reviewed, a capability profile, a historical-use section, and how many linked games, techniques and patterns it has. A missing item is a gap the factory can pick up. Define the profile's sections first, then pilot on one thin `planned` system that Emu198x already runs, such as the Oric Atmos, Jupiter Ace or Dragon. Verify: the depth report changes when the pilot's profile lands; every claim in the profile cites a source; every support surface it names is checked by running the tool; no `tier` value changes.
 
-9. **The production line, piloted on the first Spectrum demo.** Add a production record (target models, stages, expected captures, play or run scripts), extending the website catalogues rather than inventing a format. Build one `verify` command that runs every gate and exits non-zero on any failure. For a demo, the key gate is that it runs to its end, with matching repeat runs, on every model it names. Verify: a deliberately mistimed effect fails on the model it breaks and passes on the others. Emulator gaps and bugs found here go through step 6.
+9. **The production line, piloted on the first Spectrum demo.** Add a production record (target models, stages, expected captures, play or run scripts), extending the website catalogues rather than inventing a format. Build one `verify` command that runs every gate and exits non-zero on any failure. For a demo, the key gate is that it runs to its end, with matching repeat runs, on every model it names. For a tool, it is a round trip: work saved by the tool reloads identically, and the tool survives a scripted run of mistakes without losing it. Verify: a deliberately mistimed effect fails on the model it breaks and passes on the others. Emulator gaps and bugs found here go through step 6.
 
 10. **The explainer line.** Generate a From the Metal article from the pilot demo's evidence: one broken rule, traced across machines and decades, with a live figure. Verify: every fact cites a source; the figure runs in the page; the article links to the production and the production links back.
 
