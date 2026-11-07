@@ -35,6 +35,7 @@ import sys
 from collections.abc import Callable
 from pathlib import Path
 
+from candidate_ids import batch_refs, clashes, rows_at
 from check_vault_candidates import ROOT, load_backlog
 
 DECISIONS = {"write", "covered", "deferred", "blocked"}
@@ -331,6 +332,21 @@ def check_planned_links(docs: Path, paths: list[str], triage: list[dict]) -> lis
     return failures
 
 
+def check_id_clashes(docs: Path, docs_base: str) -> list[str]:
+    """New IDs must not be given to other subjects by another open batch branch."""
+    with (docs / "vault-candidates.csv").open(newline="", encoding="utf-8") as handle:
+        mine = {row["id"]: row["subject"] for row in csv.DictReader(handle)}
+    own = git(docs, "rev-parse", "--abbrev-ref", "HEAD").strip()
+    head = git(docs, "rev-parse", "HEAD").strip()
+    others = {}
+    for branch, commit in batch_refs(docs).items():
+        if branch == own or commit == head:
+            continue
+        git(docs, "fetch", "-q", "origin", branch)
+        others[branch] = rows_at(docs, commit)
+    return [f"{c}; number new candidates with scripts/candidate_ids.py" for c in clashes(mine, rows_at(docs, docs_base), others)]
+
+
 def check_built(website: Path, paths: list[str], approved: set[str] = frozenset()) -> list[str]:
     """Unreviewed drafts are noindex and out of the sitemap; approved entries are indexed and in it."""
     failures = []
@@ -405,6 +421,7 @@ def main() -> int:
         ("existing entries only gained links", lambda: check_scope_and_preservation(website, base, args.review, paths)),
         ("queue agrees with triage", lambda: check_queue(ROOT, website, triage)),
         ("the queue cites unpublished drafts by candidate ID", lambda: check_planned_links(ROOT, paths, triage)),
+        ("no other open batch uses its new IDs", lambda: check_id_clashes(ROOT, docs_base)),
         (
             "queue tests",
             lambda: [] if (r := run([sys.executable, "-m", "unittest", "discover", "-s", "scripts", "-p", "test_*.py"], ROOT)).returncode == 0
