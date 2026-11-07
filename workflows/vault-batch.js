@@ -46,7 +46,7 @@ const prep = await agent(`Prepare a Vault batch. Work in ${CODE198X}.
 
 1. Run \`date +%F\` for today's date. The batch slug is ${A.slug ? `"${A.slug}"` : '"<date>-vault-batch"'}.
 2. Fetch code198x/docs and code198x/website. Create a docs worktree at ${CODE198X}/docs-batch-<slug> on a new branch vault-batch/<slug> from origin/main, and a website worktree at ${CODE198X}/website-batch-<slug> on the same branch name from origin/main. Never use the main checkouts; another session may own them. If either path or branch already exists, stop and report it rather than reusing or deleting it.
-3. Set up the website worktree to build: \`npm ci\`, \`bash scripts/fetch-ui.sh\`, and symlink code-samples to ../code-samples. Do not symlink public/emulators; \`npm run bundles\` stages it.
+3. Set up the website worktree to build: \`npm ci\`, then \`bash scripts/fetch-ui.sh\`, then copy the built samples with \`cp -R ${CODE198X}/website/public/code-samples public/code-samples\` (a copy, not a link: Git ignores the directory but not a link to it, and the gates reject anything stray). The code-samples checkout the build reads already sits beside the worktree at ${CODE198X}/code-samples; create no link to it inside the worktree. Do not link public/emulators; \`npm run bundles\` stages it.
 4. From the docs worktree run \`python3 scripts/next_vault_batch.py --website <website worktree> ${choice}\`. If it fails, report its output and stop.
 
 Return the paths and the candidates exactly as the script printed them.`, {
