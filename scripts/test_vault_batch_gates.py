@@ -127,5 +127,74 @@ class GateTests(unittest.TestCase):
     def test_a_skipped_release_check_is_never_mistaken_for_a_pass_or_a_usage_error(self) -> None:
         self.assertNotIn(gates.INCOMPLETE, {0, 1, 2})
 
+    def docs_repo(self) -> tuple[Path, str]:
+        docs = Path(self.temp.name) / "docs-repo"
+        docs.mkdir()
+        run = lambda *a: subprocess.run(["git", *a], cwd=docs, capture_output=True, text=True, check=True).stdout
+        run("init", "-q", "-b", "main")
+        (docs / "vault-candidates.csv").write_text("id,subject\nVC-0001,PDP-1\n", encoding="utf-8")
+        run("add", ".")
+        run("-c", "user.name=t", "-c", "user.email=t@example.com", "commit", "-q", "-m", "base")
+        return docs, run("rev-parse", "HEAD").strip()
+
+    def test_nothing_the_batch_adds_may_name_a_private_path(self) -> None:
+        docs, docs_base = self.docs_repo()
+        self.assertEqual(gates.check_private(self.site, self.base, docs, docs_base), [])
+        # Triage notes in the queue are checked too, in the docs repository.
+        with (docs / "vault-candidates.csv").open("a", encoding="utf-8") as queue:
+            queue.write("VC-0002,Read in reference/by-system/dec\n")
+        self.assertRegex(gates.check_private(self.site, self.base, docs, docs_base)[0], "^docs vault-candidates.csv:3")
+        (docs / "vault-candidates.csv").write_text("id,subject\nVC-0001,PDP-1\n", encoding="utf-8")
+        for text in (
+            "Read /Users/someone/Projects/198x/reference/by-system/pdp-1/manual.pdf",
+            "Source: reference/_raw-extracts/dec/pdp-1.txt",
+            "Checked with knowledge.py and facts.sqlite",
+            "Copied from /Volumes/Data/Library",
+            "See reference/known-unknowns.md",
+        ):
+            with self.subTest(text=text):
+                self.write("docs/reviews/batch/REPORT.md", text + "\n")
+                hits = gates.check_private(self.site, self.base, docs, docs_base)
+                self.assertTrue(hits)
+                self.assertTrue(all(h.startswith("website docs/reviews/batch/REPORT.md:1:") for h in hits), hits)
+
+    def test_a_changed_file_is_read_whatever_the_diff_prefixes(self) -> None:
+        # diff.mnemonicPrefix writes "+++ w/file"; the gate must still see the file.
+        for setting in ("false", "true"):
+            with self.subTest(mnemonicPrefix=setting):
+                self.git("config", "diff.mnemonicPrefix", setting)
+                self.write("src/content/vault/systems/pdp-1.mdx", EXISTING + "From /Users/x/library\n")
+                self.assertEqual(len(gates.check_private(self.site, self.base, self.site, self.base)), 2)
+
+    def test_vault_reference_paths_and_older_text_are_allowed(self) -> None:
+        self.write(
+            "docs/reviews/batch/REPORT.md",
+            "Linked from [ports](/vault/reference/zx-spectrum-hardware-ports) and reference/zx-spectrum-hardware-ports.\n",
+        )
+        self.assertEqual(gates.check_private(self.site, self.base, self.site, self.base), [])
+        # A private path already on the base branch isn't this batch's to answer for.
+        self.write("src/content/vault/systems/pdp-1.mdx", EXISTING + "Old note: /Users/x/y\n")
+        self.git("add", ".")
+        self.git("-c", "user.name=t", "-c", "user.email=t@example.com", "commit", "-q", "-m", "older")
+        later = self.git("rev-parse", "HEAD").strip()
+        self.write("src/content/vault/systems/pdp-1.mdx", EXISTING + "Old note: /Users/x/y\nNew line.\n")
+        self.assertEqual(gates.check_private(self.site, later, self.site, later), [])
+        self.write("src/content/vault/systems/pdp-1.mdx", EXISTING + "Old note: /Users/x/y\nNew: /private/tmp/z\n")
+        self.write("src/content/vault/systems/pdp-1.mdx", EXISTING + "Old note: /Users/x/y\nOne.\nTwo /private/tmp/z\n")
+        self.assertRegex(gates.check_private(self.site, later, self.site, later)[0], r"pdp-1\.mdx:9: ")
+        self.write("src/content/vault/systems/pdp-1.mdx", EXISTING + "Old note: /Users/x/y\nNew: /private/tmp/z\n")
+        # Reported at the file's own line, not its place among the added lines.
+        self.assertRegex(gates.check_private(self.site, later, self.site, later)[0], r"pdp-1\.mdx:8: private path '/private/tmp/'")
+
+    def test_scan_checks_text_that_never_reaches_a_branch(self) -> None:
+        body = self.site / "pr-body.md"
+        body.write_text("Sources were read in /Users/someone/Projects/198x/reference/by-topic\n", encoding="utf-8")
+        script = Path(gates.__file__)
+        result = subprocess.run(["python3", str(script), "--scan", str(body)], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 1, result.stdout)
+        body.write_text("Sources are cited in each entry.\n", encoding="utf-8")
+        result = subprocess.run(["python3", str(script), "--scan", str(body)], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stdout)
+
 if __name__ == "__main__":
     unittest.main()

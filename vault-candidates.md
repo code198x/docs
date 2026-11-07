@@ -149,6 +149,7 @@ The workflow works in two new worktrees (`docs-batch-<slug>` and `website-batch-
 
 Then `scripts/vault_batch_gates.py` runs every gate and the batch stops on any failure, before anything is committed. It checks that:
 
+- nothing the batch adds, in either repository, names a private path: the local library's folders, the knowledge graph or a path on this machine. Both repositories are public, so this runs before anything is pushed, and the workflow also scans its writing issues, commit messages and PR descriptions with `--scan` before creating them;
 - triage covers exactly the batch, and the queue rows agree with it;
 - each draft is new, marked `ai_generated: true` and `reviewed: false`, and has an incoming link;
 - every claim has a source, and a claim with only one is marked single-sourced;

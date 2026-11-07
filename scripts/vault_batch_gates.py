@@ -9,7 +9,9 @@ holding the evidence the vault-batch workflow records:
 - claims.json: [{entry, claim, evidence: [...], single_source?, qualification}].
 - backlinks.json and followups.json: what was linked and what was queued.
 
-The gates check the evidence agrees with the files, that existing entries only
+The gates check that nothing the batch adds names a private path (the local
+library, the knowledge graph or anything on this machine), that the evidence
+agrees with the files, that existing entries only
 gained links, that a planted broken link fails the link check, and then run the
 website's full release check and inspect the built pages. Run from the docs
 branch of the batch:
@@ -41,6 +43,17 @@ ALLOWED = ("src/content/vault/", "public/images/vault/", "capture/vault/")
 VAULT_LINK = re.compile(r"\[([^\]]*)\]\(/vault/[^)\s]*\)")
 CONTROL = "[link control](/vault/vault-batch-deliberate-broken-link-control)"
 Run = Callable[[list[str], Path], subprocess.CompletedProcess]
+# The local research library, the knowledge graph and anything on this machine
+# must never reach a public repository. The library's own top-level folders
+# identify it; a bare "reference/" is also a Vault category, so it is allowed.
+PRIVATE = re.compile(
+    r"/Users/|/home/[a-z]|/private/(?:tmp|var)/|/Volumes/|~/Projects|Projects/198x|file://"
+    r"|facts\.sqlite|knowledge\.py"
+    r"|reference/(?:_meta|_quarantine|_raw-extracts|_recovered|_tools|assets|by-system|by-topic|contextual)"
+    r"(?=[/\s\"'`)\],;:]|$)"
+    r"|reference/(?:conventions|index|known-unknowns(?:-resolved)?|README|STATUS)\.md",
+    re.M,
+)
 # Not 2: argparse exits 2 on a usage error, and CI must not mistake one for the other.
 INCOMPLETE = 3
 
@@ -178,6 +191,51 @@ def check_scope_and_preservation(website: Path, base: str, review: str, paths: l
     return failures
 
 
+def private_hits(lines: list[tuple[int, str]], label: str) -> list[str]:
+    """Report each private path with the file's own line number."""
+    hits = []
+    for number, line in lines:
+        for match in PRIVATE.finditer(line):
+            hits.append(f"{label}:{number}: private path {match.group(0)!r}")
+    return hits
+
+
+def numbered(text: str) -> list[tuple[int, str]]:
+    return list(enumerate(text.splitlines(), 1))
+
+
+def added_lines(repo: Path, base: str, *paths: str) -> dict[str, list[tuple[int, str]]]:
+    """What a branch adds, by file: the added lines of tracked files and all of untracked ones."""
+    added: dict[str, list[tuple[int, str]]] = {}
+    current = None
+    number = 0
+    # Explicit prefixes: a user's diff.mnemonicPrefix would otherwise hide every file.
+    diff = git(repo, "diff", "-U0", "--no-color", "--src-prefix=a/", "--dst-prefix=b/", base, "--", *paths)
+    for line in diff.splitlines():
+        if line.startswith("+++ "):
+            current = line[6:] if line.startswith("+++ b/") else None
+        elif line.startswith("@@ "):
+            number = int(re.search(r"\+(\d+)", line).group(1))
+        elif line.startswith("+") and current:
+            added.setdefault(current, []).append((number, line[1:]))
+            number += 1
+    for name in git(repo, "ls-files", "--others", "--exclude-standard", "--", *paths).splitlines():
+        try:
+            added[name] = numbered((repo / name).read_text(encoding="utf-8"))
+        except (UnicodeDecodeError, IsADirectoryError):
+            continue
+    return added
+
+
+def check_private(website: Path, base: str, docs: Path, docs_base: str) -> list[str]:
+    """Nothing a batch adds, in either repository, may name a private path."""
+    failures = []
+    for repo, start, label in ((website, base, "website"), (docs, docs_base, "docs")):
+        for name, lines in added_lines(repo, start).items():
+            failures += private_hits(lines, f"{label} {name}")
+    return failures
+
+
 def link_control(website: Path, entry: str, runner: Run = run) -> list[str]:
     """Plant a broken link in a draft: the link check must fail, then pass once it's removed."""
     source = website / f"src/content/vault/{entry}.mdx"
@@ -235,22 +293,34 @@ def check_built(website: Path, paths: list[str]) -> list[str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--website", type=Path, required=True, help="the batch's website checkout")
-    parser.add_argument("--review", required=True, help="review directory, relative to the website")
-    parser.add_argument("--ids", nargs="+", required=True, metavar="VC-NNNN")
+    parser.add_argument("--scan", nargs="+", type=Path, metavar="FILE", help="only check these files for private paths")
+    parser.add_argument("--website", type=Path, help="the batch's website checkout")
+    parser.add_argument("--review", help="review directory, relative to the website")
+    parser.add_argument("--ids", nargs="+", metavar="VC-NNNN")
     parser.add_argument("--base", default="origin/main", help="website ref the batch starts from")
     parser.add_argument("--skip-release", action="store_true", help="leave out the slow release check")
     args = parser.parse_args()
+    if args.scan:
+        # For text that never reaches a branch's files: commit messages and PR descriptions.
+        hits = [h for path in args.scan for h in private_hits(numbered(path.read_text(encoding="utf-8")), str(path))]
+        for hit in hits:
+            print(f"FAIL  {hit}")
+        print("FAIL: private paths found" if hits else f"PASS: no private paths in {len(args.scan)} files")
+        return 1 if hits else 0
+    if not (args.website and args.review and args.ids):
+        parser.error("--website, --review and --ids are required unless --scan is given")
     website = args.website.resolve()
     gates: list[tuple[str, Callable[[], list[str]]]] = []
     try:
         base = git(website, "merge-base", "HEAD", args.base).strip()
+        docs_base = git(ROOT, "merge-base", "HEAD", "origin/main").strip()
         triage, claims = load_review(website / args.review)
     except (OSError, ValueError) as error:
         print(f"FAIL: {error}", file=sys.stderr)
         return 1
     paths = written(triage)
     gates = [
+        ("nothing names a private path", lambda: check_private(website, base, ROOT, docs_base)),
         ("triage covers the batch", lambda: check_triage(triage, args.ids)),
         ("drafts are new, AI-marked and unreviewed", lambda: check_entries(website, base, paths)),
         ("every claim has its sources", lambda: check_claims(claims, paths)),
