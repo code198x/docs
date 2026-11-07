@@ -2,7 +2,7 @@
 
 A brief is the reviewable specification for a guided game project on any system or language track, including BASIC. Apply [the charter](../PROJECT.md) and [curriculum design](curriculum.md). Historical ancestors and commercial comparisons are optional evidence, not admission requirements.
 
-Store a brief at `platforms/<system>/games/<slug>/brief.md`. Use a stable identity rather than a numbered game slot. Record **status** (proposal, agreed specification, or existing design pending reconciliation), target configuration, language, and the source/catalogue locations used to establish implementation state.
+Store a brief at `platforms/<system>/games/<slug>/brief.md`, or `demos/<slug>` or `tools/<slug>` for a demo or a tool, which follow the same sections where they apply (see [What makes a finished demo](../PROJECT.md#what-makes-a-finished-demo)). Use a stable identity rather than a numbered game slot. Record **status** (proposal, agreed specification, or existing design pending reconciliation), target configuration, language, and the source/catalogue locations used to establish implementation state.
 
 ## Experience and scope
 
