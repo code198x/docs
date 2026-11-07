@@ -131,7 +131,7 @@ Every candidate's `scope` was backfilled on 6 November 2026 by a model pass over
 
 The `vault-batch` workflow ([`workflows/vault-batch.js`](workflows/vault-batch.js)) runs the whole batch process and ends in two draft pull requests for review. It runs in Claude Code on the machine that holds the primary-source library, because the research reads that library; a hosted runner can't.
 
-In Claude Code, type `/vault-batch` or ask it to "run the vault-batch workflow". With no arguments it takes ten candidates from the ranking: at least a third from the lanes, taken in turn, and the rest by demand. Throughout, the machines of the 1980s and earlier (`systems` and `hardware` with a `period:` of the 1950s to the 1980s) come first, then everything else from those decades, and only then later subjects. That keeps batches on the project's centre: by demand alone, well-linked modern consoles and studios would lead. Within the world lane, regions still take turns at each of those steps. Name your own list instead with `ids`, or change the number with `size`:
+In Claude Code, type `/vault-batch` or ask it to "run the vault-batch workflow". With no arguments it takes five candidates from the ranking: at least a third from the lanes, taken in turn, and the rest by demand. Throughout, the machines of the 1980s and earlier (`systems` and `hardware` with a `period:` of the 1950s to the 1980s) come first, then everything else from those decades, and only then later subjects. That keeps batches on the project's centre: by demand alone, well-linked modern consoles and studios would lead. Within the world lane, regions still take turns at each of those steps. Name your own list instead with `ids`, or change the number with `size`:
 
 ```text
 run the vault-batch workflow
@@ -142,10 +142,10 @@ run the vault-batch workflow with ids VC-0018 VC-0931 VC-0936
 To see which candidates the ranking would choose, without starting anything:
 
 ```sh
-python3.13 scripts/next_vault_batch.py --website ../website --size 10
+python3.13 scripts/next_vault_batch.py --website ../website --size 5
 ```
 
-The workflow works in two new worktrees (`docs-batch-<slug>` and `website-batch-<slug>` beside the main checkouts) and never touches the main checkouts. For each candidate, one agent triages it and gathers claim-level evidence, a second writes the entry, and a third, which didn't write it, removes or qualifies anything the sources don't support. One agent then adds the incoming links, opens or reuses the writing issues, updates the queue rows and records the evidence in the website's `docs/reviews/<slug>/`.
+The workflow works in two new worktrees (`docs-batch-<slug>` and `website-batch-<slug>` beside the main checkouts) and never touches the main checkouts. For each candidate, one agent triages it and gathers claim-level evidence, a second writes the entry from that evidence without researching further, and a third, which didn't write it, reads the sources and removes or qualifies anything they don't support. Entries aim between the median and 90th-percentile length of published entries in their category, which the picker reports; a longer entry needs evidence to carry it and a reason in the review notes, and a thinly sourced subject gets a short entry. One agent then adds the incoming links, opens or reuses the writing issues, updates the queue rows and records the evidence in the website's `docs/reviews/<slug>/`.
 
 Then `scripts/vault_batch_gates.py` runs every gate and the batch stops on any failure, before anything is committed. It checks that:
 

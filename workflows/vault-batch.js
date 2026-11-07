@@ -15,7 +15,7 @@ export const meta = {
 
 // Arguments, all optional:
 //   ids      your own list of VC- IDs, in order; otherwise the queue ranking chooses
-//   size     how many the ranking chooses (default 10)
+//   size     how many the ranking chooses (default 5)
 //   slug     the batch name, used for branches and the review directory
 //   attempt  raise it after fixing a failed batch: Gates and Pull requests then
 //            run again while the earlier stages come back from the resume cache
@@ -27,7 +27,7 @@ const CODE198X = '/Users/stevehill/Projects/198x/Code198x'
 const UMBRELLA = '/Users/stevehill/Projects/198x'
 const choice = A.ids && A.ids.length
   ? `--ids ${A.ids.join(' ')}`
-  : `--size ${A.size || 10}`
+  : `--size ${A.size || 5}`
 
 const RULES = `
 Rules for all Vault work (the Vault specification, ${CODE198X}/docs/specifications/vault.md, is binding; read its "Entry contract", "Writing and evidence", "Participant accounts and source kinds" and "Connections and review" sections before starting):
@@ -126,8 +126,9 @@ const DRAFT = {
       items: { type: 'object', properties: { from: { type: 'string' }, text: { type: 'string', description: 'the exact existing words to wrap in the link' } }, required: ['from', 'text'] },
     },
     images: { type: 'array', items: { type: 'string' } },
+    gaps: { type: 'array', items: { type: 'string' }, description: 'facts left out for lack of evidence, and why the entry runs past the length guide if it does' },
   },
-  required: ['path', 'backlinks'],
+  required: ['path', 'backlinks', 'gaps'],
 }
 
 const CHECKED = {
@@ -164,6 +165,8 @@ Sources: ${JSON.stringify(t.sources)}
 Claims you may make, and only these: ${JSON.stringify(t.claims)}
 Referring entries: ${JSON.stringify(t.referringEntries || [])}
 
+- Write from this evidence; the research is done. Read the referring entries, the schema and recent entries in the category, and open a source only to check the wording of a quotation. If the entry needs a fact the claims don't hold, leave it out and list it in your gaps for the reviewer; don't go looking for it.
+- Length: published ${c.category} entries run ${c.length_guide ? `${c.length_guide.median} words at the median and ${c.length_guide.p90} at the 90th percentile` : 'about the Vault median'} (the article, without frontmatter or the source list). Aim within that range. Go longer only when the evidence supports it, and say why in your gaps; a thinly sourced subject gets a short entry, never padding.
 - Follow the frontmatter schema in src/content.config.ts and the shape of recent entries in the same category. Set ai_generated: true and reviewed: false. Every date in the frontmatter must agree with the prose.
 - Concrete, plain British English for a curious reader: lead with what the subject is and why it mattered; explain any term a newcomer won't know; no hype or aphorisms. Keep process and evidence talk out of the article; the Sources section carries it.
 - Link to existing Vault entries where the prose names them. Don't link to entries that don't exist.
@@ -199,7 +202,7 @@ Results per candidate (triage, draft and claim check): ${JSON.stringify(done)}
 1. Backlinks: in each existing entry named in a draft's backlinks, wrap the exact existing words in a link to /vault/<path>. Change nothing else in those files: no new words, no frontmatter, no review flags. Every new entry needs at least one incoming link; if none of the proposed ones work, look for another existing unlinked mention. Record each, added or rejected with the reason.
 2. Writing issues: for each write decision, search open and closed code198x/website issues by ID, subject and aliases and reuse a match; otherwise create "Write the Vault entry for <subject> (<id>)" with the labels enhancement and area:curriculum and the outline in docs vault-candidates.md "Open an issue when ready". Issues are public the moment they exist: write each title and body to a file outside the worktrees and run \`python3 scripts/vault_batch_gates.py --scan <file>\` from the docs worktree first, and create the issue only when it passes.
 3. Queue rows in ${prep.docs}/vault-candidates.csv (Python csv module; keep the header and order): write → in-progress with the issue URL; covered → covered with covered_by; deferred → deferred; blocked → blocked with blocked_by. Record triage notes (scope, coverage checked, source leads; no local paths) and corrected scope axes. Add followups that have no entry or candidate yet as needs-triage rows with the next IDs, link_from set to the new entry's path, after checking titles, aliases and the queue for an existing match.
-4. Evidence in ${REVIEW}/: triage.json ([{id, decision, path, issue, notes}] for exactly these IDs: ${ids.join(', ')}), claims.json ([{entry, claim, evidence, single_source, qualification}] using the checked claims), backlinks.json ([{from, to, result, label|note}]), followups.json ([{subject, decision, id|existing, referringEntries}]) and REPORT.md: what the batch covers, decisions, sources and their limits, connections, and the claim checker's concerns for the reviewer. Leave a "## Verification" heading for the gates.
+4. Evidence in ${REVIEW}/: triage.json ([{id, decision, path, issue, notes}] for exactly these IDs: ${ids.join(', ')}), claims.json ([{entry, claim, evidence, single_source, qualification}] using the checked claims), backlinks.json ([{from, to, result, label|note}]), followups.json ([{subject, decision, id|existing, referringEntries}]) and REPORT.md: what the batch covers, decisions, sources and their limits, connections, the drafters' gaps, each entry's article length against its category guide, and the claim checker's concerns for the reviewer. Leave a "## Verification" heading for the gates.
 5. Run \`python3 scripts/check_vault_candidates.py --website ${prep.website}\` in the docs worktree and fix any failure in what you wrote. Do not commit.`, {
   label: 'integrate',
   schema: {

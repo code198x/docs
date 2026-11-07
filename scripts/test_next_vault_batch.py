@@ -1,9 +1,11 @@
 """Guard how a Vault batch is chosen: the lanes' share, demand order and named lists."""
 
+import tempfile
 import unittest
+from pathlib import Path
 
 from check_vault_candidates import FIELDS
-from next_vault_batch import choose, named
+from next_vault_batch import GUIDE_MINIMUM, article_words, choose, length_guides, named
 
 
 def row(number: int, scope: str, refs: int = 0, status: str = "needs-triage") -> dict[str, str]:
@@ -98,6 +100,24 @@ class ChooseTests(unittest.TestCase):
             with self.subTest(ids=ids), self.assertRaisesRegex(ValueError, message):
                 named(self.rows, ids)
 
+
+
+class LengthGuideTests(unittest.TestCase):
+    def test_only_the_article_counts(self) -> None:
+        text = '---\ntitle: "X"\nsummary: "one two three"\n---\nimport Sources from "@components/Sources.astro";\n\nFour words of prose.\n\n<Figure src="a.png" alt="many words here" />\n\n<Sources>\n\n- A source with words.\n'
+        self.assertEqual(article_words(text), 4)
+
+    def test_guides_follow_each_category_and_small_ones_borrow_the_whole_vault(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            vault = Path(temp) / "src/content/vault"
+            for category, count, words in (("systems", GUIDE_MINIMUM, 100), ("demos", 2, 1000)):
+                (vault / category).mkdir(parents=True)
+                for n in range(count):
+                    (vault / category / f"e{n}.mdx").write_text("---\nt: x\n---\n" + "w " * (words + n), encoding="utf-8")
+            guides = length_guides(Path(temp))
+            self.assertEqual(guides["systems"], {"median": 104, "p90": 108, "entries": GUIDE_MINIMUM})
+            self.assertNotIn("demos", guides)
+            self.assertEqual(guides["*"]["entries"], GUIDE_MINIMUM + 2)
 
 if __name__ == "__main__":
     unittest.main()
