@@ -196,5 +196,51 @@ class GateTests(unittest.TestCase):
         result = subprocess.run(["python3", str(script), "--scan", str(body)], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout)
 
+    def test_an_approved_entry_must_be_reviewed_and_an_unapproved_one_must_not(self) -> None:
+        review = self.site / "docs/reviews/batch"
+        review.mkdir(parents=True, exist_ok=True)
+        record = {"approved_by": "Steve Hill", "date": "2026-11-07", "how": "in conversation", "entries": ["games/spacewar"]}
+        (review / "approval.json").write_text(json.dumps(record), encoding="utf-8")
+        approved, faults = gates.load_approval(review, ["games/spacewar"])
+        self.assertEqual((approved, faults), ({"games/spacewar"}, []))
+        self.assertRegex(gates.check_entries(self.site, self.base, ["games/spacewar"], approved)[0], "must be reviewed: true")
+        self.write("src/content/vault/games/spacewar.mdx", ENTRY.replace("reviewed: false", "reviewed: true"))
+        self.assertEqual(gates.check_entries(self.site, self.base, ["games/spacewar"], approved), [])
+        # Without the approval the same flag fails.
+        self.assertRegex(gates.check_entries(self.site, self.base, ["games/spacewar"])[0], "until a person approves it")
+
+    def test_an_approval_must_say_who_when_how_and_what(self) -> None:
+        review = self.site / "docs/reviews/batch"
+        review.mkdir(parents=True, exist_ok=True)
+        for record, message in [
+            ({"date": "2026-11-07", "how": "x", "entries": ["games/spacewar"]}, "who approved"),
+            ({"approved_by": "S", "how": "x", "date": "7 Nov", "entries": ["games/spacewar"]}, "YYYY-MM-DD"),
+            ({"approved_by": "S", "how": "x", "date": "2026-11-07", "entries": []}, "list the approved entries"),
+            ({"approved_by": "S", "how": "x", "date": "2026-11-07", "entries": ["games/elite"]}, "didn't write"),
+        ]:
+            with self.subTest(record=record):
+                (review / "approval.json").write_text(json.dumps(record), encoding="utf-8")
+                approved, faults = gates.load_approval(review, ["games/spacewar"])
+                self.assertTrue(any(message in f for f in faults), faults)
+                self.assertNotIn("games/elite", approved)
+
+    def test_approved_entries_are_indexed_and_drafts_hidden(self) -> None:
+        self.write("dist/vault/games/spacewar/index.html", "<title>Spacewar!</title>")
+        self.write("dist/sitemap-0.xml", "<loc>https://code198x.com/vault/games/spacewar/</loc>")
+        self.assertEqual(gates.check_built(self.site, ["games/spacewar"], {"games/spacewar"}), [])
+        self.write("dist/vault/games/spacewar/index.html", '<meta name="robots" content="noindex">')
+        self.assertRegex(gates.check_built(self.site, ["games/spacewar"], {"games/spacewar"})[0], "still noindex")
+
+    def test_the_workflow_run_rejects_any_approval(self) -> None:
+        review = self.site / "docs/reviews/batch"
+        review.mkdir(parents=True, exist_ok=True)
+        record = {"approved_by": "An agent", "date": "2026-11-07", "how": "itself", "entries": ["games/spacewar"]}
+        (review / "approval.json").write_text(json.dumps(record), encoding="utf-8")
+        approved, faults = gates.approval_state(review, ["games/spacewar"], drafts_only=True)
+        self.assertEqual(approved, set())
+        self.assertIn("only a person approves a batch", faults[-1])
+        # The same file passes a run that isn't drafts-only, such as CI after sign-off.
+        self.assertEqual(gates.approval_state(review, ["games/spacewar"], drafts_only=False), ({"games/spacewar"}, []))
+
 if __name__ == "__main__":
     unittest.main()

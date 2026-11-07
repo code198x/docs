@@ -151,11 +151,19 @@ Then `scripts/vault_batch_gates.py` runs every gate and the batch stops on any f
 
 - nothing the batch adds, in either repository, names a private path: the local library's folders, the knowledge graph or a path on this machine. Both repositories are public, so this runs before anything is pushed, and the workflow also scans its writing issues, commit messages and PR descriptions with `--scan` before creating them;
 - triage covers exactly the batch, and the queue rows agree with it;
-- each draft is new, marked `ai_generated: true` and `reviewed: false`, and has an incoming link;
+- each draft is new, marked `ai_generated: true`, unreviewed unless approved (see below), and has an incoming link;
 - every claim has a source, and a claim with only one is marked single-sourced;
 - existing entries changed only by gaining Vault links, and nothing outside the Vault changed;
 - a broken link planted in a draft makes the link check fail, and removing it makes it pass;
 - the website's full release check passes, and the built drafts are `noindex` and absent from the sitemap.
+
+To approve a batch, say so in conversation, naming the entries you approve (or the whole batch). The agent that applies it sets `reviewed: true` on those entries in the batch's own pull request and records your approval in the review directory as `approval.json`:
+
+```json
+{"approved_by": "Steve Hill", "date": "2026-11-07", "how": "in conversation", "entries": ["systems/magnavox-odyssey"]}
+```
+
+CI then requires exactly the approved entries to be reviewed and indexed, and every other draft to stay unreviewed and hidden. The workflow's own gate run passes `--drafts-only`, which fails if any approval exists: an agent never approves its own batch. Publication is still verified after the merge, as before.
 
 If the gates fail, the worktrees stay for you to fix. Resume the run with the same arguments plus `attempt: 2`: the earlier stages come back from the resume cache and only the gates and the pull requests run again. You can also run the gates by hand from the docs worktree (see the script's help). Website CI runs them too, without the release check, on any pull request that adds a `docs/reviews/<slug>/triage.json`, so a batch made outside the workflow is checked as well. It reads the queue from the docs branch with the same name as the website branch, or from main if there isn't one. Approval and publication stay with a person: a batch's entries are unreviewed until then.
 
