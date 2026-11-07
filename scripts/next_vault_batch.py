@@ -2,6 +2,9 @@
 
 By default the batch follows the ranking in vault-candidates.md: at least a
 third from the world and early lanes, taken in turn, and the rest by demand.
+Everywhere, the machines of the 1980s and earlier (systems and hardware) come
+first, then everything else from those decades, because that is the project's
+centre; later subjects follow once those run out.
 `--ids` replaces the choice with your own list, which must name candidates that
 are still waiting for work. The vault-batch workflow reads this output.
 """
@@ -28,6 +31,28 @@ from check_vault_candidates import (
 
 # Waiting for work: not yet triaged, or triaged and not yet written.
 WAITING = {"needs-triage", "ready"}
+# The project's centre of gravity is the 1970s and 1980s, with the 1960s (and the
+# 1950s machines before them) as its roots. A batch takes these first.
+OLD = {"period:1950s", "period:1960s", "period:1970s", "period:1980s"}
+
+
+MACHINES = {"systems", "hardware"}
+
+
+def is_old(row: dict[str, str]) -> bool:
+    return any(scope in OLD for scope in paths(row["scope"]))
+
+
+def tier(row: dict[str, str]) -> int:
+    """0: an old machine; 1: anything else old; 2: everything later or undated."""
+    if not is_old(row):
+        return 2
+    return 0 if row["category"] in MACHINES else 1
+
+
+def oldest_first(ordered: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Old machines, then the rest of their era, then later subjects; order kept within each."""
+    return sorted(ordered, key=tier)
 
 
 def in_lane(row: dict[str, str], lane: str) -> bool:
@@ -35,11 +60,13 @@ def in_lane(row: dict[str, str], lane: str) -> bool:
 
 
 def choose(rows: list[dict[str, str]], size: int, wants: Wants | None = None) -> list[tuple[dict[str, str], str]]:
-    """Pick `size` candidates: a third (rounded up) from the lanes in turn, the rest by demand."""
+    """Pick `size` candidates: a third (rounded up) from the lanes in turn, the rest by demand, oldest first."""
     waiting = [row for row in rows if row["status"] in WAITING]
+    world = [r for r in waiting if in_lane(r, "world")]
     lanes = {
-        "world": rotate_by_region([r for r in waiting if in_lane(r, "world")], wants),
-        "early": by_demand([r for r in waiting if in_lane(r, "early")], wants),
+        # Regions take turns within each tier before the next tier starts.
+        "world": [r for t in range(3) for r in rotate_by_region([r for r in world if tier(r) == t], wants)],
+        "early": oldest_first(by_demand([r for r in waiting if in_lane(r, "early")], wants)),
     }
     chosen: list[tuple[dict[str, str], str]] = []
     taken: set[str] = set()
@@ -60,7 +87,7 @@ def choose(rows: list[dict[str, str]], size: int, wants: Wants | None = None) ->
         if lane not in live:
             continue
         take(next(r for r in lanes[lane] if r["id"] not in taken), lane)
-    for row in by_demand(waiting, wants):
+    for row in oldest_first(by_demand(waiting, wants)):
         if len(chosen) >= size:
             break
         if row["id"] not in taken:

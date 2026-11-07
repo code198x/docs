@@ -123,7 +123,7 @@ python3.13 scripts/check_vault_candidates.py --status needs-triage --lane world 
 python3.13 scripts/check_vault_candidates.py --status needs-triage --lane early --limit 20
 ```
 
-A batch takes at least a third of its subjects from these lanes whenever they hold candidates, and the rest from the overall ranking. Lanes only see candidates whose `scope` is set, so triage records it.
+A batch takes at least a third of its subjects from these lanes whenever they hold candidates, and the rest from the overall ranking. Old machines come first in both, then their era (see [Run a batch](#run-a-batch)). Lanes only see candidates whose `scope` is set, so triage records it.
 
 Every candidate's `scope` was backfilled on 6 November 2026 by a model pass over each row's subject, reason and notes, with instructions to leave a field blank rather than guess. 99 rows were left empty. These are prioritisation hints, not checked facts: triage confirms or corrects a candidate's scope along with the rest of the record.
 
@@ -131,7 +131,7 @@ Every candidate's `scope` was backfilled on 6 November 2026 by a model pass over
 
 The `vault-batch` workflow ([`workflows/vault-batch.js`](workflows/vault-batch.js)) runs the whole batch process and ends in two draft pull requests for review. It runs in Claude Code on the machine that holds the primary-source library, because the research reads that library; a hosted runner can't.
 
-In Claude Code, type `/vault-batch` or ask it to "run the vault-batch workflow". With no arguments it takes ten candidates from the ranking: at least a third from the lanes, taken in turn, and the rest by demand. Name your own list instead with `ids`, or change the number with `size`:
+In Claude Code, type `/vault-batch` or ask it to "run the vault-batch workflow". With no arguments it takes ten candidates from the ranking: at least a third from the lanes, taken in turn, and the rest by demand. Throughout, the machines of the 1980s and earlier (`systems` and `hardware` with a `period:` of the 1950s to the 1980s) come first, then everything else from those decades, and only then later subjects. That keeps batches on the project's centre: by demand alone, well-linked modern consoles and studios would lead. Within the world lane, regions still take turns at each of those steps. Name your own list instead with `ids`, or change the number with `size`:
 
 ```text
 run the vault-batch workflow

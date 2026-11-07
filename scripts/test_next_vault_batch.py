@@ -37,7 +37,8 @@ class ChooseTests(unittest.TestCase):
         return [(r["id"], why) for r, why in choose(self.rows, size)]
 
     def test_a_third_comes_from_the_lanes_taken_in_turn(self) -> None:
-        # Six rounds up to two lane picks: world first, then early; four by demand.
+        # Six rounds up to two lane picks: world first, then early; four by
+        # demand, where the 1990s VC-0003 waits behind every 1980s subject.
         self.assertEqual(
             self.ids(6),
             [
@@ -45,10 +46,30 @@ class ChooseTests(unittest.TestCase):
                 ("VC-0007", "early"),
                 ("VC-0001", "demand"),
                 ("VC-0002", "demand"),
-                ("VC-0003", "demand"),
                 ("VC-0010", "demand"),
+                ("VC-0006", "demand"),
             ],
         )
+
+    def test_old_machines_come_first_then_their_era_then_later_subjects(self) -> None:
+        self.rows = [
+            row(1, "region:us;period:1990s", refs=30),
+            row(2, "region:uk;period:1980s", refs=20),
+            row(3, "region:uk;period:1980s", refs=1) | {"category": "systems"},
+            row(4, "region:us;period:1970s", refs=2) | {"category": "hardware"},
+            row(5, "region:us;period:2000s", refs=40) | {"category": "systems"},
+        ]
+        self.assertEqual([i for i, _ in self.ids(5)], ["VC-0004", "VC-0003", "VC-0002", "VC-0005", "VC-0001"])
+        # Among later subjects demand alone decides; machines get no extra place there.
+
+    def test_the_world_lane_keeps_its_rotation_within_each_tier(self) -> None:
+        self.rows = [
+            row(1, "region:japan;period:1980s", refs=9) | {"category": "systems"},
+            row(2, "region:japan;period:1980s", refs=8) | {"category": "systems"},
+            row(3, "region:brazil;period:1980s", refs=1) | {"category": "systems"},
+            row(4, "region:ussr;period:1990s", refs=50) | {"category": "systems"},
+        ]
+        self.assertEqual(self.ids(9)[:3], [("VC-0001", "world"), ("VC-0003", "world"), ("VC-0002", "world")])
 
     def test_the_world_lane_rotates_regions(self) -> None:
         # Japan ranks higher, but the USSR gets the second world place.
