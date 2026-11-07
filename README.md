@@ -44,6 +44,7 @@ verification and how to add activities after the first learner observations.
 | [Testing and diagnosis](specifications/experiments/testing-and-diagnosis.md) | Predictions, reproducible faults, boundaries, traces and evidence-led repairs through existing projects |
 | [Profiling progression](specifications/experiments/profiling-progression.md) | Game-led measurement practice, verified tool surfaces and separate guest/host investigations |
 | [Vault](specifications/vault.md) | Sourced encyclopaedic context |
+| [System profiles](specifications/system-profile.md) | What a machine can do, what it was used for and its curriculum hooks; the derived depth report |
 | [Vault candidate backlog](vault-candidates.md) | Proposed subjects, triage and the handoff to writing issues; [structured records](vault-candidates.csv) |
 | [Content candidate queue](content-candidates.md) | The content factory's non-Vault work: patterns, articles, system profiles, productions, progressions and tracks; [structured records](content-candidates.csv) |
 | [Vault packing and authoring batches](audit/2026-10-28-packing-and-authoring/README.md) | Sixteen draft entries, retained candidate identities, source evidence and uncommissioned follow-ups |
