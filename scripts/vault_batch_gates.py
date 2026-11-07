@@ -110,11 +110,48 @@ def check_triage(triage: list[dict], ids: list[str]) -> list[str]:
     return failures
 
 
+def load_approval(review: Path, paths: list[str]) -> tuple[set[str], list[str]]:
+    """Entries the owner has approved in this batch, from approval.json, and any faults in it.
+
+    {"approved_by": "...", "date": "YYYY-MM-DD", "how": "in conversation", "entries": ["category/slug", ...]}
+    Approval is a person's act; the workflow never writes this file.
+    """
+    source = review / "approval.json"
+    if not source.is_file():
+        return set(), []
+    record = json.loads(source.read_text(encoding="utf-8"))
+    faults = []
+    if not isinstance(record, dict) or not record.get("approved_by") or not record.get("how"):
+        faults.append("approval.json must say who approved and how")
+        record = record if isinstance(record, dict) else {}
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(record.get("date", ""))):
+        faults.append("approval.json needs the date as YYYY-MM-DD")
+    entries = record.get("entries") or []
+    if not entries:
+        faults.append("approval.json must list the approved entries")
+    for entry in entries:
+        if entry not in paths:
+            faults.append(f"approval.json names {entry}, which this batch didn't write")
+    return set(entries) & set(paths), faults
+
+
+def approval_state(review: Path, paths: list[str], drafts_only: bool) -> tuple[set[str], list[str]]:
+    """The approval to check against; a drafts-only run (the workflow's) accepts none."""
+    try:
+        approved, faults = load_approval(review, paths)
+    except (OSError, ValueError) as error:
+        approved, faults = set(), [f"approval.json: {error}"]
+    if drafts_only and (review / "approval.json").exists():
+        return set(), faults + ["approval.json exists, but this run checks drafts: only a person approves a batch"]
+    return approved, faults
+
+
 def written(triage: list[dict]) -> list[str]:
     return [record["path"] for record in triage if record.get("decision") == "write" and record.get("path")]
 
 
-def check_entries(website: Path, base: str, paths: list[str]) -> list[str]:
+def check_entries(website: Path, base: str, paths: list[str], approved: set[str] = frozenset()) -> list[str]:
+    """New and AI-marked; unreviewed unless the owner's approval names the entry, then reviewed."""
     failures = []
     for path in paths:
         relative = f"src/content/vault/{path}.mdx"
@@ -125,8 +162,11 @@ def check_entries(website: Path, base: str, paths: list[str]) -> list[str]:
         text = source.read_text(encoding="utf-8")
         if flag(text, "ai_generated") != "true":
             failures.append(f"{path}: must be marked ai_generated: true")
-        if flag(text, "reviewed") != "false":
-            failures.append(f"{path}: must stay reviewed: false until a person approves it")
+        if path in approved:
+            if flag(text, "reviewed") != "true":
+                failures.append(f"{path}: approved, so it must be reviewed: true")
+        elif flag(text, "reviewed") != "false":
+            failures.append(f"{path}: must stay reviewed: false until a person approves it (approval.json)")
         if run(["git", "cat-file", "-e", f"{base}:{relative}"], website).returncode == 0:
             failures.append(f"{path}: already exists on the base branch; a batch writes new entries")
     return failures
@@ -291,7 +331,8 @@ def check_planned_links(docs: Path, paths: list[str], triage: list[dict]) -> lis
     return failures
 
 
-def check_built(website: Path, paths: list[str]) -> list[str]:
+def check_built(website: Path, paths: list[str], approved: set[str] = frozenset()) -> list[str]:
+    """Unreviewed drafts are noindex and out of the sitemap; approved entries are indexed and in it."""
     failures = []
     dist = website / "dist"
     sitemap = "".join(p.read_text(encoding="utf-8") for p in dist.glob("sitemap*.xml"))
@@ -302,10 +343,18 @@ def check_built(website: Path, paths: list[str]) -> list[str]:
         if not page.is_file():
             failures.append(f"{path}: not in the built site")
             continue
-        if not re.search(r'<meta name="robots" content="noindex', page.read_text(encoding="utf-8")):
-            failures.append(f"{path}: built page lacks noindex")
-        if re.search(rf"/vault/{re.escape(path)}/?<", sitemap):
-            failures.append(f"{path}: unreviewed entry is in the sitemap")
+        noindex = re.search(r'<meta name="robots" content="noindex', page.read_text(encoding="utf-8")) is not None
+        listed = re.search(rf"/vault/{re.escape(path)}/?<", sitemap) is not None
+        if path in approved:
+            if noindex:
+                failures.append(f"{path}: approved entry is still noindex")
+            if not listed:
+                failures.append(f"{path}: approved entry is missing from the sitemap")
+        else:
+            if not noindex:
+                failures.append(f"{path}: built page lacks noindex")
+            if listed:
+                failures.append(f"{path}: unreviewed entry is in the sitemap")
     return failures
 
 
@@ -317,6 +366,11 @@ def main() -> int:
     parser.add_argument("--ids", nargs="+", metavar="VC-NNNN")
     parser.add_argument("--base", default="origin/main", help="website ref the batch starts from")
     parser.add_argument("--skip-release", action="store_true", help="leave out the slow release check")
+    parser.add_argument(
+        "--drafts-only",
+        action="store_true",
+        help="fail if the batch records any approval (the workflow's own run: agents never approve)",
+    )
     args = parser.parse_args()
     if args.scan:
         # For text that never reaches a branch's files: commit messages and PR descriptions.
@@ -337,10 +391,15 @@ def main() -> int:
         print(f"FAIL: {error}", file=sys.stderr)
         return 1
     paths = written(triage)
+    approved, approval_faults = approval_state(website / args.review, paths, args.drafts_only)
     gates = [
         ("nothing names a private path", lambda: check_private(website, base, ROOT, docs_base)),
         ("triage covers the batch", lambda: check_triage(triage, args.ids)),
-        ("drafts are new, AI-marked and unreviewed", lambda: check_entries(website, base, paths)),
+        ("any approval is recorded properly", lambda: approval_faults),
+        (
+            "entries are new, AI-marked, and reviewed only if approved",
+            lambda: check_entries(website, base, paths, approved),
+        ),
         ("every claim has its sources", lambda: check_claims(claims, paths)),
         ("every draft has an incoming link", lambda: check_incoming(website, paths)),
         ("existing entries only gained links", lambda: check_scope_and_preservation(website, base, args.review, paths)),
@@ -363,7 +422,12 @@ def main() -> int:
                 else [f"npm run check:release exited {r.returncode}:\n{(r.stdout + r.stderr)[-4000:]}"],
             )
         )
-        gates.append(("built drafts are noindex and out of the sitemap", lambda: check_built(website, paths)))
+        gates.append(
+            (
+                "built drafts are hidden, approved entries indexed",
+                lambda: check_built(website, paths, approved),
+            )
+        )
     failed = False
     for name, gate in gates:
         try:
@@ -380,7 +444,8 @@ def main() -> int:
     if args.skip_release:
         print("INCOMPLETE: the release check and built pages were skipped")
         return INCOMPLETE
-    print(f"PASS: {len(paths)} drafts and {len(triage)} triage decisions ready for review")
+    state = f"{len(approved)} approved, {len(paths) - len(approved)} awaiting review" if approved else f"{len(paths)} drafts ready for review"
+    print(f"PASS: {state}; {len(triage)} triage decisions")
     return 0
 
 
