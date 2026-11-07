@@ -26,6 +26,7 @@ check is local, and 2 is what a usage error returns.
 """
 
 import argparse
+import csv
 import json
 import os
 import re
@@ -47,7 +48,8 @@ Run = Callable[[list[str], Path], subprocess.CompletedProcess]
 # must never reach a public repository. The library's own top-level folders
 # identify it; a bare "reference/" is also a Vault category, so it is allowed.
 PRIVATE = re.compile(
-    r"/Users/|/home/[a-z]|/private/(?:tmp|var)/|/Volumes/|~/Projects|Projects/198x|file://"
+    # An absolute path starts a word; inside a web address (example.com/home/) it is the site's own.
+    r"(?<![\w.-])(?:/Users/|/home/[a-z]|/private/(?:tmp|var)/|/Volumes/)|~/Projects|Projects/198x|file://"
     r"|facts\.sqlite|knowledge\.py"
     r"|reference/(?:_meta|_quarantine|_raw-extracts|_recovered|_tools|assets|by-system|by-topic|contextual)"
     r"(?=[/\s\"'`)\],;:]|$)"
@@ -273,6 +275,22 @@ def check_queue(docs: Path, website: Path, triage: list[dict]) -> list[str]:
     return failures
 
 
+def check_planned_links(docs: Path, paths: list[str], triage: list[dict]) -> list[str]:
+    """Until the drafts are published, the queue cites them by candidate ID, not by path.
+
+    The docs branch is checked against website main, where the drafts don't
+    exist yet, so a path there fails as soon as the docs PR runs CI.
+    """
+    ids = {record.get("path"): record.get("id") for record in triage}
+    failures = []
+    with (docs / "vault-candidates.csv").open(newline="", encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            for field in ("link_from", "covered_by"):
+                for path in set(row[field].split(";")) & set(paths):
+                    failures.append(f"{row['id']}: {field} names unpublished {path}; use candidate:{ids.get(path)}")
+    return failures
+
+
 def check_built(website: Path, paths: list[str]) -> list[str]:
     failures = []
     dist = website / "dist"
@@ -327,6 +345,7 @@ def main() -> int:
         ("every draft has an incoming link", lambda: check_incoming(website, paths)),
         ("existing entries only gained links", lambda: check_scope_and_preservation(website, base, args.review, paths)),
         ("queue agrees with triage", lambda: check_queue(ROOT, website, triage)),
+        ("the queue cites unpublished drafts by candidate ID", lambda: check_planned_links(ROOT, paths, triage)),
         (
             "queue tests",
             lambda: [] if (r := run([sys.executable, "-m", "unittest", "discover", "-s", "scripts", "-p", "test_*.py"], ROOT)).returncode == 0

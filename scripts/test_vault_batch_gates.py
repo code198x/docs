@@ -196,5 +196,27 @@ class GateTests(unittest.TestCase):
         result = subprocess.run(["python3", str(script), "--scan", str(body)], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout)
 
+    def test_web_addresses_are_not_private_paths(self) -> None:
+        lines = gates.numbered("Source: https://www.donhopkins.com/home/catalog/simcity/\nSee example.org/Users/guide and x.net/Volumes/1\n")
+        self.assertEqual(gates.private_hits(lines, "f"), [])
+        for path in ("/home/steve/notes", "(/Users/x)", "`/Volumes/Data`", "path=/private/tmp/x"):
+            with self.subTest(path=path):
+                self.assertTrue(gates.private_hits(gates.numbered(path), "f"))
+
+    def test_the_queue_cites_unpublished_drafts_by_candidate_id(self) -> None:
+        docs, _ = self.docs_repo()
+        triage = [{"id": "VC-2076", "path": "games/spacewar"}]
+        (docs / "vault-candidates.csv").write_text(
+            "id,link_from,covered_by\nVC-0001,systems/pdp-1;candidate:VC-2076,\n", encoding="utf-8"
+        )
+        self.assertEqual(gates.check_planned_links(docs, ["games/spacewar"], triage), [])
+        (docs / "vault-candidates.csv").write_text(
+            "id,link_from,covered_by\nVC-0001,systems/pdp-1;games/spacewar,\n", encoding="utf-8"
+        )
+        self.assertEqual(
+            gates.check_planned_links(docs, ["games/spacewar"], triage),
+            ["VC-0001: link_from names unpublished games/spacewar; use candidate:VC-2076"],
+        )
+
 if __name__ == "__main__":
     unittest.main()
