@@ -223,7 +223,7 @@ const attempt = A.attempt || 1
 const gates = await agent(`Run the Vault batch gates (attempt ${attempt}). Change no files.
 
 In ${prep.docs} run:
-  python3 scripts/vault_batch_gates.py --website ${prep.website} --review ${REVIEW} --ids ${ids.join(' ')}
+  python3 scripts/vault_batch_gates.py --website ${prep.website} --review ${REVIEW} --ids ${ids.join(' ')} --drafts-only
 It runs the website's full release check, which takes several minutes; let it finish. Return its exit code and its complete output verbatim.`, {
   label: `gates (attempt ${attempt})`,
   schema: {
