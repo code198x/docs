@@ -127,6 +127,44 @@ A batch takes at least a third of its subjects from these lanes whenever they ho
 
 Every candidate's `scope` was backfilled on 6 November 2026 by a model pass over each row's subject, reason and notes, with instructions to leave a field blank rather than guess. 99 rows were left empty. These are prioritisation hints, not checked facts: triage confirms or corrects a candidate's scope along with the rest of the record.
 
+## Run a batch
+
+The `vault-batch` workflow ([`workflows/vault-batch.js`](workflows/vault-batch.js)) runs the whole batch process and ends in two draft pull requests for review. It runs in Claude Code on the machine that holds the primary-source library, because the research reads that library; a hosted runner can't.
+
+In Claude Code, type `/vault-batch` or ask it to "run the vault-batch workflow". With no arguments it takes ten candidates from the ranking: at least a third from the lanes, taken in turn, and the rest by demand. Name your own list instead with `ids`, or change the number with `size`:
+
+```text
+run the vault-batch workflow
+run the vault-batch workflow with size 5
+run the vault-batch workflow with ids VC-0018 VC-0931 VC-0936
+```
+
+To see which candidates the ranking would choose, without starting anything:
+
+```sh
+python3.13 scripts/next_vault_batch.py --website ../website --size 10
+```
+
+The workflow works in two new worktrees (`docs-batch-<slug>` and `website-batch-<slug>` beside the main checkouts) and never touches the main checkouts. For each candidate, one agent triages it and gathers claim-level evidence, a second writes the entry, and a third, which didn't write it, removes or qualifies anything the sources don't support. One agent then adds the incoming links, opens or reuses the writing issues, updates the queue rows and records the evidence in the website's `docs/reviews/<slug>/`.
+
+Then `scripts/vault_batch_gates.py` runs every gate and the batch stops on any failure, before anything is committed. It checks that:
+
+- triage covers exactly the batch, and the queue rows agree with it;
+- each draft is new, marked `ai_generated: true` and `reviewed: false`, and has an incoming link;
+- every claim has a source, and a claim with only one is marked single-sourced;
+- existing entries changed only by gaining Vault links, and nothing outside the Vault changed;
+- a broken link planted in a draft makes the link check fail, and removing it makes it pass;
+- the website's full release check passes, and the built drafts are `noindex` and absent from the sitemap.
+
+If the gates fail, the worktrees stay for you to fix. Resume the run with the same arguments plus `attempt: 2`: the earlier stages come back from the resume cache and only the gates and the pull requests run again. You can also run the gates by hand from the docs worktree (see the script's help). Approval and publication stay with a person: a batch's entries are unreviewed until then.
+
+To start the workflow by name, link it into the Claude Code workflows folder of the directory you work from once (it is ignored by Git there):
+
+```sh
+mkdir -p ~/Projects/198x/.claude/workflows
+ln -s ~/Projects/198x/Code198x/docs/workflows/vault-batch.js ~/Projects/198x/.claude/workflows/
+```
+
 ## Existing scope notes
 
 The *Your Sinclair* Smash Tapes and *Sinclair User* Megatape fit better as sections of `distribution/cover-tapes` than as entries.
