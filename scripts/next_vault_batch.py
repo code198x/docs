@@ -6,13 +6,17 @@ Everywhere, the machines of the 1980s and earlier (systems and hardware) come
 first, then everything else from those decades, because that is the project's
 centre; later subjects follow once those run out.
 `--ids` replaces the choice with your own list, which must name candidates that
-are still waiting for work. The vault-batch workflow reads this output.
+are still waiting for work. With `--website`, each candidate also carries a
+length guide: the median and 90th-percentile article length of the published
+entries in its category. The vault-batch workflow reads this output.
 """
 
 import argparse
 import csv
 import json
 import math
+import re
+import statistics
 import sys
 from pathlib import Path
 
@@ -53,6 +57,41 @@ def tier(row: dict[str, str]) -> int:
 def oldest_first(ordered: list[dict[str, str]]) -> list[dict[str, str]]:
     """Old machines, then the rest of their era, then later subjects; order kept within each."""
     return sorted(ordered, key=tier)
+
+
+# Categories with fewer published entries than this borrow the whole Vault's guide.
+GUIDE_MINIMUM = 10
+
+
+def article_words(text: str) -> int:
+    """Words a reader reads: no frontmatter, imports, components or source list."""
+    parts = text.split("---", 2)
+    body = parts[2] if text.startswith("---") and len(parts) > 2 else text
+    body = body.split("<Sources>")[0]
+    body = re.sub(r"^import .*$", "", body, flags=re.M)
+    body = re.sub(r"<[^>]+>", "", body)
+    return len(body.split())
+
+
+def guide(lengths: list[int]) -> dict[str, int]:
+    ordered = sorted(lengths)
+    return {
+        "median": round(statistics.median(ordered)),
+        "p90": ordered[int(0.9 * (len(ordered) - 1))],
+        "entries": len(ordered),
+    }
+
+
+def length_guides(website: Path) -> dict[str, dict[str, int]]:
+    """Per category, how long published entries run; "*" is the whole Vault."""
+    lengths: dict[str, list[int]] = {}
+    for entry in (website / "src/content/vault").glob("*/*.mdx"):
+        lengths.setdefault(entry.parent.name, []).append(article_words(entry.read_text(encoding="utf-8")))
+    every = [n for counts in lengths.values() for n in counts]
+    guides = {category: guide(counts) for category, counts in lengths.items() if len(counts) >= GUIDE_MINIMUM}
+    if every:
+        guides["*"] = guide(every)
+    return guides
 
 
 def in_lane(row: dict[str, str], lane: str) -> bool:
@@ -115,13 +154,15 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--file", type=Path, default=ROOT / "vault-candidates.csv")
     parser.add_argument("--website", type=Path, help="website checkout, to count lesson wants")
-    parser.add_argument("--size", type=positive, default=10)
+    # Five while the factory measures what a batch costs and what review changes.
+    parser.add_argument("--size", type=positive, default=5)
     parser.add_argument("--ids", nargs="+", metavar="VC-NNNN", help="use this list instead of the ranking")
     args = parser.parse_args()
     try:
         rows = load_backlog(args.file, args.website)
         wants = load_lesson_wants(args.website) if args.website else None
         chosen = named(rows, args.ids) if args.ids else choose(rows, args.size, wants)
+        guides = length_guides(args.website) if args.website else {}
     except (OSError, UnicodeError, csv.Error, ValueError) as error:
         print(f"FAIL: {error}", file=sys.stderr)
         return 1
@@ -140,6 +181,7 @@ def main() -> int:
             "triage_notes": row["triage_notes"],
             "demand": demand(row, wants),
             "chosen_by": reason,
+            "length_guide": guides.get(row["category"], guides.get("*")),
         }
         for row, reason in chosen
     ]
