@@ -1,0 +1,252 @@
+{
+  "date": "2026-11-05",
+  "method": "git ls-tree counts; git show hashes for pinned anchors; no native/browser/learner rerun",
+  "repositories": {
+    "website": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+    "code-samples": "5cd1433580ced8a421e0eba4f6dc95b8937cbb45",
+    "scripts": "f859907557cc5a29f308328b668ad82fb988886b"
+  },
+  "counts": {
+    "curriculum/sinclair-zx-spectrum/basic/meet-basic": {
+      "units": 15,
+      "paths": [
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-01-make-the-spectrum-answer.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-03-ask-and-use-the-answer.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-04-a-story-worth-sharing.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-05-give-a-useful-clue.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-06-keep-guessing.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-07-choose-a-new-secret.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-08-feedback-and-another-round.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-09-choose-an-answer.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-10-give-the-answer-a-rhythm.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-11-write-the-repeated-job-once.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-12-put-it-somewhere.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-13-make-it-move.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-14-let-the-player-steer.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-15-one-press-one-step.mdx"
+      ]
+    },
+    "curriculum/sinclair-zx-spectrum/basic/bright-spark": {
+      "units": 7,
+      "paths": [
+        "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-01-four-choices-on-the-screen.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-02-give-a-choice-a-signal.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-03-remember-an-order.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-04-play-the-stored-order.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-05-let-the-player-repeat-it.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-06-grow-a-new-round.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-07-finish-replay-and-keep-it.mdx"
+      ]
+    },
+    "curriculum/sinclair-zx-spectrum/assembly/meet-assembly": {
+      "units": 8,
+      "paths": [
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-01.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-02.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-03.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-04.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-05.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-06.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-07.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-08.mdx"
+      ]
+    },
+    "curriculum/sinclair-zx-spectrum/assembly/meteor-storm": {
+      "units": 36,
+      "paths": [
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-01.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-02.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-03.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-04.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-05.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-06.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-07.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-08.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-09.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-10.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-11.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-12.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-13.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-14.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-15.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-16.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-17.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-18.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-19.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-20.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-21.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-22.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-23.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-24.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-25.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-26.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-27.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-28.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-29.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-30.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-31.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-32.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-33.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-34.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-35.mdx",
+        "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-36.mdx"
+      ]
+    },
+    "curriculum/craft/maths-for-games": {
+      "units": 13,
+      "paths": [
+        "src/content/curriculum/craft/maths-for-games/unit-01.mdx",
+        "src/content/curriculum/craft/maths-for-games/unit-02.mdx",
+        "src/content/curriculum/craft/maths-for-games/unit-03.mdx",
+        "src/content/curriculum/craft/maths-for-games/unit-04.mdx",
+        "src/content/curriculum/craft/maths-for-games/unit-05.mdx",
+        "src/content/curriculum/craft/maths-for-games/unit-06.mdx",
+        "src/content/curriculum/craft/maths-for-games/unit-07.mdx",
+        "src/content/curriculum/craft/maths-for-games/unit-08.mdx",
+        "src/content/curriculum/craft/maths-for-games/unit-09.mdx",
+        "src/content/curriculum/craft/maths-for-games/unit-10.mdx",
+        "src/content/curriculum/craft/maths-for-games/unit-11.mdx",
+        "src/content/curriculum/craft/maths-for-games/unit-12.mdx",
+        "src/content/curriculum/craft/maths-for-games/unit-13.mdx"
+      ]
+    },
+    "curriculum/craft/game-feel": {
+      "units": 4,
+      "paths": [
+        "src/content/curriculum/craft/game-feel/unit-01.mdx",
+        "src/content/curriculum/craft/game-feel/unit-02.mdx",
+        "src/content/curriculum/craft/game-feel/unit-03.mdx",
+        "src/content/curriculum/craft/game-feel/unit-04.mdx"
+      ]
+    },
+    "patterns": {
+      "mdx_files_including_indexes": 1038
+    },
+    "vault": {
+      "mdx_files_including_indexes": 1621
+    }
+  },
+  "anchors": [
+    {
+      "repository": "code198x/website",
+      "revision": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/meet-basic/unit-02-remember-and-save.mdx",
+      "sha256": "02d26cf2d1ffea5a5962d79d36c5f386852ebc4dc9c7bdafec7463384adf1495"
+    },
+    {
+      "repository": "code198x/code-samples",
+      "revision": "5cd1433580ced8a421e0eba4f6dc95b8937cbb45",
+      "path": "sinclair-zx-spectrum/basic/meet-basic/opening/unit-02/steps/step-01.bas",
+      "sha256": "d1b5623b0a487dd6616b99a182b24451713e40b74f08581fcc77be0e281ca72b"
+    },
+    {
+      "repository": "code198x/website",
+      "revision": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+      "path": "src/content/curriculum/sinclair-zx-spectrum/basic/bright-spark/unit-03-remember-an-order.mdx",
+      "sha256": "ef9ce0488b737ea046f449632472c1b78b67ba7a97b34a0d67960e0e63acece9"
+    },
+    {
+      "repository": "code198x/website",
+      "revision": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+      "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meet-assembly/unit-08.mdx",
+      "sha256": "725dbaff5152584fb84f1a1071e03fbe6734989ea5b6b8f1667922b5caad2310"
+    },
+    {
+      "repository": "code198x/code-samples",
+      "revision": "5cd1433580ced8a421e0eba4f6dc95b8937cbb45",
+      "path": "sinclair-zx-spectrum/assembly/meet-assembly/opening/one-byte.asm",
+      "sha256": "454323ccc71b89ef174160c9c257008b8a36ff2dfc87a52c97bb736000a2ab77"
+    },
+    {
+      "repository": "code198x/code-samples",
+      "revision": "5cd1433580ced8a421e0eba4f6dc95b8937cbb45",
+      "path": "sinclair-zx-spectrum/assembly/meet-assembly/opening/verification/evidence/native-results.json",
+      "sha256": "ad0123aa70975772827eccd7990c27e3c816eb3961702d83a7746156c17ea3f9"
+    },
+    {
+      "repository": "code198x/website",
+      "revision": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+      "path": "src/content/curriculum/sinclair-zx-spectrum/assembly/meteor-storm/unit-36.mdx",
+      "sha256": "696791796577757c8196f84c0fcc92074b8663b834d0f1863b006bb27298f891"
+    },
+    {
+      "repository": "code198x/code-samples",
+      "revision": "5cd1433580ced8a421e0eba4f6dc95b8937cbb45",
+      "path": "sinclair-zx-spectrum/assembly/meteor-storm/verification/evidence/README.md",
+      "sha256": "2aecd5ea33d03000db4bbf7decc52e8e2d771cf830796386b0b4e168dbed4ab2"
+    },
+    {
+      "repository": "code198x/website",
+      "revision": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+      "path": "src/content/curriculum/craft/maths-for-games/index.mdx",
+      "sha256": "8db628eba4ea947559cb1e4c550cbaad609b1efc1c002a592a6bb54a0bf2266c"
+    },
+    {
+      "repository": "code198x/code-samples",
+      "revision": "5cd1433580ced8a421e0eba4f6dc95b8937cbb45",
+      "path": "craft/maths-for-games/aiming/model.mjs",
+      "sha256": "c90793f4218235aeef591bc2a816bbc61ef10b1651f6b259b046ffa1189c6a8e"
+    },
+    {
+      "repository": "code198x/website",
+      "revision": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-12.mdx",
+      "sha256": "4cc7462a6733730336444ab6b43dca4e30b15a55fd5c90d9970165be4e7a1e10"
+    },
+    {
+      "repository": "code198x/website",
+      "revision": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+      "path": "src/content/curriculum/craft/maths-for-games/unit-13.mdx",
+      "sha256": "bacd47bb2b9ca2f908ba20a29756cd356d84a8cf2dc954be16a09c9b43dc0c2e"
+    },
+    {
+      "repository": "code198x/website",
+      "revision": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+      "path": "src/content/curriculum/craft/game-feel/unit-04.mdx",
+      "sha256": "9cdfa8d97042b8b733d7967bc4e13c036f5f173e333bd5485a892bc3141ec08b"
+    },
+    {
+      "repository": "code198x/website",
+      "revision": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+      "path": "src/content/modules/craft.yaml",
+      "sha256": "2dc41d87088298ac88dda79449e64c5321e9880299b1a7b63fe99c45c6ad06e8"
+    },
+    {
+      "repository": "code198x/website",
+      "revision": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+      "path": "src/content/patterns/sinclair-zx-spectrum/basic/physics/aimed-projectile.mdx",
+      "sha256": "8db15028a05439c81b4a819a436c132289f5758bc299685bd37eb14699dad68c"
+    },
+    {
+      "repository": "code198x/code-samples",
+      "revision": "5cd1433580ced8a421e0eba4f6dc95b8937cbb45",
+      "path": "sinclair-zx-spectrum/patterns/basic/physics/aimed-projectile/routines.bas",
+      "sha256": "f7c600104a9242bdabe3534a7abf47f1ab53dbbc639e99fba7dd55636889c816"
+    },
+    {
+      "repository": "code198x/code-samples",
+      "revision": "5cd1433580ced8a421e0eba4f6dc95b8937cbb45",
+      "path": "sinclair-zx-spectrum/patterns/basic/physics/aimed-projectile/verification/demo.json",
+      "sha256": "5a3bc312c63e69da0b94be635b6c77c3af010a48fed30037b221432577fdcd50"
+    },
+    {
+      "repository": "code198x/code-samples",
+      "revision": "5cd1433580ced8a421e0eba4f6dc95b8937cbb45",
+      "path": "sinclair-zx-spectrum/patterns/basic/physics/aimed-projectile/verification/configuration.json",
+      "sha256": "6919139ba024fe7e5999f1f449d32c0aa13a18306ffd50c42d610e7d37cc4394"
+    },
+    {
+      "repository": "code198x/website",
+      "revision": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+      "path": "src/content/vault/distribution/budget-games.mdx",
+      "sha256": "80747d6f7656e17ce3283f63a9caade049f4f703af4690ea056fd11b51f807f8"
+    },
+    {
+      "repository": "code198x/website",
+      "revision": "f3124dc4ce0cba4b9701897ca8057a91e0734bcd",
+      "path": "scripts/check-spectrum-samples.mjs",
+      "sha256": "219c2e8ff641d9d39340c1dc8d3ea32b0e93033c9251c6142e189a39c58aec9e"
+    }
+  ]
+}
