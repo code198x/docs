@@ -27,12 +27,12 @@ Capability describes one named configuration, because models, memory sizes and r
 
 ```yaml
 capability:
-  configuration: "Oric Atmos, 48K, PAL"
+  configuration: "<model, memory size, TV standard>"
   memory:
-    value: "48K of RAM and 16K of ROM; BASIC programs start at #0501."
+    value: "<one or two sentences a reader can use>"
     sources:
-      - "Oric service manual, section 2 (memory map)"
-      - "The Oric Atmos Handbook, chapter 9"
+      - "<title, edition, section or page>"
+      - "<a second, independent source>"
 ```
 
 The rules for sources are the Vault's ([Writing and evidence](vault.md#writing-and-evidence)): cite original, checkable sources such as manuals, service documentation, datasheets and period magazines; give a second, independent source where one exists; and never name a private collection or local path. A field without a source is left out, not guessed. A field missing from a profile is a gap the depth report shows.
