@@ -124,5 +124,8 @@ class GateTests(unittest.TestCase):
         self.assertRegex(gates.check_built(self.site, ["games/spacewar"])[0], "lacks noindex")
 
 
+    def test_a_skipped_release_check_is_never_mistaken_for_a_pass_or_a_usage_error(self) -> None:
+        self.assertNotIn(gates.INCOMPLETE, {0, 1, 2})
+
 if __name__ == "__main__":
     unittest.main()

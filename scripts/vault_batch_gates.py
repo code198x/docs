@@ -18,7 +18,9 @@ branch of the batch:
         --review docs/reviews/2026-11-07-example --ids VC-0142 VC-2076
 
 --skip-release leaves out the release check and the built-page gate; the result
-is then INCOMPLETE (exit 2), never a pass.
+is then INCOMPLETE (exit 3), never a pass. Website CI runs it that way on every
+pull request that adds a review directory, and accepts only exit 3: the release
+check is local, and 2 is what a usage error returns.
 """
 
 import argparse
@@ -39,6 +41,8 @@ ALLOWED = ("src/content/vault/", "public/images/vault/", "capture/vault/")
 VAULT_LINK = re.compile(r"\[([^\]]*)\]\(/vault/[^)\s]*\)")
 CONTROL = "[link control](/vault/vault-batch-deliberate-broken-link-control)"
 Run = Callable[[list[str], Path], subprocess.CompletedProcess]
+# Not 2: argparse exits 2 on a usage error, and CI must not mistake one for the other.
+INCOMPLETE = 3
 
 
 def run(command: list[str], cwd: Path, env: dict[str, str] | None = None) -> subprocess.CompletedProcess:
@@ -286,7 +290,7 @@ def main() -> int:
         return 1
     if args.skip_release:
         print("INCOMPLETE: the release check and built pages were skipped")
-        return 2
+        return INCOMPLETE
     print(f"PASS: {len(paths)} drafts and {len(triage)} triage decisions ready for review")
     return 0
 
