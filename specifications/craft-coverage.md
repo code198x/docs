@@ -109,9 +109,9 @@ application. Introduce notation with its meaning; do not replace mathematical
 substance with controls that hide the calculation. Paper models, diagrams and
 pseudocode remain valid alongside interaction.
 
-Maths for Games now has six published aiming lessons alongside the five
-published probability lessons. Its overview distinguishes available sequences
-from further planned explorations. The Craft overview uses the agreed seven-module
+[Maths for Games](https://code198x.com/craft/maths-for-games/) has five published
+probability lessons, six aiming lessons and two grid-drawing lessons. Its
+overview distinguishes these sequences from further planned explorations. The Craft overview uses the agreed seven-module
 map without linking to empty modules.
 
 Game Feel uses play, compare, explain: let the reader experience a difference,
