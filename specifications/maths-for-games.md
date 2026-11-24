@@ -6,9 +6,11 @@ applications, especially geometry, trigonometry, matrix algebra, coordinate
 spaces and fixed-point calculation. This specification defines coverage; it
 does not set a compulsory order, unit count or claim that topics are authored.
 
-Two sequences are published: Dice Roller's five probability lessons and six
-aiming lessons. The broader routes below are for development. Readers can enter at a useful problem without first
-completing probability, Foundations or a system track.
+The [published module](https://code198x.com/craft/maths-for-games/) has three
+sequences: five probability lessons, six aiming lessons and two grid-drawing
+lessons. The broader routes below include development work. Readers can start
+at a useful problem without first completing probability, Foundations or a
+system track.
 
 ## Published sequences
 
@@ -31,6 +33,12 @@ Spectrum sample tree.
 4. Measure angles in radians — arc length and conversions.
 5. Find the angle to a target — atan2 and a reference shot.
 6. Keep fractional movement in integers — velocity quantisation and scaled position.
+
+**Drawing on a grid** (units 12–13) works through choosing line and curve
+samples, filling spans and placing bitmap glyphs. The lessons link to the
+maintained [geometry](https://code198x.com/patterns/cross-platform/rendering/geometry/)
+and [bitmap-text](https://code198x.com/patterns/cross-platform/rendering/bitmap-text/)
+routines rather than duplicating machine code.
 
 Each sequence has independent entry and its own lesson numbering from one; the
 probability URLs are unchanged. Numbers & Bits is not an attendance requirement.
@@ -135,13 +143,28 @@ or more accurate; choose it for a stated implementation reason.
 
 ## Bounded audit evidence
 
-The [probability pilot](../audit/2026-10-probability-pilot/REPORT.md) maps objectives,
-local prerequisites and maintained source ownership for the eleven published
-units. Fresh native checks cover the unit 3 count/share rounding boundary only;
-they do not qualify every maths objective or establish learner effectiveness.
+The [October 2026 probability pilot](../audit/2026-10-probability-pilot/REPORT.md)
+mapped objectives, local prerequisites and maintained source ownership for the
+eleven units published at that point. Its native checks cover the unit 3
+count/share rounding boundary only; they do not qualify every maths objective
+or establish learner effectiveness.
 The [aiming boundary audit](../audit/2026-10-aiming-boundaries/REPORT.md) adds
 finite-segment contact, signed rounding and bounded representation checks against
 the maintained host model. It adds no learner or browser qualification.
+
+### Drawing on a grid: selected objectives
+
+The rows extend the coverage record to units 12–13 without changing the
+October audit. The published lessons were read against website revision
+[`3da1fde`](https://github.com/code198x/website/tree/3da1fde4ac47fb310f2f2f8b97df90f1526d492d/src/content/curriculum/craft/maths-for-games).
+The calculations were checked from the worked examples. Links to maintained
+machine routines point to their separate evidence; no target, browser
+experiment or learner trial was rerun for this review.
+
+| Published lesson | Observable objective | Knowledge used and introduced | Representative boundary |
+|---|---|---|---|
+| 12: [Draw with integer error](https://code198x.com/craft/maths-for-games/unit-12/) | Calculate a line's grid samples from its endpoint differences; explain ties, endpoint ownership and how to clip without changing the remaining samples. | Uses integer addition, subtraction and grid coordinates. Introduces integer error accumulation and half-open clipping bounds. | With Δx = 8 and Δy = 3, start the error at 8 and add 6 per step against a threshold of 16. At X = 4 the ideal Y is 1.5 and the worked rule selects Y = 2. Clipping to [2,7) × [1,3) keeps (2,1), (3,1), (4,2), (5,2) and (6,2). |
+| 13: [Move a glyph, keep its shape](https://code198x.com/craft/maths-for-games/unit-13/) | Translate local glyph points, use quotient and remainder to find byte column and bit phase, and clip ink without changing cell advance. | Uses signed integer addition, quotient and remainder. Introduces a local origin, fixed advance and half-open span intersection. | Two eight-pixel cells starting at X = −3 have origins −3 and 5, and advance to X = 13. At the left clip edge X = 0, only local columns 3–7 of the first cell can appear. |
 
 ## Reference and coverage provenance
 
