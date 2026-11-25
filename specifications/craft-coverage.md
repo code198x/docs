@@ -4,6 +4,10 @@ Apply [curriculum design](curriculum.md). This map records agreed direction and
 module boundaries. It is not a published catalogue, lesson count or
 commitment to complete every topic before another system game can be written.
 
+The [Coverage and Learning Map](coverage-learning-map.md) connects this module
+map to the wider curriculum. Its [dated baseline](../audit/2026-11-05-coverage-learning-map.md)
+records current source observations separately from the direction below.
+
 ## Direction and status
 
 The user considers the revised Spectrum BASIC curriculum a solid basis, while
